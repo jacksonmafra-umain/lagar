@@ -1,0 +1,25 @@
+{
+ "layer": "fundamental",
+ "type": "fundamental_law",
+ "page": 1,
+ "page_count": 1,
+ "total": 2,
+ "items": [
+  {
+   "id": "sfs-1974-152",
+   "title": "Regeringsformen",
+   "number": "1974:152",
+   "type": "fundamental_law",
+   "issued": "1974-02-28",
+   "repealed": null
+  },
+  {
+   "id": "sfs-1810-0926",
+   "title": "Successionsordningen",
+   "number": "1810:0926",
+   "type": "fundamental_law",
+   "issued": "1810-09-26",
+   "repealed": null
+  }
+ ]
+}

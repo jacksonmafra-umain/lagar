@@ -1,0 +1,33 @@
+{
+ "layer": "sfs",
+ "type": "act",
+ "page": 1,
+ "page_count": 2,
+ "total": 6,
+ "items": [
+  {
+   "id": "sfs-2026-1200",
+   "title": "Lag (2026:1200) om uppgiftsskyldighet vid samverkan inom det nationella cybersäkerhetscentret",
+   "number": "2026:1200",
+   "type": "act",
+   "issued": "2026-06-11",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-1113",
+   "title": "Lag (2026:1113) om intäktsdelning från vindkraftsanläggningar",
+   "number": "2026:1113",
+   "type": "act",
+   "issued": "2026-06-11",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-1094",
+   "title": "Lag (2026:1094) med kompletterande bestämmelser till EU:s förordning om europeiska utlämnande- och bevarandeorder för elektroniska bevis",
+   "number": "2026:1094",
+   "type": "act",
+   "issued": "2026-06-11",
+   "repealed": null
+  }
+ ]
+}
