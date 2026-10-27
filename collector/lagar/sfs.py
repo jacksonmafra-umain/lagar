@@ -16,7 +16,7 @@ from pathlib import Path
 from .http import Blocked, PoliteClient
 from .riksdagen import (
     FUNDAMENTAL_LAWS,
-    collapse_whitespace,
+    clean_title,
     ListingItem,
     classify,
     parse_listing,
@@ -159,7 +159,7 @@ def _fundamental_item(dok_id, parsed, text):
     return ListingItem(
         dok_id=dok_id,
         number=header.get("SFS nr", "").strip(),
-        title=collapse_whitespace(first_line),
+        title=clean_title(first_line),
         issued=header.get("Utfärdad", "").strip() or None,
         systemdatum="",
         ministry=header.get("Departement/myndighet", "").strip() or None,
@@ -182,7 +182,7 @@ def _store(client, dok_id, item, corpus):
 def _already_done(state, item, corpus):
     if state["done"].get(item.dok_id) != item.systemdatum:
         return False
-    title = item.title.strip().removesuffix(";").strip()
+    title = clean_title(item.title).removesuffix(";").strip()
     meta = {"id": item.dok_id, "type": classify(title, item.dok_id)}
     return path_for(meta, corpus).exists()
 

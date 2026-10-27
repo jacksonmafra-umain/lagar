@@ -24,6 +24,31 @@ def collapse_whitespace(text):
     return " ".join(text.split())
 
 
+_RUBRIK_MARKER = re.compile(r"/Rubriken\b([^/]*)/")
+
+
+def clean_title(raw):
+    """Single-line title; for renamed statutes keep the currently valid one.
+
+    Transitional titles interleave `/Rubriken upphör att gälla U:.../` and
+    `/Rubriken träder i kraft I:.../` markers with the titles they apply to.
+    """
+    parts = _RUBRIK_MARKER.split(raw)
+    if len(parts) == 1:
+        return collapse_whitespace(raw)
+    # parts: [before, marker1, text1, marker2, text2, ...]
+    current = future = None
+    for marker, text in zip(parts[1::2], parts[2::2]):
+        text = collapse_whitespace(text)
+        if not text:
+            continue
+        if "upphör" in marker and current is None:
+            current = text
+        elif "träder" in marker and future is None:
+            future = text
+    return current or future or collapse_whitespace(parts[0])
+
+
 @dataclass
 class ListingItem:
     dok_id: str
@@ -49,7 +74,7 @@ def parse_listing(raw):
             ListingItem(
                 dok_id=doc["dok_id"],
                 number=doc["beteckning"],
-                title=collapse_whitespace(doc.get("titel") or ""),
+                title=clean_title(doc.get("titel") or ""),
                 issued=(doc.get("datum") or "").strip() or None,
                 systemdatum=doc.get("systemdatum") or "",
                 ministry=(doc.get("organ") or "").strip() or None,

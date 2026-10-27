@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 
 from . import frontmatter, schema
-from .riksdagen import FUNDAMENTAL_LAWS, amendments, classify, to_markdown
+from .riksdagen import FUNDAMENTAL_LAWS, amendments, classify, clean_title, to_markdown
 from .vocabulary import TYPES
 
 _SFS_NUMBER = re.compile(r"\d{4}:\d+")
@@ -29,8 +29,8 @@ def build_meta(item, parsed, raw_sha256, fetched_at):
     if item.dok_id in FUNDAMENTAL_LAWS:
         title = FUNDAMENTAL_LAWS[item.dok_id]
     else:
-        title = item.title.strip().removesuffix(";").strip()
-    type_ = classify(item.title.strip().removesuffix(";").strip(), item.dok_id)
+        title = clean_title(item.title).removesuffix(";").strip()
+    type_ = classify(clean_title(item.title).removesuffix(";").strip(), item.dok_id)
     changed = _SFS_NUMBER.search(header.get("Ändrad", ""))
     ministry = item.ministry or header.get("Departement/myndighet", "").strip() or None
     return {

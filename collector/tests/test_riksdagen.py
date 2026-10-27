@@ -115,6 +115,27 @@ class TitleTests(unittest.TestCase):
     def test_markdown_heading_is_single_line(self):
         self.assertEqual(riksdagen.to_markdown("Lag om\n  saker", "").splitlines()[0], "# Lag om saker")
 
+    def test_clean_title_plain_unchanged_except_whitespace(self):
+        self.assertEqual(riksdagen.clean_title("Lag (2026:1)  om\nsaker "), "Lag (2026:1) om saker")
+
+    def test_clean_title_keeps_current_title(self):
+        raw = ("/Rubriken upphör att gälla U:2027-01-01/\nLag (2026:956) om signalspaning i försvarsunderrättelseverksamhet i krig eller krigsfara\n"
+               "/Rubriken träder i kraft I:2027-01-01/\nLag (2026:956) om signalspaning i utrikesunderrättelseverksamhet i krig eller krigsfara")
+        self.assertEqual(riksdagen.clean_title(raw),
+                         "Lag (2026:956) om signalspaning i försvarsunderrättelseverksamhet i krig eller krigsfara")
+        self.assertEqual(riksdagen.classify(riksdagen.clean_title(raw), "sfs-2026-956"), "act")
+
+    def test_clean_title_future_only(self):
+        raw = "/Rubriken träder i kraft I:2027-01-01/\nLag (2026:957) om nya saker"
+        self.assertEqual(riksdagen.clean_title(raw), "Lag (2026:957) om nya saker")
+
+    def test_listing_applies_clean_title(self):
+        raw = json.dumps({"dokumentlista": {"@sidor": "1", "dokument": [{
+            "dok_id": "sfs-2026-957", "beteckning": "2026:957",
+            "titel": "/Rubriken träder i kraft I:2027-01-01/\nLag (2026:957) om nya saker",
+            "datum": "2026-01-01", "systemdatum": "x", "organ": ""}]}})
+        self.assertEqual(riksdagen.parse_listing(raw)[0][0].title, "Lag (2026:957) om nya saker")
+
 
 if __name__ == "__main__":
     unittest.main()
