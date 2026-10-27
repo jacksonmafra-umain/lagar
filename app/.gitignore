@@ -1,0 +1,22 @@
+# Build outputs
+build/
+**/build/
+out/
+
+# Gradle / Kotlin
+.gradle/
+.kotlin/
+local.properties
+
+# IDE
+.idea/
+*.iml
+
+# Xcode
+xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+iosApp/Pods/
+
+# OS
+.DS_Store
