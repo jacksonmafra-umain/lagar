@@ -1,0 +1,89 @@
+{
+ "layer": "sfs",
+ "type": null,
+ "page": 1,
+ "page_count": 1,
+ "total": 10,
+ "items": [
+  {
+   "id": "sfs-2026-1200",
+   "title": "Lag (2026:1200) om uppgiftsskyldighet vid samverkan inom det nationella cybersäkerhetscentret",
+   "number": "2026:1200",
+   "type": "act",
+   "issued": "2026-06-11",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-1134",
+   "title": "Förordning (2026:1134) om socialdataregister",
+   "number": "2026:1134",
+   "type": "ordinance",
+   "issued": "2026-06-11",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-1115",
+   "title": "Förordning (2026:1115) om intäktsdelning från vindkraftsanläggningar",
+   "number": "2026:1115",
+   "type": "ordinance",
+   "issued": "2026-06-11",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-1113",
+   "title": "Lag (2026:1113) om intäktsdelning från vindkraftsanläggningar",
+   "number": "2026:1113",
+   "type": "act",
+   "issued": "2026-06-11",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-1094",
+   "title": "Lag (2026:1094) med kompletterande bestämmelser till EU:s förordning om europeiska utlämnande- och bevarandeorder för elektroniska bevis",
+   "number": "2026:1094",
+   "type": "act",
+   "issued": "2026-06-11",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-1095",
+   "title": "Förordning (2026:1095) om utsedda verksamhetsställen och rättsliga ombud för inhämtning av elektroniska bevis",
+   "number": "2026:1095",
+   "type": "ordinance",
+   "issued": "2026-06-04",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-1054",
+   "title": "Lag (2026:1054) om karens för vissa befattningshavare i Finansinspektionen vid övergång till annan verksamhet",
+   "number": "2026:1054",
+   "type": "act",
+   "issued": "2026-06-04",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-1011",
+   "title": "Konsumentkreditlag (2026:1011)",
+   "number": "2026:1011",
+   "type": "act",
+   "issued": "2026-06-04",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-999",
+   "title": "Mottagandelag (2026:999)",
+   "number": "2026:999",
+   "type": "act",
+   "issued": "2026-06-04",
+   "repealed": null
+  },
+  {
+   "id": "sfs-n2026-1",
+   "title": "Förordning om anställning vid den nya myndigheten Myndigheten för utrikes underrättelser",
+   "number": "N2026:1",
+   "type": "ordinance",
+   "issued": "2026-02-12",
+   "repealed": null
+  }
+ ]
+}
