@@ -54,4 +54,15 @@
     <string name="layer_region_desc">Regional rules and decisions</string>
     <string name="layer_municipality_desc">Local statutes and plans</string>
     <string name="layer_service_desc">Public services for citizens</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_system">System</string>
+    <string name="language_swedish">Svenska</string>
+    <string name="language_english">English</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="about_credits">Created by %1$s</string>
+    <string name="about_license">Released under the %1$s licence</string>
+    <string name="saved_empty_text">Saved documents will appear here. This feature is coming soon.</string>
+    <string name="services_empty_text">Public services will appear here. This feature is coming soon.</string>
 </resources>

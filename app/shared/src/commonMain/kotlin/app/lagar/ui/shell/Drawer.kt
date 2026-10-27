@@ -19,12 +19,10 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.produceState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
-import app.lagar.data.LagarRepository
 import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.glass
@@ -36,11 +34,10 @@ import app.lagar.resources.drawer_data_built
 import app.lagar.resources.drawer_settings
 import app.lagar.resources.ic_info
 import app.lagar.resources.ic_settings
+import app.lagar.ui.common.rememberDataBuildDate
 import dev.chrisbanes.haze.HazeState
-import kotlin.coroutines.cancellation.CancellationException
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import org.koin.compose.koinInject
 
 @Composable
 internal fun LagarDrawerContent(
@@ -49,17 +46,7 @@ internal fun LagarDrawerContent(
     modifier: Modifier = Modifier,
 ) {
     val colors = LagarTheme.colors
-    val repository = koinInject<LagarRepository>()
-    // ISO date of the data build; omitted when the index cannot be loaded.
-    val builtAt by produceState<String?>(initialValue = null, repository) {
-        value = try {
-            repository.index().builtAt.take(10)
-        } catch (e: CancellationException) {
-            throw e
-        } catch (_: Exception) {
-            null
-        }
-    }
+    val builtAt by rememberDataBuildDate()
     Column(
         modifier = modifier
             .windowInsetsPadding(WindowInsets.safeDrawing)
