@@ -21,6 +21,7 @@
         <item quantity="one">%1$d dokument</item>
         <item quantity="other">%1$d dokument</item>
     </plurals>
+    <string name="layer_numbered_title">%1$d. %2$s</string>
     <string name="coming_soon">Kommer snart</string>
     <string name="coming_soon_text">Det här lagret har inga dokument ännu. Det håller fortfarande på att samlas in.</string>
     <string name="hierarchy_hint">Högre upp i pyramiden betyder högre i normordningen.</string>

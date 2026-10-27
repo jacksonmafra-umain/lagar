@@ -4,14 +4,14 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,6 +42,7 @@ fun LayerDistributionChart(summaries: List<LayerSummary>, modifier: Modifier = M
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().height(BarHeight).clip(CircleShape).background(LagarTheme.colors.surfaceContainer),
+            horizontalArrangement = Arrangement.spacedBy(SegmentGap),
         ) {
             present.forEach { s ->
                 Box(Modifier.weight(s.count.toFloat()).height(BarHeight).background(layers.accent(s.layer.key)))
@@ -81,3 +82,4 @@ private fun LegendItem(summary: LayerSummary) {
 }
 
 private val BarHeight = 12.dp
+private val SegmentGap = 2.dp

@@ -20,6 +20,16 @@ import app.lagar.resources.layer_sfs_act
 import app.lagar.resources.layer_sfs_act_desc
 import app.lagar.resources.layer_sfs_ordinance
 import app.lagar.resources.layer_sfs_ordinance_desc
+import app.lagar.resources.ic_gavel
+import app.lagar.resources.ic_layer_apartment
+import app.lagar.resources.ic_layer_badge
+import app.lagar.resources.ic_layer_balance
+import app.lagar.resources.ic_layer_crown
+import app.lagar.resources.ic_layer_description
+import app.lagar.resources.ic_layer_hospital
+import app.lagar.resources.ic_layer_shield
+import app.lagar.resources.ic_layer_stars
+import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 
 internal fun DisplayLayer.nameRes(): StringResource = when (this) {
@@ -48,3 +58,15 @@ internal fun DisplayLayer.descriptionRes(): StringResource = when (this) {
 
 /** 1-based position in the order of norms. */
 internal val DisplayLayer.level: Int get() = ordinal + 1
+
+internal fun DisplayLayer.iconRes(): DrawableResource = when (this) {
+    DisplayLayer.Fundamental -> Res.drawable.ic_layer_crown
+    DisplayLayer.SfsAct -> Res.drawable.ic_layer_balance
+    DisplayLayer.SfsOrdinance -> Res.drawable.ic_layer_description
+    DisplayLayer.Agency -> Res.drawable.ic_layer_shield
+    DisplayLayer.CaseLaw -> Res.drawable.ic_gavel
+    DisplayLayer.Eu -> Res.drawable.ic_layer_stars
+    DisplayLayer.Region -> Res.drawable.ic_layer_hospital
+    DisplayLayer.Municipality -> Res.drawable.ic_layer_apartment
+    DisplayLayer.Service -> Res.drawable.ic_layer_badge
+}
