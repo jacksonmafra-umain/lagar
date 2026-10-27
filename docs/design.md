@@ -52,3 +52,26 @@ outer stroke `rgba(0,0,0,0.06)`, dark `0.4`) and the specular top highlight. Blu
 Fallback: with `hazeState == null` (or where Haze cannot blur, which uses the same opaque tint) the
 surface is an opaque `surfaceContainer*` role with the same border: Card `surfaceContainerLowest`
 (dark `surfaceContainerLow`), Bar `surfaceContainer`, Overlay `surfaceContainerHigh`.
+
+## Component inventory
+
+Components defined in `DESIGN.md` and the task that builds each (all planned unless stated). They use
+only tokens from the sections above.
+
+| Component | Token mapping | Task |
+| --- | --- | --- |
+| Normative badge / chip | `LayerColors.tint` fill, `border` 1dp, `onTint` text, `RadiusTokens.default`, `labelSm` / `codeCitation` | 6, 7 |
+| Repealed badge | `Repealed` layer tint, strikethrough, history icon | 7, 8 |
+| Layer list row (Utforska, Layer list) | `GlassTier.Card` or layer `tint`, `RadiusTokens.lg`, `headlineSm` + `bodyUi`, layer `accent` icon | 6, 7 |
+| Layer distribution chart | layer `accent` series, `surfaceContainerLow` card | 6 |
+| Hierarki pyramid | layer `accent` / `tint`, `statuteNum` | 6 |
+| Bottom navigation bar | `GlassTier.Bar`, `labelSm`, `primary` selected indicator | 5 |
+| Top bar | `GlassTier.Bar`, `headlineSm`, icon buttons | 5 |
+| Side drawer | `GlassTier.Overlay`, `RadiusTokens.xl` | 5 |
+| Glass secondary button | `GlassTier.Card` fill, layer `onTint` text, `RadiusTokens.default` | 5, 9 |
+| Primary button | layer `accent` (or `primary`) fill, `onPrimary` text, `RadiusTokens.default` | 5, 9 |
+| § container (legal text card) | `GlassTier.Card`, 3dp layer `accent` indicator on the left, `statuteNum` number, `bodyLegalMd` / `bodyLegalLg` text, 60-75ch width | 8 |
+| Cross-reference | dotted underline in target layer `onTint` | 8 |
+| Empty state ("coming soon") | `surfaceContainerLow`, `headlineSm`, `bodyUi`, `onSurfaceVariant` | 6, 7 |
+| Error state with retry | `errorContainer` / `onErrorContainer`, primary button | 8 |
+| Settings controls (selection, radio) | M3 controls themed by `LagarTheme`, 4dp (`RadiusTokens.sm`) checkbox | 9 |
