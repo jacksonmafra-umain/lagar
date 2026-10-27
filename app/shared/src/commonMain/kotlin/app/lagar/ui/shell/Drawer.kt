@@ -1,6 +1,10 @@
 package app.lagar.ui.shell
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -47,7 +51,7 @@ internal fun LagarDrawerContent(
 ) {
     val colors = LagarTheme.colors
     val builtAt by rememberDataBuildDate()
-    Column(
+    BoxWithConstraints(
         modifier = modifier
             .windowInsetsPadding(WindowInsets.safeDrawing)
             .padding(LagarTheme.spacing.xs)
@@ -56,30 +60,37 @@ internal fun LagarDrawerContent(
             .glass(GlassTier.Overlay, hazeState)
             .padding(LagarTheme.spacing.md),
     ) {
-        Text(
-            text = stringResource(Res.string.app_name),
-            style = LagarTheme.type.headlineMd,
-            color = colors.primary,
-        )
-        Spacer(Modifier.height(LagarTheme.spacing.md))
-        DrawerItem(painterResource(Res.drawable.ic_settings), stringResource(Res.string.drawer_settings), onSettingsClick)
-        Spacer(Modifier.weight(1f))
-        Row(verticalAlignment = Alignment.Top) {
-            Icon(
-                painter = painterResource(Res.drawable.ic_info),
-                contentDescription = null,
-                tint = colors.onSurfaceVariant,
-                modifier = Modifier.size(ShellDimens.SmallIconSize),
-            )
-            Column(Modifier.padding(start = LagarTheme.spacing.sm)) {
-                Text(stringResource(Res.string.drawer_about), style = LagarTheme.type.labelMd, color = colors.onSurface)
-                Text(stringResource(Res.string.drawer_credits), style = LagarTheme.type.labelSm, color = colors.onSurfaceVariant)
-                builtAt?.let {
-                    Text(
-                        text = stringResource(Res.string.drawer_data_built, it),
-                        style = LagarTheme.type.labelSm,
-                        color = colors.onSurfaceVariant,
-                    )
+        // Scrolls when the content outgrows the drawer (200% font, landscape); otherwise About sits at the bottom.
+        Column(
+            modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).heightIn(min = maxHeight),
+            verticalArrangement = Arrangement.SpaceBetween,
+        ) {
+            Column {
+                Text(
+                    text = stringResource(Res.string.app_name),
+                    style = LagarTheme.type.headlineMd,
+                    color = colors.primary,
+                )
+                Spacer(Modifier.height(LagarTheme.spacing.md))
+                DrawerItem(painterResource(Res.drawable.ic_settings), stringResource(Res.string.drawer_settings), onSettingsClick)
+            }
+            Row(verticalAlignment = Alignment.Top) {
+                Icon(
+                    painter = painterResource(Res.drawable.ic_info),
+                    contentDescription = null,
+                    tint = colors.onSurfaceVariant,
+                    modifier = Modifier.size(ShellDimens.SmallIconSize),
+                )
+                Column(Modifier.padding(start = LagarTheme.spacing.sm)) {
+                    Text(stringResource(Res.string.drawer_about), style = LagarTheme.type.labelMd, color = colors.onSurface)
+                    Text(stringResource(Res.string.drawer_credits), style = LagarTheme.type.labelSm, color = colors.onSurfaceVariant)
+                    builtAt?.let {
+                        Text(
+                            text = stringResource(Res.string.drawer_data_built, it),
+                            style = LagarTheme.type.labelSm,
+                            color = colors.onSurfaceVariant,
+                        )
+                    }
                 }
             }
         }
