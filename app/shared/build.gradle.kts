@@ -40,6 +40,7 @@ kotlin {
             implementation(libs.compose.foundation)
             implementation(libs.compose.material3)
             implementation(libs.compose.resources)
+            implementation(libs.compose.ui.backhandler)
             implementation(libs.haze)
             implementation(libs.haze.blur)
             implementation(libs.kotlinx.coroutines.core)
@@ -50,6 +51,8 @@ kotlin {
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.androidx.navigation.compose)
         }
         androidMain.dependencies {
             implementation(libs.ktor.client.okhttp)
