@@ -20,3 +20,12 @@ Requires JDK 21 and the Android SDK (`ANDROID_HOME`). From `app/`:
 xcodebuild -project iosApp/iosApp.xcodeproj -scheme iosApp \
   -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
 ```
+
+The Xcode "Compile Kotlin Framework" phase runs Gradle with `$JAVA_HOME` if set, otherwise
+JDK 21 from `/usr/libexec/java_home -v 21` (the build fails if no JDK 21 is installed).
+Android builds also need `ANDROID_HOME` (or a `local.properties` with `sdk.dir`).
+
+## Web base path
+
+The distribution uses relative asset paths, so it can be served under any prefix, e.g. `/lagar/`
+on GitHub Pages. Verified by serving the dist under `/lagar/` (index, JS, wasm and compose resources all load).
