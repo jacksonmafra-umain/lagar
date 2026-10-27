@@ -44,6 +44,7 @@ kotlin {
             implementation(libs.haze)
             implementation(libs.haze.blur)
             implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.kotlinx.datetime)
             implementation(libs.multiplatform.settings)
             implementation(libs.multiplatform.settings.no.arg)
             implementation(libs.kotlinx.serialization.json)
