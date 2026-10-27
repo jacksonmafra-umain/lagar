@@ -13,7 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.UriHandler
 import app.lagar.data.DocumentMeta
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.DisplayLayer
@@ -78,7 +78,7 @@ internal fun MetadataHeader(meta: DocumentMeta, modifier: Modifier = Modifier) {
             meta.amendedThrough?.let { Fact(stringResource(Res.string.meta_amended_through)) { FactText(it) } }
         }
         val uriHandler = LocalUriHandler.current
-        TextButton(onClick = { uriHandler.openUri(meta.source) }) {
+        TextButton(onClick = { openSource(uriHandler, meta.source) }) {
             Text(stringResource(Res.string.meta_source), style = LagarTheme.type.labelMd)
         }
         HorizontalDivider(modifier = Modifier.padding(top = spacing.xs), color = colors.outlineVariant)
@@ -87,7 +87,7 @@ internal fun MetadataHeader(meta: DocumentMeta, modifier: Modifier = Modifier) {
 
 @Composable
 private fun Fact(label: String, value: @Composable () -> Unit) {
-    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+    Column(verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.xs)) {
         Text(label, style = LagarTheme.type.labelSm, color = LagarTheme.colors.onSurfaceVariant)
         value()
     }
@@ -95,3 +95,11 @@ private fun Fact(label: String, value: @Composable () -> Unit) {
 
 @Composable
 private fun FactText(text: String) = Text(text, style = LagarTheme.type.bodyUi, color = LagarTheme.colors.onSurface)
+
+/** Opens the official source; a malformed URL or a missing handler is ignored rather than crashing the reader. */
+private fun openSource(uriHandler: UriHandler, url: String) {
+    try {
+        uriHandler.openUri(url)
+    } catch (_: Exception) {
+    }
+}
