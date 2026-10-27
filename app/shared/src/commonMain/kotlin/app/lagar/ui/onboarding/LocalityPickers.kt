@@ -5,7 +5,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
@@ -48,6 +50,7 @@ import app.lagar.resources.picker_region_label
 import app.lagar.resources.picker_region_placeholder
 import app.lagar.resources.picker_search
 import app.lagar.ui.shell.ShellDimens
+import kotlinx.coroutines.CancellationException
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -67,11 +70,14 @@ fun LocalityPickers(
     modifier: Modifier = Modifier,
 ) {
     val geo = koinInject<GeoRepository>()
+    // A failed load leaves the list empty (the sheet then shows "no matches") instead of crashing.
     val regions by produceState(emptyList<Option>()) {
-        value = geo.regions().map { Option(it.code, it.name) }
+        value = loadOptions { geo.regions().map { Option(it.code, it.name) } }
     }
     val kommuner by produceState(emptyList<Option>(), locality.regionCode) {
-        value = locality.regionCode?.let { code -> geo.kommuner(code).map { Option(it.code, it.name) } }.orEmpty()
+        value = emptyList() // drop the previous region's list at once
+        val code = locality.regionCode ?: return@produceState
+        value = loadOptions { geo.kommuner(code).map { Option(it.code, it.name) } }
     }
     var open by remember { mutableStateOf<Field?>(null) }
 
@@ -111,6 +117,14 @@ fun LocalityPickers(
         )
         null -> Unit
     }
+}
+
+private suspend fun loadOptions(load: suspend () -> List<Option>): List<Option> = try {
+    load()
+} catch (e: CancellationException) {
+    throw e
+} catch (_: Exception) {
+    emptyList()
 }
 
 private enum class Field { Region, Kommun }
@@ -172,7 +186,7 @@ private fun OptionSheet(
         containerColor = colors.surfaceContainerLowest,
     ) {
         Column(
-            modifier = Modifier.navigationBarsPadding().padding(horizontal = LagarTheme.spacing.marginMobile),
+            modifier = Modifier.fillMaxHeight().navigationBarsPadding().imePadding().padding(horizontal = LagarTheme.spacing.marginMobile),
             verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -198,7 +212,7 @@ private fun OptionSheet(
                     modifier = Modifier.padding(vertical = LagarTheme.spacing.md),
                 )
             }
-            LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
+            LazyColumn(modifier = Modifier.weight(1f)) {
                 items(shown, key = { it.code }) { option ->
                     Row(
                         modifier = Modifier
