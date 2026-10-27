@@ -2,6 +2,10 @@ package app.lagar.ui.navigation
 
 import kotlinx.serialization.Serializable
 
+@Serializable data object Splash
+@Serializable data object OnboardingWelcome
+@Serializable data object OnboardingScope
+@Serializable data object OnboardingLocality
 @Serializable data object Utforska
 @Serializable data object Hierarki
 @Serializable data object Sparade
