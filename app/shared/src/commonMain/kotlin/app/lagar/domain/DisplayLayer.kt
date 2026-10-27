@@ -13,7 +13,13 @@ enum class DisplayLayer(val apiLayer: String, val apiType: String?, val key: Lay
     Eu("eu", null, LayerKey.Eu),
     Region("region", null, LayerKey.Region),
     Municipality("municipality", null, LayerKey.Municipality),
-    Service("service", null, LayerKey.Service),
+    Service("service", null, LayerKey.Service);
+
+    companion object {
+        /** The level a `LayerList(layer, type)` route shows; untyped levels ignore [type]. */
+        fun fromRoute(layer: String, type: String?): DisplayLayer? =
+            entries.firstOrNull { it.apiLayer == layer && (it.apiType == null || it.apiType == type) }
+    }
 }
 
 /** Documents at this level: the series count for typed levels, the layer count otherwise; 0 when absent. */

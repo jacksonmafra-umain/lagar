@@ -13,6 +13,8 @@
     <string name="drawer_data_built">Data byggd %1$s</string>
     <string name="drawer_credits">Svensk lagstiftning, rättspraxis och offentliga tjänster på ett ställe.</string>
     <string name="settings_title">Inställningar</string>
+    <string name="navigate_back">Tillbaka</string>
+    <string name="repealed">Upphävd</string>
     <string name="layer_list_title">Lager</string>
     <string name="reader_title">Dokument</string>
     <string name="explore_distribution_title">Normhierarkins fördelning</string>
