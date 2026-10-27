@@ -15,7 +15,6 @@ _HEADER_LINE = re.compile(r"^([^:]+):(.*)$")
 _CHAPTER = re.compile(r"^\d+ ?[a-z]? kap\. ")
 _PARAGRAPH = re.compile(r"^(\d+ ?[a-z]? ?§)")
 _AMENDMENT = re.compile(r"^(?:Lag|Förordning) \((\d{4}:\d+)\)")
-_AMENDMENT_ANY = re.compile(r"\((\d{4}:\d+)\)")
 _SOURCE_KEY = "Källa"
 PRINT_ONLY_NOTE = "_Text available only in print._"
 
