@@ -16,7 +16,6 @@
     <string name="navigate_back">Tillbaka</string>
     <string name="repealed">Upphävd</string>
     <string name="layer_list_title">Lager</string>
-    <string name="reader_title">Dokument</string>
     <string name="explore_distribution_title">Normhierarkins fördelning</string>
     <string name="explore_layers_title">Normativa lager</string>
     <plurals name="document_count">
@@ -27,6 +26,13 @@
     <string name="coming_soon">Kommer snart</string>
     <string name="coming_soon_text">Det här lagret har inga dokument ännu. Det håller fortfarande på att samlas in.</string>
     <string name="hierarchy_hint">Högre upp i pyramiden betyder högre i normordningen.</string>
+    <string name="meta_issued">Utfärdad</string>
+    <string name="meta_status">Status</string>
+    <string name="meta_in_force">I kraft</string>
+    <string name="meta_in_force_since">I kraft sedan %1$s</string>
+    <string name="meta_amended_through">Ändrad t.o.m.</string>
+    <string name="meta_ministry">Departement</string>
+    <string name="meta_source">Officiell källa</string>
     <string name="error_title">Något gick fel</string>
     <string name="error_text">Kontrollera anslutningen och försök igen.</string>
     <string name="error_retry">Försök igen</string>

@@ -16,7 +16,6 @@
     <string name="navigate_back">Back</string>
     <string name="repealed">Repealed</string>
     <string name="layer_list_title">Layer</string>
-    <string name="reader_title">Document</string>
     <string name="explore_distribution_title">Distribution across the hierarchy</string>
     <string name="explore_layers_title">Normative layers</string>
     <plurals name="document_count">
@@ -27,6 +26,13 @@
     <string name="coming_soon">Coming soon</string>
     <string name="coming_soon_text">This layer has no documents yet. It is still being collected.</string>
     <string name="hierarchy_hint">Higher in the pyramid means higher in the order of norms.</string>
+    <string name="meta_issued">Issued</string>
+    <string name="meta_status">Status</string>
+    <string name="meta_in_force">In force</string>
+    <string name="meta_in_force_since">In force since %1$s</string>
+    <string name="meta_amended_through">Amended through</string>
+    <string name="meta_ministry">Ministry</string>
+    <string name="meta_source">Official source</string>
     <string name="error_title">Something went wrong</string>
     <string name="error_text">Check your connection and try again.</string>
     <string name="error_retry">Try again</string>
