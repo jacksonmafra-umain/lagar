@@ -38,7 +38,10 @@ import app.lagar.resources.ic_expand_more
 import app.lagar.resources.ic_layer_crown
 import app.lagar.resources.home_key_laws_subtitle
 import app.lagar.resources.home_key_laws_title
-import app.lagar.ui.common.nameRes
+import app.lagar.resources.home_group_acts
+import app.lagar.resources.home_group_ordinances
+import app.lagar.resources.layer_fundamental
+import org.jetbrains.compose.resources.StringResource
 import app.lagar.ui.list.StatuteRow
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
@@ -70,17 +73,17 @@ internal fun ImportantLaws(data: HomeData, onOpenDocument: (String) -> Unit, mod
     val flagship = data.fundamental.firstOrNull { it.id == FLAGSHIP_ID }
 
     Column(modifier, verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
-        Column(Modifier.fillMaxWidth().padding(bottom = spacing.sm), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(spacing.xs)) {
+        Column(Modifier.fillMaxWidth().padding(bottom = spacing.xs), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(spacing.xs)) {
             Box(
-                modifier = Modifier.size(56.dp).clip(CircleShape).background(layers.tint(key)),
+                modifier = Modifier.size(44.dp).clip(CircleShape).background(layers.tint(key)),
                 contentAlignment = Alignment.Center,
             ) {
-                Icon(painterResource(Res.drawable.ic_layer_crown), null, tint = layers.accent(key), modifier = Modifier.size(28.dp))
+                Icon(painterResource(Res.drawable.ic_layer_crown), null, tint = layers.accent(key), modifier = Modifier.size(24.dp))
             }
-            Text(stringResource(Res.string.home_key_laws_title), style = LagarTheme.type.headlineMd, color = LagarTheme.colors.onSurface, textAlign = TextAlign.Center)
+            Text(stringResource(Res.string.home_key_laws_title), style = LagarTheme.type.headlineSm, color = LagarTheme.colors.onSurface, textAlign = TextAlign.Center)
             Text(
-                text = stringResource(Res.string.home_key_laws_subtitle),
-                style = LagarTheme.type.labelMd,
+                text = stringResource(Res.string.home_key_laws_subtitle).uppercase(),
+                style = LagarTheme.type.labelSm,
                 color = layers.onTint(key),
                 textAlign = TextAlign.Center,
             )
@@ -113,13 +116,13 @@ private fun FlagshipCard(item: ListingItem, onClick: () -> Unit) {
         border = BorderStroke(1.5.dp, layers.accent(key)),
     ) {
         Row(
-            modifier = Modifier.heightIn(min = 72.dp).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm),
+            modifier = Modifier.heightIn(min = 56.dp).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.md),
         ) {
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                Text(item.title, style = LagarTheme.type.headlineSm, fontWeight = FontWeight.Bold, color = layers.onTint(key))
-                Text(item.number, style = LagarTheme.type.codeCitation, color = LagarTheme.colors.onSurfaceVariant)
+                Text(item.title, style = LagarTheme.type.bodyUi, fontWeight = FontWeight.Bold, color = layers.onTint(key))
+                Text(item.number, style = LagarTheme.type.labelSm, color = LagarTheme.colors.onSurfaceVariant)
             }
             Icon(painterResource(Res.drawable.ic_chevron_right), null, tint = layers.onTint(key), modifier = Modifier.size(24.dp))
         }
@@ -137,12 +140,12 @@ private fun AccordionHeader(layer: DisplayLayer, expanded: Boolean, onClick: () 
         border = BorderStroke(1.dp, if (expanded) layers.accent(layer.key) else LagarTheme.colors.outlineVariant),
     ) {
         Row(
-            modifier = Modifier.heightIn(min = 64.dp).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm),
+            modifier = Modifier.heightIn(min = 54.dp).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.xs),
         ) {
             Text(
-                text = stringResource(layer.nameRes()),
+                text = stringResource(layer.groupTitleRes()),
                 style = LagarTheme.type.labelMd,
                 fontWeight = FontWeight.Bold,
                 color = LagarTheme.colors.onSurface,
@@ -156,4 +159,11 @@ private fun AccordionHeader(layer: DisplayLayer, expanded: Boolean, onClick: () 
             )
         }
     }
+}
+
+/** Short accordion titles: "Acts" and "Ordinances" rather than the SFS-prefixed layer names. */
+private fun DisplayLayer.groupTitleRes(): StringResource = when (this) {
+    DisplayLayer.Fundamental -> Res.string.layer_fundamental
+    DisplayLayer.SfsAct -> Res.string.home_group_acts
+    else -> Res.string.home_group_ordinances
 }

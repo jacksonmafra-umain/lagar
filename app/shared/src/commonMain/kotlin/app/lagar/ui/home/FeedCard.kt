@@ -83,7 +83,7 @@ fun FeedCard(
         color = colors.surfaceContainerLowest,
         border = BorderStroke(1.dp, colors.outlineVariant),
     ) {
-        Column(Modifier.padding(start = spacing.md, top = spacing.md, end = spacing.xs, bottom = spacing.sm)) {
+        Column(Modifier.padding(start = spacing.md, top = spacing.sm, end = spacing.xs, bottom = spacing.sm)) {
             Row(verticalAlignment = Alignment.Top) {
                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
                     FlowRow(

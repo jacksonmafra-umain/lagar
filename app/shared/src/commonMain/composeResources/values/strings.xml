@@ -134,4 +134,6 @@
         <item quantity="one">%1$d year ago</item>
         <item quantity="other">%1$d years ago</item>
     </plurals>
+    <string name="home_group_acts">Acts</string>
+    <string name="home_group_ordinances">Ordinances</string>
 </resources>

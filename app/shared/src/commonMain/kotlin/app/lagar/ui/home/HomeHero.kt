@@ -84,9 +84,9 @@ internal fun HomeHero(
         modifier = modifier
             .fillMaxWidth()
             .background(Brush.verticalGradient(listOf(layers.tint(scope.key), Color.Transparent)))
-            .padding(start = spacing.marginMobile, end = spacing.marginMobile, top = topInset + spacing.lg),
+            .padding(start = spacing.marginMobile, end = spacing.marginMobile, top = topInset + spacing.md),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(spacing.md),
+        verticalArrangement = Arrangement.spacedBy(spacing.sm),
     ) {
         if (scope == Scope.Nationell) {
             val emphasis = stringResource(Res.string.home_hero_emphasis)
@@ -94,32 +94,32 @@ internal fun HomeHero(
             val emphasisColor = layers.onTint(scope.key)
             Text(
                 text = remember(title, emphasis, emphasisColor) { emphasised(title, emphasis, emphasisColor) },
-                style = LagarTheme.type.headlineMd,
+                style = LagarTheme.type.headlineSm,
                 color = LagarTheme.colors.onSurface,
                 textAlign = TextAlign.Center,
             )
             Text(
                 text = stringResource(Res.string.home_hero_subtitle),
-                style = LagarTheme.type.bodyUi,
+                style = LagarTheme.type.labelSm,
                 color = LagarTheme.colors.onSurfaceVariant,
                 textAlign = TextAlign.Center,
             )
         } else {
             Box(
-                modifier = Modifier.size(56.dp).clip(CircleShape).background(layers.accent(scope.key)),
+                modifier = Modifier.size(44.dp).clip(CircleShape).background(layers.accent(scope.key)),
                 contentAlignment = Alignment.Center,
             ) {
-                Icon(painterResource(scope.iconRes()), null, tint = layers.accent(scope.key).iconColor(), modifier = Modifier.size(28.dp))
+                Icon(painterResource(scope.iconRes()), null, tint = layers.accent(scope.key).iconColor(), modifier = Modifier.size(24.dp))
             }
             Text(
                 text = stringResource(scope.nameRes()),
-                style = LagarTheme.type.headlineMd,
+                style = LagarTheme.type.headlineSm,
                 color = layers.onTint(scope.key),
                 textAlign = TextAlign.Center,
             )
             Text(
                 text = stringResource(scope.descriptionRes()),
-                style = LagarTheme.type.bodyUi,
+                style = LagarTheme.type.labelSm,
                 color = LagarTheme.colors.onSurfaceVariant,
                 textAlign = TextAlign.Center,
             )
@@ -145,10 +145,10 @@ internal fun HomeHero(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(spacing.xs),
             ) {
-                Icon(painterResource(Res.drawable.ic_search), null, tint = layers.onTint(scope.key), modifier = Modifier.size(18.dp))
+                Icon(painterResource(Res.drawable.ic_search), null, tint = layers.onTint(scope.key), modifier = Modifier.size(16.dp))
                 Text(
                     text = stringResource(Res.string.home_advanced_search),
-                    style = LagarTheme.type.labelMd,
+                    style = LagarTheme.type.labelSm,
                     fontWeight = FontWeight.Bold,
                     color = layers.onTint(scope.key),
                 )
@@ -181,7 +181,7 @@ private fun SearchField(scope: Scope, onSearch: (String) -> Unit) {
         border = BorderStroke(1.dp, layers.accent(scope.key)),
     ) {
         Row(
-            modifier = Modifier.heightIn(min = 56.dp).padding(start = LagarTheme.spacing.md, end = LagarTheme.spacing.xs),
+            modifier = Modifier.heightIn(min = 48.dp).padding(start = LagarTheme.spacing.md),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
         ) {
@@ -202,7 +202,7 @@ private fun SearchField(scope: Scope, onSearch: (String) -> Unit) {
                                 stringResource(Res.string.home_search_hint),
                                 style = LagarTheme.type.bodyUi,
                                 color = LagarTheme.colors.onSurfaceVariant,
-                                maxLines = 1,
+                                maxLines = 2,
                                 overflow = TextOverflow.Ellipsis,
                             )
                         }
@@ -211,16 +211,20 @@ private fun SearchField(scope: Scope, onSearch: (String) -> Unit) {
                 },
             )
             val description = stringResource(Res.string.home_search_submit)
+            // A 36dp round button inside a 48dp hit area.
             Box(
                 modifier = Modifier
                     .size(48.dp)
-                    .clip(CircleShape)
-                    .background(layers.accent(scope.key))
                     .clickable(role = Role.Button, onClick = submit)
                     .semantics { contentDescription = description },
                 contentAlignment = Alignment.Center,
             ) {
-                Icon(painterResource(Res.drawable.ic_arrow_forward), null, tint = layers.accent(scope.key).iconColor(), modifier = Modifier.size(24.dp))
+                Box(
+                    modifier = Modifier.size(36.dp).clip(CircleShape).background(layers.accent(scope.key)),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(painterResource(Res.drawable.ic_arrow_forward), null, tint = layers.accent(scope.key).iconColor(), modifier = Modifier.size(20.dp))
+                }
             }
         }
     }
@@ -237,19 +241,27 @@ internal fun LayerChips(layers: List<DisplayLayer>, onOpenLayer: (DisplayLayer) 
         layers.forEachIndexed { index, layer ->
             val accent = palette.accent(layer.key)
             val filled = index == 0
-            Surface(
-                onClick = { onOpenLayer(layer) },
-                shape = CircleShape,
-                color = if (filled) accent else LagarTheme.colors.surfaceContainerLowest,
-                border = BorderStroke(1.dp, if (filled) accent else palette.border(layer.key)),
+            // A 30dp pill inside a 48dp hit area.
+            Box(
+                modifier = Modifier
+                    .heightIn(min = 48.dp)
+                    .clip(CircleShape)
+                    .clickable(role = Role.Button, onClick = { onOpenLayer(layer) }),
+                contentAlignment = Alignment.Center,
             ) {
-                Box(Modifier.heightIn(min = 40.dp).padding(horizontal = LagarTheme.spacing.md), contentAlignment = Alignment.Center) {
-                    Text(
-                        text = stringResource(layer.nameRes()),
-                        style = LagarTheme.type.labelMd,
-                        fontWeight = FontWeight.Bold,
-                        color = if (filled) accent.iconColor() else palette.onTint(layer.key),
-                    )
+                Surface(
+                    shape = CircleShape,
+                    color = if (filled) accent else LagarTheme.colors.surfaceContainerLowest,
+                    border = BorderStroke(1.dp, if (filled) accent else palette.border(layer.key)),
+                ) {
+                    Box(Modifier.heightIn(min = 30.dp).padding(horizontal = LagarTheme.spacing.md), contentAlignment = Alignment.Center) {
+                        Text(
+                            text = stringResource(layer.nameRes()).uppercase(),
+                            style = LagarTheme.type.labelSm,
+                            fontWeight = FontWeight.Bold,
+                            color = if (filled) accent.iconColor() else palette.onTint(layer.key),
+                        )
+                    }
                 }
             }
         }
