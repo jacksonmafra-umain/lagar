@@ -19,6 +19,11 @@ _SOURCE_KEY = "Källa"
 PRINT_ONLY_NOTE = "_Text available only in print._"
 
 
+def collapse_whitespace(text):
+    """Collapse every whitespace run (newlines included) to one space and strip."""
+    return " ".join(text.split())
+
+
 @dataclass
 class ListingItem:
     dok_id: str
@@ -44,7 +49,7 @@ def parse_listing(raw):
             ListingItem(
                 dok_id=doc["dok_id"],
                 number=doc["beteckning"],
-                title=(doc.get("titel") or "").strip(),
+                title=collapse_whitespace(doc.get("titel") or ""),
                 issued=(doc.get("datum") or "").strip() or None,
                 systemdatum=doc.get("systemdatum") or "",
                 ministry=(doc.get("organ") or "").strip() or None,
@@ -110,7 +115,7 @@ def amendments(body):
 
 
 def to_markdown(title, body):
-    blocks = ["# " + title.strip()]
+    blocks = ["# " + collapse_whitespace(title)]
     paragraphs = []
     current = []
     for line in body.split("\n"):

@@ -16,6 +16,7 @@ from pathlib import Path
 from .http import Blocked, PoliteClient
 from .riksdagen import (
     FUNDAMENTAL_LAWS,
+    collapse_whitespace,
     ListingItem,
     classify,
     parse_listing,
@@ -158,7 +159,7 @@ def _fundamental_item(dok_id, parsed, text):
     return ListingItem(
         dok_id=dok_id,
         number=header.get("SFS nr", "").strip(),
-        title=first_line,
+        title=collapse_whitespace(first_line),
         issued=header.get("Utfärdad", "").strip() or None,
         systemdatum="",
         ministry=header.get("Departement/myndighet", "").strip() or None,

@@ -1,3 +1,4 @@
+import json
 import unittest
 from pathlib import Path
 
@@ -96,6 +97,23 @@ class RiksdagenTests(unittest.TestCase):
             out = "\n".join(lines).replace("**", "")
             out = "\n".join(l[3:] if l.startswith("## ") else l for l in out.split("\n"))
             self.assertEqual(out.split(), body.split(), dok_id)
+
+
+class TitleTests(unittest.TestCase):
+    def test_collapse_whitespace(self):
+        self.assertEqual(riksdagen.collapse_whitespace("  Lag (2026:100) om \n  löneavgift   för\t23 år \n"),
+                         "Lag (2026:100) om löneavgift för 23 år")
+
+    def test_listing_title_is_single_line(self):
+        raw = json.dumps({"dokumentlista": {"@sidor": "1", "dokument": [{
+            "dok_id": "sfs-2026-100", "beteckning": "2026:100",
+            "titel": "Lag (2026:100) om särskild beräkning av arbetsgivaravgifter och allmän \nlöneavgift för personer som vid årets ingång fyllt 18 men inte \n23 år",
+            "datum": "2026-01-01", "systemdatum": "2026-01-02 00:00:00", "organ": "Finansdepartementet"}]}})
+        items, _ = riksdagen.parse_listing(raw)
+        self.assertEqual(items[0].title, "Lag (2026:100) om särskild beräkning av arbetsgivaravgifter och allmän löneavgift för personer som vid årets ingång fyllt 18 men inte 23 år")
+
+    def test_markdown_heading_is_single_line(self):
+        self.assertEqual(riksdagen.to_markdown("Lag om\n  saker", "").splitlines()[0], "# Lag om saker")
 
 
 if __name__ == "__main__":
