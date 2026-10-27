@@ -14,6 +14,7 @@ kotlin {
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
         androidResources { enable = true }
+        withHostTest { }
     }
 
     listOf(iosArm64(), iosSimulatorArm64()).forEach { target ->
@@ -40,6 +41,13 @@ kotlin {
             implementation(libs.compose.resources)
             implementation(libs.haze)
             implementation(libs.haze.blur)
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.multiplatform.settings)
+            implementation(libs.multiplatform.settings.no.arg)
+        }
+        commonTest.dependencies {
+            implementation(libs.kotlin.test)
+            implementation(libs.multiplatform.settings.test)
         }
     }
 }
