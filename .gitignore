@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+build/
+.gradle/
+local.properties
+*.iml
+.idea/
+collector/data/*-state.json
+xcuserdata/
