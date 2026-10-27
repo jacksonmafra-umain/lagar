@@ -71,7 +71,8 @@ class LayerListViewModel(
         job = viewModelScope.launch {
             try {
                 val page = repository.listing(layer, type, loadedPages + 1)
-                _items.value += page.items
+                // Ids are LazyColumn keys; a repeated id (a page boundary overlap) would crash the list.
+                _items.value = (_items.value + page.items).distinctBy { it.id }
                 loadedPages = page.page
                 pageCount = page.pageCount
             } catch (e: CancellationException) {
