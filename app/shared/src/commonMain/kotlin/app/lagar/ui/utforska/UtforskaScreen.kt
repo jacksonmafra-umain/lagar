@@ -2,9 +2,9 @@ package app.lagar.ui.utforska
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -27,7 +27,6 @@ import app.lagar.resources.document_count
 import app.lagar.resources.explore_distribution_title
 import app.lagar.resources.explore_layers_title
 import app.lagar.ui.common.ComingSoonSheet
-import app.lagar.ui.common.ErrorState
 import app.lagar.ui.common.LoadStateHost
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource

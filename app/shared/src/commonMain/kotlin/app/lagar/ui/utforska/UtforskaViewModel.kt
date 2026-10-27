@@ -7,6 +7,7 @@ import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
 import app.lagar.domain.count
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -19,13 +20,16 @@ class UtforskaViewModel(private val repository: LagarRepository) : ViewModel() {
     private val _state = MutableStateFlow<LoadState<List<LayerSummary>>>(LoadState.Loading)
     val state: StateFlow<LoadState<List<LayerSummary>>> = _state.asStateFlow()
 
+    private var job: Job? = null
+
     init {
         load()
     }
 
     private fun load() {
+        job?.cancel()
         _state.value = LoadState.Loading
-        viewModelScope.launch {
+        job = viewModelScope.launch {
             _state.value = try {
                 val index = repository.index()
                 LoadState.Loaded(DisplayLayer.entries.map { LayerSummary(it, index.count(it)) })
