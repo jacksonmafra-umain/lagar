@@ -30,10 +30,10 @@ import app.lagar.resources.Res
 import app.lagar.resources.layer_list_title
 import app.lagar.resources.reader_title
 import app.lagar.resources.settings_title
-import app.lagar.resources.tab_explore
-import app.lagar.resources.tab_hierarchy
 import app.lagar.resources.tab_saved
 import app.lagar.resources.tab_services
+import app.lagar.domain.DisplayLayer
+import app.lagar.ui.hierarki.HierarkiRoute
 import app.lagar.ui.navigation.Hierarki
 import app.lagar.ui.navigation.LayerList
 import app.lagar.ui.navigation.Reader
@@ -41,6 +41,7 @@ import app.lagar.ui.navigation.Settings
 import app.lagar.ui.navigation.Sparade
 import app.lagar.ui.navigation.Tjanster
 import app.lagar.ui.navigation.Utforska
+import app.lagar.ui.utforska.UtforskaRoute
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.launch
@@ -68,6 +69,8 @@ fun AppShell(
     var bottomBarPx by remember { mutableStateOf(0) }
     val padding = with(density) { PaddingValues(top = topBarPx.toDp(), bottom = bottomBarPx.toDp()) }
 
+    fun openLayer(layer: DisplayLayer) = navController.navigate(LayerList(layer.apiLayer, layer.apiType))
+
     BackHandler(enabled = drawerState.isOpen) { scope.launch { drawerState.close() } }
 
     ModalNavigationDrawer(
@@ -90,8 +93,8 @@ fun AppShell(
                     startDestination = Utforska,
                     modifier = Modifier.fillMaxSize().hazeSource(hazeState),
                 ) {
-                    composable<Utforska> { Placeholder(stringResource(Res.string.tab_explore)) }
-                    composable<Hierarki> { Placeholder(stringResource(Res.string.tab_hierarchy)) }
+                    composable<Utforska> { UtforskaRoute(onOpenLayer = ::openLayer) }
+                    composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
                     composable<Sparade> { Placeholder(stringResource(Res.string.tab_saved)) }
                     composable<Tjanster> { Placeholder(stringResource(Res.string.tab_services)) }
                     composable<LayerList> { Placeholder(stringResource(Res.string.layer_list_title)) }

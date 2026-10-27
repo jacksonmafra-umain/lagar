@@ -15,4 +15,34 @@
     <string name="settings_title">Inställningar</string>
     <string name="layer_list_title">Lager</string>
     <string name="reader_title">Dokument</string>
+    <string name="explore_distribution_title">Normhierarkins fördelning</string>
+    <string name="explore_layers_title">Normativa lager</string>
+    <plurals name="document_count">
+        <item quantity="one">%1$d dokument</item>
+        <item quantity="other">%1$d dokument</item>
+    </plurals>
+    <string name="coming_soon">Kommer snart</string>
+    <string name="coming_soon_text">Det här lagret har inga dokument ännu. Det håller fortfarande på att samlas in.</string>
+    <string name="hierarchy_hint">Högre upp i pyramiden betyder högre i normordningen.</string>
+    <string name="error_title">Något gick fel</string>
+    <string name="error_text">Kontrollera anslutningen och försök igen.</string>
+    <string name="error_retry">Försök igen</string>
+    <string name="layer_fundamental">Grundlagar</string>
+    <string name="layer_sfs_act">SFS Lagar</string>
+    <string name="layer_sfs_ordinance">SFS Förordningar</string>
+    <string name="layer_agency">Myndighetsföreskrifter</string>
+    <string name="layer_case_law">Rättspraxis</string>
+    <string name="layer_eu">EU-rätt</string>
+    <string name="layer_region">Regioner</string>
+    <string name="layer_municipality">Kommuner</string>
+    <string name="layer_service">Tjänster</string>
+    <string name="layer_fundamental_desc">Regeringsformen och de andra grundlagarna</string>
+    <string name="layer_sfs_act_desc">Lagar beslutade av riksdagen</string>
+    <string name="layer_sfs_ordinance_desc">Förordningar utfärdade av regeringen</string>
+    <string name="layer_agency_desc">Föreskrifter utfärdade av myndigheter</string>
+    <string name="layer_case_law_desc">Domar och prejudikat</string>
+    <string name="layer_eu_desc">Förordningar och direktiv från Europeiska unionen</string>
+    <string name="layer_region_desc">Regionala regler och beslut</string>
+    <string name="layer_municipality_desc">Kommunala föreskrifter och planer</string>
+    <string name="layer_service_desc">Offentliga tjänster för medborgare</string>
 </resources>
