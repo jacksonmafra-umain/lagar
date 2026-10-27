@@ -6,6 +6,9 @@ from lagar import riksdagen
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 
 
+FIXTURE_IDS = ["sfs-1999-175", "sfs-1974-152", "sfs-1810-0926", "sfs-1757-0119"]
+
+
 def text(dok_id):
     return (FIXTURES / (dok_id + ".text")).read_text(encoding="utf-8")
 
@@ -63,6 +66,36 @@ class RiksdagenTests(unittest.TestCase):
         self.assertTrue(md.startswith("# Regeringsformen\n\n## 1 kap. Statsskickets grunder\n\n**1 §** All offentlig makt"))
         self.assertIn("\n\n## 2 kap. Grundläggande fri- och rättigheter\n\n", md)
         self.assertTrue(md.endswith("\n") and not md.endswith("\n\n"))
+
+    def test_amendments_mid_line_and_split(self):
+        body = "1 § Det ska främjas. Lag (2010:1408).\n\n2 § Text. Förordning\n(2001:147).\n\nLag (1976:871) om något"
+        self.assertEqual(riksdagen.amendments(body), ["2001:147", "2010:1408"])
+
+    def test_amendments_real_fixture(self):
+        found = riksdagen.amendments(riksdagen.parse_text(text("sfs-1999-175")).body)
+        self.assertIn("2010:283", found)
+        self.assertIn("2001:147", found)
+        rf = riksdagen.amendments(riksdagen.parse_text(text("sfs-1974-152")).body)
+        self.assertGreater(len(rf), 10)
+
+    def test_header_keys_have_no_parenthesis(self):
+        for dok_id in FIXTURE_IDS:
+            for key in riksdagen.parse_text(text(dok_id)).header:
+                self.assertNotIn("(", key)
+
+    def test_missing_source_line_keeps_body(self):
+        parsed = riksdagen.parse_text("Lag (2000:1) om x\n\nSFS nr:  2000:1\nÄndrad:  \n\n1 § Text här.\n")
+        self.assertEqual(parsed.header, {"SFS nr": "2000:1", "Ändrad": ""})
+        self.assertEqual(parsed.body, "1 § Text här.")
+
+    def test_text_preserved_by_markdown(self):
+        for dok_id in FIXTURE_IDS:
+            body = riksdagen.parse_text(text(dok_id)).body
+            md = riksdagen.to_markdown("TITLEX", body)
+            lines = md.split("\n")[1:]
+            out = "\n".join(lines).replace("**", "")
+            out = "\n".join(l[3:] if l.startswith("## ") else l for l in out.split("\n"))
+            self.assertEqual(out.split(), body.split(), dok_id)
 
 
 if __name__ == "__main__":

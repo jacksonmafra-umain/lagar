@@ -14,7 +14,7 @@ FUNDAMENTAL_LAWS = {
 _HEADER_LINE = re.compile(r"^([^:]+):(.*)$")
 _CHAPTER = re.compile(r"^\d+ ?[a-z]? kap\. ")
 _PARAGRAPH = re.compile(r"^(\d+ ?[a-z]? ?§)")
-_AMENDMENT = re.compile(r"^(?:Lag|Förordning) \((\d{4}:\d+)\)")
+_AMENDMENT = re.compile(r"(?:Lag|Förordning) \((\d{4}:\d+)\)\.(?=\s|$)")
 _SOURCE_KEY = "Källa"
 PRINT_ONLY_NOTE = "_Text available only in print._"
 
@@ -56,21 +56,31 @@ def parse_listing(raw):
 def parse_text(raw):
     lines = raw.replace("\r\n", "\n").replace("\r", "\n").split("\n")
     header = {}
-    body_start = len(lines)
+    body_start = None
+    last_header = None
     for index, line in enumerate(lines):
+        if not line.strip():
+            if header:
+                # The header block is contiguous; a blank line ends it.
+                break
+            continue
         match = _HEADER_LINE.match(line)
         if not match:
             continue
         key = match.group(1).strip()
-        # Header keys are short labels; a long prefix is body prose.
-        if len(key) > 40:
+        # Skip the title line (e.g. "Lag (2010:1)") and prose with long prefixes.
+        if "(" in key or len(key) > 40:
             continue
         header[key] = match.group(2).strip()
+        last_header = index
         if key == _SOURCE_KEY:
-            body_start = index + 1
             break
-    body = "\n".join(line.rstrip() for line in lines[body_start:]).strip("\n")
-    return ParsedText(header=header, body=body.strip())
+    if last_header is not None:
+        body_start = last_header + 1
+    else:
+        body_start = 0
+    body = "\n".join(line.rstrip() for line in lines[body_start:]).strip()
+    return ParsedText(header=header, body=body)
 
 
 def classify(title, dok_id):
@@ -87,10 +97,15 @@ def classify(title, dok_id):
 
 def amendments(body):
     found = set()
-    for line in body.split("\n"):
-        match = _AMENDMENT.match(line.strip())
-        if match:
-            found.add(match.group(1))
+    paragraph = []
+    for line in body.split("\n") + [""]:
+        if line.strip():
+            paragraph.append(line.strip())
+            continue
+        if paragraph:
+            for match in _AMENDMENT.finditer(" ".join(paragraph)):
+                found.add(match.group(1))
+            paragraph = []
     return sorted(found, key=lambda n: tuple(int(p) for p in n.split(":")))
 
 
