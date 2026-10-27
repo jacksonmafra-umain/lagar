@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project state
 
-Foundation and corpus seed are in place: the Python collector (`collector/`, SFS from Riksdagen open data), the static API generator (`api/`) and a corpus (`corpus/`) with the four fundamental laws and the first 100 statutes of 2026. The Compose Multiplatform app (`app/`) lives on its own branch and is not on this one yet. Planning and design input:
+The repo holds the Python collector (`collector/`, SFS from Riksdagen open data), the static API generator (`api/`), the corpus (`corpus/`) and the Compose Multiplatform app (`app/`: Android, iOS, wasmJs). The app covers onboarding, the scope-based home (Utforska), search and advanced search, Hierarki, Sparade (bookmarks), the document reader, the drawer and settings; Tjänster is a placeholder. Planning and design input:
 
 - `lagar-implementation-prompt.md` — **the master spec**, local-only: it is excluded from git (`.git/info/exclude`) and may be missing in other clones. When present, read it before any work; it defines the monorepo layout, corpus schema, static API contract, app stack, CI workflows and milestones (M0–M12). Follow its milestone order. When missing, rely on this file, `docs/` and `DESIGN.md`, and ask the owner for anything they don't cover. Never commit it or quote it in tracked files.
 - `docs/architecture.md` — app information architecture: normative-layer hierarchy, context engine, 4-tab shell (Utforska / Hierarki / Sparade / Tjänster), onboarding and navigation flows. Some features it describes go beyond the spec (reading a law as of a past date, version comparator, inline notes, GPS kommun detection); the static API in the spec does not yet expose historical text, so check with the owner before building those.
@@ -22,16 +22,17 @@ Run from the repo root.
 - Collector tests: `python3 -I -m unittest discover -s collector/tests -t collector` (single test: add `-k <name>`)
 - API tests: `python3 -I -m unittest discover -s api/tests -t .`
 
+- App (`app/`, needs JDK 21 and `ANDROID_HOME`; see `app/README.md` for the local API server and per-platform data source):
+
+  ```sh
+  ./gradlew :androidApp:assembleDebug
+  ./gradlew :webApp:wasmJsBrowserDistribution
+  xcodebuild -project iosApp/iosApp.xcodeproj -scheme iosApp -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
+  ```
+
+  Serve the built API locally with `python3 -m http.server 8000 -d build`.
+
 Workflow: work goes through labelled GitHub issues and PRs assigned to the owner, merged into `main`.
-
-App (`app/`, needs JDK 21 and `ANDROID_HOME`; see `app/README.md` for the local API server and per-platform data source):
-
-```sh
-./gradlew :androidApp:assembleDebug
-./gradlew :webApp:wasmJsBrowserDistribution
-xcodebuild -project iosApp/iosApp.xcodeproj -scheme iosApp -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
-python3 -I api/build.py --corpus corpus --out build/api/v1   # repo root; serve ./build with http.server 8000
-```
 
 ## What lagar is
 
