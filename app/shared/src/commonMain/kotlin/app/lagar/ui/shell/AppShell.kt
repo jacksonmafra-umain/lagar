@@ -28,7 +28,6 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.toRoute
 import app.lagar.designsystem.LagarTheme
 import app.lagar.resources.Res
-import app.lagar.resources.reader_title
 import app.lagar.resources.settings_title
 import app.lagar.resources.tab_saved
 import app.lagar.resources.tab_services
@@ -42,6 +41,7 @@ import app.lagar.ui.navigation.Sparade
 import app.lagar.ui.navigation.Tjanster
 import app.lagar.ui.navigation.Utforska
 import app.lagar.ui.list.LayerListRoute
+import app.lagar.ui.reader.ReaderRoute
 import app.lagar.ui.utforska.UtforskaRoute
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
@@ -107,7 +107,9 @@ fun AppShell(
                             onOpenDocument = { navController.navigate(Reader(it)) },
                         )
                     }
-                    composable<Reader> { Placeholder(stringResource(Res.string.reader_title)) }
+                    composable<Reader> { entry ->
+                        ReaderRoute(id = entry.toRoute<Reader>().id, onBack = { navController.popBackStack() })
+                    }
                     composable<Settings> { Placeholder(stringResource(Res.string.settings_title)) }
                 }
             }

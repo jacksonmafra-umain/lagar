@@ -7,6 +7,7 @@ import app.lagar.data.LagarRepository
 import app.lagar.data.SampleRepository
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.list.LayerListViewModel
+import app.lagar.ui.reader.ReaderViewModel
 import app.lagar.ui.utforska.UtforskaViewModel
 import com.russhwolf.settings.Settings
 import io.ktor.client.HttpClient
@@ -28,4 +29,5 @@ fun appModule(config: DataSourceConfig) = module {
     single { UserPreferences(Settings()) }
     viewModel { UtforskaViewModel(get()) }
     viewModel { (layer: String, type: String?) -> LayerListViewModel(get(), layer, type) }
+    viewModel { (id: String) -> ReaderViewModel(get(), id) }
 }

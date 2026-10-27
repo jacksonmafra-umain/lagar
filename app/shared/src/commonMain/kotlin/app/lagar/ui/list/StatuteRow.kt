@@ -13,9 +13,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -32,10 +30,8 @@ import app.lagar.designsystem.generated.LayerKey
 import app.lagar.domain.DisplayLayer
 import app.lagar.resources.Res
 import app.lagar.resources.ic_chevron_right
-import app.lagar.resources.ic_history
-import app.lagar.resources.repealed
+import app.lagar.ui.common.RepealedBadge
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.stringResource
 
 /**
  * One document: a 3dp layer indicator, the number in code-citation style, the title (two lines at
@@ -91,27 +87,6 @@ fun StatuteRow(item: ListingItem, layer: DisplayLayer?, onClick: () -> Unit, mod
                 tint = LagarTheme.colors.onSurfaceVariant,
                 modifier = Modifier.align(Alignment.CenterVertically).padding(end = LagarTheme.spacing.sm),
             )
-        }
-    }
-}
-
-/** Neutral-grey pill with a history icon, per the Repealed badge in DESIGN.md. */
-@Composable
-private fun RepealedBadge() {
-    val layers = LagarTheme.layers
-    val key = LayerKey.Repealed
-    Surface(
-        shape = CircleShape,
-        color = layers.tint(key),
-        border = BorderStroke(1.dp, layers.border(key)),
-    ) {
-        Row(
-            modifier = Modifier.padding(horizontal = LagarTheme.spacing.sm, vertical = 2.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.xs),
-        ) {
-            Icon(painterResource(Res.drawable.ic_history), contentDescription = null, tint = layers.onTint(key), modifier = Modifier.size(14.dp))
-            Text(stringResource(Res.string.repealed), style = LagarTheme.type.labelSm, color = layers.onTint(key))
         }
     }
 }
