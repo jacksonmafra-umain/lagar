@@ -1,7 +1,6 @@
 package app.lagar.ui.list
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -11,61 +10,46 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
-import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.layout.onSizeChanged
-import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.semantics.Role
-import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.Dp
 import app.lagar.data.ListingItem
-import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
-import app.lagar.designsystem.glass
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
 import app.lagar.resources.Res
 import app.lagar.resources.document_count
 import app.lagar.resources.error_retry
 import app.lagar.resources.error_title
-import app.lagar.resources.ic_arrow_back
 import app.lagar.resources.layer_list_title
-import app.lagar.resources.navigate_back
+import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.ErrorState
+import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.LayerBadge
 import app.lagar.ui.common.nameRes
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.filter
-import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
@@ -115,8 +99,7 @@ fun LayerListScreen(
     val spacing = LagarTheme.spacing
     val hazeState = remember { HazeState() }
     val listState = rememberLazyListState()
-    var headerPx by remember { mutableStateOf(0) }
-    val headerHeight = with(LocalDensity.current) { headerPx.toDp() }
+    var headerHeight by rememberBackTopBarHeight()
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
 
     Box(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
@@ -159,7 +142,8 @@ fun LayerListScreen(
             total = total,
             hazeState = hazeState,
             onBack = onBack,
-            modifier = Modifier.align(Alignment.TopCenter).onSizeChanged { headerPx = it.height },
+            onHeightChange = { headerHeight = it },
+            modifier = Modifier.align(Alignment.TopCenter),
         )
     }
 }
@@ -184,30 +168,11 @@ private fun ListHeader(
     total: Int?,
     hazeState: HazeState,
     onBack: () -> Unit,
+    onHeightChange: (Dp) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = LagarTheme.colors
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .glass(GlassTier.Bar, hazeState)
-            .windowInsetsPadding(WindowInsets.statusBars)
-            .heightIn(min = 64.dp)
-            .padding(horizontal = LagarTheme.spacing.gutterMobile),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
-    ) {
-        val backDescription = stringResource(Res.string.navigate_back)
-        Box(
-            modifier = Modifier
-                .size(48.dp)
-                .clip(CircleShape)
-                .clickable(role = Role.Button, onClick = onBack)
-                .semantics { contentDescription = backDescription },
-            contentAlignment = Alignment.Center,
-        ) {
-            Icon(painterResource(Res.drawable.ic_arrow_back), contentDescription = null, tint = colors.onSurfaceVariant)
-        }
+    BackTopBar(hazeState, onBack, onHeightChange, modifier) {
         FlowRow(
             modifier = Modifier.weight(1f),
             horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
