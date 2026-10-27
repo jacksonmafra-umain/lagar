@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project state
 
-Pre-bootstrap: no code, build files or tests exist yet. The repo currently holds only planning and design input:
+The repo holds the Compose Multiplatform app (`app/`: Android, iOS, wasmJs), the static API generator (`api/`), the Python collector (`collector/`), the corpus (`corpus/`) and the planning and design input below. The app currently covers the Utforska and Hierarki tabs, layer lists, the document reader and settings; Sparade and Tjänster are placeholders. Build commands are listed further down and in `app/README.md`. Planning and design input:
 
 - `lagar-implementation-prompt.md` — **the master spec**, local-only: it is excluded from git (`.git/info/exclude`) and may be missing in other clones. When present, read it before any work; it defines the monorepo layout, corpus schema, static API contract, app stack, CI workflows and milestones (M0–M12). Follow its milestone order. When missing, rely on this file, `docs/` and `DESIGN.md`, and ask the owner for anything they don't cover. Never commit it or quote it in tracked files.
 - `docs/architecture.md` — app information architecture: normative-layer hierarchy, context engine, 4-tab shell (Utforska / Hierarki / Sparade / Tjänster), onboarding and navigation flows. Some features it describes go beyond the spec (reading a law as of a past date, version comparator, inline notes, GPS kommun detection); the static API in the spec does not yet expose historical text, so check with the owner before building those.
