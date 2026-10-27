@@ -9,6 +9,7 @@ import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -32,6 +33,7 @@ import app.lagar.designsystem.LagarTheme
 import app.lagar.resources.Res
 import app.lagar.domain.DisplayLayer
 import app.lagar.ui.hierarki.HierarkiRoute
+import app.lagar.ui.home.HomeRoute
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.navigation.Hierarki
 import app.lagar.ui.navigation.LayerList
@@ -54,7 +56,6 @@ import app.lagar.ui.reader.ReaderRoute
 import app.lagar.ui.settings.SettingsRoute
 import app.lagar.ui.sparade.SparadeScreen
 import app.lagar.ui.tjanster.TjansterScreen
-import app.lagar.ui.utforska.UtforskaRoute
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.launch
@@ -74,6 +75,7 @@ fun AppShell(
 ) {
     val scope = rememberCoroutineScope()
     val preferences = koinInject<UserPreferences>()
+    val activeScope by preferences.scope.collectAsState()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val backStackEntry by navController.currentBackStackEntryAsState()
     val destination = backStackEntry?.destination
@@ -153,7 +155,16 @@ fun AppShell(
                             onDone = ::leaveOnboarding,
                         )
                     }
-                    composable<Utforska> { UtforskaRoute(onOpenLayer = ::openLayer) }
+                    composable<Utforska> {
+                        HomeRoute(
+                            onOpenLayer = ::openLayer,
+                            onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                            // Search and the location pickers are wired by the search and scope-sheet tasks.
+                            onOpenSearch = {},
+                            onOpenAdvancedSearch = {},
+                            onChooseLocation = {},
+                        )
+                    }
                     composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
                     composable<Sparade> { SparadeScreen() }
                     composable<Tjanster> { TjansterScreen() }
@@ -177,6 +188,8 @@ fun AppShell(
                     hazeState = hazeState,
                     onMenuClick = { scope.launch { drawerState.open() } },
                     onToggleTheme = onToggleTheme,
+                    scope = activeScope,
+                    onOpenScopeSheet = {},
                     modifier = Modifier.align(Alignment.TopCenter).onSizeChanged { topBarPx = it.height },
                 )
                 LagarBottomBar(

@@ -21,11 +21,17 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.material3.Text
 import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.glass
+import app.lagar.domain.Scope
 import app.lagar.resources.Res
+import app.lagar.resources.home_scope_chip
+import app.lagar.resources.ic_expand_more
+import app.lagar.ui.onboarding.nameRes
 import app.lagar.resources.app_name
 import app.lagar.resources.ic_dark_mode
 import app.lagar.resources.ic_light_mode
@@ -42,6 +48,8 @@ internal fun LagarTopBar(
     hazeState: HazeState,
     onMenuClick: () -> Unit,
     onToggleTheme: () -> Unit,
+    scope: Scope,
+    onOpenScopeSheet: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = LagarTheme.colors
@@ -61,6 +69,7 @@ internal fun LagarTopBar(
             color = colors.primary,
             modifier = Modifier.weight(1f),
         )
+        ScopeChip(scope, onOpenScopeSheet)
         BarIconButton(
             onClick = onToggleTheme,
             description = stringResource(
@@ -104,4 +113,39 @@ private fun BarIconButton(
             .semantics { contentDescription = description },
         contentAlignment = Alignment.Center,
     ) { content() }
+}
+
+/** Current scope (short name and a drop-down arrow); opens the scope switch. */
+@Composable
+private fun ScopeChip(scope: Scope, onClick: () -> Unit) {
+    val layers = LagarTheme.layers
+    val name = stringResource(scope.nameRes())
+    val description = stringResource(Res.string.home_scope_chip, name)
+    Row(
+        modifier = Modifier
+            .heightIn(min = ShellDimens.TouchTarget)
+            .clip(CircleShape)
+            .clickable(role = Role.Button, onClick = onClick)
+            .semantics { contentDescription = description }
+            .padding(horizontal = LagarTheme.spacing.xs),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Row(
+            modifier = Modifier
+                .clip(CircleShape)
+                .background(layers.tint(scope.key))
+                .padding(start = LagarTheme.spacing.sm, end = LagarTheme.spacing.xs, top = 6.dp, bottom = 6.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = name,
+                style = LagarTheme.type.labelMd,
+                fontWeight = FontWeight.Bold,
+                color = layers.onTint(scope.key),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Icon(painterResource(Res.drawable.ic_expand_more), null, tint = layers.onTint(scope.key), modifier = Modifier.size(ShellDimens.SmallIconSize))
+        }
+    }
 }

@@ -91,4 +91,47 @@
     <string name="picker_search">Sök</string>
     <string name="picker_no_results">Inga träffar</string>
     <string name="picker_clear">Rensa</string>
+    <string name="home_hero_title">Sveriges %1$s – samlade och sökbara på ett ställe</string>
+    <string name="home_hero_emphasis">lagar, förordningar och föreskrifter</string>
+    <string name="home_hero_subtitle">Konsoliderade författningar från Riksdagens öppna data</string>
+    <string name="home_search_hint">Sök på nummer eller ord</string>
+    <string name="home_search_example">T.ex. Regeringsformen, 2026:1200</string>
+    <string name="home_search_submit">Sök</string>
+    <string name="home_advanced_search">Avancerad sökning</string>
+    <string name="home_key_laws_title">Viktiga lagar</string>
+    <string name="home_key_laws_subtitle">Sverige · Nationellt</string>
+    <string name="home_explore_more">Utforska fler</string>
+    <string name="home_tab_recent">Senaste</string>
+    <string name="home_tab_favourites">Favoriter</string>
+    <string name="home_show_more">Visa fler</string>
+    <string name="home_favourites_empty_title">Inga favoriter ännu</string>
+    <string name="home_favourites_empty_text">Tryck på bokmärket på ett dokument för att spara det här.</string>
+    <string name="home_scope_chip">Omfattning: %1$s. Byt omfattning.</string>
+    <string name="home_location_label">Plats</string>
+    <string name="home_choose_location">Välj plats</string>
+    <string name="home_scope_region_title">Region: %1$s</string>
+    <string name="home_scope_kommun_title">Kommun: %1$s</string>
+    <string name="home_coming_soon_text">Dokument för den här omfattningen samlas fortfarande in. Byt till Nationell för att läsa lagar och förordningar nu.</string>
+    <string name="type_fundamental_law">Grundlag</string>
+    <string name="type_act">Lag</string>
+    <string name="type_ordinance">Förordning</string>
+    <string name="type_number">%1$s %2$s</string>
+    <string name="status_in_force">I kraft</string>
+    <string name="feed_read_full_text">Läs hela texten</string>
+    <string name="bookmark_add">Spara %1$s</string>
+    <string name="bookmark_remove">Ta bort %1$s från sparade</string>
+    <string name="date_today">idag</string>
+    <string name="date_yesterday">igår</string>
+    <plurals name="date_days_ago">
+        <item quantity="one">för %1$d dag sedan</item>
+        <item quantity="other">för %1$d dagar sedan</item>
+    </plurals>
+    <plurals name="date_months_ago">
+        <item quantity="one">för %1$d månad sedan</item>
+        <item quantity="other">för %1$d månader sedan</item>
+    </plurals>
+    <plurals name="date_years_ago">
+        <item quantity="one">för %1$d år sedan</item>
+        <item quantity="other">för %1$d år sedan</item>
+    </plurals>
 </resources>
