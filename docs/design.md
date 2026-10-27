@@ -55,27 +55,30 @@ surface is an opaque `surfaceContainer*` role with the same border: Card `surfac
 
 ## Component inventory
 
-Components defined in `DESIGN.md` and the task that builds each (all planned unless stated). They use
-only tokens from the sections above.
+As built. Every component uses only tokens from the sections above. Components marked **deferred** are
+defined in `DESIGN.md` but have no screen that needs them yet.
 
-| Component | Token mapping | Task |
+| Component | Implementation | Tokens used |
 | --- | --- | --- |
-| Normative badge / chip | `LayerColors.tint` fill, `border` 1dp, `onTint` text, `RadiusTokens.default`, `labelSm` / `codeCitation` | 6, 7 |
-| Repealed badge | `Repealed` layer tint, strikethrough, history icon | 7, 8 |
-| Layer list row (Utforska, Layer list) | `GlassTier.Card` or layer `tint`, `RadiusTokens.lg`, `headlineSm` + `bodyUi`, layer `accent` icon | 6, 7 |
-| Layer distribution chart | layer `accent` series, `surfaceContainerLow` card | 6 |
-| Hierarki pyramid | layer `accent` / `tint`, `statuteNum` | 6 |
-| Bottom navigation bar | `GlassTier.Bar`, `labelSm`, `primary` selected indicator | 5 |
-| Top bar | `GlassTier.Bar`, `headlineSm`, icon buttons | 5 |
-| Side drawer | `GlassTier.Overlay`, `RadiusTokens.xl` | 5 |
-| Glass secondary button | `GlassTier.Card` fill, layer `onTint` text, `RadiusTokens.default` | 5, 9 |
-| Primary button | layer `accent` (or `primary`) fill, `onPrimary` text, `RadiusTokens.default` | 5, 9 |
-| § container (legal text card) | `GlassTier.Card`, 3dp layer `accent` indicator on the left, `statuteNum` number, `bodyLegalMd` / `bodyLegalLg` text, 60-75ch width | 8 |
-| Cross-reference | dotted underline in target layer `onTint` | 8 |
-| Layer row (Utforska) | tint fill + 20% border, 40dp solid `accent` icon square (white or near-black icon, whichever contrasts more), "N. Name" in `bodyUi` bold `onTint`, `labelSm` description, `LayerBadge` with count or "coming soon" | 6 |
-| Empty state ("coming soon") | `surfaceContainerLow`, `headlineSm`, `bodyUi`, `onSurfaceVariant` | 6, 7 |
-| Error state with retry | `errorContainer` / `onErrorContainer`, primary button | 8 |
-| Settings controls (selection, radio) | M3 controls themed by `LagarTheme`, 4dp (`RadiusTokens.sm`) checkbox | 9 |
+| Normative badge / chip | `ui/common/LayerBadge.kt` | `CircleShape`, `layers.tint` fill, `layers.onTint` text, `labelSm` |
+| Repealed badge | `ui/common/RepealedBadge.kt` | `Repealed` layer `tint` / `onTint`, `CircleShape`, history icon, `labelSm` |
+| Layer row (Utforska) | `ui/utforska/LayerRow.kt` | `shapes.large`, layer `tint` fill, 40dp `accent` icon square (`shapes.medium`), "N. Name" in `bodyUi` `onTint`, `labelSm` description in `onSurfaceVariant`, `LayerBadge` with count or "coming soon" |
+| Layer list row (layer list) | `ui/list/StatuteRow.kt` | `shapes.medium`, `surfaceContainerLowest` fill, 1dp `outlineVariant` border, 3dp layer `accent` indicator, `codeCitation` number, `bodyUi` title, `labelSm` year, `RepealedBadge` when repealed |
+| Layer distribution chart | `ui/utforska/LayerDistributionChart.kt` | `shapes.large`, `surfaceContainerLowest` card, `surfaceContainer` track, layer `accent` segments, `surfaceContainerLow` legend chips, `labelSm` |
+| Hierarki pyramid | `ui/hierarki/NormPyramid.kt` | layer `tint` bands (`shapes.medium`), `labelMd` / `labelSm` in `onTint`, `onSurfaceVariant` counts |
+| Bottom navigation bar | `ui/shell/BottomBar.kt` | `GlassTier.Bar`, `labelSm`, `RadiusTokens.lg` selected pill (`primaryFixed` light, `primaryContainer` dark) |
+| Top bar (tab screens) | `ui/shell/TopBar.kt` | `GlassTier.Bar`, `headlineSm` in `primary`, icon buttons, 32dp `primary` avatar |
+| Back top bar (pushed screens) | `ui/common/BackTopBar.kt`, used by layer list, reader and settings | `GlassTier.Bar`, 48dp back target, `onSurfaceVariant` icon, title slot (`headlineSm` or `codeCitation`) |
+| Side drawer | `ui/shell/Drawer.kt` | `GlassTier.Overlay` (`RadiusTokens.xl`, `surfaceContainerHigh`), `headlineMd` in `primary`, `bodyUi` items, `labelMd` / `labelSm` about block |
+| § container (legal text card) | `StatuteContainer` in `ui/reader/LegalMarkdown.kt` | `surfaceContainerLowest` fill, 1dp `outlineVariant` border, `shapes.medium`, 3dp layer `accent` indicator, `bodyLegalMd` text, reading column width |
+| Empty state ("coming soon") | `ui/common/EmptyState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `onSurfaceVariant` icon, `headlineSm` title, `bodyUi` text in `onSurfaceVariant` |
+| Error state with retry | `ui/common/ErrorState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `error` icon tint, `headlineSm` title, `bodyUi` text, M3 `Button` for retry |
+| "Coming soon" sheet | `ui/common/ComingSoonSheet.kt` | M3 modal sheet, `surfaceContainerLowest` container |
+| Metadata header | `ui/reader/MetadataHeader.kt` | `codeCitation` number in layer `onTint`, `headlineMd` title, `labelSm` / `bodyUi` facts, `outlineVariant` divider |
+| Settings controls (radio) | `ui/settings/SettingsScreen.kt` | M3 `RadioButton` with `primary` selected and `onSurfaceVariant` unselected, 48dp rows, `bodyUi` labels |
+| Glass secondary button | deferred | `DESIGN.md` glass fill is 0.6 alpha, not the `GlassTier.Card` 0.85; give it its own spec when built |
+| Primary button | deferred (retry uses the M3 `Button` themed by `LagarTheme`) | layer `accent` (or `primary`) fill, `onPrimary` text, `RadiusTokens.default` |
+| Cross-reference | deferred | dotted underline in target layer `onTint` |
 
 ## Bottom bar label scaling
 
