@@ -37,6 +37,8 @@ python3 -I -m http.server 8000 --directory /tmp/lagar/build
 
 - Android: `BuildConfig.DEBUG` selects the API at `http://10.0.2.2:8000/api/v1/` (the emulator's alias for the host).
   Plain HTTP is allowed only in the debug source set (`androidApp/src/debug`), limited to `10.0.2.2`.
+  A debug build on a physical device cannot reach `10.0.2.2` (or `localhost`) and shows the error state; use a
+  release build (bundled sample) or point `DataSourceConfig` at a reachable base URL.
 - iOS: `Platform.isDebugBinary` selects the API at `http://localhost:8000/api/v1/` (simulator shares the host network).
 - Web: the sample is the default; open the page with `?api` to read `../api/v1/` instead. Copy the dist into the
   server root as `lagar/` (`cp -R webApp/build/dist/wasmJs/productionExecutable/. /tmp/lagar/build/lagar/`) and open
