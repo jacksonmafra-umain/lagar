@@ -139,4 +139,32 @@
     <string name="scope_sheet_title">Välj omfattning</string>
     <string name="scope_sheet_locality">Ändra plats</string>
     <string name="scope_active">Aktiv</string>
+    <string name="search_open">Sök</string>
+    <string name="search_prompt_title">Skriv för att söka</string>
+    <string name="search_prompt_text">Sök bland lagar och förordningar på titel eller nummer.</string>
+    <plurals name="search_result_count">
+        <item quantity="one">%1$d träff</item>
+        <item quantity="other">%1$d träffar</item>
+    </plurals>
+    <string name="search_no_results_title">Inga träffar</string>
+    <string name="search_no_results_text">Prova ett annat ord eller lätta på filtren.</string>
+    <string name="advanced_text_label">Ord eller nummer</string>
+    <string name="advanced_dates_title">Utfärdad mellan</string>
+    <string name="advanced_date_from">Från</string>
+    <string name="advanced_date_to">Till</string>
+    <string name="advanced_date_placeholder">ÅÅÅÅ-MM-DD</string>
+    <string name="advanced_date_invalid">Ogiltigt datum</string>
+    <string name="advanced_range_invalid">Från-datum efter till-datum</string>
+    <string name="advanced_clear_range">Rensa intervall</string>
+    <string name="advanced_types_title">Dokumenttyper</string>
+    <string name="advanced_select_all">Markera alla</string>
+    <string name="advanced_mode_title">Söktyp</string>
+    <string name="advanced_mode_all">Alla fält</string>
+    <string name="advanced_mode_title_only">Titel</string>
+    <string name="advanced_mode_number">Nummer</string>
+    <string name="advanced_mode_fulltext">Fulltext</string>
+    <string name="advanced_status_title">Status</string>
+    <string name="advanced_status_all">Alla</string>
+    <string name="advanced_status_repealed">Upphävda</string>
+    <string name="type_other_statute">Övrig författning</string>
 </resources>

@@ -36,6 +36,8 @@ import app.lagar.resources.app_name
 import app.lagar.resources.ic_dark_mode
 import app.lagar.resources.ic_light_mode
 import app.lagar.resources.ic_person
+import app.lagar.resources.ic_search
+import app.lagar.resources.search_open
 import app.lagar.resources.menu_open
 import app.lagar.resources.theme_switch_to_dark
 import app.lagar.resources.theme_switch_to_light
@@ -48,6 +50,7 @@ internal fun LagarTopBar(
     hazeState: HazeState,
     onMenuClick: () -> Unit,
     onToggleTheme: () -> Unit,
+    onOpenSearch: () -> Unit,
     scope: Scope,
     onOpenScopeSheet: () -> Unit,
     modifier: Modifier = Modifier,
@@ -70,6 +73,14 @@ internal fun LagarTopBar(
             modifier = Modifier.weight(1f),
         )
         ScopeChip(scope, onOpenScopeSheet)
+        BarIconButton(onClick = onOpenSearch, description = stringResource(Res.string.search_open)) {
+            Icon(
+                painter = painterResource(Res.drawable.ic_search),
+                contentDescription = null,
+                tint = colors.onSurfaceVariant,
+                modifier = Modifier.size(ShellDimens.IconSize),
+            )
+        }
         BarIconButton(
             onClick = onToggleTheme,
             description = stringResource(

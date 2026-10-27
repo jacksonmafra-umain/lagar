@@ -36,12 +36,14 @@ import app.lagar.ui.hierarki.HierarkiRoute
 import app.lagar.ui.home.HomeRoute
 import app.lagar.ui.home.ScopeSheet
 import app.lagar.settings.UserPreferences
+import app.lagar.ui.navigation.AdvancedSearch
 import app.lagar.ui.navigation.Hierarki
 import app.lagar.ui.navigation.LayerList
 import app.lagar.ui.navigation.OnboardingLocality
 import app.lagar.ui.navigation.OnboardingScope
 import app.lagar.ui.navigation.OnboardingWelcome
 import app.lagar.ui.navigation.Reader
+import app.lagar.ui.navigation.Search
 import app.lagar.ui.navigation.Settings
 import app.lagar.ui.navigation.Sparade
 import app.lagar.ui.navigation.Splash
@@ -54,6 +56,9 @@ import app.lagar.ui.onboarding.ScopeStepRoute
 import app.lagar.ui.onboarding.SplashRoute
 import app.lagar.ui.onboarding.WelcomeRoute
 import app.lagar.ui.reader.ReaderRoute
+import app.lagar.ui.search.AdvancedSearchRoute
+import app.lagar.ui.search.SearchRoute
+import app.lagar.ui.search.toRoute
 import app.lagar.ui.settings.SettingsRoute
 import app.lagar.ui.sparade.SparadeScreen
 import app.lagar.ui.tjanster.TjansterScreen
@@ -161,9 +166,8 @@ fun AppShell(
                         HomeRoute(
                             onOpenLayer = ::openLayer,
                             onOpenDocument = { navigateWhenResumed(Reader(it)) },
-                            // Search is wired by the search task.
-                            onOpenSearch = {},
-                            onOpenAdvancedSearch = {},
+                            onOpenSearch = { navigateWhenResumed(Search(text = it)) },
+                            onOpenAdvancedSearch = { navigateWhenResumed(AdvancedSearch) },
                             onChooseLocation = { showScopeSheet = true },
                         )
                     }
@@ -182,6 +186,20 @@ fun AppShell(
                     composable<Reader> { entry ->
                         ReaderRoute(id = entry.toRoute<Reader>().id, onBack = { navController.popBackStack() })
                     }
+                    composable<Search> { entry ->
+                        SearchRoute(
+                            route = entry.toRoute<Search>(),
+                            onBack = { navController.popBackStack() },
+                            onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                            onOpenAdvancedSearch = { navigateWhenResumed(AdvancedSearch) },
+                        )
+                    }
+                    composable<AdvancedSearch> {
+                        AdvancedSearchRoute(
+                            onBack = { navController.popBackStack() },
+                            onSearch = { navigateWhenResumed(it.toRoute()) },
+                        )
+                    }
                     composable<Settings> { SettingsRoute(onBack = { navController.popBackStack() }) }
                 }
             }
@@ -190,6 +208,7 @@ fun AppShell(
                     hazeState = hazeState,
                     onMenuClick = { scope.launch { drawerState.open() } },
                     onToggleTheme = onToggleTheme,
+                    onOpenSearch = { navigateWhenResumed(Search()) },
                     scope = activeScope,
                     onOpenScopeSheet = { showScopeSheet = true },
                     modifier = Modifier.align(Alignment.TopCenter).onSizeChanged { topBarPx = it.height },

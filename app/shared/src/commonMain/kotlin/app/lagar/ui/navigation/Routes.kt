@@ -13,3 +13,19 @@ import kotlinx.serialization.Serializable
 @Serializable data class LayerList(val layer: String, val type: String? = null)
 @Serializable data class Reader(val id: String)
 @Serializable data object Settings
+
+/**
+ * Search results. The filters of the advanced search travel as optional params (types comma-separated,
+ * dates ISO), so the query survives process death.
+ */
+@Serializable
+data class Search(
+    val text: String = "",
+    val types: String? = null,
+    val from: String? = null,
+    val to: String? = null,
+    val mode: String? = null,
+    val status: String? = null,
+)
+
+@Serializable data object AdvancedSearch

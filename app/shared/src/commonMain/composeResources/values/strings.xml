@@ -139,4 +139,32 @@
     <string name="scope_sheet_title">Choose scope</string>
     <string name="scope_sheet_locality">Change location</string>
     <string name="scope_active">Active</string>
+    <string name="search_open">Search</string>
+    <string name="search_prompt_title">Type to search</string>
+    <string name="search_prompt_text">Search acts and ordinances by title or number.</string>
+    <plurals name="search_result_count">
+        <item quantity="one">%1$d result</item>
+        <item quantity="other">%1$d results</item>
+    </plurals>
+    <string name="search_no_results_title">No results</string>
+    <string name="search_no_results_text">Try another word or loosen the filters.</string>
+    <string name="advanced_text_label">Word or number</string>
+    <string name="advanced_dates_title">Issued between</string>
+    <string name="advanced_date_from">From</string>
+    <string name="advanced_date_to">To</string>
+    <string name="advanced_date_placeholder">YYYY-MM-DD</string>
+    <string name="advanced_date_invalid">Invalid date</string>
+    <string name="advanced_range_invalid">From date is after to date</string>
+    <string name="advanced_clear_range">Clear range</string>
+    <string name="advanced_types_title">Document types</string>
+    <string name="advanced_select_all">Select all</string>
+    <string name="advanced_mode_title">Search type</string>
+    <string name="advanced_mode_all">All fields</string>
+    <string name="advanced_mode_title_only">Title</string>
+    <string name="advanced_mode_number">Number</string>
+    <string name="advanced_mode_fulltext">Full text</string>
+    <string name="advanced_status_title">Status</string>
+    <string name="advanced_status_all">All</string>
+    <string name="advanced_status_repealed">Repealed</string>
+    <string name="type_other_statute">Other statute</string>
 </resources>
