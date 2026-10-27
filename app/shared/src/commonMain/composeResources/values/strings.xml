@@ -136,4 +136,7 @@
     </plurals>
     <string name="home_group_acts">Acts</string>
     <string name="home_group_ordinances">Ordinances</string>
+    <string name="scope_sheet_title">Choose scope</string>
+    <string name="scope_sheet_locality">Change location</string>
+    <string name="scope_active">Active</string>
 </resources>
