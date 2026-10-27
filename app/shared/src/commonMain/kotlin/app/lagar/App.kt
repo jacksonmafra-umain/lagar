@@ -21,8 +21,8 @@ import org.koin.compose.koinInject
 import org.koin.dsl.koinConfiguration
 
 @Composable
-fun App() {
-    KoinApplication(koinConfiguration { modules(appModule(DataSourceConfig())) }) {
+fun App(dataSource: DataSourceConfig = DataSourceConfig()) {
+    KoinApplication(koinConfiguration { modules(appModule(dataSource)) }) {
         AppContent()
     }
 }
