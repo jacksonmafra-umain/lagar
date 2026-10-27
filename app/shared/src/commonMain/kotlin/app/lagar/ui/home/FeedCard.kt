@@ -137,10 +137,10 @@ private fun RelativeDate(issued: String) {
 
 @Composable
 private fun InForce() {
-    val layers = LagarTheme.layers
+    val status = LagarTheme.status
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
-        Box(Modifier.size(8.dp).clip(CircleShape).background(layers.accent(LayerKey.Region)))
-        Text(stringResource(Res.string.status_in_force), style = LagarTheme.type.labelMd, color = layers.onTint(LayerKey.Region))
+        Box(Modifier.size(8.dp).clip(CircleShape).background(status.inForce))
+        Text(stringResource(Res.string.status_in_force), style = LagarTheme.type.labelMd, color = status.onInForce)
     }
 }
 
