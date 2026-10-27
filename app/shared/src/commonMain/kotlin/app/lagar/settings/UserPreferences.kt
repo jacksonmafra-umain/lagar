@@ -1,5 +1,7 @@
 package app.lagar.settings
 
+import app.lagar.domain.Locality
+import app.lagar.domain.Scope
 import app.lagar.i18n.LanguageChoice
 import com.russhwolf.settings.Settings
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -11,8 +13,48 @@ class UserPreferences(private val settings: Settings) {
     private val _language = MutableStateFlow(read(KEY_LANGUAGE, LanguageChoice.System))
     private val _theme = MutableStateFlow(read(KEY_THEME, ThemeMode.System))
 
+    private val _onboardingDone = MutableStateFlow(settings.getBoolean(KEY_ONBOARDING_DONE, false))
+    private val _scope = MutableStateFlow(read(KEY_SCOPE, Scope.Nationell))
+    private val _locality = MutableStateFlow(
+        Locality(settings.getStringOrNull(KEY_REGION), settings.getStringOrNull(KEY_KOMMUN)),
+    )
+
     val language: StateFlow<LanguageChoice> = _language.asStateFlow()
     val theme: StateFlow<ThemeMode> = _theme.asStateFlow()
+
+    val onboardingDone: StateFlow<Boolean> = _onboardingDone.asStateFlow()
+    val scope: StateFlow<Scope> = _scope.asStateFlow()
+    val locality: StateFlow<Locality> = _locality.asStateFlow()
+
+    fun completeOnboarding(scope: Scope, locality: Locality) {
+        setScope(scope)
+        writeLocality(locality)
+        settings.putBoolean(KEY_ONBOARDING_DONE, true)
+        _onboardingDone.value = true
+    }
+
+    fun setScope(scope: Scope) {
+        settings.putString(KEY_SCOPE, scope.name)
+        _scope.value = scope
+    }
+
+    /** Picking a different län clears the kommun, since it belongs to the previous one. */
+    fun setRegion(code: String?) {
+        val current = _locality.value
+        writeLocality(Locality(code, if (code == current.regionCode) current.kommunCode else null))
+    }
+
+    fun setKommun(code: String?) = writeLocality(_locality.value.copy(kommunCode = code))
+
+    private fun writeLocality(locality: Locality) {
+        putOrRemove(KEY_REGION, locality.regionCode)
+        putOrRemove(KEY_KOMMUN, locality.kommunCode)
+        _locality.value = locality
+    }
+
+    private fun putOrRemove(key: String, value: String?) {
+        if (value == null) settings.remove(key) else settings.putString(key, value)
+    }
 
     fun setLanguage(choice: LanguageChoice) {
         settings.putString(KEY_LANGUAGE, choice.name)
@@ -32,5 +74,9 @@ class UserPreferences(private val settings: Settings) {
     private companion object {
         const val KEY_LANGUAGE = "language"
         const val KEY_THEME = "theme"
+        const val KEY_ONBOARDING_DONE = "onboarding_done"
+        const val KEY_SCOPE = "scope"
+        const val KEY_REGION = "region"
+        const val KEY_KOMMUN = "kommun"
     }
 }
