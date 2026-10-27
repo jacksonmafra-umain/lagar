@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
 import app.lagar.resources.Res
+import app.lagar.resources.coming_soon
 import app.lagar.resources.document_count
 import app.lagar.ui.common.level
 import app.lagar.ui.common.nameRes
@@ -74,6 +75,13 @@ private fun Band(summary: LayerSummary, onClick: () -> Unit, modifier: Modifier)
                         text = pluralStringResource(Res.plurals.document_count, summary.count, summary.count),
                         style = LagarTheme.type.labelSm,
                         color = layers.onTint(key),
+                        textAlign = TextAlign.Center,
+                    )
+                } else {
+                    Text(
+                        text = stringResource(Res.string.coming_soon),
+                        style = LagarTheme.type.labelSm,
+                        color = LagarTheme.colors.onSurfaceVariant,
                         textAlign = TextAlign.Center,
                     )
                 }

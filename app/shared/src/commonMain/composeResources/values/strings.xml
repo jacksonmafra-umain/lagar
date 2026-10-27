@@ -21,6 +21,7 @@
         <item quantity="one">%1$d document</item>
         <item quantity="other">%1$d documents</item>
     </plurals>
+    <string name="layer_numbered_title">%1$d. %2$s</string>
     <string name="coming_soon">Coming soon</string>
     <string name="coming_soon_text">This layer has no documents yet. It is still being collected.</string>
     <string name="hierarchy_hint">Higher in the pyramid means higher in the order of norms.</string>
