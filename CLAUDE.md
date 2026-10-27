@@ -24,7 +24,14 @@ Run from the repo root.
 
 Workflow: work goes through labelled GitHub issues and PRs assigned to the owner, merged into `main`.
 
-When Gradle commands are added with the app, update this file.
+App (`app/`, needs JDK 21 and `ANDROID_HOME`; see `app/README.md` for the local API server and per-platform data source):
+
+```sh
+./gradlew :androidApp:assembleDebug
+./gradlew :webApp:wasmJsBrowserDistribution
+xcodebuild -project iosApp/iosApp.xcodeproj -scheme iosApp -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
+python3 -I api/build.py --corpus corpus --out build/api/v1   # repo root; serve ./build with http.server 8000
+```
 
 ## What lagar is
 
