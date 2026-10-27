@@ -25,9 +25,9 @@ import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.toRoute
 import app.lagar.designsystem.LagarTheme
 import app.lagar.resources.Res
-import app.lagar.resources.layer_list_title
 import app.lagar.resources.reader_title
 import app.lagar.resources.settings_title
 import app.lagar.resources.tab_saved
@@ -41,6 +41,7 @@ import app.lagar.ui.navigation.Settings
 import app.lagar.ui.navigation.Sparade
 import app.lagar.ui.navigation.Tjanster
 import app.lagar.ui.navigation.Utforska
+import app.lagar.ui.list.LayerListRoute
 import app.lagar.ui.utforska.UtforskaRoute
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
@@ -97,7 +98,15 @@ fun AppShell(
                     composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
                     composable<Sparade> { Placeholder(stringResource(Res.string.tab_saved)) }
                     composable<Tjanster> { Placeholder(stringResource(Res.string.tab_services)) }
-                    composable<LayerList> { Placeholder(stringResource(Res.string.layer_list_title)) }
+                    composable<LayerList> { entry ->
+                        val route = entry.toRoute<LayerList>()
+                        LayerListRoute(
+                            layer = route.layer,
+                            type = route.type,
+                            onBack = { navController.popBackStack() },
+                            onOpenDocument = { navController.navigate(Reader(it)) },
+                        )
+                    }
                     composable<Reader> { Placeholder(stringResource(Res.string.reader_title)) }
                     composable<Settings> { Placeholder(stringResource(Res.string.settings_title)) }
                 }

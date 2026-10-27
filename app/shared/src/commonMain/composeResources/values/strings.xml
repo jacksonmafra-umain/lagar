@@ -13,6 +13,8 @@
     <string name="drawer_data_built">Data built %1$s</string>
     <string name="drawer_credits">Swedish legislation, case law and public services in one place.</string>
     <string name="settings_title">Settings</string>
+    <string name="navigate_back">Back</string>
+    <string name="repealed">Repealed</string>
     <string name="layer_list_title">Layer</string>
     <string name="reader_title">Document</string>
     <string name="explore_distribution_title">Distribution across the hierarchy</string>
