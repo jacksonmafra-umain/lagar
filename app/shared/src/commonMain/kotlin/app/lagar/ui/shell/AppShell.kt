@@ -28,9 +28,6 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.toRoute
 import app.lagar.designsystem.LagarTheme
 import app.lagar.resources.Res
-import app.lagar.resources.settings_title
-import app.lagar.resources.tab_saved
-import app.lagar.resources.tab_services
 import app.lagar.domain.DisplayLayer
 import app.lagar.ui.hierarki.HierarkiRoute
 import app.lagar.ui.navigation.Hierarki
@@ -42,11 +39,13 @@ import app.lagar.ui.navigation.Tjanster
 import app.lagar.ui.navigation.Utforska
 import app.lagar.ui.list.LayerListRoute
 import app.lagar.ui.reader.ReaderRoute
+import app.lagar.ui.settings.SettingsRoute
+import app.lagar.ui.sparade.SparadeScreen
+import app.lagar.ui.tjanster.TjansterScreen
 import app.lagar.ui.utforska.UtforskaRoute
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.launch
-import org.jetbrains.compose.resources.stringResource
 
 /**
  * Four-tab shell. The [navController] and [hazeState] are owned by the caller, above the locale
@@ -96,8 +95,8 @@ fun AppShell(
                 ) {
                     composable<Utforska> { UtforskaRoute(onOpenLayer = ::openLayer) }
                     composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
-                    composable<Sparade> { Placeholder(stringResource(Res.string.tab_saved)) }
-                    composable<Tjanster> { Placeholder(stringResource(Res.string.tab_services)) }
+                    composable<Sparade> { SparadeScreen() }
+                    composable<Tjanster> { TjansterScreen() }
                     composable<LayerList> { entry ->
                         val route = entry.toRoute<LayerList>()
                         LayerListRoute(
@@ -110,7 +109,7 @@ fun AppShell(
                     composable<Reader> { entry ->
                         ReaderRoute(id = entry.toRoute<Reader>().id, onBack = { navController.popBackStack() })
                     }
-                    composable<Settings> { Placeholder(stringResource(Res.string.settings_title)) }
+                    composable<Settings> { SettingsRoute(onBack = { navController.popBackStack() }) }
                 }
             }
             if (selectedTab != null) {

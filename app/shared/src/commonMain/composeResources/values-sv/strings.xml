@@ -54,4 +54,15 @@
     <string name="layer_region_desc">Regionala regler och beslut</string>
     <string name="layer_municipality_desc">Kommunala föreskrifter och planer</string>
     <string name="layer_service_desc">Offentliga tjänster för medborgare</string>
+    <string name="settings_language">Språk</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_system">Systemets inställning</string>
+    <string name="language_swedish">Svenska</string>
+    <string name="language_english">English</string>
+    <string name="theme_light">Ljust</string>
+    <string name="theme_dark">Mörkt</string>
+    <string name="about_credits">Skapad av %1$s</string>
+    <string name="about_license">Utgiven under licensen %1$s</string>
+    <string name="saved_empty_text">Sparade dokument visas här. Funktionen kommer snart.</string>
+    <string name="services_empty_text">Offentliga tjänster visas här. Funktionen kommer snart.</string>
 </resources>
