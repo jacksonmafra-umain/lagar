@@ -145,7 +145,6 @@ fun AppShell(
                         ScopeStepRoute(
                             viewModel = onboarding,
                             onContinue = { navigateWhenResumed(OnboardingLocality) },
-                            onSkip = { onboarding.skip(); leaveOnboarding() },
                         )
                     }
                     composable<OnboardingLocality> { entry ->

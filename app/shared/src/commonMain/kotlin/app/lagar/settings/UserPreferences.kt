@@ -2,6 +2,7 @@ package app.lagar.settings
 
 import app.lagar.domain.Locality
 import app.lagar.domain.Scope
+import app.lagar.domain.withRegion
 import app.lagar.i18n.LanguageChoice
 import com.russhwolf.settings.Settings
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -38,11 +39,7 @@ class UserPreferences(private val settings: Settings) {
         _scope.value = scope
     }
 
-    /** Picking a different län clears the kommun, since it belongs to the previous one. */
-    fun setRegion(code: String?) {
-        val current = _locality.value
-        writeLocality(Locality(code, if (code == current.regionCode) current.kommunCode else null))
-    }
+    fun setRegion(code: String?) = writeLocality(_locality.value.withRegion(code))
 
     fun setKommun(code: String?) = writeLocality(_locality.value.copy(kommunCode = code))
 
