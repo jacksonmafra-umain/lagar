@@ -14,6 +14,7 @@ import app.lagar.i18n.systemLanguageTag
 import app.lagar.settings.ThemeMode
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.shell.AppShell
+import app.lagar.ui.shell.SystemBarAppearance
 import dev.chrisbanes.haze.HazeState
 import org.koin.compose.KoinApplication
 import org.koin.compose.koinInject
@@ -44,6 +45,7 @@ private fun AppContent() {
     val hazeState = remember { HazeState() }
     ProvideAppLocale(language.resolve(systemTag)) {
         LagarTheme(darkTheme = dark) {
+            SystemBarAppearance(dark)
             AppShell(
                 navController = navController,
                 hazeState = hazeState,
