@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#ffffff","on-error-container":"#93000a","inverse-primary":"#bfc2ff","surface-container-highest":"#e0e2e9","primary":"#00004d","on-primary-fixed-variant":"#3037aa","surface":"#f7f9ff","inverse-on-surface":"#eef1f8","on-tertiary-fixed-variant":"#005235","tertiary":"#00140a","surface-tint":"#4951c3","on-background":"#181c21","on-error":"#ffffff","primary-fixed":"#e0e0ff","on-primary":"#ffffff","secondary-container":"#ffc07a","on-secondary-container":"#794c10","surface-bright":"#f7f9ff","surface-dim":"#d7dae1","on-surface":"#181c21","primary-fixed-dim":"#bfc2ff","background":"#f7f9ff","on-primary-fixed":"#00006e","tertiary-fixed-dim":"#80d8ab","error":"#ba1a1a","surface-container-high":"#e5e8ef","secondary":"#835418","on-tertiary-container":"#459c73","error-container":"#ffdad6","on-surface-variant":"#454653","inverse-surface":"#2d3136","on-tertiary-fixed":"#002113","on-primary-container":"#7981f6","on-secondary":"#ffffff","on-secondary-fixed-variant":"#673d00","primary-container":"#00008c","outline-variant":"#c6c5d5","surface-variant":"#e0e2e9","surface-container":"#ebeef5","surface-container-lowest":"#ffffff","secondary-fixed":"#ffddbb","secondary-fixed-dim":"#f9ba75","tertiary-fixed":"#9cf5c6","tertiary-container":"#002c1b","surface-container-low":"#f1f4fa","on-secondary-fixed":"#2b1700","outline":"#767685"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","gutter-mobile":"0.75rem","space-lg":"1.5rem","space-xl":"2rem","gutter":"1rem","space-xs":"0.25rem","margin":"1.25rem","margin-mobile":"1rem","space-md":"1rem"},"fontFamily":{"label-lg":["Inter"],"label-md":["Inter"],"body-legal-quote":["\"Source Serif 4\""],"body-ui":["Inter"],"body-legal":["\"Source Serif 4\""],"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"label-mono":["Inter"],"headline-xl":["Inter"],"headline-sm":["Inter"]},"fontSize":{"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-legal-quote":["15px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"400"}],"body-ui":["15px",{"lineHeight":"22px","fontWeight":"400"}],"body-legal":["17px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-mono":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-ui text-body-ui min-h-screen relative selection:bg-primary/20"><div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden"><div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#00008c]/10 blur-[90px]"></div><div class="absolute top-1/4 -right-24 w-72 h-72 rounded-full bg-[#1b7a54]/10 blur-[85px]"></div><div class="absolute bottom-1/3 -left-20 w-80 h-80 rounded-full bg-[#b71c1c]/10 blur-[95px]"></div><div class="absolute -bottom-10 right-0 w-72 h-72 rounded-full bg-[#8a5a1e]/10 blur-[80px]"></div></div><main class="flex flex-col relative w-full min-h-screen bg-transparent pt-safe pb-safe"><div class="flex flex-col w-full px-margin-mobile pb-space-xl">
+<!-- Top Bar: Logo Mark, Progress Dots & Skip Action -->
+<header class="flex items-center justify-between py-space-sm w-full">
+<!-- Brand Icon -->
+<div class="flex items-center gap-space-xs">
+<div class="relative flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-sm">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">balance</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">Leis<span class="text-secondary">.org</span></span>
+</div>
+<!-- Stepper Indicator -->
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container/70 backdrop-blur-md">
+<span class="w-6 h-1.5 rounded-full bg-primary-container transition-all"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant/60"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant/60"></span>
+</div>
+<!-- Skip Button -->
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest/70 hover:bg-surface-container-lowest backdrop-blur-md shadow-sm transition-colors text-on-surface-variant hover:text-on-surface active:scale-95" type="button">
+<span class="font-label-md text-label-md">Pular</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</header>
+<!-- Hero Visual Frame with Dynamic Visual Glass Float -->
+<section class="relative w-full mt-space-sm rounded-lg overflow-hidden shadow-sm bg-surface-container-lowest flex flex-col items-center">
+<!-- Visual Image Representation -->
+<div class="relative w-full h-56 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Minimalist fine art architectural composition representing Brazilian justice and democracy in Brasilia. Clean lines of Oscar Niemeyer marble curves bathed in natural golden hour light, with ultra subtle emerald and carmine glass refraction elements. Elegant, hyper-modern, clean editorial photography with crisp geometry and soft atmospheric depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsPRqItViAKNa5xlqSUQkYOqeoQiOx62Jy_pmy63H7AaqtGBJGFoL6KBNqQwvzjLjT8vWaZbOYHdeNTyPfBoQEoXBbhJHHwn_2Z-N71v38eWGhBbPeMo6Qj2BCUk_tuzdbDuHn3jUV6TIrnN9UdlDMntcyJaXwOfBP73Omj30MPW7iusigAylbwFqKkb3lrJMuXlQaITFci2r381NbpYQ84fLwZ9wYnkqQcK8KibzaLk6Zme0SkdEa"/>
+<!-- Liquid Gradient Scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
+<!-- Jurisdiction Accent Orbs -->
+<div class="absolute top-3 left-4 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#b71c1c]"></span>
+<span class="w-2 h-2 rounded-full bg-[#1b7a54]"></span>
+<span class="w-2 h-2 rounded-full bg-[#8a5a1e]"></span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium ml-1">Federação 100% Viva</span>
+</div>
+</div>
+<!-- Floating Metric Tag (Liquid Glass Depth) -->
+<div class="relative -mt-8 mx-4 mb-space-md z-10 w-[calc(100%-2rem)] max-w-sm rounded-DEFAULT bg-surface-container-lowest/90 backdrop-blur-xl shadow-md p-3 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">assured_workload</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-primary tracking-wide uppercase">Consolidação Total</span>
+<p class="font-body-ui text-[13px] leading-tight text-on-surface-variant truncate">
+          Mais de 7 milhões de atos normativos em tempo real
+        </p>
+</div>
+</div>
+</section>
+<!-- Typography & Messaging Section -->
+<section class="flex flex-col mt-space-md text-left">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container w-fit mb-space-xs">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-label-md text-label-md font-semibold tracking-wide">Ecossistema Unificado</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight font-bold">
+      Toda a legislação do Brasil em um só lugar.
+    </h1>
+<p class="font-body-ui text-body-ui text-on-surface-variant mt-2 leading-relaxed">
+      Pesquise, consulte vigências e compare textos consolidados em tempo real com facilidade e rigor jurídico.
+    </p>
+</section>
+<!-- Jurisdiction Bento Cards (3 Pillars) -->
+<section class="flex flex-col gap-2.5 mt-space-lg w-full">
+<!-- Municipal Pillar Card -->
+<div class="group relative flex items-start gap-3.5 p-3.5 rounded-DEFAULT bg-surface-container-lowest/80 hover:bg-surface-container-lowest backdrop-blur-lg shadow-sm transition-all">
+<div class="w-10 h-10 rounded-xl bg-[#b71c1c]/10 flex items-center justify-center text-[#b71c1c] shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">location_city</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 mb-0.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Leis Municipais</span>
+<span class="px-2 py-0.5 rounded-full bg-[#b71c1c]/15 text-[#b71c1c] font-label-md text-[11px] font-bold">
+            5.570 Cidades
+          </span>
+</div>
+<p class="font-body-ui text-[13px] text-on-surface-variant leading-snug">
+          Planos diretores, leis orgânicas e códigos tributários de todos os municípios do país.
+        </p>
+</div>
+</div>
+<!-- Estadual Pillar Card -->
+<div class="group relative flex items-start gap-3.5 p-3.5 rounded-DEFAULT bg-surface-container-lowest/80 hover:bg-surface-container-lowest backdrop-blur-lg shadow-sm transition-all">
+<div class="w-10 h-10 rounded-xl bg-[#1b7a54]/10 flex items-center justify-center text-[#1b7a54] shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">domain</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 mb-0.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Âmbito Estadual</span>
+<span class="px-2 py-0.5 rounded-full bg-[#1b7a54]/15 text-[#1b7a54] font-label-md text-[11px] font-bold">
+            26 Estados + DF
+          </span>
+</div>
+<p class="font-body-ui text-[13px] text-on-surface-variant leading-snug">
+          Constituições estaduais, decretos executivos e assembleias legislativas integradas.
+        </p>
+</div>
+</div>
+<!-- Federal Pillar Card -->
+<div class="group relative flex items-start gap-3.5 p-3.5 rounded-DEFAULT bg-surface-container-lowest/80 hover:bg-surface-container-lowest backdrop-blur-lg shadow-sm transition-all">
+<div class="w-10 h-10 rounded-xl bg-[#8a5a1e]/10 flex items-center justify-center text-[#8a5a1e] shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 mb-0.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Esfera Federal</span>
+<span class="px-2 py-0.5 rounded-full bg-[#8a5a1e]/15 text-[#8a5a1e] font-label-md text-[11px] font-bold">
+            União &amp; CF/88
+          </span>
+</div>
+<p class="font-body-ui text-[13px] text-on-surface-variant leading-snug">
+          Constituição de 1988, códigos, leis complementares e medidas provisórias consolidadas.
+        </p>
+</div>
+</div>
+</section>
+<!-- Floating Sticky Action Container -->
+<footer class="sticky bottom-3 mt-space-xl z-20 w-full">
+<div class="p-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-xl shadow-lg">
+<button class="w-full flex items-center justify-between px-6 py-4 rounded-full bg-primary text-on-primary shadow-md hover:bg-primary/95 active:scale-[0.99] transition-all" type="button">
+<span class="font-label-lg text-label-lg font-semibold tracking-wide flex items-center gap-2">
+<span>Avançar</span>
+<span class="text-xs px-2 py-0.5 rounded-full bg-on-primary/20 text-on-primary font-normal">Passo 1 de 3</span>
+</span>
+<div class="w-8 h-8 rounded-full bg-on-primary/15 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</div>
+</button>
+</div>
+</footer>
+</div>
+<script>
+  // Simple micro-interaction for cards feedback
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('touchstart', () => {}, { passive: true });
+  });
+</script></main></body></html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Menu Lateral Drawer - leis.org</title>
+<!-- Tailwind CSS v3 CDN with forms and container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              municipal: '#B71C1C',
+              estadual: '#1B7A54',
+              federal: '#8A5A1E',
+              institucional: '#00008C',
+            },
+          },
+          boxShadow: {
+            'glass-drawer': '10px 0 35px -5px rgba(15, 23, 42, 0.18), 4px 0 10px -2px rgba(15, 23, 42, 0.08)',
+            'glass-card': '0 8px 30px rgba(0, 0, 0, 0.04)',
+            'inner-sheen': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.85)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Glassmorphism Styles -->
+<style data-purpose="liquid-glass-effects">
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    /* iOS & Material You Liquid Glass Layer */
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(28px) saturate(180%);
+      -webkit-backdrop-filter: blur(28px) saturate(180%);
+      border-right: 1px solid rgba(255, 255, 255, 0.65);
+    }
+
+    /* Scrim Background Overlay with gentle blur */
+    .drawer-scrim {
+      background: rgba(15, 23, 42, 0.42);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    /* Subtle dynamic inner highlights */
+    .glass-item {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .glass-item:active {
+      transform: scale(0.985);
+      background-color: rgba(226, 232, 240, 0.55);
+    }
+
+    /* Custom thin scrollbar for drawer content */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<!-- END: Custom Glassmorphism Styles -->
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased h-screen w-screen overflow-hidden flex justify-center items-center">
+<!-- BEGIN: MobileDeviceFrame -->
+<div class="relative w-full max-w-[430px] h-full max-h-[932px] overflow-hidden bg-slate-900 shadow-2xl flex flex-col sm:rounded-[48px] sm:border-[8px] sm:border-slate-800" data-purpose="mobile-viewport-container">
+<!-- BEGIN: BackgroundHomeScreen -->
+<!-- Represents the app home screen behind the opened drawer overlay -->
+<div class="absolute inset-0 z-0 flex flex-col bg-gradient-to-br from-slate-50 via-slate-100 to-emerald-50/20 p-5 select-none pointer-events-none opacity-40 filter blur-[1px]" data-purpose="home-screen-backdrop">
+<div class="h-10"></div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-9 h-9 rounded-2xl bg-slate-300"></div>
+<div class="h-6 w-32 bg-slate-300 rounded-full"></div>
+<div class="w-9 h-9 rounded-2xl bg-slate-300"></div>
+</div>
+<div class="w-full h-12 bg-white rounded-2xl shadow-sm mb-6 border border-slate-200"></div>
+<div class="space-y-4">
+<div class="w-full h-28 bg-white rounded-3xl border border-slate-200 shadow-sm p-4"></div>
+<div class="w-full h-40 bg-white rounded-3xl border border-slate-200 shadow-sm p-4"></div>
+<div class="w-full h-32 bg-white rounded-3xl border border-slate-200 shadow-sm p-4"></div>
+</div>
+</div>
+<!-- END: BackgroundHomeScreen -->
+<!-- BEGIN: ScrimOverlay -->
+<!-- Scrim darkens background and dismisses drawer when tapped outside -->
+<div class="absolute inset-0 z-10 drawer-scrim" data-purpose="drawer-scrim-overlay"></div>
+<!-- END: ScrimOverlay -->
+<!-- BEGIN: LiquidGlassDrawer -->
+<aside class="relative z-20 w-[86%] h-full liquid-glass shadow-glass-drawer flex flex-col justify-between overflow-hidden" data-purpose="lateral-drawer-container">
+<!-- iOS Status Bar Spacer with safe-area spacing -->
+<div class="pt-11 px-5 flex-shrink-0">
+<!-- Close Drawer Handle Bar indicator for swipe -->
+<div class="w-10 h-1 bg-slate-300/80 rounded-full mb-3 mx-auto sm:hidden"></div>
+</div>
+<!-- BEGIN: ScrollableDrawerBody -->
+<div class="flex-1 overflow-y-auto no-scrollbar px-5 pb-6 space-y-6" data-purpose="drawer-scrollable-content">
+<!-- BEGIN: UserProfileSection -->
+<section class="relative bg-white/70 border border-white/90 rounded-3xl p-4 shadow-glass-card shadow-inner-sheen" data-purpose="user-profile-header">
+<div class="flex items-center space-x-3.5">
+<!-- User Avatar with Verified Ring -->
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-600 via-teal-600 to-emerald-400 flex items-center justify-center text-white font-bold text-lg shadow-md ring-2 ring-white">
+                JM
+              </div>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center" title="Conexão Segura">
+<span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+</span>
+</div>
+<!-- User Info Details -->
+<div class="min-w-0 flex-1">
+<h2 class="text-sm font-semibold text-slate-900 truncate leading-snug">
+                Olá, Jackson F. de A. Mafra
+              </h2>
+<p class="text-xs text-slate-500 truncate mt-0.5">
+                jacksonfdam@gmail.com
+              </p>
+<!-- Badges Info Profile & ICP-Brasil -->
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-100/90 text-emerald-800">
+                  Perfil Jurídico
+                </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-slate-200/80 text-slate-700">
+<svg class="w-2.5 h-2.5 text-emerald-600" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" fill-rule="evenodd"></path>
+</svg>
+                  ICP-Brasil
+                </span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: UserProfileSection -->
+<!-- BEGIN: FederationAmbitoSection -->
+<section class="space-y-2.5" data-purpose="jurisdiction-ambit-switcher">
+<div class="flex items-center justify-between px-1">
+<span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+              Trocar Âmbito Federativo
+            </span>
+<span class="text-[10px] font-medium text-slate-400">Jurisdição ativa</span>
+</div>
+<!-- Municipal Sphere -->
+<button class="glass-item w-full flex items-center justify-between p-3 rounded-2xl bg-white/60 hover:bg-white/90 border border-white/80 shadow-sm text-left group" type="button">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-red-50 border border-red-200/60 flex items-center justify-center text-brand-municipal shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+<svg class="w-5 h-5 text-brand-municipal" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+<path d="M2 17L12 22L22 17"></path>
+<path d="M2 12L12 17L22 12"></path>
+</svg>
+</div>
+<div class="truncate">
+<div class="text-xs font-bold text-slate-800 leading-tight">Leis Municipais</div>
+<div class="text-[11px] text-slate-500 font-medium">Câmaras e Prefeituras</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-red-100 text-brand-municipal border border-red-200 flex-shrink-0 ml-2">
+              Ativo: POA
+            </span>
+</button>
+<!-- Estadual Sphere -->
+<button class="glass-item w-full flex items-center justify-between p-3 rounded-2xl bg-white/40 hover:bg-white/80 border border-white/60 shadow-sm text-left group" type="button">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-brand-estadual shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+<svg class="w-5 h-5 text-brand-estadual" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M3 21h18"></path>
+<path d="M5 21V7l7-4 7 4v14"></path>
+<path d="M9 10a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v11H9z"></path>
+</svg>
+</div>
+<div class="truncate">
+<div class="text-xs font-semibold text-slate-800 leading-tight">Leis Estaduais</div>
+<div class="text-[11px] text-slate-500">Assembleias Legislativas</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-50 text-brand-estadual border border-emerald-100 flex-shrink-0 ml-2">
+              26 Estados + DF
+            </span>
+</button>
+<!-- Federal Sphere -->
+<button class="glass-item w-full flex items-center justify-between p-3 rounded-2xl bg-white/40 hover:bg-white/80 border border-white/60 shadow-sm text-left group" type="button">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-brand-federal shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+<svg class="w-5 h-5 text-brand-federal" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<line x1="12" x2="12" y1="2" y2="22"></line>
+<path d="M12 6a6 6 0 0 0 0 12"></path>
+</svg>
+</div>
+<div class="truncate">
+<div class="text-xs font-semibold text-slate-800 leading-tight">Leis Federais</div>
+<div class="text-[11px] text-slate-500">CF88, Códigos &amp; MPs</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-50 text-brand-federal border border-amber-100 flex-shrink-0 ml-2">
+              Congresso
+            </span>
+</button>
+<!-- Institucional Sphere -->
+<button class="glass-item w-full flex items-center justify-between p-3 rounded-2xl bg-white/40 hover:bg-white/80 border border-white/60 shadow-sm text-left group" type="button">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-blue-50 border border-blue-200/60 flex items-center justify-center text-brand-institucional shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+<svg class="w-5 h-5 text-brand-institucional" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+<div class="truncate">
+<div class="text-xs font-semibold text-slate-800 leading-tight">Leis Institucionais</div>
+<div class="text-[11px] text-slate-500">Resoluções e Conselhos</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-blue-50 text-brand-institucional border border-blue-100 flex-shrink-0 ml-2">
+              OAB, CFM, CNJ
+            </span>
+</button>
+</section>
+<!-- END: FederationAmbitoSection -->
+<!-- BEGIN: NavigationFeaturesSection -->
+<section class="space-y-1" data-purpose="features-navigation-list">
+<div class="px-1 mb-2">
+<span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+              Área do Advogado &amp; Cidadão
+            </span>
+</div>
+<!-- Leis Favoritas -->
+<a class="glass-item flex items-center justify-between px-3 py-2.5 rounded-2xl text-slate-700 hover:bg-white/70 group" href="#">
+<div class="flex items-center space-x-3">
+<span class="w-7 h-7 flex items-center justify-center text-rose-500 bg-rose-50 rounded-lg group-hover:scale-110 transition-transform">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+</svg>
+</span>
+<span class="text-xs font-medium text-slate-800">Leis Favoritas</span>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-rose-100/80 text-rose-700">12</span>
+</a>
+<!-- Minhas Anotações -->
+<a class="glass-item flex items-center justify-between px-3 py-2.5 rounded-2xl text-slate-700 hover:bg-white/70 group" href="#">
+<div class="flex items-center space-x-3">
+<span class="w-7 h-7 flex items-center justify-center text-amber-600 bg-amber-50 rounded-lg group-hover:scale-110 transition-transform">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span>
+<span class="text-xs font-medium text-slate-800">Minhas Anotações</span>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-100/80 text-amber-800">5 notas</span>
+</a>
+<!-- Leis Populares -->
+<a class="glass-item flex items-center justify-between px-3 py-2.5 rounded-2xl text-slate-700 hover:bg-white/70 group" href="#">
+<div class="flex items-center space-x-3">
+<span class="w-7 h-7 flex items-center justify-center text-teal-600 bg-teal-50 rounded-lg group-hover:scale-110 transition-transform">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span>
+<span class="text-xs font-medium text-slate-800">Leis Mais Populares</span>
+</div>
+<span class="text-slate-400 text-xs">→</span>
+</a>
+<!-- Diários Oficiais -->
+<a class="glass-item flex items-center justify-between px-3 py-2.5 rounded-2xl text-slate-700 hover:bg-white/70 group" href="#">
+<div class="flex items-center space-x-3">
+<span class="w-7 h-7 flex items-center justify-center text-sky-600 bg-sky-50 rounded-lg group-hover:scale-110 transition-transform">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span>
+<span class="text-xs font-medium text-slate-800">Diários Oficiais Sincronizados</span>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9px] font-semibold bg-sky-100 text-sky-700">Novo</span>
+</a>
+<!-- Histórico -->
+<a class="glass-item flex items-center justify-between px-3 py-2.5 rounded-2xl text-slate-700 hover:bg-white/70 group" href="#">
+<div class="flex items-center space-x-3">
+<span class="w-7 h-7 flex items-center justify-center text-slate-600 bg-slate-100 rounded-lg group-hover:scale-110 transition-transform">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span>
+<span class="text-xs font-medium text-slate-800">Histórico de Pesquisas</span>
+</div>
+</a>
+<!-- Configurações -->
+<a class="glass-item flex items-center justify-between px-3 py-2.5 rounded-2xl text-slate-700 hover:bg-white/70 group" href="#">
+<div class="flex items-center space-x-3">
+<span class="w-7 h-7 flex items-center justify-center text-slate-600 bg-slate-100 rounded-lg group-hover:scale-110 transition-transform">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span>
+<span class="text-xs font-medium text-slate-800">Configurações &amp; Acessibilidade</span>
+</div>
+</a>
+</section>
+<!-- END: NavigationFeaturesSection -->
+</div>
+<!-- END: ScrollableDrawerBody -->
+<!-- BEGIN: DrawerFooterSection -->
+<footer class="p-4 border-t border-slate-200/60 bg-white/40 flex flex-col space-y-2" data-purpose="drawer-bottom-actions">
+<!-- Logout Button -->
+<button class="glass-item w-full flex items-center justify-center space-x-2 py-3 px-4 rounded-2xl bg-white/70 hover:bg-red-50 text-slate-700 hover:text-red-700 border border-slate-200/60 shadow-sm transition-colors" type="button">
+<svg class="w-4 h-4 text-slate-500 hover:text-red-600 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-xs font-medium">Sair da Conta</span>
+</button>
+<!-- Brand Version & Security Metadata -->
+<div class="text-center pt-1">
+<p class="text-[10px] text-slate-400 font-medium">
+            leis.org v3.4 • Conexão Segura
+          </p>
+</div>
+<!-- iOS Home Indicator bar -->
+<div class="w-32 h-1 bg-slate-400/40 rounded-full mx-auto mt-1"></div>
+</footer>
+<!-- END: DrawerFooterSection -->
+</aside>
+<!-- END: LiquidGlassDrawer -->
+</div>
+<!-- END: MobileDeviceFrame -->
+</body></html>

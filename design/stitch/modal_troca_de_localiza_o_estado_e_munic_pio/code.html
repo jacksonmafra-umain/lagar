@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Leis.org - Alterar Localidade</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            jurismuni: {
+              50: '#fdf2f2',
+              100: '#fde8e8',
+              500: '#ef4444',
+              700: '#b91c1c',
+              800: '#991b1b',
+              900: '#7f1d1d',
+              carmim: '#b71c1c',
+            }
+          },
+          boxShadow: {
+            'liquid-glow': '0 12px 40px 0 rgba(0, 0, 0, 0.25), 0 0 1px 1px rgba(255, 255, 255, 0.45) inset',
+            'sheet-shadow': '0 24px 48px -12px rgba(183, 28, 28, 0.18), 0 18px 36px -18px rgba(0, 0, 0, 0.35)',
+            'm3-elevated': '0 4px 16px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="glass-and-tokens">
+    /* Apple Liquid Glass + Material You Tokens */
+    .glass-frosted {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.68);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+    }
+
+    .glass-input {
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1.5px solid rgba(183, 28, 28, 0.16);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-input:focus-within, .glass-input.active {
+      border-color: #b71c1c;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 0 4px rgba(183, 28, 28, 0.12);
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+    }
+    
+    .material-symbols-fill {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+    }
+
+    /* iOS safe areas */
+    .pt-safe {
+      padding-top: env(safe-area-inset-top, 44px);
+    }
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 34px);
+    }
+
+    /* Hide scrollbars smoothly */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-neutral-900 font-sans antialiased text-neutral-900 flex justify-center items-center min-h-screen select-none overflow-hidden">
+<!-- Mobile Viewport Container (iOS Form Factor) -->
+<div class="relative w-full max-w-[430px] h-[932px] max-h-screen bg-neutral-100 overflow-hidden shadow-2xl flex flex-col justify-between">
+<!-- BEGIN: Background Simulated Home Municipal Page -->
+<div class="absolute inset-0 z-0 flex flex-col filter blur-[3.5px] scale-[0.985] opacity-90 transition-all pointer-events-none select-none" data-purpose="background-context">
+<!-- Top Municipal Crimson Header (Porto Alegre) -->
+<header class="bg-jurismuni-carmim text-white pt-safe px-5 pb-5 rounded-b-[2rem] shadow-lg relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mt-2 mb-3">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white/40 flex items-center justify-center font-bold text-xs">
+<span class="material-symbols-outlined text-lg">account_balance</span>
+</div>
+<div>
+<span class="text-xs uppercase tracking-wider text-white/80 block leading-tight">Legislação Municipal</span>
+<h1 class="text-lg font-bold flex items-center gap-1 leading-none text-white">
+                Porto Alegre <span class="material-symbols-outlined text-sm">expand_more</span>
+</h1>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-white text-xl">search</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-white text-xl">tune</span>
+</div>
+</div>
+</div>
+<!-- Municipal Pill Selector -->
+<div class="flex gap-2 overflow-x-hidden pt-2">
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white text-jurismuni-carmim shadow-sm">Recentes</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white/20 text-white">Plano Diretor</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white/20 text-white">Lei Orgânica</span>
+</div>
+</header>
+<!-- Simulated Norm Cards in Home Background -->
+<main class="p-4 space-y-3 flex-1 overflow-hidden">
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-neutral-200/80">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-semibold px-2 py-0.5 rounded bg-jurismuni-100 text-jurismuni-carmim">Decreto</span>
+<span class="text-xs text-neutral-400">Norma em vigor</span>
+</div>
+<h2 class="text-sm font-bold text-neutral-800">Decreto 21.775/2022</h2>
+<p class="text-xs text-neutral-600 mt-1 line-clamp-2">Permite o uso do próprio municipal localizado na Rua Benjamin Maresco, nº 142...</p>
+</div>
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-neutral-200/80">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-semibold px-2 py-0.5 rounded bg-neutral-100 text-neutral-700">Lei Complementar</span>
+<span class="text-xs text-emerald-600 font-medium">Vigente</span>
+</div>
+<h2 class="text-sm font-bold text-neutral-800">LC nº 941/2022</h2>
+<p class="text-xs text-neutral-600 mt-1 line-clamp-2">Institui o Plano Diretor de Desenvolvimento Urbano e Ambiental de Porto Alegre.</p>
+</div>
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-neutral-200/80">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-semibold px-2 py-0.5 rounded bg-neutral-100 text-neutral-700">Portaria</span>
+<span class="text-xs text-neutral-400">03/01/2023</span>
+</div>
+<h2 class="text-sm font-bold text-neutral-800">Portaria SMSP Nº 012/2023</h2>
+<p class="text-xs text-neutral-600 mt-1 line-clamp-2">Regulamenta horários e procedimentos sanitários para feiras livres da Capital.</p>
+</div>
+</main>
+<!-- Simulated Bottom Tab Bar -->
+<nav class="bg-white/90 border-t border-neutral-200 px-6 py-2 pb-safe flex justify-between items-center text-xs text-neutral-500">
+<div class="flex flex-col items-center text-jurismuni-carmim">
+<span class="material-symbols-fill text-2xl">gavel</span>
+<span class="text-[10px] font-semibold mt-0.5">Leis</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-2xl">bookmarks</span>
+<span class="text-[10px] mt-0.5">Salvos</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-2xl">history</span>
+<span class="text-[10px] mt-0.5">Histórico</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] mt-0.5">Perfil</span>
+</div>
+</nav>
+</div>
+<!-- END: Background Simulated Home Municipal Page -->
+<!-- BEGIN: Modal Backdrop / Scrim Glass Layer -->
+<div class="absolute inset-0 bg-neutral-950/45 backdrop-blur-[14px] z-20 flex flex-col justify-end transition-opacity duration-300" data-purpose="scrim-overlay">
+<!-- iOS Drag Handle Indicator (Affordance) -->
+<div class="w-full flex justify-center pb-2 pt-4">
+<div class="w-12 h-1.5 rounded-full bg-white/60 shadow-sm backdrop-blur-md"></div>
+</div>
+<!-- BEGIN: Bottom Sheet Modal (Juris Glass) -->
+<section class="glass-frosted rounded-t-[2.25rem] shadow-sheet-shadow border-t border-x border-white/60 w-full px-6 pt-5 pb-safe flex flex-col space-y-4 max-h-[85vh] overflow-y-auto no-scrollbar relative animate-slide-up" data-purpose="location-modal-sheet">
+<!-- Sheet Header with Juris Glass Icon & Close Button -->
+<div class="flex items-center justify-between pb-1 border-b border-black/[0.05]">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-2xl bg-jurismuni-50 border border-jurismuni-100 flex items-center justify-center text-jurismuni-carmim shadow-inner">
+<span class="material-symbols-outlined text-2xl">location_on</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-neutral-900 tracking-tight leading-tight">Mudar Localização</h2>
+<p class="text-xs text-neutral-500 font-normal">Acesse a legislação local e diários oficiais</p>
+</div>
+</div>
+<!-- Close Button -->
+<button aria-label="Fechar" class="w-8 h-8 rounded-full bg-black/5 hover:bg-black/10 active:scale-95 transition-all flex items-center justify-center text-neutral-600" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- Quick GPS Action: Material You Glass Pill -->
+<div class="pt-1">
+<button class="w-full py-2.5 px-4 rounded-xl glass-card flex items-center justify-between text-xs font-semibold text-neutral-800 border border-white/80 shadow-sm active:scale-[0.99] transition hover:bg-white/80" type="button">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-jurismuni-carmim text-lg">near_me</span>
+<span>Usar localização atual (GPS)</span>
+</div>
+<span class="text-[11px] font-medium text-jurismuni-carmim bg-jurismuni-100/70 px-2 py-0.5 rounded-full">Automático</span>
+</button>
+</div>
+<!-- Selectors Group -->
+<div class="space-y-3 pt-1">
+<!-- Estado (UF) Selector Field -->
+<div class="relative" data-purpose="field-state">
+<label class="block text-[11px] font-semibold uppercase tracking-wider text-neutral-600 mb-1 ml-1 flex items-center justify-between">
+<span>Estado (UF)</span>
+<span class="text-[10px] font-normal text-neutral-400">27 Federações disponíveis</span>
+</label>
+<div class="glass-input rounded-2xl p-3 px-4 flex items-center justify-between cursor-pointer active:scale-[0.995]">
+<div class="flex items-center space-x-3">
+<div class="w-7 h-7 rounded-lg bg-neutral-200/60 flex items-center justify-center text-neutral-700">
+<span class="material-symbols-outlined text-lg">flag</span>
+</div>
+<div>
+<span class="text-[11px] text-neutral-400 block -mb-0.5">Unidade Federativa</span>
+<span class="text-sm font-semibold text-neutral-900">Rio Grande do Sul (RS)</span>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-black/5 flex items-center justify-center text-neutral-600">
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Cidade (Município) Selector Field -->
+<div class="relative" data-purpose="field-city">
+<label class="block text-[11px] font-semibold uppercase tracking-wider text-neutral-600 mb-1 ml-1 flex items-center justify-between">
+<span>Cidade (Município)</span>
+<span class="text-[10px] font-medium text-emerald-600 flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                Câmara Conectada
+              </span>
+</label>
+<div class="glass-input active rounded-2xl p-3 px-4 flex items-center justify-between cursor-pointer">
+<div class="flex items-center space-x-3">
+<div class="w-7 h-7 rounded-lg bg-jurismuni-100 flex items-center justify-center text-jurismuni-carmim">
+<span class="material-symbols-outlined text-lg">apartment</span>
+</div>
+<div>
+<span class="text-[11px] text-neutral-400 block -mb-0.5">Município Selecionado</span>
+<span class="text-sm font-semibold text-neutral-900">Porto Alegre</span>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-jurismuni-100/80 flex items-center justify-center text-jurismuni-carmim">
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Jurisdição Conectada Informational Badge (Status M3 Glass Card) -->
+<div class="rounded-2xl p-3.5 bg-gradient-to-r from-white/70 to-neutral-50/70 border border-white/90 shadow-sm flex items-center space-x-3.5" data-purpose="jurisdiction-sync-card">
+<!-- Brasão Simulado / SVG Escudo -->
+<div class="w-10 h-10 rounded-xl bg-jurismuni-carmim/10 border border-jurismuni-carmim/20 flex-shrink-0 flex items-center justify-center text-jurismuni-carmim">
+<span class="material-symbols-outlined text-2xl">shield</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center space-x-1.5">
+<h4 class="text-xs font-bold text-neutral-900 truncate">Câmara Municipal de Porto Alegre</h4>
+</div>
+<p class="text-[11px] text-neutral-500 leading-snug">Base integrada com o Diário Oficial e SAPL em tempo real.</p>
+</div>
+<span class="material-symbols-outlined text-emerald-600 text-lg">verified</span>
+</div>
+<!-- Action Buttons: Material You / iOS Stack -->
+<div class="pt-2 pb-2 flex items-center space-x-3">
+<!-- Cancelar Button -->
+<button class="flex-1 py-3.5 px-4 rounded-full border border-neutral-300/80 bg-white/70 hover:bg-white text-neutral-700 font-semibold text-sm transition-all shadow-sm active:scale-95 text-center" type="button">
+            Cancelar
+          </button>
+<!-- Confirmar / Alterar Button -->
+<button class="flex-[1.4] py-3.5 px-6 rounded-full bg-jurismuni-carmim hover:bg-jurismuni-800 active:bg-jurismuni-900 text-white font-semibold text-sm transition-all shadow-md active:scale-95 flex items-center justify-center space-x-2" type="button">
+<span>Alterar</span>
+<span class="material-symbols-outlined text-base">check</span>
+</button>
+</div>
+</section>
+<!-- END: Bottom Sheet Modal -->
+</div>
+<!-- END: Modal Backdrop / Scrim Glass Layer -->
+</div>
+</body></html>

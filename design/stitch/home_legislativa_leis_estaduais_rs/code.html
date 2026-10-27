@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-[#f2faf6]" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Leis Estaduais - Rio Grande do Sul</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#edf9f4',
+              100: '#d7f2e6',
+              500: '#1b7a54',
+              600: '#156545',
+              700: '#115037',
+              surface: '#f2faf6',
+            }
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Text', 'Roboto', 'Helvetica Neue', 'sans-serif'],
+          },
+          boxShadow: {
+            glass: '0 8px 32px 0 rgba(27, 122, 84, 0.08)',
+            'glass-subtle': '0 4px 20px 0 rgba(0, 0, 0, 0.04)',
+            'chip': '0 2px 8px 0 rgba(27, 122, 84, 0.2)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style data-purpose="glassmorphism-and-ios">
+    /* Liquid Glass Effect */
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(20px) saturate(190%);
+      -webkit-backdrop-filter: blur(20px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+    }
+    
+    .liquid-glass-card {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .liquid-glass-accent {
+      background: linear-gradient(135deg, rgba(27, 122, 84, 0.05), rgba(255, 255, 255, 0.8));
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1.5px solid rgba(27, 122, 84, 0.35);
+    }
+
+    /* iOS Safe Area Padding Utilities */
+    .pt-safe {
+      padding-top: env(safe-area-inset-top, 20px);
+    }
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 24px);
+    }
+
+    /* Subtle decorative background waves/mesh */
+    .bg-mesh {
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(27, 122, 84, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 90% 80%, rgba(27, 122, 84, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(215, 242, 230, 0.4) 0%, transparent 60%);
+    }
+
+    /* Material Symbols Font Alignment */
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-flex;
+      vertical-align: middle;
+      user-select: none;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="h-full font-sans text-slate-800 bg-[#f2faf6] bg-mesh antialiased flex flex-col justify-between overflow-x-hidden selection:bg-brand-100">
+<!-- BEGIN: MainContainer -->
+<div class="flex-1 flex flex-col w-full max-w-md mx-auto relative pb-28">
+<!-- BEGIN: TopBar -->
+<header class="sticky top-0 z-40 w-full liquid-glass border-b border-brand-500/10 shadow-sm pt-safe" data-purpose="header-navigation">
+<div class="px-4 py-3 flex items-center justify-between">
+<!-- Brand Logo -->
+<div class="flex items-center gap-2" data-purpose="brand-logo">
+<div class="w-8 h-8 rounded-full border-2 border-brand-500 flex items-center justify-center p-1 bg-white/80 shadow-inner">
+<svg class="w-5 h-5 text-brand-500 stroke-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polygon fill="rgba(27, 122, 84, 0.15)" points="12,6 18,17 6,17"></polygon>
+</svg>
+</div>
+<div class="leading-none">
+<span class="text-xl font-extrabold text-slate-800 tracking-tight">Leis<span class="text-brand-500 font-normal text-sm">.org</span></span>
+<span class="block text-[10px] font-semibold tracking-wider text-brand-600 uppercase">Estaduais</span>
+</div>
+</div>
+<!-- Scope Badge & Auth Action -->
+<div class="flex items-center gap-2" data-purpose="quick-actions">
+<!-- Abrangência Selector -->
+<button class="liquid-glass rounded-full px-2.5 py-1 text-xs font-semibold text-brand-600 flex items-center gap-1 border border-brand-500/30 active:scale-95 transition" type="button">
+<span class="material-symbols-outlined text-[15px]">sync_alt</span>
+<span>Estadual</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<!-- Login / Sign In Button -->
+<button class="bg-brand-500 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-chip active:scale-95 transition flex items-center gap-1" type="button">
+<span>Entrar</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</header>
+<!-- END: TopBar -->
+<!-- BEGIN: HeroSection -->
+<section class="px-5 pt-6 pb-2 text-center" data-purpose="hero-banner">
+<h1 class="text-lg md:text-xl font-medium text-slate-700 leading-snug">
+        Pioneiro e <span class="font-bold text-slate-900">único</span> portal que <span class="font-bold text-slate-900">integra e centraliza</span> leis <span class="font-bold text-slate-900">públicas</span> e <span class="font-bold text-slate-900">privadas</span> de todas as esferas: <span class="text-brand-600 font-semibold">estadual</span>, municipal e federal
+      </h1>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: SearchContainer -->
+<section class="px-4 py-3" data-purpose="state-selector-and-search">
+<div class="liquid-glass rounded-3xl p-3.5 shadow-glass border border-white space-y-3">
+<!-- State Selector Dropdown -->
+<div class="relative bg-white/70 rounded-2xl border border-brand-500/20 px-3.5 py-2.5">
+<label class="block text-[10px] uppercase font-bold tracking-wider text-brand-600">Selecione um estado</label>
+<div class="flex items-center justify-between mt-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-500 text-lg">location_on</span>
+<span class="font-semibold text-sm text-slate-800">Rio Grande do Sul</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-lg">arrow_drop_down</span>
+</div>
+</div>
+<!-- Search Input with Action Button -->
+<div class="relative flex items-center bg-white rounded-full border border-brand-500/30 p-1 pl-3 shadow-inner focus-within:ring-2 focus-within:ring-brand-500/40">
+<span class="material-symbols-outlined text-brand-500 mr-2 text-lg">search</span>
+<input class="w-full bg-transparent border-none text-xs text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-0 p-0" placeholder="Digite número ou termo para pesquisar..." type="text"/>
+<button aria-label="Pesquisar" class="w-9 h-9 rounded-full bg-brand-500 text-white flex items-center justify-center shadow-md active:scale-90 transition shrink-0" type="button">
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+<!-- Advanced Search Toggle -->
+<div class="flex justify-end pt-1">
+<button class="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 hover:text-brand-600 uppercase tracking-wider active:opacity-75" type="button">
+<span class="material-symbols-outlined text-sm">manage_search</span>
+<span>Busca Avançada</span>
+</button>
+</div>
+</div>
+</section>
+<!-- END: SearchContainer -->
+<!-- BEGIN: RelevantLawsSection -->
+<section class="px-4 pt-3 pb-2" data-purpose="relevant-laws">
+<!-- Section Title with State Crest representation -->
+<div class="flex flex-col items-center justify-center text-center my-2">
+<div class="w-14 h-14 rounded-full bg-white/90 p-1.5 shadow-glass flex items-center justify-center border border-brand-500/20 mb-1.5">
+<!-- Brasão Simbólico Rio Grande do Sul -->
+<svg class="w-full h-full drop-shadow-sm" fill="none" stroke="currentColor" viewbox="0 0 100 100">
+<!-- Olive wreath & Shield -->
+<path d="M 50 12 L 78 22 L 78 52 C 78 72 50 88 50 88 C 50 88 22 72 22 52 L 22 22 Z" fill="#1b7a54" fill-opacity="0.12" stroke="#1b7a54" stroke-width="2.5"></path>
+<!-- Inner Flag Tri-color Stripes RS (Green, Red, Yellow) -->
+<path d="M 28 32 L 72 56 L 66 74 L 34 74 Z" fill="#d97706" opacity="0.6"></path>
+<path d="M 30 26 L 70 48 L 50 78 Z" fill="#dc2626" opacity="0.7"></path>
+<circle cx="50" cy="48" fill="#ffffff" r="11" stroke="#1b7a54" stroke-width="2"></circle>
+<path d="M 45 48 L 55 48 M 50 43 L 50 53" stroke="#1b7a54" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold text-slate-900 tracking-tight">Leis Relevantes</h2>
+<p class="text-xs text-brand-600 font-semibold tracking-wide">Rio Grande do Sul</p>
+</div>
+<!-- Highlighted Card: Constituição Estadual -->
+<div class="mt-3">
+<div class="liquid-glass-accent rounded-2xl p-4 shadow-sm flex items-center justify-between active:scale-[0.99] transition cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-600">
+<span class="material-symbols-outlined text-xl">menu_book</span>
+</div>
+<div>
+<span class="block text-sm font-bold text-slate-900">Constituição</span>
+<span class="block text-xs font-medium text-brand-600">do Estado do RS</span>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-brand-600 shadow-sm">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: RelevantLawsSection -->
+<!-- BEGIN: ExploreSection -->
+<section class="px-4 pt-4" data-purpose="explore-more-laws">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-base font-bold text-slate-900">Explore mais leis</h3>
+<span class="text-[11px] font-semibold text-brand-600">RS e Federal</span>
+</div>
+<!-- Filter Chips (Material You) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" data-purpose="category-chips">
+<button class="liquid-glass rounded-full px-4 py-1.5 text-xs font-semibold text-slate-600 border border-slate-200 active:scale-95 transition shrink-0" type="button">
+          Recentes
+        </button>
+<button class="bg-brand-500 rounded-full px-4 py-1.5 text-xs font-semibold text-white shadow-chip active:scale-95 transition shrink-0 flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs fill">trending_up</span>
+<span>Populares</span>
+</button>
+<button class="liquid-glass rounded-full px-4 py-1.5 text-xs font-semibold text-slate-600 border border-slate-200 active:scale-95 transition shrink-0 flex items-center gap-1" type="button">
+<span>+Favoritados</span>
+</button>
+</div>
+<!-- Laws List -->
+<div class="mt-3.5 space-y-2.5" data-purpose="laws-feed">
+<!-- Law Card 1 -->
+<article class="liquid-glass-card rounded-2xl p-3.5 border border-white/80 shadow-glass-subtle active:bg-white/90 transition">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="inline-block px-2 py-0.5 rounded-md bg-brand-50 text-[10px] font-bold text-brand-600 border border-brand-500/20 mb-1">
+                Lei Complementar 10098/1994
+              </span>
+<p class="text-xs text-slate-700 leading-relaxed font-normal mt-1 line-clamp-3">
+                Dispõe sobre o estatuto e regime jurídico único dos servidores públicos civis do Estado do Rio Grande do Sul.
+              </p>
+</div>
+<button aria-label="Favoritar" class="text-slate-400 hover:text-brand-500 transition p-1">
+<span class="material-symbols-outlined text-lg">bookmark_border</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100/80 text-[10px] text-slate-400">
+<span>Estatuto dos Servidores RS</span>
+<span class="text-brand-600 font-semibold flex items-center gap-0.5">
+              Ver texto <span class="material-symbols-outlined text-[11px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- Law Card 2 -->
+<article class="liquid-glass-card rounded-2xl p-3.5 border border-white/80 shadow-glass-subtle active:bg-white/90 transition">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="inline-block px-2 py-0.5 rounded-md bg-brand-50 text-[10px] font-bold text-brand-600 border border-brand-500/20 mb-1">
+                Lei Complementar 15450/2020
+              </span>
+<p class="text-xs text-slate-700 leading-relaxed font-normal mt-1 line-clamp-3">
+                Altera a Lei Complementar nº 10.098, de 3 de fevereiro de 1994, que dispõe sobre o estatuto e regime jurídico único dos servidores...
+              </p>
+</div>
+<button aria-label="Favoritar" class="text-slate-400 hover:text-brand-500 transition p-1">
+<span class="material-symbols-outlined text-lg">bookmark_border</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100/80 text-[10px] text-slate-400">
+<span>Reforma Administrativa</span>
+<span class="text-brand-600 font-semibold flex items-center gap-0.5">
+              Ver texto <span class="material-symbols-outlined text-[11px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- Law Card 3 -->
+<article class="liquid-glass-card rounded-2xl p-3.5 border border-white/80 shadow-glass-subtle active:bg-white/90 transition">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="inline-block px-2 py-0.5 rounded-md bg-brand-50 text-[10px] font-bold text-brand-600 border border-brand-500/20 mb-1">
+                Lei Ordinária 13694/2011
+              </span>
+<p class="text-xs text-slate-700 leading-relaxed font-normal mt-1 line-clamp-3">
+                Institui o Estatuto Estadual da Igualdade Racial e dá outras providências.
+              </p>
+</div>
+<button aria-label="Favoritar" class="text-slate-400 hover:text-brand-500 transition p-1">
+<span class="material-symbols-outlined text-lg">bookmark_border</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100/80 text-[10px] text-slate-400">
+<span>Direitos Humanos &amp; Cidadania</span>
+<span class="text-brand-600 font-semibold flex items-center gap-0.5">
+              Ver texto <span class="material-symbols-outlined text-[11px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- Law Card 4 -->
+<article class="liquid-glass-card rounded-2xl p-3.5 border border-white/80 shadow-glass-subtle active:bg-white/90 transition">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="inline-block px-2 py-0.5 rounded-md bg-brand-50 text-[10px] font-bold text-brand-600 border border-brand-500/20 mb-1">
+                Lei Ordinária 15451/2020
+              </span>
+<p class="text-xs text-slate-700 leading-relaxed font-normal mt-1 line-clamp-3">
+                Altera a Lei nº 6.672, de 22 de abril de 1974, que institui o Estatuto e Plano de Carreira do Magistério Público do Rio Grande do Sul...
+              </p>
+</div>
+<button aria-label="Favoritar" class="text-slate-400 hover:text-brand-500 transition p-1">
+<span class="material-symbols-outlined text-lg">bookmark_border</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100/80 text-[10px] text-slate-400">
+<span>Educação e Magistério</span>
+<span class="text-brand-600 font-semibold flex items-center gap-0.5">
+              Ver texto <span class="material-symbols-outlined text-[11px]">arrow_forward</span>
+</span>
+</div>
+</article>
+</div>
+</section>
+<!-- END: ExploreSection -->
+</div>
+<!-- END: MainContainer -->
+<!-- BEGIN: BottomNavigationBar -->
+<nav class="fixed bottom-0 inset-x-0 z-50 liquid-glass border-t border-white/60 shadow-lg pb-safe" data-purpose="liquid-glass-bottom-bar">
+<div class="max-w-md mx-auto px-6 py-2 flex items-center justify-between">
+<!-- Tab: Início (Active) -->
+<button class="flex flex-col items-center gap-0.5 text-brand-500 relative py-1 focus:outline-none" type="button">
+<span class="material-symbols-outlined text-2xl fill">home</span>
+<span class="text-[10px] font-bold tracking-tight">Início</span>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-500 absolute -bottom-0.5"></span>
+</button>
+<!-- Tab: Explorar -->
+<button class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-slate-600 py-1 focus:outline-none transition" type="button">
+<span class="material-symbols-outlined text-2xl">manage_search</span>
+<span class="text-[10px] font-medium tracking-tight">Explorar</span>
+</button>
+<!-- Tab: Salvos -->
+<button class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-slate-600 py-1 focus:outline-none transition" type="button">
+<span class="material-symbols-outlined text-2xl">bookmarks</span>
+<span class="text-[10px] font-medium tracking-tight">Salvos</span>
+</button>
+<!-- Tab: Ajustes -->
+<button class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-slate-600 py-1 focus:outline-none transition" type="button">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<span class="text-[10px] font-medium tracking-tight">Ajustes</span>
+</button>
+</div>
+</nav>
+<!-- END: BottomNavigationBar -->
+</body></html>

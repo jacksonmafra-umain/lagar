@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="sv"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed": "#d1e4ff", "on-tertiary-fixed-variant": "#574400", "surface-container-lowest": "#ffffff", "secondary-fixed-dim": "#b1c5ff", "on-secondary-fixed": "#001947", "on-primary-container": "#aed2ff", "on-tertiary-fixed": "#241a00", "inverse-primary": "#9ecaff", "tertiary-container": "#d0a700", "surface-variant": "#e1e2e5", "primary-fixed-dim": "#9ecaff", "on-secondary-container": "#00388c", "on-secondary": "#ffffff", "outline-variant": "#c1c7d2", "on-tertiary": "#ffffff", "surface-container-highest": "#e1e2e5", "surface-container": "#eceef0", "secondary-container": "#83a6ff", "tertiary": "#745b00", "on-tertiary-container": "#4f3e00", "secondary": "#345baf", "surface-tint": "#1261a0", "outline": "#717781", "on-surface-variant": "#414750", "tertiary-fixed-dim": "#f0c100", "surface-dim": "#d8dadd", "surface": "#f8f9fc", "surface-bright": "#f8f9fc", "inverse-on-surface": "#eff1f3", "on-background": "#191c1e", "on-primary-fixed": "#001d36", "tertiary-fixed": "#ffe089", "primary-container": "#005b99", "error-container": "#ffdad6", "surface-container-low": "#f2f4f6", "on-primary": "#ffffff", "primary": "#004373", "on-error": "#ffffff", "secondary-fixed": "#dae2ff", "on-surface": "#191c1e", "surface-container-high": "#e7e8eb", "inverse-surface": "#2e3133", "on-error-container": "#93000a", "on-primary-fixed-variant": "#00497c", "error": "#ba1a1a", "background": "#f8f9fc", "on-secondary-fixed-variant": "#144296" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "gutter-mobile": "0.75rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "margin": "2rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-lg-mobile": ["Inter"], "display-lg-mobile": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Inter"], "statute-num": ["Inter"], "body-legal-md": ["\"Source Serif 4\""], "code-citation": ["Inter"], "display-lg": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-ui": ["Inter"], "body-legal-lg": ["\"Source Serif 4\""] }, fontSize: { "headline-lg-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "statute-num": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "0.025em", "fontWeight": "700" }], "body-legal-md": ["1rem", { "lineHeight": "1.65rem", "letterSpacing": "0", "fontWeight": "400" }], "code-citation": ["0.8125rem", { "lineHeight": "1.125rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-lg": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.025em", "fontWeight": "700" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-ui": ["0.9375rem", { "lineHeight": "1.375rem", "letterSpacing": "0", "fontWeight": "400" }], "body-legal-lg": ["1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-ui text-body-ui text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[22px]">balance</span></div><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">Lagar</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold leading-none">SFS</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Sveriges Rikes Lag</span></div></div><div class="flex items-center gap-1"><button aria-label="Sök lagtext" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Växla normlager" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[22px]">layers</span></button><button aria-label="Notiser" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-8">
+<div class="flex flex-col gap-4 mb-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shadow-md relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-60"></div>
+<span class="material-symbols-outlined text-[26px] text-tertiary-fixed relative z-10" style="font-variation-settings: 'FILL' 1;">crown</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Lagar</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">2025</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium">Svensk författningssamling &amp; normhierarki</p>
+</div>
+</div>
+<button aria-label="Växla tema" class="w-11 h-11 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant shadow-sm active:scale-95 transition-transform" id="theme-toggle-btn">
+<span class="material-symbols-outlined text-[20px]" id="theme-icon">dark_mode</span>
+</button>
+</div>
+<div class="relative w-full rounded-2xl bg-surface-container-low p-4 shadow-sm backdrop-blur-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[22px]">search</span>
+<input class="w-full bg-transparent font-body-ui text-body-ui text-on-surface placeholder:text-on-surface-variant outline-none" placeholder="Sök författning, SFS, kapitel eller praxis..." type="text"/>
+<span class="font-code-citation text-code-citation px-2 py-1 rounded bg-surface-container text-on-surface-variant">⌘K</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 mb-6">
+<div class="flex items-center justify-between px-0.5">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Normhierarkins fördelning</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">41 280 akter</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="h-3 w-full rounded-full bg-surface-container overflow-hidden flex shadow-inner">
+<div class="h-full" style="width: 2%; background-color: #0B3D91;" title="Grundlagar (4)"></div>
+<div class="h-full" style="width: 28%; background-color: #005B99;" title="SFS Lagar (1 850)"></div>
+<div class="h-full" style="width: 22%; background-color: #4A90C8;" title="SFS Förordningar (3 200)"></div>
+<div class="h-full" style="width: 18%; background-color: #0F7C7A;" title="Föreskrifter (8 900)"></div>
+<div class="h-full" style="width: 14%; background-color: #7A2E4D;" title="Rättspraxis (12 400)"></div>
+<div class="h-full" style="width: 8%; background-color: #5B3FA6;" title="EU-rätt (9 100)"></div>
+<div class="h-full" style="width: 5%; background-color: #2E7D32;" title="Regioner (3 100)"></div>
+<div class="h-full" style="width: 3%; background-color: #8B2E1F;" title="Kommuner (2 700)"></div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #0B3D91;"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Grundlagar</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">4 st</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #005B99;"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Lagar (SFS)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">1 852 st</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #7A2E4D;"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Rättspraxis</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">12 420 st</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #5B3FA6;"></span>
+<span class="font-label-sm text-label-sm text-on-surface">EU-akter</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">9 140 st</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 mb-6">
+<div class="flex items-center justify-between px-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Normativa lager</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Riksdagsordningen §</span>
+</div>
+<div class="flex flex-col gap-2.5" id="layers-container">
+<div class="p-3.5 rounded-2xl flex items-center justify-between shadow-sm active:scale-[0.99] transition-transform" style="background-color: rgba(11, 61, 145, 0.11);">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm" style="background-color: #0B3D91;">
+<span class="material-symbols-outlined text-[24px]" style="color: #FECC02; font-variation-settings: 'FILL' 1;">crown</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold truncate" style="color: #0B3D91;">1. Grundlagar</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold" style="background-color: rgba(11, 61, 145, 0.2); color: #0B3D91;">Överordnad</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Regeringsformen, Tryckfrihetsförordningen</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] shrink-0 ml-2" style="color: #0B3D91;">chevron_right</span>
+</div>
+<div class="p-3.5 rounded-2xl flex items-center justify-between shadow-sm active:scale-[0.99] transition-transform" style="background-color: rgba(0, 91, 153, 0.11);">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm" style="background-color: #005B99;">
+<span class="material-symbols-outlined text-[22px] text-on-primary" style="font-variation-settings: 'FILL' 1;">balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold truncate" style="color: #005B99;">2. SFS Lagar</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold" style="background-color: rgba(0, 91, 153, 0.2); color: #005B99;">Riksdag</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">SFS 2024:812 Brottsbalken, Rättegångsbalken</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] shrink-0 ml-2" style="color: #005B99;">chevron_right</span>
+</div>
+<div class="p-3.5 rounded-2xl flex items-center justify-between shadow-sm active:scale-[0.99] transition-transform" style="background-color: rgba(74, 144, 200, 0.12);">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm" style="background-color: #4A90C8;">
+<span class="material-symbols-outlined text-[22px] text-on-primary">history_edu</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold truncate" style="color: #004373;">3. SFS Förordningar</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold" style="background-color: rgba(74, 144, 200, 0.25); color: #004373;">Regering</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Förordning om statsbidrag, Trafikförordningen</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] shrink-0 ml-2" style="color: #4A90C8;">chevron_right</span>
+</div>
+<div class="p-3.5 rounded-2xl flex items-center justify-between shadow-sm active:scale-[0.99] transition-transform" style="background-color: rgba(15, 124, 122, 0.11);">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm" style="background-color: #0F7C7A;">
+<span class="material-symbols-outlined text-[22px] text-on-primary">security</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold truncate" style="color: #0F7C7A;">4. Myndighetsföreskrifter</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold" style="background-color: rgba(15, 124, 122, 0.2); color: #0F7C7A;">Verk</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Finansinspektionen (FFFS), Skatteverket (SKVFS)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] shrink-0 ml-2" style="color: #0F7C7A;">chevron_right</span>
+</div>
+<div class="p-3.5 rounded-2xl flex items-center justify-between shadow-sm active:scale-[0.99] transition-transform" style="background-color: rgba(122, 46, 77, 0.11);">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm" style="background-color: #7A2E4D;">
+<span class="material-symbols-outlined text-[22px] text-on-primary">gavel</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold truncate" style="color: #7A2E4D;">5. Rättspraxis</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold" style="background-color: rgba(122, 46, 77, 0.2); color: #7A2E4D;">Prejudikat</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Högsta domstolen (NJA), HDO, Kammarrätten</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] shrink-0 ml-2" style="color: #7A2E4D;">chevron_right</span>
+</div>
+<div class="p-3.5 rounded-2xl flex items-center justify-between shadow-sm active:scale-[0.99] transition-transform" style="background-color: rgba(91, 63, 166, 0.11);">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm" style="background-color: #5B3FA6;">
+<span class="material-symbols-outlined text-[22px] text-on-primary">stars</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold truncate" style="color: #5B3FA6;">6. EU-rätt</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold" style="background-color: rgba(91, 63, 166, 0.2); color: #5B3FA6;">Unionsakt</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Direktiv &amp; Förordningar (GDPR, AI Act, EU-domstolen)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] shrink-0 ml-2" style="color: #5B3FA6;">chevron_right</span>
+</div>
+<div class="p-3.5 rounded-2xl flex items-center justify-between shadow-sm active:scale-[0.99] transition-transform" style="background-color: rgba(46, 125, 50, 0.11);">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm" style="background-color: #2E7D32;">
+<span class="material-symbols-outlined text-[22px] text-on-primary">local_hospital</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold truncate" style="color: #2E7D32;">7. Regioner</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold" style="background-color: rgba(46, 125, 50, 0.2); color: #2E7D32;">Regionalt</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Regionala hälso- och sjukvårdsregler, Kollektivtrafik</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] shrink-0 ml-2" style="color: #2E7D32;">chevron_right</span>
+</div>
+<div class="p-3.5 rounded-2xl flex items-center justify-between shadow-sm active:scale-[0.99] transition-transform" style="background-color: rgba(139, 46, 31, 0.11);">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm" style="background-color: #8B2E1F;">
+<span class="material-symbols-outlined text-[22px] text-on-primary">holiday_village</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold truncate" style="color: #8B2E1F;">8. Kommuner</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold" style="background-color: rgba(139, 46, 31, 0.2); color: #8B2E1F;">Kommunal</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Kommunal ordningsstadga, Bygglov &amp; Detaljplaner</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] shrink-0 ml-2" style="color: #8B2E1F;">chevron_right</span>
+</div>
+<div class="p-3.5 rounded-2xl flex items-center justify-between shadow-sm active:scale-[0.99] transition-transform" style="background-color: rgba(224, 161, 0, 0.12);">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm" style="background-color: #E0A100;">
+<span class="material-symbols-outlined text-[22px] text-on-surface" style="font-variation-settings: 'FILL' 1;">badge</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold truncate" style="color: #574400;">9. Offentliga Tjänster</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold" style="background-color: rgba(224, 161, 0, 0.25); color: #574400;">Service</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Medborgarportal, BankID, Kungörelser &amp; Register</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] shrink-0 ml-2" style="color: #E0A100;">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between px-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Aktuella akter &amp; Prejudikat</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Senast ändrade</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold" style="background-color: rgba(0, 91, 153, 0.12); color: #005B99;">SFS 1962:700</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full font-medium bg-surface-container text-on-surface-variant">Ikraftträdande: 1965-01-01</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Brottsbalken</h3>
+<p class="font-body-legal-md text-body-legal-md text-on-surface-variant line-clamp-2">
+          Den grundläggande straffrättsliga lagen i Sverige med bestämmelser om allmänna brott, påföljder samt straffansvarets grunder.
+        </p>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Ändrad senast genom SFS 2024:812</span>
+<span class="font-label-sm text-label-sm">38 kap.</span>
+</div>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1" style="background-color: #7A2E4D;"></div>
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold" style="background-color: rgba(122, 46, 77, 0.12); color: #7A2E4D;">NJA 2024 s. 142</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full font-medium bg-surface-container text-on-surface-variant">Avgörande: 2024-04-18</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">bookmark_border</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Skadeståndsansvar vid AI-genererat intrång</h3>
+<p class="font-body-legal-md text-body-legal-md text-on-surface-variant line-clamp-2">
+          Högsta domstolen prövar culpa-bedömningen vid automatiserad text- och datautvinning i relation till upphovsrättslagen.
+        </p>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold" style="color: #7A2E4D;">Högsta domstolen (HD)</span>
+<span class="font-label-sm text-label-sm">Prejudicerande</span>
+</div>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-2 relative overflow-hidden opacity-85">
+<div class="absolute left-0 top-0 bottom-0 w-1" style="background-color: #8A8F98;"></div>
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold" style="background-color: rgba(138, 143, 152, 0.18); color: #414750;">SFS 1976:580</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-1" style="background-color: rgba(138, 143, 152, 0.2); color: #8A8F98;">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+<span class="line-through">Upphävd</span>
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Upphävd 2023-12-31</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface-variant line-through">Lag om medbestämmande i äldre bolagsformer</h3>
+<p class="font-body-legal-md text-body-legal-md text-on-surface-variant line-clamp-2">
+          Ersatt av harmoniserade bestämmelser i aktiebolagslagen (2005:551) och moderna samverkansförordningar.
+        </p>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm" style="color: #717781;">Historiskt arkivregister</span>
+<span class="font-label-sm text-label-sm">Ej gällande</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    let isDark = document.documentElement.classList.contains('dark');
+
+    themeBtn.addEventListener('click', () => {
+      isDark = !isDark;
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        themeIcon.textContent = 'light_mode';
+      } else {
+        document.documentElement.classList.remove('dark');
+        themeIcon.textContent = 'dark_mode';
+      }
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="bg-primary-fixed text-on-primary-fixed-variant font-semibold shadow-sm"><div class="h-20 px-space-sm flex items-center justify-around"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[70px] h-12 px-2.5 rounded-full transition-all gap-0.5 bg-primary-fixed text-on-primary-fixed-variant font-semibold shadow-sm" data-path="utforska" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-sm text-label-sm">Utforska</span></a><a class="flex flex-col items-center justify-center min-w-[70px] h-12 px-2.5 rounded-full text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="normhierarki" href="#"><span class="material-symbols-outlined text-[22px]">account_tree</span><span class="font-label-sm text-label-sm">Hierarki</span></a><a class="flex flex-col items-center justify-center min-w-[70px] h-12 px-2.5 rounded-full text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="bokmarken" href="#"><span class="material-symbols-outlined text-[22px]">bookmarks</span><span class="font-label-sm text-label-sm">Sparade</span></a><a class="flex flex-col items-center justify-center min-w-[70px] h-12 px-2.5 rounded-full text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="tjanster-och-profil" href="#"><span class="material-symbols-outlined text-[22px]">gavel</span><span class="font-label-sm text-label-sm">Tjänster</span></a></div></nav></body></html>
