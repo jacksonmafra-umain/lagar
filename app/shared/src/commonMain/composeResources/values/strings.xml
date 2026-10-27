@@ -15,4 +15,34 @@
     <string name="settings_title">Settings</string>
     <string name="layer_list_title">Layer</string>
     <string name="reader_title">Document</string>
+    <string name="explore_distribution_title">Distribution across the hierarchy</string>
+    <string name="explore_layers_title">Normative layers</string>
+    <plurals name="document_count">
+        <item quantity="one">%1$d document</item>
+        <item quantity="other">%1$d documents</item>
+    </plurals>
+    <string name="coming_soon">Coming soon</string>
+    <string name="coming_soon_text">This layer has no documents yet. It is still being collected.</string>
+    <string name="hierarchy_hint">Higher in the pyramid means higher in the order of norms.</string>
+    <string name="error_title">Something went wrong</string>
+    <string name="error_text">Check your connection and try again.</string>
+    <string name="error_retry">Try again</string>
+    <string name="layer_fundamental">Fundamental laws</string>
+    <string name="layer_sfs_act">Acts</string>
+    <string name="layer_sfs_ordinance">Ordinances</string>
+    <string name="layer_agency">Agency regulations</string>
+    <string name="layer_case_law">Case law</string>
+    <string name="layer_eu">EU law</string>
+    <string name="layer_region">Regions</string>
+    <string name="layer_municipality">Municipalities</string>
+    <string name="layer_service">Services</string>
+    <string name="layer_fundamental_desc">The Instrument of Government and the other fundamental laws</string>
+    <string name="layer_sfs_act_desc">Acts passed by the Riksdag</string>
+    <string name="layer_sfs_ordinance_desc">Ordinances issued by the Government</string>
+    <string name="layer_agency_desc">Regulations issued by government agencies</string>
+    <string name="layer_case_law_desc">Court rulings and precedents</string>
+    <string name="layer_eu_desc">Regulations and directives of the European Union</string>
+    <string name="layer_region_desc">Regional rules and decisions</string>
+    <string name="layer_municipality_desc">Local statutes and plans</string>
+    <string name="layer_service_desc">Public services for citizens</string>
 </resources>
