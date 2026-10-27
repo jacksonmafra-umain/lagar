@@ -23,3 +23,22 @@ fun withoutTitle(section: String): String {
     if (!section.startsWith("# ")) return section
     return section.substringAfter('\n', missingDelimiterValue = "").trimStart('\n')
 }
+
+// `**1 §**`, `**3 a §**`, `**4 §§**`: a statute number in bold at the start of a line.
+private val STATUTE_START = Regex("""^\*\*\d+\s?[a-z]?\s§§?\*\*""")
+
+/** True when [block] opens with a bold statute number, i.e. it is one numbered statute (§). */
+fun isStatuteBlock(block: String): Boolean = STATUTE_START.containsMatchIn(block)
+
+/**
+ * Splits a section into blocks for the reader's lazy list: a new block starts at every line that
+ * opens with a bold statute number (`**1 §**`) and at every heading line. Text before the first
+ * statute (a chapter heading, a preamble) is its own block. Joining with `\n` gives the section back.
+ */
+fun splitParagraphs(section: String): List<String> {
+    if (section.isEmpty()) return emptyList()
+    val lines = section.split('\n')
+    val starts = lines.indices.filter { it > 0 && (STATUTE_START.containsMatchIn(lines[it]) || lines[it].startsWith("#")) }
+    val bounds = listOf(0) + starts + lines.size
+    return bounds.zipWithNext { from, to -> lines.subList(from, to).joinToString("\n") }
+}

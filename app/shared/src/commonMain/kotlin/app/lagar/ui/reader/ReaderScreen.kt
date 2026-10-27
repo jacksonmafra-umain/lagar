@@ -38,16 +38,18 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
 import app.lagar.data.DocumentResponse
 import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.glass
+import app.lagar.designsystem.generated.LayerKey
+import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
 import app.lagar.resources.Res
 import app.lagar.resources.ic_arrow_back
 import app.lagar.resources.navigate_back
 import app.lagar.ui.common.ErrorState
+import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import org.jetbrains.compose.resources.painterResource
@@ -84,7 +86,13 @@ fun ReaderScreen(state: LoadState<DocumentResponse>, onBack: () -> Unit) {
             }
             is LoadState.Loaded -> {
                 val document = state.value
-                val sections = remember(document.body) { splitSections(document.body) }
+                val blocks = remember(document.body) {
+                    var firstSection = true
+                    splitSections(document.body).flatMap { section ->
+                        splitParagraphs(if (firstSection) withoutTitle(section) else section).also { firstSection = false }
+                    }.filter { it.isNotBlank() }
+                }
+                val layer = remember(document.meta) { DisplayLayer.fromRoute(document.meta.layer, document.meta.type) }
                 LazyColumn(
                     modifier = Modifier.fillMaxSize().hazeSource(hazeState),
                     contentPadding = PaddingValues(top = barHeight + spacing.md, bottom = bottomInset + spacing.lg),
@@ -94,10 +102,17 @@ fun ReaderScreen(state: LoadState<DocumentResponse>, onBack: () -> Unit) {
                             MetadataHeader(document.meta, Modifier.readingColumn())
                         }
                     }
-                    itemsIndexed(sections, key = { index, _ -> index }) { index, section ->
-                        Box(Modifier.fillMaxWidth().padding(horizontal = spacing.marginMobile), contentAlignment = Alignment.TopCenter) {
+                    itemsIndexed(blocks, key = { index, _ -> index }) { _, block ->
+                        Box(
+                            Modifier.fillMaxWidth().padding(horizontal = spacing.marginMobile, vertical = spacing.xs),
+                            contentAlignment = Alignment.TopCenter,
+                        ) {
                             SelectionContainer(Modifier.readingColumn()) {
-                                LegalMarkdown(if (index == 0) withoutTitle(section) else section)
+                                if (isStatuteBlock(block)) {
+                                    StatuteContainer(layer?.key ?: LayerKey.Repealed) { LegalMarkdown(block.trimEnd()) }
+                                } else {
+                                    LegalMarkdown(block.trimEnd())
+                                }
                             }
                         }
                     }
@@ -121,7 +136,7 @@ private fun ReaderBar(title: String?, hazeState: HazeState, onBack: () -> Unit, 
             .fillMaxWidth()
             .glass(GlassTier.Bar, hazeState)
             .windowInsetsPadding(WindowInsets.statusBars)
-            .heightIn(min = 64.dp)
+            .heightIn(min = ShellDimens.TopBarMinHeight)
             .padding(horizontal = LagarTheme.spacing.gutterMobile),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
@@ -129,7 +144,7 @@ private fun ReaderBar(title: String?, hazeState: HazeState, onBack: () -> Unit, 
         val backDescription = stringResource(Res.string.navigate_back)
         Box(
             modifier = Modifier
-                .size(48.dp)
+                .size(ShellDimens.TouchTarget)
                 .clip(CircleShape)
                 .clickable(role = Role.Button, onClick = onBack)
                 .semantics { contentDescription = backDescription },

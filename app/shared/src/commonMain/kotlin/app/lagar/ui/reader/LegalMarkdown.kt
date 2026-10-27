@@ -1,6 +1,19 @@
 package app.lagar.ui.reader
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.unit.dp
+import app.lagar.designsystem.generated.LayerKey
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -70,4 +83,24 @@ internal fun LegalMarkdown(content: String, modifier: Modifier = Modifier) {
         annotator = annotator,
         modifier = modifier,
     )
+}
+
+private val IndicatorWidth = 3.dp
+
+/** One numbered statute (§): a 3dp bar in the layer's accent color on the left of a quiet card. */
+@Composable
+internal fun StatuteContainer(layer: LayerKey, modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    val layers = LagarTheme.layers
+    val colors = LagarTheme.colors
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(MaterialTheme.shapes.medium)
+            .background(colors.surfaceContainerLowest)
+            .border(1.dp, colors.outlineVariant, MaterialTheme.shapes.medium)
+            .height(IntrinsicSize.Min),
+    ) {
+        Box(Modifier.width(IndicatorWidth).fillMaxHeight().background(layers.accent(layer)))
+        Box(Modifier.weight(1f).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm)) { content() }
+    }
 }

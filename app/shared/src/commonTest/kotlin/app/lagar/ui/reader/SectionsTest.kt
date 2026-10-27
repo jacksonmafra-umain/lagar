@@ -71,3 +71,57 @@ class WithoutTitleTest {
         assertEquals("", withoutTitle("# Lag"))
     }
 }
+
+class SplitParagraphsTest {
+    private val chapter = """
+        ## 1 kap. Statsskickets grunder
+
+        **1 §** All offentlig makt utgår från folket.
+
+        Den svenska folkstyrelsen bygger på fri åsiktsbildning.
+
+        **2 §** Den offentliga makten ska utövas med respekt.
+
+        **3 a §** Ett tillägg.
+    """.trimIndent()
+
+    @Test
+    fun headingAndEachStatuteAreSeparateBlocks() {
+        val blocks = splitParagraphs(chapter)
+        assertEquals(4, blocks.size)
+        assertTrue(blocks[0].startsWith("## 1 kap."))
+        assertTrue(blocks[1].startsWith("**1 §**") && "folkstyrelsen" in blocks[1])
+        assertTrue(blocks[2].startsWith("**2 §**"))
+        assertTrue(blocks[3].startsWith("**3 a §**"))
+    }
+
+    @Test
+    fun onlyParagraphsWithANumberAreStatuteBlocks() {
+        val blocks = splitParagraphs(chapter)
+        assertEquals(listOf(false, true, true, true), blocks.map(::isStatuteBlock))
+    }
+
+    @Test
+    fun noContentIsLostOrDuplicated() {
+        assertEquals(chapter, splitParagraphs(chapter).joinToString("\n"))
+    }
+
+    @Test
+    fun textWithoutStatutesIsOneBlock() {
+        val text = "Intro text.\n\nMore text."
+        assertEquals(listOf(text), splitParagraphs(text))
+    }
+
+    @Test
+    fun subheadingBetweenStatutesIsItsOwnBlock() {
+        val blocks = splitParagraphs("**1 §** A.\n\n### Rubrik\n\n**2 §** B.")
+        assertEquals(3, blocks.size)
+        assertTrue(blocks[1].startsWith("### Rubrik"))
+        assertEquals(false, isStatuteBlock(blocks[1]))
+    }
+
+    @Test
+    fun emptyBodyHasNoBlocks() {
+        assertEquals(emptyList(), splitParagraphs(""))
+    }
+}
