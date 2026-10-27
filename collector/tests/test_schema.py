@@ -43,6 +43,12 @@ class SchemaTest(unittest.TestCase):
         errors = schema.validate(meta)
         self.assertTrue(any("amended_by" in e for e in errors))
 
+    def test_trailing_newline_in_amended_by_rejected(self):
+        meta = example_meta()
+        meta["amended_by"] = ["2010:283\n"]
+        errors = schema.validate(meta)
+        self.assertTrue(any("amended_by" in e for e in errors))
+
 
 if __name__ == "__main__":
     unittest.main()

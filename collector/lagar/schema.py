@@ -62,7 +62,7 @@ def _check(value, schema, path, errors):
         errors.append(f"{path}: {value!r} is not one of {schema['enum']}")
         return
     if isinstance(value, str):
-        if "pattern" in schema and not re.search(schema["pattern"], value):
+        if "pattern" in schema and not re.compile(schema["pattern"], re.ASCII).fullmatch(value):
             errors.append(f"{path}: {value!r} does not match {schema['pattern']}")
         if "format" in schema and not _format_ok(schema["format"], value):
             errors.append(f"{path}: {value!r} is not a valid {schema['format']}")

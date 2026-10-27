@@ -38,13 +38,17 @@ Layer object:
 | --- | --- | --- | --- |
 | `id` | string | no | layer id |
 | `count` | integer | no | documents in the layer |
-| `series` | array of series | no | one entry per type with a listing; `[]` when the layer is empty |
+| `series` | array of series | no | only types with `count` > 0; `[]` when the layer is empty |
 
 Series object: `id` (string, a type, not null) and `count` (integer, not null).
 
+Series rule: `series` lists only types with `count` > 0, so an empty layer has
+`series: []`.
+
 Empty-layer rule: a layer with no documents is still listed, with `count: 0`
-and `series: []`. Its first page `<layer>/index-1.json` exists with
-`items: []`.
+and `series: []`. `<layer>/index-<page>.json` exists for every layer; an empty
+layer has `index-1.json` with `items: []` and `page_count: 1`.
+`<layer>/<type>/index-<page>.json` exists only for types listed in `series`.
 
 ## `GET <layer>/index-<page>.json` and `GET <layer>/<type>/index-<page>.json`
 
@@ -71,7 +75,7 @@ Item object:
 | `issued` | string (date) | yes | |
 | `repealed` | string (date) | yes | |
 
-Sort order: `issued` descending, then `number` descending, across pages. Items
+Sort order: `issued` descending, then `number` descending, across pages. `number` is compared numerically by (year, ordinal), not as a string, so `1999:175` comes before `1999:99`. Items
 with `issued: null` sort after dated ones.
 
 ## `GET docs/<id>.json`
@@ -82,6 +86,10 @@ with `issued: null` sort after dated ones.
 | `body` | string | no | Markdown: `# <title>`, paragraphs, section numbers as `**1 §**` |
 
 ### `meta` fields
+
+`amended_through` is the last amending SFS number according to the source. It
+can be set while `amended_by` is empty or partial: `amended_by` lists only the
+amending SFS numbers found in the text.
 
 Keys are always present, in this order. They mirror the corpus frontmatter
 (`docs/schema/frontmatter.schema.json`).
