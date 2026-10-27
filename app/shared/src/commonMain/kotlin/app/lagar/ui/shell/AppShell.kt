@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.backhandler.BackHandler
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.NavHostController
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.compose.NavHost
@@ -69,7 +70,14 @@ fun AppShell(
     var bottomBarPx by remember { mutableStateOf(0) }
     val padding = with(density) { PaddingValues(top = topBarPx.toDp(), bottom = bottomBarPx.toDp()) }
 
-    fun openLayer(layer: DisplayLayer) = navController.navigate(LayerList(layer.apiLayer, layer.apiType))
+    // A second tap during the transition would push a duplicate entry; only navigate from a settled screen.
+    fun navigateWhenResumed(route: Any) {
+        if (navController.currentBackStackEntry?.lifecycle?.currentState == Lifecycle.State.RESUMED) {
+            navController.navigate(route)
+        }
+    }
+
+    fun openLayer(layer: DisplayLayer) = navigateWhenResumed(LayerList(layer.apiLayer, layer.apiType))
 
     BackHandler(enabled = drawerState.isOpen) { scope.launch { drawerState.close() } }
 
@@ -103,7 +111,7 @@ fun AppShell(
                             layer = route.layer,
                             type = route.type,
                             onBack = { navController.popBackStack() },
-                            onOpenDocument = { navController.navigate(Reader(it)) },
+                            onOpenDocument = { navigateWhenResumed(Reader(it)) },
                         )
                     }
                     composable<Reader> { entry ->
