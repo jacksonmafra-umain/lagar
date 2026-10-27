@@ -134,4 +134,6 @@
         <item quantity="one">för %1$d år sedan</item>
         <item quantity="other">för %1$d år sedan</item>
     </plurals>
+    <string name="home_group_acts">Lagar</string>
+    <string name="home_group_ordinances">Förordningar</string>
 </resources>

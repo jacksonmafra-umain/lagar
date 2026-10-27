@@ -83,10 +83,10 @@ fun HomeScreen(
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(bottom = shell.calculateBottomPadding() + spacing.lg),
-            verticalArrangement = Arrangement.spacedBy(spacing.lg),
+            verticalArrangement = Arrangement.spacedBy(spacing.md),
         ) {
             item {
-                Column(verticalArrangement = Arrangement.spacedBy(spacing.md)) {
+                Column(verticalArrangement = Arrangement.spacedBy(spacing.xs)) {
                     HomeHero(data.scope, shell.calculateTopPadding(), onSearch = onOpenSearch, onOpenAdvancedSearch = onOpenAdvancedSearch)
                     if (data.scope == Scope.Nationell) {
                         LayerChips(data.layers, onOpenLayer, Modifier.padding(horizontal = spacing.marginMobile))
@@ -132,7 +132,7 @@ private fun LocationCard(scope: Scope, name: String?, onClick: () -> Unit, modif
         border = BorderStroke(1.dp, layers.border(scope.key)),
     ) {
         Row(
-            modifier = Modifier.heightIn(min = 72.dp).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm),
+            modifier = Modifier.heightIn(min = 60.dp).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.md),
         ) {
@@ -148,7 +148,7 @@ private fun LocationCard(scope: Scope, name: String?, onClick: () -> Unit, modif
                         scope == Scope.Region -> stringResource(Res.string.home_scope_region_title, name)
                         else -> stringResource(Res.string.home_scope_kommun_title, name)
                     },
-                    style = LagarTheme.type.headlineSm,
+                    style = LagarTheme.type.bodyUi,
                     fontWeight = FontWeight.Bold,
                     color = LagarTheme.colors.onSurface,
                 )

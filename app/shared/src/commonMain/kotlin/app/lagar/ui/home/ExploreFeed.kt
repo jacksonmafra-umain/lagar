@@ -2,6 +2,8 @@ package app.lagar.ui.home
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -20,6 +22,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.selected
@@ -61,9 +64,8 @@ internal fun ExploreFeed(
     Column(modifier, verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
         Text(
             stringResource(Res.string.home_explore_more),
-            style = LagarTheme.type.headlineMd,
+            style = LagarTheme.type.headlineSm,
             color = LagarTheme.colors.onSurface,
-            modifier = Modifier.padding(bottom = spacing.xs),
         )
         FlowRow(horizontalArrangement = Arrangement.spacedBy(spacing.sm), verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
             FeedTab.entries.forEach { entry ->
@@ -106,19 +108,27 @@ internal fun ExploreFeed(
 private fun PillTab(text: String, selected: Boolean, key: LayerKey, onClick: () -> Unit) {
     val layers = LagarTheme.layers
     val accent = layers.accent(key)
-    Surface(
-        onClick = onClick,
-        modifier = Modifier.semantics { role = Role.Tab; this.selected = selected },
-        shape = CircleShape,
-        color = if (selected) accent else LagarTheme.colors.surfaceContainerLowest,
-        border = BorderStroke(1.dp, if (selected) accent else LagarTheme.colors.outlineVariant),
+    // A 32dp pill inside a 48dp hit area.
+    Box(
+        modifier = Modifier
+            .heightIn(min = 48.dp)
+            .clip(CircleShape)
+            .clickable(onClick = onClick)
+            .semantics { role = Role.Tab; this.selected = selected },
+        contentAlignment = Alignment.Center,
     ) {
-        Text(
-            text = text,
-            style = LagarTheme.type.labelMd,
-            fontWeight = FontWeight.Bold,
-            color = if (selected) accent.iconColor() else LagarTheme.colors.onSurface,
-            modifier = Modifier.heightIn(min = 40.dp).padding(horizontal = LagarTheme.spacing.md, vertical = 10.dp),
-        )
+        Surface(
+            shape = CircleShape,
+            color = if (selected) accent else LagarTheme.colors.surfaceContainerLowest,
+            border = BorderStroke(1.dp, if (selected) accent else LagarTheme.colors.outlineVariant),
+        ) {
+            Text(
+                text = text.uppercase(),
+                style = LagarTheme.type.labelSm,
+                fontWeight = FontWeight.Bold,
+                color = if (selected) accent.iconColor() else LagarTheme.colors.onSurface,
+                modifier = Modifier.heightIn(min = 32.dp).padding(horizontal = LagarTheme.spacing.md, vertical = 8.dp),
+            )
+        }
     }
 }
