@@ -25,6 +25,8 @@
     <string name="layer_numbered_title">%1$d. %2$s</string>
     <string name="coming_soon">Coming soon</string>
     <string name="coming_soon_text">This layer has no documents yet. It is still being collected.</string>
+    <string name="hierarchy_view_layers">Layers</string>
+    <string name="hierarchy_view_pyramid">Pyramid</string>
     <string name="hierarchy_hint">Higher in the pyramid means higher in the order of norms.</string>
     <string name="meta_issued">Issued</string>
     <string name="meta_status">Status</string>
@@ -63,7 +65,8 @@
     <string name="theme_dark">Dark</string>
     <string name="about_credits">Created by %1$s</string>
     <string name="about_license">Released under the %1$s licence</string>
-    <string name="saved_empty_text">Saved documents will appear here. This feature is coming soon.</string>
+    <string name="saved_empty_title">No saved documents</string>
+    <string name="saved_empty_text">Tap the bookmark on a law to save it.</string>
     <string name="services_empty_text">Public services will appear here. This feature is coming soon.</string>
     <string name="splash_tagline">All of Sweden’s rules in one place</string>
     <string name="onboarding_step">Step %1$d of %2$d</string>

@@ -1,6 +1,7 @@
 package app.lagar.ui.reader
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
@@ -9,10 +10,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.text.selection.SelectionContainer
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -21,17 +25,33 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
+import app.lagar.data.DocumentMeta
 import app.lagar.data.DocumentResponse
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
+import app.lagar.resources.Res
+import app.lagar.resources.bookmark_add
+import app.lagar.resources.bookmark_remove
+import app.lagar.resources.ic_bookmark
+import app.lagar.resources.ic_bookmark_filled
+import app.lagar.settings.Bookmark
+import app.lagar.settings.BookmarkStore
 import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.ErrorState
 import app.lagar.ui.common.rememberBackTopBarHeight
+import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
+import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
+import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
 
@@ -41,13 +61,25 @@ fun ReaderRoute(
     id: String,
     onBack: () -> Unit,
     viewModel: ReaderViewModel = koinViewModel(key = id) { parametersOf(id) },
+    store: BookmarkStore = koinInject(),
 ) {
     val state by viewModel.state.collectAsState()
-    ReaderScreen(state = state, onBack = onBack)
+    val bookmarks by store.bookmarks.collectAsState()
+    ReaderScreen(
+        state = state,
+        bookmarked = bookmarks.any { it.id == id },
+        onToggleBookmark = { meta -> store.toggle(Bookmark(meta.id, meta.title, meta.number, meta.type, meta.layer)) },
+        onBack = onBack,
+    )
 }
 
 @Composable
-fun ReaderScreen(state: LoadState<DocumentResponse>, onBack: () -> Unit) {
+fun ReaderScreen(
+    state: LoadState<DocumentResponse>,
+    bookmarked: Boolean,
+    onToggleBookmark: (DocumentMeta) -> Unit,
+    onBack: () -> Unit,
+) {
     val spacing = LagarTheme.spacing
     val hazeState = remember { HazeState() }
     var barHeight by rememberBackTopBarHeight()
@@ -97,15 +129,35 @@ fun ReaderScreen(state: LoadState<DocumentResponse>, onBack: () -> Unit) {
             }
         }
         BackTopBar(hazeState, onBack, onHeightChange = { barHeight = it }, modifier = Modifier.align(Alignment.TopCenter)) {
-            (state as? LoadState.Loaded)?.value?.meta?.number?.let {
-                Text(
-                    text = it,
-                    style = LagarTheme.type.codeCitation,
-                    color = LagarTheme.colors.onSurface,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
+            val meta = (state as? LoadState.Loaded)?.value?.meta
+            Text(
+                text = meta?.number.orEmpty(),
+                style = LagarTheme.type.codeCitation,
+                color = LagarTheme.colors.onSurface,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f),
+            )
+            if (meta != null) BookmarkAction(meta, bookmarked, onToggleBookmark)
         }
+    }
+}
+
+@Composable
+private fun BookmarkAction(meta: DocumentMeta, bookmarked: Boolean, onToggle: (DocumentMeta) -> Unit) {
+    val description = stringResource(if (bookmarked) Res.string.bookmark_remove else Res.string.bookmark_add, meta.title)
+    Box(
+        modifier = Modifier
+            .size(ShellDimens.TouchTarget)
+            .clip(CircleShape)
+            .clickable(role = Role.Button) { onToggle(meta) }
+            .semantics { contentDescription = description },
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(
+            painterResource(if (bookmarked) Res.drawable.ic_bookmark_filled else Res.drawable.ic_bookmark),
+            contentDescription = null,
+            tint = if (bookmarked) LagarTheme.layers.onTint(LayerKey.SfsAct) else LagarTheme.colors.onSurfaceVariant,
+        )
     }
 }

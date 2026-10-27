@@ -42,7 +42,7 @@ import app.lagar.resources.scope_national_desc
 import app.lagar.resources.scope_region
 import app.lagar.resources.scope_region_desc
 import app.lagar.ui.common.LayerBadge
-import app.lagar.ui.utforska.iconColor
+import app.lagar.ui.hierarki.iconColor
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource

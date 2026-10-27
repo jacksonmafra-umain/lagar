@@ -42,7 +42,7 @@ import app.lagar.resources.home_tab_recent
 import app.lagar.resources.ic_bookmarks
 import app.lagar.settings.Bookmark
 import app.lagar.ui.common.EmptyState
-import app.lagar.ui.utforska.iconColor
+import app.lagar.ui.common.PillTab
 import org.jetbrains.compose.resources.stringResource
 
 private enum class FeedTab { Recent, Favourites }
@@ -100,35 +100,6 @@ internal fun ExploreFeed(
                     FeedCard(item, bookmarked = true, onOpen = { onOpenDocument(b.id) }, onToggleBookmark = { onToggleBookmark(item) })
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun PillTab(text: String, selected: Boolean, key: LayerKey, onClick: () -> Unit) {
-    val layers = LagarTheme.layers
-    val accent = layers.accent(key)
-    // A 32dp pill inside a 48dp hit area.
-    Box(
-        modifier = Modifier
-            .heightIn(min = 48.dp)
-            .clip(CircleShape)
-            .clickable(onClick = onClick)
-            .semantics { role = Role.Tab; this.selected = selected },
-        contentAlignment = Alignment.Center,
-    ) {
-        Surface(
-            shape = CircleShape,
-            color = if (selected) accent else LagarTheme.colors.surfaceContainerLowest,
-            border = BorderStroke(1.dp, if (selected) accent else LagarTheme.colors.outlineVariant),
-        ) {
-            Text(
-                text = text.uppercase(),
-                style = LagarTheme.type.labelSm,
-                fontWeight = FontWeight.Bold,
-                color = if (selected) accent.iconColor() else LagarTheme.colors.onSurface,
-                modifier = Modifier.heightIn(min = 32.dp).padding(horizontal = LagarTheme.spacing.md, vertical = 8.dp),
-            )
         }
     }
 }

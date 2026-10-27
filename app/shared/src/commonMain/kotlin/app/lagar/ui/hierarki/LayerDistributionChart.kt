@@ -1,4 +1,4 @@
-package app.lagar.ui.utforska
+package app.lagar.ui.hierarki
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

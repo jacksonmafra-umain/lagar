@@ -1,4 +1,4 @@
-package app.lagar.ui.utforska
+package app.lagar.ui.hierarki
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -42,7 +42,7 @@ import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 /**
- * A layer in the Utforska list: icon on the solid layer color, "N. Name" title, one-line
+ * A layer in the Lager list: icon on the solid layer color, "N. Name" title, one-line
  * description, and a badge with the document count or "coming soon". Title and description
  * wrap instead of truncating once the font scale passes [WRAP_FONT_SCALE].
  */

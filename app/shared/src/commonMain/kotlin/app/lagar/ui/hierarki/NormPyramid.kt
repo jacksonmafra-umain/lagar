@@ -23,7 +23,6 @@ import app.lagar.resources.coming_soon
 import app.lagar.resources.document_count
 import app.lagar.ui.common.level
 import app.lagar.ui.common.nameRes
-import app.lagar.ui.utforska.LayerSummary
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 

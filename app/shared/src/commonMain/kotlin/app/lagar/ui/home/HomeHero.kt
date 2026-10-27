@@ -64,7 +64,7 @@ import app.lagar.ui.common.nameRes
 import app.lagar.ui.onboarding.descriptionRes
 import app.lagar.ui.onboarding.iconRes
 import app.lagar.ui.onboarding.nameRes
-import app.lagar.ui.utforska.iconColor
+import app.lagar.ui.hierarki.iconColor
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 

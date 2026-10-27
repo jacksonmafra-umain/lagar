@@ -15,7 +15,7 @@ import app.lagar.ui.onboarding.OnboardingViewModel
 import app.lagar.domain.SearchQuery
 import app.lagar.ui.reader.ReaderViewModel
 import app.lagar.ui.search.SearchViewModel
-import app.lagar.ui.utforska.UtforskaViewModel
+import app.lagar.ui.hierarki.HierarkiViewModel
 import com.russhwolf.settings.Settings
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.HttpTimeout
@@ -47,7 +47,7 @@ fun appModule(config: DataSourceConfig) = module {
     single { BookmarkStore(get()) }
     single { GeoRepository() }
     single { Catalog(get()) }
-    viewModel { UtforskaViewModel(get()) }
+    viewModel { HierarkiViewModel(get()) }
     viewModel { HomeViewModel(get(), get(), get(), get(), get()) }
     viewModel { OnboardingViewModel(get(), get()) }
     viewModel { (layer: String, type: String?) -> LayerListViewModel(get(), layer, type) }
