@@ -1,6 +1,7 @@
 package app.lagar.di
 
 import app.lagar.data.CachingRepository
+import app.lagar.data.Catalog
 import app.lagar.data.DataSourceConfig
 import app.lagar.data.GeoRepository
 import app.lagar.data.HttpRepository
@@ -41,6 +42,7 @@ fun appModule(config: DataSourceConfig) = module {
     single { UserPreferences(get()) }
     single { BookmarkStore(get()) }
     single { GeoRepository() }
+    single { Catalog(get()) }
     viewModel { UtforskaViewModel(get()) }
     viewModel { (layer: String, type: String?) -> LayerListViewModel(get(), layer, type) }
     viewModel { (id: String) -> ReaderViewModel(get(), id) }
