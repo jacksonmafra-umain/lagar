@@ -1,0 +1,134 @@
+"""Generate the static JSON API (docs/api.md) from the corpus.
+
+Usage: python3 -I api/build.py --corpus corpus --out build/api/v1 [--built-at <UTC>]
+"""
+
+import argparse
+import json
+import shutil
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT / "collector"))
+
+from lagar import frontmatter  # noqa: E402
+from lagar.vocabulary import LAYERS, TYPES  # noqa: E402
+
+API_VERSION = 1
+PAGE_SIZE = 50
+ITEM_FIELDS = ("id", "title", "number", "type", "issued", "repealed")
+
+
+class BuildError(Exception):
+    pass
+
+
+def _number_key(number):
+    year, _, ordinal = number.partition(":")
+    try:
+        return (int(year), int(ordinal))
+    except ValueError:
+        raise BuildError(f"unsortable number: {number!r}")
+
+
+def _sorted(items):
+    """issued descending (null last), then number descending by (year, ordinal)."""
+    items = sorted(items, key=lambda i: _number_key(i["number"]), reverse=True)
+    dated = sorted((i for i in items if i["issued"]), key=lambda i: i["issued"], reverse=True)
+    return dated + [i for i in items if not i["issued"]]
+
+
+def load_corpus(corpus):
+    docs = []
+    for path in sorted(Path(corpus).rglob("*.md")):
+        try:
+            meta, body = frontmatter.load(path.read_text(encoding="utf-8"))
+        except (ValueError, OSError) as exc:
+            raise BuildError(f"{path}: {exc}")
+        if meta.get("type") not in TYPES or meta.get("layer") not in LAYERS:
+            raise BuildError(f"{path}: unknown type/layer")
+        if not isinstance(meta.get("number"), str):
+            raise BuildError(f"{path}: missing number")
+        docs.append((meta, body))
+    ids = [m["id"] for m, _ in docs]
+    dupes = sorted({i for i in ids if ids.count(i) > 1})
+    if dupes:
+        raise BuildError(f"duplicate document ids: {', '.join(dupes)}")
+    return docs
+
+
+def _write(out, rel, data, written):
+    path = out / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n"
+    path.write_text(text, encoding="utf-8", newline="")
+    written.append(rel)
+
+
+def _pages(out, rel_dir, layer, type_, items, written):
+    items = _sorted(items)
+    count = max(1, -(-len(items) // PAGE_SIZE))
+    for page in range(1, count + 1):
+        chunk = items[(page - 1) * PAGE_SIZE : page * PAGE_SIZE]
+        _write(out, f"{rel_dir}index-{page}.json", {
+            "layer": layer, "type": type_, "page": page, "page_count": count,
+            "total": len(items), "items": chunk,
+        }, written)
+
+
+def build(docs, out, built_at):
+    out = Path(out)
+    written = []
+    items = [{k: meta[k] for k in ITEM_FIELDS} for meta, _ in docs]
+    layers = []
+    for layer in LAYERS:
+        in_layer = [i for i in items if TYPES[i["type"]] == layer]
+        series = []
+        for type_, type_layer in TYPES.items():
+            if type_layer != layer:
+                continue
+            of_type = [i for i in in_layer if i["type"] == type_]
+            if of_type:
+                series.append({"id": type_, "count": len(of_type)})
+                _pages(out, f"{layer}/{type_}/", layer, type_, of_type, written)
+        _pages(out, f"{layer}/", layer, None, in_layer, written)
+        layers.append({"id": layer, "count": len(in_layer), "series": series})
+    for meta, body in sorted(docs, key=lambda d: d[0]["id"]):
+        _write(out, f"docs/{meta['id']}.json", {"meta": meta, "body": body}, written)
+    _write(out, "index.json", {"api_version": API_VERSION, "built_at": built_at, "layers": layers}, written)
+    return len(layers), len(written)
+
+
+def _check_out(out, corpus):
+    out, corpus = out.resolve(), corpus.resolve()
+    if out == corpus or out == REPO_ROOT or out == Path(out.anchor) or out in corpus.parents:
+        raise BuildError(f"refusing to use {out} as the output directory")
+
+
+def main(argv):
+    parser = argparse.ArgumentParser(description="Generate the static JSON API from the corpus.")
+    parser.add_argument("--corpus", required=True)
+    parser.add_argument("--out", required=True)
+    parser.add_argument("--built-at", default=None)
+    args = parser.parse_args(argv)
+    built_at = args.built_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    corpus, out = Path(args.corpus), Path(args.out)
+    try:
+        if not corpus.is_dir():
+            raise BuildError(f"corpus directory not found: {corpus}")
+        _check_out(out, corpus)
+        docs = load_corpus(corpus)  # fail before clearing anything
+        if out.exists():
+            shutil.rmtree(out)
+        layers, files = build(docs, out, built_at)
+    except BuildError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
+    print(f"built {len(docs)} documents, {layers} layers, {files} files -> {out}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))
