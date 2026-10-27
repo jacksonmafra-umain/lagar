@@ -13,16 +13,19 @@ private val LocalLayerColors = staticCompositionLocalOf { LayerColors(darkTheme 
 private val LocalLagarTypography = staticCompositionLocalOf<LagarTypography> {
     error("LagarTheme is not provided")
 }
+private val LocalStatusColors = staticCompositionLocalOf { StatusColors(darkTheme = false) }
 private val LocalLagarSpacing = staticCompositionLocalOf { LagarSpacing() }
 
 @Composable
 fun LagarTheme(darkTheme: Boolean, content: @Composable () -> Unit) {
     val colors = remember(darkTheme) { if (darkTheme) lagarDarkColorScheme() else lagarLightColorScheme() }
     val layers = remember(darkTheme) { LayerColors(darkTheme) }
+    val status = remember(darkTheme) { StatusColors(darkTheme) }
     val type = rememberLagarTypography()
     CompositionLocalProvider(
         LocalDarkTheme provides darkTheme,
         LocalLayerColors provides layers,
+        LocalStatusColors provides status,
         LocalLagarTypography provides type,
         LocalLagarSpacing provides LagarSpacing(),
     ) {
@@ -44,6 +47,9 @@ object LagarTheme {
 
     val layers: LayerColors
         @Composable @ReadOnlyComposable get() = LocalLayerColors.current
+
+    val status: StatusColors
+        @Composable @ReadOnlyComposable get() = LocalStatusColors.current
 
     val type: LagarTypography
         @Composable @ReadOnlyComposable get() = LocalLagarTypography.current
