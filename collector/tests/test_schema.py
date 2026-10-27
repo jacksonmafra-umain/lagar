@@ -17,6 +17,11 @@ class SchemaTest(unittest.TestCase):
     def test_valid_example_passes(self):
         self.assertEqual(schema.validate(example_meta()), [])
 
+    def test_n_series_accepted(self):
+        meta = example_meta()
+        meta.update(id="sfs-n2026-1", number="N2026:1", source="https://data.riksdagen.se/dokument/sfs-N2026-1")
+        self.assertEqual(schema.validate(meta), [])
+
     def test_unknown_type_rejected(self):
         meta = example_meta()
         meta["type"] = "decree"

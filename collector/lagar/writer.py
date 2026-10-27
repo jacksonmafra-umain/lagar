@@ -34,7 +34,7 @@ def build_meta(item, parsed, raw_sha256, fetched_at):
     changed = _SFS_NUMBER.search(header.get("Ändrad", ""))
     ministry = item.ministry or header.get("Departement/myndighet", "").strip() or None
     return {
-        "id": item.dok_id,
+        "id": item.dok_id.lower(),  # N-series ids arrive as sfs-N2026-1
         "title": title,
         "type": type_,
         "layer": TYPES[type_],

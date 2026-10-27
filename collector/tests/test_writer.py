@@ -85,3 +85,13 @@ class WriterTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 writer.write(bad, md, Path(tmp))
             self.assertFalse((Path(tmp) / "sfs/ordinances/2000-1.md").exists())
+    def test_n_series_document(self):
+        it = item("sfs-N2026-1", "N2026:1", "Förordning (N2026:1) om saker", "2026-01-05", None)
+        meta = writer.build_meta(it, riksdagen.parse_text("SFS nr: N2026:1\n\nText"), SHA, NOW)
+        self.assertEqual(meta["id"], "sfs-n2026-1")
+        self.assertEqual(meta["number"], "N2026:1")
+        self.assertEqual(meta["source"], "https://data.riksdagen.se/dokument/sfs-N2026-1")
+        self.assertEqual(meta["type"], "ordinance")
+        self.assertEqual(schema.validate(meta), [])
+        self.assertEqual(writer.path_for(meta, Path("corpus")), Path("corpus/sfs/ordinances/n2026-1.md"))
+

@@ -183,7 +183,7 @@ def _already_done(state, item, corpus):
     if state["done"].get(item.dok_id) != item.systemdatum:
         return False
     title = clean_title(item.title).removesuffix(";").strip()
-    meta = {"id": item.dok_id, "type": classify(title, item.dok_id)}
+    meta = {"id": item.dok_id.lower(), "type": classify(title, item.dok_id)}
     return path_for(meta, corpus).exists()
 
 

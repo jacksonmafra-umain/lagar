@@ -209,6 +209,18 @@ class BuildTest(unittest.TestCase):
             self.assertEqual(run_build(out, corpus=corpus).returncode, 0)
             self.assertEqual([i["number"] for i in read(out, "sfs/index-1.json")["items"]], ["1999:175", "1999:99"])
 
+    def test_n_series_number_sort(self):
+        from lagar import writer
+        meta, body = frontmatter.load((CORPUS / "sfs" / "acts" / "2010-800.md").read_text(encoding="utf-8"))
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus = Path(tmp) / "corpus"
+            for id_, number in (("sfs-2026-5", "2026:5"), ("sfs-n2026-1", "N2026:1"), ("sfs-n2026-5", "N2026:5")):
+                writer.write(dict(meta, id=id_, number=number, issued="2026-02-01"), body, corpus)
+            out = Path(tmp) / "out"
+            self.assertEqual(run_build(out, corpus=corpus).returncode, 0)
+            self.assertEqual([i["number"] for i in read(out, "sfs/index-1.json")["items"]],
+                             ["2026:5", "N2026:5", "N2026:1"])
+
 
 if __name__ == "__main__":
     unittest.main()

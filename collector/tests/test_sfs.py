@@ -28,7 +28,7 @@ def listing_json(ids, pages=1, systemdatum="2026-01-01 00:00:00"):
                 "dok_id": dok_id,
                 "beteckning": f"{year}:{int(number)}",
                 "titel": f"Lag ({year}:{int(number)}) om test {index}",
-                "datum": f"{year}-01-01",
+                "datum": f"{year.lstrip('N')}-01-01",
                 "systemdatum": (
                     systemdatum[index] if isinstance(systemdatum, list) else systemdatum
                 ),
@@ -114,6 +114,15 @@ class SfsTests(unittest.TestCase):
         self.assertEqual(summary.skipped, 2)
         self.assertEqual(summary.written, 0)
         self.assertEqual(client.text_calls(), [])
+
+    def test_n_series_resume_uses_original_dok_id(self):
+        listing = listing_json(["sfs-N2026-1"])
+        sfs.run(FakeClient({"dokumentlista": listing}), self.args())
+        self.assertEqual(list(self.state()["done"]), ["sfs-N2026-1"])
+        self.assertEqual([p.name for p in self.corpus.rglob("*.md")], ["n2026-1.md"])
+        client = FakeClient({"dokumentlista": listing})
+        summary = sfs.run(client, self.args())
+        self.assertEqual((summary.skipped, summary.written), (1, 0))
 
     def test_resume_refetches_when_file_missing(self):
         listing = listing_json(["sfs-2000-1"])

@@ -68,14 +68,14 @@ Item object:
 
 | field | type | null | notes |
 | --- | --- | --- | --- |
-| `id` | string | no | document id, e.g. `sfs-1999-175` |
+| `id` | string | no | document id, always lowercase, e.g. `sfs-1999-175` or `sfs-n2026-1` |
 | `title` | string | no | |
-| `number` | string | no | e.g. `1999:175` |
+| `number` | string | no | e.g. `1999:175`; N-series ordinances (published outside the printed SFS) start with `N`, e.g. `N2026:1` |
 | `type` | string | no | type id |
 | `issued` | string (date) | yes | |
 | `repealed` | string (date) | yes | |
 
-Sort order: `issued` descending, then `number` descending, across pages. `number` is compared numerically by (year, ordinal), not as a string, so `1999:175` comes before `1999:99`. Items
+Sort order: `issued` descending, then `number` descending, across pages. `number` is compared numerically by (year, ordinal), not as a string, so `1999:175` comes before `1999:99`. A leading `N` is ignored for ordering; on a tie the plain number is listed before the N-series one (`2026:5` before `N2026:5`). Items
 with `issued: null` sort after dated ones.
 
 ## `GET docs/<id>.json`
