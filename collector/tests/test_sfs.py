@@ -1,4 +1,4 @@
-import argparse
+import http.client
 import io
 import json
 import tempfile
@@ -176,6 +176,42 @@ class SfsTests(unittest.TestCase):
         summary = sfs.run(client, self.args())
         self.assertEqual(summary.written, 1)
         self.assertEqual(len(summary.failed), 3)
+
+    def test_incomplete_read_is_per_document(self):
+        ids = ["sfs-2000-1", "sfs-2000-2"]
+        client = FakeClient(
+            {"dokumentlista": listing_json(ids),
+             "/dokument/sfs-2000-1.text": http.client.IncompleteRead(b"x")}
+        )
+        summary = sfs.run(client, self.args())
+        self.assertEqual(summary.failed, ["sfs-2000-1"])
+        self.assertEqual(summary.written, 1)
+
+    def test_limit_stops_paging(self):
+        client = FakeClient(
+            {"p=1&": listing_json(["sfs-2000-1"], pages=3),
+             "p=2&": listing_json(["sfs-2000-2"], pages=3)}
+        )
+        sfs.run(client, self.args("--limit", "1"))
+        listing_calls = [c for c in client.calls if "dokumentlista" in c]
+        self.assertEqual(len(listing_calls), 1)
+
+    def test_corrupt_state_exits_1_and_is_kept(self):
+        self.state_path.parent.mkdir(parents=True)
+        self.state_path.write_text("{not json", encoding="utf-8")
+        code = sfs.main(
+            ["--corpus", str(self.corpus), "--state", str(self.state_path)],
+            client=FakeClient(),
+        )
+        self.assertEqual(code, 1)
+        self.assertEqual(self.state_path.read_text(encoding="utf-8"), "{not json")
+        self.state_path.write_text("[]", encoding="utf-8")
+        with self.assertRaises(sfs.StateError):
+            sfs.run(FakeClient(), self.args())
+
+    def test_invalid_date_rejected(self):
+        with self.assertRaises(SystemExit):
+            self.args("--since", "2026-13-01")
 
     def test_listing_error_raises(self):
         client = FakeClient({"dokumentlista": http_error("u", 500)})

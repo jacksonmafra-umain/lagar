@@ -26,10 +26,12 @@ after every document: `{"done": {id: systemdatum}, "failed": {id: error}, "block
 A document is skipped when its `systemdatum` matches the state and its corpus file exists.
 Per-document errors are recorded under `failed` and the run continues; rerun to retry them.
 
+Items sharing a date may shift between listing pages during a long run; a rerun picks up any miss.
+
 ## Exit codes
 
 - 0: finished (failures are listed, not fatal)
-- 1: the listing or robots.txt could not be read
+- 1: the listing or robots.txt could not be read, or the state file is corrupt
 - 2: blocked (HTTP 403 or robots.txt disallow); recorded in the state file
 
 ## Tests

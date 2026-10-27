@@ -2,6 +2,7 @@
 
 import argparse
 import hashlib
+import http.client
 import json
 import os
 import sys
@@ -9,7 +10,7 @@ import tempfile
 import urllib.error
 import urllib.robotparser
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from .http import Blocked, PoliteClient
@@ -38,12 +39,25 @@ NETWORK_ERRORS = (
     urllib.error.URLError,  # includes HTTPError
     TimeoutError,
     ConnectionError,
+    http.client.HTTPException,
 )
 DOCUMENT_ERRORS = NETWORK_ERRORS + (UnicodeDecodeError, ValueError)
 
 
 class ListingError(Exception):
     """The listing (or robots.txt) could not be read; the run cannot continue."""
+
+
+class StateError(Exception):
+    """The state file is unreadable; never reset it silently."""
+
+
+def _iso_date(value):
+    try:
+        date.fromisoformat(value)
+    except ValueError:
+        raise argparse.ArgumentTypeError(f"not an ISO date (YYYY-MM-DD): {value}")
+    return value
 
 
 @dataclass
@@ -57,10 +71,10 @@ class RunSummary:
 def parse_args(argv):
     parser = argparse.ArgumentParser(prog="collect.py sfs")
     parser.add_argument("--fundamental", action="store_true")
-    parser.add_argument("--from", dest="from_date", metavar="YYYY-MM-DD")
-    parser.add_argument("--to", dest="to_date", metavar="YYYY-MM-DD")
+    parser.add_argument("--from", dest="from_date", metavar="YYYY-MM-DD", type=_iso_date)
+    parser.add_argument("--to", dest="to_date", metavar="YYYY-MM-DD", type=_iso_date)
     parser.add_argument("--limit", type=int)
-    parser.add_argument("--since", metavar="YYYY-MM-DD")
+    parser.add_argument("--since", metavar="YYYY-MM-DD", type=_iso_date)
     parser.add_argument("--rate", type=float, default=1.0, metavar="SECONDS")
     parser.add_argument("--state", default=DEFAULT_STATE)
     parser.add_argument("--corpus", default="corpus")
@@ -73,6 +87,12 @@ def _load_state(path):
         loaded = json.loads(Path(path).read_text(encoding="utf-8"))
     except FileNotFoundError:
         return state
+    except (ValueError, OSError):
+        raise StateError(f"state file corrupt: {path}") from None
+    if not isinstance(loaded, dict) or not all(
+        isinstance(loaded.get(k, {}), dict) for k in ("done", "failed")
+    ):
+        raise StateError(f"state file corrupt: {path}")
     for key in state:
         if key in loaded:
             state[key] = loaded[key]
@@ -87,6 +107,8 @@ def _save_state(path, state):
         with os.fdopen(fd, "w", encoding="utf-8") as fh:
             json.dump(state, fh, ensure_ascii=False, indent=2, sort_keys=True)
             fh.write("\n")
+            fh.flush()
+            os.fsync(fh.fileno())
         os.replace(tmp, path)
     except BaseException:
         if os.path.exists(tmp):
@@ -215,10 +237,13 @@ def run(client, args):
                 state["failed"].pop(dok_id, None)
             processed += 1
             _save_state(args.state, state)
+            if args.limit is not None and summary.written >= args.limit:
+                break
             if processed % PROGRESS_EVERY == 0:
                 print(
                     f"{processed} processed: {summary.written} written, "
-                    f"{summary.skipped} skipped, {len(summary.failed)} failed"
+                    f"{summary.skipped} skipped, {len(summary.failed)} failed",
+                    flush=True,
                 )
     except Blocked as error:
         return finish_blocked(str(error))
@@ -234,15 +259,16 @@ def main(argv, client=None):
         client = PoliteClient(USER_AGENT, min_interval=args.rate)
     try:
         summary = run(client, args)
-    except ListingError as error:
-        print(f"error: {error}", file=sys.stderr)
+    except (ListingError, StateError) as error:
+        print(f"error: {error}", file=sys.stderr, flush=True)
         return 1
     print(
         f"done: {summary.written} written, {summary.skipped} skipped, "
-        f"{len(summary.failed)} failed" + (", BLOCKED" if summary.blocked else "")
+        f"{len(summary.failed)} failed" + (", BLOCKED" if summary.blocked else ""),
+        flush=True,
     )
     if summary.failed:
-        print("failed: " + ", ".join(summary.failed))
+        print("failed: " + ", ".join(summary.failed), flush=True)
     if summary.blocked:
         print("blocked: see state file", file=sys.stderr)
         return 2
