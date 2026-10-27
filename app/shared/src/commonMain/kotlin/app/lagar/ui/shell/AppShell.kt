@@ -34,6 +34,7 @@ import app.lagar.resources.Res
 import app.lagar.domain.DisplayLayer
 import app.lagar.ui.hierarki.HierarkiRoute
 import app.lagar.ui.home.HomeRoute
+import app.lagar.ui.home.ScopeSheet
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.navigation.Hierarki
 import app.lagar.ui.navigation.LayerList
@@ -76,6 +77,7 @@ fun AppShell(
     val scope = rememberCoroutineScope()
     val preferences = koinInject<UserPreferences>()
     val activeScope by preferences.scope.collectAsState()
+    var showScopeSheet by remember { mutableStateOf(false) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val backStackEntry by navController.currentBackStackEntryAsState()
     val destination = backStackEntry?.destination
@@ -159,10 +161,10 @@ fun AppShell(
                         HomeRoute(
                             onOpenLayer = ::openLayer,
                             onOpenDocument = { navigateWhenResumed(Reader(it)) },
-                            // Search and the location pickers are wired by the search and scope-sheet tasks.
+                            // Search is wired by the search task.
                             onOpenSearch = {},
                             onOpenAdvancedSearch = {},
-                            onChooseLocation = {},
+                            onChooseLocation = { showScopeSheet = true },
                         )
                     }
                     composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
@@ -189,7 +191,7 @@ fun AppShell(
                     onMenuClick = { scope.launch { drawerState.open() } },
                     onToggleTheme = onToggleTheme,
                     scope = activeScope,
-                    onOpenScopeSheet = {},
+                    onOpenScopeSheet = { showScopeSheet = true },
                     modifier = Modifier.align(Alignment.TopCenter).onSizeChanged { topBarPx = it.height },
                 )
                 LagarBottomBar(
@@ -205,6 +207,7 @@ fun AppShell(
                     modifier = Modifier.align(Alignment.BottomCenter).onSizeChanged { bottomBarPx = it.height },
                 )
             }
+            if (showScopeSheet) ScopeSheet(onDismiss = { showScopeSheet = false })
         }
     }
 }

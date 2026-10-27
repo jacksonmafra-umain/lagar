@@ -34,6 +34,7 @@ import app.lagar.resources.ic_check
 import app.lagar.resources.ic_layer_apartment
 import app.lagar.resources.ic_layer_balance
 import app.lagar.resources.ic_layer_hospital
+import app.lagar.resources.scope_active
 import app.lagar.resources.scope_kommun
 import app.lagar.resources.scope_kommun_desc
 import app.lagar.resources.scope_national
@@ -66,9 +67,16 @@ internal fun Scope.iconRes(): DrawableResource = when (this) {
     Scope.Kommun -> Res.drawable.ic_layer_apartment
 }
 
-/** A selectable scope option: layer-colored icon, name, count badge and description. [count] null hides the badge. */
+/** A selectable scope option: layer-colored icon, name, count badge and description. [count] null hides the badge; [active] marks the scope currently in use. */
 @Composable
-fun ScopeCard(scope: Scope, count: Int?, selected: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier) {
+fun ScopeCard(
+    scope: Scope,
+    count: Int?,
+    selected: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    active: Boolean = false,
+) {
     val layers = LagarTheme.layers
     val accent = layers.accent(scope.key)
     Surface(
@@ -77,7 +85,7 @@ fun ScopeCard(scope: Scope, count: Int?, selected: Boolean, onClick: () -> Unit,
         color = layers.tint(scope.key),
         border = if (selected) BorderStroke(2.dp, accent) else BorderStroke(1.dp, layers.border(scope.key)),
     ) {
-        ScopeCardContent(scope, count, trailing = {
+        ScopeCardContent(scope, count, active, trailing = {
             Box(
                 modifier = Modifier
                     .size(28.dp)
@@ -103,13 +111,13 @@ internal fun ScopeInfoCard(scope: Scope, count: Int?, modifier: Modifier = Modif
         color = layers.tint(scope.key),
         border = BorderStroke(1.dp, layers.border(scope.key)),
     ) {
-        ScopeCardContent(scope, count, trailing = null)
+        ScopeCardContent(scope, count, active = false, trailing = null)
     }
 }
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun ScopeCardContent(scope: Scope, count: Int?, trailing: @Composable (() -> Unit)?) {
+private fun ScopeCardContent(scope: Scope, count: Int?, active: Boolean, trailing: @Composable (() -> Unit)?) {
     val layers = LagarTheme.layers
     Row(
         modifier = Modifier.heightIn(min = 72.dp).padding(LagarTheme.spacing.md),
@@ -133,6 +141,7 @@ private fun ScopeCardContent(scope: Scope, count: Int?, trailing: @Composable ((
                     fontWeight = FontWeight.Bold,
                     color = layers.onTint(scope.key),
                 )
+                if (active) LayerBadge(scope.key, stringResource(Res.string.scope_active))
                 if (count != null) {
                     LayerBadge(
                         scope.key,

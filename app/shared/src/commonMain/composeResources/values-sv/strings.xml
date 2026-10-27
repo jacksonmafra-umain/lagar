@@ -136,4 +136,7 @@
     </plurals>
     <string name="home_group_acts">Lagar</string>
     <string name="home_group_ordinances">Förordningar</string>
+    <string name="scope_sheet_title">Välj omfattning</string>
+    <string name="scope_sheet_locality">Ändra plats</string>
+    <string name="scope_active">Aktiv</string>
 </resources>
