@@ -74,11 +74,12 @@ private fun GlassTier.spec(): GlassSpec = when (this) {
 fun Modifier.glass(
     tier: GlassTier,
     hazeState: HazeState?,
-    shape: Shape = tier.spec().shape,
+    shape: Shape? = null,
 ): Modifier {
     val dark = LagarTheme.isDark
     val colors = LagarTheme.colors
     val spec = remember(tier) { tier.spec() }
+    val outline = shape ?: spec.shape
 
     val opaque = when (tier) {
         GlassTier.Card -> if (dark) colors.surfaceContainerLow else colors.surfaceContainerLowest
@@ -94,9 +95,9 @@ fun Modifier.glass(
     var m = this
     if (spec.shadow > 0.dp) {
         val shadowColor = if (dark) spec.shadowDark else spec.shadowLight
-        m = m.shadow(spec.shadow, shape, clip = false, ambientColor = shadowColor, spotColor = shadowColor)
+        m = m.shadow(spec.shadow, outline, clip = false, ambientColor = shadowColor, spotColor = shadowColor)
     }
-    m = m.clip(shape)
+    m = m.clip(outline)
 
     val blur = spec.blur
     m = if (hazeState != null && blur != null) {
@@ -128,5 +129,5 @@ fun Modifier.glass(
                 size = Size(size.width, h),
             )
         }
-        .border(1.dp, Brush.verticalGradient(listOf(frosted, outer)), shape)
+        .border(1.dp, Brush.verticalGradient(listOf(frosted, outer)), outline)
 }
