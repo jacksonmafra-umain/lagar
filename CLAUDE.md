@@ -11,7 +11,16 @@ Pre-bootstrap: no code, build files or tests exist yet. The repo currently holds
 - `DESIGN.md` — the chosen design system ("Nordic Juridisk Klarhet"): M3 color roles (light + dark), layer colors, typography, radii, spacing, Liquid Glass elevation spec, Compose implementation notes. Started from `design/stitch/nordic_juridisk_klarhet/DESIGN.md` but has since been extended (dark mode, accessible layer text colors); the root file is canonical, the Stitch copy is the untouched export.
 - `design/stitch/` — Google Stitch export (`code.html` + `screen.png` per screen).
 
-When commands (Gradle, Python collector, API generator) are added, update this file with them.
+When commands (Python collector, API generator) are added, update this file with them.
+
+App (`app/`, needs JDK 21 and `ANDROID_HOME`; see `app/README.md` for the local API server and per-platform data source):
+
+```sh
+./gradlew :androidApp:assembleDebug
+./gradlew :webApp:wasmJsBrowserDistribution
+xcodebuild -project iosApp/iosApp.xcodeproj -scheme iosApp -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
+python3 -I api/build.py --corpus corpus --out build/api/v1   # repo root; serve ./build with http.server 8000
+```
 
 ## What lagar is
 
