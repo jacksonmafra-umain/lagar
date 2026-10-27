@@ -75,3 +75,10 @@ only tokens from the sections above.
 | Empty state ("coming soon") | `surfaceContainerLow`, `headlineSm`, `bodyUi`, `onSurfaceVariant` | 6, 7 |
 | Error state with retry | `errorContainer` / `onErrorContainer`, primary button | 8 |
 | Settings controls (selection, radio) | M3 controls themed by `LagarTheme`, 4dp (`RadiusTokens.sm`) checkbox | 9 |
+
+## Bottom bar label scaling
+
+The four equal-width tabs cannot hold a 200% label ("Hierarki", "Tjänster"), so `LagarBottomBar` caps
+the font scale of its own content at 1.3 (`MAX_LABEL_FONT_SCALE`); the rest of the app keeps the full
+system scale. The label is never truncated or hidden: each tab is a `selectable` with `Role.Tab` whose
+merged semantics carry the full label text, so screen readers always get the complete name.

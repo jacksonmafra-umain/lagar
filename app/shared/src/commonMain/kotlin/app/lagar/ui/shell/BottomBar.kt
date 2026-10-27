@@ -92,16 +92,16 @@ private fun TabItem(tab: Tab, selected: Boolean, onClick: () -> Unit, modifier: 
     val label = stringResource(tab.label)
     Column(
         modifier = modifier
-            .heightIn(min = 56.dp)
+            .heightIn(min = ShellDimens.TabMinHeight)
             .clip(RoundedCornerShape(RadiusTokens.lg))
             .selectable(selected = selected, role = Role.Tab, onClick = onClick)
             .then(if (selected) Modifier.background(if (LagarTheme.isDark) colors.primaryContainer else colors.primaryFixed) else Modifier)
-            .padding(vertical = 6.dp),
+            .padding(vertical = LagarTheme.spacing.xs),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
         val tint = if (selected) (if (LagarTheme.isDark) colors.onPrimaryContainer else colors.onPrimaryFixedVariant) else colors.onSurfaceVariant
-        Icon(painterResource(tab.icon), contentDescription = null, tint = tint, modifier = Modifier.size(24.dp))
+        Icon(painterResource(tab.icon), contentDescription = null, tint = tint, modifier = Modifier.size(ShellDimens.IconSize))
         Text(
             text = label,
             style = LagarTheme.type.labelSm,

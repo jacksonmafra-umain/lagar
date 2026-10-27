@@ -51,7 +51,7 @@ internal fun LagarTopBar(
             .fillMaxWidth()
             .glass(GlassTier.Bar, hazeState)
             .windowInsetsPadding(WindowInsets.statusBars)
-            .heightIn(min = 64.dp)
+            .heightIn(min = ShellDimens.TopBarMinHeight)
             .padding(horizontal = LagarTheme.spacing.gutterMobile),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -71,19 +71,19 @@ internal fun LagarTopBar(
                 painter = painterResource(if (dark) Res.drawable.ic_light_mode else Res.drawable.ic_dark_mode),
                 contentDescription = null,
                 tint = colors.onSurfaceVariant,
-                modifier = Modifier.size(24.dp),
+                modifier = Modifier.size(ShellDimens.IconSize),
             )
         }
         BarIconButton(onClick = onMenuClick, description = stringResource(Res.string.menu_open)) {
             Box(
-                modifier = Modifier.size(32.dp).clip(CircleShape).background(colors.primary),
+                modifier = Modifier.size(ShellDimens.AvatarSize).clip(CircleShape).background(colors.primary),
                 contentAlignment = Alignment.Center,
             ) {
                 Icon(
                     painter = painterResource(Res.drawable.ic_person),
                     contentDescription = null,
                     tint = colors.onPrimary,
-                    modifier = Modifier.size(20.dp),
+                    modifier = Modifier.size(ShellDimens.SmallIconSize),
                 )
             }
         }
@@ -98,7 +98,7 @@ private fun BarIconButton(
 ) {
     Box(
         modifier = Modifier
-            .size(48.dp)
+            .size(ShellDimens.TouchTarget)
             .clip(CircleShape)
             .clickable(role = Role.Button, onClick = onClick)
             .semantics { contentDescription = description },

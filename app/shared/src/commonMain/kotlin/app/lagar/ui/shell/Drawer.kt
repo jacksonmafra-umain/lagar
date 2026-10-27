@@ -37,6 +37,7 @@ import app.lagar.resources.drawer_settings
 import app.lagar.resources.ic_info
 import app.lagar.resources.ic_settings
 import dev.chrisbanes.haze.HazeState
+import kotlin.coroutines.cancellation.CancellationException
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -51,13 +52,19 @@ internal fun LagarDrawerContent(
     val repository = koinInject<LagarRepository>()
     // ISO date of the data build; omitted when the index cannot be loaded.
     val builtAt by produceState<String?>(initialValue = null, repository) {
-        value = runCatching { repository.index().builtAt.take(10) }.getOrNull()
+        value = try {
+            repository.index().builtAt.take(10)
+        } catch (e: CancellationException) {
+            throw e
+        } catch (_: Exception) {
+            null
+        }
     }
     Column(
         modifier = modifier
             .windowInsetsPadding(WindowInsets.safeDrawing)
             .padding(LagarTheme.spacing.xs)
-            .width(320.dp)
+            .width(ShellDimens.DrawerWidth)
             .fillMaxHeight()
             .glass(GlassTier.Overlay, hazeState)
             .padding(LagarTheme.spacing.md),
@@ -75,7 +82,7 @@ internal fun LagarDrawerContent(
                 painter = painterResource(Res.drawable.ic_info),
                 contentDescription = null,
                 tint = colors.onSurfaceVariant,
-                modifier = Modifier.size(20.dp),
+                modifier = Modifier.size(ShellDimens.SmallIconSize),
             )
             Column(Modifier.padding(start = LagarTheme.spacing.sm)) {
                 Text(stringResource(Res.string.drawer_about), style = LagarTheme.type.labelMd, color = colors.onSurface)
@@ -98,11 +105,11 @@ private fun DrawerItem(icon: androidx.compose.ui.graphics.painter.Painter, label
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .heightIn(min = 48.dp)
+            .heightIn(min = ShellDimens.TouchTarget)
             .clickable(role = Role.Button, onClick = onClick),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Icon(icon, contentDescription = null, tint = colors.onSurfaceVariant, modifier = Modifier.size(24.dp))
+        Icon(icon, contentDescription = null, tint = colors.onSurfaceVariant, modifier = Modifier.size(ShellDimens.IconSize))
         Text(
             text = label,
             style = LagarTheme.type.bodyUi,
