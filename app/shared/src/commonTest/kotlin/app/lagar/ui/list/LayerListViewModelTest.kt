@@ -31,6 +31,7 @@ class LayerListViewModelTest {
         val calls = mutableListOf<Int>()
         val gates = mutableMapOf<Int, CompletableDeferred<Unit>>()
         val failing = mutableSetOf<Int>()
+        var overlapOnLaterPages = false
 
         override suspend fun listing(layer: String, type: String?, page: Int): ListingPage {
             calls += page
@@ -39,7 +40,7 @@ class LayerListViewModelTest {
             return ListingPage(
                 layer, type, page, pageCount, total = pageCount * 2,
                 items = listOf(
-                    ListingItem("id-$page-a", "A$page", "$page:1", "act", null, null),
+                    ListingItem(if (overlapOnLaterPages && page > 1) "id-${page - 1}-b" else "id-$page-a", "A$page", "$page:1", "act", null, null),
                     ListingItem("id-$page-b", "B$page", "$page:2", "act", null, null),
                 ),
             )
@@ -68,6 +69,15 @@ class LayerListViewModelTest {
         vm.loadNext()
         vm.loadNext()
         assertEquals(listOf(1, 2), repo.calls)
+    }
+
+    @Test
+    fun loadNextDropsItemsWhoseIdIsAlreadyListed() {
+        val repo = FakeRepository()
+        repo.overlapOnLaterPages = true
+        val vm = LayerListViewModel(repo, "sfs", "act")
+        vm.loadNext()
+        assertEquals(listOf("id-1-a", "id-1-b", "id-2-b"), vm.items.value.map { it.id })
     }
 
     @Test
