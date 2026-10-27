@@ -91,4 +91,47 @@
     <string name="picker_search">Search</string>
     <string name="picker_no_results">No matches</string>
     <string name="picker_clear">Clear</string>
+    <string name="home_hero_title">Sweden’s %1$s – gathered and searchable in one place</string>
+    <string name="home_hero_emphasis">acts, ordinances and regulations</string>
+    <string name="home_hero_subtitle">Consolidated statutes from the Riksdag’s open data</string>
+    <string name="home_search_hint">Search by number or word</string>
+    <string name="home_search_example">E.g. Regeringsformen, 2026:1200</string>
+    <string name="home_search_submit">Search</string>
+    <string name="home_advanced_search">Advanced search</string>
+    <string name="home_key_laws_title">Key laws</string>
+    <string name="home_key_laws_subtitle">Sweden · National</string>
+    <string name="home_explore_more">Explore more</string>
+    <string name="home_tab_recent">Recent</string>
+    <string name="home_tab_favourites">Favourites</string>
+    <string name="home_show_more">Show more</string>
+    <string name="home_favourites_empty_title">No favourites yet</string>
+    <string name="home_favourites_empty_text">Tap the bookmark on a document to keep it here.</string>
+    <string name="home_scope_chip">Scope: %1$s. Change scope.</string>
+    <string name="home_location_label">Location</string>
+    <string name="home_choose_location">Choose a location</string>
+    <string name="home_scope_region_title">Region: %1$s</string>
+    <string name="home_scope_kommun_title">Municipality: %1$s</string>
+    <string name="home_coming_soon_text">Documents for this scope are still being collected. Switch to National to read acts and ordinances now.</string>
+    <string name="type_fundamental_law">Fundamental law</string>
+    <string name="type_act">Act</string>
+    <string name="type_ordinance">Ordinance</string>
+    <string name="type_number">%1$s %2$s</string>
+    <string name="status_in_force">In force</string>
+    <string name="feed_read_full_text">Read full text</string>
+    <string name="bookmark_add">Save %1$s</string>
+    <string name="bookmark_remove">Remove %1$s from saved</string>
+    <string name="date_today">today</string>
+    <string name="date_yesterday">yesterday</string>
+    <plurals name="date_days_ago">
+        <item quantity="one">%1$d day ago</item>
+        <item quantity="other">%1$d days ago</item>
+    </plurals>
+    <plurals name="date_months_ago">
+        <item quantity="one">%1$d month ago</item>
+        <item quantity="other">%1$d months ago</item>
+    </plurals>
+    <plurals name="date_years_ago">
+        <item quantity="one">%1$d year ago</item>
+        <item quantity="other">%1$d years ago</item>
+    </plurals>
 </resources>
