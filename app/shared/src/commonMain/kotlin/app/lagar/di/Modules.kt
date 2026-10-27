@@ -2,9 +2,11 @@ package app.lagar.di
 
 import app.lagar.data.CachingRepository
 import app.lagar.data.DataSourceConfig
+import app.lagar.data.GeoRepository
 import app.lagar.data.HttpRepository
 import app.lagar.data.LagarRepository
 import app.lagar.data.SampleRepository
+import app.lagar.settings.BookmarkStore
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.list.LayerListViewModel
 import app.lagar.ui.reader.ReaderViewModel
@@ -35,7 +37,10 @@ fun appModule(config: DataSourceConfig) = module {
     single<LagarRepository> {
         CachingRepository(if (config.useSample) SampleRepository() else HttpRepository(get(), config.baseUrl))
     }
-    single { UserPreferences(Settings()) }
+    single { Settings() }
+    single { UserPreferences(get()) }
+    single { BookmarkStore(get()) }
+    single { GeoRepository() }
     viewModel { UtforskaViewModel(get()) }
     viewModel { (layer: String, type: String?) -> LayerListViewModel(get(), layer, type) }
     viewModel { (id: String) -> ReaderViewModel(get(), id) }
