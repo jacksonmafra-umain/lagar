@@ -1,7 +1,6 @@
 package app.lagar.ui.settings
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -14,46 +13,32 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.statusBars
-import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Icon
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.layout.onSizeChanged
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
-import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
-import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
-import app.lagar.designsystem.glass
 import app.lagar.i18n.LanguageChoice
 import app.lagar.resources.Res
 import app.lagar.resources.about_credits
 import app.lagar.resources.about_license
 import app.lagar.resources.drawer_about
 import app.lagar.resources.drawer_data_built
-import app.lagar.resources.ic_arrow_back
 import app.lagar.resources.language_english
 import app.lagar.resources.language_swedish
-import app.lagar.resources.navigate_back
 import app.lagar.resources.settings_language
 import app.lagar.resources.settings_system
 import app.lagar.resources.settings_theme
@@ -62,11 +47,12 @@ import app.lagar.resources.theme_dark
 import app.lagar.resources.theme_light
 import app.lagar.settings.ThemeMode
 import app.lagar.settings.UserPreferences
+import app.lagar.ui.common.BackTopBar
+import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.rememberDataBuildDate
 import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
-import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 
@@ -99,8 +85,7 @@ fun SettingsScreen(
     val spacing = LagarTheme.spacing
     val colors = LagarTheme.colors
     val hazeState = remember { HazeState() }
-    var barPx by remember { mutableStateOf(0) }
-    val barHeight = with(LocalDensity.current) { barPx.toDp() }
+    var barHeight by rememberBackTopBarHeight()
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
 
     Box(Modifier.fillMaxSize().background(colors.surface)) {
@@ -141,7 +126,14 @@ fun SettingsScreen(
                 builtAt?.let { AboutLine(stringResource(Res.string.drawer_data_built, it)) }
             }
         }
-        SettingsBar(hazeState, onBack, Modifier.align(Alignment.TopCenter).onSizeChanged { barPx = it.height })
+        BackTopBar(hazeState, onBack, onHeightChange = { barHeight = it }, modifier = Modifier.align(Alignment.TopCenter)) {
+            Text(
+                text = stringResource(Res.string.settings_title),
+                style = LagarTheme.type.headlineSm,
+                color = colors.onSurface,
+                modifier = Modifier.semantics { heading() },
+            )
+        }
     }
 }
 
@@ -196,39 +188,6 @@ private fun OptionRow(label: String, selected: Boolean, onClick: () -> Unit) {
             style = LagarTheme.type.bodyUi,
             color = colors.onSurface,
             modifier = Modifier.padding(start = LagarTheme.spacing.sm),
-        )
-    }
-}
-
-@Composable
-private fun SettingsBar(hazeState: HazeState, onBack: () -> Unit, modifier: Modifier = Modifier) {
-    val colors = LagarTheme.colors
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .glass(GlassTier.Bar, hazeState)
-            .windowInsetsPadding(WindowInsets.statusBars)
-            .heightIn(min = ShellDimens.TopBarMinHeight)
-            .padding(horizontal = LagarTheme.spacing.gutterMobile),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
-    ) {
-        val backDescription = stringResource(Res.string.navigate_back)
-        Box(
-            modifier = Modifier
-                .size(ShellDimens.TouchTarget)
-                .clip(CircleShape)
-                .clickable(role = Role.Button, onClick = onBack)
-                .semantics { contentDescription = backDescription },
-            contentAlignment = Alignment.Center,
-        ) {
-            Icon(painterResource(Res.drawable.ic_arrow_back), contentDescription = null, tint = colors.onSurfaceVariant)
-        }
-        Text(
-            text = stringResource(Res.string.settings_title),
-            style = LagarTheme.type.headlineSm,
-            color = colors.onSurface,
-            modifier = Modifier.semantics { heading() },
         )
     }
 }
