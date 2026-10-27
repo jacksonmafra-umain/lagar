@@ -14,7 +14,7 @@ FUNDAMENTAL_LAWS = {
 _HEADER_LINE = re.compile(r"^([^:]+):(.*)$")
 _CHAPTER = re.compile(r"^\d+ ?[a-z]? kap\. ")
 _PARAGRAPH = re.compile(r"^(\d+ ?[a-z]? ?§)")
-_AMENDMENT = re.compile(r"(?:Lag|Förordning) \((\d{4}:\d+)\)\.(?=\s|$)")
+_AMENDMENT = re.compile(r"(?:Lag|Förordning) \((N?\d{4}:\d+)\)\.(?=\s|$)")
 _SOURCE_KEY = "Källa"
 PRINT_ONLY_NOTE = "_Text available only in print._"
 
@@ -125,6 +125,13 @@ def classify(title, dok_id):
     return "other_statute"
 
 
+def _number_order(number):
+    """(year, ordinal, is_n_series): the N prefix only breaks ties, plain first."""
+    n_series = number.startswith("N")
+    year, _, ordinal = number.removeprefix("N").partition(":")
+    return (int(year), int(ordinal), n_series)
+
+
 def amendments(body):
     found = set()
     paragraph = []
@@ -136,7 +143,7 @@ def amendments(body):
             for match in _AMENDMENT.finditer(" ".join(paragraph)):
                 found.add(match.group(1))
             paragraph = []
-    return sorted(found, key=lambda n: tuple(int(p) for p in n.split(":")))
+    return sorted(found, key=_number_order)
 
 
 def to_markdown(title, body):

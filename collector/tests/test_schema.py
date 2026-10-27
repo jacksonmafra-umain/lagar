@@ -22,6 +22,11 @@ class SchemaTest(unittest.TestCase):
         meta.update(id="sfs-n2026-1", number="N2026:1", source="https://data.riksdagen.se/dokument/sfs-N2026-1")
         self.assertEqual(schema.validate(meta), [])
 
+    def test_n_series_amendment_lists(self):
+        meta = example_meta()
+        meta.update(amended_by=["N2026:1"], amended_through="N2026:1", reprinted_by=["N2026:1"])
+        self.assertEqual(schema.validate(meta), [])
+
     def test_unknown_type_rejected(self):
         meta = example_meta()
         meta["type"] = "decree"

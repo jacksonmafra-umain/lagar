@@ -61,6 +61,11 @@ class RiksdagenTests(unittest.TestCase):
         body = "1 § Text.\n\nLag (2010:283).\n\n2 § Mer.\n\nFörordning (2019:1036).\n\nLag (2010:283)."
         self.assertEqual(riksdagen.amendments(body), ["2010:283", "2019:1036"])
 
+    def test_amendments_n_series(self):
+        body = "1 § Text.\n\nFörordning (N2026:1).\n\nLag (2026:5).\n\nFörordning (N2025:3)."
+        self.assertEqual(riksdagen.amendments(body), ["N2025:3", "N2026:1", "2026:5"])
+        self.assertEqual(riksdagen.amendments("Lag (2026:5).\n\nFörordning (N2026:5)."), ["2026:5", "N2026:5"])
+
     def test_markdown_headings(self):
         parsed = riksdagen.parse_text(text("sfs-1974-152"))
         md = riksdagen.to_markdown("Regeringsformen", parsed.body)

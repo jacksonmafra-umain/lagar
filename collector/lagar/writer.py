@@ -9,7 +9,7 @@ from . import frontmatter, schema
 from .riksdagen import FUNDAMENTAL_LAWS, amendments, classify, clean_title, to_markdown
 from .vocabulary import TYPES
 
-_SFS_NUMBER = re.compile(r"\d{4}:\d+")
+_SFS_NUMBER = re.compile(r"\bN?\d{4}:\d+")
 _DATE_PREFIX = re.compile(r"^(\d{4}-\d{2}-\d{2})")
 _DIRS = {
     "fundamental_law": ("fundamental-laws",),

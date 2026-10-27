@@ -104,9 +104,9 @@ Keys are always present, in this order. They mirror the corpus frontmatter
 | `issued` | string (date) | yes | |
 | `in_force` | string (date) | yes | |
 | `repealed` | string (date) | yes | |
-| `amended_by` | array of string | no | each `^\d{4}:\d+$`, may be empty |
-| `amended_through` | string | yes | SFS number of the latest amendment applied |
-| `reprinted_by` | array of string | no | may be empty |
+| `amended_by` | array of string | no | each `^N?\d{4}:\d+$` (N-series numbers keep their `N`), may be empty |
+| `amended_through` | string | yes | SFS number of the latest amendment applied, `^N?\d{4}:\d+$` |
+| `reprinted_by` | array of string | no | each `^N?\d{4}:\d+$`, may be empty |
 | `ministry` | string | yes | |
 | `eli` | string (URI) | yes | |
 | `language` | string | no | `sv` or `en` |
