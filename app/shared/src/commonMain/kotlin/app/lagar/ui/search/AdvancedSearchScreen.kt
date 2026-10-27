@@ -91,7 +91,7 @@ import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.onboarding.nameRes
-import app.lagar.ui.utforska.iconColor
+import app.lagar.ui.hierarki.iconColor
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import androidx.compose.ui.platform.LocalDensity

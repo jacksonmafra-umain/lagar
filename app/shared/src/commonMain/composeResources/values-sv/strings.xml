@@ -25,6 +25,8 @@
     <string name="layer_numbered_title">%1$d. %2$s</string>
     <string name="coming_soon">Kommer snart</string>
     <string name="coming_soon_text">Det här lagret har inga dokument ännu. Det håller fortfarande på att samlas in.</string>
+    <string name="hierarchy_view_layers">Lager</string>
+    <string name="hierarchy_view_pyramid">Pyramid</string>
     <string name="hierarchy_hint">Högre upp i pyramiden betyder högre i normordningen.</string>
     <string name="meta_issued">Utfärdad</string>
     <string name="meta_status">Status</string>
@@ -63,7 +65,8 @@
     <string name="theme_dark">Mörkt</string>
     <string name="about_credits">Skapad av %1$s</string>
     <string name="about_license">Utgiven under licensen %1$s</string>
-    <string name="saved_empty_text">Sparade dokument visas här. Funktionen kommer snart.</string>
+    <string name="saved_empty_title">Inga sparade dokument</string>
+    <string name="saved_empty_text">Tryck på bokmärket i en lag för att spara den.</string>
     <string name="services_empty_text">Offentliga tjänster visas här. Funktionen kommer snart.</string>
     <string name="splash_tagline">Hela Sveriges regelverk på ett ställe</string>
     <string name="onboarding_step">Steg %1$d av %2$d</string>

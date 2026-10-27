@@ -1,4 +1,4 @@
-package app.lagar.ui.utforska
+package app.lagar.ui.hierarki
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 data class LayerSummary(val layer: DisplayLayer, val count: Int)
 
 /** Loads the API index once and exposes one summary per [DisplayLayer], in hierarchy order. */
-class UtforskaViewModel(private val repository: LagarRepository) : ViewModel() {
+class HierarkiViewModel(private val repository: LagarRepository) : ViewModel() {
     private val _state = MutableStateFlow<LoadState<List<LayerSummary>>>(LoadState.Loading)
     val state: StateFlow<LoadState<List<LayerSummary>>> = _state.asStateFlow()
 

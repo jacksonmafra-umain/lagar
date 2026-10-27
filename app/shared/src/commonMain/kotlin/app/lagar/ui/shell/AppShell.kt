@@ -60,7 +60,7 @@ import app.lagar.ui.search.AdvancedSearchRoute
 import app.lagar.ui.search.SearchRoute
 import app.lagar.ui.search.toRoute
 import app.lagar.ui.settings.SettingsRoute
-import app.lagar.ui.sparade.SparadeScreen
+import app.lagar.ui.sparade.SparadeRoute
 import app.lagar.ui.tjanster.TjansterScreen
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
@@ -172,7 +172,7 @@ fun AppShell(
                         )
                     }
                     composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
-                    composable<Sparade> { SparadeScreen() }
+                    composable<Sparade> { SparadeRoute(onOpenDocument = { navigateWhenResumed(Reader(it)) }) }
                     composable<Tjanster> { TjansterScreen() }
                     composable<LayerList> { entry ->
                         val route = entry.toRoute<LayerList>()
