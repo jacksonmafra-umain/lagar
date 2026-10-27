@@ -10,6 +10,7 @@ import app.lagar.data.SampleRepository
 import app.lagar.settings.BookmarkStore
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.list.LayerListViewModel
+import app.lagar.ui.onboarding.OnboardingViewModel
 import app.lagar.ui.reader.ReaderViewModel
 import app.lagar.ui.utforska.UtforskaViewModel
 import com.russhwolf.settings.Settings
@@ -44,6 +45,7 @@ fun appModule(config: DataSourceConfig) = module {
     single { GeoRepository() }
     single { Catalog(get()) }
     viewModel { UtforskaViewModel(get()) }
+    viewModel { OnboardingViewModel(get(), get()) }
     viewModel { (layer: String, type: String?) -> LayerListViewModel(get(), layer, type) }
     viewModel { (id: String) -> ReaderViewModel(get(), id) }
 }

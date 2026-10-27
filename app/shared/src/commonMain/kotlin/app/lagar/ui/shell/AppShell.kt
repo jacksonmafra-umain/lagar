@@ -21,6 +21,7 @@ import androidx.compose.ui.backhandler.BackHandler
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.lifecycle.Lifecycle
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.compose.NavHost
@@ -31,14 +32,24 @@ import app.lagar.designsystem.LagarTheme
 import app.lagar.resources.Res
 import app.lagar.domain.DisplayLayer
 import app.lagar.ui.hierarki.HierarkiRoute
+import app.lagar.settings.UserPreferences
 import app.lagar.ui.navigation.Hierarki
 import app.lagar.ui.navigation.LayerList
+import app.lagar.ui.navigation.OnboardingLocality
+import app.lagar.ui.navigation.OnboardingScope
+import app.lagar.ui.navigation.OnboardingWelcome
 import app.lagar.ui.navigation.Reader
 import app.lagar.ui.navigation.Settings
 import app.lagar.ui.navigation.Sparade
+import app.lagar.ui.navigation.Splash
 import app.lagar.ui.navigation.Tjanster
 import app.lagar.ui.navigation.Utforska
 import app.lagar.ui.list.LayerListRoute
+import app.lagar.ui.onboarding.LocalityStepRoute
+import app.lagar.ui.onboarding.OnboardingViewModel
+import app.lagar.ui.onboarding.ScopeStepRoute
+import app.lagar.ui.onboarding.SplashRoute
+import app.lagar.ui.onboarding.WelcomeRoute
 import app.lagar.ui.reader.ReaderRoute
 import app.lagar.ui.settings.SettingsRoute
 import app.lagar.ui.sparade.SparadeScreen
@@ -47,6 +58,8 @@ import app.lagar.ui.utforska.UtforskaRoute
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.launch
+import org.koin.compose.koinInject
+import org.koin.compose.viewmodel.koinViewModel
 
 /**
  * Four-tab shell. The [navController] and [hazeState] are owned by the caller, above the locale
@@ -60,6 +73,7 @@ fun AppShell(
     onToggleTheme: () -> Unit,
 ) {
     val scope = rememberCoroutineScope()
+    val preferences = koinInject<UserPreferences>()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val backStackEntry by navController.currentBackStackEntryAsState()
     val destination = backStackEntry?.destination
@@ -74,6 +88,17 @@ fun AppShell(
     fun navigateWhenResumed(route: Any) {
         if (navController.currentBackStackEntry?.lifecycle?.currentState == Lifecycle.State.RESUMED) {
             navController.navigate(route)
+        }
+    }
+
+    // The steps share one OnboardingViewModel, kept by the Welcome entry, which stays on the stack until onboarding ends.
+    @Composable
+    fun onboardingEntry(entry: NavBackStackEntry) = remember(entry) { navController.getBackStackEntry<OnboardingWelcome>() }
+
+    // Onboarding is removed from the stack so that back from Home does not return to it.
+    fun leaveOnboarding() {
+        if (navController.currentBackStackEntry?.lifecycle?.currentState == Lifecycle.State.RESUMED) {
+            navController.navigate(Utforska) { popUpTo(OnboardingWelcome) { inclusive = true } }
         }
     }
 
@@ -98,9 +123,37 @@ fun AppShell(
             CompositionLocalProvider(LocalShellPadding provides if (selectedTab != null) padding else PaddingValues()) {
                 NavHost(
                     navController = navController,
-                    startDestination = Utforska,
+                    startDestination = Splash,
                     modifier = Modifier.fillMaxSize().hazeSource(hazeState),
                 ) {
+                    composable<Splash> {
+                        SplashRoute(onLoaded = {
+                            val next: Any = if (preferences.onboardingDone.value) Utforska else OnboardingWelcome
+                            navController.navigate(next) { popUpTo(Splash) { inclusive = true } }
+                        })
+                    }
+                    composable<OnboardingWelcome> { entry ->
+                        val onboarding = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = entry)
+                        WelcomeRoute(
+                            viewModel = onboarding,
+                            onContinue = { navigateWhenResumed(OnboardingScope) },
+                            onSkip = { onboarding.skip(); leaveOnboarding() },
+                        )
+                    }
+                    composable<OnboardingScope> { entry ->
+                        val onboarding = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = onboardingEntry(entry))
+                        ScopeStepRoute(
+                            viewModel = onboarding,
+                            onContinue = { navigateWhenResumed(OnboardingLocality) },
+                            onSkip = { onboarding.skip(); leaveOnboarding() },
+                        )
+                    }
+                    composable<OnboardingLocality> { entry ->
+                        LocalityStepRoute(
+                            viewModel = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = onboardingEntry(entry)),
+                            onDone = ::leaveOnboarding,
+                        )
+                    }
                     composable<Utforska> { UtforskaRoute(onOpenLayer = ::openLayer) }
                     composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
                     composable<Sparade> { SparadeScreen() }

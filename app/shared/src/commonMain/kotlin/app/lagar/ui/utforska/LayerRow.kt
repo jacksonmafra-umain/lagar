@@ -110,7 +110,7 @@ private fun CountBadge(summary: LayerSummary) {
 }
 
 /** White or near-black, whichever is more legible on this fill (all nine layers clear 3:1 either way). */
-private fun Color.iconColor(): Color = if (luminance() > ICON_SWITCH_LUMINANCE) DarkIcon else Color.White
+internal fun Color.iconColor(): Color = if (luminance() > ICON_SWITCH_LUMINANCE) DarkIcon else Color.White
 
 private val DarkIcon = Color(0xFF14181F)
 // Luminance where white and near-black give equal contrast on a fill (about 0.18).
