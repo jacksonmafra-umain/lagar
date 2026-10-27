@@ -87,9 +87,10 @@ class BuildTest(unittest.TestCase):
             self.assertEqual(files_a, files_b)
             for rel in files_a:
                 self.assertEqual((a / rel).read_bytes(), (b / rel).read_bytes(), rel)
-        raw = (self.out / "index.json").read_bytes()
-        self.assertTrue(raw.endswith(b"}\n"))
-        self.assertNotIn(b" ", raw.replace("Rättsinformation".encode(), b""))
+        for rel in ("index.json", "sfs/index-1.json", "docs/sfs-2010-800.json"):
+            obj = read(self.out, rel)
+            expected = json.dumps(obj, ensure_ascii=False, separators=(",", ":")) + "\n"
+            self.assertEqual((self.out / rel).read_bytes(), expected.encode("utf-8"), rel)
 
     def test_paging_and_numeric_sort(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -126,6 +127,87 @@ class BuildTest(unittest.TestCase):
             result = run_build(Path(tmp) / "out", corpus=corpus)
             self.assertEqual(result.returncode, 1)
             self.assertIn("broken.md", result.stderr)
+
+    def _corpus_with(self, tmp, **overrides):
+        from lagar import writer
+        meta, body = frontmatter.load((CORPUS / "sfs" / "acts" / "2010-800.md").read_text(encoding="utf-8"))
+        corpus = Path(tmp) / "corpus"
+        writer.write(meta, body, corpus)
+        path = corpus / "sfs" / "acts" / "2010-800.md"
+        meta = {k: v for k, v in dict(meta, **overrides).items() if v is not ...}
+        path.write_text("---\n" + frontmatter.dump(meta) + "---\n" + body, encoding="utf-8")
+        return corpus, path
+
+    def test_layer_type_mismatch_fails_with_path(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus, path = self._corpus_with(tmp, layer="eu")
+            result = run_build(Path(tmp) / "out", corpus=corpus)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn(str(path), result.stderr)
+            self.assertNotIn("Traceback", result.stderr)
+
+    def test_missing_title_fails_cleanly(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus, path = self._corpus_with(tmp, title=...)
+            result = run_build(Path(tmp) / "out", corpus=corpus)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn(str(path), result.stderr)
+            self.assertNotIn("Traceback", result.stderr)
+
+    def test_unsafe_id_fails(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus, _ = self._corpus_with(tmp, id="sfs-../x")
+            result = run_build(Path(tmp) / "out", corpus=corpus)
+            self.assertEqual(result.returncode, 1)
+            self.assertNotIn("Traceback", result.stderr)
+
+    def test_out_file_or_symlink_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            f = Path(tmp) / "afile"
+            f.write_text("x")
+            self.assertEqual(run_build(f).returncode, 1)
+            self.assertEqual(f.read_text(), "x")
+            target = Path(tmp) / "target"
+            target.mkdir()
+            (target / "keep").write_text("k")
+            link = Path(tmp) / "link"
+            link.symlink_to(target)
+            result = run_build(link)
+            self.assertEqual(result.returncode, 1)
+            self.assertNotIn("Traceback", result.stderr)
+            self.assertTrue((target / "keep").exists())
+
+    def test_out_ancestor_or_inside_corpus_rejected(self):
+        self.assertEqual(run_build(ROOT.parent).returncode, 1)
+        self.assertEqual(run_build(CORPUS / "sfs").returncode, 1)
+        self.assertEqual(run_build(CORPUS / "newout").returncode, 1)
+        self.assertFalse((CORPUS / "newout").exists())
+
+    def test_page_boundaries(self):
+        from lagar import writer
+        meta, body = frontmatter.load((CORPUS / "sfs" / "acts" / "2010-800.md").read_text(encoding="utf-8"))
+        for total, pages in ((50, 1), (51, 2)):
+            with tempfile.TemporaryDirectory() as tmp:
+                corpus = Path(tmp) / "corpus"
+                for n in range(1, total + 1):
+                    writer.write(dict(meta, id=f"sfs-2000-{n}", number=f"2000:{n}"), body, corpus)
+                out = Path(tmp) / "out"
+                self.assertEqual(run_build(out, corpus=corpus).returncode, 0)
+                p1 = read(out, "sfs/index-1.json")
+                self.assertEqual((p1["page_count"], p1["total"]), (pages, total))
+                self.assertEqual(len(p1["items"]), 50)
+                self.assertEqual((out / "sfs" / "index-2.json").exists(), pages == 2)
+
+    def test_numeric_number_sort(self):
+        from lagar import writer
+        meta, body = frontmatter.load((CORPUS / "sfs" / "acts" / "2010-800.md").read_text(encoding="utf-8"))
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus = Path(tmp) / "corpus"
+            for n in (99, 175):
+                writer.write(dict(meta, id=f"sfs-1999-{n}", number=f"1999:{n}", issued="1999-03-25"), body, corpus)
+            out = Path(tmp) / "out"
+            self.assertEqual(run_build(out, corpus=corpus).returncode, 0)
+            self.assertEqual([i["number"] for i in read(out, "sfs/index-1.json")["items"]], ["1999:175", "1999:99"])
 
 
 if __name__ == "__main__":

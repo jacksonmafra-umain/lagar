@@ -13,7 +13,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "collector"))
 
-from lagar import frontmatter  # noqa: E402
+from lagar import frontmatter, schema  # noqa: E402
 from lagar.vocabulary import LAYERS, TYPES  # noqa: E402
 
 API_VERSION = 1
@@ -47,10 +47,9 @@ def load_corpus(corpus):
             meta, body = frontmatter.load(path.read_text(encoding="utf-8"))
         except (ValueError, OSError) as exc:
             raise BuildError(f"{path}: {exc}")
-        if meta.get("type") not in TYPES or meta.get("layer") not in LAYERS:
-            raise BuildError(f"{path}: unknown type/layer")
-        if not isinstance(meta.get("number"), str):
-            raise BuildError(f"{path}: missing number")
+        errors = schema.validate(meta)
+        if errors:
+            raise BuildError(f"{path}: {errors}")
         docs.append((meta, body))
     ids = [m["id"] for m, _ in docs]
     dupes = sorted({i for i in ids if ids.count(i) > 1})
@@ -103,7 +102,14 @@ def build(docs, out, built_at):
 
 def _check_out(out, corpus):
     out, corpus = out.resolve(), corpus.resolve()
-    if out == corpus or out == REPO_ROOT or out == Path(out.anchor) or out in corpus.parents:
+    if (
+        out == corpus
+        or out == REPO_ROOT
+        or out == Path(out.anchor)
+        or out in corpus.parents
+        or out in REPO_ROOT.parents
+        or corpus in out.parents
+    ):
         raise BuildError(f"refusing to use {out} as the output directory")
 
 
@@ -118,12 +124,14 @@ def main(argv):
     try:
         if not corpus.is_dir():
             raise BuildError(f"corpus directory not found: {corpus}")
+        if out.is_symlink() or (out.exists() and not out.is_dir()):
+            raise BuildError(f"--out must be a directory, not a file or symlink: {out}")
         _check_out(out, corpus)
         docs = load_corpus(corpus)  # fail before clearing anything
         if out.exists():
             shutil.rmtree(out)
         layers, files = build(docs, out, built_at)
-    except BuildError as exc:
+    except (BuildError, OSError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
     print(f"built {len(docs)} documents, {layers} layers, {files} files -> {out}")
