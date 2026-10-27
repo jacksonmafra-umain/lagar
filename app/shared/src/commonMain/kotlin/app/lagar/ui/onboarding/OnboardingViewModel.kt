@@ -6,6 +6,7 @@ import app.lagar.data.LagarRepository
 import app.lagar.domain.Locality
 import app.lagar.domain.Scope
 import app.lagar.domain.count
+import app.lagar.domain.withRegion
 import app.lagar.settings.UserPreferences
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -46,9 +47,8 @@ class OnboardingViewModel(
         _scope.value = scope
     }
 
-    /** Picking a different län clears the kommun, since it belongs to the previous one. */
     fun selectRegion(code: String?) {
-        _locality.update { Locality(code, if (code == it.regionCode) it.kommunCode else null) }
+        _locality.update { it.withRegion(code) }
     }
 
     fun selectKommun(code: String?) {
