@@ -12,7 +12,9 @@ import app.lagar.settings.UserPreferences
 import app.lagar.ui.home.HomeViewModel
 import app.lagar.ui.list.LayerListViewModel
 import app.lagar.ui.onboarding.OnboardingViewModel
+import app.lagar.domain.SearchQuery
 import app.lagar.ui.reader.ReaderViewModel
+import app.lagar.ui.search.SearchViewModel
 import app.lagar.ui.utforska.UtforskaViewModel
 import com.russhwolf.settings.Settings
 import io.ktor.client.HttpClient
@@ -50,4 +52,5 @@ fun appModule(config: DataSourceConfig) = module {
     viewModel { OnboardingViewModel(get(), get()) }
     viewModel { (layer: String, type: String?) -> LayerListViewModel(get(), layer, type) }
     viewModel { (id: String) -> ReaderViewModel(get(), id) }
+    viewModel { (initial: SearchQuery) -> SearchViewModel(get(), get(), initial) }
 }
