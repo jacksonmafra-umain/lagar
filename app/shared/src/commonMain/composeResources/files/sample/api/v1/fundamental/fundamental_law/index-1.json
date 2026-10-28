@@ -11,7 +11,10 @@
    "number": "1974:152",
    "type": "fundamental_law",
    "issued": "1974-02-28",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": "2022:1600",
+   "ministry": "Justitiedepartementet L6"
   },
   {
    "id": "sfs-1810-0926",
@@ -19,7 +22,10 @@
    "number": "1810:0926",
    "type": "fundamental_law",
    "issued": "1810-09-26",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": "Justitiedepartementet L6"
   }
  ]
 }

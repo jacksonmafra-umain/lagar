@@ -26,6 +26,10 @@ data class ListingPage(
     val items: List<ListingItem>,
 )
 
+/**
+ * One listing entry. [inForce], [amendedThrough] and [ministry] were added within API v1; they default to null
+ * so payloads built before them still decode.
+ */
 @Serializable
 data class ListingItem(
     val id: String,
@@ -34,6 +38,9 @@ data class ListingItem(
     val type: String,
     val issued: String?,
     val repealed: String?,
+    @SerialName("in_force") val inForce: String? = null,
+    @SerialName("amended_through") val amendedThrough: String? = null,
+    val ministry: String? = null,
 )
 
 @Serializable

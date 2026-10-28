@@ -11,7 +11,10 @@
    "number": "2026:1054",
    "type": "act",
    "issued": "2026-06-04",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": "Finansdepartementet FMA B"
   },
   {
    "id": "sfs-2026-1011",
@@ -19,7 +22,10 @@
    "number": "2026:1011",
    "type": "act",
    "issued": "2026-06-04",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": "Justitiedepartementet L2"
   },
   {
    "id": "sfs-2026-999",
@@ -27,7 +33,10 @@
    "number": "2026:999",
    "type": "act",
    "issued": "2026-06-04",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": "2026:1630",
+   "ministry": "Justitiedepartementet L7"
   }
  ]
 }

@@ -35,6 +35,30 @@ class ApiModelsTest {
     }
 
     @Test
+    fun decodesListingItemOptionalFields() {
+        val sfs = json.decodeFromString<ListingPage>(ApiExamples.sfsListing)
+        val skollag = sfs.items[0]
+        assertEquals("2011-07-01", skollag.inForce)
+        assertEquals("2026:1636", skollag.amendedThrough)
+        assertEquals("Utbildningsdepartementet", skollag.ministry)
+        val repealed = sfs.items[2]
+        assertEquals("1999-07-01", repealed.inForce)
+        assertNull(repealed.amendedThrough)
+        assertNull(repealed.ministry)
+    }
+
+    @Test
+    fun decodesLegacyListingWithoutOptionalFields() {
+        val item = json.decodeFromString<ListingPage>(ApiExamples.legacyListing).items.single()
+        assertEquals("sfs-2010-800", item.id)
+        assertNull(item.inForce)
+        assertNull(item.amendedThrough)
+        assertNull(item.ministry)
+        val strict = Json.decodeFromString<ListingPage>(ApiExamples.legacyListing).items.single()
+        assertEquals(item, strict)
+    }
+
+    @Test
     fun decodesExampleDocumentWithAmendedThrough() {
         val doc = json.decodeFromString<DocumentResponse>(ApiExamples.document)
         assertEquals("sfs-1999-175", doc.meta.id)
