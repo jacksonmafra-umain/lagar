@@ -33,7 +33,7 @@ BASE = "https://data.riksdagen.se"
 ROBOTS_URL = BASE + "/robots.txt"
 LISTING_URL = (
     BASE + "/dokumentlista/?doktyp=sfs&utformat=json&sz=200&p={page}"
-    "&sort=datum&sortorder=asc"
+    "&sort={sort}&sortorder={order}"
 )
 TEXT_URL = BASE + "/dokument/{dok_id}.text"
 PROGRESS_EVERY = 50
@@ -57,6 +57,7 @@ class StateError(Exception):
 
 
 _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}", re.ASCII)
+_TIMESTAMP = re.compile(r"(\d{4}-\d{2}-\d{2})( \d{2}:\d{2}:\d{2})?", re.ASCII)
 
 
 def _iso_date(value):
@@ -66,6 +67,20 @@ def _iso_date(value):
         date.fromisoformat(value)
     except ValueError:
         raise argparse.ArgumentTypeError(f"not an ISO date (YYYY-MM-DD): {value}")
+    return value
+
+
+def _timestamp(value):
+    """A Riksdagen `systemdatum` bound: `YYYY-MM-DD` or `YYYY-MM-DD HH:MM:SS`."""
+    match = _TIMESTAMP.fullmatch(value)
+    try:
+        if not match:
+            raise ValueError(value)
+        datetime.fromisoformat(value)
+    except ValueError:
+        raise argparse.ArgumentTypeError(
+            f"not a timestamp (YYYY-MM-DD[ HH:MM:SS]): {value}"
+        )
     return value
 
 
@@ -83,6 +98,8 @@ class RunSummary:
     skipped: int = 0
     failed: "list[str]" = field(default_factory=list)
     blocked: bool = False
+    written_numbers: "list[str]" = field(default_factory=list)
+    latest_systemdatum: "str | None" = None
 
 
 def parse_args(argv):
@@ -92,10 +109,18 @@ def parse_args(argv):
     parser.add_argument("--to", dest="to_date", metavar="YYYY-MM-DD", type=_iso_date)
     parser.add_argument("--limit", type=_non_negative)
     parser.add_argument("--since", metavar="YYYY-MM-DD", type=_iso_date)
+    parser.add_argument(
+        "--changed-since", metavar="TIMESTAMP", type=_timestamp,
+        help="only documents whose systemdatum is at or after TIMESTAMP, newest first",
+    )
+    parser.add_argument("--report", metavar="FILE", help="write a JSON run report")
     parser.add_argument("--rate", type=float, default=1.0, metavar="SECONDS")
     parser.add_argument("--state", default=DEFAULT_STATE)
     parser.add_argument("--corpus", default="corpus")
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.changed_since and (args.fundamental or args.since):
+        parser.error("--changed-since cannot be combined with --fundamental or --since")
+    return args
 
 
 def _load_state(path):
@@ -159,7 +184,10 @@ def _robots_allows(client):
 def _listing_pages(client, args):
     page, pages = 1, 1
     while page <= pages:
-        url = LISTING_URL.format(page=page)
+        if args.changed_since:
+            url = LISTING_URL.format(page=page, sort="systemdatum", order="desc")
+        else:
+            url = LISTING_URL.format(page=page, sort="datum", order="asc")
         if args.from_date:
             url += f"&from={args.from_date}"
         if args.to_date:
@@ -234,12 +262,32 @@ def _candidates(client, args, state, summary):
         return
     for items in _listing_pages(client, args):
         for item in items:
+            if args.changed_since:
+                if item.systemdatum < args.changed_since:
+                    return  # newest first: everything after this is older
+                summary.latest_systemdatum = max(
+                    summary.latest_systemdatum or "", item.systemdatum
+                )
             if args.since and item.systemdatum[:10] < args.since:
                 continue
             if _already_done(state, item, args.corpus):
                 summary.skipped += 1
                 continue
             yield item.dok_id, item
+
+
+def _write_report(path, summary):
+    report = {
+        "written": summary.written_numbers,
+        "unchanged": summary.unchanged,
+        "skipped": summary.skipped,
+        "failed": summary.failed,
+        "blocked": summary.blocked,
+        "latest_systemdatum": summary.latest_systemdatum,
+    }
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def run(client, args):
@@ -251,6 +299,8 @@ def run(client, args):
         summary.blocked = True
         state["blocked"] = message
         _save_state(args.state, state)
+        if args.report:
+            _write_report(args.report, summary)
         return summary
 
     try:
@@ -274,6 +324,7 @@ def run(client, args):
             else:
                 if changed:
                     summary.written += 1
+                    summary.written_numbers.append(stored.number)
                 else:
                     summary.unchanged += 1
                 if stored.systemdatum:
@@ -296,6 +347,8 @@ def run(client, args):
     except Blocked as error:
         return finish_blocked(str(error))
     _save_state(args.state, state)
+    if args.report:
+        _write_report(args.report, summary)
     return summary
 
 
