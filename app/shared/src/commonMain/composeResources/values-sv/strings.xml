@@ -126,6 +126,8 @@
     <string name="type_number">%1$s %2$s</string>
     <string name="status_in_force">I kraft</string>
     <string name="feed_read_full_text">Läs hela texten</string>
+    <string name="feed_in_force_date">Ikraftträdande: %1$s</string>
+    <string name="feed_amended_through">Ändrad senast genom SFS %1$s</string>
     <string name="bookmark_add">Spara %1$s</string>
     <string name="bookmark_remove">Ta bort %1$s från sparade</string>
     <string name="date_today">idag</string>

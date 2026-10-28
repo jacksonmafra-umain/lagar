@@ -27,14 +27,28 @@ object ApiExamples {
   "page_count": 1,
   "total": 3,
   "items": [
-    {"id": "sfs-2010-800", "title": "Skollag (2010:800)", "number": "2010:800", "type": "act", "issued": "2010-06-23", "repealed": null},
-    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null},
-    {"id": "sfs-1999-100", "title": "Exempelförordning (1999:100)", "number": "1999:100", "type": "ordinance", "issued": "1999-03-25", "repealed": "2005-01-01"}
+    {"id": "sfs-2010-800", "title": "Skollag (2010:800)", "number": "2010:800", "type": "act", "issued": "2010-06-23", "repealed": null, "in_force": "2011-07-01", "amended_through": "2026:1636", "ministry": "Utbildningsdepartementet"},
+    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null, "in_force": null, "amended_through": "2026:851", "ministry": "Justitiedepartementet KRIM"},
+    {"id": "sfs-1999-100", "title": "Exempelförordning (1999:100)", "number": "1999:100", "type": "ordinance", "issued": "1999-03-25", "repealed": "2005-01-01", "in_force": "1999-07-01", "amended_through": null, "ministry": null}
   ]
 }
 """
 
     val actListing = """
+{
+  "layer": "sfs",
+  "type": "act",
+  "page": 1,
+  "page_count": 1,
+  "total": 1,
+  "items": [
+    {"id": "sfs-2010-800", "title": "Skollag (2010:800)", "number": "2010:800", "type": "act", "issued": "2010-06-23", "repealed": null, "in_force": "2011-07-01", "amended_through": "2026:1636", "ministry": "Utbildningsdepartementet"}
+  ]
+}
+"""
+
+    /** A listing as served before `in_force`, `amended_through` and `ministry` were added to items. */
+    val legacyListing = """
 {
   "layer": "sfs",
   "type": "act",

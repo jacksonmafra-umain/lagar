@@ -98,6 +98,15 @@ Item object:
 | `type` | string | no | type id |
 | `issued` | string (date) | yes | |
 | `repealed` | string (date) | yes | |
+| `in_force` | string (date) | yes | entry into force; same value as `meta.in_force` |
+| `amended_through` | string | yes | SFS number of the latest amendment, `^N?\d{4}:\d+$`; same value as `meta.amended_through` |
+| `ministry` | string | yes | issuing ministry or body; same value as `meta.ministry` |
+
+Keys appear in the order above. `in_force`, `amended_through` and `ministry`
+were added within v1: they are always present but may be `null`, and they come
+after the original keys. The change is additive, so v1 clients that ignore
+unknown keys keep working; clients should treat the three fields as optional
+and nullable.
 
 Sort order: `issued` descending, then `number` descending, across pages. `number` is compared numerically by (year, ordinal), not as a string, so `1999:175` comes before `1999:99`. A series prefix (`N`, `RFS`) is ignored for ordering; on a tie the plain number is listed before the prefixed one (`2026:5` before `N2026:5`). Old prints keep Riksdagen's numbering, such as `1827:60 s.1007` or `1899:bih. 25`: non-digits before the ordinal are skipped and the rest after it only breaks ties. Items
 with `issued: null` sort after dated ones.

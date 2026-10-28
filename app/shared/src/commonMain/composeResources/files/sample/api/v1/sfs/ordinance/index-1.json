@@ -11,7 +11,10 @@
    "number": "2026:1134",
    "type": "ordinance",
    "issued": "2026-06-11",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": "Socialdepartementet"
   },
   {
    "id": "sfs-2026-1115",
@@ -19,7 +22,10 @@
    "number": "2026:1115",
    "type": "ordinance",
    "issued": "2026-06-11",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": "Klimat- och näringslivsdepartementet"
   },
   {
    "id": "sfs-2026-1095",
@@ -27,7 +33,10 @@
    "number": "2026:1095",
    "type": "ordinance",
    "issued": "2026-06-04",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": "Justitiedepartementet BIRS"
   },
   {
    "id": "sfs-n2026-1",
@@ -35,7 +44,10 @@
    "number": "N2026:1",
    "type": "ordinance",
    "issued": "2026-02-12",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": "Utrikesdepartementet UD"
   }
  ]
 }

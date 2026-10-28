@@ -11,7 +11,10 @@
    "number": "2026:1200",
    "type": "act",
    "issued": "2026-06-11",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": "Försvarsdepartementet"
   },
   {
    "id": "sfs-2026-1113",
@@ -19,7 +22,10 @@
    "number": "2026:1113",
    "type": "act",
    "issued": "2026-06-11",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": "Klimat- och näringslivsdepartementet"
   },
   {
    "id": "sfs-2026-1094",
@@ -27,7 +33,10 @@
    "number": "2026:1094",
    "type": "act",
    "issued": "2026-06-11",
-   "repealed": null
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": "Justitiedepartementet BIRS"
   }
  ]
 }

@@ -26,6 +26,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -41,6 +42,8 @@ import app.lagar.resources.date_months_ago
 import app.lagar.resources.date_today
 import app.lagar.resources.date_years_ago
 import app.lagar.resources.date_yesterday
+import app.lagar.resources.feed_amended_through
+import app.lagar.resources.feed_in_force_date
 import app.lagar.resources.feed_read_full_text
 import app.lagar.resources.ic_bookmark
 import app.lagar.resources.ic_bookmark_filled
@@ -63,8 +66,8 @@ import org.jetbrains.compose.resources.stringResource
 import kotlin.time.Clock
 
 /**
- * One document in the feed: type and number badge in the layer color, how long ago it was issued, up to
- * three lines of title, its status, a bookmark toggle and the "read full text" link. The whole card opens the document.
+ * One document in the feed: type and number badge in the layer color, the in-force date when known, how long ago it
+ * was issued, up to three lines of title, the latest amending SFS when known, its status, a bookmark toggle and the "read full text" link. The whole card opens the document.
  * A repealed document switches to the Repealed layer and strikes its title, as in [app.lagar.ui.list.StatuteRow].
  */
 @OptIn(ExperimentalLayoutApi::class)
@@ -98,6 +101,7 @@ fun FeedCard(
                     ) {
                         val label = layer?.let { stringResource(Res.string.type_number, stringResource(it.typeRes()), item.number) } ?: item.number
                         LayerBadge(key, label)
+                        item.inForce?.let { InForceDateChip(it) }
                         item.issued?.let { RelativeDate(it) }
                     }
                     Text(
@@ -108,6 +112,14 @@ fun FeedCard(
                         maxLines = 3,
                         overflow = TextOverflow.Ellipsis,
                     )
+                    item.amendedThrough?.let {
+                        Text(
+                            text = stringResource(Res.string.feed_amended_through, it),
+                            style = LagarTheme.type.labelSm,
+                            fontWeight = FontWeight.SemiBold,
+                            color = LagarTheme.layers.onTint(key),
+                        )
+                    }
                 }
                 BookmarkButton(item.title, layer?.key ?: LayerKey.SfsAct, bookmarked, onToggleBookmark)
             }
@@ -122,6 +134,19 @@ fun FeedCard(
                 ReadLink(key)
             }
         }
+    }
+}
+
+/** Neutral pill with the entry-into-force date, next to the number badge. */
+@Composable
+private fun InForceDateChip(date: String) {
+    Surface(shape = CircleShape, color = LagarTheme.colors.surfaceContainer) {
+        Text(
+            text = stringResource(Res.string.feed_in_force_date, date),
+            style = LagarTheme.type.labelSm,
+            color = LagarTheme.colors.onSurfaceVariant,
+            modifier = Modifier.padding(horizontal = LagarTheme.spacing.sm, vertical = 2.dp),
+        )
     }
 }
 

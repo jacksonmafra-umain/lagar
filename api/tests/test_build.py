@@ -55,7 +55,24 @@ class BuildTest(unittest.TestCase):
         self.assertEqual((page["layer"], page["type"], page["page"], page["page_count"], page["total"]),
                          ("sfs", None, 1, 1, 2))
         self.assertEqual([i["id"] for i in page["items"]], ["sfs-2010-800", "sfs-1999-100"])
-        self.assertEqual(list(page["items"][0]), ["id", "title", "number", "type", "issued", "repealed"])
+        self.assertEqual(
+            list(page["items"][0]),
+            ["id", "title", "number", "type", "issued", "repealed", "in_force", "amended_through", "ministry"],
+        )
+
+    def test_listing_item_optional_fields(self):
+        page = read(self.out, "sfs/index-1.json")
+        item = page["items"][0]
+        self.assertEqual((item["in_force"], item["amended_through"], item["ministry"]),
+                         (None, None, "Utbildningsdepartementet"))
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus, _ = self._corpus_with(tmp, in_force="2011-07-01", amended_through="2026:851", ministry=None)
+            out = Path(tmp) / "out"
+            self.assertEqual(run_build(out, corpus=corpus).returncode, 0)
+            for rel in ("sfs/index-1.json", "sfs/act/index-1.json"):
+                item = read(out, rel)["items"][0]
+                self.assertEqual((item["in_force"], item["amended_through"], item["ministry"]),
+                                 ("2011-07-01", "2026:851", None), rel)
 
     def test_series_listing(self):
         page = read(self.out, "sfs/act/index-1.json")

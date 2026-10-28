@@ -126,6 +126,8 @@
     <string name="type_number">%1$s %2$s</string>
     <string name="status_in_force">In force</string>
     <string name="feed_read_full_text">Read full text</string>
+    <string name="feed_in_force_date">In force: %1$s</string>
+    <string name="feed_amended_through">Last amended by SFS %1$s</string>
     <string name="bookmark_add">Save %1$s</string>
     <string name="bookmark_remove">Remove %1$s from saved</string>
     <string name="date_today">today</string>
