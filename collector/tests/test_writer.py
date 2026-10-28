@@ -34,6 +34,32 @@ class WriterTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             frontmatter.load("---\nid: bare\n---\n")
 
+    def test_carriage_return_and_tab_roundtrip(self):
+        meta = {"title": "a\rb\tc\nd", "amended_by": ["x\ry"]}
+        loaded, _ = frontmatter.load("---\n" + frontmatter.dump(meta) + "---\n")
+        self.assertEqual(loaded, meta)
+        self.assertNotIn("\r", frontmatter.dump(meta))
+
+    def test_dump_rejects_other_control_characters(self):
+        for bad in ("a\x00b", "a\x1bb", "a\x7fb", "a\x0bb"):
+            with self.subTest(bad=bad):
+                with self.assertRaises(ValueError):
+                    frontmatter.dump({"title": bad})
+                with self.assertRaises(ValueError):
+                    frontmatter.dump({"title": ["ok", bad]})
+
+    def test_dump_rejects_keys_load_cannot_read(self):
+        for key in ("Title", "my-key", "key with space", "", "nyckel\u00e5"):
+            with self.subTest(key=key):
+                with self.assertRaises(ValueError):
+                    frontmatter.dump({key: "v"})
+
+    def test_body_starting_with_dashes_roundtrips(self):
+        text = "---\n" + frontmatter.dump({"id": "sfs-1-1"}) + "---\n---\nnot frontmatter\n"
+        meta, body = frontmatter.load(text)
+        self.assertEqual(meta, {"id": "sfs-1-1"})
+        self.assertEqual(body, "---\nnot frontmatter\n")
+
     def test_build_meta_1999_175(self):
         it = item("sfs-1999-175", "1999:175", "Rättsinformationsförordning (1999:175)",
                   "1999-03-25", "Justitiedepartementet KRIM")
