@@ -69,7 +69,10 @@ defined in `DESIGN.md` but have no screen that needs them yet.
 | Bottom navigation bar | `ui/shell/BottomBar.kt` | `GlassTier.Bar`, `labelSm`, `RadiusTokens.lg` selected pill (`primaryFixed` light, `primaryContainer` dark) |
 | Top bar (tab screens) | `ui/shell/TopBar.kt` | `GlassTier.Bar`, `headlineSm` in `primary`, icon buttons, 32dp `primary` avatar |
 | Back top bar (pushed screens) | `ui/common/BackTopBar.kt`, used by layer list, reader and settings | `GlassTier.Bar`, 48dp back target, `onSurfaceVariant` icon, title slot (`headlineSm` or `codeCitation`) |
-| Side drawer | `ui/shell/Drawer.kt` | `GlassTier.Overlay` (`RadiusTokens.xl`, `surfaceContainerHigh`), `headlineMd` in `primary`, `bodyUi` items, `labelMd` / `labelSm` about block |
+| Side drawer | `ui/shell/Drawer.kt` | `GlassTier.Overlay` (`RadiusTokens.xl`, `surfaceContainerHigh`); header with 40dp `primary` crown circle, `headlineMd` "Lagar" in `primary` and `labelSm` tagline; scope card (`shapes.large`, `surfaceContainerLowest`, 1dp layer `border`, `bodyUi` bold scope name, `labelSm` locality, layer `tint` "Change" pill with `onTint` text); six entries (Explore, Hierarchy, Saved, Services, Advanced search, Settings) in 48dp rows with `RadiusTokens.lg` selected pill (`primaryFixed` light, `primaryContainer` dark); `labelMd` / `labelSm` About block with data build date; scrolls at large font sizes |
+| Scope sheet | `ui/home/ScopeSheet.kt` | M3 modal sheet, scope cards in layer `tint` / `border`, "Active" and "Coming soon" badges, region and kommun pickers, primary "Done" button |
+| Scope chip (top bar) | `ui/shell/TopBar.kt` | layer `tint` fill, `labelMd` bold in `onTint`, expand icon; opens the scope sheet |
+| Location card (Region / Kommun home) | `ui/home/HomeScreen.kt` | `shapes.large`, `surfaceContainerLowest`, 1dp layer `border`, `labelSm` label in `onTint`, `bodyUi` bold name |
 | § container (legal text card) | `StatuteContainer` in `ui/reader/LegalMarkdown.kt` | `surfaceContainerLowest` fill, 1dp `outlineVariant` border, `shapes.medium`, 3dp layer `accent` indicator, `bodyLegalMd` text, reading column width |
 | Empty state ("coming soon") | `ui/common/EmptyState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `onSurfaceVariant` icon, `headlineSm` title, `bodyUi` text in `onSurfaceVariant` |
 | Error state with retry | `ui/common/ErrorState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `error` icon tint, `headlineSm` title, `bodyUi` text, M3 `Button` for retry |
@@ -79,6 +82,12 @@ defined in `DESIGN.md` but have no screen that needs them yet.
 | Glass secondary button | deferred | `DESIGN.md` glass fill is 0.6 alpha, not the `GlassTier.Card` 0.85; give it its own spec when built |
 | Primary button | deferred (retry uses the M3 `Button` themed by `LagarTheme`) | layer `accent` (or `primary`) fill, `onPrimary` text, `RadiusTokens.default` |
 | Cross-reference | deferred | dotted underline in target layer `onTint` |
+
+## Top bar label scaling
+
+The top bar holds the title, scope chip and three icon buttons on one line, so `LagarTopBar` caps the
+font scale of its own content at 1.3 (`MAX_BAR_FONT_SCALE`) and ellipsizes the title; the chip and the
+buttons keep full accessible names.
 
 ## Bottom bar label scaling
 
