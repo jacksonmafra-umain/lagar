@@ -40,9 +40,7 @@ def _number_key(number):
 
 def _sorted(items):
     """issued descending (null last), then number descending by (year, ordinal)."""
-    items = sorted(items, key=lambda i: (_number_key(i["number"]), i["id"]), reverse=True)
-    dated = sorted((i for i in items if i["issued"]), key=lambda i: i["issued"], reverse=True)
-    return dated + [i for i in items if not i["issued"]]
+    return sorted(items, key=lambda i: (bool(i["issued"]), i["issued"] or "", _number_key(i["number"]), i["id"]), reverse=True)
 
 
 def load_corpus(corpus):
