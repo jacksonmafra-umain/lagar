@@ -52,3 +52,4 @@ jobs:
         run: |
           python3 -I api/build.py --corpus corpus --out build/api/v1
           echo "API: $(du -sh build/api/v1 | cut -f1), $(find build/api/v1 -type f | wc -l) files" >> "$GITHUB_STEP_SUMMARY"
+          echo "Search index: $(du -sh build/api/v1/search | cut -f1), fields $(python3 -I -c 'import json; print(*json.load(open("build/api/v1/search/index.json"))["fields"])')" >> "$GITHUB_STEP_SUMMARY"
