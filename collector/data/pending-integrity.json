@@ -13,8 +13,8 @@
         "1920:859",
         "1921:21"
       ],
-      "total": 30485,
-      "unknown": 30476
+      "total": 30508,
+      "unknown": 30499
     },
     "amended_through": {
       "sample": [
@@ -29,8 +29,8 @@
         "1944:649",
         "1946:851"
       ],
-      "total": 5700,
-      "unknown": 5666
+      "total": 5701,
+      "unknown": 5667
     },
     "reprinted_by": {
       "sample": [
@@ -49,10 +49,10 @@
       "unknown": 426
     }
   },
-  "documents": 11425,
+  "documents": 11428,
   "duplicate_ids": [],
   "fsck": null,
-  "generated_at": "2026-10-28T11:43:26Z",
+  "generated_at": "2026-10-28T15:41:25Z",
   "path_mismatches": [],
   "schema_errors": [],
   "text_quality": [
@@ -1090,6 +1090,11 @@
       "flag": "short_body",
       "id": "sfs-1999-1419",
       "path": "sfs/ordinances/1999-1419.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1999-178",
+      "path": "sfs/other/1999-178.md"
     },
     {
       "flag": "short_body",

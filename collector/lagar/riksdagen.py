@@ -112,6 +112,9 @@ HEADER_LOOKAHEAD = 5  # non-blank lines checked after the header ended early
 def parse_text(raw):
     """Split a Riksdagen plain text into header and body.
 
+    A note paragraph set off by a blank line after `Övrig text:` and before the
+    remaining keys is folded into `Övrig text`.
+
     Raises ValueError when a known header key shows up just after the header
     ended without `Källa:` (an unlisted key or a wrapped value we cannot place):
     silently moving `Upphävd` into the body would publish a repealed law as in force.
@@ -120,6 +123,7 @@ def parse_text(raw):
     nonblank = [i for i, line in enumerate(lines) if line.strip()]
     header = {}
     last_header = None
+    last_key = None
     index_of = {i: n for n, i in enumerate(nonblank)}
     pos = 0  # position in `nonblank`
     while pos < len(nonblank):
@@ -131,6 +135,12 @@ def parse_text(raw):
                 # Header ended without Källa: a known key just ahead means we lost it.
                 ahead = nonblank[pos : pos + HEADER_LOOKAHEAD]
                 lost = [k for k in (_header_key(lines[i]) for i in ahead) if k and k not in header]
+                if lost and last_key == "Övrig text":
+                    # A note paragraph after a blank line continues `Övrig text`.
+                    header[last_key] = (header[last_key] + " " + line.strip()).strip()
+                    last_header = index
+                    pos += 1
+                    continue
                 if lost:
                     raise ValueError(
                         f"header ended before Källa but {lost[0]!r} follows: "
@@ -154,6 +164,7 @@ def parse_text(raw):
                 value = (value + " " + lines[index].strip()).strip()
                 last_header = index
         header[key] = value
+        last_key = key
         pos = index_of[last_header] + 1 if last_header in index_of else pos + 1
         if key == _SOURCE_KEY:
             break
