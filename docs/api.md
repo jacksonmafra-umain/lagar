@@ -115,8 +115,15 @@ with `issued: null` sort after dated ones.
 can be set while `amended_by` is empty or partial: `amended_by` lists only the
 amending SFS numbers found in the text.
 
+`in_force` and `amendments` come from the SFS register (SFSR) at
+<https://rkrattsbaser.gov.se/sfsr>, which only some statutes have been read
+from so far. Until then `in_force` is `null` and `amendments` is `null`. Once
+read, `amendments` is the register's full list of amending acts, so it is
+usually longer than `amended_by`.
+
 Keys are always present, in this order. They mirror the corpus frontmatter
-(`docs/schema/frontmatter.schema.json`).
+(`docs/schema/frontmatter.schema.json`); `amendments` is the one key the
+frontmatter may leave out, and the API then serves it as `null`.
 
 | field | type | null | notes |
 | --- | --- | --- | --- |
@@ -126,7 +133,7 @@ Keys are always present, in this order. They mirror the corpus frontmatter
 | `layer` | string | no | one of the layers; must equal the layer of `type` |
 | `number` | string | no | |
 | `issued` | string (date) | yes | |
-| `in_force` | string (date) | yes | |
+| `in_force` | string (date) | yes | entry into force of the statute itself, from SFSR |
 | `repealed` | string (date) | yes | |
 | `amended_by` | array of string | no | each `^N?\d{4}:\d+$` (N-series numbers keep their `N`), may be empty |
 | `amended_through` | string | yes | SFS number of the latest amendment applied, `^N?\d{4}:\d+$` |
@@ -138,3 +145,19 @@ Keys are always present, in this order. They mirror the corpus frontmatter
 | `source` | string (URI) | no | |
 | `source_sha256` | string | no | 64 lowercase hex characters |
 | `fetched_at` | string (UTC timestamp) | no | |
+| `amendments` | array of amendment | yes | `null` until read from SFSR; `[]` when the register lists none. Added in v1 without a version bump |
+
+### Amendment object
+
+One per "Ändring" entry of the register, in register order (by SFS number).
+All keys are always present.
+
+| field | type | null | notes |
+| --- | --- | --- | --- |
+| `number` | string | no | amending SFS number, `^N?\d{4}:\d+$` |
+| `title` | string | yes | e.g. `Lag (1983:240) om ändring i brottsbalken`; older entries often have none |
+| `scope` | string | yes | the register's `Omfattning`, e.g. `ändr. 26 kap. 6 §` (`ändr.` amended, `upph.` repealed, `nya` new) |
+| `preparatory_works` | string | yes | the register's `Förarbeten` (bill, committee report, Riksdag communication) |
+| `celex` | string | yes | CELEX numbers of EU acts the amendment implements, as listed |
+| `in_force` | string (date) | yes | entry into force when the register value starts with a date; `null` when it is missing (common before about 1982) or not a date |
+| `in_force_raw` | string | yes | the register value as written, whitespace collapsed, e.g. `1983-07-01 överg.best.` (transitional provisions apply) or a condition such as `den dag regeringen bestämmer`; `null` when missing |
