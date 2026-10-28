@@ -110,8 +110,7 @@ fun ScopeSheet(onDismiss: () -> Unit) {
             Button(
                 onClick = {
                     preferences.setScope(draftScope)
-                    preferences.setRegion(draftLocality.regionCode)
-                    preferences.setKommun(draftLocality.kommunCode)
+                    preferences.setLocality(draftLocality)
                     onDismiss()
                 },
                 modifier = Modifier
