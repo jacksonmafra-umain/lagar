@@ -105,8 +105,10 @@ fun AppShell(
     fun onboardingEntry(entry: NavBackStackEntry) = remember(entry) { navController.getBackStackEntry<OnboardingWelcome>() }
 
     // Onboarding is removed from the stack so that back from Home does not return to it.
-    fun leaveOnboarding() {
+    // [persist] runs only from a settled screen, so a double tap cannot store the choices twice.
+    fun leaveOnboarding(persist: () -> Unit) {
         if (navController.currentBackStackEntry?.lifecycle?.currentState == Lifecycle.State.RESUMED) {
+            persist()
             navController.navigate(Utforska) { popUpTo(OnboardingWelcome) { inclusive = true } }
         }
     }
@@ -163,7 +165,7 @@ fun AppShell(
                         WelcomeRoute(
                             viewModel = onboarding,
                             onContinue = { navigateWhenResumed(OnboardingScope) },
-                            onSkip = { onboarding.skip(); leaveOnboarding() },
+                            onSkip = { leaveOnboarding(onboarding::skip) },
                         )
                     }
                     composable<OnboardingScope> { entry ->
