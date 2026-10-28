@@ -1,9 +1,12 @@
 package app.lagar.data
 
+import app.lagar.domain.Locality
+import app.lagar.domain.Scope
 import kotlinx.coroutines.test.runTest
 import java.io.File
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 class GeoRepositoryTest {
@@ -32,5 +35,23 @@ class GeoRepositoryTest {
         val names = repository.regions().map { it.name }
         assertEquals(listOf("Örebro län", "Östergötlands län"), names.takeLast(2))
         assertTrue(names.indexOf("Västra Götalands län") < names.indexOf("Örebro län"))
+    }
+
+    @Test
+    fun nationalScopeHasNoLocalityName() = runTest {
+        assertNull(repository.localityName(Scope.Nationell, Locality("14", "1480")))
+    }
+
+    @Test
+    fun regionScopeNamesTheChosenRegion() = runTest {
+        assertEquals("Västra Götalands län", repository.localityName(Scope.Region, Locality("14", null)))
+        assertNull(repository.localityName(Scope.Region, Locality(null, null)))
+    }
+
+    @Test
+    fun kommunScopeNamesTheChosenKommun() = runTest {
+        assertEquals("Göteborg", repository.localityName(Scope.Kommun, Locality("14", "1480")))
+        assertNull(repository.localityName(Scope.Kommun, Locality("14", null)))
+        assertNull(repository.localityName(Scope.Kommun, Locality(null, "1480")))
     }
 }
