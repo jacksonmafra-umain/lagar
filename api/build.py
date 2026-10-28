@@ -5,6 +5,8 @@ Usage: python3 -I api/build.py --corpus corpus --out build/api/v1 [--built-at <U
 
 import argparse
 import json
+import os
+import re
 import shutil
 import sys
 from datetime import datetime, timezone
@@ -18,6 +20,7 @@ from lagar.vocabulary import LAYERS, TYPES  # noqa: E402
 
 API_VERSION = 1
 PAGE_SIZE = 50
+BUILT_AT_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 ITEM_FIELDS = ("id", "title", "number", "type", "issued", "repealed")
 
 
@@ -37,9 +40,11 @@ def _number_key(number):
 
 def _sorted(items):
     """issued descending (null last), then number descending by (year, ordinal)."""
-    items = sorted(items, key=lambda i: (_number_key(i["number"]), i["id"]), reverse=True)
-    dated = sorted((i for i in items if i["issued"]), key=lambda i: i["issued"], reverse=True)
-    return dated + [i for i in items if not i["issued"]]
+    return sorted(
+        items,
+        key=lambda i: (bool(i["issued"]), i["issued"] or "", _number_key(i["number"]), i["id"]),
+        reverse=True,
+    )
 
 
 def load_corpus(corpus):
@@ -51,7 +56,7 @@ def load_corpus(corpus):
             raise BuildError(f"{path}: {exc}")
         errors = schema.validate(meta)
         if errors:
-            raise BuildError(f"{path}: {errors}")
+            raise BuildError("\n".join(f"{path}: {e}" for e in errors))
         docs.append((meta, body))
     ids = [m["id"] for m, _ in docs]
     dupes = sorted({i for i in ids if ids.count(i) > 1})
@@ -102,6 +107,18 @@ def build(docs, out, built_at):
     return len(layers), len(written)
 
 
+def _check_no_symlinks(out):
+    """Reject --out when it or any parent is a symlink (checked before resolving).
+
+    Root-owned links such as macOS /var -> /private/var are system layout, not
+    something a typo can introduce, so they are tolerated.
+    """
+    path = Path(os.path.abspath(out))
+    for candidate in (path, *path.parents):
+        if candidate.is_symlink() and candidate.lstat().st_uid != 0:
+            raise BuildError(f"--out must not be or sit under a symlink: {candidate}")
+
+
 def _check_out(out, corpus):
     out, corpus = out.resolve(), corpus.resolve()
     if (
@@ -115,6 +132,15 @@ def _check_out(out, corpus):
         raise BuildError(f"refusing to use {out} as the output directory")
 
 
+def _check_built_at(value):
+    try:
+        if not BUILT_AT_RE.fullmatch(value):
+            raise ValueError(value)
+        datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
+    except ValueError:
+        raise BuildError(f"--built-at must be a UTC timestamp like 2026-10-27T10:30:00Z, got {value!r}")
+
+
 def main(argv):
     parser = argparse.ArgumentParser(description="Generate the static JSON API from the corpus.")
     parser.add_argument("--corpus", required=True)
@@ -124,13 +150,17 @@ def main(argv):
     built_at = args.built_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     corpus, out = Path(args.corpus), Path(args.out)
     try:
+        _check_built_at(built_at)
         if not corpus.is_dir():
             raise BuildError(f"corpus directory not found: {corpus}")
         if out.is_symlink() or (out.exists() and not out.is_dir()):
             raise BuildError(f"--out must be a directory, not a file or symlink: {out}")
+        _check_no_symlinks(out)
         _check_out(out, corpus)
         docs = load_corpus(corpus)  # fail before clearing anything
         if out.exists():
+            if any(out.iterdir()) and not (out / "index.json").is_file():
+                raise BuildError(f"refusing to clear {out}: it is not empty and has no index.json (not a previous build)")
             shutil.rmtree(out)
         layers, files = build(docs, out, built_at)
     except (BuildError, OSError) as exc:

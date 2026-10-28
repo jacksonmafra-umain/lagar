@@ -1,0 +1,11 @@
+{
+  "layer": "sfs",
+  "type": "ordinance",
+  "page": 1,
+  "page_count": 1,
+  "total": 2,
+  "items": [
+    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null},
+    {"id": "sfs-1999-100", "title": "Exempelförordning (1999:100)", "number": "1999:100", "type": "ordinance", "issued": "1999-03-25", "repealed": "2005-01-01"}
+  ]
+}
