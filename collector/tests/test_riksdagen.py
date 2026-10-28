@@ -125,10 +125,46 @@ class RiksdagenTests(unittest.TestCase):
         self.assertEqual(parsed.header["Upphävd"], "1994-04-01")
         self.assertEqual(parsed.body, "1 § Text.")
 
-    def test_wrapped_overig_text_after_blank_line_raises(self):
+    def test_overig_text_note_after_blank_line_is_continuation(self):
+        parsed = riksdagen.parse_text(
+            "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÖvrig text: a\n\nfortsättning\n"
+            "Upphävd: 1994-04-01\nKälla: R\n\n1 § Text.\n"
+        )
+        self.assertEqual(parsed.header["Övrig text"], "a fortsättning")
+        self.assertEqual(parsed.header["Upphävd"], "1994-04-01")
+        self.assertEqual(parsed.body, "1 § Text.")
+
+    def test_overig_text_note_shapes_from_riksdagen(self):
+        # sfs-1963-234: empty `Övrig text`, note paragraph, blank, `Upphävd`.
+        parsed = riksdagen.parse_text(
+            "Kungörelse (1963:234) om x\n\n\nSFS nr:     1963:234\nÖvrig text:  \n\n"
+            "Upphävd den dag regeringen bestämmer. Bilagor finns inte med här.\n\n"
+            "Upphävd: 1997-12-31\nKälla: Regeringskansliet / Lagrummet\n\n\nText.\n"
+        )
+        self.assertEqual(
+            parsed.header["Övrig text"],
+            "Upphävd den dag regeringen bestämmer. Bilagor finns inte med här.",
+        )
+        self.assertEqual(parsed.header["Upphävd"], "1997-12-31")
+        self.assertEqual(parsed.body, "Text.")
+        # sfs-1999-178: wrapped `Övrig text` value, blank, note, `Upphävd` with no blank.
+        parsed = riksdagen.parse_text(
+            "Föreskrifter (1999:178) om x\n\nSFS nr:     1999:178\n"
+            "Övrig text:  Bilaga 2 senast ändrad genom\n\n"
+            "Rättelseblad 2007:678 har iakttagits.\nUpphävd: 2025-02-21\n"
+            "Källa: Regeringskansliet / Lagrummet\n\n\nHar upphävts.\n"
+        )
+        self.assertEqual(
+            parsed.header["Övrig text"],
+            "Bilaga 2 senast ändrad genom Rättelseblad 2007:678 har iakttagits.",
+        )
+        self.assertEqual(parsed.header["Upphävd"], "2025-02-21")
+        self.assertEqual(parsed.body, "Har upphävts.")
+
+    def test_note_after_other_key_still_raises(self):
         with self.assertRaises(ValueError):
             riksdagen.parse_text(
-                "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÖvrig text: a\n\nfortsättning\n"
+                "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÄndrad:  \n\nfortsättning\n"
                 "Upphävd: 1994-04-01\nKälla: R\n\n1 § Text.\n"
             )
 
