@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project state
 
-The repo holds the Python collector (`collector/`, SFS from Riksdagen open data), the static API generator (`api/`), the corpus (`corpus/`) and the Compose Multiplatform app (`app/`: Android, iOS, wasmJs). The app covers onboarding, the scope-based home (Utforska), search and advanced search, Hierarki, Sparade (bookmarks), the document reader, the drawer and settings; Tjänster is a placeholder. Planning and design input:
+The repo holds the Python collector (`collector/`, SFS from Riksdagen open data), the static API generator (`api/`), the corpus (`corpus/`) the Compose Multiplatform app (`app/`: Android, iOS, wasmJs) and the static landing page (`landing/`, Swedish and English). The app covers onboarding, the scope-based home (Utforska), search and advanced search, Hierarki, Sparade (bookmarks), the document reader, the drawer and settings; Tjänster is a placeholder. Planning and design input:
 
 - `lagar-implementation-prompt.md` — **the master spec**, local-only: it is excluded from git (`.git/info/exclude`) and may be missing in other clones. When present, read it before any work; it defines the monorepo layout, corpus schema, static API contract, app stack, CI workflows and milestones (M0–M12). Follow its milestone order. When missing, rely on this file, `docs/` and `DESIGN.md`, and ask the owner for anything they don't cover. Never commit it or quote it in tracked files.
 - `docs/architecture.md` — app information architecture: normative-layer hierarchy, context engine, 4-tab shell (Utforska / Hierarki / Sparade / Tjänster), onboarding and navigation flows. Some features it describes go beyond the spec (reading a law as of a past date, version comparator, inline notes, GPS kommun detection); the static API in the spec does not yet expose historical text, so check with the owner before building those.
@@ -23,6 +23,7 @@ Run from the repo root.
 - Build the API: `python3 -I api/build.py --corpus corpus --out build/api/v1`
 - Collector tests: `python3 -I -m unittest discover -s collector/tests -t collector` (single test: add `-k <name>`)
 - API tests: `python3 -I -m unittest discover -s api/tests -t .`
+- Landing page: tests `python3 -I -m unittest discover -s landing/tests` and `node --test landing/tests/lang.test.cjs`; `scripts/build-site.sh` builds the web app and assembles `build/landing/` (landing page, fonts, web app under `app/`). The `Site` workflow (`.github/workflows/site.yml`) deploys it to Vercel (project `lagar`, <https://lagar-three.vercel.app>): a preview per PR, production on `main`. `landing/vercel.json` proxies `/app/api/v1/*` to the API on GitHub Pages. Do not use a top-level `site/` folder: `pages.yml` uses it as scratch output.
 
 - App (`app/`, needs JDK 21 and `ANDROID_HOME`; see `app/README.md` for the local API server and per-platform data source):
 
