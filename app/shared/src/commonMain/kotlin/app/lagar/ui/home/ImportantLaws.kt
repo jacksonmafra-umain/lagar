@@ -26,6 +26,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.intl.Locale
+import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import app.lagar.data.ListingItem
@@ -82,7 +84,7 @@ internal fun ImportantLaws(data: HomeData, onOpenDocument: (String) -> Unit, mod
             }
             Text(stringResource(Res.string.home_key_laws_title), style = LagarTheme.type.headlineSm, color = LagarTheme.colors.onSurface, textAlign = TextAlign.Center)
             Text(
-                text = stringResource(Res.string.home_key_laws_subtitle).uppercase(),
+                text = stringResource(Res.string.home_key_laws_subtitle).toUpperCase(Locale.current),
                 style = LagarTheme.type.labelSm,
                 color = layers.onTint(key),
                 textAlign = TextAlign.Center,

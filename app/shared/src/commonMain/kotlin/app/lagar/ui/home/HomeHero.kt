@@ -42,6 +42,8 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.intl.Locale
+import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
@@ -258,7 +260,7 @@ internal fun LayerChips(layers: List<DisplayLayer>, onOpenLayer: (DisplayLayer) 
                 ) {
                     Box(Modifier.heightIn(min = 30.dp).padding(horizontal = LagarTheme.spacing.md), contentAlignment = Alignment.Center) {
                         Text(
-                            text = stringResource(layer.nameRes()).uppercase(),
+                            text = stringResource(layer.nameRes()).toUpperCase(Locale.current),
                             style = LagarTheme.type.labelSm,
                             fontWeight = FontWeight.Bold,
                             color = if (filled) accent.iconColor() else palette.onTint(layer.key),
