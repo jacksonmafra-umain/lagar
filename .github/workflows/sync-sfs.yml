@@ -1,0 +1,140 @@
+name: Sync SFS
+
+# Daily check of Riksdagen for new and amended SFS documents. Changes land as one
+# pull request on the data/sfs-sync branch; a run with no changes opens nothing.
+
+on:
+  schedule:
+    - cron: "23 5 * * *" # after Riksdagen's nightly update (about 04:40 Swedish time)
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Collect documents changed at or after this systemdatum (YYYY-MM-DD[ HH:MM:SS]); defaults to the sync marker"
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-sfs
+  cancel-in-progress: false
+
+env:
+  BRANCH: data/sfs-sync
+  MARKER: collector/data/sfs-sync.json
+  REPORT: build/sync-report.json
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Continue an open sync pull request
+        id: base
+        run: |
+          pr=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
+          echo "pr=$pr" >> "$GITHUB_OUTPUT"
+          if [ -n "$pr" ]; then
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+            # Generated reports are rebuilt below, so keep the branch side on conflicts.
+            git merge --no-edit -X ours origin/main
+          else
+            git checkout -B "$BRANCH"
+          fi
+
+      - name: Collector tests
+        run: python3 -I -m unittest discover -s collector/tests -t collector
+
+      - name: Restore the last sync marker
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .sync-cache
+          key: sfs-sync-${{ github.run_id }}
+          restore-keys: sfs-sync-
+
+      - name: Choose the window
+        id: window
+        env:
+          INPUT_SINCE: ${{ inputs.since }}
+        run: |
+          committed=$(jq -r .changed_since "$MARKER")
+          cached=$(jq -r '.changed_since // empty' .sync-cache/sfs-sync.json 2>/dev/null || true)
+          since=$(printf '%s\n%s\n' "$committed" "$cached" | sort | tail -n 1)
+          if [ -n "$INPUT_SINCE" ]; then since="$INPUT_SINCE"; fi
+          echo "since=$since" >> "$GITHUB_OUTPUT"
+          echo "Collecting documents changed since $since" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Collect changed documents
+        run: python3 -I collector/collect.py sfs --changed-since "${{ steps.window.outputs.since }}" --report "$REPORT"
+
+      - name: Summarise the run
+        id: report
+        run: |
+          latest=$(jq -r '.latest_systemdatum // empty' "$REPORT")
+          echo "latest=$latest" >> "$GITHUB_OUTPUT"
+          {
+            echo "- Written: $(jq -r '.written | length' "$REPORT") ($(jq -r '.written | join(", ")' "$REPORT"))"
+            echo "- Unchanged: $(jq -r .unchanged "$REPORT")"
+            echo "- Failed: $(jq -r '.failed | length' "$REPORT") ($(jq -r '.failed | join(", ")' "$REPORT"))"
+            echo "- Newest systemdatum: ${latest:-none}"
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$(git status --porcelain -- corpus)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Advance the cached marker
+        if: steps.report.outputs.latest != ''
+        run: |
+          mkdir -p .sync-cache
+          jq -n --arg ts "${{ steps.report.outputs.latest }}" '{changed_since: $ts}' > .sync-cache/sfs-sync.json
+
+      - name: Save the cached marker
+        if: steps.report.outputs.latest != ''
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .sync-cache
+          key: sfs-sync-${{ github.run_id }}
+
+      - name: Commit and open the pull request
+        if: steps.report.outputs.changed == 'true'
+        env:
+          PR: ${{ steps.base.outputs.pr }}
+        run: |
+          cp .sync-cache/sfs-sync.json "$MARKER"
+          python3 -I collector/audit.py
+          python3 -I collector/plan.py
+          written=$(jq -r '.written | length' "$REPORT")
+          {
+            echo "data(sfs): sync $written statutes changed since ${{ steps.window.outputs.since }}"
+            echo
+            echo "Written: $(jq -r '.written | join(", ")' "$REPORT")"
+            failed=$(jq -r '.failed | join(", ")' "$REPORT")
+            if [ -n "$failed" ]; then echo; echo "Failed: $failed"; fi
+          } > "$RUNNER_TEMP/message"
+          git add corpus "$MARKER" collector/data/pending-integrity.json PROGRESS.md progress.svg
+          git commit -q -F "$RUNNER_TEMP/message"
+          git push --force-with-lease origin "HEAD:$BRANCH"
+          if [ -z "$PR" ]; then
+            gh pr create --base main --head "$BRANCH" \
+              --title "Sync new and amended SFS documents" \
+              --label "type: data" --label "area: corpus" \
+              --assignee "${{ github.repository_owner }}" \
+              --body "Automated sync of SFS documents that Riksdagen added or changed. Each run adds one commit listing the statutes it wrote; see the workflow run summaries for failures."
+          fi
