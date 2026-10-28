@@ -21,7 +21,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.unit.dp
 import app.lagar.data.ListingItem
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
