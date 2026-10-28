@@ -61,6 +61,53 @@ class WriterTests(unittest.TestCase):
         self.assertEqual(meta, {"id": "sfs-1-1"})
         self.assertEqual(body, "---\nnot frontmatter\n")
 
+    def test_mapping_list_roundtrip(self):
+        meta = {
+            "id": "sfs-1962-700",
+            "amendments": [
+                {"number": "1965:280", "title": None, "scope": "\u00e4ndr. 20 kap 4 \u00a7\n31 kap", "in_force": None},
+                {"number": "2026:1640", "title": 'Lag "x"', "scope": "upph. 1 \u00a7", "in_force": "2027-01-02"},
+            ],
+            "in_force": "1965-01-01",
+        }
+        text = "---\n" + frontmatter.dump(meta) + "---\nbody\n"
+        self.assertIn('amendments:\n  - number: "1965:280"\n    title: null\n', text)
+        loaded, body = frontmatter.load(text)
+        self.assertEqual(loaded, meta)
+        self.assertEqual(body, "body\n")
+        # Keys follow the schema order: in_force before amendments.
+        self.assertLess(text.index("in_force:"), text.index("amendments:"))
+
+    def test_mapping_list_item_keys_follow_schema_order(self):
+        item = {"in_force_raw": None, "number": "2000:1", "title": None}
+        dumped = frontmatter.dump({"amendments": [item]})
+        self.assertEqual(
+            dumped, 'amendments:\n  - number: "2000:1"\n    title: null\n    in_force_raw: null\n'
+        )
+
+    def test_empty_mapping_list_is_a_flow_list(self):
+        self.assertEqual(frontmatter.dump({"amendments": []}), "amendments: []\n")
+        loaded, _ = frontmatter.load("---\namendments: []\n---\n")
+        self.assertEqual(loaded, {"amendments": []})
+
+    def test_mapping_list_rejects_what_load_cannot_read(self):
+        for bad in ([{}], [{"a": ["x"]}], [{"a": {"b": "c"}}], [{"Bad": "x"}], [{"a": "x"}, "y"]):
+            with self.subTest(bad=bad):
+                with self.assertRaises(ValueError):
+                    frontmatter.dump({"amendments": bad})
+
+    def test_malformed_block_lists_rejected(self):
+        for text in (
+            "---\namendments:\n---\n",
+            "---\namendments:\n    number: \"1\"\n---\n",
+            "---\namendments:\n  - number: \"1\"\n    number: \"2\"\n---\n",
+            "---\namendments:\n  - number: [\"1\"]\n---\n",
+            "---\namendments:\n  - number: \"1\"\n",
+        ):
+            with self.subTest(text=text):
+                with self.assertRaises(ValueError):
+                    frontmatter.load(text)
+
     def test_build_meta_1999_175(self):
         it = item("sfs-1999-175", "1999:175", "Rättsinformationsförordning (1999:175)",
                   "1999-03-25", "Justitiedepartementet KRIM")
