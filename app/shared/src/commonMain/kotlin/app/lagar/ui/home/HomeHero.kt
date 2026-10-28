@@ -173,6 +173,7 @@ private fun emphasised(title: String, emphasis: String, color: Color) = buildAnn
 private fun SearchField(scope: Scope, onSearch: (String) -> Unit) {
     val layers = LagarTheme.layers
     var query by rememberSaveable { mutableStateOf("") }
+    val hint = stringResource(Res.string.home_search_hint)
     val submit = { onSearch(query.trim()) }
     Surface(
         modifier = Modifier.fillMaxWidth(),
@@ -189,7 +190,7 @@ private fun SearchField(scope: Scope, onSearch: (String) -> Unit) {
             BasicTextField(
                 value = query,
                 onValueChange = { query = it },
-                modifier = Modifier.weight(1f),
+                modifier = Modifier.weight(1f).semantics { contentDescription = hint },
                 singleLine = true,
                 textStyle = LagarTheme.type.bodyUi.copy(color = LagarTheme.colors.onSurface),
                 cursorBrush = SolidColor(layers.onTint(scope.key)),
@@ -199,7 +200,7 @@ private fun SearchField(scope: Scope, onSearch: (String) -> Unit) {
                     Box(contentAlignment = Alignment.CenterStart) {
                         if (query.isEmpty()) {
                             Text(
-                                stringResource(Res.string.home_search_hint),
+                                hint,
                                 style = LagarTheme.type.bodyUi,
                                 color = LagarTheme.colors.onSurfaceVariant,
                                 maxLines = 2,
