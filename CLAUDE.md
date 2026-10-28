@@ -16,6 +16,8 @@ Foundation and corpus seed are in place: the Python collector (`collector/`, SFS
 Run from the repo root.
 
 - Collect SFS: `python3 -I collector/collect.py sfs --fundamental` or `python3 -I collector/collect.py sfs --from YYYY-MM-DD --to YYYY-MM-DD [--limit N] [--since YYYY-MM-DD]`. State lives in `collector/data/sfs-state.json`; default `--rate` is 1 request/s.
+- Audit the corpus: `python3 -I collector/audit.py [--fsck]` writes `collector/data/pending-integrity.json`; exits 1 on schema errors, duplicate ids or path mismatches.
+- Progress reports: `python3 -I collector/plan.py` reads `collector/data/targets.json` and the audit JSON, writes `PROGRESS.md` and `progress.svg`. Run the audit first; `COVERAGE.md` is hand-written.
 - Build the API: `python3 -I api/build.py --corpus corpus --out build/api/v1`
 - Collector tests: `python3 -I -m unittest discover -s collector/tests -t collector` (single test: add `-k <name>`)
 - API tests: `python3 -I -m unittest discover -s api/tests -t .`

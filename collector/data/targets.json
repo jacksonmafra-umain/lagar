@@ -1,0 +1,74 @@
+[
+  {
+    "layer": "fundamental",
+    "type": "fundamental_law",
+    "label": "Fundamental laws",
+    "target": 4,
+    "kind": "counted",
+    "source": "The four Swedish fundamental laws",
+    "as_of": "2026-10-27"
+  },
+  {
+    "layer": "sfs",
+    "type": null,
+    "label": "SFS (statutes and ordinances)",
+    "target": 11567,
+    "kind": "counted",
+    "source": "https://data.riksdagen.se/dokumentlista/?doktyp=sfs",
+    "as_of": "2026-10-27"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "label": "Agency regulations",
+    "target": null,
+    "kind": "unknown",
+    "source": null,
+    "as_of": null
+  },
+  {
+    "layer": "case_law",
+    "type": null,
+    "label": "Case law",
+    "target": null,
+    "kind": "unknown",
+    "source": null,
+    "as_of": null
+  },
+  {
+    "layer": "eu",
+    "type": null,
+    "label": "EU law",
+    "target": null,
+    "kind": "unknown",
+    "source": null,
+    "as_of": null
+  },
+  {
+    "layer": "region",
+    "type": null,
+    "label": "Regional regulations",
+    "target": null,
+    "kind": "unknown",
+    "source": null,
+    "as_of": null
+  },
+  {
+    "layer": "municipality",
+    "type": null,
+    "label": "Municipal regulations",
+    "target": null,
+    "kind": "unknown",
+    "source": null,
+    "as_of": null
+  },
+  {
+    "layer": "service",
+    "type": null,
+    "label": "Public services",
+    "target": null,
+    "kind": "unknown",
+    "source": null,
+    "as_of": null
+  }
+]
