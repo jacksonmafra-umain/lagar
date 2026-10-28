@@ -12,6 +12,8 @@ BUILT_AT = "2026-10-27T10:30:00Z"
 sys.path.insert(0, str(ROOT / "collector"))
 from lagar import frontmatter  # noqa: E402
 
+NEW_FIELDS = ("issuer", "court", "ecli", "celex", "region_code", "municipality_code")
+
 
 def run_build(out, corpus=CORPUS, built_at=BUILT_AT):
     return subprocess.run(
@@ -91,16 +93,17 @@ class BuildTest(unittest.TestCase):
         self.assertEqual(list(doc), ["meta", "body"])
         # A statute without register data serves amendments: null, never a missing key.
         self.assertNotIn("amendments", meta)
-        self.assertEqual(doc["meta"], {**meta, "amendments": None})
-        self.assertEqual(list(doc["meta"]), [*meta, "amendments"])
+        nulls = dict.fromkeys(("amendments", *NEW_FIELDS))
+        self.assertEqual(doc["meta"], {**meta, **nulls})
+        self.assertEqual(list(doc["meta"]), [*meta, *nulls])
         self.assertEqual(doc["body"], body)
 
     def test_doc_file_with_register_data(self):
         text = (CORPUS / "fundamental-laws" / "1974-152.md").read_text(encoding="utf-8")
         meta, _ = frontmatter.load(text)
         doc = read(self.out, "docs/sfs-1974-152.json")
-        self.assertEqual(doc["meta"], meta)
-        self.assertEqual(list(doc["meta"])[-1], "amendments")
+        self.assertEqual(doc["meta"], {**meta, **dict.fromkeys(NEW_FIELDS)})
+        self.assertEqual(list(doc["meta"])[-len(NEW_FIELDS) - 1:], ["amendments", *NEW_FIELDS])
         self.assertEqual(doc["meta"]["in_force"], "1975-01-01")
         self.assertEqual([a["number"] for a in doc["meta"]["amendments"]], ["1976:871", "1979:933"])
         self.assertEqual(doc["meta"]["amendments"][0]["in_force_raw"], "1977-01-01 överg.best.")
@@ -263,7 +266,6 @@ class BuildTest(unittest.TestCase):
             self.assertEqual(run_build(out, corpus=corpus).returncode, 0)
             self.assertEqual([i["number"] for i in read(out, "sfs/index-1.json")["items"]],
                              ["RFS1968:8", "1899:bih. 25", "1827:60 s.1007", "1736:0123 2", "1736:0123 1"])
-
 
 
 class OutSafetyTest(unittest.TestCase):

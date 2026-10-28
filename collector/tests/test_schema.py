@@ -28,7 +28,8 @@ def amendment():
 def new_layer_meta(type_):
     """A valid document of one of the non-SFS types, built on the SFS example."""
     meta = example_meta()
-    meta.pop("amendments", None)
+    for key in ("amendments", "issuer", "court", "ecli", "celex", "region_code", "municipality_code"):
+        meta.pop(key, None)
     meta.update(amended_by=[], amended_through=None, reprinted_by=[], ministry=None)
     meta.update(NEW_TYPES[type_])
     meta["type"] = type_

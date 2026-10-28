@@ -23,6 +23,8 @@ PAGE_SIZE = 50
 BUILT_AT_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 # Fields added after the first release go at the end, so earlier keys keep their position.
 ITEM_FIELDS = ("id", "title", "number", "type", "issued", "repealed", "in_force", "amended_through", "ministry")
+# Document meta keys, in the schema's order; optional frontmatter keys are served as null.
+META_FIELDS = tuple(schema._load_schema()["properties"])
 
 
 class BuildError(Exception):
@@ -88,10 +90,13 @@ def _pages(out, rel_dir, layer, type_, items, written):
 
 
 def doc_meta(meta):
-    """Frontmatter as served; `amendments` is null until the register was collected."""
-    served = dict(meta)
-    served.setdefault("amendments", None)
-    return served
+    """Frontmatter as served: every schema key in schema order, null when the file leaves it out.
+
+    `amendments` is null until the register was collected; the other layers' fields
+    (`issuer`, `court`, `ecli`, `celex`, `region_code`, `municipality_code`) are null
+    where they do not apply.
+    """
+    return {key: meta.get(key) for key in META_FIELDS}
 
 
 def build(docs, out, built_at):
