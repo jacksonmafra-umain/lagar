@@ -75,12 +75,17 @@ defined in `DESIGN.md` but have no screen that needs them yet.
 | Location card (Region / Kommun home) | `ui/home/HomeScreen.kt` | `shapes.large`, `surfaceContainerLowest`, 1dp layer `border`, `labelSm` label in `onTint`, `bodyUi` bold name |
 | § container (legal text card) | `StatuteContainer` in `ui/reader/LegalMarkdown.kt` | `surfaceContainerLowest` fill, 1dp `outlineVariant` border, `shapes.medium`, 3dp layer `accent` indicator, `bodyLegalMd` text, reading column width |
 | Empty state ("coming soon") | `ui/common/EmptyState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `onSurfaceVariant` icon, `headlineSm` title, `bodyUi` text in `onSurfaceVariant` |
-| Error state with retry | `ui/common/ErrorState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `error` icon tint, `headlineSm` title, `bodyUi` text, M3 `Button` for retry |
+| Error state with retry | `ui/common/ErrorState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `error` icon tint, `headlineSm` title, `bodyUi` text, `LagarButton` for retry |
 | "Coming soon" sheet | `ui/common/ComingSoonSheet.kt` | M3 modal sheet, `surfaceContainerLowest` container |
 | Metadata header | `ui/reader/MetadataHeader.kt` | `codeCitation` number in layer `onTint`, `headlineMd` title, `labelSm` / `bodyUi` facts, `outlineVariant` divider; repealed: `Repealed` layer badge and number, struck-through number and title (`onSurfaceVariant`), banner in `Repealed` `tint` / `border` (`shapes.medium`) with history icon and `bodyUi` text in `onTint` |
 | Settings controls (radio) | `ui/settings/SettingsScreen.kt` | M3 `RadioButton` with `primary` selected and `onSurfaceVariant` unselected, 48dp rows, `bodyUi` labels |
-| Glass secondary button | deferred | `DESIGN.md` glass fill is 0.6 alpha, not the `GlassTier.Card` 0.85; give it its own spec when built |
-| Primary button | deferred (retry uses the M3 `Button` themed by `LagarTheme`) | layer `accent` (or `primary`) fill, `onPrimary` text, `RadiusTokens.default` |
+| Secondary button | `LagarSecondaryButton` in `ui/common/LagarButtons.kt`; "Show more" on the home | `surfaceContainerLowest` at 0.6 alpha (no blur), 1dp `outlineVariant` edge, `primary` (or layer `onTint`) label, `shapes.small` (`RadiusTokens.default`), 48dp min height |
+| Primary button | `LagarButton` in `ui/common/LagarButtons.kt`; onboarding CTA, scope sheet "Done", retry, advanced search "Sök" | `primary` fill with `onPrimary` label, or a layer `accent` fill with `iconColor()` label; `shapes.small` (`RadiusTokens.default`); 1dp edge in the label colour at 16%; 48dp min height |
+| Input frame | `InputFrame` in `ui/common/LagarTextField.kt` | `shapes.small`, `surfaceContainerLowest` fill, 1dp `outlineVariant` (or layer `accent`) border; focused: 1.5dp `primary` border and a 4dp `primary` 15% glow; error: 1.5dp `error` border; 48dp min height |
+| Text field | `LagarTextField` in `ui/common/LagarTextField.kt`; advanced search text and dates, locality filter | `InputFrame`, `labelMd` label above, `bodyUi` text and placeholder (`onSurfaceVariant`), optional leading icon, `labelSm` `error` message below (polite live region) |
+| Search command bar | `SearchField` in `ui/home/HomeHero.kt`, `SearchInput` in `ui/search/SearchScreen.kt` | `InputFrame` with the scope's layer `accent` idle border, `onTint` search icon and cursor, `ShortcutHint` on the web; the home bar ends in a 36dp layer `accent` submit button (`shapes.small`) in a 48dp target |
+| Shortcut key cap | `ShortcutHint` in `ui/common/LagarTextField.kt`, label from `searchShortcutHint()` (`ui/common/SearchShortcut.kt`) | `labelSm` in `onSurfaceVariant`, 1dp `outlineVariant` border, `RadiusTokens.sm`; `⌘K` on Apple platforms, `Ctrl+K` elsewhere, web only |
+| Checkbox | `LagarCheckbox` in `ui/common/LagarCheckbox.kt`; advanced search type filters | 18dp square, `RadiusTokens.sm` (4dp); unchecked: 2dp `onSurfaceVariant` border; checked: layer `accent` (or `primary`) fill with `ic_check` in `iconColor()`; the row carries `Role.Checkbox` |
 | Cross-reference | deferred | dotted underline in target layer `onTint` |
 
 ## Top bar label scaling

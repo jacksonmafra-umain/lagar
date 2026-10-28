@@ -23,12 +23,7 @@ import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Checkbox
-import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.material3.Surface
@@ -82,10 +77,14 @@ import app.lagar.resources.home_scope_kommun_title
 import app.lagar.resources.home_scope_region_title
 import app.lagar.resources.home_search_hint
 import app.lagar.resources.home_search_submit
+import app.lagar.resources.ic_search
 import app.lagar.resources.meta_in_force
 import app.lagar.resources.picker_clear
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.BackTopBar
+import app.lagar.ui.common.LagarButton
+import app.lagar.ui.common.LagarCheckbox
+import app.lagar.ui.common.LagarTextField
 import app.lagar.ui.common.iconColor
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.typeNameRes
@@ -167,15 +166,14 @@ fun AdvancedSearchScreen(
                 ),
             verticalArrangement = Arrangement.spacedBy(spacing.md),
         ) {
-            OutlinedTextField(
+            LagarTextField(
                 value = text,
                 onValueChange = { text = it },
                 modifier = Modifier.fillMaxWidth(),
-                singleLine = true,
-                label = { Text(stringResource(Res.string.advanced_text_label)) },
-                placeholder = { Text(stringResource(Res.string.home_search_hint)) },
+                label = stringResource(Res.string.advanced_text_label),
+                placeholder = stringResource(Res.string.home_search_hint),
+                leadingIcon = Res.drawable.ic_search,
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),
-                shape = MaterialTheme.shapes.medium,
             )
             FilterCard(stringResource(Res.string.advanced_dates_title)) {
                 DateField(
@@ -219,11 +217,7 @@ fun AdvancedSearchScreen(
                                 onValueChange = { types = if (it) types + type else types - type },
                             ),
                         ) {
-                            Checkbox(
-                                checked = checked,
-                                onCheckedChange = null,
-                                colors = CheckboxDefaults.colors(checkedColor = accent, checkmarkColor = accent.iconColor()),
-                            )
+                            LagarCheckbox(checked = checked, onCheckedChange = null, color = accent)
                         }
                     }
                 }
@@ -248,16 +242,16 @@ fun AdvancedSearchScreen(
             border = BorderStroke(1.dp, LagarTheme.colors.outlineVariant),
         ) {
             val accent = layers.accent(scope.key)
-            Button(
+            LagarButton(
                 onClick = { onSearch(query) },
                 enabled = canSearch,
                 modifier = Modifier
                     .windowInsetsPadding(WindowInsets.navigationBars)
                     .imePadding()
                     .padding(horizontal = spacing.marginMobile, vertical = spacing.sm)
-                    .fillMaxWidth()
-                    .heightIn(min = ShellDimens.TouchTarget),
-                colors = ButtonDefaults.buttonColors(containerColor = accent, contentColor = accent.iconColor()),
+                    .fillMaxWidth(),
+                containerColor = accent,
+                contentColor = accent.iconColor(),
             ) { Text(stringResource(Res.string.home_search_submit), fontWeight = FontWeight.Bold) }
         }
         BackTopBar(hazeState, onBack, { headerHeight = it }, Modifier.align(Alignment.TopCenter)) {

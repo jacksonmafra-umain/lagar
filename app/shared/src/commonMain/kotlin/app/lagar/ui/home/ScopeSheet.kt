@@ -10,7 +10,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
@@ -37,6 +36,7 @@ import app.lagar.resources.onboarding_done
 import app.lagar.resources.scope_sheet_locality
 import app.lagar.resources.scope_sheet_title
 import app.lagar.settings.UserPreferences
+import app.lagar.ui.common.LagarButton
 import app.lagar.ui.onboarding.LocalityPickers
 import app.lagar.ui.onboarding.ScopeCard
 import kotlinx.coroutines.CancellationException
@@ -107,7 +107,7 @@ fun ScopeSheet(onDismiss: () -> Unit) {
                     onKommun = { draftLocality = draftLocality.copy(kommunCode = it) },
                 )
             }
-            Button(
+            LagarButton(
                 onClick = {
                     preferences.setScope(draftScope)
                     preferences.setLocality(draftLocality)
