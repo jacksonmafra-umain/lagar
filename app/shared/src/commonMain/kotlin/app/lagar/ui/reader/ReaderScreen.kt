@@ -98,12 +98,7 @@ fun ReaderScreen(
             }
             is LoadState.Loaded -> {
                 val document = state.value
-                val blocks = remember(document.body) {
-                    var firstSection = true
-                    splitSections(document.body).flatMap { section ->
-                        splitParagraphs(if (firstSection) withoutTitle(section) else section).also { firstSection = false }
-                    }.filter { it.isNotBlank() }
-                }
+                val blocks = remember(document.body) { readerBlocks(document.body) }
                 val key = remember(document.meta) {
                     if (document.meta.repealed != null) LayerKey.Repealed
                     else DisplayLayer.fromRoute(document.meta.layer, document.meta.type)?.key ?: LayerKey.Repealed
