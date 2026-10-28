@@ -17,6 +17,8 @@ import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.intl.Locale
+import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
@@ -42,7 +44,7 @@ fun PillTab(text: String, selected: Boolean, key: LayerKey, onClick: () -> Unit)
             border = BorderStroke(1.dp, if (selected) accent else LagarTheme.colors.outlineVariant),
         ) {
             Text(
-                text = text.uppercase(),
+                text = text.toUpperCase(Locale.current),
                 style = LagarTheme.type.labelSm,
                 fontWeight = FontWeight.Bold,
                 color = if (selected) accent.iconColor() else LagarTheme.colors.onSurface,
