@@ -2,6 +2,8 @@ package app.lagar.ui.onboarding
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -212,12 +214,12 @@ private fun OptionSheet(
                     modifier = Modifier.padding(vertical = LagarTheme.spacing.md),
                 )
             }
-            LazyColumn(modifier = Modifier.weight(1f)) {
+            LazyColumn(modifier = Modifier.weight(1f).selectableGroup()) {
                 items(shown, key = { it.code }) { option ->
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clickable(role = Role.Button) { onSelect(option.code) }
+                            .selectable(selected = option.code == selected, role = Role.RadioButton) { onSelect(option.code) }
                             .heightIn(min = ShellDimens.TouchTarget)
                             .padding(vertical = LagarTheme.spacing.sm),
                         verticalAlignment = Alignment.CenterVertically,
