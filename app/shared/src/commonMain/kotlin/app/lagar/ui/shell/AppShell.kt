@@ -131,123 +131,129 @@ fun AppShell(
 
     BackHandler(enabled = drawerState.isOpen) { scope.launch { drawerState.close() } }
 
-    ModalNavigationDrawer(
-        drawerState = drawerState,
-        gesturesEnabled = selectedTab != null,
-        drawerContent = {
-            LagarDrawerContent(
-                hazeState = hazeState,
-                scope = activeScope,
-                localityName = localityName,
-                selected = DrawerEntry.entries.firstOrNull { destination?.hasRoute(it.route::class) == true },
-                onChangeScope = {
-                    scope.launch { drawerState.close() }
-                    showScopeSheet = true
-                },
-                onNavigate = { entry ->
-                    scope.launch { drawerState.close() }
-                    Tab.entries.firstOrNull { it.route == entry.route }?.let(::selectTab)
-                        ?: navController.navigate(entry.route) { launchSingleTop = true }
-                },
-            )
-        },
-    ) {
-        Box(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
-            CompositionLocalProvider(LocalShellPadding provides if (selectedTab != null) padding else PaddingValues()) {
-                NavHost(
-                    navController = navController,
-                    startDestination = Splash,
-                    modifier = Modifier.fillMaxSize().hazeSource(hazeState),
-                ) {
-                    composable<Splash> {
-                        SplashRoute(onLoaded = {
-                            val next: Any = if (preferences.onboardingDone.value) Utforska else OnboardingWelcome
-                            navController.navigate(next) { popUpTo(Splash) { inclusive = true } }
-                        })
-                    }
-                    composable<OnboardingWelcome> { entry ->
-                        val onboarding = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = entry)
-                        WelcomeRoute(
-                            viewModel = onboarding,
-                            onContinue = { navigateWhenResumed(OnboardingScope) },
-                            onSkip = { leaveOnboarding(onboarding::skip) },
-                        )
-                    }
-                    composable<OnboardingScope> { entry ->
-                        val onboarding = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = onboardingEntry(entry))
-                        ScopeStepRoute(
-                            viewModel = onboarding,
-                            onContinue = { navigateWhenResumed(OnboardingLocality) },
-                        )
-                    }
-                    composable<OnboardingLocality> { entry ->
-                        LocalityStepRoute(
-                            viewModel = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = onboardingEntry(entry)),
-                            onDone = ::leaveOnboarding,
-                        )
-                    }
-                    composable<Utforska> {
-                        HomeRoute(
-                            onOpenLayer = ::openLayer,
-                            onOpenDocument = { navigateWhenResumed(Reader(it)) },
-                            onOpenSearch = { navigateWhenResumed(Search(text = it)) },
-                            onOpenAdvancedSearch = { navigateWhenResumed(AdvancedSearch) },
-                            onChooseLocation = { showScopeSheet = true },
-                        )
-                    }
-                    composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
-                    composable<Sparade> { SparadeRoute(onOpenDocument = { navigateWhenResumed(Reader(it)) }) }
-                    composable<Tjanster> { TjansterScreen() }
-                    composable<LayerList> { entry ->
-                        val route = entry.toRoute<LayerList>()
-                        LayerListRoute(
-                            layer = route.layer,
-                            type = route.type,
-                            onBack = { navController.popBackStack() },
-                            onOpenDocument = { navigateWhenResumed(Reader(it)) },
-                        )
-                    }
-                    composable<Reader> { entry ->
-                        ReaderRoute(id = entry.toRoute<Reader>().id, onBack = { navController.popBackStack() })
-                    }
-                    composable<Search> { entry ->
-                        SearchRoute(
-                            route = entry.toRoute<Search>(),
-                            onBack = { navController.popBackStack() },
-                            onOpenDocument = { navigateWhenResumed(Reader(it)) },
-                            onOpenAdvancedSearch = { navigateWhenResumed(AdvancedSearch) },
-                        )
-                    }
-                    composable<AdvancedSearch> {
-                        AdvancedSearchRoute(
-                            onBack = { navController.popBackStack() },
-                            onSearch = { query ->
-                                // The form is replaced by the results, so back from them skips it.
-                                navigateWhenResumed(query.toRoute()) { popUpTo<AdvancedSearch> { inclusive = true } }
-                            },
-                        )
-                    }
-                    composable<Settings> { SettingsRoute(onBack = { navController.popBackStack() }) }
-                }
-            }
-            if (selectedTab != null) {
-                LagarTopBar(
+    // The web canvas can first lay out at 0×0 (a hidden tab, or a pane still opening). A drawer measured then anchors
+    // its closed position at offset 0 and stays drawn over the screen once the window grows, so the shell is only
+    // composed once it has a real width.
+    var hasWidth by remember { mutableStateOf(false) }
+    Box(Modifier.fillMaxSize().onSizeChanged { if (it.width > 0) hasWidth = true }) {
+        if (hasWidth) ModalNavigationDrawer(
+            drawerState = drawerState,
+            gesturesEnabled = selectedTab != null,
+            drawerContent = {
+                LagarDrawerContent(
                     hazeState = hazeState,
-                    onMenuClick = { scope.launch { drawerState.open() } },
-                    onToggleTheme = onToggleTheme,
-                    onOpenSearch = { navigateWhenResumed(Search()) },
                     scope = activeScope,
-                    onOpenScopeSheet = { showScopeSheet = true },
-                    modifier = Modifier.align(Alignment.TopCenter).onSizeChanged { topBarPx = it.height },
+                    localityName = localityName,
+                    selected = DrawerEntry.entries.firstOrNull { destination?.hasRoute(it.route::class) == true },
+                    onChangeScope = {
+                        scope.launch { drawerState.close() }
+                        showScopeSheet = true
+                    },
+                    onNavigate = { entry ->
+                        scope.launch { drawerState.close() }
+                        Tab.entries.firstOrNull { it.route == entry.route }?.let(::selectTab)
+                            ?: navController.navigate(entry.route) { launchSingleTop = true }
+                    },
                 )
-                LagarBottomBar(
-                    selected = selectedTab,
-                    hazeState = hazeState,
-                    onSelect = ::selectTab,
-                    modifier = Modifier.align(Alignment.BottomCenter).onSizeChanged { bottomBarPx = it.height },
-                )
+            },
+        ) {
+            Box(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
+                CompositionLocalProvider(LocalShellPadding provides if (selectedTab != null) padding else PaddingValues()) {
+                    NavHost(
+                        navController = navController,
+                        startDestination = Splash,
+                        modifier = Modifier.fillMaxSize().hazeSource(hazeState),
+                    ) {
+                        composable<Splash> {
+                            SplashRoute(onLoaded = {
+                                val next: Any = if (preferences.onboardingDone.value) Utforska else OnboardingWelcome
+                                navController.navigate(next) { popUpTo(Splash) { inclusive = true } }
+                            })
+                        }
+                        composable<OnboardingWelcome> { entry ->
+                            val onboarding = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = entry)
+                            WelcomeRoute(
+                                viewModel = onboarding,
+                                onContinue = { navigateWhenResumed(OnboardingScope) },
+                                onSkip = { leaveOnboarding(onboarding::skip) },
+                            )
+                        }
+                        composable<OnboardingScope> { entry ->
+                            val onboarding = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = onboardingEntry(entry))
+                            ScopeStepRoute(
+                                viewModel = onboarding,
+                                onContinue = { navigateWhenResumed(OnboardingLocality) },
+                            )
+                        }
+                        composable<OnboardingLocality> { entry ->
+                            LocalityStepRoute(
+                                viewModel = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = onboardingEntry(entry)),
+                                onDone = ::leaveOnboarding,
+                            )
+                        }
+                        composable<Utforska> {
+                            HomeRoute(
+                                onOpenLayer = ::openLayer,
+                                onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                                onOpenSearch = { navigateWhenResumed(Search(text = it)) },
+                                onOpenAdvancedSearch = { navigateWhenResumed(AdvancedSearch) },
+                                onChooseLocation = { showScopeSheet = true },
+                            )
+                        }
+                        composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
+                        composable<Sparade> { SparadeRoute(onOpenDocument = { navigateWhenResumed(Reader(it)) }) }
+                        composable<Tjanster> { TjansterScreen() }
+                        composable<LayerList> { entry ->
+                            val route = entry.toRoute<LayerList>()
+                            LayerListRoute(
+                                layer = route.layer,
+                                type = route.type,
+                                onBack = { navController.popBackStack() },
+                                onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                            )
+                        }
+                        composable<Reader> { entry ->
+                            ReaderRoute(id = entry.toRoute<Reader>().id, onBack = { navController.popBackStack() })
+                        }
+                        composable<Search> { entry ->
+                            SearchRoute(
+                                route = entry.toRoute<Search>(),
+                                onBack = { navController.popBackStack() },
+                                onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                                onOpenAdvancedSearch = { navigateWhenResumed(AdvancedSearch) },
+                            )
+                        }
+                        composable<AdvancedSearch> {
+                            AdvancedSearchRoute(
+                                onBack = { navController.popBackStack() },
+                                onSearch = { query ->
+                                    // The form is replaced by the results, so back from them skips it.
+                                    navigateWhenResumed(query.toRoute()) { popUpTo<AdvancedSearch> { inclusive = true } }
+                                },
+                            )
+                        }
+                        composable<Settings> { SettingsRoute(onBack = { navController.popBackStack() }) }
+                    }
+                }
+                if (selectedTab != null) {
+                    LagarTopBar(
+                        hazeState = hazeState,
+                        onMenuClick = { scope.launch { drawerState.open() } },
+                        onToggleTheme = onToggleTheme,
+                        onOpenSearch = { navigateWhenResumed(Search()) },
+                        scope = activeScope,
+                        onOpenScopeSheet = { showScopeSheet = true },
+                        modifier = Modifier.align(Alignment.TopCenter).onSizeChanged { topBarPx = it.height },
+                    )
+                    LagarBottomBar(
+                        selected = selectedTab,
+                        hazeState = hazeState,
+                        onSelect = ::selectTab,
+                        modifier = Modifier.align(Alignment.BottomCenter).onSizeChanged { bottomBarPx = it.height },
+                    )
+                }
+                if (showScopeSheet) ScopeSheet(onDismiss = { showScopeSheet = false })
             }
-            if (showScopeSheet) ScopeSheet(onDismiss = { showScopeSheet = false })
         }
     }
 }
