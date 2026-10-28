@@ -8,9 +8,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 BUILD = ROOT / "api" / "build.py"
 CORPUS = ROOT / "api" / "tests" / "fixtures" / "corpus"
+LAYERS_CORPUS = ROOT / "api" / "tests" / "fixtures" / "corpus-layers"
 BUILT_AT = "2026-10-27T10:30:00Z"
 sys.path.insert(0, str(ROOT / "collector"))
-from lagar import frontmatter  # noqa: E402
+from lagar import frontmatter, schema  # noqa: E402
 
 NEW_FIELDS = ("issuer", "court", "ecli", "celex", "region_code", "municipality_code")
 
@@ -266,6 +267,89 @@ class BuildTest(unittest.TestCase):
             self.assertEqual(run_build(out, corpus=corpus).returncode, 0)
             self.assertEqual([i["number"] for i in read(out, "sfs/index-1.json")["items"]],
                              ["RFS1968:8", "1899:bih. 25", "1827:60 s.1007", "1736:0123 2", "1736:0123 1"])
+
+
+class NewLayersTest(unittest.TestCase):
+    """One fixture document per type of the case law, EU, agency, region and municipality layers."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls._tmp = tempfile.TemporaryDirectory()
+        cls.out = Path(cls._tmp.name) / "v1"
+        cls.result = run_build(cls.out, corpus=LAYERS_CORPUS)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls._tmp.cleanup()
+
+    def test_build_succeeds(self):
+        self.assertEqual(self.result.returncode, 0, self.result.stderr)
+
+    def test_series_per_layer(self):
+        layers = {layer["id"]: layer for layer in read(self.out, "index.json")["layers"]}
+        expected = {
+            "fundamental": [], "sfs": [], "service": [],
+            "agency": ["agency_regulation"],
+            "case_law": ["case_report", "case_notice"],
+            "eu": ["eu_regulation", "eu_directive", "eu_decision"],
+            "region": ["county_regulation"],
+            "municipality": ["municipal_regulation"],
+        }
+        for layer, types in expected.items():
+            with self.subTest(layer=layer):
+                self.assertEqual(layers[layer]["series"], [{"id": t, "count": 1} for t in types])
+                self.assertEqual(layers[layer]["count"], len(types))
+                for type_ in types:
+                    page = read(self.out, f"{layer}/{type_}/index-1.json")
+                    self.assertEqual((page["layer"], page["type"], page["total"]), (layer, type_, 1))
+
+    def test_docs_serve_new_fields(self):
+        for path in sorted(LAYERS_CORPUS.rglob("*.md")):
+            meta, body = frontmatter.load(path.read_text(encoding="utf-8"))
+            with self.subTest(id=meta["id"]):
+                doc = read(self.out, f"docs/{meta['id']}.json")
+                self.assertEqual(list(doc["meta"]), list(schema._load_schema()["properties"]))
+                self.assertEqual({k: v for k, v in doc["meta"].items() if k in meta}, meta)
+                self.assertTrue(all(v is None for k, v in doc["meta"].items() if k not in meta))
+                self.assertEqual(doc["body"], body)
+        self.assertEqual(read(self.out, "docs/eu-32016r0679.json")["meta"]["celex"], "32016R0679")
+        self.assertEqual(read(self.out, "docs/nja-2019-2.json")["meta"]["court"], "HDO")
+        self.assertEqual(read(self.out, "docs/0180-2024-12.json")["meta"]["municipality_code"], "0180")
+
+    def _sorted_numbers(self, type_, numbers):
+        from lagar import writer
+        from tests.test_schema import new_layer_meta  # collector/tests
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus = Path(tmp) / "corpus"
+            for n, number in enumerate(numbers):
+                meta = new_layer_meta(type_)
+                prefix = "eu-3" if type_.startswith("eu_") else "x-"
+                meta.update(id=f"{prefix}2000r{n:04d}", number=number, issued=None)
+                if "celex" in meta:
+                    meta["celex"] = f"32000R{n:04d}"
+                if type_ == "county_regulation":
+                    meta["region_code"] = number[:2]
+                writer.write(meta, "# T\n", corpus)
+            out = Path(tmp) / "out"
+            result = run_build(out, corpus=corpus)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            layer = meta["layer"]
+            return [i["number"] for i in read(out, f"{layer}/{type_}/index-1.json")["items"]]
+
+    def test_number_sort_per_type(self):
+        cases = {
+            "agency_regulation": ["FFFS 2023:10", "AFS 2023:10", "AFS 2023:9", "AFS 2022:100"],
+            "case_report": ["HFD 2020 ref. 5", "NJA 2019 s. 100", "NJA 2019 s. 99", "MIG 2019:1"],
+            "case_notice": ["HFD 2020 not. 12", "HFD 2020 not. 3", "NJA 2004 N 23"],
+            "eu_regulation": ["(EU) 2016/679", "(EU) nr 1303/2013", "(EG) nr 1907/2006", "(EEG) nr 1408/71"],
+            "eu_directive": ["(EU) 2022/2555", "2004/18/EG", "95/46/EG"],
+            "eu_decision": ["(Gusp) 2019/797", "(EU) 2019/10", "(EU) 2019/9"],
+            "county_regulation": ["01FS 2024:10", "01FS 2024:9", "01FS 2020:004"],
+            "municipal_regulation": ["SKFS 2024:12", "SKFS 2024:3", "Kf 2019-03-11 \u00a7 45", "Reglemente"],
+        }
+        for type_, expected in cases.items():
+            with self.subTest(type_=type_):
+                self.assertEqual(self._sorted_numbers(type_, list(reversed(expected))), expected)
 
 
 class OutSafetyTest(unittest.TestCase):
