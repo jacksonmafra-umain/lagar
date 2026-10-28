@@ -29,6 +29,10 @@ import app.lagar.resources.layer_sfs_act
 import app.lagar.resources.layer_sfs_act_desc
 import app.lagar.resources.layer_sfs_ordinance
 import app.lagar.resources.layer_sfs_ordinance_desc
+import app.lagar.resources.type_act
+import app.lagar.resources.type_fundamental_law
+import app.lagar.resources.type_ordinance
+import app.lagar.resources.type_other_statute
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 
@@ -69,4 +73,12 @@ internal fun DisplayLayer.iconRes(): DrawableResource = when (this) {
     DisplayLayer.Region -> Res.drawable.ic_layer_hospital
     DisplayLayer.Municipality -> Res.drawable.ic_layer_apartment
     DisplayLayer.Service -> Res.drawable.ic_layer_badge
+}
+
+/** Name of an API document `type`; any type without its own name reads as "other statute". */
+internal fun typeNameRes(type: String): StringResource = when (type) {
+    "fundamental_law" -> Res.string.type_fundamental_law
+    "act" -> Res.string.type_act
+    "ordinance" -> Res.string.type_ordinance
+    else -> Res.string.type_other_statute
 }

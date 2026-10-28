@@ -17,6 +17,9 @@
     <string name="navigate_back">Back</string>
     <string name="repealed">Repealed</string>
     <string name="layer_list_title">Layer</string>
+    <string name="layer_list_all_series">All</string>
+    <string name="layer_list_empty_title">No documents yet</string>
+    <string name="layer_list_empty_text">This level has no documents in the current data. They will appear here once they are collected.</string>
     <string name="explore_distribution_title">Distribution across the hierarchy</string>
     <string name="explore_layers_title">Normative layers</string>
     <plurals name="document_count">

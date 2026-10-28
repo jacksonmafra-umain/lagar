@@ -1,6 +1,8 @@
 package app.lagar.ui.list
 
 import app.lagar.data.ApiIndex
+import app.lagar.data.ApiLayer
+import app.lagar.data.ApiSeries
 import app.lagar.data.DocumentResponse
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
@@ -32,11 +34,21 @@ class LayerListViewModelTest {
         val gates = mutableMapOf<Int, CompletableDeferred<Unit>>()
         val failing = mutableSetOf<Int>()
         var overlapOnLaterPages = false
+        val listedTypes = mutableListOf<String?>()
+        var indexFails = false
+        var layers = listOf(
+            ApiLayer("sfs", 6, listOf(ApiSeries("act", 4), ApiSeries("ordinance", 2))),
+            ApiLayer("fundamental", 4, listOf(ApiSeries("fundamental_law", 4))),
+            ApiLayer("eu", 0, emptyList()),
+        )
+        var emptyListing = false
 
         override suspend fun listing(layer: String, type: String?, page: Int): ListingPage {
             calls += page
+            listedTypes += type
             gates[page]?.await()
             if (page in failing) throw IllegalStateException("boom")
+            if (emptyListing) return ListingPage(layer, type, 1, 1, total = 0, items = emptyList())
             return ListingPage(
                 layer, type, page, pageCount, total = pageCount * 2,
                 items = listOf(
@@ -46,7 +58,11 @@ class LayerListViewModelTest {
             )
         }
 
-        override suspend fun index(): ApiIndex = error("unused")
+        override suspend fun index(): ApiIndex {
+            if (indexFails) throw IllegalStateException("offline")
+            return ApiIndex(1, "2026-01-01T00:00:00Z", layers)
+        }
+
         override suspend fun document(id: String): DocumentResponse = error("unused")
     }
 
@@ -136,5 +152,115 @@ class LayerListViewModelTest {
         vm.loadNext()
         assertEquals(listOf(1), repo.calls)
         assertEquals(LoadState.Loading, vm.state.value)
+    }
+
+    @Test
+    fun seriesComeFromTheIndexWhenTheLayerHasSeveral() {
+        val vm = LayerListViewModel(FakeRepository(), "sfs", "act")
+        assertEquals(listOf("act", "ordinance"), vm.series.value)
+        assertEquals("act", vm.selectedType.value)
+    }
+
+    @Test
+    fun aSingleSeriesOffersNoSwitch() {
+        val vm = LayerListViewModel(FakeRepository(), "fundamental", null)
+        assertEquals(0, vm.series.value.size)
+    }
+
+    @Test
+    fun indexFailureHidesTheSwitchButStillLists() {
+        val repo = FakeRepository()
+        repo.indexFails = true
+        val vm = LayerListViewModel(repo, "sfs", "act")
+        assertEquals(0, vm.series.value.size)
+        assertIs<LoadState.Loaded<Unit>>(vm.state.value)
+        assertEquals(2, vm.items.value.size)
+    }
+
+    @Test
+    fun selectSeriesReloadsFromPageOneOfThatSeries() {
+        val repo = FakeRepository()
+        val vm = LayerListViewModel(repo, "sfs", "act")
+        vm.loadNext()
+        assertEquals(4, vm.items.value.size)
+
+        vm.selectSeries("ordinance")
+        assertEquals("ordinance", vm.selectedType.value)
+        assertEquals(listOf<String?>("act", "act", "ordinance"), repo.listedTypes)
+        assertEquals(listOf(1, 2, 1), repo.calls)
+        assertEquals(listOf("id-1-a", "id-1-b"), vm.items.value.map { it.id })
+        assertIs<LoadState.Loaded<Unit>>(vm.state.value)
+
+        vm.loadNext()
+        assertEquals("ordinance", repo.listedTypes.last())
+    }
+
+    @Test
+    fun selectSeriesNullListsTheWholeLayer() {
+        val repo = FakeRepository()
+        val vm = LayerListViewModel(repo, "sfs", "act")
+        vm.selectSeries(null)
+        assertEquals(null, vm.selectedType.value)
+        assertEquals(listOf<String?>("act", null), repo.listedTypes)
+    }
+
+    @Test
+    fun selectingTheCurrentSeriesDoesNotReload() {
+        val repo = FakeRepository()
+        val vm = LayerListViewModel(repo, "sfs", "act")
+        vm.selectSeries("act")
+        assertEquals(listOf(1), repo.calls)
+    }
+
+    @Test
+    fun selectSeriesCancelsAPendingAppend() {
+        val repo = FakeRepository()
+        val vm = LayerListViewModel(repo, "sfs", "act")
+        repo.gates[2] = CompletableDeferred()
+        vm.loadNext()
+        vm.selectSeries("ordinance")
+        repo.gates.getValue(2).complete(Unit)
+        assertEquals(listOf("id-1-a", "id-1-b"), vm.items.value.map { it.id })
+        assertEquals(false, vm.appending.value)
+    }
+
+    @Test
+    fun anEmptyListingIsLoadedWithNoItems() {
+        val repo = FakeRepository()
+        repo.emptyListing = true
+        repo.indexFails = true
+        val vm = LayerListViewModel(repo, "eu", null)
+        assertEquals(listOf(1), repo.calls)
+        assertIs<LoadState.Loaded<Unit>>(vm.state.value)
+        assertEquals(0, vm.items.value.size)
+        assertEquals(0, vm.total.value)
+    }
+
+    @Test
+    fun aSeriesMissingFromTheIndexIsEmptyWithoutFetching() {
+        val repo = FakeRepository()
+        val vm = LayerListViewModel(repo, "sfs", "other_statute")
+        assertIs<LoadState.Loaded<Unit>>(vm.state.value)
+        assertEquals(0, vm.items.value.size)
+        assertEquals(0, vm.total.value)
+        assertEquals(0, repo.calls.size)
+    }
+
+    @Test
+    fun aLayerTheIndexCountsAsEmptyIsEmptyWithoutFetching() {
+        val repo = FakeRepository()
+        val vm = LayerListViewModel(repo, "eu", null)
+        assertIs<LoadState.Loaded<Unit>>(vm.state.value)
+        assertEquals(0, vm.items.value.size)
+        assertEquals(0, repo.calls.size)
+    }
+
+    @Test
+    fun aLayerMissingFromTheIndexIsEmptyWithoutFetching() {
+        val repo = FakeRepository()
+        val vm = LayerListViewModel(repo, "region", null)
+        assertIs<LoadState.Loaded<Unit>>(vm.state.value)
+        assertEquals(0, vm.items.value.size)
+        assertEquals(0, repo.calls.size)
     }
 }
