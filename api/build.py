@@ -21,7 +21,8 @@ from lagar.vocabulary import LAYERS, TYPES  # noqa: E402
 API_VERSION = 1
 PAGE_SIZE = 50
 BUILT_AT_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
-ITEM_FIELDS = ("id", "title", "number", "type", "issued", "repealed")
+# Fields added after the first release go at the end, so earlier keys keep their position.
+ITEM_FIELDS = ("id", "title", "number", "type", "issued", "repealed", "in_force", "amended_through", "ministry")
 
 
 class BuildError(Exception):
