@@ -413,9 +413,10 @@ class SfsTests(unittest.TestCase):
     def test_report_lists_written_unchanged_failed_and_latest(self):
         listing = listing_json(
             ["sfs-2000-1", "sfs-2000-2", "sfs-1868-1"],
-            systemdatum=["2026-10-27 04:40:43", "2026-10-27 04:40:40", "2026-10-27 04:40:41"],
+            systemdatum=["2026-10-27 04:40:43", "2026-10-27 04:40:40", "2026-10-27 04:40:39"],
         )
-        sfs.run(FakeClient({"dokumentlista": listing_json(["sfs-2000-2"])}), self.args())
+        # Same index, so the same listing title as in the run below.
+        sfs.run(FakeClient({"dokumentlista": listing_json(["sfs-2000-9", "sfs-2000-2"])}), self.args())
         report = self.tmp / "report.json"
         client = FakeClient({
             "dokumentlista": listing,
@@ -436,6 +437,58 @@ class SfsTests(unittest.TestCase):
                 self.args("--changed-since", "2026-10-27", "--report", str(report)))
         data = json.loads(report.read_text(encoding="utf-8"))
         self.assertEqual((data["written"], data["latest_systemdatum"]), ([], None))
+
+
+    def test_listing_field_change_rewrites_with_same_source(self):
+        first = listing_json(["sfs-2000-1"], systemdatum="2026-01-01 00:00:00")
+        sfs.run(FakeClient({"dokumentlista": first}), self.args())
+        renamed = first.replace(b"Justitiedepartementet", b"Finansdepartementet").replace(
+            b"2026-01-01 00:00:00", b"2026-02-01 00:00:00")
+        summary = sfs.run(FakeClient({"dokumentlista": renamed}), self.args("--changed-since", "2026-01-01"))
+        self.assertEqual((summary.written, summary.unchanged), (1, 0))
+        self.assertIn("Finansdepartementet", next(self.corpus.rglob("*.md")).read_text(encoding="utf-8"))
+
+    def test_changed_since_rejects_date_window(self):
+        for extra in (["--from", "2026-01-01"], ["--to", "2026-12-31"]):
+            with self.assertRaises(SystemExit), contextlib.redirect_stderr(io.StringIO()):
+                sfs.parse_args(["--changed-since", "2026-10-27", *extra])
+
+    def test_changed_since_fails_when_listing_is_not_newest_first(self):
+        listing = listing_json(
+            ["sfs-2000-1", "sfs-2000-2"],
+            systemdatum=["2026-10-27 01:00:00", "2026-10-28 01:00:00"],
+        )
+        with self.assertRaises(sfs.ListingError):
+            sfs.run(FakeClient({"dokumentlista": listing}), self.args("--changed-since", "2026-10-27"))
+
+    def test_report_retry_from_is_oldest_transient_failure(self):
+        listing = listing_json(
+            ["sfs-2000-1", "sfs-2000-2", "sfs-1868-1"],
+            systemdatum=["2026-10-27 05:00:00", "2026-10-27 04:00:00", "2026-10-27 03:00:00"],
+        )
+        report = self.tmp / "report.json"
+        client = FakeClient({
+            "dokumentlista": listing,
+            "sfs-2000-2.text": urllib.error.URLError("timed out"),
+            "sfs-1868-1.text": b"<dokumentstatus></dokumentstatus>",
+        })
+        sfs.run(client, self.args("--changed-since", "2026-10-27", "--report", str(report)))
+        data = json.loads(report.read_text(encoding="utf-8"))
+        self.assertEqual(data["failed"], ["sfs-2000-2", "sfs-1868-1"])
+        self.assertEqual(data["retry_from"], "2026-10-27 04:00:00")
+
+    def test_unexpected_document_error_is_recorded_not_fatal(self):
+        listing = listing_json(["sfs-2000-1", "sfs-2000-2"])
+        client = FakeClient({"dokumentlista": listing})
+        original = sfs._store
+        def flaky(client_, dok_id, item, corpus):
+            if dok_id == "sfs-2000-1":
+                raise KeyError("type")
+            return original(client_, dok_id, item, corpus)
+        sfs._store = flaky
+        self.addCleanup(setattr, sfs, "_store", original)
+        summary = sfs.run(client, self.args())
+        self.assertEqual((summary.failed, summary.written), (["sfs-2000-1"], 1))
 
 
 if __name__ == "__main__":

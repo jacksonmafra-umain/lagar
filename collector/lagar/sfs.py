@@ -45,7 +45,8 @@ NETWORK_ERRORS = (
     ConnectionError,
     http.client.HTTPException,
 )
-DOCUMENT_ERRORS = NETWORK_ERRORS + (UnicodeDecodeError, ValueError)
+# Per-document failures: recorded and skipped so one bad document never stalls a run.
+DOCUMENT_ERRORS = NETWORK_ERRORS + (UnicodeDecodeError, ValueError, KeyError, TypeError)
 
 
 class ListingError(Exception):
@@ -100,6 +101,7 @@ class RunSummary:
     blocked: bool = False
     written_numbers: "list[str]" = field(default_factory=list)
     latest_systemdatum: "str | None" = None
+    retry_from: "str | None" = None  # oldest systemdatum of a network failure
 
 
 def parse_args(argv):
@@ -118,8 +120,12 @@ def parse_args(argv):
     parser.add_argument("--state", default=DEFAULT_STATE)
     parser.add_argument("--corpus", default="corpus")
     args = parser.parse_args(argv)
-    if args.changed_since and (args.fundamental or args.since):
-        parser.error("--changed-since cannot be combined with --fundamental or --since")
+    if args.changed_since and (
+        args.fundamental or args.since or args.from_date or args.to_date
+    ):
+        parser.error(
+            "--changed-since cannot be combined with --fundamental, --since, --from or --to"
+        )
     return args
 
 
@@ -215,21 +221,25 @@ def _fundamental_item(dok_id, parsed, text):
     )
 
 
-def _same_source(meta, corpus):
-    """True when the stored file was built from the same source bytes."""
+def _unchanged(meta, corpus):
+    """True when the stored file has the same frontmatter apart from `fetched_at`.
+
+    The body derives from the source bytes, which `source_sha256` covers.
+    """
     path = path_for(meta, corpus)
     try:
         stored, _ = frontmatter.load(path.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return False
-    return stored.get("source_sha256") == meta["source_sha256"]
+    stored.pop("fetched_at", None)
+    return stored == {k: v for k, v in meta.items() if k != "fetched_at"}
 
 
 def _store(client, dok_id, item, corpus):
     """Fetch, parse and write one document; returns (item, written).
 
-    A document whose source bytes match the stored file is left untouched, so a
-    re-run does not churn `fetched_at`.
+    A document whose stored frontmatter matches apart from `fetched_at` is left
+    untouched, so a re-run does not churn the corpus.
     """
     raw = client.get(TEXT_URL.format(dok_id=urllib.parse.quote(dok_id)))
     if raw.lstrip().startswith(b"<dokumentstatus"):
@@ -241,7 +251,7 @@ def _store(client, dok_id, item, corpus):
         item = _fundamental_item(dok_id, parsed, text)
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     meta = build_meta(item, parsed, hashlib.sha256(raw).hexdigest(), fetched_at)
-    if _same_source(meta, corpus):
+    if _unchanged(meta, corpus):
         return item, False
     write(meta, to_markdown(meta["title"], parsed.body), corpus)
     return item, True
@@ -260,9 +270,14 @@ def _candidates(client, args, state, summary):
         for dok_id in FUNDAMENTAL_LAWS:
             yield dok_id, None
         return
+    previous = None
     for items in _listing_pages(client, args):
         for item in items:
             if args.changed_since:
+                if previous is not None and item.systemdatum > previous:
+                    # Stopping early is only safe when the listing really is newest first.
+                    raise ListingError("listing is not sorted by systemdatum, newest first")
+                previous = item.systemdatum
                 if item.systemdatum < args.changed_since:
                     return  # newest first: everything after this is older
                 summary.latest_systemdatum = max(
@@ -284,6 +299,7 @@ def _write_report(path, summary):
         "failed": summary.failed,
         "blocked": summary.blocked,
         "latest_systemdatum": summary.latest_systemdatum,
+        "retry_from": summary.retry_from,
     }
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -320,6 +336,8 @@ def run(client, args):
                 raise
             except DOCUMENT_ERRORS as error:
                 summary.failed.append(dok_id)
+                if isinstance(error, NETWORK_ERRORS) and item and item.systemdatum:
+                    summary.retry_from = min(summary.retry_from or item.systemdatum, item.systemdatum)
                 state["failed"][dok_id] = f"{type(error).__name__}: {error}"
             else:
                 if changed:
