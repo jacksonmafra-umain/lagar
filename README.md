@@ -4,7 +4,7 @@ Swedish laws, case law, EU law, municipal regulations and public services as
 Markdown, one file per norm, with a static JSON API and Compose Multiplatform
 apps for Android, iOS and the web.
 
-Website: <https://lagar-three.vercel.app> (the web app is at `/app/`).
+Website: <https://grundlagar.vercel.app> (the web app is at `/app/`).
 
 ## Repository layout
 

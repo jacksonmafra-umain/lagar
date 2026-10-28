@@ -148,4 +148,4 @@ Issues with `type:` and `area:` labels, assigned to the owner, each closed by a 
 
 - The source folder is `landing/`, not `site/`: the `Pages` workflow uses a top-level `site/` as its build output, so a tracked `site/` would leak into the GitHub Pages deploy.
 - The web app now reads the real API (`api/v1/` relative to its page), so the "sample data" note was dropped and `landing/vercel.json` proxies `/app/api/v1/*` to `https://jacksonmafra-umain.github.io/lagar/api/v1/`. If GitHub Pages is down, the app on Vercel cannot load data.
-- The Vercel project `lagar` lives under the owner's account `jacksonmafra-1855` (personal scope, Hobby), owner decision. Production: <https://lagar-three.vercel.app>. Vercel's Git integration is disconnected; only the `Site` workflow deploys, and only when all three Vercel secrets are set.
+- The Vercel project `lagar` lives under the owner's account `jacksonmafra-1855` (personal scope, Hobby), owner decision. Production: <https://grundlagar.vercel.app>. Vercel's Git integration is disconnected; only the `Site` workflow deploys, and only when all three Vercel secrets are set.

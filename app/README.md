@@ -66,5 +66,5 @@ and the API under `/lagar/api/v1/`.
 
 The distribution uses relative asset paths, so it can be served under any prefix, e.g. `/lagar/`
 on GitHub Pages. Verified by serving the dist under `/lagar/` (index, JS, wasm and compose resources all load).
-The landing site on Vercel (<https://lagar-three.vercel.app>) also serves it under `/app/`; there
+The landing site on Vercel (<https://grundlagar.vercel.app>) also serves it under `/app/`; there
 `landing/vercel.json` proxies `/app/api/v1/*` to the API on GitHub Pages.

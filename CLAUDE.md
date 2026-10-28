@@ -26,7 +26,7 @@ Run from the repo root.
 - Build the API: `python3 -I api/build.py --corpus corpus --out build/api/v1`
 - Collector tests: `python3 -I -m unittest discover -s collector/tests -t collector` (single test: add `-k <name>`)
 - API tests: `python3 -I -m unittest discover -s api/tests -t .`
-- Landing page: tests `python3 -I -m unittest discover -s landing/tests` and `node --test landing/tests/lang.test.cjs`; `scripts/build-site.sh` builds the web app and assembles `build/landing/` (landing page, fonts, web app under `app/`). The `Site` workflow (`.github/workflows/site.yml`) deploys it to Vercel (project `lagar`, <https://lagar-three.vercel.app>): a preview per PR, production on `main`. `landing/vercel.json` proxies `/app/api/v1/*` to the API on GitHub Pages. Do not use a top-level `site/` folder: `pages.yml` uses it as scratch output.
+- Landing page: tests `python3 -I -m unittest discover -s landing/tests` and `node --test landing/tests/lang.test.cjs`; `scripts/build-site.sh` builds the web app and assembles `build/landing/` (landing page, fonts, web app under `app/`). The `Site` workflow (`.github/workflows/site.yml`) deploys it to Vercel (project `lagar`, <https://grundlagar.vercel.app>): a preview per PR, production on `main`. `landing/vercel.json` proxies `/app/api/v1/*` to the API on GitHub Pages. Do not use a top-level `site/` folder: `pages.yml` uses it as scratch output.
 
 - App (`app/`, needs JDK 21 and `ANDROID_HOME`; see `app/README.md` for the local API server and per-platform data source):
 
