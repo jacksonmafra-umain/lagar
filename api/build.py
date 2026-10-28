@@ -54,7 +54,7 @@ def load_corpus(corpus):
             raise BuildError(f"{path}: {exc}")
         errors = schema.validate(meta)
         if errors:
-            raise BuildError(f"{path}: {errors}")
+            raise BuildError("\n".join(f"{path}: {e}" for e in errors))
         docs.append((meta, body))
     ids = [m["id"] for m, _ in docs]
     dupes = sorted({i for i in ids if ids.count(i) > 1})

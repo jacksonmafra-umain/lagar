@@ -265,3 +265,20 @@ class BuiltAtTest(unittest.TestCase):
                 self.assertEqual(result.returncode, 1, bad)
                 self.assertIn("--built-at", result.stderr)
                 self.assertNotIn("Traceback", result.stderr)
+
+
+class SchemaErrorsTest(unittest.TestCase):
+    def test_one_line_per_error_with_path(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus = Path(tmp) / "corpus"
+            corpus.mkdir()
+            meta, body = frontmatter.load((CORPUS / "sfs" / "acts" / "2010-800.md").read_text(encoding="utf-8"))
+            meta = {k: v for k, v in meta.items() if k not in ("title", "number")}
+            path = corpus / "x.md"
+            path.write_text("---\n" + frontmatter.dump(meta) + "---\n" + body, encoding="utf-8")
+            result = run_build(Path(tmp) / "out", corpus=corpus)
+            lines = [l for l in result.stderr.splitlines() if l.startswith("error:") or str(path) in l]
+            self.assertGreaterEqual(len(lines), 2, result.stderr)
+            for line in lines:
+                self.assertIn(str(path), line)
+                self.assertNotIn("['", line)
