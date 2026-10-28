@@ -19,6 +19,9 @@ class Catalog(private val repo: LagarRepository) {
         cache[scope] ?: load(scope).also { cache[scope] = it }
     }
 
+    /** Whether [items] for [scope] would answer from the cache, without loading. */
+    fun isLoaded(scope: Scope): Boolean = scope in cache
+
     private suspend fun load(scope: Scope): List<ListingItem> {
         val index = repo.index()
         val items = scope.layers.filter { index.count(it) > 0 }.flatMap { loadLayer(it) }

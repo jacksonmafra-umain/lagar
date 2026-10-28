@@ -22,7 +22,8 @@ import kotlinx.coroutines.launch
 /**
  * Client-side search over the [Catalog] of the active scope. [update] is debounced; the first query
  * (from the route) runs at once. A query with no text and no filter, and any scope other than
- * Nationell (no documents yet), resolve to an empty result without touching the catalog.
+ * Nationell (no documents yet), resolve to an empty result without touching the catalog, so the
+ * catalog is only downloaded once the user actually searches.
  */
 class SearchViewModel(
     private val catalog: Catalog,
@@ -55,7 +56,8 @@ class SearchViewModel(
             _results.value = LoadState.Loaded(emptyList())
             return
         }
-        if (_results.value !is LoadState.Loaded) _results.value = LoadState.Loading
+        // The first search of a scope downloads its whole catalog; show progress rather than stale results.
+        if (_results.value !is LoadState.Loaded || !catalog.isLoaded(scope)) _results.value = LoadState.Loading
         _results.value = try {
             LoadState.Loaded(catalog.items(scope).search(query).distinctBy { it.id })
         } catch (e: CancellationException) {
