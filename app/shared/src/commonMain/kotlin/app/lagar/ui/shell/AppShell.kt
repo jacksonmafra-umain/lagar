@@ -111,6 +111,14 @@ fun AppShell(
         }
     }
 
+    fun selectTab(tab: Tab) {
+        navController.navigate(tab.route) {
+            popUpTo(Utforska) { saveState = true }
+            launchSingleTop = true
+            restoreState = true
+        }
+    }
+
     fun openLayer(layer: DisplayLayer) = navigateWhenResumed(LayerList(layer.apiLayer, layer.apiType))
 
     BackHandler(enabled = drawerState.isOpen) { scope.launch { drawerState.close() } }
@@ -119,11 +127,20 @@ fun AppShell(
         drawerState = drawerState,
         gesturesEnabled = selectedTab != null,
         drawerContent = {
+            val locality by preferences.locality.collectAsState()
             LagarDrawerContent(
                 hazeState = hazeState,
-                onSettingsClick = {
+                scope = activeScope,
+                locality = locality,
+                selected = DrawerEntry.entries.firstOrNull { destination?.hasRoute(it.route::class) == true },
+                onChangeScope = {
                     scope.launch { drawerState.close() }
-                    navController.navigate(Settings) { launchSingleTop = true }
+                    showScopeSheet = true
+                },
+                onNavigate = { entry ->
+                    scope.launch { drawerState.close() }
+                    Tab.entries.firstOrNull { it.route == entry.route }?.let(::selectTab)
+                        ?: navController.navigate(entry.route) { launchSingleTop = true }
                 },
             )
         },
@@ -216,13 +233,7 @@ fun AppShell(
                 LagarBottomBar(
                     selected = selectedTab,
                     hazeState = hazeState,
-                    onSelect = { tab ->
-                        navController.navigate(tab.route) {
-                            popUpTo(Utforska) { saveState = true }
-                            launchSingleTop = true
-                            restoreState = true
-                        }
-                    },
+                    onSelect = ::selectTab,
                     modifier = Modifier.align(Alignment.BottomCenter).onSizeChanged { bottomBarPx = it.height },
                 )
             }

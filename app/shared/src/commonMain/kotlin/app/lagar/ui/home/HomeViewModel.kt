@@ -71,7 +71,7 @@ class HomeViewModel(
     }
 
     private suspend fun build(scope: Scope, locality: Locality): HomeData {
-        val localityName = localityName(scope, locality)
+        val localityName = geo.localityName(scope, locality)
         // Only the national level has documents so far; Region and Kommun make no listing requests.
         if (scope != Scope.Nationell) return HomeData(scope, localityName, emptyList(), emptyList(), emptyList(), emptyList(), emptyList(), false)
         val index = repository.index()
@@ -86,14 +86,6 @@ class HomeViewModel(
             recent = items.take(RECENT_LIMIT),
             hasMoreRecent = items.size > RECENT_LIMIT,
         )
-    }
-
-    private suspend fun localityName(scope: Scope, locality: Locality): String? = when (scope) {
-        Scope.Nationell -> null
-        Scope.Region -> locality.regionCode?.let { code -> geo.regions().firstOrNull { it.code == code }?.name }
-        Scope.Kommun -> locality.regionCode?.let { region ->
-            geo.kommuner(region).firstOrNull { it.code == locality.kommunCode }?.name
-        }
     }
 
     fun toggleBookmark(item: ListingItem) {
