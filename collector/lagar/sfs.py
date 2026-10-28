@@ -210,7 +210,7 @@ def _listing_pages(client, args):
 
 def _fundamental_item(dok_id, parsed, text):
     header = parsed.header
-    first_line = next((l.strip() for l in text.splitlines() if l.strip()), "")
+    first_line = next((line.strip() for line in text.splitlines() if line.strip()), "")
     return ListingItem(
         dok_id=dok_id,
         number=header.get("SFS nr", "").strip(),

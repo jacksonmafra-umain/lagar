@@ -203,7 +203,7 @@ class RiksdagenTests(unittest.TestCase):
             md = riksdagen.to_markdown("TITLEX", body)
             lines = md.split("\n")[1:]
             out = "\n".join(lines).replace("**", "")
-            out = "\n".join(l[3:] if l.startswith("## ") else l for l in out.split("\n"))
+            out = "\n".join(line[3:] if line.startswith("## ") else line for line in out.split("\n"))
             self.assertEqual(out.split(), body.split(), dok_id)
 
 
