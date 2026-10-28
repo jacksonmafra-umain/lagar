@@ -146,6 +146,7 @@ fun ReaderScreen(
 @Composable
 private fun BookmarkAction(meta: DocumentMeta, bookmarked: Boolean, onToggle: (DocumentMeta) -> Unit) {
     val description = stringResource(if (bookmarked) Res.string.bookmark_remove else Res.string.bookmark_add, meta.title)
+    val key = DisplayLayer.fromRoute(meta.layer, meta.type)?.key ?: LayerKey.SfsAct
     Box(
         modifier = Modifier
             .size(ShellDimens.TouchTarget)
@@ -157,7 +158,7 @@ private fun BookmarkAction(meta: DocumentMeta, bookmarked: Boolean, onToggle: (D
         Icon(
             painterResource(if (bookmarked) Res.drawable.ic_bookmark_filled else Res.drawable.ic_bookmark),
             contentDescription = null,
-            tint = if (bookmarked) LagarTheme.layers.onTint(LayerKey.SfsAct) else LagarTheme.colors.onSurfaceVariant,
+            tint = if (bookmarked) LagarTheme.layers.onTint(key) else LagarTheme.colors.onSurfaceVariant,
         )
     }
 }

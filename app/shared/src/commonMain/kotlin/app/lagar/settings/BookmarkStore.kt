@@ -1,5 +1,6 @@
 package app.lagar.settings
 
+import app.lagar.domain.DisplayLayer
 import com.russhwolf.settings.Settings
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -9,7 +10,10 @@ import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 
 @Serializable
-data class Bookmark(val id: String, val title: String, val number: String, val type: String, val layer: String)
+data class Bookmark(val id: String, val title: String, val number: String, val type: String, val layer: String) {
+    /** The display level, picked from [type] so acts and ordinances get their own colors. */
+    val displayLayer: DisplayLayer? get() = DisplayLayer.fromRoute(layer, type)
+}
 
 /** Device-local bookmarks, newest first, stored as one JSON string. */
 class BookmarkStore(private val settings: Settings) {
