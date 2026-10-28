@@ -15,18 +15,15 @@ import app.lagar.resources.onboarding_done
 import app.lagar.resources.onboarding_stored_locally
 import org.jetbrains.compose.resources.stringResource
 
-/** Step 3: pick region and kommun, both optional. [onDone] runs after the choices are stored. */
+/** Step 3: pick region and kommun, both optional. [onDone] receives the call that stores the choices and runs it when it leaves. */
 @Composable
-fun LocalityStepRoute(viewModel: OnboardingViewModel, onDone: () -> Unit) {
+fun LocalityStepRoute(viewModel: OnboardingViewModel, onDone: (persist: () -> Unit) -> Unit) {
     val locality by viewModel.locality.collectAsState()
     LocalityStepScreen(
         locality = locality,
         onRegion = viewModel::selectRegion,
         onKommun = viewModel::selectKommun,
-        onDone = {
-            viewModel.finish()
-            onDone()
-        },
+        onDone = { onDone(viewModel::finish) },
     )
 }
 
