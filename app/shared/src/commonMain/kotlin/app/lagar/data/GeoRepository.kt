@@ -1,7 +1,9 @@
 package app.lagar.data
 
 import app.lagar.domain.Kommun
+import app.lagar.domain.Locality
 import app.lagar.domain.Region
+import app.lagar.domain.Scope
 import app.lagar.resources.Res
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -18,6 +20,15 @@ class GeoRepository(
 
     suspend fun kommuner(regionCode: String): List<Kommun> =
         load().kommuner.filter { it.regionCode == regionCode }.sortedWith(compareBy(SwedishCollation) { it.name })
+
+    /** Name of the län (Region) or kommun (Kommun) the [locality] selects for [scope]; null for Nationell or when unset. */
+    suspend fun localityName(scope: Scope, locality: Locality): String? = when (scope) {
+        Scope.Nationell -> null
+        Scope.Region -> locality.regionCode?.let { code -> regions().firstOrNull { it.code == code }?.name }
+        Scope.Kommun -> locality.regionCode?.let { region ->
+            kommuner(region).firstOrNull { it.code == locality.kommunCode }?.name
+        }
+    }
 
     private suspend fun load(): Sweden = cached
         ?: json.decodeFromString<Sweden>(readBytes("files/geo/sweden.json").decodeToString()).also { cached = it }

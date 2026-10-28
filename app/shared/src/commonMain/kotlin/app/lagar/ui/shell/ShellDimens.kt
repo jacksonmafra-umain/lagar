@@ -11,4 +11,5 @@ internal object ShellDimens {
     val IconSize = 24.dp
     val SmallIconSize = 20.dp
     val AvatarSize = 32.dp
+    val DrawerLogoSize = 40.dp
 }

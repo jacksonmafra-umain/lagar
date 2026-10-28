@@ -9,6 +9,7 @@
     <string name="theme_switch_to_dark">Byt till mörkt tema</string>
     <string name="theme_switch_to_light">Byt till ljust tema</string>
     <string name="drawer_settings">Inställningar</string>
+    <string name="drawer_change">Ändra</string>
     <string name="drawer_about">Om appen</string>
     <string name="drawer_data_built">Data byggd %1$s</string>
     <string name="drawer_credits">Svensk lagstiftning, rättspraxis och offentliga tjänster på ett ställe.</string>
