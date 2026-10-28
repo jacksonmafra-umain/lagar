@@ -30,7 +30,15 @@ import app.lagar.resources.layer_sfs_act_desc
 import app.lagar.resources.layer_sfs_ordinance
 import app.lagar.resources.layer_sfs_ordinance_desc
 import app.lagar.resources.type_act
+import app.lagar.resources.type_agency_regulation
+import app.lagar.resources.type_case_notice
+import app.lagar.resources.type_case_report
+import app.lagar.resources.type_county_regulation
+import app.lagar.resources.type_eu_decision
+import app.lagar.resources.type_eu_directive
+import app.lagar.resources.type_eu_regulation
 import app.lagar.resources.type_fundamental_law
+import app.lagar.resources.type_municipal_regulation
 import app.lagar.resources.type_ordinance
 import app.lagar.resources.type_other_statute
 import org.jetbrains.compose.resources.DrawableResource
@@ -80,5 +88,13 @@ internal fun typeNameRes(type: String): StringResource = when (type) {
     "fundamental_law" -> Res.string.type_fundamental_law
     "act" -> Res.string.type_act
     "ordinance" -> Res.string.type_ordinance
+    "agency_regulation" -> Res.string.type_agency_regulation
+    "case_report" -> Res.string.type_case_report
+    "case_notice" -> Res.string.type_case_notice
+    "eu_regulation" -> Res.string.type_eu_regulation
+    "eu_directive" -> Res.string.type_eu_directive
+    "eu_decision" -> Res.string.type_eu_decision
+    "county_regulation" -> Res.string.type_county_regulation
+    "municipal_regulation" -> Res.string.type_municipal_regulation
     else -> Res.string.type_other_statute
 }

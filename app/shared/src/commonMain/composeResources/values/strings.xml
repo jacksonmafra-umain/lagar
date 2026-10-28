@@ -177,4 +177,12 @@
     <string name="advanced_status_all">All</string>
     <string name="advanced_status_repealed">Repealed</string>
     <string name="type_other_statute">Other statute</string>
+    <string name="type_agency_regulation">Agency regulation</string>
+    <string name="type_case_report">Case report</string>
+    <string name="type_case_notice">Case notice</string>
+    <string name="type_eu_regulation">EU regulation</string>
+    <string name="type_eu_directive">EU directive</string>
+    <string name="type_eu_decision">EU decision</string>
+    <string name="type_county_regulation">County regulation</string>
+    <string name="type_municipal_regulation">Municipal regulation</string>
 </resources>
