@@ -23,6 +23,7 @@ import app.lagar.resources.coming_soon
 import app.lagar.resources.document_count
 import app.lagar.ui.common.level
 import app.lagar.ui.common.nameRes
+import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -59,7 +60,7 @@ private fun Band(summary: LayerSummary, onClick: () -> Unit, modifier: Modifier)
             border = BorderStroke(1.dp, layers.border(key)),
         ) {
             Column(
-                modifier = Modifier.heightIn(min = 48.dp).padding(horizontal = LagarTheme.spacing.sm, vertical = LagarTheme.spacing.xs),
+                modifier = Modifier.heightIn(min = ShellDimens.TouchTarget).padding(horizontal = LagarTheme.spacing.sm, vertical = LagarTheme.spacing.xs),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center,
             ) {
