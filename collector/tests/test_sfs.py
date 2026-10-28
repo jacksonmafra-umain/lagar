@@ -1,3 +1,4 @@
+import contextlib
 import http.client
 import io
 import json
@@ -353,6 +354,141 @@ class SfsTests(unittest.TestCase):
         self.assertEqual(set(state["done"]), set(ids))
         self.assertEqual(state["failed"], {})
         self.assertIsNone(state["blocked"])
+
+
+    def test_unchanged_source_is_not_rewritten(self):
+        first = listing_json(["sfs-2000-1"], systemdatum="2026-01-01 00:00:00")
+        sfs.run(FakeClient({"dokumentlista": first}), self.args())
+        path = next(self.corpus.rglob("*.md"))
+        before = path.read_bytes()
+        second = listing_json(["sfs-2000-1"], systemdatum="2026-02-01 00:00:00")
+        summary = sfs.run(FakeClient({"dokumentlista": second}), self.args())
+        self.assertEqual((summary.written, summary.unchanged), (0, 1))
+        self.assertEqual(path.read_bytes(), before)
+        self.assertEqual(self.state()["done"]["sfs-2000-1"], "2026-02-01 00:00:00")
+
+    def test_changed_source_is_rewritten(self):
+        first = listing_json(["sfs-2000-1"], systemdatum="2026-01-01 00:00:00")
+        sfs.run(FakeClient({"dokumentlista": first}), self.args())
+        second = listing_json(["sfs-2000-1"], systemdatum="2026-02-01 00:00:00")
+        changed = TEXT.replace(b"\n\n", b"\n\nNy mening.\n\n", 1)
+        client = FakeClient({"dokumentlista": second, ".text": changed})
+        summary = sfs.run(client, self.args())
+        self.assertEqual((summary.written, summary.unchanged), (1, 0))
+
+
+    def test_changed_since_sorts_by_systemdatum_and_stops_at_older(self):
+        pages = {
+            "p=1&": listing_json(
+                ["sfs-2000-1", "sfs-2000-2"], pages=3,
+                systemdatum=["2026-10-27 04:40:43", "2026-10-26 08:00:00"],
+            ),
+            "p=2&": listing_json(["sfs-2000-3"], pages=3),
+        }
+        client = FakeClient(pages)
+        summary = sfs.run(client, self.args("--changed-since", "2026-10-27"))
+        self.assertEqual(summary.written, 1)
+        listing_calls = [c for c in client.calls if "dokumentlista" in c]
+        self.assertEqual(len(listing_calls), 1)
+        self.assertIn("&sort=systemdatum&sortorder=desc", listing_calls[0])
+        self.assertNotIn("sort=datum&", listing_calls[0])
+
+    def test_changed_since_compares_full_timestamps(self):
+        listing = listing_json(
+            ["sfs-2000-1", "sfs-2000-2"],
+            systemdatum=["2026-10-27 04:40:43", "2026-10-27 04:40:42"],
+        )
+        client = FakeClient({"dokumentlista": listing})
+        summary = sfs.run(client, self.args("--changed-since", "2026-10-27 04:40:43"))
+        self.assertEqual(summary.written, 1)
+        self.assertIn("sfs-2000-1", client.text_calls()[0])
+
+    def test_changed_since_rejects_bad_timestamp_and_fundamental(self):
+        for argv in (["--changed-since", "27/10/2026"],
+                     ["--changed-since", "2026-10-27", "--fundamental"],
+                     ["--changed-since", "2026-10-27", "--since", "2026-10-01"]):
+            with self.assertRaises(SystemExit), contextlib.redirect_stderr(io.StringIO()):
+                sfs.main(argv)
+
+    def test_report_lists_written_unchanged_failed_and_latest(self):
+        listing = listing_json(
+            ["sfs-2000-1", "sfs-2000-2", "sfs-1868-1"],
+            systemdatum=["2026-10-27 04:40:43", "2026-10-27 04:40:40", "2026-10-27 04:40:39"],
+        )
+        # Same index, so the same listing title as in the run below.
+        sfs.run(FakeClient({"dokumentlista": listing_json(["sfs-2000-9", "sfs-2000-2"])}), self.args())
+        report = self.tmp / "report.json"
+        client = FakeClient({
+            "dokumentlista": listing,
+            "sfs-1868-1.text": b"<dokumentstatus></dokumentstatus>",
+        })
+        sfs.run(client, self.args("--changed-since", "2026-10-27", "--report", str(report)))
+        data = json.loads(report.read_text(encoding="utf-8"))
+        self.assertEqual(data["written"], ["2000:1"])
+        self.assertEqual(data["unchanged"], 1)
+        self.assertEqual(data["failed"], ["sfs-1868-1"])
+        self.assertEqual(data["latest_systemdatum"], "2026-10-27 04:40:43")
+        self.assertFalse(data["blocked"])
+
+    def test_report_latest_is_null_when_nothing_changed(self):
+        listing = listing_json(["sfs-2000-1"], systemdatum="2026-01-01 00:00:00")
+        report = self.tmp / "report.json"
+        sfs.run(FakeClient({"dokumentlista": listing}),
+                self.args("--changed-since", "2026-10-27", "--report", str(report)))
+        data = json.loads(report.read_text(encoding="utf-8"))
+        self.assertEqual((data["written"], data["latest_systemdatum"]), ([], None))
+
+
+    def test_listing_field_change_rewrites_with_same_source(self):
+        first = listing_json(["sfs-2000-1"], systemdatum="2026-01-01 00:00:00")
+        sfs.run(FakeClient({"dokumentlista": first}), self.args())
+        renamed = first.replace(b"Justitiedepartementet", b"Finansdepartementet").replace(
+            b"2026-01-01 00:00:00", b"2026-02-01 00:00:00")
+        summary = sfs.run(FakeClient({"dokumentlista": renamed}), self.args("--changed-since", "2026-01-01"))
+        self.assertEqual((summary.written, summary.unchanged), (1, 0))
+        self.assertIn("Finansdepartementet", next(self.corpus.rglob("*.md")).read_text(encoding="utf-8"))
+
+    def test_changed_since_rejects_date_window(self):
+        for extra in (["--from", "2026-01-01"], ["--to", "2026-12-31"]):
+            with self.assertRaises(SystemExit), contextlib.redirect_stderr(io.StringIO()):
+                sfs.parse_args(["--changed-since", "2026-10-27", *extra])
+
+    def test_changed_since_fails_when_listing_is_not_newest_first(self):
+        listing = listing_json(
+            ["sfs-2000-1", "sfs-2000-2"],
+            systemdatum=["2026-10-27 01:00:00", "2026-10-28 01:00:00"],
+        )
+        with self.assertRaises(sfs.ListingError):
+            sfs.run(FakeClient({"dokumentlista": listing}), self.args("--changed-since", "2026-10-27"))
+
+    def test_report_retry_from_is_oldest_transient_failure(self):
+        listing = listing_json(
+            ["sfs-2000-1", "sfs-2000-2", "sfs-1868-1"],
+            systemdatum=["2026-10-27 05:00:00", "2026-10-27 04:00:00", "2026-10-27 03:00:00"],
+        )
+        report = self.tmp / "report.json"
+        client = FakeClient({
+            "dokumentlista": listing,
+            "sfs-2000-2.text": urllib.error.URLError("timed out"),
+            "sfs-1868-1.text": b"<dokumentstatus></dokumentstatus>",
+        })
+        sfs.run(client, self.args("--changed-since", "2026-10-27", "--report", str(report)))
+        data = json.loads(report.read_text(encoding="utf-8"))
+        self.assertEqual(data["failed"], ["sfs-2000-2", "sfs-1868-1"])
+        self.assertEqual(data["retry_from"], "2026-10-27 04:00:00")
+
+    def test_unexpected_document_error_is_recorded_not_fatal(self):
+        listing = listing_json(["sfs-2000-1", "sfs-2000-2"])
+        client = FakeClient({"dokumentlista": listing})
+        original = sfs._store
+        def flaky(client_, dok_id, item, corpus):
+            if dok_id == "sfs-2000-1":
+                raise KeyError("type")
+            return original(client_, dok_id, item, corpus)
+        sfs._store = flaky
+        self.addCleanup(setattr, sfs, "_store", original)
+        summary = sfs.run(client, self.args())
+        self.assertEqual((summary.failed, summary.written), (["sfs-2000-1"], 1))
 
 
 if __name__ == "__main__":

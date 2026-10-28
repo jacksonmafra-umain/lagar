@@ -15,6 +15,7 @@ from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from pathlib import Path
 
+from . import frontmatter
 from .http import Blocked, PoliteClient
 from .riksdagen import (
     FUNDAMENTAL_LAWS,
@@ -32,7 +33,7 @@ BASE = "https://data.riksdagen.se"
 ROBOTS_URL = BASE + "/robots.txt"
 LISTING_URL = (
     BASE + "/dokumentlista/?doktyp=sfs&utformat=json&sz=200&p={page}"
-    "&sort=datum&sortorder=asc"
+    "&sort={sort}&sortorder={order}"
 )
 TEXT_URL = BASE + "/dokument/{dok_id}.text"
 PROGRESS_EVERY = 50
@@ -44,7 +45,8 @@ NETWORK_ERRORS = (
     ConnectionError,
     http.client.HTTPException,
 )
-DOCUMENT_ERRORS = NETWORK_ERRORS + (UnicodeDecodeError, ValueError)
+# Per-document failures: recorded and skipped so one bad document never stalls a run.
+DOCUMENT_ERRORS = NETWORK_ERRORS + (UnicodeDecodeError, ValueError, KeyError, TypeError)
 
 
 class ListingError(Exception):
@@ -56,6 +58,7 @@ class StateError(Exception):
 
 
 _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}", re.ASCII)
+_TIMESTAMP = re.compile(r"(\d{4}-\d{2}-\d{2})( \d{2}:\d{2}:\d{2})?", re.ASCII)
 
 
 def _iso_date(value):
@@ -65,6 +68,20 @@ def _iso_date(value):
         date.fromisoformat(value)
     except ValueError:
         raise argparse.ArgumentTypeError(f"not an ISO date (YYYY-MM-DD): {value}")
+    return value
+
+
+def _timestamp(value):
+    """A Riksdagen `systemdatum` bound: `YYYY-MM-DD` or `YYYY-MM-DD HH:MM:SS`."""
+    match = _TIMESTAMP.fullmatch(value)
+    try:
+        if not match:
+            raise ValueError(value)
+        datetime.fromisoformat(value)
+    except ValueError:
+        raise argparse.ArgumentTypeError(
+            f"not a timestamp (YYYY-MM-DD[ HH:MM:SS]): {value}"
+        )
     return value
 
 
@@ -78,9 +95,13 @@ def _non_negative(value):
 @dataclass
 class RunSummary:
     written: int = 0
+    unchanged: int = 0
     skipped: int = 0
     failed: "list[str]" = field(default_factory=list)
     blocked: bool = False
+    written_numbers: "list[str]" = field(default_factory=list)
+    latest_systemdatum: "str | None" = None
+    retry_from: "str | None" = None  # oldest systemdatum of a network failure
 
 
 def parse_args(argv):
@@ -90,10 +111,22 @@ def parse_args(argv):
     parser.add_argument("--to", dest="to_date", metavar="YYYY-MM-DD", type=_iso_date)
     parser.add_argument("--limit", type=_non_negative)
     parser.add_argument("--since", metavar="YYYY-MM-DD", type=_iso_date)
+    parser.add_argument(
+        "--changed-since", metavar="TIMESTAMP", type=_timestamp,
+        help="only documents whose systemdatum is at or after TIMESTAMP, newest first",
+    )
+    parser.add_argument("--report", metavar="FILE", help="write a JSON run report")
     parser.add_argument("--rate", type=float, default=1.0, metavar="SECONDS")
     parser.add_argument("--state", default=DEFAULT_STATE)
     parser.add_argument("--corpus", default="corpus")
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.changed_since and (
+        args.fundamental or args.since or args.from_date or args.to_date
+    ):
+        parser.error(
+            "--changed-since cannot be combined with --fundamental, --since, --from or --to"
+        )
+    return args
 
 
 def _load_state(path):
@@ -157,7 +190,10 @@ def _robots_allows(client):
 def _listing_pages(client, args):
     page, pages = 1, 1
     while page <= pages:
-        url = LISTING_URL.format(page=page)
+        if args.changed_since:
+            url = LISTING_URL.format(page=page, sort="systemdatum", order="desc")
+        else:
+            url = LISTING_URL.format(page=page, sort="datum", order="asc")
         if args.from_date:
             url += f"&from={args.from_date}"
         if args.to_date:
@@ -185,8 +221,26 @@ def _fundamental_item(dok_id, parsed, text):
     )
 
 
+def _unchanged(meta, corpus):
+    """True when the stored file has the same frontmatter apart from `fetched_at`.
+
+    The body derives from the source bytes, which `source_sha256` covers.
+    """
+    path = path_for(meta, corpus)
+    try:
+        stored, _ = frontmatter.load(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    stored.pop("fetched_at", None)
+    return stored == {k: v for k, v in meta.items() if k != "fetched_at"}
+
+
 def _store(client, dok_id, item, corpus):
-    """Fetch, parse and write one document; returns the item that was written."""
+    """Fetch, parse and write one document; returns (item, written).
+
+    A document whose stored frontmatter matches apart from `fetched_at` is left
+    untouched, so a re-run does not churn the corpus.
+    """
     raw = client.get(TEXT_URL.format(dok_id=urllib.parse.quote(dok_id)))
     if raw.lstrip().startswith(b"<dokumentstatus"):
         # Digitised OCR prints come back as status XML wrapping styled HTML; record them as a coverage gap.
@@ -197,8 +251,10 @@ def _store(client, dok_id, item, corpus):
         item = _fundamental_item(dok_id, parsed, text)
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     meta = build_meta(item, parsed, hashlib.sha256(raw).hexdigest(), fetched_at)
+    if _unchanged(meta, corpus):
+        return item, False
     write(meta, to_markdown(meta["title"], parsed.body), corpus)
-    return item
+    return item, True
 
 
 def _already_done(state, item, corpus):
@@ -214,14 +270,40 @@ def _candidates(client, args, state, summary):
         for dok_id in FUNDAMENTAL_LAWS:
             yield dok_id, None
         return
+    previous = None
     for items in _listing_pages(client, args):
         for item in items:
+            if args.changed_since:
+                if previous is not None and item.systemdatum > previous:
+                    # Stopping early is only safe when the listing really is newest first.
+                    raise ListingError("listing is not sorted by systemdatum, newest first")
+                previous = item.systemdatum
+                if item.systemdatum < args.changed_since:
+                    return  # newest first: everything after this is older
+                summary.latest_systemdatum = max(
+                    summary.latest_systemdatum or "", item.systemdatum
+                )
             if args.since and item.systemdatum[:10] < args.since:
                 continue
             if _already_done(state, item, args.corpus):
                 summary.skipped += 1
                 continue
             yield item.dok_id, item
+
+
+def _write_report(path, summary):
+    report = {
+        "written": summary.written_numbers,
+        "unchanged": summary.unchanged,
+        "skipped": summary.skipped,
+        "failed": summary.failed,
+        "blocked": summary.blocked,
+        "latest_systemdatum": summary.latest_systemdatum,
+        "retry_from": summary.retry_from,
+    }
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def run(client, args):
@@ -233,6 +315,8 @@ def run(client, args):
         summary.blocked = True
         state["blocked"] = message
         _save_state(args.state, state)
+        if args.report:
+            _write_report(args.report, summary)
         return summary
 
     try:
@@ -247,14 +331,20 @@ def run(client, args):
             if args.limit is not None and summary.written >= args.limit:
                 break
             try:
-                stored = _store(client, dok_id, item, args.corpus)
+                stored, changed = _store(client, dok_id, item, args.corpus)
             except Blocked:
                 raise
             except DOCUMENT_ERRORS as error:
                 summary.failed.append(dok_id)
+                if isinstance(error, NETWORK_ERRORS) and item and item.systemdatum:
+                    summary.retry_from = min(summary.retry_from or item.systemdatum, item.systemdatum)
                 state["failed"][dok_id] = f"{type(error).__name__}: {error}"
             else:
-                summary.written += 1
+                if changed:
+                    summary.written += 1
+                    summary.written_numbers.append(stored.number)
+                else:
+                    summary.unchanged += 1
                 if stored.systemdatum:
                     state["done"][dok_id] = stored.systemdatum
                 else:
@@ -275,6 +365,8 @@ def run(client, args):
     except Blocked as error:
         return finish_blocked(str(error))
     _save_state(args.state, state)
+    if args.report:
+        _write_report(args.report, summary)
     return summary
 
 
@@ -290,7 +382,8 @@ def main(argv, client=None):
         print(f"error: {error}", file=sys.stderr, flush=True)
         return 1
     print(
-        f"done: {summary.written} written, {summary.skipped} skipped, "
+        f"done: {summary.written} written, {summary.unchanged} unchanged, "
+        f"{summary.skipped} skipped, "
         f"{len(summary.failed)} failed" + (", BLOCKED" if summary.blocked else ""),
         flush=True,
     )
