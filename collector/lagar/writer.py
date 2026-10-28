@@ -7,7 +7,7 @@ import urllib.parse
 from pathlib import Path
 
 from . import frontmatter, schema
-from .riksdagen import FUNDAMENTAL_LAWS, amendments, item_type, statute_title, to_markdown
+from .riksdagen import FUNDAMENTAL_LAWS, amendments, item_type, statute_title
 from .vocabulary import TYPES
 
 _SFS_NUMBER = re.compile(r"\bN?\d{4}:\d+")

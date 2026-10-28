@@ -1,5 +1,4 @@
 import json
-import os
 import subprocess
 import sys
 import tempfile
@@ -288,7 +287,7 @@ class SchemaErrorsTest(unittest.TestCase):
             path = corpus / "x.md"
             path.write_text("---\n" + frontmatter.dump(meta) + "---\n" + body, encoding="utf-8")
             result = run_build(Path(tmp) / "out", corpus=corpus)
-            lines = [l for l in result.stderr.splitlines() if l.startswith("error:") or str(path) in l]
+            lines = [line for line in result.stderr.splitlines() if line.startswith("error:") or str(path) in line]
             self.assertGreaterEqual(len(lines), 2, result.stderr)
             for line in lines:
                 self.assertIn(str(path), line)

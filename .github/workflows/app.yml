@@ -1,0 +1,73 @@
+name: App
+
+on:
+  pull_request:
+    paths:
+      - app/**
+      - DESIGN.md
+      - .github/workflows/app.yml
+  push:
+    branches: [main]
+    paths:
+      - app/**
+      - DESIGN.md
+      - .github/workflows/app.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: app-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  android-web:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@8da46b539cd8fe6ab27ca75128919a18d757604c # v6.4.1
+
+      # Design tokens are generated from DESIGN.md by the build-logic plugin.
+      - name: Build-logic tests
+        run: ./gradlew -p build-logic test
+
+      - name: Tests, Android debug APK and web build
+        run: ./gradlew :shared:testAndroidHostTest :androidApp:assembleDebug :webApp:wasmJsBrowserDistribution
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: android-debug-apk
+          path: app/androidApp/build/outputs/apk/debug/*.apk
+          retention-days: 7
+
+  ios:
+    runs-on: macos-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      # The Xcode "Compile Kotlin Framework" phase runs Gradle with $JAVA_HOME.
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@8da46b539cd8fe6ab27ca75128919a18d757604c # v6.4.1
+
+      - name: iOS simulator build
+        run: |
+          xcodebuild -project iosApp/iosApp.xcodeproj -scheme iosApp -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
