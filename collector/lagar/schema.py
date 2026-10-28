@@ -79,16 +79,17 @@ def _check(value, schema, path, errors):
             _check(item, schema["items"], f"{path}[{i}]", errors)
     if isinstance(value, dict):
         props = schema.get("properties", {})
+        prefix = "" if path == "frontmatter" else path + "."
         for key in schema.get("required", []):
             if key not in value:
-                errors.append(f"{key}: required key is missing")
+                errors.append(f"{prefix}{key}: required key is missing")
         if schema.get("additionalProperties") is False:
             for key in value:
                 if key not in props:
-                    errors.append(f"{key}: unknown key")
+                    errors.append(f"{prefix}{key}: unknown key")
         for key, sub in props.items():
             if key in value:
-                _check(value[key], sub, key, errors)
+                _check(value[key], sub, prefix + key, errors)
 
 
 def validate(frontmatter):

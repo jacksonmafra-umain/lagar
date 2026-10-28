@@ -13,6 +13,18 @@ def example_meta():
     return copy.deepcopy(json.loads(EXAMPLE.read_text(encoding="utf-8"))["meta"])
 
 
+def amendment():
+    return {
+        "number": "1965:280",
+        "title": None,
+        "scope": "\u00e4ndr. 20 kap 4 \u00a7",
+        "preparatory_works": None,
+        "celex": None,
+        "in_force": "1965-07-01",
+        "in_force_raw": "1965-07-01 \u00f6verg.best.",
+    }
+
+
 class SchemaTest(unittest.TestCase):
     def test_valid_example_passes(self):
         self.assertEqual(schema.validate(example_meta()), [])
@@ -58,6 +70,33 @@ class SchemaTest(unittest.TestCase):
         meta["amended_by"] = ["2010:283\n"]
         errors = schema.validate(meta)
         self.assertTrue(any("amended_by" in e for e in errors))
+
+    def test_amendments_optional_null_or_list(self):
+        meta = example_meta()
+        meta.pop("amendments", None)
+        self.assertEqual(schema.validate(meta), [])
+        for value in (None, [], [amendment()]):
+            with self.subTest(value=value):
+                meta["amendments"] = value
+                self.assertEqual(schema.validate(meta), [])
+
+    def test_bad_amendment_rejected_with_path(self):
+        cases = {
+            "amendments[0].number": {"number": "1965-280"},
+            "amendments[0].in_force": {"in_force": "1 jan 1965"},
+            "amendments[0].extra": {"extra": None},
+        }
+        for where, change in cases.items():
+            with self.subTest(where=where):
+                meta = example_meta()
+                meta["amendments"] = [{**amendment(), **change}]
+                errors = schema.validate(meta)
+                self.assertTrue(any(e.startswith(where + ":") for e in errors), errors)
+        meta = example_meta()
+        item = amendment()
+        del item["scope"]
+        meta["amendments"] = [item]
+        self.assertEqual(schema.validate(meta), ["amendments[0].scope: required key is missing"])
 
     def test_schema_enums_match_vocabulary(self):
         props = schema._load_schema()["properties"]
