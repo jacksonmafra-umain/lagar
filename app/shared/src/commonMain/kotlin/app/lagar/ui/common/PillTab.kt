@@ -20,7 +20,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
-import app.lagar.ui.hierarki.iconColor
 
 /** Pill-shaped tab filled with the accent of [key] when selected. */
 @Composable
