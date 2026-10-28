@@ -63,6 +63,17 @@
   --color-on-surface-variant: #414750;
   --color-outline-variant: #c1c7d2;
   --color-tertiary-container: #d0a700;
+
+  /* Layer colors: `text` values from DESIGN.md `layers` (AA-safe for text). */
+  --layer-fundamental: #0b3d91;
+  --layer-sfs-act: #005b99;
+  --layer-sfs-ordinance: #1c6da3;
+  --layer-agency: #007270;
+  --layer-case-law: #7a2e4d;
+  --layer-eu: #5b3fa6;
+  --layer-region: #28772d;
+  --layer-municipality: #8b2e1f;
+  --layer-service: #8c6300;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -78,5 +89,16 @@
     --color-on-surface-variant: #c3c7cf;
     --color-outline-variant: #42474e;
     --color-tertiary-container: #574500;
+
+    /* Layer colors: `dark` values from DESIGN.md `layers`. */
+    --layer-fundamental: #b1c5ff;
+    --layer-sfs-act: #9ecaff;
+    --layer-sfs-ordinance: #95ccff;
+    --layer-agency: #7cd5d2;
+    --layer-case-law: #ffb0ca;
+    --layer-eu: #cebdff;
+    --layer-region: #88d982;
+    --layer-municipality: #ffb4a6;
+    --layer-service: #febb2a;
   }
 }

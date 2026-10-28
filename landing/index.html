@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">lagar – gällande svensk lag, utan versionskaos</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="Sök och läs svenska lagar och förordningar i sin aktuella lydelse. Gratis, utan konto, öppen källkod.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-attr="content:meta.title" content="lagar – gällande svensk lag, utan versionskaos">
+  <meta property="og:description" data-i18n-attr="content:meta.description" content="Sök och läs svenska lagar och förordningar i sin aktuella lydelse. Gratis, utan konto, öppen källkod.">
+  <meta name="theme-color" content="#004373">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="nav.skip">Hoppa till innehållet</a>
+
+  <header class="top">
+    <div class="wrap top__inner">
+      <a class="wordmark" href="#hero">lagar</a>
+      <button id="lang-toggle" class="lang" type="button" hidden data-i18n-attr="aria-label:nav.toggle" aria-label="Byt till engelska">EN</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="hero" class="hero">
+      <div class="wrap">
+        <span class="rule" aria-hidden="true"></span>
+        <h1 data-i18n="hero.title">Gällande svensk lag, utan versionskaos</h1>
+        <p class="lead" data-i18n="hero.lead">Sök och läs lagar och förordningar i sin aktuella lydelse. Gratis, utan konto.</p>
+        <div class="actions">
+          <a class="button button--primary" href="/app/" data-i18n="hero.cta">Öppna lagar</a>
+          <a class="button button--secondary" href="https://github.com/jacksonmafra-umain/lagar" data-i18n="hero.source">Källkod på GitHub</a>
+        </div>
+        <p class="note" data-i18n="hero.independent">Oberoende projekt. Inte en myndighetstjänst.</p>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="wrap">
+        <h2 data-i18n="why.title">Varför lagar</h2>
+        <p data-i18n="why.p1">Svensk lag är offentlig, men den är svårare att läsa än den borde vara. En lag ändras om och om igen, och den lydelse som gäller i dag är utspridd över originaltexten och alla ändringar sedan dess. De officiella källorna är fullständiga men byggda för den som redan vet var man ska leta.</p>
+        <p data-i18n="why.p2">lagar samlar den gällande lydelsen av varje lag på ett ställe, lätt att läsa i mobilen, gratis och utan konto. Varje lag är en vanlig textfil i ett öppet arkiv, byggd från officiella öppna data, så att vem som helst kan se var en text kommer ifrån, återanvända den eller hjälpa till att förbättra den.</p>
+      </div>
+    </section>
+
+    <section id="inside" class="section section--alt">
+      <div class="wrap">
+        <h2 data-i18n="inside.title">Vad som finns i lagar</h2>
+        <p data-i18n="inside.lead">Normerna är ordnade i lager, från grundlagarna och nedåt. De första lagren finns redan, fler kommer.</p>
+        <ul class="layers">
+          <li class="layer" style="--layer: var(--layer-fundamental)">
+            <span class="layer__name" data-i18n="inside.fundamental">Grundlagar</span>
+            <span class="layer__desc" data-i18n="inside.fundamental_desc">Regeringsformen och de andra grundlagarna</span>
+            <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
+          </li>
+          <li class="layer" style="--layer: var(--layer-sfs-act)">
+            <span class="layer__name" data-i18n="inside.sfs_act">SFS Lagar</span>
+            <span class="layer__desc" data-i18n="inside.sfs_act_desc">Lagar beslutade av riksdagen</span>
+            <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
+          </li>
+          <li class="layer" style="--layer: var(--layer-sfs-ordinance)">
+            <span class="layer__name" data-i18n="inside.sfs_ordinance">SFS Förordningar</span>
+            <span class="layer__desc" data-i18n="inside.sfs_ordinance_desc">Förordningar utfärdade av regeringen</span>
+            <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
+          </li>
+          <li class="layer" style="--layer: var(--layer-agency)">
+            <span class="layer__name" data-i18n="inside.agency">Myndighetsföreskrifter</span>
+            <span class="layer__desc" data-i18n="inside.agency_desc">Föreskrifter utfärdade av myndigheter</span>
+            <span class="badge" data-i18n="inside.coming">Kommer</span>
+          </li>
+          <li class="layer" style="--layer: var(--layer-case-law)">
+            <span class="layer__name" data-i18n="inside.case_law">Rättspraxis</span>
+            <span class="layer__desc" data-i18n="inside.case_law_desc">Domar och prejudikat</span>
+            <span class="badge" data-i18n="inside.coming">Kommer</span>
+          </li>
+          <li class="layer" style="--layer: var(--layer-eu)">
+            <span class="layer__name" data-i18n="inside.eu">EU-rätt</span>
+            <span class="layer__desc" data-i18n="inside.eu_desc">Förordningar och direktiv från Europeiska unionen</span>
+            <span class="badge" data-i18n="inside.coming">Kommer</span>
+          </li>
+          <li class="layer" style="--layer: var(--layer-region)">
+            <span class="layer__name" data-i18n="inside.region">Regioner</span>
+            <span class="layer__desc" data-i18n="inside.region_desc">Regionala regler och beslut</span>
+            <span class="badge" data-i18n="inside.coming">Kommer</span>
+          </li>
+          <li class="layer" style="--layer: var(--layer-municipality)">
+            <span class="layer__name" data-i18n="inside.municipality">Kommuner</span>
+            <span class="layer__desc" data-i18n="inside.municipality_desc">Kommunala föreskrifter och planer</span>
+            <span class="badge" data-i18n="inside.coming">Kommer</span>
+          </li>
+          <li class="layer" style="--layer: var(--layer-service)">
+            <span class="layer__name" data-i18n="inside.service">Tjänster</span>
+            <span class="layer__desc" data-i18n="inside.service_desc">Offentliga tjänster för medborgare</span>
+            <span class="badge" data-i18n="inside.coming">Kommer</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sources" class="section">
+      <div class="wrap">
+        <h2 data-i18n="sources.title">Källor</h2>
+        <p data-i18n="sources.lead">Texterna hämtas från officiella öppna data. De är informativa och ersätter inte den officiella publiceringen.</p>
+        <ul class="links">
+          <li><a href="https://data.riksdagen.se/" data-i18n="sources.riksdagen">Riksdagens öppna data</a> <span data-i18n="sources.riksdagen_desc">källan till SFS-texterna</span></li>
+          <li><a href="https://svenskforfattningssamling.se/" data-i18n="sources.sfs">Svensk författningssamling</a> <span data-i18n="sources.sfs_desc">den officiella publiceringen av lagar och förordningar</span></li>
+          <li><a href="https://lagrummet.se/" data-i18n="sources.lagrummet">Lagrummet</a> <span data-i18n="sources.lagrummet_desc">det offentliga rättsinformationssystemets portal</span></li>
+          <li><a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1960729-om-upphovsratt-till-litterara-och_sfs-1960-729/" data-i18n="sources.copyright">Upphovsrättslagen (1960:729) 9 §</a> <span data-i18n="sources.copyright_desc">författningar är inte skyddade av upphovsrätt</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="open" class="section section--alt">
+      <div class="wrap">
+        <h2 data-i18n="open.title">Öppen källkod</h2>
+        <p data-i18n="open.p1">Varje norm är en Markdown-fil i arkivet. En insamlare hämtar texterna från officiella källor, och ett statiskt JSON-API driver webbappen. Allt är fritt under MIT-licensen.</p>
+        <p data-i18n="open.p2">Appar för Android och iOS är på väg. Tills vidare fungerar webbappen i alla moderna webbläsare, även i mobilen.</p>
+        <ul class="links">
+          <li><a href="https://github.com/jacksonmafra-umain/lagar" data-i18n="open.repo">lagar på GitHub</a></li>
+          <li><a href="https://github.com/jacksonfdam/leis" data-i18n="open.leis">leis</a> <span data-i18n="open.leis_desc">systerprojektet för brasiliansk lagstiftning</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p data-i18n="footer.notice">Texterna i lagar är informativa och ersätter inte Svensk författningssamling. Oberoende projekt, inte knutet till riksdagen, regeringen eller någon myndighet.</p>
+      <p>
+        <a href="https://github.com/jacksonmafra-umain/lagar/blob/main/LICENSE" data-i18n="footer.license">MIT-licens</a>
+        ·
+        <a href="https://github.com/jacksonmafra-umain/lagar" data-i18n="footer.repo">Källkod</a>
+        ·
+        <span data-i18n="footer.credit">Skapat av Jackson F. de A. Mafra</span>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
