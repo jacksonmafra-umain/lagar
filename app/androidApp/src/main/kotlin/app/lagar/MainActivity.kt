@@ -11,7 +11,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         // Debug builds read the API served from the host machine (the emulator's alias for it);
-        // release builds use the bundled sample.
-        setContent { App(DataSourceConfig(useSample = !BuildConfig.DEBUG, baseUrl = "http://10.0.2.2:8000/api/v1/")) }
+        // release builds read the published API.
+        val baseUrl = if (BuildConfig.DEBUG) "http://10.0.2.2:8000/api/v1/" else DataSourceConfig.PUBLISHED_API
+        setContent { App(DataSourceConfig(useSample = false, baseUrl = baseUrl)) }
     }
 }
