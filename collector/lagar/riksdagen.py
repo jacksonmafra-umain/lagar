@@ -12,10 +12,18 @@ FUNDAMENTAL_LAWS = {
 }
 
 _HEADER_LINE = re.compile(r"^([^:]+):(.*)$")
-_CHAPTER = re.compile(r"^\d+ ?[a-z]? kap\. ")
+# A chapter heading is a title; "7 kap. 3 § gäller inte." is a sentence.
+_CHAPTER = re.compile(r"^\d+ ?[a-z]? kap\. (?!\d+ ?[a-z]? ?§)")
 _PARAGRAPH = re.compile(r"^(\d+ ?[a-z]? ?§)")
 _AMENDMENT = re.compile(r"(?:Lag|Förordning) \((N?\d{4}:\d+)\)\.(?=\s|$)")
 _SOURCE_KEY = "Källa"
+_SENTENCE_END = ".!?:;)\"»”"
+# Blank lines may separate header entries (e.g. between `Övrig text` and
+# `Upphävd`), so the header is delimited by its known keys, not by blank lines.
+HEADER_KEYS = frozenset({
+    "SFS nr", "Departement/myndighet", "Utfärdad", "Omtryck", "Ändrad",
+    "Övrig text", "Upphävd", "Ikraft", "Tidsbegränsad", _SOURCE_KEY,
+})
 PRINT_ONLY_NOTE = "_Text available only in print._"
 
 
@@ -83,32 +91,33 @@ def parse_listing(raw):
     return items, pages
 
 
+def _header_key(line):
+    """The known header key a line starts, or None."""
+    match = _HEADER_LINE.match(line)
+    if not match:
+        return None
+    key = match.group(1).strip()
+    return key if key in HEADER_KEYS else None
+
+
 def parse_text(raw):
     lines = raw.replace("\r\n", "\n").replace("\r", "\n").split("\n")
     header = {}
-    body_start = None
     last_header = None
     for index, line in enumerate(lines):
         if not line.strip():
+            continue
+        key = _header_key(line)
+        if key is None:
             if header:
-                # The header block is contiguous; a blank line ends it.
+                # The header is a run of known keys; the first other line ends it.
                 break
-            continue
-        match = _HEADER_LINE.match(line)
-        if not match:
-            continue
-        key = match.group(1).strip()
-        # Skip the title line (e.g. "Lag (2010:1)") and prose with long prefixes.
-        if "(" in key or len(key) > 40:
-            continue
-        header[key] = match.group(2).strip()
+            continue  # title line or preamble before the header
+        header[key] = _HEADER_LINE.match(line).group(2).strip()
         last_header = index
         if key == _SOURCE_KEY:
             break
-    if last_header is not None:
-        body_start = last_header + 1
-    else:
-        body_start = 0
+    body_start = 0 if last_header is None else last_header + 1
     body = "\n".join(line.rstrip() for line in lines[body_start:]).strip()
     return ParsedText(header=header, body=body)
 
@@ -140,8 +149,13 @@ def amendments(body):
             paragraph.append(line.strip())
             continue
         if paragraph:
-            for match in _AMENDMENT.finditer(" ".join(paragraph)):
-                found.add(match.group(1))
+            text = " ".join(paragraph)
+            for match in _AMENDMENT.finditer(text):
+                # An amendment note closes a sentence; "se Lag (2000:1)." is a
+                # reference inside one.
+                before = text[: match.start()].rstrip()
+                if not before or before[-1] in _SENTENCE_END:
+                    found.add(match.group(1))
             paragraph = []
     return sorted(found, key=_number_order)
 

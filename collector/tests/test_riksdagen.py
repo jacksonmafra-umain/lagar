@@ -94,6 +94,35 @@ class RiksdagenTests(unittest.TestCase):
         self.assertEqual(parsed.header, {"SFS nr": "2000:1", "Ändrad": ""})
         self.assertEqual(parsed.body, "1 § Text här.")
 
+    def test_chapter_reference_sentence_is_not_a_heading(self):
+        md = riksdagen.to_markdown("T", "7 kap. 3 § gäller inte.\n\n8 kap. Straff")
+        self.assertNotIn("## 7 kap.", md)
+        self.assertIn("\n\n7 kap. 3 § gäller inte.\n\n", md)
+        self.assertIn("\n\n## 8 kap. Straff\n", md)
+
+    def test_amendment_needs_sentence_boundary(self):
+        body = "1 § Detta följer av vad som anges i se Lag (2000:1).\n\n2 § Text. Lag (2001:2)."
+        self.assertEqual(riksdagen.amendments(body), ["2001:2"])
+        self.assertEqual(riksdagen.amendments("Lag (2000:1)."), ["2000:1"])
+        self.assertEqual(
+            riksdagen.amendments("1 § Text. Lag (2000:1). Lag (2000:2)."), ["2000:1", "2000:2"]
+        )
+
+    def test_header_continues_past_blank_line_before_known_key(self):
+        parsed = riksdagen.parse_text(
+            "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÖvrig text:  \n\nUpphävd: 1994-04-01\n"
+            "Källa: Regeringskansliet\n\n1 § Text.\n"
+        )
+        self.assertEqual(parsed.header["Upphävd"], "1994-04-01")
+        self.assertEqual(parsed.body, "1 § Text.")
+
+    def test_header_ends_at_first_non_key_line(self):
+        parsed = riksdagen.parse_text(
+            "Lag (1900:1) om x\n\nSFS nr: 1900:1\n\nInledning: något\n\n1 § Text.\n"
+        )
+        self.assertEqual(parsed.header, {"SFS nr": "1900:1"})
+        self.assertTrue(parsed.body.startswith("Inledning: något"))
+
     def test_text_preserved_by_markdown(self):
         for dok_id in FIXTURE_IDS:
             body = riksdagen.parse_text(text(dok_id)).body
