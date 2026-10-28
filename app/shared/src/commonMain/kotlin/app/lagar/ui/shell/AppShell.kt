@@ -12,6 +12,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
@@ -30,6 +31,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.toRoute
+import app.lagar.data.GeoRepository
 import app.lagar.designsystem.LagarTheme
 import app.lagar.resources.Res
 import app.lagar.domain.DisplayLayer
@@ -83,6 +85,9 @@ fun AppShell(
     val scope = rememberCoroutineScope()
     val preferences = koinInject<UserPreferences>()
     val activeScope by preferences.scope.collectAsState()
+    val locality by preferences.locality.collectAsState()
+    val geo = koinInject<GeoRepository>()
+    val localityName by produceState<String?>(null, activeScope, locality) { value = geo.localityName(activeScope, locality) }
     var showScopeSheet by remember { mutableStateOf(false) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val backStackEntry by navController.currentBackStackEntryAsState()
@@ -130,11 +135,10 @@ fun AppShell(
         drawerState = drawerState,
         gesturesEnabled = selectedTab != null,
         drawerContent = {
-            val locality by preferences.locality.collectAsState()
             LagarDrawerContent(
                 hazeState = hazeState,
                 scope = activeScope,
-                locality = locality,
+                localityName = localityName,
                 selected = DrawerEntry.entries.firstOrNull { destination?.hasRoute(it.route::class) == true },
                 onChangeScope = {
                     scope.launch { drawerState.close() }
