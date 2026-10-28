@@ -1,0 +1,76 @@
+{
+  "entries": [
+    {
+      "detail_url": "https://svenskforfattningssamling.se/doc/20261828.html",
+      "files": [
+        {
+          "bytes": 360762,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-28T23:01:49Z",
+          "sha256": "e085802bcfe64add47778cd079ee8b430b3c661a4337b16f4188f76847df7264",
+          "url": "https://svenskforfattningssamling.se/sites/default/files/sfs/2026-10/SFS2026-1828.pdf"
+        }
+      ],
+      "number": "2026:1828",
+      "published": "2026-10-27"
+    },
+    {
+      "detail_url": "https://svenskforfattningssamling.se/doc/20261829.html",
+      "files": [
+        {
+          "bytes": 407596,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-28T23:01:46Z",
+          "sha256": "220793c90f87390b5fc22aca7781ab0c0295bbbc6236721203ce5329cbaf0136",
+          "url": "https://svenskforfattningssamling.se/sites/default/files/sfs/2026-10/SFS2026-1829.pdf"
+        }
+      ],
+      "number": "2026:1829",
+      "published": "2026-10-27"
+    },
+    {
+      "detail_url": "https://svenskforfattningssamling.se/doc/20261830.html",
+      "files": [
+        {
+          "bytes": 370363,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-28T23:01:44Z",
+          "sha256": "f13207048040a40d0539dc499a2dcf2508f3381a20bc779575d3bf4dfe0541f2",
+          "url": "https://svenskforfattningssamling.se/sites/default/files/sfs/2026-10/SFS2026-1830.pdf"
+        }
+      ],
+      "number": "2026:1830",
+      "published": "2026-10-27"
+    },
+    {
+      "detail_url": "https://svenskforfattningssamling.se/doc/20261831.html",
+      "files": [
+        {
+          "bytes": 371494,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-28T23:01:42Z",
+          "sha256": "3d7a08c07daa3dbe3bb302007f310cf9f56809f2925aababd85e676b23020533",
+          "url": "https://svenskforfattningssamling.se/sites/default/files/sfs/2026-10/SFS2026-1831.pdf"
+        }
+      ],
+      "number": "2026:1831",
+      "published": "2026-10-27"
+    },
+    {
+      "detail_url": "https://svenskforfattningssamling.se/doc/20261832.html",
+      "files": [
+        {
+          "bytes": 371408,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-28T23:01:40Z",
+          "sha256": "1c54ffc70869caa3dca070abbc2b14e55fa9941953ad22652dcff7ab33e5932a",
+          "url": "https://svenskforfattningssamling.se/sites/default/files/sfs/2026-10/SFS2026-1832.pdf"
+        }
+      ],
+      "number": "2026:1832",
+      "published": "2026-10-27"
+    }
+  ],
+  "source": "https://svenskforfattningssamling.se",
+  "version": 1
+}

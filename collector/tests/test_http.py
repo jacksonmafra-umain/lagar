@@ -7,8 +7,9 @@ from lagar.http import Blocked, PoliteClient
 
 
 class FakeResponse:
-    def __init__(self, body):
+    def __init__(self, body, headers=None):
         self._body = body
+        self.headers = headers
 
     def read(self):
         return self._body
@@ -43,6 +44,8 @@ class FakeOpener:
         result = self.results.pop(0)
         if isinstance(result, Exception):
             raise result
+        if isinstance(result, tuple):
+            return FakeResponse(*result)
         return FakeResponse(result)
 
 
@@ -68,6 +71,16 @@ class PoliteClientTest(unittest.TestCase):
             "lagar-test/1.0 (+https://example.org)",
         )
         self.assertEqual(opener.timeouts[0], 30)
+
+    def test_fetch_returns_body_and_bare_content_type(self):
+        headers = Message()
+        headers["Content-Type"] = "Application/PDF; charset=binary"
+        client, _, _ = make([(b"%PDF", headers)])
+        self.assertEqual(client.fetch("http://x/a.pdf"), (b"%PDF", "application/pdf"))
+
+    def test_fetch_without_content_type_header(self):
+        client, _, _ = make([(b"x", Message())])
+        self.assertEqual(client.fetch("http://x"), (b"x", None))
 
     def test_spaces_requests_by_min_interval(self):
         client, _, sleeps = make([b"a", b"b"])

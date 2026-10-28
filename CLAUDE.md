@@ -18,6 +18,7 @@ Run from the repo root.
 
 - Collect SFS: `python3 -I collector/collect.py sfs --fundamental` or `python3 -I collector/collect.py sfs --from YYYY-MM-DD --to YYYY-MM-DD [--limit N] [--since YYYY-MM-DD]`. State lives in `collector/data/sfs-state.json`; default `--rate` is 1 request/s.
 - Incremental sync (what the daily `Sync SFS` workflow runs): `python3 -I collector/collect.py sfs --changed-since "YYYY-MM-DD[ HH:MM:SS]" --report build/sync-report.json`. The committed marker is `collector/data/sfs-sync.json`; trigger the workflow manually with `gh workflow run sync-sfs.yml [-f since=YYYY-MM-DD]`.
+- Snapshot authoritative SFS PDFs: `python3 -I collector/collect.py sfspdf --year YYYY [--limit N] [--cache sources/cache]` or `... sfspdf --rss` (incremental). Writes the committed manifest `sources/sfs-pdf-manifest.json`; PDF bytes are never committed. State lives in `collector/data/sfspdf-state.json`.
 - Audit the corpus: `python3 -I collector/audit.py [--fsck]` writes `collector/data/pending-integrity.json`; exits 1 on schema errors, duplicate ids or path mismatches.
 - Progress reports: `python3 -I collector/plan.py` reads `collector/data/targets.json` and the audit JSON, writes `PROGRESS.md` and `progress.svg`. Run the audit first; `COVERAGE.md` is hand-written.
 - Build the API: `python3 -I api/build.py --corpus corpus --out build/api/v1`
