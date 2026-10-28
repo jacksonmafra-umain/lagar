@@ -99,7 +99,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | Hero with search field, advanced-search link and layer chips | Done | |
 | Key laws: Regeringsformen card, plus accordions for acts and ordinances | Done | |
 | Explore feed with Recent and Favourites tabs, bookmark toggle and "Show more" | Done | |
-| Loads only the pages it needs, not the whole catalog | Missing | #18 |
+| Loads only the first listing page of each level it shows, not the whole catalog; search loads the catalog on its first query | Done | |
 | Feed card shows the in-force date and "Ändrad senast genom SFS …" | Blocked: these fields are not in listing items | #36 |
 | Case-law items in the feed | Blocked: no case-law data | #38 |
 | Popular tab | Blocked: the app is anonymous and collects no usage data | |

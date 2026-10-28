@@ -2,7 +2,6 @@ package app.lagar.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.lagar.data.Catalog
 import app.lagar.data.GeoRepository
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
@@ -37,10 +36,12 @@ data class HomeData(
     val hasMoreRecent: Boolean,
 )
 
-/** Loads the home of the active scope and reloads when the scope or the locality changes. */
+/**
+ * Loads the home of the active scope and reloads when the scope or the locality changes. Only the first
+ * listing pages it shows are fetched; the full catalog is left to search.
+ */
 class HomeViewModel(
     private val repository: LagarRepository,
-    private val catalog: Catalog,
     private val preferences: UserPreferences,
     private val bookmarkStore: BookmarkStore,
     private val geo: GeoRepository,
@@ -75,16 +76,16 @@ class HomeViewModel(
         // Only the national level has documents so far; Region and Kommun make no listing requests.
         if (scope != Scope.Nationell) return HomeData(scope, localityName, emptyList(), emptyList(), emptyList(), emptyList(), emptyList(), false)
         val index = repository.index()
-        val items = catalog.items(scope)
+        val feed = loadHomeFeed(repository, index, scope, IMPORTANT_LIMIT, RECENT_LIMIT)
         return HomeData(
             scope = scope,
             localityName = localityName,
             layers = scope.layers.filter { index.count(it) > 0 },
-            fundamental = items.filter { it.displayLayer() == DisplayLayer.Fundamental },
-            acts = items.filter { it.displayLayer() == DisplayLayer.SfsAct }.take(IMPORTANT_LIMIT),
-            ordinances = items.filter { it.displayLayer() == DisplayLayer.SfsOrdinance }.take(IMPORTANT_LIMIT),
-            recent = items.take(RECENT_LIMIT),
-            hasMoreRecent = items.size > RECENT_LIMIT,
+            fundamental = feed.fundamental,
+            acts = feed.acts,
+            ordinances = feed.ordinances,
+            recent = feed.recent,
+            hasMoreRecent = feed.hasMoreRecent,
         )
     }
 

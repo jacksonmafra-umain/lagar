@@ -15,6 +15,7 @@ import app.lagar.domain.StatusFilter
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.navigation.Search
 import com.russhwolf.settings.MapSettings
+import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
@@ -41,6 +42,8 @@ class SearchViewModelTest {
     /** A catalog over a fake repository that counts how often the index is read. */
     private class FakeRepository : LagarRepository {
         var indexCalls = 0
+        var listingCalls = 0
+        var gate: CompletableDeferred<Unit>? = null
         val items = listOf(
             ListingItem("1", "Regeringsformen", "1974:152", "fundamental_law", "1974-02-28", null),
             ListingItem("2", "Skollag", "2010:800", "act", "2010-06-23", null),
@@ -51,8 +54,11 @@ class SearchViewModelTest {
             return ApiIndex(1, "t", listOf(ApiLayer("fundamental", 2, emptyList())))
         }
 
-        override suspend fun listing(layer: String, type: String?, page: Int) =
-            ListingPage(layer, type, page, 1, items.size, items)
+        override suspend fun listing(layer: String, type: String?, page: Int): ListingPage {
+            listingCalls++
+            gate?.await()
+            return ListingPage(layer, type, page, 1, items.size, items)
+        }
 
         override suspend fun document(id: String): DocumentResponse = error("unused")
     }
@@ -119,6 +125,30 @@ class SearchViewModelTest {
         advanceTimeBy(60)
         runCurrent()
         assertEquals(listOf("1"), vm.ids())
+    }
+
+    @Test
+    fun theFirstQueryShowsProgressWhileTheCatalogLoadsAndLaterOnesReuseIt() = runTest {
+        val repo = FakeRepository()
+        val vm = viewModel(repo)
+        runCurrent()
+        assertEquals(emptyList(), vm.ids())
+        val gate = CompletableDeferred<Unit>()
+        repo.gate = gate
+        vm.update(SearchQuery("skol"))
+        advanceTimeBy(300)
+        runCurrent()
+        assertIs<LoadState.Loading>(vm.results.value)
+        gate.complete(Unit)
+        runCurrent()
+        assertEquals(listOf("2"), vm.ids())
+        assertEquals(1, repo.listingCalls)
+        repo.gate = CompletableDeferred()
+        vm.update(SearchQuery("regering"))
+        advanceTimeBy(300)
+        runCurrent()
+        assertEquals(listOf("1"), vm.ids())
+        assertEquals(1, repo.listingCalls)
     }
 
     @Test
