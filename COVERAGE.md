@@ -19,7 +19,7 @@ type `sfs` on that date, all statute types together.
   date and dates in prose are not parsed.
 - Some older acts are available only in print. They are kept as stubs with a
   "Text available only in print" note and are flagged `print_only` by the audit.
-- N-series (Norrland-style `N` prefixed) numbering is stored as published, with
+- N-series numbering (numbers with an `N` prefix) is stored as published, with
   the `N` prefix kept in ids and numbers; the audit compares numbers literally.
 - Amendment history is not reconstructed. `amended_by`, `amended_through` and
   `reprinted_by` only list numbers; many of them point to acts not yet collected
