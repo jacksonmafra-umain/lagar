@@ -222,9 +222,6 @@ class BuildTest(unittest.TestCase):
                              ["2026:5", "N2026:5", "N2026:1"])
 
 
-if __name__ == "__main__":
-    unittest.main()
-
 
 class OutSafetyTest(unittest.TestCase):
     def test_symlinked_parent_rejected(self):
@@ -282,3 +279,7 @@ class SchemaErrorsTest(unittest.TestCase):
             for line in lines:
                 self.assertIn(str(path), line)
                 self.assertNotIn("['", line)
+
+
+if __name__ == "__main__":
+    unittest.main()
