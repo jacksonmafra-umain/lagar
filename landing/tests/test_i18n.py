@@ -71,6 +71,11 @@ class I18nTest(unittest.TestCase):
                 with self.subTest(key=key):
                     self.assertEqual(value, self.sv.get(key))
 
+    def test_toggle_name_contains_its_visible_text(self):
+        # WCAG 2.5.3: the toggle shows the other language's code
+        self.assertTrue(self.sv["nav.toggle"].startswith("EN"))
+        self.assertTrue(self.en["nav.toggle"].startswith("SV"))
+
     def test_no_empty_strings(self):
         for lang, strings in (("sv", self.sv), ("en", self.en)):
             for key, value in strings.items():
