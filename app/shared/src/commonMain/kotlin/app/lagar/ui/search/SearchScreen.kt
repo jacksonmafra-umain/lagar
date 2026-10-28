@@ -34,7 +34,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -44,6 +43,8 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
@@ -214,9 +215,10 @@ private fun SummaryRow(count: Int?, scope: Scope, onOpenAdvancedSearch: () -> Un
 @Composable
 private fun SearchInput(initial: String, autoFocus: Boolean, scope: Scope, onChange: (String) -> Unit, modifier: Modifier = Modifier) {
     val layers = LagarTheme.layers
-    var text by rememberSaveable { mutableStateOf(initial) }
+    var text by remember(initial) { mutableStateOf(initial) }
     val focus = remember { FocusRequester() }
     val focusManager = LocalFocusManager.current
+    val hint = stringResource(Res.string.home_search_hint)
     LaunchedEffect(Unit) { if (autoFocus) focus.requestFocus() }
     Surface(
         modifier = modifier,
@@ -236,7 +238,7 @@ private fun SearchInput(initial: String, autoFocus: Boolean, scope: Scope, onCha
                     text = it
                     onChange(it)
                 },
-                modifier = Modifier.weight(1f).focusRequester(focus),
+                modifier = Modifier.weight(1f).focusRequester(focus).semantics { contentDescription = hint },
                 singleLine = true,
                 textStyle = LagarTheme.type.bodyUi.copy(color = LagarTheme.colors.onSurface),
                 cursorBrush = SolidColor(layers.onTint(scope.key)),
@@ -246,7 +248,7 @@ private fun SearchInput(initial: String, autoFocus: Boolean, scope: Scope, onCha
                     Box(contentAlignment = Alignment.CenterStart) {
                         if (text.isEmpty()) {
                             Text(
-                                stringResource(Res.string.home_search_hint),
+                                hint,
                                 style = LagarTheme.type.bodyUi,
                                 color = LagarTheme.colors.onSurfaceVariant,
                                 maxLines = 1,
