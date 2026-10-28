@@ -7,3 +7,4 @@ local.properties
 .idea/
 collector/data/*-state.json
 xcuserdata/
+.vercel/
