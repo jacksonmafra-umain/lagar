@@ -139,4 +139,3 @@ def main(argv):
     out.write_text(render(report), encoding="utf-8")
     print(summary(report))
     return exit_code(report)
-
