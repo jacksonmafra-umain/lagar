@@ -24,7 +24,6 @@ import androidx.compose.ui.semantics.semantics
 import app.lagar.data.ListingItem
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
-import app.lagar.domain.DisplayLayer
 import app.lagar.resources.Res
 import app.lagar.resources.bookmark_remove
 import app.lagar.resources.ic_bookmark_filled
@@ -74,10 +73,11 @@ fun SparadeScreen(bookmarks: List<Bookmark>, onOpenDocument: (String) -> Unit, o
     ) {
         items(bookmarks, key = { it.id }) { b ->
             val item = ListingItem(b.id, b.title, b.number, b.type, issued = null, repealed = null)
+            val layer = b.displayLayer
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(spacing.xs)) {
                 StatuteRow(
                     item = item,
-                    layer = DisplayLayer.fromRoute(b.layer, b.type),
+                    layer = layer,
                     onClick = { onOpenDocument(b.id) },
                     modifier = Modifier.weight(1f),
                 )
@@ -93,7 +93,7 @@ fun SparadeScreen(bookmarks: List<Bookmark>, onOpenDocument: (String) -> Unit, o
                     Icon(
                         painterResource(Res.drawable.ic_bookmark_filled),
                         contentDescription = null,
-                        tint = LagarTheme.layers.onTint(LayerKey.SfsAct),
+                        tint = LagarTheme.layers.onTint(layer?.key ?: LayerKey.SfsAct),
                     )
                 }
             }

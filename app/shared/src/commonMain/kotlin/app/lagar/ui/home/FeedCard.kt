@@ -104,7 +104,7 @@ fun FeedCard(
                         overflow = TextOverflow.Ellipsis,
                     )
                 }
-                BookmarkButton(item.title, bookmarked, onToggleBookmark)
+                BookmarkButton(item.title, layer?.key ?: LayerKey.SfsAct, bookmarked, onToggleBookmark)
             }
             HorizontalDivider(Modifier.padding(top = spacing.sm, end = spacing.sm), color = colors.outlineVariant)
             FlowRow(
@@ -159,7 +159,7 @@ private fun ReadLink(key: LayerKey) {
 }
 
 @Composable
-private fun BookmarkButton(title: String, bookmarked: Boolean, onToggle: () -> Unit) {
+private fun BookmarkButton(title: String, key: LayerKey, bookmarked: Boolean, onToggle: () -> Unit) {
     val description = stringResource(if (bookmarked) Res.string.bookmark_remove else Res.string.bookmark_add, title)
     Box(
         modifier = Modifier
@@ -172,7 +172,7 @@ private fun BookmarkButton(title: String, bookmarked: Boolean, onToggle: () -> U
         Icon(
             painterResource(if (bookmarked) Res.drawable.ic_bookmark_filled else Res.drawable.ic_bookmark),
             contentDescription = null,
-            tint = if (bookmarked) LagarTheme.layers.onTint(LayerKey.SfsAct) else LagarTheme.colors.onSurfaceVariant,
+            tint = if (bookmarked) LagarTheme.layers.onTint(key) else LagarTheme.colors.onSurfaceVariant,
             modifier = Modifier.size(24.dp),
         )
     }
