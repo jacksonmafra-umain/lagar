@@ -9,6 +9,8 @@ Conventions:
 - Dates are `YYYY-MM-DD`. Timestamps are UTC, `YYYY-MM-DDTHH:MM:SSZ`.
 - `null` is used for unknown or not-applicable values; keys are never omitted.
 - Canonical examples live in `docs/api/examples/` and mirror the paths below.
+  They include a series listing (`sfs/ordinance/index-1.json`) and an empty layer
+  listing (`eu/index-1.json`: `items: []`, `page_count: 1`, `total: 0`).
 
 ## Vocabulary
 
@@ -23,6 +25,28 @@ Types and the layer each belongs to:
 | `act` | `sfs` |
 | `ordinance` | `sfs` |
 | `other_statute` | `sfs` |
+
+## Display levels
+
+The app shows nine levels; API layers map onto them as follows.
+
+| display level | API source |
+| --- | --- |
+| fundamental | layer `fundamental` |
+| SFS acts | layer `sfs`, type `act` (SFS lagar) |
+| SFS ordinances | layer `sfs`, type `ordinance` (SFS förordningar) |
+| agency | layer `agency` |
+| case law | layer `case_law` |
+| EU | layer `eu` |
+| region | layer `region` |
+| municipality | layer `municipality` |
+| service | layer `service` |
+
+Type `other_statute` (layer `sfs`) is shown under the SFS acts colour group as
+"other statutes".
+
+`DESIGN.md` palette keys use hyphens (`case-law`, `sfs-act`, `sfs-ordinance`);
+API ids use underscores (`case_law`, `act`, `ordinance`).
 
 ## `GET index.json`
 

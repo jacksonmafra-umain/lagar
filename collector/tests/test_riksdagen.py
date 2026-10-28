@@ -94,6 +94,73 @@ class RiksdagenTests(unittest.TestCase):
         self.assertEqual(parsed.header, {"SFS nr": "2000:1", "Ändrad": ""})
         self.assertEqual(parsed.body, "1 § Text här.")
 
+    def test_chapter_reference_sentence_is_not_a_heading(self):
+        md = riksdagen.to_markdown("T", "7 kap. 3 § gäller inte.\n\n8 kap. Straff")
+        self.assertNotIn("## 7 kap.", md)
+        self.assertIn("\n\n7 kap. 3 § gäller inte.\n\n", md)
+        self.assertIn("\n\n## 8 kap. Straff\n", md)
+
+    def test_amendment_needs_sentence_boundary(self):
+        body = "1 § Detta följer av vad som anges i se Lag (2000:1).\n\n2 § Text. Lag (2001:2)."
+        self.assertEqual(riksdagen.amendments(body), ["2001:2"])
+        self.assertEqual(riksdagen.amendments("Lag (2000:1)."), ["2000:1"])
+        self.assertEqual(
+            riksdagen.amendments("1 § Text. Lag (2000:1). Lag (2000:2)."), ["2000:1", "2000:2"]
+        )
+
+    def test_header_continues_past_blank_line_before_known_key(self):
+        parsed = riksdagen.parse_text(
+            "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÖvrig text:  \n\nUpphävd: 1994-04-01\n"
+            "Källa: Regeringskansliet\n\n1 § Text.\n"
+        )
+        self.assertEqual(parsed.header["Upphävd"], "1994-04-01")
+        self.assertEqual(parsed.body, "1 § Text.")
+
+    def test_wrapped_overig_text_is_continuation_and_upphavd_kept(self):
+        parsed = riksdagen.parse_text(
+            "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÖvrig text: Rättelseblad har\niakttagits.\n"
+            "Upphävd: 1994-04-01\nKälla: Regeringskansliet\n\n1 § Text.\n"
+        )
+        self.assertEqual(parsed.header["Övrig text"], "Rättelseblad har iakttagits.")
+        self.assertEqual(parsed.header["Upphävd"], "1994-04-01")
+        self.assertEqual(parsed.body, "1 § Text.")
+
+    def test_wrapped_overig_text_after_blank_line_raises(self):
+        with self.assertRaises(ValueError):
+            riksdagen.parse_text(
+                "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÖvrig text: a\n\nfortsättning\n"
+                "Upphävd: 1994-04-01\nKälla: R\n\n1 § Text.\n"
+            )
+
+    def test_unlisted_key_before_kalla_raises_never_drops_upphavd(self):
+        with self.assertRaises(ValueError):
+            riksdagen.parse_text(
+                "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÄndrad:  \nÄndringsregister: x\n"
+                "Upphävd: 1994-04-01\nKälla: R\n\n1 § Text.\n"
+            )
+        # Directly after `Övrig text` it is read as a continuation: parsed, not dropped.
+        parsed = riksdagen.parse_text(
+            "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÖvrig text:  \nÄndringsregister: x\n"
+            "Upphävd: 1994-04-01\nKälla: R\n\n1 § Text.\n"
+        )
+        self.assertEqual(parsed.header["Upphävd"], "1994-04-01")
+
+    def test_header_must_start_within_five_lines_after_title(self):
+        raw = "Lag (1900:1) om x\n" + "".join(f"Rad {n}\n" for n in range(6)) + "SFS nr: 1900:1\nKälla: R\n\n1 § Text.\n"
+        parsed = riksdagen.parse_text(raw)
+        self.assertEqual(parsed.header, {})
+        self.assertTrue(parsed.body.startswith("Rad 0"))
+        self.assertIn("SFS nr: 1900:1", parsed.body)
+        near = "Lag (1900:1) om x\n" + "".join(f"Rad {n}\n" for n in range(4)) + "SFS nr: 1900:1\nKälla: R\n\n1 § Text.\n"
+        self.assertEqual(riksdagen.parse_text(near).header["SFS nr"], "1900:1")
+
+    def test_header_ends_at_first_non_key_line(self):
+        parsed = riksdagen.parse_text(
+            "Lag (1900:1) om x\n\nSFS nr: 1900:1\n\nInledning: något\n\n1 § Text.\n"
+        )
+        self.assertEqual(parsed.header, {"SFS nr": "1900:1"})
+        self.assertTrue(parsed.body.startswith("Inledning: något"))
+
     def test_text_preserved_by_markdown(self):
         for dok_id in FIXTURE_IDS:
             body = riksdagen.parse_text(text(dok_id)).body
@@ -140,6 +207,25 @@ class TitleTests(unittest.TestCase):
             "titel": "/Rubriken träder i kraft I:2027-01-01/\nLag (2026:957) om nya saker",
             "datum": "2026-01-01", "systemdatum": "x", "organ": ""}]}})
         self.assertEqual(riksdagen.parse_listing(raw)[0][0].title, "Lag (2026:957) om nya saker")
+
+    def test_statute_title_strips_trailing_semicolon_once_for_all_callers(self):
+        raw = "Successionsordning (1810:0926);\n"
+        self.assertEqual(riksdagen.statute_title(raw), "Successionsordning (1810:0926)")
+        listing = json.dumps({"dokumentlista": {"@sidor": "1", "dokument": [{
+            "dok_id": "sfs-1810-0926", "beteckning": "1810:0926", "titel": raw,
+            "datum": "1810-09-26", "systemdatum": "x", "organ": ""}]}})
+        item = riksdagen.parse_listing(listing)[0][0]
+        self.assertEqual(item.title, "Successionsordning (1810:0926)")
+        self.assertEqual(riksdagen.statute_title(item.title), item.title)
+
+    def test_item_type_matches_classify_of_cleaned_title(self):
+        item = riksdagen.ListingItem("sfs-2026-5", "2026:5", "Förordning (2026:5) om x;", None, "x", None)
+        self.assertEqual(riksdagen.item_type(item), "ordinance")
+        item = riksdagen.ListingItem("sfs-1974-152", "1974:152", "Kungörelse (1974:152);", None, "x", None)
+        self.assertEqual(riksdagen.item_type(item), "fundamental_law")
+
+    def test_amendments_note_at_end_of_body(self):
+        self.assertEqual(riksdagen.amendments("1 § Text.\n\nFörordning (N2026:1)."), ["N2026:1"])
 
 
 if __name__ == "__main__":

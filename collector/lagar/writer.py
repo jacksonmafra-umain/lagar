@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 
 from . import frontmatter, schema
-from .riksdagen import FUNDAMENTAL_LAWS, amendments, classify, clean_title, to_markdown
+from .riksdagen import FUNDAMENTAL_LAWS, amendments, item_type, statute_title, to_markdown
 from .vocabulary import TYPES
 
 _SFS_NUMBER = re.compile(r"\bN?\d{4}:\d+")
@@ -29,8 +29,8 @@ def build_meta(item, parsed, raw_sha256, fetched_at):
     if item.dok_id in FUNDAMENTAL_LAWS:
         title = FUNDAMENTAL_LAWS[item.dok_id]
     else:
-        title = clean_title(item.title).removesuffix(";").strip()
-    type_ = classify(clean_title(item.title).removesuffix(";").strip(), item.dok_id)
+        title = statute_title(item.title)
+    type_ = item_type(item)
     changed = _SFS_NUMBER.search(header.get("Ändrad", ""))
     ministry = item.ministry or header.get("Departement/myndighet", "").strip() or None
     return {
@@ -40,9 +40,11 @@ def build_meta(item, parsed, raw_sha256, fetched_at):
         "layer": TYPES[type_],
         "number": item.number,
         "issued": item.issued or _date(header.get("Utfärdad")),
-        "in_force": _date(header.get("Ikraft")),
+        # Riksdagen texts have no entry-into-force header (`Ikraft` is never sent),
+        # and dates in prose are not parsed, so this stays null for now.
+        "in_force": None,
         "repealed": _date(header.get("Upphävd")),
-        "amended_by": amendments(parsed.body),
+        "amended_by": [n for n in amendments(parsed.body) if n != item.number],
         "amended_through": changed.group(0) if changed else None,
         "reprinted_by": _SFS_NUMBER.findall(header.get("Omtryck", "")),
         "ministry": ministry,
@@ -60,11 +62,23 @@ def path_for(meta, root):
     return Path(root).joinpath(*_DIRS[meta["type"]], name)
 
 
+def _stale_paths(meta, root):
+    """Existing files for the same id under another type folder."""
+    current = path_for(meta, root)
+    found = []
+    for type_ in _DIRS:
+        other = path_for({**meta, "type": type_}, root)
+        if other != current and other.exists():
+            found.append(other)
+    return found
+
+
 def write(meta, body_md, root):
     errors = schema.validate(meta)
     if errors:
         raise ValueError("invalid frontmatter: " + "; ".join(errors))
     path = path_for(meta, root)
+    stale = _stale_paths(meta, root)
     path.parent.mkdir(parents=True, exist_ok=True)
     content = "---\n" + frontmatter.dump(meta) + "---\n" + body_md
     fd, tmp = tempfile.mkstemp(dir=path.parent, prefix=".tmp-", suffix=".md")
@@ -76,4 +90,6 @@ def write(meta, body_md, root):
         if os.path.exists(tmp):
             os.unlink(tmp)
         raise
+    for old in stale:
+        old.unlink()
     return path
