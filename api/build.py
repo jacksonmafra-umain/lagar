@@ -5,6 +5,7 @@ Usage: python3 -I api/build.py --corpus corpus --out build/api/v1 [--built-at <U
 
 import argparse
 import json
+import os
 import shutil
 import sys
 from datetime import datetime, timezone
@@ -102,6 +103,18 @@ def build(docs, out, built_at):
     return len(layers), len(written)
 
 
+def _check_no_symlinks(out):
+    """Reject --out when it or any parent is a symlink (checked before resolving).
+
+    Root-owned links such as macOS /var -> /private/var are system layout, not
+    something a typo can introduce, so they are tolerated.
+    """
+    path = Path(os.path.abspath(out))
+    for candidate in (path, *path.parents):
+        if candidate.is_symlink() and candidate.lstat().st_uid != 0:
+            raise BuildError(f"--out must not be or sit under a symlink: {candidate}")
+
+
 def _check_out(out, corpus):
     out, corpus = out.resolve(), corpus.resolve()
     if (
@@ -128,6 +141,7 @@ def main(argv):
             raise BuildError(f"corpus directory not found: {corpus}")
         if out.is_symlink() or (out.exists() and not out.is_dir()):
             raise BuildError(f"--out must be a directory, not a file or symlink: {out}")
+        _check_no_symlinks(out)
         _check_out(out, corpus)
         docs = load_corpus(corpus)  # fail before clearing anything
         if out.exists():

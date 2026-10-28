@@ -224,3 +224,15 @@ class BuildTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class OutSafetyTest(unittest.TestCase):
+    def test_symlinked_parent_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            real = Path(tmp) / "real"
+            real.mkdir()
+            (Path(tmp) / "link").symlink_to(real)
+            result = run_build(Path(tmp) / "link" / "v1")
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("symlink", result.stderr)
+            self.assertFalse((real / "v1").exists())
