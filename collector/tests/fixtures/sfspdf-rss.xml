@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://svenskforfattningssamling.se/">
+  <channel>
+    <title>Start</title>
+    <link>https://svenskforfattningssamling.se/</link>
+    <description/>
+    <language>sv</language>
+<item>
+  <title>Förordning om ändring i förordningen (2026:1140) om ändring i socialtjänstförordningen (2025:468)</title>
+  <link>https://svenskforfattningssamling.se/doc/20261832.html</link>
+  <description>&lt;a href="https://svenskforfattningssamling.se/doc/20261832.html"&gt;Förordning om ändring&lt;/a&gt;</description>
+  <pubDate>tis, 27 okt 2026 13:00:00 +0100</pubDate>
+    <dc:creator>2026:1832</dc:creator>
+    <guid isPermaLink="false">7f63ca0d-c148-4b14-99f6-59f5019f4357</guid>
+</item>
+<item>
+  <title>Förordning om ändring i förordningen (2026:1126) om ändring i socialtjänstförordningen (2025:468)</title>
+  <link>https://svenskforfattningssamling.se/doc/20261831.html</link>
+  <description>&lt;a href="https://svenskforfattningssamling.se/doc/20261831.html"&gt;Förordning om ändring&lt;/a&gt;</description>
+  <pubDate>tis, 27 okt 2026 13:00:00 +0100</pubDate>
+    <dc:creator>2026:1831</dc:creator>
+    <guid isPermaLink="false">4dbeda20-732b-4896-9eac-3c0335a03870</guid>
+</item>
+  </channel>
+</rss>

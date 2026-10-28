@@ -7,3 +7,6 @@ local.properties
 .idea/
 collector/data/*-state.json
 xcuserdata/
+
+# Local caches of downloaded source bytes (only manifests are committed)
+sources/cache/
