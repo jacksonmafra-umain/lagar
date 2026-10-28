@@ -10,6 +10,7 @@ The repo holds the Python collector (`collector/`, SFS from Riksdagen open data)
 - `docs/architecture.md` — app information architecture: normative-layer hierarchy, context engine, 4-tab shell (Utforska / Hierarki / Sparade / Tjänster), onboarding and navigation flows. Some features it describes go beyond the spec (reading a law as of a past date, version comparator, inline notes, GPS kommun detection); the static API in the spec does not yet expose historical text, so check with the owner before building those.
 - `DESIGN.md` — the chosen design system ("Nordic Juridisk Klarhet"): M3 color roles (light + dark), layer colors, typography, radii, spacing, Liquid Glass elevation spec, Compose implementation notes. Started from `design/stitch/nordic_juridisk_klarhet/DESIGN.md` but has since been extended (dark mode, accessible layer text colors); the root file is canonical, the Stitch copy is the untouched export.
 - `design/stitch/` — Google Stitch export (`code.html` + `screen.png` per screen).
+- `docs/screens.md` — inventory of every app screen: route, design references, features with status, and the issue for each gap. Keep it current when a screen changes.
 
 ## Commands
 
