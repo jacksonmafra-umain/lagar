@@ -23,8 +23,6 @@ import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.MaterialTheme
@@ -86,6 +84,7 @@ import app.lagar.resources.meta_in_force
 import app.lagar.resources.picker_clear
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.BackTopBar
+import app.lagar.ui.common.LagarButton
 import app.lagar.ui.common.iconColor
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.typeNameRes
@@ -248,16 +247,16 @@ fun AdvancedSearchScreen(
             border = BorderStroke(1.dp, LagarTheme.colors.outlineVariant),
         ) {
             val accent = layers.accent(scope.key)
-            Button(
+            LagarButton(
                 onClick = { onSearch(query) },
                 enabled = canSearch,
                 modifier = Modifier
                     .windowInsetsPadding(WindowInsets.navigationBars)
                     .imePadding()
                     .padding(horizontal = spacing.marginMobile, vertical = spacing.sm)
-                    .fillMaxWidth()
-                    .heightIn(min = ShellDimens.TouchTarget),
-                colors = ButtonDefaults.buttonColors(containerColor = accent, contentColor = accent.iconColor()),
+                    .fillMaxWidth(),
+                containerColor = accent,
+                contentColor = accent.iconColor(),
             ) { Text(stringResource(Res.string.home_search_submit), fontWeight = FontWeight.Bold) }
         }
         BackTopBar(hazeState, onBack, { headerHeight = it }, Modifier.align(Alignment.TopCenter)) {
