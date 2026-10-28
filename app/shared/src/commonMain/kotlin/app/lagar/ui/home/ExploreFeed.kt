@@ -28,7 +28,6 @@ import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import app.lagar.data.ListingItem
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
