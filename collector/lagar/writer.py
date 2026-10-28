@@ -48,8 +48,8 @@ def build_meta(item, parsed, raw_sha256, fetched_at):
         "layer": TYPES[type_],
         "number": item.number,
         "issued": item.issued or _date(header.get("Utfärdad")),
-        # Riksdagen texts have no entry-into-force header (`Ikraft` is never sent),
-        # and dates in prose are not parsed, so this stays null for now.
+        # Riksdagen texts have no entry-into-force header (`Ikraft` is never sent);
+        # the SFSR register collector fills it, see keep_register_fields.
         "in_force": None,
         "repealed": _date(header.get("Upphävd")),
         "amended_by": [n for n in amendments(parsed.body) if n != item.number],
@@ -68,6 +68,41 @@ def build_meta(item, parsed, raw_sha256, fetched_at):
 def path_for(meta, root):
     name = meta["id"].removeprefix("sfs-") + ".md"
     return Path(root).joinpath(*_DIRS[meta["type"]], name)
+
+
+def existing_path(doc_id, root):
+    """The stored file for `doc_id` under any type folder, or None."""
+    found = [
+        p for p in (path_for({"id": doc_id, "type": t}, root) for t in _DIRS) if p.exists()
+    ]
+    if len(found) > 1:
+        raise ValueError(f"{doc_id} is stored more than once: {', '.join(map(str, found))}")
+    return found[0] if found else None
+
+
+# Fields filled by the SFSR register collector (sfsr.py), not from the Riksdagen text.
+REGISTER_FIELDS = ("in_force", "amendments")
+
+
+def keep_register_fields(meta, root):
+    """Copy register-derived fields from the stored file into a freshly built `meta`.
+
+    The Riksdagen text has no entry-into-force date and no amendment register, so
+    a rewrite from it must not erase what the register collector stored.
+    """
+    path = existing_path(meta["id"], root)
+    if path is None:
+        return meta
+    try:
+        stored, _ = frontmatter.load(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return meta
+    merged = dict(meta)
+    if merged.get("in_force") is None and stored.get("in_force") is not None:
+        merged["in_force"] = stored["in_force"]
+    if "amendments" in stored and "amendments" not in merged:
+        merged["amendments"] = stored["amendments"]
+    return merged
 
 
 def _stale_paths(meta, root):

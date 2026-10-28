@@ -203,6 +203,29 @@ class WriterTests(unittest.TestCase):
             self.assertTrue(new.exists())
             self.assertTrue(unrelated.exists())
 
+    def test_keep_register_fields(self):
+        meta = writer.build_meta(
+            item("sfs-1999-175", "1999:175", "Förordning (1999:175) om test", "1999-03-25", None),
+            parsed("sfs-1999-175"), SHA, NOW,
+        )
+        amendment = {
+            "number": "2000:1", "title": None, "scope": "\u00e4ndr. 1 \u00a7", "preparatory_works": None,
+            "celex": None, "in_force": None, "in_force_raw": None,
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual(writer.keep_register_fields(meta, tmp), meta)
+            writer.write({**meta, "in_force": "1999-07-01", "amendments": [amendment]}, "# T\n", tmp)
+            kept = writer.keep_register_fields(meta, tmp)
+            self.assertEqual(kept["in_force"], "1999-07-01")
+            self.assertEqual(kept["amendments"], [amendment])
+            # A value from the text itself would win over the stored one.
+            self.assertEqual(
+                writer.keep_register_fields({**meta, "in_force": "1999-08-01"}, tmp)["in_force"],
+                "1999-08-01",
+            )
+            self.assertEqual(writer.existing_path(meta["id"], tmp), writer.path_for(meta, tmp))
+            self.assertIsNone(writer.existing_path("sfs-1-1", tmp))
+
     def test_write_failure_leaves_no_temp_file(self):
         it = item("sfs-2026-5", "2026:5", "Förordning (2026:5) om x", "2026-01-01", None)
         meta = writer.build_meta(it, riksdagen.parse_text("SFS nr: 2026:5\n\nText"), SHA, NOW)

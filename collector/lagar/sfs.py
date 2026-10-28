@@ -26,7 +26,7 @@ from .riksdagen import (
     statute_title,
     to_markdown,
 )
-from .writer import build_meta, corpus_id, path_for, write
+from .writer import build_meta, corpus_id, keep_register_fields, path_for, write
 
 USER_AGENT = "lagar-collector/0.1 (+https://github.com/jacksonmafra-umain/lagar)"
 BASE = "https://data.riksdagen.se"
@@ -251,6 +251,7 @@ def _store(client, dok_id, item, corpus):
         item = _fundamental_item(dok_id, parsed, text)
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     meta = build_meta(item, parsed, hashlib.sha256(raw).hexdigest(), fetched_at)
+    meta = keep_register_fields(meta, corpus)
     if _unchanged(meta, corpus):
         return item, False
     write(meta, to_markdown(meta["title"], parsed.body), corpus)

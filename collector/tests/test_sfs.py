@@ -7,13 +7,22 @@ import unittest
 import urllib.error
 from pathlib import Path
 
-from lagar import sfs
+from lagar import frontmatter, sfs
 from lagar.http import Blocked
 from lagar.riksdagen import FUNDAMENTAL_LAWS
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 ROBOTS = "https://data.riksdagen.se/robots.txt"
 TEXT = (FIXTURES / "sfs-1999-175.text").read_bytes()
+AMENDMENT = {
+    "number": "2001:5",
+    "title": "Lag (2001:5) om \u00e4ndring i lagen (2000:1) om test",
+    "scope": "\u00e4ndr. 1 \u00a7",
+    "preparatory_works": None,
+    "celex": None,
+    "in_force": "2001-03-01",
+    "in_force_raw": "2001-03-01",
+}
 
 
 def http_error(url, code):
@@ -366,6 +375,38 @@ class SfsTests(unittest.TestCase):
         self.assertEqual((summary.written, summary.unchanged), (0, 1))
         self.assertEqual(path.read_bytes(), before)
         self.assertEqual(self.state()["done"]["sfs-2000-1"], "2026-02-01 00:00:00")
+
+    def _add_register_fields(self, path):
+        meta, body = frontmatter.load(path.read_text(encoding="utf-8"))
+        meta["in_force"] = "2000-07-01"
+        meta["amendments"] = [AMENDMENT]
+        path.write_text("---\n" + frontmatter.dump(meta) + "---\n" + body, encoding="utf-8")
+        return path.read_bytes()
+
+    def test_register_fields_keep_an_unchanged_file_untouched(self):
+        first = listing_json(["sfs-2000-1"], systemdatum="2026-01-01 00:00:00")
+        sfs.run(FakeClient({"dokumentlista": first}), self.args())
+        path = next(self.corpus.rglob("*.md"))
+        before = self._add_register_fields(path)
+        second = listing_json(["sfs-2000-1"], systemdatum="2026-02-01 00:00:00")
+        summary = sfs.run(FakeClient({"dokumentlista": second}), self.args())
+        self.assertEqual((summary.written, summary.unchanged), (0, 1))
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_rewrite_keeps_register_fields(self):
+        first = listing_json(["sfs-2000-1"], systemdatum="2026-01-01 00:00:00")
+        sfs.run(FakeClient({"dokumentlista": first}), self.args())
+        path = next(self.corpus.rglob("*.md"))
+        self._add_register_fields(path)
+        old_sha = frontmatter.load(path.read_text(encoding="utf-8"))[0]["source_sha256"]
+        second = listing_json(["sfs-2000-1"], systemdatum="2026-02-01 00:00:00")
+        changed = TEXT.replace(b"\n\n", b"\n\nNy mening.\n\n", 1)
+        summary = sfs.run(FakeClient({"dokumentlista": second, ".text": changed}), self.args())
+        self.assertEqual(summary.written, 1)
+        meta, _ = frontmatter.load(path.read_text(encoding="utf-8"))
+        self.assertNotEqual(meta["source_sha256"], old_sha)
+        self.assertEqual(meta["in_force"], "2000-07-01")
+        self.assertEqual(meta["amendments"], [AMENDMENT])
 
     def test_changed_source_is_rewritten(self):
         first = listing_json(["sfs-2000-1"], systemdatum="2026-01-01 00:00:00")
