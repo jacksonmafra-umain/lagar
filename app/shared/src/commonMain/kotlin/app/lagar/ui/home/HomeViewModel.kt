@@ -89,7 +89,8 @@ class HomeViewModel(
     }
 
     fun toggleBookmark(item: ListingItem) {
-        bookmarkStore.toggle(Bookmark(item.id, item.title, item.number, item.type, item.displayLayer()?.apiLayer ?: DisplayLayer.SfsAct.apiLayer))
+        val layer = item.displayLayer()?.apiLayer ?: DisplayLayer.SfsAct.apiLayer
+        bookmarkStore.toggle(Bookmark(item.id, item.title, item.number, item.type, layer, item.issued, item.repealed))
     }
 
     private companion object {
