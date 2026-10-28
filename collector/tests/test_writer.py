@@ -51,6 +51,19 @@ class WriterTests(unittest.TestCase):
         self.assertIsNone(meta["eli"])
         self.assertIsNone(meta["in_force"])
 
+    def test_build_meta_drops_own_number_from_amended_by(self):
+        it = item("sfs-2026-337", "2026:337", "Förordning om test (2026:337)",
+                  "2026-05-01", "Justitiedepartementet")
+        p = riksdagen.parse_text(
+            "Förordning om test\n\n"
+            "1 §   Text.\n\n"
+            "2 §   Mer text.\n\n"
+            "Förordning (2026:337).\n\n"
+            "Förordning (2026:400).\n")
+        meta = writer.build_meta(it, p, SHA, NOW)
+        self.assertNotIn("2026:337", meta["amended_by"])
+        self.assertIn("2026:400", meta["amended_by"])
+
     def test_build_meta_fundamental_title(self):
         it = item("sfs-1974-152", "1974:152", "Kungörelse (1974:152) om beslutad ny regeringsform;",
                   "1974-02-28", "Justitiedepartementet L6")

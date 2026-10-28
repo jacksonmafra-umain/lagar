@@ -42,7 +42,7 @@ def build_meta(item, parsed, raw_sha256, fetched_at):
         "issued": item.issued or _date(header.get("Utfärdad")),
         "in_force": _date(header.get("Ikraft")),
         "repealed": _date(header.get("Upphävd")),
-        "amended_by": amendments(parsed.body),
+        "amended_by": [n for n in amendments(parsed.body) if n != item.number],
         "amended_through": changed.group(0) if changed else None,
         "reprinted_by": _SFS_NUMBER.findall(header.get("Omtryck", "")),
         "ministry": ministry,
