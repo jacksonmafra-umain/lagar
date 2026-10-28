@@ -17,7 +17,8 @@
     "authoritative": false,
     "source": "https://data.riksdagen.se/dokument/sfs-1999-175",
     "source_sha256": "9f2b6c1d4e8a7035b1c6d2e9f4a83b70c5d1e6f2a9b84c3d7e0f1a2b3c4d5e6f",
-    "fetched_at": "2026-10-27T10:00:00Z"
+    "fetched_at": "2026-10-27T10:00:00Z",
+    "amendments": null
   },
   "body": "# Rättsinformationsförordning (1999:175)\n\nEtt offentligt rättsinformationssystem\n\n**1 §** I syfte att tillförsäkra den offentliga förvaltningen och enskilda tillgång till grundläggande rättsinformation i elektronisk form skall det finnas ett offentligt rättsinformationssystem.\n"
 }

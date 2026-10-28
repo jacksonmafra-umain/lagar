@@ -1,0 +1,33 @@
+{
+  "entries": [
+    {
+      "amendments": 370,
+      "bytes": 376141,
+      "number": "1962:700",
+      "other_entries": [],
+      "retrieved_at": "2026-10-28T23:22:06Z",
+      "sha256": "d2c819712456d1b8725e2d5e0f14a5097e093634f2ce0e8b83b354f262f8b7d3",
+      "url": "https://rkrattsbaser.gov.se/sfsr?bet=1962:700"
+    },
+    {
+      "amendments": 47,
+      "bytes": 61145,
+      "number": "1974:152",
+      "other_entries": [],
+      "retrieved_at": "2026-10-28T23:22:04Z",
+      "sha256": "173ee9f1fb83decb64ed07207ba11e766756fab5cc1f0bfd7cb7e54d0132df2a",
+      "url": "https://rkrattsbaser.gov.se/sfsr?bet=1974:152"
+    },
+    {
+      "amendments": 181,
+      "bytes": 219129,
+      "number": "1998:808",
+      "other_entries": [],
+      "retrieved_at": "2026-10-28T23:22:08Z",
+      "sha256": "7f8fb6fab384179e5e4e5d16a51ea888a82a0dabfabd5807becd5c87827540fd",
+      "url": "https://rkrattsbaser.gov.se/sfsr?bet=1998:808"
+    }
+  ],
+  "source": "https://rkrattsbaser.gov.se",
+  "version": 1
+}

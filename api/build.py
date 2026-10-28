@@ -87,6 +87,13 @@ def _pages(out, rel_dir, layer, type_, items, written):
         }, written)
 
 
+def doc_meta(meta):
+    """Frontmatter as served; `amendments` is null until the register was collected."""
+    served = dict(meta)
+    served.setdefault("amendments", None)
+    return served
+
+
 def build(docs, out, built_at):
     out = Path(out)
     written = []
@@ -105,7 +112,7 @@ def build(docs, out, built_at):
         _pages(out, f"{layer}/", layer, None, in_layer, written)
         layers.append({"id": layer, "count": len(in_layer), "series": series})
     for meta, body in sorted(docs, key=lambda d: d[0]["id"]):
-        _write(out, f"docs/{meta['id']}.json", {"meta": meta, "body": body}, written)
+        _write(out, f"docs/{meta['id']}.json", {"meta": doc_meta(meta), "body": body}, written)
     _write(out, "index.json", {"api_version": API_VERSION, "built_at": built_at, "layers": layers}, written)
     return len(layers), len(written)
 

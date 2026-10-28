@@ -10,21 +10,28 @@ completeness: read this file next to those numbers.
 | --- | --- | --- |
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
 | SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
+| SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
 
 The SFS target (11567 documents) is the number Riksdagen lists for document
 type `sfs` on that date, all statute types together.
 
 ## Known gaps
 
-- `in_force` is `null` everywhere: the source does not provide an entry-into-force
-  date and dates in prose are not parsed.
+- `in_force` and `amendments` come from the SFS register (SFSR) and are filled
+  only for the pilot statutes (Regeringsformen, Brottsbalken, Miljöbalken). All
+  other statutes have `in_force: null` and no `amendments`: Riksdagen gives no
+  entry-into-force date and dates in prose are not parsed. The register itself
+  has no `Ikraft` for Regeringsformen and for most amendments before about 1982.
 - Some older acts are available only in print. They are kept as stubs with a
   "Text available only in print" note and are flagged `print_only` by the audit.
 - N-series numbering (numbers with an `N` prefix) is stored as published, with
   the `N` prefix kept in ids and numbers; the audit compares numbers literally.
-- Amendment history is not reconstructed. `amended_by`, `amended_through` and
+- Amendment history is metadata only. `collector/history.py` builds one commit
+  per amendment from the register (pilot statutes), dated at entry into force or
+  a noted fallback, but historical text is not reconstructed: no open source has
+  consolidated text as of a past date. `amended_by`, `amended_through` and
   `reprinted_by` only list numbers; many of them point to acts not yet collected
-  (the audit reports the count). History reconstruction is tracked in #7.
+  (the audit reports the count).
 - Authoritative PDFs from svenskforfattningssamling.se (acts published from
   2018-04 on) are recorded in `sources/sfs-pdf-manifest.json` with their
   SHA-256, but only a five-act sample of 2026 is in it so far; the full crawl
