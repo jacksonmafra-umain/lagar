@@ -48,7 +48,7 @@ fun appModule(config: DataSourceConfig) = module {
     single { GeoRepository() }
     single { Catalog(get()) }
     viewModel { HierarkiViewModel(get()) }
-    viewModel { HomeViewModel(get(), get(), get(), get(), get()) }
+    viewModel { HomeViewModel(get(), get(), get(), get()) }
     viewModel { OnboardingViewModel(get(), get()) }
     viewModel { (layer: String, type: String?) -> LayerListViewModel(get(), layer, type) }
     viewModel { (id: String) -> ReaderViewModel(get(), id) }

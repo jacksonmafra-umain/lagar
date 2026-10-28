@@ -22,7 +22,7 @@ class Catalog(private val repo: LagarRepository) {
     private suspend fun load(scope: Scope): List<ListingItem> {
         val index = repo.index()
         val items = scope.layers.filter { index.count(it) > 0 }.flatMap { loadLayer(it) }
-        return items.sortedWith(compareByDescending<ListingItem> { it.issued != null }.thenByDescending { it.issued })
+        return items.sortedWith(NewestFirst)
     }
 
     private suspend fun loadLayer(layer: DisplayLayer): List<ListingItem> {
@@ -38,3 +38,7 @@ class Catalog(private val repo: LagarRepository) {
         return items
     }
 }
+
+/** Newest `issued` first, items without a date last; stable, so equal dates keep their listing order. */
+internal val NewestFirst: Comparator<ListingItem> =
+    compareByDescending<ListingItem> { it.issued != null }.thenByDescending { it.issued }
