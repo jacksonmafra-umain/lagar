@@ -170,6 +170,25 @@ class TitleTests(unittest.TestCase):
             "datum": "2026-01-01", "systemdatum": "x", "organ": ""}]}})
         self.assertEqual(riksdagen.parse_listing(raw)[0][0].title, "Lag (2026:957) om nya saker")
 
+    def test_statute_title_strips_trailing_semicolon_once_for_all_callers(self):
+        raw = "Successionsordning (1810:0926);\n"
+        self.assertEqual(riksdagen.statute_title(raw), "Successionsordning (1810:0926)")
+        listing = json.dumps({"dokumentlista": {"@sidor": "1", "dokument": [{
+            "dok_id": "sfs-1810-0926", "beteckning": "1810:0926", "titel": raw,
+            "datum": "1810-09-26", "systemdatum": "x", "organ": ""}]}})
+        item = riksdagen.parse_listing(listing)[0][0]
+        self.assertEqual(item.title, "Successionsordning (1810:0926)")
+        self.assertEqual(riksdagen.statute_title(item.title), item.title)
+
+    def test_item_type_matches_classify_of_cleaned_title(self):
+        item = riksdagen.ListingItem("sfs-2026-5", "2026:5", "Förordning (2026:5) om x;", None, "x", None)
+        self.assertEqual(riksdagen.item_type(item), "ordinance")
+        item = riksdagen.ListingItem("sfs-1974-152", "1974:152", "Kungörelse (1974:152);", None, "x", None)
+        self.assertEqual(riksdagen.item_type(item), "fundamental_law")
+
+    def test_amendments_note_at_end_of_body(self):
+        self.assertEqual(riksdagen.amendments("1 § Text.\n\nFörordning (N2026:1)."), ["N2026:1"])
+
 
 if __name__ == "__main__":
     unittest.main()

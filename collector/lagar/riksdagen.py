@@ -57,6 +57,11 @@ def clean_title(raw):
     return current or future or collapse_whitespace(parts[0])
 
 
+def statute_title(raw):
+    """The one cleaned title: single line, current rename, no trailing `;`."""
+    return clean_title(raw).removesuffix(";").strip()
+
+
 @dataclass
 class ListingItem:
     dok_id: str
@@ -82,7 +87,7 @@ def parse_listing(raw):
             ListingItem(
                 dok_id=doc["dok_id"],
                 number=doc["beteckning"],
-                title=clean_title(doc.get("titel") or ""),
+                title=statute_title(doc.get("titel") or ""),
                 issued=(doc.get("datum") or "").strip() or None,
                 systemdatum=doc.get("systemdatum") or "",
                 ministry=(doc.get("organ") or "").strip() or None,
@@ -132,6 +137,11 @@ def classify(title, dok_id):
     if first == "lag" or first.endswith("lag") or first.endswith("balk"):
         return "act"
     return "other_statute"
+
+
+def item_type(item):
+    """Document type of a listing item; the single source for path and frontmatter."""
+    return classify(statute_title(item.title), item.dok_id)
 
 
 def _number_order(number):
