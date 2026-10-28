@@ -326,5 +326,8 @@ Corner geometry uses smooth squircle corner smoothing (continuous curvature) to 
 - **Backdrop blur:** Compose has no native backdrop blur (`Modifier.blur` blurs the content itself). Implement Liquid Glass with a backdrop-blur library such as Haze. When blur is unavailable on a target, or the user enables reduce transparency, render the tier's fill as a solid color (`surface-container-*` roles) with the same border.
 - **Units:** `1rem` = `16sp` for type and `16dp` for spacing and radii. Typography must scale with the system font size.
 - **Fonts:** Inter and Source Serif 4 are licensed under the SIL Open Font License; bundle them in `composeResources/font/`.
-- **Keyboard shortcut:** the `⌘K` / `Ctrl+K` search prompt is shown on the web target only.
+- **Keyboard shortcut:** the `⌘K` / `Ctrl+K` search prompt is shown on the web target only. Pressing it opens search, or focuses the field when search is already open.
+- **Search command bars** use the `8px` input radius, not a pill: the Stitch references draw pills, but this file is canonical. Until the glass tiers reach them, they use a solid `surface-container-lowest` fill. The idle border takes the scope's layer colour; the focus border and glow are always primary.
+- **Text on layer fills:** primary buttons and checked checkboxes on a layer fill use white or near-black, whichever is more legible on that fill, instead of always white; some layer bases fail contrast with white.
+- **Primary button highlight:** the `1px` inner highlight is a `1dp` edge in the label colour at 16% opacity.
 - **Tokens:** generate `LagarColors` (light and dark), the layer palette and `LagarTypography` from this file's frontmatter, so values are not copied by hand.
