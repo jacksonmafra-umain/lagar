@@ -170,6 +170,9 @@ def _fundamental_item(dok_id, parsed, text):
 def _store(client, dok_id, item, corpus):
     """Fetch, parse and write one document; returns the item that was written."""
     raw = client.get(TEXT_URL.format(dok_id=urllib.parse.quote(dok_id)))
+    if raw.lstrip().startswith(b"<dokumentstatus"):
+        # Digitised OCR prints come back as status XML wrapping styled HTML; record them as a coverage gap.
+        raise ValueError("digitised print with no plain text")
     text = raw.decode("utf-8")
     parsed = parse_text(text)
     if item is None:

@@ -284,6 +284,16 @@ class SfsTests(unittest.TestCase):
         self.assertTrue((self.corpus / "sfs/other/1827-60-s-1007.md").exists())
         self.assertEqual(sfs.run(client, self.args()).skipped, 1)
 
+    def test_digitised_print_without_plain_text_fails_cleanly(self):
+        client = FakeClient({
+            "dokumentlista": listing_json(["sfs-1868-1"]),
+            ".text": b"<dokumentstatus><dokument><html>&lt;div&gt;</html></dokument></dokumentstatus>",
+        })
+        summary = sfs.run(client, self.args())
+        self.assertEqual(summary.failed, ["sfs-1868-1"])
+        self.assertIn("no plain text", self.state()["failed"]["sfs-1868-1"])
+        self.assertFalse(self.corpus.exists() and any(self.corpus.rglob("*.md")))
+
     def test_state_written_after_each_document(self):
         ids = ["sfs-2000-1", "sfs-2000-2"]
         client = FakeClient({"dokumentlista": listing_json(ids)})
