@@ -6,6 +6,7 @@ Usage: python3 -I api/build.py --corpus corpus --out build/api/v1 [--built-at <U
 import argparse
 import json
 import os
+import re
 import shutil
 import sys
 from datetime import datetime, timezone
@@ -19,6 +20,7 @@ from lagar.vocabulary import LAYERS, TYPES  # noqa: E402
 
 API_VERSION = 1
 PAGE_SIZE = 50
+BUILT_AT_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 ITEM_FIELDS = ("id", "title", "number", "type", "issued", "repealed")
 
 
@@ -128,6 +130,15 @@ def _check_out(out, corpus):
         raise BuildError(f"refusing to use {out} as the output directory")
 
 
+def _check_built_at(value):
+    try:
+        if not BUILT_AT_RE.fullmatch(value):
+            raise ValueError(value)
+        datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
+    except ValueError:
+        raise BuildError(f"--built-at must be a UTC timestamp like 2026-10-27T10:30:00Z, got {value!r}")
+
+
 def main(argv):
     parser = argparse.ArgumentParser(description="Generate the static JSON API from the corpus.")
     parser.add_argument("--corpus", required=True)
@@ -137,6 +148,7 @@ def main(argv):
     built_at = args.built_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     corpus, out = Path(args.corpus), Path(args.out)
     try:
+        _check_built_at(built_at)
         if not corpus.is_dir():
             raise BuildError(f"corpus directory not found: {corpus}")
         if out.is_symlink() or (out.exists() and not out.is_dir()):

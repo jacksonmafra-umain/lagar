@@ -255,3 +255,13 @@ class OutNonEmptyTest(unittest.TestCase):
             out.mkdir()
             self.assertEqual(run_build(out).returncode, 0)
             self.assertEqual(run_build(out).returncode, 0)
+
+
+class BuiltAtTest(unittest.TestCase):
+    def test_invalid_built_at_rejected(self):
+        for bad in ("yesterday", "2026-10-27", "2026-10-27T10:30:00", "2026-13-45T10:30:00Z", "2026-10-27T10:30:00+00:00"):
+            with tempfile.TemporaryDirectory() as tmp:
+                result = run_build(Path(tmp) / "out", built_at=bad)
+                self.assertEqual(result.returncode, 1, bad)
+                self.assertIn("--built-at", result.stderr)
+                self.assertNotIn("Traceback", result.stderr)
