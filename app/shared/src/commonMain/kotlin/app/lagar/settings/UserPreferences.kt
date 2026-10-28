@@ -39,6 +39,8 @@ class UserPreferences(private val settings: Settings) {
         _scope.value = scope
     }
 
+    fun setLocality(locality: Locality) = writeLocality(locality)
+
     fun setRegion(code: String?) = writeLocality(_locality.value.withRegion(code))
 
     fun setKommun(code: String?) = writeLocality(_locality.value.copy(kommunCode = code))
