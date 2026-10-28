@@ -201,5 +201,5 @@ Route: `Settings`, opened from the drawer. Code: `ui/settings/SettingsScreen.kt`
 
 | Topic | Status | Issue |
 | --- | --- | --- |
-| Release builds read the published API instead of the bundled sample | Missing | #10 |
+| Release builds and the web app read the published API | Done | #10 |
 | Scheduled sync of new and amended statutes | Missing | #20 |

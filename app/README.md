@@ -27,22 +27,40 @@ Android builds also need `ANDROID_HOME` (or a `local.properties` with `sdk.dir`)
 
 ## Data source
 
-Release builds read the bundled sample (no hosted API exists yet). Debug builds read the generated API
-from a local server; each platform picks its `DataSourceConfig` at its entry point and passes it to `App(...)`:
+Release builds read the API published to GitHub Pages (`DataSourceConfig.PUBLISHED_API`,
+`https://jacksonmafra-umain.github.io/lagar/api/v1/`). Debug builds read the generated API from a local
+server. Each platform picks its `DataSourceConfig` at its entry point and passes it to `App(...)`:
 
 ```sh
 python3 -I api/build.py --corpus corpus --out /tmp/lagar/build/api/v1   # from the repo root
 python3 -I -m http.server 8000 --directory /tmp/lagar/build
 ```
 
-- Android: `BuildConfig.DEBUG` selects the API at `http://10.0.2.2:8000/api/v1/` (the emulator's alias for the host).
-  Plain HTTP is allowed only in the debug source set (`androidApp/src/debug`), limited to `10.0.2.2`.
-  A debug build on a physical device cannot reach `10.0.2.2` (or `localhost`) and shows the error state; use a
-  release build (bundled sample) or point `DataSourceConfig` at a reachable base URL.
-- iOS: `Platform.isDebugBinary` selects the API at `http://localhost:8000/api/v1/` (simulator shares the host network).
-- Web: the sample is the default; open the page with `?api` to read `../api/v1/` instead. Copy the dist into the
-  server root as `lagar/` (`cp -R webApp/build/dist/wasmJs/productionExecutable/. /tmp/lagar/build/lagar/`) and open
-  `http://localhost:8000/lagar/?api`; same origin, so no CORS setup is needed.
+- **Android:** debug builds read `http://10.0.2.2:8000/api/v1/`, the emulator's alias for the host. Plain HTTP
+  is allowed only in the debug source set (`androidApp/src/debug`), limited to `10.0.2.2`. A debug build on a
+  physical device cannot reach `10.0.2.2` and shows the error state; use a release build, which reads the
+  published API.
+- **iOS:** debug builds read `http://localhost:8000/api/v1/`; the simulator shares the host network.
+- **Web:** the page reads `api/v1/` next to itself, which is the Pages layout (`/lagar/` and `/lagar/api/v1/`).
+  To try it locally, copy the dist and the API into one folder and serve that:
+
+  ```sh
+  mkdir -p /tmp/lagar/site && cp -R webApp/build/dist/wasmJs/productionExecutable/. /tmp/lagar/site/
+  cp -R /tmp/lagar/build/api /tmp/lagar/site/
+  python3 -I -m http.server 8001 --directory /tmp/lagar/site   # open http://localhost:8001/
+  ```
+
+  Add `?sample` to use the bundled sample instead.
+
+The bundled sample (`SampleRepository`) stays for tests and `?sample`. No build falls back to it silently,
+because a 104-document sample shown as the catalogue would mislead; offline, the app shows its error state
+with retry.
+
+## Deployment
+
+`.github/workflows/pages.yml` builds the API from `corpus/` and the web app on every push to `main` that
+touches them, and publishes both to GitHub Pages: the app at `https://jacksonmafra-umain.github.io/lagar/`
+and the API under `/lagar/api/v1/`.
 
 ## Web base path
 
