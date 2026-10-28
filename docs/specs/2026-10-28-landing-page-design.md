@@ -32,7 +32,7 @@ Background documents:
 ## Non-goals
 
 - No framework, bundler or Node build for the landing page.
-- No hosted JSON API in this work. The web app keeps reading its bundled sample data (`?api` would point at `/api/v1/`, which this deploy does not serve).
+- No hosted JSON API in this work. The web app reads `api/v1/` next to itself; on Vercel, `landing/vercel.json` proxies `/app/api/v1/*` to the API published on GitHub Pages.
 - No custom domain yet: the first release lives on the project's `*.vercel.app` address.
 - No analytics, cookies, newsletter, contact form or accounts.
 - No app store badges until the apps are published.
@@ -57,7 +57,7 @@ Direction A from the mockups: the landing page matches the app.
 One page, top to bottom:
 
 1. Header: wordmark "lagar", language toggle (SV / EN).
-2. Hero: headline, one-line lead, primary button "Öppna lagar" / "Open lagar" linking to `/app/`, secondary link to the GitHub repository, the note "Oberoende projekt. Inte en myndighetstjänst." / "Independent project. Not a government service." A short "preview" note says the web app currently shows sample data.
+2. Hero: headline, one-line lead, primary button "Öppna lagar" / "Open lagar" linking to `/app/`, secondary link to the GitHub repository, the note "Oberoende projekt. Inte en myndighetstjänst." / "Independent project. Not a government service."
 3. Why lagar: the motivation (draft below).
 4. What is inside: SFS acts and ordinances today, with the planned layers (agency regulations, case law, EU law, regional and municipal regulations, public services) marked as coming. Numbers stay out of the copy unless the builder wires them to `PROGRESS.md`; a hand-typed count goes stale.
 5. Sources and references: links listed below.
@@ -95,15 +95,15 @@ All external links open normally (no tracking parameters).
 
 - Swedish is the default. English is the second language.
 - Language resolution: an explicit choice (stored in `localStorage`) wins; otherwise `navigator.language` `en*` gives English and everything else gives Swedish, matching the app rule.
-- Strings live in one place per language (for example `site/i18n/sv.json` and `en.json`, or `data-*` attributes resolved by a small script). The Swedish text is in the HTML by default so the page works and indexes without JavaScript; the script swaps to English.
+- Strings live in one place per language (for example `landing/i18n/sv.json` and `en.json`, or `data-*` attributes resolved by a small script). The Swedish text is in the HTML by default so the page works and indexes without JavaScript; the script swaps to English.
 - `<html lang>` updates with the language.
 - The landing page's language choice does not carry into the web app: the app keeps resolving its language from the system locale and its own setting. Passing the choice through (for example a query parameter the app reads) is a separate app issue, not part of this work.
 - Whether English also gets its own URL (`/en/`) for sharing and indexing is left to the builder; a query parameter or path is fine, a hash is not.
 
 ## Layout in the repo and build
 
-- `site/`: hand-written landing page (`index.html`, CSS, the toggle script, fonts, favicon, `vercel.json` if needed).
-- `scripts/build-site.sh` (name is the builder's call): runs `./gradlew :webApp:wasmJsBrowserDistribution` from `app/`, copies `site/` into an output folder (for example `build/site/`), then copies `app/webApp/build/dist/wasmJs/productionExecutable/` into `build/site/app/`. The output is plain static files.
+- `landing/`: hand-written landing page (`index.html`, CSS, the toggle script, fonts, favicon, `vercel.json` if needed).
+- `scripts/build-site.sh` (name is the builder's call): runs `./gradlew :webApp:wasmJsBrowserDistribution` from `app/`, copies `landing/` into `build/landing/`, then copies `app/webApp/build/dist/wasmJs/productionExecutable/` into `build/landing/app/`. The output is plain static files.
 - The repository's top-level `api/` folder must never be uploaded as the Vercel project root: Vercel would treat it as serverless functions. Deploying the assembled output folder avoids this.
 - `.wasm` must be served as `application/wasm` (Vercel does this by default; verify).
 
@@ -111,7 +111,7 @@ All external links open normally (no tracking parameters).
 
 - One Vercel project named `lagar` under the owner's Umain Vercel account `jacksonmafra-umain` (owner decision), never the personal `jacksonfdam` account. Before any `vercel` command, check `vercel whoami` reports the Umain account; stop and ask if not.
 - The assembled folder is deployed as a static site. The builder picks between `vercel deploy` of the output folder and `vercel build` + `vercel deploy --prebuilt`.
-- GitHub Actions workflow (`.github/workflows/site.yml`): on pull requests that touch `site/`, `app/` or the build script, build and deploy a preview and post its URL on the PR; on push to `main`, deploy production. It needs JDK 21 for the Gradle build and the secrets `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, which the owner adds.
+- GitHub Actions workflow (`.github/workflows/site.yml`): on pull requests that touch `landing/`, `DESIGN.md`, `app/` or the build script, build and deploy a preview and post its URL on the PR; on push to `main`, deploy production. It needs JDK 21 for the Gradle build and the secrets `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, which the owner adds.
 - The same script also runs locally, so the owner can deploy from their machine with the CLI logged in to the Umain account.
 - Previews keep Vercel's default deployment protection (only the owner can open them). Pull requests from forks cannot read the secrets: the workflow skips the deploy for them cleanly and does not use `pull_request_target`.
 
@@ -136,10 +136,16 @@ Issues with `type:` and `area:` labels, assigned to the owner, each closed by a 
 ## Calls made without the owner
 
 - Swedish as default language, matching the app.
-- A visible "independent project" note and a "preview, sample data" note.
+- A visible "independent project" note.
 - Self-hosted fonts, no third-party requests, no analytics.
-- `site/` as the folder name, `/app/` as the web app path, `*.vercel.app` address first.
+- `landing/` as the folder name, `/app/` as the web app path, `*.vercel.app` address first.
 - Both local and GitHub Actions deploys; Actions needs the owner to add the Vercel secrets.
 - Motivation copy as drafted above, pending the owner's edit.
 - Previews stay protected (owner-only); fork PRs get no preview.
 - Landing language choice is not passed to the web app in this work.
+
+## Changes during implementation
+
+- The source folder is `landing/`, not `site/`: the `Pages` workflow uses a top-level `site/` as its build output, so a tracked `site/` would leak into the GitHub Pages deploy.
+- The web app now reads the real API (`api/v1/` relative to its page), so the "sample data" note was dropped and `landing/vercel.json` proxies `/app/api/v1/*` to `https://jacksonmafra-umain.github.io/lagar/api/v1/`. If GitHub Pages is down, the app on Vercel cannot load data.
+- The Vercel project `lagar` lives under the owner's account `jacksonmafra-1855` (personal scope, Hobby), owner decision. Production: <https://lagar-three.vercel.app>. Vercel's Git integration is disconnected; only the `Site` workflow deploys, and only when all three Vercel secrets are set.
