@@ -30,20 +30,15 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.produceState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
-import app.lagar.data.GeoRepository
 import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.RadiusTokens
 import app.lagar.designsystem.glass
-import app.lagar.domain.Locality
 import app.lagar.domain.Scope
 import app.lagar.resources.Res
 import app.lagar.resources.app_name
@@ -61,13 +56,14 @@ import app.lagar.resources.ic_settings
 import app.lagar.resources.scope_national_desc
 import app.lagar.resources.splash_tagline
 import app.lagar.ui.common.rememberDataBuildDate
+import app.lagar.ui.navigation.AdvancedSearch as AdvancedSearchDestination
+import app.lagar.ui.navigation.Settings as SettingsDestination
 import app.lagar.ui.onboarding.nameRes
 import dev.chrisbanes.haze.HazeState
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import org.koin.compose.koinInject
 
 /** The entries of the drawer below the scope card, in display order. */
 internal enum class DrawerEntry(val route: Any, val label: StringResource, val icon: DrawableResource) {
@@ -75,8 +71,8 @@ internal enum class DrawerEntry(val route: Any, val label: StringResource, val i
     Hierarchy(Tab.Hierarchy.route, Tab.Hierarchy.label, Tab.Hierarchy.icon),
     Saved(Tab.Saved.route, Tab.Saved.label, Tab.Saved.icon),
     Services(Tab.Services.route, Tab.Services.label, Tab.Services.icon),
-    AdvancedSearch(app.lagar.ui.navigation.AdvancedSearch, Res.string.home_advanced_search, Res.drawable.ic_search),
-    Settings(app.lagar.ui.navigation.Settings, Res.string.drawer_settings, Res.drawable.ic_settings),
+    AdvancedSearch(AdvancedSearchDestination, Res.string.home_advanced_search, Res.drawable.ic_search),
+    Settings(SettingsDestination, Res.string.drawer_settings, Res.drawable.ic_settings),
 }
 
 /**
@@ -88,7 +84,7 @@ internal enum class DrawerEntry(val route: Any, val label: StringResource, val i
 internal fun LagarDrawerContent(
     hazeState: HazeState,
     scope: Scope,
-    locality: Locality,
+    localityName: String?,
     selected: DrawerEntry?,
     onChangeScope: () -> Unit,
     onNavigate: (DrawerEntry) -> Unit,
@@ -112,7 +108,7 @@ internal fun LagarDrawerContent(
         ) {
             Column(verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.md)) {
                 DrawerHeader()
-                ScopeCard(scope, locality, onChangeScope)
+                ScopeCard(scope, localityName, onChangeScope)
                 Column(verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.xs)) {
                     DrawerEntry.entries.forEach { entry ->
                         DrawerItem(entry, selected = entry == selected, onClick = { onNavigate(entry) })
@@ -162,23 +158,21 @@ private fun DrawerHeader() {
 
 /** Active scope and its locality in the scope's colors; the whole card and the "Change" pill open the scope sheet. */
 @Composable
-private fun ScopeCard(scope: Scope, locality: Locality, onChange: () -> Unit) {
+private fun ScopeCard(scope: Scope, localityName: String?, onChange: () -> Unit) {
     val layers = LagarTheme.layers
-    val geo = koinInject<GeoRepository>()
-    val localityName by produceState<String?>(null, scope, locality) { value = geo.localityName(scope, locality) }
     Surface(
         onClick = onChange,
         modifier = Modifier.fillMaxWidth(),
         shape = MaterialTheme.shapes.large,
         color = LagarTheme.colors.surfaceContainerLowest,
-        border = BorderStroke(1.dp, layers.border(scope.key)),
+        border = BorderStroke(ShellDimens.Hairline, layers.border(scope.key)),
     ) {
         Row(
             modifier = Modifier.padding(LagarTheme.spacing.sm),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
         ) {
-            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(ShellDimens.TextGap)) {
                 Text(
                     text = stringResource(scope.nameRes()),
                     style = LagarTheme.type.bodyUi,
@@ -191,8 +185,6 @@ private fun ScopeCard(scope: Scope, locality: Locality, onChange: () -> Unit) {
                     ),
                     style = LagarTheme.type.labelSm,
                     color = LagarTheme.colors.onSurfaceVariant,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
                 )
             }
             Text(
@@ -203,7 +195,7 @@ private fun ScopeCard(scope: Scope, locality: Locality, onChange: () -> Unit) {
                 modifier = Modifier
                     .clip(CircleShape)
                     .background(layers.tint(scope.key))
-                    .padding(horizontal = LagarTheme.spacing.sm, vertical = 6.dp),
+                    .padding(horizontal = LagarTheme.spacing.sm, vertical = ShellDimens.PillPaddingVertical),
             )
         }
     }
