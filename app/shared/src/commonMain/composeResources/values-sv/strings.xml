@@ -17,6 +17,9 @@
     <string name="navigate_back">Tillbaka</string>
     <string name="repealed">Upphävd</string>
     <string name="layer_list_title">Lager</string>
+    <string name="layer_list_all_series">Alla</string>
+    <string name="layer_list_empty_title">Inga dokument ännu</string>
+    <string name="layer_list_empty_text">Den här nivån har inga dokument i nuvarande data. De visas här när de har samlats in.</string>
     <string name="explore_distribution_title">Normhierarkins fördelning</string>
     <string name="explore_layers_title">Normativa lager</string>
     <plurals name="document_count">
