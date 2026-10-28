@@ -24,6 +24,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import androidx.navigation.NavOptionsBuilder
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -94,9 +95,9 @@ fun AppShell(
     val padding = with(density) { PaddingValues(top = topBarPx.toDp(), bottom = bottomBarPx.toDp()) }
 
     // A second tap during the transition would push a duplicate entry; only navigate from a settled screen.
-    fun navigateWhenResumed(route: Any) {
+    fun navigateWhenResumed(route: Any, builder: NavOptionsBuilder.() -> Unit = {}) {
         if (navController.currentBackStackEntry?.lifecycle?.currentState == Lifecycle.State.RESUMED) {
-            navController.navigate(route)
+            navController.navigate(route, builder)
         }
     }
 
@@ -216,7 +217,10 @@ fun AppShell(
                     composable<AdvancedSearch> {
                         AdvancedSearchRoute(
                             onBack = { navController.popBackStack() },
-                            onSearch = { navigateWhenResumed(it.toRoute()) },
+                            onSearch = { query ->
+                                // The form is replaced by the results, so back from them skips it.
+                                navigateWhenResumed(query.toRoute()) { popUpTo<AdvancedSearch> { inclusive = true } }
+                            },
                         )
                     }
                     composable<Settings> { SettingsRoute(onBack = { navController.popBackStack() }) }
