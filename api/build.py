@@ -14,7 +14,9 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "collector"))
+sys.path.insert(0, str(REPO_ROOT / "api"))
 
+import searchindex  # noqa: E402
 from lagar import frontmatter, schema  # noqa: E402
 from lagar.vocabulary import LAYERS, TYPES  # noqa: E402
 
@@ -113,6 +115,11 @@ def build(docs, out, built_at):
         layers.append({"id": layer, "count": len(in_layer), "series": series})
     for meta, body in sorted(docs, key=lambda d: d[0]["id"]):
         _write(out, f"docs/{meta['id']}.json", {"meta": doc_meta(meta), "body": body}, written)
+    for rel, text in searchindex.build_index(docs, built_at).items():
+        path = out / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8", newline="")
+        written.append(rel)
     _write(out, "index.json", {"api_version": API_VERSION, "built_at": built_at, "layers": layers}, written)
     return len(layers), len(written)
 
