@@ -12,10 +12,18 @@ FUNDAMENTAL_LAWS = {
 }
 
 _HEADER_LINE = re.compile(r"^([^:]+):(.*)$")
-_CHAPTER = re.compile(r"^\d+ ?[a-z]? kap\. ")
+# A chapter heading is a title; "7 kap. 3 § gäller inte." is a sentence.
+_CHAPTER = re.compile(r"^\d+ ?[a-z]? kap\. (?!\d+ ?[a-z]? ?§)")
 _PARAGRAPH = re.compile(r"^(\d+ ?[a-z]? ?§)")
 _AMENDMENT = re.compile(r"(?:Lag|Förordning) \((N?\d{4}:\d+)\)\.(?=\s|$)")
 _SOURCE_KEY = "Källa"
+_SENTENCE_END = ".!?:;)\"»”"
+# Blank lines may separate header entries (e.g. between `Övrig text` and
+# `Upphävd`), so the header is delimited by its known keys, not by blank lines.
+HEADER_KEYS = frozenset({
+    "SFS nr", "Departement/myndighet", "Utfärdad", "Omtryck", "Ändrad",
+    "Övrig text", "Upphävd", "Ikraft", "Tidsbegränsad", _SOURCE_KEY,
+})
 PRINT_ONLY_NOTE = "_Text available only in print._"
 
 
@@ -49,6 +57,11 @@ def clean_title(raw):
     return current or future or collapse_whitespace(parts[0])
 
 
+def statute_title(raw):
+    """The one cleaned title: single line, current rename, no trailing `;`."""
+    return clean_title(raw).removesuffix(";").strip()
+
+
 @dataclass
 class ListingItem:
     dok_id: str
@@ -74,7 +87,7 @@ def parse_listing(raw):
             ListingItem(
                 dok_id=doc["dok_id"],
                 number=doc["beteckning"],
-                title=clean_title(doc.get("titel") or ""),
+                title=statute_title(doc.get("titel") or ""),
                 issued=(doc.get("datum") or "").strip() or None,
                 systemdatum=doc.get("systemdatum") or "",
                 ministry=(doc.get("organ") or "").strip() or None,
@@ -83,32 +96,72 @@ def parse_listing(raw):
     return items, pages
 
 
+def _header_key(line):
+    """The known header key a line starts, or None."""
+    match = _HEADER_LINE.match(line)
+    if not match:
+        return None
+    key = match.group(1).strip()
+    return key if key in HEADER_KEYS else None
+
+
+HEADER_START_WINDOW = 5  # non-blank lines after the title within which the header starts
+HEADER_LOOKAHEAD = 5  # non-blank lines checked after the header ended early
+
+
 def parse_text(raw):
+    """Split a Riksdagen plain text into header and body.
+
+    Raises ValueError when a known header key shows up just after the header
+    ended without `Källa:` (an unlisted key or a wrapped value we cannot place):
+    silently moving `Upphävd` into the body would publish a repealed law as in force.
+    """
     lines = raw.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+    nonblank = [i for i, line in enumerate(lines) if line.strip()]
     header = {}
-    body_start = None
     last_header = None
-    for index, line in enumerate(lines):
-        if not line.strip():
+    index_of = {i: n for n, i in enumerate(nonblank)}
+    pos = 0  # position in `nonblank`
+    while pos < len(nonblank):
+        index = nonblank[pos]
+        line = lines[index]
+        key = _header_key(line)
+        if key is None:
             if header:
-                # The header block is contiguous; a blank line ends it.
+                # Header ended without Källa: a known key just ahead means we lost it.
+                ahead = nonblank[pos : pos + HEADER_LOOKAHEAD]
+                lost = [k for k in (_header_key(lines[i]) for i in ahead) if k and k not in header]
+                if lost:
+                    raise ValueError(
+                        f"header ended before Källa but {lost[0]!r} follows: "
+                        f"{line.strip()[:60]!r}"
+                    )
                 break
+            if pos > HEADER_START_WINDOW:  # title is line 0; header must start soon after
+                break
+            pos += 1
             continue
-        match = _HEADER_LINE.match(line)
-        if not match:
-            continue
-        key = match.group(1).strip()
-        # Skip the title line (e.g. "Lag (2010:1)") and prose with long prefixes.
-        if "(" in key or len(key) > 40:
-            continue
-        header[key] = match.group(2).strip()
+        value = _HEADER_LINE.match(line).group(2).strip()
         last_header = index
+        # A non-key line directly after `Övrig text:` continues its value.
+        if key == "Övrig text":
+            while (
+                index + 1 < len(lines)
+                and lines[index + 1].strip()
+                and _header_key(lines[index + 1]) is None
+            ):
+                index += 1
+                value = (value + " " + lines[index].strip()).strip()
+                last_header = index
+        header[key] = value
+        pos = index_of[last_header] + 1 if last_header in index_of else pos + 1
         if key == _SOURCE_KEY:
             break
-    if last_header is not None:
-        body_start = last_header + 1
+    if last_header is None:
+        # No header: everything after the title line is body.
+        body_start = nonblank[0] + 1 if nonblank else 0
     else:
-        body_start = 0
+        body_start = last_header + 1
     body = "\n".join(line.rstrip() for line in lines[body_start:]).strip()
     return ParsedText(header=header, body=body)
 
@@ -123,6 +176,11 @@ def classify(title, dok_id):
     if first == "lag" or first.endswith("lag") or first.endswith("balk"):
         return "act"
     return "other_statute"
+
+
+def item_type(item):
+    """Document type of a listing item; the single source for path and frontmatter."""
+    return classify(statute_title(item.title), item.dok_id)
 
 
 def _number_order(number):
@@ -140,8 +198,13 @@ def amendments(body):
             paragraph.append(line.strip())
             continue
         if paragraph:
-            for match in _AMENDMENT.finditer(" ".join(paragraph)):
-                found.add(match.group(1))
+            text = " ".join(paragraph)
+            for match in _AMENDMENT.finditer(text):
+                # An amendment note closes a sentence; "se Lag (2000:1)." is a
+                # reference inside one.
+                before = text[: match.start()].rstrip()
+                if not before or before[-1] in _SENTENCE_END:
+                    found.add(match.group(1))
             paragraph = []
     return sorted(found, key=_number_order)
 

@@ -5,6 +5,7 @@ import hashlib
 import http.client
 import json
 import os
+import re
 import sys
 import tempfile
 import urllib.error
@@ -16,11 +17,11 @@ from pathlib import Path
 from .http import Blocked, PoliteClient
 from .riksdagen import (
     FUNDAMENTAL_LAWS,
-    clean_title,
     ListingItem,
-    classify,
+    item_type,
     parse_listing,
     parse_text,
+    statute_title,
     to_markdown,
 )
 from .writer import build_meta, path_for, write
@@ -53,12 +54,24 @@ class StateError(Exception):
     """The state file is unreadable; never reset it silently."""
 
 
+_ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}", re.ASCII)
+
+
 def _iso_date(value):
     try:
+        if not _ISO_DATE.fullmatch(value):
+            raise ValueError(value)
         date.fromisoformat(value)
     except ValueError:
         raise argparse.ArgumentTypeError(f"not an ISO date (YYYY-MM-DD): {value}")
     return value
+
+
+def _non_negative(value):
+    number = int(value)
+    if number < 0:
+        raise argparse.ArgumentTypeError(f"must not be negative: {value}")
+    return number
 
 
 @dataclass
@@ -74,7 +87,7 @@ def parse_args(argv):
     parser.add_argument("--fundamental", action="store_true")
     parser.add_argument("--from", dest="from_date", metavar="YYYY-MM-DD", type=_iso_date)
     parser.add_argument("--to", dest="to_date", metavar="YYYY-MM-DD", type=_iso_date)
-    parser.add_argument("--limit", type=int)
+    parser.add_argument("--limit", type=_non_negative)
     parser.add_argument("--since", metavar="YYYY-MM-DD", type=_iso_date)
     parser.add_argument("--rate", type=float, default=1.0, metavar="SECONDS")
     parser.add_argument("--state", default=DEFAULT_STATE)
@@ -90,9 +103,14 @@ def _load_state(path):
         return state
     except (ValueError, OSError):
         raise StateError(f"state file corrupt: {path}") from None
-    if not isinstance(loaded, dict) or not all(
-        isinstance(loaded.get(k, {}), dict) for k in ("done", "failed")
-    ):
+    valid = isinstance(loaded, dict) and all(
+        isinstance(loaded.get(k, {}), dict)
+        and all(isinstance(v, str) for v in loaded.get(k, {}).values())
+        for k in ("done", "failed")
+    )
+    if valid and not isinstance(loaded.get("blocked"), (str, type(None))):
+        valid = False
+    if not valid:
         raise StateError(f"state file corrupt: {path}")
     for key in state:
         if key in loaded:
@@ -159,7 +177,7 @@ def _fundamental_item(dok_id, parsed, text):
     return ListingItem(
         dok_id=dok_id,
         number=header.get("SFS nr", "").strip(),
-        title=clean_title(first_line),
+        title=statute_title(first_line),
         issued=header.get("Utfärdad", "").strip() or None,
         systemdatum="",
         ministry=header.get("Departement/myndighet", "").strip() or None,
@@ -182,8 +200,7 @@ def _store(client, dok_id, item, corpus):
 def _already_done(state, item, corpus):
     if state["done"].get(item.dok_id) != item.systemdatum:
         return False
-    title = clean_title(item.title).removesuffix(";").strip()
-    meta = {"id": item.dok_id.lower(), "type": classify(title, item.dok_id)}
+    meta = {"id": item.dok_id.lower(), "type": item_type(item)}
     return path_for(meta, corpus).exists()
 
 
@@ -234,7 +251,12 @@ def run(client, args):
                 state["failed"][dok_id] = f"{type(error).__name__}: {error}"
             else:
                 summary.written += 1
-                state["done"][dok_id] = stored.systemdatum
+                if stored.systemdatum:
+                    state["done"][dok_id] = stored.systemdatum
+                else:
+                    # --fundamental has no listing systemdatum; an empty marker
+                    # would never match a later listing run anyway.
+                    state["done"].pop(dok_id, None)
                 state["failed"].pop(dok_id, None)
             processed += 1
             _save_state(args.state, state)

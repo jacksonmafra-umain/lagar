@@ -7,13 +7,19 @@ from . import schema
 _STRING = r'"(?:[^"\\]|\\.)*"'
 _SCALAR = rf"(?:{_STRING}|null|true|false)"
 _LIST = rf"\[(?:{_STRING}(?:, {_STRING})*)?\]"
-_LINE = re.compile(rf"^([a-z0-9_]+): ({_SCALAR}|{_LIST})$")
+_KEY = re.compile(r"[a-z0-9_]+")
+_LINE = re.compile(rf"^({_KEY.pattern}): ({_SCALAR}|{_LIST})$")
 _STRING_RE = re.compile(_STRING)
-_ESCAPES = {"\\": "\\", '"': '"', "n": "\n"}
+_ESCAPES = {"\\": "\\", '"': '"', "n": "\n", "r": "\r", "t": "\t"}
+_ESCAPED_CHARS = {"\\": "\\\\", '"': '\\"', "\n": "\\n", "\r": "\\r", "\t": "\\t"}
+# Control characters without an escape would make the file unreadable or ambiguous.
+_BAD_CONTROL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 
 
 def _quote(value):
-    escaped = value.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n")
+    if _BAD_CONTROL.search(value):
+        raise ValueError(f"control character in string: {value!r}")
+    escaped = "".join(_ESCAPED_CHARS.get(ch, ch) for ch in value)
     return f'"{escaped}"'
 
 
@@ -53,6 +59,9 @@ def _scalar(value):
 def dump(meta):
     order = schema._load_schema()["required"]
     keys = [k for k in order if k in meta] + [k for k in meta if k not in order]
+    for key in keys:
+        if not _KEY.fullmatch(key):
+            raise ValueError(f"key cannot be read back by load(): {key!r}")
     return "".join(f"{key}: {_scalar(meta[key])}\n" for key in keys)
 
 
