@@ -84,14 +84,11 @@ import app.lagar.resources.home_search_hint
 import app.lagar.resources.home_search_submit
 import app.lagar.resources.meta_in_force
 import app.lagar.resources.picker_clear
-import app.lagar.resources.type_act
-import app.lagar.resources.type_fundamental_law
-import app.lagar.resources.type_ordinance
-import app.lagar.resources.type_other_statute
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.iconColor
 import app.lagar.ui.common.rememberBackTopBarHeight
+import app.lagar.ui.common.typeNameRes
 import app.lagar.ui.onboarding.nameRes
 import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
@@ -104,13 +101,6 @@ import org.koin.compose.koinInject
 internal fun Scope.documentTypes(): List<String> = when (this) {
     Scope.Nationell -> listOf("fundamental_law", "act", "ordinance", "other_statute")
     Scope.Region, Scope.Kommun -> emptyList()
-}
-
-private fun typeNameRes(type: String): StringResource = when (type) {
-    "fundamental_law" -> Res.string.type_fundamental_law
-    "act" -> Res.string.type_act
-    "ordinance" -> Res.string.type_ordinance
-    else -> Res.string.type_other_statute
 }
 
 /** Advanced search: the scope and locality in the header, then the filters; "Sök" opens the results. */
