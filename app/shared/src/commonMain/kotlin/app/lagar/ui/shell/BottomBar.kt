@@ -1,5 +1,6 @@
 package app.lagar.ui.shell
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,21 +11,20 @@ import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.windowInsetsPadding
-import androidx.compose.foundation.background
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.unit.Density
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
@@ -69,18 +69,18 @@ internal fun LagarBottomBar(
     CompositionLocalProvider(
         LocalDensity provides Density(density.density, fontScale = minOf(density.fontScale, MAX_LABEL_FONT_SCALE)),
     ) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .glass(GlassTier.Bar, hazeState)
-            .windowInsetsPadding(WindowInsets.navigationBars)
-            .padding(horizontal = LagarTheme.spacing.xs, vertical = LagarTheme.spacing.xs),
-        horizontalArrangement = Arrangement.SpaceEvenly,
-    ) {
-        Tab.entries.forEach { tab ->
-            TabItem(tab, tab == selected, onClick = { onSelect(tab) }, modifier = Modifier.weight(1f))
+        Row(
+            modifier = modifier
+                .fillMaxWidth()
+                .glass(GlassTier.Bar, hazeState)
+                .windowInsetsPadding(WindowInsets.navigationBars)
+                .padding(horizontal = LagarTheme.spacing.xs, vertical = LagarTheme.spacing.xs),
+            horizontalArrangement = Arrangement.SpaceEvenly,
+        ) {
+            Tab.entries.forEach { tab ->
+                TabItem(tab, tab == selected, onClick = { onSelect(tab) }, modifier = Modifier.weight(1f))
+            }
         }
-    }
     }
 }
 

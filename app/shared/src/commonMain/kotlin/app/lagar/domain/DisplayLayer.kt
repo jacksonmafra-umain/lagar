@@ -13,7 +13,8 @@ enum class DisplayLayer(val apiLayer: String, val apiType: String?, val key: Lay
     Eu("eu", null, LayerKey.Eu),
     Region("region", null, LayerKey.Region),
     Municipality("municipality", null, LayerKey.Municipality),
-    Service("service", null, LayerKey.Service);
+    Service("service", null, LayerKey.Service),
+    ;
 
     companion object {
         /** The level a `LayerList(layer, type)` route shows; untyped levels ignore [type]. */

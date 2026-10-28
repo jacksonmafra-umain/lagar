@@ -57,14 +57,14 @@ import app.lagar.resources.ic_settings
 import app.lagar.resources.scope_national_desc
 import app.lagar.resources.splash_tagline
 import app.lagar.ui.common.rememberDataBuildDate
-import app.lagar.ui.navigation.AdvancedSearch as AdvancedSearchDestination
-import app.lagar.ui.navigation.Settings as SettingsDestination
 import app.lagar.ui.onboarding.nameRes
 import dev.chrisbanes.haze.HazeState
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
+import app.lagar.ui.navigation.AdvancedSearch as AdvancedSearchDestination
+import app.lagar.ui.navigation.Settings as SettingsDestination
 
 /** The entries of the drawer below the scope card, in display order. */
 internal enum class DrawerEntry(val route: Any, val label: StringResource, val icon: DrawableResource) {

@@ -32,14 +32,15 @@ import androidx.compose.ui.unit.dp
 import app.lagar.data.ListingItem
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
+import app.lagar.domain.DisplayLayer
 import app.lagar.resources.Res
 import app.lagar.resources.bookmark_add
 import app.lagar.resources.bookmark_remove
 import app.lagar.resources.date_days_ago
 import app.lagar.resources.date_months_ago
 import app.lagar.resources.date_today
-import app.lagar.resources.date_yesterday
 import app.lagar.resources.date_years_ago
+import app.lagar.resources.date_yesterday
 import app.lagar.resources.feed_read_full_text
 import app.lagar.resources.ic_bookmark
 import app.lagar.resources.ic_bookmark_filled
@@ -51,9 +52,7 @@ import app.lagar.resources.type_number
 import app.lagar.resources.type_ordinance
 import app.lagar.ui.common.LayerBadge
 import app.lagar.ui.common.RepealedBadge
-import app.lagar.domain.DisplayLayer
 import app.lagar.ui.shell.ShellDimens
-import kotlin.time.Clock
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.todayIn
@@ -61,6 +60,7 @@ import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
+import kotlin.time.Clock
 
 /**
  * One document in the feed: type and number badge in the layer color, how long ago it was issued, up to

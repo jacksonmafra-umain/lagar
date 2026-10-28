@@ -1,8 +1,8 @@
 package app.lagar.i18n
 
 import androidx.compose.runtime.Composable
-import platform.Foundation.NSUserDefaults
 import platform.Foundation.NSLocale
+import platform.Foundation.NSUserDefaults
 import platform.Foundation.preferredLanguages
 
 private const val APPLE_LANGUAGES = "AppleLanguages"

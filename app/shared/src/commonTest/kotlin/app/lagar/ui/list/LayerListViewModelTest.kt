@@ -1,7 +1,7 @@
 package app.lagar.ui.list
 
-import app.lagar.data.DocumentResponse
 import app.lagar.data.ApiIndex
+import app.lagar.data.DocumentResponse
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
 import app.lagar.data.ListingPage
