@@ -8,6 +8,7 @@ on:
   pull_request:
     paths:
       - landing/**
+      - DESIGN.md
       - app/**
       - scripts/build-site.sh
       - .github/workflows/site.yml
@@ -15,6 +16,7 @@ on:
     branches: [main]
     paths:
       - landing/**
+      - DESIGN.md
       - app/**
       - scripts/build-site.sh
       - .github/workflows/site.yml
@@ -35,7 +37,8 @@ jobs:
     env:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-      DEPLOY: ${{ secrets.VERCEL_TOKEN != '' && !github.event.pull_request.head.repo.fork }}
+      # All three secrets or no deploy: without the IDs the CLI would link a new project.
+      DEPLOY: ${{ secrets.VERCEL_TOKEN != '' && secrets.VERCEL_ORG_ID != '' && secrets.VERCEL_PROJECT_ID != '' && !github.event.pull_request.head.repo.fork }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
