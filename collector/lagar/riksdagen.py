@@ -105,24 +105,63 @@ def _header_key(line):
     return key if key in HEADER_KEYS else None
 
 
+HEADER_START_WINDOW = 5  # non-blank lines after the title within which the header starts
+HEADER_LOOKAHEAD = 5  # non-blank lines checked after the header ended early
+
+
 def parse_text(raw):
+    """Split a Riksdagen plain text into header and body.
+
+    Raises ValueError when a known header key shows up just after the header
+    ended without `Källa:` (an unlisted key or a wrapped value we cannot place):
+    silently moving `Upphävd` into the body would publish a repealed law as in force.
+    """
     lines = raw.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+    nonblank = [i for i, line in enumerate(lines) if line.strip()]
     header = {}
     last_header = None
-    for index, line in enumerate(lines):
-        if not line.strip():
-            continue
+    index_of = {i: n for n, i in enumerate(nonblank)}
+    pos = 0  # position in `nonblank`
+    while pos < len(nonblank):
+        index = nonblank[pos]
+        line = lines[index]
         key = _header_key(line)
         if key is None:
             if header:
-                # The header is a run of known keys; the first other line ends it.
+                # Header ended without Källa: a known key just ahead means we lost it.
+                ahead = nonblank[pos : pos + HEADER_LOOKAHEAD]
+                lost = [k for k in (_header_key(lines[i]) for i in ahead) if k and k not in header]
+                if lost:
+                    raise ValueError(
+                        f"header ended before Källa but {lost[0]!r} follows: "
+                        f"{line.strip()[:60]!r}"
+                    )
                 break
-            continue  # title line or preamble before the header
-        header[key] = _HEADER_LINE.match(line).group(2).strip()
+            if pos > HEADER_START_WINDOW:  # title is line 0; header must start soon after
+                break
+            pos += 1
+            continue
+        value = _HEADER_LINE.match(line).group(2).strip()
         last_header = index
+        # A non-key line directly after `Övrig text:` continues its value.
+        if key == "Övrig text":
+            while (
+                index + 1 < len(lines)
+                and lines[index + 1].strip()
+                and _header_key(lines[index + 1]) is None
+            ):
+                index += 1
+                value = (value + " " + lines[index].strip()).strip()
+                last_header = index
+        header[key] = value
+        pos = index_of[last_header] + 1 if last_header in index_of else pos + 1
         if key == _SOURCE_KEY:
             break
-    body_start = 0 if last_header is None else last_header + 1
+    if last_header is None:
+        # No header: everything after the title line is body.
+        body_start = nonblank[0] + 1 if nonblank else 0
+    else:
+        body_start = last_header + 1
     body = "\n".join(line.rstrip() for line in lines[body_start:]).strip()
     return ParsedText(header=header, body=body)
 

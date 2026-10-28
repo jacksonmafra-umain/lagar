@@ -116,6 +116,44 @@ class RiksdagenTests(unittest.TestCase):
         self.assertEqual(parsed.header["Upphävd"], "1994-04-01")
         self.assertEqual(parsed.body, "1 § Text.")
 
+    def test_wrapped_overig_text_is_continuation_and_upphavd_kept(self):
+        parsed = riksdagen.parse_text(
+            "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÖvrig text: Rättelseblad har\niakttagits.\n"
+            "Upphävd: 1994-04-01\nKälla: Regeringskansliet\n\n1 § Text.\n"
+        )
+        self.assertEqual(parsed.header["Övrig text"], "Rättelseblad har iakttagits.")
+        self.assertEqual(parsed.header["Upphävd"], "1994-04-01")
+        self.assertEqual(parsed.body, "1 § Text.")
+
+    def test_wrapped_overig_text_after_blank_line_raises(self):
+        with self.assertRaises(ValueError):
+            riksdagen.parse_text(
+                "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÖvrig text: a\n\nfortsättning\n"
+                "Upphävd: 1994-04-01\nKälla: R\n\n1 § Text.\n"
+            )
+
+    def test_unlisted_key_before_kalla_raises_never_drops_upphavd(self):
+        with self.assertRaises(ValueError):
+            riksdagen.parse_text(
+                "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÄndrad:  \nÄndringsregister: x\n"
+                "Upphävd: 1994-04-01\nKälla: R\n\n1 § Text.\n"
+            )
+        # Directly after `Övrig text` it is read as a continuation: parsed, not dropped.
+        parsed = riksdagen.parse_text(
+            "Lag (1900:1) om x\n\nSFS nr: 1900:1\nÖvrig text:  \nÄndringsregister: x\n"
+            "Upphävd: 1994-04-01\nKälla: R\n\n1 § Text.\n"
+        )
+        self.assertEqual(parsed.header["Upphävd"], "1994-04-01")
+
+    def test_header_must_start_within_five_lines_after_title(self):
+        raw = "Lag (1900:1) om x\n" + "".join(f"Rad {n}\n" for n in range(6)) + "SFS nr: 1900:1\nKälla: R\n\n1 § Text.\n"
+        parsed = riksdagen.parse_text(raw)
+        self.assertEqual(parsed.header, {})
+        self.assertTrue(parsed.body.startswith("Rad 0"))
+        self.assertIn("SFS nr: 1900:1", parsed.body)
+        near = "Lag (1900:1) om x\n" + "".join(f"Rad {n}\n" for n in range(4)) + "SFS nr: 1900:1\nKälla: R\n\n1 § Text.\n"
+        self.assertEqual(riksdagen.parse_text(near).header["SFS nr"], "1900:1")
+
     def test_header_ends_at_first_non_key_line(self):
         parsed = riksdagen.parse_text(
             "Lag (1900:1) om x\n\nSFS nr: 1900:1\n\nInledning: något\n\n1 § Text.\n"
