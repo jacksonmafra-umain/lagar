@@ -355,5 +355,26 @@ class SfsTests(unittest.TestCase):
         self.assertIsNone(state["blocked"])
 
 
+    def test_unchanged_source_is_not_rewritten(self):
+        first = listing_json(["sfs-2000-1"], systemdatum="2026-01-01 00:00:00")
+        sfs.run(FakeClient({"dokumentlista": first}), self.args())
+        path = next(self.corpus.rglob("*.md"))
+        before = path.read_bytes()
+        second = listing_json(["sfs-2000-1"], systemdatum="2026-02-01 00:00:00")
+        summary = sfs.run(FakeClient({"dokumentlista": second}), self.args())
+        self.assertEqual((summary.written, summary.unchanged), (0, 1))
+        self.assertEqual(path.read_bytes(), before)
+        self.assertEqual(self.state()["done"]["sfs-2000-1"], "2026-02-01 00:00:00")
+
+    def test_changed_source_is_rewritten(self):
+        first = listing_json(["sfs-2000-1"], systemdatum="2026-01-01 00:00:00")
+        sfs.run(FakeClient({"dokumentlista": first}), self.args())
+        second = listing_json(["sfs-2000-1"], systemdatum="2026-02-01 00:00:00")
+        changed = TEXT.replace(b"\n\n", b"\n\nNy mening.\n\n", 1)
+        client = FakeClient({"dokumentlista": second, ".text": changed})
+        summary = sfs.run(client, self.args())
+        self.assertEqual((summary.written, summary.unchanged), (1, 0))
+
+
 if __name__ == "__main__":
     unittest.main()

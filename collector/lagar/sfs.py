@@ -15,6 +15,7 @@ from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from pathlib import Path
 
+from . import frontmatter
 from .http import Blocked, PoliteClient
 from .riksdagen import (
     FUNDAMENTAL_LAWS,
@@ -78,6 +79,7 @@ def _non_negative(value):
 @dataclass
 class RunSummary:
     written: int = 0
+    unchanged: int = 0
     skipped: int = 0
     failed: "list[str]" = field(default_factory=list)
     blocked: bool = False
@@ -185,8 +187,22 @@ def _fundamental_item(dok_id, parsed, text):
     )
 
 
+def _same_source(meta, corpus):
+    """True when the stored file was built from the same source bytes."""
+    path = path_for(meta, corpus)
+    try:
+        stored, _ = frontmatter.load(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    return stored.get("source_sha256") == meta["source_sha256"]
+
+
 def _store(client, dok_id, item, corpus):
-    """Fetch, parse and write one document; returns the item that was written."""
+    """Fetch, parse and write one document; returns (item, written).
+
+    A document whose source bytes match the stored file is left untouched, so a
+    re-run does not churn `fetched_at`.
+    """
     raw = client.get(TEXT_URL.format(dok_id=urllib.parse.quote(dok_id)))
     if raw.lstrip().startswith(b"<dokumentstatus"):
         # Digitised OCR prints come back as status XML wrapping styled HTML; record them as a coverage gap.
@@ -197,8 +213,10 @@ def _store(client, dok_id, item, corpus):
         item = _fundamental_item(dok_id, parsed, text)
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     meta = build_meta(item, parsed, hashlib.sha256(raw).hexdigest(), fetched_at)
+    if _same_source(meta, corpus):
+        return item, False
     write(meta, to_markdown(meta["title"], parsed.body), corpus)
-    return item
+    return item, True
 
 
 def _already_done(state, item, corpus):
@@ -247,14 +265,17 @@ def run(client, args):
             if args.limit is not None and summary.written >= args.limit:
                 break
             try:
-                stored = _store(client, dok_id, item, args.corpus)
+                stored, changed = _store(client, dok_id, item, args.corpus)
             except Blocked:
                 raise
             except DOCUMENT_ERRORS as error:
                 summary.failed.append(dok_id)
                 state["failed"][dok_id] = f"{type(error).__name__}: {error}"
             else:
-                summary.written += 1
+                if changed:
+                    summary.written += 1
+                else:
+                    summary.unchanged += 1
                 if stored.systemdatum:
                     state["done"][dok_id] = stored.systemdatum
                 else:
@@ -290,7 +311,8 @@ def main(argv, client=None):
         print(f"error: {error}", file=sys.stderr, flush=True)
         return 1
     print(
-        f"done: {summary.written} written, {summary.skipped} skipped, "
+        f"done: {summary.written} written, {summary.unchanged} unchanged, "
+        f"{summary.skipped} skipped, "
         f"{len(summary.failed)} failed" + (", BLOCKED" if summary.blocked else ""),
         flush=True,
     )
