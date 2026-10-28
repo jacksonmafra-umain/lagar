@@ -3,6 +3,9 @@ package app.lagar.data
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.Scope
 import app.lagar.domain.count
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 
@@ -28,17 +31,17 @@ class Catalog(private val repo: LagarRepository) {
         return items.sortedWith(NewestFirst)
     }
 
+    /** The first page gives the page count; the rest are fetched a few at a time, kept in page order. */
     private suspend fun loadLayer(layer: DisplayLayer): List<ListingItem> {
-        val items = mutableListOf<ListingItem>()
-        var page = 1
-        var pageCount = 1
-        while (page <= pageCount) {
-            val result = repo.listing(layer.apiLayer, layer.apiType, page)
-            pageCount = result.pageCount
-            items += result.items
-            page++
+        val first = repo.listing(layer.apiLayer, layer.apiType, 1)
+        val rest = (2..first.pageCount).chunked(PARALLEL_PAGES).flatMap { pages ->
+            coroutineScope { pages.map { async { repo.listing(layer.apiLayer, layer.apiType, it) } }.awaitAll() }
         }
-        return items
+        return first.items + rest.flatMap { it.items }
+    }
+
+    private companion object {
+        const val PARALLEL_PAGES = 6
     }
 }
 

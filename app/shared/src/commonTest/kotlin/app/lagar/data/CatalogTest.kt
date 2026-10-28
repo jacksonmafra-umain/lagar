@@ -46,6 +46,15 @@ class CatalogTest {
     }
 
     @Test
+    fun keepsPageOrderAcrossManyPages() = runTest {
+        val index = ApiIndex(1, "t", listOf(ApiLayer("sfs", 9, listOf(ApiSeries("act", 9)))))
+        val pages = (1..9).map { page("sfs", "act", it, 9, item("p$it", "2020-01-01")) }
+        val fake = repo(index, *pages.toTypedArray())
+        assertEquals((1..9).map { "p$it" }, Catalog(fake).items(Scope.Nationell).map { it.id })
+        assertEquals(9, fake.requests.size)
+    }
+
+    @Test
     fun skipsEmptyLayers() = runTest {
         val index = ApiIndex(
             1,
