@@ -119,6 +119,15 @@ class SchemaTest(unittest.TestCase):
             with self.subTest(bad=bad):
                 self.assertFalse(schema._format_ok("uri", bad))
 
+    def test_if_then_else_and_const(self):
+        rule = {"if": {"properties": {"a": {"const": 1}}}, "then": {"required": ["b"]}, "else": {"required": ["c"]}}
+        self.assertEqual(schema._valid({"a": 1, "b": 0}, rule), True)
+        self.assertEqual(schema._valid({"a": 1}, rule), False)
+        self.assertEqual(schema._valid({"a": 2, "c": 0}, rule), True)
+        self.assertEqual(schema._valid({"a": 2, "b": 0}, rule), False)
+        self.assertEqual(schema._valid([1, 2], {"maxItems": 1}), False)
+        self.assertEqual(schema._valid({"x": 1}, {"allOf": [{"required": ["x"]}, {"required": ["y"]}]}), False)
+
 
 if __name__ == "__main__":
     unittest.main()
