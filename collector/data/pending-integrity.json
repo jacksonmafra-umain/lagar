@@ -2,64 +2,3549 @@
   "cross_references": {
     "amended_by": {
       "sample": [
-        "1921:21",
-        "1976:871",
-        "1979:933",
-        "1979:935",
-        "1985:864",
-        "1991:1471",
-        "2010:1408",
-        "2014:1385",
-        "2018:1801",
-        "2018:1802"
+        "1869:43",
+        "1912:187",
+        "1912:326",
+        "1916:161",
+        "1917:275",
+        "1917:276",
+        "1918:326",
+        "1920:432",
+        "1920:859",
+        "1921:21"
       ],
-      "total": 49,
-      "unknown": 48
+      "total": 30485,
+      "unknown": 30476
     },
     "amended_through": {
       "sample": [
-        "2022:1524",
-        "2022:1525",
-        "2022:1600",
-        "2026:1010",
-        "2026:1028",
-        "2026:1194",
-        "2026:1436",
-        "2026:1456",
-        "2026:1484",
-        "2026:1501"
+        "1877:39",
+        "1910:8",
+        "1921:283",
+        "1925:100",
+        "1930:71",
+        "1932:225",
+        "1935:406",
+        "1943:883",
+        "1944:649",
+        "1946:851"
       ],
-      "total": 21,
-      "unknown": 21
+      "total": 5700,
+      "unknown": 5666
     },
     "reprinted_by": {
       "sample": [
-        "1979:935",
-        "2011:109",
-        "2014:1385",
-        "2015:150",
-        "2015:151",
-        "2018:1801",
-        "2018:1802",
-        "2018:1903",
-        "2022:1524",
-        "2022:1525"
+        "1969:589",
+        "1970:933",
+        "1970:934",
+        "1971:1036",
+        "1971:1209",
+        "1972:466",
+        "1973:437",
+        "1974:414",
+        "1974:815",
+        "1975:616"
       ],
-      "total": 11,
-      "unknown": 11
+      "total": 426,
+      "unknown": 426
     }
   },
-  "documents": 104,
+  "documents": 11425,
   "duplicate_ids": [],
   "fsck": null,
-  "generated_at": "2026-10-28T00:00:00Z",
+  "generated_at": "2026-10-28T11:43:26Z",
   "path_mismatches": [],
   "schema_errors": [],
   "text_quality": [
     {
       "flag": "short_body",
+      "id": "sfs-1757-0119",
+      "path": "sfs/other/1757-0119.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1772-1104",
+      "path": "sfs/ordinances/1772-1104.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1772-1104",
+      "path": "sfs/ordinances/1772-1104.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1840-46",
+      "path": "sfs/other/1840-46.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1867-9-s-7",
+      "path": "sfs/other/1867-9-s-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1867-9-s-7",
+      "path": "sfs/other/1867-9-s-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1870-10-s-1",
+      "path": "sfs/other/1870-10-s-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1904-60-s-1",
+      "path": "sfs/other/1904-60-s-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1912-360",
+      "path": "sfs/other/1912-360.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1912-360",
+      "path": "sfs/other/1912-360.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1918-925",
+      "path": "sfs/other/1918-925.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1919-821",
+      "path": "sfs/other/1919-821.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1919-878",
+      "path": "sfs/other/1919-878.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1921-612",
+      "path": "sfs/other/1921-612.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1921-612",
+      "path": "sfs/other/1921-612.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1925-456",
+      "path": "sfs/acts/1925-456.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1925-456",
+      "path": "sfs/acts/1925-456.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1927-25",
+      "path": "sfs/acts/1927-25.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1927-25",
+      "path": "sfs/acts/1927-25.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1927-26",
+      "path": "sfs/acts/1927-26.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1927-26",
+      "path": "sfs/acts/1927-26.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1927-28",
+      "path": "sfs/acts/1927-28.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1927-28",
+      "path": "sfs/acts/1927-28.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1930-33",
+      "path": "sfs/ordinances/1930-33.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1930-33",
+      "path": "sfs/ordinances/1930-33.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1930-54",
+      "path": "sfs/other/1930-54.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1930-54",
+      "path": "sfs/other/1930-54.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1931-68",
+      "path": "sfs/other/1931-68.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1933-483",
+      "path": "sfs/other/1933-483.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1933-483",
+      "path": "sfs/other/1933-483.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1936-282",
+      "path": "sfs/acts/1936-282.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1936-282",
+      "path": "sfs/acts/1936-282.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1936-45",
+      "path": "sfs/other/1936-45.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1936-45",
+      "path": "sfs/other/1936-45.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1937-179",
+      "path": "sfs/other/1937-179.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1937-313",
+      "path": "sfs/other/1937-313.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1937-313",
+      "path": "sfs/other/1937-313.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1937-810",
+      "path": "sfs/other/1937-810.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1937-810",
+      "path": "sfs/other/1937-810.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1937-882",
+      "path": "sfs/other/1937-882.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1937-882",
+      "path": "sfs/other/1937-882.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1939-741",
+      "path": "sfs/other/1939-741.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1939-741",
+      "path": "sfs/other/1939-741.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1942-118",
+      "path": "sfs/acts/1942-118.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1942-118",
+      "path": "sfs/acts/1942-118.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1942-818",
+      "path": "sfs/other/1942-818.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1942-818",
+      "path": "sfs/other/1942-818.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1942-937",
+      "path": "sfs/other/1942-937.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1944-42",
+      "path": "sfs/other/1944-42.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1944-772",
+      "path": "sfs/other/1944-772.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1944-772",
+      "path": "sfs/other/1944-772.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1945-239",
+      "path": "sfs/other/1945-239.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1945-239",
+      "path": "sfs/other/1945-239.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1946-108",
+      "path": "sfs/other/1946-108.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1946-108",
+      "path": "sfs/other/1946-108.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1947-275",
+      "path": "sfs/acts/1947-275.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1947-275",
+      "path": "sfs/acts/1947-275.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1947-385",
+      "path": "sfs/acts/1947-385.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1948-347",
+      "path": "sfs/other/1948-347.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1948-347",
+      "path": "sfs/other/1948-347.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1948-473",
+      "path": "sfs/acts/1948-473.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1948-473",
+      "path": "sfs/acts/1948-473.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1949-531",
+      "path": "sfs/other/1949-531.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1949-531",
+      "path": "sfs/other/1949-531.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1950-473",
+      "path": "sfs/other/1950-473.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1952-590",
+      "path": "sfs/other/1952-590.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1952-590",
+      "path": "sfs/other/1952-590.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1952-804",
+      "path": "sfs/other/1952-804.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1952-804",
+      "path": "sfs/other/1952-804.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1954-23",
+      "path": "sfs/other/1954-23.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1954-284",
+      "path": "sfs/acts/1954-284.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1954-514",
+      "path": "sfs/other/1954-514.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1954-514",
+      "path": "sfs/other/1954-514.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1955-184",
+      "path": "sfs/acts/1955-184.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1955-184",
+      "path": "sfs/acts/1955-184.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1955-187",
+      "path": "sfs/other/1955-187.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1955-187",
+      "path": "sfs/other/1955-187.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1955-417",
+      "path": "sfs/acts/1955-417.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1955-417",
+      "path": "sfs/acts/1955-417.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1955-422",
+      "path": "sfs/other/1955-422.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1955-422",
+      "path": "sfs/other/1955-422.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1955-537",
+      "path": "sfs/other/1955-537.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1955-537",
+      "path": "sfs/other/1955-537.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1958-116",
+      "path": "sfs/other/1958-116.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1958-116",
+      "path": "sfs/other/1958-116.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1958-530",
+      "path": "sfs/other/1958-530.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1958-530",
+      "path": "sfs/other/1958-530.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1959-612",
+      "path": "sfs/other/1959-612.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1960-691",
+      "path": "sfs/other/1960-691.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1960-691",
+      "path": "sfs/other/1960-691.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1962-385",
+      "path": "sfs/other/1962-385.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1962-385",
+      "path": "sfs/other/1962-385.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1962-413",
+      "path": "sfs/other/1962-413.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1962-413",
+      "path": "sfs/other/1962-413.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1962-584",
+      "path": "sfs/other/1962-584.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1963-698",
+      "path": "sfs/other/1963-698.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1963-698",
+      "path": "sfs/other/1963-698.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1964-533",
+      "path": "sfs/other/1964-533.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1964-533",
+      "path": "sfs/other/1964-533.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1965-783",
+      "path": "sfs/other/1965-783.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1965-783",
+      "path": "sfs/other/1965-783.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1966-550",
+      "path": "sfs/other/1966-550.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1966-550",
+      "path": "sfs/other/1966-550.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1967-101",
+      "path": "sfs/other/1967-101.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1967-490",
+      "path": "sfs/other/1967-490.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1967-490",
+      "path": "sfs/other/1967-490.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1967-782",
+      "path": "sfs/acts/1967-782.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1967-782",
+      "path": "sfs/acts/1967-782.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1968-447",
+      "path": "sfs/other/1968-447.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1968-447",
+      "path": "sfs/other/1968-447.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1968-738",
+      "path": "sfs/acts/1968-738.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1968-738",
+      "path": "sfs/acts/1968-738.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1969-464",
+      "path": "sfs/other/1969-464.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1969-464",
+      "path": "sfs/other/1969-464.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1969-780",
+      "path": "sfs/acts/1969-780.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1969-780",
+      "path": "sfs/acts/1969-780.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1969-88",
+      "path": "sfs/ordinances/1969-88.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1969-88",
+      "path": "sfs/ordinances/1969-88.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1970-653",
+      "path": "sfs/other/1970-653.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1970-653",
+      "path": "sfs/other/1970-653.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1973-15",
+      "path": "sfs/other/1973-15.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1973-15",
+      "path": "sfs/other/1973-15.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1973-786",
+      "path": "sfs/other/1973-786.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1974-1110",
+      "path": "sfs/other/1974-1110.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1974-1110",
+      "path": "sfs/other/1974-1110.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1974-397",
+      "path": "sfs/other/1974-397.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1974-397",
+      "path": "sfs/other/1974-397.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1974-615",
+      "path": "sfs/acts/1974-615.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1974-650",
+      "path": "sfs/other/1974-650.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1975-1190",
+      "path": "sfs/acts/1975-1190.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1975-1190",
+      "path": "sfs/acts/1975-1190.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1975-874",
+      "path": "sfs/ordinances/1975-874.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1975-874",
+      "path": "sfs/ordinances/1975-874.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1976-113",
+      "path": "sfs/other/1976-113.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1976-113",
+      "path": "sfs/other/1976-113.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1976-114",
+      "path": "sfs/ordinances/1976-114.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1976-114",
+      "path": "sfs/ordinances/1976-114.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1976-15",
+      "path": "sfs/ordinances/1976-15.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1976-173",
+      "path": "sfs/acts/1976-173.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1976-173",
+      "path": "sfs/acts/1976-173.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1976-296",
+      "path": "sfs/acts/1976-296.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1976-386",
+      "path": "sfs/ordinances/1976-386.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1976-486",
+      "path": "sfs/other/1976-486.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1976-666",
+      "path": "sfs/acts/1976-666.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1976-759",
+      "path": "sfs/ordinances/1976-759.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1977-975",
+      "path": "sfs/acts/1977-975.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1977-975",
+      "path": "sfs/acts/1977-975.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1978-215",
+      "path": "sfs/other/1978-215.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1978-843",
+      "path": "sfs/ordinances/1978-843.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1979-730",
+      "path": "sfs/other/1979-730.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1979-740",
+      "path": "sfs/ordinances/1979-740.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1980-20",
+      "path": "sfs/other/1980-20.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1981-1362",
+      "path": "sfs/ordinances/1981-1362.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1981-48",
+      "path": "sfs/other/1981-48.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1982-156",
+      "path": "sfs/other/1982-156.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1983-45",
+      "path": "sfs/other/1983-45.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1985-953",
+      "path": "sfs/ordinances/1985-953.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1986-1256",
+      "path": "sfs/ordinances/1986-1256.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1986-213",
+      "path": "sfs/other/1986-213.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1987-1227",
+      "path": "sfs/other/1987-1227.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1988-1574",
+      "path": "sfs/other/1988-1574.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1988-571",
+      "path": "sfs/acts/1988-571.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1989-1015",
+      "path": "sfs/other/1989-1015.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1989-1042",
+      "path": "sfs/other/1989-1042.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1989-184",
+      "path": "sfs/other/1989-184.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1990-107",
+      "path": "sfs/other/1990-107.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1990-1082",
+      "path": "sfs/other/1990-1082.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1990-1099",
+      "path": "sfs/other/1990-1099.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1990-1187",
+      "path": "sfs/ordinances/1990-1187.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1990-249",
+      "path": "sfs/other/1990-249.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1991-1190",
+      "path": "sfs/acts/1991-1190.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1991-126",
+      "path": "sfs/other/1991-126.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1991-1335",
+      "path": "sfs/other/1991-1335.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1991-1518",
+      "path": "sfs/ordinances/1991-1518.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1991-1525",
+      "path": "sfs/ordinances/1991-1525.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1991-613",
+      "path": "sfs/other/1991-613.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1991-86",
+      "path": "sfs/other/1991-86.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1992-1003",
+      "path": "sfs/other/1992-1003.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1992-1089",
+      "path": "sfs/ordinances/1992-1089.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1992-30",
+      "path": "sfs/other/1992-30.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1993-1088",
+      "path": "sfs/other/1993-1088.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1993-1341",
+      "path": "sfs/ordinances/1993-1341.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1993-198",
+      "path": "sfs/other/1993-198.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1993-8",
+      "path": "sfs/other/1993-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1993-985",
+      "path": "sfs/other/1993-985.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1994-1",
+      "path": "sfs/other/1994-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1994-1195",
+      "path": "sfs/other/1994-1195.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1994-1283",
+      "path": "sfs/ordinances/1994-1283.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1994-1324",
+      "path": "sfs/other/1994-1324.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1994-1501",
+      "path": "sfs/other/1994-1501.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1994-1501",
+      "path": "sfs/other/1994-1501.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1994-1967",
+      "path": "sfs/ordinances/1994-1967.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1994-197",
+      "path": "sfs/acts/1994-197.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1995-1024",
+      "path": "sfs/other/1995-1024.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1995-1113",
+      "path": "sfs/other/1995-1113.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1995-1217",
+      "path": "sfs/ordinances/1995-1217.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1995-410",
+      "path": "sfs/acts/1995-410.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1996-1",
+      "path": "sfs/other/1996-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1996-241",
+      "path": "sfs/other/1996-241.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1996-832",
+      "path": "sfs/other/1996-832.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1996-937",
+      "path": "sfs/other/1996-937.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1997-1",
+      "path": "sfs/other/1997-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-1997-1135",
+      "path": "sfs/ordinances/1997-1135.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1997-1135",
+      "path": "sfs/ordinances/1997-1135.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1998-972",
+      "path": "sfs/other/1998-972.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1999-1218",
+      "path": "sfs/ordinances/1999-1218.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1999-1419",
+      "path": "sfs/ordinances/1999-1419.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1999-192",
+      "path": "sfs/other/1999-192.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1999-3",
+      "path": "sfs/other/1999-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-1999-766",
+      "path": "sfs/other/1999-766.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2000-1171",
+      "path": "sfs/ordinances/2000-1171.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2000-162",
+      "path": "sfs/other/2000-162.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2000-6",
+      "path": "sfs/other/2000-6.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2001-956",
+      "path": "sfs/ordinances/2001-956.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2001-957",
+      "path": "sfs/ordinances/2001-957.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2002-747",
+      "path": "sfs/ordinances/2002-747.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2002-778",
+      "path": "sfs/ordinances/2002-778.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2002-985",
+      "path": "sfs/ordinances/2002-985.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2003-3",
+      "path": "sfs/other/2003-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2003-517",
+      "path": "sfs/other/2003-517.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2003-634",
+      "path": "sfs/ordinances/2003-634.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2003-635",
+      "path": "sfs/ordinances/2003-635.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2003-636",
+      "path": "sfs/ordinances/2003-636.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2004-1",
+      "path": "sfs/other/2004-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2004-1047",
+      "path": "sfs/ordinances/2004-1047.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2004-1048",
+      "path": "sfs/ordinances/2004-1048.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2004-1049",
+      "path": "sfs/ordinances/2004-1049.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2004-687",
+      "path": "sfs/other/2004-687.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2005-3",
+      "path": "sfs/other/2005-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2005-633",
+      "path": "sfs/other/2005-633.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2005-794",
+      "path": "sfs/ordinances/2005-794.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2005-795",
+      "path": "sfs/ordinances/2005-795.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2005-796",
+      "path": "sfs/ordinances/2005-796.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2006-1",
+      "path": "sfs/other/2006-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2006-1052",
+      "path": "sfs/other/2006-1052.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2006-1263",
+      "path": "sfs/ordinances/2006-1263.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2006-1264",
+      "path": "sfs/ordinances/2006-1264.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2006-1265",
+      "path": "sfs/ordinances/2006-1265.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2006-909",
+      "path": "sfs/acts/2006-909.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2006-909",
+      "path": "sfs/acts/2006-909.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2007-1",
+      "path": "sfs/other/2007-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2007-1022",
+      "path": "sfs/ordinances/2007-1022.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2007-1023",
+      "path": "sfs/ordinances/2007-1023.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2007-1024",
+      "path": "sfs/ordinances/2007-1024.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2007-679",
+      "path": "sfs/other/2007-679.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2008-1",
+      "path": "sfs/other/2008-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2008-716",
+      "path": "sfs/other/2008-716.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2008-904",
+      "path": "sfs/ordinances/2008-904.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2008-905",
+      "path": "sfs/ordinances/2008-905.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2008-906",
+      "path": "sfs/ordinances/2008-906.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2009-1248",
+      "path": "sfs/ordinances/2009-1248.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2009-1249",
+      "path": "sfs/ordinances/2009-1249.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2009-2",
+      "path": "sfs/other/2009-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2009-282",
+      "path": "sfs/acts/2009-282.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2009-891",
+      "path": "sfs/other/2009-891.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2009-925",
+      "path": "sfs/ordinances/2009-925.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2009-926",
+      "path": "sfs/ordinances/2009-926.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2010-1",
+      "path": "sfs/other/2010-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2010-1041",
+      "path": "sfs/other/2010-1041.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2010-1133",
+      "path": "sfs/ordinances/2010-1133.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2010-1134",
+      "path": "sfs/ordinances/2010-1134.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2010-1135",
+      "path": "sfs/ordinances/2010-1135.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2010-1136",
+      "path": "sfs/ordinances/2010-1136.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2010-1460",
+      "path": "sfs/acts/2010-1460.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2010-1460",
+      "path": "sfs/acts/2010-1460.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2010-1461",
+      "path": "sfs/acts/2010-1461.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2010-1461",
+      "path": "sfs/acts/2010-1461.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2011-1",
+      "path": "sfs/other/2011-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2011-1016",
+      "path": "sfs/ordinances/2011-1016.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2011-1017",
+      "path": "sfs/ordinances/2011-1017.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2011-1018",
+      "path": "sfs/ordinances/2011-1018.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2011-1019",
+      "path": "sfs/ordinances/2011-1019.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2011-1068",
+      "path": "sfs/ordinances/2011-1068.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2011-941",
+      "path": "sfs/other/2011-941.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2012-1",
+      "path": "sfs/other/2012-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2012-455",
+      "path": "sfs/acts/2012-455.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2012-455",
+      "path": "sfs/acts/2012-455.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2012-533",
+      "path": "sfs/other/2012-533.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2012-559",
+      "path": "sfs/ordinances/2012-559.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2012-560",
+      "path": "sfs/ordinances/2012-560.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2012-561",
+      "path": "sfs/ordinances/2012-561.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2012-562",
+      "path": "sfs/ordinances/2012-562.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2012-828",
+      "path": "sfs/ordinances/2012-828.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2013-1",
+      "path": "sfs/other/2013-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2013-698",
+      "path": "sfs/other/2013-698.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2013-716",
+      "path": "sfs/ordinances/2013-716.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2013-717",
+      "path": "sfs/ordinances/2013-717.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2013-718",
+      "path": "sfs/ordinances/2013-718.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2013-719",
+      "path": "sfs/ordinances/2013-719.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2013-984",
+      "path": "sfs/acts/2013-984.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2013-984",
+      "path": "sfs/acts/2013-984.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2014-1",
+      "path": "sfs/other/2014-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2014-1015",
+      "path": "sfs/other/2014-1015.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2014-1054",
+      "path": "sfs/ordinances/2014-1054.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2014-1055",
+      "path": "sfs/ordinances/2014-1055.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2014-1056",
+      "path": "sfs/ordinances/2014-1056.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2014-1057",
+      "path": "sfs/ordinances/2014-1057.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2014-1329",
+      "path": "sfs/ordinances/2014-1329.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2014-1329",
+      "path": "sfs/ordinances/2014-1329.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2014-329",
+      "path": "sfs/ordinances/2014-329.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2015-3",
+      "path": "sfs/other/2015-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2015-519",
+      "path": "sfs/other/2015-519.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2015-537",
+      "path": "sfs/ordinances/2015-537.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2015-538",
+      "path": "sfs/ordinances/2015-538.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2015-539",
+      "path": "sfs/ordinances/2015-539.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2015-540",
+      "path": "sfs/ordinances/2015-540.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2015-902",
+      "path": "sfs/acts/2015-902.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2015-902",
+      "path": "sfs/acts/2015-902.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2016-4",
+      "path": "sfs/other/2016-4.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2016-407",
+      "path": "sfs/acts/2016-407.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2016-407",
+      "path": "sfs/acts/2016-407.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2016-838",
+      "path": "sfs/other/2016-838.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2016-940",
+      "path": "sfs/ordinances/2016-940.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2016-941",
+      "path": "sfs/ordinances/2016-941.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2016-942",
+      "path": "sfs/ordinances/2016-942.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2016-943",
+      "path": "sfs/ordinances/2016-943.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2016-944",
+      "path": "sfs/ordinances/2016-944.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2017-1",
+      "path": "sfs/other/2017-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2017-1069",
+      "path": "sfs/ordinances/2017-1069.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2017-1070",
+      "path": "sfs/ordinances/2017-1070.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2017-1071",
+      "path": "sfs/ordinances/2017-1071.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2017-197",
+      "path": "sfs/acts/2017-197.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2017-197",
+      "path": "sfs/acts/2017-197.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2017-843",
+      "path": "sfs/other/2017-843.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2018-1",
+      "path": "sfs/other/2018-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2018-1119",
+      "path": "sfs/ordinances/2018-1119.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2018-1403",
+      "path": "sfs/other/2018-1403.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2018-1647",
+      "path": "sfs/ordinances/2018-1647.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2018-1648",
+      "path": "sfs/ordinances/2018-1648.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2018-1649",
+      "path": "sfs/ordinances/2018-1649.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2019-1",
+      "path": "sfs/other/2019-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2019-1204",
+      "path": "sfs/acts/2019-1204.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2019-1204",
+      "path": "sfs/acts/2019-1204.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2019-1293",
+      "path": "sfs/ordinances/2019-1293.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2019-550",
+      "path": "sfs/other/2019-550.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2019-692",
+      "path": "sfs/ordinances/2019-692.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2019-693",
+      "path": "sfs/ordinances/2019-693.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2019-694",
+      "path": "sfs/ordinances/2019-694.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2019-780",
+      "path": "sfs/ordinances/2019-780.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2020-1",
+      "path": "sfs/other/2020-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2020-1024",
+      "path": "sfs/ordinances/2020-1024.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2020-710",
+      "path": "sfs/other/2020-710.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2020-9",
+      "path": "sfs/ordinances/2020-9.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2020-9",
+      "path": "sfs/ordinances/2020-9.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2020-964",
+      "path": "sfs/ordinances/2020-964.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2020-965",
+      "path": "sfs/ordinances/2020-965.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2020-966",
+      "path": "sfs/ordinances/2020-966.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2021-1",
+      "path": "sfs/other/2021-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2021-1092",
+      "path": "sfs/ordinances/2021-1092.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2021-394",
+      "path": "sfs/ordinances/2021-394.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2021-773",
+      "path": "sfs/other/2021-773.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2021-992",
+      "path": "sfs/ordinances/2021-992.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2021-993",
+      "path": "sfs/ordinances/2021-993.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2021-994",
+      "path": "sfs/ordinances/2021-994.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2022-1",
+      "path": "sfs/other/2022-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2022-1339",
+      "path": "sfs/other/2022-1339.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2022-1437",
+      "path": "sfs/ordinances/2022-1437.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2022-1438",
+      "path": "sfs/ordinances/2022-1438.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2022-1439",
+      "path": "sfs/ordinances/2022-1439.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2022-1441",
+      "path": "sfs/ordinances/2022-1441.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2022-1588",
+      "path": "sfs/ordinances/2022-1588.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2022-1588",
+      "path": "sfs/ordinances/2022-1588.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2022-1589",
+      "path": "sfs/ordinances/2022-1589.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2022-1589",
+      "path": "sfs/ordinances/2022-1589.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2022-1591",
+      "path": "sfs/ordinances/2022-1591.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2022-1591",
+      "path": "sfs/ordinances/2022-1591.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2022-1663",
+      "path": "sfs/ordinances/2022-1663.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2023-1",
+      "path": "sfs/other/2023-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2023-323",
+      "path": "sfs/ordinances/2023-323.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2023-509",
+      "path": "sfs/other/2023-509.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2023-585",
+      "path": "sfs/ordinances/2023-585.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2023-585",
+      "path": "sfs/ordinances/2023-585.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2023-591",
+      "path": "sfs/ordinances/2023-591.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2023-591",
+      "path": "sfs/ordinances/2023-591.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-2023-592",
+      "path": "sfs/ordinances/2023-592.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2023-592",
+      "path": "sfs/ordinances/2023-592.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2023-648",
+      "path": "sfs/ordinances/2023-648.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2023-649",
+      "path": "sfs/ordinances/2023-649.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2023-650",
+      "path": "sfs/ordinances/2023-650.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2023-954",
+      "path": "sfs/other/2023-954.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2024-1168",
+      "path": "sfs/ordinances/2024-1168.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2024-1373",
+      "path": "sfs/other/2024-1373.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2024-299",
+      "path": "sfs/ordinances/2024-299.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2024-613",
+      "path": "sfs/other/2024-613.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2024-987",
+      "path": "sfs/ordinances/2024-987.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2024-988",
+      "path": "sfs/ordinances/2024-988.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2024-989",
+      "path": "sfs/ordinances/2024-989.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2025-1002",
+      "path": "sfs/ordinances/2025-1002.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2025-1003",
+      "path": "sfs/ordinances/2025-1003.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2025-1004",
+      "path": "sfs/ordinances/2025-1004.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2025-1257",
+      "path": "sfs/ordinances/2025-1257.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2025-1582",
+      "path": "sfs/other/2025-1582.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2025-399",
+      "path": "sfs/ordinances/2025-399.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2025-809",
+      "path": "sfs/other/2025-809.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-2026-1490",
+      "path": "sfs/other/2026-1490.md"
+    },
+    {
+      "flag": "short_body",
       "id": "sfs-2026-895",
       "path": "sfs/ordinances/2026-895.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-1",
+      "path": "sfs/ordinances/n2016-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-10",
+      "path": "sfs/ordinances/n2016-10.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-10",
+      "path": "sfs/ordinances/n2016-10.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-11",
+      "path": "sfs/ordinances/n2016-11.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-11",
+      "path": "sfs/ordinances/n2016-11.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-12",
+      "path": "sfs/ordinances/n2016-12.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-12",
+      "path": "sfs/ordinances/n2016-12.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-13",
+      "path": "sfs/ordinances/n2016-13.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-13",
+      "path": "sfs/ordinances/n2016-13.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-14",
+      "path": "sfs/ordinances/n2016-14.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-14",
+      "path": "sfs/ordinances/n2016-14.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-15",
+      "path": "sfs/ordinances/n2016-15.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-15",
+      "path": "sfs/ordinances/n2016-15.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-2",
+      "path": "sfs/ordinances/n2016-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-2",
+      "path": "sfs/ordinances/n2016-2.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-3",
+      "path": "sfs/ordinances/n2016-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-3",
+      "path": "sfs/ordinances/n2016-3.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-4",
+      "path": "sfs/ordinances/n2016-4.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-4",
+      "path": "sfs/ordinances/n2016-4.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-5",
+      "path": "sfs/ordinances/n2016-5.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-5",
+      "path": "sfs/ordinances/n2016-5.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-6",
+      "path": "sfs/ordinances/n2016-6.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-6",
+      "path": "sfs/ordinances/n2016-6.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-7",
+      "path": "sfs/ordinances/n2016-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-7",
+      "path": "sfs/ordinances/n2016-7.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-8",
+      "path": "sfs/ordinances/n2016-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-8",
+      "path": "sfs/ordinances/n2016-8.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2016-9",
+      "path": "sfs/ordinances/n2016-9.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2016-9",
+      "path": "sfs/ordinances/n2016-9.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-1",
+      "path": "sfs/ordinances/n2017-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-1",
+      "path": "sfs/ordinances/n2017-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-10",
+      "path": "sfs/ordinances/n2017-10.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-10",
+      "path": "sfs/ordinances/n2017-10.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-11",
+      "path": "sfs/ordinances/n2017-11.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-12",
+      "path": "sfs/ordinances/n2017-12.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-12",
+      "path": "sfs/ordinances/n2017-12.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-13",
+      "path": "sfs/ordinances/n2017-13.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-14",
+      "path": "sfs/ordinances/n2017-14.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-14",
+      "path": "sfs/ordinances/n2017-14.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-15",
+      "path": "sfs/ordinances/n2017-15.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-16",
+      "path": "sfs/ordinances/n2017-16.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-17",
+      "path": "sfs/ordinances/n2017-17.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-17",
+      "path": "sfs/ordinances/n2017-17.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-18",
+      "path": "sfs/ordinances/n2017-18.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-19",
+      "path": "sfs/ordinances/n2017-19.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-19",
+      "path": "sfs/ordinances/n2017-19.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-2",
+      "path": "sfs/ordinances/n2017-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-2",
+      "path": "sfs/ordinances/n2017-2.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-20",
+      "path": "sfs/ordinances/n2017-20.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-20",
+      "path": "sfs/ordinances/n2017-20.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-21",
+      "path": "sfs/ordinances/n2017-21.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-22",
+      "path": "sfs/ordinances/n2017-22.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-22",
+      "path": "sfs/ordinances/n2017-22.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-23",
+      "path": "sfs/ordinances/n2017-23.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-23",
+      "path": "sfs/ordinances/n2017-23.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-24",
+      "path": "sfs/ordinances/n2017-24.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-24",
+      "path": "sfs/ordinances/n2017-24.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-25",
+      "path": "sfs/ordinances/n2017-25.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-25",
+      "path": "sfs/ordinances/n2017-25.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-26",
+      "path": "sfs/ordinances/n2017-26.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-26",
+      "path": "sfs/ordinances/n2017-26.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-27",
+      "path": "sfs/ordinances/n2017-27.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-27",
+      "path": "sfs/ordinances/n2017-27.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-28",
+      "path": "sfs/ordinances/n2017-28.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-28",
+      "path": "sfs/ordinances/n2017-28.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-29",
+      "path": "sfs/ordinances/n2017-29.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-29",
+      "path": "sfs/ordinances/n2017-29.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-3",
+      "path": "sfs/ordinances/n2017-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-3",
+      "path": "sfs/ordinances/n2017-3.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-30",
+      "path": "sfs/ordinances/n2017-30.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-30",
+      "path": "sfs/ordinances/n2017-30.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-31",
+      "path": "sfs/ordinances/n2017-31.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-31",
+      "path": "sfs/ordinances/n2017-31.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-32",
+      "path": "sfs/ordinances/n2017-32.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-32",
+      "path": "sfs/ordinances/n2017-32.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-33",
+      "path": "sfs/ordinances/n2017-33.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-33",
+      "path": "sfs/ordinances/n2017-33.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-34",
+      "path": "sfs/ordinances/n2017-34.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-4",
+      "path": "sfs/ordinances/n2017-4.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-5",
+      "path": "sfs/ordinances/n2017-5.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-5",
+      "path": "sfs/ordinances/n2017-5.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-6",
+      "path": "sfs/ordinances/n2017-6.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-6",
+      "path": "sfs/ordinances/n2017-6.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-7",
+      "path": "sfs/ordinances/n2017-7.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-8",
+      "path": "sfs/ordinances/n2017-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-8",
+      "path": "sfs/ordinances/n2017-8.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2017-9",
+      "path": "sfs/ordinances/n2017-9.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2017-9",
+      "path": "sfs/ordinances/n2017-9.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2018-1",
+      "path": "sfs/ordinances/n2018-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2018-1",
+      "path": "sfs/ordinances/n2018-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2018-2",
+      "path": "sfs/ordinances/n2018-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2018-2",
+      "path": "sfs/ordinances/n2018-2.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2018-3",
+      "path": "sfs/ordinances/n2018-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2018-3",
+      "path": "sfs/ordinances/n2018-3.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2018-4",
+      "path": "sfs/ordinances/n2018-4.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2019-1",
+      "path": "sfs/ordinances/n2019-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2019-1",
+      "path": "sfs/ordinances/n2019-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2019-2",
+      "path": "sfs/ordinances/n2019-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2019-2",
+      "path": "sfs/ordinances/n2019-2.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2019-3",
+      "path": "sfs/ordinances/n2019-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2019-3",
+      "path": "sfs/ordinances/n2019-3.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2019-4",
+      "path": "sfs/ordinances/n2019-4.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2019-5",
+      "path": "sfs/ordinances/n2019-5.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2019-5",
+      "path": "sfs/ordinances/n2019-5.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2019-6",
+      "path": "sfs/ordinances/n2019-6.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2019-6",
+      "path": "sfs/ordinances/n2019-6.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2019-7",
+      "path": "sfs/ordinances/n2019-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2019-7",
+      "path": "sfs/ordinances/n2019-7.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2019-8",
+      "path": "sfs/ordinances/n2019-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2019-8",
+      "path": "sfs/ordinances/n2019-8.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2019-9",
+      "path": "sfs/ordinances/n2019-9.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2019-9",
+      "path": "sfs/ordinances/n2019-9.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-1",
+      "path": "sfs/ordinances/n2020-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-1",
+      "path": "sfs/ordinances/n2020-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-10",
+      "path": "sfs/ordinances/n2020-10.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-10",
+      "path": "sfs/ordinances/n2020-10.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-11",
+      "path": "sfs/ordinances/n2020-11.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-11",
+      "path": "sfs/ordinances/n2020-11.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-12",
+      "path": "sfs/ordinances/n2020-12.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-12",
+      "path": "sfs/ordinances/n2020-12.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-13",
+      "path": "sfs/ordinances/n2020-13.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-13",
+      "path": "sfs/ordinances/n2020-13.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-14",
+      "path": "sfs/ordinances/n2020-14.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-15",
+      "path": "sfs/ordinances/n2020-15.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-16",
+      "path": "sfs/ordinances/n2020-16.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-16",
+      "path": "sfs/ordinances/n2020-16.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-17",
+      "path": "sfs/ordinances/n2020-17.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-17",
+      "path": "sfs/ordinances/n2020-17.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-18",
+      "path": "sfs/ordinances/n2020-18.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-18",
+      "path": "sfs/ordinances/n2020-18.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-2",
+      "path": "sfs/ordinances/n2020-2.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-3",
+      "path": "sfs/ordinances/n2020-3.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-4",
+      "path": "sfs/ordinances/n2020-4.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-4",
+      "path": "sfs/ordinances/n2020-4.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-5",
+      "path": "sfs/ordinances/n2020-5.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-5",
+      "path": "sfs/ordinances/n2020-5.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-6",
+      "path": "sfs/ordinances/n2020-6.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-6",
+      "path": "sfs/ordinances/n2020-6.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-7",
+      "path": "sfs/ordinances/n2020-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-7",
+      "path": "sfs/ordinances/n2020-7.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-8",
+      "path": "sfs/ordinances/n2020-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-8",
+      "path": "sfs/ordinances/n2020-8.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2020-9",
+      "path": "sfs/ordinances/n2020-9.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2020-9",
+      "path": "sfs/ordinances/n2020-9.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-1",
+      "path": "sfs/ordinances/n2021-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-10",
+      "path": "sfs/ordinances/n2021-10.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-11",
+      "path": "sfs/ordinances/n2021-11.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-12",
+      "path": "sfs/ordinances/n2021-12.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-13",
+      "path": "sfs/ordinances/n2021-13.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-14",
+      "path": "sfs/ordinances/n2021-14.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-15",
+      "path": "sfs/ordinances/n2021-15.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-15",
+      "path": "sfs/ordinances/n2021-15.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-16",
+      "path": "sfs/ordinances/n2021-16.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-16",
+      "path": "sfs/ordinances/n2021-16.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-17",
+      "path": "sfs/ordinances/n2021-17.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-17",
+      "path": "sfs/ordinances/n2021-17.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-18",
+      "path": "sfs/ordinances/n2021-18.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-18",
+      "path": "sfs/ordinances/n2021-18.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-19",
+      "path": "sfs/ordinances/n2021-19.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-19",
+      "path": "sfs/ordinances/n2021-19.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-2",
+      "path": "sfs/ordinances/n2021-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-2",
+      "path": "sfs/ordinances/n2021-2.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-3",
+      "path": "sfs/ordinances/n2021-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-3",
+      "path": "sfs/ordinances/n2021-3.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-4",
+      "path": "sfs/ordinances/n2021-4.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-4",
+      "path": "sfs/ordinances/n2021-4.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-5",
+      "path": "sfs/ordinances/n2021-5.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-5",
+      "path": "sfs/ordinances/n2021-5.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-6",
+      "path": "sfs/ordinances/n2021-6.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-6",
+      "path": "sfs/ordinances/n2021-6.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-7",
+      "path": "sfs/ordinances/n2021-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-7",
+      "path": "sfs/ordinances/n2021-7.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-8",
+      "path": "sfs/ordinances/n2021-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-8",
+      "path": "sfs/ordinances/n2021-8.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2021-9",
+      "path": "sfs/ordinances/n2021-9.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2021-9",
+      "path": "sfs/ordinances/n2021-9.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-1",
+      "path": "sfs/ordinances/n2022-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-1",
+      "path": "sfs/ordinances/n2022-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-10",
+      "path": "sfs/ordinances/n2022-10.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-10",
+      "path": "sfs/ordinances/n2022-10.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-11",
+      "path": "sfs/ordinances/n2022-11.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-11",
+      "path": "sfs/ordinances/n2022-11.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-12",
+      "path": "sfs/ordinances/n2022-12.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-12",
+      "path": "sfs/ordinances/n2022-12.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-13",
+      "path": "sfs/ordinances/n2022-13.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-13",
+      "path": "sfs/ordinances/n2022-13.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-14",
+      "path": "sfs/ordinances/n2022-14.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-14",
+      "path": "sfs/ordinances/n2022-14.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-15",
+      "path": "sfs/ordinances/n2022-15.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-15",
+      "path": "sfs/ordinances/n2022-15.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-16",
+      "path": "sfs/ordinances/n2022-16.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-16",
+      "path": "sfs/ordinances/n2022-16.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-17",
+      "path": "sfs/ordinances/n2022-17.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-17",
+      "path": "sfs/ordinances/n2022-17.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-18",
+      "path": "sfs/ordinances/n2022-18.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-18",
+      "path": "sfs/ordinances/n2022-18.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-2",
+      "path": "sfs/ordinances/n2022-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-2",
+      "path": "sfs/ordinances/n2022-2.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-3",
+      "path": "sfs/ordinances/n2022-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-3",
+      "path": "sfs/ordinances/n2022-3.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-4",
+      "path": "sfs/ordinances/n2022-4.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-4",
+      "path": "sfs/ordinances/n2022-4.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-5",
+      "path": "sfs/ordinances/n2022-5.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-5",
+      "path": "sfs/ordinances/n2022-5.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-6",
+      "path": "sfs/ordinances/n2022-6.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-6",
+      "path": "sfs/ordinances/n2022-6.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-7",
+      "path": "sfs/ordinances/n2022-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-7",
+      "path": "sfs/ordinances/n2022-7.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-8",
+      "path": "sfs/ordinances/n2022-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-8",
+      "path": "sfs/ordinances/n2022-8.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2022-9",
+      "path": "sfs/ordinances/n2022-9.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2022-9",
+      "path": "sfs/ordinances/n2022-9.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-1",
+      "path": "sfs/ordinances/n2024-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-1",
+      "path": "sfs/ordinances/n2024-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-10",
+      "path": "sfs/ordinances/n2024-10.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-10",
+      "path": "sfs/ordinances/n2024-10.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-11",
+      "path": "sfs/ordinances/n2024-11.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-12",
+      "path": "sfs/ordinances/n2024-12.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-12",
+      "path": "sfs/ordinances/n2024-12.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-13",
+      "path": "sfs/ordinances/n2024-13.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-14",
+      "path": "sfs/ordinances/n2024-14.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-14",
+      "path": "sfs/ordinances/n2024-14.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-15",
+      "path": "sfs/ordinances/n2024-15.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-15",
+      "path": "sfs/ordinances/n2024-15.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-16",
+      "path": "sfs/ordinances/n2024-16.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-16",
+      "path": "sfs/ordinances/n2024-16.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-17",
+      "path": "sfs/ordinances/n2024-17.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-17",
+      "path": "sfs/ordinances/n2024-17.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-18",
+      "path": "sfs/ordinances/n2024-18.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-18",
+      "path": "sfs/ordinances/n2024-18.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-19",
+      "path": "sfs/ordinances/n2024-19.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-19",
+      "path": "sfs/ordinances/n2024-19.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-2",
+      "path": "sfs/ordinances/n2024-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-2",
+      "path": "sfs/ordinances/n2024-2.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-20",
+      "path": "sfs/ordinances/n2024-20.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-20",
+      "path": "sfs/ordinances/n2024-20.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-21",
+      "path": "sfs/ordinances/n2024-21.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-21",
+      "path": "sfs/ordinances/n2024-21.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-22",
+      "path": "sfs/ordinances/n2024-22.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-22",
+      "path": "sfs/ordinances/n2024-22.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-3",
+      "path": "sfs/ordinances/n2024-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-3",
+      "path": "sfs/ordinances/n2024-3.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-4",
+      "path": "sfs/ordinances/n2024-4.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-4",
+      "path": "sfs/ordinances/n2024-4.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-5",
+      "path": "sfs/ordinances/n2024-5.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-5",
+      "path": "sfs/ordinances/n2024-5.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-6",
+      "path": "sfs/ordinances/n2024-6.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-6",
+      "path": "sfs/ordinances/n2024-6.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-7",
+      "path": "sfs/ordinances/n2024-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-7",
+      "path": "sfs/ordinances/n2024-7.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-8",
+      "path": "sfs/ordinances/n2024-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-8",
+      "path": "sfs/ordinances/n2024-8.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2024-9",
+      "path": "sfs/ordinances/n2024-9.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2024-9",
+      "path": "sfs/ordinances/n2024-9.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-1",
+      "path": "sfs/ordinances/n2025-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-1",
+      "path": "sfs/ordinances/n2025-1.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-10",
+      "path": "sfs/ordinances/n2025-10.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-10",
+      "path": "sfs/ordinances/n2025-10.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-11",
+      "path": "sfs/ordinances/n2025-11.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-11",
+      "path": "sfs/ordinances/n2025-11.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-12",
+      "path": "sfs/ordinances/n2025-12.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-12",
+      "path": "sfs/ordinances/n2025-12.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-13",
+      "path": "sfs/ordinances/n2025-13.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-13",
+      "path": "sfs/ordinances/n2025-13.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-14",
+      "path": "sfs/ordinances/n2025-14.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-14",
+      "path": "sfs/ordinances/n2025-14.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-15",
+      "path": "sfs/ordinances/n2025-15.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-15",
+      "path": "sfs/ordinances/n2025-15.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-16",
+      "path": "sfs/ordinances/n2025-16.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-16",
+      "path": "sfs/ordinances/n2025-16.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-17",
+      "path": "sfs/ordinances/n2025-17.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-17",
+      "path": "sfs/ordinances/n2025-17.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-18",
+      "path": "sfs/ordinances/n2025-18.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-18",
+      "path": "sfs/ordinances/n2025-18.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-19",
+      "path": "sfs/ordinances/n2025-19.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-19",
+      "path": "sfs/ordinances/n2025-19.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-2",
+      "path": "sfs/ordinances/n2025-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-2",
+      "path": "sfs/ordinances/n2025-2.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-20",
+      "path": "sfs/ordinances/n2025-20.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-20",
+      "path": "sfs/ordinances/n2025-20.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-21",
+      "path": "sfs/ordinances/n2025-21.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-21",
+      "path": "sfs/ordinances/n2025-21.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-22",
+      "path": "sfs/ordinances/n2025-22.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-22",
+      "path": "sfs/ordinances/n2025-22.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-23",
+      "path": "sfs/ordinances/n2025-23.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-23",
+      "path": "sfs/ordinances/n2025-23.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-24",
+      "path": "sfs/ordinances/n2025-24.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-24",
+      "path": "sfs/ordinances/n2025-24.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-3",
+      "path": "sfs/ordinances/n2025-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-3",
+      "path": "sfs/ordinances/n2025-3.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-4",
+      "path": "sfs/ordinances/n2025-4.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-4",
+      "path": "sfs/ordinances/n2025-4.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-5",
+      "path": "sfs/ordinances/n2025-5.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-5",
+      "path": "sfs/ordinances/n2025-5.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-6",
+      "path": "sfs/ordinances/n2025-6.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-6",
+      "path": "sfs/ordinances/n2025-6.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-7",
+      "path": "sfs/ordinances/n2025-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-7",
+      "path": "sfs/ordinances/n2025-7.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-8",
+      "path": "sfs/ordinances/n2025-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-8",
+      "path": "sfs/ordinances/n2025-8.md"
+    },
+    {
+      "flag": "print_only",
+      "id": "sfs-n2025-9",
+      "path": "sfs/ordinances/n2025-9.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "sfs-n2025-9",
+      "path": "sfs/ordinances/n2025-9.md"
     },
     {
       "flag": "print_only",

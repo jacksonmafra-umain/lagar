@@ -8,8 +8,8 @@
 <text x="704" y="59" text-anchor="end" fill="#0b3d91">4 / 4 (100.0%)</text>
 <text x="16" y="95" fill="#005b99">SFS (statutes and ordinances)</text>
 <rect x="240" y="84" width="260" height="16" rx="8" fill="#005b99" fill-opacity="0.18"/>
-<rect x="240" y="84" width="2" height="16" rx="8" fill="#005b99"/>
-<text x="704" y="95" text-anchor="end" fill="#005b99">100 / 11567 (0.9%)</text>
+<rect x="240" y="84" width="257" height="16" rx="8" fill="#005b99"/>
+<text x="704" y="95" text-anchor="end" fill="#005b99">11421 / 11567 (98.7%)</text>
 <text x="16" y="131" fill="#007270">Agency regulations</text>
 <rect x="240" y="120" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <text x="704" y="131" text-anchor="end" fill="#007270">0 / unknown (-)</text>

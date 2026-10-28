@@ -28,14 +28,16 @@ class BuildError(Exception):
     pass
 
 
+_NUMBER_RE = re.compile(r"([A-Za-z]*)(\d{4}):\D*(\d*)(.*)")
+
+
 def _number_key(number):
-    """(year, ordinal, is_plain); the N-series letter only breaks ties (plain listed first)."""
-    year, _, ordinal = number.partition(":")
-    n_series = year[:1] in ("N", "n")
-    try:
-        return (int(year[1:] if n_series else year), int(ordinal), not n_series)
-    except ValueError:
+    """(year, ordinal, is_plain, rest); a series prefix (N, RFS) and old-print page suffixes only break ties."""
+    m = _NUMBER_RE.fullmatch(number)
+    if not m:
         raise BuildError(f"unsortable number: {number!r}")
+    prefix, year, ordinal, rest = m.groups()
+    return (int(year), int(ordinal or 0), not prefix, rest)
 
 
 def _sorted(items):

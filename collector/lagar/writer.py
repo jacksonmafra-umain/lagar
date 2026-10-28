@@ -3,6 +3,7 @@
 import os
 import re
 import tempfile
+import urllib.parse
 from pathlib import Path
 
 from . import frontmatter, schema
@@ -11,6 +12,7 @@ from .vocabulary import TYPES
 
 _SFS_NUMBER = re.compile(r"\bN?\d{4}:\d+")
 _DATE_PREFIX = re.compile(r"^(\d{4}-\d{2}-\d{2})")
+_ID_JUNK = re.compile(r"[^0-9a-z-]+")
 _DIRS = {
     "fundamental_law": ("fundamental-laws",),
     "act": ("sfs", "acts"),
@@ -24,6 +26,12 @@ def _date(value):
     return match.group(1) if match else None
 
 
+def corpus_id(dok_id):
+    """Corpus id for a Riksdagen dok_id: old prints carry spaces and dots, a few lack the sfs- prefix."""
+    slug = _ID_JUNK.sub("-", dok_id.lower()).strip("-")  # N-series ids arrive as sfs-N2026-1
+    return slug if slug.startswith("sfs-") else "sfs-" + slug
+
+
 def build_meta(item, parsed, raw_sha256, fetched_at):
     header = parsed.header
     if item.dok_id in FUNDAMENTAL_LAWS:
@@ -34,7 +42,7 @@ def build_meta(item, parsed, raw_sha256, fetched_at):
     changed = _SFS_NUMBER.search(header.get("Ändrad", ""))
     ministry = item.ministry or header.get("Departement/myndighet", "").strip() or None
     return {
-        "id": item.dok_id.lower(),  # N-series ids arrive as sfs-N2026-1
+        "id": corpus_id(item.dok_id),
         "title": title,
         "type": type_,
         "layer": TYPES[type_],
@@ -51,7 +59,7 @@ def build_meta(item, parsed, raw_sha256, fetched_at):
         "eli": None,
         "language": "sv",
         "authoritative": False,
-        "source": f"https://data.riksdagen.se/dokument/{item.dok_id}",
+        "source": "https://data.riksdagen.se/dokument/" + urllib.parse.quote(item.dok_id),
         "source_sha256": raw_sha256,
         "fetched_at": fetched_at,
     }
