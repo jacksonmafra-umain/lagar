@@ -1,0 +1,10 @@
+{
+  "layer": "sfs",
+  "type": "act",
+  "page": 1,
+  "page_count": 1,
+  "total": 1,
+  "items": [
+    {"id": "sfs-2010-800", "title": "Skollag (2010:800)", "number": "2010:800", "type": "act", "issued": "2010-06-23", "repealed": null}
+  ]
+}

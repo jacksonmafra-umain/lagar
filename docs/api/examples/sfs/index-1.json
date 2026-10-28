@@ -1,0 +1,12 @@
+{
+  "layer": "sfs",
+  "type": null,
+  "page": 1,
+  "page_count": 1,
+  "total": 3,
+  "items": [
+    {"id": "sfs-2010-800", "title": "Skollag (2010:800)", "number": "2010:800", "type": "act", "issued": "2010-06-23", "repealed": null},
+    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null},
+    {"id": "sfs-1999-100", "title": "Exempelförordning (1999:100)", "number": "1999:100", "type": "ordinance", "issued": "1999-03-25", "repealed": "2005-01-01"}
+  ]
+}
