@@ -66,59 +66,59 @@ internal fun LagarTopBar(
     CompositionLocalProvider(
         LocalDensity provides Density(density.density, fontScale = minOf(density.fontScale, MAX_BAR_FONT_SCALE)),
     ) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .glass(GlassTier.Bar, hazeState)
-            .windowInsetsPadding(WindowInsets.statusBars)
-            .heightIn(min = ShellDimens.TopBarMinHeight)
-            .padding(horizontal = LagarTheme.spacing.gutterMobile),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Text(
-            text = stringResource(Res.string.app_name),
-            style = LagarTheme.type.headlineSm,
-            color = colors.primary,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier.weight(1f),
-        )
-        ScopeChip(scope, onOpenScopeSheet)
-        BarIconButton(onClick = onOpenSearch, description = stringResource(Res.string.search_open)) {
-            Icon(
-                painter = painterResource(Res.drawable.ic_search),
-                contentDescription = null,
-                tint = colors.onSurfaceVariant,
-                modifier = Modifier.size(ShellDimens.IconSize),
-            )
-        }
-        BarIconButton(
-            onClick = onToggleTheme,
-            description = stringResource(
-                if (dark) Res.string.theme_switch_to_light else Res.string.theme_switch_to_dark,
-            ),
+        Row(
+            modifier = modifier
+                .fillMaxWidth()
+                .glass(GlassTier.Bar, hazeState)
+                .windowInsetsPadding(WindowInsets.statusBars)
+                .heightIn(min = ShellDimens.TopBarMinHeight)
+                .padding(horizontal = LagarTheme.spacing.gutterMobile),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
-            Icon(
-                painter = painterResource(if (dark) Res.drawable.ic_light_mode else Res.drawable.ic_dark_mode),
-                contentDescription = null,
-                tint = colors.onSurfaceVariant,
-                modifier = Modifier.size(ShellDimens.IconSize),
+            Text(
+                text = stringResource(Res.string.app_name),
+                style = LagarTheme.type.headlineSm,
+                color = colors.primary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f),
             )
-        }
-        BarIconButton(onClick = onMenuClick, description = stringResource(Res.string.menu_open)) {
-            Box(
-                modifier = Modifier.size(ShellDimens.AvatarSize).clip(CircleShape).background(colors.primary),
-                contentAlignment = Alignment.Center,
-            ) {
+            ScopeChip(scope, onOpenScopeSheet)
+            BarIconButton(onClick = onOpenSearch, description = stringResource(Res.string.search_open)) {
                 Icon(
-                    painter = painterResource(Res.drawable.ic_person),
+                    painter = painterResource(Res.drawable.ic_search),
                     contentDescription = null,
-                    tint = colors.onPrimary,
-                    modifier = Modifier.size(ShellDimens.SmallIconSize),
+                    tint = colors.onSurfaceVariant,
+                    modifier = Modifier.size(ShellDimens.IconSize),
                 )
             }
+            BarIconButton(
+                onClick = onToggleTheme,
+                description = stringResource(
+                    if (dark) Res.string.theme_switch_to_light else Res.string.theme_switch_to_dark,
+                ),
+            ) {
+                Icon(
+                    painter = painterResource(if (dark) Res.drawable.ic_light_mode else Res.drawable.ic_dark_mode),
+                    contentDescription = null,
+                    tint = colors.onSurfaceVariant,
+                    modifier = Modifier.size(ShellDimens.IconSize),
+                )
+            }
+            BarIconButton(onClick = onMenuClick, description = stringResource(Res.string.menu_open)) {
+                Box(
+                    modifier = Modifier.size(ShellDimens.AvatarSize).clip(CircleShape).background(colors.primary),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(
+                        painter = painterResource(Res.drawable.ic_person),
+                        contentDescription = null,
+                        tint = colors.onPrimary,
+                        modifier = Modifier.size(ShellDimens.SmallIconSize),
+                    )
+                }
+            }
         }
-    }
     }
 }
 
@@ -159,7 +159,7 @@ private fun ScopeChip(scope: Scope, onClick: () -> Unit) {
             modifier = Modifier
                 .clip(CircleShape)
                 .background(layers.tint(scope.key))
-                .padding(start = LagarTheme.spacing.sm, end = LagarTheme.spacing.xs, top = 6.dp, bottom = 6.dp),
+                .padding(start = LagarTheme.spacing.sm, end = LagarTheme.spacing.xs, top = ShellDimens.PillPaddingVertical, bottom = ShellDimens.PillPaddingVertical),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
