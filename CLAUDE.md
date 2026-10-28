@@ -32,7 +32,7 @@ Run from the repo root.
   xcodebuild -project iosApp/iosApp.xcodeproj -scheme iosApp -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
   ```
 
-  Serve the built API locally with `python3 -m http.server 8000 -d build`.
+  Serve the built API locally with `python3 -m http.server 8000 -d build`. Release builds read the published API at `https://jacksonmafra-umain.github.io/lagar/api/v1/`; the `Pages` workflow (`.github/workflows/pages.yml`) deploys the API and the web app there on every push to `main` that touches `corpus/`, `api/` or `app/`.
 
 Workflow: work goes through labelled GitHub issues and PRs assigned to the owner, merged into `main`.
 
