@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import app.lagar.data.ListingItem
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
@@ -38,7 +39,6 @@ import app.lagar.resources.ic_info
 import app.lagar.settings.Bookmark
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.common.LoadStateHost
-import app.lagar.data.ListingItem
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel

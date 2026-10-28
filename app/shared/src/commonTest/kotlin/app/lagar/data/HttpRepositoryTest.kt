@@ -28,10 +28,12 @@ class HttpRepositoryTest {
     @Test
     fun listingRequestsTypedPagePath() = runTest {
         val urls = mutableListOf<String>()
-        val repository = repo(MockEngine { request ->
-            urls += request.url.toString()
-            respond(ApiExamples.actListing, headers = jsonHeaders)
-        })
+        val repository = repo(
+            MockEngine { request ->
+                urls += request.url.toString()
+                respond(ApiExamples.actListing, headers = jsonHeaders)
+            },
+        )
         val page = repository.listing("sfs", "act", 2)
         assertEquals(listOf("https://example.test/api/v1/sfs/act/index-2.json"), urls)
         assertEquals("act", page.type)
@@ -40,10 +42,12 @@ class HttpRepositoryTest {
     @Test
     fun layerListingOmitsTypeSegment() = runTest {
         val urls = mutableListOf<String>()
-        val repository = repo(MockEngine { request ->
-            urls += request.url.toString()
-            respond(ApiExamples.sfsListing, headers = jsonHeaders)
-        })
+        val repository = repo(
+            MockEngine { request ->
+                urls += request.url.toString()
+                respond(ApiExamples.sfsListing, headers = jsonHeaders)
+            },
+        )
         repository.listing("sfs", null, 1)
         assertEquals(listOf("https://example.test/api/v1/sfs/index-1.json"), urls)
     }
@@ -51,11 +55,13 @@ class HttpRepositoryTest {
     @Test
     fun indexAndDocumentPaths() = runTest {
         val urls = mutableListOf<String>()
-        val repository = repo(MockEngine { request ->
-            urls += request.url.toString()
-            val body = if (request.url.encodedPath.endsWith("index.json")) ApiExamples.index else ApiExamples.document
-            respond(body, headers = jsonHeaders)
-        })
+        val repository = repo(
+            MockEngine { request ->
+                urls += request.url.toString()
+                val body = if (request.url.encodedPath.endsWith("index.json")) ApiExamples.index else ApiExamples.document
+                respond(body, headers = jsonHeaders)
+            },
+        )
         repository.index()
         assertEquals("sfs-1999-175", repository.document("sfs-1999-175").meta.id)
         assertEquals(

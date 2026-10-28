@@ -40,20 +40,26 @@ fun LagarTheme(darkTheme: Boolean, content: @Composable () -> Unit) {
 
 object LagarTheme {
     val isDark: Boolean
-        @Composable @ReadOnlyComposable get() = LocalDarkTheme.current
+        @Composable @ReadOnlyComposable
+        get() = LocalDarkTheme.current
 
     val colors: ColorScheme
-        @Composable @ReadOnlyComposable get() = MaterialTheme.colorScheme
+        @Composable @ReadOnlyComposable
+        get() = MaterialTheme.colorScheme
 
     val layers: LayerColors
-        @Composable @ReadOnlyComposable get() = LocalLayerColors.current
+        @Composable @ReadOnlyComposable
+        get() = LocalLayerColors.current
 
     val status: StatusColors
-        @Composable @ReadOnlyComposable get() = LocalStatusColors.current
+        @Composable @ReadOnlyComposable
+        get() = LocalStatusColors.current
 
     val type: LagarTypography
-        @Composable @ReadOnlyComposable get() = LocalLagarTypography.current
+        @Composable @ReadOnlyComposable
+        get() = LocalLagarTypography.current
 
     val spacing: LagarSpacing
-        @Composable @ReadOnlyComposable get() = LocalLagarSpacing.current
+        @Composable @ReadOnlyComposable
+        get() = LocalLagarSpacing.current
 }

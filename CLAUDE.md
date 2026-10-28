@@ -34,6 +34,9 @@ Run from the repo root.
 
   Serve the built API locally with `python3 -m http.server 8000 -d build`. Release builds read the published API at `https://jacksonmafra-umain.github.io/lagar/api/v1/`; the `Pages` workflow (`.github/workflows/pages.yml`) deploys the API and the web app there on every push to `main` that touches `corpus/`, `api/` or `app/`.
 
+- Lint: `uvx ruff check collector api` (config in `ruff.toml`) and `./gradlew ktlintCheck` / `ktlintFormat` from `app/` (rules in `.editorconfig`). `pre-commit install` enables the hooks in `.pre-commit-config.yaml` (whitespace, ruff, corpus frontmatter audit, ktlint).
+- CI: `collector.yml` (ruff, tests on Python 3.12/3.13), `api.yml` (tests, corpus audit, full API build) and `app.yml` (ktlint, build-logic and shared tests, Android debug APK, wasmJs, iOS simulator build) run on PRs and on `main` for their paths; `pages.yml` deploys, `sync-sfs.yml` syncs the corpus daily.
+
 Workflow: work goes through labelled GitHub issues and PRs assigned to the owner, merged into `main`.
 
 ## What lagar is

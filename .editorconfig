@@ -9,3 +9,22 @@ indent_size = 4
 
 [*.{yml,json,md}]
 indent_size = 2
+
+[*.{kt,kts}]
+ktlint_code_style = intellij_idea
+# Composables are PascalCase functions.
+ktlint_function_naming_ignore_when_annotated_with = Composable
+# The code base wraps compactly by hand; ktlint keeps imports, indentation, spacing and naming consistent
+# without reflowing every call site.
+ktlint_standard_argument-list-wrapping = disabled
+ktlint_standard_parameter-list-wrapping = disabled
+ktlint_standard_function-signature = disabled
+ktlint_standard_function-literal = disabled
+ktlint_standard_class-signature = disabled
+ktlint_standard_binary-expression-wrapping = disabled
+ktlint_standard_statement-wrapping = disabled
+ktlint_standard_property-wrapping = disabled
+ktlint_standard_multiline-if-else = disabled
+ktlint_standard_blank-line-between-when-conditions = disabled
+ktlint_standard_max-line-length = disabled
+ktlint_standard_filename = disabled

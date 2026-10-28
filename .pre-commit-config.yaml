@@ -1,0 +1,40 @@
+# Install with `pre-commit install`; run everything with `pre-commit run --all-files`.
+# Source captures are kept byte-for-byte: the design export, collector fixtures and bundled licence texts.
+exclude: ^(design/stitch/|collector/tests/fixtures/|app/shared/src/commonMain/composeResources/files/licenses/)
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+        args: [--maxkb=1024]
+        exclude: ^corpus/
+      # Legal texts in corpus/ are written by the collector and never edited by hand.
+      - id: end-of-file-fixer
+        exclude: (^corpus/|\.svg$)
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+        exclude: ^corpus/
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.3
+    hooks:
+      - id: ruff-check
+
+  - repo: local
+    hooks:
+      - id: corpus-frontmatter
+        name: corpus frontmatter (schema, ids, paths)
+        entry: python3 -I collector/audit.py --out build/pre-commit-audit.json
+        language: system
+        files: ^corpus/
+        pass_filenames: false
+      - id: ktlint
+        name: ktlint
+        entry: app/gradlew -p app ktlintCheck --quiet
+        language: system
+        files: ^app/.*\.kts?$
+        pass_filenames: false

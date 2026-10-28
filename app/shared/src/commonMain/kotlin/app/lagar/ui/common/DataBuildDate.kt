@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.runtime.produceState
 import app.lagar.data.LagarRepository
-import kotlin.coroutines.cancellation.CancellationException
 import org.koin.compose.koinInject
+import kotlin.coroutines.cancellation.CancellationException
 
 /** ISO date (`yyyy-MM-dd`) of the data build; stays null while loading and when the index cannot be loaded. */
 @Composable

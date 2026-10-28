@@ -7,15 +7,15 @@ import app.lagar.data.GeoRepository
 import app.lagar.data.HttpRepository
 import app.lagar.data.LagarRepository
 import app.lagar.data.SampleRepository
+import app.lagar.domain.SearchQuery
 import app.lagar.settings.BookmarkStore
 import app.lagar.settings.UserPreferences
+import app.lagar.ui.hierarki.HierarkiViewModel
 import app.lagar.ui.home.HomeViewModel
 import app.lagar.ui.list.LayerListViewModel
 import app.lagar.ui.onboarding.OnboardingViewModel
-import app.lagar.domain.SearchQuery
 import app.lagar.ui.reader.ReaderViewModel
 import app.lagar.ui.search.SearchViewModel
-import app.lagar.ui.hierarki.HierarkiViewModel
 import com.russhwolf.settings.Settings
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.HttpTimeout

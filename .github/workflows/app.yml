@@ -41,6 +41,9 @@ jobs:
       - name: Build-logic tests
         run: ./gradlew -p build-logic test
 
+      - name: Kotlin style
+        run: ./gradlew ktlintCheck
+
       - name: Tests, Android debug APK and web build
         run: ./gradlew :shared:testAndroidHostTest :androidApp:assembleDebug :webApp:wasmJsBrowserDistribution
 

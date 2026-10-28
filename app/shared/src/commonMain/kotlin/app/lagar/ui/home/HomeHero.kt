@@ -43,9 +43,9 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.intl.Locale
-import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -62,11 +62,11 @@ import app.lagar.resources.home_search_hint
 import app.lagar.resources.home_search_submit
 import app.lagar.resources.ic_arrow_forward
 import app.lagar.resources.ic_search
+import app.lagar.ui.common.iconColor
 import app.lagar.ui.common.nameRes
 import app.lagar.ui.onboarding.descriptionRes
 import app.lagar.ui.onboarding.iconRes
 import app.lagar.ui.onboarding.nameRes
-import app.lagar.ui.common.iconColor
 import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource

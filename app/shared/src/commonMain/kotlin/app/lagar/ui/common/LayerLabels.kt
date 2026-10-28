@@ -2,6 +2,15 @@ package app.lagar.ui.common
 
 import app.lagar.domain.DisplayLayer
 import app.lagar.resources.Res
+import app.lagar.resources.ic_gavel
+import app.lagar.resources.ic_layer_apartment
+import app.lagar.resources.ic_layer_badge
+import app.lagar.resources.ic_layer_balance
+import app.lagar.resources.ic_layer_crown
+import app.lagar.resources.ic_layer_description
+import app.lagar.resources.ic_layer_hospital
+import app.lagar.resources.ic_layer_shield
+import app.lagar.resources.ic_layer_stars
 import app.lagar.resources.layer_agency
 import app.lagar.resources.layer_agency_desc
 import app.lagar.resources.layer_case_law
@@ -20,15 +29,6 @@ import app.lagar.resources.layer_sfs_act
 import app.lagar.resources.layer_sfs_act_desc
 import app.lagar.resources.layer_sfs_ordinance
 import app.lagar.resources.layer_sfs_ordinance_desc
-import app.lagar.resources.ic_gavel
-import app.lagar.resources.ic_layer_apartment
-import app.lagar.resources.ic_layer_badge
-import app.lagar.resources.ic_layer_balance
-import app.lagar.resources.ic_layer_crown
-import app.lagar.resources.ic_layer_description
-import app.lagar.resources.ic_layer_hospital
-import app.lagar.resources.ic_layer_shield
-import app.lagar.resources.ic_layer_stars
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 
