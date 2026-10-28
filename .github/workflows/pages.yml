@@ -1,0 +1,73 @@
+name: Pages
+
+# Publishes the static API (/lagar/api/v1/) and the web app (/lagar/) to GitHub Pages
+# whenever main changes the corpus, the generator or the app.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - corpus/**
+      - api/**
+      - app/**
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@8da46b539cd8fe6ab27ca75128919a18d757604c # v6.4.1
+
+      - name: API tests
+        run: python3 -I -m unittest discover -s api/tests -t .
+
+      - name: Build the API
+        run: python3 -I api/build.py --corpus corpus --out site/api/v1
+
+      - name: Build the web app
+        working-directory: app
+        run: ./gradlew :webApp:wasmJsBrowserDistribution
+
+      - name: Assemble the site
+        run: |
+          cp -R app/webApp/build/dist/wasmJs/productionExecutable/. site/
+          echo "Site: $(du -sh site | cut -f1), $(find site -type f | wc -l) files" >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
