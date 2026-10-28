@@ -1,0 +1,41 @@
+name: Collector
+
+on:
+  pull_request:
+    paths:
+      - collector/**
+      - ruff.toml
+      - .github/workflows/collector.yml
+  push:
+    branches: [main]
+    paths:
+      - collector/**
+      - ruff.toml
+      - .github/workflows/collector.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: collector-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Lint
+        run: pipx run ruff==0.17.3 check collector
+
+      - name: Tests
+        run: python3 -I -m unittest discover -s collector/tests -t collector
