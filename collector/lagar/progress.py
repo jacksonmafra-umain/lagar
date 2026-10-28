@@ -6,11 +6,13 @@ import re
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from . import frontmatter
+from . import frontmatter, schema
 
 DEFAULT_TARGETS = "collector/data/targets.json"
 DEFAULT_INTEGRITY = "collector/data/pending-integrity.json"
 BACKGROUND = "#f8f9fc"
+LABEL_X, BAR_X, BAR_W = 16, 240, 260
+LABEL_CHAR_PX = 7.5  # estimated average glyph width at 13px
 SFS_TYPES = ("act", "ordinance", "other_statute")
 _TYPE_NAMES = {"act": "acts", "ordinance": "ordinances", "other_statute": "other statutes"}
 # API layer id -> DESIGN.md layer key (docs/api.md, "Display levels").
@@ -45,14 +47,16 @@ def design_key(layer):
 
 
 def count_types(corpus):
-    """Return {type: count} over the readable documents of the corpus."""
+    """Return {type: count} over documents that load and pass schema validation."""
     counts = {}
     for path in sorted(Path(corpus).rglob("*.md")):
         try:
             meta, _ = frontmatter.load(path.read_text(encoding="utf-8"))
         except (ValueError, UnicodeDecodeError):
             continue
-        counts[meta.get("type")] = counts.get(meta.get("type"), 0) + 1
+        if schema.validate(meta):
+            continue
+        counts[meta["type"]] = counts.get(meta["type"], 0) + 1
     return counts
 
 
@@ -126,8 +130,8 @@ def render_markdown(rows, integrity):
 
 
 def render_svg(rows, colors):
-    width, left, bar_w, row_h, top = 720, 16, 340, 36, 44
-    bar_x = 200
+    width, left, bar_w, row_h, top = 720, LABEL_X, BAR_W, 36, 44
+    bar_x = BAR_X
     height = top + row_h * len(rows) + 12
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '

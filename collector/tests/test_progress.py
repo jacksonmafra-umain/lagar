@@ -62,6 +62,17 @@ class ProgressTests(unittest.TestCase):
         self.assertIn("#f8f9fc", first)
         self.assertTrue(first.startswith("<svg"))
 
+    def test_labels_end_before_bars(self):
+        for entry in json.loads((Path(__file__).resolve().parents[1] / "data" / "targets.json").read_text(encoding="utf-8")):
+            end = progress.LABEL_X + len(entry["label"]) * progress.LABEL_CHAR_PX
+            self.assertLess(end, progress.BAR_X, entry["label"])
+
+    def test_invalid_documents_not_counted(self):
+        path = writer.write(meta("2026:1"), LONG, self.root)
+        writer.write(meta("2026:2"), LONG, self.root)
+        path.write_text(path.read_text(encoding="utf-8").replace('"act"', '"bogus"', 1), encoding="utf-8")
+        self.assertEqual(progress.count_types(self.root), {"act": 1})
+
     def test_markdown_has_disclaimer_table_and_integrity(self):
         integrity = {"generated_at": "2026-10-28T00:00:00Z", "documents": 0, "schema_errors": [],
                      "duplicate_ids": [], "path_mismatches": [], "text_quality": [],
