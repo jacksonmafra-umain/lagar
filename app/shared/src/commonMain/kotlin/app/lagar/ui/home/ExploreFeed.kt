@@ -40,6 +40,7 @@ import app.lagar.resources.home_tab_favourites
 import app.lagar.resources.home_tab_recent
 import app.lagar.resources.ic_bookmarks
 import app.lagar.settings.Bookmark
+import app.lagar.settings.toListingItem
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.common.PillTab
 import app.lagar.ui.shell.ShellDimens
@@ -96,7 +97,7 @@ internal fun ExploreFeed(
                 )
             } else {
                 bookmarks.forEach { b ->
-                    val item = ListingItem(b.id, b.title, b.number, b.type, issued = null, repealed = null)
+                    val item = b.toListingItem()
                     FeedCard(item, bookmarked = true, onOpen = { onOpenDocument(b.id) }, onToggleBookmark = { onToggleBookmark(item) })
                 }
             }

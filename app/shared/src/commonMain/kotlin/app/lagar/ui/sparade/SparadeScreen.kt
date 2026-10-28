@@ -21,7 +21,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
-import app.lagar.data.ListingItem
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
 import app.lagar.resources.Res
@@ -32,6 +31,7 @@ import app.lagar.resources.saved_empty_text
 import app.lagar.resources.saved_empty_title
 import app.lagar.settings.Bookmark
 import app.lagar.settings.BookmarkStore
+import app.lagar.settings.toListingItem
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.list.StatuteRow
 import app.lagar.ui.shell.LocalShellPadding
@@ -72,7 +72,7 @@ fun SparadeScreen(bookmarks: List<Bookmark>, onOpenDocument: (String) -> Unit, o
         verticalArrangement = Arrangement.spacedBy(spacing.sm),
     ) {
         items(bookmarks, key = { it.id }) { b ->
-            val item = ListingItem(b.id, b.title, b.number, b.type, issued = null, repealed = null)
+            val item = b.toListingItem()
             val layer = b.displayLayer
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(spacing.xs)) {
                 StatuteRow(
