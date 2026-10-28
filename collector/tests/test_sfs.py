@@ -272,6 +272,18 @@ class SfsTests(unittest.TestCase):
         )
         self.assertTrue(listing_calls[0].endswith("&from=2020-01-01&tom=2020-12-31"))
 
+    def test_dok_id_with_spaces_is_quoted_in_text_url(self):
+        listing = json.dumps({"dokumentlista": {"@sidor": "1", "dokument": [{
+            "dok_id": "sfs-1827-60 s.1007", "beteckning": "1827:60 s.1007",
+            "titel": "Kungörelse om test", "datum": "1827-06-01",
+            "systemdatum": "2026-01-01 00:00:00", "organ": ""}]}}).encode()
+        client = FakeClient({"dokumentlista": listing})
+        summary = sfs.run(client, self.args())
+        self.assertEqual(summary.failed, [])
+        self.assertIn("https://data.riksdagen.se/dokument/sfs-1827-60%20s.1007.text", client.text_calls())
+        self.assertTrue((self.corpus / "sfs/other/1827-60-s-1007.md").exists())
+        self.assertEqual(sfs.run(client, self.args()).skipped, 1)
+
     def test_state_written_after_each_document(self):
         ids = ["sfs-2000-1", "sfs-2000-2"]
         client = FakeClient({"dokumentlista": listing_json(ids)})

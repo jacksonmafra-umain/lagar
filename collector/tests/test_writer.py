@@ -96,6 +96,21 @@ class WriterTests(unittest.TestCase):
         self.assertEqual(schema.validate(meta), [])
         self.assertEqual(writer.path_for(meta, Path("corpus")), Path("corpus/sfs/ordinances/n2026-1.md"))
 
+    def test_corpus_id_normalises_irregular_dok_ids(self):
+        self.assertEqual(writer.corpus_id("sfs-1999-175"), "sfs-1999-175")
+        self.assertEqual(writer.corpus_id("sfs-N2026-1"), "sfs-n2026-1")
+        self.assertEqual(writer.corpus_id("sfs-1827-60 s.1007"), "sfs-1827-60-s-1007")
+        self.assertEqual(writer.corpus_id("sfs-1878-bih. 56 s. 1"), "sfs-1878-bih-56-s-1")
+        self.assertEqual(writer.corpus_id("c1s0bf"), "sfs-c1s0bf")
+
+    def test_irregular_dok_id_document(self):
+        it = item("sfs-1827-60 s.1007", "1827:60 s.1007", "Kungörelse om saker", "1827-06-01", None)
+        meta = writer.build_meta(it, riksdagen.parse_text("SFS nr: 1827:60 s.1007\n\nText"), SHA, NOW)
+        self.assertEqual(meta["id"], "sfs-1827-60-s-1007")
+        self.assertEqual(meta["source"], "https://data.riksdagen.se/dokument/sfs-1827-60%20s.1007")
+        self.assertEqual(schema.validate(meta), [])
+        self.assertEqual(writer.path_for(meta, Path("corpus")), Path("corpus/sfs/other/1827-60-s-1007.md"))
+
     def test_n_series_amendment_numbers(self):
         it = item("sfs-2026-9", "2026:9", "Lag (2026:9) om saker", "2026-01-05", None)
         p = riksdagen.parse_text("SFS nr: 2026:9\nÄndrad: t.o.m. SFS N2026:1\nOmtryck: SFS N2026:2, 2025:7\n\nText")

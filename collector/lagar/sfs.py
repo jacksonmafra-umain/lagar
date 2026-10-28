@@ -8,6 +8,7 @@ import os
 import sys
 import tempfile
 import urllib.error
+import urllib.parse
 import urllib.robotparser
 from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
@@ -23,7 +24,7 @@ from .riksdagen import (
     parse_text,
     to_markdown,
 )
-from .writer import build_meta, path_for, write
+from .writer import build_meta, corpus_id, path_for, write
 
 USER_AGENT = "lagar-collector/0.1 (+https://github.com/jacksonmafra-umain/lagar)"
 BASE = "https://data.riksdagen.se"
@@ -168,7 +169,7 @@ def _fundamental_item(dok_id, parsed, text):
 
 def _store(client, dok_id, item, corpus):
     """Fetch, parse and write one document; returns the item that was written."""
-    raw = client.get(TEXT_URL.format(dok_id=dok_id))
+    raw = client.get(TEXT_URL.format(dok_id=urllib.parse.quote(dok_id)))
     text = raw.decode("utf-8")
     parsed = parse_text(text)
     if item is None:
@@ -183,7 +184,7 @@ def _already_done(state, item, corpus):
     if state["done"].get(item.dok_id) != item.systemdatum:
         return False
     title = clean_title(item.title).removesuffix(";").strip()
-    meta = {"id": item.dok_id.lower(), "type": classify(title, item.dok_id)}
+    meta = {"id": corpus_id(item.dok_id), "type": classify(title, item.dok_id)}
     return path_for(meta, corpus).exists()
 
 
