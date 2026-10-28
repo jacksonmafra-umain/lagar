@@ -1,7 +1,8 @@
 # lagar collector
 
-Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown files, and
-records a SHA-256 manifest of the authoritative SFS PDFs.
+Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown files,
+records a SHA-256 manifest of the authoritative SFS PDFs, adds each statute's amendment
+register from SFSR, and writes a metadata-only amendment history for git.
 Python standard library only.
 
 ## Usage
@@ -98,6 +99,77 @@ python3 -I collector/collect.py sfspdf --rss [--report FILE]
 The site has no robots.txt (HTTP 404); one is honoured if it appears. The PDFs are signed by
 the publisher, but the signature is not verified or recorded. `Last-Modified` and `ETag` change
 nightly, so they are not used. A full crawl of 2018 to today is about 30,000 requests.
+
+## Amendment register (SFSR)
+
+Riksdagen texts carry no entry-into-force date and only mention amending acts inline. The SFS
+register (SFSR) of Regeringskansliets rättsdatabaser lists every amending act of a statute. The
+`sfsr` command reads it for statutes already in the corpus:
+
+```
+python3 -I collector/collect.py sfsr --pilot | --number YYYY:N [--number ...] | --all \
+    [--refresh] [--limit N] [--corpus corpus] [--manifest sources/sfsr-manifest.json] \
+    [--state collector/data/sfsr-state.json] [--rate SECONDS] [--report FILE]
+```
+
+- The source is `https://rkrattsbaser.gov.se/sfsr?bet=<number>`, one server-rendered HTML page
+  per statute, read with `html.parser`. The site has no robots.txt (one is honoured if it
+  appears); `--rate` defaults to, and may not go below, 2 s between requests.
+- `--pilot` reads Regeringsformen (1974:152), Brottsbalken (1962:700) and Miljöbalken
+  (1998:808); `--all` reads every statute in the corpus in number order. A statute that is not
+  in the corpus is recorded as failed without a request.
+- Only the frontmatter changes; the body is kept byte for byte. `in_force` gets the statute's
+  own `Ikraft` (left as it is when the register has none) and `amendments` gets one entry per
+  "Ändring, SFS ..." box, in register order: `number`, `title` (Rubrik), `scope`
+  (Omfattning), `preparatory_works` (Förarbeten), `celex` (CELEX-nr), `in_force` and
+  `in_force_raw`. Whitespace is collapsed; missing fields are `null`.
+- `Ikraft` values: `in_force` is the date the value starts with, `in_force_raw` the value as
+  written. `1983-07-01 överg.best.` (transitional provisions apply) gives `1983-07-01`; a value
+  that does not start with a date, such as an entry into force set by a later government
+  decision, gives `in_force: null` and keeps the text. Missing values (most entries before
+  about 1982) give `null` for both.
+- Register entries with another header than "Ändring" are not stored; they are listed in the
+  manifest entry's `other_entries`. A page that shows another statute, or is not a single
+  register entry (for example a search result), is recorded as failed.
+- The committed manifest `sources/sfsr-manifest.json` keeps, per statute, `number`, `url`,
+  `bytes`, `sha256` and `retrieved_at` of the fetched page, the number of amendments and
+  `other_entries`. Statutes already in it are skipped unless `--refresh` is given, so a bulk
+  run can be resumed. The HTML is not stored.
+- `--report` writes `{"written": [...], "unchanged": [...], "skipped": n, "failed": [...],
+  "blocked": bool}`. The state file (git-ignored) keeps `failed` (number to error) and
+  `blocked`; an HTTP 403 or a robots.txt disallow stops the run (exit code 2).
+
+The `sfs` collector never erases this data: when it rewrites a statute from Riksdagen it keeps
+the stored `in_force` and `amendments`. A new successor site (`beta.rkrattsbaser.gov.se`) is
+being built, so the page layout may change.
+
+## Amendment history
+
+`collector/history.py` turns the register into history: one commit for each statute and one
+per amendment, dated at entry into force, as a `git fast-import` stream. The files on the
+history branch hold frontmatter only (identity, `in_force`, `amended_through` and the
+amendments applied so far). Historical text is not reconstructed: no open source has it.
+
+```
+python3 -I collector/history.py --pilot --dry-run          # list the commits
+python3 -I collector/history.py --pilot --out build/history.fi
+git fast-import --quiet < build/history.fi                 # creates history/pilot
+```
+
+- Commit dates: the amendment's entry into force; else its publication date in
+  `sources/sfs-pdf-manifest.json` (acts from 2018 on); else 1 January of its SFS year. The
+  statute's own commit uses its `in_force`, else `issued`. Each commit body names the date and
+  its source.
+- An amendment dated before its statute's own commit moves to that date. Dates before 1970
+  are stored as 1970-01-01 (git cannot record earlier dates); the body keeps the real date.
+  Amendments that enter into force in the future get future commit dates.
+- Commits from several statutes are merged into one branch in date order. The stream starts
+  with `reset`, so it always builds the branch from scratch; to rebuild an existing branch
+  run `git fast-import --force`. `--branch` and `--author` change the defaults
+  (`history/pilot`, `lagar history <history@lagar.invalid>`).
+- Statutes without `amendments` in the corpus are refused: run `collect.py sfsr` first.
+
+The branch is not pushed by any workflow.
 
 ## Exit codes
 
