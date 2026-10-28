@@ -1,0 +1,33 @@
+{
+ "layer": "sfs",
+ "type": "act",
+ "page": 2,
+ "page_count": 2,
+ "total": 6,
+ "items": [
+  {
+   "id": "sfs-2026-1054",
+   "title": "Lag (2026:1054) om karens för vissa befattningshavare i Finansinspektionen vid övergång till annan verksamhet",
+   "number": "2026:1054",
+   "type": "act",
+   "issued": "2026-06-04",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-1011",
+   "title": "Konsumentkreditlag (2026:1011)",
+   "number": "2026:1011",
+   "type": "act",
+   "issued": "2026-06-04",
+   "repealed": null
+  },
+  {
+   "id": "sfs-2026-999",
+   "title": "Mottagandelag (2026:999)",
+   "number": "2026:999",
+   "type": "act",
+   "issued": "2026-06-04",
+   "repealed": null
+  }
+ ]
+}
