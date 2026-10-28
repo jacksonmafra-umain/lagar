@@ -99,7 +99,7 @@ Item object:
 | `issued` | string (date) | yes | |
 | `repealed` | string (date) | yes | |
 
-Sort order: `issued` descending, then `number` descending, across pages. `number` is compared numerically by (year, ordinal), not as a string, so `1999:175` comes before `1999:99`. A leading `N` is ignored for ordering; on a tie the plain number is listed before the N-series one (`2026:5` before `N2026:5`). Items
+Sort order: `issued` descending, then `number` descending, across pages. `number` is compared numerically by (year, ordinal), not as a string, so `1999:175` comes before `1999:99`. A series prefix (`N`, `RFS`) is ignored for ordering; on a tie the plain number is listed before the prefixed one (`2026:5` before `N2026:5`). Old prints keep Riksdagen's numbering, such as `1827:60 s.1007` or `1899:bih. 25`: non-digits before the ordinal are skipped and the rest after it only breaks ties. Items
 with `issued: null` sort after dated ones.
 
 ## `GET docs/<id>.json`

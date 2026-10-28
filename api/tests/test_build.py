@@ -221,6 +221,20 @@ class BuildTest(unittest.TestCase):
             self.assertEqual([i["number"] for i in read(out, "sfs/index-1.json")["items"]],
                              ["2026:5", "N2026:5", "N2026:1"])
 
+    def test_irregular_old_print_number_sort(self):
+        from lagar import writer
+        meta, body = frontmatter.load((CORPUS / "sfs" / "acts" / "2010-800.md").read_text(encoding="utf-8"))
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus = Path(tmp) / "corpus"
+            for id_, number in (("sfs-1736-0123-1", "1736:0123 1"), ("sfs-1736-0123-2", "1736:0123 2"),
+                                ("sfs-1827-60-s-1007", "1827:60 s.1007"), ("sfs-1899-bih-25", "1899:bih. 25"),
+                                ("sfs-rfs1968-8", "RFS1968:8")):
+                writer.write(dict(meta, id=id_, number=number, issued=None), body, corpus)
+            out = Path(tmp) / "out"
+            self.assertEqual(run_build(out, corpus=corpus).returncode, 0)
+            self.assertEqual([i["number"] for i in read(out, "sfs/index-1.json")["items"]],
+                             ["RFS1968:8", "1899:bih. 25", "1827:60 s.1007", "1736:0123 2", "1736:0123 1"])
+
 
 
 class OutSafetyTest(unittest.TestCase):
