@@ -318,11 +318,12 @@ class NewLayersTest(unittest.TestCase):
 
     def _sorted_numbers(self, type_, numbers):
         from lagar import writer
-        from tests.test_schema import new_layer_meta  # collector/tests
+        template = next(m for m in (frontmatter.load(p.read_text(encoding="utf-8"))[0]
+                                    for p in LAYERS_CORPUS.rglob("*.md")) if m["type"] == type_)
         with tempfile.TemporaryDirectory() as tmp:
             corpus = Path(tmp) / "corpus"
             for n, number in enumerate(numbers):
-                meta = new_layer_meta(type_)
+                meta = dict(template)
                 prefix = "eu-3" if type_.startswith("eu_") else "x-"
                 meta.update(id=f"{prefix}2000r{n:04d}", number=number, issued=None)
                 if "celex" in meta:
