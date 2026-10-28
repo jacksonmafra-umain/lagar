@@ -9,6 +9,14 @@ TIMEOUT_SECONDS = 30
 MAX_RETRY_AFTER_SECONDS = 300
 
 
+def _content_type(response):
+    headers = getattr(response, "headers", None)
+    value = headers.get("Content-Type") if headers is not None else None
+    if not value:
+        return None
+    return value.split(";", 1)[0].strip().lower() or None
+
+
 class Blocked(Exception):
     """The source refused access or asked for a long pause; collection must stop."""
 
@@ -50,6 +58,10 @@ class PoliteClient:
         return seconds if seconds >= 0 else None
 
     def get(self, url):
+        return self.fetch(url)[0]
+
+    def fetch(self, url):
+        """Return (body, content_type); content_type is lower-case, without parameters."""
         attempt = 0
         while True:
             self._space()
@@ -58,7 +70,7 @@ class PoliteClient:
             )
             try:
                 with self._opener(request, timeout=TIMEOUT_SECONDS) as response:
-                    return response.read()
+                    return response.read(), _content_type(response)
             except urllib.error.HTTPError as error:
                 if error.code == 403:
                     error.close()
