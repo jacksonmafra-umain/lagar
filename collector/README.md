@@ -11,13 +11,32 @@ Run from the repository root (`-I` ignores `PYTHONPATH`, so use the entry script
 python3 -I collector/collect.py sfs --fundamental
 python3 -I collector/collect.py sfs [--from YYYY-MM-DD --to YYYY-MM-DD] [--limit N] \
     [--since YYYY-MM-DD] [--rate SECONDS] [--state collector/data/sfs-state.json] \
-    [--corpus corpus]
+    [--corpus corpus] [--report FILE]
+python3 -I collector/collect.py sfs --changed-since "YYYY-MM-DD[ HH:MM:SS]" [--report FILE]
 ```
 
 - `--fundamental` fetches only the four fundamental laws (always refetched).
 - `--since` keeps listing items whose `systemdatum` is on or after the date.
+- `--changed-since` pages the listing newest-first by `systemdatum` and stops at the first
+  document older than the bound, so an incremental sync reads only the pages it needs. It
+  cannot be combined with `--fundamental` or `--since`.
+- `--report` writes a JSON summary: written SFS numbers, unchanged/skipped counts, failed ids,
+  `blocked` and the newest `systemdatum` seen (`latest_systemdatum`).
 - `--limit` stops after N written documents.
 - `--rate` is the minimum interval between requests (default 1.0 s).
+
+A refetched document whose source SHA-256 matches the stored file is left untouched (counted as
+unchanged), so reruns never churn `fetched_at`.
+
+## Scheduled sync
+
+`.github/workflows/sync-sfs.yml` runs daily (and on manual dispatch with an optional `since`).
+It collects with `--changed-since`, starting from the marker in `collector/data/sfs-sync.json`
+or the newer one kept in the Actions cache. When the corpus changed it refreshes the audit and
+progress reports and adds one `data(sfs):` commit to the `data/sfs-sync` branch, opening a pull
+request if none is open. A run that finds nothing new opens nothing. Failed documents are listed
+in the run summary and the commit body. The workflow needs "Allow GitHub Actions to create and
+approve pull requests" enabled in the repository settings.
 
 ## Listing cap
 
