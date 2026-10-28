@@ -150,8 +150,8 @@ Route: `LayerList(layer, type?)`. Code: `ui/list/`.
 | --- | --- | --- |
 | Paged list with prefetch, loading and error rows, layer badge and total | Done | |
 | Repealed rows struck through, with the history badge | Done | |
-| Empty state for a layer with no documents | Missing: renders a blank list | #33 |
-| Series switch (acts or ordinances) inside the list | Missing | #33 |
+| Empty state for a layer or series with no documents | Done | #33 |
+| Series switch (all, acts, ordinances, other statutes) inside the list, from the layer's `series` in `index.json` | Done | #33 |
 
 ## Reader
 
