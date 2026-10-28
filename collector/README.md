@@ -1,6 +1,7 @@
 # lagar collector
 
-Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown files.
+Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown files, and
+records a SHA-256 manifest of the authoritative SFS PDFs.
 Python standard library only.
 
 ## Usage
@@ -63,6 +64,40 @@ Per-document errors are recorded under `failed` and the run continues; rerun to 
 Digitised OCR prints that have no plain-text version are recorded there too, as a coverage gap.
 
 Items sharing a date may shift between listing pages during a long run; a rerun picks up any miss.
+
+## Authoritative PDFs
+
+The SFS published on <https://svenskforfattningssamling.se> is the authoritative version. The
+`sfspdf` command records a SHA-256 manifest of its PDFs; it never changes `corpus/`.
+
+```
+python3 -I collector/collect.py sfspdf --year YYYY [--year YYYY ...] [--limit N] [--cache DIR] \
+    [--manifest sources/sfs-pdf-manifest.json] [--state collector/data/sfspdf-state.json] \
+    [--rate SECONDS] [--report FILE]
+python3 -I collector/collect.py sfspdf --rss [--report FILE]
+```
+
+- `--year` walks the year index (`regulations/<year>/index.html`, 15 acts per page, newest
+  first) through its "next" links; `--rss` reads only the RSS feed of recent acts, for an
+  incremental run.
+- Each act's detail page (`doc/<year><number>.html`) is read for its PDF links. An act can have
+  several files, for example a correction sheet (rättelseblad). Every PDF is downloaded once and
+  hashed; a response that does not start with `%PDF-`, a detail page showing another number and a
+  link off the site are recorded as failures.
+- The manifest `sources/sfs-pdf-manifest.json` is committed. Entries are sorted by year and
+  number; each has `number`, `detail_url`, `published` and `files` (`url`, `bytes`, `sha256`,
+  `content_type`, `retrieved_at`). Numbers already in the manifest are skipped, so reruns
+  fetch only new acts.
+- PDF bytes are never committed. `--cache DIR` keeps them as `DIR/<year>/<file>.pdf`; use the
+  git-ignored `sources/cache/`.
+- `--limit` stops after N new entries. The manifest is saved every 25 entries and when the run
+  ends, including on an error or interrupt.
+- `--report` writes `{"recorded": [...], "skipped": n, "failed": [...], "blocked": bool}`.
+- The state file (git-ignored) keeps `failed` (number to error) and `blocked`.
+
+The site has no robots.txt (HTTP 404); one is honoured if it appears. The PDFs are signed by
+the publisher, but the signature is not verified or recorded. `Last-Modified` and `ETag` change
+nightly, so they are not used. A full crawl of 2018 to today is about 30,000 requests.
 
 ## Exit codes
 

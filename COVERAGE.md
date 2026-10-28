@@ -9,6 +9,7 @@ completeness: read this file next to those numbers.
 | layer | source | cut-off |
 | --- | --- | --- |
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
+| SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
 
 The SFS target (11567 documents) is the number Riksdagen lists for document
 type `sfs` on that date, all statute types together.
@@ -24,8 +25,11 @@ type `sfs` on that date, all statute types together.
 - Amendment history is not reconstructed. `amended_by`, `amended_through` and
   `reprinted_by` only list numbers; many of them point to acts not yet collected
   (the audit reports the count). History reconstruction is tracked in #7.
-- Authoritative PDFs are not snapshotted, so documents are marked
-  `authoritative: false`. Tracked in #8.
+- Authoritative PDFs from svenskforfattningssamling.se (acts published from
+  2018-04 on) are recorded in `sources/sfs-pdf-manifest.json` with their
+  SHA-256, but only a five-act sample of 2026 is in it so far; the full crawl
+  has not run. The PDF bytes are not stored, and the documents stay marked
+  `authoritative: false` until the corpus text is tied to a snapshot.
 - Phases 2 and 3 are not started: agency regulations, case law, EU law, regional
   and municipal regulations and public services have no collector yet and no known
   target.
