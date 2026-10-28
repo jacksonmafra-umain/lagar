@@ -100,7 +100,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | Key laws: Regeringsformen card, plus accordions for acts and ordinances | Done | |
 | Explore feed with Recent and Favourites tabs, bookmark toggle and "Show more" | Done | |
 | Loads only the first listing page of each level it shows, not the whole catalog; search loads the catalog on its first query | Done | |
-| Feed card shows the in-force date and "Ändrad senast genom SFS …" | Blocked: these fields are not in listing items | #36 |
+| Feed card shows the in-force date and "Ändrad senast genom SFS …" | Done; each line is hidden while its field is `null` (the collector does not fill `in_force` yet). Saved items in the Favourites tab carry neither field | |
 | Case-law items in the feed | Blocked: no case-law data | #38 |
 | Popular tab | Blocked: the app is anonymous and collects no usage data | |
 | Region and Kommun homes (constitution, key rules, feed) | Blocked: empty layers; shows "coming soon" | #38 |
@@ -127,7 +127,7 @@ Route: `AdvancedSearch`. Code: `ui/search/AdvancedSearchScreen.kt`, `DateField.k
 | --- | --- | --- |
 | Text field, issue-date range, document types, mode (all, title, number), status (all, in force, repealed) | Done | |
 | Calendar date picker, collapsible filter sections, scope change from the form | Missing | #32 |
-| Vacatio legis filter and in-force date range | Blocked: `in_force` is not in listing items | #36 |
+| Vacatio legis filter and in-force date range | Missing; `in_force` is now in listing items (still `null` until the collector fills it) | #32 |
 | Glass footer bar | Partial: solid surface | #23 |
 
 ## Hierarki
@@ -140,7 +140,7 @@ Route: `Hierarki`. Code: `ui/hierarki/`. References: Stitch `lagar_normhierarki_
 | Distribution bar and legend | Done | |
 | Nine layer rows with counts; empty layers open a "coming soon" sheet | Done | |
 | Authority badge and real examples on each layer row | Missing | #34 |
-| Browse by issuing body (ministry, agency) | Missing; needs `ministry` in listing items | #34, #36 |
+| Browse by issuing body (ministry, agency) | Missing; `ministry` is now in listing items | #34 |
 
 ## Layer list
 
