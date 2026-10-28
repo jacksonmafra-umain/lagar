@@ -65,6 +65,7 @@ import app.lagar.ui.onboarding.descriptionRes
 import app.lagar.ui.onboarding.iconRes
 import app.lagar.ui.onboarding.nameRes
 import app.lagar.ui.common.iconColor
+import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -138,7 +139,7 @@ internal fun HomeHero(
             )
             Row(
                 modifier = Modifier
-                    .heightIn(min = 48.dp)
+                    .heightIn(min = ShellDimens.TouchTarget)
                     .clip(MaterialTheme.shapes.small)
                     .clickable(role = Role.Button, onClick = onOpenAdvancedSearch)
                     .padding(horizontal = spacing.xs),
@@ -182,7 +183,7 @@ private fun SearchField(scope: Scope, onSearch: (String) -> Unit) {
         border = BorderStroke(1.dp, layers.accent(scope.key)),
     ) {
         Row(
-            modifier = Modifier.heightIn(min = 48.dp).padding(start = LagarTheme.spacing.md),
+            modifier = Modifier.heightIn(min = ShellDimens.TouchTarget).padding(start = LagarTheme.spacing.md),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
         ) {
@@ -215,7 +216,7 @@ private fun SearchField(scope: Scope, onSearch: (String) -> Unit) {
             // A 36dp round button inside a 48dp hit area.
             Box(
                 modifier = Modifier
-                    .size(48.dp)
+                    .size(ShellDimens.TouchTarget)
                     .clickable(role = Role.Button, onClick = submit)
                     .semantics { contentDescription = description },
                 contentAlignment = Alignment.Center,
@@ -245,7 +246,7 @@ internal fun LayerChips(layers: List<DisplayLayer>, onOpenLayer: (DisplayLayer) 
             // A 30dp pill inside a 48dp hit area.
             Box(
                 modifier = Modifier
-                    .heightIn(min = 48.dp)
+                    .heightIn(min = ShellDimens.TouchTarget)
                     .clip(CircleShape)
                     .clickable(role = Role.Button, onClick = { onOpenLayer(layer) }),
                 contentAlignment = Alignment.Center,

@@ -51,6 +51,7 @@ import app.lagar.resources.type_ordinance
 import app.lagar.ui.common.LayerBadge
 import app.lagar.ui.common.RepealedBadge
 import app.lagar.domain.DisplayLayer
+import app.lagar.ui.shell.ShellDimens
 import kotlin.time.Clock
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
@@ -162,7 +163,7 @@ private fun BookmarkButton(title: String, bookmarked: Boolean, onToggle: () -> U
     val description = stringResource(if (bookmarked) Res.string.bookmark_remove else Res.string.bookmark_add, title)
     Box(
         modifier = Modifier
-            .size(48.dp)
+            .size(ShellDimens.TouchTarget)
             .clip(CircleShape)
             .clickable(role = Role.Button, onClick = onToggle)
             .semantics { contentDescription = description },

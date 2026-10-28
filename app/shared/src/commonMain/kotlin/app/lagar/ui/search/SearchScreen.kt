@@ -75,6 +75,7 @@ import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.home.displayLayer
 import app.lagar.ui.list.StatuteRow
 import app.lagar.ui.navigation.Search
+import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import org.jetbrains.compose.resources.painterResource
@@ -193,7 +194,7 @@ private fun SummaryRow(count: Int?, scope: Scope, onOpenAdvancedSearch: () -> Un
         }
         Row(
             modifier = Modifier
-                .heightIn(min = 48.dp)
+                .heightIn(min = ShellDimens.TouchTarget)
                 .clip(MaterialTheme.shapes.small)
                 .clickable(role = Role.Button, onClick = onOpenAdvancedSearch)
                 .padding(horizontal = LagarTheme.spacing.xs),
@@ -227,7 +228,7 @@ private fun SearchInput(initial: String, autoFocus: Boolean, scope: Scope, onCha
         border = BorderStroke(1.dp, layers.accent(scope.key)),
     ) {
         Row(
-            modifier = Modifier.heightIn(min = 48.dp).padding(horizontal = LagarTheme.spacing.md),
+            modifier = Modifier.heightIn(min = ShellDimens.TouchTarget).padding(horizontal = LagarTheme.spacing.md),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
         ) {

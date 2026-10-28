@@ -43,6 +43,7 @@ import app.lagar.resources.ic_bookmarks
 import app.lagar.settings.Bookmark
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.common.PillTab
+import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.stringResource
 
 private enum class FeedTab { Recent, Favourites }
@@ -83,7 +84,7 @@ internal fun ExploreFeed(
                     FeedCard(item, item.id in bookmarkedIds, onOpen = { onOpenDocument(item.id) }, onToggleBookmark = { onToggleBookmark(item) })
                 }
                 if (data.hasMoreRecent) {
-                    OutlinedButton(onClick = onShowMore, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                    OutlinedButton(onClick = onShowMore, modifier = Modifier.fillMaxWidth().heightIn(min = ShellDimens.TouchTarget)) {
                         Text(stringResource(Res.string.home_show_more))
                     }
                 }

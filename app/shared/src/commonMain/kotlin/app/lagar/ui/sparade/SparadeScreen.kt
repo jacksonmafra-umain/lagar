@@ -37,6 +37,7 @@ import app.lagar.settings.BookmarkStore
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.list.StatuteRow
 import app.lagar.ui.shell.LocalShellPadding
+import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -84,7 +85,7 @@ fun SparadeScreen(bookmarks: List<Bookmark>, onOpenDocument: (String) -> Unit, o
                 val description = stringResource(Res.string.bookmark_remove, b.title)
                 Box(
                     modifier = Modifier
-                        .size(48.dp)
+                        .size(ShellDimens.TouchTarget)
                         .clip(CircleShape)
                         .clickable(role = Role.Button) { onRemove(b) }
                         .semantics { contentDescription = description },

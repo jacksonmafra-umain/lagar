@@ -20,6 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
+import app.lagar.ui.shell.ShellDimens
 
 /** Pill-shaped tab filled with the accent of [key] when selected. */
 @Composable
@@ -29,7 +30,7 @@ fun PillTab(text: String, selected: Boolean, key: LayerKey, onClick: () -> Unit)
     // A 32dp pill inside a 48dp hit area.
     Box(
         modifier = Modifier
-            .heightIn(min = 48.dp)
+            .heightIn(min = ShellDimens.TouchTarget)
             .clip(CircleShape)
             .clickable(onClick = onClick)
             .semantics { role = Role.Tab; this.selected = selected },

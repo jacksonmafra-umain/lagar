@@ -92,6 +92,7 @@ import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.onboarding.nameRes
 import app.lagar.ui.common.iconColor
+import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import androidx.compose.ui.platform.LocalDensity
@@ -266,7 +267,7 @@ fun AdvancedSearchScreen(
                     .imePadding()
                     .padding(horizontal = spacing.marginMobile, vertical = spacing.sm)
                     .fillMaxWidth()
-                    .heightIn(min = 48.dp),
+                    .heightIn(min = ShellDimens.TouchTarget),
                 colors = ButtonDefaults.buttonColors(containerColor = accent, contentColor = accent.iconColor()),
             ) { Text(stringResource(Res.string.home_search_submit), fontWeight = FontWeight.Bold) }
         }
@@ -318,7 +319,7 @@ private fun Pill(text: String, scope: Scope, filled: Boolean, onClick: () -> Uni
     val layers = LagarTheme.layers
     // A 30dp pill inside a 48dp hit area.
     Box(
-        modifier = Modifier.heightIn(min = 48.dp).clip(CircleShape).clickable(role = Role.Button, onClick = onClick),
+        modifier = Modifier.heightIn(min = ShellDimens.TouchTarget).clip(CircleShape).clickable(role = Role.Button, onClick = onClick),
         contentAlignment = Alignment.Center,
     ) {
         Surface(
@@ -347,7 +348,7 @@ private fun OptionRow(
     control: @Composable () -> Unit,
 ) {
     Row(
-        modifier = modifier.fillMaxWidth().heightIn(min = 48.dp),
+        modifier = modifier.fillMaxWidth().heightIn(min = ShellDimens.TouchTarget),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
     ) {
