@@ -22,6 +22,7 @@ import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import app.lagar.data.LagarRepository
@@ -91,9 +92,10 @@ fun SplashScreen(progress: () -> Float) {
                 color = colors.onSurfaceVariant,
                 textAlign = TextAlign.Center,
             )
+            // The bar is cosmetic (it creeps, then fills), so screen readers skip it instead of announcing a made-up percentage.
             LinearProgressIndicator(
                 progress = progress,
-                modifier = Modifier.width(160.dp).padding(top = LagarTheme.spacing.md),
+                modifier = Modifier.width(160.dp).padding(top = LagarTheme.spacing.md).clearAndSetSemantics {},
                 color = colors.primary,
                 trackColor = colors.surfaceContainerHigh,
             )
