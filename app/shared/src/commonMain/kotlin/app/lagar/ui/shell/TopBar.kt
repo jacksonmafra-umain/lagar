@@ -14,6 +14,9 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Density
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -57,6 +60,12 @@ internal fun LagarTopBar(
 ) {
     val colors = LagarTheme.colors
     val dark = LagarTheme.isDark
+    // The bar holds the title, the scope chip and three icon buttons on one line, so like the bottom bar
+    // it caps text scaling; the chip and buttons keep their full accessible names.
+    val density = LocalDensity.current
+    CompositionLocalProvider(
+        LocalDensity provides Density(density.density, fontScale = minOf(density.fontScale, MAX_BAR_FONT_SCALE)),
+    ) {
     Row(
         modifier = modifier
             .fillMaxWidth()
@@ -70,6 +79,8 @@ internal fun LagarTopBar(
             text = stringResource(Res.string.app_name),
             style = LagarTheme.type.headlineSm,
             color = colors.primary,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
             modifier = Modifier.weight(1f),
         )
         ScopeChip(scope, onOpenScopeSheet)
@@ -108,7 +119,10 @@ internal fun LagarTopBar(
             }
         }
     }
+    }
 }
+
+private const val MAX_BAR_FONT_SCALE = 1.3f
 
 @Composable
 private fun BarIconButton(
