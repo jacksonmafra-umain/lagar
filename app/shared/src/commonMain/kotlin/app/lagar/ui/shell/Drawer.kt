@@ -33,6 +33,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import app.lagar.designsystem.GlassTier
@@ -167,12 +168,10 @@ private fun ScopeCard(scope: Scope, localityName: String?, onChange: () -> Unit)
         color = LagarTheme.colors.surfaceContainerLowest,
         border = BorderStroke(ShellDimens.Hairline, layers.border(scope.key)),
     ) {
-        Row(
-            modifier = Modifier.padding(LagarTheme.spacing.sm),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
-        ) {
-            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(ShellDimens.TextGap)) {
+        // The text block and the pill share a row until a large font leaves the text too narrow; then the pill drops below.
+        val stacked = LocalDensity.current.fontScale > WRAP_FONT_SCALE
+        val texts: @Composable (Modifier) -> Unit = { textModifier ->
+            Column(textModifier, verticalArrangement = Arrangement.spacedBy(ShellDimens.TextGap)) {
                 Text(
                     text = stringResource(scope.nameRes()),
                     style = LagarTheme.type.bodyUi,
@@ -187,6 +186,8 @@ private fun ScopeCard(scope: Scope, localityName: String?, onChange: () -> Unit)
                     color = LagarTheme.colors.onSurfaceVariant,
                 )
             }
+        }
+        val pill: @Composable () -> Unit = {
             Text(
                 text = stringResource(Res.string.drawer_change),
                 style = LagarTheme.type.labelMd,
@@ -197,6 +198,25 @@ private fun ScopeCard(scope: Scope, localityName: String?, onChange: () -> Unit)
                     .background(layers.tint(scope.key))
                     .padding(horizontal = LagarTheme.spacing.sm, vertical = ShellDimens.PillPaddingVertical),
             )
+        }
+        if (stacked) {
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(LagarTheme.spacing.sm),
+                horizontalAlignment = Alignment.Start,
+                verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
+            ) {
+                texts(Modifier)
+                pill()
+            }
+        } else {
+            Row(
+                modifier = Modifier.padding(LagarTheme.spacing.sm),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
+            ) {
+                texts(Modifier.weight(1f))
+                pill()
+            }
         }
     }
 }
@@ -231,3 +251,6 @@ private fun DrawerItem(entry: DrawerEntry, selected: Boolean, onClick: () -> Uni
         )
     }
 }
+
+// Above this font scale the scope card stacks its pill under the text.
+private const val WRAP_FONT_SCALE = 1.3f
