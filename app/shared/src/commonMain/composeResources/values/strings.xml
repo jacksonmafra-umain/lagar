@@ -36,6 +36,7 @@
     <string name="meta_amended_through">Amended through</string>
     <string name="meta_ministry">Ministry</string>
     <string name="meta_source">Official source</string>
+    <string name="meta_repealed_banner">Repealed on %1$s. This text is no longer in force.</string>
     <string name="error_title">Something went wrong</string>
     <string name="error_text">Check your connection and try again.</string>
     <string name="error_retry">Try again</string>
