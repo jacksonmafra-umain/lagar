@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="344" viewBox="0 0 720 344" role="img" aria-label="Corpus progress per series">
+<rect width="720" height="344" fill="#f8f9fc"/>
+<g font-family="Inter, system-ui, sans-serif" font-size="13">
+<text x="16" y="26" font-size="16" font-weight="600" fill="#191c1e">Corpus progress per series</text>
+<text x="16" y="59" fill="#0b3d91">Fundamental laws</text>
+<rect x="200" y="48" width="340" height="16" rx="8" fill="#0b3d91" fill-opacity="0.18"/>
+<rect x="200" y="48" width="340" height="16" rx="8" fill="#0b3d91"/>
+<text x="704" y="59" text-anchor="end" fill="#0b3d91">4 / 4 (100.0%)</text>
+<text x="16" y="95" fill="#005b99">SFS (statutes and ordinances)</text>
+<rect x="200" y="84" width="340" height="16" rx="8" fill="#005b99" fill-opacity="0.18"/>
+<rect x="200" y="84" width="3" height="16" rx="8" fill="#005b99"/>
+<text x="704" y="95" text-anchor="end" fill="#005b99">100 / 11567 (0.9%)</text>
+<text x="16" y="131" fill="#007270">Agency regulations</text>
+<rect x="200" y="120" width="340" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<text x="704" y="131" text-anchor="end" fill="#007270">0 / unknown (-)</text>
+<text x="16" y="167" fill="#7a2e4d">Case law</text>
+<rect x="200" y="156" width="340" height="16" rx="8" fill="#7a2e4d" fill-opacity="0.18"/>
+<text x="704" y="167" text-anchor="end" fill="#7a2e4d">0 / unknown (-)</text>
+<text x="16" y="203" fill="#5b3fa6">EU law</text>
+<rect x="200" y="192" width="340" height="16" rx="8" fill="#5b3fa6" fill-opacity="0.18"/>
+<text x="704" y="203" text-anchor="end" fill="#5b3fa6">0 / unknown (-)</text>
+<text x="16" y="239" fill="#28772d">Regional regulations</text>
+<rect x="200" y="228" width="340" height="16" rx="8" fill="#2e7d32" fill-opacity="0.18"/>
+<text x="704" y="239" text-anchor="end" fill="#28772d">0 / unknown (-)</text>
+<text x="16" y="275" fill="#8b2e1f">Municipal regulations</text>
+<rect x="200" y="264" width="340" height="16" rx="8" fill="#8b2e1f" fill-opacity="0.18"/>
+<text x="704" y="275" text-anchor="end" fill="#8b2e1f">0 / unknown (-)</text>
+<text x="16" y="311" fill="#8c6300">Public services</text>
+<rect x="200" y="300" width="340" height="16" rx="8" fill="#e0a100" fill-opacity="0.18"/>
+<text x="704" y="311" text-anchor="end" fill="#8c6300">0 / unknown (-)</text>
+</g>
+</svg>
