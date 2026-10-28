@@ -226,3 +226,97 @@ All keys are always present.
 | `celex` | string | yes | CELEX numbers of EU acts the amendment implements, as listed |
 | `in_force` | string (date) | yes | entry into force when the register value starts with a date; `null` when it is missing (common before about 1982) or not a date |
 | `in_force_raw` | string | yes | the register value as written, whitespace collapsed, e.g. `1983-07-01 överg.best.` (transitional provisions apply) or a condition such as `den dag regeringen bestämmer`; `null` when missing |
+
+## Full-text search: `GET search/index.json`, `search/docs.json`, `search/shards/<key>.json`
+
+A static inverted index, added within v1 (additive: no existing file changes).
+The client reads the manifest, tokenises the query with the rules below, and
+fetches only the shards its terms fall in. Examples: `docs/api/examples/search/`
+(built from the API test fixture corpus).
+
+### Text normalisation and tokens
+
+Index and query text go through the same steps, which match the app's
+`normalize()` in `app/shared/.../domain/Search.kt` (so `Åre` matches `are`):
+
+1. Lowercase.
+2. Fold diacritics character by character: each character of
+   `normalization.fold_from` becomes the character at the same position in
+   `normalization.fold_to` (`å`/`ä` → `a`, `ö` → `o`, `é` → `e`, ...). Other
+   characters, such as `ü` or `æ`, are kept.
+3. Split into tokens with `normalization.token_pattern`
+   (`[a-z]*\d{4}:\d+|[^\W_]+`, Unicode-aware, applied to the folded text): an
+   SFS number such as `1962:700` or `n2026:1` is one token; otherwise a token is
+   a run of letters and digits. Everything else separates tokens.
+4. Drop single-letter tokens (single digits such as the `5` in `5 §` stay) and
+   the short list of Swedish function words in `normalization.stop_words`
+   (`och`, `att`, `om`, `for`, ...). Words such as `lag`, `kap` or `inte` stay.
+
+### `search/index.json` (manifest)
+
+| field | type | null | notes |
+| --- | --- | --- | --- |
+| `search_version` | integer | no | currently `1`; bumped on an incompatible format change |
+| `built_at` | string (UTC timestamp) | no | same as `index.json`; cache shards and `docs.json` keyed by it, since document numbers change between builds |
+| `doc_count` | integer | no | rows in `docs.json` |
+| `term_count` | integer | no | distinct terms over all shards |
+| `fields` | array of string | no | indexed fields: `title`, `number`, and `body` when the full text fits the budget (below) |
+| `field_bits` | object | no | bit per indexed field: `title` 1, `number` 2, `body` 4 |
+| `normalization` | object | no | `lowercase`, `fold_from`, `fold_to`, `token_pattern`, `min_length` (2), `keep_single_digits` (true), `stop_words` (sorted) |
+| `shard_key_length` | integer | no | `2` |
+| `shards` | array of shard | no | sorted by `key`; only keys that have terms |
+
+Shard object: `key` (string), `terms` (integer, terms in the shard) and
+`bytes` (integer, size of the shard file).
+
+### `search/docs.json`
+
+`fields` lists the column names (`id`, `title`, `number`, `type`, `issued`,
+`repealed`, same values as listing items); `docs` is one row per document,
+sorted by `id`. A document's number in the postings is its 0-based row index.
+
+### `search/shards/<key>.json`
+
+`key` is the first two characters of a term, with any character outside
+`a-z` and `0-9` replaced by `_` (`skollag` → `sk`, `1962:700` → `19`,
+`über` → `_b`). A one-character term (a single digit) has a one-character key,
+for example `5`. A shard exists only when the manifest lists its key.
+
+| field | type | null | notes |
+| --- | --- | --- | --- |
+| `key` | string | no | shard key |
+| `terms` | object | no | term → postings, terms sorted |
+
+Postings are a flat integer array of pairs `[gap, bits, gap, bits, ...]`,
+by ascending document number. The first `gap` is the document number itself,
+each following `gap` is the difference to the previous document. `bits` is
+the OR of the `field_bits` the term occurs in for that document (5 = title and
+body). Example: `"utgar": [0, 4]` means document 0 has `utgar` in its body.
+
+### Querying
+
+- Exact term: look the term up in its shard.
+- Prefix (type-ahead): every term starting with the typed text is in the same
+  shard as long as the text has at least two characters, so filter the shard's
+  sorted terms by prefix.
+- Several terms: intersect the document sets. A suggested rank: documents
+  matching in the title first, then number, then body only (lowest bit set),
+  then document order. Filters (type, dates, status) apply to `docs.json`
+  rows.
+
+### Size budget
+
+Body text is indexed only when the whole index (manifest, `docs.json` and all
+shards, uncompressed) stays within 100 MB; otherwise the build falls back to
+titles and numbers and `fields` says so. The frontmatter has no summary field
+yet, so titles and numbers are the only metadata indexed. Measured on the full
+corpus (11 428 documents, built 2026-10-29):
+
+| index | files | uncompressed | gzip (sum per file) | terms | largest shard |
+| --- | --- | --- | --- | --- | --- |
+| titles + numbers | 349 | 2.4 MB | 0.6 MB | 21 221 | 144 KB (`19`) |
+| titles + numbers + body | 1 039 | 22.1 MB | 5.5 MB | 216 691 | 1.1 MB (`fo`) |
+
+Both include `docs.json` (1.7 MB, 0.3 MB gzip). The body index fits, so it is
+built: the whole API grows from about 139 MB to 161 MB, far below
+the 1 GB GitHub Pages limit; generating it adds about 15 s to the build.
