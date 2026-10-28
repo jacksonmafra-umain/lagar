@@ -1,0 +1,104 @@
+/*
+ * Design tokens for the landing page, copied from the DESIGN.md frontmatter
+ * (`colors` and `colors-dark`). DESIGN.md is the source; landing/tests checks
+ * that every value here still matches it.
+ */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter_regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter_medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter_semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter_bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/source_serif_4_regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/source_serif_4_bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+
+  --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  --color-primary: #004373;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #005b99;
+  --color-on-primary-container: #aed2ff;
+  --color-surface: #f8f9fc;
+  --color-surface-container-low: #f2f4f6;
+  --color-surface-container: #eceef0;
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #414750;
+  --color-outline-variant: #c1c7d2;
+  --color-tertiary-container: #d0a700;
+
+  /* Layer colors: `text` values from DESIGN.md `layers` (AA-safe for text). */
+  --layer-fundamental: #0b3d91;
+  --layer-sfs-act: #005b99;
+  --layer-sfs-ordinance: #1c6da3;
+  --layer-agency: #007270;
+  --layer-case-law: #7a2e4d;
+  --layer-eu: #5b3fa6;
+  --layer-region: #28772d;
+  --layer-municipality: #8b2e1f;
+  --layer-service: #8c6300;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #9ecaff;
+    --color-on-primary: #003258;
+    --color-primary-container: #00497c;
+    --color-on-primary-container: #d1e4ff;
+    --color-surface: #121316;
+    --color-surface-container-low: #1a1c1e;
+    --color-surface-container: #1e2022;
+    --color-on-surface: #e2e2e6;
+    --color-on-surface-variant: #c3c7cf;
+    --color-outline-variant: #42474e;
+    --color-tertiary-container: #574500;
+
+    /* Layer colors: `dark` values from DESIGN.md `layers`. */
+    --layer-fundamental: #b1c5ff;
+    --layer-sfs-act: #9ecaff;
+    --layer-sfs-ordinance: #95ccff;
+    --layer-agency: #7cd5d2;
+    --layer-case-law: #ffb0ca;
+    --layer-eu: #cebdff;
+    --layer-region: #88d982;
+    --layer-municipality: #ffb4a6;
+    --layer-service: #febb2a;
+  }
+}

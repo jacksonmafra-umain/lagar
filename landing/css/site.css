@@ -1,0 +1,279 @@
+/* Layout and components for the landing page. Colors and fonts come from tokens.css. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-ui);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.wrap {
+  max-width: 68ch;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.skip {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  padding: 8px 12px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.skip:focus {
+  top: 12px;
+}
+
+/* Header */
+
+.top {
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.top__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.wordmark {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.lang {
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  min-width: 44px;
+  min-height: 36px;
+  padding: 4px 12px;
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.lang:hover {
+  background: var(--color-surface-container-low);
+}
+
+/* Hero */
+
+.hero {
+  padding: 72px 0 64px;
+}
+
+.rule {
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-bottom: 20px;
+  background: var(--color-tertiary-container);
+}
+
+h1,
+h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.lead {
+  margin: 0 0 28px;
+  font-size: 1.1875rem;
+  color: var(--color-on-surface-variant);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button--primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.button--primary:hover {
+  background: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+.button--secondary {
+  border: 1px solid var(--color-outline-variant);
+  color: var(--color-primary);
+}
+
+.button--secondary:hover {
+  background: var(--color-surface-container-low);
+}
+
+.note {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+}
+
+/* Sections */
+
+.section {
+  padding: 56px 0;
+  border-top: 1px solid var(--color-outline-variant);
+}
+
+.section--alt {
+  background: var(--color-surface-container-low);
+}
+
+.section p {
+  margin: 0 0 16px;
+}
+
+/* Layers */
+
+.layers {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.layer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 12px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--layer);
+  border-radius: 8px;
+  background: var(--color-surface);
+}
+
+.layer__name {
+  font-weight: 600;
+  color: var(--layer);
+}
+
+.layer__desc {
+  grid-column: 1;
+  font-size: 0.9375rem;
+  color: var(--color-on-surface-variant);
+}
+
+.badge {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--color-outline-variant);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-on-surface-variant);
+  white-space: nowrap;
+}
+
+.badge--ready {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Link lists */
+
+.links {
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.links span {
+  color: var(--color-on-surface-variant);
+}
+
+.links span::before {
+  content: "– ";
+}
+
+/* Footer */
+
+.footer {
+  padding: 40px 0 56px;
+  border-top: 1px solid var(--color-outline-variant);
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+}
+
+.footer p {
+  margin: 0 0 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
