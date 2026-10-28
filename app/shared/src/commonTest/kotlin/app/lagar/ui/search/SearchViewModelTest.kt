@@ -75,6 +75,39 @@ class SearchViewModelTest {
     }
 
     @Test
+    fun whitespaceOnlyQueryResolvesToNothingWithoutLoadingTheCatalog() = runTest {
+        val repo = FakeRepository()
+        val vm = viewModel(repo)
+        runCurrent()
+        vm.update(SearchQuery("   "))
+        advanceTimeBy(300)
+        runCurrent()
+        assertEquals(emptyList(), vm.ids())
+        assertEquals(0, repo.indexCalls)
+    }
+
+    @Test
+    fun aQueryWithNoMatchResolvesToAnEmptyList() = runTest {
+        val vm = viewModel(FakeRepository(), initial = SearchQuery("zzz"))
+        runCurrent()
+        assertEquals(emptyList(), vm.ids())
+    }
+
+    @Test
+    fun changingTheScopeRerunsTheSearch() = runTest {
+        val prefs = UserPreferences(MapSettings())
+        val vm = SearchViewModel(Catalog(FakeRepository()), prefs, SearchQuery("skol"))
+        runCurrent()
+        assertEquals(listOf("2"), vm.ids())
+        prefs.setScope(Scope.Kommun)
+        runCurrent()
+        assertEquals(emptyList(), vm.ids())
+        prefs.setScope(Scope.Nationell)
+        runCurrent()
+        assertEquals(listOf("2"), vm.ids())
+    }
+
+    @Test
     fun typingSearchesOnlyAfterTheDebounce() = runTest {
         val repo = FakeRepository()
         val vm = viewModel(repo)
