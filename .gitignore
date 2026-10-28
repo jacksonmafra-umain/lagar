@@ -7,6 +7,7 @@ local.properties
 .idea/
 collector/data/*-state.json
 xcuserdata/
+.vercel/
 
 # Local caches of downloaded source bytes (only manifests are committed)
 sources/cache/
