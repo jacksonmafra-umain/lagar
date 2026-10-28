@@ -145,6 +145,8 @@ def main(argv):
         _check_out(out, corpus)
         docs = load_corpus(corpus)  # fail before clearing anything
         if out.exists():
+            if any(out.iterdir()) and not (out / "index.json").is_file():
+                raise BuildError(f"refusing to clear {out}: it is not empty and has no index.json (not a previous build)")
             shutil.rmtree(out)
         layers, files = build(docs, out, built_at)
     except (BuildError, OSError) as exc:

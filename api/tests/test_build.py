@@ -236,3 +236,22 @@ class OutSafetyTest(unittest.TestCase):
             self.assertEqual(result.returncode, 1)
             self.assertIn("symlink", result.stderr)
             self.assertFalse((real / "v1").exists())
+
+
+class OutNonEmptyTest(unittest.TestCase):
+    def test_non_empty_out_without_index_refused(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out"
+            out.mkdir()
+            (out / "keep.txt").write_text("k")
+            result = run_build(out)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("index.json", result.stderr)
+            self.assertTrue((out / "keep.txt").exists())
+
+    def test_previous_build_and_empty_dir_allowed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out"
+            out.mkdir()
+            self.assertEqual(run_build(out).returncode, 0)
+            self.assertEqual(run_build(out).returncode, 0)
