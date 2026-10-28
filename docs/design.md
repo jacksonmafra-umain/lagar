@@ -77,7 +77,7 @@ defined in `DESIGN.md` but have no screen that needs them yet.
 | Empty state ("coming soon") | `ui/common/EmptyState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `onSurfaceVariant` icon, `headlineSm` title, `bodyUi` text in `onSurfaceVariant` |
 | Error state with retry | `ui/common/ErrorState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `error` icon tint, `headlineSm` title, `bodyUi` text, M3 `Button` for retry |
 | "Coming soon" sheet | `ui/common/ComingSoonSheet.kt` | M3 modal sheet, `surfaceContainerLowest` container |
-| Metadata header | `ui/reader/MetadataHeader.kt` | `codeCitation` number in layer `onTint`, `headlineMd` title, `labelSm` / `bodyUi` facts, `outlineVariant` divider |
+| Metadata header | `ui/reader/MetadataHeader.kt` | `codeCitation` number in layer `onTint`, `headlineMd` title, `labelSm` / `bodyUi` facts, `outlineVariant` divider; repealed: `Repealed` layer badge and number, struck-through number and title (`onSurfaceVariant`), banner in `Repealed` `tint` / `border` (`shapes.medium`) with history icon and `bodyUi` text in `onTint` |
 | Settings controls (radio) | `ui/settings/SettingsScreen.kt` | M3 `RadioButton` with `primary` selected and `onSurfaceVariant` unselected, 48dp rows, `bodyUi` labels |
 | Glass secondary button | deferred | `DESIGN.md` glass fill is 0.6 alpha, not the `GlassTier.Card` 0.85; give it its own spec when built |
 | Primary button | deferred (retry uses the M3 `Button` themed by `LagarTheme`) | layer `accent` (or `primary`) fill, `onPrimary` text, `RadiusTokens.default` |

@@ -36,6 +36,7 @@
     <string name="meta_amended_through">Ändrad t.o.m.</string>
     <string name="meta_ministry">Departement</string>
     <string name="meta_source">Officiell källa</string>
+    <string name="meta_repealed_banner">Upphävd %1$s. Texten gäller inte längre.</string>
     <string name="error_title">Något gick fel</string>
     <string name="error_text">Kontrollera anslutningen och försök igen.</string>
     <string name="error_retry">Försök igen</string>

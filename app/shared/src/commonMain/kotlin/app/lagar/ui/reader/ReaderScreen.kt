@@ -19,6 +19,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
@@ -41,8 +42,8 @@ import app.lagar.resources.bookmark_add
 import app.lagar.resources.bookmark_remove
 import app.lagar.resources.ic_bookmark
 import app.lagar.resources.ic_bookmark_filled
-import app.lagar.settings.Bookmark
 import app.lagar.settings.BookmarkStore
+import app.lagar.settings.toBookmark
 import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.ErrorState
 import app.lagar.ui.common.rememberBackTopBarHeight
@@ -65,10 +66,12 @@ fun ReaderRoute(
 ) {
     val state by viewModel.state.collectAsState()
     val bookmarks by store.bookmarks.collectAsState()
+    // Bookmarks saved before the dates were stored (or before a repeal) catch up when the document is read.
+    LaunchedEffect(state) { (state as? LoadState.Loaded)?.value?.meta?.let { store.refresh(it.toBookmark()) } }
     ReaderScreen(
         state = state,
         bookmarked = bookmarks.any { it.id == id },
-        onToggleBookmark = { meta -> store.toggle(Bookmark(meta.id, meta.title, meta.number, meta.type, meta.layer)) },
+        onToggleBookmark = { meta -> store.toggle(meta.toBookmark()) },
         onBack = onBack,
     )
 }
@@ -101,7 +104,10 @@ fun ReaderScreen(
                         splitParagraphs(if (firstSection) withoutTitle(section) else section).also { firstSection = false }
                     }.filter { it.isNotBlank() }
                 }
-                val layer = remember(document.meta) { DisplayLayer.fromRoute(document.meta.layer, document.meta.type) }
+                val key = remember(document.meta) {
+                    if (document.meta.repealed != null) LayerKey.Repealed
+                    else DisplayLayer.fromRoute(document.meta.layer, document.meta.type)?.key ?: LayerKey.Repealed
+                }
                 LazyColumn(
                     modifier = Modifier.fillMaxSize().hazeSource(hazeState),
                     contentPadding = PaddingValues(top = barHeight + spacing.md, bottom = bottomInset + spacing.lg),
@@ -118,7 +124,7 @@ fun ReaderScreen(
                         ) {
                             SelectionContainer(Modifier.readingColumn()) {
                                 if (isStatuteBlock(block)) {
-                                    StatuteContainer(layer?.key ?: LayerKey.Repealed) { LegalMarkdown(block.trimEnd()) }
+                                    StatuteContainer(key) { LegalMarkdown(block.trimEnd()) }
                                 } else {
                                     LegalMarkdown(block.trimEnd())
                                 }
@@ -146,6 +152,7 @@ fun ReaderScreen(
 @Composable
 private fun BookmarkAction(meta: DocumentMeta, bookmarked: Boolean, onToggle: (DocumentMeta) -> Unit) {
     val description = stringResource(if (bookmarked) Res.string.bookmark_remove else Res.string.bookmark_add, meta.title)
+    val key = DisplayLayer.fromRoute(meta.layer, meta.type)?.key ?: LayerKey.SfsAct
     Box(
         modifier = Modifier
             .size(ShellDimens.TouchTarget)
@@ -157,7 +164,7 @@ private fun BookmarkAction(meta: DocumentMeta, bookmarked: Boolean, onToggle: (D
         Icon(
             painterResource(if (bookmarked) Res.drawable.ic_bookmark_filled else Res.drawable.ic_bookmark),
             contentDescription = null,
-            tint = if (bookmarked) LagarTheme.layers.onTint(LayerKey.SfsAct) else LagarTheme.colors.onSurfaceVariant,
+            tint = if (bookmarked) LagarTheme.layers.onTint(key) else LagarTheme.colors.onSurfaceVariant,
         )
     }
 }

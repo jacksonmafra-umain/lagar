@@ -26,6 +26,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.lagar.data.ListingItem
@@ -64,6 +65,7 @@ import org.jetbrains.compose.resources.stringResource
 /**
  * One document in the feed: type and number badge in the layer color, how long ago it was issued, up to
  * three lines of title, its status, a bookmark toggle and the "read full text" link. The whole card opens the document.
+ * A repealed document switches to the Repealed layer and strikes its title, as in [app.lagar.ui.list.StatuteRow].
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -77,6 +79,8 @@ fun FeedCard(
     val colors = LagarTheme.colors
     val spacing = LagarTheme.spacing
     val layer = item.displayLayer()
+    val repealed = item.repealed != null
+    val key = if (repealed) LayerKey.Repealed else (layer?.key ?: LayerKey.SfsAct)
     Surface(
         onClick = onOpen,
         modifier = modifier.fillMaxWidth(),
@@ -93,18 +97,19 @@ fun FeedCard(
                         itemVerticalAlignment = Alignment.CenterVertically,
                     ) {
                         val label = layer?.let { stringResource(Res.string.type_number, stringResource(it.typeRes()), item.number) } ?: item.number
-                        LayerBadge(layer?.key ?: LayerKey.SfsAct, label)
+                        LayerBadge(key, label)
                         item.issued?.let { RelativeDate(it) }
                     }
                     Text(
                         text = item.title,
                         style = LagarTheme.type.bodyUi,
-                        color = colors.onSurface,
+                        color = if (repealed) colors.onSurfaceVariant else colors.onSurface,
+                        textDecoration = if (repealed) TextDecoration.LineThrough else null,
                         maxLines = 3,
                         overflow = TextOverflow.Ellipsis,
                     )
                 }
-                BookmarkButton(item.title, bookmarked, onToggleBookmark)
+                BookmarkButton(item.title, layer?.key ?: LayerKey.SfsAct, bookmarked, onToggleBookmark)
             }
             HorizontalDivider(Modifier.padding(top = spacing.sm, end = spacing.sm), color = colors.outlineVariant)
             FlowRow(
@@ -113,8 +118,8 @@ fun FeedCard(
                 verticalArrangement = Arrangement.spacedBy(spacing.xs),
                 itemVerticalAlignment = Alignment.CenterVertically,
             ) {
-                if (item.repealed == null) InForce() else RepealedBadge()
-                ReadLink(layer?.key ?: LayerKey.SfsAct)
+                if (repealed) RepealedBadge() else InForce()
+                ReadLink(key)
             }
         }
     }
@@ -159,7 +164,7 @@ private fun ReadLink(key: LayerKey) {
 }
 
 @Composable
-private fun BookmarkButton(title: String, bookmarked: Boolean, onToggle: () -> Unit) {
+private fun BookmarkButton(title: String, key: LayerKey, bookmarked: Boolean, onToggle: () -> Unit) {
     val description = stringResource(if (bookmarked) Res.string.bookmark_remove else Res.string.bookmark_add, title)
     Box(
         modifier = Modifier
@@ -172,7 +177,7 @@ private fun BookmarkButton(title: String, bookmarked: Boolean, onToggle: () -> U
         Icon(
             painterResource(if (bookmarked) Res.drawable.ic_bookmark_filled else Res.drawable.ic_bookmark),
             contentDescription = null,
-            tint = if (bookmarked) LagarTheme.layers.onTint(LayerKey.SfsAct) else LagarTheme.colors.onSurfaceVariant,
+            tint = if (bookmarked) LagarTheme.layers.onTint(key) else LagarTheme.colors.onSurfaceVariant,
             modifier = Modifier.size(24.dp),
         )
     }
