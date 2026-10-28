@@ -1,6 +1,7 @@
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from lagar import frontmatter, riksdagen, schema, writer
 
@@ -34,6 +35,32 @@ class WriterTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             frontmatter.load("---\nid: bare\n---\n")
 
+    def test_carriage_return_and_tab_roundtrip(self):
+        meta = {"title": "a\rb\tc\nd", "amended_by": ["x\ry"]}
+        loaded, _ = frontmatter.load("---\n" + frontmatter.dump(meta) + "---\n")
+        self.assertEqual(loaded, meta)
+        self.assertNotIn("\r", frontmatter.dump(meta))
+
+    def test_dump_rejects_other_control_characters(self):
+        for bad in ("a\x00b", "a\x1bb", "a\x7fb", "a\x0bb"):
+            with self.subTest(bad=bad):
+                with self.assertRaises(ValueError):
+                    frontmatter.dump({"title": bad})
+                with self.assertRaises(ValueError):
+                    frontmatter.dump({"title": ["ok", bad]})
+
+    def test_dump_rejects_keys_load_cannot_read(self):
+        for key in ("Title", "my-key", "key with space", "", "nyckel\u00e5"):
+            with self.subTest(key=key):
+                with self.assertRaises(ValueError):
+                    frontmatter.dump({key: "v"})
+
+    def test_body_starting_with_dashes_roundtrips(self):
+        text = "---\n" + frontmatter.dump({"id": "sfs-1-1"}) + "---\n---\nnot frontmatter\n"
+        meta, body = frontmatter.load(text)
+        self.assertEqual(meta, {"id": "sfs-1-1"})
+        self.assertEqual(body, "---\nnot frontmatter\n")
+
     def test_build_meta_1999_175(self):
         it = item("sfs-1999-175", "1999:175", "Rättsinformationsförordning (1999:175)",
                   "1999-03-25", "Justitiedepartementet KRIM")
@@ -50,6 +77,19 @@ class WriterTests(unittest.TestCase):
         self.assertEqual(meta["language"], "sv")
         self.assertIsNone(meta["eli"])
         self.assertIsNone(meta["in_force"])
+
+    def test_build_meta_drops_own_number_from_amended_by(self):
+        it = item("sfs-2026-337", "2026:337", "Förordning om test (2026:337)",
+                  "2026-05-01", "Justitiedepartementet")
+        p = riksdagen.parse_text(
+            "Förordning om test\n\n"
+            "1 §   Text.\n\n"
+            "2 §   Mer text.\n\n"
+            "Förordning (2026:337).\n\n"
+            "Förordning (2026:400).\n")
+        meta = writer.build_meta(it, p, SHA, NOW)
+        self.assertNotIn("2026:337", meta["amended_by"])
+        self.assertIn("2026:400", meta["amended_by"])
 
     def test_build_meta_fundamental_title(self):
         it = item("sfs-1974-152", "1974:152", "Kungörelse (1974:152) om beslutad ny regeringsform;",
@@ -85,6 +125,47 @@ class WriterTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 writer.write(bad, md, Path(tmp))
             self.assertFalse((Path(tmp) / "sfs/ordinances/2000-1.md").exists())
+
+    def test_in_force_is_null_because_source_has_no_such_field(self):
+        it = item("sfs-1999-175", "1999:175", "Rättsinformationsförordning (1999:175)",
+                  "1999-03-25", None)
+        p = riksdagen.parse_text("SFS nr: 1999:175\nIkraft: 1999-05-01\n\nText")
+        self.assertIsNone(writer.build_meta(it, p, SHA, NOW)["in_force"])
+
+    def test_build_meta_uses_shared_title_and_type(self):
+        it = item("sfs-2026-5", "2026:5", "Förordning (2026:5)\n om  x;", "2026-01-01", None)
+        meta = writer.build_meta(it, riksdagen.parse_text("SFS nr: 2026:5\n\nText"), SHA, NOW)
+        self.assertEqual(meta["title"], "Förordning (2026:5) om x")
+        self.assertEqual(meta["type"], riksdagen.item_type(it))
+
+    def test_write_removes_stale_file_under_other_type_folder(self):
+        it = item("sfs-2026-5", "2026:5", "Förordning (2026:5) om x", "2026-01-01", None)
+        p = riksdagen.parse_text("SFS nr: 2026:5\n\nText")
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            other = writer.build_meta(
+                item("sfs-2026-5", "2026:5", "Resolution (2026:5) om x", "2026-01-01", None), p, SHA, NOW)
+            old = writer.write(other, "# x\n", root)
+            self.assertEqual(old, root / "sfs/other/2026-5.md")
+            unrelated = writer.write(
+                writer.build_meta(item("sfs-2026-6", "2026:6", "Förordning (2026:6) om y", "2026-01-01", None),
+                                  riksdagen.parse_text("SFS nr: 2026:6\n\nText"), SHA, NOW), "# y\n", root)
+            new = writer.write(writer.build_meta(it, p, SHA, NOW), "# x\n", root)
+            self.assertEqual(new, root / "sfs/ordinances/2026-5.md")
+            self.assertFalse(old.exists())
+            self.assertTrue(new.exists())
+            self.assertTrue(unrelated.exists())
+
+    def test_write_failure_leaves_no_temp_file(self):
+        it = item("sfs-2026-5", "2026:5", "Förordning (2026:5) om x", "2026-01-01", None)
+        meta = writer.build_meta(it, riksdagen.parse_text("SFS nr: 2026:5\n\nText"), SHA, NOW)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            with mock.patch("lagar.writer.os.replace", side_effect=OSError("disk")):
+                with self.assertRaises(OSError):
+                    writer.write(meta, "# x\n", root)
+            self.assertEqual(list(root.rglob(".tmp-*")), [])
+            self.assertEqual(list(root.rglob("*.md")), [])
 
     def test_n_series_document(self):
         it = item("sfs-N2026-1", "N2026:1", "Förordning (N2026:1) om saker", "2026-01-05", None)

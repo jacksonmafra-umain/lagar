@@ -222,5 +222,64 @@ class BuildTest(unittest.TestCase):
                              ["2026:5", "N2026:5", "N2026:1"])
 
 
+
+class OutSafetyTest(unittest.TestCase):
+    def test_symlinked_parent_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            real = Path(tmp) / "real"
+            real.mkdir()
+            (Path(tmp) / "link").symlink_to(real)
+            result = run_build(Path(tmp) / "link" / "v1")
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("symlink", result.stderr)
+            self.assertFalse((real / "v1").exists())
+
+
+class OutNonEmptyTest(unittest.TestCase):
+    def test_non_empty_out_without_index_refused(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out"
+            out.mkdir()
+            (out / "keep.txt").write_text("k")
+            result = run_build(out)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("index.json", result.stderr)
+            self.assertTrue((out / "keep.txt").exists())
+
+    def test_previous_build_and_empty_dir_allowed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out"
+            out.mkdir()
+            self.assertEqual(run_build(out).returncode, 0)
+            self.assertEqual(run_build(out).returncode, 0)
+
+
+class BuiltAtTest(unittest.TestCase):
+    def test_invalid_built_at_rejected(self):
+        for bad in ("yesterday", "2026-10-27", "2026-10-27T10:30:00", "2026-13-45T10:30:00Z", "2026-10-27T10:30:00+00:00"):
+            with tempfile.TemporaryDirectory() as tmp:
+                result = run_build(Path(tmp) / "out", built_at=bad)
+                self.assertEqual(result.returncode, 1, bad)
+                self.assertIn("--built-at", result.stderr)
+                self.assertNotIn("Traceback", result.stderr)
+
+
+class SchemaErrorsTest(unittest.TestCase):
+    def test_one_line_per_error_with_path(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus = Path(tmp) / "corpus"
+            corpus.mkdir()
+            meta, body = frontmatter.load((CORPUS / "sfs" / "acts" / "2010-800.md").read_text(encoding="utf-8"))
+            meta = {k: v for k, v in meta.items() if k not in ("title", "number")}
+            path = corpus / "x.md"
+            path.write_text("---\n" + frontmatter.dump(meta) + "---\n" + body, encoding="utf-8")
+            result = run_build(Path(tmp) / "out", corpus=corpus)
+            lines = [l for l in result.stderr.splitlines() if l.startswith("error:") or str(path) in l]
+            self.assertGreaterEqual(len(lines), 2, result.stderr)
+            for line in lines:
+                self.assertIn(str(path), line)
+                self.assertNotIn("['", line)
+
+
 if __name__ == "__main__":
     unittest.main()

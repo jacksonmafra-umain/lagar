@@ -15,6 +15,7 @@ apps for Android, iOS and the web.
 
 ## Documentation
 
+- [Progress](PROGRESS.md) and [coverage](COVERAGE.md)
 - [Design system](DESIGN.md)
 - [App architecture](docs/architecture.md)
 - [API contract](docs/api.md)

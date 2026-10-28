@@ -27,6 +27,10 @@ def http_error(code, retry_after=None):
     return urllib.error.HTTPError("http://x", code, "err", headers, io.BytesIO(b""))
 
 
+def closed(error):
+    return error.fp.closed
+
+
 class FakeOpener:
     def __init__(self, results):
         self.results = list(results)
@@ -95,6 +99,48 @@ class PoliteClientTest(unittest.TestCase):
         with self.assertRaises(urllib.error.HTTPError):
             client.get("http://x")
         self.assertEqual(len(opener.requests), 1)
+
+    def test_backoff_is_2_4_8_seconds(self):
+        client, _, sleeps = make([http_error(503) for _ in range(3)] + [b"ok"], min_interval=0)
+        self.assertEqual(client.get("http://x"), b"ok")
+        self.assertEqual(sleeps, [2, 4, 8])
+
+    def test_retries_500_502_504(self):
+        for code in (500, 502, 504):
+            with self.subTest(code=code):
+                client, opener, sleeps = make([http_error(code), b"ok"], min_interval=0)
+                self.assertEqual(client.get("http://x"), b"ok")
+                self.assertEqual(sleeps, [2])
+                self.assertEqual(len(opener.requests), 2)
+
+    def test_retry_after_above_cap_raises_blocked(self):
+        client, opener, sleeps = make([http_error(429, "3600")])
+        with self.assertRaises(Blocked) as ctx:
+            client.get("http://x")
+        self.assertIn("Retry-After", str(ctx.exception))
+        self.assertEqual(len(opener.requests), 1)
+        self.assertEqual(sleeps, [])
+
+    def test_retry_after_at_cap_is_honoured(self):
+        client, _, sleeps = make([http_error(429, "300"), b"ok"], min_interval=0)
+        self.assertEqual(client.get("http://x"), b"ok")
+        self.assertEqual(sleeps, [300])
+
+    def test_error_responses_closed_on_retry_and_blocked_paths(self):
+        retried = http_error(503)
+        client, _, _ = make([retried, b"ok"])
+        client.get("http://x")
+        self.assertTrue(closed(retried))
+        forbidden = http_error(403)
+        client, _, _ = make([forbidden])
+        with self.assertRaises(Blocked):
+            client.get("http://x")
+        self.assertTrue(closed(forbidden))
+        too_long = http_error(429, "9999")
+        client, _, _ = make([too_long])
+        with self.assertRaises(Blocked):
+            client.get("http://x")
+        self.assertTrue(closed(too_long))
 
 
 if __name__ == "__main__":

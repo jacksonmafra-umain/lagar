@@ -96,7 +96,8 @@ class SfsTests(unittest.TestCase):
         self.assertEqual(len(client.text_calls()), 4)
         files = sorted((self.corpus / "fundamental-laws").glob("*.md"))
         self.assertEqual(len(files), 4)
-        self.assertEqual(set(self.state()["done"]), set(FUNDAMENTAL_LAWS))
+        # No listing systemdatum exists for --fundamental, so nothing is marked done.
+        self.assertEqual(self.state()["done"], {})
 
     def test_limit_stops_after_n(self):
         ids = [f"sfs-2000-{n}" for n in range(1, 6)]
@@ -221,6 +222,56 @@ class SfsTests(unittest.TestCase):
     def test_invalid_date_rejected(self):
         with self.assertRaises(SystemExit):
             self.args("--since", "2026-13-01")
+
+    def test_only_yyyy_mm_dd_dates_accepted(self):
+        for flag in ("--since", "--from", "--to"):
+            self.assertEqual(getattr(self.args(flag, "2026-03-01"), {"--since": "since", "--from": "from_date", "--to": "to_date"}[flag]), "2026-03-01")
+            for bad in ("20260301", "2026-3-1", "2026-03-01T00:00", "2026-W09-1", "2026-03-01\n", " 2026-03-01", "٢٠٢٦-٠٣-٠١"):
+                with self.subTest(flag=flag, bad=bad):
+                    with self.assertRaises(SystemExit):
+                        self.args(flag, bad)
+
+    def test_negative_limit_rejected(self):
+        with self.assertRaises(SystemExit):
+            self.args("--limit", "-1")
+        self.assertEqual(self.args("--limit", "0").limit, 0)
+
+    def test_blocked_in_state_must_be_string_or_null(self):
+        self.state_path.parent.mkdir(parents=True)
+        for bad in ('{"blocked": 5}', '{"blocked": {"a": 1}}', '{"done": {"a": 1}}', '{"failed": {"a": []}}'):
+            with self.subTest(bad=bad):
+                self.state_path.write_text(bad, encoding="utf-8")
+                with self.assertRaises(sfs.StateError):
+                    sfs.run(FakeClient(), self.args())
+        self.state_path.write_text('{"blocked": "403 Forbidden"}', encoding="utf-8")
+        sfs.run(FakeClient({"dokumentlista": listing_json([])}), self.args())
+
+    def test_fundamental_run_does_not_store_empty_systemdatum(self):
+        client = FakeClient()
+        sfs.run(client, self.args("--fundamental"))
+        self.assertTrue(all(value for value in self.state()["done"].values()))
+
+    def test_already_done_uses_same_title_and_type_as_writer(self):
+        listing = json.dumps({"dokumentlista": {"@sidor": "1", "dokument": [{
+            "dok_id": "sfs-2000-1", "beteckning": "2000:1",
+            "titel": "/Rubriken upphör att gälla U:2027-01-01/\nFörordning (2000:1) om a;\n"
+                     "/Rubriken träder i kraft I:2027-01-01/\nLag (2000:1) om b",
+            "datum": "2000-01-01", "systemdatum": "s1", "organ": ""}]}}).encode()
+        sfs.run(FakeClient({"dokumentlista": listing}), self.args())
+        self.assertEqual([p.parent.name for p in self.corpus.rglob("*.md")], ["ordinances"])
+        client = FakeClient({"dokumentlista": listing})
+        summary = sfs.run(client, self.args())
+        self.assertEqual((summary.skipped, summary.written), (1, 0))
+
+    def test_type_change_between_runs_leaves_single_file(self):
+        def listing(title):
+            return json.dumps({"dokumentlista": {"@sidor": "1", "dokument": [{
+                "dok_id": "sfs-2000-1", "beteckning": "2000:1", "titel": title,
+                "datum": "2000-01-01", "systemdatum": title, "organ": ""}]}}).encode()
+        sfs.run(FakeClient({"dokumentlista": listing("Resolution (2000:1) om a")}), self.args())
+        sfs.run(FakeClient({"dokumentlista": listing("Förordning (2000:1) om a")}), self.args())
+        self.assertEqual([str(p.relative_to(self.corpus)) for p in self.corpus.rglob("*.md")],
+                         ["sfs/ordinances/2000-1.md"])
 
     def test_listing_error_raises(self):
         client = FakeClient({"dokumentlista": http_error("u", 500)})

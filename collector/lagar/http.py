@@ -6,10 +6,11 @@ import urllib.request
 
 RETRY_STATUSES = frozenset({429, 500, 502, 503, 504})
 TIMEOUT_SECONDS = 30
+MAX_RETRY_AFTER_SECONDS = 300
 
 
 class Blocked(Exception):
-    """The source refused access (HTTP 403); collection must stop."""
+    """The source refused access or asked for a long pause; collection must stop."""
 
 
 class PoliteClient:
@@ -60,10 +61,17 @@ class PoliteClient:
                     return response.read()
             except urllib.error.HTTPError as error:
                 if error.code == 403:
+                    error.close()
                     raise Blocked(f"403 Forbidden: {url}") from error
                 if error.code not in RETRY_STATUSES or attempt >= self.max_retries:
                     raise
                 backoff = 2 ** (attempt + 1)
                 retry_after = self._retry_after(error)
+                error.close()
+                if retry_after is not None and retry_after > MAX_RETRY_AFTER_SECONDS:
+                    raise Blocked(
+                        f"Retry-After {retry_after}s exceeds the "
+                        f"{MAX_RETRY_AFTER_SECONDS}s cap: {url}"
+                    ) from error
                 self._sleep(retry_after if retry_after is not None else backoff)
                 attempt += 1

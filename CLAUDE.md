@@ -4,14 +4,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project state
 
-Pre-bootstrap: no code, build files or tests exist yet. The repo currently holds only planning and design input:
+Foundation and corpus seed are in place: the Python collector (`collector/`, SFS from Riksdagen open data), the static API generator (`api/`) and a corpus (`corpus/`) with the four fundamental laws and the first 100 statutes of 2026. The Compose Multiplatform app (`app/`) lives on its own branch and is not on this one yet. Planning and design input:
 
 - `lagar-implementation-prompt.md` — **the master spec**, local-only: it is excluded from git (`.git/info/exclude`) and may be missing in other clones. When present, read it before any work; it defines the monorepo layout, corpus schema, static API contract, app stack, CI workflows and milestones (M0–M12). Follow its milestone order. When missing, rely on this file, `docs/` and `DESIGN.md`, and ask the owner for anything they don't cover. Never commit it or quote it in tracked files.
 - `docs/architecture.md` — app information architecture: normative-layer hierarchy, context engine, 4-tab shell (Utforska / Hierarki / Sparade / Tjänster), onboarding and navigation flows. Some features it describes go beyond the spec (reading a law as of a past date, version comparator, inline notes, GPS kommun detection); the static API in the spec does not yet expose historical text, so check with the owner before building those.
 - `DESIGN.md` — the chosen design system ("Nordic Juridisk Klarhet"): M3 color roles (light + dark), layer colors, typography, radii, spacing, Liquid Glass elevation spec, Compose implementation notes. Started from `design/stitch/nordic_juridisk_klarhet/DESIGN.md` but has since been extended (dark mode, accessible layer text colors); the root file is canonical, the Stitch copy is the untouched export.
 - `design/stitch/` — Google Stitch export (`code.html` + `screen.png` per screen).
 
-When commands (Gradle, Python collector, API generator) are added, update this file with them.
+## Commands
+
+Run from the repo root.
+
+- Collect SFS: `python3 -I collector/collect.py sfs --fundamental` or `python3 -I collector/collect.py sfs --from YYYY-MM-DD --to YYYY-MM-DD [--limit N] [--since YYYY-MM-DD]`. State lives in `collector/data/sfs-state.json`; default `--rate` is 1 request/s.
+- Audit the corpus: `python3 -I collector/audit.py [--fsck]` writes `collector/data/pending-integrity.json`; exits 1 on schema errors, duplicate ids or path mismatches.
+- Progress reports: `python3 -I collector/plan.py` reads `collector/data/targets.json` and the audit JSON, writes `PROGRESS.md` and `progress.svg`. Run the audit first; `COVERAGE.md` is hand-written.
+- Build the API: `python3 -I api/build.py --corpus corpus --out build/api/v1`
+- Collector tests: `python3 -I -m unittest discover -s collector/tests -t collector` (single test: add `-k <name>`)
+- API tests: `python3 -I -m unittest discover -s api/tests -t .`
+
+Workflow: work goes through labelled GitHub issues and PRs assigned to the owner, merged into `main`.
+
+When Gradle commands are added with the app, update this file.
 
 ## What lagar is
 

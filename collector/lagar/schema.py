@@ -15,6 +15,9 @@ from .vocabulary import TYPES
 
 SCHEMA_PATH = Path(__file__).resolve().parents[2] / "docs" / "schema" / "frontmatter.schema.json"
 
+# RFC 3986 scheme, a non-empty remainder, and no whitespace or control characters.
+_URI = re.compile(r"[A-Za-z][A-Za-z0-9+.\-]*:([^\s\x00-\x1f\x7f]+)")
+
 _TYPE_CHECKS = {
     "string": lambda v: isinstance(v, str),
     "boolean": lambda v: isinstance(v, bool),
@@ -46,8 +49,13 @@ def _format_ok(fmt, value):
         except ValueError:
             return False
     if fmt == "uri":
-        parsed = urlparse(value)
-        return bool(parsed.scheme) and bool(parsed.netloc or parsed.path) and " " not in value
+        match = _URI.fullmatch(value)
+        if not match:
+            return False
+        rest = match.group(1)
+        if rest.startswith("//"):  # hierarchical URI needs an authority
+            return bool(urlparse(value).netloc)
+        return True
     return True
 
 
@@ -85,6 +93,8 @@ def _check(value, schema, path, errors):
 
 def validate(frontmatter):
     """Return a list of human-readable errors; empty means valid."""
+    if not isinstance(frontmatter, dict):
+        return [f"frontmatter: expected object, got {type(frontmatter).__name__}"]
     errors = []
     _check(frontmatter, _load_schema(), "frontmatter", errors)
     type_, layer = frontmatter.get("type"), frontmatter.get("layer")
