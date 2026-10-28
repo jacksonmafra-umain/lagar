@@ -24,6 +24,28 @@ Types and the layer each belongs to:
 | `ordinance` | `sfs` |
 | `other_statute` | `sfs` |
 
+## Display levels
+
+The app shows nine levels; API layers map onto them as follows.
+
+| display level | API source |
+| --- | --- |
+| fundamental | layer `fundamental` |
+| SFS acts | layer `sfs`, type `act` (SFS lagar) |
+| SFS ordinances | layer `sfs`, type `ordinance` (SFS förordningar) |
+| agency | layer `agency` |
+| case law | layer `case_law` |
+| EU | layer `eu` |
+| region | layer `region` |
+| municipality | layer `municipality` |
+| service | layer `service` |
+
+Type `other_statute` (layer `sfs`) is shown under the SFS acts colour group as
+"other statutes".
+
+`DESIGN.md` palette keys use hyphens (`case-law`, `sfs-act`, `sfs-ordinance`);
+API ids use underscores (`case_law`, `act`, `ordinance`).
+
 ## `GET index.json`
 
 | field | type | null | notes |
