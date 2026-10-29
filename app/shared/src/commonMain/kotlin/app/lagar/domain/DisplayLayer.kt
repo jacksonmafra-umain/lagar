@@ -16,6 +16,9 @@ enum class DisplayLayer(val apiLayer: String, val apiType: String?, val key: Lay
     Service("service", null, LayerKey.Service),
     ;
 
+    /** Whether the API has a per-ministry index for this level (`<layer>/<type>/by-ministry/`): the SFS series. */
+    val hasMinistryIndex: Boolean get() = apiLayer == "sfs" && apiType != null
+
     companion object {
         /** The level a `LayerList(layer, type)` route shows; untyped levels ignore [type]. */
         fun fromRoute(layer: String, type: String?): DisplayLayer? =

@@ -73,7 +73,8 @@ fun LayerListRoute(
     type: String?,
     onBack: () -> Unit,
     onOpenDocument: (String) -> Unit,
-    viewModel: LayerListViewModel = koinViewModel(key = "$layer/$type") { parametersOf(layer, type) },
+    ministry: MinistryFilter? = null,
+    viewModel: LayerListViewModel = koinViewModel(key = "$layer/$type/${ministry?.id}") { parametersOf(layer, type, ministry) },
 ) {
     val items by viewModel.items.collectAsState()
     val total by viewModel.total.collectAsState()
@@ -85,6 +86,7 @@ fun LayerListRoute(
     LayerListScreen(
         apiLayer = layer,
         routeType = type,
+        ministryName = ministry?.name,
         series = series,
         selectedType = selectedType,
         items = items,
@@ -104,6 +106,7 @@ fun LayerListRoute(
 fun LayerListScreen(
     apiLayer: String,
     routeType: String?,
+    ministryName: String?,
     series: List<String>,
     selectedType: String?,
     items: List<ListingItem>,
@@ -177,6 +180,7 @@ fun LayerListScreen(
         }
         ListHeader(
             layer = layer,
+            ministryName = ministryName,
             selectedType = selectedType,
             series = series,
             baseKey = baseKey,
@@ -208,6 +212,7 @@ private fun NearEndEffect(listState: LazyListState, itemCount: Int, onLoadNext: 
 @Composable
 private fun ListHeader(
     layer: DisplayLayer?,
+    ministryName: String?,
     selectedType: String?,
     series: List<String>,
     baseKey: LayerKey,
@@ -239,6 +244,9 @@ private fun ListHeader(
                         color = colors.onSurfaceVariant,
                     )
                 }
+            }
+            if (ministryName != null) {
+                Text(ministryName, style = LagarTheme.type.headlineSm, color = colors.onSurface)
             }
             if (series.size > 1) {
                 SeriesSwitch(apiLayer, series, selectedType, baseKey, onSelectSeries)

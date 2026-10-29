@@ -17,6 +17,11 @@ def _content_type(response):
     return value.split(";", 1)[0].strip().lower() or None
 
 
+def _final_url(response, url):
+    geturl = getattr(response, "geturl", None)
+    return (geturl() if callable(geturl) else None) or url
+
+
 class Blocked(Exception):
     """The source refused access or asked for a long pause; collection must stop."""
 
@@ -57,20 +62,27 @@ class PoliteClient:
             return None
         return seconds if seconds >= 0 else None
 
-    def get(self, url):
-        return self.fetch(url)[0]
+    def get(self, url, headers=None):
+        return self.fetch(url, headers)[0]
 
-    def fetch(self, url):
+    def fetch(self, url, headers=None):
         """Return (body, content_type); content_type is lower-case, without parameters."""
+        return self.fetch_final(url, headers)[:2]
+
+    def fetch_final(self, url, headers=None):
+        """Return (body, content_type, final_url): the URL answered after any redirects.
+
+        `headers` are sent in addition to the User-Agent (for example Accept).
+        """
         attempt = 0
         while True:
             self._space()
             request = urllib.request.Request(
-                url, headers={"User-Agent": self.user_agent}
+                url, headers={**(headers or {}), "User-Agent": self.user_agent}
             )
             try:
                 with self._opener(request, timeout=TIMEOUT_SECONDS) as response:
-                    return response.read(), _content_type(response)
+                    return response.read(), _content_type(response), _final_url(response, url)
             except urllib.error.HTTPError as error:
                 if error.code == 403:
                     error.close()

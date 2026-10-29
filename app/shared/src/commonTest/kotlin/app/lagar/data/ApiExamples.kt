@@ -115,6 +115,33 @@ object ApiExamples {
 }
 """
 
+    val ordinanceMinistries = """
+{
+  "layer": "sfs",
+  "type": "ordinance",
+  "total": 2,
+  "unassigned": 1,
+  "ministries": [
+    {"id": "justitiedepartementet", "name": "Justitiedepartementet", "count": 1}
+  ]
+}
+"""
+
+    val ordinanceMinistryListing = """
+{
+  "layer": "sfs",
+  "type": "ordinance",
+  "ministry_id": "justitiedepartementet",
+  "ministry": "Justitiedepartementet",
+  "page": 1,
+  "page_count": 1,
+  "total": 1,
+  "items": [
+    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null, "in_force": null, "amended_through": "2026:851", "ministry": "Justitiedepartementet KRIM"}
+  ]
+}
+"""
+
     /** A document whose `amendments` were read from the SFS register. */
     val documentWithAmendments = """
 {

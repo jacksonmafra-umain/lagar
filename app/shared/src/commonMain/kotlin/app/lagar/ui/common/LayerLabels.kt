@@ -12,23 +12,41 @@ import app.lagar.resources.ic_layer_hospital
 import app.lagar.resources.ic_layer_shield
 import app.lagar.resources.ic_layer_stars
 import app.lagar.resources.layer_agency
+import app.lagar.resources.layer_agency_authority
 import app.lagar.resources.layer_agency_desc
+import app.lagar.resources.layer_agency_examples
 import app.lagar.resources.layer_case_law
+import app.lagar.resources.layer_case_law_authority
 import app.lagar.resources.layer_case_law_desc
+import app.lagar.resources.layer_case_law_examples
 import app.lagar.resources.layer_eu
+import app.lagar.resources.layer_eu_authority
 import app.lagar.resources.layer_eu_desc
+import app.lagar.resources.layer_eu_examples
 import app.lagar.resources.layer_fundamental
+import app.lagar.resources.layer_fundamental_authority
 import app.lagar.resources.layer_fundamental_desc
+import app.lagar.resources.layer_fundamental_examples
 import app.lagar.resources.layer_municipality
+import app.lagar.resources.layer_municipality_authority
 import app.lagar.resources.layer_municipality_desc
+import app.lagar.resources.layer_municipality_examples
 import app.lagar.resources.layer_region
+import app.lagar.resources.layer_region_authority
 import app.lagar.resources.layer_region_desc
+import app.lagar.resources.layer_region_examples
 import app.lagar.resources.layer_service
+import app.lagar.resources.layer_service_authority
 import app.lagar.resources.layer_service_desc
+import app.lagar.resources.layer_service_examples
 import app.lagar.resources.layer_sfs_act
+import app.lagar.resources.layer_sfs_act_authority
 import app.lagar.resources.layer_sfs_act_desc
+import app.lagar.resources.layer_sfs_act_examples
 import app.lagar.resources.layer_sfs_ordinance
+import app.lagar.resources.layer_sfs_ordinance_authority
 import app.lagar.resources.layer_sfs_ordinance_desc
+import app.lagar.resources.layer_sfs_ordinance_examples
 import app.lagar.resources.type_act
 import app.lagar.resources.type_agency_regulation
 import app.lagar.resources.type_case_notice
@@ -66,6 +84,32 @@ internal fun DisplayLayer.descriptionRes(): StringResource = when (this) {
     DisplayLayer.Region -> Res.string.layer_region_desc
     DisplayLayer.Municipality -> Res.string.layer_municipality_desc
     DisplayLayer.Service -> Res.string.layer_service_desc
+}
+
+/** Who issues or decides the norms of this level, as the short badge on its layer row. */
+internal fun DisplayLayer.authorityRes(): StringResource = when (this) {
+    DisplayLayer.Fundamental -> Res.string.layer_fundamental_authority
+    DisplayLayer.SfsAct -> Res.string.layer_sfs_act_authority
+    DisplayLayer.SfsOrdinance -> Res.string.layer_sfs_ordinance_authority
+    DisplayLayer.Agency -> Res.string.layer_agency_authority
+    DisplayLayer.CaseLaw -> Res.string.layer_case_law_authority
+    DisplayLayer.Eu -> Res.string.layer_eu_authority
+    DisplayLayer.Region -> Res.string.layer_region_authority
+    DisplayLayer.Municipality -> Res.string.layer_municipality_authority
+    DisplayLayer.Service -> Res.string.layer_service_authority
+}
+
+/** Well-known norms of this level, listed on its layer row. */
+internal fun DisplayLayer.examplesRes(): StringResource = when (this) {
+    DisplayLayer.Fundamental -> Res.string.layer_fundamental_examples
+    DisplayLayer.SfsAct -> Res.string.layer_sfs_act_examples
+    DisplayLayer.SfsOrdinance -> Res.string.layer_sfs_ordinance_examples
+    DisplayLayer.Agency -> Res.string.layer_agency_examples
+    DisplayLayer.CaseLaw -> Res.string.layer_case_law_examples
+    DisplayLayer.Eu -> Res.string.layer_eu_examples
+    DisplayLayer.Region -> Res.string.layer_region_examples
+    DisplayLayer.Municipality -> Res.string.layer_municipality_examples
+    DisplayLayer.Service -> Res.string.layer_service_examples
 }
 
 /** 1-based position in the order of norms. */
