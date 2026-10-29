@@ -1,10 +1,10 @@
 {
-  "meta.title": "lagar – gällande svensk lag, utan versionskaos",
+  "meta.title": "lagar: gällande svensk lag, utan versionskaos",
   "meta.description": "Sök och läs svenska lagar och förordningar i sin aktuella lydelse. Gratis, utan konto, öppen källkod.",
   "nav.skip": "Hoppa till innehållet",
   "nav.toggle": "EN, byt till engelska",
   "hero.title": "Gällande svensk lag, utan versionskaos",
-  "hero.lead": "Sök och läs lagar och förordningar i sin aktuella lydelse. Gratis, utan konto.",
+  "hero.lead": "Sök och läs lagar i sin aktuella lydelse, gratis och utan konto.",
   "hero.cta": "Öppna lagar",
   "hero.source": "Källkod på GitHub",
   "hero.independent": "Oberoende projekt. Inte en myndighetstjänst.",

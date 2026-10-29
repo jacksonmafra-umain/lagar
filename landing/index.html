@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n="meta.title">lagar – gällande svensk lag, utan versionskaos</title>
+  <title data-i18n="meta.title">lagar: gällande svensk lag, utan versionskaos</title>
   <meta name="description" data-i18n-attr="content:meta.description" content="Sök och läs svenska lagar och förordningar i sin aktuella lydelse. Gratis, utan konto, öppen källkod.">
   <meta property="og:type" content="website">
-  <meta property="og:title" data-i18n-attr="content:meta.title" content="lagar – gällande svensk lag, utan versionskaos">
+  <meta property="og:title" data-i18n-attr="content:meta.title" content="lagar: gällande svensk lag, utan versionskaos">
   <meta property="og:description" data-i18n-attr="content:meta.description" content="Sök och läs svenska lagar och förordningar i sin aktuella lydelse. Gratis, utan konto, öppen källkod.">
   <meta name="theme-color" content="#004373">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -26,20 +26,24 @@
 
   <main id="main">
     <section id="hero" class="hero">
-      <div class="wrap">
-        <span class="rule" aria-hidden="true"></span>
-        <h1 data-i18n="hero.title">Gällande svensk lag, utan versionskaos</h1>
-        <p class="lead" data-i18n="hero.lead">Sök och läs lagar och förordningar i sin aktuella lydelse. Gratis, utan konto.</p>
-        <div class="actions">
-          <a class="button button--primary" href="/app/" data-i18n="hero.cta">Öppna lagar</a>
-          <a class="button button--secondary" href="https://github.com/jacksonmafra-umain/lagar" data-i18n="hero.source">Källkod på GitHub</a>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <h1 data-i18n="hero.title">Gällande svensk lag, utan versionskaos</h1>
+          <p class="lead" data-i18n="hero.lead">Sök och läs lagar i sin aktuella lydelse, gratis och utan konto.</p>
+          <div class="actions">
+            <a class="button button--primary" href="/app/" data-i18n="hero.cta">Öppna lagar</a>
+            <a class="button button--secondary" href="https://github.com/jacksonmafra-umain/lagar" data-i18n="hero.source">Källkod på GitHub</a>
+          </div>
         </div>
-        <p class="note" data-i18n="hero.independent">Oberoende projekt. Inte en myndighetstjänst.</p>
+        <figure class="specimen" lang="sv" style="--layer: var(--layer-fundamental)">
+          <figcaption class="specimen__cite">Regeringsformen 1 kap. 1 §</figcaption>
+          <blockquote class="specimen__text">All offentlig makt i Sverige utgår från folket.</blockquote>
+        </figure>
       </div>
     </section>
 
     <section id="why" class="section">
-      <div class="wrap">
+      <div class="wrap split">
         <h2 data-i18n="why.title">Varför lagar</h2>
         <p data-i18n="why.p1">Svensk lag är offentlig, men den är svårare att läsa än den borde vara. En lag ändras om och om igen, och den lydelse som gäller i dag är utspridd över originaltexten och alla ändringar sedan dess. De officiella källorna är fullständiga men byggda för den som redan vet var man ska leta.</p>
         <p data-i18n="why.p2">lagar samlar den gällande lydelsen av varje lag på ett ställe, lätt att läsa i mobilen, gratis och utan konto. Varje lag är en vanlig textfil i ett öppet arkiv, byggd från officiella öppna data, så att vem som helst kan se var en text kommer ifrån, återanvända den eller hjälpa till att förbättra den.</p>
@@ -101,7 +105,7 @@
     </section>
 
     <section id="sources" class="section">
-      <div class="wrap">
+      <div class="wrap split">
         <h2 data-i18n="sources.title">Källor</h2>
         <p data-i18n="sources.lead">Texterna hämtas från officiella öppna data. De är informativa och ersätter inte den officiella publiceringen.</p>
         <ul class="links">
@@ -113,8 +117,8 @@
       </div>
     </section>
 
-    <section id="open" class="section section--alt">
-      <div class="wrap">
+    <section id="open" class="section section--band">
+      <div class="wrap split">
         <h2 data-i18n="open.title">Öppen källkod</h2>
         <p data-i18n="open.p1">Varje norm är en Markdown-fil i arkivet. En insamlare hämtar texterna från officiella källor, och ett statiskt JSON-API driver webbappen. Allt är fritt under MIT-licensen.</p>
         <p data-i18n="open.p2">Appar för Android och iOS är på väg. Tills vidare fungerar webbappen i alla moderna webbläsare, även i mobilen.</p>
@@ -127,15 +131,14 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap">
-      <p data-i18n="footer.notice">Texterna i lagar är informativa och ersätter inte Svensk författningssamling. Oberoende projekt, inte knutet till riksdagen, regeringen eller någon myndighet.</p>
-      <p>
-        <a href="https://github.com/jacksonmafra-umain/lagar/blob/main/LICENSE" data-i18n="footer.license">MIT-licens</a>
-        ·
-        <a href="https://github.com/jacksonmafra-umain/lagar" data-i18n="footer.repo">Källkod</a>
-        ·
-        <span data-i18n="footer.credit">Skapat av Jackson F. de A. Mafra</span>
-      </p>
+    <div class="wrap footer__grid">
+      <p class="footer__notice" data-i18n="footer.notice">Texterna i lagar är informativa och ersätter inte Svensk författningssamling. Oberoende projekt, inte knutet till riksdagen, regeringen eller någon myndighet.</p>
+      <p class="note" data-i18n="hero.independent">Oberoende projekt. Inte en myndighetstjänst.</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/jacksonmafra-umain/lagar/blob/main/LICENSE" data-i18n="footer.license">MIT-licens</a></li>
+        <li><a href="https://github.com/jacksonmafra-umain/lagar" data-i18n="footer.repo">Källkod</a></li>
+        <li><span data-i18n="footer.credit">Skapat av Jackson F. de A. Mafra</span></li>
+      </ul>
     </div>
   </footer>
 </body>
