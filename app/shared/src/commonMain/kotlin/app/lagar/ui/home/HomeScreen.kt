@@ -40,6 +40,7 @@ import app.lagar.resources.home_scope_region_title
 import app.lagar.resources.ic_expand_more
 import app.lagar.resources.ic_info
 import app.lagar.settings.Bookmark
+import app.lagar.settings.UserFocus
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.common.LoadStateHost
 import org.jetbrains.compose.resources.painterResource
@@ -58,9 +59,11 @@ fun HomeRoute(
 ) {
     val state by viewModel.state.collectAsState()
     val bookmarks by viewModel.bookmarks.collectAsState()
+    val focus by viewModel.focus.collectAsState()
     HomeScreen(
         state = state,
         bookmarks = bookmarks,
+        focus = focus,
         onOpenLayer = onOpenLayer,
         onOpenDocument = onOpenDocument,
         onOpenSearch = onOpenSearch,
@@ -74,6 +77,7 @@ fun HomeRoute(
 fun HomeScreen(
     state: LoadState<HomeData>,
     bookmarks: List<Bookmark>,
+    focus: UserFocus,
     onOpenLayer: (DisplayLayer) -> Unit,
     onOpenDocument: (String) -> Unit,
     onOpenSearch: (String) -> Unit,
@@ -99,7 +103,7 @@ fun HomeScreen(
                 }
             }
             if (data.scope == Scope.Nationell) {
-                item { ImportantLaws(data, onOpenDocument, Modifier.padding(horizontal = spacing.marginMobile)) }
+                item { ImportantLaws(data, focus, onOpenDocument, Modifier.padding(horizontal = spacing.marginMobile)) }
                 item {
                     ExploreFeed(
                         data = data,

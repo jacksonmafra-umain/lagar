@@ -66,6 +66,8 @@
     <string name="settings_system">System</string>
     <string name="settings_reduce_transparency">Reduce transparency</string>
     <string name="settings_reduce_transparency_desc">Shows solid surfaces instead of frosted glass.</string>
+    <string name="settings_focus">Main focus</string>
+    <string name="settings_focus_desc">Sets which key laws the home screen shows first.</string>
     <string name="setting_on">On</string>
     <string name="setting_off">Off</string>
     <string name="language_swedish">Svenska</string>
@@ -83,6 +85,11 @@
     <string name="onboarding_continue">Continue</string>
     <string name="onboarding_done">Done</string>
     <string name="onboarding_stored_locally">Stored on this device only</string>
+    <string name="focus_title">Your main focus</string>
+    <string name="focus_text">Sets which key laws the home screen shows first. You can change it in Settings.</string>
+    <string name="focus_citizen">Citizen</string>
+    <string name="focus_student">Student</string>
+    <string name="focus_lawyer">Lawyer</string>
     <string name="welcome_title">All of Sweden’s rules in one place</string>
     <string name="welcome_text">Read acts, ordinances, agency regulations, case law and EU law, tailored to your region and municipality.</string>
     <string name="scope_national">National</string>

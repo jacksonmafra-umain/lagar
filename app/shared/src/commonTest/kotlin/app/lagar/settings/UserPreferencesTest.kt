@@ -62,6 +62,28 @@ class UserPreferencesTest {
     }
 
     @Test
+    fun focusDefaultsToCitizen() {
+        assertEquals(UserFocus.Citizen, UserPreferences(MapSettings()).focus.value)
+        assertEquals(UserFocus.Citizen, UserPreferences(MapSettings("focus" to "astronaut")).focus.value)
+    }
+
+    @Test
+    fun completeOnboardingStoresFocus() {
+        val settings = MapSettings()
+        UserPreferences(settings).completeOnboarding(Scope.Nationell, Locality(null, null), UserFocus.Student)
+        assertEquals(UserFocus.Student, UserPreferences(settings).focus.value)
+    }
+
+    @Test
+    fun setFocusPersistsImmediately() {
+        val settings = MapSettings()
+        val prefs = UserPreferences(settings)
+        prefs.setFocus(UserFocus.Lawyer)
+        assertEquals(UserFocus.Lawyer, prefs.focus.value)
+        assertEquals(UserFocus.Lawyer, UserPreferences(settings).focus.value)
+    }
+
+    @Test
     fun setScopePersistsImmediately() {
         val settings = MapSettings()
         UserPreferences(settings).setScope(Scope.Region)

@@ -66,6 +66,8 @@
     <string name="settings_system">Systemets inställning</string>
     <string name="settings_reduce_transparency">Minska genomskinlighet</string>
     <string name="settings_reduce_transparency_desc">Visar ogenomskinliga ytor i stället för frostat glas.</string>
+    <string name="settings_focus">Huvudsakligt fokus</string>
+    <string name="settings_focus_desc">Styr vilka viktiga lagar startsidan visar först.</string>
     <string name="setting_on">På</string>
     <string name="setting_off">Av</string>
     <string name="language_swedish">Svenska</string>
@@ -83,6 +85,11 @@
     <string name="onboarding_continue">Fortsätt</string>
     <string name="onboarding_done">Klar</string>
     <string name="onboarding_stored_locally">Sparas bara på den här enheten</string>
+    <string name="focus_title">Ditt huvudsakliga fokus</string>
+    <string name="focus_text">Styr vilka viktiga lagar startsidan visar först. Du kan ändra det i Inställningar.</string>
+    <string name="focus_citizen">Medborgare</string>
+    <string name="focus_student">Student</string>
+    <string name="focus_lawyer">Jurist</string>
     <string name="welcome_title">Hela Sveriges regelverk på ett ställe</string>
     <string name="welcome_text">Läs lagar, förordningar, myndighetsföreskrifter, rättspraxis och EU-rätt, anpassat till din region och kommun.</string>
     <string name="scope_national">Nationell</string>
