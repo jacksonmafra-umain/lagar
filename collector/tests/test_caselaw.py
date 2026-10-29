@@ -16,6 +16,8 @@ FIXTURES = Path(__file__).resolve().parent / "fixtures"
 SAMPLE = json.loads((FIXTURES / "caselaw-listing.json").read_text(encoding="utf-8"))
 ROBOTS = "https://rattspraxis.etjanst.domstol.se/robots.txt"
 NJA, HFD_REF, HFD_NOT = SAMPLE
+# A summary of several paragraphs separated by "-----" rules (MÖD 2013:50, text trimmed).
+MULTI = json.loads((FIXTURES / "caselaw-summary-parts.json").read_text(encoding="utf-8"))
 
 
 def http_error(url, code):
@@ -138,6 +140,29 @@ class CaseLawMappingTests(unittest.TestCase):
         self.assertNotIn("## Sammanfattning", body)  # the summary is the title
         notice = caselaw.build_meta(HFD_NOT, "0" * 64, "2026-10-29T00:00:00Z")
         self.assertIn("## Notis\n\n### Not 24", caselaw.to_markdown(notice, HFD_NOT))
+
+    def test_summary_rules_split_title_and_summary(self):
+        meta = caselaw.build_meta(MULTI, "0" * 64, "2026-10-29T00:00:00Z")
+        self.assertEqual(meta["title"], "Tillstånd enligt miljöbalken till ombyggnad och drift av kraftverk")
+        self.assertEqual(schema.validate(meta), [])
+        body = caselaw.to_markdown(meta, MULTI)
+        self.assertNotIn("-----", body)
+        self.assertTrue(body.startswith("# " + meta["title"] + "\n\nDomstol: Mark- och miljööverdomstolen  \n"))
+        self.assertIn(
+            "Referat: MÖD 2013:50\n\n## Sammanfattning\n\nMark- och miljödomstolen hade avslagit ansökan"
+            " om tillstånd till ombyggnad och effektivisering av kraftverket med motiveringen att det"
+            " samtidigt krävdes prövning av den befintliga anläggningens laglighet och att sökanden inte"
+            " ansökt om lagligförklaring.\n\nMark- och miljööverdomstolen fastställde domen.\n\n## Lagrum\n\n",
+            body,
+        )
+
+    def test_summary_without_rules_and_missing_summary(self):
+        self.assertEqual(caselaw.summary_parts(HFD_REF), [HFD_REF["sammanfattning"]])
+        self.assertEqual(caselaw.summary_parts(dict(HFD_REF, sammanfattning=" ----- ")), [])
+        item = dict(MULTI, sammanfattning=None, benamning="Kraftverket")
+        meta = caselaw.build_meta(item, "0" * 64, "2026-10-29T00:00:00Z")
+        self.assertEqual(meta["title"], "Kraftverket")
+        self.assertNotIn("## Sammanfattning", caselaw.to_markdown(meta, item))
 
     def test_references_given_as_json_lists_are_joined(self):
         item = copy.deepcopy(HFD_REF)
