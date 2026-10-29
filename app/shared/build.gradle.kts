@@ -59,6 +59,7 @@ kotlin {
             implementation(libs.androidx.navigation.compose)
         }
         androidMain.dependencies {
+            implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.okhttp)
         }
         iosMain.dependencies {

@@ -10,7 +10,7 @@ import io.ktor.http.isSuccess
 class HttpRepository(
     private val client: HttpClient,
     baseUrl: String,
-) : LagarRepository,
+) : ApiSource,
     SearchIndexSource {
     private val base = baseUrl.trimEnd('/') + "/"
 
@@ -20,6 +20,11 @@ class HttpRepository(
         fetch(listingPath(layer, type, page))
 
     override suspend fun document(id: String): DocumentResponse = fetch(documentPath(id))
+
+    override suspend fun ministries(layer: String, type: String): MinistryIndex = fetch(ministryIndexPath(layer, type))
+
+    override suspend fun ministryListing(layer: String, type: String, ministry: String, page: Int): ListingPage =
+        fetch(ministryListingPath(layer, type, ministry, page))
 
     override suspend fun searchManifest(): SearchManifest = fetch(searchManifestPath())
 

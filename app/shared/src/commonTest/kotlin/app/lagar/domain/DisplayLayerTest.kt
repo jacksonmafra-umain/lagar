@@ -56,6 +56,14 @@ class DisplayLayerTest {
         assertNull(DisplayLayer.forType("bylaw"))
     }
 
+    @Test
+    fun onlySfsSeriesHaveAMinistryIndex() {
+        assertEquals(
+            listOf(DisplayLayer.SfsAct, DisplayLayer.SfsOrdinance),
+            DisplayLayer.entries.filter { it.hasMinistryIndex },
+        )
+    }
+
     companion object {
         /** The API's closed type vocabulary (docs/api.md), type to layer. */
         val API_TYPES = mapOf(

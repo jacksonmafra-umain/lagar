@@ -46,7 +46,7 @@ A modal sheet opened from the scope chip, the drawer or the location card. Code:
 | --- | --- | --- |
 | Scope cards with Active and count badges, region and kommun pickers, changes applied on Done | Done | |
 | Glass overlay (tier 3; opaque fallback, since a modal sheet's window has no backdrop to blur) | Done | #23 |
-| Use my location | Missing | #30 |
+| "Use my location" in the locality pickers: suggests the nearest kommun offline from bundled SCB centroids, coarse permission only, nothing stored but the chosen kommun | Done | #30 |
 | Linked kommun status card | Blocked: no municipal data | #38 |
 
 ## Onboarding
@@ -88,7 +88,7 @@ Route: `OnboardingLocality`. Code: `ui/onboarding/LocalityStepScreen.kt`, `Local
 | --- | --- | --- |
 | Searchable region and kommun pickers for all 21 regions and 290 kommuner, both optional | Done | |
 | Skip at the top right | Done | #29 |
-| Kommun suggested from the device location | Missing | #30 |
+| Kommun suggested from the device location (offline nearest SCB centroid, coarse permission; pre-selected for the user to confirm, with denied, unavailable, timeout and abroad messages) | Done | #30 |
 | Linked kommun summary (council, document count) | Blocked: no municipal data | #38 |
 
 ## Utforska (home)
@@ -144,8 +144,18 @@ Route: `Hierarki`. Code: `ui/hierarki/`. References: Stitch `lagar_normhierarki_
 | Toggle between layers and pyramid views | Done | |
 | Distribution bar and legend | Done | |
 | Nine layer rows with counts; empty layers open a "coming soon" sheet | Done | |
-| Authority badge and real examples on each layer row | Missing | #34 |
-| Browse by issuing body (ministry, agency) | Missing; `ministry` is now in listing items | #34 |
+| Authority badge (Överordnad, Riksdag, Regering, Verk, Prejudikat, Unionsakt, Regional, Kommunal, Service) and real examples on each layer row | Done | #34 |
+| Browse SFS acts and ordinances by ministry: "By ministry" pill on their rows, from the API's per-ministry index | Done | #34 |
+| Browse agency, case law and other layers by issuer or court | Blocked: no data in those layers, and no per-issuer index yet | #38 |
+
+### By ministry
+
+Route: `Ministries(layer, type)`. Code: `ui/hierarki/MinistriesScreen.kt`. Reference: architecture §4 flow 3.
+
+| Feature | Status | Issue |
+| --- | --- | --- |
+| Ministries of one SFS series with document counts (glass tier 1 cards), unassigned count, empty and error states | Done | #34 |
+| Opens the layer list filtered to the ministry (`LayerList(layer, type, ministry, ministryName)`) | Done | #34 |
 
 ## Layer list
 
