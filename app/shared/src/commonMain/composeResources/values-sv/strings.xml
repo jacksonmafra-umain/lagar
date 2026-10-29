@@ -159,6 +159,8 @@
     <string name="search_shortcut_apple">⌘K</string>
     <string name="search_shortcut_other">Ctrl+K</string>
     <string name="home_search_example">T.ex. Regeringsformen, 2026:1200</string>
+    <string name="home_search_example_region">T.ex. naturreservat, sjötrafik</string>
+    <string name="home_search_example_kommun">T.ex. avfallshantering, ordningsföreskrifter</string>
     <string name="home_search_submit">Sök</string>
     <string name="home_advanced_search">Avancerad sökning</string>
     <string name="home_key_laws_title">Viktiga lagar</string>

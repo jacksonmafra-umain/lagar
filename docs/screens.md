@@ -145,6 +145,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Hero with search field, advanced-search link and layer chips | Done | |
+| Search examples under the hero field by scope: national laws for Nationell, county regulation words for Region, municipal regulation words for Kommun | Done | #130 |
 | Key laws: Regeringsformen card, plus accordions for acts and ordinances | Done | |
 | Key-law groups ordered by the main focus: hierarchy order for Medborgare and Student, acts and ordinances first for Jurist | Done | #29 |
 | Explore feed with Recent and Favourites tabs, bookmark toggle and "Show more" | Done | |
