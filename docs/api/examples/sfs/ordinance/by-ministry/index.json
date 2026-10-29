@@ -1,0 +1,9 @@
+{
+  "layer": "sfs",
+  "type": "ordinance",
+  "total": 2,
+  "unassigned": 1,
+  "ministries": [
+    {"id": "justitiedepartementet", "name": "Justitiedepartementet", "count": 1}
+  ]
+}
