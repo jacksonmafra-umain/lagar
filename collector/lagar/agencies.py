@@ -179,7 +179,7 @@ def build_report(index, curated, counts, targets, counties, municipalities, muni
         elif slug in curated["shared"]:
             shared.append({**curated["shared"][slug], **link})
         elif slug in curated["sources"]:
-            sources.append({**curated["sources"][slug], **link, "issue": _issue(curated, "source:" + slug)})
+            sources.append({**curated["sources"][slug], "slug": slug, **link, "issue": _issue(curated, "source:" + slug)})
         elif _COUNTY_SLUG.match(slug):
             county_pages[_COUNTY_SLUG.match(slug).group(1)] = link
         else:

@@ -3322,6 +3322,7 @@
       "layer": "case_law",
       "status": "collected",
       "note": "Referat and notiser; synced daily.",
+      "slug": "sok-rattspraxis",
       "url": "https://rattspraxis.etjanst.domstol.se/sok/",
       "description": "Sök rättspraxis innehåller avgöranden från svenska överrätter och Arbetsdomstolen. Här kan du hitta domar och beslut, referat, notiser, prövningstillstånd och begäranden om förhandsavgörande. Referaten och merparten av domarna gäller sådant som är vägledande för andra domstolar och myndigheter, inte minst prejudikat från de högsta instanserna.",
       "issue": null
@@ -3331,6 +3332,7 @@
       "layer": "sfs",
       "status": "collected",
       "note": "Collected from Riksdagen open data; synced daily.",
+      "slug": "svensk-forfattningssamling-sfs-i-fulltext",
       "url": "https://rkrattsbaser.gov.se/sfst/adv",
       "description": "Här hittar du lagar och förordningar i den senaste versionen med alla ändringar införda i den ursprungliga texten.",
       "issue": null
@@ -3340,6 +3342,7 @@
       "layer": "sfs",
       "status": "partial",
       "note": "SHA-256 manifest of the authoritative PDFs: a sample so far; PDF text is not extracted yet.",
+      "slug": "svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se",
       "url": "https://svenskforfattningssamling.se/",
       "description": "På webbplatsen Svensk författningssamling publiceras den officiella och autentiska versionen av lagar, förordningar och vissa myndighetsföreskrifter.",
       "issue": null
@@ -3349,6 +3352,7 @@
       "layer": "sfs",
       "status": "partial",
       "note": "Amendment register: pilot statutes only.",
+      "slug": "register-over-svensk-forfattningssamling-sfs",
       "url": "https://rkrattsbaser.gov.se/sfsr/adv",
       "description": "SFS-registret är ett register över lagar och förordningar i Svensk författningssamling (SFS). Författningar som inte gäller längre finns också med.",
       "issue": null
@@ -3358,6 +3362,7 @@
       "layer": "eu",
       "status": "blocked",
       "note": "Answers automated clients with an AWS WAF challenge; never used. EU texts come from the Publications Office Cellar.",
+      "slug": "eur-lex",
       "url": "https://eur-lex.europa.eu/homepage.html?locale=sv",
       "description": "EUR-Lex är en portal till gällande EU-rätt. På EUR-Lex finns olika databaser där du kan söka bland fördrag och lagstiftning, men även rättspraxis, parlamentsledamöternas frågor och Europeiska unionens officiella tidning (EUT).",
       "issue": null
@@ -3367,6 +3372,7 @@
       "layer": "eu",
       "status": "no_adapter",
       "note": "EU case law is not collected.",
+      "slug": "eu-domstolen",
       "url": "https://curia.europa.eu/site/",
       "description": "Europeiska unionens domstol (EU-domstolen) dömer i tvister mellan medlemsländer och EU:s institutioner. Domstolen har också i uppgift att tolka EU-rätten. Under EU-domstolen finns tribunalen som dömer i mål som rör enskilda personer och företag samt en personaldomstol som dömer i mål som gäller anställda i EU.",
       "issue": null
@@ -3376,6 +3382,7 @@
       "layer": "sfs",
       "status": "no_adapter",
       "note": "Treaties are not collected.",
+      "slug": "sveriges-internationella-overenskommelser-so",
       "url": "https://www.regeringen.se/rattsliga-dokument/sveriges-internationella-overenskommelser/",
       "description": "Sverige ingår varje år ett stort antal internationella överenskommelser med andra stater och internationella organisationer. De förekommer under flera olika benämningar, till exempel traktater, konventioner och protokoll, skatteavtal och informationsutbytesavtal. Alla internationella överenskommelser som är bindande för Sverige offentliggörs i Sveriges internationella överenskommelser (SÖ).",
       "issue": null
@@ -3385,6 +3392,7 @@
       "layer": "agency",
       "status": "out_of_scope",
       "note": "Overview page; the TSFS series is listed separately.",
+      "slug": "transportstyrelsen",
       "url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/",
       "description": "Transportstyrelsen arbetar för att uppnå god tillgänglighet, hög kvalitet, säkra och miljöanpassade transporter inom järnväg, luftfart, sjöfart och väg. Här kan du läsa om vår organisation samt om vårt uppdrag och hur vi arbetar.",
       "issue": null
@@ -3394,6 +3402,7 @@
       "layer": "case_law",
       "status": "out_of_scope",
       "note": "Not Swedish case law.",
+      "slug": "europadomstolen",
       "url": "https://www.echr.coe.int/home",
       "description": "Den europeiska domstolen för de mänskliga rättigheterna, Europadomstolen, prövar ärenden om brott mot den Europeiska konventionen om de mänskliga rättigheterna (Europakonventionen).",
       "issue": null
@@ -3403,6 +3412,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "betankanden",
       "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&doktyp=bet&subtyp=bet",
       "description": "Ett betänkande är en rapport från något av riksdagens utskott med förslag till hur riksdagen ska besluta i ett ärende. Det kallas ofta också utskottsbetänkande.",
       "issue": null
@@ -3412,6 +3422,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "brottsoffermyndigheten",
       "url": "https://referatsamling.brottsoffermyndigheten.se/",
       "description": null,
       "issue": null
@@ -3421,6 +3432,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "brottsoffermyndighetens-referatsamling",
       "url": "https://referatsamling.brottsoffermyndigheten.se/",
       "description": null,
       "issue": null
@@ -3430,6 +3442,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "departementsserien-ds",
       "url": "https://www.regeringen.se/rattsliga-dokument/departementsserien-och-promemorior/",
       "description": "När regeringen har utrett en fråga kan den publicera sina slutsatser och förslag i Departementsserien (Ds).",
       "issue": null
@@ -3439,6 +3452,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "framstallningar-och-redogorelser",
       "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=frsrdg",
       "description": "Ett förslag från ett riksdagsorgan till riksdagen kallas framställning. När riksdagsorganet redovisar årets verksamhet till riksdagen är det en redogörelse. Exempel på riksdagsorgan är Riksdagens ombudsmän (JO) och Riksrevisionen.",
       "issue": null
@@ -3448,6 +3462,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "forordningsmotiv",
       "url": "https://www.regeringen.se/rattsliga-dokument/forordningsmotiv/",
       "description": "Till vissa av regeringens förordningar finns förordningsmotiv. I förordningsmotivet berättar regeringen varför förordningen kommit till och ger besked om hur förordningen ska tolkas och tillämpas.",
       "issue": null
@@ -3457,6 +3472,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "forordningsmotiv-soktjanst",
       "url": "https://rkrattsdb.gov.se/forpdf/",
       "description": "Förordningsmotiv i pdf från och med Fm 2000:1 till och med Fm 2016:1.",
       "issue": null
@@ -3466,6 +3482,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "justitiekanslerns-beslut-och-yttranden",
       "url": "https://www.jk.se/beslut-och-yttranden/",
       "description": null,
       "issue": null
@@ -3475,6 +3492,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "kommittedirektiv",
       "url": "https://www.regeringen.se/rattsliga-dokument/kommittedirektiv/",
       "description": "När en fråga ska utredas kan regeringen välja att tillsätta en kommitté. Regeringen ger då riktlinjer för arbetet i ett kommittédirektiv.",
       "issue": null
@@ -3484,6 +3502,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "kommittedirektiv-rattsdatabas",
       "url": "https://rkrattsbaser.gov.se/dir/adv",
       "description": null,
       "issue": null
@@ -3493,6 +3512,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "kommittedirektiv-soktjanst",
       "url": "https://rkrattsdb.gov.se/kompdf/",
       "description": "Kommittédirektiv i pdf från och med Dir. 2006:1 till och med Dir. 2019:25.",
       "issue": null
@@ -3502,6 +3522,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "kommitteregistret",
       "url": "https://rkrattsbaser.gov.se/komm/adv",
       "description": "Kommittéregistret innehåller uppgifter om pågående och avslutade kommittéer under regeringen. Registret visar ledamöter, arbetsplaner och vilka betänkanden som kommittéerna har publicerat.",
       "issue": null
@@ -3511,6 +3532,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "lagradets-yttranden",
       "url": "https://www.lagradet.se/yttranden/",
       "description": "Lagrådet granskar lagförslag och ger sina synpunkter i form av yttranden när regeringen eller ett riksdagsutskott ber om det. Lagrådet ska normalt yttra sig över förslag som ändrar grundlagarna om tryckfrihet och yttrandefrihet, förslag som påverkar människors fri- och rättigheter, personliga eller ekonomiska förhållanden, och förslag som rör skyldigheter gentemot staten. Lagrådet bedömer också ofta om förslaget följer EU-rätten och Europakonventionen om mänskliga rättigheter.",
       "issue": null
@@ -3520,6 +3542,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "lagradsremisser",
       "url": "https://www.regeringen.se/rattsliga-dokument/lagradsremiss/",
       "description": "Innan regeringen lämnar ett förslag till riksdagen om en ny lag skickar regeringen oftast först en lagrådsremiss till Lagrådet. Lagrådets uppgift är bland annat att granska att det nya lagförslaget inte kolliderar med grundlagen eller någon annan lag. Lagrådet lämnar sina synpunkter i ett Yttrande.",
       "issue": null
@@ -3529,6 +3552,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "mediemyndighetens-webbdiarium",
       "url": "https://webbdiarium.mprt.se/",
       "description": null,
       "issue": null
@@ -3538,6 +3562,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "motioner",
       "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=mot",
       "description": "En motion är ett förslag till riksdagen från en eller flera riksdagsledamöter.",
       "issue": null
@@ -3547,6 +3572,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "notarienamndens-beslut",
       "url": "https://www.domstol.se/notarienamnden/om-notarienamnden/beslut/",
       "description": null,
       "issue": null
@@ -3556,6 +3582,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "propositioner-och-skrivelser",
       "url": "https://rkrattsbaser.gov.se/prop/adv",
       "description": "En proposition är ett förslag från regeringen till riksdagen. En proposition kan innehålla förslag till nya lagar eller riktlinjer. När regeringen vill lämna information till riksdagen i ett ärende kan regeringen göra det i en skrivelse.",
       "issue": null
@@ -3565,6 +3592,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "propositioner-och-skrivelser-i-pdf",
       "url": "https://www.regeringen.se/rattsliga-dokument/",
       "description": "Länken går till en söksida där du själv får filtrera fram att du söker en proposition eller en skrivelse. På söksidan kan du också göra andra val för att förfina din sökning.",
       "issue": null
@@ -3574,6 +3602,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "propositioner-och-skrivelser-aldre",
       "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=prop",
       "description": "Länken går till riksdagens webbplats där du kan söka propositioner och skrivelser från 1867 och framåt. De äldre dokumenten är inskannade.",
       "issue": null
@@ -3583,6 +3612,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "riksdagens-ombudmans-jo-beslut",
       "url": "https://www.jo.se/jo-beslut/sokresultat/",
       "description": null,
       "issue": null
@@ -3592,6 +3622,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "protokoll",
       "url": "https://www.riksdagen.se/sv/sok/?sort=datum&sortorder=desc&doktyp=prot",
       "description": "Debatter, beslut och annat som avhandlas i riksdagens kammare står i riksdagens protokoll.",
       "issue": null
@@ -3601,6 +3632,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "riksdagsskrivelser",
       "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=rskr",
       "description": "En skrivelse från riksdagen är ett meddelande till regeringen om vilka beslut som riksdagen har fattat, till exempel att en ny lag är införd.",
       "issue": null
@@ -3610,6 +3642,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "rattshjalpsnamndens-vagledande-beslut",
       "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522RHN%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
       "description": null,
       "issue": null
@@ -3619,6 +3652,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "statens-offentliga-utredningar-sou",
       "url": "https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/",
       "description": "Slutsatser och förslag från kommittéer redovisas oftast i ett betänkande som publiceras i serien Statens offentliga utredningar (SOU).",
       "issue": null
@@ -3628,6 +3662,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "statens-offentliga-utredningar-sou-aldre",
       "url": "https://sou.kb.se/",
       "description": "Länken går till Kungliga bibliotekets databas som innehåller digitaliserade SOU:er från 1922.",
       "issue": null
@@ -3637,6 +3672,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "transportstyrelsens-beslut-i-overklagningsarenden-om-trafikreglering",
       "url": "https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/trafikregler/beslut-i-overklagningsarenden/",
       "description": null,
       "issue": null
@@ -3646,6 +3682,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "slug": "yttranden-fran-utskott",
       "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=yttr",
       "description": "Ett yttrande är när ett utskott får lämna sina synpunkter i ett ärende som ett annat utskott ansvarar för.",
       "issue": null
@@ -3655,6 +3692,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "overklagandenamnden-for-etikprovnings-beslut",
       "url": "https://www.onep.se/soek-bland-oeverklagade-beslut/",
       "description": null,
       "issue": null
@@ -3664,6 +3702,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "overklagandenamnden-for-hogskolans-avgoranden",
       "url": "https://www.onh.se/avgoranden/avgoranden",
       "description": null,
       "issue": null
@@ -3673,6 +3712,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "overklagandenamnden-for-namndemannauppdrags-beslut",
       "url": "https://www.domstol.se/overklagandenamnden-for-namndemannauppdrag/om-overklagandenamnden/beslut-fattade-av-overklagandenamnden/",
       "description": null,
       "issue": null
@@ -3682,6 +3722,7 @@
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "slug": "overklagandenamnden-for-studiestods-avgoranden",
       "url": "https://www.oks.se/avgoranden/",
       "description": null,
       "issue": null
@@ -3691,6 +3732,7 @@
       "layer": "sfs",
       "status": "out_of_scope",
       "note": "Printed volumes; older print-only acts are stubs.",
+      "slug": "svensk-forfattningssamling-sfs-i-tryckt-format",
       "url": "https://rkrattsdb.gov.se/sfspdf/",
       "description": "Här hittar du lagar och förordningar presenterade som de såg ut när de gavs ut i tryckt format. Författningar i tryckt format (pdf) finns från och med SFS 1998:306 till och med SFS 2018:159.",
       "issue": null
