@@ -11,7 +11,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | Agency regulations | 0 | unknown | unknown | - |
 | case_law | Case law | 20 | 16640 | counted | 0.1% |
 | eu | EU law | 0 | unknown | unknown | - |
-| region | Regional regulations | 0 | unknown | unknown | - |
+| region | Regional regulations | 10 | unknown | unknown | - |
 | municipality | Municipal regulations | 0 | unknown | unknown | - |
 | service | Public services | 0 | unknown | unknown | - |
 
@@ -26,7 +26,7 @@ Targets:
 
 ## Integrity
 
-Audit of 11448 documents (2026-10-29T01:00:34Z):
+Audit of 11458 documents (2026-10-29T01:33:04Z):
 
 - schema errors: 0
 - duplicate ids: 0
