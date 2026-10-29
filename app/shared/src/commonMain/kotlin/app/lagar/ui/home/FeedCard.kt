@@ -165,7 +165,7 @@ private fun RelativeDate(issued: String) {
 }
 
 @Composable
-private fun InForce() {
+internal fun InForce() {
     val status = LagarTheme.status
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
         Box(Modifier.size(8.dp).clip(CircleShape).background(status.inForce))
