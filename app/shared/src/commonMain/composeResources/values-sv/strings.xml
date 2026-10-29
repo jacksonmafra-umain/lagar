@@ -64,6 +64,10 @@
     <string name="settings_language">Språk</string>
     <string name="settings_theme">Tema</string>
     <string name="settings_system">Systemets inställning</string>
+    <string name="settings_reduce_transparency">Minska genomskinlighet</string>
+    <string name="settings_reduce_transparency_desc">Visar ogenomskinliga ytor i stället för frostat glas.</string>
+    <string name="setting_on">På</string>
+    <string name="setting_off">Av</string>
     <string name="language_swedish">Svenska</string>
     <string name="language_english">English</string>
     <string name="theme_light">Ljust</string>

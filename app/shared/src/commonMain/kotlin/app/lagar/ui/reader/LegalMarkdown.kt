@@ -19,8 +19,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
+import app.lagar.designsystem.glass
 import com.mikepenz.markdown.m3.Markdown
 import com.mikepenz.markdown.m3.markdownColor
 import com.mikepenz.markdown.m3.markdownTypography
@@ -87,17 +89,14 @@ internal fun LegalMarkdown(content: String, modifier: Modifier = Modifier) {
 
 private val IndicatorWidth = 3.dp
 
-/** One numbered statute (§): a 3dp bar in the layer's accent color on the left of a quiet card. */
+/** One numbered statute (§): a 3dp bar in the layer's accent color on the left of a tier 1 glass card. */
 @Composable
 internal fun StatuteContainer(layer: LayerKey, modifier: Modifier = Modifier, content: @Composable () -> Unit) {
     val layers = LagarTheme.layers
-    val colors = LagarTheme.colors
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .clip(MaterialTheme.shapes.medium)
-            .background(colors.surfaceContainerLowest)
-            .border(1.dp, colors.outlineVariant, MaterialTheme.shapes.medium)
+            .glass(GlassTier.Card, shape = MaterialTheme.shapes.medium)
             .height(IntrinsicSize.Min),
     ) {
         Box(Modifier.width(IndicatorWidth).fillMaxHeight().background(layers.accent(layer)))

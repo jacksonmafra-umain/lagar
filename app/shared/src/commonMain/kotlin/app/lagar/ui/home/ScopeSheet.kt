@@ -37,6 +37,8 @@ import app.lagar.resources.scope_sheet_locality
 import app.lagar.resources.scope_sheet_title
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.LagarButton
+import app.lagar.ui.common.SheetShape
+import app.lagar.ui.common.sheetGlass
 import app.lagar.ui.onboarding.LocalityPickers
 import app.lagar.ui.onboarding.ScopeCard
 import kotlinx.coroutines.CancellationException
@@ -67,19 +69,17 @@ fun ScopeSheet(onDismiss: () -> Unit) {
         }
     }
     val spacing = LagarTheme.spacing
-    // The sheet lives in its own window, so there is nothing to blur behind it: the overlay tier draws its opaque fallback.
-    val shape = RoundedCornerShape(topStart = RadiusTokens.xl, topEnd = RadiusTokens.xl)
+    val shape = SheetShape
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        modifier = Modifier.sheetGlass(shape),
         shape = shape,
         containerColor = Color.Transparent,
         contentColor = LagarTheme.colors.onSurface,
     ) {
-        Column(
-            modifier = Modifier.fillMaxWidth().glass(GlassTier.Overlay, hazeState = null, shape = shape),
-        ) {
+        Column(modifier = Modifier.fillMaxWidth()) {
             Column(
                 modifier = Modifier
                     .weight(1f, fill = false)

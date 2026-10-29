@@ -16,7 +16,7 @@ The number after each gap is its GitHub issue.
 
 | Topic | Status | Issue |
 | --- | --- | --- |
-| Glass tier 1 on article cards, tier 2 on sticky bars, reduce-transparency support | Partial: only tiers 2 and 3 are used | #23 |
+| Glass tier 1 on article cards and input frames, tier 2 on sticky bars, tier 3 on the drawer and sheets, reduce-transparency support | Done | #23 |
 | Input, button and checkbox shapes, search focus glow, web `⌘K` hint | Done | #24 |
 | Repealed treatment (grey, strikethrough, history icon) everywhere | Partial: only the layer list is correct | #21 |
 | Bookmark icon in the document's layer colour | Missing | #22 |
@@ -45,7 +45,7 @@ A modal sheet opened from the scope chip, the drawer or the location card. Code:
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Scope cards with Active and count badges, region and kommun pickers, changes applied on Done | Done | |
-| Glass overlay | Partial: always uses the opaque fallback | #23 |
+| Glass overlay (tier 3; opaque fallback, since a modal sheet's window has no backdrop to blur) | Done | #23 |
 | Use my location | Missing | #30 |
 | Linked kommun status card | Blocked: no municipal data | #38 |
 
@@ -58,7 +58,8 @@ Route: `Splash`. Code: `ui/onboarding/SplashScreen.kt`. Reference: Stitch `splas
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Loads the API index, then routes to onboarding or home | Done | |
-| Stitch glass logo card and corpus-size line | Partial: flat logo | #23 |
+| Stitch glass logo card | Done | #23 |
+| Corpus-size line | Missing | |
 
 ### Welcome (step 1)
 
@@ -128,7 +129,7 @@ Route: `AdvancedSearch`. Code: `ui/search/AdvancedSearchScreen.kt`, `DateField.k
 | Text field, issue-date range, document types, mode (all, title, number), status (all, in force, repealed) | Done | |
 | Calendar date picker, collapsible filter sections, scope change from the form | Missing | #32 |
 | Vacatio legis filter and in-force date range | Missing; `in_force` is now in listing items (still `null` until the collector fills it) | #32 |
-| Glass footer bar | Partial: solid surface | #23 |
+| Glass footer bar | Done | #23 |
 
 ## Hierarki
 
@@ -196,7 +197,7 @@ Route: `Settings`, opened from the drawer. Code: `ui/settings/SettingsScreen.kt`
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Language (system, Svenska, English), theme (system, light, dark), About with credits, licence and data build date | Done | |
-| Reduce transparency | Missing | #23 |
+| Reduce transparency (system, on, off); System follows iOS Reduce Transparency and the web `prefers-reduced-transparency` query, Android has no such setting | Done | #23 |
 
 ## Data and release
 

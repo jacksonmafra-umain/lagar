@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.intl.Locale
@@ -31,8 +32,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.unit.dp
 import app.lagar.data.ListingItem
+import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
+import app.lagar.designsystem.glass
 import app.lagar.domain.DisplayLayer
 import app.lagar.resources.Res
 import app.lagar.resources.home_group_acts
@@ -136,10 +139,13 @@ private fun AccordionHeader(layer: DisplayLayer, expanded: Boolean, onClick: () 
     val layers = LagarTheme.layers
     Surface(
         onClick = onClick,
-        modifier = modifier,
+        modifier = modifier.glass(
+            GlassTier.Card,
+            shape = MaterialTheme.shapes.large,
+            border = if (expanded) BorderStroke(1.dp, layers.accent(layer.key)) else null,
+        ),
         shape = MaterialTheme.shapes.large,
-        color = LagarTheme.colors.surfaceContainerLowest,
-        border = BorderStroke(1.dp, if (expanded) layers.accent(layer.key) else LagarTheme.colors.outlineVariant),
+        color = Color.Transparent,
     ) {
         Row(
             modifier = Modifier.heightIn(min = 54.dp).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm),

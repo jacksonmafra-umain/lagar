@@ -40,15 +40,18 @@ import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.RadiusTokens
+import app.lagar.designsystem.glass
 import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 
 /**
- * The DESIGN.md input frame shared by text fields and search command bars: `RadiusTokens.default` corners, a
- * `surfaceContainerLowest` fill and a 1dp [idleBorder]. While [focused] it draws a 1.5dp `primary` border and an outer
+ * The DESIGN.md input frame shared by text fields and search command bars: `RadiusTokens.default` corners, a tier 1
+ * glass fill (opaque under reduce transparency) and a 1dp [idleBorder]. A frame inside a glass bar, such as the search
+ * screen's, gets its backdrop blur from the bar. While [focused] it draws a 1.5dp `primary` border and an outer
  * glow of `primary` at 15%; with [isError] the border is `error`. The row is at least 48dp tall.
  */
 @Composable
@@ -68,8 +71,7 @@ internal fun InputFrame(
     Row(
         modifier = modifier
             .then(if (focused) Modifier.focusGlow(glow) else Modifier)
-            .background(colors.surfaceContainerLowest, shape)
-            .border(border, shape)
+            .glass(GlassTier.Card, shape = shape, border = border)
             .heightIn(min = ShellDimens.TouchTarget)
             .padding(contentPadding),
         verticalAlignment = Alignment.CenterVertically,
