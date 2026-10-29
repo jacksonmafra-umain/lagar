@@ -1,0 +1,6 @@
+{
+  "fields": ["id", "title", "number", "type", "issued"],
+  "docs": [
+    ["sfs-1974-152", "Regeringsformen", "1974:152", "fundamental_law", "1974-02-28"]
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "group": "sfs",
+  "layers": ["sfs"],
+  "doc_count": 2,
+  "term_count": 12,
+  "fields": ["title", "number", "body"],
+  "shards": [
+    {"key": "1", "terms": 1, "bytes": 33},
+    {"key": "19", "terms": 1, "bytes": 38},
+    {"key": "20", "terms": 1, "bytes": 39},
+    {"key": "ar", "terms": 1, "bytes": 32},
+    {"key": "be", "terms": 1, "bytes": 43},
+    {"key": "ex", "terms": 1, "bytes": 47},
+    {"key": "fi", "terms": 1, "bytes": 36},
+    {"key": "fo", "terms": 1, "bytes": 40},
+    {"key": "la", "terms": 1, "bytes": 34},
+    {"key": "sk", "terms": 1, "bytes": 38},
+    {"key": "up", "terms": 1, "bytes": 37},
+    {"key": "ut", "terms": 1, "bytes": 41}
+  ]
+}

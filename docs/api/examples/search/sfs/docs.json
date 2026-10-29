@@ -1,0 +1,7 @@
+{
+  "fields": ["id", "title", "number", "type", "issued", "repealed"],
+  "docs": [
+    ["sfs-1999-100", "Exempelförordning (1999:100)", "1999:100", "ordinance", "1999-03-25", "2005-01-01"],
+    ["sfs-2010-800", "Skollag (2010:800)", "2010:800", "act", "2010-06-23", null]
+  ]
+}

@@ -1,10 +1,10 @@
 {
-  "search_version": 1,
+  "search_version": 2,
   "built_at": "2026-10-27T10:30:00Z",
   "doc_count": 3,
-  "term_count": 20,
-  "fields": ["title", "number", "body"],
+  "term_count": 21,
   "field_bits": {"title": 1, "number": 2, "body": 4},
+  "posting_bits_base": 8,
   "normalization": {
     "lowercase": true,
     "fold_from": "åäöàáâãāăąçćčďđèéêëēėęěìíîïīįłñńňòóôõøōőŕřśšşťùúûūůűųýÿźżž",
@@ -15,23 +15,8 @@
     "stop_words": ["att", "av", "de", "dem", "den", "denna", "deras", "dess", "dessa", "det", "detta", "din", "du", "eller", "en", "ett", "for", "fran", "har", "hon", "i", "jag", "man", "med", "mot", "nar", "och", "om", "pa", "sa", "sig", "sin", "ska", "skall", "som", "till", "under", "var", "vara", "vi", "vid"]
   },
   "shard_key_length": 2,
-  "shards": [
-    {"key": "1", "terms": 1, "bytes": 40},
-    {"key": "19", "terms": 2, "bytes": 57},
-    {"key": "20", "terms": 1, "bytes": 40},
-    {"key": "al", "terms": 1, "bytes": 35},
-    {"key": "ar", "terms": 1, "bytes": 34},
-    {"key": "be", "terms": 1, "bytes": 44},
-    {"key": "ex", "terms": 1, "bytes": 49},
-    {"key": "fi", "terms": 1, "bytes": 37},
-    {"key": "fo", "terms": 2, "bytes": 57},
-    {"key": "la", "terms": 1, "bytes": 35},
-    {"key": "ma", "terms": 1, "bytes": 36},
-    {"key": "of", "terms": 1, "bytes": 41},
-    {"key": "re", "terms": 1, "bytes": 47},
-    {"key": "sk", "terms": 1, "bytes": 39},
-    {"key": "sv", "terms": 1, "bytes": 39},
-    {"key": "up", "terms": 1, "bytes": 39},
-    {"key": "ut", "terms": 2, "bytes": 56}
+  "groups": [
+    {"id": "fundamental", "layers": ["fundamental"], "doc_count": 1, "fields": ["title", "number", "body"], "bytes": 893, "budget": 40000000},
+    {"id": "sfs", "layers": ["sfs"], "doc_count": 2, "fields": ["title", "number", "body"], "bytes": 1216, "budget": 40000000}
   ]
 }
