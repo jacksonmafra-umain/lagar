@@ -56,7 +56,7 @@ jobs:
       - name: Landing page tests
         run: |
           python3 -I -m unittest discover -s landing/tests
-          node --test landing/tests/lang.test.cjs
+          node --test landing/tests/lang.test.cjs landing/tests/catalog.test.cjs
 
       - name: Build
         run: scripts/build-site.sh

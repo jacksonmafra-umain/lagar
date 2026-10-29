@@ -90,7 +90,7 @@ class PageTest(unittest.TestCase):
         self.assertEqual(self.page.lang, "sv")
 
     def test_required_sections_present(self):
-        for id_ in ["hero", "why", "inside", "sources", "open"]:
+        for id_ in ["hero", "why", "inside", "catalog", "sources", "open"]:
             self.assertIn(id_, self.page.ids)
         self.assertIn("footer", self.page.tags)
 
