@@ -90,9 +90,11 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   `issued` is known only for unamended AFS regulations, and AFS `in_force` only
   for those; FFFS and TSFS have no decision date on their pages.
   Arbetsmiljöverket's robots.txt disallows its folder of original PDFs, which is
-  never requested. Boverket (BFS, API key probably needed, owner to decide),
+  never requested. PDF text stays unextracted by owner decision (no non-stdlib
+  dependency). Boverket (BFS, API key probably needed; not signed up for now),
   Skatteverket (SKVFS, robots.txt request rejected by a WAF) and the other
-  series are not collected yet.
+  series are not collected yet (#115); the full run of the pilot series is
+  #114.
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630
