@@ -47,26 +47,54 @@ def design_key(layer):
     return _DESIGN_KEYS.get(layer, layer)
 
 
-def count_types(corpus):
-    """Return {type: count} over documents that load and pass schema validation."""
-    counts = {}
+def _valid_metas(corpus):
+    """Frontmatter of every document that loads and passes schema validation."""
     for path in sorted(Path(corpus).rglob("*.md")):
         try:
             meta, _ = frontmatter.load(path.read_text(encoding="utf-8"))
         except (ValueError, UnicodeDecodeError):
             continue
-        if schema.validate(meta):
-            continue
-        counts[meta["type"]] = counts.get(meta["type"], 0) + 1
+        if not schema.validate(meta):
+            yield meta
+
+
+def _tally(keys):
+    counts = {}
+    for key in keys:
+        counts[key] = counts.get(key, 0) + 1
     return counts
 
 
-def build_rows(targets, type_counts):
+def _type_key(meta):
+    return meta["type"]
+
+
+def _series_key(meta):
+    """(layer, series prefix) for numbers like `AFS 2023:1`; None for unprefixed numbers."""
+    prefix, _, rest = str(meta.get("number") or "").rpartition(" ")
+    return (meta["layer"], prefix) if prefix and rest else None
+
+
+def count_types(corpus):
+    """Return {type: count} over documents that load and pass schema validation."""
+    return _tally(_type_key(m) for m in _valid_metas(corpus))
+
+
+def count_series(corpus):
+    """Return {(layer, series prefix): count}, e.g. {("agency", "AFS"): 45}."""
+    return _tally(k for k in map(_series_key, _valid_metas(corpus)) if k)
+
+
+def build_rows(targets, type_counts, series_counts=None):
+    """One row per target. A target with `series` counts documents of its layer
+    whose number carries that prefix (`AFS 2023:1`); otherwise `type`, or the layer."""
     rows = []
     for entry in targets:
         layer, type_ = entry["layer"], entry["type"]
         breakdown = None
-        if type_ is not None:
+        if entry.get("series"):
+            collected = (series_counts or {}).get((layer, entry["series"]), 0)
+        elif type_ is not None:
             collected = type_counts.get(type_, 0)
         elif layer == "sfs":
             breakdown = {t: type_counts.get(t, 0) for t in SFS_TYPES}
@@ -171,7 +199,9 @@ def main(argv):
     targets = json.loads(Path(args.targets).read_text(encoding="utf-8"))
     integrity_path = Path(args.integrity)
     integrity = json.loads(integrity_path.read_text(encoding="utf-8")) if integrity_path.exists() else None
-    rows = build_rows(targets, count_types(args.corpus))
+    metas = list(_valid_metas(args.corpus))
+    series = _tally(k for k in map(_series_key, metas) if k)
+    rows = build_rows(targets, _tally(map(_type_key, metas)), series)
     out = Path(args.out_dir)
     (out / "PROGRESS.md").write_text(render_markdown(rows, integrity), encoding="utf-8")
     (out / "progress.svg").write_text(render_svg(rows, load_colors(args.design)), encoding="utf-8")

@@ -62,6 +62,22 @@ class ProgressTests(unittest.TestCase):
         row = next(r for r in rows if r["layer"] == "case_law")
         self.assertEqual((row["collected"], row["breakdown"]), (3, None))
 
+    def test_series_target_counts_numbers_with_that_prefix(self):
+        for number in ("AFS 2023:1", "AFS 2023:2", "FFFS 2024:21"):
+            year, num = number.split(" ")[1].split(":")
+            series = number.split(" ")[0].lower()
+            writer.write(meta(number, type_="agency_regulation", id=f"{series}-{year}-{num}",
+                              layer="agency", issuer="Myndigheten",
+                              source=f"https://example.se/{series}-{year}-{num}"), LONG, self.root)
+        writer.write(meta("2026:1"), LONG, self.root)
+        self.assertEqual(progress.count_series(self.root), {("agency", "AFS"): 2, ("agency", "FFFS"): 1})
+        afs = {"layer": "agency", "type": None, "series": "AFS", "label": "AFS", "target": 4,
+               "kind": "counted", "source": "s", "as_of": "2026-10-29"}
+        rows = progress.build_rows(TARGETS + [afs], progress.count_types(self.root),
+                                   progress.count_series(self.root))
+        self.assertEqual((rows[-1]["collected"], rows[-1]["percent"]), (2, 50.0))
+        self.assertEqual(next(r for r in rows if r["label"] == "Agency regulations")["collected"], 3)
+
     def test_unknown_target_has_no_percent(self):
         row = next(r for r in self.rows() if r["layer"] == "agency")
         self.assertIsNone(row["percent"])
