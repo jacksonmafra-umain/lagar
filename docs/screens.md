@@ -55,12 +55,15 @@ The API now has case law (16,390 documents), so rows below marked "Blocked: no c
 
 The app shell has four tabs (Utforska, Hierarki, Sparade, Tjänster) in a glass bottom bar. The glass top bar holds the title, a scope chip, search and the drawer button. Pushed screens use a back top bar. Code: `ui/shell/`.
 
+The shell picks its navigation from the window width class (`WindowWidthClass`, exposed as `LocalWindowWidthClass`): compact windows (under 600dp) use the bottom bar, medium windows (600–1023dp: tablets, phones in landscape) a glass navigation rail at the start edge with the same four tabs, beside the compact top bar.
+
 On windows at least 1024dp wide (`ShellDimens.WideBreakpoint`, exposed as `LocalWideLayout`) the bottom bar gives way to a wide top bar (`WideTopBar.kt`): wordmark, scope switch, the tabs plus "Sök & filter" (opens the advanced search), search, theme toggle and the drawer button. Reference: Stitch `lagar_multi_jurisdiction_design_system_portal` (desktop), without BankID, the profile and any official-portal framing.
 
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Wide top bar with navigation; content capped at 1280dp on Utforska, Hierarki and Sparade | Done | #79 |
 | Back top bar of the pushed screens lines its content up with the wide top bar | Done | #35 |
+| Navigation rail instead of the bottom bar on medium windows (600–1023dp) | Done | #35 |
 | Scope switch in the bar from 1360dp, Nationell / Region / Kommun plus "Institutionellt" shown disabled | Done | #79 |
 | Search field with ⌘K in the bar | Partial: search button | #24 |
 
