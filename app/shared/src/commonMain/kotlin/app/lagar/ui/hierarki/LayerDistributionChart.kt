@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.glass
+import app.lagar.i18n.formatCount
 import app.lagar.ui.common.nameRes
 import org.jetbrains.compose.resources.stringResource
 
@@ -75,7 +76,7 @@ private fun LegendItem(summary: LayerSummary) {
             color = LagarTheme.colors.onSurface,
         )
         Text(
-            text = summary.count.toString(),
+            text = formatCount(summary.count),
             style = LagarTheme.type.labelSm,
             color = LagarTheme.colors.onSurfaceVariant,
         )

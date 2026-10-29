@@ -20,8 +20,8 @@ import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.DisplayLayer
+import app.lagar.i18n.documentCount
 import app.lagar.resources.Res
-import app.lagar.resources.document_count
 import app.lagar.resources.home_choose_location
 import app.lagar.resources.home_locality_choose_text
 import app.lagar.resources.home_locality_empty_text
@@ -34,7 +34,6 @@ import app.lagar.ui.common.EmptyState
 import app.lagar.ui.list.StatuteRow
 import app.lagar.ui.onboarding.iconRes
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 /**
@@ -65,7 +64,7 @@ internal fun LocalityRules(data: HomeData, name: String, onOpenDocument: (String
                 color = LagarTheme.colors.onSurface,
                 textAlign = TextAlign.Center,
             )
-            val count = pluralStringResource(Res.plurals.document_count, data.localityTotal, data.localityTotal)
+            val count = documentCount(data.localityTotal)
             Text(
                 text = stringResource(Res.string.home_locality_subtitle, name, count).toUpperCase(Locale.current),
                 style = LagarTheme.type.labelSm,

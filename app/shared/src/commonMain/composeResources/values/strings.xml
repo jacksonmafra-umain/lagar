@@ -25,12 +25,12 @@
     <string name="explore_distribution_title">Distribution across the hierarchy</string>
     <string name="explore_layers_title">Normative layers</string>
     <plurals name="document_count">
-        <item quantity="one">%1$d document</item>
-        <item quantity="other">%1$d documents</item>
+        <item quantity="one">%1$s document</item>
+        <item quantity="other">%1$s documents</item>
     </plurals>
     <plurals name="hierarchy_other_statutes">
-        <item quantity="one">including %1$d other statute</item>
-        <item quantity="other">including %1$d other statutes</item>
+        <item quantity="one">including %1$s other statute</item>
+        <item quantity="other">including %1$s other statutes</item>
     </plurals>
     <string name="layer_numbered_title">%1$d. %2$s</string>
     <string name="coming_soon">Coming soon</string>
@@ -41,8 +41,8 @@
     <string name="hierarchy_by_ministry">By ministry</string>
     <string name="hierarchy_by_ministry_a11y">Browse %1$s by ministry</string>
     <plurals name="ministries_unassigned">
-        <item quantity="one">%1$d document has no ministry recorded.</item>
-        <item quantity="other">%1$d documents have no ministry recorded.</item>
+        <item quantity="one">%1$s document has no ministry recorded.</item>
+        <item quantity="other">%1$s documents have no ministry recorded.</item>
     </plurals>
     <string name="ministries_empty_title">No ministries listed</string>
     <string name="ministries_empty_text">None of these documents has an issuing ministry in the current data.</string>
@@ -213,8 +213,8 @@
     <string name="search_prompt_title">Type to search</string>
     <string name="search_prompt_text">Search acts and ordinances by title or number.</string>
     <plurals name="search_result_count">
-        <item quantity="one">%1$d result</item>
-        <item quantity="other">%1$d results</item>
+        <item quantity="one">%1$s result</item>
+        <item quantity="other">%1$s results</item>
     </plurals>
     <string name="search_no_results_title">No results</string>
     <string name="search_no_results_text">Try another word or loosen the filters.</string>

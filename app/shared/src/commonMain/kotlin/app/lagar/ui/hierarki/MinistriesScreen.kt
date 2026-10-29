@@ -41,8 +41,9 @@ import app.lagar.designsystem.generated.LayerKey
 import app.lagar.designsystem.glass
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
+import app.lagar.i18n.documentCount
+import app.lagar.i18n.formatCount
 import app.lagar.resources.Res
-import app.lagar.resources.document_count
 import app.lagar.resources.hierarchy_by_ministry
 import app.lagar.resources.ic_chevron_right
 import app.lagar.resources.ic_info
@@ -126,7 +127,7 @@ fun MinistriesScreen(
                     if (state.value.unassigned > 0) {
                         item(key = "unassigned") {
                             Text(
-                                pluralStringResource(Res.plurals.ministries_unassigned, state.value.unassigned, state.value.unassigned),
+                                pluralStringResource(Res.plurals.ministries_unassigned, state.value.unassigned, formatCount(state.value.unassigned)),
                                 style = LagarTheme.type.labelSm,
                                 color = colors.onSurfaceVariant,
                                 modifier = Modifier.padding(top = spacing.xs),
@@ -172,7 +173,7 @@ private fun MinistryRow(ministry: ApiMinistry, key: LayerKey, onClick: () -> Uni
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 Text(ministry.name, style = LagarTheme.type.bodyUi, fontWeight = FontWeight.Bold, color = LagarTheme.colors.onSurface)
                 Text(
-                    pluralStringResource(Res.plurals.document_count, ministry.count, ministry.count),
+                    documentCount(ministry.count),
                     style = LagarTheme.type.labelSm,
                     color = layers.onTint(key),
                 )

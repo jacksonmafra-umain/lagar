@@ -28,9 +28,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
+import app.lagar.i18n.documentCount
+import app.lagar.i18n.formatCount
 import app.lagar.resources.Res
 import app.lagar.resources.coming_soon
-import app.lagar.resources.document_count
 import app.lagar.resources.hierarchy_by_ministry
 import app.lagar.resources.hierarchy_by_ministry_a11y
 import app.lagar.resources.hierarchy_other_statutes
@@ -113,7 +114,7 @@ fun LayerRow(
                 ) {
                     Text(
                         text = if (summary.count > 0) {
-                            pluralStringResource(Res.plurals.document_count, summary.count, summary.count)
+                            documentCount(summary.count)
                         } else {
                             stringResource(Res.string.coming_soon)
                         },
@@ -122,7 +123,7 @@ fun LayerRow(
                     )
                     if (summary.otherStatutes > 0) {
                         Text(
-                            text = pluralStringResource(Res.plurals.hierarchy_other_statutes, summary.otherStatutes, summary.otherStatutes),
+                            text = pluralStringResource(Res.plurals.hierarchy_other_statutes, summary.otherStatutes, formatCount(summary.otherStatutes)),
                             style = LagarTheme.type.labelSm,
                             color = LagarTheme.colors.onSurfaceVariant,
                         )

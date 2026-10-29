@@ -40,8 +40,8 @@ import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
+import app.lagar.i18n.documentCount
 import app.lagar.resources.Res
-import app.lagar.resources.document_count
 import app.lagar.resources.error_retry
 import app.lagar.resources.error_title
 import app.lagar.resources.ic_info
@@ -64,7 +64,6 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.filter
-import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
@@ -253,7 +252,7 @@ private fun ListHeader(
                 }
                 if (total != null) {
                     Text(
-                        pluralStringResource(Res.plurals.document_count, total, total),
+                        documentCount(total),
                         style = LagarTheme.type.labelSm,
                         color = colors.onSurfaceVariant,
                     )

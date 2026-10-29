@@ -46,10 +46,11 @@ import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.RadiusTokens
 import app.lagar.designsystem.glass
 import app.lagar.domain.Scope
+import app.lagar.i18n.documentCount
+import app.lagar.i18n.formatCount
 import app.lagar.resources.Res
 import app.lagar.resources.app_name
 import app.lagar.resources.coming_soon
-import app.lagar.resources.document_count
 import app.lagar.resources.drawer_about
 import app.lagar.resources.drawer_credits
 import app.lagar.resources.drawer_data_built
@@ -73,7 +74,6 @@ import dev.chrisbanes.haze.HazeState
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import app.lagar.ui.navigation.AdvancedSearch as AdvancedSearchDestination
 import app.lagar.ui.navigation.Settings as SettingsDestination
@@ -255,7 +255,7 @@ private fun ScopeRow(scope: Scope, active: Boolean, localityName: String?, count
                 when {
                     active -> LayerBadge(scope.key, stringResource(Res.string.scope_active))
                     count == null -> Unit
-                    count > 0 -> LayerBadge(scope.key, pluralStringResource(Res.plurals.document_count, count, count))
+                    count > 0 -> LayerBadge(scope.key, documentCount(count))
                     else -> LayerBadge(scope.key, stringResource(Res.string.coming_soon))
                 }
             }
@@ -299,9 +299,9 @@ private fun DrawerItem(entry: DrawerEntry, selected: Boolean, badge: Int?, onCli
             modifier = Modifier.weight(1f).padding(start = LagarTheme.spacing.sm),
         )
         if (badge != null) {
-            val description = pluralStringResource(Res.plurals.document_count, badge, badge)
+            val description = documentCount(badge)
             Text(
-                text = badge.toString(),
+                text = formatCount(badge),
                 style = LagarTheme.type.labelSm,
                 fontWeight = FontWeight.Bold,
                 color = if (LagarTheme.isDark) colors.onPrimaryContainer else colors.onPrimaryFixedVariant,

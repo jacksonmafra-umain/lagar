@@ -64,6 +64,7 @@ import app.lagar.domain.SearchQuery
 import app.lagar.domain.SortOrder
 import app.lagar.domain.highlightRanges
 import app.lagar.domain.localityCode
+import app.lagar.i18n.formatCount
 import app.lagar.resources.Res
 import app.lagar.resources.home_advanced_search
 import app.lagar.resources.home_choose_location
@@ -283,7 +284,7 @@ private fun SummaryRow(count: Int?, scope: Scope, scopeLabel: String, onChangeSc
         ) {
             if (count != null) {
                 Text(
-                    text = pluralStringResource(Res.plurals.search_result_count, count, count),
+                    text = pluralStringResource(Res.plurals.search_result_count, count, formatCount(count)),
                     style = LagarTheme.type.labelMd,
                     color = LagarTheme.colors.onSurfaceVariant,
                 )

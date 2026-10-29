@@ -28,9 +28,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.DisplayLayer
+import app.lagar.i18n.documentCount
+import app.lagar.i18n.formatCount
 import app.lagar.resources.Res
 import app.lagar.resources.coming_soon
-import app.lagar.resources.document_count
 import app.lagar.resources.explore_distribution_title
 import app.lagar.resources.ic_chevron_right
 import app.lagar.resources.layer_card_open
@@ -48,7 +49,6 @@ import app.lagar.ui.common.iconRes
 import app.lagar.ui.common.level
 import app.lagar.ui.common.nameRes
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 private const val GRID_COLUMNS = 3
@@ -72,7 +72,7 @@ internal fun HierarchySection(counts: Map<DisplayLayer, Int>, onLayerClick: (Dis
         }
         Surface(shape = MaterialTheme.shapes.large, color = colors.surfaceContainerLowest, border = BorderStroke(1.dp, colors.outlineVariant)) {
             Column(Modifier.padding(horizontal = spacing.md, vertical = spacing.sm), horizontalAlignment = Alignment.End) {
-                Text(total.toString(), style = LagarTheme.type.headlineMd, fontWeight = FontWeight.Bold, color = colors.onSurface)
+                Text(formatCount(total), style = LagarTheme.type.headlineMd, fontWeight = FontWeight.Bold, color = colors.onSurface)
                 Text(stringResource(Res.string.wide_total_documents), style = LagarTheme.type.labelSm, color = colors.onSurfaceVariant)
             }
         }
@@ -143,7 +143,7 @@ private fun LayerCard(layer: DisplayLayer, count: Int, onClick: () -> Unit, modi
             HorizontalDivider(color = colors.outlineVariant)
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    if (count > 0) pluralStringResource(Res.plurals.document_count, count, count) else stringResource(Res.string.coming_soon),
+                    if (count > 0) documentCount(count) else stringResource(Res.string.coming_soon),
                     style = LagarTheme.type.labelMd,
                     fontWeight = FontWeight.Bold,
                     color = if (count > 0) colors.onSurface else colors.onSurfaceVariant,

@@ -27,9 +27,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.Scope
+import app.lagar.i18n.documentCount
 import app.lagar.resources.Res
 import app.lagar.resources.coming_soon
-import app.lagar.resources.document_count
 import app.lagar.resources.ic_check
 import app.lagar.resources.ic_layer_apartment
 import app.lagar.resources.ic_layer_balance
@@ -46,7 +46,6 @@ import app.lagar.ui.common.iconColor
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 internal fun Scope.nameRes(): StringResource = when (this) {
@@ -145,7 +144,7 @@ private fun ScopeCardContent(scope: Scope, count: Int?, active: Boolean, trailin
                 if (count != null) {
                     LayerBadge(
                         scope.key,
-                        if (count > 0) pluralStringResource(Res.plurals.document_count, count, count) else stringResource(Res.string.coming_soon),
+                        if (count > 0) documentCount(count) else stringResource(Res.string.coming_soon),
                     )
                 }
             }

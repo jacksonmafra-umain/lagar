@@ -40,10 +40,11 @@ import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.Scope
+import app.lagar.i18n.documentCount
+import app.lagar.i18n.formatCount
 import app.lagar.resources.Res
 import app.lagar.resources.app_name
 import app.lagar.resources.coming_soon
-import app.lagar.resources.document_count
 import app.lagar.resources.home_advanced_search
 import app.lagar.resources.home_choose_location
 import app.lagar.resources.ic_layer_shield
@@ -71,7 +72,6 @@ import app.lagar.ui.shell.WideContent
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 /** Statutes offered as quick picks under the search bar: document id and label. */
@@ -160,7 +160,7 @@ private fun WideHero(data: HomeData, onChooseLocation: () -> Unit, onSelectScope
             Eyebrow(stringResource(Res.string.wide_hero_eyebrow))
             Text(stringResource(Res.string.wide_hero_title), style = LagarTheme.type.headlineLg, color = colors.onSurface)
             Text(
-                stringResource(Res.string.wide_hero_text, total.toString()),
+                stringResource(Res.string.wide_hero_text, formatCount(total)),
                 style = LagarTheme.type.bodyUi,
                 color = colors.onSurfaceVariant,
                 modifier = Modifier.widthIn(max = 720.dp),
@@ -179,7 +179,7 @@ private fun WideHero(data: HomeData, onChooseLocation: () -> Unit, onSelectScope
             ScopePill(
                 icon = scope.iconRes(),
                 name = stringResource(scope.nameRes()),
-                badge = if (count > 0) pluralStringResource(Res.plurals.document_count, count, count) else stringResource(Res.string.coming_soon),
+                badge = if (count > 0) documentCount(count) else stringResource(Res.string.coming_soon),
                 selected = scope == data.scope,
                 scope = scope,
                 onClick = { onSelectScope(scope) },
