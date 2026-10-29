@@ -261,7 +261,7 @@ fun AppShell(
                                 },
                             )
                         }
-                        composable<Sparade> { SparadeRoute(onOpenDocument = { navigateWhenResumed(Reader(it)) }) }
+                        composable<Sparade> { SparadeRoute(onOpen = { id, anchor -> navigateWhenResumed(Reader(id, anchor)) }) }
                         composable<Tjanster> { TjansterScreen() }
                         composable<LayerList> { entry ->
                             val route = entry.toRoute<LayerList>()
