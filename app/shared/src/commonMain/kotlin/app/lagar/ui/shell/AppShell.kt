@@ -291,6 +291,7 @@ fun AppShell(
                                 onBrowseByMinistry = { layer ->
                                     layer.apiType?.let { navigateWhenResumed(Ministries(layer.apiLayer, it)) }
                                 },
+                                onOpenDocument = { navigateWhenResumed(Reader(it)) },
                             )
                         }
                         composable<Sparade> { SparadeRoute(onOpen = { id, anchor -> navigateWhenResumed(Reader(id, anchor)) }) }
