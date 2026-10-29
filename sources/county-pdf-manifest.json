@@ -5833,6 +5833,160 @@
       ],
       "number": "18FS 2026:6",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 128968,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:13Z",
+          "sha256": "dd37c0ba45c89828a624275be1df469514a677c7f225b0b5a376b9cb56df0350",
+          "url": "https://www.lansstyrelsen.se/download/18.2ace232419540c6a2c7523d/1744009899047/19FS%202025-01%20F%C3%A4rnebo-N%C3%A4s-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 28389,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:14Z",
+          "sha256": "c4a20d91ea6179694c9aabff5a3716ef7e0e933debab71b63240fe81d1dd691c",
+          "url": "https://www.lansstyrelsen.se/download/18.6422d155195ade35c70779ef/1744010485570/19FS%202025-02%20V%C3%A4gsammanst%C3%A4llning-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 59571,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:15Z",
+          "sha256": "f0bcf343b4e7584243efc33a83deb8a0255a4f18324a0ffd7b93ef952a264dc8",
+          "url": "https://www.lansstyrelsen.se/download/18.659fb21b197a1eac806beff1/1752140226180/19FS%202025-03-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 148111,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:16Z",
+          "sha256": "832a68d3eff397a3f6107fd915e047c00833f3eb751b812ca53bcfb85875b771",
+          "url": "https://www.lansstyrelsen.se/download/18.3dd45f8719c47a47e821d0/1770730479165/19FS%202025-04%20Storljusen-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 151370,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:17Z",
+          "sha256": "f8094db858249bbbff94174c043c9ce8bbe45c7f6d0517e9acd06938ddfd624b",
+          "url": "https://www.lansstyrelsen.se/download/18.3dd45f8719c47a47e821d1/1770730488270/19FS%202025-05%20V%C3%A4sterbo-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 148249,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:19Z",
+          "sha256": "46657a45464d37fc127ba8fbf94950adde3790ee543985df5f1ad86dd59c7c69",
+          "url": "https://www.lansstyrelsen.se/download/18.3dd45f8719c47a47e821d2/1770730494719/19FS%202025-06%20Orsta-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2025:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 121517,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:19Z",
+          "sha256": "c1638812ec69fd1ae966b2ddefcbe1fe699275d8b09f28a31e9f19ae2417f95c",
+          "url": "https://www.lansstyrelsen.se/download/18.25fbfd3d1a0f13c15241708/1790771068510/19FS%202026-01%20V%C3%A4gsammanst%C3%A4llning-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 143618,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:20Z",
+          "sha256": "84e6c4cf99e5b9b8debb623cd694a73656640df64d33c8fb4bf0b0387950ee62",
+          "url": "https://www.lansstyrelsen.se/download/18.25fbfd3d1a0f13c15241707/1790771055051/19FS%202026-02%20Braknogsmossen-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 183833,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:21Z",
+          "sha256": "2e5655de4bde3969ae9c3ff7c8061a91f5bd7f5dd8dd82b32446718df9f584df",
+          "url": "https://www.lansstyrelsen.se/download/18.25fbfd3d1a0f13c1524118d/1790768869039/19FS%202026-03%20F%C3%A4rnebo-N%C3%A4s-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 174091,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:22Z",
+          "sha256": "8656fd01a99fcecfb56820e4c5bdfbc04d43a107ae6c7a5fffb146d4e7623f61",
+          "url": "https://www.lansstyrelsen.se/download/18.25fbfd3d1a0f13c15241190/1790768886459/19FS%202026-04%20H%C3%A4ggsta-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 169527,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:06:23Z",
+          "sha256": "a69d1e21bca236e25f52b82c5676d632927a74ac20f2e17dddb27a1879d93ecf",
+          "url": "https://www.lansstyrelsen.se/download/18.25fbfd3d1a0f13c15241191/1790768895614/19FS%202026-05%20%C3%85bylund-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2026:5",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
