@@ -2719,6 +2719,398 @@
       ],
       "number": "07FS 2026:3",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 406795,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:58Z",
+          "sha256": "ffad253210040d20e0c76ab1bd5f6f87040c753db41184f6036f170da190ef5a",
+          "url": "https://www.lansstyrelsen.se/download/18.20bdd3211946e2c352345444/1737987199998/202501%20Skyddsf%C3%B6reskrifter%20f%C3%B6r%20vattenskyddsomr%C3%A5det%20R%C3%A4lla%20grundvattent%C3%A4kt.pdf"
+        }
+      ],
+      "number": "08FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 336782,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:59Z",
+          "sha256": "b6dc8e959cffc4968bed8086918cda9a45c378bca4eaece0f9e236a5b157fd85",
+          "url": "https://www.lansstyrelsen.se/download/18.7f27a03419540af198865e19/1741952964516/202502%20Sammanst%C3%A4llning%20av%20allm%C3%A4nna%20v%C3%A4gar%20och%20andra%20viktigare%20v%C3%A4gar%20samt%20om%20b%C3%A4righetsklasser%20i%20Kalmar%20l%C3%A4n%20%C3%A5r%202025.pdf"
+        }
+      ],
+      "number": "08FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 130470,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:00Z",
+          "sha256": "9e45b8ff659f7720941d5ac9521f43dcabb1bf553076760601cd0b1232cd05ba",
+          "url": "https://www.lansstyrelsen.se/download/18.1f88a453195adb731b15f711/1743683174654/202503%20Tillf%C3%A4lliga%20sj%C3%B6trafikf%C3%B6reskrifter%20om%20avlysning%20av%20vattenomr%C3%A5de%20i%20Fiskarehamnen.pdf"
+        }
+      ],
+      "number": "08FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 92509,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:01Z",
+          "sha256": "e026d3599c3fbd505e447a5a05083de2aec230350b0ec160c2ef5df236ed0978",
+          "url": "https://www.lansstyrelsen.se/download/18.75dc539919618cb34bb2cb63/1744800522294/202504%20Tillf%C3%A4lliga%20f%C3%B6reskrifter%20om%20avlysning%20av%20den%20allm%C3%A4nna%20farleden%20genom%20Gr%C3%A4ns%C3%B6%20kanal.pdf"
+        }
+      ],
+      "number": "08FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 974067,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:02Z",
+          "sha256": "b28f4349bf55a64f8b2c69ecdc8452fe8b0ba7af4241760bdc4f1fc092144813",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deea8eb05/1748945133776/202505%20Tillf%C3%A4lliga%20sj%C3%B6trafikf%C3%B6reskrifter%20om%20avlysning%20av%20farleden%20Djupsundet%20i%20V%C3%A4sterviks%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 878653,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:03Z",
+          "sha256": "6573140ef4945c9f40f7bf77a99e669d528c84ba0586be4361c6181b1f934c8b",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deea8eafa/1748944934881/202506%20Skyddsf%C3%B6reskrifter%20f%C3%B6r%20vattenskyddsomr%C3%A5det%20Stora%20Klobo%20grundvattent%C3%A4kt%20H%C3%B6gsby%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2025:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 288934,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:04Z",
+          "sha256": "b88e6312fd587c00f61bc998b5962fd7b00bfeb3c74d151bef294763404ae194",
+          "url": "https://www.lansstyrelsen.se/download/18.376917b71975d4650e5a4f1/1749728777742/202507%20Tillf%C3%A4lliga%20f%C3%B6reskrifter%20om%20avlysning%20av%20vattenomr%C3%A5de%20i%20och%20utanf%C3%B6r%20Kalmars%20hamn-omr%C3%A5de%20i%20Kalmar%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2025:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 198572,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:05Z",
+          "sha256": "97368bae746d4827d93593a70a0951e5c18582cc47216c0fb3e47e8f3c1af34c",
+          "url": "https://www.lansstyrelsen.se/download/18.7b96512e198f06d6229260a7/1756708414403/202508%20%C3%84ndringsf%C3%B6reskrift%20om%20kvalitetskrav%20f%C3%B6r%20vattenf%C3%B6rekomster%20i%20S%C3%B6dra%20%C3%96stersj%C3%B6ns%20vattendistrikt%2008FS_2025_8.pdf"
+        }
+      ],
+      "number": "08FS 2025:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 241752,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:06Z",
+          "sha256": "3f96bc36e4bd5b8f114a2d9a9f7ebbb9fb1c3c87b73fa8bdca493560865fedb1",
+          "url": "https://www.lansstyrelsen.se/download/18.3fcb6f8319931f7a95fa10ae/1758634716299/202509%20Kung%C3%B6rande%20av%20f%C3%B6reskrifter%20f%C3%B6r%20Isg%C3%A4rde%20naturreservat.pdf"
+        }
+      ],
+      "number": "08FS 2025:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 212001,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:07Z",
+          "sha256": "333c278797d5a285546f749da3147256dad5b9e27b78326730138b342006e7c4",
+          "url": "https://www.lansstyrelsen.se/download/18.79741b7419ae2b9d66424b5/1764777656035/202510%20F%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20Jordtorps%C3%A5sen.pdf"
+        }
+      ],
+      "number": "08FS 2025:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 230243,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:08Z",
+          "sha256": "0c8528af9e66beb4bcc04cd12722e3407fe16442e4f4b7715e0c90070029d2ca",
+          "url": "https://www.lansstyrelsen.se/download/18.79741b7419ae2b9d66424b6/1764777656064/202511%20F%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20Gunnarstorp.pdf"
+        }
+      ],
+      "number": "08FS 2025:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 209062,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:09Z",
+          "sha256": "c5729972388a163da14a2088cc3710bcbd6fa377293aea566b7e77e8ea4be747",
+          "url": "https://www.lansstyrelsen.se/download/18.79741b7419ae2b9d66424b7/1764777656091/202512%20F%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20T%C3%B6rnbottens%20utmarker.pdf"
+        }
+      ],
+      "number": "08FS 2025:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 168418,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:10Z",
+          "sha256": "a799184e1434001f9a2d2a7c5c69b14c0baec42233eae986e34988eb3b87227a",
+          "url": "https://www.lansstyrelsen.se/download/18.79741b7419ae2b9d66424b8/1764777656131/202513%20F%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20Skogsby%20lund.pdf"
+        }
+      ],
+      "number": "08FS 2025:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 406478,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:11Z",
+          "sha256": "480ab222feae7c61d6b937850123e0e391dad913a59adf56fe6f59b096090c1a",
+          "url": "https://www.lansstyrelsen.se/download/18.79741b7419ae2b9d66424b9/1764777656153/202514%20F%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20Isg%C3%A4rde%20kustl%C3%B6vskog.pdf"
+        }
+      ],
+      "number": "08FS 2025:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 519524,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:12Z",
+          "sha256": "7fae0fb1a1b911d9e75257fc7c396fb8928b10362cc6d0288acf6a5944904f87",
+          "url": "https://www.lansstyrelsen.se/download/18.fe5e24a19ae2ac35af1aad1/1764942991962/202515%20F%C3%B6reskrifter%20om%20%C3%96lands%20norra%20rev%20naturreservat%20i%20Borgholms%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2025:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 427261,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:13Z",
+          "sha256": "5595bed59113e3ca94b8f4a669eb13446c77a762e6c64b0085b128303f68cc76",
+          "url": "https://www.lansstyrelsen.se/download/18.69e5fdd919b2bdd08ad2620/1765986706235/202516%20F%C3%B6reskrifter%20om%20Flasg%C3%B6lerums%20naturreservat%20i%20H%C3%B6gsby%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2025:16",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 334329,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:14Z",
+          "sha256": "fa25d0a345ce6c573c3ef3a98419cdeae11355fbcf3e3283e84ef988c87d0a0c",
+          "url": "https://www.lansstyrelsen.se/download/18.2345080a19ba1fedff5ea7f7/1769585878035/202601%20F%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20Runstensmyren.pdf"
+        }
+      ],
+      "number": "08FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 146896,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:15Z",
+          "sha256": "94264a5daaa558bdc78104bf8e770670c12ae191d5cec94cd244429d44b48652",
+          "url": "https://www.lansstyrelsen.se/download/18.4d207a9019c47c545eab4f6/1770829395472/202602%20F%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20Aboda.pdf"
+        }
+      ],
+      "number": "08FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 284321,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:16Z",
+          "sha256": "0e3c955ff90ba70fe2a72e7dbaece2c22050f0c1eb8254667c938028c1ce24be",
+          "url": "https://www.lansstyrelsen.se/download/18.664a32d319c935b7940699f7/1772697151912/202603%20Sj%C3%B6trafikf%C3%B6reskrifter%20om%20f%C3%B6rbud%20mot%20ankring.pdf"
+        }
+      ],
+      "number": "08FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 305397,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:17Z",
+          "sha256": "6629c7c0580dd2b4509dade14f9c4ebb625df2d14c29517352fae6acabb02785",
+          "url": "https://www.lansstyrelsen.se/download/18.6aedc3de19d24d8109d4ef31/1774939123526/202604%20F%C3%B6reskrifter%20om%20sammanst%C3%A4llning%20%C3%B6ver%20allm%C3%A4nna%20v%C3%A4gar%20och%20andra%20viktigare%20v%C3%A4gar%20samt%20om%20b%C3%A4righetsklasser.pdf"
+        }
+      ],
+      "number": "08FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 307646,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:18Z",
+          "sha256": "7c5ecbb3a84f042571b00616526dd80c312e72eefeb2992915add31b229bc2f8",
+          "url": "https://www.lansstyrelsen.se/download/18.2ee045ed19d707f4f692050/1775735061140/202605%20Beslut%20om%20tillf%C3%A4lliga%20sj%C3%B6trafikf%C3%B6reskrifter%20Fiskarehamnen%20i%20V%C3%A4sterviks%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 221171,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:19Z",
+          "sha256": "d459ec516edce2303c8707e89ea368f3f3940ff80f065aa7114335f72cf195e1",
+          "url": "https://www.lansstyrelsen.se/download/18.2ef1035b19d8bbf9a06210ce/1776408958051/202606%20L%C3%A4nsstyrelsen%20Kalmar%20l%C3%A4ns%20sj%C3%B6trafikf%C3%B6reskrifter%20om%20tillf%C3%A4llig%20begr%C3%A4nsning%20i%20r%C3%A4tten%20att%20utnyttja%20Gr%C3%A4ns%C3%B6%20kanal%20i%20V%C3%A4sterviks%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 285495,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:20Z",
+          "sha256": "f9819488564cbf98c345b2ec301a4a665dcf20a9074c8f8c6bf9b5dbb35e0a0b",
+          "url": "https://www.lansstyrelsen.se/download/18.2bb752be19daf5d7b9f25a8a/1777043065414/202607%20Beslut%20om%20tillf%C3%A4lliga%20sj%C3%B6trafikf%C3%B6reskrifter.pdf"
+        }
+      ],
+      "number": "08FS 2026:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 96706,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:21Z",
+          "sha256": "3ee33819b0c09a92a3101c2142555dfaf21baa7aab29a6c9922ebc9937b676cc",
+          "url": "https://www.lansstyrelsen.se/download/18.2bb752be19daf5d7b9f25a89/1777043065397/202608%20Beslut%20om%20f%C3%B6reskrift%20g%C3%A4llande%20skyddsf%C3%B6reskrifter%20inom%20vrakomr%C3%A5de.pdf"
+        }
+      ],
+      "number": "08FS 2026:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 447333,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:22Z",
+          "sha256": "54a2f597499f2b22fd26c95f3ff2474a5a9954292d00b1d90e373d98b5801a08",
+          "url": "https://www.lansstyrelsen.se/download/18.6fa4735719ed45ea927992/1781690533626/202609%20Beslut%20om%20sj%C3%B6trafikf%C3%B6reskrifter%20om%20tillf%C3%A4llig%20begr%C3%A4nsning%20i%20r%C3%A4tten%20att%20utnyttja%20vattenomr%C3%A5de.pdf"
+        }
+      ],
+      "number": "08FS 2026:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 212573,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:23Z",
+          "sha256": "64c9d52e774a503c8f055d3d3416811cf26359ec74cb0ea7e5d276dbb6d5d898",
+          "url": "https://www.lansstyrelsen.se/download/18.5188859e1a04207e927cce9/1787921499944/202610%20Tillf%C3%A4lliga%20sj%C3%B6trafikf%C3%B6reskrifter%20om%20avlysning%20av%20farleden%20Djupsundet%20i%20V%C3%A4sterviks%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 305874,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:24Z",
+          "sha256": "3e3177f74715d6046571c2212ee2f371fdfb935eb3f559e3031824d08d538b55",
+          "url": "https://www.lansstyrelsen.se/download/18.128f49d71a08648307f3a9c2/1789392215786/202611%20Skyddsf%C3%B6reskrifter%20f%C3%B6r%20vattenskyddsomr%C3%A5det%20Knivingaryd%20grundvattent%C3%A4kt%20i%20Nybro%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 355765,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:25Z",
+          "sha256": "41bb0219202f7202efc324c380232f88a44ec6b33347843c075fc6fec810a436",
+          "url": "https://www.lansstyrelsen.se/download/18.128f49d71a08648307f3a9c1/1789392215750/202612%20Skyddsf%C3%B6reskrifter%20f%C3%B6r%20vattenskyddsomr%C3%A5det%20Mog%C3%B6len%20grundvattent%C3%A4kt%20i%20Hultsfreds%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:12",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
