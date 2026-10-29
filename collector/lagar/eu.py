@@ -26,6 +26,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 from . import frontmatter, writer
+from .htmlmd import clean_text, escape_block, markdown_table
 from .http import Blocked, PoliteClient
 from .sfs import NETWORK_ERRORS, USER_AGENT, StateError, _save_state
 from .vocabulary import TYPES
@@ -402,7 +403,9 @@ class _Blocks(HTMLParser):
         self._text = []
         self._scoped = scoped  # old EUR-Lex HTML: only the text inside #TexteOnly
         self._rows = []  # open table rows: list of cells, each a list of blocks
-        self._tables = []  # number of open rows when each open table started
+        # Open tables: (number of open rows when the table started, finished rows). A finished
+        # row is ("blocks", [block, ...]) or ("row", [cell text, ...]).
+        self._tables = []
 
     def handle_starttag(self, tag, attrs):
         if tag in _VOID_TAGS:
@@ -414,7 +417,7 @@ class _Blocks(HTMLParser):
         if tag in _BLOCK_TAGS:
             self._flush()
         if tag == "table":
-            self._tables.append(len(self._rows))
+            self._tables.append((len(self._rows), []))
         elif tag == "tr":
             self._rows.append([])
         elif tag in ("td", "th") and self._rows:
@@ -438,9 +441,7 @@ class _Blocks(HTMLParser):
         if tag == "tr" and self._rows:
             self._end_row()
         elif tag == "table" and self._tables:
-            opened = self._tables.pop()
-            while len(self._rows) > opened:  # rows left open by malformed markup
-                self._end_row()
+            self._end_table()
         while self._stack:
             if self._stack.pop()[0] == tag:
                 break
@@ -455,6 +456,8 @@ class _Blocks(HTMLParser):
     def close(self):
         super().close()
         self._flush()
+        while self._tables:
+            self._end_table()
         while self._rows:
             self._end_row()
 
@@ -468,18 +471,50 @@ class _Blocks(HTMLParser):
         row[-1].append(block)
 
     def _end_row(self):
-        """A row whose first cell is a point label stays a list item; other rows become one line."""
-        cells = [cell for cell in self._rows.pop() if cell]
+        """A row whose first cell is a point label stays a list item; other rows are table rows."""
+        row = self._rows.pop()
+        cells = [cell for cell in row if cell]
         if len(cells) == 1 or (len(cells) == 2 and len(cells[0]) == 1 and _LABEL.fullmatch(cells[0][0][1])):
-            for cell in cells:
-                for block in cell:
-                    self._emit(block)
+            done = ("blocks", [block for cell in cells for block in cell])
         elif cells:
-            self._emit((None, " | ".join(" ".join(text for _, text in cell) for cell in cells)))
+            done = ("row", [" ".join(text for _, text in cell) for cell in row])
+        else:
+            return
+        if self._tables and len(self._rows) == self._tables[-1][0]:
+            self._tables[-1][1].append(done)
+        else:  # a row outside any table
+            self._emit_rows([done], nested=True)
+
+    def _end_table(self):
+        opened, _ = self._tables[-1]
+        while len(self._rows) > opened:  # rows left open by malformed markup
+            self._end_row()
+        _, done = self._tables.pop()
+        self._emit_rows(done, nested=bool(self._rows))
+
+    def _emit_rows(self, done, nested):
+        """Two or more adjacent table rows become a Markdown table, unless nested in another table."""
+        group = []
+
+        def flush_group():
+            if len(group) >= 2 and not nested:
+                self._emit(("table", markdown_table(group)))
+            for cells in group if len(group) < 2 or nested else ():
+                self._emit((None, " | ".join(c for c in cells if c)))
+            group.clear()
+
+        for kind, value in done:
+            if kind == "row":
+                group.append(value)
+                continue
+            flush_group()
+            for block in value:
+                self._emit(block)
+        flush_group()
 
     def _flush(self):
         # Modification markers of consolidated texts: ►M3 … ◄, ▼B.
-        text = " ".join(_MARKERS.sub(" ", "".join(self._text)).split())
+        text = clean_text(_MARKERS.sub(" ", "".join(self._text)))
         self._text = []
         if text:
             role = next((entry[1] for entry in reversed(self._stack) if entry[1]), None)
@@ -513,14 +548,16 @@ def to_markdown(title, raw):
             else:
                 out.append(label)
             label = None
-        if role == "article":
+        if role == "table":
+            out.append(text)
+        elif role == "article":
             out.append("### " + text)
         elif role == "division":
             out.append("## " + text)
         elif role == "subtitle":
             out.append(f"**{text}**")
         else:
-            out.append(text)
+            out.append(escape_block(text))
     if label is not None:
         out.append(label)
     if len(out) == 1:
@@ -733,6 +770,9 @@ def fetch_changed(client, celexes, since):
 
 def _text_format(metadata):
     if metadata.title is None:
+        if metadata.celex.startswith("0") and not metadata.amendments:
+            raise Gap("no Swedish expression; this version applies corrigenda only, "
+                      "so the Official Journal text is current")
         raise Gap("no Swedish expression")
     for name in FORMATS:
         if name in metadata.manifestations:

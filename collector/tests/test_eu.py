@@ -307,8 +307,34 @@ class MarkdownTest(unittest.TestCase):
         ).encode()
         self.assertEqual(
             eu.to_markdown("T", html),
-            "# T\n\nnr | sida | datum\n\nL 304 | 22.11.2007\n\na)\n\n### Artikel 3\n\ntext\n\ncell\n\n"
-            "blandningar och ämnen\n",
+            "# T\n\n| nr | sida | datum |\n| --- | --- | --- |\n| | L 304 | 22.11.2007 |\n\na)\n\n### Artikel 3\n\n"
+            "text\n\ncell\n\nblandningar och ämnen\n",
+        )
+
+    def test_single_rows_and_nested_tables_stay_one_line(self):
+        html = (
+            "<body><table><tr><td><p>Detta direktiv</p></td><td><p>Direktiv 2007/64/EG</p></td></tr></table>"
+            "<table><tr><td><p>yttre</p></td><td><table>"
+            "<tr><td><p>x</p></td><td><p>y</p></td></tr><tr><td><p>z</p></td><td><p>w</p></td></tr>"
+            "</table></td></tr><tr><td><p>a|b</p></td><td><p>c</p></td></tr></table></body>"
+        ).encode()
+        self.assertEqual(
+            eu.to_markdown("T", html),
+            "# T\n\nDetta direktiv | Direktiv 2007/64/EG\n\n| yttre | x \\| y z \\| w |\n| --- | --- |\n| a\\|b | c |\n",
+        )
+
+    def test_correlation_table(self):
+        html = (
+            "<body><p>BILAGA</p><table>"
+            "<tr><th><p>Detta direktiv</p></th><th><p>Direktiv 2007/64/EG</p></th></tr>"
+            "<tr><td><p>Artikel 1.1</p></td><td><p>Artikel 1.1</p></td></tr>"
+            "<tr><td><p>Artikel 2</p></td><td><p>—</p></td></tr>"
+            "</table><p># efter</p></body>"
+        ).encode()
+        self.assertEqual(
+            eu.to_markdown("T", html),
+            "# T\n\n## BILAGA\n\n| Detta direktiv | Direktiv 2007/64/EG |\n| --- | --- |\n"
+            "| Artikel 1.1 | Artikel 1.1 |\n| Artikel 2 | — |\n\n\\# efter\n",
         )
 
     def test_empty_text_is_an_error(self):
@@ -421,6 +447,14 @@ class RunTest(unittest.TestCase):
         summary = eu.run(FakeClient(gdpr_routes(bindings(fields))), self.args("--celex", GDPR))
         self.assertEqual(summary.gaps, [GDPR])
         self.assertEqual(json.loads(self.state.read_text())["gaps"][GDPR], "no Swedish expression")
+
+    def test_consolidation_of_corrigenda_without_swedish_text_points_to_the_oj_text(self):
+        routes = gdpr_routes()
+        routes[eu.metadata_url(GDPR_CONS)] = bindings({"date_document": ["2016-05-04"],
+                                                       "consolidates": ["32016R0679R(02) 2018-05-23"]})
+        summary = eu.run(FakeClient(routes), self.args("--celex", GDPR, "--consolidated"), today=date(2026, 10, 29))
+        self.assertEqual((summary.written, summary.gaps), ([GDPR], [GDPR_CONS]))
+        self.assertIn("Official Journal text is current", json.loads(self.state.read_text())["gaps"][GDPR_CONS])
 
     def test_old_html_manifestation(self):
         celex = "32004R0261"
