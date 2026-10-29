@@ -6,6 +6,8 @@ import app.lagar.data.ApiSeries
 import app.lagar.data.Catalog
 import app.lagar.data.DocumentMeta
 import app.lagar.data.DocumentResponse
+import app.lagar.data.FakeSearchSource
+import app.lagar.data.FullTextIndex
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
 import app.lagar.data.ListingPage
@@ -29,7 +31,12 @@ class ReaderViewModelTest {
     @AfterTest
     fun tearDown() = Dispatchers.resetMain()
 
-    private class FakeRepository(var failing: Boolean, val listed: List<String> = emptyList()) : LagarRepository {
+    private class FakeRepository(
+        var failing: Boolean,
+        val listed: List<String> = emptyList(),
+        val body: String = "# Title",
+        val types: Map<String, String> = emptyMap(),
+    ) : LagarRepository {
         val requested = mutableListOf<String>()
         var listings = 0
 
@@ -41,7 +48,7 @@ class ReaderViewModelTest {
                     id, "Title", "act", "sfs", "1:1", null, null, null, emptyList(), null, emptyList(),
                     null, null, "sv", false, "https://example.org", "", "",
                 ),
-                "# Title",
+                body,
             )
         }
 
@@ -50,12 +57,13 @@ class ReaderViewModelTest {
         override suspend fun listing(layer: String, type: String?, page: Int): ListingPage {
             listings++
             if (failing) throw IllegalStateException("boom")
-            val items = listed.map { ListingItem(it, "Title", "1:1", "act", null, null) }
+            val items = listed.map { ListingItem(it, "Title", "1:1", types[it] ?: "act", null, null) }
             return ListingPage(layer, type, 1, 1, items.size, items)
         }
     }
 
-    private fun viewModel(repo: FakeRepository, id: String = "doc-1") = ReaderViewModel(repo, Catalog(repo), id)
+    private fun viewModel(repo: FakeRepository, id: String = "doc-1", index: FullTextIndex? = null) =
+        ReaderViewModel(repo, Catalog(repo), id, index, Dispatchers.Main)
 
     @Test
     fun loadsTheDocument() {
@@ -95,5 +103,43 @@ class ReaderViewModelTest {
         repo.failing = false
         vm.resolveAmendmentLinks(listOf("1983:240"))
         assertEquals(mapOf("1983:240" to "sfs-1983-240"), vm.linkedAmendments.value)
+    }
+
+    @Test
+    fun resolvesTheCitedDocumentsTheApiPublishes() {
+        val repo = FakeRepository(
+            failing = false,
+            listed = listOf("sfs-1962-700", "sfs-1974-152", "nja-2026-38"),
+            body = "**1 §** Se brottsbalken (1962:700), regeringsformen (1974:152), NJA 2026:38 och lagen (1999:1).",
+            types = mapOf("sfs-1974-152" to "fundamental_law", "nja-2026-38" to "case_report"),
+        )
+        val vm = viewModel(repo, id = "sfs-1962-700")
+        assertEquals(mapOf("sfs-1974-152" to "fundamental_law", "nja-2026-38" to "case_report"), vm.crossReferences.value)
+    }
+
+    @Test
+    fun aBodyWithoutCitationsSkipsTheCatalog() {
+        val repo = FakeRepository(failing = false, listed = listOf("sfs-1962-700"), body = "**1 §** Enligt 2 kap. 3 § gäller detta.")
+        val vm = viewModel(repo)
+        assertEquals(emptyMap(), vm.crossReferences.value)
+        assertEquals(0, repo.listings)
+    }
+
+    @Test
+    fun checksCitationsAgainstTheSearchIndexWithoutTheCatalog() {
+        val repo = FakeRepository(failing = false, body = "Se skollagen (2010:800) och lagen (1999:1).")
+        val source = FakeSearchSource()
+        val vm = viewModel(repo, index = FullTextIndex(source))
+        assertEquals(mapOf("sfs-2010-800" to "act"), vm.crossReferences.value)
+        assertEquals(1, source.docsRequests)
+        assertEquals(0, repo.listings)
+    }
+
+    @Test
+    fun fallsBackToTheCatalogWhenTheApiHasNoIndex() {
+        val repo = FakeRepository(failing = false, listed = listOf("sfs-2010-800"), body = "Se skollagen (2010:800).")
+        val vm = viewModel(repo, index = FullTextIndex(FakeSearchSource(missing = true)))
+        assertEquals(mapOf("sfs-2010-800" to "act"), vm.crossReferences.value)
+        assertEquals(1, repo.listings)
     }
 }
