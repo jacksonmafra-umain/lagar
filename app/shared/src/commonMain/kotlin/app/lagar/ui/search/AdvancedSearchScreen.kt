@@ -40,6 +40,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
@@ -47,7 +48,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import app.lagar.data.GeoRepository
+import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
+import app.lagar.designsystem.glass
 import app.lagar.domain.Locality
 import app.lagar.domain.Scope
 import app.lagar.domain.SearchMode
@@ -284,10 +287,9 @@ fun AdvancedSearchScreen(
 @Composable
 private fun FilterCard(title: String, content: @Composable () -> Unit) {
     Surface(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().glass(GlassTier.Card, shape = MaterialTheme.shapes.large),
         shape = MaterialTheme.shapes.large,
-        color = LagarTheme.colors.surfaceContainerLowest,
-        border = BorderStroke(1.dp, LagarTheme.colors.outlineVariant),
+        color = Color.Transparent,
     ) {
         Column(Modifier.padding(LagarTheme.spacing.md), verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.xs)) {
             Text(title, style = LagarTheme.type.labelMd, fontWeight = FontWeight.Bold, color = LagarTheme.colors.onSurface)

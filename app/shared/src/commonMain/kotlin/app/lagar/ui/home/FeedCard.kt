@@ -23,6 +23,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -31,8 +32,10 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.lagar.data.ListingItem
+import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
+import app.lagar.designsystem.glass
 import app.lagar.domain.DisplayLayer
 import app.lagar.resources.Res
 import app.lagar.resources.bookmark_add
@@ -86,10 +89,9 @@ fun FeedCard(
     val key = if (repealed) LayerKey.Repealed else (layer?.key ?: LayerKey.SfsAct)
     Surface(
         onClick = onOpen,
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth().glass(GlassTier.Card, shape = MaterialTheme.shapes.large),
         shape = MaterialTheme.shapes.large,
-        color = colors.surfaceContainerLowest,
-        border = BorderStroke(1.dp, colors.outlineVariant),
+        color = Color.Transparent,
     ) {
         Column(Modifier.padding(start = spacing.md, top = spacing.sm, end = spacing.xs, bottom = spacing.sm)) {
             Row(verticalAlignment = Alignment.Top) {

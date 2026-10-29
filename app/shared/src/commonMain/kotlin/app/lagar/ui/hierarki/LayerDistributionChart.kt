@@ -19,7 +19,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
+import app.lagar.designsystem.glass
 import app.lagar.ui.common.nameRes
 import org.jetbrains.compose.resources.stringResource
 
@@ -35,8 +37,7 @@ fun LayerDistributionChart(summaries: List<LayerSummary>, modifier: Modifier = M
     val present = summaries.filter { it.count > 0 }
     Column(
         modifier = modifier.fillMaxWidth()
-            .clip(MaterialTheme.shapes.large)
-            .background(LagarTheme.colors.surfaceContainerLowest)
+            .glass(GlassTier.Card, shape = MaterialTheme.shapes.large)
             .padding(LagarTheme.spacing.md),
         verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
     ) {

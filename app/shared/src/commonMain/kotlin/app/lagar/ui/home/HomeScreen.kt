@@ -20,10 +20,13 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import app.lagar.data.ListingItem
+import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
+import app.lagar.designsystem.glass
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
 import app.lagar.domain.Scope
@@ -126,10 +129,10 @@ private fun LocationCard(scope: Scope, name: String?, onClick: () -> Unit, modif
     val layers = LagarTheme.layers
     Surface(
         onClick = onClick,
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth()
+            .glass(GlassTier.Card, shape = MaterialTheme.shapes.large, border = BorderStroke(1.dp, layers.border(scope.key))),
         shape = MaterialTheme.shapes.large,
-        color = LagarTheme.colors.surfaceContainerLowest,
-        border = BorderStroke(1.dp, layers.border(scope.key)),
+        color = Color.Transparent,
     ) {
         Row(
             modifier = Modifier.heightIn(min = 60.dp).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm),
