@@ -155,7 +155,7 @@ lives in [`docs/screens.md`](screens.md).
 | Advanced search filter card | `FilterCard` in `search/AdvancedSearchScreen.kt` | `GlassTier.Card` (`shapes.large`), bold `labelMd` title; action pills (`Pill`: layer `tint` / `border` when filled, `surfaceContainerLowest` / `outlineVariant` otherwise); M3 `RadioButton` options |
 | Advanced search footer | `AdvancedSearchScreen` in `search/AdvancedSearchScreen.kt` | `GlassTier.Bar` over the form, full-width layer `accent` `LagarButton` |
 | Settings controls (radio) | `OptionGroup` in `settings/SettingsScreen.kt`; language, theme, reduce transparency | `labelMd` section title, optional `labelSm` description, M3 `RadioButton` with `primary` selected and `onSurfaceVariant` unselected, 48dp rows, `bodyUi` labels |
-| Cross-reference | deferred | dotted underline in target layer `onTint` |
+| Cross-reference | `LegalMarkdown` in `reader/LegalMarkdown.kt`, citations found by `reader/CrossReferences.kt`, underline drawn by `DottedUnderlinePainter` (`reader/DottedUnderline.kt`) | citation text (`lagen (1962:700)`, `Lag (1994:458)`, `NJA 2026:38`) in the target layer's `onTint` (layer from the target's `type`, SFS act when unknown) with a dotted underline (1.5dp round dots, 2dp gap, 2.5dp below the baseline); a link role that opens the target in the reader; only when the API publishes the target |
 
 ## Top bar label scaling
 
