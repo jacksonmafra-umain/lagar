@@ -110,6 +110,14 @@
     <string name="picker_search">Search</string>
     <string name="picker_no_results">No matches</string>
     <string name="picker_clear">Clear</string>
+    <string name="location_use">Use my location</string>
+    <string name="location_locating">Finding your location…</string>
+    <string name="location_private">Your position is only used on this device to suggest a municipality. It is not saved.</string>
+    <string name="location_suggested">Suggested from your location: %1$s. Check it, and change it below if it is wrong.</string>
+    <string name="location_denied">Location access is off for Lagar. Allow it in the system settings, or choose your municipality below.</string>
+    <string name="location_unavailable">Your location could not be found. Check that location services are on, or choose your municipality below.</string>
+    <string name="location_timeout">Finding your location took too long. Try again, or choose your municipality below.</string>
+    <string name="location_outside">Your location seems to be outside Sweden. Choose your municipality below.</string>
     <string name="home_hero_title">Sweden’s %1$s – gathered and searchable in one place</string>
     <string name="home_hero_emphasis">acts, ordinances and regulations</string>
     <string name="home_hero_subtitle">Consolidated statutes from the Riksdag’s open data</string>
