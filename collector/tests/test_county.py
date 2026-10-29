@@ -258,5 +258,172 @@ class CountyRunTests(unittest.TestCase):
         self.assertEqual(self.run_main(FakeClient())[0], 1)
 
 
+FILESHARE = (FIXTURES / "county-fileshare-landing.html").read_text(encoding="utf-8")
+LINKS = (FIXTURES / "county-links-landing.html").read_text(encoding="utf-8")
+FOLDERS = (FIXTURES / "county-folders-landing.html").read_text(encoding="utf-8")
+FOLDER_2026 = (FIXTURES / "county-folder-2026.json").read_text(encoding="utf-8")
+CONFIG = county.load_config(county.DEFAULT_CONFIG)
+FOLDER_URL = (county.BASE + "/appresource/4.11a2cbf716d6c8f9f742a271/12.30198b32199c8d3aec4374c1/files?"
+              "folderId=19.{}")
+
+
+class CountyFilesLayoutTests(unittest.TestCase):
+    def test_config_covers_every_county(self):
+        self.assertEqual(sorted(CONFIG), sorted(county.COUNTIES))
+        self.assertEqual(CONFIG["01"]["landing"], LANDING_URL)
+        self.assertEqual({c for c, e in CONFIG.items() if e["layout"] == "pages"}, {"01", "13", "21"})
+
+    def test_bad_config_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "counties.json"
+            for bad in ({}, {"counties": {"02": {}}},
+                        {"counties": {"01": {"landing": "https://example.org/x.html", "layout": "pages"}}},
+                        {"counties": {"01": {"landing": LANDING_URL, "layout": "other"}}},
+                        {"counties": {"01": {"landing": LANDING_URL, "layout": "files",
+                                             "number_patterns": ["(?P<year>\\d{4})"]}}}):
+                path.write_text(json.dumps(bad), encoding="utf-8")
+                with self.assertRaises(county.ConfigError, msg=bad):
+                    county.load_config(path)
+
+    def test_numbers_from_link_text_or_file_name(self):
+        default = CONFIG["22"]["number_patterns"]
+        cases = [
+            ("22 FS 2026-1 Länsstyrelsen i Västernorrlands läns föreskrifter.pdf", "22", default, "22FS 2026:1"),
+            ("18FS2025 1 Lunnedets naturreservat.pdf", "18", default, "18FS 2025:1"),
+            ("25 FS 2026 6 A 5 Säkerhetsföreskrifter.pdf", "25", default, "25FS 2026:6"),
+            ("FS 2026-01  Naturreservat - Warragården - Osby kommun.pdf", "12", default, "12FS 2026:1"),
+            ("17 FS 2024_21 Ändring i föreskrifter 14FS 2021_43.pdf", "17", default, "17FS 2024:21"),
+            ("UPPHÄVD 2026_2 Föreskrifter om eldningsförbud.pdf", "07", CONFIG["07"]["number_patterns"],
+             "07FS 2026:2"),
+            ("2026-23 Naturreservat Marstrands skärgård Kungälv", "14", CONFIG["14"]["number_patterns"],
+             "14FS 2026:23"),
+            ("202603 Sjötrafikföreskrifter om förbud mot ankring.pdf", "08", CONFIG["08"]["number_patterns"],
+             "08FS 2026:3"),
+            ("Föreskrifter om upphävande av (05FS 2026.18) om eldningsförbud 2026.25.pdf", "05",
+             CONFIG["05"]["number_patterns"], "05FS 2026:25"),
+        ]
+        for text, code, patterns, number in cases:
+            found = county.file_number(text, county.BASE + "/download/18.1/1/x.pdf", code, patterns)
+            self.assertEqual(found and found[0], number, msg=text)
+        # A foreign series is skipped; the file name is the fallback for a bare title.
+        self.assertIsNone(county.file_number("14FS 2021:43 Ändring", "/x.pdf", "17", default))
+        found = county.file_number("Föreskrifter för Lövbergets naturreservat",
+                                   county.BASE + "/download/18.1/1/17FS2025_6%20L%C3%B6vberget.pdf", "17", default)
+        self.assertEqual(found[0], "17FS 2025:6")
+        self.assertIsNone(county.file_number("Regelförteckning 2026", "/x.pdf", "12", default))
+
+    def test_titles_drop_the_number_suffix_and_repeal_mark(self):
+        def title(text, code):
+            found = county.file_number(text, "/x.pdf", code, CONFIG[code]["number_patterns"])
+            return county.file_title(text, found[1], found[2], CONFIG[code]["title_strip"])
+        self.assertEqual(title("UPPHÄVD 2026_2 Föreskrifter om eldningsförbud.pdf", "07"),
+                         "Föreskrifter om eldningsförbud")
+        self.assertEqual(title("2026_3_Länsstyrelsen_i_Kronobergs_läns_föreskrifter.pdf", "07"),
+                         "Länsstyrelsen i Kronobergs läns föreskrifter")
+        self.assertEqual(title("Sammanställning över allmänna vägar Östergötlands län 2026.5.pdf", "05"),
+                         "Sammanställning över allmänna vägar Östergötlands län")
+        self.assertEqual(title("25FS 2026_2A1 Föreskrifter om Björknäs naturreservat.pdf", "25"),
+                         "Föreskrifter om Björknäs naturreservat")
+        self.assertEqual(title("24FS 2026-1.pdf", "24"), "")
+
+    def test_fileshare_landing_lists_the_module_files(self):
+        links, folders = county.parse_files_landing(FILESHARE, CONFIG["22"]["landing"])
+        self.assertEqual(folders, {})
+        self.assertEqual(len(links), 6)
+        self.assertTrue(all(u.startswith(county.BASE + "/download/") and n is None for u, _, n in links))
+        self.assertTrue(links[0][1].startswith("22 FS 2026-1 Länsstyrelsen"))
+        items, loose = county.group_files(links, "22", CONFIG["22"], CONFIG["22"]["landing"])
+        self.assertEqual(sorted(i.number for i in items),
+                         ["22FS 2025:1", "22FS 2025:3", "22FS 2025:4", "22FS 2026:1", "22FS 2026:2", "22FS 2026:3"])
+        self.assertEqual(loose, [])
+
+    def test_plain_links_take_title_and_decision_from_the_next_paragraph(self):
+        links, folders = county.parse_files_landing(LINKS, CONFIG["20"]["landing"])
+        self.assertEqual(folders, {})
+        self.assertEqual([t for _, t, _ in links], ["20 FS 2026:1", "20 FS 2026:2", "20 FS 2026:3"])
+        self.assertNotIn("footer", " ".join(u for u, _, _ in links))
+        items, _ = county.group_files(links, "20", CONFIG["20"], CONFIG["20"]["landing"])
+        first = items[0]
+        self.assertEqual(first.title, "Länsstyrelsen i Dalarnas läns föreskrifter om Hästflotens naturreservat "
+                                      "i Mora och Orsa kommuner.")
+        self.assertEqual(first.decided, "2025-10-13")
+        meta = county.build_file_meta(first, "20", first.files[0][0], "0" * 64, "2026-10-29T00:00:00Z")
+        self.assertEqual(schema.validate(meta), [])
+        self.assertEqual((meta["issued"], meta["title"][-8:]), ("2025-10-13", "kommuner"))
+        body = county.file_markdown(meta, first)
+        self.assertIn("Beslutad: 2025-10-13", body)
+        self.assertIn("Författningen publiceras bara som pdf.", body)
+        self.assertIn(f"- [20 FS 2026:1]({first.files[0][0]})", body)
+
+    def test_year_folders_are_read_from_the_module_endpoint(self):
+        links, folders = county.parse_files_landing(FOLDERS, CONFIG["24"]["landing"])
+        self.assertEqual(links, [])
+        self.assertEqual(sorted(folders), [2024, 2025, 2026])
+        self.assertEqual(folders[2026], [FOLDER_URL.format("69ced119d24e4b4ca5062b")])
+        found = county.parse_folder(FOLDER_2026, folders[2026][0])
+        self.assertEqual([t for _, t, _ in found], ["24FS 2026-1.pdf", "24FS 2026-2.pdf", "24FS 2026-3.pdf"])
+        with self.assertRaises(ValueError):
+            county.parse_folder('{"nothing": []}', folders[2026][0])
+
+
+class FilesClient(FakeClient):
+    def __init__(self, pages=None):
+        super().__init__({
+            CONFIG["24"]["landing"]: FOLDERS,
+            FOLDER_URL.format("69ced119d24e4b4ca5062b"): FOLDER_2026,
+            CONFIG["22"]["landing"]: FILESHARE.replace("22FS 2025-1 Länsstyrelsen", "Karta 2025 Länsstyrelsen")
+            .replace("22FS%202025-1%20L", "Karta%202025%20L"),
+            **(pages or {}),
+        })
+
+
+class CountyFilesRunTests(unittest.TestCase):
+    setUp = CountyRunTests.setUp
+    tearDown = CountyRunTests.tearDown
+
+    def run_files(self, client, code, *extra):
+        argv = ["county", "--county", code, "--corpus", str(self.corpus), "--state", str(self.state),
+                "--manifest", str(self.manifest), "--report", str(self.report), *extra]
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            code = county.main(argv, client=client)
+        report = json.loads(self.report.read_text(encoding="utf-8")) if self.report.exists() else None
+        return code, report
+
+    def test_folder_county_reads_only_the_requested_years(self):
+        client = FilesClient()
+        code, report = self.run_files(client, "24", "--from-year", "2026")
+        self.assertEqual(code, 0)
+        self.assertEqual(report["written"], ["24FS 2026:1", "24FS 2026:2", "24FS 2026:3"])
+        self.assertEqual([c for c in client.calls if "appresource" in c],
+                         [FOLDER_URL.format("69ced119d24e4b4ca5062b")])
+        for path in self.corpus.rglob("*.md"):
+            meta, _ = frontmatter.load(path.read_text(encoding="utf-8"))
+            self.assertEqual(schema.validate(meta), [])
+            self.assertTrue(meta["source"].endswith(".pdf"))
+            self.assertEqual(meta["source_sha256"], hashlib.sha256(PDF).hexdigest())
+            self.assertEqual(meta["title"], meta["number"])
+        entry = json.loads(self.manifest.read_text(encoding="utf-8"))["entries"][0]
+        self.assertEqual((entry["detail_url"], entry["files"][0]["bytes"]), (CONFIG["24"]["landing"], len(PDF)))
+        client = FilesClient()
+        _, report = self.run_files(client, "24", "--from-year", "2026")
+        self.assertEqual((report["written"], report["skipped"]), ([], 3))
+        self.assertFalse(any(c.endswith(".pdf") for c in client.calls))
+
+    def test_unnumbered_files_are_reported_and_not_collected(self):
+        code, report = self.run_files(FilesClient(), "22", "--from-year", "2025", "--no-pdf")
+        self.assertEqual(code, 0)
+        self.assertEqual(report["written"], ["22FS 2025:3", "22FS 2025:4", "22FS 2026:1", "22FS 2026:2",
+                                             "22FS 2026:3"])
+        self.assertEqual(len(report["unnumbered"]), 1)
+        self.assertTrue(report["unnumbered"][0].startswith("Karta 2025"))
+        meta, _ = frontmatter.load((self.corpus / "region/county-regulations/22fs-2026-1.md")
+                                   .read_text(encoding="utf-8"))
+        self.assertEqual(schema.validate(meta), [])
+
+    def test_landing_without_pdfs_exits_1(self):
+        client = FilesClient({CONFIG["22"]["landing"]: "<html><main></main></html>"})
+        self.assertEqual(self.run_files(client, "22")[0], 1)
+
+
 if __name__ == "__main__":
     unittest.main()
