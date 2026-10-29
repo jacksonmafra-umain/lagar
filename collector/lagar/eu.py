@@ -304,6 +304,7 @@ _DIVISION = re.compile(
     r"(?:KAPITEL|AVDELNING|AVSNITT|DEL|Kapitel|Avdelning|Avsnitt|Del) [IVXLC\d]+[A-Za-z]?"
     r"|(?:BILAGA|Bilaga)(?: [IVXLC\d]+[A-Za-z]?)?"
 )
+_MARKERS = re.compile(r"[►▼][A-Z]\d*|◄")
 # A point label alone in its cell or span: "(1)", "1.", "a)", "(iv)", "—".
 _LABEL = re.compile(r"\(?\d{1,3}[a-z]?[.)]?|\(?[a-z]{1,2}\)|\(?[ivxlc]{1,6}\)|[–—•-]")
 
@@ -317,6 +318,8 @@ class _Blocks(HTMLParser):
         self._stack = []  # (tag, role, skip, scope)
         self._text = []
         self._scoped = scoped  # old EUR-Lex HTML: only the text inside #TexteOnly
+        self._rows = []  # open table rows: list of cells, each a list of blocks
+        self._tables = []  # number of open rows when each open table started
 
     def handle_starttag(self, tag, attrs):
         if tag in _VOID_TAGS:
@@ -327,6 +330,12 @@ class _Blocks(HTMLParser):
             return
         if tag in _BLOCK_TAGS:
             self._flush()
+        if tag == "table":
+            self._tables.append(len(self._rows))
+        elif tag == "tr":
+            self._rows.append([])
+        elif tag in ("td", "th") and self._rows:
+            self._rows[-1].append([])
         attrs = dict(attrs)
         classes = {c.removeprefix("oj-") for c in (attrs.get("class") or "").split()}
         role = next((_ROLES[c] for c in sorted(classes) if c in _ROLES), None)
@@ -343,6 +352,12 @@ class _Blocks(HTMLParser):
             return
         if tag in _BLOCK_TAGS:
             self._flush()
+        if tag == "tr" and self._rows:
+            self._end_row()
+        elif tag == "table" and self._tables:
+            opened = self._tables.pop()
+            while len(self._rows) > opened:  # rows left open by malformed markup
+                self._end_row()
         while self._stack:
             if self._stack.pop()[0] == tag:
                 break
@@ -357,13 +372,35 @@ class _Blocks(HTMLParser):
     def close(self):
         super().close()
         self._flush()
+        while self._rows:
+            self._end_row()
+
+    def _emit(self, block):
+        if not self._rows:
+            self.blocks.append(block)
+            return
+        row = self._rows[-1]
+        if not row:
+            row.append([])
+        row[-1].append(block)
+
+    def _end_row(self):
+        """A row whose first cell is a point label stays a list item; other rows become one line."""
+        cells = [cell for cell in self._rows.pop() if cell]
+        if len(cells) == 1 or (len(cells) == 2 and len(cells[0]) == 1 and _LABEL.fullmatch(cells[0][0][1])):
+            for cell in cells:
+                for block in cell:
+                    self._emit(block)
+        elif cells:
+            self._emit((None, " | ".join(" ".join(text for _, text in cell) for cell in cells)))
 
     def _flush(self):
-        text = " ".join("".join(self._text).split())
+        # Modification markers of consolidated texts: ►M3 … ◄, ▼B.
+        text = " ".join(_MARKERS.sub(" ", "".join(self._text)).split())
         self._text = []
         if text:
             role = next((entry[1] for entry in reversed(self._stack) if entry[1]), None)
-            self.blocks.append((role, text))
+            self._emit((role, text))
 
 
 def text_blocks(raw):
@@ -579,14 +616,15 @@ def _fetch_text(client, celex, fmt):
     return raw, content_type, final
 
 
-def _unchanged(meta, corpus):
+def _unchanged(meta, body, corpus):
+    """True when the stored file matches apart from `fetched_at`; a converter change rewrites it."""
     path = writer.path_for(meta, corpus)
     try:
-        stored, _ = frontmatter.load(path.read_text(encoding="utf-8"))
+        stored, stored_body = frontmatter.load(path.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return False
     stored.pop("fetched_at", None)
-    return stored == {k: v for k, v in meta.items() if k != "fetched_at"}
+    return stored_body == body and stored == {k: v for k, v in meta.items() if k != "fetched_at"}
 
 
 def _done(state, celex, corpus):
@@ -627,7 +665,7 @@ def _store(client, celex, metadata, args, manifest):
         "sha256": sha,
         "retrieved_at": meta["fetched_at"],
     })
-    if _unchanged(meta, args.corpus):
+    if _unchanged(meta, body, args.corpus):
         return sha, False
     writer.write(meta, body, args.corpus)
     if celex.startswith("0"):

@@ -236,6 +236,20 @@ class MarkdownTest(unittest.TestCase):
             "# T\n\n## AVDELNING II\n\n### Artikel 3a\n\nRubrik\n\n(i) första\n\n## BILAGA I\n\n## Del 1\n\n—\n",
         )
 
+    def test_tables_and_markers(self):
+        html = (
+            "<body><table><tr><td><p>nr</p></td><td><p>sida</p></td><td><p>datum</p></td></tr>"
+            "<tr><td><p>►M1</p></td><td><p>L 304</p></td><td><p>22.11.2007</p></td></tr>"
+            "<tr><td><p>a)</p></td><td><p>Artikel 3</p><p>text</p></td></tr>"
+            "<tr><td><p>cell</p></td>"  # row and table left open
+            "</table><p>►M3 blandningar ◄ och ▼B ämnen</p></body>"
+        ).encode()
+        self.assertEqual(
+            eu.to_markdown("T", html),
+            "# T\n\nnr | sida | datum\n\nL 304 | 22.11.2007\n\na)\n\n### Artikel 3\n\ntext\n\ncell\n\n"
+            "blandningar och ämnen\n",
+        )
+
     def test_empty_text_is_an_error(self):
         with self.assertRaises(ValueError):
             eu.to_markdown("T", b"<html><head><title>x</title></head><body></body></html>")
@@ -318,6 +332,11 @@ class RunTest(unittest.TestCase):
         self.assertEqual(summary.unchanged, [GDPR])
         self.assertEqual(self.path.read_bytes(), before)
         self.assertEqual(self.manifest.read_bytes(), manifest_before)
+        # A changed conversion is written on refresh.
+        self.path.write_text(self.path.read_text(encoding="utf-8") + "stale\n", encoding="utf-8")
+        summary = eu.run(FakeClient(gdpr_routes()), self.args("--celex", GDPR, "--refresh"))
+        self.assertEqual(summary.written, [GDPR])
+        self.assertNotIn("stale", self.path.read_text(encoding="utf-8"))
 
     def test_pdf_only_act_is_a_gap_without_a_text_request(self):
         fields = gdpr_fields()
