@@ -501,6 +501,7 @@ python3 -I collector/collect.py municipal --kommun 0180 [--kommun 1480 ...] [--l
     [--refresh] [--report FILE] [--rate SECONDS] [--config collector/data/municipalities.json] \
     [--state collector/data/municipal-state.json] [--manifest sources/municipal-manifest.json]
 python3 -I collector/collect.py municipal --all [--limit N]
+python3 -I collector/collect.py municipal --kommun 0120 --dry-run
 ```
 
 - Scope: only rules that bind residents (lokala ordningsföreskrifter, föreskrifter om avfall,
@@ -570,10 +571,26 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      `?ReadViewEntries&ExpandView&Count=N`. `kind_column`, `title_column` and `number_column` name
      the view columns; only entries whose kind is in `kinds` are kept. Detail pages are read at
      `<database>/0/<unid>?OpenDocument`.
-3. Choose `sections` or `kinds` so that only rules for residents are collected.
-4. `hosts` lists every host the collector may contact for that kommun; `region_code` must be the
+   - `"preset": "sitevision"`: most kommuner run Sitevision and publish the collection as one flat
+     file list (`/download/18.<node id>/<timestamp>/<name>.pdf`). The preset fills in
+     `strategy` (`html_index`), `link_pattern`, `number` (the file's node id, which stays the same
+     when the file is replaced), `title_strip` (the ".pdf" and "Pdf, 290 kB." suffixes) and
+     `follow`. The entry's own keys win over the preset's.
+   - `follow` (regex, `html_index`): links on a listing whose absolute URL matches are read as
+     further listing pages (pagination), up to 100 pages, skipping those robots.txt disallows. The
+     Sitevision preset follows its file list's `?lp-page=N` links.
+3. Choose `sections` or `kinds` so that only rules for residents are collected. Where the list mixes
+   rules and internal documents with no headings to tell them apart, `"resident_filter": true`
+   keeps a title only when it names a rule for residents (föreskrifter, taxor, avgifter, avfall,
+   renhållning, hälsoskydd, naturreservat, hamnordning, torghandel, ABVA and the like) and drops
+   titles of internal documents (reglementen, arbetsordningar, delegationsordningar, planer,
+   program, policyer, riktlinjer and the like). `title_include` and `title_exclude` (regex lists)
+   replace the built-in lists for a kommun.
+4. `--dry-run` prints each listed document (`id`, title, URL) without fetching documents or writing
+   anything; use it to check a new entry.
+5. `hosts` lists every host the collector may contact for that kommun; `region_code` must be the
    first two digits of the kommun code.
-5. Add a trimmed listing (and detail page) fixture and a test, then run a small sample with
+6. Add a trimmed listing (and detail page) fixture and a test, then run a small sample with
    `--kommun <code> --limit 5` and the audit.
 
 ## Agencies and sources log
