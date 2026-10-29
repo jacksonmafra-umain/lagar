@@ -103,6 +103,25 @@ The site has no robots.txt (HTTP 404); one is honoured if it appears. The PDFs a
 the publisher, but the signature is not verified or recorded. `Last-Modified` and `ETag` change
 nightly, so they are not used. A full crawl of 2018 to today is about 30,000 requests.
 
+## PDF text
+
+`lagar/pdftext.py` is the one place that reads text out of an official PDF; every collector that
+needs it calls `pdftext.extract(data)`. It runs poppler's `pdftotext` on a temporary copy of the
+bytes, so the collector itself stays stdlib-only. Install poppler-utils (`sudo apt-get install
+poppler-utils`, `brew install poppler`); the collector and sync workflows install it on the runner.
+
+- `extract` returns `PdfText(text, pages, text_pages, gap)`. Pages are split by form feeds; a page
+  with fewer than 40 letters and digits has no text layer.
+- When less than half of the pages carry text, `gap` is `"no text layer (scanned PDF)"`; when
+  less than half of the visible characters are letters or digits (fonts without a Unicode map),
+  `gap` is `"text layer is not readable ..."`. Callers record the gap and keep the PDF link and
+  SHA-256; they never guess or OCR the text.
+- `paragraphs(text)` reflows the text into paragraphs: lines joined, line-break hyphens removed
+  (not before "och", "eller" and similar), lines holding only a page number dropped.
+- A missing tool, a timeout or a file `pdftotext` cannot open raises `pdftext.PdfTextError`.
+- Tests that run the tool skip when it is not installed, unless `LAGAR_REQUIRE_PDFTOTEXT=1`
+  (set in CI).
+
 ## Amendment register (SFSR)
 
 Riksdagen texts carry no entry-into-force date and only mention amending acts inline. The SFS
