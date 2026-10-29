@@ -11,9 +11,13 @@ completeness: read this file next to those numbers.
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
 | SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
+| case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (sample: NJA 2026:29–38, HFD 2026 ref. 35–43, HFD 2026 not. 24) |
 
 The SFS target (11567 documents) is the number Riksdagen lists for document
 type `sfs` on that date, all statute types together.
+
+The case-law target (16640 documents) is the number of referat and notiser the
+Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts together.
 
 ## Known gaps
 
@@ -37,9 +41,17 @@ type `sfs` on that date, all statute types together.
   SHA-256, but only a five-act sample of 2026 is in it so far; the full crawl
   has not run. The PDF bytes are not stored, and the documents stay marked
   `authoritative: false` until the corpus text is tied to a snapshot.
-- Phases 2 and 3 are not started: agency regulations, case law, EU law, regional
-  and municipal regulations and public services have no collector yet and no known
-  target.
+- Case law: only a 20-document sample of the latest Högsta domstolen and Högsta
+  förvaltningsdomstolen publications is in the corpus; the full run has not
+  started. Only the anonymised referat and notiser are collected. Rulings the
+  courts publish in full (`DOM_ELLER_BESLUT`, about 760), leave-to-appeal and
+  preliminary-ruling notices and all attachments (PDF) are left out by design.
+  Publications without a report reference in the schema's form, and any whose
+  text contains a personal identity number, are recorded as failed instead of
+  written. SFS references (`lagrumLista`) are kept in the body only; they are
+  not yet links to the SFS layer.
+- Agency regulations, EU law, regional and municipal regulations and public
+  services have no collector yet and no known target.
 
 ## Failures and blocked sources
 
