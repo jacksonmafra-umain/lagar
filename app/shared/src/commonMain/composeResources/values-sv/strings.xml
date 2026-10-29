@@ -139,6 +139,14 @@
     <string name="picker_search">Sök</string>
     <string name="picker_no_results">Inga träffar</string>
     <string name="picker_clear">Rensa</string>
+    <string name="location_use">Använd min plats</string>
+    <string name="location_locating">Hämtar din plats…</string>
+    <string name="location_private">Din position används bara på enheten för att föreslå en kommun. Den sparas inte.</string>
+    <string name="location_suggested">Föreslaget utifrån din plats: %1$s. Kontrollera och ändra nedan om det inte stämmer.</string>
+    <string name="location_denied">Lagar har inte tillgång till din plats. Tillåt det i systeminställningarna eller välj kommun nedan.</string>
+    <string name="location_unavailable">Det gick inte att hitta din plats. Kontrollera att platstjänster är på eller välj kommun nedan.</string>
+    <string name="location_timeout">Det tog för lång tid att hitta din plats. Försök igen eller välj kommun nedan.</string>
+    <string name="location_outside">Din plats verkar vara utanför Sverige. Välj kommun nedan.</string>
     <string name="home_hero_title">Sveriges %1$s – samlade och sökbara på ett ställe</string>
     <string name="home_hero_emphasis">lagar, förordningar och föreskrifter</string>
     <string name="home_hero_subtitle">Konsoliderade författningar från Riksdagens öppna data</string>

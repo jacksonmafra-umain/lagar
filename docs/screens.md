@@ -46,7 +46,7 @@ A modal sheet opened from the scope chip, the drawer or the location card. Code:
 | --- | --- | --- |
 | Scope cards with Active and count badges, region and kommun pickers, changes applied on Done | Done | |
 | Glass overlay (tier 3; opaque fallback, since a modal sheet's window has no backdrop to blur) | Done | #23 |
-| Use my location | Missing | #30 |
+| "Use my location" in the locality pickers: suggests the nearest kommun offline from bundled SCB centroids, coarse permission only, nothing stored but the chosen kommun | Done | #30 |
 | Linked kommun status card | Blocked: no municipal data | #38 |
 
 ## Onboarding
@@ -88,7 +88,7 @@ Route: `OnboardingLocality`. Code: `ui/onboarding/LocalityStepScreen.kt`, `Local
 | --- | --- | --- |
 | Searchable region and kommun pickers for all 21 regions and 290 kommuner, both optional | Done | |
 | Skip at the top right | Done | #29 |
-| Kommun suggested from the device location | Missing | #30 |
+| Kommun suggested from the device location (offline nearest SCB centroid, coarse permission; pre-selected for the user to confirm, with denied, unavailable, timeout and abroad messages) | Done | #30 |
 | Linked kommun summary (council, document count) | Blocked: no municipal data | #38 |
 
 ## Utforska (home)
