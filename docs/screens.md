@@ -200,12 +200,13 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | Metadata header: layer badge, citation, title, issue date, ministry, status, amended through, source link | Done | |
 | Source Serif 4 legal text, bold Inter § numbers, reading column width | Done | |
 | § cards with the layer indicator, bookmark toggle, text selection | Done | |
+| Save a single § or chapter: one 48dp actions button per § card and chapter heading opens a menu (save or remove, add or edit note, share link); a saved section shows the filled bookmark in the layer colour | Done | #28 |
 | Repealed banner and strikethrough | Missing | #21 |
 | Table of contents sheet: chapters and § chips, jump to a chapter or § | Done | #26 |
 | Amendment list under the header (register list, else `amended_by`; reprints), numbers link to documents the API has | Done | #26 |
 | Share links to the document and to each § (platform share sheet; Web Share API or clipboard on the web); `?doc=&p=` links open the reader at that § | Done | #26 |
 | Cross-reference links: SFS citations (`lagen (1962:700)`, `(SFS 1998:808)`, `Lag (1994:458).`) and case-law references (`NJA 2026:38`, `HFD 2026 ref. 43`) open the cited document when the API has it | Done | #27 |
-| Inline notes | Missing | #28 |
+| Private notes on the document (under the header) and on each § or chapter (under its text), edited in a sheet, stored on the device only | Done | #28 |
 | Table of contents pane and metadata inspector on wide screens | Missing | #35 |
 | Reading the text as of a past date, version comparator | Blocked: the API has no historical text; owner decision pending | #7 |
 
@@ -217,7 +218,8 @@ Route: `Sparade`. Code: `ui/sparade/SparadeScreen.kt`. Reference: architecture �
 | --- | --- | --- |
 | Bookmarked documents stored on the device, remove action, empty state | Done | |
 | Repealed state kept on bookmarks | Missing | #21 |
-| Saved single provisions, notes, grouping by layer, undo after remove | Missing | #28 |
+| Saved single provisions (label, document, excerpt) that open the reader at their §, and notes on documents and provisions | Done | #28 |
+| Grouping by level in hierarchy order, filter (all, documents, provisions, notes), search within saved items, undo snackbar after removing | Done | #28 |
 
 ## Tjänster
 
