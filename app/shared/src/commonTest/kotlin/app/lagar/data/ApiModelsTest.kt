@@ -49,12 +49,30 @@ class ApiModelsTest {
     }
 
     @Test
+    fun decodesLocalityIndexAndListings() {
+        val index = json.decodeFromString<LocalityIndex>(ApiExamples.regionCodes)
+        assertEquals("region_code", index.field)
+        assertEquals(1, index.count("01"))
+        assertEquals(0, index.count("12"))
+        val region = json.decodeFromString<ListingPage>(ApiExamples.regionCodeListing).items.single()
+        assertEquals("01", region.regionCode)
+        assertNull(region.municipalityCode)
+        val kommun = json.decodeFromString<ListingPage>(ApiExamples.municipalityCodeListing).items.single()
+        assertEquals("01" to "0180", kommun.regionCode to kommun.municipalityCode)
+        assertEquals(DisplayLayer.Municipality, DisplayLayer.forType(kommun.type))
+        // Items of other layers carry the codes as null.
+        assertNull(json.decodeFromString<ListingPage>(ApiExamples.sfsListing).items[0].regionCode)
+    }
+
+    @Test
     fun decodesLegacyListingWithoutOptionalFields() {
         val item = json.decodeFromString<ListingPage>(ApiExamples.legacyListing).items.single()
         assertEquals("sfs-2010-800", item.id)
         assertNull(item.inForce)
         assertNull(item.amendedThrough)
         assertNull(item.ministry)
+        assertNull(item.regionCode)
+        assertNull(item.municipalityCode)
         val strict = Json.decodeFromString<ListingPage>(ApiExamples.legacyListing).items.single()
         assertEquals(item, strict)
     }

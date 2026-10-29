@@ -18,10 +18,19 @@ interface MinistryRepository {
     suspend fun ministryListing(layer: String, type: String, ministry: String, page: Int): ListingPage
 }
 
+/** The per-locality listings of the API (`<layer>/by-code/`): the region layer by län, the municipality layer by kommun. */
+interface LocalityRepository {
+    suspend fun localities(layer: String): LocalityIndex
+
+    /** One county's or kommun's paged listing; pages are 1-based. */
+    suspend fun localityListing(layer: String, code: String, page: Int): ListingPage
+}
+
 /** A raw source of the whole API, before caching. */
 interface ApiSource :
     LagarRepository,
-    MinistryRepository
+    MinistryRepository,
+    LocalityRepository
 
 internal fun indexPath() = "index.json"
 
@@ -34,3 +43,7 @@ internal fun ministryIndexPath(layer: String, type: String) = "$layer/$type/by-m
 
 internal fun ministryListingPath(layer: String, type: String, ministry: String, page: Int) =
     "$layer/$type/by-ministry/$ministry/index-$page.json"
+
+internal fun localityIndexPath(layer: String) = "$layer/by-code/index.json"
+
+internal fun localityListingPath(layer: String, code: String, page: Int) = "$layer/by-code/$code/index-$page.json"

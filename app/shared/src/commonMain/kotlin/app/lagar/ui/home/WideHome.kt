@@ -96,8 +96,10 @@ internal fun WideHome(
     onOpenAdvancedSearch: () -> Unit,
     onChooseLocation: () -> Unit,
     onSelectScope: (Scope) -> Unit,
+    onOpenLocality: (layer: DisplayLayer, code: String, name: String) -> Unit,
 ) {
     val spacing = LagarTheme.spacing
+    val home = data.localityHome
     var comingSoon by remember { mutableStateOf<DisplayLayer?>(null) }
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -125,13 +127,20 @@ internal fun WideHome(
                 )
             }
         }
+        if (home != null) {
+            item(key = "locality") {
+                WideContent { LocalityRules(data, home.name, onOpenDocument) }
+            }
+        }
         item(key = "documents") {
             WideContent {
                 RecentWithPreview(
                     data = data,
                     bookmarks = bookmarks,
                     onOpenDocument = onOpenDocument,
-                    onShowMore = { onOpenLayer(DisplayLayer.SfsAct) },
+                    onShowMore = {
+                        if (home != null) onOpenLocality(home.level, home.code, home.name) else onOpenLayer(DisplayLayer.SfsAct)
+                    },
                 )
             }
         }

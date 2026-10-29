@@ -48,6 +48,7 @@ import app.lagar.ui.hierarki.MinistriesRoute
 import app.lagar.ui.home.HomeRoute
 import app.lagar.ui.home.ScopeSheet
 import app.lagar.ui.list.LayerListRoute
+import app.lagar.ui.list.LocalityFilter
 import app.lagar.ui.list.MinistryFilter
 import app.lagar.ui.navigation.AdvancedSearch
 import app.lagar.ui.navigation.Hierarki
@@ -279,6 +280,9 @@ fun AppShell(
                                 onOpenSearch = { navigateWhenResumed(Search(text = it)) },
                                 onOpenAdvancedSearch = { navigateWhenResumed(AdvancedSearch) },
                                 onChooseLocation = { showScopeSheet = true },
+                                onOpenLocality = { layer, code, name ->
+                                    navigateWhenResumed(LayerList(layer.apiLayer, code = code, codeName = name))
+                                },
                                 onSelectScope = ::selectScope,
                             )
                         }
@@ -298,6 +302,7 @@ fun AppShell(
                                 layer = route.layer,
                                 type = route.type,
                                 ministry = route.ministry?.let { MinistryFilter(it, route.ministryName ?: it) },
+                                locality = route.code?.let { LocalityFilter(it, route.codeName ?: it) },
                                 onBack = { navController.popBackStack() },
                                 onOpenDocument = { navigateWhenResumed(Reader(it)) },
                             )

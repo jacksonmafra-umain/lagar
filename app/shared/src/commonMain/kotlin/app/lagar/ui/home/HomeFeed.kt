@@ -1,8 +1,10 @@
 package app.lagar.ui.home
 
+import app.lagar.data.ApiException
 import app.lagar.data.ApiIndex
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
+import app.lagar.data.LocalityRepository
 import app.lagar.data.NewestFirst
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.Scope
@@ -81,4 +83,52 @@ private class LevelPages(val layer: DisplayLayer) {
     suspend fun loadUntil(repository: LagarRepository, enough: (List<ListingItem>) -> Boolean) {
         while (hasMore && !enough(items)) loadNext(repository)
     }
+}
+
+/**
+ * The lists of a Region or Kommun home for one län or kommun [code] of [layer]. [total] is the locality's document
+ * count, [key] its newest regulations still in force, [recent] its newest documents.
+ */
+internal data class LocalityFeed(
+    val total: Int,
+    val key: List<ListingItem>,
+    val recent: List<ListingItem>,
+    val hasMoreRecent: Boolean,
+) {
+    companion object {
+        val Empty = LocalityFeed(0, emptyList(), emptyList(), false)
+    }
+}
+
+/**
+ * Reads the per-locality index and, when it lists [code], that locality's listing: the first page, and later ones
+ * only while fewer than [keyLimit] of the loaded documents are in force. A code the index does not list, and an
+ * API built before the per-locality listings (no index), give [LocalityFeed.Empty] without further requests.
+ */
+internal suspend fun loadLocalityFeed(
+    source: LocalityRepository,
+    layer: DisplayLayer,
+    code: String,
+    keyLimit: Int,
+    recentLimit: Int,
+): LocalityFeed {
+    val count = try {
+        source.localities(layer.apiLayer).count(code)
+    } catch (e: ApiException) {
+        if (e.notFound) return LocalityFeed.Empty else throw e
+    }
+    if (count == 0) return LocalityFeed.Empty
+    val items = mutableListOf<ListingItem>()
+    var page = source.localityListing(layer.apiLayer, code, 1)
+    items += page.items
+    while (items.count { it.repealed == null } < keyLimit && page.page < page.pageCount) {
+        page = source.localityListing(layer.apiLayer, code, page.page + 1)
+        items += page.items
+    }
+    return LocalityFeed(
+        total = page.total,
+        key = items.filter { it.repealed == null }.take(keyLimit),
+        recent = items.take(recentLimit),
+        hasMoreRecent = page.total > recentLimit,
+    )
 }

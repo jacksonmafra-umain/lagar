@@ -169,7 +169,12 @@
     <string name="home_choose_location">Choose a location</string>
     <string name="home_scope_region_title">Region: %1$s</string>
     <string name="home_scope_kommun_title">Municipality: %1$s</string>
-    <string name="home_coming_soon_text">Documents for this scope are still being collected. Switch to National to read acts and ordinances now.</string>
+    <string name="home_locality_choose_text">Choose a county or municipality to see its regulations.</string>
+    <string name="home_locality_empty_title">No regulations yet</string>
+    <string name="home_locality_empty_text">No regulations have been collected yet for %1$s.</string>
+    <string name="home_locality_key_title">Regulations in force</string>
+    <string name="home_locality_subtitle">%1$s · %2$s</string>
+    <string name="home_locality_none_in_force">None of the collected regulations is in force.</string>
     <string name="type_fundamental_law">Fundamental law</string>
     <string name="type_act">Act</string>
     <string name="type_ordinance">Ordinance</string>

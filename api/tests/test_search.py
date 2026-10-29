@@ -130,6 +130,10 @@ class IndexTest(unittest.TestCase):
         files = si.build_index(self.DOCS, BUILT_AT)
         table = json.loads(files["search/docs.json"])
         self.assertEqual([d[0] for d in table["docs"]], ["sfs-1999-100", "sfs-2010-800"])
+        self.assertEqual(table["fields"], ["id", "title", "number", "type", "issued", "repealed",
+                                           "region_code", "municipality_code"])
+        # Documents without the optional locality keys get null columns.
+        self.assertEqual(table["docs"][0][-2:], [None, None])
         terms = json.loads(files["search/shards/sk.json"])["terms"]
         # sfs-1999-100 (doc 0): title and body; sfs-2010-800 (doc 1): title only.
         self.assertEqual(terms["skolor"], [0, si.FIELD_TITLE | si.FIELD_BODY])

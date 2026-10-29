@@ -110,6 +110,7 @@ class RunSummary:
     blocked: bool = False
     written_numbers: "list[str]" = field(default_factory=list)
     latest_published: "str | None" = None
+    complete: bool = False
 
 
 def parse_args(argv):
@@ -463,7 +464,21 @@ def _already_done(state, item, corpus):
     return meta["type"] is not None and path_for(meta, corpus).exists()
 
 
-def _write_report(path, summary):
+def next_since(summary, since):
+    """Where the next incremental run starts: the newest publication day seen.
+
+    The day itself is collected again (publication times are finer than the
+    API's date filter); re-reading it is idempotent. A run that stopped early
+    (--limit, a block) never moves past `since`, because the listing is ordered
+    by decision date and unseen publications may be older.
+    """
+    if not summary.complete or not summary.latest_published:
+        return since
+    day = summary.latest_published[:10]
+    return max(day, since) if since else day
+
+
+def _write_report(path, summary, since=None):
     report = {
         "written": summary.written_numbers,
         "unchanged": summary.unchanged,
@@ -472,6 +487,7 @@ def _write_report(path, summary):
         "failed": summary.failed,
         "blocked": summary.blocked,
         "latest_published": summary.latest_published,
+        "next_since": next_since(summary, since),
     }
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -489,7 +505,7 @@ def run(client, args):
             state["blocked"] = blocked
         _save_state(args.state, state)
         if args.report:
-            _write_report(args.report, summary)
+            _write_report(args.report, summary, args.since)
         return summary
 
     try:
@@ -535,6 +551,9 @@ def run(client, args):
                     f"{summary.skipped} skipped, {len(summary.failed)} failed",
                     flush=True,
                 )
+        else:
+            # A filtered run saw only part of the window; it never moves the marker.
+            summary.complete = not (args.court or args.from_date or args.to_date)
     except Blocked as error:
         return finish(str(error))
     return finish()

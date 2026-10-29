@@ -1,0 +1,11 @@
+{
+ "layer": "municipality",
+ "field": "municipality_code",
+ "total": 2,
+ "codes": [
+  {
+   "code": "0180",
+   "count": 2
+  }
+ ]
+}

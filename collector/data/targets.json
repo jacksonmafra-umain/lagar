@@ -39,7 +39,7 @@
     "layer": "eu",
     "type": null,
     "label": "EU law (curated list)",
-    "target": 43,
+    "target": 70,
     "kind": "curated",
     "source": "collector/data/eu-acts.json",
     "as_of": "2026-10-29"

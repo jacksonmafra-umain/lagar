@@ -169,7 +169,12 @@
     <string name="home_choose_location">Välj plats</string>
     <string name="home_scope_region_title">Region: %1$s</string>
     <string name="home_scope_kommun_title">Kommun: %1$s</string>
-    <string name="home_coming_soon_text">Dokument för den här omfattningen samlas fortfarande in. Byt till Nationell för att läsa lagar och förordningar nu.</string>
+    <string name="home_locality_choose_text">Välj ett län eller en kommun för att se dess föreskrifter.</string>
+    <string name="home_locality_empty_title">Inga föreskrifter ännu</string>
+    <string name="home_locality_empty_text">Inga föreskrifter har samlats in för %1$s ännu.</string>
+    <string name="home_locality_key_title">Gällande föreskrifter</string>
+    <string name="home_locality_subtitle">%1$s · %2$s</string>
+    <string name="home_locality_none_in_force">Ingen av de insamlade föreskrifterna gäller.</string>
     <string name="type_fundamental_law">Grundlag</string>
     <string name="type_act">Lag</string>
     <string name="type_ordinance">Förordning</string>

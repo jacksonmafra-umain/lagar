@@ -1,0 +1,11 @@
+{
+  "layer": "municipality",
+  "type": null,
+  "code": "0180",
+  "page": 1,
+  "page_count": 1,
+  "total": 1,
+  "items": [
+    {"id": "0180-2024-12", "title": "Lokala ordningsföreskrifter för Stockholms kommun", "number": "SKFS 2024:12", "type": "municipal_regulation", "issued": "2024-05-06", "repealed": null, "in_force": null, "amended_through": null, "ministry": null, "region_code": "01", "municipality_code": "0180"}
+  ]
+}

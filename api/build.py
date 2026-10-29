@@ -24,7 +24,10 @@ API_VERSION = 1
 PAGE_SIZE = 50
 BUILT_AT_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 # Fields added after the first release go at the end, so earlier keys keep their position.
-ITEM_FIELDS = ("id", "title", "number", "type", "issued", "repealed", "in_force", "amended_through", "ministry")
+ITEM_FIELDS = (
+    "id", "title", "number", "type", "issued", "repealed", "in_force", "amended_through", "ministry",
+    "region_code", "municipality_code",
+)
 # Document meta keys, in the schema's order; optional frontmatter keys are served as null.
 META_FIELDS = tuple(schema._load_schema()["properties"])
 
@@ -32,6 +35,9 @@ META_FIELDS = tuple(schema._load_schema()["properties"])
 class BuildError(Exception):
     pass
 
+
+# Per-locality listings (docs/api.md, "by code"): the layer and the frontmatter key that names its locality.
+LOCALITY_LAYERS = {"region": "region_code", "municipality": "municipality_code"}
 
 # Per-ministry indexes are built for the series of these layers (docs/api.md, "by ministry").
 MINISTRY_LAYERS = ("sfs",)
@@ -184,6 +190,22 @@ def _by_ministry(out, layer, type_, items, written):
     }, written)
 
 
+def _by_code(out, layer, field, items, written):
+    """`<layer>/by-code/index.json` and one paged listing per county or kommun code that has documents."""
+    groups = {}
+    for item in items:
+        if item[field] is not None:
+            groups.setdefault(item[field], []).append(item)
+    rel_dir = f"{layer}/by-code/"
+    codes = sorted(groups)
+    for code in codes:
+        _pages(out, f"{rel_dir}{code}/", layer, None, groups[code], written, {"code": code})
+    _write(out, f"{rel_dir}index.json", {
+        "layer": layer, "field": field, "total": len(items),
+        "codes": [{"code": code, "count": len(groups[code])} for code in codes],
+    }, written)
+
+
 def doc_meta(meta):
     """Frontmatter as served: every schema key in schema order, null when the file leaves it out.
 
@@ -197,7 +219,8 @@ def doc_meta(meta):
 def build(docs, out, built_at):
     out = Path(out)
     written = []
-    items = [{k: meta[k] for k in ITEM_FIELDS} for meta, _ in docs]
+    # The locality codes are optional in the frontmatter; the rest are required.
+    items = [{k: meta.get(k) for k in ITEM_FIELDS} for meta, _ in docs]
     layers = []
     for layer in LAYERS:
         in_layer = [i for i in items if TYPES[i["type"]] == layer]
@@ -212,6 +235,8 @@ def build(docs, out, built_at):
                 if layer in MINISTRY_LAYERS:
                     _by_ministry(out, layer, type_, of_type, written)
         _pages(out, f"{layer}/", layer, None, in_layer, written)
+        if layer in LOCALITY_LAYERS:
+            _by_code(out, layer, LOCALITY_LAYERS[layer], in_layer, written)
         layers.append({"id": layer, "count": len(in_layer), "series": series})
     for meta, body in sorted(docs, key=lambda d: d[0]["id"]):
         _write(out, f"docs/{meta['id']}.json", {"meta": doc_meta(meta), "body": body}, written)
