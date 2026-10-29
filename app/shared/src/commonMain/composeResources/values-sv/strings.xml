@@ -28,6 +28,10 @@
         <item quantity="one">%1$d dokument</item>
         <item quantity="other">%1$d dokument</item>
     </plurals>
+    <plurals name="hierarchy_other_statutes">
+        <item quantity="one">varav %1$d övrig författning</item>
+        <item quantity="other">varav %1$d övriga författningar</item>
+    </plurals>
     <string name="layer_numbered_title">%1$d. %2$s</string>
     <string name="coming_soon">Kommer snart</string>
     <string name="coming_soon_text">Det här lagret har inga dokument ännu. Det håller fortfarande på att samlas in.</string>
