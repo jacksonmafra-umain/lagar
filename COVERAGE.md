@@ -14,7 +14,7 @@ completeness: read this file next to those numbers.
 | agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/` | 2026-10-29 (sample: AFS 2023:1–5, FFFS 2024:21, 2024:22, 2025:2, 2025:8, 2025:13, TSFS 2026:6, 11, 13, 19, 20) |
 | EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list) |
 | regional (county) | Länsstyrelserna, `https://www.lansstyrelsen.se/<county>/om-oss/om-lansstyrelsen-<county>/lanets-forfattningssamling/forfattningar-<year>.html` and the linked detail pages | 2026-10-29 (pilot: 01FS 2026:1–10, Stockholm) |
-| case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (sample: NJA 2026:29–38, HFD 2026 ref. 35–43, HFD 2026 not. 24) |
+| case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (full run: publications up to 2026-10-28; daily sync from then on) |
 | municipal regulations | Stockholm `https://start.stockholm/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/`, Göteborg Domino view `https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf/vyHandBok`, Malmö `https://malmo.se/Om-Malmo-stad/Demokrati-och-politik/Sa-styrs-Malmo/Forfattningssamling/` (citizen rules and taxor pages) | 2026-10-29 (sample: five documents per kommun) |
 
 The SFS target (11567 documents) is the number Riksdagen lists for document
@@ -54,15 +54,19 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   legal effect (`authoritative: false`), are in the corpus instead. Consolidated
   versions of the other acts are not collected yet. Tables are flattened to one line
   per row, and `amended_through` is not filled.
-- Case law: only a 20-document sample of the latest Högsta domstolen and Högsta
-  förvaltningsdomstolen publications is in the corpus; the full run has not
-  started. Only the anonymised referat and notiser are collected. Rulings the
-  courts publish in full (`DOM_ELLER_BESLUT`, about 760), leave-to-appeal and
-  preliminary-ruling notices and all attachments (PDF) are left out by design.
-  Publications without a report reference in the schema's form, and any whose
-  text contains a personal identity number, are recorded as failed instead of
-  written. SFS references (`lagrumLista`) are kept in the body only; they are
-  not yet links to the SFS layer.
+- Case law: 16390 of the 16640 referat and notiser the API listed on
+  2026-10-29 are in the corpus; the daily `Sync case law` workflow adds new and
+  republished ones. Only the anonymised referat and notiser are collected.
+  Rulings the courts publish in full (`DOM_ELLER_BESLUT`, about 760),
+  leave-to-appeal and preliminary-ruling notices and all attachments (PDF) are
+  left out by design (19 such items appeared in the referat/notis listing). 231
+  publications are recorded as failed instead of written: 213 have no report
+  reference in the schema's form (mostly older kammarrätt and Marknadsdomstolen
+  referat with only a case number), 9 repeat a reference already stored from
+  another publication (joined cases published twice, e.g. NJA 2017:88, MÖD
+  2025:53), and 9 contain what looks like a personal identity number. SFS
+  references (`lagrumLista`) stay plain text in the body; the app's reader links
+  the citation forms to the SFS documents the API publishes.
 - Agency regulations: only a 15-document pilot sample of three series (AFS,
   FFFS, TSFS) is in the corpus; about 100 series exist (lagrummet.se lists them)
   and there is no known target. Only base regulations are stored; amending
