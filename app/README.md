@@ -50,7 +50,8 @@ python3 -I -m http.server 8000 --directory /tmp/lagar/build
   python3 -I -m http.server 8001 --directory /tmp/lagar/site   # open http://localhost:8001/
   ```
 
-  Add `?sample` to use the bundled sample instead.
+  Add `?sample` to use the bundled sample instead. `python3 -I scripts/serve_local.py` (from the repo root) does
+  the same without copying: it builds what is missing and serves the dist at `/` and the API at `/api/v1/`.
 
 The bundled sample (`SampleRepository`) stays for tests and `?sample`. No build falls back to it silently,
 because a 104-document sample shown as the catalogue would mislead; offline, the app shows its error state
