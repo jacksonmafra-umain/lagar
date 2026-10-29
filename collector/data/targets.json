@@ -20,11 +20,32 @@
   {
     "layer": "agency",
     "type": null,
-    "label": "Agency regulations",
-    "target": null,
-    "kind": "unknown",
-    "source": null,
-    "as_of": null
+    "series": "AFS",
+    "label": "AFS (Arbetsmiljöverket)",
+    "target": 15,
+    "kind": "counted",
+    "source": "https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/ (Gällande grundföreskrifter)",
+    "as_of": "2026-10-29"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "FFFS",
+    "label": "FFFS (Finansinspektionen)",
+    "target": 121,
+    "kind": "counted",
+    "source": "https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/ (base regulations in force)",
+    "as_of": "2026-10-29"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TSFS",
+    "label": "TSFS (Transportstyrelsen)",
+    "target": 622,
+    "kind": "counted",
+    "source": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/ts-foreskrifter-i-nummerordning/ (base regulations on the year listings, 331 in force and 291 repealed)",
+    "as_of": "2026-10-29"
   },
   {
     "layer": "case_law",
