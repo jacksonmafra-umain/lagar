@@ -72,11 +72,12 @@ def afs_pages(detail_1=None):
 class ParseTest(unittest.TestCase):
     def test_afs_listing(self):
         entries = AFS.parse_listing(fixture("agency-afs-listing.html"), AFS.listing_url)
-        self.assertEqual([e.number for e in entries], ["AFS 2023:1", "AFS 2023:3", "AFS 2023:4"])
+        self.assertEqual([e.number for e in entries], ["AFS 2023:1", "AFS 2023:3", "AFS 2023:4", "AFS 2005:4"])
+        # The repealing regulations under "Gällande ändringsföreskrifter" are not base regulations.
+        self.assertEqual([e.base for e in entries], [True, True, True, False])
         self.assertEqual(entries[0].url, AFS_1)
         self.assertEqual(entries[1].amended_by, ["AFS 2024:1"])
         self.assertEqual(entries[2].amended_by, ["AFS 2024:2"])
-        self.assertTrue(all(e.base for e in entries))
 
     def test_afs_base_detail(self):
         entry = AFS.parse_listing(fixture("agency-afs-listing.html"), AFS.listing_url)[0]
