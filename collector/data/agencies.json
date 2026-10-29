@@ -642,18 +642,6 @@
     }
   },
   "courts": {
-    "KGG": {
-      "status": "no_number",
-      "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet."
-    },
-    "KJO": {
-      "status": "no_number",
-      "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet."
-    },
-    "KSU": {
-      "status": "no_number",
-      "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet."
-    },
     "PBR": {
       "status": "out_of_scope",
       "note": "Publishes only rulings in full (dom eller beslut), no referat or notiser."
@@ -689,9 +677,6 @@
     "county:23": 241,
     "county:24": 242,
     "county:25": 243,
-    "court:KGG": 535,
-    "court:KJO": 535,
-    "court:KSU": 535,
     "kommun:0114": 244,
     "kommun:0115": 245,
     "kommun:0117": 246,
