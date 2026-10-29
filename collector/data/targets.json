@@ -38,11 +38,11 @@
   {
     "layer": "eu",
     "type": null,
-    "label": "EU law",
-    "target": null,
-    "kind": "unknown",
-    "source": null,
-    "as_of": null
+    "label": "EU law (curated list)",
+    "target": 43,
+    "kind": "curated",
+    "source": "collector/data/eu-acts.json",
+    "as_of": "2026-10-29"
   },
   {
     "layer": "region",

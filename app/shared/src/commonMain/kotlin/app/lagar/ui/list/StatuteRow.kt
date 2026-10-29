@@ -22,8 +22,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import app.lagar.data.ListingItem
 import app.lagar.designsystem.GlassTier
@@ -40,10 +44,20 @@ import org.jetbrains.compose.resources.painterResource
  * One document: a 3dp layer indicator, the number in code-citation style, the title (two lines at
  * most) and the year issued. A repealed document switches to the neutral Repealed layer with a
  * badge, a history icon and a struck-through title, so color is never the only signal.
+ *
+ * [highlights] are character ranges of the title to mark (search matches): bold on the layer `tint`, so the
+ * mark does not rely on color alone. [note] is an optional `labelSm` line under the title.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun StatuteRow(item: ListingItem, layer: DisplayLayer?, onClick: () -> Unit, modifier: Modifier = Modifier) {
+fun StatuteRow(
+    item: ListingItem,
+    layer: DisplayLayer?,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    highlights: List<IntRange> = emptyList(),
+    note: String? = null,
+) {
     val layers = LagarTheme.layers
     val repealed = item.repealed != null
     val key = if (repealed) LayerKey.Repealed else (layer?.key ?: LayerKey.Repealed)
@@ -71,14 +85,27 @@ fun StatuteRow(item: ListingItem, layer: DisplayLayer?, onClick: () -> Unit, mod
                     )
                     if (repealed) RepealedBadge()
                 }
+                val mark = SpanStyle(fontWeight = FontWeight.Bold, background = layers.tint(key))
                 Text(
-                    text = item.title,
+                    text = buildAnnotatedString {
+                        var at = 0
+                        for (range in highlights.sortedBy { it.first }) {
+                            if (range.first < at || range.last >= item.title.length) continue
+                            append(item.title.substring(at, range.first))
+                            withStyle(mark) { append(item.title.substring(range)) }
+                            at = range.last + 1
+                        }
+                        append(item.title.substring(at))
+                    },
                     style = LagarTheme.type.bodyUi,
                     color = if (repealed) LagarTheme.colors.onSurfaceVariant else LagarTheme.colors.onSurface,
                     textDecoration = if (repealed) TextDecoration.LineThrough else null,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
+                if (note != null) {
+                    Text(note, style = LagarTheme.type.labelSm, color = layers.onTint(key))
+                }
                 item.issued?.take(YEAR_LENGTH)?.let {
                     Text(it, style = LagarTheme.type.labelSm, color = LagarTheme.colors.onSurfaceVariant)
                 }

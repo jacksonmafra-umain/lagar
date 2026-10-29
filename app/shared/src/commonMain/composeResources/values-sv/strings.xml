@@ -13,6 +13,8 @@
     <string name="drawer_about">Om appen</string>
     <string name="drawer_data_built">Data byggd %1$s</string>
     <string name="drawer_credits">Svensk lagstiftning, rättspraxis och offentliga tjänster på ett ställe.</string>
+    <string name="drawer_section_scope">Byt omfattning</string>
+    <string name="drawer_section_navigate">Navigering</string>
     <string name="settings_title">Inställningar</string>
     <string name="navigate_back">Tillbaka</string>
     <string name="repealed">Upphävd</string>
@@ -96,6 +98,7 @@
     <string name="scope_region">Region</string>
     <string name="scope_kommun">Kommun</string>
     <string name="scope_national_desc">Grundlagar, lagar, förordningar och myndighetsföreskrifter</string>
+    <string name="scope_national_short">Hela Sverige</string>
     <string name="scope_region_desc">Regionala föreskrifter i Sveriges 21 regioner</string>
     <string name="scope_kommun_desc">Lokala föreskrifter i Sveriges 290 kommuner</string>
     <string name="scope_step_title">Välj ditt startområde</string>
@@ -175,8 +178,6 @@
     <string name="advanced_dates_title">Utfärdad mellan</string>
     <string name="advanced_date_from">Från</string>
     <string name="advanced_date_to">Till</string>
-    <string name="advanced_date_placeholder">ÅÅÅÅ-MM-DD</string>
-    <string name="advanced_date_invalid">Ogiltigt datum</string>
     <string name="advanced_range_invalid">Från-datum efter till-datum</string>
     <string name="advanced_clear_range">Rensa intervall</string>
     <string name="advanced_types_title">Dokumenttyper</string>
@@ -210,4 +211,35 @@
     <string name="type_eu_decision">EU-beslut</string>
     <string name="type_county_regulation">Länsföreskrift</string>
     <string name="type_municipal_regulation">Kommunal föreskrift</string>
+    <string name="search_sort_label">Sortera efter</string>
+    <string name="search_sort_relevance">Relevans</string>
+    <string name="search_sort_newest">Nyast</string>
+    <string name="search_sort_number">Nummer</string>
+    <string name="search_match_body">Träff i texten</string>
+    <string name="advanced_scope_title">Omfattning</string>
+    <string name="advanced_mode_fulltext_note">Söker även i dokumentens text</string>
+    <string name="advanced_in_force_title">Ikraftträdande mellan</string>
+    <string name="advanced_in_force_note">Bara dokument med känt datum för ikraftträdande matchar dessa filter.</string>
+    <string name="advanced_vacatio_legis">Ännu inte i kraft (vacatio legis)</string>
+    <string name="advanced_date_choose">Välj ett datum</string>
+    <string name="advanced_section_active">Aktiv</string>
+    <string name="advanced_section_expanded">Utfälld</string>
+    <string name="advanced_section_collapsed">Ihopfälld</string>
+    <string name="date_picker_ok">OK</string>
+    <string name="date_picker_cancel">Avbryt</string>
+    <string name="date_display">%1$d %2$s %3$d</string>
+    <string-array name="months_short">
+        <item>jan.</item>
+        <item>feb.</item>
+        <item>mars</item>
+        <item>apr.</item>
+        <item>maj</item>
+        <item>juni</item>
+        <item>juli</item>
+        <item>aug.</item>
+        <item>sep.</item>
+        <item>okt.</item>
+        <item>nov.</item>
+        <item>dec.</item>
+    </string-array>
 </resources>
