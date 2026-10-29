@@ -20,7 +20,6 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -60,11 +59,10 @@ import app.lagar.resources.reader_note_on
 import app.lagar.resources.reader_saved_state
 import app.lagar.resources.reader_section_actions
 import app.lagar.resources.reader_share_link
+import app.lagar.ui.common.GlassBottomSheet
 import app.lagar.ui.common.LagarButton
 import app.lagar.ui.common.LagarSecondaryButton
 import app.lagar.ui.common.LagarTextField
-import app.lagar.ui.common.SheetShape
-import app.lagar.ui.common.sheetGlass
 import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
@@ -208,14 +206,7 @@ internal fun NoteEditorSheet(
     val spacing = LagarTheme.spacing
     val bottom = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     var text by rememberSaveable(target) { mutableStateOf(initial) }
-    ModalBottomSheet(
-        onDismissRequest = onDismiss,
-        modifier = Modifier.sheetGlass(SheetShape),
-        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
-        shape = SheetShape,
-        containerColor = Color.Transparent,
-        contentColor = LagarTheme.colors.onSurface,
-    ) {
+    GlassBottomSheet(onDismissRequest = onDismiss, sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)) {
         Column(
             modifier = Modifier.padding(start = spacing.marginMobile, end = spacing.marginMobile, bottom = bottom + spacing.lg),
             verticalArrangement = Arrangement.spacedBy(spacing.md),

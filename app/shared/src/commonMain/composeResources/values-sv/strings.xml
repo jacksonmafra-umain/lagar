@@ -341,4 +341,8 @@
         <item>nov.</item>
         <item>dec.</item>
     </string-array>
+    <string name="sheet_drag_handle">Draghandtag</string>
+    <string name="sheet_expand">Expandera arket</string>
+    <string name="sheet_collapse">Minimera arket</string>
+    <string name="sheet_dismiss">Stäng arket</string>
 </resources>

@@ -19,14 +19,12 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
@@ -39,8 +37,7 @@ import app.lagar.resources.Res
 import app.lagar.resources.reader_toc
 import app.lagar.resources.reader_toc_go_to
 import app.lagar.resources.reader_toc_preamble
-import app.lagar.ui.common.SheetShape
-import app.lagar.ui.common.sheetGlass
+import app.lagar.ui.common.GlassBottomSheet
 import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.stringResource
 
@@ -53,13 +50,7 @@ import org.jetbrains.compose.resources.stringResource
 internal fun TableOfContentsSheet(outline: Outline, layer: LayerKey, onSelect: (Int) -> Unit, onDismiss: () -> Unit) {
     val spacing = LagarTheme.spacing
     val bottom = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
-    ModalBottomSheet(
-        onDismissRequest = onDismiss,
-        modifier = Modifier.sheetGlass(SheetShape),
-        shape = SheetShape,
-        containerColor = Color.Transparent,
-        contentColor = LagarTheme.colors.onSurface,
-    ) {
+    GlassBottomSheet(onDismissRequest = onDismiss) {
         Text(
             text = stringResource(Res.string.reader_toc),
             style = LagarTheme.type.headlineMd,

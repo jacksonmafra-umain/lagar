@@ -80,9 +80,13 @@ Blur is done by Haze (`haze-blur`): mark the content behind with `Modifier.hazeS
 - `Bar` and `Overlay`: `Blurred` with a `HazeState`, `Opaque` without one. Where Haze cannot blur on a target,
   it draws the same opaque fallback.
 
-Modal sheets use `Modifier.sheetGlass()` (`ui/common/SheetGlass.kt`), the `Overlay` tier on the whole sheet with
-the top-rounded `SheetShape` (`RadiusTokens.xl`). A modal sheet is drawn in its own window, where Haze has no
-backdrop to sample, so sheets always use the opaque fallback with the border, highlight and shadow.
+Modal sheets use `GlassBottomSheet` (`ui/common/SheetGlass.kt`): an M3 `ModalBottomSheet` with a transparent
+container whose content draws `Modifier.sheetGlass()`, the `Overlay` tier with the top-rounded `SheetShape`
+(`RadiusTokens.xl`), together with a 32x4dp `onSurfaceVariant` drag handle (48dp target; tap and accessibility
+actions to expand, collapse and close). The glass must not go on the `ModalBottomSheet` modifier: that modifier is
+laid out before the sheet is moved to its offset, so the glass would cover the top of the screen instead of the
+sheet. A modal sheet is drawn in its own window, where Haze has no backdrop to sample, so sheets always use the
+opaque fallback with the border, highlight and shadow; the screen behind stays visible under the scrim.
 
 ### Reduce transparency
 
@@ -99,7 +103,7 @@ secondary button then draw opaque.
 | --- | --- |
 | `Card` | `FeedCard`, `StatuteRow`, `StatuteContainer`, the Sparade provision and note cards, the advanced search `FilterCard`s, `LayerDistributionChart`, the home `LocationCard`, the important-laws `AccordionHeader`, the drawer scope card, the splash logo card, `InputFrame` (text fields and search command bars), the Hierarki `MinistryRow` |
 | `Bar` | `LagarTopBar`, `LagarBottomBar`, `BackTopBar`, the advanced search footer |
-| `Overlay` | `LagarDrawerContent`; `ScopeSheet`, `ComingSoonSheet`, `TableOfContentsSheet`, `NoteEditorSheet` and the locality `OptionSheet` through `sheetGlass()` |
+| `Overlay` | `LagarDrawerContent`; `ScopeSheet`, `ComingSoonSheet`, `TableOfContentsSheet`, `NoteEditorSheet` and the locality `OptionSheet` through `GlassBottomSheet` |
 
 Layer-tinted panels (`LayerRow`, `NormPyramid` bands, onboarding `ScopeCard`, the constitution `FlagshipCard`,
 the repealed banner) keep their layer `tint` fill instead of glass: the tint carries the layer.
