@@ -1,0 +1,1839 @@
+{
+  "sitemap": {
+    "source": "https://www.lagrummet.se/rattskalla-sitemap.xml",
+    "fetched_at": "2026-10-29T15:28:34Z",
+    "pages": 156
+  },
+  "summary": {
+    "series": 66,
+    "by_status": {
+      "collected": 1,
+      "collected_pdf": 2,
+      "api_key": 1,
+      "no_adapter": 61,
+      "out_of_scope": 1
+    },
+    "shared": 24,
+    "kommuner": 290,
+    "kommuner_configured": 3
+  },
+  "agency_series": [
+    {
+      "series": "AFS",
+      "agency": "Arbetsmiljöverket",
+      "status": "collected",
+      "documents": 15,
+      "target": 15,
+      "note": "Consolidated text from Arbetsmiljöverket's HTML pages; robots.txt disallows the original PDFs, which are never requested.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/arbetsmiljoverkets-forfattningssamling-afs/"
+    },
+    {
+      "series": "FFFS",
+      "agency": "Finansinspektionen",
+      "status": "collected_pdf",
+      "documents": 121,
+      "target": 121,
+      "note": "Register pages give metadata and FI's summary; the text is published only as PDF.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/finansinspektionens-forfattningssamling-fffs/"
+    },
+    {
+      "series": "TSFS",
+      "agency": "Transportstyrelsen",
+      "status": "collected_pdf",
+      "documents": 622,
+      "target": 622,
+      "note": "Year listings and detail pages give metadata; the text is published only as PDF. Predecessor series on the same index (LFS, JvSFS and others) are not collected.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/transportstyrelsens-forfattningssamling-tsfs/"
+    },
+    {
+      "series": "BFS",
+      "agency": "Boverket",
+      "status": "api_key",
+      "documents": 0,
+      "target": null,
+      "note": "Boverket's regulation API probably needs a subscription key; the owner has not signed up for one.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/boverkets-forfattningssamling-bfs/"
+    },
+    {
+      "series": "AFFS",
+      "agency": "Arbetsförmedlingen",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/arbetsformedlingens-forfattningssamling-affs/"
+    },
+    {
+      "series": "AGVFS",
+      "agency": "Arbetsgivarverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/arbetsgivarverkets-forfattningssamling-agvfs/"
+    },
+    {
+      "series": "BFNAR",
+      "agency": "Bokföringsnämnden",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": "General advice (allmänna råd), not binding regulations.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/bokforingsnamndens-allmanna-rad-bfnar-2/"
+    },
+    {
+      "series": "BOLFS",
+      "agency": "Bolagsverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/bolagsverkets-forfattningssamling-bolfs/"
+    },
+    {
+      "series": "CSNFS",
+      "agency": "Centrala studiestödsnämnden",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/centrala-studiestodsnamndens-forfattningssamling-csnfs/"
+    },
+    {
+      "series": "DVFS",
+      "agency": "Domstolsverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/domstolsverkets-forfattningssamling-dvfs/"
+    },
+    {
+      "series": "EIFS",
+      "agency": "Energimarknadsinspektionen",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/energimarknadsinspektionens-forfattningssamling-eifs/"
+    },
+    {
+      "series": "FFS",
+      "agency": "Försvarsmakten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/forsvarets-forfattningssamling-ffs/"
+    },
+    {
+      "series": "FKFS",
+      "agency": "Försäkringskassan",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/forsakringskassans-forfattningssamling-fkfs/"
+    },
+    {
+      "series": "HSLF-FS",
+      "agency": "Socialstyrelsen and other health and social-care agencies",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/gemensamma-forfattningssamlingen-avseende-halso-och-sjukvard-socialtjanst-lakemedel-folkhalsa-m-m-hslf-fs/"
+    },
+    {
+      "series": "HVMFS",
+      "agency": "Havs- och vattenmyndigheten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/havs-och-vattenmyndighetens-forfattningssamling-hvmfs/"
+    },
+    {
+      "series": "IAFFS",
+      "agency": "Inspektionen för arbetslöshetsförsäkringen",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/inspektionen-for-arbetsloshetsforsakringens-forfattningssamling-iaffs/"
+    },
+    {
+      "series": "IMYFS",
+      "agency": "Integritetsskyddsmyndigheten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/integritetsskyddsmyndighetens-forfattningssamling-imyfs/"
+    },
+    {
+      "series": "KAMFS",
+      "agency": "Kammarkollegiet",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kammarkollegiets-forfattningssamling-kamfs/"
+    },
+    {
+      "series": "KBVFS",
+      "agency": "Kustbevakningen",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kustbevakningens-forfattningssamling-kbvfs/"
+    },
+    {
+      "series": "KFMFS",
+      "agency": "Kronofogdemyndigheten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kronofogdemyndighetens-forfattningssamling-kfmfs/"
+    },
+    {
+      "series": "KFS",
+      "agency": "Kommerskollegium",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kommerskollegiums-forfattningssamling-kfs/"
+    },
+    {
+      "series": "KIFS",
+      "agency": "Kemikalieinspektionen",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kemikalieinspektionens-forfattningssamling-kifs/"
+    },
+    {
+      "series": "KKVFS",
+      "agency": "Konkurrensverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/konkurrensverkets-forfattningssamling-kkvfs/"
+    },
+    {
+      "series": "KOVFS",
+      "agency": "Konsumentverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/konsumentverkets-forfattningssamling-kovfs/"
+    },
+    {
+      "series": "KRFS",
+      "agency": "Statens kulturråd",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-kulturrads-forfattningssamling-krfs/"
+    },
+    {
+      "series": "KVFS",
+      "agency": "Kriminalvården",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kriminalvardens-forfattningssamling-kvfs/"
+    },
+    {
+      "series": "LIVSFS",
+      "agency": "Livsmedelsverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/livsmedelsverkets-forfattningssamling-livsfs/"
+    },
+    {
+      "series": "LMFS",
+      "agency": "Lantmäteriet",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/lantmateriets-forfattningssamling-lmfs/"
+    },
+    {
+      "series": "MCFFS",
+      "agency": "Myndigheten för civilt försvar",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-civilt-forsvars-forfattningssamling-mcffs/"
+    },
+    {
+      "series": "MDFFS",
+      "agency": "Myndigheten för digital förvaltning",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs-2/"
+    },
+    {
+      "series": "MEMYFS",
+      "agency": "Mediemyndigheten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/mediemyndighetens-forfattningssamling-memyfs/"
+    },
+    {
+      "series": "MIGRFS",
+      "agency": "Migrationsverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": "robots.txt (checked 2026-10-29) allows the regulation pages. Proposed as a next series on #115.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/migrationsverkets-forfattningssamling-migrfs/"
+    },
+    {
+      "series": "MTFS",
+      "agency": "Myndigheten för tillväxtpolitiska utvärderingar och analyser",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-tillvaxtpolitiska-utvarderingar-och-analysers-forfattningssamling-mtfs/"
+    },
+    {
+      "series": "MYHFS",
+      "agency": "Myndigheten för yrkeshögskolan",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-yrkeshogskolans-forfattningssamling-myhfs/"
+    },
+    {
+      "series": "NFS",
+      "agency": "Naturvårdsverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/naturvardsverkets-forfattningssamling-nfs/"
+    },
+    {
+      "series": "PMFS",
+      "agency": "Polismyndigheten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/polismyndighetens-forfattningssamling-pmfs/"
+    },
+    {
+      "series": "PRVFS",
+      "agency": "Patent- och registreringsverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/patent-och-registreringsverkets-forfattningssamling-prvfs/"
+    },
+    {
+      "series": "PTSFS",
+      "agency": "Post- och telestyrelsen",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/post-och-telestyrelsens-forfattningssamling-ptsfs/"
+    },
+    {
+      "series": "RA-FS",
+      "agency": "Riksarkivet",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/riksarkivets-forfattningssamling-ra-fs/"
+    },
+    {
+      "series": "RFS",
+      "agency": "Riksdagsförvaltningen",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/riksdagsforvaltningens-forfattningssamling-rfs/"
+    },
+    {
+      "series": "RGKFS",
+      "agency": "Riksgäldskontoret",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/riksgaldskontorets-forfattningssamling-rgkfs/"
+    },
+    {
+      "series": "RIFS",
+      "agency": "Revisorsinspektionen",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/revisorsinspektionens-forfattningssamling-rifs/"
+    },
+    {
+      "series": "SCB-FS",
+      "agency": "Statistiska centralbyrån",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/statistiska-centralbyrans-forfattningssamling-scb-fs/"
+    },
+    {
+      "series": "SGU-FS",
+      "agency": "Sveriges geologiska undersökning",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/sveriges-geologiska-undersoknings-forfattningssamling-sgu-fs/"
+    },
+    {
+      "series": "SIFS",
+      "agency": "Spelinspektionen",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/spelinspektionens-forfattningssamling-sifs/"
+    },
+    {
+      "series": "SJVFS",
+      "agency": "Statens jordbruksverk",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-jordbruksverks-forfattningssamling-sjvfs/"
+    },
+    {
+      "series": "SJÖFS",
+      "agency": "Sjöfartsverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/sjofartsverkets-forfattningssamling-sjofs/"
+    },
+    {
+      "series": "SKOLFS",
+      "agency": "Statens skolverk",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-skolverks-forfattningssamling-skolfs/"
+    },
+    {
+      "series": "SKSFS",
+      "agency": "Skogsstyrelsen",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/skogsstyrelsens-forfattningssamling-sksfs/"
+    },
+    {
+      "series": "SKVFS",
+      "agency": "Skatteverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": "An earlier robots.txt request was rejected by a WAF; on 2026-10-29 robots.txt answered normally and allows the regulation pages. Proposed as a next series on #115.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/skatteverkets-forfattningssamling-skvfs/"
+    },
+    {
+      "series": "SSMFS",
+      "agency": "Strålsäkerhetsmyndigheten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/stralsakerhetsmyndighetens-forfattningssamling-ssmfs/"
+    },
+    {
+      "series": "STAFS",
+      "agency": "Styrelsen för ackreditering och teknisk kontroll (Swedac)",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/styrelsens-for-ackreditering-och-teknisk-kontroll-swedac-forfattningssamling-stafs/"
+    },
+    {
+      "series": "STEMFS",
+      "agency": "Statens energimyndighet",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-energimyndighets-forfattningssamling-stemfs/"
+    },
+    {
+      "series": "STFS",
+      "agency": "Sametinget",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/sametingets-forfattningssamling-stfs/"
+    },
+    {
+      "series": "SiSFS",
+      "agency": "Statens institutionsstyrelse",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-institutionsstyrelses-forfattningssamling-sisfs/"
+    },
+    {
+      "series": "SvKFS",
+      "agency": "Affärsverket svenska kraftnät",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/svenska-kraftnats-forfattningssamling-svkfs/"
+    },
+    {
+      "series": "TFS",
+      "agency": "Tullverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/tullverkets-forfattningssamling-tfs/"
+    },
+    {
+      "series": "TPPVFS",
+      "agency": "Totalförsvarets plikt- och prövningsverk",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/totalforsvarets-plikt-och-provningsverks-forfattningssamling-tppvfs/"
+    },
+    {
+      "series": "TRVFS",
+      "agency": "Trafikverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/trafikverkets-forfattningssamling-trvfs/"
+    },
+    {
+      "series": "TVFS",
+      "agency": "Tillväxtverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/tillvaxtverkets-forfattningssamling-tvfs/"
+    },
+    {
+      "series": "UFS",
+      "agency": "Upphandlingsmyndigheten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/upphandlingmyndighetens-forfattningssamling-ufs/"
+    },
+    {
+      "series": "UHRFS",
+      "agency": "Universitets- och högskolerådet",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/universitets-och-hogskoleradets-forfattningssamling-uhrfs/"
+    },
+    {
+      "series": "VALFS",
+      "agency": "Valmyndigheten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/valmyndighetens-forfattningssamling-valfs/"
+    },
+    {
+      "series": "VRFS",
+      "agency": "Vetenskapsrådet",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/vetenskapsradets-forfattningssamling-vrfs/"
+    },
+    {
+      "series": "ÅFS",
+      "agency": "Åklagarmyndigheten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "lagrummet": "https://www.lagrummet.se/rattskalla/aklagarmyndighetens-forfattningssamling-afs/"
+    },
+    {
+      "series": "STFS",
+      "agency": "Transportstyrelsen (local traffic regulations)",
+      "status": "out_of_scope",
+      "documents": 0,
+      "target": null,
+      "note": "Local traffic regulations; out of scope for the county layer (COVERAGE.md).",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/svensk-trafikforeskriftssamling-stfs/"
+    }
+  ],
+  "shared_series": [
+    {
+      "agency": "Allmänna reklamationsnämnden",
+      "published_in": "KOVFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/allmanna-reklamationsnamnden-publiceras-i-konsumentverkets-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "E-hälsomyndigheten",
+      "published_in": "HSLF-FS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/e-halsomyndighetens-foreskrifter-i-gemensamma-forfattningssamlingen-hslf-fs/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Etikprövningsmyndigheten",
+      "published_in": "VRFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/etikprovningsmyndighetens-foreskrifter-publiceras-i-vetenskapsradets-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Fastighetsmäklarinspektionen",
+      "published_in": "KAMFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/fastighetsmaklarinspektionens-foreskrifter-publiceras-i-kammarkollegiets-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Folkhälsomyndigheten",
+      "published_in": "HSLF-FS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/folkhalsomyndighetens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Inspektionen för strategiska produkter",
+      "published_in": "TFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/inspektionen-for-strategiska-produkters-foreskrifter-publiceras-i-tullverkets-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Inspektionen för vård och omsorg",
+      "published_in": "HSLF-FS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/inspektionen-for-vard-och-omsorgs-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Luftfartsverket",
+      "published_in": "TSFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/luftfartsverkets-foreskrifter-publiceras-i-transportstyrelsens-serie/",
+      "status": "collected_pdf"
+    },
+    {
+      "agency": "Läkemedelsverket",
+      "published_in": "HSLF-FS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/lakemedelsverkets-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Medlingsinstitutet",
+      "published_in": "SCB-FS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/medlingsinstitutets-foreskrifter-publiceras-i-statistiska-centralbyrans-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Myndigheten för familjerätt och föräldraskapsstöd",
+      "published_in": "HSLF-FS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-familjeratt-och-foraldraskapsstods-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Myndigheten för stöd till trossamfund",
+      "published_in": "KAMFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-stod-till-trossamfunds-foreskrifter-publiceras-i-kammarkollegiets-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Notarienämnden",
+      "published_in": "DVFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/notarienamndens-foreskrifter-publiceras-i-domstolsverkets-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Patentombudsnämnden",
+      "published_in": "BOLFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/patentombudsnamndens-foreskrifter-publiceras-i-bolagsverkets-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Riksantikvarieämbetet",
+      "published_in": "KRFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/riksantikvarieambetets-foreskrifter-publiceras-i-statens-kulturrads-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Rättsmedicinalverket",
+      "published_in": "HSLF-FS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/rattsmedicinalverkets-foreskrifter-i-gemensamma-forfattningssamlingen-hslf-fs/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Rådet för Europeiska socialfonden i Sverige",
+      "published_in": "TVFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/radet-for-europeiska-socialfonden-i-sveriges-foreskrifter-publiceras-i-tillvaxtverkets-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Socialstyrelsen",
+      "published_in": "HSLF-FS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/socialstyrelsens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Specialpedagogiska skolmyndigheten",
+      "published_in": "SKOLFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/specialpedagogiska-skolmyndighetens-foreskrifter-publiceras-i-statens-skolverks-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Statens skolinspektion",
+      "published_in": "SKOLFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-skolinspektions-foreskrifter-publiceras-i-statens-skolverks-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Statens tjänstepensionsverk",
+      "published_in": "AGVFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-tjanstepensionsverks-foreskrifter-publiceras-i-arbetsgivarverkets-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Säkerhetspolisen",
+      "published_in": "PMFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/sakerhetspolisens-foreskrifter-publiceras-i-polismyndighetens-serie/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Tandvårds- och läkemedelsförmånsverket",
+      "published_in": "HSLF-FS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/tandvards-och-lakemedelsformansverkets-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
+      "status": "no_adapter"
+    },
+    {
+      "agency": "Trafikanalys",
+      "published_in": "KAMFS",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/trafikanalys-foreskrifter-publiceras-i-kammarkollegiets-serie/",
+      "status": "no_adapter"
+    }
+  ],
+  "counties": [
+    {
+      "code": "01",
+      "county": "Stockholms län",
+      "series": "01FS",
+      "status": "partial",
+      "documents": 80,
+      "years": "2025–2026",
+      "text": "HTML text",
+      "landing": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/stockholms-lans-forfattningssamling-01fs/"
+    },
+    {
+      "code": "03",
+      "county": "Uppsala län",
+      "series": "03FS",
+      "status": "partial",
+      "documents": 25,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/uppsala-lans-forfattningssamling-03fs/"
+    },
+    {
+      "code": "04",
+      "county": "Södermanlands län",
+      "series": "04FS",
+      "status": "partial",
+      "documents": 14,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/sodermanland/om-oss/om-lansstyrelsen-i-sodermanlands-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/sodermanlands-lans-forfattningssamling-04fs/"
+    },
+    {
+      "code": "05",
+      "county": "Östergötlands län",
+      "series": "05FS",
+      "status": "partial",
+      "documents": 43,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/ostergotlands-lans-forfattningssamling-05fs/"
+    },
+    {
+      "code": "06",
+      "county": "Jönköpings län",
+      "series": "06FS",
+      "status": "partial",
+      "documents": 21,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/jonkopings-lans-forfattningssamling-06fs/"
+    },
+    {
+      "code": "07",
+      "county": "Kronobergs län",
+      "series": "07FS",
+      "status": "partial",
+      "documents": 13,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/kronoberg/om-oss/om-lansstyrelsen-i-kronobergs-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kronobergs-lans-forfattningssamling-07fs/"
+    },
+    {
+      "code": "08",
+      "county": "Kalmar län",
+      "series": "08FS",
+      "status": "partial",
+      "documents": 28,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kalmars-lans-forfattningssamling-08fs/"
+    },
+    {
+      "code": "09",
+      "county": "Gotlands län",
+      "series": "09FS",
+      "status": "partial",
+      "documents": 7,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/gotlands-lans-forfattningssamling-09fs/"
+    },
+    {
+      "code": "10",
+      "county": "Blekinge län",
+      "series": "10FS",
+      "status": "partial",
+      "documents": 48,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/blekinge-lans-forfattningssamling-10fs/"
+    },
+    {
+      "code": "12",
+      "county": "Skåne län",
+      "series": "12FS",
+      "status": "partial",
+      "documents": 38,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/skane-lans-forfattningssamling-12fs/"
+    },
+    {
+      "code": "13",
+      "county": "Hallands län",
+      "series": "13FS",
+      "status": "partial",
+      "documents": 15,
+      "years": "2025–2026",
+      "text": "HTML text",
+      "landing": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/hallands-lans-forfattningssamling-13fs/"
+    },
+    {
+      "code": "14",
+      "county": "Västra Götalands län",
+      "series": "14FS",
+      "status": "partial",
+      "documents": 56,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/vastra-gotalands-lans-forfattningssamling-14fs/"
+    },
+    {
+      "code": "17",
+      "county": "Värmlands län",
+      "series": "17FS",
+      "status": "partial",
+      "documents": 14,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/varmland/om-oss/om-lansstyrelsen-varmland/forfattningar.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/varmlands-lans-forfattningssamling-17fs/"
+    },
+    {
+      "code": "18",
+      "county": "Örebro län",
+      "series": "18FS",
+      "status": "partial",
+      "documents": 23,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/orebro/om-oss/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/orebro-lans-forfattningssamling-18fs/"
+    },
+    {
+      "code": "19",
+      "county": "Västmanlands län",
+      "series": "19FS",
+      "status": "partial",
+      "documents": 11,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/vastmanlands-lans-forfattningssamling-19fs/"
+    },
+    {
+      "code": "20",
+      "county": "Dalarnas län",
+      "series": "20FS",
+      "status": "partial",
+      "documents": 34,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/dalarna/om-oss/om-lansstyrelsen-i-dalarnas-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/dalarnas-lans-forfattningssamling-20fs/"
+    },
+    {
+      "code": "21",
+      "county": "Gävleborgs län",
+      "series": "21FS",
+      "status": "partial",
+      "documents": 15,
+      "years": "2025–2026",
+      "text": "HTML text",
+      "landing": "https://www.lansstyrelsen.se/gavleborg/om-oss/om-lansstyrelsen-i-gavleborgs-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/gavleborgs-lans-forfattningssamling-21fs/"
+    },
+    {
+      "code": "22",
+      "county": "Västernorrlands län",
+      "series": "22FS",
+      "status": "partial",
+      "documents": 14,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/vasternorrlands-lans-forfattningssamling-22fs/"
+    },
+    {
+      "code": "23",
+      "county": "Jämtlands län",
+      "series": "23FS",
+      "status": "partial",
+      "documents": 28,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/jamtlands-lans-forfattningssamling-23fs/"
+    },
+    {
+      "code": "24",
+      "county": "Västerbottens län",
+      "series": "24FS",
+      "status": "partial",
+      "documents": 45,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/vasterbottens-lans-forfattningssamling-24fs/"
+    },
+    {
+      "code": "25",
+      "county": "Norrbottens län",
+      "series": "25FS",
+      "status": "partial",
+      "documents": 58,
+      "years": "2025–2026",
+      "text": "PDF links only",
+      "landing": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/norrbottens-lans-forfattningssamling-25fs/"
+    }
+  ],
+  "municipalities": {
+    "configured": [
+      {
+        "code": "0180",
+        "kommun": "Stockholm",
+        "collection": "Stockholms stads kommunala författningssamling (KFS)",
+        "status": "partial",
+        "documents": 5,
+        "note": null
+      },
+      {
+        "code": "1280",
+        "kommun": "Malmö",
+        "collection": "Malmö stads författningssamling",
+        "status": "partial",
+        "documents": 5,
+        "note": "5 documents not fetched: robots.txt disallows the document URL"
+      },
+      {
+        "code": "1480",
+        "kommun": "Göteborg",
+        "collection": "Göteborgs Stads styrande dokument (Forfattn.nsf)",
+        "status": "partial",
+        "documents": 5,
+        "note": null
+      }
+    ],
+    "not_configured": [
+      {
+        "region_code": "01",
+        "county": "Stockholms län",
+        "kommuner": [
+          "Upplands Väsby",
+          "Vallentuna",
+          "Österåker",
+          "Värmdö",
+          "Järfälla",
+          "Ekerö",
+          "Huddinge",
+          "Botkyrka",
+          "Salem",
+          "Haninge",
+          "Tyresö",
+          "Upplands-Bro",
+          "Nykvarn",
+          "Täby",
+          "Danderyd",
+          "Sollentuna",
+          "Södertälje",
+          "Nacka",
+          "Sundbyberg",
+          "Solna",
+          "Lidingö",
+          "Vaxholm",
+          "Norrtälje",
+          "Sigtuna",
+          "Nynäshamn"
+        ]
+      },
+      {
+        "region_code": "03",
+        "county": "Uppsala län",
+        "kommuner": [
+          "Håbo",
+          "Älvkarleby",
+          "Knivsta",
+          "Heby",
+          "Tierp",
+          "Uppsala",
+          "Enköping",
+          "Östhammar"
+        ]
+      },
+      {
+        "region_code": "04",
+        "county": "Södermanlands län",
+        "kommuner": [
+          "Vingåker",
+          "Gnesta",
+          "Nyköping",
+          "Oxelösund",
+          "Flen",
+          "Katrineholm",
+          "Eskilstuna",
+          "Strängnäs",
+          "Trosa"
+        ]
+      },
+      {
+        "region_code": "05",
+        "county": "Östergötlands län",
+        "kommuner": [
+          "Ödeshög",
+          "Ydre",
+          "Kinda",
+          "Boxholm",
+          "Åtvidaberg",
+          "Finspång",
+          "Valdemarsvik",
+          "Linköping",
+          "Norrköping",
+          "Söderköping",
+          "Motala",
+          "Vadstena",
+          "Mjölby"
+        ]
+      },
+      {
+        "region_code": "06",
+        "county": "Jönköpings län",
+        "kommuner": [
+          "Aneby",
+          "Gnosjö",
+          "Mullsjö",
+          "Habo",
+          "Gislaved",
+          "Vaggeryd",
+          "Jönköping",
+          "Nässjö",
+          "Värnamo",
+          "Sävsjö",
+          "Vetlanda",
+          "Eksjö",
+          "Tranås"
+        ]
+      },
+      {
+        "region_code": "07",
+        "county": "Kronobergs län",
+        "kommuner": [
+          "Uppvidinge",
+          "Lessebo",
+          "Tingsryd",
+          "Alvesta",
+          "Älmhult",
+          "Markaryd",
+          "Växjö",
+          "Ljungby"
+        ]
+      },
+      {
+        "region_code": "08",
+        "county": "Kalmar län",
+        "kommuner": [
+          "Högsby",
+          "Torsås",
+          "Mörbylånga",
+          "Hultsfred",
+          "Mönsterås",
+          "Emmaboda",
+          "Kalmar",
+          "Nybro",
+          "Oskarshamn",
+          "Västervik",
+          "Vimmerby",
+          "Borgholm"
+        ]
+      },
+      {
+        "region_code": "09",
+        "county": "Gotlands län",
+        "kommuner": [
+          "Gotland"
+        ]
+      },
+      {
+        "region_code": "10",
+        "county": "Blekinge län",
+        "kommuner": [
+          "Olofström",
+          "Karlskrona",
+          "Ronneby",
+          "Karlshamn",
+          "Sölvesborg"
+        ]
+      },
+      {
+        "region_code": "12",
+        "county": "Skåne län",
+        "kommuner": [
+          "Svalöv",
+          "Staffanstorp",
+          "Burlöv",
+          "Vellinge",
+          "Östra Göinge",
+          "Örkelljunga",
+          "Bjuv",
+          "Kävlinge",
+          "Lomma",
+          "Svedala",
+          "Skurup",
+          "Sjöbo",
+          "Hörby",
+          "Höör",
+          "Tomelilla",
+          "Bromölla",
+          "Osby",
+          "Perstorp",
+          "Klippan",
+          "Åstorp",
+          "Båstad",
+          "Lund",
+          "Landskrona",
+          "Helsingborg",
+          "Höganäs",
+          "Eslöv",
+          "Ystad",
+          "Trelleborg",
+          "Kristianstad",
+          "Simrishamn",
+          "Ängelholm",
+          "Hässleholm"
+        ]
+      },
+      {
+        "region_code": "13",
+        "county": "Hallands län",
+        "kommuner": [
+          "Hylte",
+          "Halmstad",
+          "Laholm",
+          "Falkenberg",
+          "Varberg",
+          "Kungsbacka"
+        ]
+      },
+      {
+        "region_code": "14",
+        "county": "Västra Götalands län",
+        "kommuner": [
+          "Härryda",
+          "Partille",
+          "Öckerö",
+          "Stenungsund",
+          "Tjörn",
+          "Orust",
+          "Sotenäs",
+          "Munkedal",
+          "Tanum",
+          "Dals-Ed",
+          "Färgelanda",
+          "Ale",
+          "Lerum",
+          "Vårgårda",
+          "Bollebygd",
+          "Grästorp",
+          "Essunga",
+          "Karlsborg",
+          "Gullspång",
+          "Tranemo",
+          "Bengtsfors",
+          "Mellerud",
+          "Lilla Edet",
+          "Mark",
+          "Svenljunga",
+          "Herrljunga",
+          "Vara",
+          "Götene",
+          "Tibro",
+          "Töreboda",
+          "Mölndal",
+          "Kungälv",
+          "Lysekil",
+          "Uddevalla",
+          "Strömstad",
+          "Vänersborg",
+          "Trollhättan",
+          "Alingsås",
+          "Borås",
+          "Ulricehamn",
+          "Åmål",
+          "Mariestad",
+          "Lidköping",
+          "Skara",
+          "Skövde",
+          "Hjo",
+          "Tidaholm",
+          "Falköping"
+        ]
+      },
+      {
+        "region_code": "17",
+        "county": "Värmlands län",
+        "kommuner": [
+          "Kil",
+          "Eda",
+          "Torsby",
+          "Storfors",
+          "Hammarö",
+          "Munkfors",
+          "Forshaga",
+          "Grums",
+          "Årjäng",
+          "Sunne",
+          "Karlstad",
+          "Kristinehamn",
+          "Filipstad",
+          "Hagfors",
+          "Arvika",
+          "Säffle"
+        ]
+      },
+      {
+        "region_code": "18",
+        "county": "Örebro län",
+        "kommuner": [
+          "Lekeberg",
+          "Laxå",
+          "Hallsberg",
+          "Degerfors",
+          "Hällefors",
+          "Ljusnarsberg",
+          "Örebro",
+          "Kumla",
+          "Askersund",
+          "Karlskoga",
+          "Nora",
+          "Lindesberg"
+        ]
+      },
+      {
+        "region_code": "19",
+        "county": "Västmanlands län",
+        "kommuner": [
+          "Skinnskatteberg",
+          "Surahammar",
+          "Kungsör",
+          "Hallstahammar",
+          "Norberg",
+          "Västerås",
+          "Sala",
+          "Fagersta",
+          "Köping",
+          "Arboga"
+        ]
+      },
+      {
+        "region_code": "20",
+        "county": "Dalarnas län",
+        "kommuner": [
+          "Vansbro",
+          "Malung-Sälen",
+          "Gagnef",
+          "Leksand",
+          "Rättvik",
+          "Orsa",
+          "Älvdalen",
+          "Smedjebacken",
+          "Mora",
+          "Falun",
+          "Borlänge",
+          "Säter",
+          "Hedemora",
+          "Avesta",
+          "Ludvika"
+        ]
+      },
+      {
+        "region_code": "21",
+        "county": "Gävleborgs län",
+        "kommuner": [
+          "Ockelbo",
+          "Hofors",
+          "Ovanåker",
+          "Nordanstig",
+          "Ljusdal",
+          "Gävle",
+          "Sandviken",
+          "Söderhamn",
+          "Bollnäs",
+          "Hudiksvall"
+        ]
+      },
+      {
+        "region_code": "22",
+        "county": "Västernorrlands län",
+        "kommuner": [
+          "Ånge",
+          "Timrå",
+          "Härnösand",
+          "Sundsvall",
+          "Kramfors",
+          "Sollefteå",
+          "Örnsköldsvik"
+        ]
+      },
+      {
+        "region_code": "23",
+        "county": "Jämtlands län",
+        "kommuner": [
+          "Ragunda",
+          "Bräcke",
+          "Krokom",
+          "Strömsund",
+          "Åre",
+          "Berg",
+          "Härjedalen",
+          "Östersund"
+        ]
+      },
+      {
+        "region_code": "24",
+        "county": "Västerbottens län",
+        "kommuner": [
+          "Nordmaling",
+          "Bjurholm",
+          "Vindeln",
+          "Robertsfors",
+          "Norsjö",
+          "Malå",
+          "Storuman",
+          "Sorsele",
+          "Dorotea",
+          "Vännäs",
+          "Vilhelmina",
+          "Åsele",
+          "Umeå",
+          "Lycksele",
+          "Skellefteå"
+        ]
+      },
+      {
+        "region_code": "25",
+        "county": "Norrbottens län",
+        "kommuner": [
+          "Arvidsjaur",
+          "Arjeplog",
+          "Jokkmokk",
+          "Överkalix",
+          "Kalix",
+          "Övertorneå",
+          "Pajala",
+          "Gällivare",
+          "Älvsbyn",
+          "Luleå",
+          "Piteå",
+          "Boden",
+          "Haparanda",
+          "Kiruna"
+        ]
+      }
+    ]
+  },
+  "courts": [
+    {
+      "code": "HDO",
+      "court": "Högsta domstolen",
+      "documents": 5262
+    },
+    {
+      "code": "ADO",
+      "court": "Arbetsdomstolen",
+      "documents": 2035
+    },
+    {
+      "code": "REGR",
+      "court": "Regeringsrätten",
+      "documents": 1726
+    },
+    {
+      "code": "HSV",
+      "court": "Svea hovrätt",
+      "documents": 1388
+    },
+    {
+      "code": "HFD",
+      "court": "Högsta förvaltningsdomstolen",
+      "documents": 1231
+    },
+    {
+      "code": "MMOD",
+      "court": "Mark- och miljööverdomstolen",
+      "documents": 730
+    },
+    {
+      "code": "MOD",
+      "court": "Miljööverdomstolen",
+      "documents": 709
+    },
+    {
+      "code": "HVS",
+      "court": "Hovrätten för Västra Sverige",
+      "documents": 627
+    },
+    {
+      "code": "MIOD",
+      "court": "Migrationsöverdomstolen",
+      "documents": 534
+    },
+    {
+      "code": "HSB",
+      "court": "Hovrätten över Skåne och Blekinge",
+      "documents": 510
+    },
+    {
+      "code": "HGO",
+      "court": "Göta hovrätt",
+      "documents": 447
+    },
+    {
+      "code": "MDO",
+      "court": "Marknadsdomstolen",
+      "documents": 343
+    },
+    {
+      "code": "HYOD",
+      "court": "Svea hovrätts hyresrättsliga avgöranden",
+      "documents": 244
+    },
+    {
+      "code": "PMOD",
+      "court": "Patent- och marknadsöverdomstolen",
+      "documents": 203
+    },
+    {
+      "code": "HNN",
+      "court": "Hovrätten för Nedre Norrland",
+      "documents": 200
+    },
+    {
+      "code": "HON",
+      "court": "Hovrätten för Övre Norrland",
+      "documents": 168
+    },
+    {
+      "code": "KST",
+      "court": "Kammarrätten i Stockholm",
+      "documents": 33
+    }
+  ],
+  "layers": {
+    "sfs": 11428,
+    "fundamental": 4,
+    "eu": 70,
+    "case_law": 16390
+  },
+  "other_sources": [
+    {
+      "name": "Rättspraxis (Sveriges Domstolar)",
+      "layer": "case_law",
+      "status": "collected",
+      "note": "Referat and notiser; synced daily.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/sok-rattspraxis/"
+    },
+    {
+      "name": "SFS in full text (Riksdagen open data)",
+      "layer": "sfs",
+      "status": "collected",
+      "note": "Collected from Riksdagen open data; synced daily.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/svensk-forfattningssamling-sfs-i-fulltext/"
+    },
+    {
+      "name": "SFS on svenskforfattningssamling.se (authoritative PDFs)",
+      "layer": "sfs",
+      "status": "partial",
+      "note": "SHA-256 manifest of the authoritative PDFs: a sample so far; PDF text is never extracted.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se/"
+    },
+    {
+      "name": "SFS register (SFSR)",
+      "layer": "sfs",
+      "status": "partial",
+      "note": "Amendment register: pilot statutes only.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/register-over-svensk-forfattningssamling-sfs/"
+    },
+    {
+      "name": "EUR-Lex",
+      "layer": "eu",
+      "status": "blocked",
+      "note": "Answers automated clients with an AWS WAF challenge; never used. EU texts come from the Publications Office Cellar.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/eur-lex/"
+    },
+    {
+      "name": "Court of Justice of the European Union",
+      "layer": "eu",
+      "status": "no_adapter",
+      "note": "EU case law is not collected.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/eu-domstolen/"
+    },
+    {
+      "name": "Sveriges internationella överenskommelser (SÖ)",
+      "layer": "sfs",
+      "status": "no_adapter",
+      "note": "Treaties are not collected.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/sveriges-internationella-overenskommelser-so/"
+    },
+    {
+      "name": "Transportstyrelsen (other publications)",
+      "layer": "agency",
+      "status": "out_of_scope",
+      "note": "Overview page; the TSFS series is listed separately.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/transportstyrelsen/"
+    },
+    {
+      "name": "European Court of Human Rights",
+      "layer": "case_law",
+      "status": "out_of_scope",
+      "note": "Not Swedish case law.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/europadomstolen/"
+    },
+    {
+      "name": "Betänkanden",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/betankanden/"
+    },
+    {
+      "name": "Brottsoffermyndigheten (beslut)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/brottsoffermyndigheten/"
+    },
+    {
+      "name": "Brottsoffermyndighetens referatsamling",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/brottsoffermyndighetens-referatsamling/"
+    },
+    {
+      "name": "Departementsserien (Ds)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/departementsserien-ds/"
+    },
+    {
+      "name": "Framställningar och redogörelser",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/framstallningar-och-redogorelser/"
+    },
+    {
+      "name": "Förordningsmotiv",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/forordningsmotiv/"
+    },
+    {
+      "name": "Förordningsmotiv (söktjänst)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/forordningsmotiv-soktjanst/"
+    },
+    {
+      "name": "Justitiekanslerns beslut och yttranden",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/justitiekanslerns-beslut-och-yttranden/"
+    },
+    {
+      "name": "Kommittédirektiv",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kommittedirektiv/"
+    },
+    {
+      "name": "Kommittédirektiv (rättsdatabas)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kommittedirektiv-rattsdatabas/"
+    },
+    {
+      "name": "Kommittédirektiv (söktjänst)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kommittedirektiv-soktjanst-2/"
+    },
+    {
+      "name": "Kommittéregistret",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/kommitteregistret/"
+    },
+    {
+      "name": "Lagrådets yttranden",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/lagradets-yttranden/"
+    },
+    {
+      "name": "Lagrådsremisser",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/lagradsremisser/"
+    },
+    {
+      "name": "Mediemyndighetens webbdiarium",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/mediemyndighetens-webbdiarium/"
+    },
+    {
+      "name": "Motioner",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/motioner/"
+    },
+    {
+      "name": "Notarienämndens beslut",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/notarienamndens-beslut/"
+    },
+    {
+      "name": "Propositioner och skrivelser",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/propositioner-och-skrivelser/"
+    },
+    {
+      "name": "Propositioner och skrivelser (PDF)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/propositioner-och-skrivelser-i-pdf/"
+    },
+    {
+      "name": "Propositioner och skrivelser, äldre",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/propositioner-och-skrivelser-aldre/"
+    },
+    {
+      "name": "Riksdagens ombudsmäns (JO) beslut",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/riksdagens-ombudmans-jo-beslut/"
+    },
+    {
+      "name": "Riksdagens protokoll",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/protokoll/"
+    },
+    {
+      "name": "Riksdagsskrivelser",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/riksdagsskrivelser/"
+    },
+    {
+      "name": "Rättshjälpsnämndens vägledande beslut",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/rattshjalpsnamndens-vagledande-beslut/"
+    },
+    {
+      "name": "Statens offentliga utredningar (SOU)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-offentliga-utredningar-sou/"
+    },
+    {
+      "name": "Statens offentliga utredningar (SOU), äldre",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-offentliga-utredningar-sou-aldre/"
+    },
+    {
+      "name": "Transportstyrelsens beslut i överklagandeärenden om trafikreglering",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/transportstyrelsens-beslut-i-overklagningsarenden-om-trafikreglering/"
+    },
+    {
+      "name": "Yttranden från utskott",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/yttranden-fran-utskott/"
+    },
+    {
+      "name": "Överklagandenämnden för etikprövnings beslut",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/overklagandenamnden-for-etikprovnings-beslut/"
+    },
+    {
+      "name": "Överklagandenämnden för högskolans avgöranden",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/overklagandenamnden-for-hogskolans-avgoranden/"
+    },
+    {
+      "name": "Överklagandenämnden för nämndemannauppdrags beslut",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/overklagandenamnden-for-namndemannauppdrags-beslut/"
+    },
+    {
+      "name": "Överklagandenämnden för studiestöds avgöranden",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/overklagandenamnden-for-studiestods-avgoranden/"
+    },
+    {
+      "name": "SFS in print",
+      "layer": "sfs",
+      "status": "out_of_scope",
+      "note": "Printed volumes; older print-only acts are stubs.",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/svensk-forfattningssamling-sfs-i-tryckt-format/"
+    }
+  ],
+  "unclassified": [
+    {
+      "slug": "125",
+      "status": "unclassified",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/125/"
+    },
+    {
+      "slug": "618",
+      "status": "unclassified",
+      "lagrummet": "https://www.lagrummet.se/rattskalla/618/"
+    }
+  ]
+}

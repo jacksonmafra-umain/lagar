@@ -1,0 +1,640 @@
+{
+  "version": 1,
+  "series": {
+    "arbetsmiljoverkets-forfattningssamling-afs": {
+      "series": "AFS",
+      "agency": "Arbetsmiljöverket",
+      "status": "collected",
+      "note": "Consolidated text from Arbetsmiljöverket's HTML pages; robots.txt disallows the original PDFs, which are never requested."
+    },
+    "bolagsverkets-forfattningssamling-bolfs": {
+      "series": "BOLFS",
+      "agency": "Bolagsverket"
+    },
+    "centrala-studiestodsnamndens-forfattningssamling-csnfs": {
+      "series": "CSNFS",
+      "agency": "Centrala studiestödsnämnden"
+    },
+    "energimarknadsinspektionens-forfattningssamling-eifs": {
+      "series": "EIFS",
+      "agency": "Energimarknadsinspektionen"
+    },
+    "statistiska-centralbyrans-forfattningssamling-scb-fs": {
+      "series": "SCB-FS",
+      "agency": "Statistiska centralbyrån"
+    },
+    "aklagarmyndighetens-forfattningssamling-afs": {
+      "series": "ÅFS",
+      "agency": "Åklagarmyndigheten"
+    },
+    "myndigheten-for-yrkeshogskolans-forfattningssamling-myhfs": {
+      "series": "MYHFS",
+      "agency": "Myndigheten för yrkeshögskolan"
+    },
+    "livsmedelsverkets-forfattningssamling-livsfs": {
+      "series": "LIVSFS",
+      "agency": "Livsmedelsverket"
+    },
+    "mediemyndighetens-forfattningssamling-memyfs": {
+      "series": "MEMYFS",
+      "agency": "Mediemyndigheten"
+    },
+    "sveriges-geologiska-undersoknings-forfattningssamling-sgu-fs": {
+      "series": "SGU-FS",
+      "agency": "Sveriges geologiska undersökning"
+    },
+    "kustbevakningens-forfattningssamling-kbvfs": {
+      "series": "KBVFS",
+      "agency": "Kustbevakningen"
+    },
+    "statens-energimyndighets-forfattningssamling-stemfs": {
+      "series": "STEMFS",
+      "agency": "Statens energimyndighet"
+    },
+    "styrelsens-for-ackreditering-och-teknisk-kontroll-swedac-forfattningssamling-stafs": {
+      "series": "STAFS",
+      "agency": "Styrelsen för ackreditering och teknisk kontroll (Swedac)"
+    },
+    "riksarkivets-forfattningssamling-ra-fs": {
+      "series": "RA-FS",
+      "agency": "Riksarkivet"
+    },
+    "konsumentverkets-forfattningssamling-kovfs": {
+      "series": "KOVFS",
+      "agency": "Konsumentverket"
+    },
+    "totalforsvarets-plikt-och-provningsverks-forfattningssamling-tppvfs": {
+      "series": "TPPVFS",
+      "agency": "Totalförsvarets plikt- och prövningsverk"
+    },
+    "havs-och-vattenmyndighetens-forfattningssamling-hvmfs": {
+      "series": "HVMFS",
+      "agency": "Havs- och vattenmyndigheten"
+    },
+    "arbetsgivarverkets-forfattningssamling-agvfs": {
+      "series": "AGVFS",
+      "agency": "Arbetsgivarverket"
+    },
+    "tillvaxtverkets-forfattningssamling-tvfs": {
+      "series": "TVFS",
+      "agency": "Tillväxtverket"
+    },
+    "skatteverkets-forfattningssamling-skvfs": {
+      "series": "SKVFS",
+      "agency": "Skatteverket",
+      "status": "no_adapter",
+      "note": "An earlier robots.txt request was rejected by a WAF; on 2026-10-29 robots.txt answered normally and allows the regulation pages. Proposed as a next series on #115."
+    },
+    "kronofogdemyndighetens-forfattningssamling-kfmfs": {
+      "series": "KFMFS",
+      "agency": "Kronofogdemyndigheten"
+    },
+    "statens-institutionsstyrelses-forfattningssamling-sisfs": {
+      "series": "SiSFS",
+      "agency": "Statens institutionsstyrelse"
+    },
+    "bokforingsnamndens-allmanna-rad-bfnar-2": {
+      "series": "BFNAR",
+      "agency": "Bokföringsnämnden",
+      "note": "General advice (allmänna råd), not binding regulations."
+    },
+    "migrationsverkets-forfattningssamling-migrfs": {
+      "series": "MIGRFS",
+      "agency": "Migrationsverket",
+      "status": "no_adapter",
+      "note": "robots.txt (checked 2026-10-29) allows the regulation pages. Proposed as a next series on #115."
+    },
+    "arbetsformedlingens-forfattningssamling-affs": {
+      "series": "AFFS",
+      "agency": "Arbetsförmedlingen"
+    },
+    "finansinspektionens-forfattningssamling-fffs": {
+      "series": "FFFS",
+      "agency": "Finansinspektionen",
+      "status": "collected_pdf",
+      "note": "Register pages give metadata and FI's summary; the text is published only as PDF."
+    },
+    "domstolsverkets-forfattningssamling-dvfs": {
+      "series": "DVFS",
+      "agency": "Domstolsverket"
+    },
+    "integritetsskyddsmyndighetens-forfattningssamling-imyfs": {
+      "series": "IMYFS",
+      "agency": "Integritetsskyddsmyndigheten"
+    },
+    "kammarkollegiets-forfattningssamling-kamfs": {
+      "series": "KAMFS",
+      "agency": "Kammarkollegiet"
+    },
+    "kemikalieinspektionens-forfattningssamling-kifs": {
+      "series": "KIFS",
+      "agency": "Kemikalieinspektionen"
+    },
+    "kommerskollegiums-forfattningssamling-kfs": {
+      "series": "KFS",
+      "agency": "Kommerskollegium"
+    },
+    "konkurrensverkets-forfattningssamling-kkvfs": {
+      "series": "KKVFS",
+      "agency": "Konkurrensverket"
+    },
+    "lantmateriets-forfattningssamling-lmfs": {
+      "series": "LMFS",
+      "agency": "Lantmäteriet"
+    },
+    "myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs-2": {
+      "series": "MDFFS",
+      "agency": "Myndigheten för digital förvaltning"
+    },
+    "myndigheten-for-civilt-forsvars-forfattningssamling-mcffs": {
+      "series": "MCFFS",
+      "agency": "Myndigheten för civilt försvar"
+    },
+    "myndigheten-for-tillvaxtpolitiska-utvarderingar-och-analysers-forfattningssamling-mtfs": {
+      "series": "MTFS",
+      "agency": "Myndigheten för tillväxtpolitiska utvärderingar och analyser"
+    },
+    "patent-och-registreringsverkets-forfattningssamling-prvfs": {
+      "series": "PRVFS",
+      "agency": "Patent- och registreringsverket"
+    },
+    "polismyndighetens-forfattningssamling-pmfs": {
+      "series": "PMFS",
+      "agency": "Polismyndigheten"
+    },
+    "post-och-telestyrelsens-forfattningssamling-ptsfs": {
+      "series": "PTSFS",
+      "agency": "Post- och telestyrelsen"
+    },
+    "revisorsinspektionens-forfattningssamling-rifs": {
+      "series": "RIFS",
+      "agency": "Revisorsinspektionen"
+    },
+    "riksdagsforvaltningens-forfattningssamling-rfs": {
+      "series": "RFS",
+      "agency": "Riksdagsförvaltningen"
+    },
+    "sjofartsverkets-forfattningssamling-sjofs": {
+      "series": "SJÖFS",
+      "agency": "Sjöfartsverket"
+    },
+    "spelinspektionens-forfattningssamling-sifs": {
+      "series": "SIFS",
+      "agency": "Spelinspektionen"
+    },
+    "statens-jordbruksverks-forfattningssamling-sjvfs": {
+      "series": "SJVFS",
+      "agency": "Statens jordbruksverk"
+    },
+    "statens-kulturrads-forfattningssamling-krfs": {
+      "series": "KRFS",
+      "agency": "Statens kulturråd"
+    },
+    "statens-skolverks-forfattningssamling-skolfs": {
+      "series": "SKOLFS",
+      "agency": "Statens skolverk"
+    },
+    "stralsakerhetsmyndighetens-forfattningssamling-ssmfs": {
+      "series": "SSMFS",
+      "agency": "Strålsäkerhetsmyndigheten"
+    },
+    "svenska-kraftnats-forfattningssamling-svkfs": {
+      "series": "SvKFS",
+      "agency": "Affärsverket svenska kraftnät"
+    },
+    "trafikverkets-forfattningssamling-trvfs": {
+      "series": "TRVFS",
+      "agency": "Trafikverket"
+    },
+    "transportstyrelsens-forfattningssamling-tsfs": {
+      "series": "TSFS",
+      "agency": "Transportstyrelsen",
+      "status": "collected_pdf",
+      "note": "Year listings and detail pages give metadata; the text is published only as PDF. Predecessor series on the same index (LFS, JvSFS and others) are not collected."
+    },
+    "universitets-och-hogskoleradets-forfattningssamling-uhrfs": {
+      "series": "UHRFS",
+      "agency": "Universitets- och högskolerådet"
+    },
+    "vetenskapsradets-forfattningssamling-vrfs": {
+      "series": "VRFS",
+      "agency": "Vetenskapsrådet"
+    },
+    "forsakringskassans-forfattningssamling-fkfs": {
+      "series": "FKFS",
+      "agency": "Försäkringskassan"
+    },
+    "inspektionen-for-arbetsloshetsforsakringens-forfattningssamling-iaffs": {
+      "series": "IAFFS",
+      "agency": "Inspektionen för arbetslöshetsförsäkringen"
+    },
+    "gemensamma-forfattningssamlingen-avseende-halso-och-sjukvard-socialtjanst-lakemedel-folkhalsa-m-m-hslf-fs": {
+      "series": "HSLF-FS",
+      "agency": "Socialstyrelsen and other health and social-care agencies"
+    },
+    "svensk-trafikforeskriftssamling-stfs": {
+      "series": "STFS",
+      "agency": "Transportstyrelsen (local traffic regulations)",
+      "status": "out_of_scope",
+      "note": "Local traffic regulations; out of scope for the county layer (COVERAGE.md)."
+    },
+    "naturvardsverkets-forfattningssamling-nfs": {
+      "series": "NFS",
+      "agency": "Naturvårdsverket"
+    },
+    "sametingets-forfattningssamling-stfs": {
+      "series": "STFS",
+      "agency": "Sametinget"
+    },
+    "skogsstyrelsens-forfattningssamling-sksfs": {
+      "series": "SKSFS",
+      "agency": "Skogsstyrelsen"
+    },
+    "riksgaldskontorets-forfattningssamling-rgkfs": {
+      "series": "RGKFS",
+      "agency": "Riksgäldskontoret"
+    },
+    "upphandlingmyndighetens-forfattningssamling-ufs": {
+      "series": "UFS",
+      "agency": "Upphandlingsmyndigheten"
+    },
+    "forsvarets-forfattningssamling-ffs": {
+      "series": "FFS",
+      "agency": "Försvarsmakten"
+    },
+    "boverkets-forfattningssamling-bfs": {
+      "series": "BFS",
+      "agency": "Boverket",
+      "status": "api_key",
+      "note": "Boverket's regulation API probably needs a subscription key; the owner has not signed up for one."
+    },
+    "valmyndighetens-forfattningssamling-valfs": {
+      "series": "VALFS",
+      "agency": "Valmyndigheten"
+    },
+    "kriminalvardens-forfattningssamling-kvfs": {
+      "series": "KVFS",
+      "agency": "Kriminalvården"
+    },
+    "tullverkets-forfattningssamling-tfs": {
+      "series": "TFS",
+      "agency": "Tullverket"
+    }
+  },
+  "shared": {
+    "etikprovningsmyndighetens-foreskrifter-publiceras-i-vetenskapsradets-serie": {
+      "agency": "Etikprövningsmyndigheten",
+      "published_in": "VRFS"
+    },
+    "fastighetsmaklarinspektionens-foreskrifter-publiceras-i-kammarkollegiets-serie": {
+      "agency": "Fastighetsmäklarinspektionen",
+      "published_in": "KAMFS"
+    },
+    "luftfartsverkets-foreskrifter-publiceras-i-transportstyrelsens-serie": {
+      "agency": "Luftfartsverket",
+      "published_in": "TSFS"
+    },
+    "specialpedagogiska-skolmyndighetens-foreskrifter-publiceras-i-statens-skolverks-serie": {
+      "agency": "Specialpedagogiska skolmyndigheten",
+      "published_in": "SKOLFS"
+    },
+    "radet-for-europeiska-socialfonden-i-sveriges-foreskrifter-publiceras-i-tillvaxtverkets-serie": {
+      "agency": "Rådet för Europeiska socialfonden i Sverige",
+      "published_in": "TVFS"
+    },
+    "statens-skolinspektions-foreskrifter-publiceras-i-statens-skolverks-serie": {
+      "agency": "Statens skolinspektion",
+      "published_in": "SKOLFS"
+    },
+    "rattsmedicinalverkets-foreskrifter-i-gemensamma-forfattningssamlingen-hslf-fs": {
+      "agency": "Rättsmedicinalverket",
+      "published_in": "HSLF-FS"
+    },
+    "tandvards-och-lakemedelsformansverkets-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs": {
+      "agency": "Tandvårds- och läkemedelsförmånsverket",
+      "published_in": "HSLF-FS"
+    },
+    "socialstyrelsens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs": {
+      "agency": "Socialstyrelsen",
+      "published_in": "HSLF-FS"
+    },
+    "socialstyrelsens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs-2": {
+      "agency": "Socialstyrelsen",
+      "published_in": "HSLF-FS"
+    },
+    "allmanna-reklamationsnamnden-publiceras-i-konsumentverkets-serie": {
+      "agency": "Allmänna reklamationsnämnden",
+      "published_in": "KOVFS"
+    },
+    "e-halsomyndighetens-foreskrifter-i-gemensamma-forfattningssamlingen-hslf-fs": {
+      "agency": "E-hälsomyndigheten",
+      "published_in": "HSLF-FS"
+    },
+    "folkhalsomyndighetens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs": {
+      "agency": "Folkhälsomyndigheten",
+      "published_in": "HSLF-FS"
+    },
+    "inspektionen-for-vard-och-omsorgs-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs": {
+      "agency": "Inspektionen för vård och omsorg",
+      "published_in": "HSLF-FS"
+    },
+    "lakemedelsverkets-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs": {
+      "agency": "Läkemedelsverket",
+      "published_in": "HSLF-FS"
+    },
+    "medlingsinstitutets-foreskrifter-publiceras-i-statistiska-centralbyrans-serie": {
+      "agency": "Medlingsinstitutet",
+      "published_in": "SCB-FS"
+    },
+    "myndigheten-for-stod-till-trossamfunds-foreskrifter-publiceras-i-kammarkollegiets-serie": {
+      "agency": "Myndigheten för stöd till trossamfund",
+      "published_in": "KAMFS"
+    },
+    "notarienamndens-foreskrifter-publiceras-i-domstolsverkets-serie": {
+      "agency": "Notarienämnden",
+      "published_in": "DVFS"
+    },
+    "patentombudsnamndens-foreskrifter-publiceras-i-bolagsverkets-serie": {
+      "agency": "Patentombudsnämnden",
+      "published_in": "BOLFS"
+    },
+    "riksantikvarieambetets-foreskrifter-publiceras-i-statens-kulturrads-serie": {
+      "agency": "Riksantikvarieämbetet",
+      "published_in": "KRFS"
+    },
+    "sakerhetspolisens-foreskrifter-publiceras-i-polismyndighetens-serie": {
+      "agency": "Säkerhetspolisen",
+      "published_in": "PMFS"
+    },
+    "statens-tjanstepensionsverks-foreskrifter-publiceras-i-arbetsgivarverkets-serie": {
+      "agency": "Statens tjänstepensionsverk",
+      "published_in": "AGVFS"
+    },
+    "trafikanalys-foreskrifter-publiceras-i-kammarkollegiets-serie": {
+      "agency": "Trafikanalys",
+      "published_in": "KAMFS"
+    },
+    "myndigheten-for-familjeratt-och-foraldraskapsstods-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs": {
+      "agency": "Myndigheten för familjerätt och föräldraskapsstöd",
+      "published_in": "HSLF-FS"
+    },
+    "inspektionen-for-strategiska-produkters-foreskrifter-publiceras-i-tullverkets-serie": {
+      "agency": "Inspektionen för strategiska produkter",
+      "published_in": "TFS"
+    }
+  },
+  "sources": {
+    "svensk-forfattningssamling-sfs-i-fulltext": {
+      "name": "SFS in full text (Riksdagen open data)",
+      "layer": "sfs",
+      "status": "collected",
+      "note": "Collected from Riksdagen open data; synced daily."
+    },
+    "svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": {
+      "name": "SFS on svenskforfattningssamling.se (authoritative PDFs)",
+      "layer": "sfs",
+      "status": "partial",
+      "note": "SHA-256 manifest of the authoritative PDFs: a sample so far; PDF text is never extracted."
+    },
+    "register-over-svensk-forfattningssamling-sfs": {
+      "name": "SFS register (SFSR)",
+      "layer": "sfs",
+      "status": "partial",
+      "note": "Amendment register: pilot statutes only."
+    },
+    "svensk-forfattningssamling-sfs-i-tryckt-format": {
+      "name": "SFS in print",
+      "layer": "sfs",
+      "status": "out_of_scope",
+      "note": "Printed volumes; older print-only acts are stubs."
+    },
+    "sok-rattspraxis": {
+      "name": "Rättspraxis (Sveriges Domstolar)",
+      "layer": "case_law",
+      "status": "collected",
+      "note": "Referat and notiser; synced daily."
+    },
+    "eur-lex": {
+      "name": "EUR-Lex",
+      "layer": "eu",
+      "status": "blocked",
+      "note": "Answers automated clients with an AWS WAF challenge; never used. EU texts come from the Publications Office Cellar."
+    },
+    "eu-domstolen": {
+      "name": "Court of Justice of the European Union",
+      "layer": "eu",
+      "status": "no_adapter",
+      "note": "EU case law is not collected."
+    },
+    "europadomstolen": {
+      "name": "European Court of Human Rights",
+      "layer": "case_law",
+      "status": "out_of_scope",
+      "note": "Not Swedish case law."
+    },
+    "sveriges-internationella-overenskommelser-so": {
+      "name": "Sveriges internationella överenskommelser (SÖ)",
+      "layer": "sfs",
+      "status": "no_adapter",
+      "note": "Treaties are not collected."
+    },
+    "transportstyrelsen": {
+      "name": "Transportstyrelsen (other publications)",
+      "layer": "agency",
+      "status": "out_of_scope",
+      "note": "Overview page; the TSFS series is listed separately."
+    },
+    "brottsoffermyndigheten": {
+      "name": "Brottsoffermyndigheten (beslut)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "brottsoffermyndighetens-referatsamling": {
+      "name": "Brottsoffermyndighetens referatsamling",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "justitiekanslerns-beslut-och-yttranden": {
+      "name": "Justitiekanslerns beslut och yttranden",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "mediemyndighetens-webbdiarium": {
+      "name": "Mediemyndighetens webbdiarium",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "notarienamndens-beslut": {
+      "name": "Notarienämndens beslut",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "riksdagens-ombudmans-jo-beslut": {
+      "name": "Riksdagens ombudsmäns (JO) beslut",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "rattshjalpsnamndens-vagledande-beslut": {
+      "name": "Rättshjälpsnämndens vägledande beslut",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "transportstyrelsens-beslut-i-overklagningsarenden-om-trafikreglering": {
+      "name": "Transportstyrelsens beslut i överklagandeärenden om trafikreglering",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "overklagandenamnden-for-etikprovnings-beslut": {
+      "name": "Överklagandenämnden för etikprövnings beslut",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "overklagandenamnden-for-hogskolans-avgoranden": {
+      "name": "Överklagandenämnden för högskolans avgöranden",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "overklagandenamnden-for-namndemannauppdrags-beslut": {
+      "name": "Överklagandenämnden för nämndemannauppdrags beslut",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "overklagandenamnden-for-studiestods-avgoranden": {
+      "name": "Överklagandenämnden för studiestöds avgöranden",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope."
+    },
+    "lagradets-yttranden": {
+      "name": "Lagrådets yttranden",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "betankanden": {
+      "name": "Betänkanden",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "framstallningar-och-redogorelser": {
+      "name": "Framställningar och redogörelser",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "motioner": {
+      "name": "Motioner",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "protokoll": {
+      "name": "Riksdagens protokoll",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "riksdagsskrivelser": {
+      "name": "Riksdagsskrivelser",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "yttranden-fran-utskott": {
+      "name": "Yttranden från utskott",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "departementsserien-ds": {
+      "name": "Departementsserien (Ds)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "forordningsmotiv": {
+      "name": "Förordningsmotiv",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "forordningsmotiv-soktjanst": {
+      "name": "Förordningsmotiv (söktjänst)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "kommittedirektiv": {
+      "name": "Kommittédirektiv",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "kommittedirektiv-soktjanst-2": {
+      "name": "Kommittédirektiv (söktjänst)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "kommittedirektiv-rattsdatabas": {
+      "name": "Kommittédirektiv (rättsdatabas)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "propositioner-och-skrivelser": {
+      "name": "Propositioner och skrivelser",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "propositioner-och-skrivelser-i-pdf": {
+      "name": "Propositioner och skrivelser (PDF)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "statens-offentliga-utredningar-sou-aldre": {
+      "name": "Statens offentliga utredningar (SOU), äldre",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "statens-offentliga-utredningar-sou": {
+      "name": "Statens offentliga utredningar (SOU)",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "propositioner-och-skrivelser-aldre": {
+      "name": "Propositioner och skrivelser, äldre",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "kommitteregistret": {
+      "name": "Kommittéregistret",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    },
+    "lagradsremisser": {
+      "name": "Lagrådsremisser",
+      "layer": "other",
+      "status": "out_of_scope",
+      "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
+    }
+  }
+}
