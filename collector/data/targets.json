@@ -30,10 +30,10 @@
     "layer": "case_law",
     "type": null,
     "label": "Case law",
-    "target": null,
-    "kind": "unknown",
-    "source": null,
-    "as_of": null
+    "target": 16640,
+    "kind": "counted",
+    "source": "https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar?publiceringsformer=referat,notis",
+    "as_of": "2026-10-29"
   },
   {
     "layer": "eu",
