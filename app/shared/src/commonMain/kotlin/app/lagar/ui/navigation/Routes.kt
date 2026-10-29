@@ -30,7 +30,8 @@ data class LayerList(
 /** The issuing ministries of one SFS series, from the per-ministry index. */
 @Serializable data class Ministries(val layer: String, val type: String)
 
-@Serializable data class Reader(val id: String)
+/** A document; [anchor] (an outline anchor such as `k3p1`) is scrolled to once the text has loaded. */
+@Serializable data class Reader(val id: String, val anchor: String? = null)
 
 @Serializable data object Settings
 

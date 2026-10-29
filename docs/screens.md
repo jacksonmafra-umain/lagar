@@ -68,8 +68,8 @@ Route: `OnboardingWelcome`. Code: `ui/onboarding/WelcomeScreen.kt`. Reference: S
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Introduction, three scope cards with live document counts, step progress | Done | |
-| Skip at the top right, as in Stitch | Partial: bottom text button | #29 |
-| Choice of primary focus (citizen, student, municipal lawyer) | Missing | #29 |
+| Skip at the top right, as in Stitch; stores the defaults (Nationell, no locality) and leaves like the last step | Done | #29 |
+| Choice of main focus (Medborgare, Student, Jurist), stored on the device and changeable in Settings; it only orders the home key-law groups | Done | #29 |
 
 ### Scope (step 2)
 
@@ -78,7 +78,7 @@ Route: `OnboardingScope`. Code: `ui/onboarding/ScopeStepScreen.kt`, `ScopeCard.k
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Selectable Nationell, Region and Kommun cards with layer colours and counts | Done | |
-| Skip, and a "stored on this device" note | Missing | #29 |
+| Skip at the top right, and a "stored on this device" note | Done | #29 |
 
 ### Locality (step 3)
 
@@ -87,7 +87,7 @@ Route: `OnboardingLocality`. Code: `ui/onboarding/LocalityStepScreen.kt`, `Local
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Searchable region and kommun pickers for all 21 regions and 290 kommuner, both optional | Done | |
-| Skip | Missing | #29 |
+| Skip at the top right | Done | #29 |
 | Kommun suggested from the device location | Missing | #30 |
 | Linked kommun summary (council, document count) | Blocked: no municipal data | #38 |
 
@@ -99,6 +99,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | --- | --- | --- |
 | Hero with search field, advanced-search link and layer chips | Done | |
 | Key laws: Regeringsformen card, plus accordions for acts and ordinances | Done | |
+| Key-law groups ordered by the main focus: hierarchy order for Medborgare and Student, acts and ordinances first for Jurist | Done | #29 |
 | Explore feed with Recent and Favourites tabs, bookmark toggle and "Show more" | Done | |
 | Loads only the first listing page of each level it shows, not the whole catalog; search loads the catalog on its first query | Done | |
 | Feed card shows the in-force date and "Ändrad senast genom SFS …" | Done; each line is hidden while its field is `null` (the collector does not fill `in_force` yet). Saved items in the Favourites tab carry neither field | |
@@ -167,7 +168,7 @@ Route: `LayerList(layer, type?)`. Code: `ui/list/`.
 
 ## Reader
 
-Route: `Reader(id)`. Code: `ui/reader/`. References: DESIGN.md (Legal Text Cards, Typography) and architecture §4 flow 5.
+Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 §) scrolled to once the text loads. Web links: `?doc=<id>&p=<anchor>`. Code: `ui/reader/`. References: DESIGN.md (Legal Text Cards, Typography) and architecture §4 flow 5.
 
 | Feature | Status | Issue |
 | --- | --- | --- |
@@ -175,7 +176,9 @@ Route: `Reader(id)`. Code: `ui/reader/`. References: DESIGN.md (Legal Text Cards
 | Source Serif 4 legal text, bold Inter § numbers, reading column width | Done | |
 | § cards with the layer indicator, bookmark toggle, text selection | Done | |
 | Repealed banner and strikethrough | Missing | #21 |
-| Table of contents, chapter and § shortcuts, amendment list, § deep links | Missing | #26 |
+| Table of contents sheet: chapters and § chips, jump to a chapter or § | Done | #26 |
+| Amendment list under the header (register list, else `amended_by`; reprints), numbers link to documents the API has | Done | #26 |
+| Share links to the document and to each § (platform share sheet; Web Share API or clipboard on the web); `?doc=&p=` links open the reader at that § | Done | #26 |
 | Cross-reference links between statutes | Missing | #27 |
 | Inline notes | Missing | #28 |
 | Table of contents pane and metadata inspector on wide screens | Missing | #35 |
@@ -208,6 +211,7 @@ Route: `Settings`, opened from the drawer. Code: `ui/settings/SettingsScreen.kt`
 | --- | --- | --- |
 | Language (system, Svenska, English), theme (system, light, dark), About with credits, licence and data build date | Done | |
 | Reduce transparency (system, on, off); System follows iOS Reduce Transparency and the web `prefers-reduced-transparency` query, Android has no such setting | Done | #23 |
+| Main focus (Medborgare, Student, Jurist), as chosen in onboarding | Done | #29 |
 
 ## Data and release
 

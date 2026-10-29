@@ -56,6 +56,6 @@ fun appModule(config: DataSourceConfig) = module {
     viewModel { OnboardingViewModel(get(), get()) }
     viewModel { (layer: String, type: String?, ministry: MinistryFilter?) -> LayerListViewModel(get(), layer, type, ministry, get()) }
     viewModel { (layer: String, type: String) -> MinistriesViewModel(get(), layer, type) }
-    viewModel { (id: String) -> ReaderViewModel(get(), id) }
+    viewModel { (id: String) -> ReaderViewModel(get(), get(), id) }
     viewModel { (initial: SearchQuery) -> SearchViewModel(get(), get(), initial) }
 }
