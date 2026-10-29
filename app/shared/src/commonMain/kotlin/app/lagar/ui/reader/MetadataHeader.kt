@@ -26,6 +26,7 @@ import app.lagar.data.DocumentMeta
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
 import app.lagar.domain.DisplayLayer
+import app.lagar.domain.ministryName
 import app.lagar.resources.Res
 import app.lagar.resources.ic_history
 import app.lagar.resources.meta_amended_through
@@ -106,7 +107,7 @@ internal fun DocumentFacts(meta: DocumentMeta, modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.spacedBy(spacing.sm),
         ) {
             meta.issued?.let { Fact(stringResource(Res.string.meta_issued)) { FactText(it) } }
-            meta.ministry?.let { Fact(stringResource(Res.string.meta_ministry)) { FactText(it) } }
+            ministryName(meta.ministry)?.let { Fact(stringResource(Res.string.meta_ministry)) { FactText(it) } }
             Fact(stringResource(Res.string.meta_status)) {
                 if (repealed != null) {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(spacing.sm)) {
