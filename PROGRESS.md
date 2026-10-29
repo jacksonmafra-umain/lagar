@@ -8,7 +8,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | --- | --- | ---: | ---: | --- | ---: |
 | fundamental | Fundamental laws | 4 | 4 | counted | 100.0% |
 | sfs | SFS (statutes and ordinances) | 11424 | 11567 | counted | 98.8% |
-| agency | Agency regulations | 0 | unknown | unknown | - |
+| agency | Agency regulations | 15 | unknown | unknown | - |
 | case_law | Case law | 20 | 16640 | counted | 0.1% |
 | eu | EU law | 0 | unknown | unknown | - |
 | region | Regional regulations | 0 | unknown | unknown | - |
@@ -26,10 +26,10 @@ Targets:
 
 ## Integrity
 
-Audit of 11448 documents (2026-10-29T01:00:34Z):
+Audit of 11463 documents (2026-10-29T01:29:52Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
 - text-quality flags: 705
-- cross-references not in the corpus: 36592 of 36635 (informational, the corpus is partial)
+- cross-references not in the corpus: 36605 of 36648 (informational, the corpus is partial)
