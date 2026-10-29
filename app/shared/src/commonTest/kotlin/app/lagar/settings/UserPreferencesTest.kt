@@ -15,6 +15,7 @@ class UserPreferencesTest {
         val prefs = UserPreferences(MapSettings())
         assertEquals(LanguageChoice.System, prefs.language.value)
         assertEquals(ThemeMode.System, prefs.theme.value)
+        assertEquals(ReduceTransparency.System, prefs.reduceTransparency.value)
     }
 
     @Test
@@ -23,20 +24,23 @@ class UserPreferencesTest {
         val prefs = UserPreferences(settings)
         prefs.setLanguage(LanguageChoice.English)
         prefs.setTheme(ThemeMode.Dark)
+        prefs.setReduceTransparency(ReduceTransparency.On)
         assertEquals(LanguageChoice.English, prefs.language.value)
         assertEquals(ThemeMode.Dark, prefs.theme.value)
 
         val reopened = UserPreferences(settings)
         assertEquals(LanguageChoice.English, reopened.language.value)
         assertEquals(ThemeMode.Dark, reopened.theme.value)
+        assertEquals(ReduceTransparency.On, reopened.reduceTransparency.value)
     }
 
     @Test
     fun unknownStoredValueFallsBackToSystem() {
-        val settings = MapSettings("language" to "klingon", "theme" to "neon")
+        val settings = MapSettings("language" to "klingon", "theme" to "neon", "reduce_transparency" to "sometimes")
         val prefs = UserPreferences(settings)
         assertEquals(LanguageChoice.System, prefs.language.value)
         assertEquals(ThemeMode.System, prefs.theme.value)
+        assertEquals(ReduceTransparency.System, prefs.reduceTransparency.value)
     }
 
     @Test

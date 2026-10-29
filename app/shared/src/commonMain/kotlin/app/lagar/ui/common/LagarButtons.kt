@@ -38,7 +38,7 @@ internal fun LagarButton(
 }
 
 /**
- * DESIGN.md glass secondary button: translucent `surfaceContainerLowest` fill, 1dp `outlineVariant` edge, text in
+ * DESIGN.md glass secondary button: translucent `surfaceContainerLowest` fill (opaque under reduce transparency), 1dp `outlineVariant` edge, text in
  * [contentColor] (`primary` by default, or a layer `onTint`), `RadiusTokens.default` corners and a 48dp minimum height.
  */
 @Composable
@@ -55,7 +55,10 @@ internal fun LagarSecondaryButton(
         enabled = enabled,
         shape = MaterialTheme.shapes.small,
         colors = ButtonDefaults.outlinedButtonColors(
-            containerColor = LagarTheme.colors.surfaceContainerLowest.copy(alpha = SECONDARY_FILL_ALPHA),
+            // Reduce transparency makes the glass fill opaque, like the glass tiers.
+            containerColor = LagarTheme.colors.surfaceContainerLowest.let {
+                if (LagarTheme.reduceTransparency) it else it.copy(alpha = SECONDARY_FILL_ALPHA)
+            },
             contentColor = contentColor,
         ),
         border = BorderStroke(ShellDimens.Hairline, LagarTheme.colors.outlineVariant),

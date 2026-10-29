@@ -8,6 +8,7 @@ import androidx.compose.runtime.remember
 import androidx.navigation.compose.rememberNavController
 import app.lagar.data.DataSourceConfig
 import app.lagar.designsystem.LagarTheme
+import app.lagar.designsystem.systemReduceTransparency
 import app.lagar.di.appModule
 import app.lagar.i18n.ProvideAppLocale
 import app.lagar.i18n.systemLanguageTag
@@ -34,6 +35,8 @@ private fun AppContent(startLink: Reader?) {
     val preferences = koinInject<UserPreferences>()
     val language by preferences.language.collectAsState()
     val theme by preferences.theme.collectAsState()
+    val reduceTransparency by preferences.reduceTransparency.collectAsState()
+    val systemReduceTransparency = systemReduceTransparency()
     val systemTag = remember { systemLanguageTag() }
     val systemDark = isSystemInDarkTheme()
     val dark = when (theme) {
@@ -46,7 +49,7 @@ private fun AppContent(startLink: Reader?) {
     val navController = rememberNavController()
     val hazeState = remember { HazeState() }
     ProvideAppLocale(language.resolve(systemTag)) {
-        LagarTheme(darkTheme = dark) {
+        LagarTheme(darkTheme = dark, reduceTransparency = reduceTransparency.resolve(systemReduceTransparency)) {
             SystemBarAppearance(dark)
             AppShell(
                 navController = navController,
