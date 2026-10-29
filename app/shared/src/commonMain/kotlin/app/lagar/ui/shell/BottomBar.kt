@@ -5,13 +5,19 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -79,6 +85,38 @@ internal fun LagarBottomBar(
         ) {
             Tab.entries.forEach { tab ->
                 TabItem(tab, tab == selected, onClick = { onSelect(tab) }, modifier = Modifier.weight(1f))
+            }
+        }
+    }
+}
+
+/**
+ * Navigation rail of medium windows: the bottom bar's tabs stacked at the start edge, so a tablet or a phone in
+ * landscape keeps its height for content.
+ */
+@Composable
+internal fun LagarNavigationRail(
+    selected: Tab?,
+    hazeState: HazeState,
+    onSelect: (Tab) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val density = LocalDensity.current
+    CompositionLocalProvider(
+        LocalDensity provides Density(density.density, fontScale = minOf(density.fontScale, MAX_LABEL_FONT_SCALE)),
+    ) {
+        Column(
+            modifier = modifier
+                .fillMaxHeight()
+                .glass(GlassTier.Bar, hazeState)
+                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Start + WindowInsetsSides.Vertical))
+                .width(ShellDimens.RailWidth)
+                .padding(horizontal = LagarTheme.spacing.xs, vertical = LagarTheme.spacing.md)
+                .selectableGroup(),
+            verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
+        ) {
+            Tab.entries.forEach { tab ->
+                TabItem(tab, tab == selected, onClick = { onSelect(tab) }, modifier = Modifier.fillMaxWidth())
             }
         }
     }
