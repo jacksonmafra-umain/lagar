@@ -268,6 +268,8 @@
     <string name="reader_share_link">Dela länk till %1$s</string>
     <string name="reader_link_copied">Länken har kopierats</string>
     <string name="reader_share_failed">Det gick inte att dela länken</string>
+    <string name="reader_validity_expires">Upphör att gälla %1$s</string>
+    <string name="reader_validity_enters_into_force">Träder i kraft %1$s</string>
     <string name="reader_amendments">Ändringar (%1$d)</string>
     <string name="reader_expanded">Utfälld</string>
     <string name="reader_collapsed">Hopfälld</string>

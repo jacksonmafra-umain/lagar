@@ -318,16 +318,19 @@ fun ReaderScreen(
                                 val blockAnchor = outline.anchorOf(index)
                                 val label = outline.labelOf(index)
                                 if (isStatuteBlock(block)) {
+                                    // A § printed once per wording carries Riksdagen's marker, shown as a label.
+                                    val statute = remember(block) { statuteValidity(block) }
                                     StatuteContainer(
                                         layer = key,
                                         action = if (blockAnchor != null && label != null) {
-                                            { sectionActions(blockAnchor, label, block) }
+                                            { sectionActions(blockAnchor, label, statute.text) }
                                         } else {
                                             null
                                         },
                                     ) {
                                         Column(verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
-                                            LegalMarkdown(block.trimEnd(), crossReferences = crossReferences, onOpenDocument = onOpenDocument)
+                                            statute.marker?.let { ValidityLabel(it, key) }
+                                            LegalMarkdown(statute.text.trimEnd(), crossReferences = crossReferences, onOpenDocument = onOpenDocument)
                                             if (blockAnchor != null) noteChip(blockAnchor)
                                         }
                                     }

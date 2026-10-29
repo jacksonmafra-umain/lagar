@@ -25,7 +25,7 @@ fun withoutTitle(section: String): String {
 }
 
 // `**1 §**`, `**3 a §**`, `**4 §§**`: a statute number in bold at the start of a line.
-private val STATUTE_START = Regex("""^\*\*\d+\s?[a-z]?\s§§?\*\*""")
+internal val STATUTE_START = Regex("""^\*\*\d+\s?[a-z]?\s§§?\*\*""")
 
 /** True when [block] opens with a bold statute number, i.e. it is one numbered statute (§). */
 fun isStatuteBlock(block: String): Boolean = STATUTE_START.containsMatchIn(block)
