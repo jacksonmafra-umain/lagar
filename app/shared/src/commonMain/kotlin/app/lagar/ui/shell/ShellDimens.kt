@@ -17,6 +17,12 @@ internal object ShellDimens {
     val TextGap = 2.dp
     val PillPaddingVertical = 6.dp
 
+    /** Window width from which the navigation rail replaces the bottom bar (Material's medium width class). */
+    val MediumBreakpoint = 600.dp
+
+    /** Width of the navigation rail on medium windows. */
+    val RailWidth = 88.dp
+
     /** Window width from which the desktop layout is used. */
     val WideBreakpoint = 1024.dp
 
