@@ -71,6 +71,8 @@ ISSUERS = {
 }
 
 _QUERY = """PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX ann: <http://publications.europa.eu/ontology/annotation#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?field ?value WHERE {
   ?work cdm:resource_legal_id_celex "%(celex)s"^^xsd:string .
@@ -78,6 +80,12 @@ SELECT ?field ?value WHERE {
   UNION { ?work cdm:resource_legal_eli ?value BIND("eli" AS ?field) }
   UNION { ?work cdm:resource_legal_in-force ?value BIND("in_force" AS ?field) }
   UNION { ?work cdm:resource_legal_date_entry-into-force ?value BIND("entry_into_force" AS ?field) }
+  UNION { ?date owl:annotatedSource ?work ;
+            owl:annotatedProperty cdm:resource_legal_date_entry-into-force ;
+            owl:annotatedTarget ?typedDate ;
+            ann:type_of_date ?dateType
+          BIND(CONCAT(STR(?typedDate), " ", STRBEFORE(SUBSTR(STR(?dateType), 2), "|")) AS ?value)
+          BIND("entry_into_force_type" AS ?field) }
   UNION { ?work cdm:resource_legal_date_end-of-validity ?value BIND("end_of_validity" AS ?field) }
   UNION { ?work cdm:work_created_by_agent ?value BIND("agent" AS ?field) }
   UNION { ?expr cdm:expression_belongs_to_work ?work ;
@@ -325,11 +333,33 @@ def _date(value):
     return value if _ISO_DATE.fullmatch(value) else None
 
 
+def entry_into_force(metadata):
+    """The act's own entry into force, or None.
+
+    Cellar lists under `resource_legal_date_entry-into-force` also the dates from which the
+    act or single provisions apply, told apart by the `type_of_date` annotation: EV for the
+    entry into force, MA (MA/PART) for application. The earliest EV date is taken; without
+    one, the earliest date that is not an application date (consolidated versions carry no
+    annotation at all).
+    """
+    types = {}
+    for value in metadata.all("entry_into_force_type"):
+        day, _, kind = value.partition(" ")
+        if _date(day):
+            types.setdefault(_date(day), set()).add(kind)
+    act = sorted(d for d, kinds in types.items() if "EV" in kinds)
+    if act:
+        return act[0]
+    dates = sorted(d for d in (_date(v) for v in metadata.all("entry_into_force"))
+                   if d and not any(k.startswith("MA") for k in types.get(d, ())))
+    return dates[0] if dates else None
+
+
 def build_meta(metadata, raw_sha256, source, fetched_at):
     celex = metadata.celex
     type_ = _KINDS[celex[5]]
     consolidated = celex.startswith("0")
-    entry = sorted(d for d in (_date(v) for v in metadata.all("entry_into_force")) if d)
+    entry = entry_into_force(metadata)
     end = _date(metadata.first("end_of_validity"))
     issued = metadata.first("base_date_document") if consolidated else metadata.first("date_document")
     issuers = [ISSUERS[a] for a in ISSUERS if a in metadata.all("agent")]
@@ -343,7 +373,7 @@ def build_meta(metadata, raw_sha256, source, fetched_at):
         "layer": TYPES[type_],
         "number": citation_number(celex, metadata.title),
         "issued": _date(issued),
-        "in_force": entry[0] if entry else None,
+        "in_force": entry,
         "repealed": end if end and end != NO_END else None,
         "amended_by": sorted(amended_by),
         # The latest amending act a consolidated version incorporates; the OJ text has none.
