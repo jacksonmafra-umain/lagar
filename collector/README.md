@@ -3,7 +3,8 @@
 Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown files,
 records a SHA-256 manifest of the authoritative SFS PDFs, adds each statute's amendment
 register from SFSR, writes a metadata-only amendment history for git, collects the published case
-law of the Swedish courts and collects EU acts in Swedish from the Publications Office Cellar.
+law of the Swedish courts, collects EU acts in Swedish from the Publications Office Cellar and
+collects municipal regulations from the kommuner's own författningssamlingar.
 Python standard library only.
 
 ## Usage
@@ -278,6 +279,91 @@ python3 -I collector/collect.py case-law [--court CODE ...] [--from YYYY-MM-DD] 
   "latest_published": "..."}`.
 - The site has no robots.txt (HTTP 404); one is honoured if it appears. An HTTP 403 stops the run
   (exit code 2). Entries may shift between pages while the courts publish; a rerun picks up any miss.
+
+## Municipal regulations (kommunala författningssamlingar)
+
+Each kommun publishes its own författningssamling on its own website; there is no national
+dataset. `municipal` reads the kommuner listed in `collector/data/municipalities.json`.
+
+```
+python3 -I collector/collect.py municipal --kommun 0180 [--kommun 1480 ...] [--limit N] \
+    [--refresh] [--report FILE] [--rate SECONDS] [--config collector/data/municipalities.json] \
+    [--state collector/data/municipal-state.json] [--manifest sources/municipal-manifest.json]
+python3 -I collector/collect.py municipal --all [--limit N]
+```
+
+- Scope: only rules that bind residents (lokala ordningsföreskrifter, föreskrifter om avfall,
+  renhållning and naturreservat, hamnordningar, taxor and avgifter). Internal governance documents
+  (reglementen, arbetsordningar, instruktioner, bolagsordningar, ägardirektiv, delegationsordningar,
+  stadgar) are left out through each kommun's `sections` or `kinds`.
+- Pilot: Stockholm (0180), Göteborg (1480) and Malmö (1280).
+- robots.txt is read once per host before any other request, with RFC 9309 wildcards (`*`, `$`)
+  and longest-match precedence (the standard library parser ignores wildcards). A disallowed
+  listing stops that kommun; a disallowed document is not fetched and is recorded as a gap.
+  Requests go only to the hosts configured for the kommun, redirects included.
+- PDF text is never extracted. A fetched PDF goes into the manifest with its SHA-256 and becomes
+  `source`/`source_sha256`. When robots.txt disallows the PDF, `source` is the listing page (or the
+  Domino detail page) and `source_sha256` hashes that page; the body says the document was not
+  fetched.
+- Mapping: `id` is `<kommun code>-<slug of number>`, for example `0180-kfs-2026-12`; `number` is the
+  local number as printed (`KFS 2026:12`), the Domino serial number (`N010G00545`) or, when the
+  site prints no number (Malmö), the Sitevision id of the file (`18.630778b81a03e20b4c51db6`).
+  `issuer` is the kommun, `municipality_code` its SCB code and `region_code` its county.
+  `issued` and `in_force` stay `null`: the listings do not give them reliably.
+- Body: kommun, collection and number (plus version, adopting body and the handbook's
+  "Gällande från" date for Domino), a link to the listing or detail page, the kommun's own note
+  (Domino `BodyField`, converted with `htmlmd`) and links to the PDFs.
+- Some servers answer with brotli even when only gzip is accepted. Brotli streams made of
+  uncompressed meta-blocks (start.stockholm's robots.txt) are decoded; a compressed one is
+  retried twice and then counted as a failure.
+- State (git-ignored) is `{"done": {id: source sha256}, "failed": {id or url: error},
+  "gaps": {id: reason}, "blocked": {code: reason}}`. A document is skipped when it is done and its
+  file exists, unless `--refresh`; a refreshed document whose frontmatter (apart from `fetched_at`)
+  and body are unchanged is left untouched.
+- `--limit` stops after N written documents per kommun. `--report` writes `{"written": [...],
+  "unchanged": [...], "skipped": n, "gaps": [...], "failed": [...], "blocked": {code: reason}}`.
+- An HTTP 403, an unreadable robots.txt or listing, or a redirect off the configured hosts blocks
+  that kommun (exit code 2); the other kommuner still run.
+
+### Adding a kommun
+
+Add an entry under `kommuner`, keyed by the four-digit SCB code:
+
+```json
+"0180": {
+  "name": "Stockholm",
+  "issuer": "Stockholms stad",
+  "region_code": "01",
+  "collection": "Stockholms stads kommunala författningssamling (KFS)",
+  "strategy": "html_index",
+  "hosts": ["start.stockholm"],
+  "listings": ["https://start.stockholm/.../kommunal-forfattningssamling/"],
+  "section_level": 2,
+  "sections": ["Reglerande styrdokument"],
+  "link_pattern": "^https://start\\.stockholm/globalassets/.*\\.pdf$",
+  "number": [{"from": "text", "pattern": "KFS\\s*(\\d{4}):(\\d+)", "format": "KFS {0}:{1}"}],
+  "title_strip": ["\\s*\\(?pdf\\)?\\s*$", ",?\\s*KFS\\s*\\d{4}:\\d+\\s*$"]
+}
+```
+
+1. Check the site's robots.txt and terms first. If the site forbids automation or answers with a
+   captcha or block, do not add it: record it as a gap in `COVERAGE.md`.
+2. Pick a strategy:
+   - `html_index`: a page that links straight to the documents. A link is kept when the latest
+     heading at or above `section_level` (h1 to h`N`) is one of `sections` (empty keeps all) and
+     the absolute URL matches `link_pattern`. `number` is a list of rules tried in order, each
+     reading the link text (`"from": "text"`) or the URL (`"from": "href"`); with `format` the
+     regex groups fill it, without it the first group (or the whole match) is the number.
+     `title_strip` regexes are removed from the link text to get the title.
+   - `domino_view`: an IBM Domino database; the listing is a view read with
+     `?ReadViewEntries&ExpandView&Count=N`. `kind_column`, `title_column` and `number_column` name
+     the view columns; only entries whose kind is in `kinds` are kept. Detail pages are read at
+     `<database>/0/<unid>?OpenDocument`.
+3. Choose `sections` or `kinds` so that only rules for residents are collected.
+4. `hosts` lists every host the collector may contact for that kommun; `region_code` must be the
+   first two digits of the kommun code.
+5. Add a trimmed listing (and detail page) fixture and a test, then run a small sample with
+   `--kommun <code> --limit 5` and the audit.
 
 ## Exit codes
 
