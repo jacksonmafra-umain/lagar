@@ -77,7 +77,8 @@ import org.koin.compose.viewmodel.koinViewModel
 
 /**
  * Four-tab shell. The [navController] and [hazeState] are owned by the caller, above the locale
- * provider, so a language switch keeps the back stack.
+ * provider, so a language switch keeps the back stack. [startLink] (a shared web link) opens once the
+ * splash is done.
  */
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
@@ -85,6 +86,7 @@ fun AppShell(
     navController: NavHostController,
     hazeState: HazeState,
     onToggleTheme: () -> Unit,
+    startLink: Reader? = null,
 ) {
     val scope = rememberCoroutineScope()
     val preferences = koinInject<UserPreferences>()
@@ -211,6 +213,8 @@ fun AppShell(
                             SplashRoute(onLoaded = {
                                 val next: Any = if (preferences.onboardingDone.value) Utforska else OnboardingWelcome
                                 navController.navigate(next) { popUpTo(Splash) { inclusive = true } }
+                                // A shared link opens its document on top, so back leads into the app.
+                                startLink?.let { navController.navigate(it) }
                             })
                         }
                         composable<OnboardingWelcome> { entry ->
@@ -258,7 +262,13 @@ fun AppShell(
                             )
                         }
                         composable<Reader> { entry ->
-                            ReaderRoute(id = entry.toRoute<Reader>().id, onBack = { navController.popBackStack() })
+                            val route = entry.toRoute<Reader>()
+                            ReaderRoute(
+                                id = route.id,
+                                anchor = route.anchor,
+                                onBack = { navController.popBackStack() },
+                                onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                            )
                         }
                         composable<Search> { entry ->
                             SearchRoute(
