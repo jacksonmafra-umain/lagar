@@ -74,7 +74,10 @@ fun LayerListRoute(
     onBack: () -> Unit,
     onOpenDocument: (String) -> Unit,
     ministry: MinistryFilter? = null,
-    viewModel: LayerListViewModel = koinViewModel(key = "$layer/$type/${ministry?.id}") { parametersOf(layer, type, ministry) },
+    locality: LocalityFilter? = null,
+    viewModel: LayerListViewModel = koinViewModel(key = "$layer/$type/${ministry?.id}/${locality?.code}") {
+        parametersOf(layer, type, ministry, locality)
+    },
 ) {
     val items by viewModel.items.collectAsState()
     val total by viewModel.total.collectAsState()
@@ -86,7 +89,7 @@ fun LayerListRoute(
     LayerListScreen(
         apiLayer = layer,
         routeType = type,
-        ministryName = ministry?.name,
+        filterName = ministry?.name ?: locality?.name,
         series = series,
         selectedType = selectedType,
         items = items,
@@ -106,7 +109,7 @@ fun LayerListRoute(
 fun LayerListScreen(
     apiLayer: String,
     routeType: String?,
-    ministryName: String?,
+    filterName: String?,
     series: List<String>,
     selectedType: String?,
     items: List<ListingItem>,
@@ -180,7 +183,7 @@ fun LayerListScreen(
         }
         ListHeader(
             layer = layer,
-            ministryName = ministryName,
+            filterName = filterName,
             selectedType = selectedType,
             series = series,
             baseKey = baseKey,
@@ -212,7 +215,7 @@ private fun NearEndEffect(listState: LazyListState, itemCount: Int, onLoadNext: 
 @Composable
 private fun ListHeader(
     layer: DisplayLayer?,
-    ministryName: String?,
+    filterName: String?,
     selectedType: String?,
     series: List<String>,
     baseKey: LayerKey,
@@ -245,8 +248,8 @@ private fun ListHeader(
                     )
                 }
             }
-            if (ministryName != null) {
-                Text(ministryName, style = LagarTheme.type.headlineSm, color = colors.onSurface)
+            if (filterName != null) {
+                Text(filterName, style = LagarTheme.type.headlineSm, color = colors.onSurface)
             }
             if (series.size > 1) {
                 SeriesSwitch(apiLayer, series, selectedType, baseKey, onSelectSeries)

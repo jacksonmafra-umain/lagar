@@ -31,9 +31,10 @@ import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
 import app.lagar.domain.Scope
 import app.lagar.resources.Res
-import app.lagar.resources.coming_soon
 import app.lagar.resources.home_choose_location
-import app.lagar.resources.home_coming_soon_text
+import app.lagar.resources.home_locality_choose_text
+import app.lagar.resources.home_locality_empty_text
+import app.lagar.resources.home_locality_empty_title
 import app.lagar.resources.home_location_label
 import app.lagar.resources.home_scope_kommun_title
 import app.lagar.resources.home_scope_region_title
@@ -55,6 +56,7 @@ fun HomeRoute(
     onOpenSearch: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
     onChooseLocation: () -> Unit,
+    onOpenLocality: (layer: DisplayLayer, code: String, name: String) -> Unit,
     viewModel: HomeViewModel = koinViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -69,6 +71,7 @@ fun HomeRoute(
         onOpenSearch = onOpenSearch,
         onOpenAdvancedSearch = onOpenAdvancedSearch,
         onChooseLocation = onChooseLocation,
+        onOpenLocality = onOpenLocality,
         onToggleBookmark = viewModel::toggleBookmark,
     )
 }
@@ -83,6 +86,7 @@ fun HomeScreen(
     onOpenSearch: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
     onChooseLocation: () -> Unit,
+    onOpenLocality: (layer: DisplayLayer, code: String, name: String) -> Unit,
     onToggleBookmark: (ListingItem) -> Unit,
 ) {
     LoadStateHost(state) { data, shell ->
@@ -115,12 +119,37 @@ fun HomeScreen(
                     )
                 }
             } else {
-                item {
-                    EmptyState(
-                        icon = Res.drawable.ic_info,
-                        title = stringResource(Res.string.coming_soon),
-                        text = stringResource(Res.string.home_coming_soon_text),
-                    )
+                val name = data.localityName
+                val code = data.localityCode
+                val level = data.layers.firstOrNull()
+                when {
+                    name == null || code == null -> item {
+                        EmptyState(
+                            icon = Res.drawable.ic_info,
+                            title = stringResource(Res.string.home_choose_location),
+                            text = stringResource(Res.string.home_locality_choose_text),
+                        )
+                    }
+                    level == null || data.localityTotal == 0 -> item {
+                        EmptyState(
+                            icon = Res.drawable.ic_info,
+                            title = stringResource(Res.string.home_locality_empty_title),
+                            text = stringResource(Res.string.home_locality_empty_text, name),
+                        )
+                    }
+                    else -> {
+                        item { LocalityRules(data, name, onOpenDocument, Modifier.padding(horizontal = spacing.marginMobile)) }
+                        item {
+                            ExploreFeed(
+                                data = data,
+                                bookmarks = bookmarks,
+                                onOpenDocument = onOpenDocument,
+                                onToggleBookmark = onToggleBookmark,
+                                onShowMore = { onOpenLocality(level, code, name) },
+                                modifier = Modifier.padding(horizontal = spacing.marginMobile),
+                            )
+                        }
+                    }
                 }
             }
         }
