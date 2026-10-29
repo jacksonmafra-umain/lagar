@@ -150,6 +150,15 @@ class CountyParsingTests(unittest.TestCase):
         self.assertIn("Författningen publiceras bara som pdf.", body)
         self.assertIn(PDF_URL, body)
 
+    def test_title_falls_back_to_the_pdf_label(self):
+        detail = county.parse_detail(DETAIL.replace("Länsstyrelsen i Stockholms läns beslut om att upphäva "
+                                                    "naturreservatet Bullerö, Värmdö kommun.", ""),
+                                     DETAIL_URL.format(1), "01")
+        detail.pdfs = [(PDF_URL, "01FS 2026:1 Beslut om Bullerö")]
+        item = county.ListingItem("01FS 2026:1", DETAIL_URL.format(1))
+        meta = county.build_meta(detail, item, "01", "2026-10-29T00:00:00Z")
+        self.assertEqual(meta["title"], "Beslut om Bullerö")
+
     def test_in_force_is_read_only_when_unambiguous(self):
         self.assertEqual(county._in_force("Denna författning träder i kraft den 1 mars 2026."), "2026-03-01")
         self.assertIsNone(county._in_force("träder i kraft den 1 mars 2026 ... träder i kraft den 2 maj 2026"))

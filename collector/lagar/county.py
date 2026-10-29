@@ -460,8 +460,18 @@ def _in_force(text):
     return found.pop() if len(found) == 1 else None
 
 
+def _pdf_title(detail):
+    """The first own PDF's label without its leading number (Gävleborg's pages have no ingress)."""
+    for _url, label in detail.pdfs:
+        match = _NUMBER.match(label)
+        title = label[match.end():].strip(" -–:;,.") if match else ""
+        if title:
+            return title
+    return None
+
+
 def build_meta(detail, item, region_code, fetched_at):
-    title = (detail.title or item.title or detail.number).rstrip(". ")
+    title = (detail.title or item.title or _pdf_title(detail) or detail.number).rstrip(". ")
     return {
         "id": corpus_id(detail.number),
         "title": title,
