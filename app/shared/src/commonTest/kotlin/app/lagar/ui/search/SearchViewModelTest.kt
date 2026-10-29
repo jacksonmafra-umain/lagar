@@ -7,10 +7,13 @@ import app.lagar.data.DocumentResponse
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
 import app.lagar.data.ListingPage
+import app.lagar.data.SearchService
 import app.lagar.domain.LoadState
 import app.lagar.domain.Scope
+import app.lagar.domain.SearchHit
 import app.lagar.domain.SearchMode
 import app.lagar.domain.SearchQuery
+import app.lagar.domain.SortOrder
 import app.lagar.domain.StatusFilter
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.navigation.Search
@@ -66,10 +69,10 @@ class SearchViewModelTest {
     private fun viewModel(repo: FakeRepository, scope: Scope = Scope.Nationell, initial: SearchQuery = SearchQuery("")): SearchViewModel {
         val prefs = UserPreferences(MapSettings())
         prefs.setScope(scope)
-        return SearchViewModel(Catalog(repo), prefs, initial)
+        return SearchViewModel(SearchService(null, Catalog(repo)), prefs, initial)
     }
 
-    private fun SearchViewModel.ids() = assertIs<LoadState.Loaded<List<ListingItem>>>(results.value).value.map { it.id }
+    private fun SearchViewModel.ids() = assertIs<LoadState.Loaded<List<SearchHit>>>(results.value).value.map { it.item.id }
 
     @Test
     fun blankQueryResolvesToTheHintWithoutLoadingTheCatalog() = runTest {
@@ -102,7 +105,7 @@ class SearchViewModelTest {
     @Test
     fun changingTheScopeRerunsTheSearch() = runTest {
         val prefs = UserPreferences(MapSettings())
-        val vm = SearchViewModel(Catalog(FakeRepository()), prefs, SearchQuery("skol"))
+        val vm = SearchViewModel(SearchService(null, Catalog(FakeRepository())), prefs, SearchQuery("skol"))
         runCurrent()
         assertEquals(listOf("2"), vm.ids())
         prefs.setScope(Scope.Kommun)
@@ -152,6 +155,16 @@ class SearchViewModelTest {
     }
 
     @Test
+    fun changingOnlyTheSortRunsAtOnce() = runTest {
+        val vm = viewModel(FakeRepository(), initial = SearchQuery("2"))
+        runCurrent()
+        assertEquals(listOf("2", "1"), vm.ids())
+        vm.update(vm.query.value.copy(sort = SortOrder.Number))
+        runCurrent()
+        assertEquals(listOf("1", "2"), vm.ids())
+    }
+
+    @Test
     fun theRouteQueryRunsAtOnce() = runTest {
         val vm = viewModel(FakeRepository(), initial = SearchQuery("2010:800", mode = SearchMode.Number))
         runCurrent()
@@ -174,8 +187,12 @@ class SearchViewModelTest {
             types = setOf("act", "ordinance"),
             from = LocalDate(2026, 6, 1),
             to = LocalDate(2026, 6, 30),
-            mode = SearchMode.Title,
+            mode = SearchMode.FullText,
             status = StatusFilter.InForce,
+            inForceFrom = LocalDate(2026, 7, 1),
+            inForceTo = LocalDate(2027, 1, 1),
+            vacatioLegis = true,
+            sort = SortOrder.Number,
         )
         assertEquals(query, query.toRoute().toQuery())
         assertEquals(Search(text = "x"), SearchQuery("x").toRoute())
@@ -183,7 +200,7 @@ class SearchViewModelTest {
 
     @Test
     fun staleRouteValuesFallBackToDefaults() {
-        val query = Search(text = "x", from = "nope", mode = "Gone", status = "Gone").toQuery()
+        val query = Search(text = "x", from = "nope", mode = "Gone", status = "Gone", inForceTo = "x", sort = "Gone").toQuery()
         assertEquals(SearchQuery("x"), query)
     }
 
