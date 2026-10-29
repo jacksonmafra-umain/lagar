@@ -30,6 +30,7 @@ Run from the repo root.
 - Progress reports: `python3 -I collector/plan.py` reads `collector/data/targets.json` and the audit JSON, writes `PROGRESS.md` and `progress.svg`. Run the audit first; `COVERAGE.md` is hand-written.
 - Kommun centroids for the app's location suggestion: download SCB's CC0 boundaries zip once (URL in `collector/lagar/centroids.py`) and run `python3 -I collector/centroids.py <zip>`; it rewrites `app/shared/src/commonMain/composeResources/files/geo/sweden.json` with `lat`, `lon` and `radiusKm` per kommun.
 - Build the API: `python3 -I api/build.py --corpus corpus --out build/api/v1`
+- Check the API size against the GitHub Pages budget: `python3 -I api/size_report.py --api build/api/v1 [--site <dir>]`; fails above 900 MB (warns above 800 MB). `api.yml` and `pages.yml` run it and print the report to the step summary. Per-layer search index budgets live in `api/searchindex.py`.
 - Collector tests: `python3 -I -m unittest discover -s collector/tests -t collector` (single test: add `-k <name>`)
 - API tests: `python3 -I -m unittest discover -s api/tests -t .`
 - Landing page: tests `python3 -I -m unittest discover -s landing/tests` and `node --test landing/tests/lang.test.cjs`; `scripts/build-site.sh` builds the web app and assembles `build/landing/` (landing page, fonts, web app under `app/`). The `Site` workflow (`.github/workflows/site.yml`) deploys it to Vercel (project `lagar`, <https://grundlagar.vercel.app>): a preview per PR, production on `main`. `landing/vercel.json` proxies `/app/api/v1/*` to the API on GitHub Pages. Do not use a top-level `site/` folder: `pages.yml` uses it as scratch output.
@@ -45,7 +46,7 @@ Run from the repo root.
   Serve the built API locally with `python3 -m http.server 8000 -d build`. Release builds read the published API at `https://jacksonmafra-umain.github.io/lagar/api/v1/`; the `Pages` workflow (`.github/workflows/pages.yml`) deploys the API and the web app there on every push to `main` that touches `corpus/`, `api/` or `app/`.
 
 - Lint: `uvx ruff check collector api` (config in `ruff.toml`) and `./gradlew ktlintCheck` / `ktlintFormat` from `app/` (rules in `.editorconfig`). `pre-commit install` enables the hooks in `.pre-commit-config.yaml` (whitespace, ruff, corpus frontmatter audit, ktlint).
-- CI: `collector.yml` (ruff, tests on Python 3.12/3.13), `api.yml` (tests, corpus audit, full API build) and `app.yml` (ktlint, build-logic and shared tests on the JVM and wasmJs, Android debug APK, wasmJs build, iOS simulator build) run on PRs and on `main` for their paths; `pages.yml` deploys, `sync-sfs.yml` and `sync-case-law.yml` sync the corpus daily.
+- CI: `collector.yml` (ruff, tests on Python 3.12/3.13), `api.yml` (tests, corpus audit, full API build, size budget) and `app.yml` (ktlint, build-logic and shared tests on the JVM and wasmJs, Android debug APK, wasmJs build, iOS simulator build) run on PRs and on `main` for their paths; `pages.yml` deploys, `sync-sfs.yml` and `sync-case-law.yml` sync the corpus daily.
 
 Workflow: work goes through labelled GitHub issues and PRs assigned to the owner, merged into `main`.
 

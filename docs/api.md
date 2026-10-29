@@ -308,12 +308,18 @@ All keys are always present.
 | `in_force` | string (date) | yes | entry into force when the register value starts with a date; `null` when it is missing (common before about 1982) or not a date |
 | `in_force_raw` | string | yes | the register value as written, whitespace collapsed, e.g. `1983-07-01 överg.best.` (transitional provisions apply) or a condition such as `den dag regeringen bestämmer`; `null` when missing |
 
-## Full-text search: `GET search/index.json`, `search/docs.json`, `search/shards/<key>.json`
+## Full-text search: `GET search/index.json`, `search/<group>/index.json`, `search/<group>/docs.json`, `search/<group>/shards/<key>.json`
 
-A static inverted index, added within v1 (additive: no existing file changes).
-The client reads the manifest, tokenises the query with the rules below, and
-fetches only the shards its terms fall in. Examples: `docs/api/examples/search/`
-(built from the API test fixture corpus).
+A static inverted index, split by layer. The client reads the top-level
+manifest, picks the groups of the layers it searches, tokenises the query
+with the rules below and fetches only the shards its terms fall in, per
+group. Examples: `docs/api/examples/search/` (built from the API test fixture
+corpus; only two shards per group are copied).
+
+The index has its own format version, `search_version`, independent of
+`api_version`: the search files are an optional extra that clients detect
+through the manifest. Version 2 (current) replaced version 1, a single index
+over every layer; see Versions below.
 
 ### Text normalisation and tokens
 
@@ -333,75 +339,182 @@ Index and query text go through the same steps, which match the app's
    the short list of Swedish function words in `normalization.stop_words`
    (`och`, `att`, `om`, `for`, ...). Words such as `lag`, `kap` or `inte` stay.
 
-### `search/index.json` (manifest)
+### `search/index.json` (top-level manifest)
 
 | field | type | null | notes |
 | --- | --- | --- | --- |
-| `search_version` | integer | no | currently `1`; bumped on an incompatible format change |
-| `built_at` | string (UTC timestamp) | no | same as `index.json`; cache shards and `docs.json` keyed by it, since document numbers change between builds |
-| `doc_count` | integer | no | rows in `docs.json` |
-| `term_count` | integer | no | distinct terms over all shards |
-| `fields` | array of string | no | indexed fields: `title`, `number`, and `body` when the full text fits the budget (below) |
-| `field_bits` | object | no | bit per indexed field: `title` 1, `number` 2, `body` 4 |
+| `search_version` | integer | no | `2`; bumped on an incompatible format change |
+| `built_at` | string (UTC timestamp) | no | same as `index.json`; cache group manifests, document tables and shards keyed by it, since document numbers change between builds |
+| `doc_count` | integer | no | documents over all groups |
+| `term_count` | integer | no | sum of the groups' `term_count` (a term in two groups counts twice) |
+| `field_bits` | object | no | bit per field: `title` 1, `number` 2, `body` 4 |
+| `posting_bits_base` | integer | no | `8`: a posting is `gap * 8 + bits` (below) |
 | `normalization` | object | no | `lowercase`, `fold_from`, `fold_to`, `token_pattern`, `min_length` (2), `keep_single_digits` (true), `stop_words` (sorted) |
 | `shard_key_length` | integer | no | `2` |
+| `groups` | array of group | no | one per layer with documents, in layer order; a layer without documents has no group |
+
+Group object:
+
+| field | type | null | notes |
+| --- | --- | --- | --- |
+| `id` | string | no | group id; today always the layer id, and the group's files are under `search/<id>/` |
+| `layers` | array of string | no | layers whose documents the group holds; today one, `[<id>]`. Clients pick groups by this list, not by `id` |
+| `doc_count` | integer | no | rows in the group's `docs.json` |
+| `fields` | array of string | no | indexed fields: `title`, `number`, and `body` when the group fits its budget (Size budget below) |
+| `bytes` | integer | no | size of the group's files (manifest, `docs.json` and shards), uncompressed |
+| `budget` | integer | no | the group's budget in bytes |
+
+### `search/<group>/index.json` (group manifest)
+
+| field | type | null | notes |
+| --- | --- | --- | --- |
+| `group` | string | no | group id |
+| `layers` | array of string | no | as in the group object |
+| `doc_count` | integer | no | rows in `docs.json` |
+| `term_count` | integer | no | distinct terms over the group's shards |
+| `fields` | array of string | no | as in the group object |
 | `shards` | array of shard | no | sorted by `key`; only keys that have terms |
 
 Shard object: `key` (string), `terms` (integer, terms in the shard) and
 `bytes` (integer, size of the shard file).
 
-### `search/docs.json`
+### `search/<group>/docs.json`
 
-`fields` lists the column names (`id`, `title`, `number`, `type`, `issued`,
-`repealed`, `region_code`, `municipality_code`, same values as listing items);
-`docs` is one row per document, sorted by `id`. A document's number in the
-postings is its 0-based row index. `region_code` and `municipality_code` were
-added within v1, after the original columns; clients read columns by name, so
-older tables without them still work (the codes are then unknown). The
+`fields` lists the column names, a subset of `id`, `title`, `number`, `type`,
+`issued`, `repealed`, `region_code`, `municipality_code` in that order (same
+values as listing items); `docs` is one row per document of the group, sorted
+by `id`. A document's number in the group's postings is its 0-based row
+index. A column that is `null` in every row of the group is left out (the
+case-law group has no locality columns, for example); `id` is always there.
+Clients read columns by name and treat a missing column as `null`. The
 locality codes let a client narrow a search to the user's län or kommun.
 
-### `search/shards/<key>.json`
+### `search/<group>/shards/<key>.json`
 
 `key` is the first two characters of a term, with any character outside
 `a-z` and `0-9` replaced by `_` (`skollag` → `sk`, `1962:700` → `19`,
 `über` → `_b`). A one-character term (a single digit) has a one-character key,
-for example `5`. A shard exists only when the manifest lists its key.
+for example `5`. A shard exists only when the group manifest lists its key.
 
 | field | type | null | notes |
 | --- | --- | --- | --- |
 | `key` | string | no | shard key |
 | `terms` | object | no | term → postings, terms sorted |
 
-Postings are a flat integer array of pairs `[gap, bits, gap, bits, ...]`,
-by ascending document number. The first `gap` is the document number itself,
-each following `gap` is the difference to the previous document. `bits` is
-the OR of the `field_bits` the term occurs in for that document (5 = title and
-body). Example: `"utgar": [0, 4]` means document 0 has `utgar` in its body.
+Postings are a flat integer array, one integer per document, by ascending
+document number: `gap * 8 + bits` (`posting_bits_base` is 8). `gap` is the
+document number itself for the first posting and the difference to the
+previous document after that; `bits` (the remainder) is the OR of the
+`field_bits` the term occurs in for that document (5 = title and body).
+Example: `"utbildning": [12]` means document 1 (12 / 8) has `utbildning` in
+its body (12 % 8 = 4); `[1, 9, 9]` is documents 0, 1 and 2, each in the title.
 
 ### Querying
 
+- Groups: read the groups whose `layers` overlap the layers being searched
+  (the app's Nationell scope reads `fundamental`, `sfs`, `agency`,
+  `case_law` and `eu`; Region and Kommun read one group each). Document
+  numbers are per group, so run the query in each group and merge the hits
+  by document id.
 - Exact term: look the term up in its shard.
 - Prefix (type-ahead): every term starting with the typed text is in the same
   shard as long as the text has at least two characters, so filter the shard's
   sorted terms by prefix.
-- Several terms: intersect the document sets. A suggested rank: documents
-  matching in the title first, then number, then body only (lowest bit set),
-  then document order. Filters (type, dates, status) apply to `docs.json`
-  rows.
+- Several terms: intersect the document sets within a group. A suggested
+  rank across groups: documents matching in the title first, then number,
+  then body only (lowest bit set). Filters (type, dates, status, locality)
+  apply to `docs.json` rows.
+
+### Versions
+
+| version | layout | postings |
+| --- | --- | --- |
+| 1 | one index over every layer: `search/index.json` holds `fields` and `shards`, `search/docs.json`, `search/shards/<key>.json` | `[gap, bits, gap, bits, ...]` |
+| 2 | one group per layer, as above | `[gap * 8 + bits, ...]` |
+
+Rollout: the API publishes only the current version; old files are not kept,
+because keeping both would double the index (about 80 MB). The app reads both
+versions (version 1 as one group over every layer), so an app built after
+version 2 works against either API. An app build that reads only version 1
+sees an unknown `search_version`, ignores the index and falls back to listing
+search (titles and numbers from the listings), as it does when the API has no
+index. The web app is deployed with the API in one Pages build, so it always
+matches.
 
 ### Size budget
 
-Body text is indexed only when the whole index (manifest, `docs.json` and all
-shards, uncompressed) stays within 100 MB; otherwise the build falls back to
-titles and numbers and `fields` says so. The frontmatter has no summary field
-yet, so titles and numbers are the only metadata indexed. Measured on the full
-corpus (11 428 documents, built 2026-10-29):
+Each group gets body text only when the whole group (manifest, `docs.json`
+and shards, uncompressed) fits its budget; otherwise that group falls back to
+titles and numbers and its `fields` say so, while other groups keep their
+bodies. Budgets live in `api/searchindex.py`: `case_law` 80 MB, every other
+layer 40 MB. The frontmatter has no summary field yet, so titles and numbers
+are the only metadata indexed.
 
-| index | files | uncompressed | gzip (sum per file) | terms | largest shard |
-| --- | --- | --- | --- | --- | --- |
-| titles + numbers | 349 | 2.4 MB | 0.6 MB | 21 221 | 144 KB (`19`) |
-| titles + numbers + body | 1 039 | 22.1 MB | 5.5 MB | 216 691 | 1.1 MB (`fo`) |
+Measured on the full corpus (27 901 documents, built 2026-10-29):
 
-Both include `docs.json` (1.7 MB, 0.3 MB gzip). The body index fits, so it is
-built: the whole API grows from about 139 MB to 161 MB, far below
-the 1 GB GitHub Pages limit; generating it adds about 15 s to the build.
+| group | documents | files | uncompressed | gzip (sum per file) | terms | `docs.json` | largest shard |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `fundamental` | 4 | 207 | 72 KB | 29 KB | 3 256 | 0.4 KB | 4.6 KB (`fo`) |
+| `sfs` | 11 424 | 1 039 | 18.4 MB | 5.6 MB | 216 517 | 1.7 MB | 0.9 MB (`fo`) |
+| `agency` | 15 | 329 | 144 KB | 55 KB | 6 272 | 2.5 KB | 6.1 KB (`fo`) |
+| `case_law` | 16 390 | 1 208 | 58.5 MB | 16.6 MB | 432 952 | 6.4 MB | 2.6 MB (`fo`) |
+| `eu` | 43 | 766 | 1.4 MB | 0.4 MB | 51 791 | 14 KB | 50 KB (`fo`) |
+| `region` | 10 | 208 | 35 KB | 21 KB | 1 100 | 2.2 KB | 1.2 KB (`fo`) |
+| `municipality` | 15 | 110 | 13 KB | 9 KB | 211 | 2.2 KB | 0.4 KB (`st`) |
+
+Every group has body text; the whole index is 78.5 MB (version 1, one index
+with `[gap, bits]` postings and every locality column, was 94.0 MB for the
+same corpus). Titles and numbers alone would be 2.3 MB for `sfs` and 9.0 MB
+for `case_law`. A Nationell search reads the five national groups' document
+tables (about 8 MB, mostly case law) once per session, then a few shards per
+query.
+
+## Site size budget
+
+GitHub Pages publishes at most 1 GB per site. `api/size_report.py` measures
+the built site and fails CI above the budget:
+
+- `api.yml` (pull requests and `main`) checks the API alone;
+  `pages.yml` checks the whole site (API and web app) before uploading it.
+- Budget 900 MB, warning above 800 MB (MB = 1 000 000 bytes); change them
+  with `--budget-mb` and `--warn-mb` or the defaults in the script.
+- The report, in the workflow's step summary, lists the total, the size per
+  top-level folder, per layer (its listings, its `docs/` files and its search
+  group) and per search group with its fields and budget.
+
+Run it locally after a build:
+`python3 -I api/size_report.py --api build/api/v1`.
+
+Measured on the full corpus (27 901 documents, built 2026-10-29, API only;
+the web app adds about 15 MB):
+
+| | before (search v1) | after (search v2) |
+| --- | --- | --- |
+| whole API | 676.0 MB | 660.5 MB |
+| `docs/` | 552.9 MB | 552.9 MB |
+| `search/` | 94.0 MB | 78.5 MB |
+| listings (all layer folders) | 29.1 MB | 29.1 MB |
+
+By layer (listings, documents and search group): case law 481.7 MB, SFS
+163.2 MB, EU 14.3 MB, the rest under 1 MB each.
+
+Document bodies are 96 % of `docs/` (528 MB of 553 MB), and the JSON is
+already compact (no indentation, no spaces after separators, UTF-8 without
+`\u` escapes); the null-valued meta keys would save under 5 MB and the
+contract keeps them. The rest of the API is too small to matter.
+
+### Approach and headroom
+
+The API stays on GitHub Pages. With search split by layer, a layer that
+outgrows its search budget loses only its own body search, and the CI budget
+stops a build long before Pages refuses it. At today's size there are about
+240 MB of headroom below the 900 MB budget. When the budget gets close (the
+full agency, county and municipal runs and amendment history are the expected
+growth), the next steps, in order:
+
+1. Lower the search budget of the largest group (case law first), which frees
+   up to about 50 MB.
+2. Serve case-law bodies from smaller per-year chunks or drop them from
+   `docs/<id>.json` (a breaking change: needs a new `api_version`).
+3. Move `docs/` to object storage or a CDN (Cloudflare R2, S3) and keep the
+   listings, search and web app on Pages.
