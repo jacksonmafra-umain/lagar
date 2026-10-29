@@ -36,7 +36,6 @@ import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
 import app.lagar.designsystem.glass
-import app.lagar.domain.DisplayLayer
 import app.lagar.resources.Res
 import app.lagar.resources.bookmark_add
 import app.lagar.resources.bookmark_remove
@@ -52,17 +51,14 @@ import app.lagar.resources.ic_bookmark
 import app.lagar.resources.ic_bookmark_filled
 import app.lagar.resources.ic_chevron_right
 import app.lagar.resources.status_in_force
-import app.lagar.resources.type_act
-import app.lagar.resources.type_fundamental_law
 import app.lagar.resources.type_number
-import app.lagar.resources.type_ordinance
 import app.lagar.ui.common.LayerBadge
 import app.lagar.ui.common.RepealedBadge
+import app.lagar.ui.common.typeNameRes
 import app.lagar.ui.shell.ShellDimens
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.todayIn
-import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
@@ -101,7 +97,7 @@ fun FeedCard(
                         verticalArrangement = Arrangement.spacedBy(spacing.xs),
                         itemVerticalAlignment = Alignment.CenterVertically,
                     ) {
-                        val label = layer?.let { stringResource(Res.string.type_number, stringResource(it.typeRes()), item.number) } ?: item.number
+                        val label = layer?.let { stringResource(Res.string.type_number, stringResource(typeNameRes(item.type)), item.number) } ?: item.number
                         LayerBadge(key, label)
                         item.inForce?.let { InForceDateChip(it) }
                         item.issued?.let { RelativeDate(it) }
@@ -208,10 +204,4 @@ private fun BookmarkButton(title: String, key: LayerKey, bookmarked: Boolean, on
             modifier = Modifier.size(24.dp),
         )
     }
-}
-
-private fun DisplayLayer.typeRes(): StringResource = when (this) {
-    DisplayLayer.Fundamental -> Res.string.type_fundamental_law
-    DisplayLayer.SfsOrdinance -> Res.string.type_ordinance
-    else -> Res.string.type_act
 }

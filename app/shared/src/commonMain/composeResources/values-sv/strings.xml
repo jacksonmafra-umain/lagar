@@ -183,4 +183,12 @@
     <string name="advanced_status_all">Alla</string>
     <string name="advanced_status_repealed">Upphävda</string>
     <string name="type_other_statute">Övrig författning</string>
+    <string name="type_agency_regulation">Myndighetsföreskrift</string>
+    <string name="type_case_report">Referat</string>
+    <string name="type_case_notice">Notis</string>
+    <string name="type_eu_regulation">EU-förordning</string>
+    <string name="type_eu_directive">EU-direktiv</string>
+    <string name="type_eu_decision">EU-beslut</string>
+    <string name="type_county_regulation">Länsföreskrift</string>
+    <string name="type_municipal_regulation">Kommunal föreskrift</string>
 </resources>

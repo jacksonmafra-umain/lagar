@@ -3,7 +3,8 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from lagar import frontmatter, riksdagen, schema, writer
+from lagar import frontmatter, riksdagen, schema, vocabulary, writer
+from tests.test_schema import NEW_TYPES, new_layer_meta
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 SHA = "a" * 64
@@ -153,8 +154,37 @@ class WriterTests(unittest.TestCase):
             ("act", "sfs-2010-110", "corpus/sfs/acts/2010-110.md"),
             ("ordinance", "sfs-1999-175", "corpus/sfs/ordinances/1999-175.md"),
             ("other_statute", "sfs-1757-0119", "corpus/sfs/other/1757-0119.md"),
+            ("agency_regulation", "afs-2023-1", "corpus/agency/regulations/afs-2023-1.md"),
+            ("case_report", "nja-2019-2", "corpus/case-law/reports/nja-2019-2.md"),
+            ("case_notice", "hfd-2020-not-3", "corpus/case-law/notices/hfd-2020-not-3.md"),
+            ("eu_regulation", "eu-32016r0679", "corpus/eu/regulations/32016r0679.md"),
+            ("eu_directive", "eu-31995l0046", "corpus/eu/directives/31995l0046.md"),
+            ("eu_decision", "eu-32019d0001", "corpus/eu/decisions/32019d0001.md"),
+            ("county_regulation", "01fs-2024-3", "corpus/region/county-regulations/01fs-2024-3.md"),
+            ("municipal_regulation", "0180-2024-12", "corpus/municipality/regulations/0180-2024-12.md"),
         ]:
             self.assertEqual(writer.path_for({"type": type_, "id": id_}, root), Path(want))
+
+    def test_every_type_has_a_folder(self):
+        self.assertEqual(set(writer._DIRS), set(vocabulary.TYPES))
+
+    def test_new_layer_documents_write_and_reload(self):
+        for type_ in NEW_TYPES:
+            with self.subTest(type_=type_), tempfile.TemporaryDirectory() as tmp:
+                meta = new_layer_meta(type_)
+                path = writer.write(meta, "# Body\n", tmp)
+                self.assertEqual(path, writer.path_for(meta, tmp))
+                self.assertEqual(writer.existing_path(meta["id"], tmp), path)
+                loaded, body = frontmatter.load(path.read_text(encoding="utf-8"))
+                self.assertEqual(loaded, meta)
+                self.assertEqual(body, "# Body\n")
+
+    def test_new_fields_follow_the_schema_order(self):
+        meta = new_layer_meta("municipal_regulation")
+        shuffled = dict(reversed(list(meta.items())))
+        keys = [line.split(":", 1)[0] for line in frontmatter.dump(shuffled).splitlines()]
+        self.assertEqual(keys[-3:], ["issuer", "region_code", "municipality_code"])
+        self.assertEqual(keys, [k for k in schema._load_schema()["properties"] if k in meta])
 
     def test_write_roundtrip_and_refuses_invalid(self):
         it = item("sfs-1999-175", "1999:175", "Rättsinformationsförordning (1999:175)",

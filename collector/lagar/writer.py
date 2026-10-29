@@ -13,11 +13,20 @@ from .vocabulary import TYPES
 _SFS_NUMBER = re.compile(r"\bN?\d{4}:\d+")
 _DATE_PREFIX = re.compile(r"^(\d{4}-\d{2}-\d{2})")
 _ID_JUNK = re.compile(r"[^0-9a-z-]+")
+# type -> (folder under the corpus root, id prefix left out of the file name)
 _DIRS = {
-    "fundamental_law": ("fundamental-laws",),
-    "act": ("sfs", "acts"),
-    "ordinance": ("sfs", "ordinances"),
-    "other_statute": ("sfs", "other"),
+    "fundamental_law": (("fundamental-laws",), "sfs-"),
+    "act": (("sfs", "acts"), "sfs-"),
+    "ordinance": (("sfs", "ordinances"), "sfs-"),
+    "other_statute": (("sfs", "other"), "sfs-"),
+    "agency_regulation": (("agency", "regulations"), ""),
+    "case_report": (("case-law", "reports"), ""),
+    "case_notice": (("case-law", "notices"), ""),
+    "eu_regulation": (("eu", "regulations"), "eu-"),
+    "eu_directive": (("eu", "directives"), "eu-"),
+    "eu_decision": (("eu", "decisions"), "eu-"),
+    "county_regulation": (("region", "county-regulations"), ""),
+    "municipal_regulation": (("municipality", "regulations"), ""),
 }
 
 
@@ -66,8 +75,8 @@ def build_meta(item, parsed, raw_sha256, fetched_at):
 
 
 def path_for(meta, root):
-    name = meta["id"].removeprefix("sfs-") + ".md"
-    return Path(root).joinpath(*_DIRS[meta["type"]], name)
+    folders, prefix = _DIRS[meta["type"]]
+    return Path(root).joinpath(*folders, meta["id"].removeprefix(prefix) + ".md")
 
 
 def existing_path(doc_id, root):
