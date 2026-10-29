@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lagar": {
+      "command": "python3",
+      "args": ["-I", "mcp/server.py", "--api", "build/api/v1"]
+    }
+  }
+}
