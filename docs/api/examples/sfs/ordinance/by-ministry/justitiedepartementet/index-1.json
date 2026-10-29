@@ -7,6 +7,6 @@
   "page_count": 1,
   "total": 1,
   "items": [
-    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null, "in_force": null, "amended_through": "2026:851", "ministry": "Justitiedepartementet KRIM"}
+    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null, "in_force": null, "amended_through": "2026:851", "ministry": "Justitiedepartementet KRIM", "region_code": null, "municipality_code": null}
   ]
 }
