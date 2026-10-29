@@ -1,5 +1,8 @@
 package app.lagar.domain
 
+import app.lagar.data.ApiIndex
+import app.lagar.data.ApiLayer
+import app.lagar.data.ApiSeries
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
@@ -54,6 +57,31 @@ class DisplayLayerTest {
         assertEquals(DisplayLayer.Region, DisplayLayer.forType("county_regulation"))
         assertEquals(DisplayLayer.Municipality, DisplayLayer.forType("municipal_regulation"))
         assertNull(DisplayLayer.forType("bylaw"))
+    }
+
+    @Test
+    fun sfsActsCountIncludesTheOtherStatutes() {
+        val index = ApiIndex(
+            1,
+            "2026-10-29T00:00:00Z",
+            listOf(
+                ApiLayer("fundamental", 4, emptyList()),
+                ApiLayer("sfs", 100, listOf(ApiSeries("act", 48), ApiSeries("ordinance", 40), ApiSeries("other_statute", 12))),
+            ),
+        )
+        assertEquals(60, index.count(DisplayLayer.SfsAct))
+        assertEquals(40, index.count(DisplayLayer.SfsOrdinance))
+        assertEquals(12, index.otherStatuteCount())
+        assertEquals(4, index.count(DisplayLayer.Fundamental))
+        // Every SFS document is counted once across the levels.
+        assertEquals(104, DisplayLayer.entries.sumOf { index.count(it) })
+    }
+
+    @Test
+    fun countsWithoutOtherStatutesAreUnchanged() {
+        val index = ApiIndex(1, "2026-10-29T00:00:00Z", listOf(ApiLayer("sfs", 6, listOf(ApiSeries("act", 6)))))
+        assertEquals(6, index.count(DisplayLayer.SfsAct))
+        assertEquals(0, index.otherStatuteCount())
     }
 
     @Test

@@ -18,7 +18,7 @@ import org.jetbrains.compose.resources.stringResource
  * defaults) and runs it when it leaves.
  */
 @Composable
-fun LocalityStepRoute(viewModel: OnboardingViewModel, onDone: (persist: () -> Unit) -> Unit) {
+fun LocalityStepRoute(viewModel: OnboardingViewModel, onDone: (persist: () -> Unit) -> Unit, onBack: () -> Unit) {
     val locality by viewModel.locality.collectAsState()
     LocalityStepScreen(
         locality = locality,
@@ -26,6 +26,7 @@ fun LocalityStepRoute(viewModel: OnboardingViewModel, onDone: (persist: () -> Un
         onKommun = viewModel::selectKommun,
         onDone = { onDone(viewModel::finish) },
         onSkip = { onDone(viewModel::skip) },
+        onBack = onBack,
     )
 }
 
@@ -36,6 +37,7 @@ fun LocalityStepScreen(
     onKommun: (String?) -> Unit,
     onDone: () -> Unit,
     onSkip: () -> Unit,
+    onBack: () -> Unit,
 ) {
     OnboardingScaffold(
         step = 3,
@@ -44,6 +46,7 @@ fun LocalityStepScreen(
         primaryLabel = stringResource(Res.string.onboarding_done),
         onPrimary = onDone,
         onSkip = onSkip,
+        onBack = onBack,
     ) {
         Column(verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.md)) {
             LocalityPickers(locality, onRegion, onKommun)

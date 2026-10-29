@@ -79,7 +79,9 @@ internal fun BackTopBar(
             modifier = (if (wide) Modifier.widthIn(max = ShellDimens.MaxContentWidth + spacing.margin * 2) else Modifier)
                 .fillMaxWidth()
                 .heightIn(min = ShellDimens.TopBarMinHeight)
-                .padding(horizontal = if (wide) spacing.margin else spacing.gutterMobile),
+                // Vertical padding keeps a multi-line title (badge, count and series tabs) off the bar's edges;
+                // a single-line bar still measures TopBarMinHeight (48dp back target plus 2 x sm).
+                .padding(horizontal = if (wide) spacing.margin else spacing.gutterMobile, vertical = spacing.sm),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(spacing.sm),
         ) {
