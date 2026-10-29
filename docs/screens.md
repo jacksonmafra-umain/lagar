@@ -20,15 +20,15 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | --- | --- | --- |
 | Splash | Matches, with the known corpus-size gap | |
 | Welcome (step 1) | Matches | |
-| Scope (step 2), Locality (step 3) | Mismatch: no back button | #128 |
+| Scope (step 2), Locality (step 3) | Matches; back arrow at the top left (fixed) | #128 |
 | Utforska, Nationell | Matches, with known gaps | |
 | Utforska, Region and Kommun | Mismatch: search hint names national laws | #130 |
-| Scope sheet, Drawer | Match; the drawer button uses a profile icon | #134 |
-| Search results | Mismatch: no scope shown on results; case-law titles carry "-----" separators. Fixed since: exact title matches ranked below newer case reports (#127) | #126, #127, #135 |
+| Scope sheet, Drawer | Matches; the drawer button uses a menu icon (fixed) | #134 |
+| Search results | Mismatch: no scope shown on results; exact title matches rank below newer case reports; case-law titles carry "-----" separators | #126, #127, #135 |
 | Advanced search | Mismatch on phones: title wraps beside a long scope chip | #131 |
-| Hierarki, wide home hierarchy | Mismatch: SFS other statutes left out of totals and counts; counts not digit-grouped | #125, #133 |
+| Hierarki, wide home hierarchy | Mismatch: counts not digit-grouped (SFS other statutes now counted, #125) | #133 |
 | By ministry | Matches | |
-| Layer list | Mismatch: header badge touches the top edge of the bar | #129 |
+| Layer list | Matches; the header badge no longer touches the top edge of the bar (fixed) | #129 |
 | Reader | Mismatch: table-of-contents sheet covers the screen on phones; raw "Upphör att gälla / Träder i kraft" markers; raw ministry unit code | #123, #124, #132 |
 | Sparade | Matches, with the known repealed gap | |
 | Tjänster | Matches | |
@@ -71,6 +71,7 @@ Code: `ui/shell/Drawer.kt`. Reference: Stitch `menu_lateral_drawer_perfil_e_nave
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Header, six entries, About block with data build date | Done | |
+| Opened from a menu icon button in the top bar and the wide top bar (no profile avatar, the app has no accounts) | Done | #134 |
 | Each scope as a direct switch (Region / Kommun without a stored locality, and the active scope, open the scope sheet), Saved count badge, "Switch scope" / "Navigate" / "About" section headings | Done | #31 |
 | "Most popular" and "Official gazettes" entries | Blocked: no usage data, no gazette source | #38 |
 
@@ -115,6 +116,7 @@ Route: `OnboardingScope`. Code: `ui/onboarding/ScopeStepScreen.kt`, `ScopeCard.k
 | --- | --- | --- |
 | Selectable Nationell, Region and Kommun cards with layer colours and counts | Done | |
 | Skip at the top right, and a "stored on this device" note | Done | #29 |
+| Back arrow at the top left, returning to the welcome step | Done | #128 |
 
 ### Locality (step 3)
 
@@ -124,6 +126,7 @@ Route: `OnboardingLocality`. Code: `ui/onboarding/LocalityStepScreen.kt`, `Local
 | --- | --- | --- |
 | Searchable region and kommun pickers for all 21 regions and 290 kommuner, both optional | Done | |
 | Skip at the top right | Done | #29 |
+| Back arrow at the top left, returning to the scope step | Done | #128 |
 | Kommun suggested from the device location (offline nearest SCB centroid, coarse permission; pre-selected for the user to confirm, with denied, unavailable, timeout and abroad messages) | Done | #30 |
 | Linked kommun summary (council, document count) | Blocked: no municipal data | #38 |
 
@@ -159,7 +162,7 @@ Code: `ui/home/WideHome.kt`, `HierarchySection.kt`, `RecentWithPreview.kt`. Refe
 | --- | --- | --- |
 | Hero with document total, scope row with counts (Institutionellt disabled), location pill and data build date | Done | #79 |
 | Wide search bar, advanced-search button and quick picks (Grundlagar, Brottsbalken, Miljöbalken, Rättegångsbalken) | Done | #79 |
-| Norm hierarchy: total, distribution bar, 3-column grid of the nine layers with counts or "coming soon" | Done | #79 |
+| Norm hierarchy: total, distribution bar, 3-column grid of the nine layers with counts or "coming soon"; SFS other statutes counted under SFS acts | Done | #79, #125 |
 | Recent and Favourites list next to a live preview of the selected document (header, opening sections, bookmark, open full text) | Done | #79 |
 | Region and Kommun: "Regulations in force" for the chosen län or kommun above the list, which shows that locality's documents ("Show more" opens its list); the choose-a-locality or "no regulations collected yet" state when there are none | Done | #99 |
 | Footer with the independent-project disclaimer | Done | #79 |
@@ -181,6 +184,7 @@ Route: `Search(text, types, from, to, mode, status, inForceFrom, inForceTo, vaca
 | Full-text mode (body text) with a "Found in the text" note on body-only matches | Done | #37 |
 | Snippets of the matching text | Not planned: needs each result's document (`docs/<id>.json`), too costly per result; the note above says where it matched | #37 |
 | Region and Kommun scopes: only the chosen län's or kommun's documents, by the `region_code` and `municipality_code` columns of `docs.json` (or listing items on the catalog path); a prompt to choose a locality when it is unset | Done | #99 |
+| Searched scope as a chip beside the result count ("Region: Skåne län", ellipsized; opens the scope sheet); a Region or Kommun search without results says it covered only the län or kommun and offers "Sök i Nationell" | Done | #126 |
 | Desktop: results in two equal-height columns within the 1280dp content width; the list stays full width so the whole window scrolls | Done | #35 |
 
 ### Advanced search
@@ -203,8 +207,8 @@ Route: `Hierarki`. Code: `ui/hierarki/`. References: Stitch `lagar_normhierarki_
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Toggle between layers and pyramid views | Done | |
-| Distribution bar and legend | Done | |
-| Nine layer rows with counts (Region and Kommun count every collected län and kommun); empty layers open a "coming soon" sheet | Done | #99 |
+| Distribution bar and legend; total, bar and legend count the SFS other statutes under SFS acts | Done | #125 |
+| Nine layer rows with counts (Region and Kommun count every collected län and kommun; SFS acts include the other statutes, noted on their row); empty layers open a "coming soon" sheet | Done | #99, #125 |
 | Authority badge (Överordnad, Riksdag, Regering, Verk, Prejudikat, Unionsakt, Regional, Kommunal, Service) and real examples on each layer row | Done | #34 |
 | Browse SFS acts and ordinances by ministry: "By ministry" pill on their rows, from the API's per-ministry index | Done | #34 |
 | Browse agency, case law and other layers by issuer or court | Blocked: no data in those layers, and no per-issuer index yet | #38 |
@@ -228,6 +232,7 @@ Route: `LayerList(layer, type?, ministry?, ministryName?, code?, codeName?)`. Co
 | Repealed rows struck through, with the history badge | Done | |
 | Empty state for a layer or series with no documents | Done | #33 |
 | Series switch (all, acts, ordinances, other statutes) inside the list, from the layer's `series` in `index.json` | Done | #33 |
+| Header (badge, count, series switch) padded clear of the back top bar's edges | Done | #129 |
 | Names, levels and colours for the case law, EU, agency, county and municipal types, ready for when those layers have data | Done | #77 |
 | One län's or kommun's documents (`code`, from the per-locality listings), opened from "Show more" on the Region and Kommun homes | Done | #99 |
 | Desktop: two equal-height columns within the 1280dp content width, prefetch counted in rows | Done | #35 |

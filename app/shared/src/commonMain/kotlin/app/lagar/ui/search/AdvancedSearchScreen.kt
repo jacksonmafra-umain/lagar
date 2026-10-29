@@ -168,7 +168,8 @@ fun AdvancedSearchRoute(onBack: () -> Unit, onSearch: (SearchQuery) -> Unit) {
     if (showScopeSheet) ScopeSheet(onDismiss = { showScopeSheet = false })
 }
 
-private suspend fun localityName(geo: GeoRepository, scope: Scope, locality: Locality): String? = when (scope) {
+/** Name of the län or kommun of a Region or Kommun [scope], or null (Nationell, or no locality chosen). */
+internal suspend fun localityName(geo: GeoRepository, scope: Scope, locality: Locality): String? = when (scope) {
     Scope.Nationell -> null
     Scope.Region -> locality.regionCode?.let { code -> geo.regions().firstOrNull { it.code == code }?.name }
     Scope.Kommun -> locality.regionCode?.let { region ->
@@ -386,8 +387,9 @@ fun AdvancedSearchScreen(
     }
 }
 
+/** "Nationell", "Region: Skåne län" or "Kommun: Lund"; the bare scope name while the locality is unknown. */
 @Composable
-private fun scopeLabel(scope: Scope, localityName: String?): String {
+internal fun scopeLabel(scope: Scope, localityName: String?): String {
     val scopeName = stringResource(scope.nameRes())
     return when {
         localityName == null -> scopeName
