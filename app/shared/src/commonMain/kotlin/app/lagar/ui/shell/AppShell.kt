@@ -43,12 +43,15 @@ import app.lagar.settings.BookmarkStore
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.SearchShortcutEffect
 import app.lagar.ui.hierarki.HierarkiRoute
+import app.lagar.ui.hierarki.MinistriesRoute
 import app.lagar.ui.home.HomeRoute
 import app.lagar.ui.home.ScopeSheet
 import app.lagar.ui.list.LayerListRoute
+import app.lagar.ui.list.MinistryFilter
 import app.lagar.ui.navigation.AdvancedSearch
 import app.lagar.ui.navigation.Hierarki
 import app.lagar.ui.navigation.LayerList
+import app.lagar.ui.navigation.Ministries
 import app.lagar.ui.navigation.OnboardingLocality
 import app.lagar.ui.navigation.OnboardingScope
 import app.lagar.ui.navigation.OnboardingWelcome
@@ -250,7 +253,14 @@ fun AppShell(
                                 onChooseLocation = { showScopeSheet = true },
                             )
                         }
-                        composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
+                        composable<Hierarki> {
+                            HierarkiRoute(
+                                onOpenLayer = ::openLayer,
+                                onBrowseByMinistry = { layer ->
+                                    layer.apiType?.let { navigateWhenResumed(Ministries(layer.apiLayer, it)) }
+                                },
+                            )
+                        }
                         composable<Sparade> { SparadeRoute(onOpenDocument = { navigateWhenResumed(Reader(it)) }) }
                         composable<Tjanster> { TjansterScreen() }
                         composable<LayerList> { entry ->
@@ -258,8 +268,20 @@ fun AppShell(
                             LayerListRoute(
                                 layer = route.layer,
                                 type = route.type,
+                                ministry = route.ministry?.let { MinistryFilter(it, route.ministryName ?: it) },
                                 onBack = { navController.popBackStack() },
                                 onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                            )
+                        }
+                        composable<Ministries> { entry ->
+                            val route = entry.toRoute<Ministries>()
+                            MinistriesRoute(
+                                layer = route.layer,
+                                type = route.type,
+                                onBack = { navController.popBackStack() },
+                                onOpenMinistry = {
+                                    navigateWhenResumed(LayerList(route.layer, route.type, ministry = it.id, ministryName = it.name))
+                                },
                             )
                         }
                         composable<Reader> { entry ->

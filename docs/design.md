@@ -97,7 +97,7 @@ secondary button then draw opaque.
 
 | Tier | Surfaces |
 | --- | --- |
-| `Card` | `FeedCard`, `StatuteRow`, `StatuteContainer`, the advanced search `FilterCard`s, `LayerDistributionChart`, the home `LocationCard`, the important-laws `AccordionHeader`, the drawer scope card, the splash logo card, `InputFrame` (text fields and search command bars) |
+| `Card` | `FeedCard`, `StatuteRow`, `StatuteContainer`, the advanced search `FilterCard`s, `LayerDistributionChart`, the home `LocationCard`, the important-laws `AccordionHeader`, the drawer scope card, the splash logo card, `InputFrame` (text fields and search command bars), the Hierarki `MinistryRow` |
 | `Bar` | `LagarTopBar`, `LagarBottomBar`, `BackTopBar`, the advanced search footer |
 | `Overlay` | `LagarDrawerContent`; `ScopeSheet`, `ComingSoonSheet` and the locality `OptionSheet` through `sheetGlass()` |
 
@@ -116,7 +116,8 @@ lives in [`docs/screens.md`](screens.md).
 | Repealed badge | `RepealedBadge` in `common/RepealedBadge.kt` | `Repealed` layer `tint` / `border` / `onTint`, `CircleShape`, 14dp `ic_history` icon, `labelSm` |
 | Pill tab | `PillTab` in `common/PillTab.kt`; Hierarki "Lager / Pyramid" switch, Explore feed tabs, layer list series switch | 32dp `CircleShape` pill in a 48dp target, `Role.Tab`; selected: layer `accent` fill and border, `labelSm` bold upper case in `iconColor()`; unselected: `surfaceContainerLowest`, 1dp `outlineVariant`, `onSurface` |
 | Series switch (layer list) | `SeriesSwitch` in `list/LayerListScreen.kt` | Horizontally scrolling row of `PillTab`s: "All" in the level colour, then one per series (`typeNameRes`), each in its own level's colour from `DisplayLayer.fromRoute` |
-| Layer row (Hierarki) | `LayerRow` in `hierarki/LayerRow.kt` | `shapes.large`, layer `tint` fill and 1dp `border`, 40dp `accent` icon square (`shapes.medium`) with `iconColor()` icon, "N. Name" in bold `bodyUi` `onTint`, `labelSm` description in `onSurfaceVariant`, `LayerBadge` with count or "coming soon", `onTint` chevron |
+| Layer row (Hierarki) | `LayerRow` in `hierarki/LayerRow.kt` | `shapes.large`, layer `tint` fill and 1dp `border`, 40dp `accent` icon square (`shapes.medium`) with `iconColor()` icon, "N. Name" in bold `bodyUi` `onTint` followed by a `LayerBadge` with the authority (Riksdag, Regering, ...), `labelSm` examples in `onSurfaceVariant`, `labelSm` count or "coming soon" in `onTint`, `onTint` chevron; SFS rows add a "By ministry" pill (`surface` at 60%, 1dp layer `border`, `labelSm` `onTint`, 48dp target) |
+| Ministry row (Hierarki) | `MinistryRow` in `hierarki/MinistriesScreen.kt` | `GlassTier.Card` (`shapes.medium`) with a 1dp layer `border`, bold `bodyUi` name in `onSurface`, `labelSm` count in `onTint`, `onTint` chevron, 56dp minimum height |
 | Layer distribution chart | `LayerDistributionChart` in `hierarki/LayerDistributionChart.kt` | `GlassTier.Card` (`shapes.large`), 12dp `surfaceContainer` track, layer `accent` segments, legend chips in `surfaceContainerLow` (`shapes.medium`) with a 10dp `accent` dot and `labelSm` |
 | Hierarki pyramid | `NormPyramid` in `hierarki/NormPyramid.kt` | layer `tint` bands with 1dp `border` (`shapes.medium`), `labelMd` / `labelSm` in `onTint`, "coming soon" in `onSurfaceVariant` |
 | Bottom navigation bar | `LagarBottomBar` in `shell/BottomBar.kt` | `GlassTier.Bar`, `labelSm`, `RadiusTokens.lg` selected pill (`primaryFixed` with `onPrimaryFixedVariant` light, `primaryContainer` with `onPrimaryContainer` dark) |
@@ -127,6 +128,7 @@ lives in [`docs/screens.md`](screens.md).
 | Scope sheet | `ScopeSheet` in `home/ScopeSheet.kt` | `sheetGlass()`, `headlineMd` / `headlineSm` titles, onboarding `ScopeCard`s with "Active" and count badges, `LocalityPickers`, `LagarButton` "Done" |
 | Scope card (onboarding, scope sheet) | `ScopeCard` and `ScopeInfoCard` in `onboarding/ScopeCard.kt` | `shapes.large`, layer `tint` fill, 1dp layer `border` (2dp `accent` when selected), 44dp `accent` icon square (`shapes.medium`), `headlineSm` name in `onTint`, `bodyUi` description, `LayerBadge`s; 28dp check circle (`accent` when selected, `surfaceContainerHighest` otherwise) |
 | Locality picker field | `PickerField` in `onboarding/LocalityPickers.kt` | `labelMd` label, `shapes.small`, `surfaceContainerLowest` (disabled `surfaceContainerLow`), 1dp `outlineVariant`, `bodyUi` value, `Role.DropdownList` |
+| Use my location | `UseLocation` in `onboarding/LocalityPickers.kt` | full-width `LagarSecondaryButton` with `ic_my_location` and `labelMd` text; outcome row with `ic_info` (`primary` for a suggestion, `onSurfaceVariant` otherwise), `bodyUi` text, polite live region; `labelSm` privacy note in `onSurfaceVariant` |
 | Locality option sheet | `OptionSheet` in `onboarding/LocalityPickers.kt` | `sheetGlass()`, `headlineSm` title, `LagarTextField` filter, `bodyUi` options (`primary` when selected) |
 | Step header (onboarding) | `StepHeader` in `onboarding/StepHeader.kt` | `surfaceContainerHigh` pill with `labelMd`, three-segment bar in `primary` / `outlineVariant` |
 | Splash | `SplashScreen` in `onboarding/SplashScreen.kt` | 128dp `GlassTier.Card` (`RadiusTokens.xl`) holding a 96dp `primary` crown circle, `displayLgMobile` "Lagar" in `primary`, `bodyUi` tagline, `primary` progress bar on `surfaceContainerHigh` |

@@ -10,9 +10,27 @@ interface LagarRepository {
     suspend fun document(id: String): DocumentResponse
 }
 
+/** The per-ministry indexes of the API (`<layer>/<type>/by-ministry/`); only SFS series have them. */
+interface MinistryRepository {
+    suspend fun ministries(layer: String, type: String): MinistryIndex
+
+    /** One ministry's paged listing; pages are 1-based. */
+    suspend fun ministryListing(layer: String, type: String, ministry: String, page: Int): ListingPage
+}
+
+/** A raw source of the whole API, before caching. */
+interface ApiSource :
+    LagarRepository,
+    MinistryRepository
+
 internal fun indexPath() = "index.json"
 
 internal fun listingPath(layer: String, type: String?, page: Int) =
     if (type == null) "$layer/index-$page.json" else "$layer/$type/index-$page.json"
 
 internal fun documentPath(id: String) = "docs/$id.json"
+
+internal fun ministryIndexPath(layer: String, type: String) = "$layer/$type/by-ministry/index.json"
+
+internal fun ministryListingPath(layer: String, type: String, ministry: String, page: Int) =
+    "$layer/$type/by-ministry/$ministry/index-$page.json"

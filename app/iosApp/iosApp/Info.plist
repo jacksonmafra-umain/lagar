@@ -4,6 +4,8 @@
 <dict>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your approximate location is used on this device to suggest your municipality. It is not saved or sent anywhere.</string>
 	<key>UILaunchScreen</key>
 	<dict/>
 </dict>
