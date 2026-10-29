@@ -218,6 +218,9 @@
     </plurals>
     <string name="search_no_results_title">No results</string>
     <string name="search_no_results_text">Try another word or loosen the filters.</string>
+    <string name="search_scope_empty_title">No results in %1$s</string>
+    <string name="search_scope_empty_text">This search covers only %1$s. Search all of Sweden instead?</string>
+    <string name="search_in_nationell">Search National</string>
     <string name="advanced_text_label">Word or number</string>
     <string name="advanced_dates_title">Issued between</string>
     <string name="advanced_date_from">From</string>

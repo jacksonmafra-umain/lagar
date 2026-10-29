@@ -218,6 +218,9 @@
     </plurals>
     <string name="search_no_results_title">Inga träffar</string>
     <string name="search_no_results_text">Prova ett annat ord eller lätta på filtren.</string>
+    <string name="search_scope_empty_title">Inga träffar i %1$s</string>
+    <string name="search_scope_empty_text">Sökningen gäller bara %1$s. Vill du söka i hela Sverige i stället?</string>
+    <string name="search_in_nationell">Sök i Nationell</string>
     <string name="advanced_text_label">Ord eller nummer</string>
     <string name="advanced_dates_title">Utfärdad mellan</string>
     <string name="advanced_date_from">Från</string>
