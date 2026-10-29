@@ -3,7 +3,8 @@
 Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown files,
 records a SHA-256 manifest of the authoritative SFS PDFs, adds each statute's amendment
 register from SFSR, writes a metadata-only amendment history for git, collects the published case
-law of the Swedish courts and collects EU acts in Swedish from the Publications Office Cellar.
+law of the Swedish courts, collects EU acts in Swedish from the Publications Office Cellar and
+collects agency regulations (pilot: AFS, FFFS, TSFS).
 Python standard library only.
 
 ## Usage
@@ -279,13 +280,83 @@ python3 -I collector/collect.py case-law [--court CODE ...] [--from YYYY-MM-DD] 
 - The site has no robots.txt (HTTP 404); one is honoured if it appears. An HTTP 403 stops the run
   (exit code 2). Entries may shift between pages while the courts publish; a rerun picks up any miss.
 
+## Agency regulations
+
+The `agency` command collects agency regulations (myndighetsföreskrifter) from each agency's own
+register. There is no central database; lagrummet.se lists the series and links to the
+registers. Regulations carry no copyright (9 § upphovsrättslagen).
+
+```
+python3 -I collector/collect.py agency --series AFS|FFFS|TSFS [--series ...] [--year YYYY ...] \
+    [--number 'AFS 2023:1' ...] [--limit N] [--refresh] [--rate SECONDS] \
+    [--state collector/data/agency-state.json] [--manifest sources/agency-pdf-manifest.json] \
+    [--corpus corpus] [--report FILE]
+```
+
+Each series has a small adapter in `collector/lagar/agency.py` that lists the regulations
+(`listing_urls`, `parse_listing`) and parses one detail page (`parse_detail`); the shared run
+loop does robots.txt, rate limiting, state, PDF hashing and writing. Adding a series means
+adding an adapter and registering it in `ADAPTERS`.
+
+| series | listing | detail | text |
+| --- | --- | --- | --- |
+| AFS (Arbetsmiljöverket) | `https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/`, "Gällande grundföreskrifter" plus the amending regulations in force | `.../foreskrifter/afs-20231/` | HTML, the latest consolidated version |
+| FFFS (Finansinspektionen) | `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/` (all regulations in force, newest first) | `.../sok-fffs/<year>/<yearnumber>/` | PDF only |
+| TSFS (Transportstyrelsen) | `.../ts-foreskrifter-i-nummerordning/<year>/` (in force and repealed) | `.../<year>/details?RuleNumber=<year>:<n>&ruleprefix=TSFS` | PDF only |
+
+- Only base regulations (grundförfattningar) are stored, in `corpus/agency/regulations/`.
+  Amending regulations are counted as `excluded` and appear in the base regulation's
+  `amended_by` and in its body. FFFS uses the register's own type; TSFS uses the title
+  (`Föreskrifter om ändring/ändringar/upphävande ...`), and a TSFS page that shows another
+  regulation which lists the requested number as an amendment is excluded too. FI classes its
+  repealing regulations (`Föreskrifter om upphävande av ...`) as base regulations; they are kept.
+- Mapping: `id` is the slug of the number (`afs-2023-1`, `hslf-fs-2016-40`), `number` the
+  series-prefixed number (`AFS 2023:1`), `issuer` the agency, `language: sv`, `eli: null`,
+  `authoritative: false` (the printed series is authoritative). AFS: `issued` is "Beslutad",
+  `in_force` "Träder i kraft" (both only on pages of unamended regulations) and `amended_through`
+  the "Ändringar är införda till och med" note of consolidated pages. FFFS: `in_force` is
+  "Gäller från". TSFS: `in_force` and `repealed` come from the year listing and the base PDF
+  entry. `source` is the detail page and `source_sha256` hashes it as served.
+- Body: a facts block (series, issuer, dates, version), the agency's own summary when there is
+  one, the amending regulations (with entry into force and scope where published), links to the
+  PDFs, then the text. AFS text is converted from the page's HTML: section signs in bold,
+  "Allmänna råd" captions, lettered and roman list markers, tables flattened to one row per line
+  and footnotes collected under `## Fotnoter`. FFFS and TSFS publish the text only as PDF;
+  their bodies say so and link the official PDFs. PDF text is not extracted.
+- PDFs listed on a detail page are downloaded once to record `url`, `bytes`, `sha256`,
+  `content_type` and `retrieved_at` in the committed manifest `sources/agency-pdf-manifest.json`
+  (keyed by regulation number). A response that is not a PDF fails the regulation. The bytes are
+  never stored. AFS PDFs are not requested: the text comes from HTML, and Arbetsmiljöverket's
+  robots.txt disallows the folder with the original PDFs
+  (`/globalassets/filer/publikationer/foreskrifter/ursprungs/`).
+- robots.txt is read per host before anything else and checked for every URL: a disallowed
+  listing stops the run as blocked (exit code 2), a disallowed detail page fails that
+  regulation and a disallowed PDF is listed in the manifest without a hash. A `Crawl-delay`
+  raises the interval. `--rate` defaults to, and may not go below, 1 s. An HTTP 403 stops the run.
+- `--year` keeps regulations numbered in those years; for TSFS it also picks the year listings
+  to read (without it, every year on the index). `--number` picks single regulations. `--limit`
+  stops after N written documents per series (unchanged and skipped ones do not count).
+- State (git-ignored) is `{"done": {number: page sha256}, "failed": {number: error},
+  "blocked": null|msg}`. Done regulations are skipped while their file exists; `--refresh`
+  refetches them and hashes their PDFs again (a consolidated PDF can change behind the same
+  URL). A document whose body and frontmatter, apart from `fetched_at` and `source_sha256`, are
+  unchanged is left untouched, so page chrome changes do not churn the corpus.
+- `--report` writes `{"written": [...], "unchanged": n, "skipped": n, "excluded": n, "pdfs": n,
+  "failed": [...], "blocked": bool}`.
+
+Not yet collected: Boverket (BFS) has an official API with full text from 2024 on, which probably
+needs a subscription key from `api-portal.boverket.se` (owner decision). Skatteverket's
+`www4.skatteverket.se` rejected the robots.txt request (WAF), so access must be confirmed first.
+Arbetsmiljöverket's regulation API is in a closed evaluation and needs a key; the public HTML
+pages are used instead.
+
 ## Exit codes
 
 - 0: finished (failures are listed, not fatal)
 - 1: the listing, list file or robots.txt could not be read, or the state file is corrupt
 - 2: blocked (HTTP 403 or robots.txt disallow); recorded in the state file
 
-These apply to `sfs` and `case-law`.
+These apply to `sfs`, `case-law` and `agency`.
 
 ## Tests
 
