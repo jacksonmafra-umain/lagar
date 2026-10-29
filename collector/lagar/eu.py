@@ -855,6 +855,14 @@ def _unchanged(meta, body, corpus):
     return stored_body == body and stored == {k: v for k, v in meta.items() if k != "fetched_at"}
 
 
+def _stored_fetched_at(meta, corpus):
+    try:
+        stored, _ = frontmatter.load(writer.path_for(meta, corpus).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    return stored.get("fetched_at")
+
+
 def _done(state, celex, corpus):
     if celex not in state["done"]:
         return False
@@ -879,6 +887,8 @@ def _store(client, celex, metadata, args, manifest, cache):
     raw, content_type, source = _fetch_text(client, celex, fmt, cache)
     sha = hashlib.sha256(raw).hexdigest()
     meta = build_meta(metadata, sha, source, _now())
+    if cache.offline:  # nothing was fetched: keep the stored retrieval time
+        meta["fetched_at"] = _stored_fetched_at(meta, args.corpus) or meta["fetched_at"]
     body = to_markdown(meta["title"], raw)
     _record_act(manifest, {
         "celex": celex,

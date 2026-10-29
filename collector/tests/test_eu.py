@@ -625,13 +625,17 @@ class RunTest(unittest.TestCase):
             "32016R0679.source.json", "32016R0679.sparql.json", "32016R0679.xhtml",
         ])
         before = self.path.read_bytes()
+        cons = self.corpus / "eu/regulations/02016r0679-20160504.md"
+        cons.write_text(cons.read_text("utf-8") + "stale\n", encoding="utf-8")
+        fetched = frontmatter.load(cons.read_text("utf-8"))[0]["fetched_at"]
         self.path.write_text("stale", encoding="utf-8")
         client = FakeClient({})
         summary = eu.run(client, self.args("--celex", GDPR, "--consolidated", "--refresh", "--cache", str(cache),
                                            "--offline"), today=date(2026, 10, 29))
         self.assertEqual(client.urls, [])
-        self.assertEqual((summary.written, summary.unchanged), ([GDPR], [GDPR_CONS]))
+        self.assertEqual(summary.written, [GDPR, GDPR_CONS])
         self.assertEqual(frontmatter.load(self.path.read_text("utf-8"))[1], frontmatter.load(before.decode())[1])
+        self.assertEqual(frontmatter.load(cons.read_text("utf-8"))[0]["fetched_at"], fetched)
         # Nothing cached: the act fails, still without a request.
         summary = eu.run(client, self.args("--celex", "32022L2555", "--cache", str(cache), "--offline"))
         self.assertEqual((summary.failed, client.urls), (["32022L2555"], []))
