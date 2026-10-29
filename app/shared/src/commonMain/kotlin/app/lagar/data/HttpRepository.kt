@@ -33,9 +33,11 @@ class HttpRepository(
 
     override suspend fun searchManifest(): SearchManifest = fetch(searchManifestPath())
 
-    override suspend fun searchDocs(): SearchDocsTable = fetch(searchDocsPath())
+    override suspend fun searchGroupManifest(group: String): SearchGroupManifest = fetch(searchGroupManifestPath(group))
 
-    override suspend fun searchShard(key: String): SearchShard = fetch(searchShardPath(key))
+    override suspend fun searchDocs(group: String?): SearchDocsTable = fetch(searchDocsPath(group))
+
+    override suspend fun searchShard(group: String?, key: String): SearchShard = fetch(searchShardPath(group, key))
 
     private suspend inline fun <reified T> fetch(path: String): T {
         val response: HttpResponse = client.get(base + path)

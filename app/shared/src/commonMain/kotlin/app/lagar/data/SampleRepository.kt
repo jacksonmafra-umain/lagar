@@ -29,9 +29,11 @@ class SampleRepository(
 
     override suspend fun searchManifest() = read<SearchManifest>(searchManifestPath())
 
-    override suspend fun searchDocs() = read<SearchDocsTable>(searchDocsPath())
+    override suspend fun searchGroupManifest(group: String) = read<SearchGroupManifest>(searchGroupManifestPath(group))
 
-    override suspend fun searchShard(key: String) = read<SearchShard>(searchShardPath(key))
+    override suspend fun searchDocs(group: String?) = read<SearchDocsTable>(searchDocsPath(group))
+
+    override suspend fun searchShard(group: String?, key: String) = read<SearchShard>(searchShardPath(group, key))
 
     private suspend inline fun <reified T> read(path: String): T =
         json.decodeFromString(readBytes("files/sample/api/v1/$path").decodeToString())
