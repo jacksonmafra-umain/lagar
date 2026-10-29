@@ -28,7 +28,7 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | Advanced search | Mismatch on phones: title wraps beside a long scope chip | #131 |
 | Hierarki, wide home hierarchy | Mismatch: SFS other statutes left out of totals and counts; counts not digit-grouped | #125, #133 |
 | By ministry | Matches | |
-| Layer list | Mismatch: header badge touches the top edge of the bar | #129 |
+| Layer list | Matches; the header badge no longer touches the top edge of the bar (fixed) | #129 |
 | Reader | Mismatch: table-of-contents sheet covers the screen on phones; raw "Upphör att gälla / Träder i kraft" markers; raw ministry unit code | #123, #124, #132 |
 | Sparade | Matches, with the known repealed gap | |
 | Tjänster | Matches | |
@@ -227,6 +227,7 @@ Route: `LayerList(layer, type?, ministry?, ministryName?, code?, codeName?)`. Co
 | Repealed rows struck through, with the history badge | Done | |
 | Empty state for a layer or series with no documents | Done | #33 |
 | Series switch (all, acts, ordinances, other statutes) inside the list, from the layer's `series` in `index.json` | Done | #33 |
+| Header (badge, count, series switch) padded clear of the back top bar's edges | Done | #129 |
 | Names, levels and colours for the case law, EU, agency, county and municipal types, ready for when those layers have data | Done | #77 |
 | One län's or kommun's documents (`code`, from the per-locality listings), opened from "Show more" on the Region and Kommun homes | Done | #99 |
 | Desktop: two equal-height columns within the 1280dp content width, prefetch counted in rows | Done | #35 |
