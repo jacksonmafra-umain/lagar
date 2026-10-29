@@ -15,6 +15,7 @@ class UserPreferencesTest {
         val prefs = UserPreferences(MapSettings())
         assertEquals(LanguageChoice.System, prefs.language.value)
         assertEquals(ThemeMode.System, prefs.theme.value)
+        assertEquals(ReduceTransparency.System, prefs.reduceTransparency.value)
     }
 
     @Test
@@ -23,20 +24,23 @@ class UserPreferencesTest {
         val prefs = UserPreferences(settings)
         prefs.setLanguage(LanguageChoice.English)
         prefs.setTheme(ThemeMode.Dark)
+        prefs.setReduceTransparency(ReduceTransparency.On)
         assertEquals(LanguageChoice.English, prefs.language.value)
         assertEquals(ThemeMode.Dark, prefs.theme.value)
 
         val reopened = UserPreferences(settings)
         assertEquals(LanguageChoice.English, reopened.language.value)
         assertEquals(ThemeMode.Dark, reopened.theme.value)
+        assertEquals(ReduceTransparency.On, reopened.reduceTransparency.value)
     }
 
     @Test
     fun unknownStoredValueFallsBackToSystem() {
-        val settings = MapSettings("language" to "klingon", "theme" to "neon")
+        val settings = MapSettings("language" to "klingon", "theme" to "neon", "reduce_transparency" to "sometimes")
         val prefs = UserPreferences(settings)
         assertEquals(LanguageChoice.System, prefs.language.value)
         assertEquals(ThemeMode.System, prefs.theme.value)
+        assertEquals(ReduceTransparency.System, prefs.reduceTransparency.value)
     }
 
     @Test
@@ -55,6 +59,28 @@ class UserPreferencesTest {
         assertTrue(reopened.onboardingDone.value)
         assertEquals(Scope.Kommun, reopened.scope.value)
         assertEquals(Locality("14", "1480"), reopened.locality.value)
+    }
+
+    @Test
+    fun focusDefaultsToCitizen() {
+        assertEquals(UserFocus.Citizen, UserPreferences(MapSettings()).focus.value)
+        assertEquals(UserFocus.Citizen, UserPreferences(MapSettings("focus" to "astronaut")).focus.value)
+    }
+
+    @Test
+    fun completeOnboardingStoresFocus() {
+        val settings = MapSettings()
+        UserPreferences(settings).completeOnboarding(Scope.Nationell, Locality(null, null), UserFocus.Student)
+        assertEquals(UserFocus.Student, UserPreferences(settings).focus.value)
+    }
+
+    @Test
+    fun setFocusPersistsImmediately() {
+        val settings = MapSettings()
+        val prefs = UserPreferences(settings)
+        prefs.setFocus(UserFocus.Lawyer)
+        assertEquals(UserFocus.Lawyer, prefs.focus.value)
+        assertEquals(UserFocus.Lawyer, UserPreferences(settings).focus.value)
     }
 
     @Test

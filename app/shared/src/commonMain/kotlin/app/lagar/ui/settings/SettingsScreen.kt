@@ -39,36 +39,51 @@ import app.lagar.resources.drawer_about
 import app.lagar.resources.drawer_data_built
 import app.lagar.resources.language_english
 import app.lagar.resources.language_swedish
+import app.lagar.resources.setting_off
+import app.lagar.resources.setting_on
+import app.lagar.resources.settings_focus
+import app.lagar.resources.settings_focus_desc
 import app.lagar.resources.settings_language
+import app.lagar.resources.settings_reduce_transparency
+import app.lagar.resources.settings_reduce_transparency_desc
 import app.lagar.resources.settings_system
 import app.lagar.resources.settings_theme
 import app.lagar.resources.settings_title
 import app.lagar.resources.theme_dark
 import app.lagar.resources.theme_light
+import app.lagar.settings.ReduceTransparency
 import app.lagar.settings.ThemeMode
+import app.lagar.settings.UserFocus
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.rememberDataBuildDate
+import app.lagar.ui.onboarding.labelRes
 import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 
-/** Language, theme and about. Choices apply immediately and are stored on the device. */
+/** Language, theme, transparency, main focus and about. Choices apply immediately and are stored on the device. */
 @Composable
 fun SettingsRoute(onBack: () -> Unit) {
     val preferences = koinInject<UserPreferences>()
     val language by preferences.language.collectAsState()
     val theme by preferences.theme.collectAsState()
+    val reduceTransparency by preferences.reduceTransparency.collectAsState()
+    val focus by preferences.focus.collectAsState()
     val builtAt by rememberDataBuildDate()
     SettingsScreen(
         language = language,
         theme = theme,
+        reduceTransparency = reduceTransparency,
+        focus = focus,
         builtAt = builtAt,
         onLanguage = preferences::setLanguage,
         onTheme = preferences::setTheme,
+        onReduceTransparency = preferences::setReduceTransparency,
+        onFocus = preferences::setFocus,
         onBack = onBack,
     )
 }
@@ -77,9 +92,13 @@ fun SettingsRoute(onBack: () -> Unit) {
 fun SettingsScreen(
     language: LanguageChoice,
     theme: ThemeMode,
+    reduceTransparency: ReduceTransparency,
+    focus: UserFocus,
     builtAt: String?,
     onLanguage: (LanguageChoice) -> Unit,
     onTheme: (ThemeMode) -> Unit,
+    onReduceTransparency: (ReduceTransparency) -> Unit,
+    onFocus: (UserFocus) -> Unit,
     onBack: () -> Unit,
 ) {
     val spacing = LagarTheme.spacing
@@ -119,6 +138,24 @@ fun SettingsScreen(
                 selected = theme,
                 onSelect = onTheme,
             )
+            OptionGroup(
+                title = stringResource(Res.string.settings_reduce_transparency),
+                description = stringResource(Res.string.settings_reduce_transparency_desc),
+                options = listOf(
+                    ReduceTransparency.System to system,
+                    ReduceTransparency.On to stringResource(Res.string.setting_on),
+                    ReduceTransparency.Off to stringResource(Res.string.setting_off),
+                ),
+                selected = reduceTransparency,
+                onSelect = onReduceTransparency,
+            )
+            OptionGroup(
+                title = stringResource(Res.string.settings_focus),
+                description = stringResource(Res.string.settings_focus_desc),
+                options = UserFocus.entries.map { it to stringResource(it.labelRes()) },
+                selected = focus,
+                onSelect = onFocus,
+            )
             Column(verticalArrangement = Arrangement.spacedBy(spacing.xs)) {
                 SectionTitle(stringResource(Res.string.drawer_about))
                 AboutLine(stringResource(Res.string.about_credits, CREDITS_NAME))
@@ -157,9 +194,23 @@ private fun AboutLine(text: String) {
 }
 
 @Composable
-private fun <T> OptionGroup(title: String, options: List<Pair<T, String>>, selected: T, onSelect: (T) -> Unit) {
+private fun <T> OptionGroup(
+    title: String,
+    options: List<Pair<T, String>>,
+    selected: T,
+    onSelect: (T) -> Unit,
+    description: String? = null,
+) {
     Column {
         SectionTitle(title)
+        description?.let {
+            Text(
+                it,
+                style = LagarTheme.type.labelSm,
+                color = LagarTheme.colors.onSurfaceVariant,
+                modifier = Modifier.padding(top = LagarTheme.spacing.xs),
+            )
+        }
         Column(Modifier.selectableGroup()) {
             options.forEach { (value, label) ->
                 OptionRow(label = label, selected = value == selected, onClick = { onSelect(value) })

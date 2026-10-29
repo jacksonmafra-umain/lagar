@@ -7,6 +7,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.DisplayLayer
 import app.lagar.resources.Res
@@ -20,7 +21,10 @@ import org.jetbrains.compose.resources.stringResource
 fun ComingSoonSheet(layer: DisplayLayer, onDismiss: () -> Unit) {
     ModalBottomSheet(
         onDismissRequest = onDismiss,
-        containerColor = LagarTheme.colors.surfaceContainerLowest,
+        modifier = Modifier.sheetGlass(),
+        shape = SheetShape,
+        containerColor = Color.Transparent,
+        contentColor = LagarTheme.colors.onSurface,
     ) {
         EmptyState(
             icon = Res.drawable.ic_info,

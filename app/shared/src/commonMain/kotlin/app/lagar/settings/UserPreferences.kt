@@ -9,27 +9,32 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-/** Device-local user settings; unknown or missing stored values fall back to `System`. */
+/** Device-local user settings; unknown or missing stored values fall back to `System` (focus: `Citizen`). */
 class UserPreferences(private val settings: Settings) {
     private val _language = MutableStateFlow(read(KEY_LANGUAGE, LanguageChoice.System))
     private val _theme = MutableStateFlow(read(KEY_THEME, ThemeMode.System))
+    private val _reduceTransparency = MutableStateFlow(read(KEY_REDUCE_TRANSPARENCY, ReduceTransparency.System))
 
     private val _onboardingDone = MutableStateFlow(settings.getBoolean(KEY_ONBOARDING_DONE, false))
     private val _scope = MutableStateFlow(read(KEY_SCOPE, Scope.Nationell))
     private val _locality = MutableStateFlow(
         Locality(settings.getStringOrNull(KEY_REGION), settings.getStringOrNull(KEY_KOMMUN)),
     )
+    private val _focus = MutableStateFlow(read(KEY_FOCUS, UserFocus.Citizen))
 
     val language: StateFlow<LanguageChoice> = _language.asStateFlow()
     val theme: StateFlow<ThemeMode> = _theme.asStateFlow()
+    val reduceTransparency: StateFlow<ReduceTransparency> = _reduceTransparency.asStateFlow()
 
     val onboardingDone: StateFlow<Boolean> = _onboardingDone.asStateFlow()
     val scope: StateFlow<Scope> = _scope.asStateFlow()
     val locality: StateFlow<Locality> = _locality.asStateFlow()
+    val focus: StateFlow<UserFocus> = _focus.asStateFlow()
 
-    fun completeOnboarding(scope: Scope, locality: Locality) {
+    fun completeOnboarding(scope: Scope, locality: Locality, focus: UserFocus = _focus.value) {
         setScope(scope)
         writeLocality(locality)
+        setFocus(focus)
         settings.putBoolean(KEY_ONBOARDING_DONE, true)
         _onboardingDone.value = true
     }
@@ -37,6 +42,11 @@ class UserPreferences(private val settings: Settings) {
     fun setScope(scope: Scope) {
         settings.putString(KEY_SCOPE, scope.name)
         _scope.value = scope
+    }
+
+    fun setFocus(focus: UserFocus) {
+        settings.putString(KEY_FOCUS, focus.name)
+        _focus.value = focus
     }
 
     fun setLocality(locality: Locality) = writeLocality(locality)
@@ -65,6 +75,11 @@ class UserPreferences(private val settings: Settings) {
         _theme.value = mode
     }
 
+    fun setReduceTransparency(choice: ReduceTransparency) {
+        settings.putString(KEY_REDUCE_TRANSPARENCY, choice.name)
+        _reduceTransparency.value = choice
+    }
+
     private inline fun <reified E : Enum<E>> read(key: String, default: E): E {
         val stored = settings.getStringOrNull(key) ?: return default
         return enumValues<E>().firstOrNull { it.name == stored } ?: default
@@ -73,9 +88,11 @@ class UserPreferences(private val settings: Settings) {
     private companion object {
         const val KEY_LANGUAGE = "language"
         const val KEY_THEME = "theme"
+        const val KEY_REDUCE_TRANSPARENCY = "reduce_transparency"
         const val KEY_ONBOARDING_DONE = "onboarding_done"
         const val KEY_SCOPE = "scope"
         const val KEY_REGION = "region"
         const val KEY_KOMMUN = "kommun"
+        const val KEY_FOCUS = "focus"
     }
 }
