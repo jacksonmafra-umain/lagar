@@ -140,6 +140,35 @@ class _Converter(HTMLParser):
         return "\n\n".join(b.lstrip("\x01\x02") for b in self.blocks)
 
 
+def clean_text(text):
+    """Text with invisible characters removed and whitespace (including no-break spaces) collapsed."""
+    return _SPACE.sub(" ", _INVISIBLE.sub("", text)).strip()
+
+
+def escape_block(text):
+    """A paragraph that would otherwise read as a Markdown heading gets its `#` escaped."""
+    return "\\" + text if text.startswith("#") else text
+
+
+def markdown_table(rows):
+    """A Markdown (GFM) table; the first row is the header.
+
+    Short rows are padded, columns empty in every row are dropped and `|` in a cell is escaped.
+    """
+    width = max((len(row) for row in rows), default=0)
+    rows = [[clean_text(cell) for cell in row] + [""] * (width - len(row)) for row in rows]
+    keep = [i for i in range(width) if any(row[i] for row in rows)]
+    if not keep:
+        return ""
+
+    def line(cells):
+        return "|" + "|".join(f" {c} " if c else " " for c in cells) + "|"
+
+    out = [line(rows[0][i].replace("|", "\\|") for i in keep), line("---" for _ in keep)]
+    out += [line(row[i].replace("|", "\\|") for i in keep) for row in rows[1:]]
+    return "\n".join(out)
+
+
 def to_markdown(html, heading_offset=0):
     """Markdown for an HTML fragment; headings are moved down by `heading_offset` levels."""
     converter = _Converter(heading_offset)

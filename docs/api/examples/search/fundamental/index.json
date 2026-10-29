@@ -1,0 +1,18 @@
+{
+  "group": "fundamental",
+  "layers": ["fundamental"],
+  "doc_count": 1,
+  "term_count": 9,
+  "fields": ["title", "number", "body"],
+  "shards": [
+    {"key": "1", "terms": 1, "bytes": 30},
+    {"key": "19", "terms": 1, "bytes": 38},
+    {"key": "al", "terms": 1, "bytes": 33},
+    {"key": "fo", "terms": 1, "bytes": 36},
+    {"key": "ma", "terms": 1, "bytes": 34},
+    {"key": "of", "terms": 1, "bytes": 39},
+    {"key": "re", "terms": 1, "bytes": 45},
+    {"key": "sv", "terms": 1, "bytes": 37},
+    {"key": "ut", "terms": 1, "bytes": 35}
+  ]
+}

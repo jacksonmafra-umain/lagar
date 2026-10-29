@@ -49,7 +49,6 @@ import app.lagar.resources.bookmark_add
 import app.lagar.resources.bookmark_remove
 import app.lagar.resources.coming_soon
 import app.lagar.resources.feed_amended_through
-import app.lagar.resources.home_coming_soon_text
 import app.lagar.resources.home_favourites_empty_text
 import app.lagar.resources.home_favourites_empty_title
 import app.lagar.resources.home_show_more
@@ -96,8 +95,8 @@ private const val PREVIEW_BLOCKS = 6
 
 /**
  * The wide home's document area: newest documents or bookmarks on the left; selecting one shows its opening
- * text on the right. The first document is previewed until another is chosen. Region and Kommun have no
- * documents yet, so they show the coming-soon notice instead.
+ * text on the right. The first document is previewed until another is chosen. Region and Kommun list the chosen
+ * locality's documents, or say why there are none.
  */
 @Composable
 internal fun RecentWithPreview(
@@ -107,12 +106,8 @@ internal fun RecentWithPreview(
     onShowMore: () -> Unit,
 ) {
     val spacing = LagarTheme.spacing
-    if (data.scope != Scope.Nationell) {
-        EmptyState(
-            icon = Res.drawable.ic_info,
-            title = stringResource(Res.string.coming_soon),
-            text = stringResource(Res.string.home_coming_soon_text),
-        )
+    if (data.scope != Scope.Nationell && data.localityHome == null) {
+        LocalityEmptyState(data)
         return
     }
     var tab by rememberSaveable { mutableStateOf(ListTab.Recent) }

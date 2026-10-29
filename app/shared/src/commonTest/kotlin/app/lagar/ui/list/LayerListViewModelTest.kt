@@ -7,6 +7,8 @@ import app.lagar.data.DocumentResponse
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
 import app.lagar.data.ListingPage
+import app.lagar.data.LocalityIndex
+import app.lagar.data.LocalityRepository
 import app.lagar.data.MinistryIndex
 import app.lagar.data.MinistryRepository
 import app.lagar.domain.LoadState
@@ -94,6 +96,35 @@ class LayerListViewModelTest {
         assertEquals(listOf("justitiedepartementet-1", "justitiedepartementet-2"), vm.items.value.map { it.id })
         assertEquals(2, vm.total.value)
         // Neither the layer listing nor the index is read, so the series switch stays hidden.
+        assertEquals(emptyList(), repo.calls)
+        assertEquals(emptyList(), vm.series.value)
+    }
+
+    /** Serves [pageCount] pages of one item for any län or kommun code and records the requests. */
+    private class FakeLocalities(private val pageCount: Int = 2) : LocalityRepository {
+        val requests = mutableListOf<String>()
+
+        override suspend fun localities(layer: String): LocalityIndex = error("unused")
+
+        override suspend fun localityListing(layer: String, code: String, page: Int): ListingPage {
+            requests += "$layer/$code/$page"
+            return ListingPage(
+                layer, null, page, pageCount, total = pageCount,
+                items = listOf(ListingItem("$code-$page", "T$page", "KFS 2026:$page", "municipal_regulation", null, null, municipalityCode = code)),
+            )
+        }
+    }
+
+    @Test
+    fun localityFilterPagesThroughTheLocalityListing() {
+        val repo = FakeRepository()
+        val localities = FakeLocalities()
+        val vm = LayerListViewModel(repo, "municipality", null, locality = LocalityFilter("0180", "Stockholm"), localities = localities)
+        vm.loadNext()
+        vm.selectSeries("municipal_regulation")
+        assertEquals(listOf("municipality/0180/1", "municipality/0180/2"), localities.requests)
+        assertEquals(listOf("0180-1", "0180-2"), vm.items.value.map { it.id })
+        assertEquals(null, vm.selectedType.value)
         assertEquals(emptyList(), repo.calls)
         assertEquals(emptyList(), vm.series.value)
     }

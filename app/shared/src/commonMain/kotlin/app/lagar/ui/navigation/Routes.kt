@@ -18,13 +18,18 @@ import kotlinx.serialization.Serializable
 
 @Serializable data object Tjanster
 
-/** A layer's documents; with [ministry] (an id from the per-ministry index) only that ministry's, under [ministryName]. */
+/**
+ * A layer's documents; with [ministry] (an id from the per-ministry index) only that ministry's, under [ministryName];
+ * with [code] (a län or kommun code from the per-locality index) only that locality's, under [codeName].
+ */
 @Serializable
 data class LayerList(
     val layer: String,
     val type: String? = null,
     val ministry: String? = null,
     val ministryName: String? = null,
+    val code: String? = null,
+    val codeName: String? = null,
 )
 
 /** The issuing ministries of one SFS series, from the per-ministry index. */

@@ -22,11 +22,18 @@ class SampleRepository(
     override suspend fun ministryListing(layer: String, type: String, ministry: String, page: Int) =
         read<ListingPage>(ministryListingPath(layer, type, ministry, page))
 
+    override suspend fun localities(layer: String) = read<LocalityIndex>(localityIndexPath(layer))
+
+    override suspend fun localityListing(layer: String, code: String, page: Int) =
+        read<ListingPage>(localityListingPath(layer, code, page))
+
     override suspend fun searchManifest() = read<SearchManifest>(searchManifestPath())
 
-    override suspend fun searchDocs() = read<SearchDocsTable>(searchDocsPath())
+    override suspend fun searchGroupManifest(group: String) = read<SearchGroupManifest>(searchGroupManifestPath(group))
 
-    override suspend fun searchShard(key: String) = read<SearchShard>(searchShardPath(key))
+    override suspend fun searchDocs(group: String?) = read<SearchDocsTable>(searchDocsPath(group))
+
+    override suspend fun searchShard(group: String?, key: String) = read<SearchShard>(searchShardPath(group, key))
 
     private suspend inline fun <reified T> read(path: String): T =
         json.decodeFromString(readBytes("files/sample/api/v1/$path").decodeToString())

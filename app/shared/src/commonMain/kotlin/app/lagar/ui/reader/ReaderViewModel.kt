@@ -88,10 +88,13 @@ class ReaderViewModel(
         }
     }
 
-    /** Every published document: the index's `docs.json` when the API has an index, else the national catalog. */
+    /**
+     * The published documents citations can name (SFS numbers: fundamental laws and SFS statutes): the index's
+     * document tables of those layers when the API has an index, else the national catalog.
+     */
     private suspend fun publishedDocuments(): List<ListingItem> {
         val fromIndex = try {
-            index?.takeIf { it.manifest() != null }?.docs()
+            index?.takeIf { it.manifest() != null }?.docs(CITED_LAYERS)
         } catch (e: CancellationException) {
             throw e
         } catch (_: Exception) {
@@ -120,3 +123,6 @@ class ReaderViewModel(
         }
     }
 }
+
+/** API layers whose documents have SFS numbers, the only ones the reader links citations to. */
+private val CITED_LAYERS = setOf("fundamental", "sfs")

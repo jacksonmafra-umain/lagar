@@ -124,7 +124,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | Feed card shows the in-force date and "Ändrad senast genom SFS …" | Done; each line is hidden while its field is `null` (the collector does not fill `in_force` yet). Saved items in the Favourites tab carry neither field | |
 | Case-law items in the feed | Blocked: no case-law data | #38 |
 | Popular tab | Blocked: the app is anonymous and collects no usage data | |
-| Region and Kommun homes (constitution, key rules, feed) | Blocked; shows "coming soon". The region layer now has a Stockholm pilot (`county_regulation`, #74), but the home does not list it yet: listing items carry no `region_code`, so a Region home would filter by the `<code>FS` prefix of `number`. Kommun has no data | #38 |
+| Region and Kommun homes: the chosen län's or kommun's documents from the per-locality listings (`<layer>/by-code/`), with "Regulations in force" (newest five in force, document count), the Recent and Favourites feed and "Show more" to the locality's list; "no regulations collected yet for <locality>" when it has none, and a prompt to choose one when unset. The location card stays | Done | #99 |
 
 ### Wide layout
 
@@ -136,6 +136,7 @@ Code: `ui/home/WideHome.kt`, `HierarchySection.kt`, `RecentWithPreview.kt`. Refe
 | Wide search bar, advanced-search button and quick picks (Grundlagar, Brottsbalken, Miljöbalken, Rättegångsbalken) | Done | #79 |
 | Norm hierarchy: total, distribution bar, 3-column grid of the nine layers with counts or "coming soon" | Done | #79 |
 | Recent and Favourites list next to a live preview of the selected document (header, opening sections, bookmark, open full text) | Done | #79 |
+| Region and Kommun: "Regulations in force" for the chosen län or kommun above the list, which shows that locality's documents ("Show more" opens its list); the choose-a-locality or "no regulations collected yet" state when there are none | Done | #99 |
 | Footer with the independent-project disclaimer | Done | #79 |
 | GPS location, inline advanced-search panel, case-law / most-read / real-time tabs, version history, notes and linked precedents in the preview | Left out: no data, or owner decision | |
 
@@ -149,11 +150,11 @@ Route: `Search(text, types, from, to, mode, status, inForceFrom, inForceTo, vaca
 | --- | --- | --- |
 | Live search over titles and numbers, accent-insensitive; result count; empty, prompt and error states | Done | |
 | Query survives process death through the route arguments | Done | |
-| Static search index (`search/`): loads the manifest, `docs.json` and only the shards of the query terms, cached by `built_at`; every term must match, the word being typed matches as a prefix; falls back to the whole catalog when the API has no index | Done | #37 |
+| Static search index (`search/`): loads the manifest, then for each layer group of the scope its `docs.json` and only the shards of the query terms, cached by `built_at`, and merges the groups' hits (search versions 1 and 2); every term must match, the word being typed matches as a prefix; falls back to the whole catalog when the API has no index | Done | #37, #105 |
 | Ranking (title, then number, then body; more matched fields first), sorting by relevance, newest or number, and matched words highlighted in titles | Done | #32 |
 | Full-text mode (body text) with a "Found in the text" note on body-only matches | Done | #37 |
 | Snippets of the matching text | Not planned: needs each result's document (`docs/<id>.json`), too costly per result; the note above says where it matched | #37 |
-| Region and Kommun scopes | Blocked: no data | #38 |
+| Region and Kommun scopes: only the chosen län's or kommun's documents, by the `region_code` and `municipality_code` columns of `docs.json` (or listing items on the catalog path); a prompt to choose a locality when it is unset | Done | #99 |
 | Desktop: results in two equal-height columns within the 1280dp content width; the list stays full width so the whole window scrolls | Done | #35 |
 
 ### Advanced search
@@ -177,7 +178,7 @@ Route: `Hierarki`. Code: `ui/hierarki/`. References: Stitch `lagar_normhierarki_
 | --- | --- | --- |
 | Toggle between layers and pyramid views | Done | |
 | Distribution bar and legend | Done | |
-| Nine layer rows with counts; empty layers open a "coming soon" sheet | Done | |
+| Nine layer rows with counts (Region and Kommun count every collected län and kommun); empty layers open a "coming soon" sheet | Done | #99 |
 | Authority badge (Överordnad, Riksdag, Regering, Verk, Prejudikat, Unionsakt, Regional, Kommunal, Service) and real examples on each layer row | Done | #34 |
 | Browse SFS acts and ordinances by ministry: "By ministry" pill on their rows, from the API's per-ministry index | Done | #34 |
 | Browse agency, case law and other layers by issuer or court | Blocked: no data in those layers, and no per-issuer index yet | #38 |
@@ -193,7 +194,7 @@ Route: `Ministries(layer, type)`. Code: `ui/hierarki/MinistriesScreen.kt`. Refer
 
 ## Layer list
 
-Route: `LayerList(layer, type?)`. Code: `ui/list/`.
+Route: `LayerList(layer, type?, ministry?, ministryName?, code?, codeName?)`. Code: `ui/list/`.
 
 | Feature | Status | Issue |
 | --- | --- | --- |
@@ -202,6 +203,7 @@ Route: `LayerList(layer, type?)`. Code: `ui/list/`.
 | Empty state for a layer or series with no documents | Done | #33 |
 | Series switch (all, acts, ordinances, other statutes) inside the list, from the layer's `series` in `index.json` | Done | #33 |
 | Names, levels and colours for the case law, EU, agency, county and municipal types, ready for when those layers have data | Done | #77 |
+| One län's or kommun's documents (`code`, from the per-locality listings), opened from "Show more" on the Region and Kommun homes | Done | #99 |
 | Desktop: two equal-height columns within the 1280dp content width, prefetch counted in rows | Done | #35 |
 
 ## Reader
@@ -213,12 +215,13 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | Metadata header: layer badge, citation, title, issue date, ministry, status, amended through, source link | Done | |
 | Source Serif 4 legal text, bold Inter § numbers, reading column width | Done | |
 | § cards with the layer indicator, bookmark toggle, text selection | Done | |
+| Save a single § or chapter: one 48dp actions button per § card and chapter heading opens a menu (save or remove, add or edit note, share link); a saved section shows the filled bookmark in the layer colour | Done | #28 |
 | Repealed banner and strikethrough | Missing | #21 |
 | Table of contents sheet: chapters and § chips, jump to a chapter or § | Done | #26 |
 | Amendment list under the header (register list, else `amended_by`; reprints), numbers link to documents the API has | Done | #26 |
 | Share links to the document and to each § (platform share sheet; Web Share API or clipboard on the web); `?doc=&p=` links open the reader at that § | Done | #26 |
 | Cross-reference links: SFS citations (`lagen (1962:700)`, `(SFS 1998:808)`, `Lag (1994:458).`) and case-law references (`NJA 2026:38`, `HFD 2026 ref. 43`) open the cited document when the API has it | Done | #27 |
-| Inline notes | Missing | #28 |
+| Private notes on the document (under the header) and on each § or chapter (under its text), edited in a sheet, stored on the device only | Done | #28 |
 | Desktop (≥ 1024dp): table of contents as a 300dp pane left of the text instead of a sheet | Done | #35 |
 | Desktop (≥ 1280dp, `ShellDimens.ReaderInspectorBreakpoint`): facts, source link and amendments in an inspector pane right of the text; the text keeps the badge, number and title | Done | #35 |
 | Tablet: frosted bottom sheet for the normative tree, sliding metadata drawer | Missing | #35 |
@@ -232,7 +235,8 @@ Route: `Sparade`. Code: `ui/sparade/SparadeScreen.kt`. Reference: architecture �
 | --- | --- | --- |
 | Bookmarked documents stored on the device, remove action, empty state | Done | |
 | Repealed state kept on bookmarks | Missing | #21 |
-| Saved single provisions, notes, grouping by layer, undo after remove | Missing | #28 |
+| Saved single provisions (label, document, excerpt) that open the reader at their §, and notes on documents and provisions | Done | #28 |
+| Grouping by level in hierarchy order, filter (all, documents, provisions, notes), search within saved items, undo snackbar after removing | Done | #28 |
 
 ## Tjänster
 

@@ -27,8 +27,9 @@ data class ListingPage(
 )
 
 /**
- * One listing entry. [inForce], [amendedThrough] and [ministry] were added within API v1; they default to null
- * so payloads built before them still decode.
+ * One listing entry. [inForce], [amendedThrough], [ministry], [regionCode] and [municipalityCode] were added within
+ * API v1; they default to null so payloads built before them still decode. [regionCode] is the county (län) code of
+ * county and municipal regulations, [municipalityCode] the kommun code of municipal regulations.
  */
 @Serializable
 data class ListingItem(
@@ -41,7 +42,25 @@ data class ListingItem(
     @SerialName("in_force") val inForce: String? = null,
     @SerialName("amended_through") val amendedThrough: String? = null,
     val ministry: String? = null,
+    @SerialName("region_code") val regionCode: String? = null,
+    @SerialName("municipality_code") val municipalityCode: String? = null,
 )
+
+/** `<layer>/by-code/index.json`: the documents of a locality layer grouped by county or kommun code. */
+@Serializable
+data class LocalityIndex(
+    val layer: String,
+    val field: String,
+    val total: Int,
+    val codes: List<LocalityCount>,
+) {
+    /** Documents with [code]; 0 when the index does not list it. */
+    fun count(code: String): Int = codes.firstOrNull { it.code == code }?.count ?: 0
+}
+
+/** One county or kommun [code] and the number of documents that carry it. */
+@Serializable
+data class LocalityCount(val code: String, val count: Int)
 
 /** `<layer>/<type>/by-ministry/index.json`: the type's documents grouped by issuing ministry. */
 @Serializable

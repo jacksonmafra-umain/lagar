@@ -6,6 +6,7 @@ import app.lagar.data.ApiLayer
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
 import app.lagar.data.ListingPage
+import app.lagar.data.LocalityRepository
 import app.lagar.data.MinistryRepository
 import app.lagar.domain.LoadState
 import kotlinx.coroutines.CancellationException
@@ -26,6 +27,9 @@ import kotlinx.coroutines.launch
  *
  * With a [ministry] (and a [type]) the screen lists that ministry's documents from the per-ministry index
  * through [ministries] instead; the series switch stays hidden, since the listing belongs to one series.
+ *
+ * With a [locality] the screen lists one län's or kommun's documents of the layer from the per-locality listings
+ * through [localities]; the series switch stays hidden there too.
  */
 class LayerListViewModel(
     private val repository: LagarRepository,
@@ -33,8 +37,13 @@ class LayerListViewModel(
     type: String?,
     val ministry: MinistryFilter? = null,
     private val ministries: MinistryRepository? = null,
+    val locality: LocalityFilter? = null,
+    private val localities: LocalityRepository? = null,
 ) : ViewModel() {
-    private val byMinistry = ministry != null && type != null && ministries != null
+    private val byLocality = locality != null && localities != null
+
+    /** Listing one ministry's or one locality's documents: no series switch and no index check. */
+    private val byMinistry = (ministry != null && type != null && ministries != null) || byLocality
 
     private val _selectedType = MutableStateFlow(type)
 
@@ -137,10 +146,12 @@ class LayerListViewModel(
     private suspend fun page(type: String?, number: Int): ListingPage {
         val filter = ministry
         val source = ministries
-        return if (filter != null && source != null && type != null) {
-            source.ministryListing(layer, type, filter.id, number)
-        } else {
-            repository.listing(layer, type, number)
+        val place = locality
+        val placeSource = localities
+        return when {
+            place != null && placeSource != null -> placeSource.localityListing(layer, place.code, number)
+            filter != null && source != null && type != null -> source.ministryListing(layer, type, filter.id, number)
+            else -> repository.listing(layer, type, number)
         }
     }
 

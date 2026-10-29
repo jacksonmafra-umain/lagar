@@ -103,4 +103,114 @@ class BookmarkStoreTest {
             saved.toListingItem(),
         )
     }
+
+    private fun provision(id: String, anchor: String) = SavedProvision(bookmark(id), anchor, "${anchor.drop(1)} §", "Text of $anchor")
+
+    @Test
+    fun provisionToggleAddsThenRemovesNewestFirst() {
+        val store = BookmarkStore(MapSettings())
+        store.toggleProvision(provision("1", "p1"))
+        store.toggleProvision(provision("1", "p2"))
+        assertTrue(store.isProvisionSaved("1", "p1"))
+        assertEquals(listOf("p2", "p1"), store.provisions.value.map { it.anchor })
+        store.toggleProvision(provision("1", "p1"))
+        assertFalse(store.isProvisionSaved("1", "p1"))
+        assertEquals(listOf("p2"), store.provisions.value.map { it.anchor })
+    }
+
+    @Test
+    fun provisionsAreKeptApartFromDocuments() {
+        val settings = MapSettings()
+        val store = BookmarkStore(settings)
+        store.toggleProvision(provision("1", "k3p1"))
+        assertFalse(store.isBookmarked("1"))
+        assertTrue(store.bookmarks.value.isEmpty())
+        assertEquals(listOf(provision("1", "k3p1")), BookmarkStore(settings).provisions.value)
+    }
+
+    @Test
+    fun provisionsPersistWithTheirDocument() {
+        val settings = MapSettings()
+        val saved = SavedProvision(bookmark("1").copy(issued = "1962-12-21", repealed = "2020-01-01"), "k3p1", "3 kap. 1 §", "Den som")
+        BookmarkStore(settings).toggleProvision(saved)
+        assertEquals(listOf(saved), BookmarkStore(settings).provisions.value)
+    }
+
+    @Test
+    fun provisionsWithoutDatesOrExcerptLoad() {
+        val settings = MapSettings()
+        settings.putString(
+            "saved_provisions",
+            """[{"document":{"id":"1","title":"Title 1","number":"2020:1","type":"act","layer":"sfs"},"anchor":"p1","label":"1 §"}]""",
+        )
+        val loaded = BookmarkStore(settings).provisions.value.single()
+        assertEquals(SavedProvision(bookmark("1"), "p1", "1 §"), loaded)
+        assertNull(loaded.document.issued)
+        assertEquals("", loaded.excerpt)
+    }
+
+    @Test
+    fun unknownStoredKeysAreIgnored() {
+        val settings = MapSettings()
+        settings.putString("bookmarks", """[{"id":"1","title":"Title 1","number":"2020:1","type":"act","layer":"sfs","pinned":true}]""")
+        assertEquals(listOf(bookmark("1")), BookmarkStore(settings).bookmarks.value)
+    }
+
+    @Test
+    fun unreadableDataLoadsEmpty() {
+        val settings = MapSettings()
+        settings.putString("bookmarks", "not json")
+        settings.putString("saved_provisions", """{"anchor":1}""")
+        val store = BookmarkStore(settings)
+        assertTrue(store.bookmarks.value.isEmpty())
+        assertTrue(store.provisions.value.isEmpty())
+    }
+
+    @Test
+    fun removeThenRestorePutsTheBookmarkBackInPlace() {
+        val settings = MapSettings()
+        val store = BookmarkStore(settings)
+        listOf("1", "2", "3").forEach { store.toggle(bookmark(it)) }
+        val removed = store.remove("2")!!
+        assertEquals(1, removed.index)
+        assertEquals(listOf("3", "1"), store.bookmarks.value.map { it.id })
+        store.restore(removed)
+        assertEquals(listOf("3", "2", "1"), store.bookmarks.value.map { it.id })
+        assertEquals(listOf("3", "2", "1"), BookmarkStore(settings).bookmarks.value.map { it.id })
+    }
+
+    @Test
+    fun restoreDoesNotDuplicate() {
+        val store = BookmarkStore(MapSettings())
+        store.toggle(bookmark("1"))
+        val removed = store.remove("1")!!
+        store.toggle(bookmark("1"))
+        store.restore(removed)
+        assertEquals(listOf("1"), store.bookmarks.value.map { it.id })
+        assertNull(store.remove("missing"))
+    }
+
+    @Test
+    fun removeThenRestoreProvision() {
+        val store = BookmarkStore(MapSettings())
+        store.toggleProvision(provision("1", "p1"))
+        store.toggleProvision(provision("1", "p2"))
+        val removed = store.removeProvision("1", "p1")!!
+        assertEquals(listOf("p2"), store.provisions.value.map { it.anchor })
+        store.restoreProvision(removed)
+        assertEquals(listOf("p2", "p1"), store.provisions.value.map { it.anchor })
+    }
+
+    @Test
+    fun refreshUpdatesTheProvisionSnapshots() {
+        val settings = MapSettings()
+        val store = BookmarkStore(settings)
+        store.toggleProvision(provision("1", "p1"))
+        store.toggleProvision(provision("2", "p1"))
+        val fresh = bookmark("1").copy(repealed = "2024-07-01")
+        store.refresh(fresh)
+        assertEquals(listOf(bookmark("2"), fresh), store.provisions.value.map { it.document })
+        assertTrue(store.bookmarks.value.isEmpty())
+        assertEquals(fresh, BookmarkStore(settings).provisions.value.last().document)
+    }
 }

@@ -1,0 +1,35 @@
+{
+ "layer": "municipality",
+ "type": "municipal_regulation",
+ "page": 1,
+ "page_count": 1,
+ "total": 2,
+ "items": [
+  {
+   "id": "0180-kfs-2026-12",
+   "title": "Föreskrifter för avfallshantering för Stockholms stad",
+   "number": "KFS 2026:12",
+   "type": "municipal_regulation",
+   "issued": null,
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": null,
+   "region_code": "01",
+   "municipality_code": "0180"
+  },
+  {
+   "id": "0180-kfs-2013-19",
+   "title": "Lokala hälsoföreskrifter för Stockholms kommun",
+   "number": "KFS 2013:19",
+   "type": "municipal_regulation",
+   "issued": null,
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": null,
+   "region_code": "01",
+   "municipality_code": "0180"
+  }
+ ]
+}

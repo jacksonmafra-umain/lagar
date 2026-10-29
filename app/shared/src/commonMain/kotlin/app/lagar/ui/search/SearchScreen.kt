@@ -58,10 +58,11 @@ import app.lagar.domain.SearchHit
 import app.lagar.domain.SearchQuery
 import app.lagar.domain.SortOrder
 import app.lagar.domain.highlightRanges
+import app.lagar.domain.localityCode
 import app.lagar.resources.Res
-import app.lagar.resources.coming_soon
 import app.lagar.resources.home_advanced_search
-import app.lagar.resources.home_coming_soon_text
+import app.lagar.resources.home_choose_location
+import app.lagar.resources.home_locality_choose_text
 import app.lagar.resources.home_search_hint
 import app.lagar.resources.ic_info
 import app.lagar.resources.ic_search
@@ -113,11 +114,14 @@ fun SearchRoute(
 ) {
     val query by viewModel.query.collectAsState()
     val results by viewModel.results.collectAsState()
-    val scope by koinInject<UserPreferences>().scope.collectAsState()
+    val preferences = koinInject<UserPreferences>()
+    val scope by preferences.scope.collectAsState()
+    val locality by preferences.locality.collectAsState()
     SearchScreen(
         query = query,
         results = results,
         scope = scope,
+        localityMissing = scope != Scope.Nationell && scope.localityCode(locality) == null,
         onQueryChange = viewModel::update,
         onBack = onBack,
         onOpenDocument = onOpenDocument,
@@ -126,12 +130,16 @@ fun SearchRoute(
     )
 }
 
-/** [focusRequests] moves focus to the search field each time it grows (the web search shortcut). */
+/**
+ * [focusRequests] moves focus to the search field each time it grows (the web search shortcut). [localityMissing]
+ * is a Region or Kommun scope without its län or kommun: there is nothing to search until one is chosen.
+ */
 @Composable
 fun SearchScreen(
     query: SearchQuery,
     results: LoadState<List<SearchHit>>,
     scope: Scope,
+    localityMissing: Boolean,
     onQueryChange: (SearchQuery) -> Unit,
     onBack: () -> Unit,
     onOpenDocument: (String) -> Unit,
@@ -148,8 +156,7 @@ fun SearchScreen(
     // On desktop the results fill two columns within the content width.
     BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
         val side = if (wide) wideListPadding(maxWidth, spacing.margin) else spacing.marginMobile
-        // Only the national level has documents so far, so other scopes never reach the results.
-        val state = if (scope == Scope.Nationell) results else LoadState.Loaded(emptyList())
+        val state = if (localityMissing) LoadState.Loaded(emptyList()) else results
         when (state) {
             LoadState.Loading -> Box(centered, contentAlignment = Alignment.Center) { CircularProgressIndicator() }
             is LoadState.Failed -> Box(centered, contentAlignment = Alignment.Center) { ErrorState(onRetry = state.retry) }
@@ -163,13 +170,13 @@ fun SearchScreen(
                 ),
                 verticalArrangement = Arrangement.spacedBy(spacing.sm),
             ) {
-                val showCount = scope == Scope.Nationell && query.isActive && state.value.isNotEmpty()
+                val showCount = !localityMissing && query.isActive && state.value.isNotEmpty()
                 item(key = "summary") {
                     SummaryRow(count = state.value.size.takeIf { showCount }, scope = scope, onOpenAdvancedSearch = onOpenAdvancedSearch)
                 }
                 when {
-                    scope != Scope.Nationell -> item(key = "state") {
-                        EmptyState(Res.drawable.ic_info, stringResource(Res.string.coming_soon), stringResource(Res.string.home_coming_soon_text))
+                    localityMissing -> item(key = "state") {
+                        EmptyState(Res.drawable.ic_info, stringResource(Res.string.home_choose_location), stringResource(Res.string.home_locality_choose_text))
                     }
                     !query.isActive -> item(key = "state") {
                         EmptyState(Res.drawable.ic_search, stringResource(Res.string.search_prompt_title), stringResource(Res.string.search_prompt_text))

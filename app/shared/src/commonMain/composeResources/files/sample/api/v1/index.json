@@ -43,13 +43,23 @@
   },
   {
    "id": "region",
-   "count": 0,
-   "series": []
+   "count": 2,
+   "series": [
+    {
+     "id": "county_regulation",
+     "count": 2
+    }
+   ]
   },
   {
    "id": "municipality",
-   "count": 0,
-   "series": []
+   "count": 2,
+   "series": [
+    {
+     "id": "municipal_regulation",
+     "count": 2
+    }
+   ]
   },
   {
    "id": "service",

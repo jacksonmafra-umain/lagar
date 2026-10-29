@@ -6,19 +6,42 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonPrimitive
 
-/** `search/index.json`: the manifest of the static full-text index (docs/api.md, "Full-text search"). */
+/**
+ * `search/index.json`: the manifest of the static full-text index (docs/api.md, "Full-text search"). Version 1 is
+ * one index over every layer, with its [shards] listed here; version 2 lists one [groups] entry per layer, each with
+ * its own manifest, document table and shards under `search/<group>/`.
+ */
 @Serializable
 data class SearchManifest(
     @SerialName("search_version") val searchVersion: Int,
     @SerialName("built_at") val builtAt: String,
+    @SerialName("doc_count") val docCount: Int = 0,
+    val fields: List<String> = emptyList(),
+    @SerialName("field_bits") val fieldBits: Map<String, Int> = emptyMap(),
+    @SerialName("shard_key_length") val shardKeyLength: Int = 2,
+    val shards: List<SearchShardInfo> = emptyList(),
+    val groups: List<SearchGroupInfo> = emptyList(),
+    @SerialName("posting_bits_base") val postingBitsBase: Int? = null,
+)
+
+/** A version 2 group as the top-level manifest lists it: the layers it covers and whether bodies are indexed. */
+@Serializable
+data class SearchGroupInfo(
+    val id: String,
+    val layers: List<String>,
     @SerialName("doc_count") val docCount: Int,
     val fields: List<String>,
-    @SerialName("field_bits") val fieldBits: Map<String, Int>,
-    @SerialName("shard_key_length") val shardKeyLength: Int,
+)
+
+/** `search/<group>/index.json`: the shards of one version 2 group. */
+@Serializable
+data class SearchGroupManifest(
+    val group: String,
+    val layers: List<String>,
+    @SerialName("doc_count") val docCount: Int,
+    val fields: List<String>,
     val shards: List<SearchShardInfo>,
-) {
-    val shardKeys: Set<String> by lazy { shards.mapTo(HashSet()) { it.key } }
-}
+)
 
 @Serializable
 data class SearchShardInfo(val key: String, val terms: Int, val bytes: Int)
@@ -48,6 +71,8 @@ data class SearchDocsTable(val fields: List<String>, val docs: List<List<JsonEle
                 inForce = row.text("in_force"),
                 amendedThrough = row.text("amended_through"),
                 ministry = row.text("ministry"),
+                regionCode = row.text("region_code"),
+                municipalityCode = row.text("municipality_code"),
             )
         }
     }
@@ -57,17 +82,26 @@ data class SearchDocsTable(val fields: List<String>, val docs: List<List<JsonEle
 @Serializable
 data class SearchShard(val key: String, val terms: Map<String, List<Int>>)
 
-/** Read access to the static search index. A missing index surfaces as [ApiException] with [ApiException.notFound]. */
+/**
+ * Read access to the static search index. [group] is a version 2 group id, or null for the single version 1 index.
+ * A missing index surfaces as [ApiException] with [ApiException.notFound].
+ */
 interface SearchIndexSource {
     suspend fun searchManifest(): SearchManifest
 
-    suspend fun searchDocs(): SearchDocsTable
+    suspend fun searchGroupManifest(group: String): SearchGroupManifest
 
-    suspend fun searchShard(key: String): SearchShard
+    suspend fun searchDocs(group: String?): SearchDocsTable
+
+    suspend fun searchShard(group: String?, key: String): SearchShard
 }
 
 internal fun searchManifestPath() = "search/index.json"
 
-internal fun searchDocsPath() = "search/docs.json"
+private fun searchDir(group: String?) = if (group == null) "search/" else "search/$group/"
 
-internal fun searchShardPath(key: String) = "search/shards/$key.json"
+internal fun searchGroupManifestPath(group: String) = "${searchDir(group)}index.json"
+
+internal fun searchDocsPath(group: String?) = "${searchDir(group)}docs.json"
+
+internal fun searchShardPath(group: String?, key: String) = "${searchDir(group)}shards/$key.json"

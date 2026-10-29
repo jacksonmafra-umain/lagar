@@ -1,0 +1,8 @@
+{
+  "layer": "region",
+  "field": "region_code",
+  "total": 1,
+  "codes": [
+    {"code": "01", "count": 1}
+  ]
+}

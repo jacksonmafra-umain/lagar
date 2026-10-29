@@ -17,6 +17,7 @@ SPARQL = (FIXTURES / "eu-32016r0679-sparql.json").read_bytes()
 XHTML = (FIXTURES / "eu-32016r0679.xhtml").read_bytes()
 OLD_HTML = (FIXTURES / "eu-32004r0261.html").read_bytes()
 CONSOLIDATED = (FIXTURES / "eu-02016r0679-20160504.xhtml").read_bytes()
+CHANGED = (FIXTURES / "eu-changed-sparql.json").read_bytes()
 GDPR = "32016R0679"
 GDPR_CONS = "02016R0679-20160504"
 MANIFESTATION = "https://publications.europa.eu/resource/cellar/3e485e15-11bd-11e6-ba9a-01aa75ed71a1.0024.03/DOC_1"
@@ -149,12 +150,111 @@ class MetadataTest(unittest.TestCase):
         self.assertEqual((meta["id"], meta["number"], meta["issued"], meta["in_force"], meta["authoritative"]),
                          ("eu-02016r0679-20160504", "(EU) 2016/679", "2016-04-27", "2016-05-04", False))
 
+    def test_consolidated_version_amendments(self):
+        consolidates = [
+            "32016R0679 2016-04-27",  # the base act
+            "02016R0679-20160504 2016-05-04",  # an earlier consolidated version
+            "32016R0679R(02) 2018-05-23",  # a corrigendum
+            "32019R0001 2019-01-10",
+            "32021R0002 2021-03-04",
+            "32020L0003 2020-06-30",
+            "not-a-celex 2020-01-01",
+            "32022R0004 no-date",
+        ]
+        md = eu.parse_metadata(GDPR_CONS, consolidated_sparql(consolidates=consolidates))
+        self.assertEqual(md.amendments, [("2019-01-10", "32019R0001"), ("2020-06-30", "32020L0003"),
+                                         ("2021-03-04", "32021R0002")])
+        meta = eu.build_meta(md, "b" * 64, CONS_MANIFESTATION, "2026-10-29T00:00:00Z")
+        self.assertEqual(meta["amended_through"], "32021R0002")
+        self.assertEqual(meta["amended_by"], ["32019R0001", "32020L0003", "32021R0002"])
+        self.assertEqual(schema.validate(meta), [])
+
+    def test_in_force_is_the_acts_own_entry_into_force(self):
+        # Cellar's dates for the DSA and the AI Act: the one typed EV is the act's entry into
+        # force, those typed MA or MA/PART the dates from which it or provisions apply.
+        acts = {
+            "32022R2065": (["2022-02-17", "2022-11-16"],
+                           ["2022-02-17 MA", "2022-11-16 MA", "2022-11-16 EV"], "2022-11-16"),
+            "32024R1689": (["2027-08-02", "2024-08-01", "2025-02-02", "2026-08-02", "2025-08-02"],
+                           ["2027-08-02 MA", "2024-08-01 EV", "2025-02-02 MA", "2026-08-02 MA",
+                            "2025-08-02 MA"], "2024-08-01"),
+        }
+        for celex, (dates, typed, expected) in acts.items():
+            with self.subTest(celex=celex):
+                md = eu.parse_metadata(celex, bindings({
+                    "date_document": ["2022-10-19"],
+                    "entry_into_force": dates,
+                    "entry_into_force_type": typed,
+                }))
+                meta = eu.build_meta(md, "a" * 64, MANIFESTATION, "2026-10-29T00:00:00Z")
+                self.assertEqual(meta["in_force"], expected)
+
+    def test_application_dates_are_never_in_force(self):
+        # Rome II, (EG) nr 864/2007: Cellar has only its application dates.
+        md = eu.Metadata("32007R0864", {"entry_into_force": ["2008-07-11", "2009-01-11"],
+                                        "entry_into_force_type": ["2008-07-11 MA/PART", "2009-01-11 MA"]})
+        self.assertIsNone(eu.entry_into_force(md))
+
+    def test_in_force_without_annotations_is_the_earliest_date(self):
+        md = eu.Metadata(GDPR_CONS, {"entry_into_force": ["2026-07-27", "2016-05-04"]})
+        self.assertEqual(eu.entry_into_force(md), "2016-05-04")
+        md = eu.Metadata(GDPR, {"entry_into_force": ["2016-05-24", "2018-05-25"],
+                                "entry_into_force_type": ["2018-05-25 MA"]})
+        self.assertEqual(eu.entry_into_force(md), "2016-05-24")
+        self.assertIsNone(eu.entry_into_force(eu.Metadata(GDPR, {})))
+
+    def test_metadata_query_reads_the_type_of_entry_into_force(self):
+        query = urllib.parse.parse_qs(urllib.parse.urlsplit(eu.metadata_url(GDPR)).query)["query"][0]
+        self.assertIn("ann:type_of_date", query)
+        self.assertIn('BIND("entry_into_force_type" AS ?field)', query)
+
+    def test_oj_text_has_no_amendment_applied(self):
+        fields = gdpr_fields()
+        fields["consolidates"] = ["32019R0001 2019-01-10"]
+        meta = eu.build_meta(eu.Metadata(GDPR, fields), "a" * 64, MANIFESTATION, "2026-10-29T00:00:00Z")
+        self.assertIsNone(meta["amended_through"])
+        self.assertEqual(meta["amended_by"], [])
+
+    def test_metadata_query_reads_the_consolidated_amendments(self):
+        query = urllib.parse.parse_qs(urllib.parse.urlsplit(eu.metadata_url(GDPR_CONS)).query)["query"][0]
+        self.assertIn("cdm:act_consolidated_consolidates_resource_legal", query)
+        self.assertIn('BIND("consolidates" AS ?field)', query)
+
     def test_latest_consolidated_applying_today(self):
         md = eu.Metadata(GDPR, {"consolidated": ["02016R0679-20160504", "02016R0679-20260801",
                                                   "02016R0679-20200101", "bogus"]})
         self.assertEqual(eu.latest_consolidated(md, date(2026, 7, 1)), "02016R0679-20200101")
         self.assertEqual(eu.latest_consolidated(md, date(2026, 8, 1)), "02016R0679-20260801")
         self.assertIsNone(eu.latest_consolidated(eu.Metadata(GDPR, {}), date(2026, 8, 1)))
+
+
+class ChangedTest(unittest.TestCase):
+    def test_query_lists_the_acts_and_the_moment_in_utc(self):
+        url = eu.changed_url([GDPR, "32022L2555"], "2026-10-29T07:00:00+02:00")
+        self.assertTrue(url.startswith(eu.SPARQL_URL + "?query="))
+        query = urllib.parse.parse_qs(urllib.parse.urlsplit(url).query)["query"][0]
+        self.assertIn('VALUES ?celex { "32016R0679"^^xsd:string "32022L2555"^^xsd:string }', query)
+        self.assertIn('FILTER(?m > "2026-10-29T05:00:00.000Z"^^xsd:dateTime)', query)
+        self.assertIn("cmr:lastModificationDate", query)
+        with self.assertRaises(ValueError):
+            eu.changed_url(['32016R0679" } #'], "2026-10-29")
+
+    def test_parse_recorded_answer(self):
+        self.assertEqual(eu.parse_changed(CHANGED), {
+            "32004R0261": "2026-10-22T06:12:16.708Z",
+            "32004R0883": "2026-10-28T08:17:38.420Z",
+            "32017R0745": "2026-10-28T00:08:17.689Z",
+        })
+
+    def test_moments(self):
+        self.assertEqual(eu._utc("2026-10-29"), "2026-10-29T00:00:00.000Z")
+        self.assertEqual(eu._utc("2026-10-29T05:06:07.123456Z"), "2026-10-29T05:06:07.123Z")
+        self.assertEqual(eu._before("2026-10-29T00:00:00.000Z"), "2026-10-28T23:59:59.999Z")
+        args = eu.parse_args(["--list", "x.json", "--changed-since", "2026-10-29 05:00:00"])
+        self.assertEqual(args.changed_since, "2026-10-29T05:00:00.000Z")
+        for bad in ("yesterday", "2026-13-01", "2026-10-29; DROP"):
+            with self.subTest(bad=bad), self.assertRaises(SystemExit):
+                eu.parse_args(["--list", "x.json", "--changed-since", bad])
 
 
 class NumberTest(unittest.TestCase):
@@ -246,8 +346,51 @@ class MarkdownTest(unittest.TestCase):
         ).encode()
         self.assertEqual(
             eu.to_markdown("T", html),
-            "# T\n\nnr | sida | datum\n\nL 304 | 22.11.2007\n\na)\n\n### Artikel 3\n\ntext\n\ncell\n\n"
-            "blandningar och ämnen\n",
+            "# T\n\n| nr | sida | datum |\n| --- | --- | --- |\n| | L 304 | 22.11.2007 |\n\na)\n\n### Artikel 3\n\n"
+            "text\n\ncell\n\nblandningar och ämnen\n",
+        )
+
+    def test_single_rows_and_nested_tables_stay_one_line(self):
+        html = (
+            "<body><table><tr><td><p>Detta direktiv</p></td><td><p>Direktiv 2007/64/EG</p></td></tr></table>"
+            "<table><tr><td><p>yttre</p></td><td><table>"
+            "<tr><td><p>x</p></td><td><p>y</p></td></tr><tr><td><p>z</p></td><td><p>w</p></td></tr>"
+            "</table></td></tr><tr><td><p>a|b</p></td><td><p>c</p></td></tr></table></body>"
+        ).encode()
+        self.assertEqual(
+            eu.to_markdown("T", html),
+            "# T\n\nDetta direktiv | Direktiv 2007/64/EG\n\n| yttre | x \\| y z \\| w |\n| --- | --- |\n| a\\|b | c |\n",
+        )
+
+    def test_row_and_column_spans_keep_cells_in_their_columns(self):
+        # The amendment list of a consolidated text: two cells span both header rows.
+        html = (
+            "<body><table><tr><td rowspan='2'><p> </p></td><td rowspan='2'><p> </p></td>"
+            "<td colspan='3'><p>Officiella tidningen</p></td></tr>"
+            "<tr><td><p>nr</p></td><td><p>sida</p></td><td><p>datum</p></td></tr>"
+            "<tr><td><p>►M1</p></td><td><p>FÖRORDNING 1354/2007</p></td><td><p>L 304</p></td>"
+            "<td><p>1</p></td><td><p>22.11.2007</p></td></tr>"
+            "<tr><td colspan='2'><p>bred</p></td><td><p>L 1</p></td><td><p>2</p></td><td><p>3.1.2008</p></td></tr>"
+            "</table></body>"
+        ).encode()
+        self.assertEqual(
+            eu.to_markdown("T", html),
+            "# T\n\nOfficiella tidningen\n\n| | | nr | sida | datum |\n| --- | --- | --- | --- | --- |\n"
+            "| | FÖRORDNING 1354/2007 | L 304 | 1 | 22.11.2007 |\n| bred | | L 1 | 2 | 3.1.2008 |\n",
+        )
+
+    def test_correlation_table(self):
+        html = (
+            "<body><p>BILAGA</p><table>"
+            "<tr><th><p>Detta direktiv</p></th><th><p>Direktiv 2007/64/EG</p></th></tr>"
+            "<tr><td><p>Artikel 1.1</p></td><td><p>Artikel 1.1</p></td></tr>"
+            "<tr><td><p>Artikel 2</p></td><td><p>—</p></td></tr>"
+            "</table><p># efter</p></body>"
+        ).encode()
+        self.assertEqual(
+            eu.to_markdown("T", html),
+            "# T\n\n## BILAGA\n\n| Detta direktiv | Direktiv 2007/64/EG |\n| --- | --- |\n"
+            "| Artikel 1.1 | Artikel 1.1 |\n| Artikel 2 | — |\n\n\\# efter\n",
         )
 
     def test_empty_text_is_an_error(self):
@@ -361,6 +504,14 @@ class RunTest(unittest.TestCase):
         self.assertEqual(summary.gaps, [GDPR])
         self.assertEqual(json.loads(self.state.read_text())["gaps"][GDPR], "no Swedish expression")
 
+    def test_consolidation_of_corrigenda_without_swedish_text_points_to_the_oj_text(self):
+        routes = gdpr_routes()
+        routes[eu.metadata_url(GDPR_CONS)] = bindings({"date_document": ["2016-05-04"],
+                                                       "consolidates": ["32016R0679R(02) 2018-05-23"]})
+        summary = eu.run(FakeClient(routes), self.args("--celex", GDPR, "--consolidated"), today=date(2026, 10, 29))
+        self.assertEqual((summary.written, summary.gaps), ([GDPR], [GDPR_CONS]))
+        self.assertIn("Official Journal text is current", json.loads(self.state.read_text())["gaps"][GDPR_CONS])
+
     def test_old_html_manifestation(self):
         celex = "32004R0261"
         fields = {"date_document": ["2004-02-11"], "entry_into_force": ["2005-02-17"],
@@ -459,6 +610,79 @@ class RunTest(unittest.TestCase):
         eu.run(client, self.args("--celex", GDPR, "--consolidated"), today=date(2026, 10, 29))
         for url in client.urls:
             self.assertIn(urllib.parse.urlsplit(url).hostname, eu.ALLOWED_HOSTS)
+
+    def changed_routes(self, modified):
+        rows = [{"celex": {"type": "literal", "value": celex}, "modified": {"type": "literal", "value": when}}
+                for celex, when in modified.items()]
+        routes = gdpr_routes()
+        routes[eu.changed_url([GDPR, "32022L2555"], "2026-10-01")] = json.dumps(
+            {"results": {"bindings": rows}}).encode()
+        return routes
+
+    def test_changed_since_collects_only_changed_acts_again(self):
+        eu.run(FakeClient(gdpr_routes()), self.args("--celex", GDPR))
+        report = self.tmp / "report.json"
+        client = FakeClient(self.changed_routes({GDPR: "2026-10-20T10:00:00.000+02:00"}))
+        summary = eu.run(client, self.args("--celex", GDPR + ",32022L2555", "--changed-since", "2026-10-01",
+                                           "--report", str(report)))
+        # GDPR is refetched although it was collected before; the unchanged NIS 2 is not asked for.
+        self.assertEqual(summary.unchanged, [GDPR])
+        self.assertEqual(client.urls, [eu.ROBOTS_URL, eu.changed_url([GDPR, "32022L2555"], "2026-10-01"),
+                                       eu.metadata_url(GDPR), eu.CELEX_URL.format(celex=GDPR)])
+        data = json.loads(report.read_text())
+        self.assertEqual((data["latest_modified"], data["retry_from"]), ("2026-10-20T08:00:00.000Z", None))
+
+    def test_changed_since_without_changes_fetches_nothing_else(self):
+        client = FakeClient(self.changed_routes({}))
+        summary = eu.run(client, self.args("--celex", GDPR + ",32022L2555", "--changed-since", "2026-10-01"))
+        self.assertEqual((summary.written, summary.latest_modified, summary.retry_from), ([], None, None))
+        self.assertEqual(len(client.urls), 2)
+
+    def test_changed_since_holds_back_at_the_oldest_failure(self):
+        client = FakeClient(self.changed_routes({GDPR: "2026-10-20T08:00:00Z", "32022L2555": "2026-10-05T08:00:00Z"}))
+        summary = eu.run(client, self.args("--celex", GDPR + ",32022L2555", "--changed-since", "2026-10-01"))
+        self.assertEqual((summary.written, summary.failed), ([GDPR], ["32022L2555"]))
+        self.assertEqual(summary.latest_modified, "2026-10-20T08:00:00.000Z")
+        self.assertEqual(summary.retry_from, "2026-10-05T07:59:59.999Z")
+
+    def test_changed_since_listing_failure_is_an_error(self):
+        routes = gdpr_routes()  # no answer for the changed query: HTTP 404
+        code = eu.main(["eu", "--celex", GDPR, "--changed-since", "2026-10-01", "--corpus", str(self.corpus),
+                        "--state", str(self.state), "--manifest", str(self.manifest)], client=FakeClient(routes))
+        self.assertEqual(code, 1)
+        self.assertFalse(self.path.exists())
+
+    def test_offline_rerun_from_the_cache(self):
+        cache = self.tmp / "cache"
+        routes = gdpr_routes()
+        routes[eu.metadata_url(GDPR_CONS)] = consolidated_sparql()
+        routes[eu.CELEX_URL.format(celex=GDPR_CONS)] = (CONSOLIDATED, "application/xhtml+xml", CONS_MANIFESTATION)
+        eu.run(FakeClient(routes), self.args("--celex", GDPR, "--consolidated", "--cache", str(cache)),
+               today=date(2026, 10, 29))
+        self.assertEqual(sorted(p.name for p in cache.iterdir()), [
+            "02016R0679-20160504.source.json", "02016R0679-20160504.sparql.json", "02016R0679-20160504.xhtml",
+            "32016R0679.source.json", "32016R0679.sparql.json", "32016R0679.xhtml",
+        ])
+        before = self.path.read_bytes()
+        cons = self.corpus / "eu/regulations/02016r0679-20160504.md"
+        cons.write_text(cons.read_text("utf-8") + "stale\n", encoding="utf-8")
+        fetched = frontmatter.load(cons.read_text("utf-8"))[0]["fetched_at"]
+        self.path.write_text("stale", encoding="utf-8")
+        client = FakeClient({})
+        summary = eu.run(client, self.args("--celex", GDPR, "--consolidated", "--refresh", "--cache", str(cache),
+                                           "--offline"), today=date(2026, 10, 29))
+        self.assertEqual(client.urls, [])
+        self.assertEqual(summary.written, [GDPR, GDPR_CONS])
+        self.assertEqual(frontmatter.load(self.path.read_text("utf-8"))[1], frontmatter.load(before.decode())[1])
+        self.assertEqual(frontmatter.load(cons.read_text("utf-8"))[0]["fetched_at"], fetched)
+        # Nothing cached: the act fails, still without a request.
+        summary = eu.run(client, self.args("--celex", "32022L2555", "--cache", str(cache), "--offline"))
+        self.assertEqual((summary.failed, client.urls), (["32022L2555"], []))
+
+    def test_offline_needs_a_cache_and_no_changed_since(self):
+        for extra in (["--offline"], ["--offline", "--cache", "c", "--changed-since", "2026-10-01"]):
+            with self.subTest(extra=extra), self.assertRaises(SystemExit):
+                eu.parse_args(["--celex", GDPR, *extra])
 
     def test_rate_below_one_second_is_refused(self):
         with self.assertRaises(SystemExit):
