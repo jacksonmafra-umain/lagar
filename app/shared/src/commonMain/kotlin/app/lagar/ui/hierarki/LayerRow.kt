@@ -33,6 +33,7 @@ import app.lagar.resources.coming_soon
 import app.lagar.resources.document_count
 import app.lagar.resources.hierarchy_by_ministry
 import app.lagar.resources.hierarchy_by_ministry_a11y
+import app.lagar.resources.hierarchy_other_statutes
 import app.lagar.resources.ic_chevron_right
 import app.lagar.resources.layer_numbered_title
 import app.lagar.ui.common.LayerBadge
@@ -119,6 +120,13 @@ fun LayerRow(
                         style = LagarTheme.type.labelSm,
                         color = layers.onTint(key),
                     )
+                    if (summary.otherStatutes > 0) {
+                        Text(
+                            text = pluralStringResource(Res.plurals.hierarchy_other_statutes, summary.otherStatutes, summary.otherStatutes),
+                            style = LagarTheme.type.labelSm,
+                            color = LagarTheme.colors.onSurfaceVariant,
+                        )
+                    }
                     if (onBrowseByMinistry != null && summary.count > 0) {
                         BrowseByMinistryPill(summary, onBrowseByMinistry)
                     }

@@ -151,6 +151,13 @@ fun AppShell(
         }
     }
 
+    // Back to the previous onboarding step; only from a settled screen, so a double tap cannot pop past Welcome.
+    fun previousOnboardingStep() {
+        if (navController.currentBackStackEntry?.lifecycle?.currentState == Lifecycle.State.RESUMED) {
+            navController.popBackStack()
+        }
+    }
+
     fun selectTab(tab: Tab) {
         navController.navigate(tab.route) {
             popUpTo(Utforska) { saveState = true }
@@ -265,12 +272,14 @@ fun AppShell(
                                 viewModel = onboarding,
                                 onContinue = { navigateWhenResumed(OnboardingLocality) },
                                 onSkip = { leaveOnboarding(onboarding::skip) },
+                                onBack = ::previousOnboardingStep,
                             )
                         }
                         composable<OnboardingLocality> { entry ->
                             LocalityStepRoute(
                                 viewModel = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = onboardingEntry(entry)),
                                 onDone = ::leaveOnboarding,
+                                onBack = ::previousOnboardingStep,
                             )
                         }
                         composable<Utforska> {

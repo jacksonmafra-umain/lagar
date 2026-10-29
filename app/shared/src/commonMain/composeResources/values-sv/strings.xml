@@ -28,6 +28,10 @@
         <item quantity="one">%1$d dokument</item>
         <item quantity="other">%1$d dokument</item>
     </plurals>
+    <plurals name="hierarchy_other_statutes">
+        <item quantity="one">varav %1$d övrig författning</item>
+        <item quantity="other">varav %1$d övriga författningar</item>
+    </plurals>
     <string name="layer_numbered_title">%1$d. %2$s</string>
     <string name="coming_soon">Kommer snart</string>
     <string name="coming_soon_text">Det här lagret har inga dokument ännu. Det håller fortfarande på att samlas in.</string>
@@ -110,6 +114,7 @@
     <string name="splash_tagline">Hela Sveriges regelverk på ett ställe</string>
     <string name="onboarding_step">Steg %1$d av %2$d</string>
     <string name="onboarding_skip">Hoppa över</string>
+    <string name="onboarding_back">Tillbaka till föregående steg</string>
     <string name="onboarding_continue">Fortsätt</string>
     <string name="onboarding_done">Klar</string>
     <string name="onboarding_stored_locally">Sparas bara på den här enheten</string>
@@ -213,6 +218,9 @@
     </plurals>
     <string name="search_no_results_title">Inga träffar</string>
     <string name="search_no_results_text">Prova ett annat ord eller lätta på filtren.</string>
+    <string name="search_scope_empty_title">Inga träffar i %1$s</string>
+    <string name="search_scope_empty_text">Sökningen gäller bara %1$s. Vill du söka i hela Sverige i stället?</string>
+    <string name="search_in_nationell">Sök i Nationell</string>
     <string name="advanced_text_label">Ord eller nummer</string>
     <string name="advanced_dates_title">Utfärdad mellan</string>
     <string name="advanced_date_from">Från</string>
