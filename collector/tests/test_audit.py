@@ -120,6 +120,18 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(refs["amended_through"]["unknown"], 1)
         self.assertEqual(refs["reprinted_by"]["unknown"], 1)
 
+    def test_eu_references_resolve_by_celex(self):
+        def eu_meta(celex, number, **extra):
+            base = meta("2026:1", "eu_regulation", id="eu-" + celex.lower(), layer="eu", celex=celex,
+                        source="https://publications.europa.eu/resource/celex/" + celex, **extra)
+            return {**base, "number": number}
+
+        writer.write(eu_meta("32016R0679", "(EU) 2016/679", amended_by=["32018R1725", "32099R0001"]),
+                     LONG, self.root)
+        writer.write(eu_meta("32018R1725", "(EU) 2018/1725"), LONG, self.root)
+        refs = self.run_audit()["cross_references"]["amended_by"]
+        self.assertEqual((refs["total"], refs["unknown"], refs["sample"]), (2, 1, ["32099R0001"]))
+
     def test_report_is_deterministic_and_sorted(self):
         writer.write(meta("2026:2"), "", self.root)
         writer.write(meta("2026:1"), "", self.root)
