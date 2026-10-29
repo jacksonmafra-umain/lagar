@@ -191,4 +191,35 @@
     <string name="type_eu_decision">EU-beslut</string>
     <string name="type_county_regulation">Länsföreskrift</string>
     <string name="type_municipal_regulation">Kommunal föreskrift</string>
+    <string name="search_sort_label">Sortera efter</string>
+    <string name="search_sort_relevance">Relevans</string>
+    <string name="search_sort_newest">Nyast</string>
+    <string name="search_sort_number">Nummer</string>
+    <string name="search_match_body">Träff i texten</string>
+    <string name="advanced_scope_title">Omfattning</string>
+    <string name="advanced_mode_fulltext_note">Söker även i dokumentens text</string>
+    <string name="advanced_in_force_title">Ikraftträdande mellan</string>
+    <string name="advanced_in_force_note">Bara dokument med känt datum för ikraftträdande matchar dessa filter.</string>
+    <string name="advanced_vacatio_legis">Ännu inte i kraft (vacatio legis)</string>
+    <string name="advanced_date_choose">Välj ett datum</string>
+    <string name="advanced_section_active">Aktiv</string>
+    <string name="advanced_section_expanded">Utfälld</string>
+    <string name="advanced_section_collapsed">Ihopfälld</string>
+    <string name="date_picker_ok">OK</string>
+    <string name="date_picker_cancel">Avbryt</string>
+    <string name="date_display">%1$d %2$s %3$d</string>
+    <string-array name="months_short">
+        <item>jan.</item>
+        <item>feb.</item>
+        <item>mars</item>
+        <item>apr.</item>
+        <item>maj</item>
+        <item>juni</item>
+        <item>juli</item>
+        <item>aug.</item>
+        <item>sep.</item>
+        <item>okt.</item>
+        <item>nov.</item>
+        <item>dec.</item>
+    </string-array>
 </resources>

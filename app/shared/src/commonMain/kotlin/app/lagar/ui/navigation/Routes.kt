@@ -36,6 +36,10 @@ data class Search(
     val to: String? = null,
     val mode: String? = null,
     val status: String? = null,
+    val inForceFrom: String? = null,
+    val inForceTo: String? = null,
+    val vacatioLegis: Boolean = false,
+    val sort: String? = null,
 )
 
 @Serializable data object AdvancedSearch

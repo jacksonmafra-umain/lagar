@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -48,12 +49,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import app.lagar.data.ListingItem
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
 import app.lagar.domain.Scope
+import app.lagar.domain.SearchHit
 import app.lagar.domain.SearchQuery
+import app.lagar.domain.SortOrder
+import app.lagar.domain.highlightRanges
 import app.lagar.resources.Res
 import app.lagar.resources.coming_soon
 import app.lagar.resources.home_advanced_search
@@ -61,16 +64,22 @@ import app.lagar.resources.home_coming_soon_text
 import app.lagar.resources.home_search_hint
 import app.lagar.resources.ic_info
 import app.lagar.resources.ic_search
+import app.lagar.resources.search_match_body
 import app.lagar.resources.search_no_results_text
 import app.lagar.resources.search_no_results_title
 import app.lagar.resources.search_prompt_text
 import app.lagar.resources.search_prompt_title
 import app.lagar.resources.search_result_count
+import app.lagar.resources.search_sort_label
+import app.lagar.resources.search_sort_newest
+import app.lagar.resources.search_sort_number
+import app.lagar.resources.search_sort_relevance
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.common.ErrorState
 import app.lagar.ui.common.InputFrame
+import app.lagar.ui.common.PillTab
 import app.lagar.ui.common.ShortcutHint
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.searchShortcutHint
@@ -116,7 +125,7 @@ fun SearchRoute(
 @Composable
 fun SearchScreen(
     query: SearchQuery,
-    results: LoadState<List<ListingItem>>,
+    results: LoadState<List<SearchHit>>,
     scope: Scope,
     onQueryChange: (SearchQuery) -> Unit,
     onBack: () -> Unit,
@@ -160,8 +169,20 @@ fun SearchScreen(
                     state.value.isEmpty() -> item(key = "state") {
                         EmptyState(Res.drawable.ic_search, stringResource(Res.string.search_no_results_title), stringResource(Res.string.search_no_results_text))
                     }
-                    else -> items(state.value, key = { it.id }) { item ->
-                        StatuteRow(item, item.displayLayer() ?: DisplayLayer.SfsAct, onClick = { onOpenDocument(item.id) })
+                    else -> {
+                        item(key = "sort") {
+                            SortRow(query.sort, scope) { onQueryChange(query.copy(sort = it)) }
+                        }
+                        items(state.value, key = { it.item.id }) { hit ->
+                            val item = hit.item
+                            StatuteRow(
+                                item = item,
+                                layer = item.displayLayer() ?: DisplayLayer.SfsAct,
+                                onClick = { onOpenDocument(item.id) },
+                                highlights = highlightRanges(item.title, query.text),
+                                note = if (hit.bodyOnly) stringResource(Res.string.search_match_body) else null,
+                            )
+                        }
                     }
                 }
             }
@@ -215,6 +236,31 @@ private fun SummaryRow(count: Int?, scope: Scope, onOpenAdvancedSearch: () -> Un
                 fontWeight = FontWeight.Bold,
                 color = layers.onTint(scope.key),
             )
+        }
+    }
+}
+
+/** The result order: relevance, newest first or by number. */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun SortRow(current: SortOrder, scope: Scope, onSelect: (SortOrder) -> Unit) {
+    FlowRow(
+        modifier = Modifier.fillMaxWidth().selectableGroup(),
+        horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
+        itemVerticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            text = stringResource(Res.string.search_sort_label),
+            style = LagarTheme.type.labelMd,
+            color = LagarTheme.colors.onSurfaceVariant,
+        )
+        SortOrder.entries.forEach { order ->
+            val label = when (order) {
+                SortOrder.Relevance -> Res.string.search_sort_relevance
+                SortOrder.Newest -> Res.string.search_sort_newest
+                SortOrder.Number -> Res.string.search_sort_number
+            }
+            PillTab(stringResource(label), selected = order == current, key = scope.key) { onSelect(order) }
         }
     }
 }
