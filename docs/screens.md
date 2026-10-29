@@ -245,7 +245,7 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 
 | Feature | Status | Issue |
 | --- | --- | --- |
-| Metadata header: layer badge, citation, title, issue date, ministry, status, amended through, source link | Done | |
+| Metadata header: layer badge, citation, title, issue date, ministry (without the unit code, grouped as in By ministry), status, amended through, source link | Done | #132 |
 | Source Serif 4 legal text, bold Inter § numbers, reading column width | Done | |
 | § cards with the layer indicator, bookmark toggle, text selection | Done | |
 | Riksdagen's "Upphör att gälla U:…" and "Träder i kraft I:…" markers on a § shown as a label above its text ("Upphör att gälla …", "Träder i kraft …" with the date or condition as published) | Done | #124 |
