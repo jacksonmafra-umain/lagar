@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
@@ -26,7 +27,10 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import app.lagar.data.LagarRepository
+import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
+import app.lagar.designsystem.generated.RadiusTokens
+import app.lagar.designsystem.glass
 import app.lagar.resources.Res
 import app.lagar.resources.app_name
 import app.lagar.resources.ic_layer_crown
@@ -41,6 +45,7 @@ import org.koin.compose.koinInject
 private const val CREEP_TARGET = 0.85f
 private const val CREEP_MS = 1_500
 private const val FINISH_MS = 200
+private val LogoCardSize = 128.dp
 
 /**
  * Loads the API index and calls [onLoaded] once it has finished, whether it worked or not: the index is
@@ -79,11 +84,17 @@ fun SplashScreen(progress: () -> Float) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.md),
         ) {
+            // The Stitch logo vessel: a tier 1 glass card holding the crown.
             Box(
-                modifier = Modifier.size(96.dp).clip(CircleShape).background(colors.primary),
+                modifier = Modifier.size(LogoCardSize).glass(GlassTier.Card, shape = RoundedCornerShape(RadiusTokens.xl)),
                 contentAlignment = Alignment.Center,
             ) {
-                Icon(painterResource(Res.drawable.ic_layer_crown), contentDescription = null, tint = colors.onPrimary, modifier = Modifier.size(56.dp))
+                Box(
+                    modifier = Modifier.size(96.dp).clip(CircleShape).background(colors.primary),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(painterResource(Res.drawable.ic_layer_crown), contentDescription = null, tint = colors.onPrimary, modifier = Modifier.size(56.dp))
+                }
             }
             Text(stringResource(Res.string.app_name), style = LagarTheme.type.displayLgMobile, color = colors.primary)
             Text(
