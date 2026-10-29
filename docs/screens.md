@@ -21,7 +21,7 @@ The number after each gap is its GitHub issue.
 | Repealed treatment (grey, strikethrough, history icon) everywhere | Partial: only the layer list is correct | #21 |
 | Bookmark icon in the document's layer colour | Missing | #22 |
 | Tablet two-pane and desktop tri-pane layouts | Missing | #35 |
-| `docs/design.md` component inventory up to date | Partial: stale paths | #25 |
+| `docs/design.md` component inventory up to date | Done | #25 |
 | Swedish and English strings, no hardcoded UI text | Done | |
 
 ## Shell
