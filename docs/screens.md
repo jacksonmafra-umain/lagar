@@ -17,7 +17,7 @@ The number after each gap is its GitHub issue.
 | Topic | Status | Issue |
 | --- | --- | --- |
 | Glass tier 1 on article cards, tier 2 on sticky bars, reduce-transparency support | Partial: only tiers 2 and 3 are used | #23 |
-| Input, button and checkbox shapes, search focus glow, web `⌘K` hint | Partial: stock M3 defaults | #24 |
+| Input, button and checkbox shapes, search focus glow, web `⌘K` hint | Done | #24 |
 | Repealed treatment (grey, strikethrough, history icon) everywhere | Partial: only the layer list is correct | #21 |
 | Bookmark icon in the document's layer colour | Missing | #22 |
 | Tablet two-pane and desktop tri-pane layouts | Missing | #35 |

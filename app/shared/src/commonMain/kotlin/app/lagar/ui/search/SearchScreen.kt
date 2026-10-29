@@ -1,8 +1,9 @@
 package app.lagar.ui.search
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsFocusedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -19,14 +20,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -71,7 +70,10 @@ import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.common.ErrorState
+import app.lagar.ui.common.InputFrame
+import app.lagar.ui.common.ShortcutHint
 import app.lagar.ui.common.rememberBackTopBarHeight
+import app.lagar.ui.common.searchShortcutHint
 import app.lagar.ui.home.displayLayer
 import app.lagar.ui.list.StatuteRow
 import app.lagar.ui.navigation.Search
@@ -92,6 +94,7 @@ fun SearchRoute(
     onBack: () -> Unit,
     onOpenDocument: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
+    focusRequests: Int = 0,
     viewModel: SearchViewModel = koinViewModel(key = route.toString()) { parametersOf(route.toQuery()) },
 ) {
     val query by viewModel.query.collectAsState()
@@ -105,9 +108,11 @@ fun SearchRoute(
         onBack = onBack,
         onOpenDocument = onOpenDocument,
         onOpenAdvancedSearch = onOpenAdvancedSearch,
+        focusRequests = focusRequests,
     )
 }
 
+/** [focusRequests] moves focus to the search field each time it grows (the web search shortcut). */
 @Composable
 fun SearchScreen(
     query: SearchQuery,
@@ -117,6 +122,7 @@ fun SearchScreen(
     onBack: () -> Unit,
     onOpenDocument: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
+    focusRequests: Int = 0,
 ) {
     val spacing = LagarTheme.spacing
     val hazeState = remember { HazeState() }
@@ -164,6 +170,7 @@ fun SearchScreen(
             SearchInput(
                 initial = query.text,
                 autoFocus = !query.isActive,
+                focusRequests = focusRequests,
                 scope = scope,
                 onChange = { onQueryChange(query.copy(text = it)) },
                 modifier = Modifier.weight(1f),
@@ -212,54 +219,57 @@ private fun SummaryRow(count: Int?, scope: Scope, onOpenAdvancedSearch: () -> Un
     }
 }
 
-/** Pill-shaped text field for the top bar. Keeps its own text so typing never waits on the debounced results. */
+/** Search command bar for the top bar. Keeps its own text so typing never waits on the debounced results. */
 @Composable
-private fun SearchInput(initial: String, autoFocus: Boolean, scope: Scope, onChange: (String) -> Unit, modifier: Modifier = Modifier) {
+private fun SearchInput(
+    initial: String,
+    autoFocus: Boolean,
+    focusRequests: Int,
+    scope: Scope,
+    onChange: (String) -> Unit,
+    modifier: Modifier = Modifier,
+) {
     val layers = LagarTheme.layers
     var text by remember(initial) { mutableStateOf(initial) }
     val focus = remember { FocusRequester() }
     val focusManager = LocalFocusManager.current
     val hint = stringResource(Res.string.home_search_hint)
+    val interactionSource = remember { MutableInteractionSource() }
+    val focused by interactionSource.collectIsFocusedAsState()
     LaunchedEffect(Unit) { if (autoFocus) focus.requestFocus() }
-    Surface(
-        modifier = modifier,
-        shape = CircleShape,
-        color = LagarTheme.colors.surfaceContainerLowest,
-        border = BorderStroke(1.dp, layers.accent(scope.key)),
-    ) {
-        Row(
-            modifier = Modifier.heightIn(min = ShellDimens.TouchTarget).padding(horizontal = LagarTheme.spacing.md),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
-        ) {
-            Icon(painterResource(Res.drawable.ic_search), null, tint = layers.onTint(scope.key), modifier = Modifier.size(24.dp))
-            BasicTextField(
-                value = text,
-                onValueChange = {
-                    text = it
-                    onChange(it)
-                },
-                modifier = Modifier.weight(1f).focusRequester(focus).semantics { contentDescription = hint },
-                singleLine = true,
-                textStyle = LagarTheme.type.bodyUi.copy(color = LagarTheme.colors.onSurface),
-                cursorBrush = SolidColor(layers.onTint(scope.key)),
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                keyboardActions = KeyboardActions(onSearch = { focusManager.clearFocus() }),
-                decorationBox = { field ->
-                    Box(contentAlignment = Alignment.CenterStart) {
-                        if (text.isEmpty()) {
-                            Text(
-                                hint,
-                                style = LagarTheme.type.bodyUi,
-                                color = LagarTheme.colors.onSurfaceVariant,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis,
-                            )
-                        }
-                        field()
+    // Only requests made while this field is shown move focus; the count can be older than the screen.
+    val shownAt = remember { focusRequests }
+    LaunchedEffect(focusRequests) { if (focusRequests != shownAt) focus.requestFocus() }
+    InputFrame(focused = focused, modifier = modifier, idleBorder = layers.accent(scope.key)) {
+        Icon(painterResource(Res.drawable.ic_search), null, tint = layers.onTint(scope.key), modifier = Modifier.size(24.dp))
+        BasicTextField(
+            value = text,
+            onValueChange = {
+                text = it
+                onChange(it)
+            },
+            modifier = Modifier.weight(1f).focusRequester(focus).semantics { contentDescription = hint },
+            singleLine = true,
+            textStyle = LagarTheme.type.bodyUi.copy(color = LagarTheme.colors.onSurface),
+            cursorBrush = SolidColor(layers.onTint(scope.key)),
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+            keyboardActions = KeyboardActions(onSearch = { focusManager.clearFocus() }),
+            interactionSource = interactionSource,
+            decorationBox = { field ->
+                Box(contentAlignment = Alignment.CenterStart) {
+                    if (text.isEmpty()) {
+                        Text(
+                            hint,
+                            style = LagarTheme.type.bodyUi,
+                            color = LagarTheme.colors.onSurfaceVariant,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
                     }
-                },
-            )
-        }
+                    field()
+                }
+            },
+        )
+        searchShortcutHint()?.let { ShortcutHint(it) }
     }
 }

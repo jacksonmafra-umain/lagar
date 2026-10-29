@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBars
@@ -21,7 +20,6 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -38,6 +36,7 @@ import app.lagar.resources.Res
 import app.lagar.resources.ic_arrow_forward
 import app.lagar.resources.onboarding_skip
 import app.lagar.resources.onboarding_step
+import app.lagar.ui.common.LagarButton
 import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
@@ -111,7 +110,7 @@ internal fun OnboardingScaffold(
             if (onSkip != null) {
                 TextButton(onClick = onSkip) { Text(stringResource(Res.string.onboarding_skip)) }
             }
-            Button(onClick = onPrimary, modifier = Modifier.weight(1f).heightIn(min = ShellDimens.TouchTarget)) {
+            LagarButton(onClick = onPrimary, modifier = Modifier.weight(1f)) {
                 Text(primaryLabel)
                 Spacer(Modifier.width(spacing.sm))
                 Icon(painterResource(Res.drawable.ic_arrow_forward), contentDescription = null, modifier = Modifier.size(ShellDimens.SmallIconSize))

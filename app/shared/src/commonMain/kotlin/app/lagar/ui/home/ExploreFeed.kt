@@ -8,11 +8,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,8 +40,8 @@ import app.lagar.resources.ic_bookmarks
 import app.lagar.settings.Bookmark
 import app.lagar.settings.toListingItem
 import app.lagar.ui.common.EmptyState
+import app.lagar.ui.common.LagarSecondaryButton
 import app.lagar.ui.common.PillTab
-import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.stringResource
 
 private enum class FeedTab { Recent, Favourites }
@@ -84,7 +82,7 @@ internal fun ExploreFeed(
                     FeedCard(item, item.id in bookmarkedIds, onOpen = { onOpenDocument(item.id) }, onToggleBookmark = { onToggleBookmark(item) })
                 }
                 if (data.hasMoreRecent) {
-                    OutlinedButton(onClick = onShowMore, modifier = Modifier.fillMaxWidth().heightIn(min = ShellDimens.TouchTarget)) {
+                    LagarSecondaryButton(onClick = onShowMore, modifier = Modifier.fillMaxWidth()) {
                         Text(stringResource(Res.string.home_show_more))
                     }
                 }

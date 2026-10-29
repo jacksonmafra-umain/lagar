@@ -20,7 +20,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -51,6 +50,7 @@ import app.lagar.resources.picker_no_results
 import app.lagar.resources.picker_region_label
 import app.lagar.resources.picker_region_placeholder
 import app.lagar.resources.picker_search
+import app.lagar.ui.common.LagarTextField
 import app.lagar.ui.shell.ShellDimens
 import kotlinx.coroutines.CancellationException
 import org.jetbrains.compose.resources.painterResource
@@ -138,7 +138,7 @@ private fun PickerField(label: String, value: String?, placeholder: String, enab
         Text(label, style = LagarTheme.type.labelMd, color = colors.onSurfaceVariant)
         Surface(
             modifier = Modifier.fillMaxWidth(),
-            shape = MaterialTheme.shapes.medium,
+            shape = MaterialTheme.shapes.small,
             color = if (enabled) colors.surfaceContainerLowest else colors.surfaceContainerLow,
             border = BorderStroke(1.dp, colors.outlineVariant),
         ) {
@@ -197,14 +197,12 @@ private fun OptionSheet(
                     TextButton(onClick = { onSelect(null) }) { Text(stringResource(Res.string.picker_clear)) }
                 }
             }
-            OutlinedTextField(
+            LagarTextField(
                 value = query,
                 onValueChange = { query = it },
                 modifier = Modifier.fillMaxWidth(),
-                singleLine = true,
-                placeholder = { Text(stringResource(Res.string.picker_search)) },
-                leadingIcon = { Icon(painterResource(Res.drawable.ic_search), contentDescription = null) },
-                shape = MaterialTheme.shapes.medium,
+                placeholder = stringResource(Res.string.picker_search),
+                leadingIcon = Res.drawable.ic_search,
             )
             if (shown.isEmpty()) {
                 Text(

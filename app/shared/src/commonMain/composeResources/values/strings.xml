@@ -103,6 +103,8 @@
     <string name="home_hero_emphasis">acts, ordinances and regulations</string>
     <string name="home_hero_subtitle">Consolidated statutes from the Riksdag’s open data</string>
     <string name="home_search_hint">Search by number or word</string>
+    <string name="search_shortcut_apple">⌘K</string>
+    <string name="search_shortcut_other">Ctrl+K</string>
     <string name="home_search_example">E.g. Regeringsformen, 2026:1200</string>
     <string name="home_search_submit">Search</string>
     <string name="home_advanced_search">Advanced search</string>
