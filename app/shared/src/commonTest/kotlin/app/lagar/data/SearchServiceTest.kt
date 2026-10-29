@@ -11,6 +11,7 @@ import kotlinx.datetime.LocalDate
 import kotlinx.serialization.json.JsonPrimitive
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class SearchServiceTest {
@@ -67,7 +68,50 @@ class SearchServiceTest {
 
     @Test
     fun onlyTheScopesLayersAreSearched() = runTest {
-        assertEquals(emptyList(), service().ids(SearchQuery("skollag"), Scope.Kommun))
+        val source = FakeSearchSource()
+        assertEquals(emptyList(), service(source).ids(SearchQuery("skollag"), Scope.Kommun))
+        // The index has no municipal group, so nothing beyond the manifest is read.
+        assertEquals(emptyList(), source.docsRequests)
+        assertEquals(emptyList(), source.shardRequests)
+        val v1 = FakeSearchSource(version = 1)
+        assertEquals(emptyList(), service(v1).ids(SearchQuery("skollag"), Scope.Kommun))
+    }
+
+    @Test
+    fun hitsFromSeveralGroupsAreMerged() = runTest {
+        val source = FakeSearchSource()
+        // `fo` is a prefix of `foreskrift` (fundamental) and `forordning` (sfs).
+        val ids = service(source).ids(SearchQuery("fo", mode = SearchMode.FullText))
+        assertEquals(setOf("sfs-1974-152", "sfs-1999-100", "sfs-2010-800"), ids.toSet())
+        assertEquals(3, ids.size)
+        assertEquals(setOf("fundamental/fo", "sfs/fo"), source.shardRequests.toSet())
+        assertEquals(setOf<String?>("fundamental", "sfs"), source.docsRequests.toSet())
+    }
+
+    @Test
+    fun bothIndexVersionsGiveTheSameResults() = runTest {
+        val queries = listOf(
+            SearchQuery("utbildning", mode = SearchMode.FullText),
+            SearchQuery("forordning", mode = SearchMode.FullText),
+            SearchQuery("skoll"),
+            SearchQuery("Regeringsf"),
+            SearchQuery("1999:100", mode = SearchMode.Number),
+            SearchQuery("fo", mode = SearchMode.FullText),
+            SearchQuery("19", sort = SortOrder.Newest),
+            SearchQuery("", status = StatusFilter.Repealed),
+            SearchQuery("", from = LocalDate(1999, 1, 1)),
+        )
+        for (q in queries) {
+            assertEquals(service(FakeSearchSource(version = 1)).ids(q), service(FakeSearchSource(version = 2)).ids(q), q.toString())
+        }
+    }
+
+    @Test
+    fun warmOnceTheScopesDocumentTablesAreLoaded() = runTest {
+        val s = service()
+        assertFalse(s.isWarm(Scope.Nationell))
+        s.ids(SearchQuery("skollag"))
+        assertTrue(s.isWarm(Scope.Nationell))
     }
 
     @Test
@@ -140,14 +184,16 @@ class SearchServiceTest {
     private class LocalIndex(private val rows: List<ListingItem>) : SearchIndexSource {
         override suspend fun searchManifest() = SearchManifest(1, "t", rows.size, listOf("title", "number"), mapOf("title" to 1, "number" to 2), 2, emptyList())
 
-        override suspend fun searchDocs() = SearchDocsTable(
+        override suspend fun searchGroupManifest(group: String): SearchGroupManifest = error("version 1")
+
+        override suspend fun searchDocs(group: String?) = SearchDocsTable(
             listOf("id", "title", "number", "type", "issued", "repealed", "region_code", "municipality_code"),
             rows.map { r ->
                 listOf(r.id, r.title, r.number, r.type, r.issued, r.repealed, r.regionCode, r.municipalityCode).map { JsonPrimitive(it) }
             },
         )
 
-        override suspend fun searchShard(key: String): SearchShard = error("no shards")
+        override suspend fun searchShard(group: String?, key: String): SearchShard = error("no shards")
     }
 
     @Test

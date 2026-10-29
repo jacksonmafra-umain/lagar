@@ -188,7 +188,7 @@ python3 -I collector/collect.py eu --celex 32016R0679[,32022L2555 ...] [options]
 ```
 
 - Metadata: one SPARQL query per act to `https://publications.europa.eu/webapi/rdf/sparql`
-  (date of document, entry into force, end of validity, ELI, adopting institutions, Swedish
+  (date of document, entry-into-force dates and their type, end of validity, ELI, adopting institutions, Swedish
   title and manifestation types, amending acts and consolidated versions).
 - Text: `https://publications.europa.eu/resource/celex/<CELEX>` with `Accept-Language: swe`
   and `Accept: application/xhtml+xml` (or `text/html` for older acts that only have the old
@@ -215,7 +215,10 @@ python3 -I collector/collect.py eu --celex 32016R0679[,32022L2555 ...] [options]
 - Frontmatter: `id` `eu-<celex lowercased>`, `number` in the Swedish citation form taken from
   the Swedish title when it agrees with the CELEX number (else rebuilt from it: `(EU) 2016/679`,
   `(EG) nr 1907/2006`, `95/46/EG`), `celex`, `issued` (date of document; for a consolidated
-  version, the base act's), `in_force` (earliest entry into force), `repealed` (end of
+  version, the base act's), `in_force` (the act's own entry into force: the
+  `resource_legal_date_entry-into-force` annotated `type_of_date` EV; dates annotated MA or
+  MA/PART are when the act or single provisions apply and never count; without an EV date,
+  the earliest unannotated date, as for consolidated versions, else `null`), `repealed` (end of
   validity unless open-ended), `amended_by` (CELEX numbers of amending acts), `amended_through`,
   `eli`, `issuer`
   (adopting institutions in Swedish), `source` (the manifestation URL), `source_sha256`.

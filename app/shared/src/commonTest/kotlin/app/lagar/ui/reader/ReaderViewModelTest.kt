@@ -131,7 +131,7 @@ class ReaderViewModelTest {
         val source = FakeSearchSource()
         val vm = viewModel(repo, index = FullTextIndex(source))
         assertEquals(mapOf("sfs-2010-800" to "act"), vm.crossReferences.value)
-        assertEquals(1, source.docsRequests)
+        assertEquals(listOf<String?>("fundamental", "sfs"), source.docsRequests)
         assertEquals(0, repo.listings)
     }
 
