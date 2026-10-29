@@ -36,6 +36,7 @@ import app.lagar.ui.common.EmptyState
 import app.lagar.ui.list.StatuteRow
 import app.lagar.ui.shell.LocalShellPadding
 import app.lagar.ui.shell.ShellDimens
+import app.lagar.ui.shell.maxContentWidth
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -62,7 +63,7 @@ fun SparadeScreen(bookmarks: List<Bookmark>, onOpenDocument: (String) -> Unit, o
         return
     }
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().maxContentWidth(),
         contentPadding = PaddingValues(
             start = spacing.marginMobile,
             end = spacing.marginMobile,
