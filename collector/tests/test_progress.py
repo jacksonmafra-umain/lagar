@@ -54,6 +54,14 @@ class ProgressTests(unittest.TestCase):
         self.assertEqual(row["breakdown"], {"act": 1, "ordinance": 1, "other_statute": 0})
         self.assertIn("1 acts, 1 ordinances, 0 other statutes", progress.render_markdown(self.rows(), None))
 
+    def test_other_layers_sum_their_types(self):
+        counts = {"act": 4, "case_report": 2, "case_notice": 1}
+        case_law = {"layer": "case_law", "type": None, "label": "Case law", "target": 10,
+                    "kind": "counted", "source": "s", "as_of": "2026-10-29"}
+        rows = progress.build_rows(TARGETS + [case_law], counts)
+        row = next(r for r in rows if r["layer"] == "case_law")
+        self.assertEqual((row["collected"], row["breakdown"]), (3, None))
+
     def test_unknown_target_has_no_percent(self):
         row = next(r for r in self.rows() if r["layer"] == "agency")
         self.assertIsNone(row["percent"])

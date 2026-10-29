@@ -2,8 +2,8 @@
 
 Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown files,
 records a SHA-256 manifest of the authoritative SFS PDFs, adds each statute's amendment
-register from SFSR, writes a metadata-only amendment history for git, and collects EU acts
-in Swedish from the Publications Office Cellar.
+register from SFSR, writes a metadata-only amendment history for git, collects the published case
+law of the Swedish courts and collects EU acts in Swedish from the Publications Office Cellar.
 Python standard library only.
 
 ## Usage
@@ -226,11 +226,66 @@ protection, digital, consumer, labour, environment, private international law). 
 in-force sweep is not implemented yet. Reuse is free with acknowledgement of the source
 (Commission Decision 2011/833/EU).
 
+## Case law
+
+The `case-law` command (alias `caselaw`) collects the anonymised summaries that the courts
+publish as guiding case law, from the open API of Sveriges Domstolar (dataset "Rättspraxis från
+Sveriges Domstolar", CC0):
+
+```
+python3 -I collector/collect.py case-law [--court CODE ...] [--from YYYY-MM-DD] [--to YYYY-MM-DD] \
+    [--since YYYY-MM-DD] [--limit N] [--page-size N] [--rate SECONDS] \
+    [--state collector/data/case-law-state.json] [--corpus corpus] [--report FILE]
+```
+
+- Source: `GET https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar?publiceringsformer=referat,notis`
+  (OpenAPI spec at `/openapi/puh-openapi.yaml`), paged with `page` (from 0) and `pagesize`
+  (default 20), newest decision first. Each listing entry is the whole publication, so the listing
+  is the only endpoint requested.
+- Only referat (`case_report`, `corpus/case-law/reports/`) and notiser (`case_notice`,
+  `corpus/case-law/notices/`) are stored. Rulings published in full (`DOM_ELLER_BESLUT`), leave to
+  appeal (`PROVNINGSTILLSTAND`), preliminary rulings (`FORHANDSAVGORANDE`) and non-guiding decisions
+  (`EJ_VAGLEDANDE`) are skipped and counted as `excluded`. Attachments (`/api/v1/bilagor/...`) are
+  never requested; tests assert that every request goes to the listing.
+- The texts are the courts' anonymised publications. As a safeguard, a publication whose text
+  contains a personal identity number (valid date and check digit) is recorded as failed and not
+  written.
+- `--court` takes the codes of `GET /api/v1/domstolar` (`HDO` Högsta domstolen, `HFD` Högsta
+  förvaltningsdomstolen, `ADO`, `MIOD`, ...); repeat it for several courts. `--from`/`--to` bound
+  the decision date (`avgorandedatum`); the run stops at the first decision older than `--from`.
+  `--since` (alias `--changed-since`) asks the API for publications published on or after the day
+  (`publicerad_fran_och_med`), for an incremental sync.
+- Mapping: `number` is the report reference, the ordinal form (`NJA 2026:38`) when the API gives
+  one, else the first reference (`HFD 2026 ref. 43`, `HFD 2026 not. 24`, `NJA 2019 s. 2`); `id` is
+  its slug (`nja-2026-38`, `hfd-2026-ref-43`, `ra-2010-ref-5`). `title` is the summary
+  (`sammanfattning`, the report's headline), `issued` the decision date, `court` the court code,
+  `issuer` the court name, `ecli` the ECLI when it has the standard form. `source` is
+  `/api/v1/publiceringar/{id}` and `source_sha256` hashes the publication as the API serialises it
+  (sorted keys, compact UTF-8 JSON), which is byte for byte the response of that URL.
+- Body: a facts block (court, decision date, case numbers, all references, name, ECLI), then
+  sections for Lagrum (with SFS numbers), Nyckelord, Rättsområden, Förarbeten, Litteratur,
+  Hänvisningar and Europarättsliga avgöranden when present, then the text (`innehall`, HTML
+  converted to Markdown, headings moved down two levels) under `## Referat` or `## Notis`.
+- A publication without a reference in the schema's form (`[A-ZÅÄÖ]{2,5} YYYY:N` or
+  `YYYY s./ref./not./nr/N N`), or with a reference already stored from another publication, is
+  recorded as failed.
+- State (git-ignored) is `{"done": {publication id: publiceringstid}, "failed": {id: error},
+  "blocked": null|msg}`; a publication is skipped when its `publiceringstid` matches and its file
+  exists. A document whose frontmatter (apart from `fetched_at`) and body are unchanged is left
+  untouched. After a mapping change, delete the state file and rerun to rewrite affected files.
+- `--limit` stops after N written documents (unchanged ones do not count). `--report` writes
+  `{"written": [...], "unchanged": n, "skipped": n, "excluded": n, "failed": [...], "blocked": bool,
+  "latest_published": "..."}`.
+- The site has no robots.txt (HTTP 404); one is honoured if it appears. An HTTP 403 stops the run
+  (exit code 2). Entries may shift between pages while the courts publish; a rerun picks up any miss.
+
 ## Exit codes
 
 - 0: finished (failures are listed, not fatal)
 - 1: the listing, list file or robots.txt could not be read, or the state file is corrupt
 - 2: blocked (HTTP 403 or robots.txt disallow); recorded in the state file
+
+These apply to `sfs` and `case-law`.
 
 ## Tests
 
