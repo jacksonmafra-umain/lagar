@@ -7261,6 +7261,636 @@
       ],
       "number": "23FS 2026:10",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 499099,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:25Z",
+          "sha256": "d82b7dde4aa17f26b6716ca80f32c3cd47ea0eab37a233e584c98ac49456378d",
+          "url": "https://www.lansstyrelsen.se/download/18.2ace232419540c6a2c725e74/1741078026228/24FS%202025_1.pdf"
+        }
+      ],
+      "number": "24FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 523133,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:26Z",
+          "sha256": "4cc20cab9ec7e31ea3d3fb5c846447670171646546f169aeb89825f96561a587",
+          "url": "https://www.lansstyrelsen.se/download/18.2ace232419540c6a2c725e75/1741078026274/24FS%202025_2.pdf"
+        }
+      ],
+      "number": "24FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1246489,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:27Z",
+          "sha256": "23ccda6f8ae6cda1e895f3aa0450b10c76afeee032cb23e3265051039762114d",
+          "url": "https://www.lansstyrelsen.se/download/18.2ace232419540c6a2c725e76/1741078026316/24FS%202025-3.pdf"
+        }
+      ],
+      "number": "24FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 396860,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:28Z",
+          "sha256": "bc479df0ca6888fa3c1fdd8810d40b2305c844e1325620d4833d39333962ce0f",
+          "url": "https://www.lansstyrelsen.se/download/18.1f88a453195adb731b1ce2/1742394142305/24FS%202025-4.pdf"
+        }
+      ],
+      "number": "24FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 314923,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:30Z",
+          "sha256": "ac4ea410374880b4ee2849de7b556b21f3dcc9f806c56c8c9e60dcfb03657811",
+          "url": "https://www.lansstyrelsen.se/download/18.7d39256b19618e09f63c4654/1745826487171/24FS%202025-5.pdf"
+        }
+      ],
+      "number": "24FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 394815,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:30Z",
+          "sha256": "ee60dce2fc8e7ac6363bf51e1826d4106e2addeae017c86b8eed9055654b7768",
+          "url": "https://www.lansstyrelsen.se/download/18.6422d155195ade35c707f452/1744112589111/24FS%202025-7.pdf"
+        }
+      ],
+      "number": "24FS 2025:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 416140,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:31Z",
+          "sha256": "d1308967d1b5dd544ccf4e0ebf5b4e07f2d551bdd840745a527e8ecff72940d4",
+          "url": "https://www.lansstyrelsen.se/download/18.75dc539919618cb34bb1114/1744196265926/24FS%202025-8.pdf"
+        }
+      ],
+      "number": "24FS 2025:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 419336,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:32Z",
+          "sha256": "75722fe42ef4852ed717cb0edddb2aad9e30d23b6880b622ad5f52404a901bfc",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deea991da/1749025580257/24FS%202025_9.pdf"
+        }
+      ],
+      "number": "24FS 2025:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 2148005,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:34Z",
+          "sha256": "773a433d2c0355476628b5092bea73d2b3c5bbf816965a4c094fc3362c3ccfe0",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deea991db/1749025580318/24FS%202025_10.pdf"
+        }
+      ],
+      "number": "24FS 2025:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 391372,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:34Z",
+          "sha256": "b4075a16b187d1b352359604568ade4d0b580b972fbaeb60a02c31f7de01cc0b",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deea991dc/1749025580472/24FS%202025-11.pdf"
+        }
+      ],
+      "number": "24FS 2025:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 434466,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:35Z",
+          "sha256": "0812a2b92901901f955da3b5ccede7a6bc692b00101ae839de8e801024570412",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deea991dd/1749025580507/24FS%202025-12.pdf"
+        }
+      ],
+      "number": "24FS 2025:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 687525,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:36Z",
+          "sha256": "f5dfb51e4b95557fe028ef7fa3a96553947bddceecdea636e5c1e0ea54ee688d",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deea991de/1749025580544/24FS%202025-13.pdf"
+        }
+      ],
+      "number": "24FS 2025:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 652367,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:37Z",
+          "sha256": "2663097b48ff3434e159aefaa3b6a19b7314ff4efbfaf3f0f38cffdc051aa7a9",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deea991df/1749025580593/24FS%202025-14.pdf"
+        }
+      ],
+      "number": "24FS 2025:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 879692,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:38Z",
+          "sha256": "53159f976087ca0c625aa6aaa1a6f0398bef7bda4f594e8c21bbe4c510c86a84",
+          "url": "https://www.lansstyrelsen.se/download/18.32dd9f4d1982b4fa63d1c5d2/1753340564442/24FS%202025_15.pdf"
+        }
+      ],
+      "number": "24FS 2025:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 82048,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:39Z",
+          "sha256": "f2fb9e9280a1e71eaf327e64878f0c7063e74b932b89ad9706f61420837c066e",
+          "url": "https://www.lansstyrelsen.se/download/18.7149a31e1984f66c6601b61/1753707739657/24FS%202025-17.pdf"
+        }
+      ],
+      "number": "24FS 2025:17",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 22008,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:40Z",
+          "sha256": "56fd66c07817c2b2eac083d54ab70ad487a1682c366fc78b26a3ec8f70e0cb08",
+          "url": "https://www.lansstyrelsen.se/download/18.2d188dbd19931eadfb6635ac/1758194631180/24FS%202025-18.pdf"
+        }
+      ],
+      "number": "24FS 2025:18",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 431504,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:41Z",
+          "sha256": "d26ded3cb981f84e224a2da79a7ef70e3d2069e4b29c7ea04b868145de85134a",
+          "url": "https://www.lansstyrelsen.se/download/18.58adacb11999e1200ff19690/1759486824083/24FS%202025-19.pdf"
+        }
+      ],
+      "number": "24FS 2025:19",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 407996,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:42Z",
+          "sha256": "22e9053d3580f25a28b4f721e913c1cd14f03c4fc4d1c7df1f843da9ea8c220b",
+          "url": "https://www.lansstyrelsen.se/download/18.58adacb11999e1200ff19691/1759486824131/24FS%202025-20.pdf"
+        }
+      ],
+      "number": "24FS 2025:20",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 122995,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:43Z",
+          "sha256": "6c9e9aaf48ae1eadf1fdb42099fef84a457b0ed072b80cb380f743bc0147f244",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fe52bd2/1774949063774/24FS%202026-1.pdf"
+        }
+      ],
+      "number": "24FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 122562,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:44Z",
+          "sha256": "1b37e0153a130641dd52d6640afef953d91dad8b698471ff4dc01ba6a93869ba",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fe52bd3/1774949063810/24FS%202026-2.pdf"
+        }
+      ],
+      "number": "24FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 122450,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:45Z",
+          "sha256": "0189ffd12c38f9f79c2d7663144f9fa8096766f2be9c8963b324d367409fe74d",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fe52bd4/1774949063840/24FS%202026-3.pdf"
+        }
+      ],
+      "number": "24FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 122920,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:46Z",
+          "sha256": "1d73eff5165025ae037f37b98bba5185826c41022e8f3273f1240627917f3275",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fe52bd5/1774949063863/24FS%202026-4.pdf"
+        }
+      ],
+      "number": "24FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 123160,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:47Z",
+          "sha256": "51e2334fd6d936fd9330593c84fc66111871064d273109248fbfc7e2bb553306",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fe52bd6/1774949063886/24FS%202026-5.pdf"
+        }
+      ],
+      "number": "24FS 2026:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 123128,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:49Z",
+          "sha256": "6f0b0ffe21c89fdf04e369a2ce38d490d851f8a91777d4b6f6acf0d347de9934",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fe52bd7/1774949063908/24FS%202026-6.pdf"
+        }
+      ],
+      "number": "24FS 2026:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 337972,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:49Z",
+          "sha256": "c221fa4e310a02409ef94ab8c64190d9d57dbe181b621a8fb9c316d70f02cc0b",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fe52bd8/1774949063929/24FS%202026-7.pdf"
+        }
+      ],
+      "number": "24FS 2026:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 127116,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:50Z",
+          "sha256": "68fc1ffad3c027b5c0eba5b3605182dce6dead05cb1b984ae41fcdc96954dc5d",
+          "url": "https://www.lansstyrelsen.se/download/18.458c24da19eafd611654d7e6/1781614198964/24FS%202026-9.pdf"
+        }
+      ],
+      "number": "24FS 2026:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 127316,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:51Z",
+          "sha256": "4aa98302cf985be92374f91c84908d17567558ff2f926b5a5e08e5b4947dabbe",
+          "url": "https://www.lansstyrelsen.se/download/18.458c24da19eafd611654d7e5/1781614198927/24FS%202026-10.pdf"
+        }
+      ],
+      "number": "24FS 2026:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 430288,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:53Z",
+          "sha256": "087e052c75b30b86b2f32aaaeccd5f3c91406b29d67f5cffa9b7ce460a57b3d8",
+          "url": "https://www.lansstyrelsen.se/download/18.402de13019d724145b22a70f/1776064869339/24FS%202026-11.pdf"
+        }
+      ],
+      "number": "24FS 2026:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 126492,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:53Z",
+          "sha256": "16fd0724debd4430178dd82828e9cb457e4849edf16d557291b5d74f8610f65a",
+          "url": "https://www.lansstyrelsen.se/download/18.458c24da19eafd611654d7e4/1781614198908/24FS%202026-12.pdf"
+        }
+      ],
+      "number": "24FS 2026:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 128140,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:54Z",
+          "sha256": "9832f3ae68783c7e8d588a6862f204e731fb59e3792855c6eb09dcb78b6a6443",
+          "url": "https://www.lansstyrelsen.se/download/18.458c24da19eafd611654d7e3/1781614198889/24FS%202026-13.pdf"
+        }
+      ],
+      "number": "24FS 2026:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 127783,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:55Z",
+          "sha256": "4bee393a8b9e3237033eb219391e41826ea6e5f7402df30b212f341c2e4152e2",
+          "url": "https://www.lansstyrelsen.se/download/18.458c24da19eafd611654d7e2/1781614198868/24FS%202026-14.pdf"
+        }
+      ],
+      "number": "24FS 2026:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 127821,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:56Z",
+          "sha256": "0b3d86c6efb3a7b9a186df4e8c50bb5ddc0cada02f50202f85d70d41dbf5ca80",
+          "url": "https://www.lansstyrelsen.se/download/18.458c24da19eafd611654d7e1/1781614198842/24FS%202026-15.pdf"
+        }
+      ],
+      "number": "24FS 2026:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 119153,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:57Z",
+          "sha256": "d442befd8da6958b71f7b33ee84d4e09e709bcb1bc800b02858813313ca457e3",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d83f/1791986650348/24FS%202026-16.pdf"
+        }
+      ],
+      "number": "24FS 2026:16",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 119393,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:58Z",
+          "sha256": "6e3746053c8bee18c47c813053a360994d41df4d4a11ae2b71e603b2a3d1692e",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d83e/1791986650330/24FS%202026-17.pdf"
+        }
+      ],
+      "number": "24FS 2026:17",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 120335,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:59Z",
+          "sha256": "d8ddd10477aa36a203afbe30d19cc0957342c1f7c0888d028d9b2161c02a6ce6",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d83d/1791986650311/24FS%202026-18.pdf"
+        }
+      ],
+      "number": "24FS 2026:18",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 118871,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:09:00Z",
+          "sha256": "214de6fca5f81c57cebb45e9f3e500364495bb5f0b54ec8a64132869c1c4069c",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d83c/1791986650294/24FS%202026-19.pdf"
+        }
+      ],
+      "number": "24FS 2026:19",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 118505,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:09:01Z",
+          "sha256": "585d19313743bfb2e2007e7421a515814a14ec18acf8032e3f3351166e38b4d5",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d83b/1791986650276/24FS%202026-20.pdf"
+        }
+      ],
+      "number": "24FS 2026:20",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 119646,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:09:03Z",
+          "sha256": "970e3828df56f895233ec7a7ece9d440d5622e67a38a41d3cf53f18aea36bed0",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d83a/1791986650255/24FS%202026-21.pdf"
+        }
+      ],
+      "number": "24FS 2026:21",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 117762,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:09:03Z",
+          "sha256": "ca83a4390d816c9e32cee2ff491eccc7548bdbdd76858a3488b05fde3ef613dd",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d839/1791986650236/24FS%202026-22.pdf"
+        }
+      ],
+      "number": "24FS 2026:22",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 120515,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:09:04Z",
+          "sha256": "80caeb0f3aaf2475c645b6f90f24ade0ac95c8018a515dc93d2000913814c9dd",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d838/1791986650219/24FS%202026-23.pdf"
+        }
+      ],
+      "number": "24FS 2026:23",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 120817,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:09:06Z",
+          "sha256": "0f7ec8dd2b5b515a2007914b99864b6570f69c1f59bb7fd27c0f07c41fa739b0",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d837/1791986650202/24FS%202026-24.pdf"
+        }
+      ],
+      "number": "24FS 2026:24",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 156538,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:09:07Z",
+          "sha256": "3b500515acbcf32c645803380a239e3752fe8478ca6aeee83f73768279e0a5c0",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d836/1791986650183/24FS%202026-25.pdf"
+        }
+      ],
+      "number": "24FS 2026:25",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 156469,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:09:08Z",
+          "sha256": "0942d19501eae3a217b78dff001e886aefcfe0f3cd4fb57b725a2abbb34a7264",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d835/1791986650164/24FS%202026-26.pdf"
+        }
+      ],
+      "number": "24FS 2026:26",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 158599,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:09:09Z",
+          "sha256": "18cf0e5ed7bd8faf4b95a067ea1a4acaff74c86502528049e43ccd67cef33b6d",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d834/1791986650146/24FS%202026-27.pdf"
+        }
+      ],
+      "number": "24FS 2026:27",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 116986,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:09:10Z",
+          "sha256": "72dc75843195db6b8e8ef0b707799e92a315b4ae102d84f6926595363021899c",
+          "url": "https://www.lansstyrelsen.se/download/18.389d6b1e1a12f4535bf1d833/1791986650125/24FS%202026-28.pdf"
+        }
+      ],
+      "number": "24FS 2026:28",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
