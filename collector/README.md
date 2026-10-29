@@ -350,6 +350,52 @@ needs a subscription key from `api-portal.boverket.se` (owner decision). Skattev
 `www4.skatteverket.se` rejected the robots.txt request (WAF), so access must be confirmed first.
 Arbetsmiljöverket's regulation API is in a closed evaluation and needs a key; the public HTML
 pages are used instead.
+## County regulations
+
+The `county` command collects one county's regulations (länets författningssamling, series
+`01FS`–`25FS`) from the shared site of the county administrative boards, `www.lansstyrelsen.se`.
+There is no API or open data set; the texts are free of copyright (9 § upphovsrättslagen).
+
+```
+python3 -I collector/collect.py county --county CODE [--from-year YYYY] [--to-year YYYY] \
+    [--newest-first] [--limit N] [--no-pdf] [--landing-url URL] [--rate SECONDS] \
+    [--state collector/data/county-state.json] [--manifest sources/county-pdf-manifest.json] \
+    [--corpus corpus] [--report FILE]
+```
+
+- `--county` (alias `--region`) is the county code, `01` (Stockholm) to `25` (Norrbotten); `01FS`
+  is accepted too. The run reads `robots.txt` first, then the county's landing page
+  (`/<slug>/om-oss/om-lansstyrelsen-<slug>/lanets-forfattningssamling.html`), which links one index
+  page per year (`.../forfattningar-<year>.html`), then each regulation's detail page. Years and
+  numbers are walked oldest first unless `--newest-first` is given. Only Stockholm has been checked
+  against the live site; `--landing-url` overrides the landing page for a county whose site differs.
+- Each URL is checked against `robots.txt` before it is requested; a disallowed URL or an HTTP 403
+  stops the run (exit code 2). `--rate` must be at least 1 second (the default).
+- Mapping (`county_regulation`, `layer: region`, `corpus/region/county-regulations/`): `number` is the
+  printed number with the leading zeros of the ordinal dropped (`01FS 2026:01` -> `01FS 2026:1`),
+  `id` its slug (`01fs-2026-1`). A number outside the requested county's series fails. `title` is
+  the page's ingress without the final period, `issued` the decision date ("Beslutat den ...") or,
+  when the page has none, the publication date ("Utkom från trycket den ..."). `in_force` is set
+  only when the text names exactly one date in "träder i kraft den ..."; `repealed` and the
+  amendment fields stay empty. `issuer` is "Länsstyrelsen i <county>", `region_code` the county
+  code. `source` is the detail page and `source_sha256` hashes its heading, ingress and text
+  fragments (the full page carries a per-request script nonce, so it is not hashed whole).
+- Body: a facts block (number, publication and decision dates, entry into force, issuer), the text
+  of the detail page converted to Markdown (lists and nested lists kept; links keep their text),
+  then `## Tryckt version` with links to the printed PDF. Regulations published only as PDF get a
+  one-line note instead of text. The PDFs are never parsed.
+- PDFs: a paragraph made only of PDF links is the regulation's own printed version; PDF links in
+  running text point at other regulations and are not followed. Each own PDF is downloaded once
+  (where `robots.txt` allows) to record its size and SHA-256 in the committed manifest
+  `sources/county-pdf-manifest.json` (entries `number`, `detail_url`, `published`, `files[]` with
+  `url`, `bytes`, `sha256`, `content_type`, `retrieved_at`); the bytes are not kept. `--no-pdf`
+  records the links with null hashes; a later run without it fills them.
+- As for case law, a text containing a personal identity number is recorded as failed.
+- State (git-ignored) is `{"done": {number: source_sha256}, "failed": {number: error}, "blocked":
+  null|msg}`; a regulation is skipped without a request when it is done and its file exists. A
+  document whose frontmatter (apart from `fetched_at`) and body are unchanged is left untouched.
+- `--limit` stops after N written documents (unchanged ones do not count). `--report` writes
+  `{"written": [...], "unchanged": n, "skipped": n, "failed": [...], "blocked": bool}`.
 
 ## Municipal regulations (kommunala författningssamlingar)
 
@@ -443,6 +489,7 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
 - 2: blocked (HTTP 403 or robots.txt disallow); recorded in the state file
 
 These apply to `sfs`, `case-law` and `agency`.
+These apply to `sfs`, `case-law` and `county`.
 
 ## Tests
 

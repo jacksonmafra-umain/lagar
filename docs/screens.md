@@ -105,7 +105,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | Feed card shows the in-force date and "Ändrad senast genom SFS …" | Done; each line is hidden while its field is `null` (the collector does not fill `in_force` yet). Saved items in the Favourites tab carry neither field | |
 | Case-law items in the feed | Blocked: no case-law data | #38 |
 | Popular tab | Blocked: the app is anonymous and collects no usage data | |
-| Region and Kommun homes (constitution, key rules, feed) | Blocked: empty layers; shows "coming soon" | #38 |
+| Region and Kommun homes (constitution, key rules, feed) | Blocked; shows "coming soon". The region layer now has a Stockholm pilot (`county_regulation`, #74), but the home does not list it yet: listing items carry no `region_code`, so a Region home would filter by the `<code>FS` prefix of `number`. Kommun has no data | #38 |
 
 ## Search
 
@@ -182,7 +182,7 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | Table of contents sheet: chapters and § chips, jump to a chapter or § | Done | #26 |
 | Amendment list under the header (register list, else `amended_by`; reprints), numbers link to documents the API has | Done | #26 |
 | Share links to the document and to each § (platform share sheet; Web Share API or clipboard on the web); `?doc=&p=` links open the reader at that § | Done | #26 |
-| Cross-reference links between statutes | Missing | #27 |
+| Cross-reference links: SFS citations (`lagen (1962:700)`, `(SFS 1998:808)`, `Lag (1994:458).`) and case-law references (`NJA 2026:38`, `HFD 2026 ref. 43`) open the cited document when the API has it | Done | #27 |
 | Inline notes | Missing | #28 |
 | Table of contents pane and metadata inspector on wide screens | Missing | #35 |
 | Reading the text as of a past date, version comparator | Blocked: the API has no historical text; owner decision pending | #7 |

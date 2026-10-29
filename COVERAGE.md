@@ -13,6 +13,7 @@ completeness: read this file next to those numbers.
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
 | agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/` | 2026-10-29 (sample: AFS 2023:1–5, FFFS 2024:21, 2024:22, 2025:2, 2025:8, 2025:13, TSFS 2026:6, 11, 13, 19, 20) |
 | EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list) |
+| regional (county) | Länsstyrelserna, `https://www.lansstyrelsen.se/<county>/om-oss/om-lansstyrelsen-<county>/lanets-forfattningssamling/forfattningar-<year>.html` and the linked detail pages | 2026-10-29 (pilot: 01FS 2026:1–10, Stockholm) |
 | case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (sample: NJA 2026:29–38, HFD 2026 ref. 35–43, HFD 2026 not. 24) |
 | municipal regulations | Stockholm `https://start.stockholm/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/`, Göteborg Domino view `https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf/vyHandBok`, Malmö `https://malmo.se/Om-Malmo-stad/Demokrati-och-politik/Sa-styrs-Malmo/Forfattningssamling/` (citizen rules and taxor pages) | 2026-10-29 (sample: five documents per kommun) |
 
@@ -75,6 +76,20 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   never requested. Boverket (BFS, API key probably needed, owner to decide),
   Skatteverket (SKVFS, robots.txt request rejected by a WAF) and the other
   series are not collected yet.
+- Regional and municipal regulations and public services have no collector
+  yet and no known target.
+- Regional regulations: only a pilot of ten Stockholm regulations (01FS
+  2026:1–10) is in the corpus. Stockholm's site lists 2020–2026 (38
+  regulations in 2026 by 2026-10-29); older years and the other 20 counties are
+  not collected yet, and only Stockholm's landing page has been checked. The
+  text comes from the HTML version on each detail page; the printed PDF is
+  recorded by URL and SHA-256 but not parsed, so a regulation published only as
+  PDF has no text. `repealed` and amendment links are not filled (the site
+  publishes no status), and `in_force` only when the text names one date. Local
+  traffic regulations (Transportstyrelsen's STFS) and the self-governing regions
+  are out of scope. No target is set: the total volume is not measured yet.
+- Agency regulations, municipal regulations and public services have no
+  collector yet and no known target.
 - Municipal regulations: only a pilot sample of 15 documents (five each from
   Stockholm, Göteborg and Malmö) is in the corpus; the other 287 kommuner have no
   config entry yet and there is no known target (roughly 30–150 documents per
