@@ -167,7 +167,7 @@ private fun RelativeDate(issued: String) {
 }
 
 @Composable
-private fun InForce() {
+internal fun InForce() {
     val status = LagarTheme.status
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
         Box(Modifier.size(8.dp).clip(CircleShape).background(status.inForce))
@@ -208,7 +208,7 @@ private fun BookmarkButton(title: String, key: LayerKey, bookmarked: Boolean, on
     }
 }
 
-private fun DisplayLayer.typeRes(): StringResource = when (this) {
+internal fun DisplayLayer.typeRes(): StringResource = when (this) {
     DisplayLayer.Fundamental -> Res.string.type_fundamental_law
     DisplayLayer.SfsOrdinance -> Res.string.type_ordinance
     else -> Res.string.type_act

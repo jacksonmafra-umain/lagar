@@ -39,6 +39,7 @@ import app.lagar.resources.ic_info
 import app.lagar.settings.Bookmark
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.common.LoadStateHost
+import app.lagar.ui.shell.LocalWideLayout
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
@@ -51,6 +52,7 @@ fun HomeRoute(
     onOpenSearch: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
     onChooseLocation: () -> Unit,
+    onSelectScope: (Scope) -> Unit,
     viewModel: HomeViewModel = koinViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -63,6 +65,7 @@ fun HomeRoute(
         onOpenSearch = onOpenSearch,
         onOpenAdvancedSearch = onOpenAdvancedSearch,
         onChooseLocation = onChooseLocation,
+        onSelectScope = onSelectScope,
         onToggleBookmark = viewModel::toggleBookmark,
     )
 }
@@ -76,9 +79,25 @@ fun HomeScreen(
     onOpenSearch: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
     onChooseLocation: () -> Unit,
+    onSelectScope: (Scope) -> Unit,
     onToggleBookmark: (ListingItem) -> Unit,
 ) {
+    val wide = LocalWideLayout.current
     LoadStateHost(state) { data, shell ->
+        if (wide) {
+            WideHome(
+                data = data,
+                shell = shell,
+                bookmarks = bookmarks,
+                onOpenLayer = onOpenLayer,
+                onOpenDocument = onOpenDocument,
+                onOpenSearch = onOpenSearch,
+                onOpenAdvancedSearch = onOpenAdvancedSearch,
+                onChooseLocation = onChooseLocation,
+                onSelectScope = onSelectScope,
+            )
+            return@LoadStateHost
+        }
         val spacing = LagarTheme.spacing
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
