@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.backhandler.BackHandler
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavDestination.Companion.hasRoute
@@ -125,7 +126,9 @@ fun AppShell(
     val density = LocalDensity.current
     var topBarPx by remember { mutableStateOf(0) }
     var bottomBarPx by remember { mutableStateOf(0) }
-    val padding = with(density) { PaddingValues(top = topBarPx.toDp(), bottom = bottomBarPx.toDp()) }
+    var widthPx by remember { mutableStateOf(0) }
+    val wide = with(density) { widthPx.toDp() } >= ShellDimens.WideBreakpoint
+    val padding = with(density) { PaddingValues(top = topBarPx.toDp(), bottom = if (wide) 0.dp else bottomBarPx.toDp()) }
 
     // A second tap during the transition would push a duplicate entry; only navigate from a settled screen.
     fun navigateWhenResumed(route: Any, builder: NavOptionsBuilder.() -> Unit = {}) {
@@ -157,6 +160,23 @@ fun AppShell(
 
     fun openLayer(layer: DisplayLayer) = navigateWhenResumed(LayerList(layer.apiLayer, layer.apiType))
 
+    // From the wide top bar and the home's scope row: a scope whose place is chosen applies at once; one without a
+    // place opens the sheet on it, where the place is picked. The active scope is left as it is.
+    fun selectScope(next: Scope) {
+        if (next == activeScope) return
+        when (val action = drawerScopeAction(next, activeScope, locality)) {
+            is DrawerScopeAction.Apply -> preferences.setScope(action.scope)
+            is DrawerScopeAction.OpenSheet -> {
+                sheetScope = action.scope
+                showScopeSheet = true
+            }
+        }
+    }
+
+    fun selectWide(item: WideNav) {
+        Tab.entries.firstOrNull { it.route == item.route }?.let(::selectTab) ?: navigateWhenResumed(item.route)
+    }
+
     BackHandler(enabled = drawerState.isOpen) { scope.launch { drawerState.close() } }
 
     // Web only: Cmd/Ctrl+K focuses the search field when search is open, and opens search from any screen past onboarding.
@@ -177,7 +197,12 @@ fun AppShell(
     // its closed position at offset 0 and stays drawn over the screen once the window grows, so the shell is only
     // composed once it has a real width.
     var hasWidth by remember { mutableStateOf(false) }
-    Box(Modifier.fillMaxSize().onSizeChanged { if (it.width > 0) hasWidth = true }) {
+    Box(
+        Modifier.fillMaxSize().onSizeChanged {
+            if (it.width > 0) hasWidth = true
+            widthPx = it.width
+        },
+    ) {
         if (hasWidth) ModalNavigationDrawer(
             drawerState = drawerState,
             gesturesEnabled = selectedTab != null,
@@ -208,7 +233,10 @@ fun AppShell(
             },
         ) {
             Box(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
-                CompositionLocalProvider(LocalShellPadding provides if (selectedTab != null) padding else PaddingValues()) {
+                CompositionLocalProvider(
+                    LocalShellPadding provides if (selectedTab != null) padding else PaddingValues(),
+                    LocalWideLayout provides wide,
+                ) {
                     NavHost(
                         navController = navController,
                         startDestination = Splash,
@@ -251,6 +279,7 @@ fun AppShell(
                                 onOpenSearch = { navigateWhenResumed(Search(text = it)) },
                                 onOpenAdvancedSearch = { navigateWhenResumed(AdvancedSearch) },
                                 onChooseLocation = { showScopeSheet = true },
+                                onSelectScope = ::selectScope,
                             )
                         }
                         composable<Hierarki> {
@@ -314,7 +343,19 @@ fun AppShell(
                         composable<Settings> { SettingsRoute(onBack = { navController.popBackStack() }) }
                     }
                 }
-                if (selectedTab != null) {
+                if (selectedTab != null && wide) {
+                    WideTopBar(
+                        hazeState = hazeState,
+                        selected = WideNav.entries.firstOrNull { destination?.hasRoute(it.route::class) == true },
+                        scope = activeScope,
+                        onSelect = ::selectWide,
+                        onSelectScope = ::selectScope,
+                        onOpenSearch = { navigateWhenResumed(Search()) },
+                        onToggleTheme = onToggleTheme,
+                        onMenuClick = { scope.launch { drawerState.open() } },
+                        modifier = Modifier.align(Alignment.TopCenter).onSizeChanged { topBarPx = it.height },
+                    )
+                } else if (selectedTab != null) {
                     LagarTopBar(
                         hazeState = hazeState,
                         onMenuClick = { scope.launch { drawerState.open() } },

@@ -179,7 +179,7 @@ private fun emphasised(title: String, emphasis: String, color: Color) = buildAnn
 }
 
 @Composable
-private fun SearchField(scope: Scope, onSearch: (String) -> Unit) {
+internal fun SearchField(scope: Scope, onSearch: (String) -> Unit, modifier: Modifier = Modifier) {
     val layers = LagarTheme.layers
     var query by rememberSaveable { mutableStateOf("") }
     val hint = stringResource(Res.string.home_search_hint)
@@ -188,7 +188,7 @@ private fun SearchField(scope: Scope, onSearch: (String) -> Unit) {
     val focused by interactionSource.collectIsFocusedAsState()
     InputFrame(
         focused = focused,
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         idleBorder = layers.accent(scope.key),
         contentPadding = PaddingValues(start = LagarTheme.spacing.md),
     ) {

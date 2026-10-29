@@ -100,6 +100,7 @@ import app.lagar.ui.list.StatuteRow
 import app.lagar.ui.reader.notePreview
 import app.lagar.ui.shell.LocalShellPadding
 import app.lagar.ui.shell.ShellDimens
+import app.lagar.ui.shell.maxContentWidth
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.getString
@@ -182,7 +183,7 @@ fun SparadeScreen(
             }
         } else {
             LazyColumn(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.fillMaxSize().maxContentWidth(),
                 contentPadding = PaddingValues(
                     start = spacing.marginMobile,
                     end = spacing.marginMobile,
