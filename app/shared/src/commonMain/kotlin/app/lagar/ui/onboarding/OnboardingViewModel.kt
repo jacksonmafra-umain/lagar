@@ -7,6 +7,7 @@ import app.lagar.domain.Locality
 import app.lagar.domain.Scope
 import app.lagar.domain.count
 import app.lagar.domain.withRegion
+import app.lagar.settings.UserFocus
 import app.lagar.settings.UserPreferences
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -25,6 +26,9 @@ class OnboardingViewModel(
 
     private val _locality = MutableStateFlow(Locality(null, null))
     val locality: StateFlow<Locality> = _locality.asStateFlow()
+
+    private val _focus = MutableStateFlow(preferences.focus.value)
+    val focus: StateFlow<UserFocus> = _focus.asStateFlow()
 
     /** Documents per scope; null while the index is loading or when it could not be loaded. */
     private val _counts = MutableStateFlow<Map<Scope, Int>?>(null)
@@ -47,6 +51,10 @@ class OnboardingViewModel(
         _scope.value = scope
     }
 
+    fun selectFocus(focus: UserFocus) {
+        _focus.value = focus
+    }
+
     fun selectRegion(code: String?) {
         _locality.update { it.withRegion(code) }
     }
@@ -55,7 +63,11 @@ class OnboardingViewModel(
         _locality.update { it.copy(kommunCode = code) }
     }
 
-    fun finish() = preferences.completeOnboarding(_scope.value, _locality.value)
+    fun finish() = preferences.completeOnboarding(_scope.value, _locality.value, _focus.value)
 
-    fun skip() = preferences.completeOnboarding(Scope.Nationell, Locality(null, null))
+    /**
+     * Leaves onboarding from any step with the defaults: the national scope and no locality. The focus is kept,
+     * since it is picked on the first step, next to the skip action, and every value of it is a valid default.
+     */
+    fun skip() = preferences.completeOnboarding(Scope.Nationell, Locality(null, null), _focus.value)
 }

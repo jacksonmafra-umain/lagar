@@ -18,9 +18,22 @@ in `DESIGN.md` is all it takes; `./gradlew -p build-logic test` covers the gener
 
 ## Handwritten theme (`app.lagar.designsystem`)
 
-- `LagarTheme(darkTheme) { }` wraps `MaterialTheme` (colors, typography and shapes mapped from the tokens).
-- `LagarTheme.colors` (M3 `ColorScheme`), `.layers` (`LayerColors`), `.type` (`LagarTypography`),
-  `.spacing` (`LagarSpacing`), `.isDark`.
+All paths below are relative to `app/shared/src/commonMain/kotlin/app/lagar/`.
+
+| File | Content |
+| --- | --- |
+| `designsystem/LagarTheme.kt` | `LagarTheme(darkTheme, reduceTransparency) { }` wraps `MaterialTheme`; the `LagarTheme` object exposes `.colors` (M3 `ColorScheme`), `.layers` (`LayerColors`), `.status` (`StatusColors`), `.type` (`LagarTypography`), `.spacing` (`LagarSpacing`), `.isDark` and `.reduceTransparency` |
+| `designsystem/LagarColors.kt` | `lagarLightColorScheme()`, `lagarDarkColorScheme()` from `LightTokens` / `DarkTokens` |
+| `designsystem/LayerPalette.kt` | `LayerColors`: `accent`, `onTint`, `tint`, `border` (see the rules below) |
+| `designsystem/StatusColors.kt` | `StatusColors.inForce` (status dot, the Region accent) and `onInForce` (its label, the Region `onTint`) |
+| `designsystem/LagarTypography.kt` | `LagarTypography` (one `TextStyle` per type token), `rememberLagarTypography()`, `toMaterial()` |
+| `designsystem/LagarShapes.kt` | M3 `Shapes`: `extraSmall` = `RadiusTokens.sm` (4dp), `small` = `default` (8dp), `medium` = `md` (12dp), `large` = `lg` (16dp), `extraLarge` = `xl` (24dp) |
+| `designsystem/LagarSpacing.kt` | `LagarSpacing`: `gutter`, `gutterMobile`, `margin`, `marginMobile`, `xs`, `sm`, `md`, `lg`, `xl` |
+| `designsystem/Glass.kt` | `GlassTier`, `Modifier.glass(...)`, `glassFill(...)` (see Glass below) |
+| `designsystem/SystemReduceTransparency.kt` | `systemReduceTransparency()`, expect/actual for the platform setting |
+| `ui/shell/ShellDimens.kt` | Component sizes: 48dp `TouchTarget`, 56dp `TabMinHeight`, 64dp `TopBarMinHeight`, 320dp `DrawerWidth`, 24dp `IconSize`, 20dp `SmallIconSize`, 32dp `AvatarSize`, 40dp `DrawerLogoSize`, 1dp `Hairline`, 2dp `TextGap`, 6dp `PillPaddingVertical` |
+| `ui/common/IconColor.kt` | `Color.iconColor()`: white or near-black, whichever reads better on a layer fill |
+
 - Fonts: Inter (400/500/600/700) and Source Serif 4 (400/700) in `composeResources/font/`; the SIL OFL
   licences are in `composeResources/files/licenses/` (non-font files do not belong in `font/`).
   Inter is UI chrome, Source Serif 4 is legal text (`bodyLegal*`); `statuteNum` is bold Inter.
@@ -28,67 +41,120 @@ in `DESIGN.md` is all it takes; `./gradlew -p build-logic test` covers the gener
 
 ## Layer color rules
 
-- `LayerColors.accent(k)`: icons, borders, indicator lines, chart series (`base` in light, `dark` in dark).
+- `LayerColors.accent(k)`: icons, borders, indicator lines, chart series, solid fills (`base` in light, `dark` in dark).
 - `LayerColors.onTint(k)`: text and badge labels (`text` in light, `dark` in dark).
 - `LayerColors.tint(k)`: badge and panel background, accent at 12% (light) / 16% (dark) alpha.
 - `LayerColors.border(k)`: accent at 20% alpha.
 - Never put text in a `base` color: six bases fail contrast on their own tint. Always use `onTint`.
-- Pick the color from the item `type`, not the spec `layer` field (acts and ordinances differ).
+- Text and icons on a solid `accent` fill use `accent.iconColor()`, never a fixed white.
+- Pick the color from the item `type`, not the spec `layer` field (acts and ordinances differ):
+  `DisplayLayer.fromRoute(layer, type)` in `domain/DisplayLayer.kt` maps an API layer and type to a display level.
+- Type names come from `typeNameRes(type)` in `ui/common/LayerLabels.kt`: fundamental law, act, ordinance,
+  agency regulation, case report, case notice, EU regulation, EU directive, EU decision, county regulation,
+  municipal regulation, and "other statute" for any type without its own name. Level names, descriptions and
+  icons come from `nameRes()`, `descriptionRes()` and `iconRes()` in the same file.
 - Layer color is never the only signal: badges carry the name or citation; repealed also gets a
   strikethrough and an icon.
 
-## Glass (`Modifier.glass(tier, hazeState, shape)`)
+## Glass (`Modifier.glass(tier, hazeState = null, shape = null, border = null)`)
 
-| Tier | Use | Fill (light / dark) | Blur | Shadow |
-| --- | --- | --- | --- | --- |
-| `Card` (1) | Article cards, document body | white 0.85 / surface 0.85 | none | none |
-| `Bar` (2) | Sticky headers, norm bars | 0.72 | 20dp, saturate 180% | ambient aura |
-| `Overlay` (3) | Floating overlays, drawers | 0.88 | 28dp, saturate 180% | diffuse |
+| Tier | Use | Fill (light / dark) | Blur | Shadow | Opaque fallback |
+| --- | --- | --- | --- | --- | --- |
+| `Card` (1) | Article cards, § containers, input frames | white 0.85 / surface 0.85 | none | none | `surfaceContainerLowest` (dark `surfaceContainerLow`) |
+| `Bar` (2) | Top bars, bottom bar, sticky footers | 0.72 | 20dp, saturate 180% | 8dp ambient aura | `surfaceContainer` |
+| `Overlay` (3) | Drawer, modal sheets | 0.88 | 28dp, saturate 180% | 16dp diffuse | `surfaceContainerHigh` |
 
-All tiers get the frosted border (top/sides `rgba(255,255,255,0.65)`, dark `0.12`, fading to the
-outer stroke `rgba(0,0,0,0.06)`, dark `0.4`) and the specular top highlight. Blur is done by Haze
-(`haze-blur`): mark the content behind with `Modifier.hazeSource(state)` and pass the same `HazeState`.
+All tiers get the frosted border (top `rgba(255,255,255,0.65)`, dark `0.12`, fading to the outer stroke
+`rgba(0,0,0,0.06)`, dark `0.4`) and the specular top highlight. A non-null `border` replaces the frosted
+border, for cards with a layer edge (location card, drawer scope card, an open accordion) and for the input
+frame's idle, focus and error edges. The default shapes are `RadiusTokens.lg` for `Card`, none for `Bar` and
+`RadiusTokens.xl` for `Overlay`; callers pass the shape they need.
 
-Fallback: with `hazeState == null` (or where Haze cannot blur, which uses the same opaque tint) the
-surface is an opaque `surfaceContainer*` role with the same border: Card `surfaceContainerLowest`
-(dark `surfaceContainerLow`), Bar `surfaceContainer`, Overlay `surfaceContainerHigh`.
+Blur is done by Haze (`haze-blur`): mark the content behind with `Modifier.hazeSource(state)` and pass the same
+`HazeState`. `Card` never blurs and ignores `hazeState`, so long lists of cards stay cheap.
+
+`glassFill(tier, hasBlurSource, reduceTransparency)` picks the fill (`GlassFill.Blurred`, `Translucent` or `Opaque`):
+
+- reduce transparency on: `Opaque` for every tier;
+- `Card`: `Translucent`;
+- `Bar` and `Overlay`: `Blurred` with a `HazeState`, `Opaque` without one. Where Haze cannot blur on a target,
+  it draws the same opaque fallback.
+
+Modal sheets use `Modifier.sheetGlass()` (`ui/common/SheetGlass.kt`), the `Overlay` tier on the whole sheet with
+the top-rounded `SheetShape` (`RadiusTokens.xl`). A modal sheet is drawn in its own window, where Haze has no
+backdrop to sample, so sheets always use the opaque fallback with the border, highlight and shadow.
+
+### Reduce transparency
+
+`ReduceTransparency` (`settings/ReduceTransparency.kt`) is `System`, `On` or `Off`, stored in `UserPreferences`
+and chosen in Settings. `System` follows `systemReduceTransparency()`: iOS reads
+`UIAccessibilityIsReduceTransparencyEnabled` and its change notification, the web follows the
+`prefers-reduced-transparency` media query (browsers without it keep the glass), and Android, which has no such
+setting, reports false. `App.kt` passes the resolved value to `LagarTheme`, and every glass tier and the glass
+secondary button then draw opaque.
+
+### Where each tier is used
+
+| Tier | Surfaces |
+| --- | --- |
+| `Card` | `FeedCard`, `StatuteRow`, `StatuteContainer`, the advanced search `FilterCard`s, `LayerDistributionChart`, the home `LocationCard`, the important-laws `AccordionHeader`, the drawer scope card, the splash logo card, `InputFrame` (text fields and search command bars) |
+| `Bar` | `LagarTopBar`, `LagarBottomBar`, `BackTopBar`, the advanced search footer |
+| `Overlay` | `LagarDrawerContent`; `ScopeSheet`, `ComingSoonSheet` and the locality `OptionSheet` through `sheetGlass()` |
+
+Layer-tinted panels (`LayerRow`, `NormPyramid` bands, onboarding `ScopeCard`, the constitution `FlagshipCard`,
+the repealed banner) keep their layer `tint` fill instead of glass: the tint carries the layer.
 
 ## Component inventory
 
 As built. Every component uses only tokens from the sections above. Components marked **deferred** are
-defined in `DESIGN.md` but have no screen that needs them yet.
+defined in `DESIGN.md` but have no screen that needs them yet. Paths are relative to `ui/`. Screen status
+lives in [`docs/screens.md`](screens.md).
 
 | Component | Implementation | Tokens used |
 | --- | --- | --- |
-| Normative badge / chip | `ui/common/LayerBadge.kt` | `CircleShape`, `layers.tint` fill, `layers.onTint` text, `labelSm` |
-| Repealed badge | `ui/common/RepealedBadge.kt` | `Repealed` layer `tint` / `onTint`, `CircleShape`, history icon, `labelSm` |
-| Layer row (Utforska) | `ui/utforska/LayerRow.kt` | `shapes.large`, layer `tint` fill, 40dp `accent` icon square (`shapes.medium`), "N. Name" in `bodyUi` `onTint`, `labelSm` description in `onSurfaceVariant`, `LayerBadge` with count or "coming soon" |
-| Layer list row (layer list) | `ui/list/StatuteRow.kt` | `shapes.medium`, `surfaceContainerLowest` fill, 1dp `outlineVariant` border, 3dp layer `accent` indicator, `codeCitation` number, `bodyUi` title, `labelSm` year, `RepealedBadge` when repealed |
-| Layer distribution chart | `ui/utforska/LayerDistributionChart.kt` | `shapes.large`, `surfaceContainerLowest` card, `surfaceContainer` track, layer `accent` segments, `surfaceContainerLow` legend chips, `labelSm` |
-| Hierarki pyramid | `ui/hierarki/NormPyramid.kt` | layer `tint` bands (`shapes.medium`), `labelMd` / `labelSm` in `onTint`, `onSurfaceVariant` counts |
-| Bottom navigation bar | `ui/shell/BottomBar.kt` | `GlassTier.Bar`, `labelSm`, `RadiusTokens.lg` selected pill (`primaryFixed` light, `primaryContainer` dark) |
-| Top bar (tab screens) | `ui/shell/TopBar.kt` | `GlassTier.Bar`, `headlineSm` in `primary`, icon buttons, 32dp `primary` avatar |
-| Back top bar (pushed screens) | `ui/common/BackTopBar.kt`, used by layer list, reader and settings | `GlassTier.Bar`, 48dp back target, `onSurfaceVariant` icon, title slot (`headlineSm` or `codeCitation`) |
-| Side drawer | `ui/shell/Drawer.kt` | `GlassTier.Overlay` (`RadiusTokens.xl`, `surfaceContainerHigh`); header with 40dp `primary` crown circle, `headlineMd` "Lagar" in `primary` and `labelSm` tagline; scope card (`shapes.large`, `surfaceContainerLowest`, 1dp layer `border`, `bodyUi` bold scope name, `labelSm` locality, layer `tint` "Change" pill with `onTint` text); six entries (Explore, Hierarchy, Saved, Services, Advanced search, Settings) in 48dp rows with `RadiusTokens.lg` selected pill (`primaryFixed` light, `primaryContainer` dark); `labelMd` / `labelSm` About block with data build date; scrolls at large font sizes |
-| Scope sheet | `ui/home/ScopeSheet.kt` | M3 modal sheet, scope cards in layer `tint` / `border`, "Active" and "Coming soon" badges, region and kommun pickers, primary "Done" button |
-| Scope chip (top bar) | `ui/shell/TopBar.kt` | layer `tint` fill, `labelMd` bold in `onTint`, expand icon; opens the scope sheet |
-| Location card (Region / Kommun home) | `ui/home/HomeScreen.kt` | `shapes.large`, `surfaceContainerLowest`, 1dp layer `border`, `labelSm` label in `onTint`, `bodyUi` bold name |
-| § container (legal text card) | `StatuteContainer` in `ui/reader/LegalMarkdown.kt` | `surfaceContainerLowest` fill, 1dp `outlineVariant` border, `shapes.medium`, 3dp layer `accent` indicator, `bodyLegalMd` text, reading column width |
-| Empty state ("coming soon") | `ui/common/EmptyState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `onSurfaceVariant` icon, `headlineSm` title, `bodyUi` text in `onSurfaceVariant` |
-| Error state with retry | `ui/common/ErrorState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `error` icon tint, `headlineSm` title, `bodyUi` text, `LagarButton` for retry |
-| "Coming soon" sheet | `ui/common/ComingSoonSheet.kt` | M3 modal sheet, `surfaceContainerLowest` container |
-| Metadata header | `ui/reader/MetadataHeader.kt` | `codeCitation` number in layer `onTint`, `headlineMd` title, `labelSm` / `bodyUi` facts, `outlineVariant` divider; repealed: `Repealed` layer badge and number, struck-through number and title (`onSurfaceVariant`), banner in `Repealed` `tint` / `border` (`shapes.medium`) with history icon and `bodyUi` text in `onTint` |
-| Settings controls (radio) | `ui/settings/SettingsScreen.kt` | M3 `RadioButton` with `primary` selected and `onSurfaceVariant` unselected, 48dp rows, `bodyUi` labels |
-| Secondary button | `LagarSecondaryButton` in `ui/common/LagarButtons.kt`; "Show more" on the home | `surfaceContainerLowest` at 0.6 alpha (no blur), 1dp `outlineVariant` edge, `primary` (or layer `onTint`) label, `shapes.small` (`RadiusTokens.default`), 48dp min height |
-| Primary button | `LagarButton` in `ui/common/LagarButtons.kt`; onboarding CTA, scope sheet "Done", retry, advanced search "Sök" | `primary` fill with `onPrimary` label, or a layer `accent` fill with `iconColor()` label; `shapes.small` (`RadiusTokens.default`); 1dp edge in the label colour at 16%; 48dp min height |
-| Input frame | `InputFrame` in `ui/common/LagarTextField.kt` | `shapes.small`, `surfaceContainerLowest` fill, 1dp `outlineVariant` (or layer `accent`) border; focused: 1.5dp `primary` border and a 4dp `primary` 15% glow; error: 1.5dp `error` border; 48dp min height |
-| Text field | `LagarTextField` in `ui/common/LagarTextField.kt`; advanced search text and dates, locality filter | `InputFrame`, `labelMd` label above, `bodyUi` text and placeholder (`onSurfaceVariant`), optional leading icon, `labelSm` `error` message below (polite live region) |
-| Search command bar | `SearchField` in `ui/home/HomeHero.kt`, `SearchInput` in `ui/search/SearchScreen.kt` | `InputFrame` with the scope's layer `accent` idle border, `onTint` search icon and cursor, `ShortcutHint` on the web; the home bar ends in a 36dp layer `accent` submit button (`shapes.small`) in a 48dp target |
-| Shortcut key cap | `ShortcutHint` in `ui/common/LagarTextField.kt`, label from `searchShortcutHint()` (`ui/common/SearchShortcut.kt`) | `labelSm` in `onSurfaceVariant`, 1dp `outlineVariant` border, `RadiusTokens.sm`; `⌘K` on Apple platforms, `Ctrl+K` elsewhere, web only |
-| Checkbox | `LagarCheckbox` in `ui/common/LagarCheckbox.kt`; advanced search type filters | 18dp square, `RadiusTokens.sm` (4dp); unchecked: 2dp `onSurfaceVariant` border; checked: layer `accent` (or `primary`) fill with `ic_check` in `iconColor()`; the row carries `Role.Checkbox` |
-| Date field and picker | `DateField`, `LagarDatePickerDialog` in `ui/search/DateField.kt`; advanced search dates | `InputFrame` with `labelMd` label, `bodyUi` date in the app language ("15 Oct 2026", "15 okt. 2026"), `ic_expand_more` in layer `onTint`; M3 `DatePicker` in a `GlassTier.Overlay` dialog (`RadiusTokens.xl`), selected day and year in layer `accent` with `iconColor()`, today ring in `accent`, today and buttons in `onTint` |
-| Collapsible filter section | `FilterCard` in `ui/search/AdvancedSearchScreen.kt` | `GlassTier.Card`, `shapes.large`; 48dp header (`labelMd` bold title, heading semantics, expanded state announced), layer `tint` / `onTint` "Active" badge, `ic_expand_more` turning 180° |
-| Search sort tabs and match highlight | `SortRow` in `ui/search/SearchScreen.kt` (`PillTab`); `StatuteRow` `highlights` | layer `accent` pill when selected; matched words bold on the layer `tint`; `labelSm` "Found in the text" note in `onTint` |
+| Normative badge / chip | `LayerBadge` in `common/LayerBadge.kt` | `CircleShape`, layer `tint` fill, 1dp layer `border`, `labelSm` in `onTint` |
+| Repealed badge | `RepealedBadge` in `common/RepealedBadge.kt` | `Repealed` layer `tint` / `border` / `onTint`, `CircleShape`, 14dp `ic_history` icon, `labelSm` |
+| Pill tab | `PillTab` in `common/PillTab.kt`; Hierarki "Lager / Pyramid" switch, Explore feed tabs, layer list series switch | 32dp `CircleShape` pill in a 48dp target, `Role.Tab`; selected: layer `accent` fill and border, `labelSm` bold upper case in `iconColor()`; unselected: `surfaceContainerLowest`, 1dp `outlineVariant`, `onSurface` |
+| Series switch (layer list) | `SeriesSwitch` in `list/LayerListScreen.kt` | Horizontally scrolling row of `PillTab`s: "All" in the level colour, then one per series (`typeNameRes`), each in its own level's colour from `DisplayLayer.fromRoute` |
+| Layer row (Hierarki) | `LayerRow` in `hierarki/LayerRow.kt` | `shapes.large`, layer `tint` fill and 1dp `border`, 40dp `accent` icon square (`shapes.medium`) with `iconColor()` icon, "N. Name" in bold `bodyUi` `onTint`, `labelSm` description in `onSurfaceVariant`, `LayerBadge` with count or "coming soon", `onTint` chevron |
+| Layer distribution chart | `LayerDistributionChart` in `hierarki/LayerDistributionChart.kt` | `GlassTier.Card` (`shapes.large`), 12dp `surfaceContainer` track, layer `accent` segments, legend chips in `surfaceContainerLow` (`shapes.medium`) with a 10dp `accent` dot and `labelSm` |
+| Hierarki pyramid | `NormPyramid` in `hierarki/NormPyramid.kt` | layer `tint` bands with 1dp `border` (`shapes.medium`), `labelMd` / `labelSm` in `onTint`, "coming soon" in `onSurfaceVariant` |
+| Bottom navigation bar | `LagarBottomBar` in `shell/BottomBar.kt` | `GlassTier.Bar`, `labelSm`, `RadiusTokens.lg` selected pill (`primaryFixed` with `onPrimaryFixedVariant` light, `primaryContainer` with `onPrimaryContainer` dark) |
+| Top bar (tab screens) | `LagarTopBar` in `shell/TopBar.kt` | `GlassTier.Bar`, `headlineSm` "Lagar" in `primary`, scope chip, search and theme icon buttons in `onSurfaceVariant`, 32dp `primary` avatar |
+| Scope chip (top bar) | `ScopeChip` in `shell/TopBar.kt` | layer `tint` pill, `labelMd` bold in `onTint`, expand icon; opens the scope sheet |
+| Back top bar (pushed screens) | `BackTopBar` in `common/BackTopBar.kt`; layer list, reader, search, advanced search, settings | `GlassTier.Bar`, 48dp back target, `onSurfaceVariant` icon, title slot |
+| Side drawer | `LagarDrawerContent` in `shell/Drawer.kt` | `GlassTier.Overlay` (`RadiusTokens.xl`); header with 40dp `primary` crown circle, `headlineMd` "Lagar" in `primary` and `labelSm` tagline; scope card (`GlassTier.Card`, `shapes.large`, 1dp layer `border`, bold `bodyUi` scope name, `labelSm` locality, layer `tint` "Change" pill with `onTint` text, stacks above 1.3x font scale); six entries (Explore, Hierarchy, Saved, Services, Advanced search, Settings) in 48dp rows with a `RadiusTokens.lg` selected pill (`primaryFixed` light, `primaryContainer` dark); `labelMd` / `labelSm` About block with the data build date; scrolls at large font sizes |
+| Scope sheet | `ScopeSheet` in `home/ScopeSheet.kt` | `sheetGlass()`, `headlineMd` / `headlineSm` titles, onboarding `ScopeCard`s with "Active" and count badges, `LocalityPickers`, `LagarButton` "Done" |
+| Scope card (onboarding, scope sheet) | `ScopeCard` and `ScopeInfoCard` in `onboarding/ScopeCard.kt` | `shapes.large`, layer `tint` fill, 1dp layer `border` (2dp `accent` when selected), 44dp `accent` icon square (`shapes.medium`), `headlineSm` name in `onTint`, `bodyUi` description, `LayerBadge`s; 28dp check circle (`accent` when selected, `surfaceContainerHighest` otherwise) |
+| Locality picker field | `PickerField` in `onboarding/LocalityPickers.kt` | `labelMd` label, `shapes.small`, `surfaceContainerLowest` (disabled `surfaceContainerLow`), 1dp `outlineVariant`, `bodyUi` value, `Role.DropdownList` |
+| Locality option sheet | `OptionSheet` in `onboarding/LocalityPickers.kt` | `sheetGlass()`, `headlineSm` title, `LagarTextField` filter, `bodyUi` options (`primary` when selected) |
+| Step header (onboarding) | `StepHeader` in `onboarding/StepHeader.kt` | `surfaceContainerHigh` pill with `labelMd`, three-segment bar in `primary` / `outlineVariant` |
+| Splash | `SplashScreen` in `onboarding/SplashScreen.kt` | 128dp `GlassTier.Card` (`RadiusTokens.xl`) holding a 96dp `primary` crown circle, `displayLgMobile` "Lagar" in `primary`, `bodyUi` tagline, `primary` progress bar on `surfaceContainerHigh` |
+| Home hero | `HomeHero` in `home/HomeHero.kt` | Scope `tint` to transparent gradient, `headlineSm` title with the emphasis in `onTint`, `labelSm` subtitle; Region / Kommun: 44dp `accent` icon circle; advanced search link in bold `labelSm` `onTint` |
+| Level quick links | `LayerChips` in `home/HomeHero.kt` | 30dp `CircleShape` pills in 48dp targets; first filled with `accent` and `iconColor()` text, the rest `surfaceContainerLowest` with layer `border` and `onTint` text; bold `labelSm` upper case |
+| Location card (Region / Kommun home) | `LocationCard` in `home/HomeScreen.kt` | `GlassTier.Card` (`shapes.large`) with 1dp layer `border`, `labelSm` label in `onTint`, bold `bodyUi` name |
+| Feed card | `FeedCard` in `home/FeedCard.kt` | `GlassTier.Card` (`shapes.large`); `LayerBadge` "Type number" (`typeNameRes`), in-force date pill (`CircleShape`, `surfaceContainer`, `labelSm` `onSurfaceVariant`), relative issue age (`labelSm`); `bodyUi` title (3 lines); "amended through" line in semibold `labelSm` `onTint`; `outlineVariant` divider; `InForce` status (8dp `status.inForce` dot, `labelMd` `onInForce`) or `RepealedBadge`; "read full text" in `labelMd` `onTint` with chevron; 48dp bookmark toggle (`onTint` when saved) |
+| Explore feed | `ExploreFeed` in `home/ExploreFeed.kt` | `headlineSm` title, `PillTab`s for newest and saved, `FeedCard`s, `LagarSecondaryButton` "Show more" |
+| Key laws | `ImportantLaws` in `home/ImportantLaws.kt` | 44dp Fundamental `tint` crown medallion; `FlagshipCard` (`shapes.large`, Fundamental `tint`, 1.5dp `accent` border, bold `bodyUi` in `onTint`); `AccordionHeader` (`GlassTier.Card`, `shapes.large`, 1dp layer `accent` border when open, bold `labelMd`) over `StatuteRow`s |
+| Layer list row | `StatuteRow` in `list/StatuteRow.kt`; layer list, search results, key laws, Sparade | `GlassTier.Card` (`shapes.medium`), 3dp layer `accent` indicator, `codeCitation` number in `onTint`, `bodyUi` title (2 lines), `labelSm` year, `RepealedBadge` and strikethrough when repealed, `onSurfaceVariant` chevron |
+| § container (legal text card) | `StatuteContainer` in `reader/LegalMarkdown.kt` | `GlassTier.Card` (`shapes.medium`), 3dp layer `accent` indicator, `bodyLegalMd` text, `readingColumn()` width (about 70 characters) |
+| Legal text | `LegalMarkdown` in `reader/LegalMarkdown.kt` | `bodyLegalMd` (Source Serif 4) paragraphs and lists, `**N §**` in `statuteNum`, `headlineMd` / `headlineSm` headings |
+| Metadata header | `MetadataHeader` in `reader/MetadataHeader.kt` | `LayerBadge`, `codeCitation` number in layer `onTint`, `headlineMd` title, `labelSm` / `bodyUi` facts, `outlineVariant` divider; repealed: `Repealed` badge and number, struck-through number and title (`onSurfaceVariant`), banner in `Repealed` `tint` / `border` (`shapes.medium`) with history icon and `bodyUi` text in `onTint` |
+| Empty state ("coming soon") | `EmptyState` in `common/EmptyState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `onSurfaceVariant` icon, `headlineSm` title, `bodyUi` text in `onSurfaceVariant` |
+| Error state with retry | `ErrorState` in `common/ErrorState.kt` (`StatusMessage`) | as the empty state with an `error` icon tint and a `LagarButton` retry |
+| "Coming soon" sheet | `ComingSoonSheet` in `common/ComingSoonSheet.kt` | `sheetGlass()` with an `EmptyState` |
+| Primary button | `LagarButton` in `common/LagarButtons.kt`; onboarding steps, scope sheet "Done", retry, advanced search "Sök" | `primary` fill with `onPrimary` label, or a layer `accent` fill with `iconColor()` label; `shapes.small` (`RadiusTokens.default`); 1dp edge in the label colour at 16%; 48dp min height |
+| Secondary button | `LagarSecondaryButton` in `common/LagarButtons.kt`; "Show more" on the home | `surfaceContainerLowest` at 0.6 alpha (opaque under reduce transparency, no blur), 1dp `outlineVariant` edge, `primary` (or layer `onTint`) label, `shapes.small`, 48dp min height |
+| Input frame | `InputFrame` in `common/LagarTextField.kt` | `GlassTier.Card` fill, `shapes.small`, 1dp `outlineVariant` (or layer `accent`) border; focused: 1.5dp `primary` border and a 4dp `primary` 15% glow; error: 1.5dp `error` border; 48dp min height |
+| Text field | `LagarTextField` in `common/LagarTextField.kt`; advanced search text, locality filter | `InputFrame`, `labelMd` label above, `bodyUi` text and placeholder (`onSurfaceVariant`), optional leading icon, `labelSm` `error` message below (polite live region) |
+| Search command bar | `SearchField` in `home/HomeHero.kt`, `SearchInput` in `search/SearchScreen.kt` | `InputFrame` with the scope's layer `accent` idle border, `onTint` search icon and cursor, `ShortcutHint` on the web; the home bar ends in a 36dp layer `accent` submit button (`shapes.small`) in a 48dp target; the search screen's bar sits in the `BackTopBar`, which supplies the blur |
+| Shortcut key cap | `ShortcutHint` in `common/LagarTextField.kt`, label from `searchShortcutHint()` (`common/SearchShortcut.kt`) | `labelSm` in `onSurfaceVariant`, 1dp `outlineVariant` border, `RadiusTokens.sm`; `⌘K` on Apple platforms, `Ctrl+K` elsewhere, web only |
+| Checkbox | `LagarCheckbox` in `common/LagarCheckbox.kt`; advanced search type filters | 18dp square, `RadiusTokens.sm` (4dp); unchecked: 2dp `onSurfaceVariant` border; checked: layer `accent` (or `primary`) fill with `ic_check` in `iconColor()`; the row carries `Role.Checkbox` |
+| Advanced search filter card | `FilterCard` in `search/AdvancedSearchScreen.kt` | `GlassTier.Card` (`shapes.large`); collapsible: 48dp header (bold `labelMd` title, heading semantics, expanded state announced), layer `tint` / `onTint` "Active" badge, `ic_expand_more` turning 180°; action pills (`Pill`: layer `tint` / `border` when filled, `surfaceContainerLowest` / `outlineVariant` otherwise); M3 `RadioButton` options |
+| Date field and picker | `DateField`, `LagarDatePickerDialog` in `search/DateField.kt`; advanced search dates | `InputFrame` with `labelMd` label, `bodyUi` date in the app language ("15 Oct 2026", "15 okt. 2026"), `ic_expand_more` in layer `onTint`; M3 `DatePicker` in a `GlassTier.Overlay` dialog (`RadiusTokens.xl`), selected day and year in layer `accent` with `iconColor()`, today ring in `accent`, today and buttons in `onTint` |
+| Search sort tabs and match highlight | `SortRow` in `search/SearchScreen.kt` (`PillTab`); `StatuteRow` `highlights` and `note` | `labelMd` "Sort by", `PillTab`s in the scope colour; matched words bold on the layer `tint`; `labelSm` "Found in the text" note in `onTint` |
+| Advanced search footer | `AdvancedSearchScreen` in `search/AdvancedSearchScreen.kt` | `GlassTier.Bar` over the form, full-width layer `accent` `LagarButton` |
+| Settings controls (radio) | `OptionGroup` in `settings/SettingsScreen.kt`; language, theme, reduce transparency | `labelMd` section title, optional `labelSm` description, M3 `RadioButton` with `primary` selected and `onSurfaceVariant` unselected, 48dp rows, `bodyUi` labels |
 | Cross-reference | deferred | dotted underline in target layer `onTint` |
 
 ## Top bar label scaling
@@ -108,5 +174,5 @@ merged semantics carry the full label text, so screen readers always get the com
 
 The upper bands of `NormPyramid` are narrow (50% of the width at the top), so each band caps the font
 scale of its own content at 1.3 (`MAX_FONT_SCALE`). Names are never truncated or hidden; the rest of the
-screen follows the full system scale. Layer rows in Utforska stay at full scale: past 1.3 they stop
+screen follows the full system scale. Layer rows in Hierarki stay at full scale: past 1.3 they stop
 truncating the title and description and wrap them instead.

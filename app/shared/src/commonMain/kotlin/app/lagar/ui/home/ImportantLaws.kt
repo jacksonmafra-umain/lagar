@@ -46,6 +46,7 @@ import app.lagar.resources.ic_chevron_right
 import app.lagar.resources.ic_expand_more
 import app.lagar.resources.ic_layer_crown
 import app.lagar.resources.layer_fundamental
+import app.lagar.settings.UserFocus
 import app.lagar.ui.list.StatuteRow
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
@@ -57,21 +58,27 @@ private const val WRAP_FONT_SCALE = 1.3f
 internal const val FLAGSHIP_ID = "sfs-1974-152"
 
 /**
+ * The order of the "Key laws" groups for a [focus]. Citizens and students get the hierarchy order, fundamental
+ * laws first; lawyers, who mostly work with ordinary acts and ordinances, get those first. This is the only effect
+ * of the focus on the home so far.
+ */
+internal fun keyLawGroupOrder(focus: UserFocus): List<DisplayLayer> = when (focus) {
+    UserFocus.Citizen, UserFocus.Student -> listOf(DisplayLayer.Fundamental, DisplayLayer.SfsAct, DisplayLayer.SfsOrdinance)
+    UserFocus.Lawyer -> listOf(DisplayLayer.SfsAct, DisplayLayer.SfsOrdinance, DisplayLayer.Fundamental)
+}
+
+/**
  * "Key laws": a crown medallion and title, the highlighted constitution card, then expandable groups of
- * documents. Groups with no documents are left out; two groups share a row as in the reference, and
- * one is open at a time.
+ * documents in the order of [keyLawGroupOrder]. Groups with no documents are left out; two groups share a row
+ * as in the reference, and one is open at a time.
  */
 @Composable
-internal fun ImportantLaws(data: HomeData, onOpenDocument: (String) -> Unit, modifier: Modifier = Modifier) {
+internal fun ImportantLaws(data: HomeData, focus: UserFocus, onOpenDocument: (String) -> Unit, modifier: Modifier = Modifier) {
     val spacing = LagarTheme.spacing
     val layers = LagarTheme.layers
     val key = LayerKey.Fundamental
     var open by rememberSaveable { mutableStateOf<String?>(null) }
-    val groups = listOf(
-        DisplayLayer.Fundamental to data.fundamental,
-        DisplayLayer.SfsAct to data.acts,
-        DisplayLayer.SfsOrdinance to data.ordinances,
-    ).filter { it.second.isNotEmpty() }
+    val groups = keyLawGroupOrder(focus).map { it to data.items(it) }.filter { it.second.isNotEmpty() }
     // Two headers per row stop fitting once the font is large; a header would break mid-word.
     val sideBySide = groups.size >= 2 && LocalDensity.current.fontScale <= WRAP_FONT_SCALE
     val rows = if (sideBySide) listOf(groups.take(2)) + groups.drop(2).map { listOf(it) } else groups.map { listOf(it) }
@@ -167,6 +174,13 @@ private fun AccordionHeader(layer: DisplayLayer, expanded: Boolean, onClick: () 
             )
         }
     }
+}
+
+private fun HomeData.items(layer: DisplayLayer): List<ListingItem> = when (layer) {
+    DisplayLayer.Fundamental -> fundamental
+    DisplayLayer.SfsAct -> acts
+    DisplayLayer.SfsOrdinance -> ordinances
+    else -> emptyList()
 }
 
 /** Short accordion titles: "Acts" and "Ordinances" rather than the SFS-prefixed layer names. */
