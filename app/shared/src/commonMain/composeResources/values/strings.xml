@@ -123,7 +123,7 @@
     <string name="focus_citizen">Citizen</string>
     <string name="focus_student">Student</string>
     <string name="focus_lawyer">Lawyer</string>
-    <string name="welcome_title">All of Sweden’s rules in one place</string>
+    <string name="welcome_title">Welcome to Lagar</string>
     <string name="welcome_text">Read acts, ordinances, agency regulations, case law and EU law, tailored to your region and municipality.</string>
     <string name="scope_national">National</string>
     <string name="scope_region">Regional</string>

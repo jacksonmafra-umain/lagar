@@ -100,20 +100,6 @@ fun ScopeCard(
     }
 }
 
-/** The same card without selection, for the welcome overview. */
-@Composable
-internal fun ScopeInfoCard(scope: Scope, count: Int?, modifier: Modifier = Modifier) {
-    val layers = LagarTheme.layers
-    Surface(
-        modifier = modifier.fillMaxWidth(),
-        shape = MaterialTheme.shapes.large,
-        color = layers.tint(scope.key),
-        border = BorderStroke(1.dp, layers.border(scope.key)),
-    ) {
-        ScopeCardContent(scope, count, active = false, trailing = null)
-    }
-}
-
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun ScopeCardContent(scope: Scope, count: Int?, active: Boolean, trailing: @Composable (() -> Unit)?) {

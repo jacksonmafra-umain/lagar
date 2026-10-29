@@ -18,7 +18,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
-import app.lagar.domain.Scope
 import app.lagar.resources.Res
 import app.lagar.resources.app_name
 import app.lagar.resources.ic_layer_crown
@@ -26,20 +25,23 @@ import app.lagar.resources.onboarding_continue
 import app.lagar.resources.welcome_text
 import app.lagar.resources.welcome_title
 import app.lagar.settings.UserFocus
+import app.lagar.ui.shell.LocalWideLayout
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
 /** Step 1: what the app covers, and the user's main focus. */
 @Composable
 fun WelcomeRoute(viewModel: OnboardingViewModel, onContinue: () -> Unit, onSkip: () -> Unit) {
-    val counts by viewModel.counts.collectAsState()
     val focus by viewModel.focus.collectAsState()
-    WelcomeScreen(counts, focus, viewModel::selectFocus, onContinue, onSkip)
+    WelcomeScreen(focus, viewModel::selectFocus, onContinue, onSkip)
 }
 
+/**
+ * The focus choice is the step's only decision, so it follows the introduction directly; the scopes are chosen
+ * on the next step. The Lagar card fills the desktop side column only: on a phone it would push the choice down.
+ */
 @Composable
 fun WelcomeScreen(
-    counts: Map<Scope, Int>?,
     focus: UserFocus,
     onFocus: (UserFocus) -> Unit,
     onContinue: () -> Unit,
@@ -52,11 +54,8 @@ fun WelcomeScreen(
         primaryLabel = stringResource(Res.string.onboarding_continue),
         onPrimary = onContinue,
         onSkip = onSkip,
-        aside = { Hero() },
+        aside = if (LocalWideLayout.current) ({ Hero() }) else null,
     ) {
-        Column(verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
-            Scope.entries.forEach { ScopeInfoCard(it, counts?.get(it)) }
-        }
         FocusChoice(focus, onFocus)
     }
 }

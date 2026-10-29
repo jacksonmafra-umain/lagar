@@ -123,7 +123,7 @@
     <string name="focus_citizen">Medborgare</string>
     <string name="focus_student">Student</string>
     <string name="focus_lawyer">Jurist</string>
-    <string name="welcome_title">Hela Sveriges regelverk på ett ställe</string>
+    <string name="welcome_title">Välkommen till Lagar</string>
     <string name="welcome_text">Läs lagar, förordningar, myndighetsföreskrifter, rättspraxis och EU-rätt, anpassat till din region och kommun.</string>
     <string name="scope_national">Nationell</string>
     <string name="scope_region">Region</string>
