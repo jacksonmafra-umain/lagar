@@ -20,7 +20,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable data class LayerList(val layer: String, val type: String? = null)
 
-@Serializable data class Reader(val id: String)
+/** A document; [anchor] (an outline anchor such as `k3p1`) is scrolled to once the text has loaded. */
+@Serializable data class Reader(val id: String, val anchor: String? = null)
 
 @Serializable data object Settings
 
