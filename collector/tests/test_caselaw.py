@@ -267,6 +267,28 @@ class CaseLawRunTests(unittest.TestCase):
         self.run_main(client, "--since", "2026-10-01")
         self.assertTrue(all("publicerad_fran_och_med=2026-10-01" in c for c in client.listing_calls()))
 
+    def test_next_since_is_the_newest_publication_day(self):
+        _, report = self.run_main(FakeClient(SAMPLE), "--since", "2026-10-01")
+        self.assertEqual(report["next_since"], "2026-10-22")
+
+    def test_next_since_holds_when_nothing_is_newer_or_the_run_stopped_early(self):
+        _, report = self.run_main(FakeClient([]), "--since", "2026-10-01")
+        self.assertEqual((report["latest_published"], report["next_since"]), (None, "2026-10-01"))
+
+        self.state.unlink()
+        _, report = self.run_main(FakeClient(SAMPLE), "--since", "2026-10-01", "--limit", "1",
+                                  "--corpus", str(self.root / "other"))
+        self.assertEqual(report["next_since"], "2026-10-01")
+
+        self.state.unlink()
+        _, report = self.run_main(FakeClient(SAMPLE), "--since", "2026-10-01", "--court", "HFD",
+                                  "--corpus", str(self.root / "filtered"))
+        self.assertEqual(report["next_since"], "2026-10-01")
+
+        self.state.unlink()
+        _, report = self.run_main(FakeClient(SAMPLE), "--corpus", str(self.root / "third"))
+        self.assertEqual(report["next_since"], "2026-10-22")
+
     def test_unsorted_listing_is_an_error(self):
         class Unsorted(FakeClient):
             def get(self, url):
