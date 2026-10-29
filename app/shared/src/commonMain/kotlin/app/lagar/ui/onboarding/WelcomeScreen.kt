@@ -25,18 +25,26 @@ import app.lagar.resources.ic_layer_crown
 import app.lagar.resources.onboarding_continue
 import app.lagar.resources.welcome_text
 import app.lagar.resources.welcome_title
+import app.lagar.settings.UserFocus
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
-/** Step 1: what the app covers. */
+/** Step 1: what the app covers, and the user's main focus. */
 @Composable
 fun WelcomeRoute(viewModel: OnboardingViewModel, onContinue: () -> Unit, onSkip: () -> Unit) {
     val counts by viewModel.counts.collectAsState()
-    WelcomeScreen(counts, onContinue, onSkip)
+    val focus by viewModel.focus.collectAsState()
+    WelcomeScreen(counts, focus, viewModel::selectFocus, onContinue, onSkip)
 }
 
 @Composable
-fun WelcomeScreen(counts: Map<Scope, Int>?, onContinue: () -> Unit, onSkip: () -> Unit) {
+fun WelcomeScreen(
+    counts: Map<Scope, Int>?,
+    focus: UserFocus,
+    onFocus: (UserFocus) -> Unit,
+    onContinue: () -> Unit,
+    onSkip: () -> Unit,
+) {
     OnboardingScaffold(
         step = 1,
         title = stringResource(Res.string.welcome_title),
@@ -49,6 +57,7 @@ fun WelcomeScreen(counts: Map<Scope, Int>?, onContinue: () -> Unit, onSkip: () -
         Column(verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
             Scope.entries.forEach { ScopeInfoCard(it, counts?.get(it)) }
         }
+        FocusChoice(focus, onFocus)
     }
 }
 
