@@ -573,6 +573,32 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
 5. Add a trimmed listing (and detail page) fixture and a test, then run a small sample with
    `--kommun <code> --limit 5` and the audit.
 
+## Agencies and sources log
+
+```sh
+python3 -I collector/agencies.py             # rebuild from the cached sitemap
+python3 -I collector/agencies.py --refresh   # fetch lagrummet.se's sitemap again first
+```
+
+Writes `AGENCIES.md` and `collector/data/agencies-report.json`: every agency regulation series
+(författningssamling), agency publishing in another agency's series, county, kommun, court and
+other legal source, with its status (collected, metadata and PDF links only, partly collected,
+blocked, API key needed, robots.txt, no adapter yet, out of scope) and the reason for each gap.
+
+- The list of series and sources is lagrummet.se's `rattskalla` sitemap
+  (`https://www.lagrummet.se/rattskalla-sitemap.xml`), cached in `collector/data/rattskalla.json`.
+  `--refresh` reads robots.txt, then the sitemap: two requests, `--rate` apart (default 2 s).
+- Agency names (the sitemap has only URL slugs), statuses and notes are curated in
+  `collector/data/agencies.json`, keyed by slug: `series` (own series), `shared` (an agency that
+  publishes in another series; it takes that series' status) and `sources` (SFS, case law, EU and
+  other sources). County series are recognised from their slug. A series without a status is
+  `collected` when the corpus has documents with its prefix, otherwise `no adapter yet`; a sitemap
+  page missing from the file is listed as unclassified.
+- Counts come from the corpus (series prefix of `number`, kommun code of `id`, `court`), the
+  county and kommun configuration from `counties.json` and `municipalities.json`, the list of
+  counties and kommuner from the app's `files/geo/sweden.json`, kommun gaps from
+  `sources/municipal-manifest.json`.
+
 ## Exit codes
 
 - 0: finished (failures are listed, not fatal)
