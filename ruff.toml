@@ -1,4 +1,4 @@
-# Python lint for collector/ and api/ (standard library only, run with python3 -I).
+# Python lint for collector/, api/, mcp/ and scripts/ (standard library only, run with python3 -I).
 target-version = "py312"
 line-length = 120
 

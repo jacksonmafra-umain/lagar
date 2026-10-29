@@ -1,0 +1,51 @@
+name: Tools
+
+on:
+  pull_request:
+    paths:
+      - mcp/**
+      - scripts/serve_local.py
+      - scripts/tests/**
+      - api/**
+      - ruff.toml
+      - .github/workflows/tools.yml
+  push:
+    branches: [main]
+    paths:
+      - mcp/**
+      - scripts/serve_local.py
+      - scripts/tests/**
+      - api/**
+      - ruff.toml
+      - .github/workflows/tools.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tools-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Lint
+        run: pipx run ruff==0.17.3 check mcp scripts
+
+      # Builds a small API from api/tests/fixtures and queries it through the MCP tools.
+      - name: MCP server tests
+        run: python3 -I -m unittest discover -s mcp/tests -t mcp
+
+      - name: Local server tests
+        run: python3 -I -m unittest discover -s scripts/tests -t scripts
