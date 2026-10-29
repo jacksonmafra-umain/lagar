@@ -319,9 +319,27 @@ python3 -I collector/collect.py case-law [--court CODE ...] [--from YYYY-MM-DD] 
   untouched. After a mapping change, delete the state file and rerun to rewrite affected files.
 - `--limit` stops after N written documents (unchanged ones do not count). `--report` writes
   `{"written": [...], "unchanged": n, "skipped": n, "excluded": n, "failed": [...], "blocked": bool,
-  "latest_published": "..."}`.
+  "latest_published": "...", "next_since": "YYYY-MM-DD"}`. `next_since` is the day of the newest
+  publication seen, or `--since` unchanged when the run was limited, filtered by court or decision
+  date, blocked, or saw nothing newer; the scheduled sync stores it as its marker.
+- Lagrum references stay plain text in the body (`22 § förvaltningslagen (1986:223)`, or
+  `... (SFS 1986:223)` when the reference lacks the number). The app's reader turns these citation
+  forms into links to the SFS documents the API publishes, so no extra frontmatter field is needed.
 - The site has no robots.txt (HTTP 404); one is honoured if it appears. An HTTP 403 stops the run
   (exit code 2). Entries may shift between pages while the courts publish; a rerun picks up any miss.
+
+### Scheduled case-law sync
+
+`.github/workflows/sync-case-law.yml` mirrors the SFS sync: daily, and on manual dispatch with an
+optional earlier `since` (`gh workflow run sync-case-law.yml [-f since=YYYY-MM-DD]`). It starts
+from `main`, or from the `data/case-law-sync` branch while a sync pull request is open, and runs
+`case-law --since <marker>` with the day in `collector/data/case-law-sync.json`
+(`{"published_since": "YYYY-MM-DD"}`). When the corpus changed it writes the report's
+`next_since` to the marker, regenerates the audit and progress files, adds one `data(case-law):`
+commit to `data/case-law-sync` and opens a pull request (labels `type: data`, `area: corpus`,
+assigned to the owner) if none is open. The marker only moves inside that commit, so a failed or
+abandoned run never skips publications. The job summary lists what was written, excluded and
+failed.
 
 ## Agency regulations
 

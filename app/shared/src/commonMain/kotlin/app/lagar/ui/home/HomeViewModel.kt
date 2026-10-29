@@ -5,11 +5,14 @@ import androidx.lifecycle.viewModelScope
 import app.lagar.data.GeoRepository
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
+import app.lagar.data.LocalityRepository
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
 import app.lagar.domain.Locality
 import app.lagar.domain.Scope
 import app.lagar.domain.count
+import app.lagar.domain.localityCode
+import app.lagar.domain.localityLayer
 import app.lagar.settings.Bookmark
 import app.lagar.settings.BookmarkStore
 import app.lagar.settings.UserFocus
@@ -23,9 +26,14 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
 /**
- * What the home of one [scope] shows. [localityName] is the chosen län (Region) or kommun (Kommun), null when unset.
- * [layers] are the scope's levels that have documents, in hierarchy order. [counts] holds the documents of every
- * level, whatever the scope, and [builtAt] the data build date (`yyyy-MM-dd`); the wide layout shows both.
+ * What the home of one [scope] shows. [localityName] is the chosen län (Region) or kommun (Kommun), null when unset,
+ * and [localityCode] its code. [layers] are the scope's levels that have documents, in hierarchy order. [counts]
+ * holds the documents of every level, whatever the scope, and [builtAt] the data build date (`yyyy-MM-dd`); the
+ * wide layout shows both.
+ *
+ * Nationell fills [fundamental], [acts] and [ordinances]; Region and Kommun fill [inForce] (the locality's newest
+ * regulations in force) and [localityTotal] (its document count). [recent] is the scope's or locality's newest
+ * documents either way.
  */
 data class HomeData(
     val scope: Scope,
@@ -38,17 +46,22 @@ data class HomeData(
     val hasMoreRecent: Boolean,
     val counts: Map<DisplayLayer, Int> = emptyMap(),
     val builtAt: String? = null,
+    val localityCode: String? = null,
+    val localityTotal: Int = 0,
+    val inForce: List<ListingItem> = emptyList(),
 )
 
 /**
  * Loads the home of the active scope and reloads when the scope or the locality changes. Only the first
- * listing pages it shows are fetched; the full catalog is left to search.
+ * listing pages it shows are fetched; the full catalog is left to search. Region and Kommun read only the chosen
+ * län's or kommun's listing, through [localities].
  */
 class HomeViewModel(
     private val repository: LagarRepository,
     private val preferences: UserPreferences,
     private val bookmarkStore: BookmarkStore,
     private val geo: GeoRepository,
+    private val localities: LocalityRepository,
 ) : ViewModel() {
     private val _state = MutableStateFlow<LoadState<HomeData>>(LoadState.Loading)
     val state: StateFlow<LoadState<HomeData>> = _state.asStateFlow()
@@ -83,9 +96,30 @@ class HomeViewModel(
         val index = repository.index()
         val counts = DisplayLayer.entries.associateWith { index.count(it) }
         val builtAt = index.builtAt.take(10)
-        // Only the national level has documents so far; Region and Kommun make no listing requests.
-        if (scope != Scope.Nationell) {
-            return HomeData(scope, localityName, emptyList(), emptyList(), emptyList(), emptyList(), emptyList(), false, counts, builtAt)
+        val localityLayer = scope.localityLayer
+        if (localityLayer != null) {
+            val code = scope.localityCode(locality)
+            // Without a chosen locality there is nothing to list; the home asks the user to choose one.
+            val feed = if (code == null || localityName == null) {
+                LocalityFeed.Empty
+            } else {
+                loadLocalityFeed(localities, localityLayer, code, IMPORTANT_LIMIT, RECENT_LIMIT)
+            }
+            return HomeData(
+                scope = scope,
+                localityName = localityName,
+                layers = if (feed.total > 0) listOf(localityLayer) else emptyList(),
+                fundamental = emptyList(),
+                acts = emptyList(),
+                ordinances = emptyList(),
+                recent = feed.recent,
+                hasMoreRecent = feed.hasMoreRecent,
+                counts = counts,
+                builtAt = builtAt,
+                localityCode = code,
+                localityTotal = feed.total,
+                inForce = feed.key,
+            )
         }
         val feed = loadHomeFeed(repository, index, scope, IMPORTANT_LIMIT, RECENT_LIMIT)
         return HomeData(

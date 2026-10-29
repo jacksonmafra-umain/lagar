@@ -22,6 +22,11 @@ class SampleRepository(
     override suspend fun ministryListing(layer: String, type: String, ministry: String, page: Int) =
         read<ListingPage>(ministryListingPath(layer, type, ministry, page))
 
+    override suspend fun localities(layer: String) = read<LocalityIndex>(localityIndexPath(layer))
+
+    override suspend fun localityListing(layer: String, code: String, page: Int) =
+        read<ListingPage>(localityListingPath(layer, code, page))
+
     override suspend fun searchManifest() = read<SearchManifest>(searchManifestPath())
 
     override suspend fun searchDocs() = read<SearchDocsTable>(searchDocsPath())

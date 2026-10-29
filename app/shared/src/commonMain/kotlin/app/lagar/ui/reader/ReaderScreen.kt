@@ -2,8 +2,11 @@ package app.lagar.ui.reader
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -54,14 +57,17 @@ import app.lagar.resources.bookmark_add
 import app.lagar.resources.bookmark_remove
 import app.lagar.resources.ic_bookmark
 import app.lagar.resources.ic_bookmark_filled
-import app.lagar.resources.ic_link
 import app.lagar.resources.ic_share
 import app.lagar.resources.ic_toc
 import app.lagar.resources.reader_link_copied
+import app.lagar.resources.reader_provision_removed
+import app.lagar.resources.reader_provision_saved
 import app.lagar.resources.reader_share_failed
 import app.lagar.resources.reader_share_link
 import app.lagar.resources.reader_toc
 import app.lagar.settings.BookmarkStore
+import app.lagar.settings.NoteStore
+import app.lagar.settings.SavedProvision
 import app.lagar.settings.toBookmark
 import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.ErrorState
@@ -71,6 +77,7 @@ import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -86,15 +93,26 @@ fun ReaderRoute(
     anchor: String? = null,
     viewModel: ReaderViewModel = koinViewModel(key = id) { parametersOf(id) },
     store: BookmarkStore = koinInject(),
+    noteStore: NoteStore = koinInject(),
 ) {
     val state by viewModel.state.collectAsState()
     val bookmarks by store.bookmarks.collectAsState()
+    val provisions by store.provisions.collectAsState()
+    val notes by noteStore.notes.collectAsState()
+    val savedAnchors = remember(provisions, id) { provisions.filter { it.document.id == id }.mapTo(HashSet()) { it.anchor } }
+    val documentNotes = remember(notes, id) { notes.filter { it.document.id == id } }
+    val provisionNotes = remember(documentNotes) { documentNotes.mapNotNull { note -> note.anchor?.let { it to note.text } }.toMap() }
     val links by viewModel.linkedAmendments.collectAsState()
     val cited by viewModel.crossReferences.collectAsState()
     // The layer colors a cross-reference; a type the app does not place falls back to SFS acts.
     val crossReferences = remember(cited) { cited.mapValues { (_, type) -> DisplayLayer.forType(type)?.key ?: LayerKey.SfsAct } }
     // Bookmarks saved before the dates were stored (or before a repeal) catch up when the document is read.
-    LaunchedEffect(state) { (state as? LoadState.Loaded)?.value?.meta?.let { store.refresh(it.toBookmark()) } }
+    LaunchedEffect(state) {
+        (state as? LoadState.Loaded)?.value?.meta?.toBookmark()?.let {
+            store.refresh(it)
+            noteStore.refresh(it)
+        }
+    }
     ReaderScreen(
         state = state,
         bookmarked = bookmarks.any { it.id == id },
@@ -105,6 +123,13 @@ fun ReaderRoute(
         onResolveAmendmentLinks = viewModel::resolveAmendmentLinks,
         crossReferences = crossReferences,
         onOpenDocument = onOpenDocument,
+        savedAnchors = savedAnchors,
+        documentNote = documentNotes.firstOrNull { it.anchor == null }?.text,
+        provisionNotes = provisionNotes,
+        onToggleProvision = { meta, anchor, label, excerpt ->
+            store.toggleProvision(SavedProvision(meta.toBookmark(), anchor, label, excerpt))
+        },
+        onWriteNote = { meta, anchor, label, text -> noteStore.write(meta.toBookmark(), anchor, label, text) },
     )
 }
 
@@ -119,6 +144,11 @@ fun ReaderScreen(
     onResolveAmendmentLinks: (List<String>) -> Unit = {},
     crossReferences: Map<String, LayerKey> = emptyMap(),
     onOpenDocument: (String) -> Unit = {},
+    savedAnchors: Set<String> = emptySet(),
+    documentNote: String? = null,
+    provisionNotes: Map<String, String> = emptyMap(),
+    onToggleProvision: (meta: DocumentMeta, anchor: String, label: String, excerpt: String) -> Unit = { _, _, _, _ -> },
+    onWriteNote: (meta: DocumentMeta, anchor: String?, label: String?, text: String) -> Unit = { _, _, _, _ -> },
 ) {
     val spacing = LagarTheme.spacing
     val hazeState = remember { HazeState() }
@@ -132,6 +162,9 @@ fun ReaderScreen(
     val failed = stringResource(Res.string.reader_share_failed)
     var showToc by rememberSaveable { mutableStateOf(false) }
     var amendmentsOpen by rememberSaveable { mutableStateOf(false) }
+    // The note being edited: open with the anchor of its §, or no anchor for the document note.
+    var noteOpen by rememberSaveable { mutableStateOf(false) }
+    var noteAnchor by rememberSaveable { mutableStateOf<String?>(null) }
 
     fun share(title: String, url: String) {
         when (sharer.share(title, url)) {
@@ -147,8 +180,9 @@ fun ReaderScreen(
     val amendments = remember(document?.meta) { document?.meta?.let(::amendmentRows).orEmpty() }
     val reprints = document?.meta?.reprintedBy.orEmpty()
     val hasAmendments = amendments.isNotEmpty() || reprints.isNotEmpty()
-    // Lazy items before the first block: the header, then the amendments toggle, the open list and a divider.
-    val leadingItems = 1 + (if (hasAmendments) 2 else 0) +
+    // Lazy items before the first block: the header and the document note, then the amendments toggle, the open
+    // list and a divider.
+    val leadingItems = 2 + (if (hasAmendments) 2 else 0) +
         (if (hasAmendments && amendmentsOpen) amendments.size + (if (reprints.isNotEmpty()) 1 else 0) else 0)
 
     // A deep link scrolls to its section once, when the text has loaded; later recompositions leave the scroll alone.
@@ -177,6 +211,36 @@ fun ReaderScreen(
                     else DisplayLayer.fromRoute(meta.layer, meta.type)?.key ?: LayerKey.Repealed
                 }
                 val shareBase = remember { shareBaseUrl() }
+                val sectionActions: @Composable (String, String, String) -> Unit = { anchor, label, block ->
+                    val saved = anchor in savedAnchors
+                    SectionActions(
+                        label = label,
+                        layer = key,
+                        saved = saved,
+                        hasNote = anchor in provisionNotes,
+                        onToggleSave = {
+                            onToggleProvision(meta, anchor, label, provisionExcerpt(block))
+                            scope.launch {
+                                snackbar.showSnackbar(
+                                    getString(if (saved) Res.string.reader_provision_removed else Res.string.reader_provision_saved, label),
+                                )
+                            }
+                        },
+                        onNote = {
+                            noteAnchor = anchor
+                            noteOpen = true
+                        },
+                        onShare = { share("$label ${meta.title}", readerLink(shareBase, meta.id, anchor)) },
+                    )
+                }
+                val noteChip: @Composable (String) -> Unit = { anchor ->
+                    provisionNotes[anchor]?.let { text ->
+                        NoteChip(text, key, onEdit = {
+                            noteAnchor = anchor
+                            noteOpen = true
+                        })
+                    }
+                }
                 LazyColumn(
                     state = listState,
                     modifier = Modifier.fillMaxSize().hazeSource(hazeState),
@@ -184,6 +248,16 @@ fun ReaderScreen(
                 ) {
                     item(key = "header") {
                         ReadingItem { MetadataHeader(meta, Modifier.readingColumn()) }
+                    }
+                    item(key = "document-note") {
+                        ReadingItem {
+                            Box(Modifier.readingColumn().padding(bottom = spacing.xs)) {
+                                DocumentNote(documentNote, key, onEdit = {
+                                    noteAnchor = null
+                                    noteOpen = true
+                                })
+                            }
+                        }
                     }
                     if (hasAmendments) {
                         item(key = "amendments") {
@@ -215,17 +289,31 @@ fun ReaderScreen(
                             contentAlignment = Alignment.TopCenter,
                         ) {
                             SelectionContainer(Modifier.readingColumn()) {
+                                val blockAnchor = outline.anchorOf(index)
+                                val label = outline.labelOf(index)
                                 if (isStatuteBlock(block)) {
-                                    val blockAnchor = outline.anchorOf(index)
-                                    val label = outline.labelOf(index)
                                     StatuteContainer(
                                         layer = key,
                                         action = if (blockAnchor != null && label != null) {
-                                            { SectionLinkButton(label) { share("$label ${meta.title}", readerLink(shareBase, meta.id, blockAnchor)) } }
+                                            { sectionActions(blockAnchor, label, block) }
                                         } else {
                                             null
                                         },
-                                    ) { LegalMarkdown(block.trimEnd(), crossReferences = crossReferences, onOpenDocument = onOpenDocument) }
+                                    ) {
+                                        Column(verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
+                                            LegalMarkdown(block.trimEnd(), crossReferences = crossReferences, onOpenDocument = onOpenDocument)
+                                            if (blockAnchor != null) noteChip(blockAnchor)
+                                        }
+                                    }
+                                } else if (block.startsWith("#") && blockAnchor != null && label != null) {
+                                    // A chapter heading: saved, noted and shared like a §.
+                                    Column(verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
+                                        Row {
+                                            LegalMarkdown(block.trimEnd(), Modifier.weight(1f).semantics { heading() })
+                                            sectionActions(blockAnchor, label, block)
+                                        }
+                                        noteChip(blockAnchor)
+                                    }
                                 } else if (block.startsWith("#")) {
                                     LegalMarkdown(block.trimEnd(), Modifier.semantics { heading() })
                                 } else {
@@ -234,6 +322,28 @@ fun ReaderScreen(
                             }
                         }
                     }
+                }
+                if (noteOpen) {
+                    val anchor = noteAnchor
+                    val target = anchor?.let { a -> outline.blockOf(a)?.let(outline::labelOf) }
+                    val existing = if (anchor == null) documentNote else provisionNotes[anchor]
+                    NoteEditorSheet(
+                        target = target ?: meta.title,
+                        initial = existing.orEmpty(),
+                        onSave = { text ->
+                            onWriteNote(meta, anchor, target, text)
+                            noteOpen = false
+                        },
+                        onDelete = if (existing != null) {
+                            {
+                                onWriteNote(meta, anchor, target, "")
+                                noteOpen = false
+                            }
+                        } else {
+                            null
+                        },
+                        onDismiss = { noteOpen = false },
+                    )
                 }
                 if (showToc) {
                     TableOfContentsSheet(
@@ -279,12 +389,6 @@ private fun ReadingItem(content: @Composable () -> Unit) {
     Box(Modifier.fillMaxWidth().padding(horizontal = LagarTheme.spacing.marginMobile), contentAlignment = Alignment.TopCenter) {
         content()
     }
-}
-
-/** The per-§ link action in the card's upper right corner; shares a deep link to that §. */
-@Composable
-private fun SectionLinkButton(label: String, onClick: () -> Unit) {
-    BarAction(painterResource(Res.drawable.ic_link), stringResource(Res.string.reader_share_link, label), ShellDimens.SmallIconSize, onClick)
 }
 
 /** A 48dp round icon button in the reader's quiet style. */

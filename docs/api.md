@@ -9,8 +9,9 @@ Conventions:
 - Dates are `YYYY-MM-DD`. Timestamps are UTC, `YYYY-MM-DDTHH:MM:SSZ`.
 - `null` is used for unknown or not-applicable values; keys are never omitted.
 - Canonical examples live in `docs/api/examples/` and mirror the paths below.
-  They include a series listing (`sfs/ordinance/index-1.json`) and an empty layer
-  listing (`eu/index-1.json`: `items: []`, `page_count: 1`, `total: 0`).
+  They include a series listing (`sfs/ordinance/index-1.json`), an empty layer
+  listing (`eu/index-1.json`: `items: []`, `page_count: 1`, `total: 0`) and
+  per-locality listings (`region/by-code/`, `municipality/by-code/`).
 
 ## Vocabulary
 
@@ -133,11 +134,14 @@ Item object:
 | `in_force` | string (date) | yes | entry into force; same value as `meta.in_force` |
 | `amended_through` | string | yes | number of the latest amendment (an SFS number for SFS types, see Number formats); same value as `meta.amended_through` |
 | `ministry` | string | yes | issuing ministry or body; same value as `meta.ministry` |
+| `region_code` | string | yes | county code (`01`–`25`); same value as `meta.region_code`. Set for `county_regulation` and usually for `municipal_regulation`, `null` elsewhere |
+| `municipality_code` | string | yes | four-digit kommun code; same value as `meta.municipality_code`. Set for `municipal_regulation`, `null` elsewhere |
 
-Keys appear in the order above. `in_force`, `amended_through` and `ministry`
-were added within v1: they are always present but may be `null`, and they come
-after the original keys. The change is additive, so v1 clients that ignore
-unknown keys keep working; clients should treat the three fields as optional
+Keys appear in the order above. `in_force`, `amended_through`, `ministry`,
+`region_code` and `municipality_code` were added within v1: they are always
+present but may be `null`, and they come after the original keys (the two
+locality codes last). The change is additive, so v1 clients that ignore
+unknown keys keep working; clients should treat the five fields as optional
 and nullable.
 
 Sort order: `issued` descending, then `number` descending, across pages. `number` is compared numerically by (year, ordinal), not as a string, so `1999:175` comes before `1999:99`. A series prefix (`N`, `RFS`) is ignored for ordering; on a tie the plain number is listed before the prefixed one (`2026:5` before `N2026:5`). Old prints keep Riksdagen's numbering, such as `1827:60 s.1007` or `1899:bih. 25`: non-digits before the ordinal are skipped and the rest after it only breaks ties. Items
@@ -198,6 +202,42 @@ sort order and page size), with two keys after `type`: `ministry_id` (the
 ministry id) and `ministry` (the grouped name). Items keep their own
 `ministry` value as written, unit code included. A listing exists only for the
 ids in the index.
+
+## By code: `GET <layer>/by-code/index.json` and `GET <layer>/by-code/<code>/index-<page>.json`
+
+Added within v1 (additive: no existing file changes). The `region` layer is
+grouped by `region_code` (one län each) and the `municipality` layer by
+`municipality_code` (one kommun each), so a client shows the documents of the
+user's län or kommun without reading the whole layer. Examples:
+`docs/api/examples/region/by-code/` and `docs/api/examples/municipality/by-code/`.
+
+Why per-code listings rather than only the item fields: a kommun home needs a
+few dozen documents out of what will be thousands across 290 kommuner, and
+filtering the layer listing client-side would mean reading every page of it.
+The codes are also on every listing item and in the search `docs.json`, for
+search and for clients that already hold the whole layer.
+
+### `<layer>/by-code/index.json`
+
+Exists for `region` and `municipality`, also when the layer is empty.
+
+| field | type | null | notes |
+| --- | --- | --- | --- |
+| `layer` | string | no | `region` or `municipality` |
+| `field` | string | no | the item key the layer is grouped by: `region_code` or `municipality_code` |
+| `total` | integer | no | documents in the layer |
+| `codes` | array of code | no | codes with at least one document, ascending; `[]` when the layer is empty |
+
+Code object: `code` (string, a county or kommun code) and `count` (integer,
+documents with that code). Neither is null. The schema requires the code on
+every document of these layers, so the counts add up to `total`.
+
+### `<layer>/by-code/<code>/index-<page>.json`
+
+A paged listing like `<layer>/index-<page>.json` (same item object, sort order
+and page size; `type` is `null`), with one key after `type`: `code`. A listing
+exists only for the codes in the index; a code that is not listed has no
+documents, so clients show their empty state without requesting it.
 
 ## `GET docs/<id>.json`
 
@@ -315,8 +355,12 @@ Shard object: `key` (string), `terms` (integer, terms in the shard) and
 ### `search/docs.json`
 
 `fields` lists the column names (`id`, `title`, `number`, `type`, `issued`,
-`repealed`, same values as listing items); `docs` is one row per document,
-sorted by `id`. A document's number in the postings is its 0-based row index.
+`repealed`, `region_code`, `municipality_code`, same values as listing items);
+`docs` is one row per document, sorted by `id`. A document's number in the
+postings is its 0-based row index. `region_code` and `municipality_code` were
+added within v1, after the original columns; clients read columns by name, so
+older tables without them still work (the codes are then unknown). The
+locality codes let a client narrow a search to the user's län or kommun.
 
 ### `search/shards/<key>.json`
 

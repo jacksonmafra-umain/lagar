@@ -88,8 +88,9 @@ private fun Modifier.focusGlow(color: Color) = drawBehind {
 }
 
 /**
- * Single-line text input in the DESIGN.md [InputFrame]: [label] above the field, [placeholder] inside it while empty,
- * an optional [leadingIcon], and [error] below (also announced as the field's error state).
+ * Text input in the DESIGN.md [InputFrame]: [label] above the field, [placeholder] inside it while empty,
+ * an optional [leadingIcon], and [error] below (also announced as the field's error state). Single-line unless
+ * [singleLine] is false; [minLines] then sets the visible height.
  */
 @Composable
 internal fun LagarTextField(
@@ -102,6 +103,8 @@ internal fun LagarTextField(
     leadingIcon: DrawableResource? = null,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default,
+    singleLine: Boolean = true,
+    minLines: Int = 1,
 ) {
     val colors = LagarTheme.colors
     val interactionSource = remember { MutableInteractionSource() }
@@ -117,7 +120,12 @@ internal fun LagarTextField(
                 modifier = Modifier.clearAndSetSemantics {},
             )
         }
-        InputFrame(focused = focused, isError = error != null) {
+        val padding = if (singleLine) {
+            PaddingValues(horizontal = LagarTheme.spacing.md)
+        } else {
+            PaddingValues(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm)
+        }
+        InputFrame(focused = focused, isError = error != null, contentPadding = padding) {
             if (leadingIcon != null) {
                 Icon(painterResource(leadingIcon), contentDescription = null, tint = colors.onSurfaceVariant, modifier = Modifier.size(ShellDimens.SmallIconSize))
             }
@@ -128,14 +136,15 @@ internal fun LagarTextField(
                     if (description != null) contentDescription = description
                     if (error != null) error(error)
                 },
-                singleLine = true,
+                singleLine = singleLine,
+                minLines = if (singleLine) 1 else minLines,
                 textStyle = LagarTheme.type.bodyUi.copy(color = colors.onSurface),
                 cursorBrush = SolidColor(if (error != null) colors.error else colors.primary),
                 keyboardOptions = keyboardOptions,
                 keyboardActions = keyboardActions,
                 interactionSource = interactionSource,
                 decorationBox = { field ->
-                    Box(contentAlignment = Alignment.CenterStart) {
+                    Box(contentAlignment = if (singleLine) Alignment.CenterStart else Alignment.TopStart) {
                         if (value.isEmpty() && placeholder != null) {
                             Text(placeholder, style = LagarTheme.type.bodyUi, color = colors.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis)
                         }
