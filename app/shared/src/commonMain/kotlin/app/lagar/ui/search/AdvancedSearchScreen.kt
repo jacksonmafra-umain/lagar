@@ -239,10 +239,13 @@ fun AdvancedSearchScreen(
                 StatusOption(Res.string.advanced_status_repealed, StatusFilter.Repealed, status, scope) { status = it }
             }
         }
-        Surface(
-            modifier = Modifier.align(Alignment.BottomCenter).fillMaxWidth().onSizeChanged { footerPx = it.height },
-            color = LagarTheme.colors.surfaceContainerLowest,
-            border = BorderStroke(1.dp, LagarTheme.colors.outlineVariant),
+        // Sticky footer: a tier 2 glass bar over the scrolling form.
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .onSizeChanged { footerPx = it.height }
+                .glass(GlassTier.Bar, hazeState),
         ) {
             val accent = layers.accent(scope.key)
             LagarButton(
