@@ -27,7 +27,9 @@ import kotlinx.coroutines.launch
 
 /**
  * What the home of one [scope] shows. [localityName] is the chosen län (Region) or kommun (Kommun), null when unset,
- * and [localityCode] its code. [layers] are the scope's levels that have documents, in hierarchy order.
+ * and [localityCode] its code. [layers] are the scope's levels that have documents, in hierarchy order. [counts]
+ * holds the documents of every level, whatever the scope, and [builtAt] the data build date (`yyyy-MM-dd`); the
+ * wide layout shows both.
  *
  * Nationell fills [fundamental], [acts] and [ordinances]; Region and Kommun fill [inForce] (the locality's newest
  * regulations in force) and [localityTotal] (its document count). [recent] is the scope's or locality's newest
@@ -42,6 +44,8 @@ data class HomeData(
     val ordinances: List<ListingItem>,
     val recent: List<ListingItem>,
     val hasMoreRecent: Boolean,
+    val counts: Map<DisplayLayer, Int> = emptyMap(),
+    val builtAt: String? = null,
     val localityCode: String? = null,
     val localityTotal: Int = 0,
     val inForce: List<ListingItem> = emptyList(),
@@ -89,6 +93,9 @@ class HomeViewModel(
 
     private suspend fun build(scope: Scope, locality: Locality): HomeData {
         val localityName = geo.localityName(scope, locality)
+        val index = repository.index()
+        val counts = DisplayLayer.entries.associateWith { index.count(it) }
+        val builtAt = index.builtAt.take(10)
         val localityLayer = scope.localityLayer
         if (localityLayer != null) {
             val code = scope.localityCode(locality)
@@ -107,12 +114,13 @@ class HomeViewModel(
                 ordinances = emptyList(),
                 recent = feed.recent,
                 hasMoreRecent = feed.hasMoreRecent,
+                counts = counts,
+                builtAt = builtAt,
                 localityCode = code,
                 localityTotal = feed.total,
                 inForce = feed.key,
             )
         }
-        val index = repository.index()
         val feed = loadHomeFeed(repository, index, scope, IMPORTANT_LIMIT, RECENT_LIMIT)
         return HomeData(
             scope = scope,
@@ -123,6 +131,8 @@ class HomeViewModel(
             ordinances = feed.ordinances,
             recent = feed.recent,
             hasMoreRecent = feed.hasMoreRecent,
+            counts = counts,
+            builtAt = builtAt,
         )
     }
 

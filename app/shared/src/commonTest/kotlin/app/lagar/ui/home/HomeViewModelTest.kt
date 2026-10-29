@@ -1,6 +1,8 @@
 package app.lagar.ui.home
 
 import app.lagar.data.ApiIndex
+import app.lagar.data.ApiLayer
+import app.lagar.data.ApiSeries
 import app.lagar.data.DocumentResponse
 import app.lagar.data.GeoRepository
 import app.lagar.data.LagarRepository
@@ -43,10 +45,15 @@ class HomeViewModelTest {
         """.encodeToByteArray()
     }
 
+    /** Only the index is read by the Region and Kommun homes (for the wide layout's counts); no national listing. */
     private object NoNational : LagarRepository {
-        override suspend fun index(): ApiIndex = error("not read by the Region and Kommun homes")
+        override suspend fun index(): ApiIndex = ApiIndex(
+            1,
+            "2026-10-29T10:00:00Z",
+            listOf(ApiLayer("region", 1, listOf(ApiSeries("county_regulation", 1))), ApiLayer("municipality", 2, listOf(ApiSeries("municipal_regulation", 2)))),
+        )
 
-        override suspend fun listing(layer: String, type: String?, page: Int): ListingPage = error("unused")
+        override suspend fun listing(layer: String, type: String?, page: Int): ListingPage = error("not read by the Region and Kommun homes")
 
         override suspend fun document(id: String): DocumentResponse = error("unused")
     }
@@ -96,6 +103,9 @@ class HomeViewModelTest {
         assertEquals(listOf("0180-kfs-2026-12", "0180-kfs-2013-19"), data.recent.map { it.id })
         assertEquals(listOf("0180-kfs-2013-19"), data.inForce.map { it.id })
         assertEquals(listOf("municipality/index", "municipality/0180/1"), localities.requests)
+        assertEquals(2, data.counts[DisplayLayer.Municipality])
+        assertEquals("2026-10-29", data.builtAt)
+        assertEquals(LocalityHome(DisplayLayer.Municipality, "0180", "Stockholm"), data.localityHome)
     }
 
     @Test
@@ -112,6 +122,7 @@ class HomeViewModelTest {
         assertEquals("Göteborg", data.localityName)
         assertEquals(0, data.localityTotal)
         assertEquals(emptyList(), data.layers)
+        assertEquals(null, data.localityHome)
         assertEquals(listOf("municipality/index"), localities.requests)
     }
 

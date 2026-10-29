@@ -1,0 +1,64 @@
+{
+  "kommuner": {
+    "0180": {
+      "name": "Stockholm",
+      "issuer": "Stockholms stad",
+      "region_code": "01",
+      "collection": "Stockholms stads kommunala författningssamling (KFS)",
+      "strategy": "html_index",
+      "hosts": ["start.stockholm"],
+      "listings": [
+        "https://start.stockholm/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/"
+      ],
+      "section_level": 2,
+      "sections": ["Reglerande styrdokument"],
+      "link_pattern": "^https://start\\.stockholm/globalassets/.*/kommunal-forfattningssamling/[^/]+\\.pdf$",
+      "number": [
+        {"from": "text", "pattern": "KFS\\s*(\\d{4}):(\\d+)", "format": "KFS {0}:{1}"},
+        {"from": "href", "pattern": "/kfs-(\\d{4})-(\\d+)-", "format": "KFS {0}:{1}"}
+      ],
+      "title_strip": ["\\s*\\(?pdf\\)?\\s*$", ",?\\s*KFS\\s*\\d{4}:\\d+\\s*$"]
+    },
+    "1280": {
+      "name": "Malmö",
+      "issuer": "Malmö stad",
+      "region_code": "12",
+      "collection": "Malmö stads författningssamling",
+      "strategy": "html_index",
+      "hosts": ["malmo.se"],
+      "listings": [
+        "https://malmo.se/Om-Malmo-stad/Demokrati-och-politik/Sa-styrs-Malmo/Forfattningssamling/Bestammelser-som-riktar-sig-till-dig-som-medborgare.html",
+        "https://malmo.se/Om-Malmo-stad/Demokrati-och-politik/Sa-styrs-Malmo/Forfattningssamling/Taxor-och-avgifter.html"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Om renhållning och underhåll",
+        "För torghandlare",
+        "Om naturreservat",
+        "Allmänna och övriga föreskrifter",
+        "Taxor och avgifter",
+        "Taxor för markupplåtelse"
+      ],
+      "link_pattern": "^https://malmo\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
+    "1480": {
+      "name": "Göteborg",
+      "issuer": "Göteborgs Stad",
+      "region_code": "14",
+      "collection": "Göteborgs Stads styrande dokument (Forfattn.nsf)",
+      "strategy": "domino_view",
+      "hosts": ["www4.goteborg.se"],
+      "listings": [
+        "https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf/vyHandBok?ReadViewEntries&ExpandView&Count=2000"
+      ],
+      "kind_column": "$75",
+      "title_column": "$73",
+      "number_column": "txtSerialnumber",
+      "kinds": ["Lokal föreskrift", "Taxor/avgifter"]
+    }
+  }
+}

@@ -20,13 +20,22 @@ The number after each gap is its GitHub issue.
 | Input, button and checkbox shapes, search focus glow, web `⌘K` hint | Done | #24 |
 | Repealed treatment (grey, strikethrough, history icon) everywhere | Partial: only the layer list is correct | #21 |
 | Bookmark icon in the document's layer colour | Missing | #22 |
-| Tablet two-pane and desktop tri-pane layouts | Missing | #35 |
+| Desktop layout (window ≥ 1024dp): top bar navigation, max content width, wide home | Done | #79 |
+| Tablet two-pane layout and wide layouts of the pushed screens | Missing | #35 |
 | `docs/design.md` component inventory up to date | Done | #25 |
 | Swedish and English strings, no hardcoded UI text | Done | |
 
 ## Shell
 
 The app shell has four tabs (Utforska, Hierarki, Sparade, Tjänster) in a glass bottom bar. The glass top bar holds the title, a scope chip, search and the drawer button. Pushed screens use a back top bar. Code: `ui/shell/`.
+
+On windows at least 1024dp wide (`ShellDimens.WideBreakpoint`, exposed as `LocalWideLayout`) the bottom bar gives way to a wide top bar (`WideTopBar.kt`): wordmark, scope switch, the tabs plus "Sök & filter" (opens the advanced search), search, theme toggle and the drawer button. Reference: Stitch `lagar_multi_jurisdiction_design_system_portal` (desktop), without BankID, the profile and any official-portal framing.
+
+| Feature | Status | Issue |
+| --- | --- | --- |
+| Wide top bar with navigation; content capped at 1280dp on Utforska, Hierarki and Sparade | Done | #79 |
+| Scope switch in the bar from 1360dp, Nationell / Region / Kommun plus "Institutionellt" shown disabled | Done | #79 |
+| Search field with ⌘K in the bar | Partial: search button | #24 |
 
 ### Drawer
 
@@ -106,6 +115,20 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | Case-law items in the feed | Blocked: no case-law data | #38 |
 | Popular tab | Blocked: the app is anonymous and collects no usage data | |
 | Region and Kommun homes: the chosen län's or kommun's documents from the per-locality listings (`<layer>/by-code/`), with "Regulations in force" (newest five in force, document count), the Recent and Favourites feed and "Show more" to the locality's list; "no regulations collected yet for <locality>" when it has none, and a prompt to choose one when unset. The location card stays | Done | #99 |
+
+### Wide layout
+
+Code: `ui/home/WideHome.kt`, `HierarchySection.kt`, `RecentWithPreview.kt`. Reference: Stitch `lagar_multi_jurisdiction_design_system_portal` (desktop).
+
+| Feature | Status | Issue |
+| --- | --- | --- |
+| Hero with document total, scope row with counts (Institutionellt disabled), location pill and data build date | Done | #79 |
+| Wide search bar, advanced-search button and quick picks (Grundlagar, Brottsbalken, Miljöbalken, Rättegångsbalken) | Done | #79 |
+| Norm hierarchy: total, distribution bar, 3-column grid of the nine layers with counts or "coming soon" | Done | #79 |
+| Recent and Favourites list next to a live preview of the selected document (header, opening sections, bookmark, open full text) | Done | #79 |
+| Region and Kommun: "Regulations in force" for the chosen län or kommun above the list, which shows that locality's documents ("Show more" opens its list); the choose-a-locality or "no regulations collected yet" state when there are none | Done | #99 |
+| Footer with the independent-project disclaimer | Done | #79 |
+| GPS location, inline advanced-search panel, case-law / most-read / real-time tabs, version history, notes and linked precedents in the preview | Left out: no data, or owner decision | |
 
 ## Search
 

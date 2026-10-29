@@ -37,6 +37,7 @@ import app.lagar.resources.hierarchy_view_pyramid
 import app.lagar.ui.common.ComingSoonSheet
 import app.lagar.ui.common.LoadStateHost
 import app.lagar.ui.common.PillTab
+import app.lagar.ui.shell.maxContentWidth
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
@@ -75,7 +76,7 @@ fun HierarkiScreen(
     var view by rememberSaveable { mutableStateOf(HierarkiView.Layers) }
     LoadStateHost(state) { summaries, shell ->
         val top = shell.calculateTopPadding() + spacing.sm
-        Column(Modifier.fillMaxSize()) {
+        Column(Modifier.fillMaxSize().maxContentWidth()) {
             FlowRow(
                 modifier = Modifier.padding(start = spacing.marginMobile, end = spacing.marginMobile, top = top),
                 horizontalArrangement = Arrangement.spacedBy(spacing.sm),

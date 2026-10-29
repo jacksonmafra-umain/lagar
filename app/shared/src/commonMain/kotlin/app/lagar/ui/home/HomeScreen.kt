@@ -32,9 +32,6 @@ import app.lagar.domain.LoadState
 import app.lagar.domain.Scope
 import app.lagar.resources.Res
 import app.lagar.resources.home_choose_location
-import app.lagar.resources.home_locality_choose_text
-import app.lagar.resources.home_locality_empty_text
-import app.lagar.resources.home_locality_empty_title
 import app.lagar.resources.home_location_label
 import app.lagar.resources.home_scope_kommun_title
 import app.lagar.resources.home_scope_region_title
@@ -44,6 +41,7 @@ import app.lagar.settings.Bookmark
 import app.lagar.settings.UserFocus
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.common.LoadStateHost
+import app.lagar.ui.shell.LocalWideLayout
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
@@ -57,6 +55,7 @@ fun HomeRoute(
     onOpenAdvancedSearch: () -> Unit,
     onChooseLocation: () -> Unit,
     onOpenLocality: (layer: DisplayLayer, code: String, name: String) -> Unit,
+    onSelectScope: (Scope) -> Unit,
     viewModel: HomeViewModel = koinViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -72,6 +71,7 @@ fun HomeRoute(
         onOpenAdvancedSearch = onOpenAdvancedSearch,
         onChooseLocation = onChooseLocation,
         onOpenLocality = onOpenLocality,
+        onSelectScope = onSelectScope,
         onToggleBookmark = viewModel::toggleBookmark,
     )
 }
@@ -87,9 +87,26 @@ fun HomeScreen(
     onOpenAdvancedSearch: () -> Unit,
     onChooseLocation: () -> Unit,
     onOpenLocality: (layer: DisplayLayer, code: String, name: String) -> Unit,
+    onSelectScope: (Scope) -> Unit,
     onToggleBookmark: (ListingItem) -> Unit,
 ) {
+    val wide = LocalWideLayout.current
     LoadStateHost(state) { data, shell ->
+        if (wide) {
+            WideHome(
+                data = data,
+                shell = shell,
+                bookmarks = bookmarks,
+                onOpenLayer = onOpenLayer,
+                onOpenDocument = onOpenDocument,
+                onOpenSearch = onOpenSearch,
+                onOpenAdvancedSearch = onOpenAdvancedSearch,
+                onChooseLocation = onChooseLocation,
+                onSelectScope = onSelectScope,
+                onOpenLocality = onOpenLocality,
+            )
+            return@LoadStateHost
+        }
         val spacing = LagarTheme.spacing
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
@@ -119,36 +136,20 @@ fun HomeScreen(
                     )
                 }
             } else {
-                val name = data.localityName
-                val code = data.localityCode
-                val level = data.layers.firstOrNull()
-                when {
-                    name == null || code == null -> item {
-                        EmptyState(
-                            icon = Res.drawable.ic_info,
-                            title = stringResource(Res.string.home_choose_location),
-                            text = stringResource(Res.string.home_locality_choose_text),
+                val home = data.localityHome
+                if (home == null) {
+                    item { LocalityEmptyState(data) }
+                } else {
+                    item { LocalityRules(data, home.name, onOpenDocument, Modifier.padding(horizontal = spacing.marginMobile)) }
+                    item {
+                        ExploreFeed(
+                            data = data,
+                            bookmarks = bookmarks,
+                            onOpenDocument = onOpenDocument,
+                            onToggleBookmark = onToggleBookmark,
+                            onShowMore = { onOpenLocality(home.level, home.code, home.name) },
+                            modifier = Modifier.padding(horizontal = spacing.marginMobile),
                         )
-                    }
-                    level == null || data.localityTotal == 0 -> item {
-                        EmptyState(
-                            icon = Res.drawable.ic_info,
-                            title = stringResource(Res.string.home_locality_empty_title),
-                            text = stringResource(Res.string.home_locality_empty_text, name),
-                        )
-                    }
-                    else -> {
-                        item { LocalityRules(data, name, onOpenDocument, Modifier.padding(horizontal = spacing.marginMobile)) }
-                        item {
-                            ExploreFeed(
-                                data = data,
-                                bookmarks = bookmarks,
-                                onOpenDocument = onOpenDocument,
-                                onToggleBookmark = onToggleBookmark,
-                                onShowMore = { onOpenLocality(level, code, name) },
-                                modifier = Modifier.padding(horizontal = spacing.marginMobile),
-                            )
-                        }
                     }
                 }
             }
