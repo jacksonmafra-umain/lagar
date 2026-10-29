@@ -28,6 +28,10 @@
         <item quantity="one">%1$s document</item>
         <item quantity="other">%1$s documents</item>
     </plurals>
+    <plurals name="hierarchy_other_statutes">
+        <item quantity="one">including %1$s other statute</item>
+        <item quantity="other">including %1$s other statutes</item>
+    </plurals>
     <string name="layer_numbered_title">%1$d. %2$s</string>
     <string name="coming_soon">Coming soon</string>
     <string name="coming_soon_text">This layer has no documents yet. It is still being collected.</string>
@@ -110,6 +114,7 @@
     <string name="splash_tagline">All of Sweden’s rules in one place</string>
     <string name="onboarding_step">Step %1$d of %2$d</string>
     <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_back">Back to the previous step</string>
     <string name="onboarding_continue">Continue</string>
     <string name="onboarding_done">Done</string>
     <string name="onboarding_stored_locally">Stored on this device only</string>
@@ -213,6 +218,9 @@
     </plurals>
     <string name="search_no_results_title">No results</string>
     <string name="search_no_results_text">Try another word or loosen the filters.</string>
+    <string name="search_scope_empty_title">No results in %1$s</string>
+    <string name="search_scope_empty_text">This search covers only %1$s. Search all of Sweden instead?</string>
+    <string name="search_in_nationell">Search National</string>
     <string name="advanced_text_label">Word or number</string>
     <string name="advanced_dates_title">Issued between</string>
     <string name="advanced_date_from">From</string>

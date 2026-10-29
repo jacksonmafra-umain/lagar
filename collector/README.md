@@ -305,13 +305,16 @@ python3 -I collector/collect.py case-law [--court CODE ...] [--from YYYY-MM-DD] 
 - Mapping: `number` is the report reference, the ordinal form (`NJA 2026:38`) when the API gives
   one, else the first reference (`HFD 2026 ref. 43`, `HFD 2026 not. 24`, `NJA 2019 s. 2`); `id` is
   its slug (`nja-2026-38`, `hfd-2026-ref-43`, `ra-2010-ref-5`). `title` is the summary
-  (`sammanfattning`, the report's headline), `issued` the decision date, `court` the court code,
-  `issuer` the court name, `ecli` the ECLI when it has the standard form. `source` is
+  (`sammanfattning`, the report's headline); when the summary holds several paragraphs separated
+  by `-----` rules, the title is the first and the others go to a `## Sammanfattning` section.
+  `issued` is the decision date, `court` the court code, `issuer` the court name, `ecli` the ECLI
+  when it has the standard form. `source` is
   `/api/v1/publiceringar/{id}` and `source_sha256` hashes the publication as the API serialises it
   (sorted keys, compact UTF-8 JSON), which is byte for byte the response of that URL.
 - Body: a facts block (court, decision date, case numbers, all references, name, ECLI), then
-  sections for Lagrum (with SFS numbers), Nyckelord, Rättsområden, Förarbeten, Litteratur,
-  Hänvisningar and Europarättsliga avgöranden when present, then the text (`innehall`, HTML
+  the remaining summary paragraphs, then sections for Lagrum (with SFS numbers), Nyckelord,
+  Rättsområden, Förarbeten, Litteratur, Hänvisningar and Europarättsliga avgöranden when present,
+  then the text (`innehall`, HTML
   converted to Markdown, headings moved down two levels) under `## Referat` or `## Notis`.
 - A publication without a reference in the schema's form (`[A-ZÅÄÖ]{2,5} YYYY:N` or
   `YYYY s./ref./not./nr/N N`), or with a reference already stored from another publication, is
