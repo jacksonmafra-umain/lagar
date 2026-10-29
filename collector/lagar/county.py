@@ -1,14 +1,22 @@
 """Resumable collector for the county regulations (länets författningssamling).
 
 Source: the shared Sitevision site of the county administrative boards,
-https://www.lansstyrelsen.se. Each county has a landing page that links one
-index page per year; each index entry links a detail page carrying the number,
-the publication note ("Utkom från trycket den …"), the title, the text as HTML
-and a link to the printed PDF under /download/. There is no API or open data
-set, and the texts are free of copyright (9 § upphovsrättslagen).
+https://www.lansstyrelsen.se. There is no API or open data set, and the texts
+are free of copyright (9 § upphovsrättslagen). The counties publish their
+collections in two layouts, configured per county in
+`collector/data/counties.json`:
 
-The body is taken from the HTML text on the detail page; the PDFs are never
-parsed. Each linked PDF is downloaded once to record its size and SHA-256 in a
+- `pages`: the landing page links one index page per year; each index entry
+  links a detail page carrying the number, the publication note ("Utkom från
+  trycket den …"), the title, the text as HTML and a link to the printed PDF.
+  The body is taken from the HTML text; the PDFs are never parsed.
+- `files`: the landing page lists the printed PDFs only, as plain links or in
+  Sitevision's file-share module (either the files themselves or one folder per
+  year, whose listing is read from the module's JSON endpoint). The number and
+  title come from the link text or file name; the document records the
+  metadata and links to the PDF.
+
+Each linked PDF is downloaded once to record its size and SHA-256 in a
 committed manifest (`sources/county-pdf-manifest.json`); the bytes are not kept.
 """
 
@@ -35,38 +43,44 @@ USER_AGENT = "lagar-collector/0.1 (+https://github.com/jacksonmafra-umain/lagar)
 BASE = "https://www.lansstyrelsen.se"
 HOST = urllib.parse.urlsplit(BASE).netloc
 ROBOTS_URL = BASE + "/robots.txt"
-LANDING_URL = BASE + "/{slug}/om-oss/om-lansstyrelsen-{slug}/lanets-forfattningssamling.html"
+DEFAULT_CONFIG = str(Path(__file__).resolve().parents[1] / "data" / "counties.json")
 DEFAULT_STATE = "collector/data/county-state.json"
 DEFAULT_MANIFEST = "sources/county-pdf-manifest.json"
 MANIFEST_VERSION = 1
 TYPE = "county_regulation"
 
-# county code -> (site slug, county name). Only Stockholm (01) has been checked
-# against the live site; the landing URL of the others follows the same pattern
-# and can be overridden with --landing-url.
+# county code -> county name. Landing pages and layouts live in DEFAULT_CONFIG.
 COUNTIES = {
-    "01": ("stockholm", "Stockholms län"),
-    "03": ("uppsala", "Uppsala län"),
-    "04": ("sodermanland", "Södermanlands län"),
-    "05": ("ostergotland", "Östergötlands län"),
-    "06": ("jonkoping", "Jönköpings län"),
-    "07": ("kronoberg", "Kronobergs län"),
-    "08": ("kalmar", "Kalmar län"),
-    "09": ("gotland", "Gotlands län"),
-    "10": ("blekinge", "Blekinge län"),
-    "12": ("skane", "Skåne län"),
-    "13": ("halland", "Hallands län"),
-    "14": ("vastra-gotaland", "Västra Götalands län"),
-    "17": ("varmland", "Värmlands län"),
-    "18": ("orebro", "Örebro län"),
-    "19": ("vastmanland", "Västmanlands län"),
-    "20": ("dalarna", "Dalarnas län"),
-    "21": ("gavleborg", "Gävleborgs län"),
-    "22": ("vasternorrland", "Västernorrlands län"),
-    "23": ("jamtland", "Jämtlands län"),
-    "24": ("vasterbotten", "Västerbottens län"),
-    "25": ("norrbotten", "Norrbottens län"),
+    "01": "Stockholms län",
+    "03": "Uppsala län",
+    "04": "Södermanlands län",
+    "05": "Östergötlands län",
+    "06": "Jönköpings län",
+    "07": "Kronobergs län",
+    "08": "Kalmar län",
+    "09": "Gotlands län",
+    "10": "Blekinge län",
+    "12": "Skåne län",
+    "13": "Hallands län",
+    "14": "Västra Götalands län",
+    "17": "Värmlands län",
+    "18": "Örebro län",
+    "19": "Västmanlands län",
+    "20": "Dalarnas län",
+    "21": "Gävleborgs län",
+    "22": "Västernorrlands län",
+    "23": "Jämtlands län",
+    "24": "Västerbottens län",
+    "25": "Norrbottens län",
 }
+LAYOUTS = ("pages", "files")
+
+# File names and link texts of the `files` layout: "04FS 2026-1 …", "22 FS 2026-1 …",
+# "18FS2025 1 …", "FS 2026-01 …" (Skåne prints no county code). Counties that print
+# the number differently configure their own `number_patterns`.
+DEFAULT_NUMBER_PATTERNS = (
+    r"(?<![0-9])(?:(?P<code>[0-9]{2})\s*)?FS\s*(?P<year>(?:19|20)[0-9]{2})\s*[-:_. ]\s*0*(?P<n>[0-9]{1,3})(?![0-9])",
+)
 
 MONTHS = {
     name: i + 1
@@ -88,6 +102,16 @@ _PARAGRAPH = re.compile(r"<p\b[^>]*>.*?</p>", re.S | re.I)
 _PDF_LINK = re.compile(r'<a\b[^>]*href="([^"]+\.pdf)"[^>]*>(.*?)</a>', re.S | re.I)
 _ASSISTIVE = re.compile(r'<span class="env-assistive-text">.*?</span>|<svg\b.*?</svg>', re.S | re.I)
 _TAG = re.compile(r"<[^>]+>")
+_PAGE_ID = re.compile(r"pageId:\s*'(4\.[0-9a-f]+)'")
+_APP_STATE = re.compile(r"registerInitialState\('(12\.[0-9a-f]+)',(\{.*?\})\);</script>", re.S)
+_SCRIPT = re.compile(r"<script\b.*?</script>", re.S | re.I)
+_DOWNLOAD_LINK = re.compile(r'<a\b[^>]*href="(/download/[^"]+\.pdf)"[^>]*>(.*?)</a>', re.S | re.I)
+# A paragraph right after the link's own paragraph describes it (Dalarna: title and decision date).
+_LINK_NOTE = re.compile(r'\s*</p>\s*<p class="normal">(.*?)</p>', re.S)
+_NOTE_DECIDED = re.compile(r"\s*Beslut(?:at|ad|ade)\b.*$", re.S | re.I)
+_YEAR_FOLDER = re.compile(r"\s*((?:19|20)\d{2})\s*")
+_ANY_YEAR = re.compile(r"(?<![0-9])((?:19|20)\d{2})(?![0-9])")
+_REPEALED_MARK = re.compile(r"^\s*UPPHÄVD\b[\s:_-]*", re.I)
 _SPACE = re.compile(r"\s+")
 _SV_DATE = re.compile(r"(\d{1,2}) (" + "|".join(MONTHS) + r") (\d{4})", re.I)
 _PUBLISHED = re.compile(r"Utkom från trycket\s+(?:den\s+)?" + _SV_DATE.pattern, re.I)
@@ -105,6 +129,9 @@ class ListingItem:
     url: str
     published: "str | None" = None
     title: "str | None" = None
+    files: "list[tuple[str, str]] | None" = None  # `files` layout: (PDF url, link text)
+    marked_repealed: bool = False
+    decided: "str | None" = None
 
 
 @dataclass
@@ -126,6 +153,7 @@ class RunSummary:
     failed: "list[str]" = field(default_factory=list)
     blocked: bool = False
     written_numbers: "list[str]" = field(default_factory=list)
+    unnumbered: "list[str]" = field(default_factory=list)
 
 
 # --- text helpers ----------------------------------------------------------
@@ -174,7 +202,7 @@ def number_key(number):
 
 
 def issuer(region_code):
-    return "Länsstyrelsen i " + COUNTIES[region_code][1]
+    return "Länsstyrelsen i " + COUNTIES[region_code]
 
 
 # --- parsing ---------------------------------------------------------------
@@ -266,6 +294,164 @@ def parse_detail(page, page_url, region_code):
     )
 
 
+# --- configuration ---------------------------------------------------------
+
+
+class ConfigError(Exception):
+    """The county configuration is missing or malformed."""
+
+
+def load_config(path):
+    """{code: {"landing", "layout", "number_patterns", "title_strip"}} from the JSON config."""
+    try:
+        loaded = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError) as error:
+        raise ConfigError(f"county config unreadable: {path}: {error}") from None
+    counties = loaded.get("counties") if isinstance(loaded, dict) else None
+    if not isinstance(counties, dict):
+        raise ConfigError(f"county config has no counties: {path}")
+    config = {}
+    for code, entry in counties.items():
+        if code not in COUNTIES or not isinstance(entry, dict):
+            raise ConfigError(f"county config: bad entry {code!r}")
+        landing, layout = entry.get("landing"), entry.get("layout")
+        if not isinstance(landing, str) or not _on_site(landing):
+            raise ConfigError(f"county config: {code} landing must be on {HOST}")
+        if layout not in LAYOUTS:
+            raise ConfigError(f"county config: {code} layout must be one of {', '.join(LAYOUTS)}")
+        try:
+            patterns = [re.compile(p) for p in entry.get("number_patterns", DEFAULT_NUMBER_PATTERNS)]
+            strip = [re.compile(p) for p in entry.get("title_strip", ())]
+        except (re.error, TypeError) as error:
+            raise ConfigError(f"county config: {code} pattern: {error}") from None
+        for pattern in patterns:
+            if not {"year", "n"} <= set(pattern.groupindex):
+                raise ConfigError(f"county config: {code} number pattern needs groups year and n")
+        config[code] = {"landing": landing, "layout": layout, "number_patterns": patterns, "title_strip": strip}
+    return config
+
+
+# --- `files` layout --------------------------------------------------------
+
+
+def main_content(page):
+    """The page's <main> element without scripts (the whole page when there is none)."""
+    start = page.find("<main")
+    end = page.find("</main>", start)
+    body = page[start:end] if start >= 0 and end > start else page
+    return _SCRIPT.sub("", body)
+
+
+def parse_files_landing(page, page_url):
+    """PDF links and year folders of a `files` landing page.
+
+    Returns (links, folders): links as [(url, text, note)] from the file-share modules
+    and the plain /download/ links of the main content, where note is the paragraph
+    describing a plain link (or None); folders as {year: [url]}, the module's JSON
+    endpoint listing that folder.
+    """
+    links, folders = [], {}
+    page_id = _PAGE_ID.search(page)
+    for portlet_id, raw in _APP_STATE.findall(page):
+        try:
+            state = json.loads(raw)
+        except ValueError:
+            continue
+        files = state.get("files") if isinstance(state, dict) else None
+        if not isinstance(files, list):
+            continue
+        for entry in files:
+            if not isinstance(entry, dict) or not isinstance(entry.get("name"), str):
+                continue
+            if entry.get("isFolder"):
+                year = _YEAR_FOLDER.fullmatch(entry["name"])
+                if year and page_id and isinstance(entry.get("id"), str):
+                    url = (f"{BASE}/appresource/{page_id.group(1)}/{portlet_id}/files?"
+                           + urllib.parse.urlencode({"folderId": entry["id"]}))
+                    folders.setdefault(int(year.group(1)), []).append(url)
+            elif isinstance(entry.get("uri"), str):
+                links.append((urllib.parse.urljoin(page_url, entry["uri"]), entry["name"], None))
+    main = main_content(page)
+    for match in _DOWNLOAD_LINK.finditer(main):
+        note = _LINK_NOTE.match(main, match.end())
+        note = _text(note.group(1)) if note and "/download/" not in note.group(1) else None
+        url = urllib.parse.urljoin(page_url, html.unescape(match.group(1)))
+        links.append((url, _text(_ASSISTIVE.sub("", match.group(2))), note or None))
+    return [link for link in links if _on_site(link[0]) and link[0].lower().endswith(".pdf")], folders
+
+
+def parse_folder(raw, page_url):
+    """PDF links of one file-share folder (the module's JSON listing)."""
+    state = json.loads(raw)
+    files = state.get("files") if isinstance(state, dict) else None
+    if not isinstance(files, list):
+        raise ValueError("folder listing has no files")
+    links = []
+    for entry in files:
+        if (isinstance(entry, dict) and not entry.get("isFolder")
+                and isinstance(entry.get("name"), str) and isinstance(entry.get("uri"), str)):
+            url = urllib.parse.urljoin(page_url, entry["uri"])
+            if _on_site(url) and url.lower().endswith(".pdf"):
+                links.append((url, entry["name"], None))
+    return links
+
+
+def _file_name(url):
+    return urllib.parse.unquote(urllib.parse.urlsplit(url).path.rsplit("/", 1)[-1])
+
+
+def file_number(text, url, region_code, patterns):
+    """(number, matched text, source) for a link, trying its text and then the file name."""
+    for source in (text, _file_name(url)):
+        source = source.replace("\xa0", " ")
+        for pattern in patterns:
+            for match in pattern.finditer(source):
+                code = match.groupdict().get("code")
+                if code and code != region_code:
+                    continue
+                number = f"{region_code}FS {match.group('year')}:{int(match.group('n'))}"
+                return number, match, source
+    return None
+
+
+def file_title(text, match, source, strip):
+    """The link text without the number, the .pdf suffix and the repeal mark."""
+    title = text
+    if match is not None and source == text:
+        title = text[:match.start()] + " " + text[match.end():]
+    title = re.sub(r"\.pdf\s*$", "", title, flags=re.I)
+    title = _REPEALED_MARK.sub("", title).replace("_", " ")
+    for pattern in strip:
+        title = pattern.sub(" ", title)
+    return _SPACE.sub(" ", title).strip(" -–:;,.")
+
+
+def group_files(links, region_code, config, landing):
+    """ListingItems (one per number, all its PDFs) and the (url, text) links without a number."""
+    items, unnumbered, seen = {}, [], set()
+    for url, text, note in links:
+        if url in seen:
+            continue
+        seen.add(url)
+        found = file_number(text, url, region_code, config["number_patterns"])
+        if found is None:
+            unnumbered.append((url, text or _file_name(url)))
+            continue
+        number, match, source = found
+        item = items.setdefault(number, ListingItem(number, landing, files=[]))
+        item.files.append((url, text or _file_name(url)))
+        title = file_title(text, match, source, config["title_strip"])
+        if not title and note:
+            title = _NOTE_DECIDED.sub("", note).strip()
+        if not item.title and title:
+            item.title = title
+        if note and not item.decided:
+            item.decided = _find_date(_DECIDED, note)
+        if _REPEALED_MARK.match(text) or _REPEALED_MARK.match(_file_name(url)):
+            item.marked_repealed = True
+    return list(items.values()), unnumbered
+
+
 # --- mapping ---------------------------------------------------------------
 
 
@@ -274,8 +460,18 @@ def _in_force(text):
     return found.pop() if len(found) == 1 else None
 
 
+def _pdf_title(detail):
+    """The first own PDF's label without its leading number (Gävleborg's pages have no ingress)."""
+    for _url, label in detail.pdfs:
+        match = _NUMBER.match(label)
+        title = label[match.end():].strip(" -–:;,.") if match else ""
+        if title:
+            return title
+    return None
+
+
 def build_meta(detail, item, region_code, fetched_at):
-    title = (detail.title or item.title or detail.number).rstrip(". ")
+    title = (detail.title or item.title or _pdf_title(detail) or detail.number).rstrip(". ")
     return {
         "id": corpus_id(detail.number),
         "title": title,
@@ -326,6 +522,55 @@ def to_markdown(meta, detail):
             + "\n".join(f"- [{label}]({url})" for url, label in detail.pdfs)
         )
     return "\n\n".join(b for b in blocks if b) + "\n"
+
+
+def build_file_meta(item, region_code, source, source_sha256, fetched_at):
+    """Frontmatter of a `files` layout regulation: only what the link gives."""
+    return {
+        "id": corpus_id(item.number),
+        "title": (item.title or item.number).rstrip(". "),
+        "type": TYPE,
+        "layer": TYPES[TYPE],
+        "number": item.number,
+        "issued": item.decided,
+        "in_force": None,
+        "repealed": None,
+        "amended_by": [],
+        "amended_through": None,
+        "reprinted_by": [],
+        "ministry": None,
+        "eli": None,
+        "language": "sv",
+        "authoritative": False,
+        "source": source,
+        "source_sha256": source_sha256,
+        "fetched_at": fetched_at,
+        "issuer": issuer(region_code),
+        "court": None,
+        "ecli": None,
+        "celex": None,
+        "region_code": region_code,
+        "municipality_code": None,
+    }
+
+
+def file_markdown(meta, item):
+    facts = [
+        ("Författningssamling", meta["number"]),
+        ("Beslutad", item.decided),
+        ("Utfärdare", meta["issuer"]),
+        ("Förteckning", item.url),
+    ]
+    blocks = ["# " + meta["title"], "  \n".join(f"{k}: {v}" for k, v in facts if v)]
+    if item.marked_repealed:
+        blocks.append("Länsstyrelsen markerar författningen som upphävd.")
+    blocks.append("Författningen publiceras bara som pdf.")
+    blocks.append("## Tryckt version")
+    blocks.append(
+        "Den tryckta författningen i länets författningssamling (pdf):\n\n"
+        + "\n".join(f"- [{label}]({url})" for url, label in item.files)
+    )
+    return "\n\n".join(blocks) + "\n"
 
 
 # --- manifest --------------------------------------------------------------
@@ -387,16 +632,21 @@ def _get_page(client, robots, url, what):
         raise ListingError(f"{what}: {error}") from error
 
 
-def _candidates(client, robots, args):
-    landing = args.landing_url or LANDING_URL.format(slug=COUNTIES[args.county][0])
+def _in_range(year, args):
+    return (args.from_year is None or year >= args.from_year) and (
+        args.to_year is None or year <= args.to_year
+    )
+
+
+def _candidates(client, robots, args, config, unnumbered):
+    landing = args.landing_url or config["landing"]
+    if config["layout"] == "files":
+        yield from _file_candidates(client, robots, args, config, landing, unnumbered)
+        return
     years = parse_landing(_get_page(client, robots, landing, "landing page"), landing)
     if not years:
         raise ListingError(f"no year index linked from {landing}")
-    wanted = sorted(
-        (y for y in years if (args.from_year is None or y >= args.from_year)
-         and (args.to_year is None or y <= args.to_year)),
-        reverse=args.newest_first,
-    )
+    wanted = sorted((y for y in years if _in_range(y, args)), reverse=args.newest_first)
     for year in wanted:
         page = _get_page(client, robots, years[year], f"year {year} index")
         try:
@@ -407,9 +657,35 @@ def _candidates(client, robots, args):
         yield from items
 
 
-def _hash_pdfs(client, robots, detail, download):
+def _file_candidates(client, robots, args, config, landing, unnumbered):
+    links, folders = parse_files_landing(_get_page(client, robots, landing, "landing page"), landing)
+    in_folders = set()
+    for year in sorted(y for y in folders if _in_range(y, args)):
+        for url in folders[year]:
+            raw = _get_page(client, robots, url, f"year {year} folder")
+            try:
+                found = parse_folder(raw, url)
+            except ValueError as error:
+                raise ListingError(f"year {year} folder: {error}") from error
+            links.extend(found)
+            in_folders.update(u for u, _, _ in found)
+    if not links:
+        raise ListingError(f"no PDF linked from {landing}")
+    items, loose = group_files(links, args.county, config, landing)
+    # Unnumbered links are reported when they sit in a requested year's folder or name
+    # a year in the requested range.
+    unnumbered.extend(
+        t for u, t in loose
+        if u in in_folders or any(_in_range(int(y), args) for y in _ANY_YEAR.findall(t))
+    )
+    items = [i for i in items if _in_range(number_key(i.number)[1], args)]
+    items.sort(key=lambda i: number_key(i.number), reverse=args.newest_first)
+    yield from items
+
+
+def _hash_pdfs(client, robots, pdfs, download):
     files = []
-    for url, _label in detail.pdfs:
+    for url, _label in pdfs:
         entry = {"url": url, "bytes": None, "sha256": None, "content_type": None, "retrieved_at": None}
         if download and _on_site(url) and robots.allows(url):
             body, content_type = client.fetch(url)
@@ -436,6 +712,8 @@ def _unchanged(meta, body, corpus):
 
 def _store(client, robots, item, args, manifest):
     """Fetch, map and write one regulation; returns (meta, written)."""
+    if item.files is not None:
+        return _store_files(client, robots, item, args, manifest)
     if not _on_site(item.url):
         raise ValueError(f"detail page is not on {HOST}: {item.url}")
     if not robots.allows(item.url):
@@ -461,12 +739,45 @@ def _store(client, robots, item, args, manifest):
             "number": meta["number"],
             "detail_url": item.url,
             "published": detail.published or item.published,
-            "files": _hash_pdfs(client, robots, detail, args.pdf),
+            "files": _hash_pdfs(client, robots, detail.pdfs, args.pdf),
         }
-    if _unchanged(meta, body, args.corpus):
+    return _write_if_changed(meta, body, args.corpus)
+
+
+def _write_if_changed(meta, body, corpus):
+    if _unchanged(meta, body, corpus):
         return meta, False
-    write(meta, body, args.corpus)
+    write(meta, body, corpus)
     return meta, True
+
+
+def _store_files(client, robots, item, args, manifest):
+    """Hash the PDFs of one `files` layout regulation, then map and write it."""
+    urls = [u for u, _ in item.files]
+    stored = manifest.get(item.number)
+    stored_urls = [f["url"] for f in (stored or {}).get("files", [])]
+    if stored is None or stored_urls != urls or (
+        args.pdf and any(f.get("sha256") is None for f in stored["files"])
+    ):
+        stored = manifest[item.number] = {
+            "number": item.number,
+            "detail_url": item.url,
+            "published": None,
+            "files": _hash_pdfs(client, robots, item.files, args.pdf),
+        }
+    first = stored["files"][0]
+    sha = first.get("sha256") or hashlib.sha256(
+        "\n".join(f"{u}\t{t}" for u, t in item.files).encode("utf-8")
+    ).hexdigest()
+    fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    meta = build_file_meta(item, args.county, first["url"], sha, fetched_at)
+    other = existing_path(meta["id"], args.corpus)
+    if other is not None and other != path_for(meta, args.corpus):
+        raise ValueError(f"{meta['number']} is already stored as {other}")
+    body = file_markdown(meta, item)
+    if personal_numbers(body):
+        raise ValueError("possible personal identity number in the title")
+    return _write_if_changed(meta, body, args.corpus)
 
 
 def _already_done(state, item, corpus):
@@ -481,6 +792,7 @@ def _write_report(path, summary):
         "unchanged": summary.unchanged,
         "skipped": summary.skipped,
         "failed": summary.failed,
+        "unnumbered": summary.unnumbered,
         "blocked": summary.blocked,
     }
     path = Path(path)
@@ -542,6 +854,9 @@ def parse_args(argv):
         help="record PDF links without downloading them to hash",
     )
     parser.add_argument("--landing-url", help="override the county's landing page URL")
+    parser.add_argument(
+        "--config", default=DEFAULT_CONFIG, help="county landing pages and layouts (JSON)",
+    )
     parser.add_argument("--rate", type=_rate, default=1.0, metavar="SECONDS")
     parser.add_argument("--state", default=DEFAULT_STATE)
     parser.add_argument("--manifest", default=DEFAULT_MANIFEST)
@@ -554,6 +869,9 @@ def parse_args(argv):
 
 def run(client, args):
     summary = RunSummary()
+    config = load_config(args.config).get(args.county)
+    if config is None:
+        raise ConfigError(f"county {args.county} is not in {args.config}")
     state = _load_state(args.state)
     state["blocked"] = None
     manifest = load_manifest(args.manifest)
@@ -570,7 +888,7 @@ def run(client, args):
 
     try:
         robots = Robots(client)
-        for item in _candidates(client, robots, args):
+        for item in _candidates(client, robots, args, config, summary.unnumbered):
             if args.limit is not None and summary.written >= args.limit:
                 break
             if _already_done(state, item, args.corpus):
@@ -604,7 +922,7 @@ def main(argv, client=None):
         client = PoliteClient(USER_AGENT, min_interval=args.rate)
     try:
         summary = run(client, args)
-    except (ListingError, StateError) as error:
+    except (ListingError, StateError, ConfigError) as error:
         print(f"error: {error}", file=sys.stderr, flush=True)
         return 1
     print(
@@ -615,6 +933,8 @@ def main(argv, client=None):
     )
     if summary.failed:
         print("failed: " + ", ".join(summary.failed), flush=True)
+    if summary.unnumbered:
+        print(f"unnumbered (not collected): {len(summary.unnumbered)}", flush=True)
     if summary.blocked:
         print("blocked: see state file", file=sys.stderr)
         return 2

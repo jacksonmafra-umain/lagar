@@ -11,7 +11,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | Agency regulations | 15 | unknown | unknown | - |
 | case_law | Case law | 16390 | 16640 | counted | 98.5% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
-| region | Regional regulations | 10 | unknown | unknown | - |
+| region | Regional regulations | 630 | 630 | counted | 100.0% |
 | municipality | Municipal regulations | 15 | unknown | unknown | - |
 | service | Public services | 0 | unknown | unknown | - |
 
@@ -24,10 +24,11 @@ Targets:
 - SFS (statutes and ordinances): counted, https://data.riksdagen.se/dokumentlista/?doktyp=sfs, as of 2026-10-27
 - Case law: counted, https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar?publiceringsformer=referat,notis, as of 2026-10-29
 - EU law (curated list): curated, collector/data/eu-acts.json, as of 2026-10-29
+- Regional regulations: counted, https://www.lansstyrelsen.se (numbered regulations on the 21 county landing pages in collector/data/counties.json, 2025–2026), as of 2026-10-29
 
 ## Integrity
 
-Audit of 27928 documents (2026-10-29T02:56:56Z):
+Audit of 28548 documents (2026-10-29T03:31:47Z):
 
 - schema errors: 0
 - duplicate ids: 0
