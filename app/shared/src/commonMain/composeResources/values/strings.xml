@@ -13,6 +13,8 @@
     <string name="drawer_about">About</string>
     <string name="drawer_data_built">Data built %1$s</string>
     <string name="drawer_credits">Swedish legislation, case law and public services in one place.</string>
+    <string name="drawer_section_scope">Switch scope</string>
+    <string name="drawer_section_navigate">Navigate</string>
     <string name="settings_title">Settings</string>
     <string name="navigate_back">Back</string>
     <string name="repealed">Repealed</string>
@@ -96,6 +98,7 @@
     <string name="scope_region">Regional</string>
     <string name="scope_kommun">Municipal</string>
     <string name="scope_national_desc">Fundamental laws, acts, ordinances and agency regulations</string>
+    <string name="scope_national_short">All of Sweden</string>
     <string name="scope_region_desc">Regional regulations in Sweden’s 21 regions</string>
     <string name="scope_kommun_desc">Local regulations in Sweden’s 290 municipalities</string>
     <string name="scope_step_title">Choose your starting scope</string>

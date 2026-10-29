@@ -13,6 +13,8 @@
     <string name="drawer_about">Om appen</string>
     <string name="drawer_data_built">Data byggd %1$s</string>
     <string name="drawer_credits">Svensk lagstiftning, rättspraxis och offentliga tjänster på ett ställe.</string>
+    <string name="drawer_section_scope">Byt omfattning</string>
+    <string name="drawer_section_navigate">Navigering</string>
     <string name="settings_title">Inställningar</string>
     <string name="navigate_back">Tillbaka</string>
     <string name="repealed">Upphävd</string>
@@ -96,6 +98,7 @@
     <string name="scope_region">Region</string>
     <string name="scope_kommun">Kommun</string>
     <string name="scope_national_desc">Grundlagar, lagar, förordningar och myndighetsföreskrifter</string>
+    <string name="scope_national_short">Hela Sverige</string>
     <string name="scope_region_desc">Regionala föreskrifter i Sveriges 21 regioner</string>
     <string name="scope_kommun_desc">Lokala föreskrifter i Sveriges 290 kommuner</string>
     <string name="scope_step_title">Välj ditt startområde</string>
