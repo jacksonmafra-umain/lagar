@@ -180,6 +180,7 @@ Route: `Search(text, types, from, to, mode, status, inForceFrom, inForceTo, vaca
 | Full-text mode (body text) with a "Found in the text" note on body-only matches | Done | #37 |
 | Snippets of the matching text | Not planned: needs each result's document (`docs/<id>.json`), too costly per result; the note above says where it matched | #37 |
 | Region and Kommun scopes: only the chosen län's or kommun's documents, by the `region_code` and `municipality_code` columns of `docs.json` (or listing items on the catalog path); a prompt to choose a locality when it is unset | Done | #99 |
+| Searched scope as a chip beside the result count ("Region: Skåne län", ellipsized; opens the scope sheet); a Region or Kommun search without results says it covered only the län or kommun and offers "Sök i Nationell" | Done | #126 |
 | Desktop: results in two equal-height columns within the 1280dp content width; the list stays full width so the whole window scrolls | Done | #35 |
 
 ### Advanced search
