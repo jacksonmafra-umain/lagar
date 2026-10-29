@@ -71,6 +71,34 @@ class HttpRepositoryTest {
     }
 
     @Test
+    fun ministryIndexAndListingPaths() = runTest {
+        val urls = mutableListOf<String>()
+        val repository = repo(
+            MockEngine { request ->
+                urls += request.url.toString()
+                val body = if (request.url.encodedPath.endsWith("by-ministry/index.json")) {
+                    ApiExamples.ordinanceMinistries
+                } else {
+                    ApiExamples.ordinanceMinistryListing
+                }
+                respond(body, headers = jsonHeaders)
+            },
+        )
+        val index = repository.ministries("sfs", "ordinance")
+        assertEquals(listOf(ApiMinistry("justitiedepartementet", "Justitiedepartementet", 1)), index.ministries)
+        assertEquals(2 to 1, index.total to index.unassigned)
+        val page = repository.ministryListing("sfs", "ordinance", "justitiedepartementet", 1)
+        assertEquals(listOf("sfs-1999-175"), page.items.map { it.id })
+        assertEquals(
+            listOf(
+                "https://example.test/api/v1/sfs/ordinance/by-ministry/index.json",
+                "https://example.test/api/v1/sfs/ordinance/by-ministry/justitiedepartementet/index-1.json",
+            ),
+            urls,
+        )
+    }
+
+    @Test
     fun notFoundSurfacesAsException() = runTest {
         val repository = repo(MockEngine { respondError(HttpStatusCode.NotFound) })
         assertFailsWith<Exception> { repository.document("sfs-0000-0") }

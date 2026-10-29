@@ -43,14 +43,22 @@ import org.koin.compose.viewmodel.koinViewModel
 
 private enum class HierarkiView { Layers, Pyramid }
 
-/** Hierarki tab. [onOpenLayer] is called only for layers that have documents. */
+/**
+ * Hierarki tab. [onOpenLayer] is called only for layers that have documents; [onBrowseByMinistry] only for
+ * levels with a per-ministry index ([DisplayLayer.hasMinistryIndex]).
+ */
 @Composable
-fun HierarkiRoute(onOpenLayer: (DisplayLayer) -> Unit, viewModel: HierarkiViewModel = koinViewModel()) {
+fun HierarkiRoute(
+    onOpenLayer: (DisplayLayer) -> Unit,
+    onBrowseByMinistry: (DisplayLayer) -> Unit,
+    viewModel: HierarkiViewModel = koinViewModel(),
+) {
     val state by viewModel.state.collectAsState()
     var comingSoon by remember { mutableStateOf<DisplayLayer?>(null) }
     HierarkiScreen(
         state = state,
         onLayerClick = { if (it.count > 0) onOpenLayer(it.layer) else comingSoon = it.layer },
+        onBrowseByMinistry = { onBrowseByMinistry(it.layer) },
     )
     comingSoon?.let { ComingSoonSheet(it) { comingSoon = null } }
 }
@@ -58,7 +66,11 @@ fun HierarkiRoute(onOpenLayer: (DisplayLayer) -> Unit, viewModel: HierarkiViewMo
 /** A "Lager" / "Pyramid" segmented switch above either the layer list or the norm pyramid. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun HierarkiScreen(state: LoadState<List<LayerSummary>>, onLayerClick: (LayerSummary) -> Unit) {
+fun HierarkiScreen(
+    state: LoadState<List<LayerSummary>>,
+    onLayerClick: (LayerSummary) -> Unit,
+    onBrowseByMinistry: (LayerSummary) -> Unit = {},
+) {
     val spacing = LagarTheme.spacing
     var view by rememberSaveable { mutableStateOf(HierarkiView.Layers) }
     LoadStateHost(state) { summaries, shell ->
@@ -85,7 +97,7 @@ fun HierarkiScreen(state: LoadState<List<LayerSummary>>, onLayerClick: (LayerSum
                 bottom = shell.calculateBottomPadding() + spacing.md,
             )
             when (view) {
-                HierarkiView.Layers -> LayerOverview(summaries, content, onLayerClick)
+                HierarkiView.Layers -> LayerOverview(summaries, content, onLayerClick, onBrowseByMinistry)
                 HierarkiView.Pyramid -> PyramidView(summaries, content, onLayerClick)
             }
         }
@@ -110,7 +122,12 @@ private fun PyramidView(summaries: List<LayerSummary>, padding: PaddingValues, o
 }
 
 @Composable
-private fun LayerOverview(summaries: List<LayerSummary>, padding: PaddingValues, onLayerClick: (LayerSummary) -> Unit) {
+private fun LayerOverview(
+    summaries: List<LayerSummary>,
+    padding: PaddingValues,
+    onLayerClick: (LayerSummary) -> Unit,
+    onBrowseByMinistry: (LayerSummary) -> Unit,
+) {
     val spacing = LagarTheme.spacing
     val total = summaries.sumOf { it.count }
     LazyColumn(
@@ -126,7 +143,13 @@ private fun LayerOverview(summaries: List<LayerSummary>, padding: PaddingValues,
         }
         item { LayerDistributionChart(summaries) }
         item { SectionHeader(title = stringResource(Res.string.explore_layers_title), modifier = Modifier.padding(top = spacing.md)) }
-        items(summaries, key = { it.layer.name }) { LayerRow(it, onClick = { onLayerClick(it) }) }
+        items(summaries, key = { it.layer.name }) { summary ->
+            LayerRow(
+                summary,
+                onClick = { onLayerClick(summary) },
+                onBrowseByMinistry = if (summary.layer.hasMinistryIndex) ({ onBrowseByMinistry(summary) }) else null,
+            )
+        }
     }
 }
 

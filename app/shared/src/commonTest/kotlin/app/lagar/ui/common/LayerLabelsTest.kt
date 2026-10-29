@@ -1,7 +1,10 @@
 package app.lagar.ui.common
 
+import app.lagar.domain.DisplayLayer
 import app.lagar.domain.DisplayLayerTest
 import app.lagar.resources.Res
+import app.lagar.resources.layer_fundamental_examples
+import app.lagar.resources.layer_sfs_act_authority
 import app.lagar.resources.type_case_report
 import app.lagar.resources.type_eu_directive
 import app.lagar.resources.type_municipal_regulation
@@ -25,6 +28,16 @@ class LayerLabelsTest {
         assertEquals(Res.string.type_case_report, typeNameRes("case_report"))
         assertEquals(Res.string.type_eu_directive, typeNameRes("eu_directive"))
         assertEquals(Res.string.type_municipal_regulation, typeNameRes("municipal_regulation"))
+    }
+
+    @Test
+    fun everyLevelHasItsOwnAuthorityAndExamples() {
+        val authorities = DisplayLayer.entries.map { it.authorityRes() }
+        val examples = DisplayLayer.entries.map { it.examplesRes() }
+        assertEquals(DisplayLayer.entries.size, authorities.toSet().size)
+        assertEquals(DisplayLayer.entries.size, examples.toSet().size)
+        assertEquals(Res.string.layer_sfs_act_authority, DisplayLayer.SfsAct.authorityRes())
+        assertEquals(Res.string.layer_fundamental_examples, DisplayLayer.Fundamental.examplesRes())
     }
 
     @Test

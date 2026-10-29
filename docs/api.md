@@ -158,6 +158,47 @@ The other layers' numbers are also compared by (year, ordinal), descending:
   digits that follow it (`SKFS 2024:12` is (2024, 12)); a number without a
   year sorts as (0, 0), after the others; ties by the full number.
 
+## By ministry: `GET <layer>/<type>/by-ministry/index.json` and `GET <layer>/<type>/by-ministry/<ministry>/index-<page>.json`
+
+Added within v1 (additive: no existing file changes). For each type of the
+`sfs` layer listed in `series`, the documents grouped by issuing ministry, so
+a client can browse by ministry without reading every listing page. Other
+layers have no per-issuer index yet. Examples:
+`docs/api/examples/sfs/ordinance/by-ministry/`.
+
+Grouping: the item's `ministry` with surrounding and repeated whitespace
+removed and, when it names a ministry (`…departementet`), without the unit
+code that follows (`Justitiedepartementet L2` and `Justitiedepartementet DOM`
+are both `Justitiedepartementet`). Other bodies (`Riksbanken`,
+`Statistiska centralbyrån`) are kept as written. Items with `ministry: null`
+are left out and counted in `unassigned`.
+
+Ministry id: the name lowercased, `å`/`ä`/`æ` → `a`, `ö`/`ø` → `o`, `é`/`è` → `e`, `ü` → `u`, and
+every run of other characters than `a-z0-9` as one `-`, trimmed
+(`Klimat- och näringslivsdepartementet` → `klimat-och-naringslivsdepartementet`).
+Two names with the same id fail the build.
+
+### `<layer>/<type>/by-ministry/index.json`
+
+| field | type | null | notes |
+| --- | --- | --- | --- |
+| `layer` | string | no | layer id |
+| `type` | string | no | type id |
+| `total` | integer | no | documents of the type, with or without a ministry |
+| `unassigned` | integer | no | documents with `ministry: null` |
+| `ministries` | array of ministry | no | `count` descending, then `name`; `[]` when no document has a ministry |
+
+Ministry object: `id` (string, the ministry id), `name` (string, the grouped
+name) and `count` (integer, documents in the group). None are null.
+
+### `<layer>/<type>/by-ministry/<ministry>/index-<page>.json`
+
+A paged listing like `<layer>/<type>/index-<page>.json` (same item object,
+sort order and page size), with two keys after `type`: `ministry_id` (the
+ministry id) and `ministry` (the grouped name). Items keep their own
+`ministry` value as written, unit code included. A listing exists only for the
+ids in the index.
+
 ## `GET docs/<id>.json`
 
 | field | type | null | notes |
