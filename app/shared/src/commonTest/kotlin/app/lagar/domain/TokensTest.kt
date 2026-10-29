@@ -47,4 +47,13 @@ class TokensTest {
         val s = "lag (2010:800), x"
         assertEquals(listOf("lag", "2010:800", "x"), tokenRanges(s).map { s.substring(it) })
     }
+
+    @Test
+    fun aDefiniteEndingAlsoMatchesItsBase() {
+        assertEquals(listOf(QueryTerm("miljobalken", prefix = true, base = "miljobalk")), queryTerms("Miljöbalken"))
+        assertEquals(listOf(QueryTerm("lagen", base = "lag"), QueryTerm("2010:800")), queryTerms("lagen 2010:800 "))
+        assertEquals(null, definiteBase("ten"))
+        assertEquals(null, definiteBase("2010en"))
+        assertEquals("avtal", definiteBase("avtalet"))
+    }
 }

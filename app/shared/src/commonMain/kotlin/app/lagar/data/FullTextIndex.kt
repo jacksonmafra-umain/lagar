@@ -165,14 +165,17 @@ internal fun decodePostings(flat: List<Int>, base: Int? = null): List<Pair<Int, 
     return out
 }
 
-/** Document -> field bits (within [mask], never 0) for one query term in its [shard]; [base] as in [decodePostings]. */
+/**
+ * Document -> field bits (within [mask], never 0) for one query term in its [shard], including the term's
+ * [QueryTerm.base] (same shard, since it keeps the first two characters); [base] as in [decodePostings].
+ */
 internal fun termPostings(term: QueryTerm, shard: SearchShard, mask: Int, base: Int? = null): Map<Int, Int> {
     val out = HashMap<Int, Int>()
     val lists = if (term.prefix) {
         shard.terms.filterKeys { it.startsWith(term.text) }.values
     } else {
         listOfNotNull(shard.terms[term.text])
-    }
+    } + listOfNotNull(term.base?.let { shard.terms[it] })
     for (flat in lists) {
         for ((doc, bits) in decodePostings(flat, base)) {
             val masked = bits and mask

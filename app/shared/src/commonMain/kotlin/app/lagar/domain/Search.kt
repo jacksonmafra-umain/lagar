@@ -89,7 +89,8 @@ fun List<ListingItem>.search(q: SearchQuery, today: LocalDate? = null): List<Lis
 
 /**
  * Substring search over titles and numbers, for when the API has no search index. Every term must occur in a
- * field of [SearchQuery.mode]; the body is not available, so [SearchMode.FullText] searches titles and numbers.
+ * field of [SearchQuery.mode] (in a title, a term with a definite ending may occur without it, see
+ * [definiteBase]); the body is not available, so [SearchMode.FullText] searches titles and numbers.
  */
 fun List<ListingItem>.searchHits(q: SearchQuery, today: LocalDate? = null): List<SearchHit> {
     if (!q.isValidRange || !q.isActive) return emptyList()
@@ -103,7 +104,9 @@ fun List<ListingItem>.searchHits(q: SearchQuery, today: LocalDate? = null): List
         var any = 0
         var all = mask
         for (term in terms) {
-            val bits = ((if (term in title) SearchField.TITLE else 0) or (if (term in number) SearchField.NUMBER else 0)) and mask
+            val base = definiteBase(term)
+            val inTitle = term in title || (base != null && base in title)
+            val bits = ((if (inTitle) SearchField.TITLE else 0) or (if (term in number) SearchField.NUMBER else 0)) and mask
             if (bits == 0) return@mapNotNull null
             any = any or bits
             all = all and bits
@@ -188,14 +191,17 @@ fun List<SearchHit>.sortedFor(order: SortOrder): List<SearchHit> = when (order) 
 
 /**
  * Character ranges of [title] to highlight for [text]: every word that equals a query word or starts with one,
- * accent-insensitive ("are" marks "Åre"). Words the query drops (stop words, single letters) mark nothing.
+ * accent-insensitive ("are" marks "Åre"), and the base of a word with a definite ending ("miljöbalken" marks
+ * "Miljöbalk"). Words the query drops (stop words, single letters) mark nothing.
  */
 fun highlightRanges(title: String, text: String): List<IntRange> {
-    val terms = queryTerms(text).map { it.text }
-    if (terms.isEmpty()) return emptyList()
+    val query = queryTerms(text)
+    if (query.isEmpty()) return emptyList()
+    val terms = query.map { it.text }
+    val bases = query.mapNotNull { it.base }
     val folded = normalizeAligned(title)
     return tokenRanges(folded).filter { range ->
         val word = folded.substring(range)
-        terms.any { word.startsWith(it) }
+        terms.any { word.startsWith(it) } || word in bases
     }
 }

@@ -169,4 +169,10 @@ class SearchTest {
         assertEquals(listOf("2026:1113"), highlightRanges(title, "2026:1113").map { title.substring(it) })
         assertEquals(emptyList(), highlightRanges(title, "om "))
     }
+
+    @Test
+    fun highlightsMarkTheBaseOfADefiniteQueryWord() {
+        val title = "Miljöbalk (1998:808)"
+        assertEquals(listOf("Miljöbalk"), highlightRanges(title, "miljöbalken").map { title.substring(it) })
+    }
 }
