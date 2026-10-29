@@ -169,6 +169,45 @@ class MetadataTest(unittest.TestCase):
         self.assertEqual(meta["amended_by"], ["32019R0001", "32020L0003", "32021R0002"])
         self.assertEqual(schema.validate(meta), [])
 
+    def test_in_force_is_the_acts_own_entry_into_force(self):
+        # Cellar's dates for the DSA and the AI Act: the one typed EV is the act's entry into
+        # force, those typed MA or MA/PART the dates from which it or provisions apply.
+        acts = {
+            "32022R2065": (["2022-02-17", "2022-11-16"],
+                           ["2022-02-17 MA", "2022-11-16 MA", "2022-11-16 EV"], "2022-11-16"),
+            "32024R1689": (["2027-08-02", "2024-08-01", "2025-02-02", "2026-08-02", "2025-08-02"],
+                           ["2027-08-02 MA", "2024-08-01 EV", "2025-02-02 MA", "2026-08-02 MA",
+                            "2025-08-02 MA"], "2024-08-01"),
+        }
+        for celex, (dates, typed, expected) in acts.items():
+            with self.subTest(celex=celex):
+                md = eu.parse_metadata(celex, bindings({
+                    "date_document": ["2022-10-19"],
+                    "entry_into_force": dates,
+                    "entry_into_force_type": typed,
+                }))
+                meta = eu.build_meta(md, "a" * 64, MANIFESTATION, "2026-10-29T00:00:00Z")
+                self.assertEqual(meta["in_force"], expected)
+
+    def test_application_dates_are_never_in_force(self):
+        # Rome II, (EG) nr 864/2007: Cellar has only its application dates.
+        md = eu.Metadata("32007R0864", {"entry_into_force": ["2008-07-11", "2009-01-11"],
+                                        "entry_into_force_type": ["2008-07-11 MA/PART", "2009-01-11 MA"]})
+        self.assertIsNone(eu.entry_into_force(md))
+
+    def test_in_force_without_annotations_is_the_earliest_date(self):
+        md = eu.Metadata(GDPR_CONS, {"entry_into_force": ["2026-07-27", "2016-05-04"]})
+        self.assertEqual(eu.entry_into_force(md), "2016-05-04")
+        md = eu.Metadata(GDPR, {"entry_into_force": ["2016-05-24", "2018-05-25"],
+                                "entry_into_force_type": ["2018-05-25 MA"]})
+        self.assertEqual(eu.entry_into_force(md), "2016-05-24")
+        self.assertIsNone(eu.entry_into_force(eu.Metadata(GDPR, {})))
+
+    def test_metadata_query_reads_the_type_of_entry_into_force(self):
+        query = urllib.parse.parse_qs(urllib.parse.urlsplit(eu.metadata_url(GDPR)).query)["query"][0]
+        self.assertIn("ann:type_of_date", query)
+        self.assertIn('BIND("entry_into_force_type" AS ?field)', query)
+
     def test_oj_text_has_no_amendment_applied(self):
         fields = gdpr_fields()
         fields["consolidates"] = ["32019R0001 2019-01-10"]
