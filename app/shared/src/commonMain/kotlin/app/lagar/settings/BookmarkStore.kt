@@ -4,14 +4,13 @@ import app.lagar.data.DocumentMeta
 import app.lagar.data.ListingItem
 import app.lagar.domain.DisplayLayer
 import com.russhwolf.settings.Settings
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.builtins.ListSerializer
-import kotlinx.serialization.json.Json
 
-/** A saved document. [issued] and [repealed] are null in bookmarks stored before they were kept. */
+/**
+ * A saved document, and the document snapshot kept with saved provisions and notes. [issued] and [repealed] are
+ * null in bookmarks stored before they were kept.
+ */
 @Serializable
 data class Bookmark(
     val id: String,
@@ -30,43 +29,69 @@ fun Bookmark.toListingItem(): ListingItem = ListingItem(id, title, number, type,
 
 fun DocumentMeta.toBookmark(): Bookmark = Bookmark(id, title, number, type, layer, issued, repealed)
 
-/** Device-local bookmarks, newest first, stored as one JSON string. */
-class BookmarkStore(private val settings: Settings) {
-    private val serializer = ListSerializer(Bookmark.serializer())
-    private val _bookmarks = MutableStateFlow(load())
+/**
+ * One saved § or chapter: the [document] it belongs to, its outline [anchor] (`k3p1`), how the text names it
+ * ([label], `3 kap. 1 §`) and the start of its text ([excerpt]).
+ */
+@Serializable
+data class SavedProvision(
+    val document: Bookmark,
+    val anchor: String,
+    val label: String,
+    val excerpt: String = "",
+) {
+    fun isAt(documentId: String, anchor: String): Boolean = document.id == documentId && this.anchor == anchor
+}
 
-    val bookmarks: StateFlow<List<Bookmark>> = _bookmarks.asStateFlow()
+/**
+ * Device-local saved items, newest first: whole documents ([bookmarks], stored under `bookmarks` as before) and
+ * single provisions ([provisions], under `saved_provisions`).
+ */
+class BookmarkStore(settings: Settings) {
+    private val documents = StoredList(settings, KEY, Bookmark.serializer())
+    private val savedProvisions = StoredList(settings, KEY_PROVISIONS, SavedProvision.serializer())
 
-    fun isBookmarked(id: String): Boolean = _bookmarks.value.any { it.id == id }
+    val bookmarks: StateFlow<List<Bookmark>> = documents.items
+    val provisions: StateFlow<List<SavedProvision>> = savedProvisions.items
+
+    fun isBookmarked(id: String): Boolean = documents.value.any { it.id == id }
 
     fun toggle(b: Bookmark) {
-        val current = _bookmarks.value
-        val next = if (current.any { it.id == b.id }) current.filterNot { it.id == b.id } else listOf(b) + current
-        save(next)
+        if (remove(b.id) == null) documents.set(listOf(b) + documents.value)
     }
 
-    /** Replaces the stored copy of [b] with fresher data, keeping its position; does nothing if [b] is not saved. */
+    /** Removes the bookmark of document [id]; the result undoes it through [restore]. */
+    fun remove(id: String): Removed<Bookmark>? = documents.remove { it.id == id }
+
+    fun restore(removed: Removed<Bookmark>) = documents.restore(removed) { it.id == removed.item.id }
+
+    fun isProvisionSaved(documentId: String, anchor: String): Boolean = savedProvisions.value.any { it.isAt(documentId, anchor) }
+
+    fun toggleProvision(p: SavedProvision) {
+        if (removeProvision(p.document.id, p.anchor) == null) savedProvisions.set(listOf(p) + savedProvisions.value)
+    }
+
+    fun removeProvision(documentId: String, anchor: String): Removed<SavedProvision>? =
+        savedProvisions.remove { it.isAt(documentId, anchor) }
+
+    fun restoreProvision(removed: Removed<SavedProvision>) =
+        savedProvisions.restore(removed) { it.isAt(removed.item.document.id, removed.item.anchor) }
+
+    /**
+     * Replaces the stored copy of document [b], and the snapshot kept with its saved provisions, with fresher data,
+     * keeping positions; does nothing for a document that is not saved.
+     */
     fun refresh(b: Bookmark) {
-        val current = _bookmarks.value
-        if (current.none { it.id == b.id && it != b }) return
-        save(current.map { if (it.id == b.id) b else it })
-    }
-
-    private fun save(next: List<Bookmark>) {
-        settings.putString(KEY, Json.encodeToString(serializer, next))
-        _bookmarks.value = next
-    }
-
-    private fun load(): List<Bookmark> {
-        val stored = settings.getStringOrNull(KEY) ?: return emptyList()
-        return try {
-            Json.decodeFromString(serializer, stored)
-        } catch (_: kotlinx.serialization.SerializationException) {
-            emptyList()
+        if (documents.value.any { it.id == b.id && it != b }) {
+            documents.set(documents.value.map { if (it.id == b.id) b else it })
+        }
+        if (savedProvisions.value.any { it.document.id == b.id && it.document != b }) {
+            savedProvisions.set(savedProvisions.value.map { if (it.document.id == b.id) it.copy(document = b) else it })
         }
     }
 
     private companion object {
         const val KEY = "bookmarks"
+        const val KEY_PROVISIONS = "saved_provisions"
     }
 }
