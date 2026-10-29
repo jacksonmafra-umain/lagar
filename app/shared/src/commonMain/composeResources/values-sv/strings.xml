@@ -226,6 +226,7 @@
     <string name="reader_reprinted_by">Omtryck</string>
     <string name="reader_amendment_in_force">Ikraftträdande: %1$s</string>
     <string name="reader_open_document">Öppna %1$s</string>
+    <string name="reader_inspector">Om författningen</string>
     <string name="type_agency_regulation">Myndighetsföreskrift</string>
     <string name="type_case_report">Referat</string>
     <string name="type_case_notice">Notis</string>

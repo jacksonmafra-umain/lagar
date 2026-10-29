@@ -2,28 +2,37 @@ package app.lagar.ui.reader
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.selection.SelectionContainer
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
+import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -41,6 +50,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import app.lagar.data.DocumentMeta
@@ -57,6 +67,7 @@ import app.lagar.resources.ic_bookmark_filled
 import app.lagar.resources.ic_link
 import app.lagar.resources.ic_share
 import app.lagar.resources.ic_toc
+import app.lagar.resources.reader_inspector
 import app.lagar.resources.reader_link_copied
 import app.lagar.resources.reader_share_failed
 import app.lagar.resources.reader_share_link
@@ -67,7 +78,9 @@ import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.ErrorState
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.navigation.readerLink
+import app.lagar.ui.shell.LocalWideLayout
 import app.lagar.ui.shell.ShellDimens
+import app.lagar.ui.shell.wideListPadding
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.launch
@@ -104,6 +117,10 @@ fun ReaderRoute(
     )
 }
 
+/**
+ * On desktop the table of contents is a pane left of the text instead of a sheet, and from
+ * [ShellDimens.ReaderInspectorBreakpoint] the facts and amendments move to an inspector pane right of it.
+ */
 @Composable
 fun ReaderScreen(
     state: LoadState<DocumentResponse>,
@@ -114,8 +131,10 @@ fun ReaderScreen(
     amendmentLinks: Map<String, String> = emptyMap(),
     onResolveAmendmentLinks: (List<String>) -> Unit = {},
     onOpenDocument: (String) -> Unit = {},
-) {
+) = BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
     val spacing = LagarTheme.spacing
+    val wide = LocalWideLayout.current
+    val inspector = wide && maxWidth >= ShellDimens.ReaderInspectorBreakpoint
     val hazeState = remember { HazeState() }
     var barHeight by rememberBackTopBarHeight()
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
@@ -142,9 +161,15 @@ fun ReaderScreen(
     val amendments = remember(document?.meta) { document?.meta?.let(::amendmentRows).orEmpty() }
     val reprints = document?.meta?.reprintedBy.orEmpty()
     val hasAmendments = amendments.isNotEmpty() || reprints.isNotEmpty()
-    // Lazy items before the first block: the header, then the amendments toggle, the open list and a divider.
-    val leadingItems = 1 + (if (hasAmendments) 2 else 0) +
-        (if (hasAmendments && amendmentsOpen) amendments.size + (if (reprints.isNotEmpty()) 1 else 0) else 0)
+    // Lazy items before the first block: the header, then (unless the inspector holds them) the amendments toggle,
+    // the open list and a divider.
+    val leadingItems = if (inspector) {
+        1
+    } else {
+        1 + (if (hasAmendments) 2 else 0) +
+            (if (hasAmendments && amendmentsOpen) amendments.size + (if (reprints.isNotEmpty()) 1 else 0) else 0)
+    }
+    val tocPane = wide && !outline.isEmpty
 
     // A deep link scrolls to its section once, when the text has loaded; later recompositions leave the scroll alone.
     var anchorDone by rememberSaveable(anchor) { mutableStateOf(anchor == null) }
@@ -157,30 +182,40 @@ fun ReaderScreen(
         if (amendmentsOpen) onResolveAmendmentLinks(amendments.map { it.number } + reprints)
     }
 
-    Box(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
-        when (state) {
-            LoadState.Loading -> Box(Modifier.fillMaxSize().padding(top = barHeight), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
+    when (state) {
+        LoadState.Loading -> Box(Modifier.fillMaxSize().padding(top = barHeight), contentAlignment = Alignment.Center) {
+            CircularProgressIndicator()
+        }
+        is LoadState.Failed -> Box(Modifier.fillMaxSize().padding(top = barHeight), contentAlignment = Alignment.Center) {
+            ErrorState(onRetry = state.retry)
+        }
+        is LoadState.Loaded -> {
+            val meta = state.value.meta
+            val key = remember(meta) {
+                if (meta.repealed != null) LayerKey.Repealed
+                else DisplayLayer.fromRoute(meta.layer, meta.type)?.key ?: LayerKey.Repealed
             }
-            is LoadState.Failed -> Box(Modifier.fillMaxSize().padding(top = barHeight), contentAlignment = Alignment.Center) {
-                ErrorState(onRetry = state.retry)
-            }
-            is LoadState.Loaded -> {
-                val meta = state.value.meta
-                val key = remember(meta) {
-                    if (meta.repealed != null) LayerKey.Repealed
-                    else DisplayLayer.fromRoute(meta.layer, meta.type)?.key ?: LayerKey.Repealed
-                }
-                val shareBase = remember { shareBaseUrl() }
+            val shareBase = remember { shareBaseUrl() }
+
+            val text = @Composable { modifier: Modifier ->
                 LazyColumn(
                     state = listState,
-                    modifier = Modifier.fillMaxSize().hazeSource(hazeState),
+                    modifier = modifier,
                     contentPadding = PaddingValues(top = barHeight + spacing.md, bottom = bottomInset + spacing.lg),
                 ) {
                     item(key = "header") {
-                        ReadingItem { MetadataHeader(meta, Modifier.readingColumn()) }
+                        ReadingItem {
+                            if (inspector) {
+                                Column(Modifier.readingColumn(), verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
+                                    DocumentTitle(meta)
+                                    HorizontalDivider(Modifier.padding(top = spacing.xs), color = LagarTheme.colors.outlineVariant)
+                                }
+                            } else {
+                                MetadataHeader(meta, Modifier.readingColumn())
+                            }
+                        }
                     }
-                    if (hasAmendments) {
+                    if (hasAmendments && !inspector) {
                         item(key = "amendments") {
                             ReadingItem {
                                 AmendmentsToggle(amendments.size, amendmentsOpen, { amendmentsOpen = !amendmentsOpen }, Modifier.readingColumn())
@@ -230,42 +265,103 @@ fun ReaderScreen(
                         }
                     }
                 }
-                if (showToc) {
-                    TableOfContentsSheet(
-                        outline = outline,
-                        layer = key,
-                        onSelect = { block ->
-                            showToc = false
-                            scope.launch { listState.scrollToItem(leadingItems + block) }
-                        },
-                        onDismiss = { showToc = false },
-                    )
+            }
+
+            if (wide) {
+                Row(
+                    Modifier
+                        .fillMaxSize()
+                        .hazeSource(hazeState)
+                        .padding(horizontal = wideListPadding(maxWidth, spacing.margin)),
+                ) {
+                    val paneTop = barHeight + spacing.md
+                    if (tocPane) {
+                        Column(Modifier.width(ShellDimens.ReaderPaneWidth).fillMaxHeight().padding(top = paneTop)) {
+                            PaneHeading(stringResource(Res.string.reader_toc))
+                            TableOfContentsList(
+                                outline = outline,
+                                layer = key,
+                                onSelect = { block -> scope.launch { listState.scrollToItem(leadingItems + block) } },
+                                contentPadding = PaddingValues(top = spacing.sm, end = spacing.md, bottom = bottomInset + spacing.lg),
+                                modifier = Modifier.weight(1f),
+                            )
+                        }
+                        VerticalDivider(Modifier.padding(top = paneTop), color = LagarTheme.colors.outlineVariant)
+                    }
+                    text(Modifier.weight(1f).fillMaxHeight())
+                    if (inspector) {
+                        VerticalDivider(Modifier.padding(top = paneTop), color = LagarTheme.colors.outlineVariant)
+                        Column(
+                            modifier = Modifier
+                                .width(ShellDimens.ReaderPaneWidth)
+                                .fillMaxHeight()
+                                .verticalScroll(rememberScrollState())
+                                .padding(start = spacing.md, top = paneTop, bottom = bottomInset + spacing.lg),
+                            verticalArrangement = Arrangement.spacedBy(spacing.sm),
+                        ) {
+                            PaneHeading(stringResource(Res.string.reader_inspector))
+                            DocumentFacts(meta)
+                            if (hasAmendments) {
+                                HorizontalDivider(color = LagarTheme.colors.outlineVariant)
+                                AmendmentsToggle(amendments.size, amendmentsOpen, { amendmentsOpen = !amendmentsOpen })
+                                if (amendmentsOpen) {
+                                    if (reprints.isNotEmpty()) ReprintsItem(reprints, amendmentLinks, key, onOpenDocument)
+                                    amendments.forEach { row -> AmendmentItem(row, amendmentLinks[row.number], key, onOpenDocument) }
+                                }
+                            }
+                        }
+                    }
                 }
+            } else {
+                text(Modifier.fillMaxSize().hazeSource(hazeState))
+            }
+            if (showToc && !tocPane) {
+                TableOfContentsSheet(
+                    outline = outline,
+                    layer = key,
+                    onSelect = { block ->
+                        showToc = false
+                        scope.launch { listState.scrollToItem(leadingItems + block) }
+                    },
+                    onDismiss = { showToc = false },
+                )
             }
         }
-        BackTopBar(hazeState, onBack, onHeightChange = { barHeight = it }, modifier = Modifier.align(Alignment.TopCenter)) {
-            val meta = document?.meta
-            Text(
-                text = meta?.number.orEmpty(),
-                style = LagarTheme.type.codeCitation,
-                color = LagarTheme.colors.onSurface,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-            if (meta != null) {
-                if (!outline.isEmpty) {
-                    BarAction(painterResource(Res.drawable.ic_toc), stringResource(Res.string.reader_toc)) { showToc = true }
-                }
-                val shareBase = remember { shareBaseUrl() }
-                BarAction(painterResource(Res.drawable.ic_share), stringResource(Res.string.reader_share_link, meta.title)) {
-                    share(meta.title, readerLink(shareBase, meta.id))
-                }
-                BookmarkAction(meta, bookmarked, onToggleBookmark)
-            }
-        }
-        SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter).navigationBarsPadding())
     }
+    BackTopBar(hazeState, onBack, onHeightChange = { barHeight = it }, modifier = Modifier.align(Alignment.TopCenter)) {
+        val meta = document?.meta
+        Text(
+            text = meta?.number.orEmpty(),
+            style = LagarTheme.type.codeCitation,
+            color = LagarTheme.colors.onSurface,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f),
+        )
+        if (meta != null) {
+            if (!outline.isEmpty && !tocPane) {
+                BarAction(painterResource(Res.drawable.ic_toc), stringResource(Res.string.reader_toc)) { showToc = true }
+            }
+            val shareBase = remember { shareBaseUrl() }
+            BarAction(painterResource(Res.drawable.ic_share), stringResource(Res.string.reader_share_link, meta.title)) {
+                share(meta.title, readerLink(shareBase, meta.id))
+            }
+            BookmarkAction(meta, bookmarked, onToggleBookmark)
+        }
+    }
+    SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter).navigationBarsPadding())
+}
+
+/** Title of a desktop side pane. */
+@Composable
+private fun PaneHeading(text: String) {
+    Text(
+        text = text,
+        style = LagarTheme.type.labelMd,
+        fontWeight = FontWeight.Bold,
+        color = LagarTheme.colors.onSurfaceVariant,
+        modifier = Modifier.semantics { heading() },
+    )
 }
 
 /** Centers one lazy item in the reading column with the screen margins. */

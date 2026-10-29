@@ -226,6 +226,7 @@
     <string name="reader_reprinted_by">Reprinted by</string>
     <string name="reader_amendment_in_force">In force: %1$s</string>
     <string name="reader_open_document">Open %1$s</string>
+    <string name="reader_inspector">About this document</string>
     <string name="type_agency_regulation">Agency regulation</string>
     <string name="type_case_report">Case report</string>
     <string name="type_case_notice">Case notice</string>
