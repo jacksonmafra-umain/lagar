@@ -409,7 +409,9 @@ class NewLayersTest(unittest.TestCase):
     def test_number_sort_per_type(self):
         cases = {
             "agency_regulation": ["FFFS 2023:10", "AFS 2023:10", "AFS 2023:9", "AFS 2022:100"],
-            "case_report": ["HFD 2020 ref. 5", "NJA 2019 s. 100", "NJA 2019 s. 99", "MIG 2019:1"],
+            "case_report": ["HFD 2020 ref. 5", "NJA 2019 s. 100", "NJA 2019 s. 99", "MIG 2019:1",
+                            "KRNJ 2007-01-09 mål nr 1097-06", "KRNG 2002-06-14 mål nr 3745-01",
+                            "KRNS 2002-06-12 mål nr 787-01"],
             "case_notice": ["HFD 2020 not. 12", "HFD 2020 not. 3", "NJA 2004 N 23"],
             "eu_regulation": ["(EU) 2016/679", "(EU) nr 1303/2013", "(EG) nr 1907/2006", "(EEG) nr 1408/71"],
             "eu_directive": ["(EU) 2022/2555", "2004/18/EG", "95/46/EG"],
