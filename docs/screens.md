@@ -34,8 +34,8 @@ Code: `ui/shell/Drawer.kt`. Reference: Stitch `menu_lateral_drawer_perfil_e_nave
 
 | Feature | Status | Issue |
 | --- | --- | --- |
-| Header, current scope card with a "Change" action, six entries, About block with data build date | Done | |
-| Each scope as a direct switch, Saved count badge, section headings | Missing | #31 |
+| Header, six entries, About block with data build date | Done | |
+| Each scope as a direct switch (Region / Kommun without a stored locality, and the active scope, open the scope sheet), Saved count badge, "Switch scope" / "Navigate" / "About" section headings | Done | #31 |
 | "Most popular" and "Official gazettes" entries | Blocked: no usage data, no gazette source | #38 |
 
 ### Scope sheet
@@ -111,14 +111,16 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 
 ### Search results
 
-Route: `Search(text, types, from, to, mode, status)`. Code: `ui/search/SearchScreen.kt`. Reference: architecture §4 flow 4.
+Route: `Search(text, types, from, to, mode, status, inForceFrom, inForceTo, vacatioLegis, sort)`. Code: `ui/search/SearchScreen.kt`, `data/SearchService.kt`, `data/FullTextIndex.kt`. Reference: architecture §4 flow 4.
 
 | Feature | Status | Issue |
 | --- | --- | --- |
-| Live on-device search over titles and numbers, accent-insensitive; result count; empty, prompt and error states | Done | |
+| Live search over titles and numbers, accent-insensitive; result count; empty, prompt and error states | Done | |
 | Query survives process death through the route arguments | Done | |
-| Sorting and highlighted matches | Missing | #32 |
-| Full-text search with snippets | Blocked: no search index in the API | #37 |
+| Static search index (`search/`): loads the manifest, `docs.json` and only the shards of the query terms, cached by `built_at`; every term must match, the word being typed matches as a prefix; falls back to the whole catalog when the API has no index | Done | #37 |
+| Ranking (title, then number, then body; more matched fields first), sorting by relevance, newest or number, and matched words highlighted in titles | Done | #32 |
+| Full-text mode (body text) with a "Found in the text" note on body-only matches | Done | #37 |
+| Snippets of the matching text | Not planned: needs each result's document (`docs/<id>.json`), too costly per result; the note above says where it matched | #37 |
 | Region and Kommun scopes | Blocked: no data | #38 |
 
 ### Advanced search
@@ -127,9 +129,10 @@ Route: `AdvancedSearch`. Code: `ui/search/AdvancedSearchScreen.kt`, `DateField.k
 
 | Feature | Status | Issue |
 | --- | --- | --- |
-| Text field, issue-date range, document types, mode (all, title, number), status (all, in force, repealed) | Done | |
-| Calendar date picker, collapsible filter sections, scope change from the form | Missing | #32 |
-| Vacatio legis filter and in-force date range | Missing; `in_force` is now in listing items (still `null` until the collector fills it) | #32 |
+| Text field, issue-date range, mode (all, title, number, full text), status (all, in force, repealed) | Done | #37 |
+| Document types from the index `series` of the scope, so new vocabulary types appear once they have data | Done | #32 |
+| Calendar date picker (M3, tier 3 glass) with dates shown in the app language, collapsible filter sections with an "Active" badge, scope change from the form and the header chip | Done | #32 |
+| Vacatio legis filter and in-force date range; documents without `in_force` (most SFS today) never match them. `docs.json` has no `in_force` yet, so these filters read the catalog | Done | #32 |
 | Glass footer bar | Done | #23 |
 
 ## Hierarki

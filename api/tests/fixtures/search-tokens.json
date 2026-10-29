@@ -1,0 +1,18 @@
+{
+  "_comment": "Query text and the tokens both the API index and the app produce for it (api/searchindex.py, app domain/Tokens.kt).",
+  "cases": [
+    {"text": "Lag (1962:700) om ändring", "tokens": ["lag", "1962:700", "andring"]},
+    {"text": "N2026:1", "tokens": ["n2026:1"]},
+    {"text": "Åre-kommunens skatter, 2 kap.", "tokens": ["are", "kommunens", "skatter", "2", "kap"]},
+    {"text": "Lagen om att x och 5 § i Sverige", "tokens": ["lagen", "5", "sverige"]},
+    {"text": "ÅRE Écija Łódź", "tokens": ["are", "ecija", "lodz"]},
+    {"text": "Förordning (2026:1054) för Försäkringskassan", "tokens": ["forordning", "2026:1054", "forsakringskassan"]},
+    {"text": "lag2010:800 x12345:6 12345:6", "tokens": ["lag2010:800", "x12345", "6", "12345", "6"]},
+    {"text": "1962:700abc", "tokens": ["1962:700", "abc"]},
+    {"text": "snake_case über straße", "tokens": ["snake", "case", "über", "straße"]},
+    {"text": "1827:60 s.1007", "tokens": ["1827:60", "1007"]},
+    {"text": "AFS 2023:1, HSLF-FS 2016:40", "tokens": ["afs", "2023:1", "hslf", "fs", "2016:40"]},
+    {"text": "(EU) 2016/679", "tokens": ["eu", "2016", "679"]},
+    {"text": "", "tokens": []}
+  ]
+}

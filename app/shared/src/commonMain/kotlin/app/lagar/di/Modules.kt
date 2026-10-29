@@ -4,11 +4,14 @@ import app.lagar.data.ApiSource
 import app.lagar.data.CachingRepository
 import app.lagar.data.Catalog
 import app.lagar.data.DataSourceConfig
+import app.lagar.data.FullTextIndex
 import app.lagar.data.GeoRepository
 import app.lagar.data.HttpRepository
 import app.lagar.data.LagarRepository
 import app.lagar.data.MinistryRepository
 import app.lagar.data.SampleRepository
+import app.lagar.data.SearchIndexSource
+import app.lagar.data.SearchService
 import app.lagar.domain.SearchQuery
 import app.lagar.settings.BookmarkStore
 import app.lagar.settings.UserPreferences
@@ -51,6 +54,9 @@ fun appModule(config: DataSourceConfig) = module {
     single { BookmarkStore(get()) }
     single { GeoRepository() }
     single { Catalog(get()) }
+    single<SearchIndexSource> { if (config.useSample) SampleRepository() else HttpRepository(get(), config.baseUrl) }
+    single { FullTextIndex(get()) }
+    single { SearchService(get(), get()) }
     viewModel { HierarkiViewModel(get()) }
     viewModel { HomeViewModel(get(), get(), get(), get()) }
     viewModel { OnboardingViewModel(get(), get()) }
