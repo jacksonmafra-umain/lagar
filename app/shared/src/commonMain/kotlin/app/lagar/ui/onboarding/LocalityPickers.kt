@@ -32,6 +32,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import app.lagar.data.GeoRepository
@@ -51,6 +52,8 @@ import app.lagar.resources.picker_region_label
 import app.lagar.resources.picker_region_placeholder
 import app.lagar.resources.picker_search
 import app.lagar.ui.common.LagarTextField
+import app.lagar.ui.common.SheetShape
+import app.lagar.ui.common.sheetGlass
 import app.lagar.ui.shell.ShellDimens
 import kotlinx.coroutines.CancellationException
 import org.jetbrains.compose.resources.painterResource
@@ -185,7 +188,10 @@ private fun OptionSheet(
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
-        containerColor = colors.surfaceContainerLowest,
+        modifier = Modifier.sheetGlass(),
+        shape = SheetShape,
+        containerColor = Color.Transparent,
+        contentColor = colors.onSurface,
     ) {
         Column(
             modifier = Modifier.fillMaxHeight().navigationBarsPadding().imePadding().padding(horizontal = LagarTheme.spacing.marginMobile),
