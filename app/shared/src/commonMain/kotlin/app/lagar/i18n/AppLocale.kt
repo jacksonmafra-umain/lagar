@@ -22,6 +22,8 @@ internal expect fun ProvidePlatformLocale(tag: String, content: @Composable () -
 @Composable
 fun ProvideAppLocale(language: SupportedLanguage, content: @Composable () -> Unit) {
     key(language) {
-        ProvidePlatformLocale(language.tag, content)
+        CompositionLocalProvider(LocalAppLanguage provides language) {
+            ProvidePlatformLocale(language.tag, content)
+        }
     }
 }
