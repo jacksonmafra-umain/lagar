@@ -6673,6 +6673,202 @@
       ],
       "number": "21FS 2026:10",
       "published": "2026-10-01"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 58978,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:37Z",
+          "sha256": "cca493f1baff22f716557f60b7a107405540cf939f5a8da37ca4164fdecc9110",
+          "url": "https://www.lansstyrelsen.se/download/18.75dc539919618cb34bb3435a/1744870074104/22FS%202025-1%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20tillk%C3%A4nnagivande%20av%20nytt%20undantag%20fr%C3%A5n%20f%C3%B6reskrifter%20i%20Djup-Hortenskogarnas%20naturreservat%20i%20%C3%85nge%20kommun.pdf"
+        }
+      ],
+      "number": "22FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 57802,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:38Z",
+          "sha256": "c52b38c169b6796f8d0329d59112faed099afc9d1035d3fc2891c3ded9ea3331",
+          "url": "https://www.lansstyrelsen.se/download/18.75dc539919618cb34bb3435b/1744870074140/22FS%202025-2%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20tillk%C3%A4nnagivande%20av%20nytt%20undantag%20fr%C3%A5n%20f%C3%B6reskrifter%20i%20Styggbergets%20naturreservat%20i%20%C3%85nge%20kommun.pdf"
+        }
+      ],
+      "number": "22FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 324933,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:39Z",
+          "sha256": "9a338807f227ac81fb9d284e0202f80bb91a358d50b360d8aaed30b004a8a35b",
+          "url": "https://www.lansstyrelsen.se/download/18.75dc539919618cb34bb25388/1744704105226/22FS%202025-3%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20beslut%20om%20utvidgning%20av%20Kvarnhusbergets%20naturreservat%20i%20%C3%96rnsk%C3%B6ldsviks%20kommun%20samt%20f%C3%B6reskrifter%20f%C3%B6r%20reservatet.pdf"
+        }
+      ],
+      "number": "22FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 74800,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:40Z",
+          "sha256": "1de1368f90c3f36abedbb91b25beed2ee2b8e5202dd4b0bbacd77e08a530e080",
+          "url": "https://www.lansstyrelsen.se/download/18.7ab5268119807370e3c1e5a6/1752735421964/22FS%202025-4%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20eldningsf%C3%B6rbud.pdf"
+        }
+      ],
+      "number": "22FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 62533,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:41Z",
+          "sha256": "11e957c32c489d1a283da479416c513d905c1ad466e270b406012685e00f9aec",
+          "url": "https://www.lansstyrelsen.se/download/18.36096d051984f5c72da6804/1753768744607/22FS%202025-5%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20upph%C3%A4vande%20av%20eldningsf%C3%B6rbud.pdf"
+        }
+      ],
+      "number": "22FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 209240,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:42Z",
+          "sha256": "44b892dde9acdf1ab8a35993278a3d66465ae28002d432176dfaefa24ea0666c",
+          "url": "https://www.lansstyrelsen.se/download/18.7b96512e198f06d6229319a5/1756794159348/22%20FS%202025-6%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20beslut%20om%20utvidgning%20av%20Nedre%20Mj%C3%A4ll%C3%A5dalens%20naturreservat%20i%20Timr%C3%A5%20kommun%20samt%20f%C3%B6reskrifter%20f%C3%B6r%20reservatet.pdf"
+        }
+      ],
+      "number": "22FS 2025:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 714926,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:43Z",
+          "sha256": "1afa65475e77577927936331297808b9c7ec1be90370cf85ef8fbdf5819ba232",
+          "url": "https://www.lansstyrelsen.se/download/18.59f9b38b19a7678e62715660/1763109169010/22%20FS%202025-7%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20T%C3%A4ngstaskogarnas%20naturreservat%20i%20Sollefte%C3%A5%20kommun%20samt%20f%C3%B6reskrifter%20f%C3%B6r%20reservatet.pdf"
+        }
+      ],
+      "number": "22FS 2025:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 600293,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:44Z",
+          "sha256": "298150e8b878fcc0f58092d183abf70dad07d4a3a29a69bb89aaf169ebdc7ced",
+          "url": "https://www.lansstyrelsen.se/download/18.59f9b38b19a7678e62715661/1763109169079/22%20FS%202025-8%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20%C3%96ster%C3%A5senskogens%20naturreservat%20i%20Sollefte%C3%A5%20kommun%20samt%20f%C3%B6reskrifter%20f%C3%B6r%20reservatet.pdf"
+        }
+      ],
+      "number": "22FS 2025:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 150297,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:45Z",
+          "sha256": "352646de3ce51f519870ba8d5059e15d38d9c685df049186a0eb8befb16dc5c1",
+          "url": "https://www.lansstyrelsen.se/download/18.62d38e7a19d8c40a36f15613/1776343240415/22%20FS%202026-1%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20f%C3%B6reskrifter;%20fastst%C3%A4llande%20av%20vattenskyddsomr%C3%A5de%20och%20skyddsf%C3%B6reskrifter%20f%C3%B6r%20Gerdal%20och%20Bys%20vattent%C3%A4kter%20i%20%C3%96rnsk%C3%B6ldsviks%20kommun.pdf"
+        }
+      ],
+      "number": "22FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 142913,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:46Z",
+          "sha256": "f9a3353a492551e747675275dd20bd08f213f8488ca0750ae4c7af27bf4669c6",
+          "url": "https://www.lansstyrelsen.se/download/18.238822c519e023e8735946e/1778232729680/22%20FS%202026-2%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20permanenta%20lokala%20f%C3%B6reskrifter%20om%20fartbegr%C3%A4nsning%20om%205%20knop,%20Mo%C3%A4lven%20vid%20H%C3%B6rnettsundet%20i%20%C3%96rnsk%C3%B6ldsviks%20kommun.pdf"
+        }
+      ],
+      "number": "22FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 95463,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:47Z",
+          "sha256": "41d6ed99f9080d585a640774268b2c59ebb61e9f6a7e8108a82bb8101ab56c25",
+          "url": "https://www.lansstyrelsen.se/download/18.2590686319e49ddd6c886d/1779364608987/22%20FS%202026-3%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20K%C3%A5lhuvudets%20naturreservat%20i%20%C3%96rnsk%C3%B6ldsviks%20kommun.pdf"
+        }
+      ],
+      "number": "22FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 200716,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:48Z",
+          "sha256": "daa7be2e9aba11e29f6093b43f74c25bfa13c10850288217ac7f7962a8ff9998",
+          "url": "https://www.lansstyrelsen.se/download/18.3fcc934b19e6346dceab0080/1780998107482/22FS%202026-4%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20f%C3%B6rbud%20mot%20ankring%20i%20K%C3%B6pingsviken,%20Sundsvalls%20kommun.pdf"
+        }
+      ],
+      "number": "22FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 654915,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:49Z",
+          "sha256": "184180dda3c50adf5a448c4b0c207b12844159d02b6637552c76b07b906510ac",
+          "url": "https://www.lansstyrelsen.se/download/18.216bb90f1a1160fdd461a0fc/1791548776926/22FS%202026-5%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20f%C3%B6reskrifter%20f%C3%B6r%20Pengsj%C3%B6-J%C3%A4rvbergets%20naturreservat%20i%20%C3%96rnsk%C3%B6ldsviks%20kommun.pdf"
+        }
+      ],
+      "number": "22FS 2026:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 196721,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:50Z",
+          "sha256": "9d0f8f17179e54c84135ca3dfeba5dec8cc575c674c66527d5436fa66ee08dbc",
+          "url": "https://www.lansstyrelsen.se/download/18.216bb90f1a1160fdd461a15b/1791548862861/22FS%202026-6%20L%C3%A4nsstyrelsen%20i%20V%C3%A4sternorrlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Me%C3%A5forsens%20naturreservat%20i%20Sollefte%C3%A5%20kommun.pdf"
+        }
+      ],
+      "number": "22FS 2026:6",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
