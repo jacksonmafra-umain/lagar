@@ -23,7 +23,8 @@ import kotlinx.coroutines.launch
 
 /**
  * What the home of one [scope] shows. [localityName] is the chosen län (Region) or kommun (Kommun), null when unset.
- * [layers] are the scope's levels that have documents, in hierarchy order.
+ * [layers] are the scope's levels that have documents, in hierarchy order. [counts] holds the documents of every
+ * level, whatever the scope, and [builtAt] the data build date (`yyyy-MM-dd`); the wide layout shows both.
  */
 data class HomeData(
     val scope: Scope,
@@ -34,6 +35,8 @@ data class HomeData(
     val ordinances: List<ListingItem>,
     val recent: List<ListingItem>,
     val hasMoreRecent: Boolean,
+    val counts: Map<DisplayLayer, Int> = emptyMap(),
+    val builtAt: String? = null,
 )
 
 /**
@@ -73,9 +76,13 @@ class HomeViewModel(
 
     private suspend fun build(scope: Scope, locality: Locality): HomeData {
         val localityName = geo.localityName(scope, locality)
-        // Only the national level has documents so far; Region and Kommun make no listing requests.
-        if (scope != Scope.Nationell) return HomeData(scope, localityName, emptyList(), emptyList(), emptyList(), emptyList(), emptyList(), false)
         val index = repository.index()
+        val counts = DisplayLayer.entries.associateWith { index.count(it) }
+        val builtAt = index.builtAt.take(10)
+        // Only the national level has documents so far; Region and Kommun make no listing requests.
+        if (scope != Scope.Nationell) {
+            return HomeData(scope, localityName, emptyList(), emptyList(), emptyList(), emptyList(), emptyList(), false, counts, builtAt)
+        }
         val feed = loadHomeFeed(repository, index, scope, IMPORTANT_LIMIT, RECENT_LIMIT)
         return HomeData(
             scope = scope,
@@ -86,6 +93,8 @@ class HomeViewModel(
             ordinances = feed.ordinances,
             recent = feed.recent,
             hasMoreRecent = feed.hasMoreRecent,
+            counts = counts,
+            builtAt = builtAt,
         )
     }
 
