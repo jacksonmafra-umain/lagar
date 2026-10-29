@@ -7,6 +7,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 from . import frontmatter, schema
+from .vocabulary import TYPES
 
 DEFAULT_TARGETS = "collector/data/targets.json"
 DEFAULT_INTEGRITY = "collector/data/pending-integrity.json"
@@ -71,7 +72,7 @@ def build_rows(targets, type_counts):
             breakdown = {t: type_counts.get(t, 0) for t in SFS_TYPES}
             collected = sum(breakdown.values())
         else:
-            collected = 0
+            collected = sum(n for t, n in type_counts.items() if TYPES.get(t) == layer)
         target = entry["target"]
         percent = round(min(collected, target) / target * 100, 1) if target else None
         rows.append({**entry, "collected": collected, "percent": percent, "breakdown": breakdown})
