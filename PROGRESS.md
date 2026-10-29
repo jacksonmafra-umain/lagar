@@ -7,7 +7,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | layer | series | collected | target | kind | % |
 | --- | --- | ---: | ---: | --- | ---: |
 | fundamental | Fundamental laws | 4 | 4 | counted | 100.0% |
-| sfs | SFS (statutes and ordinances) | 11424 | 11567 | counted | 98.8% |
+| sfs | SFS (statutes and ordinances) | 11428 | 11567 | counted | 98.8% |
 | agency | AFS (Arbetsmiljöverket) | 15 | 15 | counted | 100.0% |
 | agency | FFFS (Finansinspektionen) | 121 | 121 | counted | 100.0% |
 | agency | TSFS (Transportstyrelsen) | 622 | 622 | counted | 100.0% |
@@ -19,7 +19,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 
 Progress is capped at the target; a series without a known target has no percentage.
 
-SFS (statutes and ordinances) breakdown: 3000 acts, 6587 ordinances, 1837 other statutes.
+SFS (statutes and ordinances) breakdown: 3000 acts, 6591 ordinances, 1837 other statutes.
 
 Targets:
 - Fundamental laws: counted, The four Swedish fundamental laws, as of 2026-10-27
@@ -33,10 +33,10 @@ Targets:
 
 ## Integrity
 
-Audit of 29291 documents (2026-10-29T13:22:42Z):
+Audit of 29295 documents (2026-10-29T13:56:15Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
-- text-quality flags: 707
+- text-quality flags: 714
 - cross-references not in the corpus: 38283 of 38341 (informational, the corpus is partial)
