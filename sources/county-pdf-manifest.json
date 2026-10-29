@@ -1641,6 +1641,608 @@
       ],
       "number": "04FS 2026:5",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1248222,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:38Z",
+          "sha256": "a757681c78732cede57f64c363e945ebaf5f1480b94dc9c59f867da4d879686b",
+          "url": "https://www.lansstyrelsen.se/download/18.75dc539919618cb34bbd0e0/1744374418166/Sammanst%C3%A4llning%20%C3%B6ver%20allm%C3%A4nna%20v%C3%A4gar%20och%20andra%20viktigare%20v%C3%A4gar%20%C3%96sterg%C3%B6tlands%20l%C3%A4n%202025.1.pdf"
+        }
+      ],
+      "number": "05FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 111829,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:39Z",
+          "sha256": "1e01b9383967e7caa3fee9e473987604516c23f7a9bb848297fee5c4a4ba7d1c",
+          "url": "https://www.lansstyrelsen.se/download/18.5d22726519618d6580ab1992/1745583968034/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndrad%20ordningsf%C3%B6reskrift%20inom%20Br%C3%A5tbergets%20naturreservat,%20Kinda%20kommun%202025.2.pdf"
+        }
+      ],
+      "number": "05FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 113414,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:40Z",
+          "sha256": "4cde73660b853ce14d01c6ff68d19d9ba39c81741b99db527ae11c73732f2121",
+          "url": "https://www.lansstyrelsen.se/download/18.5d22726519618d6580ab1991/1745583968011/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndrad%20ordningsf%C3%B6reskrift%20inom%20Storsko-gens%20naturreservat,%20%C3%85tvidabergs%20kommun%202025.3.pdf"
+        }
+      ],
+      "number": "05FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 711537,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:11:01Z",
+          "sha256": "4733dfc7900c847169c1fa3b65e28a47d47c15dc05cc2afd3d00e712c7fd2daf",
+          "url": "https://www.lansstyrelsen.se/download/18.59f9b38b19a7678e6276b3c3/1763709756989/Sj%C3%B6trafikf%C3%B6reskrifter%20om%20fartbegr%C3%A4nsningar%20i%20Ettersundet,%2005FS%202025-4%20ny%20.pdf"
+        }
+      ],
+      "number": "05FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 105334,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:41Z",
+          "sha256": "4a7475e6a80bfbdf9f3a1ee224ffd8fd39383cdce0915bf25fd1b882c024006f",
+          "url": "https://www.lansstyrelsen.se/download/18.5d22726519618d6580ab1947/1745583729295/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20skyddsjakt%20efter%20dovhjort%20under%20hela%20dygnet%202025.5.pdf"
+        }
+      ],
+      "number": "05FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 100342,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:11:01Z",
+          "sha256": "1cb4525971de3b223f8929cfb5fcdd9ab80c95b449c6fff31599651ec43d5148",
+          "url": "https://www.lansstyrelsen.se/download/18.5cfa956b1969f62b01b9e82/1746520989488/TIllf%C3%A4lliga%20sj%C3%B6trafikf%C3%B6reskrifter%20%20i%20samband%20med%20t%C3%A4vlingen%20farleden%2005FS%202025-6.pdf"
+        }
+      ],
+      "number": "05FS 2025:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 100355,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:11:03Z",
+          "sha256": "a8ddf32aa6742ca999ba4ea0a33de21cb1fdc80b3c9e43e29c461ae634567241",
+          "url": "https://www.lansstyrelsen.se/download/18.5cfa956b1969f62b01b9ee3/1746521010046/TIllf%C3%A4lliga%20sj%C3%B6trafikf%C3%B6reskrifter%20i%20samband%20med%20SM-veckan%20i%20Norrk%C3%B6ping%2005%20FS%202025-7.pdf"
+        }
+      ],
+      "number": "05FS 2025:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 341454,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:42Z",
+          "sha256": "c6476f4b53342cc58bf904d258d1639501d98cbc34c8e95e284a3462239221f1",
+          "url": "https://www.lansstyrelsen.se/download/18.54916724197a1f80d051dff0/1751022362569/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20H%C3%B6gholmens%20naturreservat%20i%20S%C3%B6derk%C3%B6pings%20kommun%202025.8.pdf"
+        }
+      ],
+      "number": "05FS 2025:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 505424,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:43Z",
+          "sha256": "6dc5afdc4a93661d2d816f7a61c0ef2bd7374ba5c76f163c525f8668da4ebef6",
+          "url": "https://www.lansstyrelsen.se/download/18.54916724197a1f80d051dfef/1751022362531/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20R%C3%B6dhallar%20naturreservat%20i%20Ydre%20kommun%202025.9.pdf"
+        }
+      ],
+      "number": "05FS 2025:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 157827,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:44Z",
+          "sha256": "23d34bf87598aeef70488f1b8c12a9a3d887da24f40fff501900cbbdf5c98094",
+          "url": "https://www.lansstyrelsen.se/download/18.34f08ae6199138e9be62c1ce/1757321245340/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20beslut%20om%20bildande%20av%20Tarants%20naturreser-vat%20i%20%C3%85tvidabergs%20kommun;%202025.10.pdf"
+        }
+      ],
+      "number": "05FS 2025:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 124497,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:45Z",
+          "sha256": "852dd34fdd599b31047a28bc9189e60ac601bcd516f6f7f4d84c8a338b18203a",
+          "url": "https://www.lansstyrelsen.se/download/18.34f08ae6199138e9be62c1cf/1757321245361/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20upph%C3%A4vande%20av%20beslut%20om%20vattenskyddsomr%C3%A5de%20och%20skyddsf%C3%B6reskrifter%20vid%20S%C3%B6rby%20i%20Motala%20kommun;%202025.11.pdf"
+        }
+      ],
+      "number": "05FS 2025:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 116693,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:46Z",
+          "sha256": "6d7e02b1644d4914f5b2da96c0e02e74fcb6471e6f0d8bd422e73b6b1ad5f28e",
+          "url": "https://www.lansstyrelsen.se/download/18.34f08ae6199138e9be62c1d0/1757321245381/Tillk%C3%A4nnagivande%20av%20L%C3%A4nsstyrelsen%20Kalmar%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndring%20i%20%20f%C3%B6reskrifter%20(08FS%202021.11)%20om%20kvalitetskrav%20f%C3%B6r%20vattenf%C3%B6rekomster;%202025.12.pdf"
+        }
+      ],
+      "number": "05FS 2025:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 532122,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:47Z",
+          "sha256": "223e9fa98828796bfff399b23852f66facae81fe8477577b631fcbd36c1f8912",
+          "url": "https://www.lansstyrelsen.se/download/18.5dc1540819a7685a5103ed42/1763384745525/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20beslut%20om%20bildande%20av%20Korpklevs%20naturreservat%20i%20Kinda%20kommun%202025.13.pdf"
+        }
+      ],
+      "number": "05FS 2025:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 639218,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:48Z",
+          "sha256": "ef5616553e8319a11fdebcc5b3fdce9803134f1e5ed3f67bfae5ce50b70d7e6a",
+          "url": "https://www.lansstyrelsen.se/download/18.5dc1540819a7685a5103ed43/1763384745582/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Skogssj%C3%B6omr%C3%A5dets%20naturreservat%20i%20Mj%C3%B6lby%20kommun%202025.14.pdf"
+        }
+      ],
+      "number": "05FS 2025:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 536550,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:49Z",
+          "sha256": "02d2485f8ae2f024d6b74f3956e0c93220fb3b05e2eb9c0f219c6b4b56dbb543",
+          "url": "https://www.lansstyrelsen.se/download/18.5dc1540819a7685a5103ed44/1763384745631/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Stora%20Lunds%20naturreservat%20i%20%C3%96desh%C3%B6gs%20kommun%202025.15.pdf"
+        }
+      ],
+      "number": "05FS 2025:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 613395,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:50Z",
+          "sha256": "77dc57f83633b980039a8dd4d0cb28f9f92df7497f4002090335eb084831131b",
+          "url": "https://www.lansstyrelsen.se/download/18.6bfbad7419c2729f2202dc6/1770215790060/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20beslut%20om%20utvidgning%20av%20Kjusebo%20naturreservat%20i%20Kinda%20kommun%202026.1.pdf"
+        }
+      ],
+      "number": "05FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 542416,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:51Z",
+          "sha256": "97207bc36eea4766673fab26042e44ebb28b3d88a1383e82be6c11907bea46e9",
+          "url": "https://www.lansstyrelsen.se/download/18.6bfbad7419c2729f2202dc5/1770215790015/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Val%C3%B6%20naturreservat%20i%20Kinda%20kommun%202026.2.pdf"
+        }
+      ],
+      "number": "05FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 477209,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:52Z",
+          "sha256": "66a5d57993456138927a5a82e0886cdf3a89766bb16f997587dc75c36b41e566",
+          "url": "https://www.lansstyrelsen.se/download/18.6bfbad7419c2729f2202dc4/1770215789970/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20F%C3%B6dekullas%20naturreservat%20i%20Ydre%20kommun%202026.3.pdf"
+        }
+      ],
+      "number": "05FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 469372,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:53Z",
+          "sha256": "bcb58dbf927c4f966775ea10829fdb5224c49899289c5a23fbff6b5d47e89e66",
+          "url": "https://www.lansstyrelsen.se/download/18.5f7f2e0119cff5b0e2d1ad08/1774015759353/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20T%C3%A5ngby%20biotopskyddsomr%C3%A5de%20p%C3%A5%20fastigheten%20T%C3%A5ngby%201_9%20i%20Ydre%20kommun%202026.4.pdf"
+        }
+      ],
+      "number": "05FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1674631,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:54Z",
+          "sha256": "9a8c637bc51ad566b3dfcc87dcbc1fb998df0f6e3584ce7cdef63fe67d7e7085",
+          "url": "https://www.lansstyrelsen.se/download/18.6aedc3de19d24d8109d608d7/1775049174837/Sammanst%C3%A4llning%20%C3%B6ver%20allm%C3%A4nna%20v%C3%A4gar%20och%20andra%20viktigare%20v%C3%A4gar%20%C3%96sterg%C3%B6tlands%20l%C3%A4n%202026.5.pdf"
+        }
+      ],
+      "number": "05FS 2026:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 2182332,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:55Z",
+          "sha256": "18abcf8b0e24ade91f082c97b275d98507f14647e895260875d7739c3c7f0b66",
+          "url": "https://www.lansstyrelsen.se/download/18.6aedc3de19d24d8109d608d6/1775049174685/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20vattenskyddsomr%C3%A5de%20med%20f%C3%B6reskrifter%20f%C3%B6r%20Ulrika%20vattent%C3%A4kt%20i%20Link%C3%B6pings%20kommun%202026.6.pdf"
+        }
+      ],
+      "number": "05FS 2026:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 662846,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:56Z",
+          "sha256": "95bf55eb91f9f4efc785e6b0f77c34bc04939cdb1fd00b4b1dcc9165088b959a",
+          "url": "https://www.lansstyrelsen.se/download/18.6aedc3de19d24d8109d608d5/1775049174630/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20utvidgning%20av%20Stora%20Hj%C3%A4lmmossens%20naturreservat%20i%20Finsp%C3%A5ng,%20Norrk%C3%B6ping%20och%20Link%C3%B6pings%20kommun%202026.7.pdf"
+        }
+      ],
+      "number": "05FS 2026:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 846877,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:57Z",
+          "sha256": "f972374d9d62d9602d869213a7202caf87aa4d8b4ff134589c79f239c188f31d",
+          "url": "https://www.lansstyrelsen.se/download/18.6aedc3de19d24d8109d608d3/1775049174500/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Nybroskogens%20naturreservat%20i%20Boxholms%20kommun%202026.8.pdf"
+        }
+      ],
+      "number": "05FS 2026:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 3265746,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:58Z",
+          "sha256": "a62fb8adf3e87ed3f6f99c934fbd200bc90f751840318fd36639606767f400fa",
+          "url": "https://www.lansstyrelsen.se/download/18.6aedc3de19d24d8109d608d2/1775049174287/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20naturreservatet%20Pj%C3%A4lt%C3%A5ns%20mader%20i%20Norrk%C3%B6pings%20kommun%202026.9.pdf"
+        }
+      ],
+      "number": "05FS 2026:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 901576,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:59Z",
+          "sha256": "a45430989bcedff96d6e4f606058ad3f24c1ddc327195a3fa71d4c34edb98f71",
+          "url": "https://www.lansstyrelsen.se/download/18.6aedc3de19d24d8109d608d4/1775049174562/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Sandtorpsk%C3%A4rrets%20naturreservat%20i%20Ydre%20kommun%202026.10.pdf"
+        }
+      ],
+      "number": "05FS 2026:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 489174,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:00Z",
+          "sha256": "086385ce354a510c4f81ea0f96047d6ff3874141e660d9495cb122ab4c897d19",
+          "url": "https://www.lansstyrelsen.se/download/18.6aedc3de19d24d8109d608d1/1775049174243/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Idebo%20naturreservat%20i%20Boxholms%20kommun%202026.11.pdf"
+        }
+      ],
+      "number": "05FS 2026:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 11577811,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:02Z",
+          "sha256": "f71f09c3695d20bc17cc42c971c82c55914acff45ffa15250f716670dee00215",
+          "url": "https://www.lansstyrelsen.se/download/18.6372be0819dd77281a393a3/1777529316453/L%C3%A4nsstyrelsen%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20tillf%C3%A4lliga%20f%C3%B6reskrifter%20om%20begr%C3%A4nsning%20av%20r%C3%A4tten%20att%20anv%C3%A4nda%20vattenomr%C3%A5de%20utanf%C3%B6r%20Ark%C3%B6sund,%20Norrk%C3%B6pings%20kommun%202026.12.pdf"
+        }
+      ],
+      "number": "05FS 2026:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 522347,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:02Z",
+          "sha256": "f587415b71bd598d0156b0d28290cf5308086f22bcb13d989ab856c53eab8753",
+          "url": "https://www.lansstyrelsen.se/download/18.6372be0819dd77281a393a4/1777529316950/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Karshult%20naturreservat%20i%20Motala%20kommun%202026.13.pdf"
+        }
+      ],
+      "number": "05FS 2026:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 464190,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:03Z",
+          "sha256": "42513673dc8bdcc427fed8e09336bb22e69997075d7e023190da9d47fc52ed2a",
+          "url": "https://www.lansstyrelsen.se/download/18.6372be0819dd77281a393a2/1777529316423/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20M%C3%B6rkviksbergens%20naturreservat%20i%20%C3%85tvidabergs%20kommun%202026.14.pdf"
+        }
+      ],
+      "number": "05FS 2026:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 135809,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:04Z",
+          "sha256": "ed19a0ddeca808eb4fb0dae3d1b94940c20bb7bff1c0d22d201c28db2c3b4c47",
+          "url": "https://www.lansstyrelsen.se/download/18.5d397faa19e63389aafaf2f7/1781010834136/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20upph%C3%A4vande%20av%20beslut%20om%20vattenskyddsomr%C3%A5de%20och%20skyddsf%C3%B6reskrifter%20vid%20Rystad%20i%20Link%C3%B6pings%20kommun%202026.15.pdf"
+        }
+      ],
+      "number": "05FS 2026:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 136975,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:05Z",
+          "sha256": "2b7c4c93bfeefaed08a9ff4dc3d3f5db93ae9b6e19cd5c8ae562715948f6d256",
+          "url": "https://www.lansstyrelsen.se/download/18.5d397faa19e63389aafaf2f8/1781010834154/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20upph%C3%A4vande%20av%20naturminnesf%C3%B6rordnande%20S%C3%B6der-k%C3%B6pings%20kommun%202026.16.pdf"
+        }
+      ],
+      "number": "05FS 2026:16",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 102971,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:06Z",
+          "sha256": "24ced5fff17a47c0b7a963f56797a77bbb87fdb458c0b254467cc3d66d233ac8",
+          "url": "https://www.lansstyrelsen.se/download/18.5d397faa19e63389aafaf2f6/1781010834118/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20ang%C3%A5ende%20tillst%C3%A5nd%20f%C3%B6r%20uppf%C3%B6rande%20av%20byggnad%20m.m.%20inom%20visst%20avst%C3%A5nd%20fr%C3%A5n%20v%C3%A4gomr%C3%A5de%202026.17.pdf"
+        }
+      ],
+      "number": "05FS 2026:17",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 174825,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:07Z",
+          "sha256": "1d211250513561e05eaafc71366b4fc54f2eaebcd9b439754c9ae9f5373a37e9",
+          "url": "https://www.lansstyrelsen.se/download/18.398510271a01f5768342e86c/1787569704880/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20upph%C3%A4vande%20av%20beslut%20om%20vattenskyddsomr%C3%A5de%20och%20skyddsf%C3%B6reskrifter%20vid%20Kisa%20i%20Kinda%20kommun%202026.19.pdf"
+        }
+      ],
+      "number": "05FS 2026:19",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 682970,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:08Z",
+          "sha256": "539418cef709506132ea77410d06c650004353e7c4951692ed7744c2f0a71bde",
+          "url": "https://www.lansstyrelsen.se/download/18.398510271a01f5768342e867/1787569704646/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20L%C3%A5ngvr%C3%A5ns%20naturreservat%20i%20Motala%20kommun%202026.20.pdf"
+        }
+      ],
+      "number": "05FS 2026:20",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 569097,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:09Z",
+          "sha256": "dedb535d8ef39ac2e4d0553f4e3cdbb51ef59bffc4c85419441569c4d7e95a13",
+          "url": "https://www.lansstyrelsen.se/download/18.398510271a01f5768342e868/1787569704695/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20M%C3%A4rkl%C3%A4mmans%20naturreservat%20i%20Valdemarsviks%20kommun%202026.21.pdf"
+        }
+      ],
+      "number": "05FS 2026:21",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 590613,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:10Z",
+          "sha256": "6d41fbc4954d54fbd427d7077a7de17740c9cba884d82f0c724190ffabb1093e",
+          "url": "https://www.lansstyrelsen.se/download/18.398510271a01f5768342e86a/1787569704775/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20utvidgning%20av%20Dammfalleb%C3%A4ckens%20naturreservat%20i%20Norrk%C3%B6pings%20kommun%20samt%20fastst%C3%A4llande%20av%20sk%C3%B6tselplan%20f%C3%B6r%20utvidgning%202026.22.pdf"
+        }
+      ],
+      "number": "05FS 2026:22",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1079359,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:11Z",
+          "sha256": "290decad84a1130c6945a0f6e3a54720df3d859a4e93b922fd38c7feb64c2d29",
+          "url": "https://www.lansstyrelsen.se/download/18.398510271a01f5768342e86b/1787569704827/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20utvidgning%20av%20Krankenb%C3%A4ckens%20naturreservat%20i%20Norrk%C3%B6pings%20kommun%20samt%20fastst%C3%A4llande%20av%20sk%C3%B6tselplan%20f%C3%B6r%20utvidgning%202026.23.pdf"
+        }
+      ],
+      "number": "05FS 2026:23",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 842983,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:12Z",
+          "sha256": "568cb003b51c246d62fd670c5e5913e702ffd9119aed9326c0533888d37a9d44",
+          "url": "https://www.lansstyrelsen.se/download/18.398510271a01f5768342e869/1787569704734/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Skr%C3%A4cksk%C3%A4rs%20naturreservat%20i%20Valdemarsviks%20kommun%202026.24.pdf"
+        }
+      ],
+      "number": "05FS 2026:24",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 99195,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:13Z",
+          "sha256": "599525dbab0ad5f8ba6f169816dd7138fecba5e1d65450395bad5ab291b2d85e",
+          "url": "https://www.lansstyrelsen.se/download/18.5188859e1a04207e9278e593/1788785088587/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20upph%C3%A4vande%20av%20L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20lokala%20f%C3%B6reskrifter%20(05FS%202026.18)%20om%20eldningsf%C3%B6rbud%202026.25.pdf"
+        }
+      ],
+      "number": "05FS 2026:25",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 526823,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:14Z",
+          "sha256": "a70b0530ffb90b8e7898aac0ce7141140f2aad6224aa088cb1a0ead3f760549b",
+          "url": "https://www.lansstyrelsen.se/download/18.39bf752a1a0a887948362d/1789540805733/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Skullebo%20naturreservat%20i%20Link%C3%B6pings%20kommun%202026.26.pdf"
+        }
+      ],
+      "number": "05FS 2026:26",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 314477,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:15Z",
+          "sha256": "da758d66efa4f60a4b1df5c342c964c24a1620e39884e67c7d1b65895c966d89",
+          "url": "https://www.lansstyrelsen.se/download/18.39bf752a1a0a887948362f/1789540805818/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Br%C3%A5tabergens%20naturreservat%20i%20Norrk%C3%B6pings%20kommun%202026.27.pdf"
+        }
+      ],
+      "number": "05FS 2026:27",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 733156,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:16Z",
+          "sha256": "c692cf92b9875b6b3acbabb9a3d80aa3328dc2cb826b012b980b799ec80316ba",
+          "url": "https://www.lansstyrelsen.se/download/18.39bf752a1a0a887948362e/1789540805773/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Lill%C3%A5ns%20naturreservat%20i%20Boxholms%20kommun%202026.28.pdf"
+        }
+      ],
+      "number": "05FS 2026:28",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 596380,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:17Z",
+          "sha256": "930a12ac663257b7aa70a98dd4a4fb62ddc59e6a8045011c5ef7c043838ffdd3",
+          "url": "https://www.lansstyrelsen.se/download/18.39bf752a1a0a887948362c/1789540805681/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Svart%C3%A5mynningens%20naturreservat%20i%20Link%C3%B6pings%20kommun%202026.29.pdf"
+        }
+      ],
+      "number": "05FS 2026:29",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
