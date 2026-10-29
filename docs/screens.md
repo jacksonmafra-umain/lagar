@@ -25,7 +25,7 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | Utforska, Region and Kommun | Mismatch: search hint names national laws | #130 |
 | Scope sheet, Drawer | Matches; the drawer button uses a menu icon (fixed) | #134 |
 | Search results | Mismatch: no scope shown on results; exact title matches rank below newer case reports; case-law titles carry "-----" separators | #126, #127, #135 |
-| Advanced search | Mismatch on phones: title wraps beside a long scope chip | #131 |
+| Advanced search | Matches; the title wrapped beside a long scope chip on phones until #131 | #131 |
 | Hierarki, wide home hierarchy | Mismatch: counts not digit-grouped (SFS other statutes now counted, #125) | #133 |
 | By ministry | Matches | |
 | Layer list | Matches; the header badge no longer touches the top edge of the bar (fixed) | #129 |
@@ -195,6 +195,7 @@ Route: `AdvancedSearch`. Code: `ui/search/AdvancedSearchScreen.kt`, `DateField.k
 | Text field, issue-date range, mode (all, title, number, full text), status (all, in force, repealed) | Done | #37 |
 | Document types from the index `series` of the scope, so new vocabulary types appear once they have data | Done | #32 |
 | Calendar date picker (M3, tier 3 glass) with dates shown in the app language, collapsible filter sections with an "Active" badge, scope change from the form and the header chip | Done | #32 |
+| Header scope chip moves under the title when both do not fit (phones with a long locality), ellipsized when too long for its line | Done | #131 |
 | Vacatio legis filter and in-force date range; documents without `in_force` (most SFS today) never match them. `docs.json` has no `in_force` yet, so these filters read the catalog | Done | #32 |
 | Glass footer bar | Done | #23 |
 | Desktop: text, scope, mode and types beside the date, in-force and status filters, capped at 1040dp, search button under the right column | Done | #35 |

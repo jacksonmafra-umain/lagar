@@ -59,6 +59,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.lagar.data.ApiIndex
 import app.lagar.data.GeoRepository
@@ -356,32 +357,41 @@ fun AdvancedSearchScreen(
             ) { Text(stringResource(Res.string.home_search_submit), fontWeight = FontWeight.Bold) }
         }
         BackTopBar(hazeState, onBack, { headerHeight = it }, Modifier.align(Alignment.TopCenter)) {
-            Text(
-                text = stringResource(Res.string.home_advanced_search),
-                style = LagarTheme.type.headlineSm,
-                color = LagarTheme.colors.onSurface,
-                modifier = Modifier.weight(1f),
-            )
-            val label = scopeLabel(scope, localityName)
-            val chipDescription = stringResource(Res.string.home_scope_chip, label)
-            Box(
-                modifier = Modifier
-                    .heightIn(min = ShellDimens.TouchTarget)
-                    .clip(CircleShape)
-                    .clickable(role = Role.Button, onClick = onChangeScope)
-                    .semantics(mergeDescendants = true) { contentDescription = chipDescription },
-                contentAlignment = Alignment.Center,
+            // The scope chip moves under the title when both do not fit on one line (phones with a long locality).
+            FlowRow(
+                modifier = Modifier.weight(1f).padding(vertical = spacing.xs),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                itemVerticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = label,
-                    style = LagarTheme.type.labelMd,
-                    fontWeight = FontWeight.Bold,
-                    color = layers.onTint(scope.key),
-                    modifier = Modifier
-                        .clip(CircleShape)
-                        .background(layers.tint(scope.key))
-                        .padding(horizontal = spacing.sm, vertical = 6.dp),
+                    text = stringResource(Res.string.home_advanced_search),
+                    style = LagarTheme.type.headlineSm,
+                    color = LagarTheme.colors.onSurface,
+                    modifier = Modifier.padding(end = spacing.sm),
                 )
+                val label = scopeLabel(scope, localityName)
+                val chipDescription = stringResource(Res.string.home_scope_chip, label)
+                Box(
+                    modifier = Modifier
+                        .heightIn(min = ShellDimens.TouchTarget)
+                        .clip(CircleShape)
+                        .clickable(role = Role.Button, onClick = onChangeScope)
+                        .semantics(mergeDescendants = true) { contentDescription = chipDescription },
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(
+                        text = label,
+                        style = LagarTheme.type.labelMd,
+                        fontWeight = FontWeight.Bold,
+                        color = layers.onTint(scope.key),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier
+                            .clip(CircleShape)
+                            .background(layers.tint(scope.key))
+                            .padding(horizontal = spacing.sm, vertical = 6.dp),
+                    )
+                }
             }
         }
     }
