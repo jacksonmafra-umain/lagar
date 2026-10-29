@@ -73,7 +73,7 @@
       "note": null,
       "url": "https://arbetsformedlingen.se/om-oss/var-verksamhet/styrning-och-resultat/forfattningssamling-AFFS",
       "description": "Arbetsförmedlingens författningssamling (AFFS) innehåller gällande föreskrifter och allmänna råd för Arbetsförmedlingen. Samlingen innehåller även gällande föreskrifter och allmänna råd från tidigare Arbetsmarknadsstyrelsen (AMSFS), vars verksamhet övergick till Arbetsförmedlingen 1 januari 2008.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/158"
     },
     {
       "series": "AGVFS",
@@ -84,7 +84,7 @@
       "note": null,
       "url": "https://www.arbetsgivarverket.se/avtal-och-skrifter?category=32",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/159"
     },
     {
       "series": "BFNAR",
@@ -95,7 +95,7 @@
       "note": "General advice (allmänna råd), not binding regulations.",
       "url": "https://www.bfn.se/redovisningsregler/allmanna-rad/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/160"
     },
     {
       "series": "BOLFS",
@@ -106,7 +106,7 @@
       "note": null,
       "url": "https://bolagsverket.se/omoss/varverksamhet/styrochplaneringsdokument/bolagsverketsforeskrifterbolfs.2161.html",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/161"
     },
     {
       "series": "CSNFS",
@@ -117,7 +117,7 @@
       "note": null,
       "url": "https://www.csn.se/om-csn/lag-och-ratt/forfattningssamling",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/162"
     },
     {
       "series": "DVFS",
@@ -128,7 +128,7 @@
       "note": null,
       "url": "https://www.domstol.se/om-sveriges-domstolar/for-dig-som-aktor-i-domstol/stod-for-aktorer-i-domstol/dvfs/",
       "description": "Domstolsverkets författningssamling, DVFS, innehåller Domstolsverkets och Notarienämndens föreskrifter och allmänna råd.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/164"
     },
     {
       "series": "EIFS",
@@ -139,7 +139,7 @@
       "note": null,
       "url": "https://ei.se/om-oss/lagar-och-regler/foreskrifter",
       "description": "Föreskrifterna handlar om el, gas, fjärrvärme och fjärrkyla",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/165"
     },
     {
       "series": "ELSÄK-FS",
@@ -150,7 +150,7 @@
       "note": null,
       "url": "https://elsakerhetsverket.se/lag-och-ratt/foreskrifter",
       "description": "Föreskrifterna innehåller bestämmelser som ska bidra till hög elsäkerhet och minska risker för att el orsakar personskada eller sakskada.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/166"
     },
     {
       "series": "FFS",
@@ -161,7 +161,7 @@
       "note": null,
       "url": "https://www.forsvarsmakten.se/om-forsvarsmakten/myndighetsinformation/dokument/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/167"
     },
     {
       "series": "FKFS",
@@ -172,7 +172,7 @@
       "note": null,
       "url": "https://lagrummet.forsakringskassan.se/",
       "description": "Innehåller föreskrifter om aktivitetsstöd, förmåner för totalförsvarspliktiga, tandvårdsersättning, ersättning för kostnader för internationell vård, sjukvårdsersättning,, arbetsgivaravgifter och egenavgifter, Fritidskortet, dataskydd och integritet, självbetjäningstjänster via Internet.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/168"
     },
     {
       "series": "HSLF-FS",
@@ -183,7 +183,7 @@
       "note": null,
       "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
       "description": "Utnyttjas av E-hälsomyndigheten, Folkhälsomyndigheten, Inspektionen för vård och omsorg, Läkemedelsverket, Myndigheten för familjerätt och föräldraskapsstöd, Rättsmedicinalverket, Socialstyrelsen och Tandvårds- och läkemedelsförmånsverket.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
       "series": "HVMFS",
@@ -194,7 +194,7 @@
       "note": null,
       "url": "https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/foreskrifter.html",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/170"
     },
     {
       "series": "IAFFS",
@@ -205,7 +205,7 @@
       "note": null,
       "url": "https://www.iaf.se/Lag-ratt/Foreskrifter/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/171"
     },
     {
       "series": "IMYFS",
@@ -216,7 +216,7 @@
       "note": null,
       "url": "https://www.imy.se/om-oss/beslut-publikationer-och-remisser/foreskrifter-och-allmanna-rad/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/172"
     },
     {
       "series": "KAMFS",
@@ -227,7 +227,7 @@
       "note": null,
       "url": "https://www.kammarkollegiet.se/om-oss/kammarkollegiets-forfattningssamling-kamfs",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/173"
     },
     {
       "series": "KBVFS",
@@ -238,7 +238,7 @@
       "note": null,
       "url": "https://www.kustbevakningen.se/om-oss/kustbevakningens-forfattningssamling/",
       "description": "Föreskrifter och allmänna råd om förundersökningsledning vid utredning av brott, avgifter vid uppdragsverksamhet, sjösäkerhet på Kustbevakningens fartyg, rapportering av olyckor vid olje- och gasverksamhet till havs.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/174"
     },
     {
       "series": "KFMFS",
@@ -249,7 +249,7 @@
       "note": null,
       "url": "https://www.kronofogden.se/om-kronofogden/dina-rattigheter-lagar-och-regler/foreskrifter-allmanna-rad-och-meddelanden",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/175"
     },
     {
       "series": "KFS",
@@ -260,7 +260,7 @@
       "note": null,
       "url": "https://www.kommerskollegium.se/uppdrag/forfattningssamling/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/176"
     },
     {
       "series": "KIFS",
@@ -271,7 +271,7 @@
       "note": null,
       "url": "https://www.kemi.se/lagar-och-regler/lagstiftningar-inom-kemikalieomradet/kemikalieinspektionens-foreskrifter-kifs",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/177"
     },
     {
       "series": "KKVFS",
@@ -282,7 +282,7 @@
       "note": null,
       "url": "https://www.konkurrensverket.se/om-oss/forfattningssamling/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/178"
     },
     {
       "series": "KOVFS",
@@ -293,7 +293,7 @@
       "note": null,
       "url": "https://publikationer.konsumentverket.se/filtrera-fram-forfattningssamling",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/179"
     },
     {
       "series": "KRFS",
@@ -304,7 +304,7 @@
       "note": null,
       "url": "https://www.kulturradet.se/om-oss/forfattningssamling/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/180"
     },
     {
       "series": "KVFS",
@@ -315,7 +315,7 @@
       "note": null,
       "url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/kriminalvardens-foreskrifter/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/181"
     },
     {
       "series": "LIVSFS",
@@ -326,7 +326,7 @@
       "note": null,
       "url": "https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/182"
     },
     {
       "series": "LMFS",
@@ -337,7 +337,7 @@
       "note": null,
       "url": "https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/183"
     },
     {
       "series": "MCFFS",
@@ -348,7 +348,7 @@
       "note": null,
       "url": "https://www.mcf.se/sv/regler/om-regler/",
       "description": "I Myndigheten för civilt försvars författningssamling (MCFFS) ingår även regler utgivna av de tidigare myndigheterna MSB (MSBFS) Statens räddningsverk (SRVFS), Krisberedskapsmyndigheten (KBMFS) och Sprängämnesinspektionen (SÄIFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/184"
     },
     {
       "series": "MDFFS",
@@ -359,7 +359,7 @@
       "note": null,
       "url": "https://www.digg.se/om-oss/forfattningssamling",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/185"
     },
     {
       "series": "MEMYFS",
@@ -370,7 +370,7 @@
       "note": null,
       "url": "https://mediemyndigheten.se/om-oss/lagar-forordningar-och-foreskrifter/",
       "description": "Föreskrifter om sändningstillstånd för radio och tv, tillgänglighetskrav för audiovisuella verk, standarder för digital-tv, stöd till medier, skyldigheter att redovisa program med europeiskt ursprung.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/186"
     },
     {
       "series": "MIGRFS",
@@ -381,7 +381,7 @@
       "note": "robots.txt (checked 2026-10-29) allows the regulation pages. Proposed as a next series on #115.",
       "url": "https://www.migrationsverket.se/om-migrationsverket/styrning-och-uppfoljning/foreskrifter.html",
       "description": "Migrationsverket är förvaltningsmyndighet för frågor som rör uppehållstillstånd, arbetstillstånd, uppehållsrätt, visering, mottagande av asylsökande inklusive boenden, anvisning till kommuner av ensamkommande barn, anvisning till kommuner av nyanlända och personer med tillfälligt skydd, självmant återvändande, medborgarskap, och återvandring. Föreskrifterna innehåller bestämmelser på dessa områden.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/187"
     },
     {
       "series": "MTFS",
@@ -392,7 +392,7 @@
       "note": null,
       "url": "https://www.tillvaxtanalys.se/statistik/tillvaxtanalysforeskrifter.125740.html",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/188"
     },
     {
       "series": "MYHFS",
@@ -403,7 +403,7 @@
       "note": null,
       "url": "https://www.myh.se/lag-och-ratt/foreskrifter-och-allmanna-rad",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/189"
     },
     {
       "series": "NFS",
@@ -414,7 +414,7 @@
       "note": null,
       "url": "https://www.naturvardsverket.se/nfs",
       "description": "Naturvårdsverket ansvarar för frågor som handlar om klimat och luft, mark, biologisk mångfald, förorenade områden, kretslopp och avfall, resurseffektivitet, miljöövervakning, jakt och vilt samt miljöforskning.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/190"
     },
     {
       "series": "PFS",
@@ -425,7 +425,7 @@
       "note": null,
       "url": "https://www.pensionsmyndigheten.se/om-pensionsmyndigheten/allmanna-handlingar/lagar-och-regler",
       "description": "Här publiceras Pensionsmyndighetens gällande och upphävda föreskrifter om pension, andra förmåner och e-tjänster. De föreskrifter som beslutats av Premiepensionsmyndigheten och Försäkringskassan (inklusive Riksförsäkringsverket) gäller även efter Pensionsmyndighetens inrättande 2010.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/191"
     },
     {
       "series": "PMFS",
@@ -436,7 +436,7 @@
       "note": null,
       "url": "https://polisen.se/Lagar-och-regler/Polismyndighetens-forfattningssamling/",
       "description": "Polismyndigheten föreskriver bland annat inom områdena vapen, bevakning, pass och nationellt identitetskort, trafikövervakning, utrustning i polisarbetet och delgivning.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/192"
     },
     {
       "series": "PRVFS",
@@ -447,7 +447,7 @@
       "note": null,
       "url": "https://www.prv.se/sv/om-oss/var-verksamhet/styrdokument/prvs-forfattningssamling/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/193"
     },
     {
       "series": "PTSFS",
@@ -458,7 +458,7 @@
       "note": null,
       "url": "https://pts.se/regelbibliotek/",
       "description": "Innehåller föreskrifter om elektronisk kommunikation, post, radioutrustning, produkter och tjänsters tillgänglighet.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/194"
     },
     {
       "series": "RA-FS",
@@ -469,7 +469,7 @@
       "note": null,
       "url": "https://riksarkivet.se/arkivera-och-forvalta/foreskrifter-och-vagledningar",
       "description": "Föreskrifter om till exempel gallring (att förstöra allmäna handlingar) hos alla myndigheter, krav på arkivlokaler, hur handlingar ska hanteras, förvaras, skyddas, kunna återsökas och bevaras samt överlämnas mellan myndigheter. I föreskrifterna finns även stöd för enskilda att behandla personuppgifter för arkivändamål av allmänt intresse.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/195"
     },
     {
       "series": "RFS",
@@ -480,7 +480,7 @@
       "note": null,
       "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=rfs",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/196"
     },
     {
       "series": "RGKFS",
@@ -491,7 +491,7 @@
       "note": null,
       "url": "https://www.riksgalden.se/press-och-publicerat/foreskrifter/",
       "description": "Riksgälden är statens centrala finansförvaltning och har även uppdrag som bidrar till att värna finansiell stabilitet.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/197"
     },
     {
       "series": "RIFS",
@@ -502,7 +502,7 @@
       "note": null,
       "url": "https://www.revisorsinspektionen.se/regelverk/samtliga-foreskrifter/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/198"
     },
     {
       "series": "SCB-FS",
@@ -513,7 +513,7 @@
       "note": null,
       "url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/",
       "description": "Föreskrifter om uppgiftsskyldighet till statistik, kvalitet och tillgängliggörande av statistik.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/199"
     },
     {
       "series": "SGU-FS",
@@ -524,7 +524,7 @@
       "note": null,
       "url": "https://www.sgu.se/om-sgu/verksamhet/foreskrifter/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/200"
     },
     {
       "series": "SIFS",
@@ -535,7 +535,7 @@
       "note": null,
       "url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/201"
     },
     {
       "series": "SJVFS",
@@ -546,7 +546,7 @@
       "note": null,
       "url": "https://jordbruksverket.se/om-jordbruksverket/forfattningar/om-forfattningssamlingen",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/202"
     },
     {
       "series": "SJÖFS",
@@ -557,7 +557,7 @@
       "note": null,
       "url": "https://www.sjofartsverket.se/sv/om-oss/lagrum/systematisk-forteckning-n/",
       "description": "Föreskrifter om bland annat säkerheten på fartyg, sjömanssociala frågor, föroreningar från fartyg, sjötrafik, sjöfartsskydd och hamnskydd.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/203"
     },
     {
       "series": "SKOLFS",
@@ -568,7 +568,7 @@
       "note": null,
       "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
       "description": "Skolverket ger ut föreskrifter och allmänna råd i Skolverkets författningssamling (SKOLFS). Författningssamlingen innehåller även föreskrifter beslutade av Myndigheten för ungdoms- och civilsamhällesfrågor, Skolinspektionen och Specialpedagogiska skolmyndigheten. Författningssamlingen innehåller även vissa förordningar – till exempel läroplaner – om regeringen har beslutat att dessa ska kungöras i SKOLFS i stället för i Svensk författningssamling (SFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/204"
     },
     {
       "series": "SKSFS",
@@ -579,7 +579,7 @@
       "note": null,
       "url": "https://www.skogsstyrelsen.se/lag-och-tillsyn/forfattningar/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/205"
     },
     {
       "series": "SKVFS",
@@ -590,7 +590,7 @@
       "note": "An earlier robots.txt request was rejected by a WAF; on 2026-10-29 robots.txt answered normally and allows the regulation pages. Proposed as a next series on #115.",
       "url": "https://www4.skatteverket.se/rattsligvagledning/115.html?year=Alla",
       "description": "Innehåller föreskrifter rörande följande områden enligt Förordning (2017:154) med instruktion för Skatteverket: Skatter och avgifter, fastighetstaxering, folkbokföringsverksamhet, identitetskort, bouppteckning, äktenskapsregistret, pensionsgrundande inkomst, lönegarantiutbetalning.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/206"
     },
     {
       "series": "SSMFS",
@@ -601,7 +601,7 @@
       "note": null,
       "url": "https://www.stralsakerhetsmyndigheten.se/regler/foreskrifter/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/207"
     },
     {
       "series": "STAFS",
@@ -612,7 +612,7 @@
       "note": null,
       "url": "https://www.swedac.se/lag-ratt/swedacs-foreskrifter/",
       "description": "Swedac föreskriver om krav på mätningar och mättekniska metoder, krav på kontroll av mätdon, krav på och kontroll av färdigförpackade varor och kontroll av mängduppgifter för färdigförpackade varor, krav i fråga om kundvågar i detaljhandel, kontroll av elmätare och registrering av namnstämplar avsedda för ädelmetallarbeten. Swedac föreskriver vidare om krav på ackrediterade och anmälda/utsedda organ, införande om OECD:s principer om god laboratoriesed (GLP) samt avgifter inom flera områden.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/208"
     },
     {
       "series": "STEMFS",
@@ -623,7 +623,7 @@
       "note": null,
       "url": "https://energimyndigheten.a-w2m.se/System/TemplateNavigate.aspx?p=Arkitektkopia&l=t&view=672&cat=%2FF%C3%B6reskrifter",
       "description": "Föreskrifter om bland annat försörjningsberedskap och säkerhetsskydd för olika energislag, klimat och hållbarhet på energiområdet, elcertifikat med mera.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/209"
     },
     {
       "series": "STFS",
@@ -634,7 +634,7 @@
       "note": null,
       "url": "https://sametinget.se/dokumentbank?cat=72",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/210"
     },
     {
       "series": "SiSFS",
@@ -645,7 +645,7 @@
       "note": null,
       "url": "https://www.stat-inst.se/om-sis/lagar-forordningar-forfattningar/sis-forfattningssamling/",
       "description": "Statens institutionsstyrelse, SiS, är en myndighet som ansvarar för individuellt anpassad tvångsvård och behandling av ungdomar med allvarliga psykosociala problem och vuxna med missbruksproblem, och har föreskrifter inom de områdena.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/211"
     },
     {
       "series": "SvKFS",
@@ -656,7 +656,7 @@
       "note": null,
       "url": "https://www.svk.se/om-kraftsystemet/legalt-ramverk/svenska-kraftnats-foreskrifter/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/212"
     },
     {
       "series": "TFS",
@@ -667,7 +667,7 @@
       "note": null,
       "url": "https://www.tullverket.se/omoss/dethargortullverket/verksamhetochorganisation/lagarochforeskrifter/tullverketsforfattningssamlingtfs",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/213"
     },
     {
       "series": "TPPVFS",
@@ -678,7 +678,7 @@
       "note": null,
       "url": "https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter",
       "description": "Innehåller bland annat föreskrifter om totalförsvarsplikt och förmåner till totalförsvarspliktiga.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/215"
     },
     {
       "series": "TRVFS",
@@ -689,7 +689,7 @@
       "note": null,
       "url": "https://www.trafikverket.se/om-oss/var-verksamhet-vision-och-uppdrag/trafikverkets-forfattningssamling/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/216"
     },
     {
       "series": "TVFS",
@@ -700,7 +700,7 @@
       "note": null,
       "url": "https://tillvaxtverket.se/tillvaxtverket/omtillvaxtverket/varverksamhet/foreskrifter.595.html",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/217"
     },
     {
       "series": "UFS",
@@ -711,7 +711,7 @@
       "note": null,
       "url": "https://www.upphandlingsmyndigheten.se/rapporter-och-statistik/upphandlingsmyndighetens-forfattningssamling/",
       "description": "Innehåller föreskrifter om upphandlingsstatistik.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/218"
     },
     {
       "series": "UHRFS",
@@ -722,7 +722,7 @@
       "note": null,
       "url": "https://www.uhr.se/publikationer/lagar-och-regler-for-hogre-utbildning/Universitets--och-hogskoleradets-forfattningssamling/",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/219"
     },
     {
       "series": "VALFS",
@@ -733,7 +733,7 @@
       "note": null,
       "url": "https://www.val.se/det-svenska-valsystemet/grunderna-i-det-svenska-valsystemet/lagar-och-regler",
       "description": "Föreskrifter av praktiskt slag om avgifter för och utformning av vissa valrelaterade produkter som inte är reglerade i annan ordning.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/220"
     },
     {
       "series": "VRFS",
@@ -744,7 +744,7 @@
       "note": null,
       "url": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html",
       "description": "Författningssamlingen innehåller Vetenskapsrådets föreskrifter om godkännande för forskningshuvudmän att ta emot gästforskare samt myndighetens föreskrifter om genomförande av elektorsförsamlingars val av ledamöter till forskningsråd och ämnesråd. Den innehåller även Etikprövningsmyndighetens föreskrifter och allmänna råd för etikprövning av forskning som avser människor m.m.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/221"
     },
     {
       "series": "ÅFS",
@@ -755,7 +755,7 @@
       "note": null,
       "url": "https://www.aklagare.se/om-oss/dokument/forfattningssamling",
       "description": null,
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/222"
     },
     {
       "series": "STFS",
@@ -766,7 +766,7 @@
       "note": "Local traffic regulations; out of scope for the county layer (COVERAGE.md).",
       "url": "https://rdt.transportstyrelsen.se/rdt/defaultstfs.aspx",
       "description": "Trafikföreskrifter som i huvudsak meddelas av kommuner, länsstyrelser, polismyndigheter, Trafikverket och myndigheter som har hand om väg- eller gatuhållningen. Av förordningen (2007:231) om elektroniskt kungörande av vissa trafikföreskrifter framgår vilka slags trafikföreskrifter som ska publiceras i STFS.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/210"
     }
   ],
   "shared_series": [
@@ -776,7 +776,7 @@
       "url": "https://publikationer.konsumentverket.se/filtrera-fram-forfattningssamling",
       "description": "Allmänna reklamationsnämndens föreskrift om att anmälan ska göras på en särskild blankett.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/179"
     },
     {
       "agency": "E-hälsomyndigheten",
@@ -784,7 +784,7 @@
       "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
       "description": "Innehåller föreskrifter om vissa avgifter för öppenvårdsapotek.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
       "agency": "Etikprövningsmyndigheten",
@@ -792,7 +792,7 @@
       "url": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html",
       "description": null,
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/221"
     },
     {
       "agency": "Fastighetsmäklarinspektionen",
@@ -800,7 +800,7 @@
       "url": "https://fmi.se/det-har-ar-fmi/lag-och-ratt/foreskrifter/",
       "description": "Föreskrifter rörande registrering av fastighetsmäklare samt om åtgärder mot penningtvätt och finansiering av terrorism.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/173"
     },
     {
       "agency": "Folkhälsomyndigheten",
@@ -808,7 +808,7 @@
       "url": "https://www.folkhalsomyndigheten.se/publikationer-och-material/foreskrifter-och-allmanna-rad/",
       "description": "Föreskrifter och allmänna råd inom smittskyddslagens, alkohollagens och lagen om tobak och andra produkters område. Även föreskrifter och allmänna råd inom miljöbalkens område kring bland annat dricksvatten, bekämpningsmedel, inomhustemperatur, ventilation och buller.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
       "agency": "Inspektionen för strategiska produkter",
@@ -816,7 +816,7 @@
       "url": "https://www.tullverket.se/omoss/dethargortullverket/verksamhetochorganisation/lagarochforeskrifter/tullverketsforfattningssamlingtfs",
       "description": null,
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/213"
     },
     {
       "agency": "Inspektionen för vård och omsorg",
@@ -824,7 +824,7 @@
       "url": "https://www.ivo.se/aktuellt/publikationer/foreskrifter/",
       "description": "IVO ansvarar för tillsyn och tillståndsprövning inom hälso- och sjukvård, socialtjänst och verksamhet enligt lagen om stöd och service till vissa funktionshindrade (LSS). Myndigheten ansvarar även för prövning av klagomål enligt patientsäkerhetslagen och de flesta föreskrifterna berör detta område.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
       "agency": "Luftfartsverket",
@@ -840,7 +840,7 @@
       "url": "https://www.lakemedelsverket.se/sv/lagar-och-regler/foreskrifter",
       "description": null,
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
       "agency": "Medlingsinstitutet",
@@ -848,7 +848,7 @@
       "url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/",
       "description": null,
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/199"
     },
     {
       "agency": "Myndigheten för familjerätt och föräldraskapsstöd",
@@ -856,7 +856,7 @@
       "url": "https://www.mfof.se/familjeratt/regler-och-riktlinjer/foreskrifter-och-allmanna-rad",
       "description": "Innehåller föreskrifter om adoption, faderskap och föräldraskap, samt vårdnad, boende och umgänge.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
       "agency": "Myndigheten för stöd till trossamfund",
@@ -864,7 +864,7 @@
       "url": "https://www.kammarkollegiet.se/om-oss/kammarkollegiets-forfattningssamling-kamfs",
       "description": "Innehåller föreskrifter om statsbidrag till trossamfund.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/173"
     },
     {
       "agency": "Notarienämnden",
@@ -872,7 +872,7 @@
       "url": "https://www.domstol.se/om-sveriges-domstolar/for-dig-som-aktor-i-domstol/stod-for-aktorer-i-domstol/dvfs/?f=OrdinanceAuthority_list:notarienamnden&s=",
       "description": null,
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/164"
     },
     {
       "agency": "Patentombudsnämnden",
@@ -880,7 +880,7 @@
       "url": "https://bolagsverket.se/omoss/flerverksamheter/patentombudsnamnden/ompatentombudsnamnden/patentombudsnamndensforeskrifterbolfs.2621.html",
       "description": "Innehåller föreskrifter om auktorisation av patentombud.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/161"
     },
     {
       "agency": "Riksantikvarieämbetet",
@@ -888,7 +888,7 @@
       "url": "https://www.kulturradet.se/om-oss/forfattningssamling/",
       "description": "Riksantikvarieämbetet har föreskrifter om verkställigheten av kulturmiljölagens bestämmelser om fornminnen, byggnadsminnen, kyrkliga kulturminnen och utförsel av vissa äldre kulturföremål. Riksantikvarieämbetet har även föreskrifter om utmärkning av kulturegendom enligt totalförsvarets folkrättsförordning.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/180"
     },
     {
       "agency": "Rättsmedicinalverket",
@@ -896,7 +896,7 @@
       "url": "https://www.rmv.se/om-oss/var-verksamhet/rattsmedicinalverkets-forfattningssamling/",
       "description": "Innehåller föreskrifter om rättsmedicinsk, rättspsykiatrisk, rättsgenetisk och rättskemisk verksamhet.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
       "agency": "Rådet för Europeiska socialfonden i Sverige",
@@ -904,7 +904,7 @@
       "url": "https://www.esf.se/uppfoljning-revision-och-regelverk/styrande-dokument/",
       "description": null,
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/217"
     },
     {
       "agency": "Socialstyrelsen",
@@ -912,7 +912,7 @@
       "url": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/regler-och-riktlinjer/foreskrifter-och-allmanna-rad/",
       "description": "Innehåller socialstyrelsens gällande bestämmelser för hälso- och sjukvård, tandvård, hälsoskydd och socialtjänst.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
       "agency": "Specialpedagogiska skolmyndigheten",
@@ -920,7 +920,7 @@
       "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
       "description": "Föreskrifterna rör i huvudsak reglering av statsbidrag inom myndighetens område.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/204"
     },
     {
       "agency": "Statens skolinspektion",
@@ -928,7 +928,7 @@
       "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
       "description": null,
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/204"
     },
     {
       "agency": "Statens tjänstepensionsverk",
@@ -936,7 +936,7 @@
       "url": "https://www.arbetsgivarverket.se/avtal-och-skrifter?category=32",
       "description": null,
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/159"
     },
     {
       "agency": "Säkerhetspolisen",
@@ -944,7 +944,7 @@
       "url": "https://polisen.se/Lagar-och-regler/Polismyndighetens-forfattningssamling/",
       "description": null,
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/192"
     },
     {
       "agency": "Tandvårds- och läkemedelsförmånsverket",
@@ -952,7 +952,7 @@
       "url": "https://www.tlv.se/om-tlv/regelverk/foreskrifter.html",
       "description": "Innehåller föreskrifter om läkemedelsförmåner, pris och subvention på läkemedel och förbrukningsartiklar, bidrag till apotek i glesbygd, referenspriser i det statliga tandvårdsstödet, handelsmarginal för apotek.",
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
       "agency": "Trafikanalys",
@@ -960,7 +960,7 @@
       "url": "https://www.trafa.se/sidor/kvalitetsarbete-inom-statistik/foreskrifter/",
       "description": null,
       "status": "no_adapter",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/173"
     }
   ],
   "counties": [
@@ -974,7 +974,7 @@
       "text": "HTML text",
       "url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling.html",
       "description": "Stockholms läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/223"
     },
     {
       "code": "03",
@@ -986,7 +986,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
       "description": "Uppsala läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/224"
     },
     {
       "code": "04",
@@ -998,7 +998,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/sodermanland/om-oss/om-lansstyrelsen-i-sodermanlands-lan/lanets-forfattningssamling.html",
       "description": "Södermanlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/225"
     },
     {
       "code": "05",
@@ -1010,7 +1010,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
       "description": "Östergötlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/226"
     },
     {
       "code": "06",
@@ -1022,7 +1022,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
       "description": "Jönköpings läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/227"
     },
     {
       "code": "07",
@@ -1034,7 +1034,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/kronoberg/om-oss/om-lansstyrelsen-i-kronobergs-lan/lanets-forfattningssamling.html",
       "description": "Kronobergs läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/228"
     },
     {
       "code": "08",
@@ -1046,7 +1046,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
       "description": "Kalmars läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/229"
     },
     {
       "code": "09",
@@ -1058,7 +1058,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
       "description": "Gotlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/230"
     },
     {
       "code": "10",
@@ -1070,7 +1070,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
       "description": "Blekinge läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/231"
     },
     {
       "code": "12",
@@ -1082,7 +1082,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
       "description": "Skåne läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/232"
     },
     {
       "code": "13",
@@ -1094,7 +1094,7 @@
       "text": "HTML text",
       "url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling.html",
       "description": "Hallands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/233"
     },
     {
       "code": "14",
@@ -1106,7 +1106,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
       "description": "Västra Götalands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/234"
     },
     {
       "code": "17",
@@ -1118,7 +1118,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/varmland/om-oss/om-lansstyrelsen-varmland/forfattningar.html",
       "description": "Värmlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/235"
     },
     {
       "code": "18",
@@ -1130,7 +1130,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/orebro/om-oss/lanets-forfattningssamling.html",
       "description": "Örebro läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/236"
     },
     {
       "code": "19",
@@ -1142,7 +1142,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
       "description": "Västmanlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/237"
     },
     {
       "code": "20",
@@ -1154,7 +1154,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/dalarna/om-oss/om-lansstyrelsen-i-dalarnas-lan/lanets-forfattningssamling.html",
       "description": "Dalarnas läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/238"
     },
     {
       "code": "21",
@@ -1166,7 +1166,7 @@
       "text": "HTML text",
       "url": "https://www.lansstyrelsen.se/gavleborg/om-oss/om-lansstyrelsen-i-gavleborgs-lan/lanets-forfattningssamling.html",
       "description": "Gävleborgs läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/239"
     },
     {
       "code": "22",
@@ -1178,7 +1178,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
       "description": "Västernorrlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/240"
     },
     {
       "code": "23",
@@ -1190,7 +1190,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
       "description": "Jämtlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/241"
     },
     {
       "code": "24",
@@ -1202,7 +1202,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
       "description": "Västerbottens läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/242"
     },
     {
       "code": "25",
@@ -1214,7 +1214,7 @@
       "text": "PDF links only",
       "url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
       "description": "Norrbottens läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/243"
     }
   ],
   "municipalities": {
@@ -1223,7 +1223,7 @@
         "code": "0180",
         "kommun": "Stockholm",
         "url": "https://start.stockholm/",
-        "issue": null,
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/260",
         "collection": "Stockholms stads kommunala författningssamling (KFS)",
         "status": "partial",
         "documents": 5,
@@ -1233,7 +1233,7 @@
         "code": "1280",
         "kommun": "Malmö",
         "url": "https://www.malmo.se/",
-        "issue": null,
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/361",
         "collection": "Malmö stads författningssamling",
         "status": "partial",
         "documents": 5,
@@ -1243,7 +1243,7 @@
         "code": "1480",
         "kommun": "Göteborg",
         "url": "https://www.goteborg.se/",
-        "issue": null,
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/409",
         "collection": "Göteborgs Stads styrande dokument (Forfattn.nsf)",
         "status": "partial",
         "documents": 5,
@@ -1259,151 +1259,151 @@
             "code": "0114",
             "kommun": "Upplands Väsby",
             "url": "https://www.upplandsvasby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/244"
           },
           {
             "code": "0115",
             "kommun": "Vallentuna",
             "url": "https://www.vallentuna.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/245"
           },
           {
             "code": "0117",
             "kommun": "Österåker",
             "url": "https://www.osteraker.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/246"
           },
           {
             "code": "0120",
             "kommun": "Värmdö",
             "url": "https://www.varmdo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/247"
           },
           {
             "code": "0123",
             "kommun": "Järfälla",
             "url": "https://www.jarfalla.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/248"
           },
           {
             "code": "0125",
             "kommun": "Ekerö",
             "url": "https://www.ekero.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/249"
           },
           {
             "code": "0126",
             "kommun": "Huddinge",
             "url": "https://www.huddinge.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/250"
           },
           {
             "code": "0127",
             "kommun": "Botkyrka",
             "url": "https://www.botkyrka.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/251"
           },
           {
             "code": "0128",
             "kommun": "Salem",
             "url": "https://www.salem.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/252"
           },
           {
             "code": "0136",
             "kommun": "Haninge",
             "url": "https://www.haninge.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/253"
           },
           {
             "code": "0138",
             "kommun": "Tyresö",
             "url": "https://www.tyreso.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/254"
           },
           {
             "code": "0139",
             "kommun": "Upplands-Bro",
             "url": "https://www.upplands-bro.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/255"
           },
           {
             "code": "0140",
             "kommun": "Nykvarn",
             "url": "https://www.nykvarn.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/256"
           },
           {
             "code": "0160",
             "kommun": "Täby",
             "url": "https://www.taby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/257"
           },
           {
             "code": "0162",
             "kommun": "Danderyd",
             "url": "https://www.danderyd.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/258"
           },
           {
             "code": "0163",
             "kommun": "Sollentuna",
             "url": "https://www.sollentuna.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/259"
           },
           {
             "code": "0181",
             "kommun": "Södertälje",
             "url": "https://www.sodertalje.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/261"
           },
           {
             "code": "0182",
             "kommun": "Nacka",
             "url": "https://www.nacka.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/262"
           },
           {
             "code": "0183",
             "kommun": "Sundbyberg",
             "url": "https://www.sundbyberg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/263"
           },
           {
             "code": "0184",
             "kommun": "Solna",
             "url": "https://www.solna.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/264"
           },
           {
             "code": "0186",
             "kommun": "Lidingö",
             "url": "https://www.lidingo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/265"
           },
           {
             "code": "0187",
             "kommun": "Vaxholm",
             "url": "https://www.vaxholm.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/266"
           },
           {
             "code": "0188",
             "kommun": "Norrtälje",
             "url": "https://www.norrtalje.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/267"
           },
           {
             "code": "0191",
             "kommun": "Sigtuna",
             "url": "https://www.sigtuna.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/268"
           },
           {
             "code": "0192",
             "kommun": "Nynäshamn",
             "url": "https://www.nynashamn.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/269"
           }
         ]
       },
@@ -1415,49 +1415,49 @@
             "code": "0305",
             "kommun": "Håbo",
             "url": "https://www.habo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/270"
           },
           {
             "code": "0319",
             "kommun": "Älvkarleby",
             "url": "https://www.alvkarleby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/271"
           },
           {
             "code": "0330",
             "kommun": "Knivsta",
             "url": "https://www.knivsta.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/272"
           },
           {
             "code": "0331",
             "kommun": "Heby",
             "url": "https://www.heby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/273"
           },
           {
             "code": "0360",
             "kommun": "Tierp",
             "url": "https://www.tierp.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/274"
           },
           {
             "code": "0380",
             "kommun": "Uppsala",
             "url": "https://www.uppsala.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/276"
           },
           {
             "code": "0381",
             "kommun": "Enköping",
             "url": "https://enkoping.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/277"
           },
           {
             "code": "0382",
             "kommun": "Östhammar",
             "url": "https://www.osthammar.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/278"
           }
         ]
       },
@@ -1469,55 +1469,55 @@
             "code": "0428",
             "kommun": "Vingåker",
             "url": "https://www.vingaker.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/279"
           },
           {
             "code": "0461",
             "kommun": "Gnesta",
             "url": "https://www.gnesta.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/280"
           },
           {
             "code": "0480",
             "kommun": "Nyköping",
             "url": "https://nykoping.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/281"
           },
           {
             "code": "0481",
             "kommun": "Oxelösund",
             "url": "https://www.oxelosund.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/282"
           },
           {
             "code": "0482",
             "kommun": "Flen",
             "url": "https://flen.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/283"
           },
           {
             "code": "0483",
             "kommun": "Katrineholm",
             "url": "https://www.katrineholm.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/284"
           },
           {
             "code": "0484",
             "kommun": "Eskilstuna",
             "url": "https://www.eskilstuna.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/285"
           },
           {
             "code": "0486",
             "kommun": "Strängnäs",
             "url": "https://www.strangnas.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/286"
           },
           {
             "code": "0488",
             "kommun": "Trosa",
             "url": "https://www.trosa.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/287"
           }
         ]
       },
@@ -1529,79 +1529,79 @@
             "code": "0509",
             "kommun": "Ödeshög",
             "url": "https://www.odeshog.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/288"
           },
           {
             "code": "0512",
             "kommun": "Ydre",
             "url": "https://www.ydre.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/289"
           },
           {
             "code": "0513",
             "kommun": "Kinda",
             "url": "https://www.kinda.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/290"
           },
           {
             "code": "0560",
             "kommun": "Boxholm",
             "url": "https://www.boxholm.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/291"
           },
           {
             "code": "0561",
             "kommun": "Åtvidaberg",
             "url": "https://www.atvidaberg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/292"
           },
           {
             "code": "0562",
             "kommun": "Finspång",
             "url": "https://www.finspang.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/293"
           },
           {
             "code": "0563",
             "kommun": "Valdemarsvik",
             "url": "https://www.valdemarsvik.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/294"
           },
           {
             "code": "0580",
             "kommun": "Linköping",
             "url": "https://www.linkoping.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/295"
           },
           {
             "code": "0581",
             "kommun": "Norrköping",
             "url": "https://www.norrkoping.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/296"
           },
           {
             "code": "0582",
             "kommun": "Söderköping",
             "url": "https://www.soderkoping.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/297"
           },
           {
             "code": "0583",
             "kommun": "Motala",
             "url": "https://www.motala.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/298"
           },
           {
             "code": "0584",
             "kommun": "Vadstena",
             "url": "https://www.vadstena.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/299"
           },
           {
             "code": "0586",
             "kommun": "Mjölby",
             "url": "https://www.mjolby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/300"
           }
         ]
       },
@@ -1613,79 +1613,79 @@
             "code": "0604",
             "kommun": "Aneby",
             "url": "https://www.aneby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/301"
           },
           {
             "code": "0617",
             "kommun": "Gnosjö",
             "url": "https://www.gnosjo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/302"
           },
           {
             "code": "0642",
             "kommun": "Mullsjö",
             "url": "https://www.mullsjo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/303"
           },
           {
             "code": "0643",
             "kommun": "Habo",
             "url": "https://www.habokommun.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/304"
           },
           {
             "code": "0662",
             "kommun": "Gislaved",
             "url": "https://www.gislaved.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/305"
           },
           {
             "code": "0665",
             "kommun": "Vaggeryd",
             "url": "https://www.vaggeryd.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/306"
           },
           {
             "code": "0680",
             "kommun": "Jönköping",
             "url": "https://www.jonkoping.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/307"
           },
           {
             "code": "0682",
             "kommun": "Nässjö",
             "url": "https://www.nassjo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/308"
           },
           {
             "code": "0683",
             "kommun": "Värnamo",
             "url": "https://kommun.varnamo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/309"
           },
           {
             "code": "0684",
             "kommun": "Sävsjö",
             "url": "https://www.savsjo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/310"
           },
           {
             "code": "0685",
             "kommun": "Vetlanda",
             "url": "https://kommun.vetlanda.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/311"
           },
           {
             "code": "0686",
             "kommun": "Eksjö",
             "url": "https://www.eksjo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/312"
           },
           {
             "code": "0687",
             "kommun": "Tranås",
             "url": "https://www.tranas.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/313"
           }
         ]
       },
@@ -1697,49 +1697,49 @@
             "code": "0760",
             "kommun": "Uppvidinge",
             "url": "https://www.uppvidinge.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/314"
           },
           {
             "code": "0761",
             "kommun": "Lessebo",
             "url": "https://www.lessebo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/315"
           },
           {
             "code": "0763",
             "kommun": "Tingsryd",
             "url": "https://tingsryd.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/316"
           },
           {
             "code": "0764",
             "kommun": "Alvesta",
             "url": "https://www.alvesta.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/317"
           },
           {
             "code": "0765",
             "kommun": "Älmhult",
             "url": "https://www.almhult.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/318"
           },
           {
             "code": "0767",
             "kommun": "Markaryd",
             "url": "https://www.markaryd.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/319"
           },
           {
             "code": "0780",
             "kommun": "Växjö",
             "url": "https://www.vaxjo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/320"
           },
           {
             "code": "0781",
             "kommun": "Ljungby",
             "url": "https://www.ljungby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/321"
           }
         ]
       },
@@ -1751,73 +1751,73 @@
             "code": "0821",
             "kommun": "Högsby",
             "url": "https://www.hogsby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/322"
           },
           {
             "code": "0834",
             "kommun": "Torsås",
             "url": "https://www.torsas.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/323"
           },
           {
             "code": "0840",
             "kommun": "Mörbylånga",
             "url": "https://www.morbylanga.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/324"
           },
           {
             "code": "0860",
             "kommun": "Hultsfred",
             "url": "https://www.hultsfred.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/325"
           },
           {
             "code": "0861",
             "kommun": "Mönsterås",
             "url": "https://www.monsteras.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/326"
           },
           {
             "code": "0862",
             "kommun": "Emmaboda",
             "url": "https://www.emmaboda.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/327"
           },
           {
             "code": "0880",
             "kommun": "Kalmar",
             "url": "https://kalmar.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/328"
           },
           {
             "code": "0881",
             "kommun": "Nybro",
             "url": "https://www.nybro.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/329"
           },
           {
             "code": "0882",
             "kommun": "Oskarshamn",
             "url": "https://www.oskarshamn.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/330"
           },
           {
             "code": "0883",
             "kommun": "Västervik",
             "url": "https://www.vastervik.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/331"
           },
           {
             "code": "0884",
             "kommun": "Vimmerby",
             "url": "https://www.vimmerby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/332"
           },
           {
             "code": "0885",
             "kommun": "Borgholm",
             "url": "https://www.borgholm.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/333"
           }
         ]
       },
@@ -1829,7 +1829,7 @@
             "code": "0980",
             "kommun": "Gotland",
             "url": "https://www.gotland.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/334"
           }
         ]
       },
@@ -1841,31 +1841,31 @@
             "code": "1060",
             "kommun": "Olofström",
             "url": "https://www.olofstrom.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/335"
           },
           {
             "code": "1080",
             "kommun": "Karlskrona",
             "url": "https://www.karlskrona.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/336"
           },
           {
             "code": "1081",
             "kommun": "Ronneby",
             "url": "https://www.ronneby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/337"
           },
           {
             "code": "1082",
             "kommun": "Karlshamn",
             "url": "https://www.karlshamn.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/338"
           },
           {
             "code": "1083",
             "kommun": "Sölvesborg",
             "url": "https://www.solvesborg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/339"
           }
         ]
       },
@@ -1877,193 +1877,193 @@
             "code": "1214",
             "kommun": "Svalöv",
             "url": "https://www.svalov.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/340"
           },
           {
             "code": "1230",
             "kommun": "Staffanstorp",
             "url": "https://www.staffanstorp.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/341"
           },
           {
             "code": "1231",
             "kommun": "Burlöv",
             "url": "https://burlov.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/342"
           },
           {
             "code": "1233",
             "kommun": "Vellinge",
             "url": "https://www.vellinge.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/343"
           },
           {
             "code": "1256",
             "kommun": "Östra Göinge",
             "url": "https://www.ostragoinge.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/344"
           },
           {
             "code": "1257",
             "kommun": "Örkelljunga",
             "url": "https://www.orkelljunga.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/345"
           },
           {
             "code": "1260",
             "kommun": "Bjuv",
             "url": "https://www.bjuv.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/346"
           },
           {
             "code": "1261",
             "kommun": "Kävlinge",
             "url": "https://www.kavlinge.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/347"
           },
           {
             "code": "1262",
             "kommun": "Lomma",
             "url": "https://lomma.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/348"
           },
           {
             "code": "1263",
             "kommun": "Svedala",
             "url": "https://www.svedala.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/349"
           },
           {
             "code": "1264",
             "kommun": "Skurup",
             "url": "https://www.skurup.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/350"
           },
           {
             "code": "1265",
             "kommun": "Sjöbo",
             "url": "https://www.sjobo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/351"
           },
           {
             "code": "1266",
             "kommun": "Hörby",
             "url": "https://www.horby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/352"
           },
           {
             "code": "1267",
             "kommun": "Höör",
             "url": "https://www.hoor.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/353"
           },
           {
             "code": "1270",
             "kommun": "Tomelilla",
             "url": "https://www.tomelilla.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/354"
           },
           {
             "code": "1272",
             "kommun": "Bromölla",
             "url": "https://www.bromolla.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/355"
           },
           {
             "code": "1273",
             "kommun": "Osby",
             "url": "https://www.osby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/356"
           },
           {
             "code": "1275",
             "kommun": "Perstorp",
             "url": "https://www.perstorp.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/357"
           },
           {
             "code": "1276",
             "kommun": "Klippan",
             "url": "https://www.klippan.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/358"
           },
           {
             "code": "1277",
             "kommun": "Åstorp",
             "url": "https://www.astorp.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/359"
           },
           {
             "code": "1278",
             "kommun": "Båstad",
             "url": "https://www.bastad.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/360"
           },
           {
             "code": "1281",
             "kommun": "Lund",
             "url": "https://www.lund.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/362"
           },
           {
             "code": "1282",
             "kommun": "Landskrona",
             "url": "https://www.landskrona.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/363"
           },
           {
             "code": "1283",
             "kommun": "Helsingborg",
             "url": "https://www.helsingborg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/364"
           },
           {
             "code": "1284",
             "kommun": "Höganäs",
             "url": "https://www.hoganas.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/365"
           },
           {
             "code": "1285",
             "kommun": "Eslöv",
             "url": "https://www.eslov.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/366"
           },
           {
             "code": "1286",
             "kommun": "Ystad",
             "url": "https://www.ystad.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/367"
           },
           {
             "code": "1287",
             "kommun": "Trelleborg",
             "url": "https://www.trelleborg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/368"
           },
           {
             "code": "1290",
             "kommun": "Kristianstad",
             "url": "https://www.kristianstad.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/369"
           },
           {
             "code": "1291",
             "kommun": "Simrishamn",
             "url": "https://www.simrishamn.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/370"
           },
           {
             "code": "1292",
             "kommun": "Ängelholm",
             "url": "https://www.angelholm.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/371"
           },
           {
             "code": "1293",
             "kommun": "Hässleholm",
             "url": "https://www.hassleholm.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/372"
           }
         ]
       },
@@ -2075,37 +2075,37 @@
             "code": "1315",
             "kommun": "Hylte",
             "url": "https://www.hylte.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/373"
           },
           {
             "code": "1380",
             "kommun": "Halmstad",
             "url": "https://www.halmstad.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/374"
           },
           {
             "code": "1381",
             "kommun": "Laholm",
             "url": "https://www.laholm.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/375"
           },
           {
             "code": "1382",
             "kommun": "Falkenberg",
             "url": "https://kommun.falkenberg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/376"
           },
           {
             "code": "1383",
             "kommun": "Varberg",
             "url": "https://www.varberg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/377"
           },
           {
             "code": "1384",
             "kommun": "Kungsbacka",
             "url": "https://www.kungsbacka.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/378"
           }
         ]
       },
@@ -2117,289 +2117,289 @@
             "code": "1401",
             "kommun": "Härryda",
             "url": "https://www.harryda.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/379"
           },
           {
             "code": "1402",
             "kommun": "Partille",
             "url": "https://www.partille.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/380"
           },
           {
             "code": "1407",
             "kommun": "Öckerö",
             "url": "https://www.ockero.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/381"
           },
           {
             "code": "1415",
             "kommun": "Stenungsund",
             "url": "https://www.stenungsund.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/382"
           },
           {
             "code": "1419",
             "kommun": "Tjörn",
             "url": "https://tjorn.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/383"
           },
           {
             "code": "1421",
             "kommun": "Orust",
             "url": "https://www.orust.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/384"
           },
           {
             "code": "1427",
             "kommun": "Sotenäs",
             "url": "https://www.sotenas.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/385"
           },
           {
             "code": "1430",
             "kommun": "Munkedal",
             "url": "https://www.munkedal.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/386"
           },
           {
             "code": "1435",
             "kommun": "Tanum",
             "url": "https://www.tanum.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/387"
           },
           {
             "code": "1438",
             "kommun": "Dals-Ed",
             "url": "https://www.dalsed.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/388"
           },
           {
             "code": "1439",
             "kommun": "Färgelanda",
             "url": "https://www.fargelanda.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/389"
           },
           {
             "code": "1440",
             "kommun": "Ale",
             "url": "https://www.ale.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/390"
           },
           {
             "code": "1441",
             "kommun": "Lerum",
             "url": "https://www.lerum.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/391"
           },
           {
             "code": "1442",
             "kommun": "Vårgårda",
             "url": "https://www.vargarda.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/392"
           },
           {
             "code": "1443",
             "kommun": "Bollebygd",
             "url": "https://www.bollebygd.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/393"
           },
           {
             "code": "1444",
             "kommun": "Grästorp",
             "url": "https://www.grastorp.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/394"
           },
           {
             "code": "1445",
             "kommun": "Essunga",
             "url": "https://www.essunga.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/395"
           },
           {
             "code": "1446",
             "kommun": "Karlsborg",
             "url": "https://www.karlsborg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/396"
           },
           {
             "code": "1447",
             "kommun": "Gullspång",
             "url": "https://gullspang.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/397"
           },
           {
             "code": "1452",
             "kommun": "Tranemo",
             "url": "https://www.tranemo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/398"
           },
           {
             "code": "1460",
             "kommun": "Bengtsfors",
             "url": "https://www.bengtsfors.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/399"
           },
           {
             "code": "1461",
             "kommun": "Mellerud",
             "url": "https://www.mellerud.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/400"
           },
           {
             "code": "1462",
             "kommun": "Lilla Edet",
             "url": "https://www.lillaedet.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/401"
           },
           {
             "code": "1463",
             "kommun": "Mark",
             "url": "https://www.mark.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/402"
           },
           {
             "code": "1465",
             "kommun": "Svenljunga",
             "url": "https://www.svenljunga.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/403"
           },
           {
             "code": "1466",
             "kommun": "Herrljunga",
             "url": "https://www.herrljunga.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/404"
           },
           {
             "code": "1470",
             "kommun": "Vara",
             "url": "https://www.vara.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/405"
           },
           {
             "code": "1471",
             "kommun": "Götene",
             "url": "https://www.gotene.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/406"
           },
           {
             "code": "1472",
             "kommun": "Tibro",
             "url": "https://www.tibro.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/407"
           },
           {
             "code": "1473",
             "kommun": "Töreboda",
             "url": "https://toreboda.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/408"
           },
           {
             "code": "1481",
             "kommun": "Mölndal",
             "url": "https://www.molndal.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/410"
           },
           {
             "code": "1482",
             "kommun": "Kungälv",
             "url": "https://www.kungalv.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/411"
           },
           {
             "code": "1484",
             "kommun": "Lysekil",
             "url": "https://www.lysekil.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/412"
           },
           {
             "code": "1485",
             "kommun": "Uddevalla",
             "url": "https://www.uddevalla.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/413"
           },
           {
             "code": "1486",
             "kommun": "Strömstad",
             "url": "https://www.stromstad.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/414"
           },
           {
             "code": "1487",
             "kommun": "Vänersborg",
             "url": "https://www.vanersborg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/415"
           },
           {
             "code": "1488",
             "kommun": "Trollhättan",
             "url": "https://www.trollhattan.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/416"
           },
           {
             "code": "1489",
             "kommun": "Alingsås",
             "url": "https://www.alingsas.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/417"
           },
           {
             "code": "1490",
             "kommun": "Borås",
             "url": "https://www.boras.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/418"
           },
           {
             "code": "1491",
             "kommun": "Ulricehamn",
             "url": "https://www.ulricehamn.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/419"
           },
           {
             "code": "1492",
             "kommun": "Åmål",
             "url": "https://www.amal.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/420"
           },
           {
             "code": "1493",
             "kommun": "Mariestad",
             "url": "https://mariestad.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/421"
           },
           {
             "code": "1494",
             "kommun": "Lidköping",
             "url": "https://lidkoping.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/422"
           },
           {
             "code": "1495",
             "kommun": "Skara",
             "url": "https://www.skara.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/423"
           },
           {
             "code": "1496",
             "kommun": "Skövde",
             "url": "https://www.skovde.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/424"
           },
           {
             "code": "1497",
             "kommun": "Hjo",
             "url": "https://www.hjo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/425"
           },
           {
             "code": "1498",
             "kommun": "Tidaholm",
             "url": "https://www.tidaholm.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/426"
           },
           {
             "code": "1499",
             "kommun": "Falköping",
             "url": "https://www.falkoping.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/427"
           }
         ]
       },
@@ -2411,97 +2411,97 @@
             "code": "1715",
             "kommun": "Kil",
             "url": "https://www.kil.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/428"
           },
           {
             "code": "1730",
             "kommun": "Eda",
             "url": "https://www.eda.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/429"
           },
           {
             "code": "1737",
             "kommun": "Torsby",
             "url": "https://www.torsby.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/430"
           },
           {
             "code": "1760",
             "kommun": "Storfors",
             "url": "https://www.storfors.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/431"
           },
           {
             "code": "1761",
             "kommun": "Hammarö",
             "url": "https://www.hammaro.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/432"
           },
           {
             "code": "1762",
             "kommun": "Munkfors",
             "url": "https://www.munkfors.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/433"
           },
           {
             "code": "1763",
             "kommun": "Forshaga",
             "url": "https://www.forshaga.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/434"
           },
           {
             "code": "1764",
             "kommun": "Grums",
             "url": "https://www.grums.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/435"
           },
           {
             "code": "1765",
             "kommun": "Årjäng",
             "url": "https://www.arjang.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/436"
           },
           {
             "code": "1766",
             "kommun": "Sunne",
             "url": "https://www.sunne.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/437"
           },
           {
             "code": "1780",
             "kommun": "Karlstad",
             "url": "https://karlstad.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/438"
           },
           {
             "code": "1781",
             "kommun": "Kristinehamn",
             "url": "https://www.kristinehamn.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/439"
           },
           {
             "code": "1782",
             "kommun": "Filipstad",
             "url": "https://www.filipstad.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/440"
           },
           {
             "code": "1783",
             "kommun": "Hagfors",
             "url": "https://www.hagfors.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/441"
           },
           {
             "code": "1784",
             "kommun": "Arvika",
             "url": "https://www.arvika.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/442"
           },
           {
             "code": "1785",
             "kommun": "Säffle",
             "url": "https://www.saffle.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/443"
           }
         ]
       },
@@ -2513,73 +2513,73 @@
             "code": "1814",
             "kommun": "Lekeberg",
             "url": "https://www.lekeberg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/444"
           },
           {
             "code": "1860",
             "kommun": "Laxå",
             "url": "https://www.laxa.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/445"
           },
           {
             "code": "1861",
             "kommun": "Hallsberg",
             "url": "https://www.hallsberg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/446"
           },
           {
             "code": "1862",
             "kommun": "Degerfors",
             "url": "https://www.degerfors.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/447"
           },
           {
             "code": "1863",
             "kommun": "Hällefors",
             "url": "https://www.hellefors.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/448"
           },
           {
             "code": "1864",
             "kommun": "Ljusnarsberg",
             "url": "https://www.ljusnarsberg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/449"
           },
           {
             "code": "1880",
             "kommun": "Örebro",
             "url": "https://www.orebro.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/450"
           },
           {
             "code": "1881",
             "kommun": "Kumla",
             "url": "https://www.kumla.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/451"
           },
           {
             "code": "1882",
             "kommun": "Askersund",
             "url": "https://www.askersund.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/452"
           },
           {
             "code": "1883",
             "kommun": "Karlskoga",
             "url": "https://www.karlskoga.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/453"
           },
           {
             "code": "1884",
             "kommun": "Nora",
             "url": "https://www.nora.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/454"
           },
           {
             "code": "1885",
             "kommun": "Lindesberg",
             "url": "https://www.lindesberg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/455"
           }
         ]
       },
@@ -2591,61 +2591,61 @@
             "code": "1904",
             "kommun": "Skinnskatteberg",
             "url": "https://www.skinnskatteberg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/456"
           },
           {
             "code": "1907",
             "kommun": "Surahammar",
             "url": "https://www.surahammar.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/457"
           },
           {
             "code": "1960",
             "kommun": "Kungsör",
             "url": "https://www.kungsor.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/458"
           },
           {
             "code": "1961",
             "kommun": "Hallstahammar",
             "url": "https://www.hallstahammar.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/459"
           },
           {
             "code": "1962",
             "kommun": "Norberg",
             "url": "https://www.norberg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/460"
           },
           {
             "code": "1980",
             "kommun": "Västerås",
             "url": "https://www.vasteras.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/461"
           },
           {
             "code": "1981",
             "kommun": "Sala",
             "url": "https://www.sala.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/462"
           },
           {
             "code": "1982",
             "kommun": "Fagersta",
             "url": "https://www.fagersta.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/463"
           },
           {
             "code": "1983",
             "kommun": "Köping",
             "url": "https://www.koping.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/464"
           },
           {
             "code": "1984",
             "kommun": "Arboga",
             "url": "https://www.arboga.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/465"
           }
         ]
       },
@@ -2657,91 +2657,91 @@
             "code": "2021",
             "kommun": "Vansbro",
             "url": "https://www.vansbro.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/466"
           },
           {
             "code": "2023",
             "kommun": "Malung-Sälen",
             "url": "https://www.malung-salen.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/467"
           },
           {
             "code": "2026",
             "kommun": "Gagnef",
             "url": "https://www.gagnef.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/468"
           },
           {
             "code": "2029",
             "kommun": "Leksand",
             "url": "https://www.leksand.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/469"
           },
           {
             "code": "2031",
             "kommun": "Rättvik",
             "url": "https://www.rattvik.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/470"
           },
           {
             "code": "2034",
             "kommun": "Orsa",
             "url": "https://www.orsa.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/471"
           },
           {
             "code": "2039",
             "kommun": "Älvdalen",
             "url": "https://www.alvdalen.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/472"
           },
           {
             "code": "2061",
             "kommun": "Smedjebacken",
             "url": "https://www.smedjebacken.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/473"
           },
           {
             "code": "2062",
             "kommun": "Mora",
             "url": "https://morakommun.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/474"
           },
           {
             "code": "2080",
             "kommun": "Falun",
             "url": "https://www.falun.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/475"
           },
           {
             "code": "2081",
             "kommun": "Borlänge",
             "url": "https://www.borlange.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/476"
           },
           {
             "code": "2082",
             "kommun": "Säter",
             "url": "https://www.sater.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/477"
           },
           {
             "code": "2083",
             "kommun": "Hedemora",
             "url": "https://www.hedemora.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/478"
           },
           {
             "code": "2084",
             "kommun": "Avesta",
             "url": "https://www.avesta.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/479"
           },
           {
             "code": "2085",
             "kommun": "Ludvika",
             "url": "https://www.ludvika.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/480"
           }
         ]
       },
@@ -2753,61 +2753,61 @@
             "code": "2101",
             "kommun": "Ockelbo",
             "url": "https://ockelbo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/481"
           },
           {
             "code": "2104",
             "kommun": "Hofors",
             "url": "https://www.hofors.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/482"
           },
           {
             "code": "2121",
             "kommun": "Ovanåker",
             "url": "https://www.ovanaker.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/483"
           },
           {
             "code": "2132",
             "kommun": "Nordanstig",
             "url": "https://www.nordanstig.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/484"
           },
           {
             "code": "2161",
             "kommun": "Ljusdal",
             "url": "https://www.ljusdal.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/485"
           },
           {
             "code": "2180",
             "kommun": "Gävle",
             "url": "https://www.gavle.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/486"
           },
           {
             "code": "2181",
             "kommun": "Sandviken",
             "url": "https://sandviken.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/487"
           },
           {
             "code": "2182",
             "kommun": "Söderhamn",
             "url": "https://www.soderhamn.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/488"
           },
           {
             "code": "2183",
             "kommun": "Bollnäs",
             "url": "https://www.bollnas.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/489"
           },
           {
             "code": "2184",
             "kommun": "Hudiksvall",
             "url": "https://www.hudiksvall.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/490"
           }
         ]
       },
@@ -2819,43 +2819,43 @@
             "code": "2260",
             "kommun": "Ånge",
             "url": "https://www.ange.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/491"
           },
           {
             "code": "2262",
             "kommun": "Timrå",
             "url": "https://www.timra.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/492"
           },
           {
             "code": "2280",
             "kommun": "Härnösand",
             "url": "https://www.harnosand.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/493"
           },
           {
             "code": "2281",
             "kommun": "Sundsvall",
             "url": "https://www.sundsvall.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/494"
           },
           {
             "code": "2282",
             "kommun": "Kramfors",
             "url": "https://www.kramfors.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/495"
           },
           {
             "code": "2283",
             "kommun": "Sollefteå",
             "url": "https://www.solleftea.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/496"
           },
           {
             "code": "2284",
             "kommun": "Örnsköldsvik",
             "url": "https://www.ornskoldsvik.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/497"
           }
         ]
       },
@@ -2867,49 +2867,49 @@
             "code": "2303",
             "kommun": "Ragunda",
             "url": "https://www.ragunda.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/498"
           },
           {
             "code": "2305",
             "kommun": "Bräcke",
             "url": "https://www.bracke.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/499"
           },
           {
             "code": "2309",
             "kommun": "Krokom",
             "url": "https://www.krokom.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/500"
           },
           {
             "code": "2313",
             "kommun": "Strömsund",
             "url": "https://www.stromsund.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/501"
           },
           {
             "code": "2321",
             "kommun": "Åre",
             "url": "https://www.are.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/502"
           },
           {
             "code": "2326",
             "kommun": "Berg",
             "url": "https://www.berg.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/503"
           },
           {
             "code": "2361",
             "kommun": "Härjedalen",
             "url": "https://www.herjedalen.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/504"
           },
           {
             "code": "2380",
             "kommun": "Östersund",
             "url": "https://www.ostersund.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/505"
           }
         ]
       },
@@ -2921,91 +2921,91 @@
             "code": "2401",
             "kommun": "Nordmaling",
             "url": "https://www.nordmaling.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/506"
           },
           {
             "code": "2403",
             "kommun": "Bjurholm",
             "url": "https://www.bjurholm.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/507"
           },
           {
             "code": "2404",
             "kommun": "Vindeln",
             "url": "https://www.vindeln.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/508"
           },
           {
             "code": "2409",
             "kommun": "Robertsfors",
             "url": "https://www.robertsfors.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/509"
           },
           {
             "code": "2417",
             "kommun": "Norsjö",
             "url": "https://www.norsjo.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/510"
           },
           {
             "code": "2418",
             "kommun": "Malå",
             "url": "https://www.mala.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/511"
           },
           {
             "code": "2421",
             "kommun": "Storuman",
             "url": "https://www.storuman.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/512"
           },
           {
             "code": "2422",
             "kommun": "Sorsele",
             "url": "https://www.sorsele.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/513"
           },
           {
             "code": "2425",
             "kommun": "Dorotea",
             "url": "https://www.dorotea.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/514"
           },
           {
             "code": "2460",
             "kommun": "Vännäs",
             "url": "https://www.vannas.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/515"
           },
           {
             "code": "2462",
             "kommun": "Vilhelmina",
             "url": "https://www.vilhelmina.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/516"
           },
           {
             "code": "2463",
             "kommun": "Åsele",
             "url": "https://www.asele.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/517"
           },
           {
             "code": "2480",
             "kommun": "Umeå",
             "url": "https://www.umea.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/518"
           },
           {
             "code": "2481",
             "kommun": "Lycksele",
             "url": "https://www.lycksele.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/519"
           },
           {
             "code": "2482",
             "kommun": "Skellefteå",
             "url": "https://www.skelleftea.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/520"
           }
         ]
       },
@@ -3017,85 +3017,85 @@
             "code": "2505",
             "kommun": "Arvidsjaur",
             "url": "https://www.arvidsjaur.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/521"
           },
           {
             "code": "2506",
             "kommun": "Arjeplog",
             "url": "https://www.arjeplog.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/522"
           },
           {
             "code": "2510",
             "kommun": "Jokkmokk",
             "url": "https://www.jokkmokk.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/523"
           },
           {
             "code": "2513",
             "kommun": "Överkalix",
             "url": "https://www.overkalix.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/524"
           },
           {
             "code": "2514",
             "kommun": "Kalix",
             "url": "https://www.kalix.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/525"
           },
           {
             "code": "2518",
             "kommun": "Övertorneå",
             "url": "https://www.overtornea.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/526"
           },
           {
             "code": "2521",
             "kommun": "Pajala",
             "url": "https://www.pajala.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/527"
           },
           {
             "code": "2523",
             "kommun": "Gällivare",
             "url": "https://gallivare.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/528"
           },
           {
             "code": "2560",
             "kommun": "Älvsbyn",
             "url": "https://www.alvsbyn.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/529"
           },
           {
             "code": "2580",
             "kommun": "Luleå",
             "url": "https://www.lulea.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/530"
           },
           {
             "code": "2581",
             "kommun": "Piteå",
             "url": "https://www.pitea.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/531"
           },
           {
             "code": "2582",
             "kommun": "Boden",
             "url": "https://www.boden.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/532"
           },
           {
             "code": "2583",
             "kommun": "Haparanda",
             "url": "https://www.haparanda.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/533"
           },
           {
             "code": "2584",
             "kommun": "Kiruna",
             "url": "https://kiruna.se/",
-            "issue": null
+            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/534"
           }
         ]
       }
@@ -3262,7 +3262,7 @@
       "documents": 0,
       "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet.",
       "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522KGG%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/535"
     },
     {
       "code": "KJO",
@@ -3271,7 +3271,7 @@
       "documents": 0,
       "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet.",
       "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522KJO%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/535"
     },
     {
       "code": "KSU",
@@ -3280,7 +3280,7 @@
       "documents": 0,
       "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet.",
       "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522KSU%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/535"
     },
     {
       "code": "DOV",
@@ -3345,7 +3345,7 @@
       "slug": "svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se",
       "url": "https://svenskforfattningssamling.se/",
       "description": "På webbplatsen Svensk författningssamling publiceras den officiella och autentiska versionen av lagar, förordningar och vissa myndighetsföreskrifter.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/536"
     },
     {
       "name": "SFS register (SFSR)",
@@ -3355,7 +3355,7 @@
       "slug": "register-over-svensk-forfattningssamling-sfs",
       "url": "https://rkrattsbaser.gov.se/sfsr/adv",
       "description": "SFS-registret är ett register över lagar och förordningar i Svensk författningssamling (SFS). Författningar som inte gäller längre finns också med.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/537"
     },
     {
       "name": "EUR-Lex",
@@ -3375,7 +3375,7 @@
       "slug": "eu-domstolen",
       "url": "https://curia.europa.eu/site/",
       "description": "Europeiska unionens domstol (EU-domstolen) dömer i tvister mellan medlemsländer och EU:s institutioner. Domstolen har också i uppgift att tolka EU-rätten. Under EU-domstolen finns tribunalen som dömer i mål som rör enskilda personer och företag samt en personaldomstol som dömer i mål som gäller anställda i EU.",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/538"
     },
     {
       "name": "Sveriges internationella överenskommelser (SÖ)",
@@ -3385,7 +3385,7 @@
       "slug": "sveriges-internationella-overenskommelser-so",
       "url": "https://www.regeringen.se/rattsliga-dokument/sveriges-internationella-overenskommelser/",
       "description": "Sverige ingår varje år ett stort antal internationella överenskommelser med andra stater och internationella organisationer. De förekommer under flera olika benämningar, till exempel traktater, konventioner och protokoll, skatteavtal och informationsutbytesavtal. Alla internationella överenskommelser som är bindande för Sverige offentliggörs i Sveriges internationella överenskommelser (SÖ).",
-      "issue": null
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/539"
     },
     {
       "name": "Transportstyrelsen (other publications)",
