@@ -51,11 +51,30 @@ fun readerBlocks(body: String): List<String> = splitSections(body).flatMapIndexe
     splitParagraphs(if (index == 0) withoutTitle(section) else section)
 }.filter { it.isNotBlank() }
 
-// `## 1 kap. Om brott`, `## 2 a kap. ...`: a numbered chapter heading.
-private val CHAPTER_NUMBER = Regex("""^##\s+(\d+)\s?([a-z])?\s+kap\.""")
+private val WHITESPACE = Regex("""\s+""")
 
-// The statute number inside the bold opening: `3`, `3 a`.
-private val STATUTE_NUMBER = Regex("""^\*\*(\d+)\s?([a-z])?\s§§?\*\*""")
+/**
+ * The number of a numbered statute or chapter, as words: `3` or `3 a` followed by [marker] (`§`, `§§`,
+ * `kap.`). Parsed by splitting on whitespace rather than with optional regex groups, whose captures
+ * Kotlin/Wasm keeps after backtracking (`1 kap.` would read as chapter `1k`).
+ */
+private fun numberBefore(words: List<String>, marker: (String) -> Boolean): String? {
+    val digits = words.getOrNull(0)?.takeIf { it.isNotEmpty() && it.all(Char::isDigit) } ?: return null
+    val second = words.getOrNull(1) ?: return null
+    if (marker(second)) return digits
+    val letter = second.singleOrNull()?.takeIf { it in 'a'..'z' } ?: return null
+    return if (words.getOrNull(2)?.let(marker) == true) "$digits $letter" else null
+}
+
+// `## 1 kap. Om brott`, `## 2 a kap. ...`: `1`, `2 a`.
+private fun chapterNumber(heading: String): String? =
+    numberBefore(heading.removePrefix(CHAPTER_PREFIX).trim().split(WHITESPACE)) { it.startsWith("kap.") }
+
+// `**3 §** Text`, `**3 a §** Text`, `**4 §§**`: `3`, `3 a`, `4`.
+private fun statuteNumber(block: String): String? {
+    val opening = STATUTE_START.find(block)?.value ?: return null
+    return numberBefore(opening.removeSurrounding("**").trim().split(WHITESPACE)) { it == "§" || it == "§§" }
+}
 
 /** One chapter in the table of contents; [anchor] null for the statutes before the first chapter. */
 data class OutlineChapter(
@@ -123,17 +142,15 @@ fun buildOutline(blocks: List<String>): Outline {
         val firstLine = block.substringBefore('\n')
         if (firstLine.startsWith(CHAPTER_PREFIX)) {
             close()
-            val number = CHAPTER_NUMBER.find(firstLine)
+            val number = chapterNumber(firstLine)
             title = firstLine.removePrefix(CHAPTER_PREFIX).trim()
-            anchor = unique(if (number != null) "k" + number.groupValues[1] + number.groupValues[2] else "h${++headings}")
+            anchor = unique(if (number != null) "k" + number.replace(" ", "") else "h${++headings}")
             start = index
             statutes = mutableListOf()
             return@forEachIndexed
         }
-        val number = STATUTE_NUMBER.find(block) ?: return@forEachIndexed
-        val (digits, letter) = number.destructured
-        val label = if (letter.isEmpty()) "$digits §" else "$digits $letter §"
-        statutes += OutlineStatute(label, unique((anchor ?: "") + "p" + digits + letter), index)
+        val number = statuteNumber(block) ?: return@forEachIndexed
+        statutes += OutlineStatute("$number §", unique((anchor ?: "") + "p" + number.replace(" ", "")), index)
     }
     close()
     return Outline(chapters)

@@ -74,6 +74,15 @@ class OutlineTest {
     }
 
     @Test
+    fun numbersNeverPickUpTheFollowingWord() {
+        // Optional regex groups kept their backtracked capture on Kotlin/Wasm, turning `1 kap.` into `k1k`.
+        val parsed = buildOutline(readerBlocks("# T\n\n## 12 kap. Kapitel\n\n**10 a §** Text.\n\n**11 §** kort.\n\n## 13 b kap. Mer\n\n**2 §§** x"))
+        assertEquals(listOf("k12", "k13b"), parsed.chapters.map { it.anchor })
+        assertEquals(listOf("k12p10a", "k12p11", "k13bp2"), parsed.chapters.flatMap { c -> c.statutes.map { it.anchor } })
+        assertEquals(listOf("10 a §", "11 §", "2 §"), parsed.chapters.flatMap { c -> c.statutes.map { it.label } })
+    }
+
+    @Test
     fun documentWithoutStatutesHasAnEmptyOutline() {
         val plain = buildOutline(readerBlocks("# Titel\n\nBara text."))
         assertTrue(plain.isEmpty)
