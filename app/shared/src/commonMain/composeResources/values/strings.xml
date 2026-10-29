@@ -28,6 +28,10 @@
         <item quantity="one">%1$d document</item>
         <item quantity="other">%1$d documents</item>
     </plurals>
+    <plurals name="hierarchy_other_statutes">
+        <item quantity="one">including %1$d other statute</item>
+        <item quantity="other">including %1$d other statutes</item>
+    </plurals>
     <string name="layer_numbered_title">%1$d. %2$s</string>
     <string name="coming_soon">Coming soon</string>
     <string name="coming_soon_text">This layer has no documents yet. It is still being collected.</string>
