@@ -47,9 +47,19 @@ import org.jetbrains.compose.resources.stringResource
  * and the repeal date; otherwise it is "In force", with the date when the API has one. A repealed
  * document also gets the Repealed layer color, a struck-through number and title and a banner.
  */
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun MetadataHeader(meta: DocumentMeta, modifier: Modifier = Modifier) {
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
+        DocumentTitle(meta)
+        DocumentFacts(meta)
+        HorizontalDivider(modifier = Modifier.padding(top = LagarTheme.spacing.xs), color = LagarTheme.colors.outlineVariant)
+    }
+}
+
+/** The layer badge, number and title: the top of [MetadataHeader], and on desktop the top of the text beside the inspector. */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+internal fun DocumentTitle(meta: DocumentMeta, modifier: Modifier = Modifier) {
     val spacing = LagarTheme.spacing
     val layers = LagarTheme.layers
     val colors = LagarTheme.colors
@@ -80,6 +90,16 @@ internal fun MetadataHeader(meta: DocumentMeta, modifier: Modifier = Modifier) {
             color = if (repealed != null) colors.onSurfaceVariant else colors.onSurface,
             textDecoration = decoration,
         )
+    }
+}
+
+/** The repeal banner, the facts and the source link: the rest of [MetadataHeader], and on desktop the top of the inspector. */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+internal fun DocumentFacts(meta: DocumentMeta, modifier: Modifier = Modifier) {
+    val spacing = LagarTheme.spacing
+    val repealed = meta.repealed
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
         if (repealed != null) RepealedBanner(repealed)
         FlowRow(
             horizontalArrangement = Arrangement.spacedBy(spacing.lg),
@@ -106,7 +126,6 @@ internal fun MetadataHeader(meta: DocumentMeta, modifier: Modifier = Modifier) {
         TextButton(onClick = { openSource(uriHandler, meta.source) }) {
             Text(stringResource(Res.string.meta_source), style = LagarTheme.type.labelMd)
         }
-        HorizontalDivider(modifier = Modifier.padding(top = spacing.xs), color = colors.outlineVariant)
     }
 }
 
