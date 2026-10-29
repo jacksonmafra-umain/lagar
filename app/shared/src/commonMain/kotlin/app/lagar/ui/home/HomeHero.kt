@@ -61,6 +61,8 @@ import app.lagar.resources.home_hero_emphasis
 import app.lagar.resources.home_hero_subtitle
 import app.lagar.resources.home_hero_title
 import app.lagar.resources.home_search_example
+import app.lagar.resources.home_search_example_kommun
+import app.lagar.resources.home_search_example_region
 import app.lagar.resources.home_search_hint
 import app.lagar.resources.home_search_submit
 import app.lagar.resources.ic_arrow_forward
@@ -74,6 +76,7 @@ import app.lagar.ui.onboarding.descriptionRes
 import app.lagar.ui.onboarding.iconRes
 import app.lagar.ui.onboarding.nameRes
 import app.lagar.ui.shell.ShellDimens
+import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -140,7 +143,7 @@ internal fun HomeHero(
             itemVerticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
-                text = stringResource(Res.string.home_search_example),
+                text = stringResource(scope.searchExampleRes()),
                 style = LagarTheme.type.labelSm,
                 color = LagarTheme.colors.onSurfaceVariant,
                 modifier = Modifier.padding(end = spacing.sm),
@@ -176,6 +179,16 @@ private fun emphasised(title: String, emphasis: String, color: Color) = buildAnn
     append(title.substring(0, start))
     withStyle(SpanStyle(color = color, fontWeight = FontWeight.Bold)) { append(emphasis) }
     append(title.substring(start + emphasis.length))
+}
+
+/**
+ * Search examples under the hero search field. Region and Kommun search only the chosen län or kommun, so their
+ * examples are words found in county and municipal regulations rather than national laws.
+ */
+internal fun Scope.searchExampleRes(): StringResource = when (this) {
+    Scope.Nationell -> Res.string.home_search_example
+    Scope.Region -> Res.string.home_search_example_region
+    Scope.Kommun -> Res.string.home_search_example_kommun
 }
 
 @Composable
