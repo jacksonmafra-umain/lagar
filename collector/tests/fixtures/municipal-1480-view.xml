@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewentries timestamp="20261029T013404,82Z" toplevelentries="17">
+<viewentry position="1" noteid="80001B88" children="1" descendants="1" siblings="17">
+<entrydata columnnumber="0" name="$87" category="true">
+<text>Göteborgs Stads riktlinje för styrande dokument</text></entrydata>
+</viewentry>
+<viewentry position="2" noteid="80001B90" children="5" descendants="172" siblings="17">
+<entrydata columnnumber="0" name="$87" category="true">
+<text>Uppdrag för nämnder och bolag</text></entrydata>
+</viewentry>
+<viewentry position="2.1" noteid="80001B94" children="9" descendants="118" siblings="5">
+<entrydata columnnumber="1" name="$81" category="true">
+<text>Bolag</text></entrydata>
+</viewentry>
+<viewentry position="2.1.1" noteid="81001B98" children="41" descendants="41" siblings="9">
+<entrydata columnnumber="1" name="$81" indent="1" category="true">
+<text>Bostäder</text></entrydata>
+</viewentry>
+<viewentry position="2.1.1.1" unid="FC1140A676D9FAE7C1257AD40050887F" noteid="E3E" siblings="41">
+<entrydata columnnumber="2" name="$76">
+<text></text></entrydata>
+<entrydata columnnumber="3" name="$71">
+<numberlist><number>41</number></numberlist></entrydata>
+<entrydata columnnumber="4" name="$73">
+<text>Bolagsordning för Boplats Göteborg AB</text></entrydata>
+<entrydata columnnumber="5" name="txtSerialnumber">
+<text>N010G00380</text></entrydata>
+<entrydata columnnumber="6" name="version">
+<number>4</number></entrydata>
+<entrydata columnnumber="7" name="$75">
+<text>Bolagsordning</text></entrydata>
+</viewentry>
+<viewentry position="11" noteid="80001C0C" children="1" descendants="66" siblings="17">
+<entrydata columnnumber="0" name="$87" category="true">
+<text>Stadsmiljö</text></entrydata>
+</viewentry>
+<viewentry position="11.1" noteid="80001C10" children="66" descendants="66" siblings="1">
+<entrydata columnnumber="1" name="$81" category="true">
+<text>Gemensamt för staden</text></entrydata>
+</viewentry>
+<viewentry position="11.1.1" unid="EF9346B611FA08DDC12586650046A0C1" noteid="4D56" siblings="66">
+<entrydata columnnumber="2" name="$76">
+<text></text></entrydata>
+<entrydata columnnumber="3" name="$71">
+<numberlist><number>41</number></numberlist></entrydata>
+<entrydata columnnumber="4" name="$73">
+<text>Avgifter för undantag från föreskrifter för breda, långa och tunga fordon</text></entrydata>
+<entrydata columnnumber="5" name="txtSerialnumber">
+<text>N010G00723</text></entrydata>
+<entrydata columnnumber="6" name="version">
+<number>3</number></entrydata>
+<entrydata columnnumber="7" name="$75">
+<text>Taxor/avgifter</text></entrydata>
+</viewentry>
+<viewentry position="11.1.24" unid="6472E4B36F4C6891C12582A6002684CF" noteid="2346" siblings="66">
+<entrydata columnnumber="2" name="$76">
+<text></text></entrydata>
+<entrydata columnnumber="3" name="$71">
+<numberlist><number>41</number></numberlist></entrydata>
+<entrydata columnnumber="4" name="$73">
+<text>Göteborgs Stads föreskrifter för avfallshantering</text></entrydata>
+<entrydata columnnumber="5" name="txtSerialnumber">
+<text>N010G00547</text></entrydata>
+<entrydata columnnumber="6" name="version">
+<number>6</number></entrydata>
+<entrydata columnnumber="7" name="$75">
+<text>Lokal föreskrift</text></entrydata>
+</viewentry>
+<viewentry position="11.1.56" unid="94053E04792CC8EBC125828200346E1E" noteid="22D2" siblings="66">
+<entrydata columnnumber="2" name="$76">
+<text></text></entrydata>
+<entrydata columnnumber="3" name="$71">
+<numberlist><number>41</number></numberlist></entrydata>
+<entrydata columnnumber="4" name="$73">
+<text>Lokala ordningsföreskrifter för Göteborgs Stad</text></entrydata>
+<entrydata columnnumber="5" name="txtSerialnumber">
+<text>N010G00545</text></entrydata>
+<entrydata columnnumber="6" name="version">
+<number>12</number></entrydata>
+<entrydata columnnumber="7" name="$75">
+<text>Lokal föreskrift</text></entrydata>
+</viewentry>
+<viewentry position="11.1.99" unid="94053E04792CC8EBC125828200346E1E" noteid="22D2" siblings="66">
+<entrydata columnnumber="2" name="$76">
+<text></text></entrydata>
+<entrydata columnnumber="3" name="$71">
+<numberlist><number>41</number></numberlist></entrydata>
+<entrydata columnnumber="4" name="$73">
+<text>Lokala ordningsföreskrifter för Göteborgs Stad</text></entrydata>
+<entrydata columnnumber="5" name="txtSerialnumber">
+<text>N010G00545</text></entrydata>
+<entrydata columnnumber="6" name="version">
+<number>12</number></entrydata>
+<entrydata columnnumber="7" name="$75">
+<text>Lokal föreskrift</text></entrydata>
+</viewentry>
+</viewentries>

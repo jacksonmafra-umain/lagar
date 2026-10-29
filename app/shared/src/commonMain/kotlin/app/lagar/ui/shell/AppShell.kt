@@ -160,15 +160,17 @@ fun AppShell(
 
     fun openLayer(layer: DisplayLayer) = navigateWhenResumed(LayerList(layer.apiLayer, layer.apiType))
 
-    // A region or kommun scope without a chosen place opens the sheet, where the place is picked.
+    // From the wide top bar and the home's scope row: a scope whose place is chosen applies at once; one without a
+    // place opens the sheet on it, where the place is picked. The active scope is left as it is.
     fun selectScope(next: Scope) {
-        preferences.setScope(next)
-        val missing = when (next) {
-            Scope.Nationell -> false
-            Scope.Region -> locality.regionCode == null
-            Scope.Kommun -> locality.kommunCode == null
+        if (next == activeScope) return
+        when (val action = drawerScopeAction(next, activeScope, locality)) {
+            is DrawerScopeAction.Apply -> preferences.setScope(action.scope)
+            is DrawerScopeAction.OpenSheet -> {
+                sheetScope = action.scope
+                showScopeSheet = true
+            }
         }
-        if (missing) showScopeSheet = true
     }
 
     fun selectWide(item: WideNav) {
