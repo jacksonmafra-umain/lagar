@@ -168,8 +168,6 @@
     <string name="advanced_dates_title">Utfärdad mellan</string>
     <string name="advanced_date_from">Från</string>
     <string name="advanced_date_to">Till</string>
-    <string name="advanced_date_placeholder">ÅÅÅÅ-MM-DD</string>
-    <string name="advanced_date_invalid">Ogiltigt datum</string>
     <string name="advanced_range_invalid">Från-datum efter till-datum</string>
     <string name="advanced_clear_range">Rensa intervall</string>
     <string name="advanced_types_title">Dokumenttyper</string>

@@ -168,8 +168,6 @@
     <string name="advanced_dates_title">Issued between</string>
     <string name="advanced_date_from">From</string>
     <string name="advanced_date_to">To</string>
-    <string name="advanced_date_placeholder">YYYY-MM-DD</string>
-    <string name="advanced_date_invalid">Invalid date</string>
     <string name="advanced_range_invalid">From date is after to date</string>
     <string name="advanced_clear_range">Clear range</string>
     <string name="advanced_types_title">Document types</string>
