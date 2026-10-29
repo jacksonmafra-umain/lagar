@@ -1,0 +1,127 @@
+{
+  "documents": [
+    {
+      "bytes": 1945091,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-1995-46",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T01:46:32Z",
+      "sha256": "9c8df3a0c879699de94ccd43bc8bf186b51ea2d895bc365edc65f4690c5c824a",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-1995-46-hamnordning-for-stockholms-hamn.pdf"
+    },
+    {
+      "bytes": 48058,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2013-19",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T01:46:32Z",
+      "sha256": "e26363fff17cbf4be15662e726f7800e8e9c75916e3e5858b97d84cde710f04c",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2013-19-lokala-halsoforeskrifter-for-stockholms-kommun.pdf"
+    },
+    {
+      "bytes": 56712,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2020-05",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T01:46:35Z",
+      "sha256": "a54edda14f67164353b095c90d347a85db43dee70b188392c1a49929e95cd24f",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2020-05-avgifter-for-kopior-m.m.-av-allmanna-handlingar.pdf"
+    },
+    {
+      "bytes": 305367,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-12",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T01:46:30Z",
+      "sha256": "ef42afdbc8402891d15dc8eb9516e608584442d73ce347494b6accfad9d42aa0",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-12-foreskrifter-for-avfallshantering-for-stockholms-stad.pdf"
+    },
+    {
+      "bytes": 5819945,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-14",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T01:46:35Z",
+      "sha256": "3fba6f8ac0a6a3ef08d2ff5d61eb8a5f2fecb95bef9be9ed2473c8c8d00c23af",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-14-lokala-ordningsforeskrifter-for-torghandeln-i-stockholms-stad.pdf"
+    },
+    {
+      "bytes": 116645,
+      "content_type": "application/pdf",
+      "id": "1480-n010g00741",
+      "municipality_code": "1480",
+      "retrieved_at": "2026-10-29T01:45:19Z",
+      "sha256": "37e497d532905a44a02e5c4af607c8ffa6fc58a25472079d48dab64efafc2f22",
+      "url": "https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf//0C729690C8AE7D10C12587660022CE40/$File/C12574360024D6C7MSKDC7J9FS.pdf?OpenElement"
+    },
+    {
+      "bytes": 272495,
+      "content_type": "application/pdf",
+      "id": "1480-n010g00752",
+      "municipality_code": "1480",
+      "retrieved_at": "2026-10-29T01:45:11Z",
+      "sha256": "2e13549e421f3d0c4471448943aa2f19f15f72b5bf4d6d1e998917d29557001f",
+      "url": "https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf//BA6FC11E1EE55C6BC12587B20038BEFF/$File/C12574360024D6C7MSKDC9WE5L.pdf?OpenElement"
+    },
+    {
+      "bytes": 246449,
+      "content_type": "application/pdf",
+      "id": "1480-n010g00754",
+      "municipality_code": "1480",
+      "retrieved_at": "2026-10-29T01:45:17Z",
+      "sha256": "f287486eb776ed354378155352e56912f474a67ecca618475bc045a3efedf9f9",
+      "url": "https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf//BC8AB1086536C501C12587B2003A37F2/$File/C12574360024D6C7WEBVCZC37S.pdf?OpenElement"
+    },
+    {
+      "bytes": 41653,
+      "content_type": "application/pdf",
+      "id": "1480-n010g00781",
+      "municipality_code": "1480",
+      "retrieved_at": "2026-10-29T01:45:13Z",
+      "sha256": "48eb9762e2373bebaffb16f798dfb3384c6866e9cf7db4e03b0535d7e5e75b73",
+      "url": "https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf//39CC48229984E5ACC125899000422C90/$File/C12574360024D6C7MSKDCQUG6F.pdf?OpenElement"
+    },
+    {
+      "bytes": 109798,
+      "content_type": "application/pdf",
+      "id": "1480-n010g00872",
+      "municipality_code": "1480",
+      "retrieved_at": "2026-10-29T01:45:15Z",
+      "sha256": "442de903f63483175f4a6f25ac0f91d6f88b50d50cae8e9d640164b5159091c2",
+      "url": "https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf//852F66C39ACE0CFFC1258E83002E3CF8/$File/C12574360024D6C7MSKDDYFBVW.pdf?OpenElement"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "1280-18-50574bcf196ed960a5523b7d",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.50574bcf196ed960a5523b7d/1763450396903/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20renh%C3%A5llning%20av%20g%C3%A5ngbana%20-%20Tillg%C3%A4nglighetsanpassad.pdf"
+    },
+    {
+      "id": "1280-18-7413819a18bf1f2a7976409",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.7413819a18bf1f2a7976409/1700831396041/BESLUT~1.PDF"
+    },
+    {
+      "id": "1280-18-7413819a18bf1f2a7976432",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.7413819a18bf1f2a7976432/1700831808153/FRESKR~1.PDF"
+    },
+    {
+      "id": "1280-18-7413819a18bf1f2a7976451",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.7413819a18bf1f2a7976451/1700831994007/KRETSL~1.PDF"
+    },
+    {
+      "id": "1280-18-7413819a18bf1f2a7976493",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.7413819a18bf1f2a7976493/1700832665110/torghandelsstadga%20-%20tillg.pdf"
+    }
+  ],
+  "version": 1
+}
