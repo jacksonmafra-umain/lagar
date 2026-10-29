@@ -66,6 +66,8 @@
     <string name="settings_system">System</string>
     <string name="settings_reduce_transparency">Reduce transparency</string>
     <string name="settings_reduce_transparency_desc">Shows solid surfaces instead of frosted glass.</string>
+    <string name="settings_focus">Main focus</string>
+    <string name="settings_focus_desc">Sets which key laws the home screen shows first.</string>
     <string name="setting_on">On</string>
     <string name="setting_off">Off</string>
     <string name="language_swedish">Svenska</string>
