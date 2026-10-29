@@ -22,7 +22,7 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | Welcome (step 1) | Matches | |
 | Scope (step 2), Locality (step 3) | Mismatch: no back button | #128 |
 | Utforska, Nationell | Matches, with known gaps | |
-| Utforska, Region and Kommun | Mismatch: search hint names national laws | #130 |
+| Utforska, Region and Kommun | Matches; the search hint named national laws until #130 | #130 |
 | Scope sheet, Drawer | Match; the drawer button uses a profile icon | #134 |
 | Search results | Mismatch: no scope shown on results; exact title matches rank below newer case reports; case-law titles carry "-----" separators | #126, #127, #135 |
 | Advanced search | Mismatch on phones: title wraps beside a long scope chip | #131 |
@@ -142,6 +142,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Hero with search field, advanced-search link and layer chips | Done | |
+| Search examples under the hero field by scope: national laws for Nationell, county regulation words for Region, municipal regulation words for Kommun | Done | #130 |
 | Key laws: Regeringsformen card, plus accordions for acts and ordinances | Done | |
 | Key-law groups ordered by the main focus: hierarchy order for Medborgare and Student, acts and ordinances first for Jurist | Done | #29 |
 | Explore feed with Recent and Favourites tabs, bookmark toggle and "Show more" | Done | |
