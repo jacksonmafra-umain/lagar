@@ -2,7 +2,8 @@
 
 Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown files,
 records a SHA-256 manifest of the authoritative SFS PDFs, adds each statute's amendment
-register from SFSR, and writes a metadata-only amendment history for git.
+register from SFSR, writes a metadata-only amendment history for git, and collects EU acts
+in Swedish from the Publications Office Cellar.
 Python standard library only.
 
 ## Usage
@@ -171,10 +172,64 @@ git fast-import --quiet < build/history.fi                 # creates history/pil
 
 The branch is not pushed by any workflow.
 
+## EU law (Cellar)
+
+The `eu` command collects EU regulations, directives and decisions in their Swedish language
+version from the Cellar, the Publications Office repository behind EUR-Lex:
+
+```
+python3 -I collector/collect.py eu --list collector/data/eu-acts.json [--consolidated] \
+    [--refresh] [--limit N] [--cache sources/cache/eu] [--corpus corpus] \
+    [--manifest sources/eu-manifest.json] [--state collector/data/eu-state.json] \
+    [--rate SECONDS] [--report FILE]
+python3 -I collector/collect.py eu --celex 32016R0679[,32022L2555 ...] [options]
+```
+
+- Metadata: one SPARQL query per act to `https://publications.europa.eu/webapi/rdf/sparql`
+  (date of document, entry into force, end of validity, ELI, adopting institutions, Swedish
+  title and manifestation types, amending acts and consolidated versions).
+- Text: `https://publications.europa.eu/resource/celex/<CELEX>` with `Accept-Language: swe`
+  and `Accept: application/xhtml+xml` (or `text/html` for older acts that only have the old
+  EUR-Lex HTML) answers 303 with the Swedish manifestation. It is converted to Markdown with
+  `html.parser`: divisions (KAPITEL, AVDELNING, AVSNITT, BILAGA) as `##`, articles as `###`,
+  article and chapter titles in bold, point labels kept with their text, other table rows on
+  one line with cells separated by ` | `. The OJ page header and the `►M1 … ◄` / `▼B`
+  markers of consolidated texts are dropped.
+- **eur-lex.europa.eu is never contacted.** Its front end answers automated clients with a
+  WAF challenge. Every request, and every redirect, must stay on `publications.europa.eu` or
+  `op.europa.eu` (where its robots.txt lives); redirects are followed over https only.
+- Acts without a Swedish expression, or with Swedish only as PDF or print (REACH, for
+  example), are recorded as gaps in the state file and in the manifest's `gaps`; nothing is
+  translated. `--consolidated` also collects each act's latest consolidated version that
+  applies today (CELEX `0…-YYYYMMDD`) and removes older consolidated versions of that act.
+- Frontmatter: `id` `eu-<celex lowercased>`, `number` in the Swedish citation form taken from
+  the Swedish title when it agrees with the CELEX number (else rebuilt from it: `(EU) 2016/679`,
+  `(EG) nr 1907/2006`, `95/46/EG`), `celex`, `issued` (date of document; for a consolidated
+  version, the base act's), `in_force` (earliest entry into force), `repealed` (end of
+  validity unless open-ended), `amended_by` (CELEX numbers of amending acts), `eli`, `issuer`
+  (adopting institutions in Swedish), `source` (the manifestation URL), `source_sha256`.
+  `authoritative` is true for the Official Journal text, false for consolidated versions.
+- The committed manifest `sources/eu-manifest.json` lists, per act, `celex`, `id`, `url`,
+  `content_type`, `bytes`, `sha256` and `retrieved_at` (kept while the bytes are unchanged),
+  plus the gaps. `--cache DIR` keeps the bytes as `DIR/<CELEX>.<format>` (use the git-ignored
+  `sources/cache/`).
+- Resume: the state file (git-ignored) keeps `done` (CELEX to SHA-256), `failed`, `gaps` and
+  `blocked`. Collected acts are skipped unless `--refresh`; a refresh rewrites a document only
+  when its frontmatter (apart from `fetched_at`) or its converted text changed.
+- `--rate` defaults to, and may not go below, 1 s. An HTTP 403, a long `Retry-After` or a
+  robots.txt disallow stops the run (exit code 2).
+- `--report` writes `{"written": [...], "unchanged": [...], "skipped": n, "gaps": [...],
+  "failed": [...], "blocked": bool}`.
+
+The curated list `collector/data/eu-acts.json` holds the acts the app highlights (data
+protection, digital, consumer, labour, environment, private international law). A wider
+in-force sweep is not implemented yet. Reuse is free with acknowledgement of the source
+(Commission Decision 2011/833/EU).
+
 ## Exit codes
 
 - 0: finished (failures are listed, not fatal)
-- 1: the listing or robots.txt could not be read, or the state file is corrupt
+- 1: the listing, list file or robots.txt could not be read, or the state file is corrupt
 - 2: blocked (HTTP 403 or robots.txt disallow); recorded in the state file
 
 ## Tests
