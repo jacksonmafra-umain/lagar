@@ -13,6 +13,7 @@ completeness: read this file next to those numbers.
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
 | EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list) |
 | case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (sample: NJA 2026:29–38, HFD 2026 ref. 35–43, HFD 2026 not. 24) |
+| municipal regulations | Stockholm `https://start.stockholm/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/`, Göteborg Domino view `https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf/vyHandBok`, Malmö `https://malmo.se/Om-Malmo-stad/Demokrati-och-politik/Sa-styrs-Malmo/Forfattningssamling/` (citizen rules and taxor pages) | 2026-10-29 (sample: five documents per kommun) |
 
 The SFS target (11567 documents) is the number Riksdagen lists for document
 type `sfs` on that date, all statute types together.
@@ -60,8 +61,32 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   text contains a personal identity number, are recorded as failed instead of
   written. SFS references (`lagrumLista`) are kept in the body only; they are
   not yet links to the SFS layer.
-- Agency regulations, regional and municipal regulations and public services have
-  no collector yet and no known target.
+- Municipal regulations: only a pilot sample of 15 documents (five each from
+  Stockholm, Göteborg and Malmö) is in the corpus; the other 287 kommuner have no
+  config entry yet and there is no known target (roughly 30–150 documents per
+  kommun). Scope decision: only rules that bind residents are collected (lokala
+  ordningsföreskrifter, föreskrifter om avfall, renhållning and naturreservat,
+  hamnordningar, taxor and avgifter); internal governance documents
+  (reglementen, arbetsordningar, instruktioner, bolagsordningar, ägardirektiv,
+  delegationsordningar, stadgar) are left out. The text is published as PDF and
+  is not extracted: bodies hold metadata, the kommun's note and links to the
+  PDFs, whose SHA-256 is in `sources/municipal-manifest.json`. `issued` and
+  `in_force` are not filled. Kommun-specific gaps:
+  - Malmö: robots.txt disallows `/download/*`, where every PDF lives, so the
+    PDFs are never fetched; the documents point at the listing page and are
+    recorded as gaps in the manifest. Malmö prints no local number, so `number`
+    is the Sitevision id of the file. Links to other pages (hundstadga,
+    lokala trafikföreskrifter, VA SYD's rules) are not collected.
+  - Stockholm: the general lokala ordningsföreskrifter are an HTML page, not a
+    KFS PDF, and are not collected yet.
+  - Göteborg: the source is the city's "styrande dokument" handbook
+    (`Forfattn.nsf`), filtered to the kinds "Lokal föreskrift" and
+    "Taxor/avgifter"; `number` is the handbook serial number (`N010G…`), as
+    Göteborg prints no KFS-style number. The detail pages carry a
+    `noindex,nofollow` robots meta tag (a search-engine indexing hint);
+    robots.txt allows the paths.
+- Regional regulations and public services have no collector yet and no known
+  target.
 
 ## Failures and blocked sources
 
