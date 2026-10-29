@@ -4524,6 +4524,797 @@
       "files": [],
       "number": "13FS 2026:5",
       "published": "2026-10-16"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 139232,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:32Z",
+          "sha256": "ad5fa711fc3e40d81a2cb801eb0a7f9c30e60092cc763b9230edcb5368de5781",
+          "url": "https://www.lansstyrelsen.se/download/18.5824d8f619540bc082d104d/1740574085823/2025-1%20Vattenskyddsomr%C3%A5de%20K%C3%A5sj%C3%B6n%20Partille.pdf"
+        }
+      ],
+      "number": "14FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 139626,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:33Z",
+          "sha256": "f8265f2e651180037e0b07292aa9977453d58ac7160589b32958c1b16ecd3d96",
+          "url": "https://www.lansstyrelsen.se/download/18.5824d8f619540bc082d104e/1740574092894/2025-2%20Vattenskyddsomr%C3%A5de%20Svenljunga%20Svenljunga.pdf"
+        }
+      ],
+      "number": "14FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 141064,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:34Z",
+          "sha256": "df4b2ed1abdd05b227609eade5a46822aa676be984a73d93a3f4aa3b79938cd8",
+          "url": "https://www.lansstyrelsen.se/download/18.7f27a03419540af198821122/1741009651905/2025-3%20Strandskydd%20Hjo.pdf"
+        }
+      ],
+      "number": "14FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 137319,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:35Z",
+          "sha256": "ddc0ecfbb93a63397005774af295dd683062bfbdbe296f5e502a28aa82c80a42",
+          "url": "https://www.lansstyrelsen.se/download/18.7f27a03419540af1988396c6/1741335010405/2025-4%20Strandskydd%20H%C3%A4rryda.pdf"
+        }
+      ],
+      "number": "14FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 352671,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:37Z",
+          "sha256": "288f2a0684d8d2e35b3c0f1386b080d92f39c9d6543c9129a63359149183162b",
+          "url": "https://www.lansstyrelsen.se/download/18.469ff1061999df7ffd93b965/1759741785998/2025-5%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Frihamnen%20G%C3%B6teborg.pdf"
+        }
+      ],
+      "number": "14FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 1317434,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:38Z",
+          "sha256": "e1f88f68e81e660028b0a0dd911aaf2898a390f1d117042019059bf654d288cd",
+          "url": "https://www.lansstyrelsen.se/download/18.41d990d6195adccd5ad1f27d/1742808850914/2025-6%20Sj%C3%B6trafik%20fartbegr%C3%A4nsning%20H%C3%A4lls%C3%B6sundet%20L%C3%A5ng%C3%B6r%C3%A4nnan%20Str%C3%B6mstad.pdf"
+        }
+      ],
+      "number": "14FS 2025:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 162701,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:38Z",
+          "sha256": "553caa8515d94d6576cdc5aea50640e268850c702d534421f4efffeba43732ac",
+          "url": "https://www.lansstyrelsen.se/download/18.5258db091969f6f37eb4c537/1747044036479/2025-7%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Ullersundet%20Lidk%C3%B6ping.pdf"
+        }
+      ],
+      "number": "14FS 2025:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 4912266,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:40Z",
+          "sha256": "86cf7d636d823bd9cbecf6f26f75cd67093a9d8304ca9104bd02111785e39a67",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fe60232/1775037432343/2025-8%20UPPH%C3%84VD%20V%C3%A4gsammanst%C3%A4llning%20V%C3%A4stra%20G%C3%B6talands%20l%C3%A4n.pdf"
+        }
+      ],
+      "number": "14FS 2025:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 187271,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:40Z",
+          "sha256": "2446a12e76adad48157c3f28dd95aeae906e82e5789f7a71d67855bcca7f037b",
+          "url": "https://www.lansstyrelsen.se/download/18.5f41c6e195c8cccd332ace8/1743421121705/2025-9%20Vattenkvalitetskrav%20V%C3%A4sterhavets%20vattendistrikt.pdf"
+        }
+      ],
+      "number": "14FS 2025:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 140565,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:42Z",
+          "sha256": "cab7f50c3e559c4dd7816e818fe3f08c543bf3bf8f52f6886674afff72a43a9c",
+          "url": "https://www.lansstyrelsen.se/download/18.7d39256b19618e09f63be3a/1744356863365/2025-10%20Vattenskyddsomr%C3%A5de%20V%C3%A4nersborgsviken%20G%C3%B6ta%20%C3%A4lv%20Ale%20G%C3%B6teborg%20Kung%C3%A4lv%20Lilla%20Edet%20Trollh%C3%A4ttan%20V%C3%A4nersborg.pdf"
+        }
+      ],
+      "number": "14FS 2025:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 138114,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:42Z",
+          "sha256": "285e98b8c86497b034a1e51402884b6710d0977a0d92c2b8a0e0d258f90abfa3",
+          "url": "https://www.lansstyrelsen.se/download/18.7d39256b19618e09f63bf53/1744357833853/2025-11%20Strandskydd%20Tj%C3%B6rn.pdf"
+        }
+      ],
+      "number": "14FS 2025:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 374992,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:44Z",
+          "sha256": "0683c96b1907743a3d09fcd7f5570e12a98d8e46487432a477c404ef82ceb054",
+          "url": "https://www.lansstyrelsen.se/download/18.f8de9e519e6328a85c1bed/1779802911655/2025-12%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Frihamnen%20G%C3%B6teborg.pdf"
+        }
+      ],
+      "number": "14FS 2025:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 136700,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:44Z",
+          "sha256": "23d98da6d5c731e552a945db7d7664bbcac0e335ac6cfb7520ac463417ea147c",
+          "url": "https://www.lansstyrelsen.se/download/18.7d39256b19618e09f63c6139/1745836113441/2025-13%20Vattenskyddsomr%C3%A5de%20R%C3%B6dsvattnet%20Orust.pdf"
+        }
+      ],
+      "number": "14FS 2025:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 136971,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:45Z",
+          "sha256": "cf2ff6b852333e8eafe490b9d931476e19831c68e9ed6df549d45608cae44dd8",
+          "url": "https://www.lansstyrelsen.se/download/18.7d39256b19618e09f63c613a/1745836113464/2025-14%20Vattenskyddsomr%C3%A5de%20Korsk%C3%A4llan%20Orust.pdf"
+        }
+      ],
+      "number": "14FS 2025:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 137312,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:46Z",
+          "sha256": "1c18421f0420c1a7fbd179324ee465554a94a6b805306d0daf2acde75500620e",
+          "url": "https://www.lansstyrelsen.se/download/18.7d39256b19618e09f63c613b/1745836113486/2025-15%20Vattenskyddsomr%C3%A5de%20R%C3%B6dsvattnet%20Orust.pdf"
+        }
+      ],
+      "number": "14FS 2025:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 141194,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:48Z",
+          "sha256": "c84c0a80fae8d0d82e98c8bfe0e2306eb157d735fea7ec96f3a1c74b870baeb1",
+          "url": "https://www.lansstyrelsen.se/download/18.7d39256b19618e09f63c613c/1745836113507/2025-16%20Vattenskyddsomr%C3%A5de%20Korsk%C3%A4llan%20Ell%C3%B6s%20Orust.pdf"
+        }
+      ],
+      "number": "14FS 2025:16",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 138320,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:48Z",
+          "sha256": "21ff0093343edabd1fcea590bb04e1fa91db14e0d1a8136bbaafbe3d57eb7d62",
+          "url": "https://www.lansstyrelsen.se/download/18.7d39256b19618e09f63c613d/1745836113529/2025-17%20Vattenskyddsomr%C3%A5de%20H%C3%A4r%C3%B6d%20Hen%C3%A5n%20Orust.pdf"
+        }
+      ],
+      "number": "14FS 2025:17",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 310530,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:50Z",
+          "sha256": "cdc658fb47f50b2b72455b3aef1209305c9128bb2f746be27e138f464881903e",
+          "url": "https://www.lansstyrelsen.se/download/18.659fb21b197a1eac80693aaa/1751872602874/2025-18%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Marstrand%20Kung%C3%A4lv.pdf"
+        }
+      ],
+      "number": "14FS 2025:18",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 597190,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:51Z",
+          "sha256": "6cc5f116734be5db2a9dc7f167a20c1416eede454d1252fc5deed1b09405af9a",
+          "url": "https://www.lansstyrelsen.se/download/18.21610148198c5c5c741b9cf/1755772599066/2025-19%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Lidan%20Lidk%C3%B6ping.pdf"
+        }
+      ],
+      "number": "14FS 2025:19",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 515766,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:52Z",
+          "sha256": "829b95124cc29e07439bae49ea0054a98fd5180eeca50a2b71c05436362a5576",
+          "url": "https://www.lansstyrelsen.se/download/18.51268a8c1969f7d8e3855a65/1747118483558/2025-20%20Sj%C3%B6trafik%20ankringsf%C3%B6rbud%20Str%C3%B6mstad.pdf"
+        }
+      ],
+      "number": "14FS 2025:20",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 860611,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:53Z",
+          "sha256": "57c6080e559666f34796b51b42f211b44bc6a55230f9268d4f455e4d9297f5c5",
+          "url": "https://www.lansstyrelsen.se/download/18.3043922c196f123562f3e84b/1748331300147/2025-21%20Naturreservat%20Nord-L%C3%A5ng%C3%B6%20och%20H%C3%A4lls%C3%B6arna%20Str%C3%B6mstad.pdf"
+        },
+        {
+          "bytes": 640074,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:54Z",
+          "sha256": "51c7a5db3fea30637522a57acecb6f6fa03afb5d247bdfb2789d6249ef49d851",
+          "url": "https://www.lansstyrelsen.se/download/18.3357a38f196f109f26d90351/1748956178754/2025-21%20Naturreservat%20Nord-L%C3%A5ng%C3%B6%20och%20H%C3%A4lls%C3%B6arna%20Str%C3%B6mstad%20r%C3%A4ttelse.pdf"
+        }
+      ],
+      "number": "14FS 2025:21",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 163056,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:55Z",
+          "sha256": "3e89ab41575e60b23afa48897071366248cfba9b0199c3088a8e67b25b72b49c",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deea98261/1749018713320/2025-22%20Naturreservat%20Amundsrud%20Mellerud.pdf"
+        }
+      ],
+      "number": "14FS 2025:22",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 170499,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:56Z",
+          "sha256": "d62a08e2b214704ee68c69e98618c354d1cd359c8b6fae2701de3ab97b98bf01",
+          "url": "https://www.lansstyrelsen.se/download/18.376917b71975d4650e5a925/1749730986324/2025-23%20Naturreservat%20Lugn%C3%A5s%20gamla%20by%C3%A4ng%20Mariestad.pdf"
+        }
+      ],
+      "number": "14FS 2025:23",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 479456,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:57Z",
+          "sha256": "60f1978aa6f49a1da16209b9ddb798891d4cf17e667bf668613146faf0909509",
+          "url": "https://www.lansstyrelsen.se/download/18.40f94737198c5d23b8b37501/1756109920361/2025-24%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Vallgraven%20G%C3%B6teborg.pdf"
+        }
+      ],
+      "number": "14FS 2025:24",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 376673,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:58Z",
+          "sha256": "cb7d9ea535bf191503c7f7da11bf8fc0d0fdee2feb954095a2b4107d7ba6170e",
+          "url": "https://www.lansstyrelsen.se/download/18.2f8110451975d2f3bc18d72a/1750745598536/2025-25%20Sj%C3%B6trafik%20fartbegr%C3%A4nsning%20Str%C3%B6mstad.pdf"
+        }
+      ],
+      "number": "14FS 2025:25",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 238134,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:59Z",
+          "sha256": "7ef0095e80e83dd59efef0ddbb7f5f7706bd9be6cb2af1a6f256b89ae167dc7b",
+          "url": "https://www.lansstyrelsen.se/download/18.2f8110451975d2f3bc18f1f6/1750757504171/2025-26%20Tillst%C3%A5ndsplikt%20allm%C3%A4nna%20v%C3%A4gar%20V%C3%A4stra%20G%C3%B6talands%20l%C3%A4n.pdf"
+        }
+      ],
+      "number": "14FS 2025:26",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 158556,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:00Z",
+          "sha256": "7259aaf16337d4e52788bc14d5869b249a5066502b5a8701df00700b7a5df8aa",
+          "url": "https://www.lansstyrelsen.se/download/18.2cccdb1c19a769f74023eb86/1763379465828/2025-27%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Ullersundet%20Lidk%C3%B6ping.pdf"
+        }
+      ],
+      "number": "14FS 2025:27",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 160817,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:01Z",
+          "sha256": "9b76939b7a357d9dcd199f3e1da50b9e21398c800f8f725bd6ab46452f863a7b",
+          "url": "https://www.lansstyrelsen.se/download/18.34f08ae6199138e9be690b1/1757056936286/2025-28%20Naturreservat%20Bottnane%20Bengtsfors.pdf"
+        }
+      ],
+      "number": "14FS 2025:28",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 169473,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:02Z",
+          "sha256": "a3750c2f1b4f119a9b98c4ab93ab83fabcefbcfe8b6b2f198f6cd99d2c12869c",
+          "url": "https://www.lansstyrelsen.se/download/18.74364056199c8eed15741f9c/1760524594614/2025-29%20Naturreservat%20M%C3%A4ngsholms%20ekhagar%20V%C3%A5rg%C3%A5rda.pdf"
+        }
+      ],
+      "number": "14FS 2025:29",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 1637968,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:03Z",
+          "sha256": "be3b61c97c4875ffc659a3c0336c1759647b6c6e6dc3cedfc2a971cd13f90155",
+          "url": "https://www.lansstyrelsen.se/download/18.4554c05d19a0a2a91ab4a6be/1761647986955/2025-30%20Naturreservat%20Koster%C3%B6arna%20Str%C3%B6mstad.pdf"
+        }
+      ],
+      "number": "14FS 2025:30",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 942329,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:04Z",
+          "sha256": "21ef815d3b36866b76d092f681ced64186d4c41d7468b9ad5acffdc654de4264",
+          "url": "https://www.lansstyrelsen.se/download/18.59f9b38b19a7678e62746ae5/1763455039180/2025-31%20Sj%C3%B6trafik%20f%C3%B6rbud%20S%C3%A4cken%20Grisb%C3%A5darna%20Bj%C3%B6rns%20rev%20Ullvillarna%20Str%C3%B6mstad.pdf"
+        }
+      ],
+      "number": "14FS 2025:31",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 547645,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:05Z",
+          "sha256": "751b2a1c2865802239065535d13d85ded42d2b4ada6838eac6b2b7d4377e28d2",
+          "url": "https://www.lansstyrelsen.se/download/18.59f9b38b19a7678e62746ae6/1763455049024/2025-32%20Sj%C3%B6trafik%20f%C3%B6rbud%20Spiran%20Djupr%C3%A4nnan%20Tanum.pdf"
+        }
+      ],
+      "number": "14FS 2025:32",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 163803,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:06Z",
+          "sha256": "17af47f60ea5843570765e4d65d1512b5b914cc9bde551f92cd6e4bad1675334",
+          "url": "https://www.lansstyrelsen.se/download/18.4a69e05c19afcc737732e469/1765524436553/2025-33%20Naturreservat%20Br%C3%A5tn%C3%A4s%20Bengtsfors.pdf"
+        }
+      ],
+      "number": "14FS 2025:33",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 137192,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:07Z",
+          "sha256": "68e729ce97290bf36db705bcc34e357ccfe518a17e754a829732b51bfadc08a2",
+          "url": "https://www.lansstyrelsen.se/download/18.5a93ff5119b8ae48416c6b18/1768897064823/2026-1%20Naturreservat%20P%C3%A5lsbo%20Bor%C3%A5s.pdf"
+        }
+      ],
+      "number": "14FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 759779,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:08Z",
+          "sha256": "c1b6c9b4174bc7ddf61da8bd568d7a5dafba7bce58292eaf02c681096c758c00",
+          "url": "https://www.lansstyrelsen.se/download/18.48c08ac819c2710f440a5f/1770194009706/2026-2%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Frihamnen%20G%C3%B6teborg.pdf"
+        }
+      ],
+      "number": "14FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 166837,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:09Z",
+          "sha256": "490f417a31dbe6e18eb722993a6114b6c7d02e13450ea0cd6843842c66826aa8",
+          "url": "https://www.lansstyrelsen.se/download/18.7f17016919c4795c07d842e/1770814626935/2026-3%20Naturreservat%20Hulan%20Mariestad.pdf"
+        }
+      ],
+      "number": "14FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 381181,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:10Z",
+          "sha256": "bbadcf9004fb67e27569e8d43b0542d7abfaefdf4071b0e1bbeb090f98631746",
+          "url": "https://www.lansstyrelsen.se/download/18.5a1f26ad19c47b25a4156347/1771325871532/2026-4%20Vattenskyddsomr%C3%A5de%20R%C3%A5dasj%C3%B6n%20Norra%20L%C3%A5ngevattnet%20H%C3%A4rryda%20M%C3%B6lndal%20Partille.pdf"
+        }
+      ],
+      "number": "14FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 495469,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:11Z",
+          "sha256": "a85b71e568ffc354dc6a10a1c9fbaffd16a718d1b60fbc4b464e9ba42f38c0a0",
+          "url": "https://www.lansstyrelsen.se/download/18.5a1f26ad19c47b25a4156713/1771327472208/2026-5%20Sj%C3%B6trafik%20fartbegr%C3%A4nsning%20Ganlebukten%20G%C3%B6teborg.pdf"
+        }
+      ],
+      "number": "14FS 2026:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 429250,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:12Z",
+          "sha256": "3f27a37e9fcf928e9996b70ead87d3d2c7a0c8995929bb25fc87915bcfc258f9",
+          "url": "https://www.lansstyrelsen.se/download/18.55b414119c934f5486ee333/1773307137833/2026-6%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Bohus-Malm%C3%B6n%20Soten%C3%A4s.pdf"
+        }
+      ],
+      "number": "14FS 2026:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 356874,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:13Z",
+          "sha256": "0cab1e0cae700196fe5b3cbdd996ed90249b3c53b45c3b9d9123c0a2e3080dd5",
+          "url": "https://www.lansstyrelsen.se/download/18.20950a901a0fb5fce1123d81/1791183013851/2026-7%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Frihamnen%20G%C3%B6teborg.pdf"
+        }
+      ],
+      "number": "14FS 2026:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 138304,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:14Z",
+          "sha256": "481c05d4aeb4b73b2573b40cebdac1225cef63092eb5039b14fec3127a3da3da",
+          "url": "https://www.lansstyrelsen.se/download/18.55b414119c934f5486ee332/1773307129407/2026-8%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Bohus-Malm%C3%B6n%20Soten%C3%A4s.pdf"
+        }
+      ],
+      "number": "14FS 2026:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 5109630,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:15Z",
+          "sha256": "099e734fc6af137a4769be7a3ed379f634e20a8d30c8fcc7e0b85161ebef5c67",
+          "url": "https://www.lansstyrelsen.se/download/18.69ced119d24e4b4ca4ee99/1774938028563/2026-9%20V%C3%A4gsammanst%C3%A4llning%20V%C3%A4stra%20G%C3%B6talands%20l%C3%A4n.pdf"
+        }
+      ],
+      "number": "14FS 2026:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 168409,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:16Z",
+          "sha256": "51262b7a30b5560f736eefee75492f14addc2de895b37441a6122d2c56b5a5e1",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fe6b756/1775112145503/2026-10%20Naturreservat%20%C3%85sebukten%20Uddevalla.pdf"
+        }
+      ],
+      "number": "14FS 2026:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 163403,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:17Z",
+          "sha256": "5495853b477d18e4f78bfca83ebe2c15fe8faa473497c48f261749e150b353cd",
+          "url": "https://www.lansstyrelsen.se/download/18.6d44beb219daf6a101b5ab2c/1777368655685/2026-11%20Naturreservat%20Buteruds%20%C3%A4ngar%20Bengtsfors.pdf"
+        }
+      ],
+      "number": "14FS 2026:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 169862,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:18Z",
+          "sha256": "3553ff07ab44ca22ce2badc6c4126454f6cd4bef0477d7b5a3f966409e62195e",
+          "url": "https://www.lansstyrelsen.se/download/18.238822c519e023e873548fe9/1778656279926/2026-12%20Jakt%20allm%C3%A4nt%20vatten%20i%20havet%20V%C3%A4stra%20G%C3%B6talands%20l%C3%A4n.pdf"
+        }
+      ],
+      "number": "14FS 2026:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 288048,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:19Z",
+          "sha256": "67ef795fe93727e625966ab87546a84039c17a6c98a3937232db7b717fe9e9fa",
+          "url": "https://www.lansstyrelsen.se/download/18.3cbd77a19f96d2923420adc/1785155045650/2026-13%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20Marstrand%20Kung%C3%A4lv.pdf"
+        }
+      ],
+      "number": "14FS 2026:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 1605013,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:20Z",
+          "sha256": "2c4491812ae3b0e4a2229bc43263e722e1452dbd35fc290b2bceaf7279891709",
+          "url": "https://www.lansstyrelsen.se/download/18.3cbd77a19f96d2923420add/1785155054966/2026-14%20UPPH%C3%84VD%20Sj%C3%B6trafik%20tillf%C3%A4lliga%20f%C3%B6rbud%20S%C3%B6dra%20sk%C3%A4rg%C3%A5rden%20G%C3%B6teborg.pdf"
+        }
+      ],
+      "number": "14FS 2026:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 801806,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:21Z",
+          "sha256": "7bf95186723ac1824b0294e20153ba12003534165f31c6b843a1552c5c5d7a3f",
+          "url": "https://www.lansstyrelsen.se/download/18.3802389e19eafc8ca301a7e0/1781257618287/2026-15%20Naturreservat%20Norra%20Stigfjorden%20Orust.pdf"
+        }
+      ],
+      "number": "14FS 2026:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 755531,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:22Z",
+          "sha256": "ab2df0e095ba0b783ebeb9f842b43f704904cf838fa1c2df0f5ad56e31ccfcb0",
+          "url": "https://www.lansstyrelsen.se/download/18.6fa4735719ed45ea9275d4b2/1782298206415/2026-16%20Naturreservat%20Bj%C3%B6rshuvudet%20Tj%C3%B6rn.pdf"
+        }
+      ],
+      "number": "14FS 2026:16",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 166534,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:23Z",
+          "sha256": "6cc64788005a2cbd6e30b08e8a4a7ce31ff14a4c4feab188bab0808a236e867f",
+          "url": "https://www.lansstyrelsen.se/download/18.6dcddd7d1a042196bfb56da2/1788421529197/2026-17%20Naturreservat%20Bredmossen-Dalen%20Munkedal.pdf"
+        }
+      ],
+      "number": "14FS 2026:17",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 139573,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:24Z",
+          "sha256": "2092685cf6ab9ddfe322ff4d6418ed3176c7ebcc2c320f8376e760cd33be9b66",
+          "url": "https://www.lansstyrelsen.se/download/18.6dcddd7d1a042196bfb56da4/1788421540666/2026-18%20Vattenskyddsomr%C3%A5de%20Nedre%20Bolsj%C3%B6n%20Tanum.pdf"
+        }
+      ],
+      "number": "14FS 2026:18",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 143686,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:25Z",
+          "sha256": "7b8cb29f3f68cfc40d7a791e2578d4cefffbfe92d0d8fa734477b188512333fc",
+          "url": "https://www.lansstyrelsen.se/download/18.6dcddd7d1a042196bfb56da7/1788421547805/2026-19%20Vattenskyddsomr%C3%A5de%20Sk%C3%A5pafors%20Bengtsfors.pdf"
+        }
+      ],
+      "number": "14FS 2026:19",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 141521,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:26Z",
+          "sha256": "e56fa750552a5a59a4563e89534ce04afbeed3701f7aa1f5a48ac11cb8bb34ec",
+          "url": "https://www.lansstyrelsen.se/download/18.6dcddd7d1a042196bfb56da8/1788421554058/2026-20%20Vattenskyddsomr%C3%A5de%20Billingsfors%20Bengtsfors.pdf"
+        }
+      ],
+      "number": "14FS 2026:20",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 170163,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:27Z",
+          "sha256": "65b477696d10e4a275083d55d1effac994d25543b0012df2e3664c1ecaef12c1",
+          "url": "https://www.lansstyrelsen.se/download/18.6dcddd7d1a042196bfb56da9/1788421560771/2026-21%20Naturreservat%20Nakareholme%20Mariestad.pdf"
+        }
+      ],
+      "number": "14FS 2026:21",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 613825,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:28Z",
+          "sha256": "88474341e867e5558246e5da4f36f86dc8a37cdaf302d1647092e81f53ccbb1b",
+          "url": "https://www.lansstyrelsen.se/download/18.6dcddd7d1a042196bfb56daa/1788421567284/2026-22%20Naturreservat%20Ugglums%20tallskog%20Falk%C3%B6ping.pdf"
+        }
+      ],
+      "number": "14FS 2026:22",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 137906,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:05:29Z",
+          "sha256": "3b1aa65996215d6813a60d15faa8ded9baa93aa1fc1dbd855cf461b6fa1978c0",
+          "url": "https://www.lansstyrelsen.se/download/18.a72cbca1a086381f0f13f33/1789114694580/2026-23%20Naturreservat%20Marstrands%20sk%C3%A4rg%C3%A5rd%20Kung%C3%A4lv.pdf"
+        }
+      ],
+      "number": "14FS 2026:23",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
