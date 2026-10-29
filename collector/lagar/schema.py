@@ -1,8 +1,10 @@
 """Stdlib-only validator for corpus frontmatter.
 
 Implements the JSON Schema keywords used by docs/schema/frontmatter.schema.json
-(type, required, enum, pattern, format, items, additionalProperties, properties)
-plus the rule that `layer` must equal the layer of `type`.
+(type, required, enum, const, pattern, format, items, maxItems,
+additionalProperties, properties, allOf, if/then/else) plus the cross-field
+rules in `_cross_checks`: `layer` must equal the layer of `type`, and the
+regional codes must agree with the number.
 """
 
 import json
@@ -59,6 +61,12 @@ def _format_ok(fmt, value):
     return True
 
 
+def _valid(value, schema):
+    errors = []
+    _check(value, schema, "frontmatter", errors)
+    return not errors
+
+
 def _check(value, schema, path, errors):
     types = schema.get("type")
     if types is not None:
@@ -69,11 +77,16 @@ def _check(value, schema, path, errors):
     if "enum" in schema and value not in schema["enum"]:
         errors.append(f"{path}: {value!r} is not one of {schema['enum']}")
         return
+    if "const" in schema and value != schema["const"]:
+        errors.append(f"{path}: {value!r} is not {schema['const']!r}")
+        return
     if isinstance(value, str):
         if "pattern" in schema and not re.compile(schema["pattern"], re.ASCII).fullmatch(value):
             errors.append(f"{path}: {value!r} does not match {schema['pattern']}")
         if "format" in schema and not _format_ok(schema["format"], value):
             errors.append(f"{path}: {value!r} is not a valid {schema['format']}")
+    if isinstance(value, list) and "maxItems" in schema and len(value) > schema["maxItems"]:
+        errors.append(f"{path}: must have at most {schema['maxItems']} items, got {len(value)}")
     if isinstance(value, list) and "items" in schema:
         for i, item in enumerate(value):
             _check(item, schema["items"], f"{path}[{i}]", errors)
@@ -90,6 +103,12 @@ def _check(value, schema, path, errors):
         for key, sub in props.items():
             if key in value:
                 _check(value[key], sub, prefix + key, errors)
+    for sub in schema.get("allOf", ()):
+        _check(value, sub, path, errors)
+    if "if" in schema:
+        branch = schema.get("then") if _valid(value, schema["if"]) else schema.get("else")
+        if branch is not None:
+            _check(value, branch, path, errors)
 
 
 def validate(frontmatter):
@@ -98,7 +117,19 @@ def validate(frontmatter):
         return [f"frontmatter: expected object, got {type(frontmatter).__name__}"]
     errors = []
     _check(frontmatter, _load_schema(), "frontmatter", errors)
-    type_, layer = frontmatter.get("type"), frontmatter.get("layer")
+    errors.extend(_cross_checks(frontmatter))
+    return errors
+
+
+def _cross_checks(meta):
+    errors = []
+    type_, layer = meta.get("type"), meta.get("layer")
     if type_ in TYPES and isinstance(layer, str) and layer != TYPES[type_]:
         errors.append(f"layer: {layer!r} does not match type {type_!r} (expected {TYPES[type_]!r})")
+    region, kommun, number = meta.get("region_code"), meta.get("municipality_code"), meta.get("number")
+    if type_ == "county_regulation" and isinstance(region, str) and isinstance(number, str):
+        if not number.startswith(region + "FS "):
+            errors.append(f"region_code: {region!r} does not match the series of number {number!r}")
+    if isinstance(region, str) and isinstance(kommun, str) and not kommun.startswith(region):
+        errors.append(f"municipality_code: {kommun!r} is not in region {region!r}")
     return errors
