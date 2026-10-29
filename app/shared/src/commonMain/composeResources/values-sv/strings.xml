@@ -132,10 +132,10 @@
     <string name="scope_national_short">Hela Sverige</string>
     <string name="scope_region_desc">Regionala föreskrifter i Sveriges 21 regioner</string>
     <string name="scope_kommun_desc">Lokala föreskrifter i Sveriges 290 kommuner</string>
-    <string name="scope_step_title">Välj ditt startområde</string>
-    <string name="scope_step_text">Du kan byta mellan områden när som helst.</string>
-    <string name="locality_step_title">Var bor du?</string>
-    <string name="locality_step_text">Välj region och kommun för att se lokala regler. Du kan lämna det tomt.</string>
+    <string name="scope_step_title">Var vill du börja?</string>
+    <string name="scope_step_text">Välj vilka regler startsidan öppnar med. Du kan byta när som helst.</string>
+    <string name="scope_step_needs_region">Välj ett län för att fortsätta</string>
+    <string name="scope_step_needs_kommun">Välj en kommun för att fortsätta</string>
     <string name="picker_region_label">Region</string>
     <string name="picker_kommun_label">Kommun</string>
     <string name="picker_region_placeholder">Välj region</string>

@@ -31,9 +31,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
@@ -52,9 +54,9 @@ import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
-internal const val ONBOARDING_STEPS = 3
+internal const val ONBOARDING_STEPS = 2
 
-/** "Step N of 3" pill with a three-segment progress bar; the bar is decoration, the pill carries the meaning. */
+/** "Step N of 2" pill with a segmented progress bar; the bar is decoration, the pill carries the meaning. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun StepHeader(step: Int, modifier: Modifier = Modifier) {
@@ -88,10 +90,11 @@ internal fun StepHeader(step: Int, modifier: Modifier = Modifier) {
 }
 
 /**
- * Shared frame of the three steps: a fixed top row with the step header and Skip at the top right (as in the
+ * Shared frame of the steps: a fixed top row with the step header and Skip at the top right (as in the
  * Stitch steps), title and text on a scrolling body, and the primary action fixed at the bottom. Skip leaves
- * onboarding with the defaults from any step. With [onBack] (steps 2 and 3) the top row starts with a back arrow
- * that returns to the previous step. Fills the screen, inside the system bars. [aside] (the welcome
+ * onboarding from any step. With [onBack] (step 2) the top row starts with a back arrow that returns to the
+ * previous step. [primaryEnabled] false disables the primary action, and [primaryHint] (shown right above it)
+ * says why. Fills the screen, inside the system bars. [aside] (the welcome
  * illustration) follows the text on phones; on desktop the title, text and [aside] form a left column beside
  * the choices, and the frame is capped at [ShellDimens.FormMaxWidth].
  */
@@ -105,12 +108,14 @@ internal fun OnboardingScaffold(
     onSkip: () -> Unit,
     modifier: Modifier = Modifier,
     onBack: (() -> Unit)? = null,
+    primaryEnabled: Boolean = true,
+    primaryHint: String? = null,
     aside: (@Composable ColumnScope.() -> Unit)? = null,
     body: @Composable ColumnScope.() -> Unit,
 ) {
     val frame = modifier.fillMaxSize().background(LagarTheme.colors.surface).windowInsetsPadding(WindowInsets.systemBars)
     if (LocalWideLayout.current) {
-        WideOnboardingScaffold(step, title, text, primaryLabel, onPrimary, onSkip, onBack, frame, aside, body)
+        WideOnboardingScaffold(step, title, text, primaryLabel, onPrimary, onSkip, onBack, primaryEnabled, primaryHint, frame, aside, body)
         return
     }
     val spacing = LagarTheme.spacing
@@ -133,11 +138,14 @@ internal fun OnboardingScaffold(
             aside?.invoke(this)
             body()
         }
-        LagarButton(
-            onClick = onPrimary,
+        Column(
             modifier = Modifier.fillMaxWidth().padding(horizontal = spacing.marginMobile, vertical = spacing.md),
+            verticalArrangement = Arrangement.spacedBy(spacing.sm),
         ) {
-            PrimaryLabel(primaryLabel)
+            primaryHint?.let { PrimaryHint(it) }
+            LagarButton(onClick = onPrimary, enabled = primaryEnabled, modifier = Modifier.fillMaxWidth()) {
+                PrimaryLabel(primaryLabel)
+            }
         }
     }
 }
@@ -152,6 +160,8 @@ private fun WideOnboardingScaffold(
     onPrimary: () -> Unit,
     onSkip: () -> Unit,
     onBack: (() -> Unit)?,
+    primaryEnabled: Boolean,
+    primaryHint: String?,
     modifier: Modifier,
     aside: (@Composable ColumnScope.() -> Unit)?,
     body: @Composable ColumnScope.() -> Unit,
@@ -182,8 +192,10 @@ private fun WideOnboardingScaffold(
                     verticalArrangement = Arrangement.spacedBy(spacing.md),
                 ) {
                     body()
+                    primaryHint?.let { PrimaryHint(it, Modifier.align(Alignment.End)) }
                     LagarButton(
                         onClick = onPrimary,
+                        enabled = primaryEnabled,
                         modifier = Modifier.align(Alignment.End).widthIn(min = WidePrimaryMinWidth).padding(top = spacing.sm),
                     ) {
                         PrimaryLabel(primaryLabel)
@@ -203,7 +215,18 @@ private fun PrimaryLabel(label: String) {
 
 private val WidePrimaryMinWidth = 240.dp
 
-/** The Stitch back arrow at the top left of steps 2 and 3: a 48dp round target, labelled for screen readers. */
+/** What the primary action still waits for; announced politely when it changes. */
+@Composable
+private fun PrimaryHint(text: String, modifier: Modifier = Modifier) {
+    Text(
+        text,
+        style = LagarTheme.type.labelMd,
+        color = LagarTheme.colors.onSurfaceVariant,
+        modifier = modifier.semantics { liveRegion = LiveRegionMode.Polite },
+    )
+}
+
+/** The Stitch back arrow at the top left of step 2: a 48dp round target, labelled for screen readers. */
 @Composable
 private fun BackButton(onClick: () -> Unit) {
     val description = stringResource(Res.string.onboarding_back)
@@ -229,7 +252,7 @@ private fun SkipButton(onClick: () -> Unit) {
     }
 }
 
-/** "Stored on this device only", under the choices of steps 2 and 3. */
+/** "Stored on this device only", under the choices of step 2. */
 @Composable
 internal fun StoredLocallyNote(modifier: Modifier = Modifier) {
     Text(
