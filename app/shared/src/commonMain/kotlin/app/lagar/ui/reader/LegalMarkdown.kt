@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalDensity
@@ -87,9 +88,17 @@ internal fun LegalMarkdown(content: String, modifier: Modifier = Modifier) {
 
 private val IndicatorWidth = 3.dp
 
-/** One numbered statute (§): a 3dp bar in the layer's accent color on the left of a quiet card. */
+/**
+ * One numbered statute (§): a 3dp bar in the layer's accent color on the left of a quiet card. [action]
+ * (the section link) sits in the upper right corner, beside the text rather than over it.
+ */
 @Composable
-internal fun StatuteContainer(layer: LayerKey, modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+internal fun StatuteContainer(
+    layer: LayerKey,
+    modifier: Modifier = Modifier,
+    action: (@Composable () -> Unit)? = null,
+    content: @Composable () -> Unit,
+) {
     val layers = LagarTheme.layers
     val colors = LagarTheme.colors
     Row(
@@ -101,6 +110,7 @@ internal fun StatuteContainer(layer: LayerKey, modifier: Modifier = Modifier, co
             .height(IntrinsicSize.Min),
     ) {
         Box(Modifier.width(IndicatorWidth).fillMaxHeight().background(layers.accent(layer)))
-        Box(Modifier.weight(1f).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm)) { content() }
+        Box(Modifier.weight(1f).padding(start = LagarTheme.spacing.md, end = if (action == null) LagarTheme.spacing.md else 0.dp, top = LagarTheme.spacing.sm, bottom = LagarTheme.spacing.sm)) { content() }
+        if (action != null) Box(Modifier.align(Alignment.Top)) { action() }
     }
 }
