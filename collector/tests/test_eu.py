@@ -323,6 +323,23 @@ class MarkdownTest(unittest.TestCase):
             "# T\n\nDetta direktiv | Direktiv 2007/64/EG\n\n| yttre | x \\| y z \\| w |\n| --- | --- |\n| a\\|b | c |\n",
         )
 
+    def test_row_and_column_spans_keep_cells_in_their_columns(self):
+        # The amendment list of a consolidated text: two cells span both header rows.
+        html = (
+            "<body><table><tr><td rowspan='2'><p> </p></td><td rowspan='2'><p> </p></td>"
+            "<td colspan='3'><p>Officiella tidningen</p></td></tr>"
+            "<tr><td><p>nr</p></td><td><p>sida</p></td><td><p>datum</p></td></tr>"
+            "<tr><td><p>►M1</p></td><td><p>FÖRORDNING 1354/2007</p></td><td><p>L 304</p></td>"
+            "<td><p>1</p></td><td><p>22.11.2007</p></td></tr>"
+            "<tr><td colspan='2'><p>bred</p></td><td><p>L 1</p></td><td><p>2</p></td><td><p>3.1.2008</p></td></tr>"
+            "</table></body>"
+        ).encode()
+        self.assertEqual(
+            eu.to_markdown("T", html),
+            "# T\n\nOfficiella tidningen\n\n| | | nr | sida | datum |\n| --- | --- | --- | --- | --- |\n"
+            "| | FÖRORDNING 1354/2007 | L 304 | 1 | 22.11.2007 |\n| bred | | L 1 | 2 | 3.1.2008 |\n",
+        )
+
     def test_correlation_table(self):
         html = (
             "<body><p>BILAGA</p><table>"

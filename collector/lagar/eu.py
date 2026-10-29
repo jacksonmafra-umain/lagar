@@ -393,6 +393,50 @@ _MARKERS = re.compile(r"[►▼][A-Z]\d*|◄")
 _LABEL = re.compile(r"\(?\d{1,3}[a-z]?[.)]?|\(?[a-z]{1,2}\)|\(?[ivxlc]{1,6}\)|[–—•-]")
 
 
+def _span(attrs, name):
+    try:
+        return max(1, min(int(attrs.get(name) or 1), 50))
+    except ValueError:
+        return 1
+
+
+class _Row:
+    """An open table row: its cells (each a list of blocks) and the spans still to place."""
+
+    def __init__(self, carry):
+        self.cells = []
+        self.pad = 0  # empty cells owed by the last cell's colspan
+        self.spans = {}  # column -> further rows a rowspan of this row covers
+        self.carry = carry  # the table's active rowspans: column -> rows left, or None
+
+    def _covered(self, column):
+        return self.carry is not None and self.carry.get(column, 0) > 0
+
+    def start_cell(self, attrs):
+        self.cells.extend([] for _ in range(self.pad))
+        while self._covered(len(self.cells)):
+            self.cells.append([])
+        column, colspan, rowspan = len(self.cells), _span(attrs, "colspan"), _span(attrs, "rowspan")
+        self.cells.append([])
+        self.pad = colspan - 1
+        if rowspan > 1:
+            self.spans.update({c: rowspan - 1 for c in range(column, column + colspan)})
+
+    def finish(self):
+        """Pad the row to the rowspans above it and hand its own rowspans to the table."""
+        self.cells.extend([] for _ in range(self.pad))
+        if self.carry is None:
+            return self.cells
+        while any(c >= len(self.cells) for c, left in self.carry.items() if left > 0):
+            self.cells.append([])
+        for column in list(self.carry):
+            self.carry[column] -= 1
+            if self.carry[column] <= 0:
+                del self.carry[column]
+        self.carry.update(self.spans)
+        return self.cells
+
+
 class _Blocks(HTMLParser):
     """Text blocks of a Cellar XHTML or HTML manifestation, with their role."""
 
@@ -402,9 +446,9 @@ class _Blocks(HTMLParser):
         self._stack = []  # (tag, role, skip, scope)
         self._text = []
         self._scoped = scoped  # old EUR-Lex HTML: only the text inside #TexteOnly
-        self._rows = []  # open table rows: list of cells, each a list of blocks
-        # Open tables: (number of open rows when the table started, finished rows). A finished
-        # row is ("blocks", [block, ...]) or ("row", [cell text, ...]).
+        self._rows = []  # open table rows (_Row)
+        # Open tables: [number of open rows when the table started, finished rows, active
+        # rowspans]. A finished row is ("blocks", [block, ...]) or ("row", [cell text, ...]).
         self._tables = []
 
     def handle_starttag(self, tag, attrs):
@@ -416,13 +460,14 @@ class _Blocks(HTMLParser):
             return
         if tag in _BLOCK_TAGS:
             self._flush()
-        if tag == "table":
-            self._tables.append((len(self._rows), []))
-        elif tag == "tr":
-            self._rows.append([])
-        elif tag in ("td", "th") and self._rows:
-            self._rows[-1].append([])
         attrs = dict(attrs)
+        if tag == "table":
+            self._tables.append([len(self._rows), [], {}])
+        elif tag == "tr":
+            own = self._tables and len(self._rows) == self._tables[-1][0]
+            self._rows.append(_Row(self._tables[-1][2] if own else None))
+        elif tag in ("td", "th") and self._rows:
+            self._rows[-1].start_cell(attrs)
         classes = {c.removeprefix("oj-") for c in (attrs.get("class") or "").split()}
         role = next((_ROLES[c] for c in sorted(classes) if c in _ROLES), None)
         skip = tag in _SKIP_TAGS or bool(classes & _SKIP_CLASSES)
@@ -466,13 +511,13 @@ class _Blocks(HTMLParser):
             self.blocks.append(block)
             return
         row = self._rows[-1]
-        if not row:
-            row.append([])
-        row[-1].append(block)
+        if not row.cells:
+            row.cells.append([])
+        row.cells[-1].append(block)
 
     def _end_row(self):
         """A row whose first cell is a point label stays a list item; other rows are table rows."""
-        row = self._rows.pop()
+        row = self._rows.pop().finish()
         cells = [cell for cell in row if cell]
         if len(cells) == 1 or (len(cells) == 2 and len(cells[0]) == 1 and _LABEL.fullmatch(cells[0][0][1])):
             done = ("blocks", [block for cell in cells for block in cell])
@@ -486,10 +531,10 @@ class _Blocks(HTMLParser):
             self._emit_rows([done], nested=True)
 
     def _end_table(self):
-        opened, _ = self._tables[-1]
+        opened = self._tables[-1][0]
         while len(self._rows) > opened:  # rows left open by malformed markup
             self._end_row()
-        _, done = self._tables.pop()
+        _, done, _ = self._tables.pop()
         self._emit_rows(done, nested=bool(self._rows))
 
     def _emit_rows(self, done, nested):
