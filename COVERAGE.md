@@ -11,6 +11,7 @@ completeness: read this file next to those numbers.
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
 | SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
+| regional (county) | Länsstyrelserna, `https://www.lansstyrelsen.se/<county>/om-oss/om-lansstyrelsen-<county>/lanets-forfattningssamling/forfattningar-<year>.html` and the linked detail pages | 2026-10-29 (pilot: 01FS 2026:1–10, Stockholm) |
 | case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (sample: NJA 2026:29–38, HFD 2026 ref. 35–43, HFD 2026 not. 24) |
 
 The SFS target (11567 documents) is the number Riksdagen lists for document
@@ -50,8 +51,18 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   text contains a personal identity number, are recorded as failed instead of
   written. SFS references (`lagrumLista`) are kept in the body only; they are
   not yet links to the SFS layer.
-- Agency regulations, EU law, regional and municipal regulations and public
-  services have no collector yet and no known target.
+- Regional regulations: only a pilot of ten Stockholm regulations (01FS
+  2026:1–10) is in the corpus. Stockholm's site lists 2020–2026 (38
+  regulations in 2026 by 2026-10-29); older years and the other 20 counties are
+  not collected yet, and only Stockholm's landing page has been checked. The
+  text comes from the HTML version on each detail page; the printed PDF is
+  recorded by URL and SHA-256 but not parsed, so a regulation published only as
+  PDF has no text. `repealed` and amendment links are not filled (the site
+  publishes no status), and `in_force` only when the text names one date. Local
+  traffic regulations (Transportstyrelsen's STFS) and the self-governing regions
+  are out of scope. No target is set: the total volume is not measured yet.
+- Agency regulations, EU law, municipal regulations and public services have no
+  collector yet and no known target.
 
 ## Failures and blocked sources
 

@@ -105,7 +105,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | Feed card shows the in-force date and "Ändrad senast genom SFS …" | Done; each line is hidden while its field is `null` (the collector does not fill `in_force` yet). Saved items in the Favourites tab carry neither field | |
 | Case-law items in the feed | Blocked: no case-law data | #38 |
 | Popular tab | Blocked: the app is anonymous and collects no usage data | |
-| Region and Kommun homes (constitution, key rules, feed) | Blocked: empty layers; shows "coming soon" | #38 |
+| Region and Kommun homes (constitution, key rules, feed) | Blocked; shows "coming soon". The region layer now has a Stockholm pilot (`county_regulation`, #74), but the home does not list it yet: listing items carry no `region_code`, so a Region home would filter by the `<code>FS` prefix of `number`. Kommun has no data | #38 |
 
 ## Search
 
