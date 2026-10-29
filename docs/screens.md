@@ -12,6 +12,31 @@ Inventory of every screen in the Compose Multiplatform app (`app/`). For each on
 
 The number after each gap is its GitHub issue.
 
+## Layout check
+
+Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_local.py` (full local API), at 375x812 against the Stitch screens and `DESIGN.md`, and at 1440x900 against the wide-layout rows below. Stitch's Portuguese text, Brazilian data, BankID and profile elements are not counted, nor are gaps already listed with an issue. The desktop reference `lagar_multi_jurisdiction_design_system_portal` is not in `design/stitch/`, so the wide layouts were checked against this file and `DESIGN.md` only. Tablet (#35) was not checked.
+
+| Screen | Result | Issues |
+| --- | --- | --- |
+| Splash | Matches, with the known corpus-size gap | |
+| Welcome (step 1) | Matches | |
+| Scope (step 2), Locality (step 3) | Mismatch: no back button | #128 |
+| Utforska, Nationell | Matches, with known gaps | |
+| Utforska, Region and Kommun | Mismatch: search hint names national laws | #130 |
+| Scope sheet, Drawer | Match; the drawer button uses a profile icon | #134 |
+| Search results | Mismatch: no scope shown on results; exact title matches rank below newer case reports; case-law titles carry "-----" separators | #126, #127, #135 |
+| Advanced search | Mismatch on phones: title wraps beside a long scope chip | #131 |
+| Hierarki, wide home hierarchy | Mismatch: SFS other statutes left out of totals and counts; counts not digit-grouped | #125, #133 |
+| By ministry | Matches | |
+| Layer list | Mismatch: header badge touches the top edge of the bar | #129 |
+| Reader | Mismatch: table-of-contents sheet covers the screen on phones; raw "Upphör att gälla / Träder i kraft" markers; raw ministry unit code | #123, #124, #132 |
+| Sparade | Matches, with the known repealed gap | |
+| Tjänster | Matches | |
+| Settings | Matches; Swedish and English complete on the screens visited | |
+| Wide top bar, wide home, reader panes, two-column search and advanced search (1440x900) | Match the layout; the content issues above also show there | |
+
+The API now has case law (16,390 documents), so rows below marked "Blocked: no case-law data" (#38) need a fresh look.
+
 ## Cross-cutting design work
 
 | Topic | Status | Issue |
