@@ -1,5 +1,6 @@
 package app.lagar.data
 
+import app.lagar.domain.Locality
 import app.lagar.domain.Scope
 import app.lagar.domain.SearchMode
 import app.lagar.domain.SearchQuery
@@ -7,6 +8,7 @@ import app.lagar.domain.SortOrder
 import app.lagar.domain.StatusFilter
 import kotlinx.coroutines.test.runTest
 import kotlinx.datetime.LocalDate
+import kotlinx.serialization.json.JsonPrimitive
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -107,5 +109,76 @@ class SearchServiceTest {
     fun withoutAnIndexTheCatalogIsUsed() = runTest {
         val s = SearchService(null, Catalog(Listings())) { today }
         assertEquals(listOf("sfs-1974-152"), s.ids(SearchQuery("regering")))
+    }
+
+    /** Two län and two kommuner: county regulations of Stockholm (01) and Skåne (12), municipal ones of 0180 and 1280. */
+    private class LocalListings : LagarRepository {
+        val region = listOf(
+            ListingItem("01fs-2026-3", "Naturreservatet Vindsjöbergen", "01FS 2026:3", "county_regulation", "2026-01-27", null, regionCode = "01"),
+            ListingItem("12fs-2026-1", "Naturreservatet Exempel", "12FS 2026:1", "county_regulation", "2026-01-02", null, regionCode = "12"),
+        )
+        val municipality = listOf(
+            ListingItem("0180-kfs-2013-19", "Lokala hälsoföreskrifter", "KFS 2013:19", "municipal_regulation", null, null, regionCode = "01", municipalityCode = "0180"),
+            ListingItem("1280-1", "Lokala hälsoföreskrifter", "MFS 1", "municipal_regulation", null, null, regionCode = "12", municipalityCode = "1280"),
+        )
+
+        override suspend fun index() = ApiIndex(
+            1,
+            "t",
+            listOf(ApiLayer("region", 2, listOf(ApiSeries("county_regulation", 2))), ApiLayer("municipality", 2, listOf(ApiSeries("municipal_regulation", 2)))),
+        )
+
+        override suspend fun listing(layer: String, type: String?, page: Int): ListingPage {
+            val items = if (layer == "region") region else if (layer == "municipality") municipality else emptyList()
+            return ListingPage(layer, type, 1, 1, items.size, items)
+        }
+
+        override suspend fun document(id: String): DocumentResponse = error("unused")
+    }
+
+    /** A search index without shards whose document table holds [LocalListings] with their locality codes. */
+    private class LocalIndex(private val rows: List<ListingItem>) : SearchIndexSource {
+        override suspend fun searchManifest() = SearchManifest(1, "t", rows.size, listOf("title", "number"), mapOf("title" to 1, "number" to 2), 2, emptyList())
+
+        override suspend fun searchDocs() = SearchDocsTable(
+            listOf("id", "title", "number", "type", "issued", "repealed", "region_code", "municipality_code"),
+            rows.map { r ->
+                listOf(r.id, r.title, r.number, r.type, r.issued, r.repealed, r.regionCode, r.municipalityCode).map { JsonPrimitive(it) }
+            },
+        )
+
+        override suspend fun searchShard(key: String): SearchShard = error("no shards")
+    }
+
+    @Test
+    fun regionAndKommunSearchOnlyTheChosenLocality() = runTest {
+        val listings = LocalListings()
+        val catalog = SearchService(null, Catalog(listings)) { today }
+        val indexed = SearchService(FullTextIndex(LocalIndex(listings.region + listings.municipality)), Catalog(listings)) { today }
+        val stockholm = Locality("01", "0180")
+        // The index has no shards, so the text query runs on the catalog and the filter-only ones on both.
+        assertEquals(listOf("01fs-2026-3"), catalog.search(SearchQuery("naturreservatet"), Scope.Region, stockholm).map { it.item.id })
+        assertEquals(emptyList(), catalog.search(SearchQuery("halsoforeskrifter"), Scope.Kommun, Locality(null, null)))
+        for (s in listOf(catalog, indexed)) {
+            val county = SearchQuery("", types = setOf("county_regulation"))
+            assertEquals(listOf("01fs-2026-3"), s.search(county, Scope.Region, stockholm).map { it.item.id })
+            assertEquals(listOf("12fs-2026-1"), s.search(county, Scope.Region, Locality("12", null)).map { it.item.id })
+            val municipal = SearchQuery("", types = setOf("municipal_regulation"))
+            assertEquals(listOf("0180-kfs-2013-19"), s.search(municipal, Scope.Kommun, stockholm).map { it.item.id })
+            assertEquals(emptyList(), s.search(municipal, Scope.Kommun, Locality(null, null)))
+            // National search leaves out the regional and municipal layers.
+            assertEquals(emptyList(), s.search(county, Scope.Nationell, stockholm))
+        }
+    }
+
+    @Test
+    fun docsTableReadsTheLocalityColumns() {
+        val table = SearchDocsTable(
+            listOf("id", "title", "number", "type", "issued", "repealed", "region_code", "municipality_code"),
+            listOf(listOf("0180-x", "T", "KFS 1", "municipal_regulation", null, null, "01", "0180").map { JsonPrimitive(it) }),
+        )
+        assertEquals("01" to "0180", table.items().single().let { it.regionCode to it.municipalityCode })
+        val legacy = SearchDocsTable(listOf("id", "title"), listOf(listOf(JsonPrimitive("a"), JsonPrimitive("A"))))
+        assertEquals(null, legacy.items().single().regionCode)
     }
 }

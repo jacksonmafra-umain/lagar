@@ -69,4 +69,23 @@ class SampleRepositoryTest {
             }
         }
     }
+
+    @Test
+    fun bundledLocalityListingsMatchTheirIndexes() = runTest {
+        for ((layer, field) in listOf("region" to "region_code", "municipality" to "municipality_code")) {
+            val index = repository.localities(layer)
+            assertEquals(field, index.field)
+            assertEquals(repository.listing(layer, null, 1).total, index.total)
+            assertTrue(index.codes.isNotEmpty(), layer)
+            index.codes.forEach { entry ->
+                val page = repository.localityListing(layer, entry.code, 1)
+                assertEquals(entry.count, page.total, entry.code)
+                val codes = page.items.map { if (layer == "region") it.regionCode else it.municipalityCode }
+                assertTrue(codes.all { it == entry.code }, entry.code)
+                page.items.forEach { assertEquals(it.id, repository.document(it.id).meta.id) }
+            }
+        }
+        assertEquals(2, repository.localities("region").count("01"))
+        assertEquals(2, repository.localities("municipality").count("0180"))
+    }
 }

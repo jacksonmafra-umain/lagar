@@ -31,9 +31,7 @@ import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
 import app.lagar.domain.Scope
 import app.lagar.resources.Res
-import app.lagar.resources.coming_soon
 import app.lagar.resources.home_choose_location
-import app.lagar.resources.home_coming_soon_text
 import app.lagar.resources.home_location_label
 import app.lagar.resources.home_scope_kommun_title
 import app.lagar.resources.home_scope_region_title
@@ -56,6 +54,7 @@ fun HomeRoute(
     onOpenSearch: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
     onChooseLocation: () -> Unit,
+    onOpenLocality: (layer: DisplayLayer, code: String, name: String) -> Unit,
     onSelectScope: (Scope) -> Unit,
     viewModel: HomeViewModel = koinViewModel(),
 ) {
@@ -71,6 +70,7 @@ fun HomeRoute(
         onOpenSearch = onOpenSearch,
         onOpenAdvancedSearch = onOpenAdvancedSearch,
         onChooseLocation = onChooseLocation,
+        onOpenLocality = onOpenLocality,
         onSelectScope = onSelectScope,
         onToggleBookmark = viewModel::toggleBookmark,
     )
@@ -86,6 +86,7 @@ fun HomeScreen(
     onOpenSearch: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
     onChooseLocation: () -> Unit,
+    onOpenLocality: (layer: DisplayLayer, code: String, name: String) -> Unit,
     onSelectScope: (Scope) -> Unit,
     onToggleBookmark: (ListingItem) -> Unit,
 ) {
@@ -102,6 +103,7 @@ fun HomeScreen(
                 onOpenAdvancedSearch = onOpenAdvancedSearch,
                 onChooseLocation = onChooseLocation,
                 onSelectScope = onSelectScope,
+                onOpenLocality = onOpenLocality,
             )
             return@LoadStateHost
         }
@@ -134,12 +136,21 @@ fun HomeScreen(
                     )
                 }
             } else {
-                item {
-                    EmptyState(
-                        icon = Res.drawable.ic_info,
-                        title = stringResource(Res.string.coming_soon),
-                        text = stringResource(Res.string.home_coming_soon_text),
-                    )
+                val home = data.localityHome
+                if (home == null) {
+                    item { LocalityEmptyState(data) }
+                } else {
+                    item { LocalityRules(data, home.name, onOpenDocument, Modifier.padding(horizontal = spacing.marginMobile)) }
+                    item {
+                        ExploreFeed(
+                            data = data,
+                            bookmarks = bookmarks,
+                            onOpenDocument = onOpenDocument,
+                            onToggleBookmark = onToggleBookmark,
+                            onShowMore = { onOpenLocality(home.level, home.code, home.name) },
+                            modifier = Modifier.padding(horizontal = spacing.marginMobile),
+                        )
+                    }
                 }
             }
         }

@@ -4,9 +4,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.lagar.data.SearchService
 import app.lagar.domain.LoadState
+import app.lagar.domain.Locality
 import app.lagar.domain.Scope
 import app.lagar.domain.SearchHit
 import app.lagar.domain.SearchQuery
+import app.lagar.domain.localityCode
 import app.lagar.settings.UserPreferences
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.FlowPreview
@@ -20,9 +22,10 @@ import kotlinx.coroutines.launch
 
 /**
  * Search of the active scope through the [SearchService] (static index, or the catalog when the API has none).
- * [update] is debounced; the first query (from the route) runs at once, and so does a change of sort only. A
- * query with no text and no filter, and any scope other than Nationell (no documents yet), resolve to an empty
- * result without downloading anything, so data is only fetched once the user actually searches.
+ * [update] is debounced; the first query (from the route) runs at once, and so does a change of sort only. Region
+ * and Kommun search the chosen län or kommun. A query with no text and no filter, and a Region or Kommun scope
+ * without its locality, resolve to an empty result without downloading anything, so data is only fetched once the
+ * user actually searches.
  */
 class SearchViewModel(
     private val service: SearchService,
@@ -47,8 +50,9 @@ class SearchViewModel(
                 previous = it
                 if (it === initial || sortOnly) 0 else DEBOUNCE_MS
             }
-            combine(debounced, preferences.scope, attempt) { query, scope, _ -> query to scope }
-                .collectLatest { (query, scope) -> run(query, scope) }
+            combine(debounced, preferences.scope, preferences.locality, attempt) { query, scope, locality, _ ->
+                Triple(query, scope, locality)
+            }.collectLatest { (query, scope, locality) -> run(query, scope, locality) }
         }
     }
 
@@ -56,15 +60,15 @@ class SearchViewModel(
         _query.value = query
     }
 
-    private suspend fun run(query: SearchQuery, scope: Scope) {
-        if (scope != Scope.Nationell || !query.isActive) {
+    private suspend fun run(query: SearchQuery, scope: Scope, locality: Locality) {
+        if (!query.isActive || (scope != Scope.Nationell && scope.localityCode(locality) == null)) {
             _results.value = LoadState.Loaded(emptyList())
             return
         }
         // The first search downloads the document table (or the whole catalog); show progress rather than stale results.
         if (_results.value !is LoadState.Loaded || !service.isWarm(scope)) _results.value = LoadState.Loading
         _results.value = try {
-            LoadState.Loaded(service.search(query, scope))
+            LoadState.Loaded(service.search(query, scope, locality))
         } catch (e: CancellationException) {
             throw e
         } catch (_: Exception) {

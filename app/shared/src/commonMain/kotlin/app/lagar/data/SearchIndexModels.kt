@@ -48,6 +48,8 @@ data class SearchDocsTable(val fields: List<String>, val docs: List<List<JsonEle
                 inForce = row.text("in_force"),
                 amendedThrough = row.text("amended_through"),
                 ministry = row.text("ministry"),
+                regionCode = row.text("region_code"),
+                municipalityCode = row.text("municipality_code"),
             )
         }
     }

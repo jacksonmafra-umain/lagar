@@ -27,9 +27,9 @@ object ApiExamples {
   "page_count": 1,
   "total": 3,
   "items": [
-    {"id": "sfs-2010-800", "title": "Skollag (2010:800)", "number": "2010:800", "type": "act", "issued": "2010-06-23", "repealed": null, "in_force": "2011-07-01", "amended_through": "2026:1636", "ministry": "Utbildningsdepartementet"},
-    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null, "in_force": null, "amended_through": "2026:851", "ministry": "Justitiedepartementet KRIM"},
-    {"id": "sfs-1999-100", "title": "Exempelförordning (1999:100)", "number": "1999:100", "type": "ordinance", "issued": "1999-03-25", "repealed": "2005-01-01", "in_force": "1999-07-01", "amended_through": null, "ministry": null}
+    {"id": "sfs-2010-800", "title": "Skollag (2010:800)", "number": "2010:800", "type": "act", "issued": "2010-06-23", "repealed": null, "in_force": "2011-07-01", "amended_through": "2026:1636", "ministry": "Utbildningsdepartementet", "region_code": null, "municipality_code": null},
+    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null, "in_force": null, "amended_through": "2026:851", "ministry": "Justitiedepartementet KRIM", "region_code": null, "municipality_code": null},
+    {"id": "sfs-1999-100", "title": "Exempelförordning (1999:100)", "number": "1999:100", "type": "ordinance", "issued": "1999-03-25", "repealed": "2005-01-01", "in_force": "1999-07-01", "amended_through": null, "ministry": null, "region_code": null, "municipality_code": null}
   ]
 }
 """
@@ -42,7 +42,7 @@ object ApiExamples {
   "page_count": 1,
   "total": 1,
   "items": [
-    {"id": "sfs-2010-800", "title": "Skollag (2010:800)", "number": "2010:800", "type": "act", "issued": "2010-06-23", "repealed": null, "in_force": "2011-07-01", "amended_through": "2026:1636", "ministry": "Utbildningsdepartementet"}
+    {"id": "sfs-2010-800", "title": "Skollag (2010:800)", "number": "2010:800", "type": "act", "issued": "2010-06-23", "repealed": null, "in_force": "2011-07-01", "amended_through": "2026:1636", "ministry": "Utbildningsdepartementet", "region_code": null, "municipality_code": null}
   ]
 }
 """
@@ -137,7 +137,7 @@ object ApiExamples {
   "page_count": 1,
   "total": 1,
   "items": [
-    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null, "in_force": null, "amended_through": "2026:851", "ministry": "Justitiedepartementet KRIM"}
+    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null, "in_force": null, "amended_through": "2026:851", "ministry": "Justitiedepartementet KRIM", "region_code": null, "municipality_code": null}
   ]
 }
 """
@@ -186,6 +186,45 @@ object ApiExamples {
     ]
   },
   "body": "# Regeringsformen\n"
+}
+"""
+
+    val regionCodes = """
+{
+  "layer": "region",
+  "field": "region_code",
+  "total": 1,
+  "codes": [
+    {"code": "01", "count": 1}
+  ]
+}
+"""
+
+    val regionCodeListing = """
+{
+  "layer": "region",
+  "type": null,
+  "code": "01",
+  "page": 1,
+  "page_count": 1,
+  "total": 1,
+  "items": [
+    {"id": "01fs-2024-3", "title": "Föreskrifter om naturreservatet Exempelskogen", "number": "01FS 2024:3", "type": "county_regulation", "issued": "2024-02-01", "repealed": null, "in_force": "2024-03-01", "amended_through": null, "ministry": null, "region_code": "01", "municipality_code": null}
+  ]
+}
+"""
+
+    val municipalityCodeListing = """
+{
+  "layer": "municipality",
+  "type": null,
+  "code": "0180",
+  "page": 1,
+  "page_count": 1,
+  "total": 1,
+  "items": [
+    {"id": "0180-2024-12", "title": "Lokala ordningsföreskrifter för Stockholms kommun", "number": "SKFS 2024:12", "type": "municipal_regulation", "issued": "2024-05-06", "repealed": null, "in_force": null, "amended_through": null, "ministry": null, "region_code": "01", "municipality_code": "0180"}
+  ]
 }
 """
 }

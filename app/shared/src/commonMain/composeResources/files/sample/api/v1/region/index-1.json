@@ -3,6 +3,33 @@
  "type": null,
  "page": 1,
  "page_count": 1,
- "total": 0,
- "items": []
+ "total": 2,
+ "items": [
+  {
+   "id": "01fs-2026-3",
+   "title": "Länsstyrelsen i Stockholms läns beslut om bildande av naturreservatet Vindsjöbergen i Österåkers kommun samt föreskrifter för naturreservatet",
+   "number": "01FS 2026:3",
+   "type": "county_regulation",
+   "issued": "2026-01-27",
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": null,
+   "region_code": "01",
+   "municipality_code": null
+  },
+  {
+   "id": "01fs-2026-1",
+   "title": "Länsstyrelsen i Stockholms läns beslut om att upphäva naturreservatet Bullerö, Värmdö kommun",
+   "number": "01FS 2026:1",
+   "type": "county_regulation",
+   "issued": "2025-11-10",
+   "repealed": null,
+   "in_force": null,
+   "amended_through": null,
+   "ministry": null,
+   "region_code": "01",
+   "municipality_code": null
+  }
+ ]
 }

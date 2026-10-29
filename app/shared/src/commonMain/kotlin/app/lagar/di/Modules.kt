@@ -8,6 +8,7 @@ import app.lagar.data.FullTextIndex
 import app.lagar.data.GeoRepository
 import app.lagar.data.HttpRepository
 import app.lagar.data.LagarRepository
+import app.lagar.data.LocalityRepository
 import app.lagar.data.MinistryRepository
 import app.lagar.data.SampleRepository
 import app.lagar.data.SearchIndexSource
@@ -20,6 +21,7 @@ import app.lagar.ui.hierarki.HierarkiViewModel
 import app.lagar.ui.hierarki.MinistriesViewModel
 import app.lagar.ui.home.HomeViewModel
 import app.lagar.ui.list.LayerListViewModel
+import app.lagar.ui.list.LocalityFilter
 import app.lagar.ui.list.MinistryFilter
 import app.lagar.ui.onboarding.OnboardingViewModel
 import app.lagar.ui.reader.ReaderViewModel
@@ -50,6 +52,7 @@ fun appModule(config: DataSourceConfig) = module {
     single<ApiSource> { if (config.useSample) SampleRepository() else HttpRepository(get(), config.baseUrl) }
     single<LagarRepository> { CachingRepository(get<ApiSource>()) }
     single<MinistryRepository> { get<ApiSource>() }
+    single<LocalityRepository> { get<ApiSource>() }
     single { Settings() }
     single { UserPreferences(get()) }
     single { BookmarkStore(get()) }
@@ -60,9 +63,11 @@ fun appModule(config: DataSourceConfig) = module {
     single { FullTextIndex(get()) }
     single { SearchService(get(), get()) }
     viewModel { HierarkiViewModel(get()) }
-    viewModel { HomeViewModel(get(), get(), get(), get()) }
+    viewModel { HomeViewModel(get(), get(), get(), get(), get()) }
     viewModel { OnboardingViewModel(get(), get()) }
-    viewModel { (layer: String, type: String?, ministry: MinistryFilter?) -> LayerListViewModel(get(), layer, type, ministry, get()) }
+    viewModel { (layer: String, type: String?, ministry: MinistryFilter?, locality: LocalityFilter?) ->
+        LayerListViewModel(get(), layer, type, ministry, get(), locality, get())
+    }
     viewModel { (layer: String, type: String) -> MinistriesViewModel(get(), layer, type) }
     viewModel { (id: String) -> ReaderViewModel(get(), get(), id, get()) }
     viewModel { (initial: SearchQuery) -> SearchViewModel(get(), get(), initial) }
