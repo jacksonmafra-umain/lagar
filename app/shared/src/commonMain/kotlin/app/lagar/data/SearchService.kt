@@ -41,7 +41,7 @@ class SearchService(
         if (!query.isValidRange || !query.isActive) return emptyList()
         val hits = index?.manifest()?.let { searchIndex(index, query, scope, locality) }
             ?: catalog.items(scope).filter { it.inScope(scope, locality) }.searchHits(query, today())
-        return hits.distinctBy { it.item.id }.sortedFor(query.sort)
+        return hits.distinctBy { it.item.id }.sortedFor(query.sort, query.text)
     }
 
     private suspend fun searchIndex(index: FullTextIndex, query: SearchQuery, scope: Scope, locality: Locality): List<SearchHit> {

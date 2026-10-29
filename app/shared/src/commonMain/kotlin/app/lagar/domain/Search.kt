@@ -150,14 +150,52 @@ private fun parseIso(iso: String?): LocalDate? = iso?.let { runCatching { LocalD
 private fun bestField(bits: Int): Int = if (bits == 0) Int.MAX_VALUE else bits and -bits
 
 /**
- * Relevance: a document where every term matched in the title comes first, then number, then body; then by
- * the best field any term matched in; then more matched fields; then newest.
+ * Relevance, after the [nameMatch] of the query text: a document where every term matched in the title comes
+ * first, then number, then body; then by the best field any term matched in; then more matched fields; then newest.
  */
-private val ByRelevance: Comparator<SearchHit> =
+private val ByFields: Comparator<SearchHit> =
     compareBy<SearchHit> { bestField(it.allFields) }
         .thenBy { bestField(it.anyFields) }
         .thenByDescending { it.anyFields.countOneBits() }
         .then(compareBy(NewestFirst) { it.item })
+
+/** How a document's name answers a query, best first: see [nameMatch]. */
+internal enum class NameMatch { Exact, Start, None }
+
+/**
+ * Whether [item] is the document the query [text] names. [NameMatch.Exact]: the title, the title without its
+ * trailing number ("Brottsbalk" of "Brottsbalk (1962:700)") or the number equals the text. [NameMatch.Start]:
+ * the title starts with the text, the last word being typed as a prefix. Words compare accent-insensitively, and
+ * a query word with a definite ending also equals its base ("miljöbalken" names "Miljöbalk (1998:808)").
+ */
+internal fun nameMatch(item: ListingItem, text: String): NameMatch {
+    val query = words(text)
+    if (query.isEmpty()) return NameMatch.None
+    val title = words(item.title)
+    val number = words(item.number)
+    val name = if (number.isNotEmpty() && title.takeLast(number.size) == number) title.dropLast(number.size) else title
+    return when {
+        query == number || sameWords(title, query) || sameWords(name, query) -> NameMatch.Exact
+        query.size <= title.size && startsWithWords(title, query) -> NameMatch.Start
+        else -> NameMatch.None
+    }
+}
+
+/** Every word of [s], normalised, stop words included. */
+private fun words(s: String): List<String> {
+    val folded = normalize(s)
+    return tokenRanges(folded).map { folded.substring(it) }
+}
+
+private fun sameWord(word: String, query: String): Boolean = word == query || word == definiteBase(query)
+
+private fun sameWords(words: List<String>, query: List<String>): Boolean =
+    words.size == query.size && words.indices.all { sameWord(words[it], query[it]) }
+
+/** The first words of [words] are [query]; the last query word may be the start of its word. */
+private fun startsWithWords(words: List<String>, query: List<String>): Boolean = query.indices.all { i ->
+    if (i == query.lastIndex) words[i].startsWith(query[i]) || sameWord(words[i], query[i]) else sameWord(words[i], query[i])
+}
 
 /** Ascending by the number's (year, ordinal), then as text; numbers without a year last. */
 internal val ByNumber: Comparator<ListingItem> =
@@ -182,9 +220,14 @@ internal fun numberKey(number: String): Pair<Int, Long>? {
 
 private const val MAX_ORDINAL_DIGITS = 15
 
-/** [this] in [order]; stable, so ties keep their input order. */
-fun List<SearchHit>.sortedFor(order: SortOrder): List<SearchHit> = when (order) {
-    SortOrder.Relevance -> sortedWith(ByRelevance)
+/**
+ * [this] in [order]; stable, so ties keep their input order. By relevance, documents the query [text] names
+ * ([nameMatch]) come first, so "brottsbalk" puts Brottsbalk (1962:700) ahead of newer case reports citing it.
+ */
+fun List<SearchHit>.sortedFor(order: SortOrder, text: String = ""): List<SearchHit> = when (order) {
+    SortOrder.Relevance -> map { it to nameMatch(it.item, text) }
+        .sortedWith(compareBy<Pair<SearchHit, NameMatch>> { it.second }.thenComparator { a, b -> ByFields.compare(a.first, b.first) })
+        .map { it.first }
     SortOrder.Newest -> sortedWith(compareBy(NewestFirst) { it.item })
     SortOrder.Number -> sortedWith(compareBy(ByNumber) { it.item })
 }

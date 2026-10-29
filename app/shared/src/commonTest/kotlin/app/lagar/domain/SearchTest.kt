@@ -171,6 +171,48 @@ class SearchTest {
     }
 
     @Test
+    fun relevancePutsTheDocumentTheQueryNamesFirst() {
+        val brottsbalk = item("sfs-1962-700", "Brottsbalk (1962:700)", "1962:700", issued = "1962-12-21")
+        val report = item("nja-2024-1", "NJA 2024 s. 1 Brottsbalken 29 kap. och påföljd", "NJA 2024 s. 1", type = "case_report", issued = "2024-05-01")
+        val amendment = item("sfs-2025-1", "Lag (2025:1) om ändring i brottsbalken", "2025:1", issued = "2025-01-10")
+        val items = listOf(report, amendment, brottsbalk)
+        assertEquals(
+            listOf(brottsbalk, amendment, report),
+            items.searchHits(SearchQuery("brottsbalk")).sortedFor(SortOrder.Relevance, "brottsbalk").map { it.item },
+        )
+        assertEquals(brottsbalk, items.searchHits(SearchQuery("Brottsbalken")).sortedFor(SortOrder.Relevance, "Brottsbalken").first().item)
+    }
+
+    @Test
+    fun aDefiniteQueryFindsAndRanksTheIndefiniteTitle() {
+        val miljobalk = item("sfs-1998-808", "Miljöbalk (1998:808)", "1998:808", issued = "1998-06-11")
+        val report = item("mod-2025-1", "MÖD 2025:1 Tillstånd enligt miljöbalken", "MÖD 2025:1", type = "case_report", issued = "2025-03-01")
+        val hits = listOf(report, miljobalk).searchHits(SearchQuery("miljöbalken")).sortedFor(SortOrder.Relevance, "miljöbalken")
+        assertEquals(listOf(miljobalk, report), hits.map { it.item })
+    }
+
+    @Test
+    fun aMatchingNumberRanksFirst() {
+        val old = item("sfs-1962-700", "Brottsbalk (1962:700)", "1962:700", issued = "1962-12-21")
+        val newer = item("sfs-2026-1", "Lag (2026:1) om ändring i lagen (1962:700)", "2026:1", issued = "2026-01-02")
+        val hits = listOf(newer, old).searchHits(SearchQuery("1962:700")).sortedFor(SortOrder.Relevance, "1962:700")
+        assertEquals(listOf(old, newer), hits.map { it.item })
+    }
+
+    @Test
+    fun nameMatchComparesWholeTitlesAndTheirStart() {
+        val skollag = item("a", "Skollag (2010:800)", "2010:800")
+        assertEquals(NameMatch.Exact, nameMatch(skollag, "skollag"))
+        assertEquals(NameMatch.Exact, nameMatch(skollag, "Skollagen"))
+        assertEquals(NameMatch.Exact, nameMatch(skollag, "skollag (2010:800)"))
+        assertEquals(NameMatch.Exact, nameMatch(skollag, "2010:800"))
+        assertEquals(NameMatch.Start, nameMatch(skollag, "skol"))
+        assertEquals(NameMatch.Start, nameMatch(item("b", "Lag (1977:1160) om arbetsmiljö", "1977:1160"), "lag"))
+        assertEquals(NameMatch.None, nameMatch(item("c", "Lag om ändring i skollagen"), "skollag"))
+        assertEquals(NameMatch.None, nameMatch(skollag, ""))
+    }
+
+    @Test
     fun highlightsMarkTheBaseOfADefiniteQueryWord() {
         val title = "Miljöbalk (1998:808)"
         assertEquals(listOf("Miljöbalk"), highlightRanges(title, "miljöbalken").map { title.substring(it) })
