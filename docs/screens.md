@@ -20,7 +20,7 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | --- | --- | --- |
 | Splash | Matches, with the known corpus-size gap | |
 | Welcome (step 1) | Matches | |
-| Scope (step 2), Locality (step 3) | Mismatch: no back button | #128 |
+| Scope (step 2), Locality (step 3) | Matches; back arrow at the top left (fixed) | #128 |
 | Utforska, Nationell | Matches, with known gaps | |
 | Utforska, Region and Kommun | Mismatch: search hint names national laws | #130 |
 | Scope sheet, Drawer | Match; the drawer button uses a profile icon | #134 |
@@ -115,6 +115,7 @@ Route: `OnboardingScope`. Code: `ui/onboarding/ScopeStepScreen.kt`, `ScopeCard.k
 | --- | --- | --- |
 | Selectable Nationell, Region and Kommun cards with layer colours and counts | Done | |
 | Skip at the top right, and a "stored on this device" note | Done | #29 |
+| Back arrow at the top left, returning to the welcome step | Done | #128 |
 
 ### Locality (step 3)
 
@@ -124,6 +125,7 @@ Route: `OnboardingLocality`. Code: `ui/onboarding/LocalityStepScreen.kt`, `Local
 | --- | --- | --- |
 | Searchable region and kommun pickers for all 21 regions and 290 kommuner, both optional | Done | |
 | Skip at the top right | Done | #29 |
+| Back arrow at the top left, returning to the scope step | Done | #128 |
 | Kommun suggested from the device location (offline nearest SCB centroid, coarse permission; pre-selected for the user to confirm, with denied, unavailable, timeout and abroad messages) | Done | #30 |
 | Linked kommun summary (council, document count) | Blocked: no municipal data | #38 |
 
