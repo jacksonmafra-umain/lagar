@@ -115,18 +115,47 @@ class ProgressTests(unittest.TestCase):
         self.assertIn("![", text)
         self.assertNotIn("## Integrity", progress.render_markdown(self.rows(), None))
 
+    def test_layer_summary_sums_series_and_needs_every_target(self):
+        rows = [
+            {"layer": "agency", "collected": 3, "target": 2},
+            {"layer": "agency", "collected": 1, "target": 2},
+            {"layer": "municipality", "collected": 5, "target": None},
+            {"layer": "eu", "collected": 1, "target": 4},
+            {"layer": "eu", "collected": 1, "target": None},
+        ]
+        agency, municipality, eu = progress.summarize_layers(rows)
+        self.assertEqual((agency["series"], agency["collected"], agency["target"], agency["percent"]), (2, 4, 4, 75.0))
+        self.assertEqual((municipality["target"], municipality["percent"]), (None, None))
+        self.assertEqual((eu["collected"], eu["target"], eu["percent"]), (2, None, None))
+
+    def test_readme_block_replaced_between_markers(self):
+        block = progress.render_readme_block(self.rows())
+        self.assertTrue(block.startswith(progress.README_START))
+        self.assertTrue(block.endswith(progress.README_END))
+        self.assertIn("| Fundamental laws | 0 | 4 | 0.0% |", block)
+        self.assertIn("| Agency regulations | 0 | unknown | - |", block)
+        self.assertIn("[PROGRESS.md](PROGRESS.md)", block)
+        self.assertIn("[COVERAGE.md](COVERAGE.md)", block)
+        text = f"# Title\n\n{progress.README_START}\nold\n{progress.README_END}\n\nRest\n"
+        updated = progress.update_readme(text, block)
+        self.assertEqual(updated, f"# Title\n\n{block}\n\nRest\n")
+        self.assertEqual(progress.update_readme(updated, block), updated)
+        self.assertIsNone(progress.update_readme("# No markers\n", block))
+
     def test_main_writes_files(self):
         writer.write(meta(), LONG, self.root)
         targets = Path(self.tmp.name) / "targets.json"
         targets.write_text(json.dumps(TARGETS), encoding="utf-8")
         out = Path(self.tmp.name) / "out"
         out.mkdir()
+        (out / "README.md").write_text(f"# t\n{progress.README_START}\n{progress.README_END}\n", encoding="utf-8")
         code = progress.main(["--corpus", str(self.root), "--targets", str(targets),
                               "--integrity", str(out / "none.json"), "--design", str(DESIGN),
                               "--out-dir", str(out)])
         self.assertEqual(code, 0)
         self.assertTrue((out / "PROGRESS.md").exists())
         self.assertTrue((out / "progress.svg").exists())
+        self.assertIn("| SFS (statutes and ordinances) | 1 | 2 | 50.0% |", (out / "README.md").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":
