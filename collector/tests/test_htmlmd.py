@@ -1,6 +1,6 @@
 import unittest
 
-from lagar.htmlmd import to_markdown
+from lagar.htmlmd import clean_text, escape_block, markdown_table, to_markdown
 
 
 class HtmlToMarkdownTests(unittest.TestCase):
@@ -34,6 +34,22 @@ class HtmlToMarkdownTests(unittest.TestCase):
 
     def test_leading_hash_is_escaped(self):
         self.assertEqual(to_markdown("<p># inte rubrik</p>"), "\\# inte rubrik")
+
+
+
+class HelperTests(unittest.TestCase):
+    def test_clean_text(self):
+        self.assertEqual(clean_text("  a\u00a0\u00adb\n\tc\u200b "), "a b c")
+
+    def test_escape_block(self):
+        self.assertEqual((escape_block("# x"), escape_block("x #")), ("\\# x", "x #"))
+
+    def test_markdown_table(self):
+        rows = [["A", "", "B"], ["1", "", "2|3", "extra"], ["x"]]
+        self.assertEqual(markdown_table(rows),
+                         "| A | B | |\n| --- | --- | --- |\n| 1 | 2\\|3 | extra |\n| x | | |")
+        self.assertEqual(markdown_table([["", ""]]), "")
+        self.assertEqual(markdown_table([]), "")
 
 
 if __name__ == "__main__":
