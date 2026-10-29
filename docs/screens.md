@@ -105,7 +105,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | Feed card shows the in-force date and "Ändrad senast genom SFS …" | Done; each line is hidden while its field is `null` (the collector does not fill `in_force` yet). Saved items in the Favourites tab carry neither field | |
 | Case-law items in the feed | Blocked: no case-law data | #38 |
 | Popular tab | Blocked: the app is anonymous and collects no usage data | |
-| Region and Kommun homes (constitution, key rules, feed) | Blocked: empty layers; shows "coming soon" | #38 |
+| Region and Kommun homes: the chosen län's or kommun's documents from the per-locality listings (`<layer>/by-code/`), with "Regulations in force" (newest five in force, document count), the Recent and Favourites feed and "Show more" to the locality's list; "no regulations collected yet for <locality>" when it has none, and a prompt to choose one when unset. The location card stays | Done | #99 |
 
 ## Search
 
@@ -121,7 +121,7 @@ Route: `Search(text, types, from, to, mode, status, inForceFrom, inForceTo, vaca
 | Ranking (title, then number, then body; more matched fields first), sorting by relevance, newest or number, and matched words highlighted in titles | Done | #32 |
 | Full-text mode (body text) with a "Found in the text" note on body-only matches | Done | #37 |
 | Snippets of the matching text | Not planned: needs each result's document (`docs/<id>.json`), too costly per result; the note above says where it matched | #37 |
-| Region and Kommun scopes | Blocked: no data | #38 |
+| Region and Kommun scopes: only the chosen län's or kommun's documents, by the `region_code` and `municipality_code` columns of `docs.json` (or listing items on the catalog path); a prompt to choose a locality when it is unset | Done | #99 |
 
 ### Advanced search
 
@@ -143,7 +143,7 @@ Route: `Hierarki`. Code: `ui/hierarki/`. References: Stitch `lagar_normhierarki_
 | --- | --- | --- |
 | Toggle between layers and pyramid views | Done | |
 | Distribution bar and legend | Done | |
-| Nine layer rows with counts; empty layers open a "coming soon" sheet | Done | |
+| Nine layer rows with counts (Region and Kommun count every collected län and kommun); empty layers open a "coming soon" sheet | Done | #99 |
 | Authority badge (Överordnad, Riksdag, Regering, Verk, Prejudikat, Unionsakt, Regional, Kommunal, Service) and real examples on each layer row | Done | #34 |
 | Browse SFS acts and ordinances by ministry: "By ministry" pill on their rows, from the API's per-ministry index | Done | #34 |
 | Browse agency, case law and other layers by issuer or court | Blocked: no data in those layers, and no per-issuer index yet | #38 |
@@ -159,7 +159,7 @@ Route: `Ministries(layer, type)`. Code: `ui/hierarki/MinistriesScreen.kt`. Refer
 
 ## Layer list
 
-Route: `LayerList(layer, type?)`. Code: `ui/list/`.
+Route: `LayerList(layer, type?, ministry?, ministryName?, code?, codeName?)`. Code: `ui/list/`.
 
 | Feature | Status | Issue |
 | --- | --- | --- |
@@ -168,6 +168,7 @@ Route: `LayerList(layer, type?)`. Code: `ui/list/`.
 | Empty state for a layer or series with no documents | Done | #33 |
 | Series switch (all, acts, ordinances, other statutes) inside the list, from the layer's `series` in `index.json` | Done | #33 |
 | Names, levels and colours for the case law, EU, agency, county and municipal types, ready for when those layers have data | Done | #77 |
+| One län's or kommun's documents (`code`, from the per-locality listings), opened from "Show more" on the Region and Kommun homes | Done | #99 |
 
 ## Reader
 
