@@ -152,6 +152,14 @@ class FullTextIndexTest {
     }
 
     @Test
+    fun aTermsBaseIsMatchedExactly() = runTest {
+        val index = FullTextIndex(FakeSearchSource())
+        val sfs = index.group("sfs")
+        assertEquals(setOf(1), index.match(sfs, listOf(QueryTerm("skollagen", base = "skollag")), all).keys)
+        assertTrue(index.match(sfs, listOf(QueryTerm("skollagen")), all).isEmpty())
+    }
+
+    @Test
     fun theFieldMaskLimitsWhereATermMayMatch() = runTest {
         val index = FullTextIndex(FakeSearchSource())
         val sfs = index.group("sfs")

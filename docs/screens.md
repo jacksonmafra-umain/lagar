@@ -180,6 +180,7 @@ Route: `Search(text, types, from, to, mode, status, inForceFrom, inForceTo, vaca
 | Query survives process death through the route arguments | Done | |
 | Static search index (`search/`): loads the manifest, then for each layer group of the scope its `docs.json` and only the shards of the query terms, cached by `built_at`, and merges the groups' hits (search versions 1 and 2); every term must match, the word being typed matches as a prefix; falls back to the whole catalog when the API has no index | Done | #37, #105 |
 | Ranking (title, then number, then body; more matched fields first), sorting by relevance, newest or number, and matched words highlighted in titles | Done | #32 |
+| Documents the query names first: title (with or without its number) or number equal to the query, then titles starting with it; a definite query word also matches its base ("miljöbalken" finds and ranks Miljöbalk (1998:808) first) | Done | #127 |
 | Full-text mode (body text) with a "Found in the text" note on body-only matches | Done | #37 |
 | Snippets of the matching text | Not planned: needs each result's document (`docs/<id>.json`), too costly per result; the note above says where it matched | #37 |
 | Region and Kommun scopes: only the chosen län's or kommun's documents, by the `region_code` and `municipality_code` columns of `docs.json` (or listing items on the catalog path); a prompt to choose a locality when it is unset | Done | #99 |

@@ -17,8 +17,11 @@ fun tokenize(text: String): List<String> {
     return tokenRanges(folded).map { folded.substring(it) }.filter { it.isIndexTerm() }
 }
 
-/** One term of a query; a [prefix] term matches every indexed term that starts with [text]. */
-data class QueryTerm(val text: String, val prefix: Boolean = false)
+/**
+ * One term of a query; a [prefix] term matches every indexed term that starts with [text]. [base] is the word
+ * without a definite ending ([definiteBase]), matched exactly as well, so "miljöbalken" finds "Miljöbalk".
+ */
+data class QueryTerm(val text: String, val prefix: Boolean = false, val base: String? = null)
 
 /**
  * The terms of a type-ahead query. The last word is a prefix while the user is still typing it (the text does
@@ -34,12 +37,24 @@ fun queryTerms(text: String): List<QueryTerm> {
         val typing = i == ranges.lastIndex && range.last == folded.lastIndex && term.length >= 2
         when {
             typing && term in STOP_WORDS -> if (ranges.size == 1) QueryTerm(term, prefix = true) else null
-            typing -> QueryTerm(term, prefix = true)
-            term.isIndexTerm() -> QueryTerm(term)
+            typing -> QueryTerm(term, prefix = true, base = definiteBase(term))
+            term.isIndexTerm() -> QueryTerm(term, base = definiteBase(term))
             else -> null
         }
     }
 }
+
+/**
+ * [term] without the Swedish definite singular ending `-en` or `-et` ("brottsbalken" -> "brottsbalk"), or null when
+ * it has none, is not made of letters only, or would leave fewer than [MIN_BASE_LENGTH] letters. Titles name laws
+ * in the indefinite form ("Miljöbalk (1998:808)") while people search for the definite one.
+ */
+internal fun definiteBase(term: String): String? {
+    if (term.length < MIN_BASE_LENGTH + 2 || !term.all { it.isLetter() }) return null
+    return if (term.endsWith("en") || term.endsWith("et")) term.dropLast(2) else null
+}
+
+private const val MIN_BASE_LENGTH = 3
 
 /** First two characters of a term, anything outside `a-z` and `0-9` replaced by `_`: the shard it lives in. */
 fun shardKey(term: String): String = buildString {
