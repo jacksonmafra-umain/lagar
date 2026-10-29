@@ -21,11 +21,12 @@ import urllib.parse
 import urllib.request
 import urllib.robotparser
 from dataclasses import dataclass, field
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
 from . import frontmatter, writer
+from .htmlmd import clean_text, escape_block, markdown_table
 from .http import Blocked, PoliteClient
 from .sfs import NETWORK_ERRORS, USER_AGENT, StateError, _save_state
 from .vocabulary import TYPES
@@ -59,6 +60,7 @@ CELEX = re.compile(r"(?:3\d{4}[RLD]\d{4}|0\d{4}[RLD]\d{4}-\d{8})", re.ASCII)
 _KINDS = {"R": "eu_regulation", "L": "eu_directive", "D": "eu_decision"}
 _SCHEMA_CELEX = re.compile(r"[0-9CE]\d{4}[A-Z]{1,2}\d{4}(?:[A-Z]?\(\d{2}\))?(?:-\d{8})?", re.ASCII)
 _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}", re.ASCII)
+_CORRIGENDUM = re.compile(r"R\(\d{2}\)$", re.ASCII)
 
 # Institutions that adopt acts, by Publications Office corporate-body code.
 ISSUERS = {
@@ -91,7 +93,33 @@ SELECT ?field ?value WHERE {
             cdm:resource_legal_id_celex ?value BIND("consolidated" AS ?field) }
   UNION { ?work cdm:act_consolidated_based_on_resource_legal ?base .
           ?base cdm:work_date_document ?value BIND("base_date_document" AS ?field) }
+  UNION { ?work cdm:act_consolidated_based_on_resource_legal ?base ;
+            cdm:act_consolidated_date ?date .
+          ?version cdm:act_consolidated_based_on_resource_legal ?base ;
+            cdm:act_consolidated_date ?versionDate ;
+            cdm:act_consolidated_consolidates_resource_legal ?act .
+          FILTER(?versionDate <= ?date)
+          ?act cdm:resource_legal_id_celex ?actCelex ;
+            cdm:work_date_document ?actDate
+          BIND(CONCAT(STR(?actCelex), " ", STR(?actDate)) AS ?value) BIND("consolidates" AS ?field) }
 }
+"""
+
+# Curated acts whose work, consolidated versions or amending acts changed after a
+# point in time, with the newest modification. %(values)s are CELEX literals.
+_CHANGED_QUERY = """PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX cmr: <http://publications.europa.eu/ontology/cdm/cmr#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?celex (MAX(?m) AS ?modified) WHERE {
+  VALUES ?celex { %(values)s }
+  ?work cdm:resource_legal_id_celex ?celex .
+  { ?work cmr:lastModificationDate ?m }
+  UNION { ?version cdm:act_consolidated_based_on_resource_legal ?work .
+          ?version cmr:lastModificationDate ?m }
+  UNION { ?amending cdm:resource_legal_amends_resource_legal ?work .
+          ?amending cmr:lastModificationDate ?m }
+  FILTER(?m > "%(since)s"^^xsd:dateTime)
+} GROUP BY ?celex
 """
 
 
@@ -160,6 +188,22 @@ class Metadata:
     def consolidated(self):
         return sorted(c for c in set(self.all("consolidated")) if CELEX.fullmatch(c))
 
+    @property
+    def amendments(self):
+        """(date of document, CELEX) of the amending acts a consolidated version incorporates.
+
+        The base act, earlier consolidated versions and corrigenda (`R(nn)`) are left out.
+        """
+        base = "3" + self.celex[1:10]
+        out = set()
+        for value in self.all("consolidates"):
+            celex, _, day = value.partition(" ")
+            day = _date(day)
+            if (day and _SCHEMA_CELEX.fullmatch(celex) and celex != base
+                    and not celex.startswith("0") and not _CORRIGENDUM.search(celex)):
+                out.add((day, celex))
+        return sorted(out)
+
 
 def metadata_url(celex):
     if not CELEX.fullmatch(celex):
@@ -181,6 +225,42 @@ def parse_metadata(celex, raw):
     if not fields:
         raise ValueError(f"{celex} is not in Cellar")
     return Metadata(celex, fields)
+
+
+def _utc(value):
+    """An ISO date or date-time as UTC `YYYY-MM-DDTHH:MM:SS.fffZ`; naive values are UTC."""
+    moment = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+    if moment.tzinfo is None:
+        moment = moment.replace(tzinfo=timezone.utc)
+    moment = moment.astimezone(timezone.utc)
+    return moment.strftime("%Y-%m-%dT%H:%M:%S.") + f"{moment.microsecond // 1000:03d}Z"
+
+
+def changed_url(celexes, since):
+    """SPARQL for the acts among `celexes` changed in Cellar after `since`."""
+    for celex in celexes:
+        if not CELEX.fullmatch(celex):
+            raise ValueError(f"unsupported CELEX number: {celex!r}")
+    values = " ".join(f'"{c}"^^xsd:string' for c in celexes)
+    query = _CHANGED_QUERY % {"values": values, "since": _utc(since)}
+    return SPARQL_URL + "?" + urllib.parse.urlencode({"query": query})
+
+
+def parse_changed(raw):
+    """CELEX -> newest modification (UTC) from a changed_url answer."""
+    data = json.loads(raw.decode("utf-8"))
+    out = {}
+    for row in data["results"]["bindings"]:
+        celex, latest = row["celex"]["value"], _utc(row["modified"]["value"])
+        if CELEX.fullmatch(celex) and latest > out.get(celex, ""):
+            out[celex] = latest
+    return out
+
+
+def _before(moment):
+    """One millisecond before a UTC `_utc` value, so a strict `>` filter includes `moment`."""
+    value = datetime.fromisoformat(moment.replace("Z", "+00:00")) - timedelta(milliseconds=1)
+    return _utc(value.isoformat())
 
 
 def latest_consolidated(metadata, today):
@@ -253,6 +333,9 @@ def build_meta(metadata, raw_sha256, source, fetched_at):
     end = _date(metadata.first("end_of_validity"))
     issued = metadata.first("base_date_document") if consolidated else metadata.first("date_document")
     issuers = [ISSUERS[a] for a in ISSUERS if a in metadata.all("agent")]
+    amended_by = {c for c in metadata.all("amended_by") if _SCHEMA_CELEX.fullmatch(c)}
+    amendments = metadata.amendments if consolidated else []
+    amended_by.update(c for _, c in amendments)
     return {
         "id": corpus_id(celex),
         "title": metadata.title,
@@ -262,8 +345,9 @@ def build_meta(metadata, raw_sha256, source, fetched_at):
         "issued": _date(issued),
         "in_force": entry[0] if entry else None,
         "repealed": end if end and end != NO_END else None,
-        "amended_by": sorted(c for c in set(metadata.all("amended_by")) if _SCHEMA_CELEX.fullmatch(c)),
-        "amended_through": None,
+        "amended_by": sorted(amended_by),
+        # The latest amending act a consolidated version incorporates; the OJ text has none.
+        "amended_through": amendments[-1][1] if amendments else None,
         "reprinted_by": [],
         "ministry": None,
         "eli": metadata.first("eli"),
@@ -309,6 +393,50 @@ _MARKERS = re.compile(r"[►▼][A-Z]\d*|◄")
 _LABEL = re.compile(r"\(?\d{1,3}[a-z]?[.)]?|\(?[a-z]{1,2}\)|\(?[ivxlc]{1,6}\)|[–—•-]")
 
 
+def _span(attrs, name):
+    try:
+        return max(1, min(int(attrs.get(name) or 1), 50))
+    except ValueError:
+        return 1
+
+
+class _Row:
+    """An open table row: its cells (each a list of blocks) and the spans still to place."""
+
+    def __init__(self, carry):
+        self.cells = []
+        self.pad = 0  # empty cells owed by the last cell's colspan
+        self.spans = {}  # column -> further rows a rowspan of this row covers
+        self.carry = carry  # the table's active rowspans: column -> rows left, or None
+
+    def _covered(self, column):
+        return self.carry is not None and self.carry.get(column, 0) > 0
+
+    def start_cell(self, attrs):
+        self.cells.extend([] for _ in range(self.pad))
+        while self._covered(len(self.cells)):
+            self.cells.append([])
+        column, colspan, rowspan = len(self.cells), _span(attrs, "colspan"), _span(attrs, "rowspan")
+        self.cells.append([])
+        self.pad = colspan - 1
+        if rowspan > 1:
+            self.spans.update({c: rowspan - 1 for c in range(column, column + colspan)})
+
+    def finish(self):
+        """Pad the row to the rowspans above it and hand its own rowspans to the table."""
+        self.cells.extend([] for _ in range(self.pad))
+        if self.carry is None:
+            return self.cells
+        while any(c >= len(self.cells) for c, left in self.carry.items() if left > 0):
+            self.cells.append([])
+        for column in list(self.carry):
+            self.carry[column] -= 1
+            if self.carry[column] <= 0:
+                del self.carry[column]
+        self.carry.update(self.spans)
+        return self.cells
+
+
 class _Blocks(HTMLParser):
     """Text blocks of a Cellar XHTML or HTML manifestation, with their role."""
 
@@ -318,8 +446,10 @@ class _Blocks(HTMLParser):
         self._stack = []  # (tag, role, skip, scope)
         self._text = []
         self._scoped = scoped  # old EUR-Lex HTML: only the text inside #TexteOnly
-        self._rows = []  # open table rows: list of cells, each a list of blocks
-        self._tables = []  # number of open rows when each open table started
+        self._rows = []  # open table rows (_Row)
+        # Open tables: [number of open rows when the table started, finished rows, active
+        # rowspans]. A finished row is ("blocks", [block, ...]) or ("row", [cell text, ...]).
+        self._tables = []
 
     def handle_starttag(self, tag, attrs):
         if tag in _VOID_TAGS:
@@ -330,13 +460,14 @@ class _Blocks(HTMLParser):
             return
         if tag in _BLOCK_TAGS:
             self._flush()
-        if tag == "table":
-            self._tables.append(len(self._rows))
-        elif tag == "tr":
-            self._rows.append([])
-        elif tag in ("td", "th") and self._rows:
-            self._rows[-1].append([])
         attrs = dict(attrs)
+        if tag == "table":
+            self._tables.append([len(self._rows), [], {}])
+        elif tag == "tr":
+            own = self._tables and len(self._rows) == self._tables[-1][0]
+            self._rows.append(_Row(self._tables[-1][2] if own else None))
+        elif tag in ("td", "th") and self._rows:
+            self._rows[-1].start_cell(attrs)
         classes = {c.removeprefix("oj-") for c in (attrs.get("class") or "").split()}
         role = next((_ROLES[c] for c in sorted(classes) if c in _ROLES), None)
         skip = tag in _SKIP_TAGS or bool(classes & _SKIP_CLASSES)
@@ -355,9 +486,7 @@ class _Blocks(HTMLParser):
         if tag == "tr" and self._rows:
             self._end_row()
         elif tag == "table" and self._tables:
-            opened = self._tables.pop()
-            while len(self._rows) > opened:  # rows left open by malformed markup
-                self._end_row()
+            self._end_table()
         while self._stack:
             if self._stack.pop()[0] == tag:
                 break
@@ -372,6 +501,8 @@ class _Blocks(HTMLParser):
     def close(self):
         super().close()
         self._flush()
+        while self._tables:
+            self._end_table()
         while self._rows:
             self._end_row()
 
@@ -380,23 +511,55 @@ class _Blocks(HTMLParser):
             self.blocks.append(block)
             return
         row = self._rows[-1]
-        if not row:
-            row.append([])
-        row[-1].append(block)
+        if not row.cells:
+            row.cells.append([])
+        row.cells[-1].append(block)
 
     def _end_row(self):
-        """A row whose first cell is a point label stays a list item; other rows become one line."""
-        cells = [cell for cell in self._rows.pop() if cell]
+        """A row whose first cell is a point label stays a list item; other rows are table rows."""
+        row = self._rows.pop().finish()
+        cells = [cell for cell in row if cell]
         if len(cells) == 1 or (len(cells) == 2 and len(cells[0]) == 1 and _LABEL.fullmatch(cells[0][0][1])):
-            for cell in cells:
-                for block in cell:
-                    self._emit(block)
+            done = ("blocks", [block for cell in cells for block in cell])
         elif cells:
-            self._emit((None, " | ".join(" ".join(text for _, text in cell) for cell in cells)))
+            done = ("row", [" ".join(text for _, text in cell) for cell in row])
+        else:
+            return
+        if self._tables and len(self._rows) == self._tables[-1][0]:
+            self._tables[-1][1].append(done)
+        else:  # a row outside any table
+            self._emit_rows([done], nested=True)
+
+    def _end_table(self):
+        opened = self._tables[-1][0]
+        while len(self._rows) > opened:  # rows left open by malformed markup
+            self._end_row()
+        _, done, _ = self._tables.pop()
+        self._emit_rows(done, nested=bool(self._rows))
+
+    def _emit_rows(self, done, nested):
+        """Two or more adjacent table rows become a Markdown table, unless nested in another table."""
+        group = []
+
+        def flush_group():
+            if len(group) >= 2 and not nested:
+                self._emit(("table", markdown_table(group)))
+            for cells in group if len(group) < 2 or nested else ():
+                self._emit((None, " | ".join(c for c in cells if c)))
+            group.clear()
+
+        for kind, value in done:
+            if kind == "row":
+                group.append(value)
+                continue
+            flush_group()
+            for block in value:
+                self._emit(block)
+        flush_group()
 
     def _flush(self):
         # Modification markers of consolidated texts: ►M3 … ◄, ▼B.
-        text = " ".join(_MARKERS.sub(" ", "".join(self._text)).split())
+        text = clean_text(_MARKERS.sub(" ", "".join(self._text)))
         self._text = []
         if text:
             role = next((entry[1] for entry in reversed(self._stack) if entry[1]), None)
@@ -430,14 +593,16 @@ def to_markdown(title, raw):
             else:
                 out.append(label)
             label = None
-        if role == "article":
+        if role == "table":
+            out.append(text)
+        elif role == "article":
             out.append("### " + text)
         elif role == "division":
             out.append("## " + text)
         elif role == "subtitle":
             out.append(f"**{text}**")
         else:
-            out.append(text)
+            out.append(escape_block(text))
     if label is not None:
         out.append(label)
     if len(out) == 1:
@@ -456,6 +621,10 @@ class RunSummary:
     gaps: "list[str]" = field(default_factory=list)
     failed: "list[str]" = field(default_factory=list)
     blocked: bool = False
+    # --changed-since: the newest Cellar modification among the changed acts, and the
+    # point to resume from when some of them were not collected.
+    latest_modified: "str | None" = None
+    retry_from: "str | None" = None
 
 
 def _celex_arg(value):
@@ -475,6 +644,15 @@ def _rate(value):
     return rate
 
 
+def _since(value):
+    try:
+        return _utc(value)
+    except ValueError:
+        raise argparse.ArgumentTypeError(
+            f"expected YYYY-MM-DD or an ISO date-time such as 2026-10-29T05:00:00Z: {value}"
+        ) from None
+
+
 def _non_negative(value):
     number = int(value)
     if number < 0:
@@ -490,14 +668,23 @@ def parse_args(argv):
     parser.add_argument("--consolidated", action="store_true",
                         help="also collect each act's latest consolidated version")
     parser.add_argument("--refresh", action="store_true", help="refetch acts already collected")
+    parser.add_argument("--changed-since", type=_since, metavar="DATE[TIME]",
+                        help="only (re)collect acts that Cellar changed after this moment (UTC)")
     parser.add_argument("--limit", type=_non_negative, help="stop after N written documents")
     parser.add_argument("--cache", metavar="DIR", help="keep the fetched bytes in DIR")
+    parser.add_argument("--offline", action="store_true",
+                        help="read metadata and text from --cache instead of the network")
     parser.add_argument("--report", metavar="FILE", help="write a JSON run report")
     parser.add_argument("--rate", type=_rate, default=DEFAULT_RATE, metavar="SECONDS")
     parser.add_argument("--state", default=DEFAULT_STATE)
     parser.add_argument("--manifest", default=DEFAULT_MANIFEST)
     parser.add_argument("--corpus", default="corpus")
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.offline and not args.cache:
+        parser.error("--offline needs --cache")
+    if args.offline and args.changed_since:
+        parser.error("--offline cannot ask Cellar what changed")
+    return args
 
 
 def load_list(path):
@@ -591,12 +778,46 @@ def _now():
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def fetch_metadata(client, celex):
-    return parse_metadata(celex, client.get(check_host(metadata_url(celex)), SPARQL_HEADERS))
+class _Cache:
+    """Fetched bytes under DIR: `<CELEX>.sparql.json`, `<CELEX>.<format>` and `<CELEX>.source.json`."""
+
+    def __init__(self, directory, offline):
+        self.dir = Path(directory) if directory else None
+        self.offline = offline
+
+    def read(self, name):
+        try:
+            return (self.dir / name).read_bytes()
+        except OSError as error:
+            raise ValueError(f"not in the cache: {name}") from error
+
+    def write(self, name, raw):
+        if self.dir is not None and not self.offline:
+            self.dir.mkdir(parents=True, exist_ok=True)
+            (self.dir / name).write_bytes(raw)
+
+
+def fetch_metadata(client, celex, cache=None):
+    cache = cache or _Cache(None, False)
+    name = f"{celex}.sparql.json"
+    if cache.offline:
+        raw = cache.read(name)
+    else:
+        raw = client.get(check_host(metadata_url(celex)), SPARQL_HEADERS)
+        cache.write(name, raw)
+    return parse_metadata(celex, raw)
+
+
+def fetch_changed(client, celexes, since):
+    """CELEX -> newest Cellar modification, for the acts changed after `since`."""
+    return parse_changed(client.get(check_host(changed_url(celexes, since)), SPARQL_HEADERS))
 
 
 def _text_format(metadata):
     if metadata.title is None:
+        if metadata.celex.startswith("0") and not metadata.amendments:
+            raise Gap("no Swedish expression; this version applies corrigenda only, "
+                      "so the Official Journal text is current")
         raise Gap("no Swedish expression")
     for name in FORMATS:
         if name in metadata.manifestations:
@@ -605,14 +826,21 @@ def _text_format(metadata):
     raise Gap(f"no Swedish XHTML or HTML manifestation (found: {found})")
 
 
-def _fetch_text(client, celex, fmt):
+def _fetch_text(client, celex, fmt, cache):
     accept, expected = FORMATS[fmt]
-    url = check_host(CELEX_URL.format(celex=celex))
-    raw, content_type, final = client.fetch_final(url, {"Accept": accept, "Accept-Language": "swe"})
+    if cache.offline:
+        raw = cache.read(f"{celex}.{fmt}")
+        source = json.loads(cache.read(f"{celex}.source.json").decode("utf-8"))
+        content_type, final = source["content_type"], source["url"]
+    else:
+        url = check_host(CELEX_URL.format(celex=celex))
+        raw, content_type, final = client.fetch_final(url, {"Accept": accept, "Accept-Language": "swe"})
     final = _https(final)
     check_host(final)
     if content_type not in expected:
         raise ValueError(f"expected {fmt}, got {content_type}")
+    cache.write(f"{celex}.{fmt}", raw)
+    cache.write(f"{celex}.source.json", json.dumps({"url": final, "content_type": content_type}).encode())
     return raw, content_type, final
 
 
@@ -625,6 +853,14 @@ def _unchanged(meta, body, corpus):
         return False
     stored.pop("fetched_at", None)
     return stored_body == body and stored == {k: v for k, v in meta.items() if k != "fetched_at"}
+
+
+def _stored_fetched_at(meta, corpus):
+    try:
+        stored, _ = frontmatter.load(writer.path_for(meta, corpus).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    return stored.get("fetched_at")
 
 
 def _done(state, celex, corpus):
@@ -645,16 +881,14 @@ def _drop_older_consolidated(celex, corpus):
     return removed
 
 
-def _store(client, celex, metadata, args, manifest):
+def _store(client, celex, metadata, args, manifest, cache):
     """Fetch, convert and write one act; returns True when the corpus changed."""
     fmt = _text_format(metadata)
-    raw, content_type, source = _fetch_text(client, celex, fmt)
+    raw, content_type, source = _fetch_text(client, celex, fmt, cache)
     sha = hashlib.sha256(raw).hexdigest()
-    if args.cache:
-        cache = Path(args.cache)
-        cache.mkdir(parents=True, exist_ok=True)
-        (cache / f"{celex}.{fmt}").write_bytes(raw)
     meta = build_meta(metadata, sha, source, _now())
+    if cache.offline:  # nothing was fetched: keep the stored retrieval time
+        meta["fetched_at"] = _stored_fetched_at(meta, args.corpus) or meta["fetched_at"]
     body = to_markdown(meta["title"], raw)
     _record_act(manifest, {
         "celex": celex,
@@ -681,6 +915,8 @@ def _write_report(path, summary):
         "gaps": summary.gaps,
         "failed": summary.failed,
         "blocked": summary.blocked,
+        "latest_modified": summary.latest_modified,
+        "retry_from": summary.retry_from,
     }
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -706,11 +942,32 @@ def run(client, args, today=None):
         state["blocked"] = message
         return finish()
 
-    try:
-        if not _robots_allows(client):
-            return finish_blocked("robots.txt disallows the Cellar SPARQL or resource paths")
-    except Blocked as error:
-        return finish_blocked(str(error))
+    cache = _Cache(args.cache, args.offline)
+    if not args.offline:
+        try:
+            if not _robots_allows(client):
+                return finish_blocked("robots.txt disallows the Cellar SPARQL or resource paths")
+        except Blocked as error:
+            return finish_blocked(str(error))
+    candidates = _candidates(args)
+    changed = None  # --changed-since: CELEX -> newest modification
+    if args.changed_since:
+        try:
+            changed = fetch_changed(client, candidates, args.changed_since) if candidates else {}
+        except Blocked as error:
+            return finish_blocked(str(error))
+        except DOCUMENT_ERRORS as error:
+            finish()
+            raise ListingError(f"changed acts: {type(error).__name__}: {error}") from error
+        candidates = [c for c in candidates if c in changed]
+        summary.latest_modified = max(changed.values(), default=None)
+    refresh = args.refresh or changed is not None
+    complete = set()  # acts collected (or recorded as gaps) together with their consolidated version
+
+    def settle():
+        if changed:
+            pending = [changed[c] for c in candidates if c not in complete]
+            summary.retry_from = _before(min(pending)) if pending else None
 
     def collect(celex, metadata=None):
         """Collect one act; returns its metadata (None when it failed or was skipped)."""
@@ -718,11 +975,11 @@ def run(client, args, today=None):
             return None
         try:
             if metadata is None:
-                metadata = fetch_metadata(client, celex)
-            if _done(state, celex, args.corpus) and not args.refresh:
+                metadata = fetch_metadata(client, celex, cache)
+            if _done(state, celex, args.corpus) and not refresh:
                 summary.skipped += 1
                 return metadata
-            sha, changed = _store(client, celex, metadata, args, manifest)
+            sha, written = _store(client, celex, metadata, args, manifest, cache)
         except Blocked:
             raise
         except Gap as gap:
@@ -735,30 +992,37 @@ def run(client, args, today=None):
             summary.failed.append(celex)
             state["failed"][celex] = f"{type(error).__name__}: {error}"
             return metadata
-        (summary.written if changed else summary.unchanged).append(celex)
+        (summary.written if written else summary.unchanged).append(celex)
         state["done"][celex] = sha
         state["failed"].pop(celex, None)
         state["gaps"].pop(celex, None)
         return metadata
 
     try:
-        for celex in _candidates(args):
+        for celex in candidates:
             if args.limit is not None and len(summary.written) >= args.limit:
                 break
-            if not args.consolidated and not args.refresh and _done(state, celex, args.corpus):
+            if not args.consolidated and not refresh and _done(state, celex, args.corpus):
                 summary.skipped += 1
+                complete.add(celex)
                 continue
+            failed_before = len(summary.failed)
             metadata = collect(celex)
             if args.consolidated and metadata is not None and not celex.startswith("0"):
                 latest = latest_consolidated(metadata, today)
                 if latest:
                     collect(latest)
+            if metadata is not None and len(summary.failed) == failed_before:
+                complete.add(celex)
             _save_state(args.state, state)
     except Blocked as error:
+        settle()
         return finish_blocked(str(error))
     except ListingError:
+        settle()
         finish()
         raise
+    settle()
     return finish()
 
 

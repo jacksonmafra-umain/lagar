@@ -251,6 +251,8 @@ documents, so clients show their empty state without requesting it.
 `amended_through` is the last amending SFS number according to the source. It
 can be set while `amended_by` is empty or partial: `amended_by` lists only the
 amending SFS numbers found in the text.
+For EU types, `amended_through` is the CELEX number of the latest amending act
+a consolidated version applies, and `null` for the Official Journal text.
 
 `in_force` and `amendments` come from the SFS register (SFSR) at
 <https://rkrattsbaser.gov.se/sfsr>, which only some statutes have been read
