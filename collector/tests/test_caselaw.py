@@ -139,6 +139,14 @@ class CaseLawMappingTests(unittest.TestCase):
         notice = caselaw.build_meta(HFD_NOT, "0" * 64, "2026-10-29T00:00:00Z")
         self.assertIn("## Notis\n\n### Not 24", caselaw.to_markdown(notice, HFD_NOT))
 
+    def test_references_given_as_json_lists_are_joined(self):
+        item = copy.deepcopy(HFD_REF)
+        item["hanvisadePubliceringarLista"] = [{"fritext": '["NJA 1981 s. 1263","NJA 1981:173"]'},
+                                               {"fritext": "[inte json"}]
+        meta = caselaw.build_meta(item, "0" * 64, "2026-10-29T00:00:00Z")
+        body = caselaw.to_markdown(meta, item)
+        self.assertIn("## Hänvisningar\n\n- NJA 1981 s. 1263, NJA 1981:173\n- [inte json\n", body)
+
     def test_personal_identity_numbers_are_detected(self):
         self.assertEqual(caselaw.personal_numbers("född 811218-9876 i"), ["811218-9876"])
         self.assertEqual(caselaw.personal_numbers("19811218-9876"), ["19811218-9876"])
@@ -217,6 +225,15 @@ class CaseLawRunTests(unittest.TestCase):
         _, report = self.run_main(FakeClient(SAMPLE))
         self.assertEqual((report["written"], report["unchanged"]), ([], 3))
         self.assertEqual({p: p.read_bytes() for p in self.corpus.rglob("*.md")}, before)
+
+    def test_a_different_body_is_rewritten_without_a_source_change(self):
+        self.run_main(FakeClient(SAMPLE))
+        path = self.corpus / "case-law/reports/nja-2026-38.md"
+        path.write_text(path.read_text(encoding="utf-8") + "stale\n", encoding="utf-8")
+        self.state.unlink()
+        _, report = self.run_main(FakeClient(SAMPLE))
+        self.assertEqual(report["written"], ["NJA 2026:38"])
+        self.assertFalse(path.read_text(encoding="utf-8").endswith("stale\n"))
 
     def test_changed_publication_is_rewritten(self):
         self.run_main(FakeClient(SAMPLE))

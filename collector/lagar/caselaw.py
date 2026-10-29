@@ -285,6 +285,19 @@ def build_meta(item, raw_sha256, fetched_at):
     }
 
 
+def _reference_text(value):
+    """A referenced publication; some arrive as a JSON list of references."""
+    text = _clean(value)
+    if text.startswith("["):
+        try:
+            refs = json.loads(text)
+        except ValueError:
+            return text
+        if isinstance(refs, list) and all(isinstance(r, str) for r in refs):
+            return ", ".join(_clean(r) for r in refs if _clean(r))
+    return text
+
+
 def _bullets(values):
     return "\n".join("- " + v for v in values if v)
 
@@ -323,7 +336,7 @@ def to_markdown(meta, item):
         ", ".join(p for p in (_clean(e.get("forfattare")), _clean(e.get("titel"))) if p)
         for e in item.get("litteraturLista") or []
     ])
-    section("Hänvisningar", [_clean(e.get("fritext")) for e in item.get("hanvisadePubliceringarLista") or []])
+    section("Hänvisningar", [_reference_text(e.get("fritext")) for e in item.get("hanvisadePubliceringarLista") or []])
     section("Europarättsliga avgöranden", [_clean(v) for v in item.get("europarattsligaAvgorandenLista") or []])
     text = htmlmd.to_markdown(item.get("innehall") or "", heading_offset=2)
     if text:
@@ -397,14 +410,18 @@ def _candidates(client, args):
         yield from _court_candidates(client, court, args)
 
 
-def _unchanged(meta, corpus):
-    """True when the stored file has the same frontmatter apart from `fetched_at`."""
+def _unchanged(meta, body, corpus):
+    """True when the stored file has the same body and frontmatter apart from `fetched_at`.
+
+    The body is compared too, so a mapping change reaches documents whose
+    source bytes did not change.
+    """
     try:
-        stored, _ = frontmatter.load(path_for(meta, corpus).read_text(encoding="utf-8"))
+        stored, stored_body = frontmatter.load(path_for(meta, corpus).read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return False
     stored.pop("fetched_at", None)
-    return stored == {k: v for k, v in meta.items() if k != "fetched_at"}
+    return stored_body == body and stored == {k: v for k, v in meta.items() if k != "fetched_at"}
 
 
 def _stored_source(doc_id, corpus):
@@ -430,7 +447,7 @@ def _store(item, corpus):
     found = personal_numbers(body)
     if found:
         raise ValueError(f"possible personal identity number in the text ({len(found)} found)")
-    if _unchanged(meta, corpus):
+    if _unchanged(meta, body, corpus):
         return meta, False
     write(meta, body, corpus)
     return meta, True
