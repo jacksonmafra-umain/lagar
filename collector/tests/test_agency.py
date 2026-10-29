@@ -89,7 +89,7 @@ class ParseTest(unittest.TestCase):
         text = regulation.text
         self.assertIn("Arbetsmiljöverket föreskriver[1] följande med stöd av 18 §", text)
         self.assertIn("**1 §** Syftet med dessa föreskrifter", text)
-        self.assertIn("## Varför föreskrifterna finns", text)
+        self.assertIn("\n### Varför föreskrifterna finns", "\n" + text)
         self.assertIn("**Allmänna råd**", text)
         self.assertIn("1. Denna författning träder i kraft den 1 januari 2025.", text)
         self.assertIn("- a) valet av andra arbetstagare", text)
@@ -144,6 +144,16 @@ class ParseTest(unittest.TestCase):
         ])
         self.assertEqual(regulation.amended_by, ["TSFS 2009:90", "TSFS 2019:44"])
         self.assertEqual(regulation.amendments[0].scope, "Ändr. 5, 8, 19, 23 och 27 §§.")
+
+    def test_tsfs_amending_titles_and_pages(self):
+        self.assertTrue(agency._TSFS_AMENDING.match("Föreskrifter om ändringar i Transportstyrelsens föreskrifter"))
+        self.assertFalse(agency._TSFS_AMENDING.match("Transportstyrelsens föreskrifter om fartygsåtervinning"))
+        # An amending regulation's page shows its base regulation and lists it as an amendment.
+        entry = agency.Entry("TSFS 2019:44", "x", "https://www.transportstyrelsen.se/d")
+        with self.assertRaises(agency.NotBase):
+            TSFS.parse_detail(fixture("agency-tsfs-detail.html"), entry)
+        with self.assertRaises(ValueError):
+            TSFS.parse_detail(fixture("agency-tsfs-detail.html"), agency.Entry("TSFS 2019:4", "x", "u"))
 
     def test_ids_and_numbers(self):
         self.assertEqual(agency.corpus_id("AFS 2023:1"), "afs-2023-1")

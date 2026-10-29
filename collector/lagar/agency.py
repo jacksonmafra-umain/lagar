@@ -54,6 +54,10 @@ _VOID = frozenset({"area", "base", "br", "col", "embed", "hr", "img", "input", "
                    "meta", "source", "track", "wbr"})
 
 
+class NotBase(ValueError):
+    """The detail page belongs to an amending regulation; it is not stored on its own."""
+
+
 class ListingError(Exception):
     """A listing page (or robots.txt) could not be read; the run cannot continue."""
 
@@ -345,7 +349,7 @@ def afs_text(provision):
     """(Markdown, footnotes) for the `div.provision` element of an AFS page."""
     writer = _AfsText()
     markup = writer.render(provision)
-    return htmlmd.to_markdown(markup), writer.footnotes
+    return htmlmd.to_markdown(markup, heading_offset=1), writer.footnotes
 
 
 class AfsAdapter:
@@ -511,7 +515,7 @@ def _flat_blocks(page):
 
 # --- Transportstyrelsen (TSFS) ---------------------------------------------
 
-_TSFS_AMENDING = re.compile(r"(Transportstyrelsens )?[Ff]öreskrifter om (ändring|upphävande) ")
+_TSFS_AMENDING = re.compile(r"(Transportstyrelsens )?[Ff]öreskrifter om (ändring|ändringar|upphävande) ")
 _TSFS_REF = re.compile(r"TSFS \d{4}:\d+")
 
 
@@ -570,6 +574,8 @@ class TsfsAdapter:
             raise ValueError("no number on the detail page")
         head = [_clean(c) if isinstance(c, str) else c for c in heading.children]
         first = next((c for c in head if isinstance(c, str) and c), "")
+        if first != entry.number and re.search(re.escape(entry.number) + r"(?!\d)", main.text()):
+            raise NotBase(f"{entry.number} is shown as an amendment of {first}")
         _check_number(first, entry)
         title = heading.text().removeprefix(first).strip() or entry.title
         regulation = Regulation(number=entry.number, title=title, in_force=entry.in_force,
@@ -900,6 +906,9 @@ def run(client, args):
                     continue
                 try:
                     meta, changed = _collect_one(client, robots, adapter, entry, args, manifest, summary)
+                except NotBase:
+                    summary.excluded += 1
+                    state["failed"].pop(entry.number, None)
                 except DOCUMENT_ERRORS as error:
                     summary.failed.append(entry.number)
                     state["failed"][entry.number] = f"{type(error).__name__}: {error}"
