@@ -12,7 +12,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | case_law | Case law | 20 | 16640 | counted | 0.1% |
 | eu | EU law (curated list) | 43 | 43 | curated | 100.0% |
 | region | Regional regulations | 0 | unknown | unknown | - |
-| municipality | Municipal regulations | 0 | unknown | unknown | - |
+| municipality | Municipal regulations | 15 | unknown | unknown | - |
 | service | Public services | 0 | unknown | unknown | - |
 
 Progress is capped at the target; a series without a known target has no percentage.
@@ -27,7 +27,7 @@ Targets:
 
 ## Integrity
 
-Audit of 11491 documents (2026-10-29T01:16:03Z):
+Audit of 11506 documents (2026-10-29T01:47:02Z):
 
 - schema errors: 0
 - duplicate ids: 0
