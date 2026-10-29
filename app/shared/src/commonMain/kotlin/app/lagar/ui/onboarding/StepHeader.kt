@@ -2,6 +2,7 @@ package app.lagar.ui.onboarding
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -16,6 +18,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -39,6 +42,7 @@ import app.lagar.resources.onboarding_step
 import app.lagar.resources.onboarding_stored_locally
 import app.lagar.ui.common.LagarButton
 import app.lagar.ui.common.LagarSecondaryButton
+import app.lagar.ui.shell.LocalWideLayout
 import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
@@ -81,7 +85,9 @@ internal fun StepHeader(step: Int, modifier: Modifier = Modifier) {
 /**
  * Shared frame of the three steps: a fixed top row with the step header and Skip at the top right (as in the
  * Stitch steps), title and text on a scrolling body, and the primary action fixed at the bottom. Skip leaves
- * onboarding with the defaults from any step. Fills the screen, inside the system bars.
+ * onboarding with the defaults from any step. Fills the screen, inside the system bars. [aside] (the welcome
+ * illustration) follows the text on phones; on desktop the title, text and [aside] form a left column beside
+ * the choices, and the frame is capped at [ShellDimens.FormMaxWidth].
  */
 @Composable
 internal fun OnboardingScaffold(
@@ -92,10 +98,16 @@ internal fun OnboardingScaffold(
     onPrimary: () -> Unit,
     onSkip: () -> Unit,
     modifier: Modifier = Modifier,
+    aside: (@Composable ColumnScope.() -> Unit)? = null,
     body: @Composable ColumnScope.() -> Unit,
 ) {
+    val frame = modifier.fillMaxSize().background(LagarTheme.colors.surface).windowInsetsPadding(WindowInsets.systemBars)
+    if (LocalWideLayout.current) {
+        WideOnboardingScaffold(step, title, text, primaryLabel, onPrimary, onSkip, frame, aside, body)
+        return
+    }
     val spacing = LagarTheme.spacing
-    Column(modifier = modifier.fillMaxSize().background(LagarTheme.colors.surface).windowInsetsPadding(WindowInsets.systemBars)) {
+    Column(modifier = frame) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(start = spacing.marginMobile, end = spacing.marginMobile, top = spacing.sm),
             horizontalArrangement = Arrangement.spacedBy(spacing.sm),
@@ -110,18 +122,76 @@ internal fun OnboardingScaffold(
         ) {
             Text(title, style = LagarTheme.type.headlineLgMobile, color = LagarTheme.colors.onSurface, modifier = Modifier.semantics { heading() })
             Text(text, style = LagarTheme.type.bodyUi, color = LagarTheme.colors.onSurfaceVariant)
+            aside?.invoke(this)
             body()
         }
         LagarButton(
             onClick = onPrimary,
             modifier = Modifier.fillMaxWidth().padding(horizontal = spacing.marginMobile, vertical = spacing.md),
         ) {
-            Text(primaryLabel)
-            Spacer(Modifier.width(spacing.sm))
-            Icon(painterResource(Res.drawable.ic_arrow_forward), contentDescription = null, modifier = Modifier.size(ShellDimens.SmallIconSize))
+            PrimaryLabel(primaryLabel)
         }
     }
 }
+
+/** Desktop frame: the step row on top, then the title column (2/5) beside the scrolling choices (3/5), which end with the primary action. */
+@Composable
+private fun WideOnboardingScaffold(
+    step: Int,
+    title: String,
+    text: String,
+    primaryLabel: String,
+    onPrimary: () -> Unit,
+    onSkip: () -> Unit,
+    modifier: Modifier,
+    aside: (@Composable ColumnScope.() -> Unit)?,
+    body: @Composable ColumnScope.() -> Unit,
+) {
+    val spacing = LagarTheme.spacing
+    Box(modifier, contentAlignment = Alignment.TopCenter) {
+        Column(Modifier.fillMaxHeight().widthIn(max = ShellDimens.FormMaxWidth).fillMaxWidth().padding(horizontal = spacing.margin)) {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(top = spacing.md),
+                horizontalArrangement = Arrangement.spacedBy(spacing.sm),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                StepHeader(step, Modifier.weight(1f))
+                SkipButton(onSkip)
+            }
+            Row(Modifier.weight(1f), horizontalArrangement = Arrangement.spacedBy(spacing.xl)) {
+                Column(
+                    modifier = Modifier.weight(2f).fillMaxHeight().verticalScroll(rememberScrollState()).padding(vertical = spacing.lg),
+                    verticalArrangement = Arrangement.spacedBy(spacing.md),
+                ) {
+                    Text(title, style = LagarTheme.type.headlineLg, color = LagarTheme.colors.onSurface, modifier = Modifier.semantics { heading() })
+                    Text(text, style = LagarTheme.type.bodyUi, color = LagarTheme.colors.onSurfaceVariant)
+                    aside?.invoke(this)
+                }
+                Column(
+                    modifier = Modifier.weight(3f).fillMaxHeight().verticalScroll(rememberScrollState()).padding(vertical = spacing.lg),
+                    verticalArrangement = Arrangement.spacedBy(spacing.md),
+                ) {
+                    body()
+                    LagarButton(
+                        onClick = onPrimary,
+                        modifier = Modifier.align(Alignment.End).widthIn(min = WidePrimaryMinWidth).padding(top = spacing.sm),
+                    ) {
+                        PrimaryLabel(primaryLabel)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun PrimaryLabel(label: String) {
+    Text(label)
+    Spacer(Modifier.width(LagarTheme.spacing.sm))
+    Icon(painterResource(Res.drawable.ic_arrow_forward), contentDescription = null, modifier = Modifier.size(ShellDimens.SmallIconSize))
+}
+
+private val WidePrimaryMinWidth = 240.dp
 
 /** The Stitch "Skip ›" pill: a glass secondary button. */
 @Composable
