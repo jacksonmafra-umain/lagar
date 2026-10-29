@@ -93,8 +93,8 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   never requested. Boverket (BFS, API key probably needed, owner to decide),
   Skatteverket (SKVFS, robots.txt request rejected by a WAF) and the other
   series are not collected yet.
-- Municipal regulations and public services have no collector yet and no
-  known target.
+- Public services have no collector yet; what the Tjänster tab should hold is
+  an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630
   regulations); earlier years are not collected yet. Only Stockholm, Halland and
   Gävleborg publish each regulation as an HTML page, so only their documents
@@ -113,8 +113,6 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   county marks "UPPHÄVD" gets a note in the body), and `in_force` only when an
   HTML text names one date. Local traffic regulations (Transportstyrelsen's STFS)
   and the self-governing regions are out of scope.
-- Agency regulations, municipal regulations and public services have no
-  collector yet and no known target.
 - Municipal regulations: only a pilot sample of 15 documents (five each from
   Stockholm, Göteborg and Malmö) is in the corpus; the other 287 kommuner have no
   config entry yet and there is no known target (roughly 30–150 documents per
