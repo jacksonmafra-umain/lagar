@@ -11,6 +11,7 @@ completeness: read this file next to those numbers.
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
 | SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
+| agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/` | 2026-10-29 (sample: AFS 2023:1–5, FFFS 2024:21, 2024:22, 2025:2, 2025:8, 2025:13, TSFS 2026:6, 11, 13, 19, 20) |
 | case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (sample: NJA 2026:29–38, HFD 2026 ref. 35–43, HFD 2026 not. 24) |
 
 The SFS target (11567 documents) is the number Riksdagen lists for document
@@ -50,8 +51,21 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   text contains a personal identity number, are recorded as failed instead of
   written. SFS references (`lagrumLista`) are kept in the body only; they are
   not yet links to the SFS layer.
-- Agency regulations, EU law, regional and municipal regulations and public
-  services have no collector yet and no known target.
+- Agency regulations: only a 15-document pilot sample of three series (AFS,
+  FFFS, TSFS) is in the corpus; about 100 series exist (lagrummet.se lists them)
+  and there is no known target. Only base regulations are stored; amending
+  regulations are listed in `amended_by`. AFS has the consolidated text from
+  Arbetsmiljöverket's HTML pages. FFFS and TSFS publish the text only as PDF:
+  their bodies hold metadata, the agency's summary and links to the PDFs, whose
+  SHA-256 is in `sources/agency-pdf-manifest.json`; PDF text is not extracted.
+  `issued` is known only for unamended AFS regulations, and AFS `in_force` only
+  for those; FFFS and TSFS have no decision date on their pages.
+  Arbetsmiljöverket's robots.txt disallows its folder of original PDFs, which is
+  never requested. Boverket (BFS, API key probably needed, owner to decide),
+  Skatteverket (SKVFS, robots.txt request rejected by a WAF) and the other
+  series are not collected yet.
+- EU law, regional and municipal regulations and public services have no
+  collector yet and no known target.
 
 ## Failures and blocked sources
 
