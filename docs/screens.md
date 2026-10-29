@@ -22,18 +22,18 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | Welcome (step 1) | Matches | |
 | Scope (step 2), Locality (step 3) | Matches; back arrow at the top left (fixed) | #128 |
 | Utforska, Nationell | Matches, with known gaps | |
-| Utforska, Region and Kommun | Mismatch: search hint names national laws | #130 |
+| Utforska, Region and Kommun | Matches; the search hint follows the scope (fixed) | #130 |
 | Scope sheet, Drawer | Matches; the drawer button uses a menu icon (fixed) | #134 |
-| Search results | Mismatch: no scope shown on results; exact title matches rank below newer case reports; case-law titles carry "-----" separators | #126, #127, #135 |
-| Advanced search | Matches; the title wrapped beside a long scope chip on phones until #131 | #131 |
-| Hierarki, wide home hierarchy | Mismatch: counts not digit-grouped (SFS other statutes now counted, #125) | #133 |
+| Search results | Matches; the active scope is shown with a scoped empty state, the document the query names ranks first and case-law titles no longer carry "-----" separators (fixed) | #126, #127, #135 |
+| Advanced search | Matches; the scope chip moves under the title on narrow windows (fixed) | #131 |
+| Hierarki, wide home hierarchy | Matches; counts are digit-grouped and include the SFS other statutes (fixed) | #125, #133 |
 | By ministry | Matches | |
 | Layer list | Matches; the header badge no longer touches the top edge of the bar (fixed) | #129 |
-| Reader | Mismatch: table-of-contents sheet covers the screen on phones; raw "Upphör att gälla / Träder i kraft" markers; raw ministry unit code | #123, #124, #132 |
+| Reader | Matches; the table of contents opens over the dimmed reader, validity markers show as labels on the § card and the ministry is shown without its unit code (fixed) | #123, #124, #132 |
 | Sparade | Matches, with the known repealed gap | |
 | Tjänster | Matches | |
 | Settings | Matches; Swedish and English complete on the screens visited | |
-| Wide top bar, wide home, reader panes, two-column search and advanced search (1440x900) | Match the layout; the content issues above also show there | |
+| Wide top bar, wide home, reader panes, two-column search and advanced search (1440x900) | Match the layout; the content fixes above apply there too | |
 
 The API now has case law (16,390 documents), so rows below marked "Blocked: no case-law data" (#38) need a fresh look.
 
