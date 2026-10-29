@@ -363,13 +363,20 @@ class AfsAdapter:
         return [self.listing_url]
 
     def parse_listing(self, text, url):
-        """Base regulations in force (with their amendments in force) from the overview page."""
+        """Base regulations in force (with their amendments in force) from the overview page.
+
+        The page also lists the repealing regulations in force ("Gällande
+        ändringsföreskrifter med upphävanden") in an accordion; they are not base
+        regulations.
+        """
         root = parse_html(text)
         amendments = {}
         for link in root.find_all("a"):
             match = _AFS_AMENDMENT.search(link.text())
             if match:
                 amendments.setdefault(match.group(2), set()).add(match.group(1))
+        amending = {id(block) for accordion in root.find_all("ul", "accordion")
+                    for block in accordion.find_all("div", "pagelist__items")}
         entries = []
         for block in root.find_all("div", "pagelist__items"):
             for link in block.find_all("a"):
@@ -381,6 +388,7 @@ class AfsAdapter:
                     number=number,
                     title=title_node.text() if title_node else number,
                     url=absolute(url, link.attrs.get("href", "")),
+                    base=id(block) not in amending,
                     amended_by=sorted(amendments.get(number, ()), key=number_key),
                 ))
         if not entries:
