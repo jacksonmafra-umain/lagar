@@ -226,6 +226,52 @@ ALLOW_ALL = Robots("")
 # --- fetching -----------------------------------------------------------------
 
 
+class _Bits:
+    def __init__(self, data):
+        self.data, self.pos = data, 0
+
+    def read(self, count):
+        value = 0
+        for i in range(count):
+            byte = self.pos >> 3
+            if byte >= len(self.data):
+                raise UnsupportedEncoding("truncated brotli stream")
+            value |= ((self.data[byte] >> (self.pos & 7)) & 1) << i
+            self.pos += 1
+        return value
+
+    def align(self):
+        self.pos = (self.pos + 7) & ~7
+
+
+def _stored_brotli(body):
+    """Decode a brotli stream made only of uncompressed meta-blocks (RFC 7932, 9.2).
+
+    Some servers send small files this way even when brotli was not asked for.
+    Compressed meta-blocks need a full decoder, which the standard library lacks.
+    """
+    bits = _Bits(body)
+    if bits.read(1) and not bits.read(3):
+        bits.read(3)  # large-window or 17-bit WBITS forms
+    out = bytearray()
+    while True:
+        last = bits.read(1)
+        if last and bits.read(1):  # ISLASTEMPTY
+            return bytes(out)
+        nibbles = bits.read(2)
+        if nibbles == 3:
+            raise UnsupportedEncoding("brotli metadata block")
+        length = bits.read(4 * (nibbles + 4)) + 1
+        if last or not bits.read(1):
+            raise UnsupportedEncoding("compressed brotli meta-block")
+        bits.align()
+        start = bits.pos >> 3
+        if start + length > len(body):
+            raise UnsupportedEncoding("truncated brotli stream")
+        out += body[start:start + length]
+        bits.pos = (start + length) * 8
+
+
 def _decode_body(body, encoding):
     encoding = (encoding or "identity").strip().lower()
     if encoding in ("", "identity"):
@@ -237,6 +283,8 @@ def _decode_body(body, encoding):
             return zlib.decompress(body)
         except zlib.error:
             return zlib.decompress(body, -zlib.MAX_WBITS)
+    if encoding == "br":
+        return _stored_brotli(body)
     raise UnsupportedEncoding(f"unsupported Content-Encoding {encoding!r}")
 
 

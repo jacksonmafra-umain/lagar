@@ -170,9 +170,18 @@ class DecodingTest(unittest.TestCase):
         self.assertEqual(municipal._decode_body(gzip.compress(b"abc"), "gzip"), b"abc")
         self.assertEqual(municipal._decode_body(b"abc", None), b"abc")
 
-    def test_brotli_is_refused(self):
+    def test_stored_brotli_is_decoded(self):
+        text = b"User-agent: *\r\nSitemap: http://start.stockholm/sitemap.xml"
+        stream = b"\x8b\x1c\x80" + text + b"\x03"  # as start.stockholm sends robots.txt
+        self.assertEqual(municipal._decode_body(stream, "br"), text)
+
+    def test_compressed_or_truncated_brotli_is_refused(self):
         with self.assertRaises(municipal.UnsupportedEncoding):
-            municipal._decode_body(b"\x8b\x1c\x80", "br")
+            municipal._decode_body(b"\x0b\x02\x00\x41\x03", "br")  # compressed meta-block
+        with self.assertRaises(municipal.UnsupportedEncoding):
+            municipal._decode_body(b"\x8b\x1c\x80User", "br")
+        with self.assertRaises(municipal.UnsupportedEncoding):
+            municipal._decode_body(b"x", "zstd")
 
     def test_fetcher_retries_an_unsupported_encoding(self):
         class Flaky(FakeClient):
