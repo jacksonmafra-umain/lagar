@@ -21,7 +21,7 @@ import urllib.parse
 import urllib.request
 import urllib.robotparser
 from dataclasses import dataclass, field
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -102,6 +102,23 @@ SELECT ?field ?value WHERE {
             cdm:work_date_document ?actDate
           BIND(CONCAT(STR(?actCelex), " ", STR(?actDate)) AS ?value) BIND("consolidates" AS ?field) }
 }
+"""
+
+# Curated acts whose work, consolidated versions or amending acts changed after a
+# point in time, with the newest modification. %(values)s are CELEX literals.
+_CHANGED_QUERY = """PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX cmr: <http://publications.europa.eu/ontology/cdm/cmr#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?celex (MAX(?m) AS ?modified) WHERE {
+  VALUES ?celex { %(values)s }
+  ?work cdm:resource_legal_id_celex ?celex .
+  { ?work cmr:lastModificationDate ?m }
+  UNION { ?version cdm:act_consolidated_based_on_resource_legal ?work .
+          ?version cmr:lastModificationDate ?m }
+  UNION { ?amending cdm:resource_legal_amends_resource_legal ?work .
+          ?amending cmr:lastModificationDate ?m }
+  FILTER(?m > "%(since)s"^^xsd:dateTime)
+} GROUP BY ?celex
 """
 
 
@@ -207,6 +224,42 @@ def parse_metadata(celex, raw):
     if not fields:
         raise ValueError(f"{celex} is not in Cellar")
     return Metadata(celex, fields)
+
+
+def _utc(value):
+    """An ISO date or date-time as UTC `YYYY-MM-DDTHH:MM:SS.fffZ`; naive values are UTC."""
+    moment = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+    if moment.tzinfo is None:
+        moment = moment.replace(tzinfo=timezone.utc)
+    moment = moment.astimezone(timezone.utc)
+    return moment.strftime("%Y-%m-%dT%H:%M:%S.") + f"{moment.microsecond // 1000:03d}Z"
+
+
+def changed_url(celexes, since):
+    """SPARQL for the acts among `celexes` changed in Cellar after `since`."""
+    for celex in celexes:
+        if not CELEX.fullmatch(celex):
+            raise ValueError(f"unsupported CELEX number: {celex!r}")
+    values = " ".join(f'"{c}"^^xsd:string' for c in celexes)
+    query = _CHANGED_QUERY % {"values": values, "since": _utc(since)}
+    return SPARQL_URL + "?" + urllib.parse.urlencode({"query": query})
+
+
+def parse_changed(raw):
+    """CELEX -> newest modification (UTC) from a changed_url answer."""
+    data = json.loads(raw.decode("utf-8"))
+    out = {}
+    for row in data["results"]["bindings"]:
+        celex, latest = row["celex"]["value"], _utc(row["modified"]["value"])
+        if CELEX.fullmatch(celex) and latest > out.get(celex, ""):
+            out[celex] = latest
+    return out
+
+
+def _before(moment):
+    """One millisecond before a UTC `_utc` value, so a strict `>` filter includes `moment`."""
+    value = datetime.fromisoformat(moment.replace("Z", "+00:00")) - timedelta(milliseconds=1)
+    return _utc(value.isoformat())
 
 
 def latest_consolidated(metadata, today):
@@ -486,6 +539,10 @@ class RunSummary:
     gaps: "list[str]" = field(default_factory=list)
     failed: "list[str]" = field(default_factory=list)
     blocked: bool = False
+    # --changed-since: the newest Cellar modification among the changed acts, and the
+    # point to resume from when some of them were not collected.
+    latest_modified: "str | None" = None
+    retry_from: "str | None" = None
 
 
 def _celex_arg(value):
@@ -505,6 +562,15 @@ def _rate(value):
     return rate
 
 
+def _since(value):
+    try:
+        return _utc(value)
+    except ValueError:
+        raise argparse.ArgumentTypeError(
+            f"expected YYYY-MM-DD or an ISO date-time such as 2026-10-29T05:00:00Z: {value}"
+        ) from None
+
+
 def _non_negative(value):
     number = int(value)
     if number < 0:
@@ -520,14 +586,23 @@ def parse_args(argv):
     parser.add_argument("--consolidated", action="store_true",
                         help="also collect each act's latest consolidated version")
     parser.add_argument("--refresh", action="store_true", help="refetch acts already collected")
+    parser.add_argument("--changed-since", type=_since, metavar="DATE[TIME]",
+                        help="only (re)collect acts that Cellar changed after this moment (UTC)")
     parser.add_argument("--limit", type=_non_negative, help="stop after N written documents")
     parser.add_argument("--cache", metavar="DIR", help="keep the fetched bytes in DIR")
+    parser.add_argument("--offline", action="store_true",
+                        help="read metadata and text from --cache instead of the network")
     parser.add_argument("--report", metavar="FILE", help="write a JSON run report")
     parser.add_argument("--rate", type=_rate, default=DEFAULT_RATE, metavar="SECONDS")
     parser.add_argument("--state", default=DEFAULT_STATE)
     parser.add_argument("--manifest", default=DEFAULT_MANIFEST)
     parser.add_argument("--corpus", default="corpus")
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.offline and not args.cache:
+        parser.error("--offline needs --cache")
+    if args.offline and args.changed_since:
+        parser.error("--offline cannot ask Cellar what changed")
+    return args
 
 
 def load_list(path):
@@ -621,8 +696,39 @@ def _now():
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def fetch_metadata(client, celex):
-    return parse_metadata(celex, client.get(check_host(metadata_url(celex)), SPARQL_HEADERS))
+class _Cache:
+    """Fetched bytes under DIR: `<CELEX>.sparql.json`, `<CELEX>.<format>` and `<CELEX>.source.json`."""
+
+    def __init__(self, directory, offline):
+        self.dir = Path(directory) if directory else None
+        self.offline = offline
+
+    def read(self, name):
+        try:
+            return (self.dir / name).read_bytes()
+        except OSError as error:
+            raise ValueError(f"not in the cache: {name}") from error
+
+    def write(self, name, raw):
+        if self.dir is not None and not self.offline:
+            self.dir.mkdir(parents=True, exist_ok=True)
+            (self.dir / name).write_bytes(raw)
+
+
+def fetch_metadata(client, celex, cache=None):
+    cache = cache or _Cache(None, False)
+    name = f"{celex}.sparql.json"
+    if cache.offline:
+        raw = cache.read(name)
+    else:
+        raw = client.get(check_host(metadata_url(celex)), SPARQL_HEADERS)
+        cache.write(name, raw)
+    return parse_metadata(celex, raw)
+
+
+def fetch_changed(client, celexes, since):
+    """CELEX -> newest Cellar modification, for the acts changed after `since`."""
+    return parse_changed(client.get(check_host(changed_url(celexes, since)), SPARQL_HEADERS))
 
 
 def _text_format(metadata):
@@ -635,14 +741,21 @@ def _text_format(metadata):
     raise Gap(f"no Swedish XHTML or HTML manifestation (found: {found})")
 
 
-def _fetch_text(client, celex, fmt):
+def _fetch_text(client, celex, fmt, cache):
     accept, expected = FORMATS[fmt]
-    url = check_host(CELEX_URL.format(celex=celex))
-    raw, content_type, final = client.fetch_final(url, {"Accept": accept, "Accept-Language": "swe"})
+    if cache.offline:
+        raw = cache.read(f"{celex}.{fmt}")
+        source = json.loads(cache.read(f"{celex}.source.json").decode("utf-8"))
+        content_type, final = source["content_type"], source["url"]
+    else:
+        url = check_host(CELEX_URL.format(celex=celex))
+        raw, content_type, final = client.fetch_final(url, {"Accept": accept, "Accept-Language": "swe"})
     final = _https(final)
     check_host(final)
     if content_type not in expected:
         raise ValueError(f"expected {fmt}, got {content_type}")
+    cache.write(f"{celex}.{fmt}", raw)
+    cache.write(f"{celex}.source.json", json.dumps({"url": final, "content_type": content_type}).encode())
     return raw, content_type, final
 
 
@@ -675,15 +788,11 @@ def _drop_older_consolidated(celex, corpus):
     return removed
 
 
-def _store(client, celex, metadata, args, manifest):
+def _store(client, celex, metadata, args, manifest, cache):
     """Fetch, convert and write one act; returns True when the corpus changed."""
     fmt = _text_format(metadata)
-    raw, content_type, source = _fetch_text(client, celex, fmt)
+    raw, content_type, source = _fetch_text(client, celex, fmt, cache)
     sha = hashlib.sha256(raw).hexdigest()
-    if args.cache:
-        cache = Path(args.cache)
-        cache.mkdir(parents=True, exist_ok=True)
-        (cache / f"{celex}.{fmt}").write_bytes(raw)
     meta = build_meta(metadata, sha, source, _now())
     body = to_markdown(meta["title"], raw)
     _record_act(manifest, {
@@ -711,6 +820,8 @@ def _write_report(path, summary):
         "gaps": summary.gaps,
         "failed": summary.failed,
         "blocked": summary.blocked,
+        "latest_modified": summary.latest_modified,
+        "retry_from": summary.retry_from,
     }
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -736,11 +847,32 @@ def run(client, args, today=None):
         state["blocked"] = message
         return finish()
 
-    try:
-        if not _robots_allows(client):
-            return finish_blocked("robots.txt disallows the Cellar SPARQL or resource paths")
-    except Blocked as error:
-        return finish_blocked(str(error))
+    cache = _Cache(args.cache, args.offline)
+    if not args.offline:
+        try:
+            if not _robots_allows(client):
+                return finish_blocked("robots.txt disallows the Cellar SPARQL or resource paths")
+        except Blocked as error:
+            return finish_blocked(str(error))
+    candidates = _candidates(args)
+    changed = None  # --changed-since: CELEX -> newest modification
+    if args.changed_since:
+        try:
+            changed = fetch_changed(client, candidates, args.changed_since) if candidates else {}
+        except Blocked as error:
+            return finish_blocked(str(error))
+        except DOCUMENT_ERRORS as error:
+            finish()
+            raise ListingError(f"changed acts: {type(error).__name__}: {error}") from error
+        candidates = [c for c in candidates if c in changed]
+        summary.latest_modified = max(changed.values(), default=None)
+    refresh = args.refresh or changed is not None
+    complete = set()  # acts collected (or recorded as gaps) together with their consolidated version
+
+    def settle():
+        if changed:
+            pending = [changed[c] for c in candidates if c not in complete]
+            summary.retry_from = _before(min(pending)) if pending else None
 
     def collect(celex, metadata=None):
         """Collect one act; returns its metadata (None when it failed or was skipped)."""
@@ -748,11 +880,11 @@ def run(client, args, today=None):
             return None
         try:
             if metadata is None:
-                metadata = fetch_metadata(client, celex)
-            if _done(state, celex, args.corpus) and not args.refresh:
+                metadata = fetch_metadata(client, celex, cache)
+            if _done(state, celex, args.corpus) and not refresh:
                 summary.skipped += 1
                 return metadata
-            sha, changed = _store(client, celex, metadata, args, manifest)
+            sha, written = _store(client, celex, metadata, args, manifest, cache)
         except Blocked:
             raise
         except Gap as gap:
@@ -765,30 +897,37 @@ def run(client, args, today=None):
             summary.failed.append(celex)
             state["failed"][celex] = f"{type(error).__name__}: {error}"
             return metadata
-        (summary.written if changed else summary.unchanged).append(celex)
+        (summary.written if written else summary.unchanged).append(celex)
         state["done"][celex] = sha
         state["failed"].pop(celex, None)
         state["gaps"].pop(celex, None)
         return metadata
 
     try:
-        for celex in _candidates(args):
+        for celex in candidates:
             if args.limit is not None and len(summary.written) >= args.limit:
                 break
-            if not args.consolidated and not args.refresh and _done(state, celex, args.corpus):
+            if not args.consolidated and not refresh and _done(state, celex, args.corpus):
                 summary.skipped += 1
+                complete.add(celex)
                 continue
+            failed_before = len(summary.failed)
             metadata = collect(celex)
             if args.consolidated and metadata is not None and not celex.startswith("0"):
                 latest = latest_consolidated(metadata, today)
                 if latest:
                     collect(latest)
+            if metadata is not None and len(summary.failed) == failed_before:
+                complete.add(celex)
             _save_state(args.state, state)
     except Blocked as error:
+        settle()
         return finish_blocked(str(error))
     except ListingError:
+        settle()
         finish()
         raise
+    settle()
     return finish()
 
 

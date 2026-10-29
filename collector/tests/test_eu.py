@@ -17,6 +17,7 @@ SPARQL = (FIXTURES / "eu-32016r0679-sparql.json").read_bytes()
 XHTML = (FIXTURES / "eu-32016r0679.xhtml").read_bytes()
 OLD_HTML = (FIXTURES / "eu-32004r0261.html").read_bytes()
 CONSOLIDATED = (FIXTURES / "eu-02016r0679-20160504.xhtml").read_bytes()
+CHANGED = (FIXTURES / "eu-changed-sparql.json").read_bytes()
 GDPR = "32016R0679"
 GDPR_CONS = "02016R0679-20160504"
 MANIFESTATION = "https://publications.europa.eu/resource/cellar/3e485e15-11bd-11e6-ba9a-01aa75ed71a1.0024.03/DOC_1"
@@ -186,6 +187,35 @@ class MetadataTest(unittest.TestCase):
         self.assertEqual(eu.latest_consolidated(md, date(2026, 7, 1)), "02016R0679-20200101")
         self.assertEqual(eu.latest_consolidated(md, date(2026, 8, 1)), "02016R0679-20260801")
         self.assertIsNone(eu.latest_consolidated(eu.Metadata(GDPR, {}), date(2026, 8, 1)))
+
+
+class ChangedTest(unittest.TestCase):
+    def test_query_lists_the_acts_and_the_moment_in_utc(self):
+        url = eu.changed_url([GDPR, "32022L2555"], "2026-10-29T07:00:00+02:00")
+        self.assertTrue(url.startswith(eu.SPARQL_URL + "?query="))
+        query = urllib.parse.parse_qs(urllib.parse.urlsplit(url).query)["query"][0]
+        self.assertIn('VALUES ?celex { "32016R0679"^^xsd:string "32022L2555"^^xsd:string }', query)
+        self.assertIn('FILTER(?m > "2026-10-29T05:00:00.000Z"^^xsd:dateTime)', query)
+        self.assertIn("cmr:lastModificationDate", query)
+        with self.assertRaises(ValueError):
+            eu.changed_url(['32016R0679" } #'], "2026-10-29")
+
+    def test_parse_recorded_answer(self):
+        self.assertEqual(eu.parse_changed(CHANGED), {
+            "32004R0261": "2026-10-22T06:12:16.708Z",
+            "32004R0883": "2026-10-28T08:17:38.420Z",
+            "32017R0745": "2026-10-28T00:08:17.689Z",
+        })
+
+    def test_moments(self):
+        self.assertEqual(eu._utc("2026-10-29"), "2026-10-29T00:00:00.000Z")
+        self.assertEqual(eu._utc("2026-10-29T05:06:07.123456Z"), "2026-10-29T05:06:07.123Z")
+        self.assertEqual(eu._before("2026-10-29T00:00:00.000Z"), "2026-10-28T23:59:59.999Z")
+        args = eu.parse_args(["--list", "x.json", "--changed-since", "2026-10-29 05:00:00"])
+        self.assertEqual(args.changed_since, "2026-10-29T05:00:00.000Z")
+        for bad in ("yesterday", "2026-13-01", "2026-10-29; DROP"):
+            with self.subTest(bad=bad), self.assertRaises(SystemExit):
+                eu.parse_args(["--list", "x.json", "--changed-since", bad])
 
 
 class NumberTest(unittest.TestCase):
@@ -490,6 +520,75 @@ class RunTest(unittest.TestCase):
         eu.run(client, self.args("--celex", GDPR, "--consolidated"), today=date(2026, 10, 29))
         for url in client.urls:
             self.assertIn(urllib.parse.urlsplit(url).hostname, eu.ALLOWED_HOSTS)
+
+    def changed_routes(self, modified):
+        rows = [{"celex": {"type": "literal", "value": celex}, "modified": {"type": "literal", "value": when}}
+                for celex, when in modified.items()]
+        routes = gdpr_routes()
+        routes[eu.changed_url([GDPR, "32022L2555"], "2026-10-01")] = json.dumps(
+            {"results": {"bindings": rows}}).encode()
+        return routes
+
+    def test_changed_since_collects_only_changed_acts_again(self):
+        eu.run(FakeClient(gdpr_routes()), self.args("--celex", GDPR))
+        report = self.tmp / "report.json"
+        client = FakeClient(self.changed_routes({GDPR: "2026-10-20T10:00:00.000+02:00"}))
+        summary = eu.run(client, self.args("--celex", GDPR + ",32022L2555", "--changed-since", "2026-10-01",
+                                           "--report", str(report)))
+        # GDPR is refetched although it was collected before; the unchanged NIS 2 is not asked for.
+        self.assertEqual(summary.unchanged, [GDPR])
+        self.assertEqual(client.urls, [eu.ROBOTS_URL, eu.changed_url([GDPR, "32022L2555"], "2026-10-01"),
+                                       eu.metadata_url(GDPR), eu.CELEX_URL.format(celex=GDPR)])
+        data = json.loads(report.read_text())
+        self.assertEqual((data["latest_modified"], data["retry_from"]), ("2026-10-20T08:00:00.000Z", None))
+
+    def test_changed_since_without_changes_fetches_nothing_else(self):
+        client = FakeClient(self.changed_routes({}))
+        summary = eu.run(client, self.args("--celex", GDPR + ",32022L2555", "--changed-since", "2026-10-01"))
+        self.assertEqual((summary.written, summary.latest_modified, summary.retry_from), ([], None, None))
+        self.assertEqual(len(client.urls), 2)
+
+    def test_changed_since_holds_back_at_the_oldest_failure(self):
+        client = FakeClient(self.changed_routes({GDPR: "2026-10-20T08:00:00Z", "32022L2555": "2026-10-05T08:00:00Z"}))
+        summary = eu.run(client, self.args("--celex", GDPR + ",32022L2555", "--changed-since", "2026-10-01"))
+        self.assertEqual((summary.written, summary.failed), ([GDPR], ["32022L2555"]))
+        self.assertEqual(summary.latest_modified, "2026-10-20T08:00:00.000Z")
+        self.assertEqual(summary.retry_from, "2026-10-05T07:59:59.999Z")
+
+    def test_changed_since_listing_failure_is_an_error(self):
+        routes = gdpr_routes()  # no answer for the changed query: HTTP 404
+        code = eu.main(["eu", "--celex", GDPR, "--changed-since", "2026-10-01", "--corpus", str(self.corpus),
+                        "--state", str(self.state), "--manifest", str(self.manifest)], client=FakeClient(routes))
+        self.assertEqual(code, 1)
+        self.assertFalse(self.path.exists())
+
+    def test_offline_rerun_from_the_cache(self):
+        cache = self.tmp / "cache"
+        routes = gdpr_routes()
+        routes[eu.metadata_url(GDPR_CONS)] = consolidated_sparql()
+        routes[eu.CELEX_URL.format(celex=GDPR_CONS)] = (CONSOLIDATED, "application/xhtml+xml", CONS_MANIFESTATION)
+        eu.run(FakeClient(routes), self.args("--celex", GDPR, "--consolidated", "--cache", str(cache)),
+               today=date(2026, 10, 29))
+        self.assertEqual(sorted(p.name for p in cache.iterdir()), [
+            "02016R0679-20160504.source.json", "02016R0679-20160504.sparql.json", "02016R0679-20160504.xhtml",
+            "32016R0679.source.json", "32016R0679.sparql.json", "32016R0679.xhtml",
+        ])
+        before = self.path.read_bytes()
+        self.path.write_text("stale", encoding="utf-8")
+        client = FakeClient({})
+        summary = eu.run(client, self.args("--celex", GDPR, "--consolidated", "--refresh", "--cache", str(cache),
+                                           "--offline"), today=date(2026, 10, 29))
+        self.assertEqual(client.urls, [])
+        self.assertEqual((summary.written, summary.unchanged), ([GDPR], [GDPR_CONS]))
+        self.assertEqual(frontmatter.load(self.path.read_text("utf-8"))[1], frontmatter.load(before.decode())[1])
+        # Nothing cached: the act fails, still without a request.
+        summary = eu.run(client, self.args("--celex", "32022L2555", "--cache", str(cache), "--offline"))
+        self.assertEqual((summary.failed, client.urls), (["32022L2555"], []))
+
+    def test_offline_needs_a_cache_and_no_changed_since(self):
+        for extra in (["--offline"], ["--offline", "--cache", "c", "--changed-since", "2026-10-01"]):
+            with self.subTest(extra=extra), self.assertRaises(SystemExit):
+                eu.parse_args(["--celex", GDPR, *extra])
 
     def test_rate_below_one_second_is_refused(self):
         with self.assertRaises(SystemExit):
