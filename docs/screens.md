@@ -29,7 +29,7 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | Hierarki, wide home hierarchy | Mismatch: SFS other statutes left out of totals and counts; counts not digit-grouped | #125, #133 |
 | By ministry | Matches | |
 | Layer list | Mismatch: header badge touches the top edge of the bar | #129 |
-| Reader | Mismatch: table-of-contents sheet covers the screen on phones; raw "Upphör att gälla / Träder i kraft" markers; raw ministry unit code | #123, #124, #132 |
+| Reader | Mismatch: table-of-contents sheet covers the screen on phones; raw ministry unit code | #123, #132 |
 | Sparade | Matches, with the known repealed gap | |
 | Tjänster | Matches | |
 | Settings | Matches; Swedish and English complete on the screens visited | |
@@ -240,6 +240,7 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | Metadata header: layer badge, citation, title, issue date, ministry, status, amended through, source link | Done | |
 | Source Serif 4 legal text, bold Inter § numbers, reading column width | Done | |
 | § cards with the layer indicator, bookmark toggle, text selection | Done | |
+| Riksdagen's "Upphör att gälla U:…" and "Träder i kraft I:…" markers on a § shown as a label above its text ("Upphör att gälla …", "Träder i kraft …" with the date or condition as published) | Done | #124 |
 | Save a single § or chapter: one 48dp actions button per § card and chapter heading opens a menu (save or remove, add or edit note, share link); a saved section shows the filled bookmark in the layer colour | Done | #28 |
 | Repealed banner and strikethrough | Missing | #21 |
 | Table of contents sheet: chapters and § chips, jump to a chapter or § | Done | #26 |
