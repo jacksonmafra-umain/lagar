@@ -1,0 +1,98 @@
+{
+  "source": "https://rattspraxis.etjanst.domstol.se/api/v1/domstolar",
+  "fetched_at": "2026-10-29T20:40:10Z",
+  "courts": [
+    {
+      "code": "ADO",
+      "name": "Arbetsdomstolen"
+    },
+    {
+      "code": "DOV",
+      "name": "Domstolsverket"
+    },
+    {
+      "code": "HDO",
+      "name": "Högsta domstolen"
+    },
+    {
+      "code": "HFD",
+      "name": "Högsta förvaltningsdomstolen"
+    },
+    {
+      "code": "HGO",
+      "name": "Göta hovrätt"
+    },
+    {
+      "code": "HNN",
+      "name": "Hovrätten för Nedre Norrland"
+    },
+    {
+      "code": "HON",
+      "name": "Hovrätten för Övre Norrland"
+    },
+    {
+      "code": "HSB",
+      "name": "Hovrätten över Skåne och Blekinge"
+    },
+    {
+      "code": "HSV",
+      "name": "Svea hovrätt"
+    },
+    {
+      "code": "HVS",
+      "name": "Hovrätten för Västra Sverige"
+    },
+    {
+      "code": "HYOD",
+      "name": "Svea hovrätts hyresrättsliga avgöranden"
+    },
+    {
+      "code": "KGG",
+      "name": "Kammarrätten i Göteborg"
+    },
+    {
+      "code": "KJO",
+      "name": "Kammarrätten i Jönköping"
+    },
+    {
+      "code": "KST",
+      "name": "Kammarrätten i Stockholm"
+    },
+    {
+      "code": "KSU",
+      "name": "Kammarrätten i Sundsvall"
+    },
+    {
+      "code": "MDO",
+      "name": "Marknadsdomstolen"
+    },
+    {
+      "code": "MIOD",
+      "name": "Migrationsöverdomstolen"
+    },
+    {
+      "code": "MMOD",
+      "name": "Mark- och miljööverdomstolen"
+    },
+    {
+      "code": "MOD",
+      "name": "Miljööverdomstolen"
+    },
+    {
+      "code": "PBR",
+      "name": "Patentbesvärsrätten"
+    },
+    {
+      "code": "PMOD",
+      "name": "Patent- och marknadsöverdomstolen"
+    },
+    {
+      "code": "REGR",
+      "name": "Regeringsrätten"
+    },
+    {
+      "code": "RHN",
+      "name": "Rättshjälpsnämnden"
+    }
+  ]
+}

@@ -1,21 +1,23 @@
 {
-  "sitemap": {
-    "source": "https://www.lagrummet.se/rattskalla-sitemap.xml",
-    "fetched_at": "2026-10-29T15:28:34Z",
+  "index": {
+    "source": "https://www.lagrummet.se/rattskalla/",
+    "fetched_at": "2026-10-29T20:40:10Z",
     "pages": 156
   },
   "summary": {
-    "series": 66,
+    "series": 68,
     "by_status": {
       "collected": 1,
       "collected_pdf": 2,
       "api_key": 1,
-      "no_adapter": 61,
+      "no_adapter": 63,
       "out_of_scope": 1
     },
     "shared": 24,
     "kommuner": 290,
-    "kommuner_configured": 3
+    "kommuner_configured": 3,
+    "courts": 23,
+    "courts_collected": 17
   },
   "agency_series": [
     {
@@ -25,7 +27,9 @@
       "documents": 15,
       "target": 15,
       "note": "Consolidated text from Arbetsmiljöverket's HTML pages; robots.txt disallows the original PDFs, which are never requested.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/arbetsmiljoverkets-forfattningssamling-afs/"
+      "url": "https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/",
+      "description": "Arbetsmiljöverkets författningssamling (AFS) består av föreskrifter och allmänna råd.",
+      "issue": null
     },
     {
       "series": "FFFS",
@@ -34,7 +38,9 @@
       "documents": 121,
       "target": 121,
       "note": "Register pages give metadata and FI's summary; the text is published only as PDF.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/finansinspektionens-forfattningssamling-fffs/"
+      "url": "https://www.fi.se/sv/vara-register/fffs/sok-fffs/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "TSFS",
@@ -43,7 +49,9 @@
       "documents": 622,
       "target": 622,
       "note": "Year listings and detail pages give metadata; the text is published only as PDF. Predecessor series on the same index (LFS, JvSFS and others) are not collected.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/transportstyrelsens-forfattningssamling-tsfs/"
+      "url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/",
+      "description": "Föreskrifter om järnväg, spårväg och tunnelbana, luftfart, sjöfart och vägtrafik.",
+      "issue": null
     },
     {
       "series": "BFS",
@@ -52,7 +60,9 @@
       "documents": 0,
       "target": null,
       "note": "Boverket's regulation API probably needs a subscription key; the owner has not signed up for one.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/boverkets-forfattningssamling-bfs/"
+      "url": "https://forfattningssamling.boverket.se/",
+      "description": "Boverkets författningssamling, BFS, innehåller Boverkets föreskrifter och allmänna råd. I författningssamlingen ingår även regler utgivna av den tidigare myndigheten Bostadsstyrelsen, BOFS.",
+      "issue": null
     },
     {
       "series": "AFFS",
@@ -61,7 +71,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/arbetsformedlingens-forfattningssamling-affs/"
+      "url": "https://arbetsformedlingen.se/om-oss/var-verksamhet/styrning-och-resultat/forfattningssamling-AFFS",
+      "description": "Arbetsförmedlingens författningssamling (AFFS) innehåller gällande föreskrifter och allmänna råd för Arbetsförmedlingen. Samlingen innehåller även gällande föreskrifter och allmänna råd från tidigare Arbetsmarknadsstyrelsen (AMSFS), vars verksamhet övergick till Arbetsförmedlingen 1 januari 2008.",
+      "issue": null
     },
     {
       "series": "AGVFS",
@@ -70,7 +82,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/arbetsgivarverkets-forfattningssamling-agvfs/"
+      "url": "https://www.arbetsgivarverket.se/avtal-och-skrifter?category=32",
+      "description": null,
+      "issue": null
     },
     {
       "series": "BFNAR",
@@ -79,7 +93,9 @@
       "documents": 0,
       "target": null,
       "note": "General advice (allmänna råd), not binding regulations.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/bokforingsnamndens-allmanna-rad-bfnar-2/"
+      "url": "https://www.bfn.se/redovisningsregler/allmanna-rad/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "BOLFS",
@@ -88,7 +104,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/bolagsverkets-forfattningssamling-bolfs/"
+      "url": "https://bolagsverket.se/omoss/varverksamhet/styrochplaneringsdokument/bolagsverketsforeskrifterbolfs.2161.html",
+      "description": null,
+      "issue": null
     },
     {
       "series": "CSNFS",
@@ -97,7 +115,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/centrala-studiestodsnamndens-forfattningssamling-csnfs/"
+      "url": "https://www.csn.se/om-csn/lag-och-ratt/forfattningssamling",
+      "description": null,
+      "issue": null
     },
     {
       "series": "DVFS",
@@ -106,7 +126,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/domstolsverkets-forfattningssamling-dvfs/"
+      "url": "https://www.domstol.se/om-sveriges-domstolar/for-dig-som-aktor-i-domstol/stod-for-aktorer-i-domstol/dvfs/",
+      "description": "Domstolsverkets författningssamling, DVFS, innehåller Domstolsverkets och Notarienämndens föreskrifter och allmänna råd.",
+      "issue": null
     },
     {
       "series": "EIFS",
@@ -115,7 +137,20 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/energimarknadsinspektionens-forfattningssamling-eifs/"
+      "url": "https://ei.se/om-oss/lagar-och-regler/foreskrifter",
+      "description": "Föreskrifterna handlar om el, gas, fjärrvärme och fjärrkyla",
+      "issue": null
+    },
+    {
+      "series": "ELSÄK-FS",
+      "agency": "Elsäkerhetsverket",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "url": "https://elsakerhetsverket.se/lag-och-ratt/foreskrifter",
+      "description": "Föreskrifterna innehåller bestämmelser som ska bidra till hög elsäkerhet och minska risker för att el orsakar personskada eller sakskada.",
+      "issue": null
     },
     {
       "series": "FFS",
@@ -124,7 +159,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/forsvarets-forfattningssamling-ffs/"
+      "url": "https://www.forsvarsmakten.se/om-forsvarsmakten/myndighetsinformation/dokument/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "FKFS",
@@ -133,7 +170,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/forsakringskassans-forfattningssamling-fkfs/"
+      "url": "https://lagrummet.forsakringskassan.se/",
+      "description": "Innehåller föreskrifter om aktivitetsstöd, förmåner för totalförsvarspliktiga, tandvårdsersättning, ersättning för kostnader för internationell vård, sjukvårdsersättning,, arbetsgivaravgifter och egenavgifter, Fritidskortet, dataskydd och integritet, självbetjäningstjänster via Internet.",
+      "issue": null
     },
     {
       "series": "HSLF-FS",
@@ -142,7 +181,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/gemensamma-forfattningssamlingen-avseende-halso-och-sjukvard-socialtjanst-lakemedel-folkhalsa-m-m-hslf-fs/"
+      "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
+      "description": "Utnyttjas av E-hälsomyndigheten, Folkhälsomyndigheten, Inspektionen för vård och omsorg, Läkemedelsverket, Myndigheten för familjerätt och föräldraskapsstöd, Rättsmedicinalverket, Socialstyrelsen och Tandvårds- och läkemedelsförmånsverket.",
+      "issue": null
     },
     {
       "series": "HVMFS",
@@ -151,7 +192,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/havs-och-vattenmyndighetens-forfattningssamling-hvmfs/"
+      "url": "https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/foreskrifter.html",
+      "description": null,
+      "issue": null
     },
     {
       "series": "IAFFS",
@@ -160,7 +203,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/inspektionen-for-arbetsloshetsforsakringens-forfattningssamling-iaffs/"
+      "url": "https://www.iaf.se/Lag-ratt/Foreskrifter/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "IMYFS",
@@ -169,7 +214,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/integritetsskyddsmyndighetens-forfattningssamling-imyfs/"
+      "url": "https://www.imy.se/om-oss/beslut-publikationer-och-remisser/foreskrifter-och-allmanna-rad/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "KAMFS",
@@ -178,7 +225,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kammarkollegiets-forfattningssamling-kamfs/"
+      "url": "https://www.kammarkollegiet.se/om-oss/kammarkollegiets-forfattningssamling-kamfs",
+      "description": null,
+      "issue": null
     },
     {
       "series": "KBVFS",
@@ -187,7 +236,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kustbevakningens-forfattningssamling-kbvfs/"
+      "url": "https://www.kustbevakningen.se/om-oss/kustbevakningens-forfattningssamling/",
+      "description": "Föreskrifter och allmänna råd om förundersökningsledning vid utredning av brott, avgifter vid uppdragsverksamhet, sjösäkerhet på Kustbevakningens fartyg, rapportering av olyckor vid olje- och gasverksamhet till havs.",
+      "issue": null
     },
     {
       "series": "KFMFS",
@@ -196,7 +247,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kronofogdemyndighetens-forfattningssamling-kfmfs/"
+      "url": "https://www.kronofogden.se/om-kronofogden/dina-rattigheter-lagar-och-regler/foreskrifter-allmanna-rad-och-meddelanden",
+      "description": null,
+      "issue": null
     },
     {
       "series": "KFS",
@@ -205,7 +258,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kommerskollegiums-forfattningssamling-kfs/"
+      "url": "https://www.kommerskollegium.se/uppdrag/forfattningssamling/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "KIFS",
@@ -214,7 +269,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kemikalieinspektionens-forfattningssamling-kifs/"
+      "url": "https://www.kemi.se/lagar-och-regler/lagstiftningar-inom-kemikalieomradet/kemikalieinspektionens-foreskrifter-kifs",
+      "description": null,
+      "issue": null
     },
     {
       "series": "KKVFS",
@@ -223,7 +280,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/konkurrensverkets-forfattningssamling-kkvfs/"
+      "url": "https://www.konkurrensverket.se/om-oss/forfattningssamling/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "KOVFS",
@@ -232,7 +291,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/konsumentverkets-forfattningssamling-kovfs/"
+      "url": "https://publikationer.konsumentverket.se/filtrera-fram-forfattningssamling",
+      "description": null,
+      "issue": null
     },
     {
       "series": "KRFS",
@@ -241,7 +302,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-kulturrads-forfattningssamling-krfs/"
+      "url": "https://www.kulturradet.se/om-oss/forfattningssamling/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "KVFS",
@@ -250,7 +313,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kriminalvardens-forfattningssamling-kvfs/"
+      "url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/kriminalvardens-foreskrifter/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "LIVSFS",
@@ -259,7 +324,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/livsmedelsverkets-forfattningssamling-livsfs/"
+      "url": "https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "LMFS",
@@ -268,7 +335,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/lantmateriets-forfattningssamling-lmfs/"
+      "url": "https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "MCFFS",
@@ -277,7 +346,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-civilt-forsvars-forfattningssamling-mcffs/"
+      "url": "https://www.mcf.se/sv/regler/om-regler/",
+      "description": "I Myndigheten för civilt försvars författningssamling (MCFFS) ingår även regler utgivna av de tidigare myndigheterna MSB (MSBFS) Statens räddningsverk (SRVFS), Krisberedskapsmyndigheten (KBMFS) och Sprängämnesinspektionen (SÄIFS).",
+      "issue": null
     },
     {
       "series": "MDFFS",
@@ -286,7 +357,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs-2/"
+      "url": "https://www.digg.se/om-oss/forfattningssamling",
+      "description": null,
+      "issue": null
     },
     {
       "series": "MEMYFS",
@@ -295,7 +368,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/mediemyndighetens-forfattningssamling-memyfs/"
+      "url": "https://mediemyndigheten.se/om-oss/lagar-forordningar-och-foreskrifter/",
+      "description": "Föreskrifter om sändningstillstånd för radio och tv, tillgänglighetskrav för audiovisuella verk, standarder för digital-tv, stöd till medier, skyldigheter att redovisa program med europeiskt ursprung.",
+      "issue": null
     },
     {
       "series": "MIGRFS",
@@ -304,7 +379,9 @@
       "documents": 0,
       "target": null,
       "note": "robots.txt (checked 2026-10-29) allows the regulation pages. Proposed as a next series on #115.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/migrationsverkets-forfattningssamling-migrfs/"
+      "url": "https://www.migrationsverket.se/om-migrationsverket/styrning-och-uppfoljning/foreskrifter.html",
+      "description": "Migrationsverket är förvaltningsmyndighet för frågor som rör uppehållstillstånd, arbetstillstånd, uppehållsrätt, visering, mottagande av asylsökande inklusive boenden, anvisning till kommuner av ensamkommande barn, anvisning till kommuner av nyanlända och personer med tillfälligt skydd, självmant återvändande, medborgarskap, och återvandring. Föreskrifterna innehåller bestämmelser på dessa områden.",
+      "issue": null
     },
     {
       "series": "MTFS",
@@ -313,7 +390,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-tillvaxtpolitiska-utvarderingar-och-analysers-forfattningssamling-mtfs/"
+      "url": "https://www.tillvaxtanalys.se/statistik/tillvaxtanalysforeskrifter.125740.html",
+      "description": null,
+      "issue": null
     },
     {
       "series": "MYHFS",
@@ -322,7 +401,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-yrkeshogskolans-forfattningssamling-myhfs/"
+      "url": "https://www.myh.se/lag-och-ratt/foreskrifter-och-allmanna-rad",
+      "description": null,
+      "issue": null
     },
     {
       "series": "NFS",
@@ -331,7 +412,20 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/naturvardsverkets-forfattningssamling-nfs/"
+      "url": "https://www.naturvardsverket.se/nfs",
+      "description": "Naturvårdsverket ansvarar för frågor som handlar om klimat och luft, mark, biologisk mångfald, förorenade områden, kretslopp och avfall, resurseffektivitet, miljöövervakning, jakt och vilt samt miljöforskning.",
+      "issue": null
+    },
+    {
+      "series": "PFS",
+      "agency": "Pensionsmyndigheten",
+      "status": "no_adapter",
+      "documents": 0,
+      "target": null,
+      "note": null,
+      "url": "https://www.pensionsmyndigheten.se/om-pensionsmyndigheten/allmanna-handlingar/lagar-och-regler",
+      "description": "Här publiceras Pensionsmyndighetens gällande och upphävda föreskrifter om pension, andra förmåner och e-tjänster. De föreskrifter som beslutats av Premiepensionsmyndigheten och Försäkringskassan (inklusive Riksförsäkringsverket) gäller även efter Pensionsmyndighetens inrättande 2010.",
+      "issue": null
     },
     {
       "series": "PMFS",
@@ -340,7 +434,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/polismyndighetens-forfattningssamling-pmfs/"
+      "url": "https://polisen.se/Lagar-och-regler/Polismyndighetens-forfattningssamling/",
+      "description": "Polismyndigheten föreskriver bland annat inom områdena vapen, bevakning, pass och nationellt identitetskort, trafikövervakning, utrustning i polisarbetet och delgivning.",
+      "issue": null
     },
     {
       "series": "PRVFS",
@@ -349,7 +445,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/patent-och-registreringsverkets-forfattningssamling-prvfs/"
+      "url": "https://www.prv.se/sv/om-oss/var-verksamhet/styrdokument/prvs-forfattningssamling/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "PTSFS",
@@ -358,7 +456,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/post-och-telestyrelsens-forfattningssamling-ptsfs/"
+      "url": "https://pts.se/regelbibliotek/",
+      "description": "Innehåller föreskrifter om elektronisk kommunikation, post, radioutrustning, produkter och tjänsters tillgänglighet.",
+      "issue": null
     },
     {
       "series": "RA-FS",
@@ -367,7 +467,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/riksarkivets-forfattningssamling-ra-fs/"
+      "url": "https://riksarkivet.se/arkivera-och-forvalta/foreskrifter-och-vagledningar",
+      "description": "Föreskrifter om till exempel gallring (att förstöra allmäna handlingar) hos alla myndigheter, krav på arkivlokaler, hur handlingar ska hanteras, förvaras, skyddas, kunna återsökas och bevaras samt överlämnas mellan myndigheter. I föreskrifterna finns även stöd för enskilda att behandla personuppgifter för arkivändamål av allmänt intresse.",
+      "issue": null
     },
     {
       "series": "RFS",
@@ -376,7 +478,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/riksdagsforvaltningens-forfattningssamling-rfs/"
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=rfs",
+      "description": null,
+      "issue": null
     },
     {
       "series": "RGKFS",
@@ -385,7 +489,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/riksgaldskontorets-forfattningssamling-rgkfs/"
+      "url": "https://www.riksgalden.se/press-och-publicerat/foreskrifter/",
+      "description": "Riksgälden är statens centrala finansförvaltning och har även uppdrag som bidrar till att värna finansiell stabilitet.",
+      "issue": null
     },
     {
       "series": "RIFS",
@@ -394,7 +500,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/revisorsinspektionens-forfattningssamling-rifs/"
+      "url": "https://www.revisorsinspektionen.se/regelverk/samtliga-foreskrifter/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "SCB-FS",
@@ -403,7 +511,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/statistiska-centralbyrans-forfattningssamling-scb-fs/"
+      "url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/",
+      "description": "Föreskrifter om uppgiftsskyldighet till statistik, kvalitet och tillgängliggörande av statistik.",
+      "issue": null
     },
     {
       "series": "SGU-FS",
@@ -412,7 +522,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/sveriges-geologiska-undersoknings-forfattningssamling-sgu-fs/"
+      "url": "https://www.sgu.se/om-sgu/verksamhet/foreskrifter/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "SIFS",
@@ -421,7 +533,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/spelinspektionens-forfattningssamling-sifs/"
+      "url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "SJVFS",
@@ -430,7 +544,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-jordbruksverks-forfattningssamling-sjvfs/"
+      "url": "https://jordbruksverket.se/om-jordbruksverket/forfattningar/om-forfattningssamlingen",
+      "description": null,
+      "issue": null
     },
     {
       "series": "SJÖFS",
@@ -439,7 +555,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/sjofartsverkets-forfattningssamling-sjofs/"
+      "url": "https://www.sjofartsverket.se/sv/om-oss/lagrum/systematisk-forteckning-n/",
+      "description": "Föreskrifter om bland annat säkerheten på fartyg, sjömanssociala frågor, föroreningar från fartyg, sjötrafik, sjöfartsskydd och hamnskydd.",
+      "issue": null
     },
     {
       "series": "SKOLFS",
@@ -448,7 +566,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-skolverks-forfattningssamling-skolfs/"
+      "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
+      "description": "Skolverket ger ut föreskrifter och allmänna råd i Skolverkets författningssamling (SKOLFS). Författningssamlingen innehåller även föreskrifter beslutade av Myndigheten för ungdoms- och civilsamhällesfrågor, Skolinspektionen och Specialpedagogiska skolmyndigheten. Författningssamlingen innehåller även vissa förordningar – till exempel läroplaner – om regeringen har beslutat att dessa ska kungöras i SKOLFS i stället för i Svensk författningssamling (SFS).",
+      "issue": null
     },
     {
       "series": "SKSFS",
@@ -457,7 +577,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/skogsstyrelsens-forfattningssamling-sksfs/"
+      "url": "https://www.skogsstyrelsen.se/lag-och-tillsyn/forfattningar/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "SKVFS",
@@ -466,7 +588,9 @@
       "documents": 0,
       "target": null,
       "note": "An earlier robots.txt request was rejected by a WAF; on 2026-10-29 robots.txt answered normally and allows the regulation pages. Proposed as a next series on #115.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/skatteverkets-forfattningssamling-skvfs/"
+      "url": "https://www4.skatteverket.se/rattsligvagledning/115.html?year=Alla",
+      "description": "Innehåller föreskrifter rörande följande områden enligt Förordning (2017:154) med instruktion för Skatteverket: Skatter och avgifter, fastighetstaxering, folkbokföringsverksamhet, identitetskort, bouppteckning, äktenskapsregistret, pensionsgrundande inkomst, lönegarantiutbetalning.",
+      "issue": null
     },
     {
       "series": "SSMFS",
@@ -475,7 +599,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/stralsakerhetsmyndighetens-forfattningssamling-ssmfs/"
+      "url": "https://www.stralsakerhetsmyndigheten.se/regler/foreskrifter/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "STAFS",
@@ -484,7 +610,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/styrelsens-for-ackreditering-och-teknisk-kontroll-swedac-forfattningssamling-stafs/"
+      "url": "https://www.swedac.se/lag-ratt/swedacs-foreskrifter/",
+      "description": "Swedac föreskriver om krav på mätningar och mättekniska metoder, krav på kontroll av mätdon, krav på och kontroll av färdigförpackade varor och kontroll av mängduppgifter för färdigförpackade varor, krav i fråga om kundvågar i detaljhandel, kontroll av elmätare och registrering av namnstämplar avsedda för ädelmetallarbeten. Swedac föreskriver vidare om krav på ackrediterade och anmälda/utsedda organ, införande om OECD:s principer om god laboratoriesed (GLP) samt avgifter inom flera områden.",
+      "issue": null
     },
     {
       "series": "STEMFS",
@@ -493,7 +621,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-energimyndighets-forfattningssamling-stemfs/"
+      "url": "https://energimyndigheten.a-w2m.se/System/TemplateNavigate.aspx?p=Arkitektkopia&l=t&view=672&cat=%2FF%C3%B6reskrifter",
+      "description": "Föreskrifter om bland annat försörjningsberedskap och säkerhetsskydd för olika energislag, klimat och hållbarhet på energiområdet, elcertifikat med mera.",
+      "issue": null
     },
     {
       "series": "STFS",
@@ -502,7 +632,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/sametingets-forfattningssamling-stfs/"
+      "url": "https://sametinget.se/dokumentbank?cat=72",
+      "description": null,
+      "issue": null
     },
     {
       "series": "SiSFS",
@@ -511,7 +643,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-institutionsstyrelses-forfattningssamling-sisfs/"
+      "url": "https://www.stat-inst.se/om-sis/lagar-forordningar-forfattningar/sis-forfattningssamling/",
+      "description": "Statens institutionsstyrelse, SiS, är en myndighet som ansvarar för individuellt anpassad tvångsvård och behandling av ungdomar med allvarliga psykosociala problem och vuxna med missbruksproblem, och har föreskrifter inom de områdena.",
+      "issue": null
     },
     {
       "series": "SvKFS",
@@ -520,7 +654,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/svenska-kraftnats-forfattningssamling-svkfs/"
+      "url": "https://www.svk.se/om-kraftsystemet/legalt-ramverk/svenska-kraftnats-foreskrifter/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "TFS",
@@ -529,7 +665,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/tullverkets-forfattningssamling-tfs/"
+      "url": "https://www.tullverket.se/omoss/dethargortullverket/verksamhetochorganisation/lagarochforeskrifter/tullverketsforfattningssamlingtfs",
+      "description": null,
+      "issue": null
     },
     {
       "series": "TPPVFS",
@@ -538,7 +676,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/totalforsvarets-plikt-och-provningsverks-forfattningssamling-tppvfs/"
+      "url": "https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter",
+      "description": "Innehåller bland annat föreskrifter om totalförsvarsplikt och förmåner till totalförsvarspliktiga.",
+      "issue": null
     },
     {
       "series": "TRVFS",
@@ -547,7 +687,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/trafikverkets-forfattningssamling-trvfs/"
+      "url": "https://www.trafikverket.se/om-oss/var-verksamhet-vision-och-uppdrag/trafikverkets-forfattningssamling/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "TVFS",
@@ -556,7 +698,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/tillvaxtverkets-forfattningssamling-tvfs/"
+      "url": "https://tillvaxtverket.se/tillvaxtverket/omtillvaxtverket/varverksamhet/foreskrifter.595.html",
+      "description": null,
+      "issue": null
     },
     {
       "series": "UFS",
@@ -565,7 +709,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/upphandlingmyndighetens-forfattningssamling-ufs/"
+      "url": "https://www.upphandlingsmyndigheten.se/rapporter-och-statistik/upphandlingsmyndighetens-forfattningssamling/",
+      "description": "Innehåller föreskrifter om upphandlingsstatistik.",
+      "issue": null
     },
     {
       "series": "UHRFS",
@@ -574,7 +720,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/universitets-och-hogskoleradets-forfattningssamling-uhrfs/"
+      "url": "https://www.uhr.se/publikationer/lagar-och-regler-for-hogre-utbildning/Universitets--och-hogskoleradets-forfattningssamling/",
+      "description": null,
+      "issue": null
     },
     {
       "series": "VALFS",
@@ -583,7 +731,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/valmyndighetens-forfattningssamling-valfs/"
+      "url": "https://www.val.se/det-svenska-valsystemet/grunderna-i-det-svenska-valsystemet/lagar-och-regler",
+      "description": "Föreskrifter av praktiskt slag om avgifter för och utformning av vissa valrelaterade produkter som inte är reglerade i annan ordning.",
+      "issue": null
     },
     {
       "series": "VRFS",
@@ -592,7 +742,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/vetenskapsradets-forfattningssamling-vrfs/"
+      "url": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html",
+      "description": "Författningssamlingen innehåller Vetenskapsrådets föreskrifter om godkännande för forskningshuvudmän att ta emot gästforskare samt myndighetens föreskrifter om genomförande av elektorsförsamlingars val av ledamöter till forskningsråd och ämnesråd. Den innehåller även Etikprövningsmyndighetens föreskrifter och allmänna råd för etikprövning av forskning som avser människor m.m.",
+      "issue": null
     },
     {
       "series": "ÅFS",
@@ -601,7 +753,9 @@
       "documents": 0,
       "target": null,
       "note": null,
-      "lagrummet": "https://www.lagrummet.se/rattskalla/aklagarmyndighetens-forfattningssamling-afs/"
+      "url": "https://www.aklagare.se/om-oss/dokument/forfattningssamling",
+      "description": null,
+      "issue": null
     },
     {
       "series": "STFS",
@@ -610,153 +764,203 @@
       "documents": 0,
       "target": null,
       "note": "Local traffic regulations; out of scope for the county layer (COVERAGE.md).",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/svensk-trafikforeskriftssamling-stfs/"
+      "url": "https://rdt.transportstyrelsen.se/rdt/defaultstfs.aspx",
+      "description": "Trafikföreskrifter som i huvudsak meddelas av kommuner, länsstyrelser, polismyndigheter, Trafikverket och myndigheter som har hand om väg- eller gatuhållningen. Av förordningen (2007:231) om elektroniskt kungörande av vissa trafikföreskrifter framgår vilka slags trafikföreskrifter som ska publiceras i STFS.",
+      "issue": null
     }
   ],
   "shared_series": [
     {
       "agency": "Allmänna reklamationsnämnden",
       "published_in": "KOVFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/allmanna-reklamationsnamnden-publiceras-i-konsumentverkets-serie/",
-      "status": "no_adapter"
+      "url": "https://publikationer.konsumentverket.se/filtrera-fram-forfattningssamling",
+      "description": "Allmänna reklamationsnämndens föreskrift om att anmälan ska göras på en särskild blankett.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "E-hälsomyndigheten",
       "published_in": "HSLF-FS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/e-halsomyndighetens-foreskrifter-i-gemensamma-forfattningssamlingen-hslf-fs/",
-      "status": "no_adapter"
+      "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
+      "description": "Innehåller föreskrifter om vissa avgifter för öppenvårdsapotek.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Etikprövningsmyndigheten",
       "published_in": "VRFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/etikprovningsmyndighetens-foreskrifter-publiceras-i-vetenskapsradets-serie/",
-      "status": "no_adapter"
+      "url": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html",
+      "description": null,
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Fastighetsmäklarinspektionen",
       "published_in": "KAMFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/fastighetsmaklarinspektionens-foreskrifter-publiceras-i-kammarkollegiets-serie/",
-      "status": "no_adapter"
+      "url": "https://fmi.se/det-har-ar-fmi/lag-och-ratt/foreskrifter/",
+      "description": "Föreskrifter rörande registrering av fastighetsmäklare samt om åtgärder mot penningtvätt och finansiering av terrorism.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Folkhälsomyndigheten",
       "published_in": "HSLF-FS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/folkhalsomyndighetens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
-      "status": "no_adapter"
+      "url": "https://www.folkhalsomyndigheten.se/publikationer-och-material/foreskrifter-och-allmanna-rad/",
+      "description": "Föreskrifter och allmänna råd inom smittskyddslagens, alkohollagens och lagen om tobak och andra produkters område. Även föreskrifter och allmänna råd inom miljöbalkens område kring bland annat dricksvatten, bekämpningsmedel, inomhustemperatur, ventilation och buller.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Inspektionen för strategiska produkter",
       "published_in": "TFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/inspektionen-for-strategiska-produkters-foreskrifter-publiceras-i-tullverkets-serie/",
-      "status": "no_adapter"
+      "url": "https://www.tullverket.se/omoss/dethargortullverket/verksamhetochorganisation/lagarochforeskrifter/tullverketsforfattningssamlingtfs",
+      "description": null,
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Inspektionen för vård och omsorg",
       "published_in": "HSLF-FS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/inspektionen-for-vard-och-omsorgs-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
-      "status": "no_adapter"
+      "url": "https://www.ivo.se/aktuellt/publikationer/foreskrifter/",
+      "description": "IVO ansvarar för tillsyn och tillståndsprövning inom hälso- och sjukvård, socialtjänst och verksamhet enligt lagen om stöd och service till vissa funktionshindrade (LSS). Myndigheten ansvarar även för prövning av klagomål enligt patientsäkerhetslagen och de flesta föreskrifterna berör detta område.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Luftfartsverket",
       "published_in": "TSFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/luftfartsverkets-foreskrifter-publiceras-i-transportstyrelsens-serie/",
-      "status": "collected_pdf"
+      "url": "https://www.transportstyrelsen.se/sv/Regler/",
+      "description": null,
+      "status": "collected_pdf",
+      "issue": null
     },
     {
       "agency": "Läkemedelsverket",
       "published_in": "HSLF-FS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/lakemedelsverkets-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
-      "status": "no_adapter"
+      "url": "https://www.lakemedelsverket.se/sv/lagar-och-regler/foreskrifter",
+      "description": null,
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Medlingsinstitutet",
       "published_in": "SCB-FS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/medlingsinstitutets-foreskrifter-publiceras-i-statistiska-centralbyrans-serie/",
-      "status": "no_adapter"
+      "url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/",
+      "description": null,
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Myndigheten för familjerätt och föräldraskapsstöd",
       "published_in": "HSLF-FS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-familjeratt-och-foraldraskapsstods-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
-      "status": "no_adapter"
+      "url": "https://www.mfof.se/familjeratt/regler-och-riktlinjer/foreskrifter-och-allmanna-rad",
+      "description": "Innehåller föreskrifter om adoption, faderskap och föräldraskap, samt vårdnad, boende och umgänge.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Myndigheten för stöd till trossamfund",
       "published_in": "KAMFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/myndigheten-for-stod-till-trossamfunds-foreskrifter-publiceras-i-kammarkollegiets-serie/",
-      "status": "no_adapter"
+      "url": "https://www.kammarkollegiet.se/om-oss/kammarkollegiets-forfattningssamling-kamfs",
+      "description": "Innehåller föreskrifter om statsbidrag till trossamfund.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Notarienämnden",
       "published_in": "DVFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/notarienamndens-foreskrifter-publiceras-i-domstolsverkets-serie/",
-      "status": "no_adapter"
+      "url": "https://www.domstol.se/om-sveriges-domstolar/for-dig-som-aktor-i-domstol/stod-for-aktorer-i-domstol/dvfs/?f=OrdinanceAuthority_list:notarienamnden&s=",
+      "description": null,
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Patentombudsnämnden",
       "published_in": "BOLFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/patentombudsnamndens-foreskrifter-publiceras-i-bolagsverkets-serie/",
-      "status": "no_adapter"
+      "url": "https://bolagsverket.se/omoss/flerverksamheter/patentombudsnamnden/ompatentombudsnamnden/patentombudsnamndensforeskrifterbolfs.2621.html",
+      "description": "Innehåller föreskrifter om auktorisation av patentombud.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Riksantikvarieämbetet",
       "published_in": "KRFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/riksantikvarieambetets-foreskrifter-publiceras-i-statens-kulturrads-serie/",
-      "status": "no_adapter"
+      "url": "https://www.kulturradet.se/om-oss/forfattningssamling/",
+      "description": "Riksantikvarieämbetet har föreskrifter om verkställigheten av kulturmiljölagens bestämmelser om fornminnen, byggnadsminnen, kyrkliga kulturminnen och utförsel av vissa äldre kulturföremål. Riksantikvarieämbetet har även föreskrifter om utmärkning av kulturegendom enligt totalförsvarets folkrättsförordning.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Rättsmedicinalverket",
       "published_in": "HSLF-FS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/rattsmedicinalverkets-foreskrifter-i-gemensamma-forfattningssamlingen-hslf-fs/",
-      "status": "no_adapter"
+      "url": "https://www.rmv.se/om-oss/var-verksamhet/rattsmedicinalverkets-forfattningssamling/",
+      "description": "Innehåller föreskrifter om rättsmedicinsk, rättspsykiatrisk, rättsgenetisk och rättskemisk verksamhet.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Rådet för Europeiska socialfonden i Sverige",
       "published_in": "TVFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/radet-for-europeiska-socialfonden-i-sveriges-foreskrifter-publiceras-i-tillvaxtverkets-serie/",
-      "status": "no_adapter"
+      "url": "https://www.esf.se/uppfoljning-revision-och-regelverk/styrande-dokument/",
+      "description": null,
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Socialstyrelsen",
       "published_in": "HSLF-FS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/socialstyrelsens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
-      "status": "no_adapter"
+      "url": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/regler-och-riktlinjer/foreskrifter-och-allmanna-rad/",
+      "description": "Innehåller socialstyrelsens gällande bestämmelser för hälso- och sjukvård, tandvård, hälsoskydd och socialtjänst.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Specialpedagogiska skolmyndigheten",
       "published_in": "SKOLFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/specialpedagogiska-skolmyndighetens-foreskrifter-publiceras-i-statens-skolverks-serie/",
-      "status": "no_adapter"
+      "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
+      "description": "Föreskrifterna rör i huvudsak reglering av statsbidrag inom myndighetens område.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Statens skolinspektion",
       "published_in": "SKOLFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-skolinspektions-foreskrifter-publiceras-i-statens-skolverks-serie/",
-      "status": "no_adapter"
+      "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
+      "description": null,
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Statens tjänstepensionsverk",
       "published_in": "AGVFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-tjanstepensionsverks-foreskrifter-publiceras-i-arbetsgivarverkets-serie/",
-      "status": "no_adapter"
+      "url": "https://www.arbetsgivarverket.se/avtal-och-skrifter?category=32",
+      "description": null,
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Säkerhetspolisen",
       "published_in": "PMFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/sakerhetspolisens-foreskrifter-publiceras-i-polismyndighetens-serie/",
-      "status": "no_adapter"
+      "url": "https://polisen.se/Lagar-och-regler/Polismyndighetens-forfattningssamling/",
+      "description": null,
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Tandvårds- och läkemedelsförmånsverket",
       "published_in": "HSLF-FS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/tandvards-och-lakemedelsformansverkets-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs/",
-      "status": "no_adapter"
+      "url": "https://www.tlv.se/om-tlv/regelverk/foreskrifter.html",
+      "description": "Innehåller föreskrifter om läkemedelsförmåner, pris och subvention på läkemedel och förbrukningsartiklar, bidrag till apotek i glesbygd, referenspriser i det statliga tandvårdsstödet, handelsmarginal för apotek.",
+      "status": "no_adapter",
+      "issue": null
     },
     {
       "agency": "Trafikanalys",
       "published_in": "KAMFS",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/trafikanalys-foreskrifter-publiceras-i-kammarkollegiets-serie/",
-      "status": "no_adapter"
+      "url": "https://www.trafa.se/sidor/kvalitetsarbete-inom-statistik/foreskrifter/",
+      "description": null,
+      "status": "no_adapter",
+      "issue": null
     }
   ],
   "counties": [
@@ -768,8 +972,9 @@
       "documents": 80,
       "years": "2025–2026",
       "text": "HTML text",
-      "landing": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/stockholms-lans-forfattningssamling-01fs/"
+      "url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling.html",
+      "description": "Stockholms läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "03",
@@ -779,8 +984,9 @@
       "documents": 25,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/uppsala-lans-forfattningssamling-03fs/"
+      "url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "description": "Uppsala läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "04",
@@ -790,8 +996,9 @@
       "documents": 14,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/sodermanland/om-oss/om-lansstyrelsen-i-sodermanlands-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/sodermanlands-lans-forfattningssamling-04fs/"
+      "url": "https://www.lansstyrelsen.se/sodermanland/om-oss/om-lansstyrelsen-i-sodermanlands-lan/lanets-forfattningssamling.html",
+      "description": "Södermanlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "05",
@@ -801,8 +1008,9 @@
       "documents": 43,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/ostergotlands-lans-forfattningssamling-05fs/"
+      "url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "description": "Östergötlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "06",
@@ -812,8 +1020,9 @@
       "documents": 21,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/jonkopings-lans-forfattningssamling-06fs/"
+      "url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "description": "Jönköpings läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "07",
@@ -823,8 +1032,9 @@
       "documents": 13,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/kronoberg/om-oss/om-lansstyrelsen-i-kronobergs-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kronobergs-lans-forfattningssamling-07fs/"
+      "url": "https://www.lansstyrelsen.se/kronoberg/om-oss/om-lansstyrelsen-i-kronobergs-lan/lanets-forfattningssamling.html",
+      "description": "Kronobergs läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "08",
@@ -834,8 +1044,9 @@
       "documents": 28,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kalmars-lans-forfattningssamling-08fs/"
+      "url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "description": "Kalmars läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "09",
@@ -845,8 +1056,9 @@
       "documents": 7,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/gotlands-lans-forfattningssamling-09fs/"
+      "url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
+      "description": "Gotlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "10",
@@ -856,8 +1068,9 @@
       "documents": 48,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/blekinge-lans-forfattningssamling-10fs/"
+      "url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "description": "Blekinge läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "12",
@@ -867,8 +1080,9 @@
       "documents": 38,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/skane-lans-forfattningssamling-12fs/"
+      "url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "description": "Skåne läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "13",
@@ -878,8 +1092,9 @@
       "documents": 15,
       "years": "2025–2026",
       "text": "HTML text",
-      "landing": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/hallands-lans-forfattningssamling-13fs/"
+      "url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling.html",
+      "description": "Hallands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "14",
@@ -889,8 +1104,9 @@
       "documents": 56,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/vastra-gotalands-lans-forfattningssamling-14fs/"
+      "url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "description": "Västra Götalands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "17",
@@ -900,8 +1116,9 @@
       "documents": 14,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/varmland/om-oss/om-lansstyrelsen-varmland/forfattningar.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/varmlands-lans-forfattningssamling-17fs/"
+      "url": "https://www.lansstyrelsen.se/varmland/om-oss/om-lansstyrelsen-varmland/forfattningar.html",
+      "description": "Värmlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "18",
@@ -911,8 +1128,9 @@
       "documents": 23,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/orebro/om-oss/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/orebro-lans-forfattningssamling-18fs/"
+      "url": "https://www.lansstyrelsen.se/orebro/om-oss/lanets-forfattningssamling.html",
+      "description": "Örebro läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "19",
@@ -922,8 +1140,9 @@
       "documents": 11,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/vastmanlands-lans-forfattningssamling-19fs/"
+      "url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "description": "Västmanlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "20",
@@ -933,8 +1152,9 @@
       "documents": 34,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/dalarna/om-oss/om-lansstyrelsen-i-dalarnas-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/dalarnas-lans-forfattningssamling-20fs/"
+      "url": "https://www.lansstyrelsen.se/dalarna/om-oss/om-lansstyrelsen-i-dalarnas-lan/lanets-forfattningssamling.html",
+      "description": "Dalarnas läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "21",
@@ -944,8 +1164,9 @@
       "documents": 15,
       "years": "2025–2026",
       "text": "HTML text",
-      "landing": "https://www.lansstyrelsen.se/gavleborg/om-oss/om-lansstyrelsen-i-gavleborgs-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/gavleborgs-lans-forfattningssamling-21fs/"
+      "url": "https://www.lansstyrelsen.se/gavleborg/om-oss/om-lansstyrelsen-i-gavleborgs-lan/lanets-forfattningssamling.html",
+      "description": "Gävleborgs läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "22",
@@ -955,8 +1176,9 @@
       "documents": 14,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/vasternorrlands-lans-forfattningssamling-22fs/"
+      "url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "description": "Västernorrlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "23",
@@ -966,8 +1188,9 @@
       "documents": 28,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/jamtlands-lans-forfattningssamling-23fs/"
+      "url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "description": "Jämtlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "24",
@@ -977,8 +1200,9 @@
       "documents": 45,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/vasterbottens-lans-forfattningssamling-24fs/"
+      "url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "description": "Västerbottens läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     },
     {
       "code": "25",
@@ -988,8 +1212,9 @@
       "documents": 58,
       "years": "2025–2026",
       "text": "PDF links only",
-      "landing": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/norrbottens-lans-forfattningssamling-25fs/"
+      "url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "description": "Norrbottens läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
+      "issue": null
     }
   ],
   "municipalities": {
@@ -997,6 +1222,8 @@
       {
         "code": "0180",
         "kommun": "Stockholm",
+        "url": "https://start.stockholm/",
+        "issue": null,
         "collection": "Stockholms stads kommunala författningssamling (KFS)",
         "status": "partial",
         "documents": 5,
@@ -1005,6 +1232,8 @@
       {
         "code": "1280",
         "kommun": "Malmö",
+        "url": "https://www.malmo.se/",
+        "issue": null,
         "collection": "Malmö stads författningssamling",
         "status": "partial",
         "documents": 5,
@@ -1013,6 +1242,8 @@
       {
         "code": "1480",
         "kommun": "Göteborg",
+        "url": "https://www.goteborg.se/",
+        "issue": null,
         "collection": "Göteborgs Stads styrande dokument (Forfattn.nsf)",
         "status": "partial",
         "documents": 5,
@@ -1024,413 +1255,1848 @@
         "region_code": "01",
         "county": "Stockholms län",
         "kommuner": [
-          "Upplands Väsby",
-          "Vallentuna",
-          "Österåker",
-          "Värmdö",
-          "Järfälla",
-          "Ekerö",
-          "Huddinge",
-          "Botkyrka",
-          "Salem",
-          "Haninge",
-          "Tyresö",
-          "Upplands-Bro",
-          "Nykvarn",
-          "Täby",
-          "Danderyd",
-          "Sollentuna",
-          "Södertälje",
-          "Nacka",
-          "Sundbyberg",
-          "Solna",
-          "Lidingö",
-          "Vaxholm",
-          "Norrtälje",
-          "Sigtuna",
-          "Nynäshamn"
+          {
+            "code": "0114",
+            "kommun": "Upplands Väsby",
+            "url": "https://www.upplandsvasby.se/",
+            "issue": null
+          },
+          {
+            "code": "0115",
+            "kommun": "Vallentuna",
+            "url": "https://www.vallentuna.se/",
+            "issue": null
+          },
+          {
+            "code": "0117",
+            "kommun": "Österåker",
+            "url": "https://www.osteraker.se/",
+            "issue": null
+          },
+          {
+            "code": "0120",
+            "kommun": "Värmdö",
+            "url": "https://www.varmdo.se/",
+            "issue": null
+          },
+          {
+            "code": "0123",
+            "kommun": "Järfälla",
+            "url": "https://www.jarfalla.se/",
+            "issue": null
+          },
+          {
+            "code": "0125",
+            "kommun": "Ekerö",
+            "url": "https://www.ekero.se/",
+            "issue": null
+          },
+          {
+            "code": "0126",
+            "kommun": "Huddinge",
+            "url": "https://www.huddinge.se/",
+            "issue": null
+          },
+          {
+            "code": "0127",
+            "kommun": "Botkyrka",
+            "url": "https://www.botkyrka.se/",
+            "issue": null
+          },
+          {
+            "code": "0128",
+            "kommun": "Salem",
+            "url": "https://www.salem.se/",
+            "issue": null
+          },
+          {
+            "code": "0136",
+            "kommun": "Haninge",
+            "url": "https://www.haninge.se/",
+            "issue": null
+          },
+          {
+            "code": "0138",
+            "kommun": "Tyresö",
+            "url": "https://www.tyreso.se/",
+            "issue": null
+          },
+          {
+            "code": "0139",
+            "kommun": "Upplands-Bro",
+            "url": "https://www.upplands-bro.se/",
+            "issue": null
+          },
+          {
+            "code": "0140",
+            "kommun": "Nykvarn",
+            "url": "https://www.nykvarn.se/",
+            "issue": null
+          },
+          {
+            "code": "0160",
+            "kommun": "Täby",
+            "url": "https://www.taby.se/",
+            "issue": null
+          },
+          {
+            "code": "0162",
+            "kommun": "Danderyd",
+            "url": "https://www.danderyd.se/",
+            "issue": null
+          },
+          {
+            "code": "0163",
+            "kommun": "Sollentuna",
+            "url": "https://www.sollentuna.se/",
+            "issue": null
+          },
+          {
+            "code": "0181",
+            "kommun": "Södertälje",
+            "url": "https://www.sodertalje.se/",
+            "issue": null
+          },
+          {
+            "code": "0182",
+            "kommun": "Nacka",
+            "url": "https://www.nacka.se/",
+            "issue": null
+          },
+          {
+            "code": "0183",
+            "kommun": "Sundbyberg",
+            "url": "https://www.sundbyberg.se/",
+            "issue": null
+          },
+          {
+            "code": "0184",
+            "kommun": "Solna",
+            "url": "https://www.solna.se/",
+            "issue": null
+          },
+          {
+            "code": "0186",
+            "kommun": "Lidingö",
+            "url": "https://www.lidingo.se/",
+            "issue": null
+          },
+          {
+            "code": "0187",
+            "kommun": "Vaxholm",
+            "url": "https://www.vaxholm.se/",
+            "issue": null
+          },
+          {
+            "code": "0188",
+            "kommun": "Norrtälje",
+            "url": "https://www.norrtalje.se/",
+            "issue": null
+          },
+          {
+            "code": "0191",
+            "kommun": "Sigtuna",
+            "url": "https://www.sigtuna.se/",
+            "issue": null
+          },
+          {
+            "code": "0192",
+            "kommun": "Nynäshamn",
+            "url": "https://www.nynashamn.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "03",
         "county": "Uppsala län",
         "kommuner": [
-          "Håbo",
-          "Älvkarleby",
-          "Knivsta",
-          "Heby",
-          "Tierp",
-          "Uppsala",
-          "Enköping",
-          "Östhammar"
+          {
+            "code": "0305",
+            "kommun": "Håbo",
+            "url": "https://www.habo.se/",
+            "issue": null
+          },
+          {
+            "code": "0319",
+            "kommun": "Älvkarleby",
+            "url": "https://www.alvkarleby.se/",
+            "issue": null
+          },
+          {
+            "code": "0330",
+            "kommun": "Knivsta",
+            "url": "https://www.knivsta.se/",
+            "issue": null
+          },
+          {
+            "code": "0331",
+            "kommun": "Heby",
+            "url": "https://www.heby.se/",
+            "issue": null
+          },
+          {
+            "code": "0360",
+            "kommun": "Tierp",
+            "url": "https://www.tierp.se/",
+            "issue": null
+          },
+          {
+            "code": "0380",
+            "kommun": "Uppsala",
+            "url": "https://www.uppsala.se/",
+            "issue": null
+          },
+          {
+            "code": "0381",
+            "kommun": "Enköping",
+            "url": "https://enkoping.se/",
+            "issue": null
+          },
+          {
+            "code": "0382",
+            "kommun": "Östhammar",
+            "url": "https://www.osthammar.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "04",
         "county": "Södermanlands län",
         "kommuner": [
-          "Vingåker",
-          "Gnesta",
-          "Nyköping",
-          "Oxelösund",
-          "Flen",
-          "Katrineholm",
-          "Eskilstuna",
-          "Strängnäs",
-          "Trosa"
+          {
+            "code": "0428",
+            "kommun": "Vingåker",
+            "url": "https://www.vingaker.se/",
+            "issue": null
+          },
+          {
+            "code": "0461",
+            "kommun": "Gnesta",
+            "url": "https://www.gnesta.se/",
+            "issue": null
+          },
+          {
+            "code": "0480",
+            "kommun": "Nyköping",
+            "url": "https://nykoping.se/",
+            "issue": null
+          },
+          {
+            "code": "0481",
+            "kommun": "Oxelösund",
+            "url": "https://www.oxelosund.se/",
+            "issue": null
+          },
+          {
+            "code": "0482",
+            "kommun": "Flen",
+            "url": "https://flen.se/",
+            "issue": null
+          },
+          {
+            "code": "0483",
+            "kommun": "Katrineholm",
+            "url": "https://www.katrineholm.se/",
+            "issue": null
+          },
+          {
+            "code": "0484",
+            "kommun": "Eskilstuna",
+            "url": "https://www.eskilstuna.se/",
+            "issue": null
+          },
+          {
+            "code": "0486",
+            "kommun": "Strängnäs",
+            "url": "https://www.strangnas.se/",
+            "issue": null
+          },
+          {
+            "code": "0488",
+            "kommun": "Trosa",
+            "url": "https://www.trosa.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "05",
         "county": "Östergötlands län",
         "kommuner": [
-          "Ödeshög",
-          "Ydre",
-          "Kinda",
-          "Boxholm",
-          "Åtvidaberg",
-          "Finspång",
-          "Valdemarsvik",
-          "Linköping",
-          "Norrköping",
-          "Söderköping",
-          "Motala",
-          "Vadstena",
-          "Mjölby"
+          {
+            "code": "0509",
+            "kommun": "Ödeshög",
+            "url": "https://www.odeshog.se/",
+            "issue": null
+          },
+          {
+            "code": "0512",
+            "kommun": "Ydre",
+            "url": "https://www.ydre.se/",
+            "issue": null
+          },
+          {
+            "code": "0513",
+            "kommun": "Kinda",
+            "url": "https://www.kinda.se/",
+            "issue": null
+          },
+          {
+            "code": "0560",
+            "kommun": "Boxholm",
+            "url": "https://www.boxholm.se/",
+            "issue": null
+          },
+          {
+            "code": "0561",
+            "kommun": "Åtvidaberg",
+            "url": "https://www.atvidaberg.se/",
+            "issue": null
+          },
+          {
+            "code": "0562",
+            "kommun": "Finspång",
+            "url": "https://www.finspang.se/",
+            "issue": null
+          },
+          {
+            "code": "0563",
+            "kommun": "Valdemarsvik",
+            "url": "https://www.valdemarsvik.se/",
+            "issue": null
+          },
+          {
+            "code": "0580",
+            "kommun": "Linköping",
+            "url": "https://www.linkoping.se/",
+            "issue": null
+          },
+          {
+            "code": "0581",
+            "kommun": "Norrköping",
+            "url": "https://www.norrkoping.se/",
+            "issue": null
+          },
+          {
+            "code": "0582",
+            "kommun": "Söderköping",
+            "url": "https://www.soderkoping.se/",
+            "issue": null
+          },
+          {
+            "code": "0583",
+            "kommun": "Motala",
+            "url": "https://www.motala.se/",
+            "issue": null
+          },
+          {
+            "code": "0584",
+            "kommun": "Vadstena",
+            "url": "https://www.vadstena.se/",
+            "issue": null
+          },
+          {
+            "code": "0586",
+            "kommun": "Mjölby",
+            "url": "https://www.mjolby.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "06",
         "county": "Jönköpings län",
         "kommuner": [
-          "Aneby",
-          "Gnosjö",
-          "Mullsjö",
-          "Habo",
-          "Gislaved",
-          "Vaggeryd",
-          "Jönköping",
-          "Nässjö",
-          "Värnamo",
-          "Sävsjö",
-          "Vetlanda",
-          "Eksjö",
-          "Tranås"
+          {
+            "code": "0604",
+            "kommun": "Aneby",
+            "url": "https://www.aneby.se/",
+            "issue": null
+          },
+          {
+            "code": "0617",
+            "kommun": "Gnosjö",
+            "url": "https://www.gnosjo.se/",
+            "issue": null
+          },
+          {
+            "code": "0642",
+            "kommun": "Mullsjö",
+            "url": "https://www.mullsjo.se/",
+            "issue": null
+          },
+          {
+            "code": "0643",
+            "kommun": "Habo",
+            "url": "https://www.habokommun.se/",
+            "issue": null
+          },
+          {
+            "code": "0662",
+            "kommun": "Gislaved",
+            "url": "https://www.gislaved.se/",
+            "issue": null
+          },
+          {
+            "code": "0665",
+            "kommun": "Vaggeryd",
+            "url": "https://www.vaggeryd.se/",
+            "issue": null
+          },
+          {
+            "code": "0680",
+            "kommun": "Jönköping",
+            "url": "https://www.jonkoping.se/",
+            "issue": null
+          },
+          {
+            "code": "0682",
+            "kommun": "Nässjö",
+            "url": "https://www.nassjo.se/",
+            "issue": null
+          },
+          {
+            "code": "0683",
+            "kommun": "Värnamo",
+            "url": "https://kommun.varnamo.se/",
+            "issue": null
+          },
+          {
+            "code": "0684",
+            "kommun": "Sävsjö",
+            "url": "https://www.savsjo.se/",
+            "issue": null
+          },
+          {
+            "code": "0685",
+            "kommun": "Vetlanda",
+            "url": "https://kommun.vetlanda.se/",
+            "issue": null
+          },
+          {
+            "code": "0686",
+            "kommun": "Eksjö",
+            "url": "https://www.eksjo.se/",
+            "issue": null
+          },
+          {
+            "code": "0687",
+            "kommun": "Tranås",
+            "url": "https://www.tranas.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "07",
         "county": "Kronobergs län",
         "kommuner": [
-          "Uppvidinge",
-          "Lessebo",
-          "Tingsryd",
-          "Alvesta",
-          "Älmhult",
-          "Markaryd",
-          "Växjö",
-          "Ljungby"
+          {
+            "code": "0760",
+            "kommun": "Uppvidinge",
+            "url": "https://www.uppvidinge.se/",
+            "issue": null
+          },
+          {
+            "code": "0761",
+            "kommun": "Lessebo",
+            "url": "https://www.lessebo.se/",
+            "issue": null
+          },
+          {
+            "code": "0763",
+            "kommun": "Tingsryd",
+            "url": "https://tingsryd.se/",
+            "issue": null
+          },
+          {
+            "code": "0764",
+            "kommun": "Alvesta",
+            "url": "https://www.alvesta.se/",
+            "issue": null
+          },
+          {
+            "code": "0765",
+            "kommun": "Älmhult",
+            "url": "https://www.almhult.se/",
+            "issue": null
+          },
+          {
+            "code": "0767",
+            "kommun": "Markaryd",
+            "url": "https://www.markaryd.se/",
+            "issue": null
+          },
+          {
+            "code": "0780",
+            "kommun": "Växjö",
+            "url": "https://www.vaxjo.se/",
+            "issue": null
+          },
+          {
+            "code": "0781",
+            "kommun": "Ljungby",
+            "url": "https://www.ljungby.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "08",
         "county": "Kalmar län",
         "kommuner": [
-          "Högsby",
-          "Torsås",
-          "Mörbylånga",
-          "Hultsfred",
-          "Mönsterås",
-          "Emmaboda",
-          "Kalmar",
-          "Nybro",
-          "Oskarshamn",
-          "Västervik",
-          "Vimmerby",
-          "Borgholm"
+          {
+            "code": "0821",
+            "kommun": "Högsby",
+            "url": "https://www.hogsby.se/",
+            "issue": null
+          },
+          {
+            "code": "0834",
+            "kommun": "Torsås",
+            "url": "https://www.torsas.se/",
+            "issue": null
+          },
+          {
+            "code": "0840",
+            "kommun": "Mörbylånga",
+            "url": "https://www.morbylanga.se/",
+            "issue": null
+          },
+          {
+            "code": "0860",
+            "kommun": "Hultsfred",
+            "url": "https://www.hultsfred.se/",
+            "issue": null
+          },
+          {
+            "code": "0861",
+            "kommun": "Mönsterås",
+            "url": "https://www.monsteras.se/",
+            "issue": null
+          },
+          {
+            "code": "0862",
+            "kommun": "Emmaboda",
+            "url": "https://www.emmaboda.se/",
+            "issue": null
+          },
+          {
+            "code": "0880",
+            "kommun": "Kalmar",
+            "url": "https://kalmar.se/",
+            "issue": null
+          },
+          {
+            "code": "0881",
+            "kommun": "Nybro",
+            "url": "https://www.nybro.se/",
+            "issue": null
+          },
+          {
+            "code": "0882",
+            "kommun": "Oskarshamn",
+            "url": "https://www.oskarshamn.se/",
+            "issue": null
+          },
+          {
+            "code": "0883",
+            "kommun": "Västervik",
+            "url": "https://www.vastervik.se/",
+            "issue": null
+          },
+          {
+            "code": "0884",
+            "kommun": "Vimmerby",
+            "url": "https://www.vimmerby.se/",
+            "issue": null
+          },
+          {
+            "code": "0885",
+            "kommun": "Borgholm",
+            "url": "https://www.borgholm.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "09",
         "county": "Gotlands län",
         "kommuner": [
-          "Gotland"
+          {
+            "code": "0980",
+            "kommun": "Gotland",
+            "url": "https://www.gotland.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "10",
         "county": "Blekinge län",
         "kommuner": [
-          "Olofström",
-          "Karlskrona",
-          "Ronneby",
-          "Karlshamn",
-          "Sölvesborg"
+          {
+            "code": "1060",
+            "kommun": "Olofström",
+            "url": "https://www.olofstrom.se/",
+            "issue": null
+          },
+          {
+            "code": "1080",
+            "kommun": "Karlskrona",
+            "url": "https://www.karlskrona.se/",
+            "issue": null
+          },
+          {
+            "code": "1081",
+            "kommun": "Ronneby",
+            "url": "https://www.ronneby.se/",
+            "issue": null
+          },
+          {
+            "code": "1082",
+            "kommun": "Karlshamn",
+            "url": "https://www.karlshamn.se/",
+            "issue": null
+          },
+          {
+            "code": "1083",
+            "kommun": "Sölvesborg",
+            "url": "https://www.solvesborg.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "12",
         "county": "Skåne län",
         "kommuner": [
-          "Svalöv",
-          "Staffanstorp",
-          "Burlöv",
-          "Vellinge",
-          "Östra Göinge",
-          "Örkelljunga",
-          "Bjuv",
-          "Kävlinge",
-          "Lomma",
-          "Svedala",
-          "Skurup",
-          "Sjöbo",
-          "Hörby",
-          "Höör",
-          "Tomelilla",
-          "Bromölla",
-          "Osby",
-          "Perstorp",
-          "Klippan",
-          "Åstorp",
-          "Båstad",
-          "Lund",
-          "Landskrona",
-          "Helsingborg",
-          "Höganäs",
-          "Eslöv",
-          "Ystad",
-          "Trelleborg",
-          "Kristianstad",
-          "Simrishamn",
-          "Ängelholm",
-          "Hässleholm"
+          {
+            "code": "1214",
+            "kommun": "Svalöv",
+            "url": "https://www.svalov.se/",
+            "issue": null
+          },
+          {
+            "code": "1230",
+            "kommun": "Staffanstorp",
+            "url": "https://www.staffanstorp.se/",
+            "issue": null
+          },
+          {
+            "code": "1231",
+            "kommun": "Burlöv",
+            "url": "https://burlov.se/",
+            "issue": null
+          },
+          {
+            "code": "1233",
+            "kommun": "Vellinge",
+            "url": "https://www.vellinge.se/",
+            "issue": null
+          },
+          {
+            "code": "1256",
+            "kommun": "Östra Göinge",
+            "url": "https://www.ostragoinge.se/",
+            "issue": null
+          },
+          {
+            "code": "1257",
+            "kommun": "Örkelljunga",
+            "url": "https://www.orkelljunga.se/",
+            "issue": null
+          },
+          {
+            "code": "1260",
+            "kommun": "Bjuv",
+            "url": "https://www.bjuv.se/",
+            "issue": null
+          },
+          {
+            "code": "1261",
+            "kommun": "Kävlinge",
+            "url": "https://www.kavlinge.se/",
+            "issue": null
+          },
+          {
+            "code": "1262",
+            "kommun": "Lomma",
+            "url": "https://lomma.se/",
+            "issue": null
+          },
+          {
+            "code": "1263",
+            "kommun": "Svedala",
+            "url": "https://www.svedala.se/",
+            "issue": null
+          },
+          {
+            "code": "1264",
+            "kommun": "Skurup",
+            "url": "https://www.skurup.se/",
+            "issue": null
+          },
+          {
+            "code": "1265",
+            "kommun": "Sjöbo",
+            "url": "https://www.sjobo.se/",
+            "issue": null
+          },
+          {
+            "code": "1266",
+            "kommun": "Hörby",
+            "url": "https://www.horby.se/",
+            "issue": null
+          },
+          {
+            "code": "1267",
+            "kommun": "Höör",
+            "url": "https://www.hoor.se/",
+            "issue": null
+          },
+          {
+            "code": "1270",
+            "kommun": "Tomelilla",
+            "url": "https://www.tomelilla.se/",
+            "issue": null
+          },
+          {
+            "code": "1272",
+            "kommun": "Bromölla",
+            "url": "https://www.bromolla.se/",
+            "issue": null
+          },
+          {
+            "code": "1273",
+            "kommun": "Osby",
+            "url": "https://www.osby.se/",
+            "issue": null
+          },
+          {
+            "code": "1275",
+            "kommun": "Perstorp",
+            "url": "https://www.perstorp.se/",
+            "issue": null
+          },
+          {
+            "code": "1276",
+            "kommun": "Klippan",
+            "url": "https://www.klippan.se/",
+            "issue": null
+          },
+          {
+            "code": "1277",
+            "kommun": "Åstorp",
+            "url": "https://www.astorp.se/",
+            "issue": null
+          },
+          {
+            "code": "1278",
+            "kommun": "Båstad",
+            "url": "https://www.bastad.se/",
+            "issue": null
+          },
+          {
+            "code": "1281",
+            "kommun": "Lund",
+            "url": "https://www.lund.se/",
+            "issue": null
+          },
+          {
+            "code": "1282",
+            "kommun": "Landskrona",
+            "url": "https://www.landskrona.se/",
+            "issue": null
+          },
+          {
+            "code": "1283",
+            "kommun": "Helsingborg",
+            "url": "https://www.helsingborg.se/",
+            "issue": null
+          },
+          {
+            "code": "1284",
+            "kommun": "Höganäs",
+            "url": "https://www.hoganas.se/",
+            "issue": null
+          },
+          {
+            "code": "1285",
+            "kommun": "Eslöv",
+            "url": "https://www.eslov.se/",
+            "issue": null
+          },
+          {
+            "code": "1286",
+            "kommun": "Ystad",
+            "url": "https://www.ystad.se/",
+            "issue": null
+          },
+          {
+            "code": "1287",
+            "kommun": "Trelleborg",
+            "url": "https://www.trelleborg.se/",
+            "issue": null
+          },
+          {
+            "code": "1290",
+            "kommun": "Kristianstad",
+            "url": "https://www.kristianstad.se/",
+            "issue": null
+          },
+          {
+            "code": "1291",
+            "kommun": "Simrishamn",
+            "url": "https://www.simrishamn.se/",
+            "issue": null
+          },
+          {
+            "code": "1292",
+            "kommun": "Ängelholm",
+            "url": "https://www.angelholm.se/",
+            "issue": null
+          },
+          {
+            "code": "1293",
+            "kommun": "Hässleholm",
+            "url": "https://www.hassleholm.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "13",
         "county": "Hallands län",
         "kommuner": [
-          "Hylte",
-          "Halmstad",
-          "Laholm",
-          "Falkenberg",
-          "Varberg",
-          "Kungsbacka"
+          {
+            "code": "1315",
+            "kommun": "Hylte",
+            "url": "https://www.hylte.se/",
+            "issue": null
+          },
+          {
+            "code": "1380",
+            "kommun": "Halmstad",
+            "url": "https://www.halmstad.se/",
+            "issue": null
+          },
+          {
+            "code": "1381",
+            "kommun": "Laholm",
+            "url": "https://www.laholm.se/",
+            "issue": null
+          },
+          {
+            "code": "1382",
+            "kommun": "Falkenberg",
+            "url": "https://kommun.falkenberg.se/",
+            "issue": null
+          },
+          {
+            "code": "1383",
+            "kommun": "Varberg",
+            "url": "https://www.varberg.se/",
+            "issue": null
+          },
+          {
+            "code": "1384",
+            "kommun": "Kungsbacka",
+            "url": "https://www.kungsbacka.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "14",
         "county": "Västra Götalands län",
         "kommuner": [
-          "Härryda",
-          "Partille",
-          "Öckerö",
-          "Stenungsund",
-          "Tjörn",
-          "Orust",
-          "Sotenäs",
-          "Munkedal",
-          "Tanum",
-          "Dals-Ed",
-          "Färgelanda",
-          "Ale",
-          "Lerum",
-          "Vårgårda",
-          "Bollebygd",
-          "Grästorp",
-          "Essunga",
-          "Karlsborg",
-          "Gullspång",
-          "Tranemo",
-          "Bengtsfors",
-          "Mellerud",
-          "Lilla Edet",
-          "Mark",
-          "Svenljunga",
-          "Herrljunga",
-          "Vara",
-          "Götene",
-          "Tibro",
-          "Töreboda",
-          "Mölndal",
-          "Kungälv",
-          "Lysekil",
-          "Uddevalla",
-          "Strömstad",
-          "Vänersborg",
-          "Trollhättan",
-          "Alingsås",
-          "Borås",
-          "Ulricehamn",
-          "Åmål",
-          "Mariestad",
-          "Lidköping",
-          "Skara",
-          "Skövde",
-          "Hjo",
-          "Tidaholm",
-          "Falköping"
+          {
+            "code": "1401",
+            "kommun": "Härryda",
+            "url": "https://www.harryda.se/",
+            "issue": null
+          },
+          {
+            "code": "1402",
+            "kommun": "Partille",
+            "url": "https://www.partille.se/",
+            "issue": null
+          },
+          {
+            "code": "1407",
+            "kommun": "Öckerö",
+            "url": "https://www.ockero.se/",
+            "issue": null
+          },
+          {
+            "code": "1415",
+            "kommun": "Stenungsund",
+            "url": "https://www.stenungsund.se/",
+            "issue": null
+          },
+          {
+            "code": "1419",
+            "kommun": "Tjörn",
+            "url": "https://tjorn.se/",
+            "issue": null
+          },
+          {
+            "code": "1421",
+            "kommun": "Orust",
+            "url": "https://www.orust.se/",
+            "issue": null
+          },
+          {
+            "code": "1427",
+            "kommun": "Sotenäs",
+            "url": "https://www.sotenas.se/",
+            "issue": null
+          },
+          {
+            "code": "1430",
+            "kommun": "Munkedal",
+            "url": "https://www.munkedal.se/",
+            "issue": null
+          },
+          {
+            "code": "1435",
+            "kommun": "Tanum",
+            "url": "https://www.tanum.se/",
+            "issue": null
+          },
+          {
+            "code": "1438",
+            "kommun": "Dals-Ed",
+            "url": "https://www.dalsed.se/",
+            "issue": null
+          },
+          {
+            "code": "1439",
+            "kommun": "Färgelanda",
+            "url": "https://www.fargelanda.se/",
+            "issue": null
+          },
+          {
+            "code": "1440",
+            "kommun": "Ale",
+            "url": "https://www.ale.se/",
+            "issue": null
+          },
+          {
+            "code": "1441",
+            "kommun": "Lerum",
+            "url": "https://www.lerum.se/",
+            "issue": null
+          },
+          {
+            "code": "1442",
+            "kommun": "Vårgårda",
+            "url": "https://www.vargarda.se/",
+            "issue": null
+          },
+          {
+            "code": "1443",
+            "kommun": "Bollebygd",
+            "url": "https://www.bollebygd.se/",
+            "issue": null
+          },
+          {
+            "code": "1444",
+            "kommun": "Grästorp",
+            "url": "https://www.grastorp.se/",
+            "issue": null
+          },
+          {
+            "code": "1445",
+            "kommun": "Essunga",
+            "url": "https://www.essunga.se/",
+            "issue": null
+          },
+          {
+            "code": "1446",
+            "kommun": "Karlsborg",
+            "url": "https://www.karlsborg.se/",
+            "issue": null
+          },
+          {
+            "code": "1447",
+            "kommun": "Gullspång",
+            "url": "https://gullspang.se/",
+            "issue": null
+          },
+          {
+            "code": "1452",
+            "kommun": "Tranemo",
+            "url": "https://www.tranemo.se/",
+            "issue": null
+          },
+          {
+            "code": "1460",
+            "kommun": "Bengtsfors",
+            "url": "https://www.bengtsfors.se/",
+            "issue": null
+          },
+          {
+            "code": "1461",
+            "kommun": "Mellerud",
+            "url": "https://www.mellerud.se/",
+            "issue": null
+          },
+          {
+            "code": "1462",
+            "kommun": "Lilla Edet",
+            "url": "https://www.lillaedet.se/",
+            "issue": null
+          },
+          {
+            "code": "1463",
+            "kommun": "Mark",
+            "url": "https://www.mark.se/",
+            "issue": null
+          },
+          {
+            "code": "1465",
+            "kommun": "Svenljunga",
+            "url": "https://www.svenljunga.se/",
+            "issue": null
+          },
+          {
+            "code": "1466",
+            "kommun": "Herrljunga",
+            "url": "https://www.herrljunga.se/",
+            "issue": null
+          },
+          {
+            "code": "1470",
+            "kommun": "Vara",
+            "url": "https://www.vara.se/",
+            "issue": null
+          },
+          {
+            "code": "1471",
+            "kommun": "Götene",
+            "url": "https://www.gotene.se/",
+            "issue": null
+          },
+          {
+            "code": "1472",
+            "kommun": "Tibro",
+            "url": "https://www.tibro.se/",
+            "issue": null
+          },
+          {
+            "code": "1473",
+            "kommun": "Töreboda",
+            "url": "https://toreboda.se/",
+            "issue": null
+          },
+          {
+            "code": "1481",
+            "kommun": "Mölndal",
+            "url": "https://www.molndal.se/",
+            "issue": null
+          },
+          {
+            "code": "1482",
+            "kommun": "Kungälv",
+            "url": "https://www.kungalv.se/",
+            "issue": null
+          },
+          {
+            "code": "1484",
+            "kommun": "Lysekil",
+            "url": "https://www.lysekil.se/",
+            "issue": null
+          },
+          {
+            "code": "1485",
+            "kommun": "Uddevalla",
+            "url": "https://www.uddevalla.se/",
+            "issue": null
+          },
+          {
+            "code": "1486",
+            "kommun": "Strömstad",
+            "url": "https://www.stromstad.se/",
+            "issue": null
+          },
+          {
+            "code": "1487",
+            "kommun": "Vänersborg",
+            "url": "https://www.vanersborg.se/",
+            "issue": null
+          },
+          {
+            "code": "1488",
+            "kommun": "Trollhättan",
+            "url": "https://www.trollhattan.se/",
+            "issue": null
+          },
+          {
+            "code": "1489",
+            "kommun": "Alingsås",
+            "url": "https://www.alingsas.se/",
+            "issue": null
+          },
+          {
+            "code": "1490",
+            "kommun": "Borås",
+            "url": "https://www.boras.se/",
+            "issue": null
+          },
+          {
+            "code": "1491",
+            "kommun": "Ulricehamn",
+            "url": "https://www.ulricehamn.se/",
+            "issue": null
+          },
+          {
+            "code": "1492",
+            "kommun": "Åmål",
+            "url": "https://www.amal.se/",
+            "issue": null
+          },
+          {
+            "code": "1493",
+            "kommun": "Mariestad",
+            "url": "https://mariestad.se/",
+            "issue": null
+          },
+          {
+            "code": "1494",
+            "kommun": "Lidköping",
+            "url": "https://lidkoping.se/",
+            "issue": null
+          },
+          {
+            "code": "1495",
+            "kommun": "Skara",
+            "url": "https://www.skara.se/",
+            "issue": null
+          },
+          {
+            "code": "1496",
+            "kommun": "Skövde",
+            "url": "https://www.skovde.se/",
+            "issue": null
+          },
+          {
+            "code": "1497",
+            "kommun": "Hjo",
+            "url": "https://www.hjo.se/",
+            "issue": null
+          },
+          {
+            "code": "1498",
+            "kommun": "Tidaholm",
+            "url": "https://www.tidaholm.se/",
+            "issue": null
+          },
+          {
+            "code": "1499",
+            "kommun": "Falköping",
+            "url": "https://www.falkoping.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "17",
         "county": "Värmlands län",
         "kommuner": [
-          "Kil",
-          "Eda",
-          "Torsby",
-          "Storfors",
-          "Hammarö",
-          "Munkfors",
-          "Forshaga",
-          "Grums",
-          "Årjäng",
-          "Sunne",
-          "Karlstad",
-          "Kristinehamn",
-          "Filipstad",
-          "Hagfors",
-          "Arvika",
-          "Säffle"
+          {
+            "code": "1715",
+            "kommun": "Kil",
+            "url": "https://www.kil.se/",
+            "issue": null
+          },
+          {
+            "code": "1730",
+            "kommun": "Eda",
+            "url": "https://www.eda.se/",
+            "issue": null
+          },
+          {
+            "code": "1737",
+            "kommun": "Torsby",
+            "url": "https://www.torsby.se/",
+            "issue": null
+          },
+          {
+            "code": "1760",
+            "kommun": "Storfors",
+            "url": "https://www.storfors.se/",
+            "issue": null
+          },
+          {
+            "code": "1761",
+            "kommun": "Hammarö",
+            "url": "https://www.hammaro.se/",
+            "issue": null
+          },
+          {
+            "code": "1762",
+            "kommun": "Munkfors",
+            "url": "https://www.munkfors.se/",
+            "issue": null
+          },
+          {
+            "code": "1763",
+            "kommun": "Forshaga",
+            "url": "https://www.forshaga.se/",
+            "issue": null
+          },
+          {
+            "code": "1764",
+            "kommun": "Grums",
+            "url": "https://www.grums.se/",
+            "issue": null
+          },
+          {
+            "code": "1765",
+            "kommun": "Årjäng",
+            "url": "https://www.arjang.se/",
+            "issue": null
+          },
+          {
+            "code": "1766",
+            "kommun": "Sunne",
+            "url": "https://www.sunne.se/",
+            "issue": null
+          },
+          {
+            "code": "1780",
+            "kommun": "Karlstad",
+            "url": "https://karlstad.se/",
+            "issue": null
+          },
+          {
+            "code": "1781",
+            "kommun": "Kristinehamn",
+            "url": "https://www.kristinehamn.se/",
+            "issue": null
+          },
+          {
+            "code": "1782",
+            "kommun": "Filipstad",
+            "url": "https://www.filipstad.se/",
+            "issue": null
+          },
+          {
+            "code": "1783",
+            "kommun": "Hagfors",
+            "url": "https://www.hagfors.se/",
+            "issue": null
+          },
+          {
+            "code": "1784",
+            "kommun": "Arvika",
+            "url": "https://www.arvika.se/",
+            "issue": null
+          },
+          {
+            "code": "1785",
+            "kommun": "Säffle",
+            "url": "https://www.saffle.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "18",
         "county": "Örebro län",
         "kommuner": [
-          "Lekeberg",
-          "Laxå",
-          "Hallsberg",
-          "Degerfors",
-          "Hällefors",
-          "Ljusnarsberg",
-          "Örebro",
-          "Kumla",
-          "Askersund",
-          "Karlskoga",
-          "Nora",
-          "Lindesberg"
+          {
+            "code": "1814",
+            "kommun": "Lekeberg",
+            "url": "https://www.lekeberg.se/",
+            "issue": null
+          },
+          {
+            "code": "1860",
+            "kommun": "Laxå",
+            "url": "https://www.laxa.se/",
+            "issue": null
+          },
+          {
+            "code": "1861",
+            "kommun": "Hallsberg",
+            "url": "https://www.hallsberg.se/",
+            "issue": null
+          },
+          {
+            "code": "1862",
+            "kommun": "Degerfors",
+            "url": "https://www.degerfors.se/",
+            "issue": null
+          },
+          {
+            "code": "1863",
+            "kommun": "Hällefors",
+            "url": "https://www.hellefors.se/",
+            "issue": null
+          },
+          {
+            "code": "1864",
+            "kommun": "Ljusnarsberg",
+            "url": "https://www.ljusnarsberg.se/",
+            "issue": null
+          },
+          {
+            "code": "1880",
+            "kommun": "Örebro",
+            "url": "https://www.orebro.se/",
+            "issue": null
+          },
+          {
+            "code": "1881",
+            "kommun": "Kumla",
+            "url": "https://www.kumla.se/",
+            "issue": null
+          },
+          {
+            "code": "1882",
+            "kommun": "Askersund",
+            "url": "https://www.askersund.se/",
+            "issue": null
+          },
+          {
+            "code": "1883",
+            "kommun": "Karlskoga",
+            "url": "https://www.karlskoga.se/",
+            "issue": null
+          },
+          {
+            "code": "1884",
+            "kommun": "Nora",
+            "url": "https://www.nora.se/",
+            "issue": null
+          },
+          {
+            "code": "1885",
+            "kommun": "Lindesberg",
+            "url": "https://www.lindesberg.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "19",
         "county": "Västmanlands län",
         "kommuner": [
-          "Skinnskatteberg",
-          "Surahammar",
-          "Kungsör",
-          "Hallstahammar",
-          "Norberg",
-          "Västerås",
-          "Sala",
-          "Fagersta",
-          "Köping",
-          "Arboga"
+          {
+            "code": "1904",
+            "kommun": "Skinnskatteberg",
+            "url": "https://www.skinnskatteberg.se/",
+            "issue": null
+          },
+          {
+            "code": "1907",
+            "kommun": "Surahammar",
+            "url": "https://www.surahammar.se/",
+            "issue": null
+          },
+          {
+            "code": "1960",
+            "kommun": "Kungsör",
+            "url": "https://www.kungsor.se/",
+            "issue": null
+          },
+          {
+            "code": "1961",
+            "kommun": "Hallstahammar",
+            "url": "https://www.hallstahammar.se/",
+            "issue": null
+          },
+          {
+            "code": "1962",
+            "kommun": "Norberg",
+            "url": "https://www.norberg.se/",
+            "issue": null
+          },
+          {
+            "code": "1980",
+            "kommun": "Västerås",
+            "url": "https://www.vasteras.se/",
+            "issue": null
+          },
+          {
+            "code": "1981",
+            "kommun": "Sala",
+            "url": "https://www.sala.se/",
+            "issue": null
+          },
+          {
+            "code": "1982",
+            "kommun": "Fagersta",
+            "url": "https://www.fagersta.se/",
+            "issue": null
+          },
+          {
+            "code": "1983",
+            "kommun": "Köping",
+            "url": "https://www.koping.se/",
+            "issue": null
+          },
+          {
+            "code": "1984",
+            "kommun": "Arboga",
+            "url": "https://www.arboga.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "20",
         "county": "Dalarnas län",
         "kommuner": [
-          "Vansbro",
-          "Malung-Sälen",
-          "Gagnef",
-          "Leksand",
-          "Rättvik",
-          "Orsa",
-          "Älvdalen",
-          "Smedjebacken",
-          "Mora",
-          "Falun",
-          "Borlänge",
-          "Säter",
-          "Hedemora",
-          "Avesta",
-          "Ludvika"
+          {
+            "code": "2021",
+            "kommun": "Vansbro",
+            "url": "https://www.vansbro.se/",
+            "issue": null
+          },
+          {
+            "code": "2023",
+            "kommun": "Malung-Sälen",
+            "url": "https://www.malung-salen.se/",
+            "issue": null
+          },
+          {
+            "code": "2026",
+            "kommun": "Gagnef",
+            "url": "https://www.gagnef.se/",
+            "issue": null
+          },
+          {
+            "code": "2029",
+            "kommun": "Leksand",
+            "url": "https://www.leksand.se/",
+            "issue": null
+          },
+          {
+            "code": "2031",
+            "kommun": "Rättvik",
+            "url": "https://www.rattvik.se/",
+            "issue": null
+          },
+          {
+            "code": "2034",
+            "kommun": "Orsa",
+            "url": "https://www.orsa.se/",
+            "issue": null
+          },
+          {
+            "code": "2039",
+            "kommun": "Älvdalen",
+            "url": "https://www.alvdalen.se/",
+            "issue": null
+          },
+          {
+            "code": "2061",
+            "kommun": "Smedjebacken",
+            "url": "https://www.smedjebacken.se/",
+            "issue": null
+          },
+          {
+            "code": "2062",
+            "kommun": "Mora",
+            "url": "https://morakommun.se/",
+            "issue": null
+          },
+          {
+            "code": "2080",
+            "kommun": "Falun",
+            "url": "https://www.falun.se/",
+            "issue": null
+          },
+          {
+            "code": "2081",
+            "kommun": "Borlänge",
+            "url": "https://www.borlange.se/",
+            "issue": null
+          },
+          {
+            "code": "2082",
+            "kommun": "Säter",
+            "url": "https://www.sater.se/",
+            "issue": null
+          },
+          {
+            "code": "2083",
+            "kommun": "Hedemora",
+            "url": "https://www.hedemora.se/",
+            "issue": null
+          },
+          {
+            "code": "2084",
+            "kommun": "Avesta",
+            "url": "https://www.avesta.se/",
+            "issue": null
+          },
+          {
+            "code": "2085",
+            "kommun": "Ludvika",
+            "url": "https://www.ludvika.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "21",
         "county": "Gävleborgs län",
         "kommuner": [
-          "Ockelbo",
-          "Hofors",
-          "Ovanåker",
-          "Nordanstig",
-          "Ljusdal",
-          "Gävle",
-          "Sandviken",
-          "Söderhamn",
-          "Bollnäs",
-          "Hudiksvall"
+          {
+            "code": "2101",
+            "kommun": "Ockelbo",
+            "url": "https://ockelbo.se/",
+            "issue": null
+          },
+          {
+            "code": "2104",
+            "kommun": "Hofors",
+            "url": "https://www.hofors.se/",
+            "issue": null
+          },
+          {
+            "code": "2121",
+            "kommun": "Ovanåker",
+            "url": "https://www.ovanaker.se/",
+            "issue": null
+          },
+          {
+            "code": "2132",
+            "kommun": "Nordanstig",
+            "url": "https://www.nordanstig.se/",
+            "issue": null
+          },
+          {
+            "code": "2161",
+            "kommun": "Ljusdal",
+            "url": "https://www.ljusdal.se/",
+            "issue": null
+          },
+          {
+            "code": "2180",
+            "kommun": "Gävle",
+            "url": "https://www.gavle.se/",
+            "issue": null
+          },
+          {
+            "code": "2181",
+            "kommun": "Sandviken",
+            "url": "https://sandviken.se/",
+            "issue": null
+          },
+          {
+            "code": "2182",
+            "kommun": "Söderhamn",
+            "url": "https://www.soderhamn.se/",
+            "issue": null
+          },
+          {
+            "code": "2183",
+            "kommun": "Bollnäs",
+            "url": "https://www.bollnas.se/",
+            "issue": null
+          },
+          {
+            "code": "2184",
+            "kommun": "Hudiksvall",
+            "url": "https://www.hudiksvall.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "22",
         "county": "Västernorrlands län",
         "kommuner": [
-          "Ånge",
-          "Timrå",
-          "Härnösand",
-          "Sundsvall",
-          "Kramfors",
-          "Sollefteå",
-          "Örnsköldsvik"
+          {
+            "code": "2260",
+            "kommun": "Ånge",
+            "url": "https://www.ange.se/",
+            "issue": null
+          },
+          {
+            "code": "2262",
+            "kommun": "Timrå",
+            "url": "https://www.timra.se/",
+            "issue": null
+          },
+          {
+            "code": "2280",
+            "kommun": "Härnösand",
+            "url": "https://www.harnosand.se/",
+            "issue": null
+          },
+          {
+            "code": "2281",
+            "kommun": "Sundsvall",
+            "url": "https://www.sundsvall.se/",
+            "issue": null
+          },
+          {
+            "code": "2282",
+            "kommun": "Kramfors",
+            "url": "https://www.kramfors.se/",
+            "issue": null
+          },
+          {
+            "code": "2283",
+            "kommun": "Sollefteå",
+            "url": "https://www.solleftea.se/",
+            "issue": null
+          },
+          {
+            "code": "2284",
+            "kommun": "Örnsköldsvik",
+            "url": "https://www.ornskoldsvik.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "23",
         "county": "Jämtlands län",
         "kommuner": [
-          "Ragunda",
-          "Bräcke",
-          "Krokom",
-          "Strömsund",
-          "Åre",
-          "Berg",
-          "Härjedalen",
-          "Östersund"
+          {
+            "code": "2303",
+            "kommun": "Ragunda",
+            "url": "https://www.ragunda.se/",
+            "issue": null
+          },
+          {
+            "code": "2305",
+            "kommun": "Bräcke",
+            "url": "https://www.bracke.se/",
+            "issue": null
+          },
+          {
+            "code": "2309",
+            "kommun": "Krokom",
+            "url": "https://www.krokom.se/",
+            "issue": null
+          },
+          {
+            "code": "2313",
+            "kommun": "Strömsund",
+            "url": "https://www.stromsund.se/",
+            "issue": null
+          },
+          {
+            "code": "2321",
+            "kommun": "Åre",
+            "url": "https://www.are.se/",
+            "issue": null
+          },
+          {
+            "code": "2326",
+            "kommun": "Berg",
+            "url": "https://www.berg.se/",
+            "issue": null
+          },
+          {
+            "code": "2361",
+            "kommun": "Härjedalen",
+            "url": "https://www.herjedalen.se/",
+            "issue": null
+          },
+          {
+            "code": "2380",
+            "kommun": "Östersund",
+            "url": "https://www.ostersund.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "24",
         "county": "Västerbottens län",
         "kommuner": [
-          "Nordmaling",
-          "Bjurholm",
-          "Vindeln",
-          "Robertsfors",
-          "Norsjö",
-          "Malå",
-          "Storuman",
-          "Sorsele",
-          "Dorotea",
-          "Vännäs",
-          "Vilhelmina",
-          "Åsele",
-          "Umeå",
-          "Lycksele",
-          "Skellefteå"
+          {
+            "code": "2401",
+            "kommun": "Nordmaling",
+            "url": "https://www.nordmaling.se/",
+            "issue": null
+          },
+          {
+            "code": "2403",
+            "kommun": "Bjurholm",
+            "url": "https://www.bjurholm.se/",
+            "issue": null
+          },
+          {
+            "code": "2404",
+            "kommun": "Vindeln",
+            "url": "https://www.vindeln.se/",
+            "issue": null
+          },
+          {
+            "code": "2409",
+            "kommun": "Robertsfors",
+            "url": "https://www.robertsfors.se/",
+            "issue": null
+          },
+          {
+            "code": "2417",
+            "kommun": "Norsjö",
+            "url": "https://www.norsjo.se/",
+            "issue": null
+          },
+          {
+            "code": "2418",
+            "kommun": "Malå",
+            "url": "https://www.mala.se/",
+            "issue": null
+          },
+          {
+            "code": "2421",
+            "kommun": "Storuman",
+            "url": "https://www.storuman.se/",
+            "issue": null
+          },
+          {
+            "code": "2422",
+            "kommun": "Sorsele",
+            "url": "https://www.sorsele.se/",
+            "issue": null
+          },
+          {
+            "code": "2425",
+            "kommun": "Dorotea",
+            "url": "https://www.dorotea.se/",
+            "issue": null
+          },
+          {
+            "code": "2460",
+            "kommun": "Vännäs",
+            "url": "https://www.vannas.se/",
+            "issue": null
+          },
+          {
+            "code": "2462",
+            "kommun": "Vilhelmina",
+            "url": "https://www.vilhelmina.se/",
+            "issue": null
+          },
+          {
+            "code": "2463",
+            "kommun": "Åsele",
+            "url": "https://www.asele.se/",
+            "issue": null
+          },
+          {
+            "code": "2480",
+            "kommun": "Umeå",
+            "url": "https://www.umea.se/",
+            "issue": null
+          },
+          {
+            "code": "2481",
+            "kommun": "Lycksele",
+            "url": "https://www.lycksele.se/",
+            "issue": null
+          },
+          {
+            "code": "2482",
+            "kommun": "Skellefteå",
+            "url": "https://www.skelleftea.se/",
+            "issue": null
+          }
         ]
       },
       {
         "region_code": "25",
         "county": "Norrbottens län",
         "kommuner": [
-          "Arvidsjaur",
-          "Arjeplog",
-          "Jokkmokk",
-          "Överkalix",
-          "Kalix",
-          "Övertorneå",
-          "Pajala",
-          "Gällivare",
-          "Älvsbyn",
-          "Luleå",
-          "Piteå",
-          "Boden",
-          "Haparanda",
-          "Kiruna"
+          {
+            "code": "2505",
+            "kommun": "Arvidsjaur",
+            "url": "https://www.arvidsjaur.se/",
+            "issue": null
+          },
+          {
+            "code": "2506",
+            "kommun": "Arjeplog",
+            "url": "https://www.arjeplog.se/",
+            "issue": null
+          },
+          {
+            "code": "2510",
+            "kommun": "Jokkmokk",
+            "url": "https://www.jokkmokk.se/",
+            "issue": null
+          },
+          {
+            "code": "2513",
+            "kommun": "Överkalix",
+            "url": "https://www.overkalix.se/",
+            "issue": null
+          },
+          {
+            "code": "2514",
+            "kommun": "Kalix",
+            "url": "https://www.kalix.se/",
+            "issue": null
+          },
+          {
+            "code": "2518",
+            "kommun": "Övertorneå",
+            "url": "https://www.overtornea.se/",
+            "issue": null
+          },
+          {
+            "code": "2521",
+            "kommun": "Pajala",
+            "url": "https://www.pajala.se/",
+            "issue": null
+          },
+          {
+            "code": "2523",
+            "kommun": "Gällivare",
+            "url": "https://gallivare.se/",
+            "issue": null
+          },
+          {
+            "code": "2560",
+            "kommun": "Älvsbyn",
+            "url": "https://www.alvsbyn.se/",
+            "issue": null
+          },
+          {
+            "code": "2580",
+            "kommun": "Luleå",
+            "url": "https://www.lulea.se/",
+            "issue": null
+          },
+          {
+            "code": "2581",
+            "kommun": "Piteå",
+            "url": "https://www.pitea.se/",
+            "issue": null
+          },
+          {
+            "code": "2582",
+            "kommun": "Boden",
+            "url": "https://www.boden.se/",
+            "issue": null
+          },
+          {
+            "code": "2583",
+            "kommun": "Haparanda",
+            "url": "https://www.haparanda.se/",
+            "issue": null
+          },
+          {
+            "code": "2584",
+            "kommun": "Kiruna",
+            "url": "https://kiruna.se/",
+            "issue": null
+          }
         ]
       }
     ]
@@ -1439,87 +3105,209 @@
     {
       "code": "HDO",
       "court": "Högsta domstolen",
-      "documents": 5262
+      "status": "collected",
+      "documents": 5262,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HDO%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "ADO",
       "court": "Arbetsdomstolen",
-      "documents": 2035
+      "status": "collected",
+      "documents": 2035,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522ADO%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "REGR",
       "court": "Regeringsrätten",
-      "documents": 1726
+      "status": "collected",
+      "documents": 1726,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522REGR%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "HSV",
       "court": "Svea hovrätt",
-      "documents": 1388
+      "status": "collected",
+      "documents": 1388,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HSV%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "HFD",
       "court": "Högsta förvaltningsdomstolen",
-      "documents": 1231
+      "status": "collected",
+      "documents": 1231,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HFD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "MMOD",
       "court": "Mark- och miljööverdomstolen",
-      "documents": 730
+      "status": "collected",
+      "documents": 730,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MMOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "MOD",
       "court": "Miljööverdomstolen",
-      "documents": 709
+      "status": "collected",
+      "documents": 709,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "HVS",
       "court": "Hovrätten för Västra Sverige",
-      "documents": 627
+      "status": "collected",
+      "documents": 627,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HVS%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "MIOD",
       "court": "Migrationsöverdomstolen",
-      "documents": 534
+      "status": "collected",
+      "documents": 534,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MIOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "HSB",
       "court": "Hovrätten över Skåne och Blekinge",
-      "documents": 510
+      "status": "collected",
+      "documents": 510,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HSB%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "HGO",
       "court": "Göta hovrätt",
-      "documents": 447
+      "status": "collected",
+      "documents": 447,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HGO%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "MDO",
       "court": "Marknadsdomstolen",
-      "documents": 343
+      "status": "collected",
+      "documents": 343,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MDO%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "HYOD",
       "court": "Svea hovrätts hyresrättsliga avgöranden",
-      "documents": 244
+      "status": "collected",
+      "documents": 244,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HYOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "PMOD",
       "court": "Patent- och marknadsöverdomstolen",
-      "documents": 203
+      "status": "collected",
+      "documents": 203,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522PMOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "HNN",
       "court": "Hovrätten för Nedre Norrland",
-      "documents": 200
+      "status": "collected",
+      "documents": 200,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HNN%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "HON",
       "court": "Hovrätten för Övre Norrland",
-      "documents": 168
+      "status": "collected",
+      "documents": 168,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HON%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     },
     {
       "code": "KST",
       "court": "Kammarrätten i Stockholm",
-      "documents": 33
+      "status": "collected",
+      "documents": 33,
+      "note": null,
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522KST%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
+    },
+    {
+      "code": "KGG",
+      "court": "Kammarrätten i Göteborg",
+      "status": "no_number",
+      "documents": 0,
+      "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet.",
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522KGG%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
+    },
+    {
+      "code": "KJO",
+      "court": "Kammarrätten i Jönköping",
+      "status": "no_number",
+      "documents": 0,
+      "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet.",
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522KJO%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
+    },
+    {
+      "code": "KSU",
+      "court": "Kammarrätten i Sundsvall",
+      "status": "no_number",
+      "documents": 0,
+      "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet.",
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522KSU%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
+    },
+    {
+      "code": "DOV",
+      "court": "Domstolsverket",
+      "status": "out_of_scope",
+      "documents": 0,
+      "note": "Listed as a court in the API but has no publications.",
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522DOV%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
+    },
+    {
+      "code": "PBR",
+      "court": "Patentbesvärsrätten",
+      "status": "out_of_scope",
+      "documents": 0,
+      "note": "Publishes only rulings in full (dom eller beslut), no referat or notiser.",
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522PBR%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
+    },
+    {
+      "code": "RHN",
+      "court": "Rättshjälpsnämnden",
+      "status": "out_of_scope",
+      "documents": 0,
+      "note": "Publishes only rulings in full (dom eller beslut), no referat or notiser.",
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522RHN%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "issue": null
     }
   ],
   "layers": {
@@ -1534,306 +3322,379 @@
       "layer": "case_law",
       "status": "collected",
       "note": "Referat and notiser; synced daily.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/sok-rattspraxis/"
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/",
+      "description": "Sök rättspraxis innehåller avgöranden från svenska överrätter och Arbetsdomstolen. Här kan du hitta domar och beslut, referat, notiser, prövningstillstånd och begäranden om förhandsavgörande. Referaten och merparten av domarna gäller sådant som är vägledande för andra domstolar och myndigheter, inte minst prejudikat från de högsta instanserna.",
+      "issue": null
     },
     {
       "name": "SFS in full text (Riksdagen open data)",
       "layer": "sfs",
       "status": "collected",
       "note": "Collected from Riksdagen open data; synced daily.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/svensk-forfattningssamling-sfs-i-fulltext/"
+      "url": "https://rkrattsbaser.gov.se/sfst/adv",
+      "description": "Här hittar du lagar och förordningar i den senaste versionen med alla ändringar införda i den ursprungliga texten.",
+      "issue": null
     },
     {
       "name": "SFS on svenskforfattningssamling.se (authoritative PDFs)",
       "layer": "sfs",
       "status": "partial",
-      "note": "SHA-256 manifest of the authoritative PDFs: a sample so far; PDF text is never extracted.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se/"
+      "note": "SHA-256 manifest of the authoritative PDFs: a sample so far; PDF text is not extracted yet.",
+      "url": "https://svenskforfattningssamling.se/",
+      "description": "På webbplatsen Svensk författningssamling publiceras den officiella och autentiska versionen av lagar, förordningar och vissa myndighetsföreskrifter.",
+      "issue": null
     },
     {
       "name": "SFS register (SFSR)",
       "layer": "sfs",
       "status": "partial",
       "note": "Amendment register: pilot statutes only.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/register-over-svensk-forfattningssamling-sfs/"
+      "url": "https://rkrattsbaser.gov.se/sfsr/adv",
+      "description": "SFS-registret är ett register över lagar och förordningar i Svensk författningssamling (SFS). Författningar som inte gäller längre finns också med.",
+      "issue": null
     },
     {
       "name": "EUR-Lex",
       "layer": "eu",
       "status": "blocked",
       "note": "Answers automated clients with an AWS WAF challenge; never used. EU texts come from the Publications Office Cellar.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/eur-lex/"
+      "url": "https://eur-lex.europa.eu/homepage.html?locale=sv",
+      "description": "EUR-Lex är en portal till gällande EU-rätt. På EUR-Lex finns olika databaser där du kan söka bland fördrag och lagstiftning, men även rättspraxis, parlamentsledamöternas frågor och Europeiska unionens officiella tidning (EUT).",
+      "issue": null
     },
     {
       "name": "Court of Justice of the European Union",
       "layer": "eu",
       "status": "no_adapter",
       "note": "EU case law is not collected.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/eu-domstolen/"
+      "url": "https://curia.europa.eu/site/",
+      "description": "Europeiska unionens domstol (EU-domstolen) dömer i tvister mellan medlemsländer och EU:s institutioner. Domstolen har också i uppgift att tolka EU-rätten. Under EU-domstolen finns tribunalen som dömer i mål som rör enskilda personer och företag samt en personaldomstol som dömer i mål som gäller anställda i EU.",
+      "issue": null
     },
     {
       "name": "Sveriges internationella överenskommelser (SÖ)",
       "layer": "sfs",
       "status": "no_adapter",
       "note": "Treaties are not collected.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/sveriges-internationella-overenskommelser-so/"
+      "url": "https://www.regeringen.se/rattsliga-dokument/sveriges-internationella-overenskommelser/",
+      "description": "Sverige ingår varje år ett stort antal internationella överenskommelser med andra stater och internationella organisationer. De förekommer under flera olika benämningar, till exempel traktater, konventioner och protokoll, skatteavtal och informationsutbytesavtal. Alla internationella överenskommelser som är bindande för Sverige offentliggörs i Sveriges internationella överenskommelser (SÖ).",
+      "issue": null
     },
     {
       "name": "Transportstyrelsen (other publications)",
       "layer": "agency",
       "status": "out_of_scope",
       "note": "Overview page; the TSFS series is listed separately.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/transportstyrelsen/"
+      "url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/",
+      "description": "Transportstyrelsen arbetar för att uppnå god tillgänglighet, hög kvalitet, säkra och miljöanpassade transporter inom järnväg, luftfart, sjöfart och väg. Här kan du läsa om vår organisation samt om vårt uppdrag och hur vi arbetar.",
+      "issue": null
     },
     {
       "name": "European Court of Human Rights",
       "layer": "case_law",
       "status": "out_of_scope",
       "note": "Not Swedish case law.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/europadomstolen/"
+      "url": "https://www.echr.coe.int/home",
+      "description": "Den europeiska domstolen för de mänskliga rättigheterna, Europadomstolen, prövar ärenden om brott mot den Europeiska konventionen om de mänskliga rättigheterna (Europakonventionen).",
+      "issue": null
     },
     {
       "name": "Betänkanden",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/betankanden/"
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&doktyp=bet&subtyp=bet",
+      "description": "Ett betänkande är en rapport från något av riksdagens utskott med förslag till hur riksdagen ska besluta i ett ärende. Det kallas ofta också utskottsbetänkande.",
+      "issue": null
     },
     {
       "name": "Brottsoffermyndigheten (beslut)",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/brottsoffermyndigheten/"
+      "url": "https://referatsamling.brottsoffermyndigheten.se/",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Brottsoffermyndighetens referatsamling",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/brottsoffermyndighetens-referatsamling/"
+      "url": "https://referatsamling.brottsoffermyndigheten.se/",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Departementsserien (Ds)",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/departementsserien-ds/"
+      "url": "https://www.regeringen.se/rattsliga-dokument/departementsserien-och-promemorior/",
+      "description": "När regeringen har utrett en fråga kan den publicera sina slutsatser och förslag i Departementsserien (Ds).",
+      "issue": null
     },
     {
       "name": "Framställningar och redogörelser",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/framstallningar-och-redogorelser/"
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=frsrdg",
+      "description": "Ett förslag från ett riksdagsorgan till riksdagen kallas framställning. När riksdagsorganet redovisar årets verksamhet till riksdagen är det en redogörelse. Exempel på riksdagsorgan är Riksdagens ombudsmän (JO) och Riksrevisionen.",
+      "issue": null
     },
     {
       "name": "Förordningsmotiv",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/forordningsmotiv/"
+      "url": "https://www.regeringen.se/rattsliga-dokument/forordningsmotiv/",
+      "description": "Till vissa av regeringens förordningar finns förordningsmotiv. I förordningsmotivet berättar regeringen varför förordningen kommit till och ger besked om hur förordningen ska tolkas och tillämpas.",
+      "issue": null
     },
     {
       "name": "Förordningsmotiv (söktjänst)",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/forordningsmotiv-soktjanst/"
+      "url": "https://rkrattsdb.gov.se/forpdf/",
+      "description": "Förordningsmotiv i pdf från och med Fm 2000:1 till och med Fm 2016:1.",
+      "issue": null
     },
     {
       "name": "Justitiekanslerns beslut och yttranden",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/justitiekanslerns-beslut-och-yttranden/"
+      "url": "https://www.jk.se/beslut-och-yttranden/",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Kommittédirektiv",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kommittedirektiv/"
+      "url": "https://www.regeringen.se/rattsliga-dokument/kommittedirektiv/",
+      "description": "När en fråga ska utredas kan regeringen välja att tillsätta en kommitté. Regeringen ger då riktlinjer för arbetet i ett kommittédirektiv.",
+      "issue": null
     },
     {
       "name": "Kommittédirektiv (rättsdatabas)",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kommittedirektiv-rattsdatabas/"
+      "url": "https://rkrattsbaser.gov.se/dir/adv",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Kommittédirektiv (söktjänst)",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kommittedirektiv-soktjanst-2/"
+      "url": "https://rkrattsdb.gov.se/kompdf/",
+      "description": "Kommittédirektiv i pdf från och med Dir. 2006:1 till och med Dir. 2019:25.",
+      "issue": null
     },
     {
       "name": "Kommittéregistret",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/kommitteregistret/"
+      "url": "https://rkrattsbaser.gov.se/komm/adv",
+      "description": "Kommittéregistret innehåller uppgifter om pågående och avslutade kommittéer under regeringen. Registret visar ledamöter, arbetsplaner och vilka betänkanden som kommittéerna har publicerat.",
+      "issue": null
     },
     {
       "name": "Lagrådets yttranden",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/lagradets-yttranden/"
+      "url": "https://www.lagradet.se/yttranden/",
+      "description": "Lagrådet granskar lagförslag och ger sina synpunkter i form av yttranden när regeringen eller ett riksdagsutskott ber om det. Lagrådet ska normalt yttra sig över förslag som ändrar grundlagarna om tryckfrihet och yttrandefrihet, förslag som påverkar människors fri- och rättigheter, personliga eller ekonomiska förhållanden, och förslag som rör skyldigheter gentemot staten. Lagrådet bedömer också ofta om förslaget följer EU-rätten och Europakonventionen om mänskliga rättigheter.",
+      "issue": null
     },
     {
       "name": "Lagrådsremisser",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/lagradsremisser/"
+      "url": "https://www.regeringen.se/rattsliga-dokument/lagradsremiss/",
+      "description": "Innan regeringen lämnar ett förslag till riksdagen om en ny lag skickar regeringen oftast först en lagrådsremiss till Lagrådet. Lagrådets uppgift är bland annat att granska att det nya lagförslaget inte kolliderar med grundlagen eller någon annan lag. Lagrådet lämnar sina synpunkter i ett Yttrande.",
+      "issue": null
     },
     {
       "name": "Mediemyndighetens webbdiarium",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/mediemyndighetens-webbdiarium/"
+      "url": "https://webbdiarium.mprt.se/",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Motioner",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/motioner/"
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=mot",
+      "description": "En motion är ett förslag till riksdagen från en eller flera riksdagsledamöter.",
+      "issue": null
     },
     {
       "name": "Notarienämndens beslut",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/notarienamndens-beslut/"
+      "url": "https://www.domstol.se/notarienamnden/om-notarienamnden/beslut/",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Propositioner och skrivelser",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/propositioner-och-skrivelser/"
+      "url": "https://rkrattsbaser.gov.se/prop/adv",
+      "description": "En proposition är ett förslag från regeringen till riksdagen. En proposition kan innehålla förslag till nya lagar eller riktlinjer. När regeringen vill lämna information till riksdagen i ett ärende kan regeringen göra det i en skrivelse.",
+      "issue": null
     },
     {
       "name": "Propositioner och skrivelser (PDF)",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/propositioner-och-skrivelser-i-pdf/"
+      "url": "https://www.regeringen.se/rattsliga-dokument/",
+      "description": "Länken går till en söksida där du själv får filtrera fram att du söker en proposition eller en skrivelse. På söksidan kan du också göra andra val för att förfina din sökning.",
+      "issue": null
     },
     {
       "name": "Propositioner och skrivelser, äldre",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/propositioner-och-skrivelser-aldre/"
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=prop",
+      "description": "Länken går till riksdagens webbplats där du kan söka propositioner och skrivelser från 1867 och framåt. De äldre dokumenten är inskannade.",
+      "issue": null
     },
     {
       "name": "Riksdagens ombudsmäns (JO) beslut",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/riksdagens-ombudmans-jo-beslut/"
+      "url": "https://www.jo.se/jo-beslut/sokresultat/",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Riksdagens protokoll",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/protokoll/"
+      "url": "https://www.riksdagen.se/sv/sok/?sort=datum&sortorder=desc&doktyp=prot",
+      "description": "Debatter, beslut och annat som avhandlas i riksdagens kammare står i riksdagens protokoll.",
+      "issue": null
     },
     {
       "name": "Riksdagsskrivelser",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/riksdagsskrivelser/"
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=rskr",
+      "description": "En skrivelse från riksdagen är ett meddelande till regeringen om vilka beslut som riksdagen har fattat, till exempel att en ny lag är införd.",
+      "issue": null
     },
     {
       "name": "Rättshjälpsnämndens vägledande beslut",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/rattshjalpsnamndens-vagledande-beslut/"
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522RHN%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Statens offentliga utredningar (SOU)",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-offentliga-utredningar-sou/"
+      "url": "https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/",
+      "description": "Slutsatser och förslag från kommittéer redovisas oftast i ett betänkande som publiceras i serien Statens offentliga utredningar (SOU).",
+      "issue": null
     },
     {
       "name": "Statens offentliga utredningar (SOU), äldre",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/statens-offentliga-utredningar-sou-aldre/"
+      "url": "https://sou.kb.se/",
+      "description": "Länken går till Kungliga bibliotekets databas som innehåller digitaliserade SOU:er från 1922.",
+      "issue": null
     },
     {
       "name": "Transportstyrelsens beslut i överklagandeärenden om trafikreglering",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/transportstyrelsens-beslut-i-overklagningsarenden-om-trafikreglering/"
+      "url": "https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/trafikregler/beslut-i-overklagningsarenden/",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Yttranden från utskott",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/yttranden-fran-utskott/"
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=yttr",
+      "description": "Ett yttrande är när ett utskott får lämna sina synpunkter i ett ärende som ett annat utskott ansvarar för.",
+      "issue": null
     },
     {
       "name": "Överklagandenämnden för etikprövnings beslut",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/overklagandenamnden-for-etikprovnings-beslut/"
+      "url": "https://www.onep.se/soek-bland-oeverklagade-beslut/",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Överklagandenämnden för högskolans avgöranden",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/overklagandenamnden-for-hogskolans-avgoranden/"
+      "url": "https://www.onh.se/avgoranden/avgoranden",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Överklagandenämnden för nämndemannauppdrags beslut",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/overklagandenamnden-for-namndemannauppdrags-beslut/"
+      "url": "https://www.domstol.se/overklagandenamnden-for-namndemannauppdrag/om-overklagandenamnden/beslut-fattade-av-overklagandenamnden/",
+      "description": null,
+      "issue": null
     },
     {
       "name": "Överklagandenämnden för studiestöds avgöranden",
       "layer": "other",
       "status": "out_of_scope",
       "note": "Decisions and statements of authorities and review boards: not norms or guiding court case law, out of scope.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/overklagandenamnden-for-studiestods-avgoranden/"
+      "url": "https://www.oks.se/avgoranden/",
+      "description": null,
+      "issue": null
     },
     {
       "name": "SFS in print",
       "layer": "sfs",
       "status": "out_of_scope",
       "note": "Printed volumes; older print-only acts are stubs.",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/svensk-forfattningssamling-sfs-i-tryckt-format/"
+      "url": "https://rkrattsdb.gov.se/sfspdf/",
+      "description": "Här hittar du lagar och förordningar presenterade som de såg ut när de gavs ut i tryckt format. Författningar i tryckt format (pdf) finns från och med SFS 1998:306 till och med SFS 2018:159.",
+      "issue": null
     }
   ],
-  "unclassified": [
-    {
-      "slug": "125",
-      "status": "unclassified",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/125/"
-    },
-    {
-      "slug": "618",
-      "status": "unclassified",
-      "lagrummet": "https://www.lagrummet.se/rattskalla/618/"
-    }
-  ]
+  "unclassified": []
 }

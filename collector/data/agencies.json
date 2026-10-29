@@ -93,7 +93,7 @@
       "series": "SiSFS",
       "agency": "Statens institutionsstyrelse"
     },
-    "bokforingsnamndens-allmanna-rad-bfnar-2": {
+    "bokforingsnamndens-allmanna-rad-bfnar": {
       "series": "BFNAR",
       "agency": "Bokföringsnämnden",
       "note": "General advice (allmänna råd), not binding regulations."
@@ -142,7 +142,7 @@
       "series": "LMFS",
       "agency": "Lantmäteriet"
     },
-    "myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs-2": {
+    "myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs": {
       "series": "MDFFS",
       "agency": "Myndigheten för digital förvaltning"
     },
@@ -279,6 +279,14 @@
     "tullverkets-forfattningssamling-tfs": {
       "series": "TFS",
       "agency": "Tullverket"
+    },
+    "elsakerhetsverkets-forfattningssamling-elsak-fs": {
+      "series": "ELSÄK-FS",
+      "agency": "Elsäkerhetsverket"
+    },
+    "pensionsmyndighetens-forfattningssamling-pfs": {
+      "series": "PFS",
+      "agency": "Pensionsmyndigheten"
     }
   },
   "shared": {
@@ -315,10 +323,6 @@
       "published_in": "HSLF-FS"
     },
     "socialstyrelsens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs": {
-      "agency": "Socialstyrelsen",
-      "published_in": "HSLF-FS"
-    },
-    "socialstyrelsens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs-2": {
       "agency": "Socialstyrelsen",
       "published_in": "HSLF-FS"
     },
@@ -394,7 +398,7 @@
       "name": "SFS on svenskforfattningssamling.se (authoritative PDFs)",
       "layer": "sfs",
       "status": "partial",
-      "note": "SHA-256 manifest of the authoritative PDFs: a sample so far; PDF text is never extracted."
+      "note": "SHA-256 manifest of the authoritative PDFs: a sample so far; PDF text is not extracted yet."
     },
     "register-over-svensk-forfattningssamling-sfs": {
       "name": "SFS register (SFSR)",
@@ -582,7 +586,7 @@
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
     },
-    "kommittedirektiv-soktjanst-2": {
+    "kommittedirektiv-soktjanst": {
       "name": "Kommittédirektiv (söktjänst)",
       "layer": "other",
       "status": "out_of_scope",
@@ -636,5 +640,32 @@
       "status": "out_of_scope",
       "note": "Preparatory works (förarbeten) and parliamentary documents: not norms, out of scope."
     }
-  }
+  },
+  "courts": {
+    "KGG": {
+      "status": "no_number",
+      "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet."
+    },
+    "KJO": {
+      "status": "no_number",
+      "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet."
+    },
+    "KSU": {
+      "status": "no_number",
+      "note": "The API lists these referat without a report number (referatNummerLista is empty), so the collector cannot give them an id yet."
+    },
+    "PBR": {
+      "status": "out_of_scope",
+      "note": "Publishes only rulings in full (dom eller beslut), no referat or notiser."
+    },
+    "RHN": {
+      "status": "out_of_scope",
+      "note": "Publishes only rulings in full (dom eller beslut), no referat or notiser."
+    },
+    "DOV": {
+      "status": "out_of_scope",
+      "note": "Listed as a court in the API but has no publications."
+    }
+  },
+  "issues": {}
 }

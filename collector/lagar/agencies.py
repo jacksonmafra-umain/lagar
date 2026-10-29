@@ -1,32 +1,42 @@
 """Processing log of Swedish legal sources: AGENCIES.md and its JSON report.
 
 The list of agency regulation series (författningssamlingar) and other legal
-sources comes from lagrummet.se's `rattskalla` sitemap. It is fetched only with
-`--refresh` (robots.txt checked, one request each, collector User-Agent) and
-cached in `collector/data/rattskalla.json`, so the report is rebuilt offline.
-Agency names, statuses and reasons for gaps are curated in
+sources comes from lagrummet.se's `rattskalla` index, which links every source
+to its official page and describes it; the court list comes from the rättspraxis
+API. Both are fetched only with `--refresh` (robots.txt checked, one request
+each, collector User-Agent) and cached in `collector/data/rattskalla.json` and
+`collector/data/courts.json`, so the report is rebuilt offline. Agency names,
+statuses, reasons for gaps and tracking issues are curated in
 `collector/data/agencies.json`; document counts come from the corpus, county
-and kommun configuration from `counties.json` and `municipalities.json`, the
-kommun list from the app's bundled geo file.
+and kommun configuration from `counties.json` and `municipalities.json`, kommun
+websites from `kommuner.json`, the kommun list from the app's bundled geo file.
 """
 
 import argparse
+import html
 import json
 import re
 import sys
-import xml.etree.ElementTree as ET
+import unicodedata
+import urllib.parse
 from datetime import datetime, timezone
 from pathlib import Path
 
 from . import progress
-from .agency import _Robots
+from .agency import ListingError, _Robots
 from .caselaw import NETWORK_ERRORS, USER_AGENT
 from .http import Blocked, PoliteClient
 
-SITEMAP_URL = "https://www.lagrummet.se/rattskalla-sitemap.xml"
-SITEMAP_HOST = "https://www.lagrummet.se"
-PAGE_PREFIX = SITEMAP_HOST + "/rattskalla/"
+INDEX_HOST = "https://www.lagrummet.se"
+INDEX_URL = INDEX_HOST + "/rattskalla/"
+COURTS_HOST = "https://rattspraxis.etjanst.domstol.se"
+COURTS_URL = COURTS_HOST + "/api/v1/domstolar"
+COURT_SEARCH = COURTS_HOST + "/sok/sokning?filter="
+ISSUES_URL = "https://github.com/jacksonmafra-umain/lagar/issues/"
 DEFAULT_CACHE = "collector/data/rattskalla.json"
+DEFAULT_COURTS = "collector/data/courts.json"
+DEFAULT_KOMMUNER = "collector/data/kommuner.json"
+DEFAULT_LANDING = "landing/data/sources.json"
 DEFAULT_CURATED = "collector/data/agencies.json"
 DEFAULT_REPORT = "collector/data/agencies-report.json"
 DEFAULT_COUNTIES = "collector/data/counties.json"
@@ -37,42 +47,82 @@ MIN_RATE = 1.0
 
 STATUSES = {
     "collected": "collected",
-    "collected_pdf": "collected: metadata and PDF links (text only in PDF, not extracted)",
+    "collected_pdf": "collected: metadata and PDF links (text only in PDF, not extracted yet)",
     "partial": "partly collected",
     "blocked": "not collected: blocked by a WAF",
     "api_key": "not collected: API key needed",
     "robots": "not collected: robots.txt disallows",
     "no_adapter": "not collected: no adapter yet",
+    "no_number": "not collected: no report number in the API",
     "out_of_scope": "out of scope",
-    "unclassified": "unclassified: new or unknown sitemap page",
+    "unclassified": "unclassified: new or unknown lagrummet.se entry",
 }
 _ORDER = list(STATUSES)
-_NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
-_COUNTY_SLUG = re.compile(r"^.+-lans-forfattningssamling-(\d{2})fs$")
+_COUNTY_SLUG = re.compile(r"^.+-lans-forfattningssamling-(\d{2})-?fs$")
 _YEAR = re.compile(r"(\d{4}):\d+")
+_ARTICLE = re.compile(r"<article\b(.*?)</article>", re.S)
+_HREF = re.compile(r'<a\b[^>]*\bhref="([^"]+)"')
+_TITLE = re.compile(r"<h2[^>]*>(.*?)</h2>", re.S)
+_DESCRIPTION = re.compile(r'<div class="text-sm[^"]*">(.*?)</div>', re.S)
+_TAG = re.compile(r"<[^>]+>")
 
 
-def parse_sitemap(raw):
-    """[{slug, lastmod}] for every page under /rattskalla/, without the index page itself."""
-    root = ET.fromstring(raw)
+def _text(fragment):
+    return " ".join(html.unescape(_TAG.sub("", fragment)).split())
+
+
+def slugify(title):
+    """`Arbetsmiljöverkets författningssamling (AFS)` -> `arbetsmiljoverkets-forfattningssamling-afs`."""
+    ascii_title = unicodedata.normalize("NFKD", title.lower()).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", ascii_title).strip("-")
+
+
+def parse_index(raw):
+    """[{slug, title, url, description}] for every entry on the rättskällor index, sorted by slug.
+
+    The page lists every entry at once (its pagination is client-side); `url` is
+    the official page the entry links to, `description` lagrummet.se's Swedish
+    summary of the source or None.
+    """
     pages = []
-    for url in root.iter(f"{_NS}url"):
-        loc = (url.findtext(f"{_NS}loc") or "").strip()
-        if not loc.startswith(PAGE_PREFIX):
+    for block in _ARTICLE.findall(raw.decode("utf-8") if isinstance(raw, bytes) else raw):
+        href, title = _HREF.search(block), _TITLE.search(block)
+        if not (href and title):
             continue
-        slug = loc[len(PAGE_PREFIX):].strip("/")
-        if slug:
-            lastmod = (url.findtext(f"{_NS}lastmod") or "").strip()[:10] or None
-            pages.append({"slug": slug, "lastmod": lastmod})
-    return sorted(pages, key=lambda p: p["slug"])
+        description = _DESCRIPTION.search(block)
+        name = _text(title.group(1))
+        pages.append({"slug": slugify(name), "title": name, "url": html.unescape(href.group(1)).strip(),
+                      "description": _text(description.group(1)) or None if description else None})
+    return sorted(pages, key=lambda p: (p["slug"], p["url"]))
 
 
-def fetch_sitemap(client, now):
-    """Fetch the sitemap politely; raise Blocked if robots.txt disallows it."""
-    robots = _Robots(client, SITEMAP_HOST)
-    if not robots.allows(SITEMAP_URL):
-        raise Blocked(f"robots.txt disallows {SITEMAP_URL}")
-    return {"source": SITEMAP_URL, "fetched_at": now, "pages": parse_sitemap(client.get(SITEMAP_URL))}
+def parse_courts(raw):
+    """[{code, name}] from the rättspraxis API's court list, sorted by code."""
+    courts = json.loads(raw)
+    return sorted(({"code": c["domstolKod"], "name": c["domstolNamn"]} for c in courts), key=lambda c: c["code"])
+
+
+def _fetch(client, host, url):
+    robots = _Robots(client, host)
+    if not robots.allows(url):
+        raise Blocked(f"robots.txt disallows {url}")
+    return client.get(url)
+
+
+def fetch_index(client, now):
+    """Fetch the rättskällor index politely; raise Blocked if robots.txt disallows it."""
+    return {"source": INDEX_URL, "fetched_at": now, "pages": parse_index(_fetch(client, INDEX_HOST, INDEX_URL))}
+
+
+def fetch_courts(client, now):
+    """Fetch the court list of the rättspraxis API politely."""
+    return {"source": COURTS_URL, "fetched_at": now, "courts": parse_courts(_fetch(client, COURTS_HOST, COURTS_URL))}
+
+
+def court_url(code):
+    """The rättspraxis search for one court's guiding decisions, as lagrummet.se links it."""
+    query = f'domstolskodLista=["{code}"]&arVagledande=true&sortering="desc"'
+    return COURT_SEARCH + urllib.parse.quote(urllib.parse.quote(query, safe="=&"), safe="")
 
 
 def tally_corpus(corpus):
@@ -104,38 +154,43 @@ def _years(counts, key):
     return str(min(years)) if min(years) == max(years) else f"{min(years)}–{max(years)}"
 
 
-def _page_url(slug):
-    return PAGE_PREFIX + slug + "/"
+def _issue(curated, key):
+    number = curated.get("issues", {}).get(key)
+    return ISSUES_URL + str(number) if number else None
 
 
-def build_report(sitemap, curated, counts, targets, counties, municipalities, municipal_manifest, geo):
+def build_report(index, curated, counts, targets, counties, municipalities, municipal_manifest, geo,
+                 courts=None, kommuner=None):
     series_status = {}
-    agencies, shared, sources, unclassified, county_slugs = [], [], [], [], {}
+    agencies, shared, sources, unclassified, county_pages = [], [], [], [], {}
     target_by_series = {t["series"]: t["target"] for t in targets if t.get("series")}
-    for page in sitemap["pages"]:
+    for page in index["pages"]:
         slug = page["slug"]
+        link = {"url": page["url"], "description": page.get("description")}
         if slug in curated["series"]:
             entry = curated["series"][slug]
             documents = counts["series"].get(("agency", entry["series"]), 0)
             status = entry.get("status") or ("collected" if documents else "no_adapter")
             agencies.append({"series": entry["series"], "agency": entry["agency"], "status": status,
                              "documents": documents, "target": target_by_series.get(entry["series"]),
-                             "note": entry.get("note"), "lagrummet": _page_url(slug)})
+                             "note": entry.get("note"), **link,
+                             "issue": _issue(curated, "series:" + entry["series"])})
             series_status.setdefault(entry["series"], status)
         elif slug in curated["shared"]:
-            shared.append({**curated["shared"][slug], "lagrummet": _page_url(slug)})
+            shared.append({**curated["shared"][slug], **link})
         elif slug in curated["sources"]:
-            sources.append({**curated["sources"][slug], "lagrummet": _page_url(slug)})
+            sources.append({**curated["sources"][slug], **link, "issue": _issue(curated, "source:" + slug)})
         elif _COUNTY_SLUG.match(slug):
-            county_slugs[_COUNTY_SLUG.match(slug).group(1)] = _page_url(slug)
+            county_pages[_COUNTY_SLUG.match(slug).group(1)] = link
         else:
-            unclassified.append({"slug": slug, "status": "unclassified", "lagrummet": _page_url(slug)})
+            unclassified.append({"slug": slug, "title": page["title"], "status": "unclassified", **link})
     agencies.sort(key=lambda a: (_ORDER.index(a["status"]), a["series"], a["agency"]))
     seen, unique_shared = set(), []
     for entry in sorted(shared, key=lambda s: (s["agency"], s["published_in"])):
         if (entry["agency"], entry["published_in"]) not in seen:
             seen.add((entry["agency"], entry["published_in"]))
-            unique_shared.append({**entry, "status": series_status.get(entry["published_in"], "no_adapter")})
+            unique_shared.append({**entry, "status": series_status.get(entry["published_in"], "no_adapter"),
+                                  "issue": _issue(curated, "series:" + entry["published_in"])})
     sources.sort(key=lambda s: (_ORDER.index(s["status"]), s["layer"], s["name"]))
 
     county_rows = []
@@ -149,32 +204,45 @@ def build_report(sitemap, curated, counts, targets, counties, municipalities, mu
         else:
             status = "partial" if documents else "no_adapter"
             text = "HTML text" if config["layout"] == "pages" else "PDF links only"
+        page = county_pages.get(code, {})
         county_rows.append({"code": code, "county": region["name"], "series": f"{code}FS", "status": status,
                             "documents": documents, "years": _years(counts, key), "text": text,
-                            "landing": config["landing"] if config else None,
-                            "lagrummet": county_slugs.get(code)})
+                            "url": config["landing"] if config else page.get("url"),
+                            "description": page.get("description"), "issue": _issue(curated, "county:" + code)})
 
     gaps = {}
     for gap in municipal_manifest.get("gaps", []):
         gaps.setdefault(gap["municipality_code"], {}).setdefault(gap["reason"], 0)
         gaps[gap["municipality_code"]][gap["reason"]] += 1
     regions = {r["code"]: r["name"] for r in geo["regions"]}
+    websites = (kommuner or {}).get("websites", {})
     configured, missing = [], {}
     for kommun in sorted(geo["kommuner"], key=lambda k: k["code"]):
-        config = municipalities["kommuner"].get(kommun["code"])
+        code = kommun["code"]
+        config = municipalities["kommuner"].get(code)
+        row = {"code": code, "kommun": kommun["name"], "url": websites.get(code), "issue": _issue(curated, "kommun:" + code)}
         if config is None:
-            missing.setdefault(kommun["regionCode"], []).append(kommun["name"])
+            missing.setdefault(kommun["regionCode"], []).append(row)
             continue
-        documents = counts["kommun"].get(kommun["code"], 0)
-        notes = [f"{n} documents not fetched: {reason}" for reason, n in sorted(gaps.get(kommun["code"], {}).items())]
-        configured.append({"code": kommun["code"], "kommun": kommun["name"], "collection": config["collection"],
+        documents = counts["kommun"].get(code, 0)
+        notes = [f"{n} documents not fetched: {reason}" for reason, n in sorted(gaps.get(code, {}).items())]
+        configured.append({**row, "collection": config["collection"],
                            "status": "partial" if documents else "no_adapter", "documents": documents,
                            "note": "; ".join(notes) or None})
-    missing_rows = [{"region_code": code, "county": regions[code], "kommuner": names}
-                    for code, names in sorted(missing.items())]
+    missing_rows = [{"region_code": code, "county": regions[code], "kommuner": rows}
+                    for code, rows in sorted(missing.items())]
 
-    courts = [{"code": code, "court": counts["court_name"][code], "documents": n}
-              for code, n in sorted(counts["court"].items(), key=lambda item: (-item[1], item[0]))]
+    court_notes = curated.get("courts", {})
+    court_names = {c["code"]: c["name"] for c in (courts or {}).get("courts", [])}
+    court_names.update({code: name for code, name in counts["court_name"].items() if code not in court_names})
+    court_rows = []
+    for code, name in court_names.items():
+        documents = counts["court"].get(code, 0)
+        note = court_notes.get(code, {})
+        status = note.get("status") or ("collected" if documents else "no_adapter")
+        court_rows.append({"code": code, "court": name, "status": status, "documents": documents,
+                           "note": note.get("note"), "url": court_url(code), "issue": _issue(curated, "court:" + code)})
+    court_rows.sort(key=lambda c: (_ORDER.index(c["status"]), -c["documents"], c["code"]))
     layers = {
         "sfs": sum(counts["type"].get(t, 0) for t in progress.SFS_TYPES),
         "fundamental": counts["type"].get("fundamental_law", 0),
@@ -185,16 +253,16 @@ def build_report(sitemap, curated, counts, targets, counties, municipalities, mu
     for entry in agencies:
         summary[entry["status"]] = summary.get(entry["status"], 0) + 1
     return {
-        "sitemap": {"source": sitemap["source"], "fetched_at": sitemap["fetched_at"],
-                    "pages": len(sitemap["pages"])},
+        "index": {"source": index["source"], "fetched_at": index["fetched_at"], "pages": len(index["pages"])},
         "summary": {"series": len(agencies), "by_status": summary,
                     "shared": len(unique_shared), "kommuner": len(geo["kommuner"]),
-                    "kommuner_configured": len(configured)},
+                    "kommuner_configured": len(configured),
+                    "courts": len(court_rows), "courts_collected": sum(1 for c in court_rows if c["documents"])},
         "agency_series": agencies,
         "shared_series": unique_shared,
         "counties": county_rows,
         "municipalities": {"configured": configured, "not_configured": missing_rows},
-        "courts": courts,
+        "courts": court_rows,
         "layers": layers,
         "other_sources": sources,
         "unclassified": unclassified,
@@ -205,23 +273,32 @@ def _cell(value):
     return "-" if value is None else str(value).replace("|", "\\|")
 
 
+def _link(text, url):
+    return f"[{_cell(text)}]({url})" if url else _cell(text)
+
+
+def _issue_cell(url):
+    return f"[#{url.rsplit('/', 1)[1]}]({url})" if url else "-"
+
+
 def render_markdown(report):
-    sm, summary = report["sitemap"], report["summary"]
+    idx, summary = report["index"], report["summary"]
     out = [
         "# Agencies and sources",
         "",
         "Which Swedish legal sources the corpus processes and which it does not, with the reason for each "
-        "gap. Generated by `collector/agencies.py` from lagrummet.se's "
-        f"[rättskällor sitemap]({sm['source']}) (fetched {sm['fetched_at'][:10]}, {sm['pages']} pages), "
-        "the corpus and the collector configuration; do not edit by hand. Per-series counts are in "
+        "gap and the issue that tracks it. Generated by `collector/agencies.py` from lagrummet.se's "
+        f"[rättskällor index]({idx['source']}) (fetched {idx['fetched_at'][:10]}, {idx['pages']} entries), "
+        "the rättspraxis court list, the corpus and the collector configuration; do not edit by hand. Each "
+        "name links to the official page of the source. Per-series counts are in "
         "[PROGRESS.md](PROGRESS.md) and the details of each gap in [COVERAGE.md](COVERAGE.md). "
-        "More agency series are tracked in "
-        "[#115](https://github.com/jacksonmafra-umain/lagar/issues/115).",
+        "The same data is browsable on the [landing page](https://grundlagar.vercel.app/#catalog).",
         "",
         "## Summary",
         "",
         f"{summary['series']} agency regulation series, {summary['shared']} agencies that publish in another "
-        f"agency's series, {summary['kommuner_configured']} of {summary['kommuner']} kommuner configured.",
+        f"agency's series, {summary['kommuner_configured']} of {summary['kommuner']} kommuner configured, "
+        f"{summary['courts_collected']} of {summary['courts']} courts with collected case law.",
         "",
         "| agency series | count |",
         "| --- | ---: |",
@@ -231,79 +308,111 @@ def render_markdown(report):
     out += [
         "",
         f"Other layers in the corpus: {layers['fundamental']} fundamental laws, {layers['sfs']} SFS statutes, "
-        f"{layers['case_law']} case-law documents from {len(report['courts'])} courts, {layers['eu']} EU documents "
+        f"{layers['case_law']} case-law documents, {layers['eu']} EU documents "
         "(a curated list, from the Publications Office Cellar).",
         "",
         "## Agency regulation series",
         "",
-        "| series | agency | status | documents | target | note |",
-        "| --- | --- | --- | ---: | ---: | --- |",
+        "| series | agency | status | documents | target | issue | note |",
+        "| --- | --- | --- | ---: | ---: | --- | --- |",
     ]
     for a in report["agency_series"]:
-        out.append(f"| [{_cell(a['series'])}]({a['lagrummet']}) | {_cell(a['agency'])} | {STATUSES[a['status']]} | "
-                   f"{a['documents']} | {_cell(a['target'])} | {_cell(a['note'])} |")
+        out.append(f"| {_link(a['series'], a['url'])} | {_cell(a['agency'])} | {STATUSES[a['status']]} | "
+                   f"{a['documents']} | {_cell(a['target'])} | {_issue_cell(a['issue'])} | {_cell(a['note'])} |")
     out += [
         "",
         "## Agencies publishing in another series",
         "",
-        "Their regulations are collected when the series they publish in is.",
+        "Their regulations are collected when the series they publish in is; the issue is that series' issue.",
         "",
-        "| agency | published in | status of that series |",
-        "| --- | --- | --- |",
+        "| agency | published in | status of that series | issue |",
+        "| --- | --- | --- | --- |",
     ]
-    out += [f"| [{_cell(s['agency'])}]({s['lagrummet']}) | {s['published_in']} | {STATUSES[s['status']]} |"
-            for s in report["shared_series"]]
+    out += [f"| {_link(s['agency'], s['url'])} | {s['published_in']} | {STATUSES[s['status']]} | "
+            f"{_issue_cell(s['issue'])} |" for s in report["shared_series"]]
     out += [
         "",
         "## County regulations (Länsstyrelserna)",
         "",
-        "| code | county | series | status | documents | years | text |",
-        "| --- | --- | --- | --- | ---: | --- | --- |",
+        "| code | county | series | status | documents | years | text | issue |",
+        "| --- | --- | --- | --- | ---: | --- | --- | --- |",
     ]
     for c in report["counties"]:
-        county = f"[{c['county']}]({c['landing']})" if c["landing"] else c["county"]
-        out.append(f"| {c['code']} | {county} | {c['series']} | {STATUSES[c['status']]} | {c['documents']} | "
-                   f"{_cell(c['years'])} | {_cell(c['text'])} |")
+        out.append(f"| {c['code']} | {_link(c['county'], c['url'])} | {c['series']} | {STATUSES[c['status']]} | "
+                   f"{c['documents']} | {_cell(c['years'])} | {_cell(c['text'])} | {_issue_cell(c['issue'])} |")
     m = report["municipalities"]
     out += [
         "",
         "## Municipal regulations (kommuner)",
         "",
         f"{len(m['configured'])} of {summary['kommuner']} kommuner have a collector configuration "
-        "(`collector/data/municipalities.json`); the others are not collected: no configuration yet.",
+        "(`collector/data/municipalities.json`); the others are not collected: no configuration yet. "
+        "Each name links to the kommun's official website.",
         "",
-        "| code | kommun | collection | status | documents | note |",
-        "| --- | --- | --- | --- | ---: | --- |",
+        "| code | kommun | collection | status | documents | issue | note |",
+        "| --- | --- | --- | --- | ---: | --- | --- |",
     ]
-    out += [f"| {k['code']} | {k['kommun']} | {_cell(k['collection'])} | {STATUSES[k['status']]} | {k['documents']} | "
-            f"{_cell(k['note'])} |" for k in m["configured"]]
+    out += [f"| {k['code']} | {_link(k['kommun'], k['url'])} | {_cell(k['collection'])} | {STATUSES[k['status']]} | "
+            f"{k['documents']} | {_issue_cell(k['issue'])} | {_cell(k['note'])} |" for k in m["configured"]]
     out += ["", "Not configured yet, per county:", ""]
-    out += [f"- {row['county']} ({len(row['kommuner'])}): {', '.join(row['kommuner'])}" for row in m["not_configured"]]
+    for row in m["not_configured"]:
+        names = ", ".join(_link(k["kommun"], k["url"]) + (f" ({_issue_cell(k['issue'])})" if k["issue"] else "")
+                          for k in row["kommuner"])
+        out.append(f"- {row['county']} ({len(row['kommuner'])}): {names}")
     out += [
         "",
         "## Courts (case law)",
         "",
-        "Referat and notiser from Sveriges Domstolar's rättspraxis API; rulings published in full, "
-        "attachments and non-guiding decisions are left out by design.",
+        "Every court in Sveriges Domstolar's rättspraxis API. Referat and notiser are collected; rulings "
+        "published in full, attachments and non-guiding decisions are left out by design. Each name links "
+        "to the court's guiding decisions on rättspraxis.",
         "",
-        "| code | court | documents |",
-        "| --- | --- | ---: |",
+        "| code | court | status | documents | issue | note |",
+        "| --- | --- | --- | ---: | --- | --- |",
     ]
-    out += [f"| {c['code']} | {c['court']} | {c['documents']} |" for c in report["courts"]]
+    out += [f"| {c['code']} | {_link(c['court'], c['url'])} | {STATUSES[c['status']]} | {c['documents']} | "
+            f"{_issue_cell(c['issue'])} | {_cell(c['note'])} |" for c in report["courts"]]
     out += [
         "",
         "## SFS, EU and other sources",
         "",
-        "| source | layer | status | note |",
-        "| --- | --- | --- | --- |",
+        "| source | layer | status | issue | note |",
+        "| --- | --- | --- | --- | --- |",
     ]
-    out += [f"| [{_cell(s['name'])}]({s['lagrummet']}) | {s['layer']} | {STATUSES[s['status']]} | {_cell(s.get('note'))} |"
-            for s in report["other_sources"]]
+    out += [f"| {_link(s['name'], s['url'])} | {s['layer']} | {STATUSES[s['status']]} | {_issue_cell(s['issue'])} | "
+            f"{_cell(s.get('note'))} |" for s in report["other_sources"]]
     if report["unclassified"]:
-        out += ["", "## Unclassified sitemap pages", "",
-                "Pages the curated list in `collector/data/agencies.json` does not know yet:", ""]
-        out += [f"- [{u['slug']}]({u['lagrummet']})" for u in report["unclassified"]]
+        out += ["", "## Unclassified lagrummet.se entries", "",
+                "Entries the curated list in `collector/data/agencies.json` does not know yet:", ""]
+        out += [f"- {_link(u['title'], u['url'])}" for u in report["unclassified"]]
     return "\n".join(out) + "\n"
+
+
+def landing_catalog(report):
+    """The report reshaped for the landing page catalog: one flat list per section, same row keys."""
+    def row(name, entry, **extra):
+        return {"name": name, "status": entry["status"], "documents": entry.get("documents"),
+                "url": entry.get("url"), "issue": entry.get("issue"), "description": entry.get("description"),
+                "note": entry.get("note"), **extra}
+
+    counties = {c["code"]: c["county"] for c in report["counties"]}
+    m = report["municipalities"]
+    kommuner = [row(k["kommun"], k, code=k["code"], county=counties.get(k["code"][:2])) for k in m["configured"]]
+    kommuner += [row(k["kommun"], {**k, "status": "no_adapter", "documents": 0}, code=k["code"], county=r["county"])
+                 for r in m["not_configured"] for k in r["kommuner"]]
+    return {
+        "generated": report["index"]["fetched_at"][:10],
+        "statuses": _ORDER,
+        "sections": {
+            "series": [row(a["series"], a, agency=a["agency"]) for a in report["agency_series"]],
+            "shared": [row(s["agency"], s, published_in=s["published_in"]) for s in report["shared_series"]],
+            "counties": [row(c["county"], c, code=c["code"], series=c["series"], years=c["years"])
+                         for c in report["counties"]],
+            "kommuner": sorted(kommuner, key=lambda k: k["code"]),
+            "courts": [row(c["court"], c, code=c["code"]) for c in report["courts"]],
+            "sources": [row(s["name"], s, layer=s["layer"]) for s in report["other_sources"]],
+        },
+    }
 
 
 def _read_json(path, default=None):
@@ -319,9 +428,12 @@ def _write_json(path, data):
 
 def main(argv, client=None):
     parser = argparse.ArgumentParser(prog="agencies.py", description="Write AGENCIES.md and its JSON report.")
-    parser.add_argument("--refresh", action="store_true", help="fetch the lagrummet.se sitemap again")
+    parser.add_argument("--refresh", action="store_true",
+                        help="fetch the lagrummet.se index and the rättspraxis court list again")
     parser.add_argument("--rate", type=float, default=2.0, help=f"seconds between requests (at least {MIN_RATE})")
     parser.add_argument("--cache", default=DEFAULT_CACHE)
+    parser.add_argument("--courts", default=DEFAULT_COURTS)
+    parser.add_argument("--kommuner", default=DEFAULT_KOMMUNER)
     parser.add_argument("--curated", default=DEFAULT_CURATED)
     parser.add_argument("--corpus", default="corpus")
     parser.add_argument("--targets", default=progress.DEFAULT_TARGETS)
@@ -331,6 +443,7 @@ def main(argv, client=None):
     parser.add_argument("--geo", default=DEFAULT_GEO)
     parser.add_argument("--report", default=DEFAULT_REPORT)
     parser.add_argument("--out", default="AGENCIES.md")
+    parser.add_argument("--landing", default=DEFAULT_LANDING, help="catalog JSON for the landing page")
     args = parser.parse_args(argv)
     if args.rate < MIN_RATE:
         parser.error(f"--rate must be at least {MIN_RATE}")
@@ -338,19 +451,24 @@ def main(argv, client=None):
         client = client or PoliteClient(USER_AGENT, min_interval=args.rate)
         now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         try:
-            sitemap = fetch_sitemap(client, now)
-        except (Blocked, *NETWORK_ERRORS) as error:
-            print(f"sitemap not fetched: {error}", file=sys.stderr)
+            index = fetch_index(client, now)
+            courts = fetch_courts(client, now)
+        except (Blocked, ListingError, ValueError, *NETWORK_ERRORS) as error:
+            print(f"sources not fetched: {error}", file=sys.stderr)
             return 1
-        _write_json(args.cache, sitemap)
-    sitemap = _read_json(args.cache)
+        _write_json(args.cache, index)
+        _write_json(args.courts, courts)
     report = build_report(
-        sitemap, _read_json(args.curated), tally_corpus(args.corpus), _read_json(args.targets),
+        _read_json(args.cache), _read_json(args.curated), tally_corpus(args.corpus), _read_json(args.targets),
         _read_json(args.counties), _read_json(args.municipalities),
         _read_json(args.municipal_manifest, {}), _read_json(args.geo),
+        _read_json(args.courts, {}), _read_json(args.kommuner, {}),
     )
     _write_json(args.report, report)
     Path(args.out).write_text(render_markdown(report), encoding="utf-8")
+    if args.landing:
+        Path(args.landing).parent.mkdir(parents=True, exist_ok=True)
+        _write_json(args.landing, landing_catalog(report))
     for status in _ORDER:
         if status in report["summary"]["by_status"]:
             print(f"{STATUSES[status]}: {report['summary']['by_status'][status]}")
