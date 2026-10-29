@@ -181,9 +181,9 @@ version from the Cellar, the Publications Office repository behind EUR-Lex:
 
 ```
 python3 -I collector/collect.py eu --list collector/data/eu-acts.json [--consolidated] \
-    [--refresh] [--limit N] [--cache sources/cache/eu] [--corpus corpus] \
-    [--manifest sources/eu-manifest.json] [--state collector/data/eu-state.json] \
-    [--rate SECONDS] [--report FILE]
+    [--refresh] [--changed-since DATE[TIME]] [--limit N] [--cache sources/cache/eu [--offline]] \
+    [--corpus corpus] [--manifest sources/eu-manifest.json] \
+    [--state collector/data/eu-state.json] [--rate SECONDS] [--report FILE]
 python3 -I collector/collect.py eu --celex 32016R0679[,32022L2555 ...] [options]
 ```
 
@@ -194,9 +194,14 @@ python3 -I collector/collect.py eu --celex 32016R0679[,32022L2555 ...] [options]
   and `Accept: application/xhtml+xml` (or `text/html` for older acts that only have the old
   EUR-Lex HTML) answers 303 with the Swedish manifestation. It is converted to Markdown with
   `html.parser`: divisions (KAPITEL, AVDELNING, AVSNITT, BILAGA) as `##`, articles as `###`,
-  article and chapter titles in bold, point labels kept with their text, other table rows on
-  one line with cells separated by ` | `. The OJ page header and the `►M1 … ◄` / `▼B`
-  markers of consolidated texts are dropped.
+  article and chapter titles in bold, point labels kept with their text. Two or more adjacent
+  table rows of several cells (correlation tables, amendment lists, annex tables) become a
+  Markdown (GFM) table with the first row as header; a lone row, or a table nested in another
+  table's cell, stays on one line with cells separated by ` | `. The OJ page header and the
+  `►M1 … ◄` / `▼B` markers of consolidated texts are dropped. Text cleanup (invisible
+  characters, whitespace), `#` escaping and the table renderer are shared with the case-law
+  converter in `lagar/htmlmd.py`; the EU-specific structure (OJ classes, point labels,
+  divisions) stays in `lagar/eu.py`, since the generic converter has no notion of it.
 - **eur-lex.europa.eu is never contacted.** Its front end answers automated clients with a
   WAF challenge. Every request, and every redirect, must stay on `publications.europa.eu` or
   `op.europa.eu` (where its robots.txt lives); redirects are followed over https only.
@@ -204,24 +209,61 @@ python3 -I collector/collect.py eu --celex 32016R0679[,32022L2555 ...] [options]
   example), are recorded as gaps in the state file and in the manifest's `gaps`; nothing is
   translated. `--consolidated` also collects each act's latest consolidated version that
   applies today (CELEX `0…-YYYYMMDD`) and removes older consolidated versions of that act.
+  The curated list is collected this way, so every act has its Official Journal text
+  (`authoritative: true`, where Swedish XHTML or HTML exists) and its latest consolidated
+  version (`authoritative: false`).
 - Frontmatter: `id` `eu-<celex lowercased>`, `number` in the Swedish citation form taken from
   the Swedish title when it agrees with the CELEX number (else rebuilt from it: `(EU) 2016/679`,
   `(EG) nr 1907/2006`, `95/46/EG`), `celex`, `issued` (date of document; for a consolidated
   version, the base act's), `in_force` (earliest entry into force), `repealed` (end of
-  validity unless open-ended), `amended_by` (CELEX numbers of amending acts), `eli`, `issuer`
+  validity unless open-ended), `amended_by` (CELEX numbers of amending acts), `amended_through`,
+  `eli`, `issuer`
   (adopting institutions in Swedish), `source` (the manifestation URL), `source_sha256`.
   `authoritative` is true for the Official Journal text, false for consolidated versions.
+- Amendments of a consolidated version come from Cellar's
+  `act_consolidated_consolidates_resource_legal`, read over every consolidated version of the
+  base act up to this one (each version lists only what it adds). `amended_by` lists those
+  amending acts and `amended_through` the latest of them by date of document; the base act,
+  earlier consolidated versions and corrigenda (`…R(01)`) are left out. The Official Journal
+  text has no amendment applied, so its `amended_through` stays `null`; its `amended_by` lists
+  the acts that amend it (`resource_legal_amends_resource_legal`).
 - The committed manifest `sources/eu-manifest.json` lists, per act, `celex`, `id`, `url`,
   `content_type`, `bytes`, `sha256` and `retrieved_at` (kept while the bytes are unchanged),
-  plus the gaps. `--cache DIR` keeps the bytes as `DIR/<CELEX>.<format>` (use the git-ignored
-  `sources/cache/`).
+  plus the gaps. `--cache DIR` keeps, per act, the SPARQL answer (`<CELEX>.sparql.json`), the
+  text (`<CELEX>.<format>`) and its URL and content type (`<CELEX>.source.json`); use the
+  git-ignored `sources/cache/eu`. `--offline` then reconverts from the cache without any
+  request, which is how a converter change is applied and compared.
 - Resume: the state file (git-ignored) keeps `done` (CELEX to SHA-256), `failed`, `gaps` and
   `blocked`. Collected acts are skipped unless `--refresh`; a refresh rewrites a document only
   when its frontmatter (apart from `fetched_at`) or its converted text changed.
 - `--rate` defaults to, and may not go below, 1 s. An HTTP 403, a long `Retry-After` or a
   robots.txt disallow stops the run (exit code 2).
 - `--report` writes `{"written": [...], "unchanged": [...], "skipped": n, "gaps": [...],
-  "failed": [...], "blocked": bool}`.
+  "failed": [...], "blocked": bool, "latest_modified": ..., "retry_from": ...}`.
+- Incremental runs: `--changed-since` takes a date or a UTC date-time and asks Cellar, in one
+  SPARQL query, which listed acts changed after it: the work itself, any of its consolidated
+  versions or an act amending it (`cmr:lastModificationDate`). Only those are collected again
+  (as with `--refresh`), with their latest consolidated version when `--consolidated` is given.
+  `latest_modified` in the report is the newest change seen, and `retry_from` is one
+  millisecond before the oldest change that could not be collected (failure, block or
+  `--limit`), so `retry_from // latest_modified` is a safe next marker.
+- Cellar also has an ingestion notification feed
+  (`/webapi/notification/ingestion?startDate=…&type=UPDATE`, RSS). It covers every ingestion
+  in Cellar, keyed by Cellar id rather than CELEX, at about 1.3 MB per page and several pages
+  per day, so following it for a list of 43 acts costs far more than the one SPARQL query
+  above. It is not used.
+
+### Daily sync
+
+The `Sync EU` workflow (`.github/workflows/sync-eu.yml`) mirrors `Sync SFS`: every day it runs
+`collect.py eu --list collector/data/eu-acts.json --consolidated --changed-since <marker>` and
+puts any corpus change into one pull request on `data/eu-sync`. The marker,
+`collector/data/eu-sync.json` (`{"changed_since": "YYYY-MM-DDTHH:MM:SS.mmmZ"}`), only moves in
+the commit that carries the documents, so a failed run never skips a change. A day without
+changes costs one SPARQL query; Cellar touches the metadata of the curated acts often (about
+half of them in two months), but a touched act whose text and frontmatter are unchanged is
+not rewritten and opens no pull request. Run it by hand with
+`gh workflow run sync-eu.yml [-f since=YYYY-MM-DD]`; an earlier `since` only widens the window.
 
 The curated list `collector/data/eu-acts.json` holds the acts the app highlights (data
 protection, digital, consumer, labour, environment, private international law). A wider

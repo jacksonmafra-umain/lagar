@@ -12,7 +12,7 @@ completeness: read this file next to those numbers.
 | SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
 | agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/` | 2026-10-29 (sample: AFS 2023:1–5, FFFS 2024:21, 2024:22, 2025:2, 2025:8, 2025:13, TSFS 2026:6, 11, 13, 19, 20) |
-| EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list) |
+| EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list with latest consolidated versions; daily `Sync EU` since then) |
 | regional (county) | Länsstyrelserna, `https://www.lansstyrelsen.se/<county>/om-oss/om-lansstyrelsen-<county>/lanets-forfattningssamling/forfattningar-<year>.html` and the linked detail pages | 2026-10-29 (pilot: 01FS 2026:1–10, Stockholm) |
 | case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (sample: NJA 2026:29–38, HFD 2026 ref. 35–43, HFD 2026 not. 24) |
 | municipal regulations | Stockholm `https://start.stockholm/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/`, Göteborg Domino view `https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf/vyHandBok`, Malmö `https://malmo.se/Om-Malmo-stad/Demokrati-och-politik/Sa-styrs-Malmo/Forfattningssamling/` (citizen rules and taxor pages) | 2026-10-29 (sample: five documents per kommun) |
@@ -46,14 +46,23 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   has not run. The PDF bytes are not stored, and the documents stay marked
   `authoritative: false` until the corpus text is tied to a snapshot.
 - EU law covers only the curated list in `collector/data/eu-acts.json` (43
-  acts: 40 Official Journal texts and 3 consolidated versions); its target is that
-  list, not the roughly 47,000 acts in force. Three acts have Swedish only as PDF or
-  print in the Cellar: REACH (32006R1907), Regulation (EC) No 883/2004
-  (32004R0883) and Directive 2004/38/EC (32004L0038). They are recorded as gaps in
-  `sources/eu-manifest.json`, and their latest consolidated versions, which have no
-  legal effect (`authoritative: false`), are in the corpus instead. Consolidated
-  versions of the other acts are not collected yet. Tables are flattened to one line
-  per row, and `amended_through` is not filled.
+  acts, 70 documents: 40 Official Journal texts and 30 latest consolidated
+  versions); its target is that list, not the roughly 47,000 acts in force.
+  Three acts have Swedish only as PDF or print in the Cellar: REACH (32006R1907),
+  Regulation (EC) No 883/2004 (32004R0883) and Directive 2004/38/EC (32004L0038).
+  They are recorded as gaps in `sources/eu-manifest.json`; their consolidated
+  versions are in the corpus. Consolidated versions have no legal effect
+  (`authoritative: false`). Eleven acts that were never amended, only corrected,
+  have no Swedish consolidated expression (the DSA, the Data Act, the Data
+  Governance Act, DORA, the platform-to-business regulation, Rome II and the
+  working-time, services, copyright, transparent-working-conditions and
+  minimum-wage directives); their Official Journal text is current and the
+  manifest records the consolidation as a gap. The decisions 2011/833/EU and
+  (EU) 2022/2481 have no consolidated version. `amended_through` is set on
+  consolidated versions that apply at least one amending act (23 of 30); the
+  Official Journal texts keep it `null`. Rows of a table nested inside another
+  table's cell stay on one line, and the `M1`, `M2` … labels of a consolidated
+  text's amendment list are dropped with the other modification markers.
 - Case law: only a 20-document sample of the latest Högsta domstolen and Högsta
   förvaltningsdomstolen publications is in the corpus; the full run has not
   started. Only the anonymised referat and notiser are collected. Rulings the
