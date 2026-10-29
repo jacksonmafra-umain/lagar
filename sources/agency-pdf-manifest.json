@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "number": "FFFS 2024:21",
+      "detail_url": "https://www.fi.se/sv/vara-register/fffs/sok-fffs/2024/202421/",
+      "files": [
+        {
+          "label": "FFFS 2024:21",
+          "url": "https://www.fi.se/contentassets/20e71c968ef24c159729e470b678f171/fs2421.pdf",
+          "bytes": 169823,
+          "sha256": "c70a58ecea6405578ca1ed9c7fcd43758b72e952b580c13c17df03d560384ff2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:19Z"
+        },
+        {
+          "label": "Beslutspromemoria FFFS 2024:21",
+          "url": "https://www.fi.se/globalassets/media/dokument/fffs-bilagor/2024/beslutspromemoria-fffs-dora.pdf",
+          "bytes": 1308999,
+          "sha256": "48d5072b1a022472d1b477e559b9645330ab3f872537426b2e5f9bede7487f40",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:20Z"
+        }
+      ]
+    },
+    {
+      "number": "FFFS 2024:22",
+      "detail_url": "https://www.fi.se/sv/vara-register/fffs/sok-fffs/2024/202422/",
+      "files": [
+        {
+          "label": "FFFS 2024:22",
+          "url": "https://www.fi.se/contentassets/55e1ed1069ca423494df3d22178f57bf/fs2422.pdf",
+          "bytes": 172517,
+          "sha256": "d5e179cf68156b30fb5adc695d373326097effc4e7ee184cbc671abf7982bb29",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:16Z"
+        },
+        {
+          "label": "Beslutspromemoria FFFS 2024:22",
+          "url": "https://www.fi.se/globalassets/media/dokument/fffs-bilagor/2024/beslutspromemoria-fffs-dora.pdf",
+          "bytes": 1308999,
+          "sha256": "48d5072b1a022472d1b477e559b9645330ab3f872537426b2e5f9bede7487f40",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:17Z"
+        }
+      ]
+    },
+    {
+      "number": "FFFS 2025:2",
+      "detail_url": "https://www.fi.se/sv/vara-register/fffs/sok-fffs/2025/20252/",
+      "files": [
+        {
+          "label": "FFFS 2025:2",
+          "url": "https://www.fi.se/contentassets/8d66aa5674644cb2a9b58676718d2f98/fs2502.pdf",
+          "bytes": 261965,
+          "sha256": "0f8454409dcce08ff162cd3e372ec99d2178f2049880103f7de029089056721e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:13Z"
+        },
+        {
+          "label": "Beslutspromemoria FFFS 2025:2",
+          "url": "https://www.fi.se/contentassets/8d66aa5674644cb2a9b58676718d2f98/beslutspromemoria-inkasso-kreditforvaltning.pdf",
+          "bytes": 355647,
+          "sha256": "6aa4c0373aa280dbf353671107983533b22600390922ef7a28b8f904fc60f03f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:14Z"
+        }
+      ]
+    },
+    {
+      "number": "FFFS 2025:8",
+      "detail_url": "https://www.fi.se/sv/vara-register/fffs/sok-fffs/2025/fffs-20258/",
+      "files": [
+        {
+          "label": "FFFS 2025:8",
+          "url": "https://www.fi.se/contentassets/5b58dbc858e94ab780a25925fb8feeb8/fs2508.pdf",
+          "bytes": 143185,
+          "sha256": "64e714e166ce42aca14b53f3f951ad6aa67b68677911d2458f6bea36a9fc1a29",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:10Z"
+        },
+        {
+          "label": "Beslutspromemoria FFFS 2025:8",
+          "url": "https://www.fi.se/contentassets/5b58dbc858e94ab780a25925fb8feeb8/beslutspromemoria-2025-06-17.pdf",
+          "bytes": 402660,
+          "sha256": "c825ae776300f34724cbb3dca68f0265a0c079dc56d0e0e9fc6b3a3ce600ce8b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:11Z"
+        }
+      ]
+    },
+    {
+      "number": "FFFS 2025:13",
+      "detail_url": "https://www.fi.se/sv/vara-register/fffs/sok-fffs/2025/202513/",
+      "files": [
+        {
+          "label": "FFFS 2025:13",
+          "url": "https://www.fi.se/contentassets/cd749024a57e441aa6d269a8254be6db/fs2513.pdf",
+          "bytes": 126826,
+          "sha256": "8d38efce4094df0d34326ac537d0c9e578bc0b094183d163c2e43c42cb334198",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:07Z"
+        },
+        {
+          "label": "Beslutspromemoria FFFS 2025:13",
+          "url": "https://www.fi.se/contentassets/cd749024a57e441aa6d269a8254be6db/beslutspromemoria-fffs-2513.pdf",
+          "bytes": 245783,
+          "sha256": "dd7def305063be86404337cc01b7e37baf1256ddcd512f7f4dd9471afc78ecfa",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:08Z"
+        }
+      ]
+    },
+    {
+      "number": "TSFS 2026:6",
+      "detail_url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/ts-foreskrifter-i-nummerordning/2026/details?RuleNumber=2026:6&ruleprefix=TSFS",
+      "files": [
+        {
+          "label": "TSFS 2026:6",
+          "url": "https://www.transportstyrelsen.se/TSFS/TSFS%202026_6.pdf",
+          "bytes": 113403,
+          "sha256": "d872324f31a834c67cd5d47ca6cb6954db70428d6692fe2198771b0402c313c4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:25Z"
+        }
+      ]
+    },
+    {
+      "number": "TSFS 2026:11",
+      "detail_url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/ts-foreskrifter-i-nummerordning/2026/details?RuleNumber=2026:11&ruleprefix=TSFS",
+      "files": [
+        {
+          "label": "TSFS 2026:11 (konsoliderad version)",
+          "url": "https://www.transportstyrelsen.se/TSFS/TSFS%202026_11k.pdf",
+          "bytes": 513899,
+          "sha256": "d687941cdbe0285ebde77fb4588ee4164acfa6c1eb51f513e99cc6da8a503851",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:27Z"
+        },
+        {
+          "label": "TSFS 2026:11",
+          "url": "https://www.transportstyrelsen.se/TSFS/TSFS%202026_11.pdf",
+          "bytes": 499067,
+          "sha256": "ddcc272544e49e879ee1007f8ff79792b8725760c2e95c7fe74c4910f7608a4c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:28Z"
+        }
+      ]
+    },
+    {
+      "number": "TSFS 2026:13",
+      "detail_url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/ts-foreskrifter-i-nummerordning/2026/details?RuleNumber=2026:13&ruleprefix=TSFS",
+      "files": [
+        {
+          "label": "TSFS 2026:13",
+          "url": "https://www.transportstyrelsen.se/TSFS/TSFS%202026_13.pdf",
+          "bytes": 170655,
+          "sha256": "6b46d0a9609d10d2c4c4428362abeb4cf8589bc4182710e6ac00553c46c1e899",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:30Z"
+        }
+      ]
+    },
+    {
+      "number": "TSFS 2026:19",
+      "detail_url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/ts-foreskrifter-i-nummerordning/2026/details?RuleNumber=2026:19&ruleprefix=TSFS",
+      "files": [
+        {
+          "label": "TSFS 2026:19",
+          "url": "https://www.transportstyrelsen.se/TSFS/TSFS%202026_19.pdf",
+          "bytes": 148657,
+          "sha256": "8062d40dca9d61a770eaa46e5764d1310df6c7d29ed10dd62e48fdcdf753ff24",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:32Z"
+        }
+      ]
+    },
+    {
+      "number": "TSFS 2026:20",
+      "detail_url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/ts-foreskrifter-i-nummerordning/2026/details?RuleNumber=2026:20&ruleprefix=TSFS",
+      "files": [
+        {
+          "label": "TSFS 2026:20",
+          "url": "https://www.transportstyrelsen.se/TSFS/TSFS%202026_20.pdf",
+          "bytes": 321913,
+          "sha256": "d45e6a14615ff83d9e0ebf77ea3280c6853771639b3c8312c181b637ac8fce9c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T01:25:34Z"
+        }
+      ]
+    }
+  ]
+}
