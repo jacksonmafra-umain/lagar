@@ -246,6 +246,17 @@ class StockholmTest(unittest.TestCase):
             self.assertEqual(sorted(refreshed.unchanged), ["0180-kfs-1995-46", "0180-kfs-2026-12"])
             self.assertEqual(path.read_text(encoding="utf-8"), before)
 
+    def test_rerun_without_state_skips_documents_in_the_manifest(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            args = Args(tmp, limit=1)
+            municipal.run(FakeClient(sthlm_routes()), args)
+            Path(args.state).unlink()
+            client = FakeClient(sthlm_routes())
+            again = municipal.run(client, args)
+            self.assertEqual(again.skipped, 1)
+            self.assertEqual(again.written, ["0180-kfs-1995-46"])
+            self.assertNotIn(STHLM_PDF, client.calls)
+
     def test_failed_document_is_recorded_and_run_continues(self):
         routes = sthlm_routes()
         routes[STHLM_PDF] = b"<html>not a pdf</html>"
