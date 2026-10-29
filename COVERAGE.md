@@ -11,7 +11,7 @@ completeness: read this file next to those numbers.
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
 | SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
-| agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/` | 2026-10-29 (sample: AFS 2023:1–5, FFFS 2024:21, 2024:22, 2025:2, 2025:8, 2025:13, TSFS 2026:6, 11, 13, 19, 20) |
+| agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/` | 2026-10-29 (full run of AFS, FFFS and TSFS: 15, 121 and 622 base regulations) |
 | EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list with latest consolidated versions; daily `Sync EU` since then) |
 | regional (county) | Länsstyrelserna, `https://www.lansstyrelsen.se`: the 21 landing pages in `collector/data/counties.json`, their year index and detail pages (Stockholm, Halland, Gävleborg), PDF links, file-share modules and year folders (the other 18) | 2026-10-29 (2025–2026, all 21 counties) |
 | case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (full run: publications up to 2026-10-28; daily sync from then on) |
@@ -80,19 +80,29 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   2025:53), and 9 contain what looks like a personal identity number. SFS
   references (`lagrumLista`) stay plain text in the body; the app's reader links
   the citation forms to the SFS documents the API publishes.
-- Agency regulations: only a 15-document pilot sample of three series (AFS,
-  FFFS, TSFS) is in the corpus; about 100 series exist (lagrummet.se lists them)
-  and there is no known target. Only base regulations are stored; amending
-  regulations are listed in `amended_by`. AFS has the consolidated text from
+- Agency regulations: three of about 100 series (lagrummet.se lists them) are
+  collected, in full as of 2026-10-29: every base regulation in force of AFS
+  (15) and FFFS (121), and every TSFS base regulation on Transportstyrelsen's
+  year listings (622: 331 in force and 291 repealed, stored with `repealed`
+  set). The targets in `collector/data/targets.json` are those counts. Only
+  base regulations are stored; amending regulations (30 AFS repealing
+  regulations, 280 FFFS and 1528 TSFS amending or repealing regulations) are
+  not stored on their own but listed in `amended_by`. No regulation failed and
+  no host blocked the run. Transportstyrelsen's number-order index also lists
+  regulations of the predecessor series it took over (LFS, JvSFS and others,
+  years 1978 to 2008 and later), some still in force; only numbers in the TSFS
+  series are collected, so those are a gap. The earliest TSFS base regulation
+  in the corpus is TSFS 2009:1. AFS has the consolidated text from
   Arbetsmiljöverket's HTML pages. FFFS and TSFS publish the text only as PDF:
-  their bodies hold metadata, the agency's summary and links to the PDFs, whose
-  SHA-256 is in `sources/agency-pdf-manifest.json`; PDF text is not extracted.
-  `issued` is known only for unamended AFS regulations, and AFS `in_force` only
-  for those; FFFS and TSFS have no decision date on their pages.
-  Arbetsmiljöverket's robots.txt disallows its folder of original PDFs, which is
-  never requested. Boverket (BFS, API key probably needed, owner to decide),
-  Skatteverket (SKVFS, robots.txt request rejected by a WAF) and the other
-  series are not collected yet.
+  their bodies hold metadata, the agency's summary and links to the PDFs,
+  whose SHA-256 is in `sources/agency-pdf-manifest.json`; PDF text is not
+  extracted (owner decision: no non-stdlib dependency). `issued` is known only
+  for unamended AFS regulations, and AFS `in_force` only for those; FFFS and
+  TSFS have no decision date on their pages. Arbetsmiljöverket's robots.txt
+  disallows its folder of original PDFs, which is never requested. Boverket
+  (BFS, API key probably needed; not signed up for now), Skatteverket (SKVFS,
+  robots.txt request rejected by a WAF) and the other series are not collected
+  yet (#115).
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630

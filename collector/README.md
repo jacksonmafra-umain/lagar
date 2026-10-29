@@ -374,6 +374,10 @@ adding an adapter and registering it in `ADAPTERS`.
   (`Föreskrifter om ändring/ändringar/upphävande ...`), and a TSFS page that shows another
   regulation which lists the requested number as an amendment is excluded too. FI classes its
   repealing regulations (`Föreskrifter om upphävande av ...`) as base regulations; they are kept.
+  AFS takes the base regulations from "Gällande grundföreskrifter"; the repealing regulations the
+  overview lists under "Gällande ändringsföreskrifter med upphävanden" are excluded. The TSFS
+  year listings also hold repealed regulations: their base regulations are stored with
+  `repealed` set from the listing's "Upphävd" badge.
 - Mapping: `id` is the slug of the number (`afs-2023-1`, `hslf-fs-2016-40`), `number` the
   series-prefixed number (`AFS 2023:1`), `issuer` the agency, `language: sv`, `eli: null`,
   `authoritative: false` (the printed series is authoritative). AFS: `issued` is "Beslutad",
