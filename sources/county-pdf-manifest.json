@@ -3209,6 +3209,699 @@
       ],
       "number": "09FS 2026:2",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 115962,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:37Z",
+          "sha256": "3819de17175761c738a483efe3581188a1123bfe48bf5f418f376018b86e932c",
+          "url": "https://www.lansstyrelsen.se/download/18.671316dc193dec4d4d39e88d/1736757524648/10%20FS%202025:1.pdf"
+        },
+        {
+          "bytes": 628618,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:38Z",
+          "sha256": "6ebbc76cd6bacbd10fc9aa76d6e83a11e0e20dda7d8779e5c75f41a926b7909d",
+          "url": "https://www.lansstyrelsen.se/download/18.671316dc193dec4d4d39e893/1736757583807/10%20FS%202025:1%20Kartbilaga.pdf"
+        }
+      ],
+      "number": "10FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 115998,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:39Z",
+          "sha256": "cb20a6d917567b602439eb53ab860983a651f1a55770d680447ad31b3ef76920",
+          "url": "https://www.lansstyrelsen.se/download/18.453ea5d61946e1be409bc/1737015564864/10%20FS%202025:2.pdf"
+        },
+        {
+          "bytes": 518359,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:40Z",
+          "sha256": "b9c1b60c8728d29e6c686fde0ce4bf6d0058f463fcedfb25f9d41f53613f5f4b",
+          "url": "https://www.lansstyrelsen.se/download/18.453ea5d61946e1be409be/1737015607661/10%20FS%202025:2%20Kartbilaga.pdf"
+        }
+      ],
+      "number": "10FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 95388,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:41Z",
+          "sha256": "36e8e6e298e69869d27080bf8d1084a918a879966f4dd429f0e77f5e900d24d0",
+          "url": "https://www.lansstyrelsen.se/download/18.453819d0194d33c8a905b8d6/1739969827050/10FS%202025_3.pdf"
+        }
+      ],
+      "number": "10FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 748512,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:42Z",
+          "sha256": "d589eb87c3b1242e36ea2056dd16cf9927e39a0cd5c801509b236ac9c4de6ab6",
+          "url": "https://www.lansstyrelsen.se/download/18.5754b1b8194d34147317b3f9/1740401626921/10FS%202025_4.pdf"
+        }
+      ],
+      "number": "10FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 279320,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:43Z",
+          "sha256": "8087d743b217c6ee8f7bea641d9ab4a89656f4770548b76c1d6a982bd5ca529b",
+          "url": "https://www.lansstyrelsen.se/download/18.5754b1b8194d34147317a816/1740392773503/10FS%202025_5.pdf"
+        }
+      ],
+      "number": "10FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 3039438,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:45Z",
+          "sha256": "51f64d7f4d08be1fd99b2c58cba4d99185abe899eac8c59101bbd831ac7a5c20",
+          "url": "https://www.lansstyrelsen.se/download/18.2ace232419540c6a2c777f72/1742214039418/10FS%202025:6%20Sammanst%C3%A4llning%20%C3%B6ver%20allm%C3%A4nna%20v%C3%A4gar%20Blekinge%20l%C3%A4n.pdf"
+        }
+      ],
+      "number": "10FS 2025:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 209230,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:45Z",
+          "sha256": "899438bc75931fd80236b1f4cb70b6ff601663776bee439f3ea9552f1ab4dd47",
+          "url": "https://www.lansstyrelsen.se/download/18.5824d8f619540bc082d7d35d/1742290811860/10%20FS%202025:7.pdf"
+        },
+        {
+          "bytes": 439856,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:46Z",
+          "sha256": "794c8e2dfea5bb18cd7c5bed3bcfed1ba2f6707df184477dfd3e8702434055e6",
+          "url": "https://www.lansstyrelsen.se/download/18.5824d8f619540bc082d7d34d/1742290789762/Kartbilaga%2010%20FS%202025:7.pdf"
+        }
+      ],
+      "number": "10FS 2025:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 276284,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:47Z",
+          "sha256": "c8cf6dae6c639691e157a9bbd3851e05a79eefa803b46babb140ad45c2aa18e0",
+          "url": "https://www.lansstyrelsen.se/download/18.5f41c6e195c8cccd33102e6/1743067086435/10FS%202025:8.pdf"
+        }
+      ],
+      "number": "10FS 2025:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 289491,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:48Z",
+          "sha256": "fc51ad3e64eba06a8a5078ad26a940c7d8746a6133831c132d2051efddfd7f47",
+          "url": "https://www.lansstyrelsen.se/download/18.75dc539919618cb34bb69eb/1744284398558/10FS%202025:9.pdf"
+        }
+      ],
+      "number": "10FS 2025:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 502573,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:49Z",
+          "sha256": "ff9bb5b43654b0f019ecc1023eb4d96d5b517c6ab7341c0c3337133ed44e040f",
+          "url": "https://www.lansstyrelsen.se/download/18.202842d1967cad6f445651/1745911510997/10%20FS%202025:10.pdf"
+        }
+      ],
+      "number": "10FS 2025:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 96775,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:50Z",
+          "sha256": "1dbc611e4fb22df6529eaedcf87633faa2d599700ef3ad43700a183a82b09a77",
+          "url": "https://www.lansstyrelsen.se/download/18.353ea87b19686c6f269ecde/1746173966270/10%20FS%202025:11.pdf"
+        }
+      ],
+      "number": "10FS 2025:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 127100,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:51Z",
+          "sha256": "824df0ed5dc7377daf5e3ae5e14ab0d262eec9d4c3b8b0f817de4be8285b0569",
+          "url": "https://www.lansstyrelsen.se/download/18.57c2d35a1969f8a67de6e064/1747299063341/10FS%202025:12.pdf"
+        }
+      ],
+      "number": "10FS 2025:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 79894,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:52Z",
+          "sha256": "d49d753149cffe07f2728b843b7ae06c85f9550771bd99b44beca44575a30b20",
+          "url": "https://www.lansstyrelsen.se/download/18.3357a38f196f109f26d4b281/1748415090211/10FS%202025:13.pdf"
+        }
+      ],
+      "number": "10FS 2025:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 90542,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:53Z",
+          "sha256": "6956eca43a3755f84338b608a4187fc7bb1f9781fa444b5950cfb71c65c43956",
+          "url": "https://www.lansstyrelsen.se/download/18.3043922c196f123562f4dba9/1748440553830/10FS%202025:14.pdf"
+        }
+      ],
+      "number": "10FS 2025:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 544078,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:54Z",
+          "sha256": "a6aeff05a46e4dcbc90cdaf2f0853366f88d2cbff6fba5aaf4b1d39ed8194afb",
+          "url": "https://www.lansstyrelsen.se/download/18.2f8110451975d2f3bc1da9/1749633265648/10%20FS%202025:15.pdf"
+        }
+      ],
+      "number": "10FS 2025:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 5248073,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:56Z",
+          "sha256": "15794c9291a5eef499430e3e8885e93f44c70127bace27700d0dca5cbce9872e",
+          "url": "https://www.lansstyrelsen.se/download/18.57a931ed1975d3a7bbf1864/1749640656257/10%20FS%202025:16.pdf"
+        }
+      ],
+      "number": "10FS 2025:16",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 377648,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:57Z",
+          "sha256": "bbfc8f719c36e7d04a9417d90f7b3c7c0bcfb8286f5cd22d3cbeb218491a6d86",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deeade7ec/1749564019402/10FS%202025:17.pdf"
+        }
+      ],
+      "number": "10FS 2025:17",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 89598,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:57Z",
+          "sha256": "471c60e25bd51e50e51ce76200ba9717c0bcb001f5ce5037c0958defda8f68c9",
+          "url": "https://www.lansstyrelsen.se/download/18.72fc4e3f197a205653153c6e/1751441876175/10%20FS%202025:18.pdf"
+        }
+      ],
+      "number": "10FS 2025:18",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 414736,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:58Z",
+          "sha256": "f7383df4f7a717dec2dc22a5c5a0fd0eb061602a88444bafe9f4bf1243ff9511",
+          "url": "https://www.lansstyrelsen.se/download/18.72fc4e3f197a20565319cac5/1751978050603/10%20FS%202025:19.pdf"
+        }
+      ],
+      "number": "10FS 2025:19",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 2194957,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:00Z",
+          "sha256": "2f86720455af09e5b3fc72e19cd6350058b0868cf664342b610a5731a2b3da4a",
+          "url": "https://www.lansstyrelsen.se/download/18.44c8f063198074a61abe5ff/1752586615760/10FS%202025:20.pdf"
+        }
+      ],
+      "number": "10FS 2025:20",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 87740,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:00Z",
+          "sha256": "9ba6d58727c030b5e1ea7e4ab5c076c9b3448f47734b8465e9376c4c82ba5c32",
+          "url": "https://www.lansstyrelsen.se/download/18.227393a0198735e22ca15eef/1754465910718/10FS%202025-21.pdf"
+        }
+      ],
+      "number": "10FS 2025:21",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 87343,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:01Z",
+          "sha256": "9aadcbdc4073014a6965a6070484551e18a1a3a062675b12978b3b81add7bd22",
+          "url": "https://www.lansstyrelsen.se/download/18.3057bc87199139bb55f3cdb2/1757425659590/10FS%202025:23.pdf"
+        }
+      ],
+      "number": "10FS 2025:23",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 298365,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:02Z",
+          "sha256": "0e64ba1a30f1e1df2a301225e6c32447dd1c6963011f60fee7b9ac84de7e2eca",
+          "url": "https://www.lansstyrelsen.se/download/18.3057bc87199139bb55f3cd95/1757425584873/10FS%202025:24.pdf"
+        }
+      ],
+      "number": "10FS 2025:24",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 94681,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:03Z",
+          "sha256": "4ba158973f8c0ac429e971fbc1a7323eeb01c471e924ebc28bb3f531517c7b12",
+          "url": "https://www.lansstyrelsen.se/download/18.3fcb6f8319931f7a95f9eab8/1758618185179/10FS%202025:25.pdf"
+        }
+      ],
+      "number": "10FS 2025:25",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 238216,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:04Z",
+          "sha256": "e5e87bbc32f26e379eb2fc1f874427acf21f9e462f6b5cc4f9a2277b30accaba",
+          "url": "https://www.lansstyrelsen.se/download/18.3fcb6f8319931f7a95f9eb32/1758618599475/10FS%202025:26.pdf"
+        }
+      ],
+      "number": "10FS 2025:26",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1170276,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:06Z",
+          "sha256": "c234afbbb826b103d815183062519ade00f3f3e7e97d8ae46bec5db5a79d87ff",
+          "url": "https://www.lansstyrelsen.se/download/18.2c723dee19960b3f8907c84e/1759156627367/10FS%202025:27.pdf"
+        }
+      ],
+      "number": "10FS 2025:27",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1089044,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:07Z",
+          "sha256": "6ca42a947270f112ef95979b52c869eb298fd1063614590f0609992b178fa28d",
+          "url": "https://www.lansstyrelsen.se/download/18.47c7784319c076bdd8a48a54/1770127825755/10FS%202025:28.pdf"
+        }
+      ],
+      "number": "10FS 2025:28",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 997463,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:08Z",
+          "sha256": "2ba346f6e069a7544ed50abf443a39b0621be0dfda54d82cb3d987068b5ef5ce",
+          "url": "https://www.lansstyrelsen.se/download/18.5dc1540819a7685a5104a56b/1763464005769/Blekinge%20l%C3%A4ns%20f%C3%B6rfattningssamling_Bj%C3%B6rkelycke%20utvidgn_%20m%20bilagor_20251118.pdf"
+        }
+      ],
+      "number": "10FS 2025:29",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 513267,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:09Z",
+          "sha256": "8ac94586de7b4bf18b6924db630a03b81053ebef37bcf857fe154e0eb654c38a",
+          "url": "https://www.lansstyrelsen.se/download/18.1c44abc919a76935c09af6ac/1764163756759/10%20FS%202025:30.pdf"
+        }
+      ],
+      "number": "10FS 2025:30",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 417641,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:10Z",
+          "sha256": "85cabd0d8b0ed20dc9dfd81037e6ff408bfe3bab6422654ff44515ef0623c205",
+          "url": "https://www.lansstyrelsen.se/download/18.1c44abc919a76935c09af880/1764164640372/10%20FS%202025:31.pdf"
+        }
+      ],
+      "number": "10FS 2025:31",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 672435,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:11Z",
+          "sha256": "6420b6d41ae6369e0d872ab33a473a7c8dc88611809dfa08384d212e972eedf0",
+          "url": "https://www.lansstyrelsen.se/download/18.2b90509c19afce1b938de02/1765291796687/FS%20skyddsf%C3%B6reskrifter%20Djupek%C3%A5s(6228-2021-51).pdf"
+        }
+      ],
+      "number": "10FS 2025:32",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 701270,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:12Z",
+          "sha256": "97fa2ce3c496a0bae3addb899dad4ec2e5cf71cc3530bd10035ec9e96e269b41",
+          "url": "https://www.lansstyrelsen.se/download/18.2b90509c19afce1b938c65d/1765282276391/FS%20skyddsf%C3%B6reskrifter%20Gammalstorp(6229-2021-73).pdf"
+        }
+      ],
+      "number": "10FS 2025:33",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 75693,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:13Z",
+          "sha256": "2327a03d638f117436f3ee4f61fe670887d13669d51532b5053e0b3f53d52dce",
+          "url": "https://www.lansstyrelsen.se/download/18.7fd0f0d219afcb93b9665a92/1765869418605/10FS%202025:34.pdf"
+        }
+      ],
+      "number": "10FS 2025:34",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1108765,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:14Z",
+          "sha256": "a1e3b5b2ce8de4dc897f610b66e19fa08ea7561df8c7bacb78dcf9a8a9e56eb0",
+          "url": "https://www.lansstyrelsen.se/download/18.7fd0f0d219afcb93b965c3a3/1765806425431/10FS%202025:35.pdf"
+        }
+      ],
+      "number": "10FS 2025:35",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1597534,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:15Z",
+          "sha256": "6ae542fcaed5d7f38a6badc5189c9ba5c802fcafc712090e82b9ebf0743a7340",
+          "url": "https://www.lansstyrelsen.se/download/18.69e5fdd919b2bdd08ad57b/1765973091257/10FS%202025:36.pdf"
+        }
+      ],
+      "number": "10FS 2025:36",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1546562,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:16Z",
+          "sha256": "e8bdbaf7641cfeab09a3f8249a2df5dba46add7a37f13244fffd697dabcac659",
+          "url": "https://www.lansstyrelsen.se/download/18.2345080a19ba1fedff525632/1768215670502/10FS%202026:1.pdf"
+        }
+      ],
+      "number": "10FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 209126,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:17Z",
+          "sha256": "6f440067a5ef986b70744f698c89aaf526bdebdcaf930e6f87f59791dd1eb320",
+          "url": "https://www.lansstyrelsen.se/download/18.8a2d3da19bf0cc568b49086/1769778063355/10FS%202026:2.pdf"
+        }
+      ],
+      "number": "10FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 86125,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:18Z",
+          "sha256": "0b05ec2dca45ff6bc8f11b52f21d800fc5465d1c31036832b65f4fc8cebd964f",
+          "url": "https://www.lansstyrelsen.se/download/18.54abb3519c93374c29e475/1772112431372/10FS%202026:3.pdf"
+        }
+      ],
+      "number": "10FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 3452612,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:19Z",
+          "sha256": "406a7a4477193bc7640750662968862033fd99980a0f4c01b0a17919261cc3cf",
+          "url": "https://www.lansstyrelsen.se/download/18.672db76219d24c945681675c/1774594695818/10FS%202026:4.pdf"
+        }
+      ],
+      "number": "10FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 90667,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:20Z",
+          "sha256": "e05b6a5882846eeccba7257cc573b196a6794a02701fbb11e77d425fe3912dfc",
+          "url": "https://www.lansstyrelsen.se/download/18.47de43c919e024e9b40a7c9/1778240858139/10FS%202026-5.pdf"
+        }
+      ],
+      "number": "10FS 2026:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 570743,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:21Z",
+          "sha256": "e9af72534e5e65cf4cfc6ebc926a23fe6a6153e5f274c3fd482745ffe85ed01b",
+          "url": "https://www.lansstyrelsen.se/download/18.8774bdc19e021f5f4b3e28a/1778583234286/Blekinge%20l%C3%A4ns%20f%C3%B6rfattningssamling%20m%20bilagor_Bj%C3%B6rkelycke_20260512.pdf"
+        }
+      ],
+      "number": "10FS 2026:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 3147931,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:22Z",
+          "sha256": "bf78356111b82c3b8068e298dc9f7867ce3ab89cb1d55b958ff63e42e429aef2",
+          "url": "https://www.lansstyrelsen.se/download/18.11a69ad819eb685a1ac3ca49/1781611428302/10FS%202026:7.pdf"
+        }
+      ],
+      "number": "10FS 2026:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 88737,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:23Z",
+          "sha256": "fb6d564a19731f64af69630d1001ff88479dc181792ab9e339ceb946c62ba540",
+          "url": "https://www.lansstyrelsen.se/download/18.6fa4735719ed45ea927408ff/1782126187432/10FS%202026:8.pdf"
+        }
+      ],
+      "number": "10FS 2026:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 212470,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:24Z",
+          "sha256": "48e0d251c2a9d810e3965c7852efc477278679e503958bb743ef92a90f6353d2",
+          "url": "https://www.lansstyrelsen.se/download/18.6fa4735719ed45ea927affe6/1782737453434/10FS%202026-9.pdf"
+        }
+      ],
+      "number": "10FS 2026:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 122855,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:25Z",
+          "sha256": "4b9dd8b60e1d8b93f29ec5f479ed2b1aef486f0531fcef6ba3413907983b6f89",
+          "url": "https://www.lansstyrelsen.se/download/18.1611710c19ed44d0beac2045/1783002931882/10FS%202026-10.pdf"
+        }
+      ],
+      "number": "10FS 2026:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 103747,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:26Z",
+          "sha256": "c969c61f1bc5bfedf1ef545a3a3d4fb513d6832421b327700f2b1cdfda31087d",
+          "url": "https://www.lansstyrelsen.se/download/18.66462e61a01f431fd52dc0d/1787570664666/10FS2026_11.pdf"
+        }
+      ],
+      "number": "10FS 2026:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 87601,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:27Z",
+          "sha256": "e2c218493148a88dab3639a75862e393abd93a886fb5813f4ee2b3593e08cf6d",
+          "url": "https://www.lansstyrelsen.se/download/18.5188859e1a04207e9274b4c7/1788340650652/10FS2026-12.pdf"
+        }
+      ],
+      "number": "10FS 2026:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 110446,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:28Z",
+          "sha256": "86cf61ad3cf6c12bc0fb552cb6f17a9dea14f8ae6751a022ef170c5247a6c7b0",
+          "url": "https://www.lansstyrelsen.se/download/18.3d07f9b91a115a6f008ca42/1791456675525/10FS2026-14.pdf"
+        }
+      ],
+      "number": "10FS 2026:14",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
