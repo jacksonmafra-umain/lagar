@@ -13,6 +13,8 @@
     <string name="drawer_about">About</string>
     <string name="drawer_data_built">Data built %1$s</string>
     <string name="drawer_credits">Swedish legislation, case law and public services in one place.</string>
+    <string name="drawer_section_scope">Switch scope</string>
+    <string name="drawer_section_navigate">Navigate</string>
     <string name="settings_title">Settings</string>
     <string name="navigate_back">Back</string>
     <string name="repealed">Repealed</string>
@@ -96,6 +98,7 @@
     <string name="scope_region">Regional</string>
     <string name="scope_kommun">Municipal</string>
     <string name="scope_national_desc">Fundamental laws, acts, ordinances and agency regulations</string>
+    <string name="scope_national_short">All of Sweden</string>
     <string name="scope_region_desc">Regional regulations in Sweden’s 21 regions</string>
     <string name="scope_kommun_desc">Local regulations in Sweden’s 290 municipalities</string>
     <string name="scope_step_title">Choose your starting scope</string>
@@ -175,8 +178,6 @@
     <string name="advanced_dates_title">Issued between</string>
     <string name="advanced_date_from">From</string>
     <string name="advanced_date_to">To</string>
-    <string name="advanced_date_placeholder">YYYY-MM-DD</string>
-    <string name="advanced_date_invalid">Invalid date</string>
     <string name="advanced_range_invalid">From date is after to date</string>
     <string name="advanced_clear_range">Clear range</string>
     <string name="advanced_types_title">Document types</string>
@@ -210,4 +211,35 @@
     <string name="type_eu_decision">EU decision</string>
     <string name="type_county_regulation">County regulation</string>
     <string name="type_municipal_regulation">Municipal regulation</string>
+    <string name="search_sort_label">Sort by</string>
+    <string name="search_sort_relevance">Relevance</string>
+    <string name="search_sort_newest">Newest</string>
+    <string name="search_sort_number">Number</string>
+    <string name="search_match_body">Found in the text</string>
+    <string name="advanced_scope_title">Scope</string>
+    <string name="advanced_mode_fulltext_note">Also searches the text of each document</string>
+    <string name="advanced_in_force_title">Entry into force between</string>
+    <string name="advanced_in_force_note">Only documents with a known entry-into-force date match these filters.</string>
+    <string name="advanced_vacatio_legis">Not yet in force (vacatio legis)</string>
+    <string name="advanced_date_choose">Choose a date</string>
+    <string name="advanced_section_active">Active</string>
+    <string name="advanced_section_expanded">Expanded</string>
+    <string name="advanced_section_collapsed">Collapsed</string>
+    <string name="date_picker_ok">OK</string>
+    <string name="date_picker_cancel">Cancel</string>
+    <string name="date_display">%1$d %2$s %3$d</string>
+    <string-array name="months_short">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
 </resources>

@@ -78,6 +78,24 @@ class PoliteClientTest(unittest.TestCase):
         client, _, _ = make([(b"%PDF", headers)])
         self.assertEqual(client.fetch("http://x/a.pdf"), (b"%PDF", "application/pdf"))
 
+    def test_extra_headers_are_sent_with_the_user_agent(self):
+        client, opener, _ = make([b"ok"])
+        client.get("http://x", {"Accept": "text/html", "User-Agent": "spoof"})
+        request = opener.requests[0]
+        self.assertEqual(request.get_header("Accept"), "text/html")
+        self.assertEqual(request.get_header("User-agent"), "lagar-test/1.0 (+https://example.org)")
+
+    def test_fetch_final_returns_the_redirected_url(self):
+        class Redirected(FakeResponse):
+            def geturl(self):
+                return "http://y/final"
+
+        opener = lambda request, timeout=None: Redirected(b"body")  # noqa: E731
+        client = PoliteClient("ua", opener=opener, clock=lambda: 0.0, sleep=lambda s: None)
+        self.assertEqual(client.fetch_final("http://x"), (b"body", None, "http://y/final"))
+        client, _, _ = make([b"plain"])
+        self.assertEqual(client.fetch_final("http://x"), (b"plain", None, "http://x"))
+
     def test_fetch_without_content_type_header(self):
         client, _, _ = make([(b"x", Message())])
         self.assertEqual(client.fetch("http://x"), (b"x", None))

@@ -56,6 +56,13 @@ class TokenizeTest(unittest.TestCase):
         self.assertEqual(si.normalize("Åre ÄÖ Écija Łódź"), "are ao ecija lodz")
         self.assertEqual(len(si.ACCENTED), len(si.PLAIN))
 
+    def test_shared_token_fixture(self):
+        # The app tokenizer is tested against the same file (app/shared androidHostTest SearchTokensParityTest).
+        cases = json.loads((ROOT / "api/tests/fixtures/search-tokens.json").read_text(encoding="utf-8"))["cases"]
+        for case in cases:
+            with self.subTest(text=case["text"]):
+                self.assertEqual(si.tokenize(case["text"]), case["tokens"])
+
     def test_app_fold_table_in_sync(self):
         kotlin = (ROOT / "app/shared/src/commonMain/kotlin/app/lagar/domain/Search.kt").read_text(encoding="utf-8")
         self.assertIn(f'ACCENTED = "{si.ACCENTED}"', kotlin)
