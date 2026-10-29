@@ -114,6 +114,7 @@
     <string name="splash_tagline">Hela Sveriges regelverk på ett ställe</string>
     <string name="onboarding_step">Steg %1$d av %2$d</string>
     <string name="onboarding_skip">Hoppa över</string>
+    <string name="onboarding_back">Tillbaka till föregående steg</string>
     <string name="onboarding_continue">Fortsätt</string>
     <string name="onboarding_done">Klar</string>
     <string name="onboarding_stored_locally">Sparas bara på den här enheten</string>

@@ -17,10 +17,10 @@ import org.jetbrains.compose.resources.stringResource
 
 /** Step 2: pick the scope the app opens on. */
 @Composable
-fun ScopeStepRoute(viewModel: OnboardingViewModel, onContinue: () -> Unit, onSkip: () -> Unit) {
+fun ScopeStepRoute(viewModel: OnboardingViewModel, onContinue: () -> Unit, onSkip: () -> Unit, onBack: () -> Unit) {
     val scope by viewModel.scope.collectAsState()
     val counts by viewModel.counts.collectAsState()
-    ScopeStepScreen(scope, counts, viewModel::selectScope, onContinue, onSkip)
+    ScopeStepScreen(scope, counts, viewModel::selectScope, onContinue, onSkip, onBack)
 }
 
 @Composable
@@ -30,6 +30,7 @@ fun ScopeStepScreen(
     onSelect: (Scope) -> Unit,
     onContinue: () -> Unit,
     onSkip: () -> Unit,
+    onBack: () -> Unit,
 ) {
     OnboardingScaffold(
         step = 2,
@@ -38,6 +39,7 @@ fun ScopeStepScreen(
         primaryLabel = stringResource(Res.string.onboarding_continue),
         onPrimary = onContinue,
         onSkip = onSkip,
+        onBack = onBack,
     ) {
         Column(Modifier.selectableGroup(), verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
             Scope.entries.forEach { scope ->
