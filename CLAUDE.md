@@ -23,6 +23,7 @@ Run from the repo root.
 - Metadata-only amendment history: `python3 -I collector/history.py --pilot --dry-run`, or `--out build/history.fi` and then `git fast-import --quiet < build/history.fi` (creates `history/pilot` locally; do not push it without the owner).
 - Audit the corpus: `python3 -I collector/audit.py [--fsck]` writes `collector/data/pending-integrity.json`; exits 1 on schema errors, duplicate ids or path mismatches.
 - Progress reports: `python3 -I collector/plan.py` reads `collector/data/targets.json` and the audit JSON, writes `PROGRESS.md` and `progress.svg`. Run the audit first; `COVERAGE.md` is hand-written.
+- Kommun centroids for the app's location suggestion: download SCB's CC0 boundaries zip once (URL in `collector/lagar/centroids.py`) and run `python3 -I collector/centroids.py <zip>`; it rewrites `app/shared/src/commonMain/composeResources/files/geo/sweden.json` with `lat`, `lon` and `radiusKm` per kommun.
 - Build the API: `python3 -I api/build.py --corpus corpus --out build/api/v1`
 - Collector tests: `python3 -I -m unittest discover -s collector/tests -t collector` (single test: add `-k <name>`)
 - API tests: `python3 -I -m unittest discover -s api/tests -t .`
