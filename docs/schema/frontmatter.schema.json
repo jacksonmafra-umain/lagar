@@ -7,15 +7,15 @@
   "properties": {
     "id": {"type": "string", "pattern": "^[a-z0-9_]+-[0-9a-z-]+$"},
     "title": {"type": "string"},
-    "type": {"type": "string", "enum": ["fundamental_law", "act", "ordinance", "other_statute"]},
+    "type": {"type": "string", "enum": ["fundamental_law", "act", "ordinance", "other_statute", "agency_regulation", "case_report", "case_notice", "eu_regulation", "eu_directive", "eu_decision", "county_regulation", "municipal_regulation"]},
     "layer": {"type": "string", "enum": ["fundamental", "sfs", "agency", "case_law", "eu", "region", "municipality", "service"]},
     "number": {"type": "string"},
     "issued": {"type": ["string", "null"], "format": "date"},
     "in_force": {"type": ["string", "null"], "format": "date"},
     "repealed": {"type": ["string", "null"], "format": "date"},
-    "amended_by": {"type": "array", "items": {"type": "string", "pattern": "^N?\\d{4}:\\d+$"}},
-    "amended_through": {"type": ["string", "null"], "pattern": "^N?\\d{4}:\\d+$"},
-    "reprinted_by": {"type": "array", "items": {"type": "string", "pattern": "^N?\\d{4}:\\d+$"}},
+    "amended_by": {"type": "array", "items": {"type": "string", "pattern": "^\\S(.*\\S)?$"}},
+    "amended_through": {"type": ["string", "null"], "pattern": "^\\S(.*\\S)?$"},
+    "reprinted_by": {"type": "array", "items": {"type": "string", "pattern": "^\\S(.*\\S)?$"}},
     "ministry": {"type": ["string", "null"]},
     "eli": {"type": ["string", "null"], "format": "uri"},
     "language": {"type": "string", "enum": ["sv", "en"]},
@@ -39,6 +39,115 @@
           "in_force_raw": {"type": ["string", "null"]}
         }
       }
+    },
+    "issuer": {"type": ["string", "null"], "pattern": "^\\S(.*\\S)?$"},
+    "court": {"type": ["string", "null"], "pattern": "^[A-ZÅÄÖ0-9]{2,10}$"},
+    "ecli": {"type": ["string", "null"], "pattern": "^ECLI:[A-Z]{2}:[A-Z0-9.]{1,7}:\\d{4}:[A-Za-z0-9.]{1,25}$"},
+    "celex": {"type": ["string", "null"], "pattern": "^[0-9CE]\\d{4}[A-Z]{1,2}\\d{4}([A-Z]?\\(\\d{2}\\))?(-\\d{8})?$"},
+    "region_code": {"type": ["string", "null"], "pattern": "^(0[13-9]|1[02-47-9]|2[0-5])$"},
+    "municipality_code": {"type": ["string", "null"], "pattern": "^(0[13-9]|1[02-47-9]|2[0-5])\\d{2}$"}
+  },
+  "allOf": [
+    {
+      "$comment": "SFS types: references are SFS numbers, as before the other layers existed; the other layers' fields stay null.",
+      "if": {"required": ["type"], "properties": {"type": {"enum": ["fundamental_law", "act", "ordinance", "other_statute"]}}},
+      "then": {
+        "properties": {
+          "amended_by": {"items": {"pattern": "^N?\\d{4}:\\d+$"}},
+          "amended_through": {"pattern": "^N?\\d{4}:\\d+$"},
+          "reprinted_by": {"items": {"pattern": "^N?\\d{4}:\\d+$"}},
+          "issuer": {"type": "null"},
+          "court": {"type": "null"},
+          "ecli": {"type": "null"},
+          "celex": {"type": "null"},
+          "region_code": {"type": "null"},
+          "municipality_code": {"type": "null"}
+        }
+      }
+    },
+    {
+      "$comment": "Agency regulations: series-prefixed numbers such as AFS 2023:1, FFFS 2014:1 or HSLF-FS 2016:40.",
+      "if": {"required": ["type"], "properties": {"type": {"const": "agency_regulation"}}},
+      "then": {
+        "properties": {
+          "number": {"pattern": "^[A-ZÅÄÖ][A-ZÅÄÖ0-9]*(-[A-ZÅÄÖ0-9]+)* \\d{4}:\\d+$"},
+          "amended_by": {"items": {"pattern": "^[A-ZÅÄÖ][A-ZÅÄÖ0-9]*(-[A-ZÅÄÖ0-9]+)* \\d{4}:\\d+$"}},
+          "amended_through": {"pattern": "^[A-ZÅÄÖ][A-ZÅÄÖ0-9]*(-[A-ZÅÄÖ0-9]+)* \\d{4}:\\d+$"},
+          "reprinted_by": {"items": {"pattern": "^[A-ZÅÄÖ][A-ZÅÄÖ0-9]*(-[A-ZÅÄÖ0-9]+)* \\d{4}:\\d+$"}},
+          "court": {"type": "null"},
+          "ecli": {"type": "null"},
+          "celex": {"type": "null"},
+          "region_code": {"type": "null"},
+          "municipality_code": {"type": "null"}
+        }
+      }
+    },
+    {
+      "$comment": "Case law: report references such as NJA 2019 s. 2, HFD 2020 ref. 5, MIG 2026:10 or AD 2020 nr 45; reports are never amended.",
+      "if": {"required": ["type"], "properties": {"type": {"enum": ["case_report", "case_notice"]}}},
+      "then": {
+        "required": ["court"],
+        "properties": {
+          "number": {"pattern": "^[A-ZÅÄÖ]{2,5} \\d{4}(:\\d+| (s\\.|ref\\.|not\\.|nr|N) \\d+)$"},
+          "amended_by": {"maxItems": 0},
+          "amended_through": {"type": "null"},
+          "reprinted_by": {"maxItems": 0},
+          "court": {"type": "string"},
+          "celex": {"type": "null"},
+          "region_code": {"type": "null"},
+          "municipality_code": {"type": "null"}
+        }
+      }
+    },
+    {
+      "$comment": "EU acts: numbers in the Swedish citation form, such as (EU) 2016/679, (EG) nr 1907/2006 or 95/46/EG; references are CELEX numbers.",
+      "if": {"required": ["type"], "properties": {"type": {"enum": ["eu_regulation", "eu_directive", "eu_decision"]}}},
+      "then": {
+        "required": ["celex"],
+        "properties": {
+          "number": {"pattern": "^(\\((EU|EG|EEG|EKSG|Euratom|Gusp)(, (EU|EG|EEG|Euratom))?\\) (nr )?\\d{1,4}/\\d{1,4}|\\d{2,4}/\\d{1,4}/(EU|EG|EEG|EKSG|Euratom|Gusp|RIF)(, (EU|EG|EEG|Euratom))?)$"},
+          "amended_by": {"items": {"pattern": "^[0-9CE]\\d{4}[A-Z]{1,2}\\d{4}([A-Z]?\\(\\d{2}\\))?(-\\d{8})?$"}},
+          "amended_through": {"pattern": "^[0-9CE]\\d{4}[A-Z]{1,2}\\d{4}([A-Z]?\\(\\d{2}\\))?(-\\d{8})?$"},
+          "reprinted_by": {"maxItems": 0},
+          "celex": {"type": "string"},
+          "court": {"type": "null"},
+          "ecli": {"type": "null"},
+          "region_code": {"type": "null"},
+          "municipality_code": {"type": "null"}
+        }
+      }
+    },
+    {
+      "$comment": "County regulations: the county's own series, such as 01FS 2024:3; region_code is the county code.",
+      "if": {"required": ["type"], "properties": {"type": {"const": "county_regulation"}}},
+      "then": {
+        "required": ["region_code"],
+        "properties": {
+          "number": {"pattern": "^(0[13-9]|1[02-47-9]|2[0-5])FS \\d{4}:\\d+$"},
+          "amended_by": {"items": {"pattern": "^(0[13-9]|1[02-47-9]|2[0-5])FS \\d{4}:\\d+$"}},
+          "amended_through": {"pattern": "^(0[13-9]|1[02-47-9]|2[0-5])FS \\d{4}:\\d+$"},
+          "reprinted_by": {"items": {"pattern": "^(0[13-9]|1[02-47-9]|2[0-5])FS \\d{4}:\\d+$"}},
+          "region_code": {"type": "string"},
+          "court": {"type": "null"},
+          "ecli": {"type": "null"},
+          "celex": {"type": "null"},
+          "municipality_code": {"type": "null"}
+        }
+      }
+    },
+    {
+      "$comment": "Municipal regulations: the local number as printed; municipality_code is the SCB kommun code.",
+      "if": {"required": ["type"], "properties": {"type": {"const": "municipal_regulation"}}},
+      "then": {
+        "required": ["municipality_code"],
+        "properties": {
+          "number": {"pattern": "^\\S(.*\\S)?$"},
+          "municipality_code": {"type": "string"},
+          "court": {"type": "null"},
+          "ecli": {"type": "null"},
+          "celex": {"type": "null"}
+        }
+      }
     }
-  }
+  ]
 }

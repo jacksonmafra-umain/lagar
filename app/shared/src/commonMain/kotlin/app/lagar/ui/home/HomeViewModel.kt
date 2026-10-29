@@ -100,10 +100,5 @@ class HomeViewModel(
     }
 }
 
-/** The display level of a listing item, from its API `type`; null for types the home does not group yet. */
-internal fun ListingItem.displayLayer(): DisplayLayer? = when (type) {
-    "fundamental_law" -> DisplayLayer.Fundamental
-    "act" -> DisplayLayer.SfsAct
-    "ordinance" -> DisplayLayer.SfsOrdinance
-    else -> null
-}
+/** The display level of a listing item, from its API `type`; null for `other_statute` and unknown types. */
+internal fun ListingItem.displayLayer(): DisplayLayer? = DisplayLayer.forType(type)

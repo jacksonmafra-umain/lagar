@@ -191,4 +191,12 @@
     <string name="reader_reprinted_by">Omtryck</string>
     <string name="reader_amendment_in_force">Ikraftträdande: %1$s</string>
     <string name="reader_open_document">Öppna %1$s</string>
+    <string name="type_agency_regulation">Myndighetsföreskrift</string>
+    <string name="type_case_report">Referat</string>
+    <string name="type_case_notice">Notis</string>
+    <string name="type_eu_regulation">EU-förordning</string>
+    <string name="type_eu_directive">EU-direktiv</string>
+    <string name="type_eu_decision">EU-beslut</string>
+    <string name="type_county_regulation">Länsföreskrift</string>
+    <string name="type_municipal_regulation">Kommunal föreskrift</string>
 </resources>
