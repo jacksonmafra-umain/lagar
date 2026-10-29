@@ -1,6 +1,7 @@
 package app.lagar.ui.onboarding
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -30,13 +31,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
 import app.lagar.resources.Res
+import app.lagar.resources.ic_arrow_back
 import app.lagar.resources.ic_arrow_forward
 import app.lagar.resources.ic_chevron_right
+import app.lagar.resources.onboarding_back
 import app.lagar.resources.onboarding_skip
 import app.lagar.resources.onboarding_step
 import app.lagar.resources.onboarding_stored_locally
@@ -85,7 +90,8 @@ internal fun StepHeader(step: Int, modifier: Modifier = Modifier) {
 /**
  * Shared frame of the three steps: a fixed top row with the step header and Skip at the top right (as in the
  * Stitch steps), title and text on a scrolling body, and the primary action fixed at the bottom. Skip leaves
- * onboarding with the defaults from any step. Fills the screen, inside the system bars. [aside] (the welcome
+ * onboarding with the defaults from any step. With [onBack] (steps 2 and 3) the top row starts with a back arrow
+ * that returns to the previous step. Fills the screen, inside the system bars. [aside] (the welcome
  * illustration) follows the text on phones; on desktop the title, text and [aside] form a left column beside
  * the choices, and the frame is capped at [ShellDimens.FormMaxWidth].
  */
@@ -98,12 +104,13 @@ internal fun OnboardingScaffold(
     onPrimary: () -> Unit,
     onSkip: () -> Unit,
     modifier: Modifier = Modifier,
+    onBack: (() -> Unit)? = null,
     aside: (@Composable ColumnScope.() -> Unit)? = null,
     body: @Composable ColumnScope.() -> Unit,
 ) {
     val frame = modifier.fillMaxSize().background(LagarTheme.colors.surface).windowInsetsPadding(WindowInsets.systemBars)
     if (LocalWideLayout.current) {
-        WideOnboardingScaffold(step, title, text, primaryLabel, onPrimary, onSkip, frame, aside, body)
+        WideOnboardingScaffold(step, title, text, primaryLabel, onPrimary, onSkip, onBack, frame, aside, body)
         return
     }
     val spacing = LagarTheme.spacing
@@ -113,6 +120,7 @@ internal fun OnboardingScaffold(
             horizontalArrangement = Arrangement.spacedBy(spacing.sm),
             verticalAlignment = Alignment.CenterVertically,
         ) {
+            onBack?.let { BackButton(it) }
             StepHeader(step, Modifier.weight(1f))
             SkipButton(onSkip)
         }
@@ -143,6 +151,7 @@ private fun WideOnboardingScaffold(
     primaryLabel: String,
     onPrimary: () -> Unit,
     onSkip: () -> Unit,
+    onBack: (() -> Unit)?,
     modifier: Modifier,
     aside: (@Composable ColumnScope.() -> Unit)?,
     body: @Composable ColumnScope.() -> Unit,
@@ -155,6 +164,7 @@ private fun WideOnboardingScaffold(
                 horizontalArrangement = Arrangement.spacedBy(spacing.sm),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
+                onBack?.let { BackButton(it) }
                 StepHeader(step, Modifier.weight(1f))
                 SkipButton(onSkip)
             }
@@ -192,6 +202,22 @@ private fun PrimaryLabel(label: String) {
 }
 
 private val WidePrimaryMinWidth = 240.dp
+
+/** The Stitch back arrow at the top left of steps 2 and 3: a 48dp round target, labelled for screen readers. */
+@Composable
+private fun BackButton(onClick: () -> Unit) {
+    val description = stringResource(Res.string.onboarding_back)
+    Box(
+        modifier = Modifier
+            .size(ShellDimens.TouchTarget)
+            .clip(CircleShape)
+            .clickable(role = Role.Button, onClick = onClick)
+            .semantics { contentDescription = description },
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(painterResource(Res.drawable.ic_arrow_back), contentDescription = null, tint = LagarTheme.colors.onSurfaceVariant)
+    }
+}
 
 /** The Stitch "Skip ›" pill: a glass secondary button. */
 @Composable
