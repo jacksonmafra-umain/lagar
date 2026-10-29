@@ -3111,6 +3111,104 @@
       ],
       "number": "08FS 2026:12",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 564993,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:28Z",
+          "sha256": "eeb63cef420cca18657016a4f060e4d74e00e7b9ba47792ee595ae0abef8b823",
+          "url": "https://www.lansstyrelsen.se/download/18.5754b1b8194d34147315b508/1739977415876/09FS%202025%2001.pdf"
+        }
+      ],
+      "number": "09FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 17108,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:29Z",
+          "sha256": "01faaf734fda4b772634f30e9ccf104ff3707ec8ab949ac1ebdc328069a0006a",
+          "url": "https://www.lansstyrelsen.se/download/18.1f88a453195adb731b1e48/1742395793071/09FS%202025-02.pdf"
+        }
+      ],
+      "number": "09FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 234788,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:30Z",
+          "sha256": "f8a37a4a01acade3a1314928b88e2532acd5ab5d1df02acabe9280d793226462",
+          "url": "https://www.lansstyrelsen.se/download/18.3043922c196f123562f8f254/1748955450034/2025-3.pdf"
+        }
+      ],
+      "number": "09FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 59004,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:31Z",
+          "sha256": "061a3adcbbc317e9cb7d0651ae8b893a77c92603dc2356ad41c40bcf1144114d",
+          "url": "https://www.lansstyrelsen.se/download/18.3043922c196f123562fcfd2a/1749459075102/09FS%202025%204.pdf"
+        }
+      ],
+      "number": "09FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 78860,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:32Z",
+          "sha256": "b6c38d7877aaa8158a79829d85e600419de7857dc55f0cc250c5f674c23f5830",
+          "url": "https://www.lansstyrelsen.se/download/18.376917b71975d4650e54c724/1750246407044/09FS%202025%2005.pdf"
+        }
+      ],
+      "number": "09FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 965256,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:33Z",
+          "sha256": "d405360b8a8ab96c9c9454d0fdcf909fa10bf68f7c5e60d243e465e3f0be1dc2",
+          "url": "https://www.lansstyrelsen.se/download/18.5a1f26ad19c47b25a414b257/1771251991488/09FS%202026-01%20%C3%A5rlig%20sammanst%C3%A4llning(4283-2025-4).pdf"
+        }
+      ],
+      "number": "09FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 335315,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:02:34Z",
+          "sha256": "cbf5e1bb36712235e8ebd84ec183b91fa5372be41ffee22fb7ef89bea55461bb",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fe45892/1774862439405/5178-25%20F%C3%B6reskrifter%20om%20ordning%20och%20s%C3%A4kerhet%20f%C3%B6r%20Visby%20flygplats.pdf"
+        }
+      ],
+      "number": "09FS 2026:2",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
