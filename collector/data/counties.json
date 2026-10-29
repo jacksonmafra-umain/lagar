@@ -17,7 +17,8 @@
       "landing": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
       "layout": "files",
       "number_patterns": [
-        "(?P<year>(?:19|20)[0-9]{2})\\.0*(?P<n>[0-9]{1,3})\\.pdf$"
+        "(?P<year>(?:19|20)[0-9]{2})\\.0*(?P<n>[0-9]{1,3})\\.pdf$",
+        "(?<![0-9])(?:(?P<code>[0-9]{2})\\s*)?FS\\s*(?P<year>(?:19|20)[0-9]{2})\\s*[-:_. ]\\s*0*(?P<n>[0-9]{1,3})(?![0-9])"
       ]
     },
     "06": {

@@ -301,6 +301,8 @@ class CountyFilesLayoutTests(unittest.TestCase):
              "08FS 2026:3"),
             ("Föreskrifter om upphävande av (05FS 2026.18) om eldningsförbud 2026.25.pdf", "05",
              CONFIG["05"]["number_patterns"], "05FS 2026:25"),
+            ("Sjötrafikföreskrifter om fartbegränsningar i Ettersundet, 05FS 2025-4 ny .pdf", "05",
+             CONFIG["05"]["number_patterns"], "05FS 2025:4"),
         ]
         for text, code, patterns, number in cases:
             found = county.file_number(text, county.BASE + "/download/18.1/1/x.pdf", code, patterns)
