@@ -33,6 +33,27 @@ class BuildError(Exception):
     pass
 
 
+# Per-ministry indexes are built for the series of these layers (docs/api.md, "by ministry").
+MINISTRY_LAYERS = ("sfs",)
+# "Justitiedepartementet L2": the unit code after the ministry name is dropped when grouping.
+_MINISTRY_RE = re.compile(r"(.*?departementet)\b.*")
+_SLUG_FOLD = str.maketrans("åäöéèüæø", "aaoeeuao")
+
+
+def ministry_name(value):
+    """The ministry a `ministry` value belongs to, without the unit code; None when blank."""
+    if value is None or not value.strip():
+        return None
+    value = " ".join(value.split())
+    m = _MINISTRY_RE.fullmatch(value)
+    return m.group(1) if m else value
+
+
+def ministry_slug(name):
+    """URL-safe id of a ministry name: lowercase, Swedish letters folded, other runs as one hyphen."""
+    return re.sub(r"[^a-z0-9]+", "-", name.lower().translate(_SLUG_FOLD)).strip("-")
+
+
 _NUMBER_RE = re.compile(r"([A-Za-z]*)(\d{4}):\D*(\d*)(.*)")
 # Series-prefixed numbers: agency (AFS 2023:1) and county (01FS 2024:3) regulations.
 _SERIES_RE = re.compile(r"(\S+) (\d{4}):(\d+)")
@@ -129,15 +150,38 @@ def _write(out, rel, data, written):
     written.append(rel)
 
 
-def _pages(out, rel_dir, layer, type_, items, written):
+def _pages(out, rel_dir, layer, type_, items, written, extra=None):
     items = _sorted(items)
     count = max(1, -(-len(items) // PAGE_SIZE))
     for page in range(1, count + 1):
         chunk = items[(page - 1) * PAGE_SIZE : page * PAGE_SIZE]
         _write(out, f"{rel_dir}index-{page}.json", {
-            "layer": layer, "type": type_, "page": page, "page_count": count,
+            "layer": layer, "type": type_, **(extra or {}), "page": page, "page_count": count,
             "total": len(items), "items": chunk,
         }, written)
+
+
+def _by_ministry(out, layer, type_, items, written):
+    """`<layer>/<type>/by-ministry/index.json` and one paged listing per ministry."""
+    groups, names = {}, {}
+    for item in items:
+        name = ministry_name(item["ministry"])
+        if name is None:
+            continue
+        slug = ministry_slug(name)
+        if names.setdefault(slug, name) != name:
+            raise BuildError(f"ministries {names[slug]!r} and {name!r} share the id {slug!r}")
+        groups.setdefault(slug, []).append(item)
+    rel_dir = f"{layer}/{type_}/by-ministry/"
+    ministries = sorted(groups, key=lambda slug: (-len(groups[slug]), names[slug], slug))
+    for slug in ministries:
+        extra = {"ministry_id": slug, "ministry": names[slug]}
+        _pages(out, f"{rel_dir}{slug}/", layer, type_, groups[slug], written, extra)
+    _write(out, f"{rel_dir}index.json", {
+        "layer": layer, "type": type_, "total": len(items),
+        "unassigned": len(items) - sum(len(g) for g in groups.values()),
+        "ministries": [{"id": slug, "name": names[slug], "count": len(groups[slug])} for slug in ministries],
+    }, written)
 
 
 def doc_meta(meta):
@@ -165,6 +209,8 @@ def build(docs, out, built_at):
             if of_type:
                 series.append({"id": type_, "count": len(of_type)})
                 _pages(out, f"{layer}/{type_}/", layer, type_, of_type, written)
+                if layer in MINISTRY_LAYERS:
+                    _by_ministry(out, layer, type_, of_type, written)
         _pages(out, f"{layer}/", layer, None, in_layer, written)
         layers.append({"id": layer, "count": len(in_layer), "series": series})
     for meta, body in sorted(docs, key=lambda d: d[0]["id"]):

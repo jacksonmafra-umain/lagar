@@ -144,8 +144,18 @@ Route: `Hierarki`. Code: `ui/hierarki/`. References: Stitch `lagar_normhierarki_
 | Toggle between layers and pyramid views | Done | |
 | Distribution bar and legend | Done | |
 | Nine layer rows with counts; empty layers open a "coming soon" sheet | Done | |
-| Authority badge and real examples on each layer row | Missing | #34 |
-| Browse by issuing body (ministry, agency) | Missing; `ministry` is now in listing items | #34 |
+| Authority badge (Överordnad, Riksdag, Regering, Verk, Prejudikat, Unionsakt, Regional, Kommunal, Service) and real examples on each layer row | Done | #34 |
+| Browse SFS acts and ordinances by ministry: "By ministry" pill on their rows, from the API's per-ministry index | Done | #34 |
+| Browse agency, case law and other layers by issuer or court | Blocked: no data in those layers, and no per-issuer index yet | #38 |
+
+### By ministry
+
+Route: `Ministries(layer, type)`. Code: `ui/hierarki/MinistriesScreen.kt`. Reference: architecture §4 flow 3.
+
+| Feature | Status | Issue |
+| --- | --- | --- |
+| Ministries of one SFS series with document counts (glass tier 1 cards), unassigned count, empty and error states | Done | #34 |
+| Opens the layer list filtered to the ministry (`LayerList(layer, type, ministry, ministryName)`) | Done | #34 |
 
 ## Layer list
 
