@@ -291,6 +291,7 @@
     <string name="note_private">Anteckningar stannar på den här enheten. De laddas aldrig upp och delas inte.</string>
     <string name="note_save">Spara anteckning</string>
     <string name="note_delete">Radera anteckning</string>
+    <string name="reader_inspector">Om författningen</string>
     <string name="type_agency_regulation">Myndighetsföreskrift</string>
     <string name="type_case_report">Referat</string>
     <string name="type_case_notice">Notis</string>

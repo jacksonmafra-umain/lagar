@@ -7,7 +7,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
@@ -19,7 +21,9 @@ import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.toggleable
@@ -113,6 +117,7 @@ import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.typeNameRes
 import app.lagar.ui.home.ScopeSheet
 import app.lagar.ui.onboarding.nameRes
+import app.lagar.ui.shell.LocalWideLayout
 import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
@@ -187,6 +192,7 @@ fun AdvancedSearchScreen(
     var headerHeight by rememberBackTopBarHeight()
     var footerPx by remember { mutableStateOf(0) }
     val density = LocalDensity.current
+    val wide = LocalWideLayout.current
 
     var text by rememberSaveable { mutableStateOf("") }
     var fromIso by rememberSaveable { mutableStateOf("") }
@@ -215,20 +221,10 @@ fun AdvancedSearchScreen(
     val inForceInvalid = query.inForceFrom != null && query.inForceTo != null && query.inForceFrom > query.inForceTo
     val rangeError = stringResource(Res.string.advanced_range_invalid)
 
-    Box(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .hazeSource(hazeState)
-                .verticalScroll(rememberScrollState())
-                .padding(
-                    start = spacing.marginMobile,
-                    end = spacing.marginMobile,
-                    top = headerHeight + spacing.sm,
-                    bottom = with(density) { footerPx.toDp() } + spacing.md,
-                ),
-            verticalArrangement = Arrangement.spacedBy(spacing.md),
-        ) {
+    // On desktop the filters form two columns within the form width, and the search button sits under the right one.
+    BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
+        val side = if (wide) maxOf(spacing.margin, (maxWidth - ShellDimens.FormMaxWidth) / 2) else spacing.marginMobile
+        val textScopeModeTypes: @Composable ColumnScope.() -> Unit = {
             LagarTextField(
                 value = text,
                 onValueChange = { text = it },
@@ -267,6 +263,8 @@ fun AdvancedSearchScreen(
                     }
                 }
             }
+        }
+        val datesAndStatus: @Composable ColumnScope.() -> Unit = {
             FilterCard(
                 stringResource(Res.string.advanced_dates_title),
                 scope,
@@ -312,6 +310,29 @@ fun AdvancedSearchScreen(
                 StatusOption(Res.string.advanced_status_repealed, StatusFilter.Repealed, status, scope) { status = it }
             }
         }
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .hazeSource(hazeState)
+                .verticalScroll(rememberScrollState())
+                .padding(
+                    start = side,
+                    end = side,
+                    top = headerHeight + spacing.sm,
+                    bottom = with(density) { footerPx.toDp() } + spacing.md,
+                ),
+            verticalArrangement = Arrangement.spacedBy(spacing.md),
+        ) {
+            if (wide) {
+                Row(horizontalArrangement = Arrangement.spacedBy(spacing.gutter)) {
+                    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(spacing.md), content = textScopeModeTypes)
+                    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(spacing.md), content = datesAndStatus)
+                }
+            } else {
+                textScopeModeTypes()
+                datesAndStatus()
+            }
+        }
         // Sticky footer: a tier 2 glass bar over the scrolling form.
         Box(
             modifier = Modifier
@@ -327,8 +348,8 @@ fun AdvancedSearchScreen(
                 modifier = Modifier
                     .windowInsetsPadding(WindowInsets.navigationBars)
                     .imePadding()
-                    .padding(horizontal = spacing.marginMobile, vertical = spacing.sm)
-                    .fillMaxWidth(),
+                    .padding(horizontal = side, vertical = spacing.sm)
+                    .then(if (wide) Modifier.fillMaxWidth().wrapContentWidth(Alignment.End).widthIn(min = WideSubmitMinWidth) else Modifier.fillMaxWidth()),
                 containerColor = accent,
                 contentColor = accent.iconColor(),
             ) { Text(stringResource(Res.string.home_search_submit), fontWeight = FontWeight.Bold) }
@@ -422,6 +443,8 @@ private fun DateRange(
  * A collapsible filter section: the header row (48dp, `Role.Button`, expanded state announced) shows the title,
  * an "Active" badge while the section holds a non-default value, and a chevron that turns when open.
  */
+private val WideSubmitMinWidth = 240.dp
+
 @Composable
 private fun FilterCard(
     title: String,

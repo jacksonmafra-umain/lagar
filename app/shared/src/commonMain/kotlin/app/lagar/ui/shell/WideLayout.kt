@@ -25,6 +25,13 @@ internal val LocalWideLayout = compositionLocalOf { false }
 internal fun Modifier.maxContentWidth(): Modifier =
     wrapContentWidth(Alignment.CenterHorizontally).widthIn(max = ShellDimens.MaxContentWidth)
 
+/**
+ * Side padding for a full-width scrolling list on desktop: at least [margin], and enough to keep the content within
+ * [ShellDimens.MaxContentWidth], centered under the top bar's content. The list itself stays full width, so the
+ * whole window scrolls it and the glass bar blurs it edge to edge.
+ */
+internal fun wideListPadding(windowWidth: Dp, margin: Dp): Dp = maxOf(margin, (windowWidth - ShellDimens.MaxContentWidth) / 2)
+
 /** Centers [content] in a column capped at [ShellDimens.MaxContentWidth], with the desktop side margins. */
 @Composable
 internal fun WideContent(

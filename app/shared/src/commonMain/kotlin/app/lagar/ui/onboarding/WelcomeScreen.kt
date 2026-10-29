@@ -52,8 +52,8 @@ fun WelcomeScreen(
         primaryLabel = stringResource(Res.string.onboarding_continue),
         onPrimary = onContinue,
         onSkip = onSkip,
+        aside = { Hero() },
     ) {
-        Hero()
         Column(verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
             Scope.entries.forEach { ScopeInfoCard(it, counts?.get(it)) }
         }

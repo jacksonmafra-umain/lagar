@@ -291,6 +291,7 @@
     <string name="note_private">Notes stay on this device. They are never uploaded or shared.</string>
     <string name="note_save">Save note</string>
     <string name="note_delete">Delete note</string>
+    <string name="reader_inspector">About this document</string>
     <string name="type_agency_regulation">Agency regulation</string>
     <string name="type_case_report">Case report</string>
     <string name="type_case_notice">Case notice</string>

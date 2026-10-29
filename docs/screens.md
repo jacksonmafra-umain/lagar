@@ -21,7 +21,8 @@ The number after each gap is its GitHub issue.
 | Repealed treatment (grey, strikethrough, history icon) everywhere | Partial: only the layer list is correct | #21 |
 | Bookmark icon in the document's layer colour | Missing | #22 |
 | Desktop layout (window ≥ 1024dp): top bar navigation, max content width, wide home | Done | #79 |
-| Tablet two-pane layout and wide layouts of the pushed screens | Missing | #35 |
+| Desktop layouts of onboarding, search, advanced search, the layer list and the reader | Done | #35 |
+| Tablet two-pane layout (768–1023dp) | Missing | #35 |
 | `docs/design.md` component inventory up to date | Done | #25 |
 | Swedish and English strings, no hardcoded UI text | Done | |
 
@@ -34,6 +35,7 @@ On windows at least 1024dp wide (`ShellDimens.WideBreakpoint`, exposed as `Local
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Wide top bar with navigation; content capped at 1280dp on Utforska, Hierarki and Sparade | Done | #79 |
+| Back top bar of the pushed screens lines its content up with the wide top bar | Done | #35 |
 | Scope switch in the bar from 1360dp, Nationell / Region / Kommun plus "Institutionellt" shown disabled | Done | #79 |
 | Search field with ⌘K in the bar | Partial: search button | #24 |
 
@@ -100,6 +102,14 @@ Route: `OnboardingLocality`. Code: `ui/onboarding/LocalityStepScreen.kt`, `Local
 | Kommun suggested from the device location (offline nearest SCB centroid, coarse permission; pre-selected for the user to confirm, with denied, unavailable, timeout and abroad messages) | Done | #30 |
 | Linked kommun summary (council, document count) | Blocked: no municipal data | #38 |
 
+### Desktop layout
+
+All three steps share `OnboardingScaffold` (`ui/onboarding/StepHeader.kt`). From 1024dp the frame is capped at 1040dp (`ShellDimens.FormMaxWidth`): the title, text and (on step 1) the Lagar card form a left column beside the choices, and the primary action follows the choices instead of spanning the window.
+
+| Feature | Status | Issue |
+| --- | --- | --- |
+| Two-column steps capped at the form width | Done | #35 |
+
 ## Utforska (home)
 
 Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_federais_brasil` (Nationell) and `home_legislativa_leis_estaduais_rs` (Region), the feed card on `lagar_normhierarki_f_rgsystem`, and architecture §4 flow 2.
@@ -145,6 +155,7 @@ Route: `Search(text, types, from, to, mode, status, inForceFrom, inForceTo, vaca
 | Full-text mode (body text) with a "Found in the text" note on body-only matches | Done | #37 |
 | Snippets of the matching text | Not planned: needs each result's document (`docs/<id>.json`), too costly per result; the note above says where it matched | #37 |
 | Region and Kommun scopes: only the chosen län's or kommun's documents, by the `region_code` and `municipality_code` columns of `docs.json` (or listing items on the catalog path); a prompt to choose a locality when it is unset | Done | #99 |
+| Desktop: results in two equal-height columns within the 1280dp content width; the list stays full width so the whole window scrolls | Done | #35 |
 
 ### Advanced search
 
@@ -157,6 +168,7 @@ Route: `AdvancedSearch`. Code: `ui/search/AdvancedSearchScreen.kt`, `DateField.k
 | Calendar date picker (M3, tier 3 glass) with dates shown in the app language, collapsible filter sections with an "Active" badge, scope change from the form and the header chip | Done | #32 |
 | Vacatio legis filter and in-force date range; documents without `in_force` (most SFS today) never match them. `docs.json` has no `in_force` yet, so these filters read the catalog | Done | #32 |
 | Glass footer bar | Done | #23 |
+| Desktop: text, scope, mode and types beside the date, in-force and status filters, capped at 1040dp, search button under the right column | Done | #35 |
 
 ## Hierarki
 
@@ -192,6 +204,7 @@ Route: `LayerList(layer, type?, ministry?, ministryName?, code?, codeName?)`. Co
 | Series switch (all, acts, ordinances, other statutes) inside the list, from the layer's `series` in `index.json` | Done | #33 |
 | Names, levels and colours for the case law, EU, agency, county and municipal types, ready for when those layers have data | Done | #77 |
 | One län's or kommun's documents (`code`, from the per-locality listings), opened from "Show more" on the Region and Kommun homes | Done | #99 |
+| Desktop: two equal-height columns within the 1280dp content width, prefetch counted in rows | Done | #35 |
 
 ## Reader
 
@@ -209,7 +222,9 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | Share links to the document and to each § (platform share sheet; Web Share API or clipboard on the web); `?doc=&p=` links open the reader at that § | Done | #26 |
 | Cross-reference links: SFS citations (`lagen (1962:700)`, `(SFS 1998:808)`, `Lag (1994:458).`) and case-law references (`NJA 2026:38`, `HFD 2026 ref. 43`) open the cited document when the API has it | Done | #27 |
 | Private notes on the document (under the header) and on each § or chapter (under its text), edited in a sheet, stored on the device only | Done | #28 |
-| Table of contents pane and metadata inspector on wide screens | Missing | #35 |
+| Desktop (≥ 1024dp): table of contents as a 300dp pane left of the text instead of a sheet | Done | #35 |
+| Desktop (≥ 1280dp, `ShellDimens.ReaderInspectorBreakpoint`): facts, source link and amendments in an inspector pane right of the text; the text keeps the badge, number and title | Done | #35 |
+| Tablet: frosted bottom sheet for the normative tree, sliding metadata drawer | Missing | #35 |
 | Reading the text as of a past date, version comparator | Blocked: the API has no historical text; owner decision pending | #7 |
 
 ## Sparade

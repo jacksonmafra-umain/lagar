@@ -6,6 +6,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsFocusedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
@@ -85,9 +86,13 @@ import app.lagar.ui.common.ShortcutHint
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.searchShortcutHint
 import app.lagar.ui.home.displayLayer
+import app.lagar.ui.list.STATUTE_COLUMNS
 import app.lagar.ui.list.StatuteRow
+import app.lagar.ui.list.StatuteRowPair
 import app.lagar.ui.navigation.Search
+import app.lagar.ui.shell.LocalWideLayout
 import app.lagar.ui.shell.ShellDimens
+import app.lagar.ui.shell.wideListPadding
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import org.jetbrains.compose.resources.painterResource
@@ -146,8 +151,11 @@ fun SearchScreen(
     var headerHeight by rememberBackTopBarHeight()
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     val centered = Modifier.fillMaxSize().padding(top = headerHeight)
+    val wide = LocalWideLayout.current
 
-    Box(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
+    // On desktop the results fill two columns within the content width.
+    BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
+        val side = if (wide) wideListPadding(maxWidth, spacing.margin) else spacing.marginMobile
         val state = if (localityMissing) LoadState.Loaded(emptyList()) else results
         when (state) {
             LoadState.Loading -> Box(centered, contentAlignment = Alignment.Center) { CircularProgressIndicator() }
@@ -155,8 +163,8 @@ fun SearchScreen(
             is LoadState.Loaded -> LazyColumn(
                 modifier = Modifier.fillMaxSize().hazeSource(hazeState),
                 contentPadding = PaddingValues(
-                    start = spacing.marginMobile,
-                    end = spacing.marginMobile,
+                    start = side,
+                    end = side,
                     top = headerHeight + spacing.xs,
                     bottom = bottomInset + spacing.md,
                 ),
@@ -180,15 +188,13 @@ fun SearchScreen(
                         item(key = "sort") {
                             SortRow(query.sort, scope) { onQueryChange(query.copy(sort = it)) }
                         }
-                        items(state.value, key = { it.item.id }) { hit ->
-                            val item = hit.item
-                            StatuteRow(
-                                item = item,
-                                layer = item.displayLayer() ?: DisplayLayer.SfsAct,
-                                onClick = { onOpenDocument(item.id) },
-                                highlights = highlightRanges(item.title, query.text),
-                                note = if (hit.bodyOnly) stringResource(Res.string.search_match_body) else null,
-                            )
+                        // On desktop the results fill two columns.
+                        if (wide) {
+                            items(state.value.chunked(STATUTE_COLUMNS), key = { it.first().item.id }) { pair ->
+                                StatuteRowPair(pair) { hit, modifier -> SearchHitRow(hit, query.text, onOpenDocument, modifier) }
+                            }
+                        } else {
+                            items(state.value, key = { it.item.id }) { hit -> SearchHitRow(hit, query.text, onOpenDocument) }
                         }
                     }
                 }
@@ -205,6 +211,20 @@ fun SearchScreen(
             )
         }
     }
+}
+
+/** One result: the title matches highlighted, and a note when only the body matched. */
+@Composable
+private fun SearchHitRow(hit: SearchHit, text: String, onOpenDocument: (String) -> Unit, modifier: Modifier = Modifier) {
+    val item = hit.item
+    StatuteRow(
+        item = item,
+        layer = item.displayLayer() ?: DisplayLayer.SfsAct,
+        onClick = { onOpenDocument(item.id) },
+        modifier = modifier,
+        highlights = highlightRanges(item.title, text),
+        note = if (hit.bodyOnly) stringResource(Res.string.search_match_body) else null,
+    )
 }
 
 /** Result count on the left, the advanced-search link on the right; wraps at large font sizes. */

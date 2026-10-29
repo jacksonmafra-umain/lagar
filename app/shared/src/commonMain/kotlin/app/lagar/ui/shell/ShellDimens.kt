@@ -26,5 +26,14 @@ internal object ShellDimens {
     /** Bar width from which the wide top bar's search button shows its label (when the scope switch is hidden). */
     val SearchLabelWidth = 1200.dp
     val MaxContentWidth = 1280.dp
+
+    /** Content width of the desktop forms (onboarding, advanced search), which read badly at full width. */
+    val FormMaxWidth = 1040.dp
+
+    /** Width of the reader's table of contents pane and of its metadata inspector on desktop. */
+    val ReaderPaneWidth = 300.dp
+
+    /** Window width from which the reader shows the metadata inspector beside the text, as a third pane. */
+    val ReaderInspectorBreakpoint = 1280.dp
     val LogoSize = 40.dp
 }

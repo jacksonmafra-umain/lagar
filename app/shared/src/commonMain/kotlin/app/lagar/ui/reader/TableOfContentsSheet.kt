@@ -66,13 +66,31 @@ internal fun TableOfContentsSheet(outline: Outline, layer: LayerKey, onSelect: (
             color = LagarTheme.colors.onSurface,
             modifier = Modifier.padding(horizontal = spacing.marginMobile).semantics { heading() },
         )
-        LazyColumn(
+        TableOfContentsList(
+            outline = outline,
+            layer = layer,
+            onSelect = onSelect,
             contentPadding = PaddingValues(start = spacing.marginMobile, end = spacing.marginMobile, top = spacing.sm, bottom = bottom + spacing.lg),
-            verticalArrangement = Arrangement.spacedBy(spacing.md),
-        ) {
-            items(outline.chapters, key = { it.blockIndex }) { chapter ->
-                ChapterEntry(chapter, layer, onSelect)
-            }
+        )
+    }
+}
+
+/** The chapters and their § chips; the body of [TableOfContentsSheet], and on desktop the pane beside the text. */
+@Composable
+internal fun TableOfContentsList(
+    outline: Outline,
+    layer: LayerKey,
+    onSelect: (Int) -> Unit,
+    contentPadding: PaddingValues,
+    modifier: Modifier = Modifier,
+) {
+    LazyColumn(
+        modifier = modifier,
+        contentPadding = contentPadding,
+        verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.md),
+    ) {
+        items(outline.chapters, key = { it.blockIndex }) { chapter ->
+            ChapterEntry(chapter, layer, onSelect)
         }
     }
 }

@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -57,6 +58,8 @@ import app.lagar.ui.common.iconRes
 import app.lagar.ui.common.nameRes
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.typeNameRes
+import app.lagar.ui.shell.LocalWideLayout
+import app.lagar.ui.shell.wideListPadding
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -133,8 +136,11 @@ fun LayerListScreen(
         ?.key ?: LayerKey.Repealed
     var headerHeight by rememberBackTopBarHeight()
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
+    val wide = LocalWideLayout.current
 
-    Box(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
+    // On desktop the documents fill two columns within the content width.
+    BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
+        val side = if (wide) wideListPadding(maxWidth, spacing.margin) else spacing.marginMobile
         when (state) {
             LoadState.Loading -> Box(Modifier.fillMaxSize().padding(top = headerHeight), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
@@ -151,22 +157,27 @@ fun LayerListScreen(
                     )
                 }
             } else {
-                NearEndEffect(listState, items.size, onLoadNext)
+                val rows = remember(items, wide) { if (wide) items.chunked(STATUTE_COLUMNS) else null }
+                NearEndEffect(listState, rows?.size ?: items.size, onLoadNext)
                 LazyColumn(
                     state = listState,
                     modifier = Modifier.fillMaxSize().hazeSource(hazeState),
                     contentPadding = PaddingValues(
-                        start = spacing.marginMobile,
-                        end = spacing.marginMobile,
+                        start = side,
+                        end = side,
                         top = headerHeight + spacing.md,
                         bottom = bottomInset + spacing.md,
                     ),
                     verticalArrangement = Arrangement.spacedBy(spacing.sm),
                 ) {
-                    items(items, key = { it.id }) {
-                        // On "all", each row takes the colour of its own series.
-                        val rowLayer = DisplayLayer.fromRoute(apiLayer, it.type) ?: layer
-                        StatuteRow(it, rowLayer, onClick = { onOpenDocument(it.id) })
+                    // On "all", each row takes the colour of its own series.
+                    val layerOf = { item: ListingItem -> DisplayLayer.fromRoute(apiLayer, item.type) ?: layer }
+                    if (rows != null) {
+                        items(rows, key = { it.first().id }) { pair ->
+                            StatuteRowPair(pair) { item, modifier -> StatuteRow(item, layerOf(item), onClick = { onOpenDocument(item.id) }, modifier = modifier) }
+                        }
+                    } else {
+                        items(items, key = { it.id }) { StatuteRow(it, layerOf(it), onClick = { onOpenDocument(it.id) }) }
                     }
                     if (appending) {
                         item(key = "appending") {
