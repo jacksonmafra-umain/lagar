@@ -34,8 +34,8 @@ Code: `ui/shell/Drawer.kt`. Reference: Stitch `menu_lateral_drawer_perfil_e_nave
 
 | Feature | Status | Issue |
 | --- | --- | --- |
-| Header, current scope card with a "Change" action, six entries, About block with data build date | Done | |
-| Each scope as a direct switch, Saved count badge, section headings | Missing | #31 |
+| Header, six entries, About block with data build date | Done | |
+| Each scope as a direct switch (Region / Kommun without a stored locality, and the active scope, open the scope sheet), Saved count badge, "Switch scope" / "Navigate" / "About" section headings | Done | #31 |
 | "Most popular" and "Official gazettes" entries | Blocked: no usage data, no gazette source | #38 |
 
 ### Scope sheet
