@@ -36,7 +36,7 @@ import app.lagar.resources.home_scope_chip
 import app.lagar.resources.ic_dark_mode
 import app.lagar.resources.ic_expand_more
 import app.lagar.resources.ic_light_mode
-import app.lagar.resources.ic_person
+import app.lagar.resources.ic_menu
 import app.lagar.resources.ic_search
 import app.lagar.resources.menu_open
 import app.lagar.resources.search_open
@@ -105,17 +105,12 @@ internal fun LagarTopBar(
                 )
             }
             BarIconButton(onClick = onMenuClick, description = stringResource(Res.string.menu_open)) {
-                Box(
-                    modifier = Modifier.size(ShellDimens.AvatarSize).clip(CircleShape).background(colors.primary),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Icon(
-                        painter = painterResource(Res.drawable.ic_person),
-                        contentDescription = null,
-                        tint = colors.onPrimary,
-                        modifier = Modifier.size(ShellDimens.SmallIconSize),
-                    )
-                }
+                Icon(
+                    painter = painterResource(Res.drawable.ic_menu),
+                    contentDescription = null,
+                    tint = colors.onSurfaceVariant,
+                    modifier = Modifier.size(ShellDimens.IconSize),
+                )
             }
         }
     }

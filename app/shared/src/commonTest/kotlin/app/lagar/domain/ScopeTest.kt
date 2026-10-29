@@ -20,8 +20,8 @@ class ScopeTest {
     )
 
     @Test
-    fun countSumsLayers() {
-        assertEquals(102, index.count(Scope.Nationell))
+    fun countSumsLayersIncludingOtherStatutes() {
+        assertEquals(104, index.count(Scope.Nationell))
     }
 
     @Test

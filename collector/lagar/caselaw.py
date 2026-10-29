@@ -56,6 +56,8 @@ _ECLI = re.compile(r"ECLI:[A-Z]{2}:[A-Z0-9.]{1,7}:\d{4}:[A-Za-z0-9.]{1,25}")
 _COURT = re.compile(r"[A-ZÅÄÖ0-9]{2,10}")
 _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}", re.ASCII)
 _SPACE = re.compile(r"\s+")
+# Several summary paragraphs arrive in one `sammanfattning`, separated by a dash rule.
+_SUMMARY_BREAK = re.compile(r"\s*-{5,}\s*")
 _SLUG = str.maketrans({"å": "a", "ä": "a", "ö": "o", "é": "e", "ü": "u"})
 # A Swedish personal identity number: (YY)YYMMDD, a - or + separator and four digits.
 _PERSONNUMMER = re.compile(r"(?<![\d-])(?:\d{2})?(\d{2})(\d{2})(\d{2})[-+](\d{3})(\d)(?![\d-])")
@@ -252,6 +254,11 @@ def personal_numbers(text):
     return found
 
 
+def summary_parts(item):
+    """The summary paragraphs: `sammanfattning` split at its "-----" rules, empty parts dropped."""
+    return [p for p in _SUMMARY_BREAK.split(_clean(item.get("sammanfattning"))) if p]
+
+
 def build_meta(item, raw_sha256, fetched_at):
     type_ = corpus_type(item)
     if type_ is None:
@@ -260,7 +267,8 @@ def build_meta(item, raw_sha256, fetched_at):
     number = report_number(item)
     issued = _clean(item.get("avgorandedatum"))[:10] or None
     ecli = _clean(item.get("ecliNummer"))
-    title = _clean(item.get("sammanfattning")) or _clean(item.get("benamning")) or number
+    parts = summary_parts(item)
+    title = parts[0] if parts else _clean(item.get("benamning")) or number
     return {
         "id": corpus_id(number),
         "title": title,
@@ -320,9 +328,11 @@ def to_markdown(meta, item):
         if text:
             blocks.extend(["## " + heading, text])
 
-    summary = _clean(item.get("sammanfattning"))
-    if summary and summary != meta["title"]:
-        blocks.extend(["## Sammanfattning", summary])
+    summary = summary_parts(item)
+    if summary and summary[0] == meta["title"]:
+        summary = summary[1:]  # the first paragraph is the title
+    if summary:
+        blocks.extend(["## Sammanfattning", "\n\n".join(summary)])
     lagrum = []
     for entry in item.get("lagrumLista") or []:
         ref, sfs = _clean(entry.get("referens")), _clean(entry.get("sfsNummer"))

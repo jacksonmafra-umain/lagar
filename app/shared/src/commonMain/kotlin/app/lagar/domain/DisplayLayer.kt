@@ -19,6 +19,12 @@ enum class DisplayLayer(val apiLayer: String, val apiType: String?, val key: Lay
     /** Whether the API has a per-ministry index for this level (`<layer>/<type>/by-ministry/`): the SFS series. */
     val hasMinistryIndex: Boolean get() = apiLayer == "sfs" && apiType != null
 
+    /**
+     * Other API types counted at this level besides [apiType]: SFS other statutes are shown under the SFS acts
+     * colour group (docs/api.md), so the totals, the distribution and the scope counts include them.
+     */
+    val groupedTypes: List<String> get() = if (this == SfsAct) listOf(OTHER_STATUTE) else emptyList()
+
     companion object {
         /** The level a `LayerList(layer, type)` route shows; untyped levels ignore [type]. */
         fun fromRoute(layer: String, type: String?): DisplayLayer? =
@@ -39,9 +45,19 @@ enum class DisplayLayer(val apiLayer: String, val apiType: String?, val key: Lay
     }
 }
 
-/** Documents at this level: the series count for typed levels, the layer count otherwise; 0 when absent. */
+/** API type of the SFS statutes that are neither acts nor ordinances. */
+const val OTHER_STATUTE = "other_statute"
+
+/**
+ * Documents at this level: the layer count for untyped levels, otherwise the count of the level's series plus
+ * its [DisplayLayer.groupedTypes] (SFS acts include the other statutes); 0 when absent.
+ */
 fun ApiIndex.count(d: DisplayLayer): Int {
     val layer = layers.firstOrNull { it.id == d.apiLayer } ?: return 0
     val type = d.apiType ?: return layer.count
-    return layer.series.firstOrNull { it.id == type }?.count ?: 0
+    return (listOf(type) + d.groupedTypes).sumOf { id -> layer.series.firstOrNull { it.id == id }?.count ?: 0 }
 }
+
+/** The SFS other statutes, counted within [DisplayLayer.SfsAct]; 0 when absent. */
+fun ApiIndex.otherStatuteCount(): Int =
+    layers.firstOrNull { it.id == DisplayLayer.SfsAct.apiLayer }?.series?.firstOrNull { it.id == OTHER_STATUTE }?.count ?: 0
