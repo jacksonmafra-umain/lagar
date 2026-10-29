@@ -52,7 +52,7 @@ and fundamental laws and without the `eu-` prefix for EU acts
 | SFS and fundamental laws | free text; normally `1999:175` or `N2026:1`, old prints keep Riksdagen's numbering | `^N?\d{4}:\d+$` |
 | `agency_regulation` | series, year and ordinal: `AFS 2023:1`, `FFFS 2014:1`, `HSLF-FS 2016:40` | same form as `number` |
 | `county_regulation` | county series: `01FS 2024:3` (`<region_code>FS`) | same form as `number` |
-| `case_report`, `case_notice` | report reference: `NJA 2019 s. 2`, `HFD 2020 ref. 5`, `HFD 2020 not. 3`, `NJA 2004 N 23`, `MIG 2026:10`, `AD 2020 nr 45` | none: `amended_by` and `reprinted_by` are `[]`, `amended_through` is `null` |
+| `case_report`, `case_notice` | report reference: `NJA 2019 s. 2`, `HFD 2020 ref. 5`, `HFD 2020 not. 3`, `NJA 2004 N 23`, `MIG 2026:10`, `AD 2020 nr 45`; a kammarrätt referat published without one (KGG, KJO, KST, KSU) is cited by the court's abbreviation, decision date and case number: `KRNJ 2007-01-09 mål nr 1097-06` (series `KRNG`, `KRNJ`, `KRNS`, `KRSU`) | none: `amended_by` and `reprinted_by` are `[]`, `amended_through` is `null` |
 | `eu_regulation`, `eu_directive`, `eu_decision` | Swedish citation form: `(EU) 2016/679`, `(EG) nr 1907/2006`, `95/46/EG` | CELEX numbers (`32016R0679`); `reprinted_by` is `[]` |
 | `municipal_regulation` | the local number as printed, any non-empty text without surrounding spaces | any non-empty text |
 
@@ -152,8 +152,9 @@ The other layers' numbers are also compared by (year, ordinal), descending:
 - `agency_regulation`, `county_regulation`: year and ordinal after the series
   (`AFS 2023:10` before `AFS 2023:9`); on a tie the series name descending.
 - `case_report`, `case_notice`: year and the number after it, which is the
-  page for `NJA … s.` and the report or notice number otherwise; on a tie the
-  report series descending.
+  page for `NJA … s.` and the report or notice number otherwise (the case
+  number's ordinal for `KRNJ 2007-01-09 mål nr 1097-06`); on a tie the report
+  series descending.
 - EU types: the act's year and number. `(EU) 2016/679` is year/number; with
   `nr`, `(EG) nr 1907/2006` and `(EEG) nr 1408/71` are number/year; directives
   and decisions such as `95/46/EG` and `2004/18/EG` are year/number. A
