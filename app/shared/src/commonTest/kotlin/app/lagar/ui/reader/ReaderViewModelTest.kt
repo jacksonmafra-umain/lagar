@@ -6,6 +6,8 @@ import app.lagar.data.ApiSeries
 import app.lagar.data.Catalog
 import app.lagar.data.DocumentMeta
 import app.lagar.data.DocumentResponse
+import app.lagar.data.FakeSearchSource
+import app.lagar.data.FullTextIndex
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
 import app.lagar.data.ListingPage
@@ -60,7 +62,8 @@ class ReaderViewModelTest {
         }
     }
 
-    private fun viewModel(repo: FakeRepository, id: String = "doc-1") = ReaderViewModel(repo, Catalog(repo), id, Dispatchers.Main)
+    private fun viewModel(repo: FakeRepository, id: String = "doc-1", index: FullTextIndex? = null) =
+        ReaderViewModel(repo, Catalog(repo), id, index, Dispatchers.Main)
 
     @Test
     fun loadsTheDocument() {
@@ -120,5 +123,23 @@ class ReaderViewModelTest {
         val vm = viewModel(repo)
         assertEquals(emptyMap(), vm.crossReferences.value)
         assertEquals(0, repo.listings)
+    }
+
+    @Test
+    fun checksCitationsAgainstTheSearchIndexWithoutTheCatalog() {
+        val repo = FakeRepository(failing = false, body = "Se skollagen (2010:800) och lagen (1999:1).")
+        val source = FakeSearchSource()
+        val vm = viewModel(repo, index = FullTextIndex(source))
+        assertEquals(mapOf("sfs-2010-800" to "act"), vm.crossReferences.value)
+        assertEquals(1, source.docsRequests)
+        assertEquals(0, repo.listings)
+    }
+
+    @Test
+    fun fallsBackToTheCatalogWhenTheApiHasNoIndex() {
+        val repo = FakeRepository(failing = false, listed = listOf("sfs-2010-800"), body = "Se skollagen (2010:800).")
+        val vm = viewModel(repo, index = FullTextIndex(FakeSearchSource(missing = true)))
+        assertEquals(mapOf("sfs-2010-800" to "act"), vm.crossReferences.value)
+        assertEquals(1, repo.listings)
     }
 }

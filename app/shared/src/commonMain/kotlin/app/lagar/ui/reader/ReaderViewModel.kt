@@ -4,7 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.lagar.data.Catalog
 import app.lagar.data.DocumentResponse
+import app.lagar.data.FullTextIndex
 import app.lagar.data.LagarRepository
+import app.lagar.data.ListingItem
 import app.lagar.domain.LoadState
 import app.lagar.domain.Scope
 import kotlinx.coroutines.CancellationException
@@ -20,12 +22,14 @@ import kotlinx.coroutines.withContext
 /**
  * Loads one document; a failure becomes [LoadState.Failed] whose retry reloads it. [linkedAmendments]
  * holds the amending SFS numbers that the API also publishes as documents, so the reader can link them;
- * [crossReferences] does the same for the documents the body cites. [work] scans the body for citations.
+ * [crossReferences] does the same for the documents the body cites, checked against the search index's
+ * document table ([index], one request) or, without an index, the national catalog. [work] scans the body.
  */
 class ReaderViewModel(
     private val repository: LagarRepository,
     private val catalog: Catalog,
     private val id: String,
+    private val index: FullTextIndex? = null,
     private val work: CoroutineDispatcher = Dispatchers.Default,
 ) : ViewModel() {
     private val _state = MutableStateFlow<LoadState<DocumentResponse>>(LoadState.Loading)
@@ -69,20 +73,31 @@ class ReaderViewModel(
     }
 
     /**
-     * Finds the documents [body] cites and keeps those the API publishes, through the national catalog
-     * (shared with search and the amendment links, so it is loaded at most once per process). On failure
-     * the citations stay plain text.
+     * Finds the documents [body] cites and keeps those the API publishes. Both sources are cached for the
+     * process and shared with search. On failure the citations stay plain text.
      */
     private suspend fun resolveCrossReferences(body: String) {
         val cited = withContext(work) { citedDocumentIds(body) } - id
         if (cited.isEmpty()) return
         try {
-            val known = catalog.items(Scope.Nationell).associateBy({ it.id }, { it.type })
+            val known = publishedDocuments().associateBy({ it.id }, { it.type })
             _crossReferences.value = cited.mapNotNull { target -> known[target]?.let { target to it } }.toMap()
         } catch (e: CancellationException) {
             throw e
         } catch (_: Exception) {
         }
+    }
+
+    /** Every published document: the index's `docs.json` when the API has an index, else the national catalog. */
+    private suspend fun publishedDocuments(): List<ListingItem> {
+        val fromIndex = try {
+            index?.takeIf { it.manifest() != null }?.docs()
+        } catch (e: CancellationException) {
+            throw e
+        } catch (_: Exception) {
+            null
+        }
+        return fromIndex ?: catalog.items(Scope.Nationell)
     }
 
     /**
