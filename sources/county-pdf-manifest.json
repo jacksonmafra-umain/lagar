@@ -1095,6 +1095,356 @@
       ],
       "number": "01FS 2026:38",
       "published": "2026-10-09"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 511189,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:28Z",
+          "sha256": "77161bcf9495a3f91c4ccb1dff7287933366ef0865a1920e1c56a517189857a2",
+          "url": "https://www.lansstyrelsen.se/download/18.7d39256b19618e09f631a9d/1744206848812/03FS%202025_2%20Tillf%C3%A4llig%20avlysning%20av%20Fyris%C3%A5n%20Uppsala%20kommun%20i%20Uppsala%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 375292,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:29Z",
+          "sha256": "7d8276baf0dba4a5d124ca4a174d4deebccaed456580e54a5d5254587128fae3",
+          "url": "https://www.lansstyrelsen.se/download/18.6e9512221967cb941bf56d6/1745912110355/03FS%202025_3%20Tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5de%20och%20dispens%20fr%C3%A5n%20g%C3%A4llande%20sj%C3%B6trafikf%C3%B6reskrift%20i%20%C3%96sthammars%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 232112,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:30Z",
+          "sha256": "a79a0b2cb929c7453fe7b97cea6d14c9ea41bc7a5ebc5d061b8a76203dcc3105",
+          "url": "https://www.lansstyrelsen.se/download/18.37305b791967c95b4725993/1745917291238/03FS%202025_4%20Tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5de%20och%20dispens%20fr%C3%A5n%20g%C3%A4llande%20sj%C3%B6trafikf%C3%B6reskrift%20i%20%C3%96sthammars%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 634864,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:31Z",
+          "sha256": "8e9f9d0eecb74f6457ea26489c526c40bace07362b36532fa3860445d9a6b333",
+          "url": "https://www.lansstyrelsen.se/download/18.3357a38f196f109f26d3765c/1748256919638/03FS%202025_5%20Tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5den%20i%20%C3%96sthammars%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 102432,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:32Z",
+          "sha256": "0634106c6f4fd1a4a0249d172c5ce6faeb1c9911dd4c3575b20dde7995db2c83",
+          "url": "https://www.lansstyrelsen.se/download/18.3357a38f196f109f26d3867e/1748264863908/03FS%202025_6%20F%C3%B6reskrift%20om%20jakt%20p%C3%A5%20allm%C3%A4nt%20vatten.pdf"
+        }
+      ],
+      "number": "03FS 2025:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 103771,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:33Z",
+          "sha256": "b1ac25c38ef1a738eb8d405fc6c74c646e61edcb3d175a62547e5c2276e88d2d",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deea40db4/1748333496891/03FS%202025_7%20Utvidgning%20av%20naturreservatet%20Slada%20i%20Tierps%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2025:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 97188,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:34Z",
+          "sha256": "84dd3ff372f953f89160553d742250145c7d31ce9f91b8d0d74431c19d08c91c",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deead1a10/1749465051713/03FS%202025_8%20F%C3%B6reskrifter%20om%20upph%C3%A4vande%20av%20vattenskyddsomr%C3%A5de%20Enk%C3%B6pings%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2025:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 476408,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:35Z",
+          "sha256": "116cf4535cad74df6598d53f42a4732317b6703fb622ee2a2ea1a1f39c42ce0c",
+          "url": "https://www.lansstyrelsen.se/download/18.5b7cca1b196f130deead116c/1749460428459/03FS%202025_9%20F%C3%B6reskrifter%20om%20tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5de%20i%20%C3%96sthammars%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2025:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 73721,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:36Z",
+          "sha256": "9cda236889a09a4c32637167f7d9e36e8741d03312d09fe65203252b0bb8b901",
+          "url": "https://www.lansstyrelsen.se/download/18.7272a65f199c8e12cde40d88/1760514399248/03FS%202025_10%20F%C3%B6reskrifter%20om%20tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5de,%20P%C3%A5lsundet%20i%20Uppsala%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2025:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 111899,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:37Z",
+          "sha256": "34c39203515591d0a7d2634332346cfa2f688e802b2a0d89f65f3dfe8e10be8c",
+          "url": "https://www.lansstyrelsen.se/download/18.7272a65f199c8e12cde40abc/1760513228402/03FS%202025_11%20F%C3%B6reskrifter%20om%20inskr%C3%A4nkningar%20i%20r%C3%A4tten%20att%20anv%C3%A4nda%20mark-%20och%20vattenomr%C3%A5den%20i%20naturreservatet%20Frebbenboskogen.pdf"
+        }
+      ],
+      "number": "03FS 2025:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 306205,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:38Z",
+          "sha256": "e23b01805814bd790101b97143761ab1fe2f3038c3f335731744f05d07c7ff76",
+          "url": "https://www.lansstyrelsen.se/download/18.5dc1540819a7685a510ea68f/1764570149647/03FS%202025_12%20bildande%20av%20Berkingeskogens%20naturreservat.pdf"
+        }
+      ],
+      "number": "03FS 2025:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 170381,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:39Z",
+          "sha256": "d2dda484abfebdf5e3331f991f0f75760b848698779ef7fdd7a4fe000b538f51",
+          "url": "https://www.lansstyrelsen.se/download/18.5dc1540819a7685a510ea690/1764570159447/03FS%202025_13%20utvidgning%20av%20Kod%C3%B6dk%C3%A4rrets%20naturreservat.pdf"
+        }
+      ],
+      "number": "03FS 2025:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 101604,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:40Z",
+          "sha256": "ee4498773203166878b78dea685e48809042a79423f193cdd24e26bc6aa9a994",
+          "url": "https://www.lansstyrelsen.se/download/18.3bc1ea7e19b895bc375c25bb/1768925923419/03FS%202026_1%20F%C3%B6reskrifter%20om%20Hedesundafj%C3%A4rdens%20naturreservat.pdf"
+        }
+      ],
+      "number": "03FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 75020,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:41Z",
+          "sha256": "b4657a746da61a49713562ebc18922b6ab865365275ae005c666a81402543fcc",
+          "url": "https://www.lansstyrelsen.se/download/18.5a1f26ad19c47b25a416161a/1771400528059/03FS%202026_2%20Bildande%20av%20%20naturreservatet%20Torkeln%20i%20Tierps%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 99712,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:42Z",
+          "sha256": "09fc818b387874134e459cedfcc70d95d877a70570b116af00438cf9f8915064",
+          "url": "https://www.lansstyrelsen.se/download/18.55b414119c934f54864ed60/1772452752207/03FS%202026_3%20F%C3%B6reskrifter%20avseende%20Tr%C3%A4nviksmossens%20naturreservat.pdf"
+        }
+      ],
+      "number": "03FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 503127,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:43Z",
+          "sha256": "601a40d7bdad8028155704ad6da1aee3bc3dfb2d2ea56d85726da022318d9390",
+          "url": "https://www.lansstyrelsen.se/download/18.69ced119d24e4b4ca44afc/1774870004624/03FS%202026_4%20Sammanst%C3%A4llning%20%C3%B6ver%20allm%C3%A4nna%20v%C3%A4gar%20och%20andra%20viktiga%20v%C3%A4gar%20i%20Uppsala%20l%C3%A4n.pdf"
+        }
+      ],
+      "number": "03FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 541371,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:44Z",
+          "sha256": "c8c70ee386f0c148293240ed4ce4cd840576bd9988e58af4e1d81f6d8b240b66",
+          "url": "https://www.lansstyrelsen.se/download/18.51667aa119d8c19a924156ce/1776339425114/03FS%202026_5%20L%C3%A4nsstyrelsen%20i%20Uppsala%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20f%C3%B6rbud%20mot%20ankring%20i%20Enk%C3%B6pings%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2026:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1865892,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:46Z",
+          "sha256": "592fcdd0faf62a9a13471f20f0fe9c90e4c2da2b311397c7847da63de55be03f",
+          "url": "https://www.lansstyrelsen.se/download/18.51667aa119d8c19a924156e5/1776339433484/03FS%202026_6%20L%C3%A4nsstyrelsen%20i%20Uppsala%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20tillf%C3%A4llig%20avlysning%20av%20Fyris%C3%A5n%20i%20Uppsala%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2026:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 315455,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:46Z",
+          "sha256": "1104d0bde3f87f465fe42a57ed0161c72c2098c577a1a6ad03bb56fb135bc989",
+          "url": "https://www.lansstyrelsen.se/download/18.238822c519e023e8735c924/1778253708867/03FS%202026_7%20Tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5de%20och%20dispens%20fr%C3%A5n%20g%C3%A4llande%20sj%C3%B6trafikf%C3%B6reskrift%20i%20%C3%96sthammars%20kommn.pdf"
+        }
+      ],
+      "number": "03FS 2026:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 326733,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:47Z",
+          "sha256": "71c488f69263b4eb0e4f9a90e88bb576a7cb60448f74a4302eff32fbdd875685",
+          "url": "https://www.lansstyrelsen.se/download/18.238822c519e023e8735c925/1778253708896/03FS%202026_8%20Tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5de%20och%20dispens%20fr%C3%A5n%20g%C3%A4llande%20sj%C3%B6trafikf%C3%B6reskrift%20i%20%C3%96sthammars%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2026:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 99874,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:48Z",
+          "sha256": "3605c5879934b447725b83a50c2cb2edc143773d1deebccd45798d41fcbdeb30",
+          "url": "https://www.lansstyrelsen.se/download/18.458c24da19eafd611654ab5a/1781596294756/03FS%202026_9%20F%C3%B6reskrifter%20om%20bildande%20av%20Kr%C3%A4bylunds%20naturreservat%20i%20Uppsala%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2026:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 113994,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T02:59:51Z",
+          "sha256": "f36c506e74f5bb0e3e4edaecfec0728f2707ce8973508612021646b1912de12f",
+          "url": "https://www.lansstyrelsen.se/download/18.458c24da19eafd611654aba1/1781596407587/03FS%202026_10%20F%C3%B6reskrifter%20avseende%20Fager%C3%B6n%20naturreservat%20i%20%C3%96sthammars%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2026:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1860080,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:05Z",
+          "sha256": "34bd407be7532d1d522b63851374029dd53e7148ba8995261ecbaeee74aeb38a",
+          "url": "https://www.lansstyrelsen.se/download/18.888fba919ed43ce643a28db/1782816436728/03%20FS%202026_12%20Tillf%C3%A4llig%20begr%C3%A4nsning%20i%20r%C3%A4tten%20att%20utnyttja%20vattenomr%C3%A5de%20i%20%C3%96sthammars%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2026:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 486484,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:06Z",
+          "sha256": "830c6f51379dff37a27ef6ffd4de048baba1668138a63b41a0c1f9aefe55b24f",
+          "url": "https://www.lansstyrelsen.se/download/18.4a0f037319ed42b2371b20d4/1782902162335/03FS%202026_13%20Tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5de%20och%20dispens%20fr%C3%A5n%20g%C3%A4llande%20sj%C3%B6trafikf%C3%B6reskrifter%20i%20%C3%96sthammars%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2026:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 167353,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:00:07Z",
+          "sha256": "b585a76fa8c3a31de1702629d1de7126efd520c73b648e68769dc9f3926b8da2",
+          "url": "https://www.lansstyrelsen.se/download/18.4a0f037319ed42b2371b20d5/1782902162384/03FS%202026_14%20F%C3%B6reskrifter%20om%20vattenskyddsomr%C3%A5de%20%C3%96sthammars%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2026:14",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
