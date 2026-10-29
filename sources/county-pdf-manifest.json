@@ -6869,6 +6869,398 @@
       ],
       "number": "22FS 2026:6",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 248902,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:53Z",
+          "sha256": "8e05c370366a1110b7d20b385987cfd5090ee82719ccacf7d658e9079e50a4e3",
+          "url": "https://www.lansstyrelsen.se/download/18.7f27a03419540af19882046b/1740999414457/23FS%202025-1%20F%C3%B6reskrifter%20om%20Fr%C3%B6%C3%A5%20gruva%20kulturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 19462,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:54Z",
+          "sha256": "a71ed03794d9c731797f6cd9a879769c34e0451ac2123d49ca4ada172adaa1f4",
+          "url": "https://www.lansstyrelsen.se/download/18.1f88a453195adb731b125804/1742914117763/23FS%202025-2%20%C3%84ndringsf%C3%B6reskrift%20Grubbmyran%20efter%20%C3%96verpr%C3%B6vning.pdf"
+        }
+      ],
+      "number": "23FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 421430,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:55Z",
+          "sha256": "42a6c48151d58725721a3c6d25e8c0dd01668528ea7552415033fb6aa285be5d",
+          "url": "https://www.lansstyrelsen.se/download/18.1f88a453195adb731b125805/1742914117771/23FS%202025-3%20F%C3%B6reskrift%20Grubbmyran%20r%C3%A4ttelse%20av%20skrivfel.pdf"
+        }
+      ],
+      "number": "23FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 390598,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:56Z",
+          "sha256": "555d43fd116cbbb45c8c2212ce2b5098bc7043d22b1340ab993977f8ead55d82",
+          "url": "https://www.lansstyrelsen.se/download/18.68f281e3195adf0b45426d7f/1742915467677/23FS%202025-4%20%C3%85rlig%20v%C3%A4gsammanst%C3%A4llning%202025-26.pdf"
+        }
+      ],
+      "number": "23FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 382020,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:57Z",
+          "sha256": "9dd1230641d0f9200c38abd02df382d203b570d8f438627da6e2a1f640e56ae1",
+          "url": "https://www.lansstyrelsen.se/download/18.3357a38f196f109f26d42c97/1748347628983/23FS%202025-5%20F%C3%B6reskrifter%20om%20Fl%C3%A4rkdalsh%C3%B6jdens%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 217732,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:58Z",
+          "sha256": "ff8a5fddef9e7ef13e2c80583fab951937e9eeec282be08704d07ba4500eca69",
+          "url": "https://www.lansstyrelsen.se/download/18.38a88731197a1d95173a9447/1752058316362/23FS%202025-6%20Tillf%C3%A4lliga%20sj%C3%B6trafikf%C3%B6reskrifter%20under%20Storsj%C3%B6yran.pdf"
+        }
+      ],
+      "number": "23FS 2025:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 119140,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:07:59Z",
+          "sha256": "4b3119b594226d27f68ad360af11143014d4d970558f713a61596b0dde0d8af5",
+          "url": "https://www.lansstyrelsen.se/download/18.7ab5268119807370e3c16868/1752678403825/23FS%202025-7%20F%C3%B6reskrifter%20om%20eldningsf%C3%B6rbud.pdf"
+        }
+      ],
+      "number": "23FS 2025:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 16232,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:00Z",
+          "sha256": "ae6ca9a42defebd30032f72fe30a7e3de7aff972a4bb5b059f79f0639dc75f68",
+          "url": "https://www.lansstyrelsen.se/download/18.36096d051984f5c72da18ed/1753711060228/23FS%202025-8%20F%C3%B6reskrifter%20om%20upph%C3%A4vande%20av%20eldningsf%C3%B6rbud.pdf"
+        }
+      ],
+      "number": "23FS 2025:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 669562,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:01Z",
+          "sha256": "78506742e10eb8495968475baf6630b69b0c81a098bb17211434cb98dac87dec",
+          "url": "https://www.lansstyrelsen.se/download/18.34f08ae6199138e9be6391f8/1757414959375/23FS%202025-9%20F%C3%B6reskrift%20Kullflons%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2025:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 529260,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:02Z",
+          "sha256": "1b990675053299d4d337af294685aea849b5fa9c9850dc52923ef18a19ae3a6a",
+          "url": "https://www.lansstyrelsen.se/download/18.469ff1061999df7ffd9491be/1759838676707/23FS%202025-10%20F%C3%B6reskrift%20Brehungen%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2025:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 380026,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:03Z",
+          "sha256": "963ac303d1f9acf7164a2b91747596af31dae4e5bd74ef94cf84de496484e6b9",
+          "url": "https://www.lansstyrelsen.se/download/18.353f088f199c8fbacb18e8e8/1761053287683/23FS%202025-11%20F%C3%B6reskrift%20Pr%C3%A4sttj%C3%A4rnmyrans%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2025:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 2265297,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:04Z",
+          "sha256": "c62415509e71a7b38801794844d8ae00874c7a7f7e32c5b94397a1c896ee7b49",
+          "url": "https://www.lansstyrelsen.se/download/18.4554c05d19a0a2a91abc3eb2/1762500962883/23FS%202025-12%20F%C3%B6reskrift%20V%C3%A5l%C3%A5dalens%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2025:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 380849,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:05Z",
+          "sha256": "787ebbf784f8a63741fc4b848a157792fa40fbbec7914388e68bdbafb0a60b31",
+          "url": "https://www.lansstyrelsen.se/download/18.1c44abc919a76935c09bf2f/1763023916542/23FS%202025-13%20F%C3%B6reskrift%20om%20Gravak%C3%A4lens%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2025:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 448624,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:06Z",
+          "sha256": "8e455af0ef4fa869f3836c930f05d5d7036f8c8be1412e687e6d71af44453104",
+          "url": "https://www.lansstyrelsen.se/download/18.fe5e24a19ae2ac35afbc29/1764840075610/23FS%202025-14%20F%C3%B6reskrift%20om%20Riskammen%20naturreservat,%20Str%C3%B6msunds%20kommun.pdf"
+        }
+      ],
+      "number": "23FS 2025:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 695652,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:07Z",
+          "sha256": "d5640f9c17322bba50f625dce700567f07ed0a5012567200fa0dc27174b53dfd",
+          "url": "https://www.lansstyrelsen.se/download/18.695174fb19afcd3c7bbd565/1765283310223/23FS%202025-15%20F%C3%B6reskrifter%20Billtj%C3%A4rns%20urskog.pdf"
+        }
+      ],
+      "number": "23FS 2025:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 480421,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:08Z",
+          "sha256": "0c46d99260ef9fda40ad5818e2cfef4a6972c984d0ab55ffa255acb857c145c3",
+          "url": "https://www.lansstyrelsen.se/download/18.695174fb19afcd3c7bbd571/1765283325802/23FS%202025-16%20F%C3%B6reskrifter%20Dalsbergets%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2025:16",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 569311,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:09Z",
+          "sha256": "9a75b18109babdda938e5d1d824ce20ad4e67a05e39208171944720b459567cd",
+          "url": "https://www.lansstyrelsen.se/download/18.647dd53119b2bcf7d5fd0a3/1766061237306/23FS%202025-17%20F%C3%B6reskrifter%20Tysj%C3%B6arnas%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2025:17",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 237176,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:10Z",
+          "sha256": "c5c2fffd5bdee93b12af4f0b2827edcf3a777dcc9620c0cbbf4bc6cf26d9a688",
+          "url": "https://www.lansstyrelsen.se/download/18.647dd53119b2bcf7d5fd87e/1766064189950/23FS%202025-18%20F%C3%B6reskrifter%20Kvarntorpet%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2025:18",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 342834,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:11Z",
+          "sha256": "393411fa8848a43ce2623ce99169da13e4405b4f2e5395fe61ea31f5a240b03f",
+          "url": "https://www.lansstyrelsen.se/download/18.4d207a9019c47c545ea165d8/1770905695746/23FS%202026-1%20F%C3%B6reskrift%20om%20Fillstab%C3%A4ckens%20naturreservat,%20%C3%96stersunds%20kommun.pdf"
+        }
+      ],
+      "number": "23FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 392848,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:12Z",
+          "sha256": "d2fea36496fb0d89c0122a9c6ebc9a0aee10f90d2ed12af7d9dd8d95bbf7062f",
+          "url": "https://www.lansstyrelsen.se/download/18.5f7f2e0119cff5b0e2d18584/1774000014505/23FS%202026-2%20Tillf%C3%A4lliga%20sj%C3%B6trafikf%C3%B6reskrifter%20under%20Storsj%C3%B6yran.pdf"
+        }
+      ],
+      "number": "23FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 438961,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:13Z",
+          "sha256": "89849f5d7824db9c8638f307037ce9997de19e1ffea1139f12a3c63b9d55aadf",
+          "url": "https://www.lansstyrelsen.se/download/18.6aedc3de19d24d8109d1af17/1774622777567/23FS%202026-3%20%C3%85rlig%20v%C3%A4gsammanst%C3%A4llning%20f%C3%B6r%202026-2027.pdf"
+        }
+      ],
+      "number": "23FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 247435,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:14Z",
+          "sha256": "3f0228b103d1dc60342ffd895225c064de2b9d40d6935bd41321b2c9320bc7b9",
+          "url": "https://www.lansstyrelsen.se/download/18.69ced119d24e4b4ca5f492/1775046392641/23FS%202026-4%20L%C3%A4nsstyrelsen%20J%C3%A4mtlands%20l%C3%A4n%20f%C3%B6reskrifter%20om%20Granbos%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 477264,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:15Z",
+          "sha256": "3571766cfab356771d751095499642383704a5e04b97a4de3cb018ca19114378",
+          "url": "https://www.lansstyrelsen.se/download/18.6372be0819dd77281a31638/1777460072113/23FS%202026-5%20Ordningsf%C3%B6reskrifter%20f%C3%B6r%20%C3%85re%20%C3%96stersund%20Airport.pdf"
+        }
+      ],
+      "number": "23FS 2026:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 131294,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:16Z",
+          "sha256": "5ba0bfc2e829c09b15bfaae06e48c26f3c018b3cce0668798f39bccb37a79e8d",
+          "url": "https://www.lansstyrelsen.se/download/18.434dd5f319e0253f7653cc65/1778583509351/23FS%202026-6%20Interimistiskt%20f%C3%B6rbud%20inom%20planerat%20vattenskyddsomr%C3%A5de%20f%C3%B6r%20%C3%84nge%20vattent%C3%A4kt,%20Krokoms%20kommun.pdf"
+        }
+      ],
+      "number": "23FS 2026:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 134828,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:17Z",
+          "sha256": "3283a68c96ec0b388fe95ed3af8208b723cafc44144542f312b35671db06513d",
+          "url": "https://www.lansstyrelsen.se/download/18.5d397faa19e63389aaf62774/1780486028396/23FS%202026-7%20F%C3%B6reskrift%20g%C3%A4llande%20Andsj%C3%B6vallens%20naturreservat,%20%C3%85re%20kommun.pdf"
+        }
+      ],
+      "number": "23FS 2026:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 130915,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:18Z",
+          "sha256": "6c60ebb8f72a8dd72ce2fce50212f3456fe7d9b733ce0305124da585169c5043",
+          "url": "https://www.lansstyrelsen.se/download/18.7865e6921a12f60a288ced8/1791897081472/23FS%202026-8%20H%C3%A4rbergdalens%20naturreservat.pdf"
+        }
+      ],
+      "number": "23FS 2026:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 122810,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:19Z",
+          "sha256": "190891a9118a164bfdc5b1248fd43a01ad52b2ce377d53b6fa84d7b177dd01a7",
+          "url": "https://www.lansstyrelsen.se/download/18.245cf1e91a1630e7e7d42f8c/1793106747347/23FS%202026-9%20F%C3%B6reskrift%20g%C3%A4llande%20naturreservatet%20Ar%C3%A5dalen,%20Bergs%20kommun.pdf"
+        }
+      ],
+      "number": "23FS 2026:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 141527,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:08:20Z",
+          "sha256": "1b2de2fe265da815a5853976368971c967925c4e1f4adf8ecf3f0b7063ecd959",
+          "url": "https://www.lansstyrelsen.se/download/18.245cf1e91a1630e7e7d42fa3/1793106763523/23FS%202026-10%20F%C3%B6reskrift%20g%C3%A4llande%20naturreservatet%20Bj%C3%B6rnsbodarna,%20Bergs%20kommun.pdf"
+        }
+      ],
+      "number": "23FS 2026:10",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
