@@ -331,4 +331,8 @@
         <item>Nov</item>
         <item>Dec</item>
     </string-array>
+    <string name="sheet_drag_handle">Drag handle</string>
+    <string name="sheet_expand">Expand sheet</string>
+    <string name="sheet_collapse">Collapse sheet</string>
+    <string name="sheet_dismiss">Close sheet</string>
 </resources>
