@@ -13,6 +13,7 @@ import app.lagar.i18n.ProvideAppLocale
 import app.lagar.i18n.systemLanguageTag
 import app.lagar.settings.ThemeMode
 import app.lagar.settings.UserPreferences
+import app.lagar.ui.navigation.Reader
 import app.lagar.ui.shell.AppShell
 import app.lagar.ui.shell.SystemBarAppearance
 import dev.chrisbanes.haze.HazeState
@@ -20,15 +21,16 @@ import org.koin.compose.KoinApplication
 import org.koin.compose.koinInject
 import org.koin.dsl.koinConfiguration
 
+/** [startLink] is the document a shared link asks for (the web app's `?doc=…&p=…`); it opens after the splash. */
 @Composable
-fun App(dataSource: DataSourceConfig = DataSourceConfig()) {
+fun App(dataSource: DataSourceConfig = DataSourceConfig(), startLink: Reader? = null) {
     KoinApplication(koinConfiguration { modules(appModule(dataSource)) }) {
-        AppContent()
+        AppContent(startLink)
     }
 }
 
 @Composable
-private fun AppContent() {
+private fun AppContent(startLink: Reader?) {
     val preferences = koinInject<UserPreferences>()
     val language by preferences.language.collectAsState()
     val theme by preferences.theme.collectAsState()
@@ -50,6 +52,7 @@ private fun AppContent() {
                 navController = navController,
                 hazeState = hazeState,
                 onToggleTheme = { preferences.setTheme(if (dark) ThemeMode.Light else ThemeMode.Dark) },
+                startLink = startLink,
             )
         }
     }
