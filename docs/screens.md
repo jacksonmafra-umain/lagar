@@ -16,13 +16,13 @@ The number after each gap is its GitHub issue.
 
 | Topic | Status | Issue |
 | --- | --- | --- |
-| Glass tier 1 on article cards, tier 2 on sticky bars, reduce-transparency support | Partial: only tiers 2 and 3 are used | #23 |
-| Input, button and checkbox shapes, search focus glow, web `⌘K` hint | Partial: stock M3 defaults | #24 |
+| Glass tier 1 on article cards and input frames, tier 2 on sticky bars, tier 3 on the drawer and sheets, reduce-transparency support | Done | #23 |
+| Input, button and checkbox shapes, search focus glow, web `⌘K` hint | Done | #24 |
 | Repealed treatment (grey, strikethrough, history icon) everywhere | Partial: only the layer list is correct | #21 |
 | Bookmark icon in the document's layer colour | Missing | #22 |
 | Desktop layout (window ≥ 1024dp): top bar navigation, max content width, wide home | Done | #79 |
 | Tablet two-pane layout and wide layouts of the pushed screens | Missing | #35 |
-| `docs/design.md` component inventory up to date | Partial: stale paths | #25 |
+| `docs/design.md` component inventory up to date | Done | #25 |
 | Swedish and English strings, no hardcoded UI text | Done | |
 
 ## Shell
@@ -54,7 +54,7 @@ A modal sheet opened from the scope chip, the drawer or the location card. Code:
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Scope cards with Active and count badges, region and kommun pickers, changes applied on Done | Done | |
-| Glass overlay | Partial: always uses the opaque fallback | #23 |
+| Glass overlay (tier 3; opaque fallback, since a modal sheet's window has no backdrop to blur) | Done | #23 |
 | Use my location | Missing | #30 |
 | Linked kommun status card | Blocked: no municipal data | #38 |
 
@@ -67,7 +67,8 @@ Route: `Splash`. Code: `ui/onboarding/SplashScreen.kt`. Reference: Stitch `splas
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Loads the API index, then routes to onboarding or home | Done | |
-| Stitch glass logo card and corpus-size line | Partial: flat logo | #23 |
+| Stitch glass logo card | Done | #23 |
+| Corpus-size line | Missing | |
 
 ### Welcome (step 1)
 
@@ -76,8 +77,8 @@ Route: `OnboardingWelcome`. Code: `ui/onboarding/WelcomeScreen.kt`. Reference: S
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Introduction, three scope cards with live document counts, step progress | Done | |
-| Skip at the top right, as in Stitch | Partial: bottom text button | #29 |
-| Choice of primary focus (citizen, student, municipal lawyer) | Missing | #29 |
+| Skip at the top right, as in Stitch; stores the defaults (Nationell, no locality) and leaves like the last step | Done | #29 |
+| Choice of main focus (Medborgare, Student, Jurist), stored on the device and changeable in Settings; it only orders the home key-law groups | Done | #29 |
 
 ### Scope (step 2)
 
@@ -86,7 +87,7 @@ Route: `OnboardingScope`. Code: `ui/onboarding/ScopeStepScreen.kt`, `ScopeCard.k
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Selectable Nationell, Region and Kommun cards with layer colours and counts | Done | |
-| Skip, and a "stored on this device" note | Missing | #29 |
+| Skip at the top right, and a "stored on this device" note | Done | #29 |
 
 ### Locality (step 3)
 
@@ -95,7 +96,7 @@ Route: `OnboardingLocality`. Code: `ui/onboarding/LocalityStepScreen.kt`, `Local
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Searchable region and kommun pickers for all 21 regions and 290 kommuner, both optional | Done | |
-| Skip | Missing | #29 |
+| Skip at the top right | Done | #29 |
 | Kommun suggested from the device location | Missing | #30 |
 | Linked kommun summary (council, document count) | Blocked: no municipal data | #38 |
 
@@ -107,6 +108,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | --- | --- | --- |
 | Hero with search field, advanced-search link and layer chips | Done | |
 | Key laws: Regeringsformen card, plus accordions for acts and ordinances | Done | |
+| Key-law groups ordered by the main focus: hierarchy order for Medborgare and Student, acts and ordinances first for Jurist | Done | #29 |
 | Explore feed with Recent and Favourites tabs, bookmark toggle and "Show more" | Done | |
 | Loads only the first listing page of each level it shows, not the whole catalog; search loads the catalog on its first query | Done | |
 | Feed card shows the in-force date and "Ändrad senast genom SFS …" | Done; each line is hidden while its field is `null` (the collector does not fill `in_force` yet). Saved items in the Favourites tab carry neither field | |
@@ -150,7 +152,7 @@ Route: `AdvancedSearch`. Code: `ui/search/AdvancedSearchScreen.kt`, `DateField.k
 | Text field, issue-date range, document types, mode (all, title, number), status (all, in force, repealed) | Done | |
 | Calendar date picker, collapsible filter sections, scope change from the form | Missing | #32 |
 | Vacatio legis filter and in-force date range | Missing; `in_force` is now in listing items (still `null` until the collector fills it) | #32 |
-| Glass footer bar | Partial: solid surface | #23 |
+| Glass footer bar | Done | #23 |
 
 ## Hierarki
 
@@ -174,6 +176,7 @@ Route: `LayerList(layer, type?)`. Code: `ui/list/`.
 | Repealed rows struck through, with the history badge | Done | |
 | Empty state for a layer or series with no documents | Done | #33 |
 | Series switch (all, acts, ordinances, other statutes) inside the list, from the layer's `series` in `index.json` | Done | #33 |
+| Names, levels and colours for the case law, EU, agency, county and municipal types, ready for when those layers have data | Done | #77 |
 
 ## Reader
 
@@ -217,7 +220,8 @@ Route: `Settings`, opened from the drawer. Code: `ui/settings/SettingsScreen.kt`
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Language (system, Svenska, English), theme (system, light, dark), About with credits, licence and data build date | Done | |
-| Reduce transparency | Missing | #23 |
+| Reduce transparency (system, on, off); System follows iOS Reduce Transparency and the web `prefers-reduced-transparency` query, Android has no such setting | Done | #23 |
+| Main focus (Medborgare, Student, Jurist), as chosen in onboarding | Done | #29 |
 
 ## Data and release
 

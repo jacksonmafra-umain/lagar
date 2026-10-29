@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
@@ -38,6 +39,7 @@ import app.lagar.domain.DisplayLayer
 import app.lagar.domain.Scope
 import app.lagar.resources.Res
 import app.lagar.settings.UserPreferences
+import app.lagar.ui.common.SearchShortcutEffect
 import app.lagar.ui.hierarki.HierarkiRoute
 import app.lagar.ui.home.HomeRoute
 import app.lagar.ui.home.ScopeSheet
@@ -150,6 +152,20 @@ fun AppShell(
 
     BackHandler(enabled = drawerState.isOpen) { scope.launch { drawerState.close() } }
 
+    // Web only: Cmd/Ctrl+K focuses the search field when search is open, and opens search from any screen past onboarding.
+    var searchFocusRequests by remember { mutableIntStateOf(0) }
+    SearchShortcutEffect {
+        when {
+            destination?.hasRoute(Search::class) == true -> searchFocusRequests++
+            destination == null || destination.hasRoute(Splash::class) || !preferences.onboardingDone.value -> Unit
+            else -> {
+                if (drawerState.isOpen) scope.launch { drawerState.close() }
+                showScopeSheet = false
+                navigateWhenResumed(Search())
+            }
+        }
+    }
+
     // The web canvas can first lay out at 0×0 (a hidden tab, or a pane still opening). A drawer measured then anchors
     // its closed position at offset 0 and stays drawn over the screen once the window grows, so the shell is only
     // composed once it has a real width.
@@ -210,6 +226,7 @@ fun AppShell(
                             ScopeStepRoute(
                                 viewModel = onboarding,
                                 onContinue = { navigateWhenResumed(OnboardingLocality) },
+                                onSkip = { leaveOnboarding(onboarding::skip) },
                             )
                         }
                         composable<OnboardingLocality> { entry ->
@@ -249,6 +266,7 @@ fun AppShell(
                                 onBack = { navController.popBackStack() },
                                 onOpenDocument = { navigateWhenResumed(Reader(it)) },
                                 onOpenAdvancedSearch = { navigateWhenResumed(AdvancedSearch) },
+                                focusRequests = searchFocusRequests,
                             )
                         }
                         composable<AdvancedSearch> {

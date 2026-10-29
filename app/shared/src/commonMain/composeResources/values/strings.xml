@@ -64,6 +64,12 @@
     <string name="settings_language">Language</string>
     <string name="settings_theme">Theme</string>
     <string name="settings_system">System</string>
+    <string name="settings_reduce_transparency">Reduce transparency</string>
+    <string name="settings_reduce_transparency_desc">Shows solid surfaces instead of frosted glass.</string>
+    <string name="settings_focus">Main focus</string>
+    <string name="settings_focus_desc">Sets which key laws the home screen shows first.</string>
+    <string name="setting_on">On</string>
+    <string name="setting_off">Off</string>
     <string name="language_swedish">Svenska</string>
     <string name="language_english">English</string>
     <string name="theme_light">Light</string>
@@ -79,6 +85,11 @@
     <string name="onboarding_continue">Continue</string>
     <string name="onboarding_done">Done</string>
     <string name="onboarding_stored_locally">Stored on this device only</string>
+    <string name="focus_title">Your main focus</string>
+    <string name="focus_text">Sets which key laws the home screen shows first. You can change it in Settings.</string>
+    <string name="focus_citizen">Citizen</string>
+    <string name="focus_student">Student</string>
+    <string name="focus_lawyer">Lawyer</string>
     <string name="welcome_title">All of Sweden’s rules in one place</string>
     <string name="welcome_text">Read acts, ordinances, agency regulations, case law and EU law, tailored to your region and municipality.</string>
     <string name="scope_national">National</string>
@@ -103,6 +114,8 @@
     <string name="home_hero_emphasis">acts, ordinances and regulations</string>
     <string name="home_hero_subtitle">Consolidated statutes from the Riksdag’s open data</string>
     <string name="home_search_hint">Search by number or word</string>
+    <string name="search_shortcut_apple">⌘K</string>
+    <string name="search_shortcut_other">Ctrl+K</string>
     <string name="home_search_example">E.g. Regeringsformen, 2026:1200</string>
     <string name="home_search_submit">Search</string>
     <string name="home_advanced_search">Advanced search</string>
@@ -201,4 +214,12 @@
     <string name="wide_preview_continue">Continue reading</string>
     <string name="wide_preview_empty">Choose a document to preview it here.</string>
     <string name="wide_footer_disclaimer">An independent project, not an official publication. Legal texts come from the Riksdag’s open data; the printed Svensk författningssamling is authoritative.</string>
+    <string name="type_agency_regulation">Agency regulation</string>
+    <string name="type_case_report">Case report</string>
+    <string name="type_case_notice">Case notice</string>
+    <string name="type_eu_regulation">EU regulation</string>
+    <string name="type_eu_directive">EU directive</string>
+    <string name="type_eu_decision">EU decision</string>
+    <string name="type_county_regulation">County regulation</string>
+    <string name="type_municipal_regulation">Municipal regulation</string>
 </resources>

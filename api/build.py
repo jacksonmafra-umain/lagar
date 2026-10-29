@@ -25,6 +25,8 @@ PAGE_SIZE = 50
 BUILT_AT_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 # Fields added after the first release go at the end, so earlier keys keep their position.
 ITEM_FIELDS = ("id", "title", "number", "type", "issued", "repealed", "in_force", "amended_through", "ministry")
+# Document meta keys, in the schema's order; optional frontmatter keys are served as null.
+META_FIELDS = tuple(schema._load_schema()["properties"])
 
 
 class BuildError(Exception):
@@ -32,22 +34,71 @@ class BuildError(Exception):
 
 
 _NUMBER_RE = re.compile(r"([A-Za-z]*)(\d{4}):\D*(\d*)(.*)")
+# Series-prefixed numbers: agency (AFS 2023:1) and county (01FS 2024:3) regulations.
+_SERIES_RE = re.compile(r"(\S+) (\d{4}):(\d+)")
+# Case law: NJA 2019 s. 2, HFD 2020 ref. 5, HFD 2020 not. 3, AD 2020 nr 45, MIG 2026:10.
+_CASE_RE = re.compile(r"(\S+) (\d{4})(:| s\. | ref\. | not\. | nr | N )(\d+)")
+# EU acts: (EU) 2016/679 is year/number; with "nr", (EG) nr 1907/2006 is number/year;
+# 95/46/EG and 2004/18/EG are year/number/institution. Two-digit years are 19xx.
+_EU_YEAR_FIRST_RE = re.compile(r"\([^)]+\) (\d{4})/(\d+)")
+_EU_NR_RE = re.compile(r"\([^)]+\) nr (\d+)/(\d{2}|\d{4})")
+_EU_SLASH_RE = re.compile(r"(\d{2}|\d{4})/(\d+)/\D.*")
+_YEAR_RE = re.compile(r"(?<!\d)((?:1[6-9]|20)\d{2})(?!\d)\D*(\d*)")
 
 
-def _number_key(number):
-    """(year, ordinal, is_plain, rest); a series prefix (N, RFS) and old-print page suffixes only break ties."""
-    m = _NUMBER_RE.fullmatch(number)
-    if not m:
-        raise BuildError(f"unsortable number: {number!r}")
-    prefix, year, ordinal, rest = m.groups()
-    return (int(year), int(ordinal or 0), not prefix, rest)
+def _year(text):
+    return int(text) + 1900 if len(text) == 2 else int(text)
+
+
+def _eu_key(number):
+    m = _EU_YEAR_FIRST_RE.fullmatch(number)
+    if m:
+        return (int(m.group(1)), int(m.group(2)))
+    m = _EU_NR_RE.fullmatch(number)
+    if m:
+        return (_year(m.group(2)), int(m.group(1)))
+    m = _EU_SLASH_RE.fullmatch(number)
+    if m:
+        return (_year(m.group(1)), int(m.group(2)))
+    return None
+
+
+def _number_key(number, type_="act"):
+    """(year, ordinal, is_plain, rest) for sorting `number` of a document of `type_`.
+
+    SFS: a series prefix (N, RFS) and old-print page suffixes only break ties.
+    Agency, county and case law: the series or report name only breaks ties.
+    EU: year and number of the act, whatever the citation form.
+    Municipal: the first year in the number and the digits after it, else (0, 0).
+    """
+    if type_ in ("agency_regulation", "county_regulation"):
+        m = _SERIES_RE.fullmatch(number)
+        if m:
+            return (int(m.group(2)), int(m.group(3)), True, m.group(1))
+    elif type_ in ("case_report", "case_notice"):
+        m = _CASE_RE.fullmatch(number)
+        if m:
+            return (int(m.group(2)), int(m.group(4)), True, m.group(1) + m.group(3))
+    elif type_ in ("eu_regulation", "eu_directive", "eu_decision"):
+        key = _eu_key(number)
+        if key:
+            return (*key, True, number)
+    elif type_ == "municipal_regulation":
+        m = _YEAR_RE.search(number)
+        return (int(m.group(1)), int(m.group(2) or 0), True, number) if m else (0, 0, True, number)
+    else:
+        m = _NUMBER_RE.fullmatch(number)
+        if m:
+            prefix, year, ordinal, rest = m.groups()
+            return (int(year), int(ordinal or 0), not prefix, rest)
+    raise BuildError(f"unsortable number: {number!r}")
 
 
 def _sorted(items):
     """issued descending (null last), then number descending by (year, ordinal)."""
     return sorted(
         items,
-        key=lambda i: (bool(i["issued"]), i["issued"] or "", _number_key(i["number"]), i["id"]),
+        key=lambda i: (bool(i["issued"]), i["issued"] or "", _number_key(i["number"], i["type"]), i["id"]),
         reverse=True,
     )
 
@@ -90,10 +141,13 @@ def _pages(out, rel_dir, layer, type_, items, written):
 
 
 def doc_meta(meta):
-    """Frontmatter as served; `amendments` is null until the register was collected."""
-    served = dict(meta)
-    served.setdefault("amendments", None)
-    return served
+    """Frontmatter as served: every schema key in schema order, null when the file leaves it out.
+
+    `amendments` is null until the register was collected; the other layers' fields
+    (`issuer`, `court`, `ecli`, `celex`, `region_code`, `municipality_code`) are null
+    where they do not apply.
+    """
+    return {key: meta.get(key) for key in META_FIELDS}
 
 
 def build(docs, out, built_at):

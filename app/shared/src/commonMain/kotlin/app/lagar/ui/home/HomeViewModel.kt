@@ -12,6 +12,7 @@ import app.lagar.domain.Scope
 import app.lagar.domain.count
 import app.lagar.settings.Bookmark
 import app.lagar.settings.BookmarkStore
+import app.lagar.settings.UserFocus
 import app.lagar.settings.UserPreferences
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -53,6 +54,9 @@ class HomeViewModel(
     val state: StateFlow<LoadState<HomeData>> = _state.asStateFlow()
 
     val bookmarks: StateFlow<List<Bookmark>> = bookmarkStore.bookmarks
+
+    /** Orders the "Key laws" groups; read separately from [state] so that a change does not reload the home. */
+    val focus: StateFlow<UserFocus> = preferences.focus
 
     private val attempt = MutableStateFlow(0)
 
@@ -109,10 +113,5 @@ class HomeViewModel(
     }
 }
 
-/** The display level of a listing item, from its API `type`; null for types the home does not group yet. */
-internal fun ListingItem.displayLayer(): DisplayLayer? = when (type) {
-    "fundamental_law" -> DisplayLayer.Fundamental
-    "act" -> DisplayLayer.SfsAct
-    "ordinance" -> DisplayLayer.SfsOrdinance
-    else -> null
-}
+/** The display level of a listing item, from its API `type`; null for `other_statute` and unknown types. */
+internal fun ListingItem.displayLayer(): DisplayLayer? = DisplayLayer.forType(type)

@@ -73,6 +73,7 @@ import app.lagar.ui.common.ErrorState
 import app.lagar.ui.common.LayerBadge
 import app.lagar.ui.common.PillTab
 import app.lagar.ui.common.RepealedBadge
+import app.lagar.ui.common.typeNameRes
 import app.lagar.ui.reader.LegalMarkdown
 import app.lagar.ui.reader.MetadataHeader
 import app.lagar.ui.reader.ReaderViewModel
@@ -180,7 +181,7 @@ private fun DocumentRow(item: ListingItem, selected: Boolean, onClick: () -> Uni
                 verticalArrangement = Arrangement.spacedBy(spacing.xs),
                 itemVerticalAlignment = Alignment.CenterVertically,
             ) {
-                val label = layer?.let { stringResource(Res.string.type_number, stringResource(it.typeRes()), item.number) } ?: item.number
+                val label = layer?.let { stringResource(Res.string.type_number, stringResource(typeNameRes(item.type)), item.number) } ?: item.number
                 LayerBadge(key, label)
                 if (repealed) RepealedBadge() else InForce()
             }

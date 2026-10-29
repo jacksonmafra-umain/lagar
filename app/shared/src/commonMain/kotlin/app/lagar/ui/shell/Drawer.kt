@@ -33,6 +33,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
@@ -163,10 +164,10 @@ private fun ScopeCard(scope: Scope, localityName: String?, onChange: () -> Unit)
     val layers = LagarTheme.layers
     Surface(
         onClick = onChange,
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth()
+            .glass(GlassTier.Card, shape = MaterialTheme.shapes.large, border = BorderStroke(ShellDimens.Hairline, layers.border(scope.key))),
         shape = MaterialTheme.shapes.large,
-        color = LagarTheme.colors.surfaceContainerLowest,
-        border = BorderStroke(ShellDimens.Hairline, layers.border(scope.key)),
+        color = Color.Transparent,
     ) {
         // The text block and the pill share a row until a large font leaves the text too narrow; then the pill drops below.
         val stacked = LocalDensity.current.fontScale > WRAP_FONT_SCALE

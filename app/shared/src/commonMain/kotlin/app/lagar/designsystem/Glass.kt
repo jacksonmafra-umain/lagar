@@ -1,5 +1,6 @@
 package app.lagar.designsystem
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -62,24 +63,51 @@ private fun GlassTier.spec(): GlassSpec = when (this) {
     )
 }
 
+/** How a glass surface fills its shape. */
+internal enum class GlassFill {
+    /** Haze blurs the content behind and tints it with the translucent fill. */
+    Blurred,
+
+    /** The translucent fill alone; tier 1 has no blur. */
+    Translucent,
+
+    /** The opaque `surfaceContainer*` fallback. */
+    Opaque,
+}
+
 /**
- * Draws a Liquid Glass surface for [tier]: translucent fill, frosted border and specular highlight,
- * with a backdrop blur (blur 20dp / 28dp, saturate 180%) behind [Bar] and [Overlay] when [hazeState] is
- * given. The glass samples content marked with `Modifier.hazeSource(hazeState)`.
+ * Picks the fill of a [tier] surface. Reduce transparency always gets the opaque fallback. Otherwise [GlassTier.Card]
+ * is translucent without blur, and [GlassTier.Bar] and [GlassTier.Overlay] blur when [hasBlurSource] (a `HazeState`
+ * with content behind) and fall back to opaque when there is nothing to blur.
+ */
+internal fun glassFill(tier: GlassTier, hasBlurSource: Boolean, reduceTransparency: Boolean): GlassFill = when {
+    reduceTransparency -> GlassFill.Opaque
+    tier == GlassTier.Card -> GlassFill.Translucent
+    hasBlurSource -> GlassFill.Blurred
+    else -> GlassFill.Opaque
+}
+
+/**
+ * Draws a Liquid Glass surface for [tier]: translucent fill, frosted border and specular highlight, with a backdrop
+ * blur (blur 20dp / 28dp, saturate 180%) behind [GlassTier.Bar] and [GlassTier.Overlay] when [hazeState] is given.
+ * The glass samples content marked with `Modifier.hazeSource(hazeState)`. [GlassTier.Card] never blurs, so it
+ * ignores [hazeState]. A non-null [border] replaces the frosted border, for cards with a layer or focus edge.
  *
- * With a null [hazeState], or on targets where Haze cannot blur, the surface falls back to an opaque
- * `surfaceContainer*` fill with the same border.
+ * With reduce transparency on ([LagarTheme.reduceTransparency]), with a null [hazeState] on a blurred tier, or on
+ * targets where Haze cannot blur, the surface falls back to an opaque `surfaceContainer*` fill with the same border.
  */
 @Composable
 fun Modifier.glass(
     tier: GlassTier,
-    hazeState: HazeState?,
+    hazeState: HazeState? = null,
     shape: Shape? = null,
+    border: BorderStroke? = null,
 ): Modifier {
     val dark = LagarTheme.isDark
     val colors = LagarTheme.colors
     val spec = remember(tier) { tier.spec() }
     val outline = shape ?: spec.shape
+    val fillKind = glassFill(tier, hasBlurSource = hazeState != null, reduceTransparency = LagarTheme.reduceTransparency)
 
     val opaque = when (tier) {
         GlassTier.Card -> if (dark) colors.surfaceContainerLow else colors.surfaceContainerLowest
@@ -88,9 +116,12 @@ fun Modifier.glass(
     }
     // Light glass is translucent white; dark glass is the dark surface.
     val fill = (if (dark) DarkTokens.surface else Color.White).copy(alpha = spec.fillAlpha)
-    val frosted = if (dark) Color.White.copy(alpha = 0.12f) else Color.White.copy(alpha = 0.65f)
-    val outer = if (dark) Color.Black.copy(alpha = 0.4f) else Color.Black.copy(alpha = 0.06f)
     val highlight = if (dark) Color.White.copy(alpha = 0.08f) else Color.White.copy(alpha = 0.4f)
+    val frostedBorder = remember(dark) {
+        val frosted = if (dark) Color.White.copy(alpha = 0.12f) else Color.White.copy(alpha = 0.65f)
+        val outer = if (dark) Color.Black.copy(alpha = 0.4f) else Color.Black.copy(alpha = 0.06f)
+        Brush.verticalGradient(listOf(frosted, outer))
+    }
 
     var m = this
     if (spec.shadow > 0.dp) {
@@ -99,35 +130,34 @@ fun Modifier.glass(
     }
     m = m.clip(outline)
 
-    val blur = spec.blur
-    m = if (hazeState != null && blur != null) {
-        val style = remember(blur, dark, fill, opaque) {
-            HazeBlurStyle {
-                blurRadius(blur)
-                backgroundColor(opaque)
-                colorEffects(
-                    listOf(
-                        HazeColorEffect.colorFilter(ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(1.8f) })),
-                        HazeColorEffect.tint(fill),
-                    ),
-                )
-                fallbackColorEffect(HazeColorEffect.tint(opaque))
+    m = when (fillKind) {
+        GlassFill.Blurred -> {
+            val blur = requireNotNull(spec.blur)
+            val style = remember(blur, dark, fill, opaque) {
+                HazeBlurStyle {
+                    blurRadius(blur)
+                    backgroundColor(opaque)
+                    colorEffects(
+                        listOf(
+                            HazeColorEffect.colorFilter(ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(1.8f) })),
+                            HazeColorEffect.tint(fill),
+                        ),
+                    )
+                    fallbackColorEffect(HazeColorEffect.tint(opaque))
+                }
             }
+            m.hazeBlur(HazeInput.Sources(requireNotNull(hazeState)), style)
         }
-        m.hazeBlur(HazeInput.Sources(hazeState), style)
-    } else if (hazeState == null) {
-        m.background(opaque)
-    } else {
-        m.background(fill)
+        GlassFill.Translucent -> m.background(fill)
+        GlassFill.Opaque -> m.background(opaque)
     }
 
-    return m
-        .drawBehind {
-            val h = minOf(size.height, 48.dp.toPx())
-            drawRect(
-                brush = Brush.verticalGradient(listOf(highlight, Color.Transparent), startY = 0f, endY = h),
-                size = Size(size.width, h),
-            )
-        }
-        .border(1.dp, Brush.verticalGradient(listOf(frosted, outer)), outline)
+    m = m.drawBehind {
+        val h = minOf(size.height, 48.dp.toPx())
+        drawRect(
+            brush = Brush.verticalGradient(listOf(highlight, Color.Transparent), startY = 0f, endY = h),
+            size = Size(size.width, h),
+        )
+    }
+    return if (border != null) m.border(border, outline) else m.border(1.dp, frostedBorder, outline)
 }

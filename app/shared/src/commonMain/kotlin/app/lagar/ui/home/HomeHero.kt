@@ -4,11 +4,14 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsFocusedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
@@ -62,8 +65,11 @@ import app.lagar.resources.home_search_hint
 import app.lagar.resources.home_search_submit
 import app.lagar.resources.ic_arrow_forward
 import app.lagar.resources.ic_search
+import app.lagar.ui.common.InputFrame
+import app.lagar.ui.common.ShortcutHint
 import app.lagar.ui.common.iconColor
 import app.lagar.ui.common.nameRes
+import app.lagar.ui.common.searchShortcutHint
 import app.lagar.ui.onboarding.descriptionRes
 import app.lagar.ui.onboarding.iconRes
 import app.lagar.ui.onboarding.nameRes
@@ -178,57 +184,55 @@ internal fun SearchField(scope: Scope, onSearch: (String) -> Unit, modifier: Mod
     var query by rememberSaveable { mutableStateOf("") }
     val hint = stringResource(Res.string.home_search_hint)
     val submit = { onSearch(query.trim()) }
-    Surface(
+    val interactionSource = remember { MutableInteractionSource() }
+    val focused by interactionSource.collectIsFocusedAsState()
+    InputFrame(
+        focused = focused,
         modifier = modifier.fillMaxWidth(),
-        shape = CircleShape,
-        color = LagarTheme.colors.surfaceContainerLowest,
-        border = BorderStroke(1.dp, layers.accent(scope.key)),
+        idleBorder = layers.accent(scope.key),
+        contentPadding = PaddingValues(start = LagarTheme.spacing.md),
     ) {
-        Row(
-            modifier = Modifier.heightIn(min = ShellDimens.TouchTarget).padding(start = LagarTheme.spacing.md),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
-        ) {
-            Icon(painterResource(Res.drawable.ic_search), null, tint = layers.onTint(scope.key), modifier = Modifier.size(24.dp))
-            BasicTextField(
-                value = query,
-                onValueChange = { query = it },
-                modifier = Modifier.weight(1f).semantics { contentDescription = hint },
-                singleLine = true,
-                textStyle = LagarTheme.type.bodyUi.copy(color = LagarTheme.colors.onSurface),
-                cursorBrush = SolidColor(layers.onTint(scope.key)),
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                keyboardActions = KeyboardActions(onSearch = { submit() }),
-                decorationBox = { field ->
-                    Box(contentAlignment = Alignment.CenterStart) {
-                        if (query.isEmpty()) {
-                            Text(
-                                hint,
-                                style = LagarTheme.type.bodyUi,
-                                color = LagarTheme.colors.onSurfaceVariant,
-                                maxLines = 2,
-                                overflow = TextOverflow.Ellipsis,
-                            )
-                        }
-                        field()
+        Icon(painterResource(Res.drawable.ic_search), null, tint = layers.onTint(scope.key), modifier = Modifier.size(24.dp))
+        BasicTextField(
+            value = query,
+            onValueChange = { query = it },
+            modifier = Modifier.weight(1f).semantics { contentDescription = hint },
+            singleLine = true,
+            textStyle = LagarTheme.type.bodyUi.copy(color = LagarTheme.colors.onSurface),
+            cursorBrush = SolidColor(layers.onTint(scope.key)),
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+            keyboardActions = KeyboardActions(onSearch = { submit() }),
+            interactionSource = interactionSource,
+            decorationBox = { field ->
+                Box(contentAlignment = Alignment.CenterStart) {
+                    if (query.isEmpty()) {
+                        Text(
+                            hint,
+                            style = LagarTheme.type.bodyUi,
+                            color = LagarTheme.colors.onSurfaceVariant,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                        )
                     }
-                },
-            )
-            val description = stringResource(Res.string.home_search_submit)
-            // A 36dp round button inside a 48dp hit area.
+                    field()
+                }
+            },
+        )
+        searchShortcutHint()?.let { ShortcutHint(it) }
+        val description = stringResource(Res.string.home_search_submit)
+        // A 36dp button inside a 48dp hit area.
+        Box(
+            modifier = Modifier
+                .size(ShellDimens.TouchTarget)
+                .clickable(role = Role.Button, onClick = submit)
+                .semantics { contentDescription = description },
+            contentAlignment = Alignment.Center,
+        ) {
             Box(
-                modifier = Modifier
-                    .size(ShellDimens.TouchTarget)
-                    .clickable(role = Role.Button, onClick = submit)
-                    .semantics { contentDescription = description },
+                modifier = Modifier.size(36.dp).clip(MaterialTheme.shapes.small).background(layers.accent(scope.key)),
                 contentAlignment = Alignment.Center,
             ) {
-                Box(
-                    modifier = Modifier.size(36.dp).clip(CircleShape).background(layers.accent(scope.key)),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Icon(painterResource(Res.drawable.ic_arrow_forward), null, tint = layers.accent(scope.key).iconColor(), modifier = Modifier.size(20.dp))
-                }
+                Icon(painterResource(Res.drawable.ic_arrow_forward), null, tint = layers.accent(scope.key).iconColor(), modifier = Modifier.size(20.dp))
             }
         }
     }

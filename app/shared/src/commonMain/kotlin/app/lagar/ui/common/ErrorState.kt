@@ -1,6 +1,5 @@
 package app.lagar.ui.common
 
-import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -21,6 +20,6 @@ fun ErrorState(onRetry: () -> Unit, modifier: Modifier = Modifier) {
         text = stringResource(Res.string.error_text),
         iconTint = LagarTheme.colors.error,
         modifier = modifier,
-        action = { Button(onClick = onRetry) { Text(stringResource(Res.string.error_retry)) } },
+        action = { LagarButton(onClick = onRetry) { Text(stringResource(Res.string.error_retry)) } },
     )
 }

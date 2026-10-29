@@ -21,12 +21,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.lagar.data.ListingItem
+import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
+import app.lagar.designsystem.glass
 import app.lagar.domain.DisplayLayer
 import app.lagar.resources.Res
 import app.lagar.resources.ic_chevron_right
@@ -46,10 +49,9 @@ fun StatuteRow(item: ListingItem, layer: DisplayLayer?, onClick: () -> Unit, mod
     val key = if (repealed) LayerKey.Repealed else (layer?.key ?: LayerKey.Repealed)
     Surface(
         onClick = onClick,
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth().glass(GlassTier.Card, shape = MaterialTheme.shapes.medium),
         shape = MaterialTheme.shapes.medium,
-        color = LagarTheme.colors.surfaceContainerLowest,
-        border = BorderStroke(1.dp, LagarTheme.colors.outlineVariant),
+        color = Color.Transparent,
     ) {
         Row(Modifier.height(IntrinsicSize.Min)) {
             Box(Modifier.width(3.dp).fillMaxHeight().background(layers.accent(key)))

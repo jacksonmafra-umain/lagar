@@ -64,6 +64,12 @@
     <string name="settings_language">Språk</string>
     <string name="settings_theme">Tema</string>
     <string name="settings_system">Systemets inställning</string>
+    <string name="settings_reduce_transparency">Minska genomskinlighet</string>
+    <string name="settings_reduce_transparency_desc">Visar ogenomskinliga ytor i stället för frostat glas.</string>
+    <string name="settings_focus">Huvudsakligt fokus</string>
+    <string name="settings_focus_desc">Styr vilka viktiga lagar startsidan visar först.</string>
+    <string name="setting_on">På</string>
+    <string name="setting_off">Av</string>
     <string name="language_swedish">Svenska</string>
     <string name="language_english">English</string>
     <string name="theme_light">Ljust</string>
@@ -79,6 +85,11 @@
     <string name="onboarding_continue">Fortsätt</string>
     <string name="onboarding_done">Klar</string>
     <string name="onboarding_stored_locally">Sparas bara på den här enheten</string>
+    <string name="focus_title">Ditt huvudsakliga fokus</string>
+    <string name="focus_text">Styr vilka viktiga lagar startsidan visar först. Du kan ändra det i Inställningar.</string>
+    <string name="focus_citizen">Medborgare</string>
+    <string name="focus_student">Student</string>
+    <string name="focus_lawyer">Jurist</string>
     <string name="welcome_title">Hela Sveriges regelverk på ett ställe</string>
     <string name="welcome_text">Läs lagar, förordningar, myndighetsföreskrifter, rättspraxis och EU-rätt, anpassat till din region och kommun.</string>
     <string name="scope_national">Nationell</string>
@@ -103,6 +114,8 @@
     <string name="home_hero_emphasis">lagar, förordningar och föreskrifter</string>
     <string name="home_hero_subtitle">Konsoliderade författningar från Riksdagens öppna data</string>
     <string name="home_search_hint">Sök på nummer eller ord</string>
+    <string name="search_shortcut_apple">⌘K</string>
+    <string name="search_shortcut_other">Ctrl+K</string>
     <string name="home_search_example">T.ex. Regeringsformen, 2026:1200</string>
     <string name="home_search_submit">Sök</string>
     <string name="home_advanced_search">Avancerad sökning</string>
@@ -201,4 +214,12 @@
     <string name="wide_preview_continue">Läs vidare</string>
     <string name="wide_preview_empty">Välj en författning för att förhandsgranska den här.</string>
     <string name="wide_footer_disclaimer">Ett fristående projekt, inte en officiell publikation. Lagtexterna kommer från Riksdagens öppna data; den tryckta Svensk författningssamling gäller.</string>
+    <string name="type_agency_regulation">Myndighetsföreskrift</string>
+    <string name="type_case_report">Referat</string>
+    <string name="type_case_notice">Notis</string>
+    <string name="type_eu_regulation">EU-förordning</string>
+    <string name="type_eu_directive">EU-direktiv</string>
+    <string name="type_eu_decision">EU-beslut</string>
+    <string name="type_county_regulation">Länsföreskrift</string>
+    <string name="type_municipal_regulation">Kommunal föreskrift</string>
 </resources>

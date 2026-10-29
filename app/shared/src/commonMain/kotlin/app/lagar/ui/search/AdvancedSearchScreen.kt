@@ -23,12 +23,7 @@ import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Checkbox
-import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.material3.Surface
@@ -45,6 +40,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
@@ -52,7 +48,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import app.lagar.data.GeoRepository
+import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
+import app.lagar.designsystem.glass
 import app.lagar.domain.Locality
 import app.lagar.domain.Scope
 import app.lagar.domain.SearchMode
@@ -82,10 +80,14 @@ import app.lagar.resources.home_scope_kommun_title
 import app.lagar.resources.home_scope_region_title
 import app.lagar.resources.home_search_hint
 import app.lagar.resources.home_search_submit
+import app.lagar.resources.ic_search
 import app.lagar.resources.meta_in_force
 import app.lagar.resources.picker_clear
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.BackTopBar
+import app.lagar.ui.common.LagarButton
+import app.lagar.ui.common.LagarCheckbox
+import app.lagar.ui.common.LagarTextField
 import app.lagar.ui.common.iconColor
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.typeNameRes
@@ -167,15 +169,14 @@ fun AdvancedSearchScreen(
                 ),
             verticalArrangement = Arrangement.spacedBy(spacing.md),
         ) {
-            OutlinedTextField(
+            LagarTextField(
                 value = text,
                 onValueChange = { text = it },
                 modifier = Modifier.fillMaxWidth(),
-                singleLine = true,
-                label = { Text(stringResource(Res.string.advanced_text_label)) },
-                placeholder = { Text(stringResource(Res.string.home_search_hint)) },
+                label = stringResource(Res.string.advanced_text_label),
+                placeholder = stringResource(Res.string.home_search_hint),
+                leadingIcon = Res.drawable.ic_search,
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),
-                shape = MaterialTheme.shapes.medium,
             )
             FilterCard(stringResource(Res.string.advanced_dates_title)) {
                 DateField(
@@ -219,11 +220,7 @@ fun AdvancedSearchScreen(
                                 onValueChange = { types = if (it) types + type else types - type },
                             ),
                         ) {
-                            Checkbox(
-                                checked = checked,
-                                onCheckedChange = null,
-                                colors = CheckboxDefaults.colors(checkedColor = accent, checkmarkColor = accent.iconColor()),
-                            )
+                            LagarCheckbox(checked = checked, onCheckedChange = null, color = accent)
                         }
                     }
                 }
@@ -242,22 +239,25 @@ fun AdvancedSearchScreen(
                 StatusOption(Res.string.advanced_status_repealed, StatusFilter.Repealed, status, scope) { status = it }
             }
         }
-        Surface(
-            modifier = Modifier.align(Alignment.BottomCenter).fillMaxWidth().onSizeChanged { footerPx = it.height },
-            color = LagarTheme.colors.surfaceContainerLowest,
-            border = BorderStroke(1.dp, LagarTheme.colors.outlineVariant),
+        // Sticky footer: a tier 2 glass bar over the scrolling form.
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .onSizeChanged { footerPx = it.height }
+                .glass(GlassTier.Bar, hazeState),
         ) {
             val accent = layers.accent(scope.key)
-            Button(
+            LagarButton(
                 onClick = { onSearch(query) },
                 enabled = canSearch,
                 modifier = Modifier
                     .windowInsetsPadding(WindowInsets.navigationBars)
                     .imePadding()
                     .padding(horizontal = spacing.marginMobile, vertical = spacing.sm)
-                    .fillMaxWidth()
-                    .heightIn(min = ShellDimens.TouchTarget),
-                colors = ButtonDefaults.buttonColors(containerColor = accent, contentColor = accent.iconColor()),
+                    .fillMaxWidth(),
+                containerColor = accent,
+                contentColor = accent.iconColor(),
             ) { Text(stringResource(Res.string.home_search_submit), fontWeight = FontWeight.Bold) }
         }
         BackTopBar(hazeState, onBack, { headerHeight = it }, Modifier.align(Alignment.TopCenter)) {
@@ -290,10 +290,9 @@ fun AdvancedSearchScreen(
 @Composable
 private fun FilterCard(title: String, content: @Composable () -> Unit) {
     Surface(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().glass(GlassTier.Card, shape = MaterialTheme.shapes.large),
         shape = MaterialTheme.shapes.large,
-        color = LagarTheme.colors.surfaceContainerLowest,
-        border = BorderStroke(1.dp, LagarTheme.colors.outlineVariant),
+        color = Color.Transparent,
     ) {
         Column(Modifier.padding(LagarTheme.spacing.md), verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.xs)) {
             Text(title, style = LagarTheme.type.labelMd, fontWeight = FontWeight.Bold, color = LagarTheme.colors.onSurface)
