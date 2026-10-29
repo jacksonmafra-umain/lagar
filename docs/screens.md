@@ -29,7 +29,7 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | Hierarki, wide home hierarchy | Mismatch: SFS other statutes left out of totals and counts; counts not digit-grouped | #125, #133 |
 | By ministry | Matches | |
 | Layer list | Mismatch: header badge touches the top edge of the bar | #129 |
-| Reader | Mismatch: table-of-contents sheet covers the screen on phones; raw "Upphör att gälla / Träder i kraft" markers; raw ministry unit code | #123, #124, #132 |
+| Reader | Mismatch: raw "Upphör att gälla / Träder i kraft" markers; raw ministry unit code | #124, #132 |
 | Sparade | Matches, with the known repealed gap | |
 | Tjänster | Matches | |
 | Settings | Matches; Swedish and English complete on the screens visited | |
@@ -242,7 +242,7 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | § cards with the layer indicator, bookmark toggle, text selection | Done | |
 | Save a single § or chapter: one 48dp actions button per § card and chapter heading opens a menu (save or remove, add or edit note, share link); a saved section shows the filled bookmark in the layer colour | Done | #28 |
 | Repealed banner and strikethrough | Missing | #21 |
-| Table of contents sheet: chapters and § chips, jump to a chapter or § | Done | #26 |
+| Table of contents sheet: chapters and § chips, jump to a chapter or §; opens half-expanded over the dimmed reader on phones | Done | #26, #123 |
 | Amendment list under the header (register list, else `amended_by`; reprints), numbers link to documents the API has | Done | #26 |
 | Share links to the document and to each § (platform share sheet; Web Share API or clipboard on the web); `?doc=&p=` links open the reader at that § | Done | #26 |
 | Cross-reference links: SFS citations (`lagen (1962:700)`, `(SFS 1998:808)`, `Lag (1994:458).`) and case-law references (`NJA 2026:38`, `HFD 2026 ref. 43`) open the cited document when the API has it | Done | #27 |
