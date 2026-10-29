@@ -21,7 +21,8 @@ The number after each gap is its GitHub issue.
 | Repealed treatment (grey, strikethrough, history icon) everywhere | Partial: only the layer list is correct | #21 |
 | Bookmark icon in the document's layer colour | Missing | #22 |
 | Desktop layout (window ≥ 1024dp): top bar navigation, max content width, wide home | Done | #79 |
-| Tablet two-pane layout and wide layouts of the pushed screens | Missing | #35 |
+| Desktop layouts of onboarding, search, advanced search, the layer list and the reader | Done | #35 |
+| Tablet two-pane layout (768–1023dp) | Missing | #35 |
 | `docs/design.md` component inventory up to date | Done | #25 |
 | Swedish and English strings, no hardcoded UI text | Done | |
 
@@ -34,6 +35,7 @@ On windows at least 1024dp wide (`ShellDimens.WideBreakpoint`, exposed as `Local
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Wide top bar with navigation; content capped at 1280dp on Utforska, Hierarki and Sparade | Done | #79 |
+| Back top bar of the pushed screens lines its content up with the wide top bar | Done | #35 |
 | Scope switch in the bar from 1360dp, Nationell / Region / Kommun plus "Institutionellt" shown disabled | Done | #79 |
 | Search field with ⌘K in the bar | Partial: search button | #24 |
 
@@ -98,6 +100,14 @@ Route: `OnboardingLocality`. Code: `ui/onboarding/LocalityStepScreen.kt`, `Local
 | Searchable region and kommun pickers for all 21 regions and 290 kommuner, both optional | Done | |
 | Skip at the top right | Done | #29 |
 | Kommun suggested from the device location | Missing | #30 |
+
+### Desktop layout
+
+All three steps share `OnboardingScaffold` (`ui/onboarding/StepHeader.kt`). From 1024dp the frame is capped at 1040dp (`ShellDimens.FormMaxWidth`): the title, text and (on step 1) the Lagar card form a left column beside the choices, and the primary action follows the choices instead of spanning the window.
+
+| Feature | Status | Issue |
+| --- | --- | --- |
+| Two-column steps capped at the form width | Done | #35 |
 | Linked kommun summary (council, document count) | Blocked: no municipal data | #38 |
 
 ## Utforska (home)
@@ -142,6 +152,7 @@ Route: `Search(text, types, from, to, mode, status)`. Code: `ui/search/SearchScr
 | Sorting and highlighted matches | Missing | #32 |
 | Full-text search with snippets | Blocked: no search index in the API | #37 |
 | Region and Kommun scopes | Blocked: no data | #38 |
+| Desktop: results in two equal-height columns within the 1280dp content width; the list stays full width so the whole window scrolls | Done | #35 |
 
 ### Advanced search
 
@@ -153,6 +164,7 @@ Route: `AdvancedSearch`. Code: `ui/search/AdvancedSearchScreen.kt`, `DateField.k
 | Calendar date picker, collapsible filter sections, scope change from the form | Missing | #32 |
 | Vacatio legis filter and in-force date range | Missing; `in_force` is now in listing items (still `null` until the collector fills it) | #32 |
 | Glass footer bar | Done | #23 |
+| Desktop: text, dates and types beside mode and status, capped at 1040dp, search button under the right column | Done | #35 |
 
 ## Hierarki
 
@@ -177,6 +189,7 @@ Route: `LayerList(layer, type?)`. Code: `ui/list/`.
 | Empty state for a layer or series with no documents | Done | #33 |
 | Series switch (all, acts, ordinances, other statutes) inside the list, from the layer's `series` in `index.json` | Done | #33 |
 | Names, levels and colours for the case law, EU, agency, county and municipal types, ready for when those layers have data | Done | #77 |
+| Desktop: two equal-height columns within the 1280dp content width, prefetch counted in rows | Done | #35 |
 
 ## Reader
 
@@ -193,7 +206,9 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | Share links to the document and to each § (platform share sheet; Web Share API or clipboard on the web); `?doc=&p=` links open the reader at that § | Done | #26 |
 | Cross-reference links between statutes | Missing | #27 |
 | Inline notes | Missing | #28 |
-| Table of contents pane and metadata inspector on wide screens | Missing | #35 |
+| Desktop (≥ 1024dp): table of contents as a 300dp pane left of the text instead of a sheet | Done | #35 |
+| Desktop (≥ 1280dp, `ShellDimens.ReaderInspectorBreakpoint`): facts, source link and amendments in an inspector pane right of the text; the text keeps the badge, number and title | Done | #35 |
+| Tablet: frosted bottom sheet for the normative tree, sliding metadata drawer | Missing | #35 |
 | Reading the text as of a past date, version comparator | Blocked: the API has no historical text; owner decision pending | #7 |
 
 ## Sparade
