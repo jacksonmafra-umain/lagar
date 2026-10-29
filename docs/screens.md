@@ -26,7 +26,7 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | Scope sheet, Drawer | Match; the drawer button uses a profile icon | #134 |
 | Search results | Mismatch: no scope shown on results; exact title matches rank below newer case reports; case-law titles carry "-----" separators | #126, #127, #135 |
 | Advanced search | Mismatch on phones: title wraps beside a long scope chip | #131 |
-| Hierarki, wide home hierarchy | Mismatch: SFS other statutes left out of totals and counts; counts not digit-grouped | #125, #133 |
+| Hierarki, wide home hierarchy | Mismatch: SFS other statutes left out of totals and counts. Counts are now digit-grouped for the app language ("26 813", "26,813") in onboarding, the scope sheet, the drawer, Hierarki, the wide home and the layer lists (#133) | #125 |
 | By ministry | Matches | |
 | Layer list | Mismatch: header badge touches the top edge of the bar | #129 |
 | Reader | Mismatch: table-of-contents sheet covers the screen on phones; raw "Upphör att gälla / Träder i kraft" markers; raw ministry unit code | #123, #124, #132 |
