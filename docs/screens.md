@@ -23,7 +23,7 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | Scope (step 2), Locality (step 3) | Matches; back arrow at the top left (fixed) | #128 |
 | Utforska, Nationell | Matches, with known gaps | |
 | Utforska, Region and Kommun | Mismatch: search hint names national laws | #130 |
-| Scope sheet, Drawer | Match; the drawer button uses a profile icon | #134 |
+| Scope sheet, Drawer | Matches; the drawer button uses a menu icon (fixed) | #134 |
 | Search results | Mismatch: no scope shown on results; exact title matches rank below newer case reports; case-law titles carry "-----" separators | #126, #127, #135 |
 | Advanced search | Mismatch on phones: title wraps beside a long scope chip | #131 |
 | Hierarki, wide home hierarchy | Mismatch: counts not digit-grouped (SFS other statutes now counted, #125) | #133 |
@@ -71,6 +71,7 @@ Code: `ui/shell/Drawer.kt`. Reference: Stitch `menu_lateral_drawer_perfil_e_nave
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Header, six entries, About block with data build date | Done | |
+| Opened from a menu icon button in the top bar and the wide top bar (no profile avatar, the app has no accounts) | Done | #134 |
 | Each scope as a direct switch (Region / Kommun without a stored locality, and the active scope, open the scope sheet), Saved count badge, "Switch scope" / "Navigate" / "About" section headings | Done | #31 |
 | "Most popular" and "Official gazettes" entries | Blocked: no usage data, no gazette source | #38 |
 

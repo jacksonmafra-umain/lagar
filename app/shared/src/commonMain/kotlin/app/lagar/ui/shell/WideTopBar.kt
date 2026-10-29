@@ -45,7 +45,7 @@ import app.lagar.resources.app_tagline
 import app.lagar.resources.ic_dark_mode
 import app.lagar.resources.ic_gavel
 import app.lagar.resources.ic_light_mode
-import app.lagar.resources.ic_person
+import app.lagar.resources.ic_menu
 import app.lagar.resources.ic_search
 import app.lagar.resources.menu_open
 import app.lagar.resources.scope_institutions
@@ -142,12 +142,7 @@ internal fun WideTopBar(
                     )
                 }
                 BarButton(onClick = onMenuClick, description = stringResource(Res.string.menu_open)) {
-                    Box(
-                        modifier = Modifier.size(ShellDimens.AvatarSize).clip(CircleShape).background(colors.primary),
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        Icon(painterResource(Res.drawable.ic_person), null, tint = colors.onPrimary, modifier = Modifier.size(ShellDimens.SmallIconSize))
-                    }
+                    Icon(painterResource(Res.drawable.ic_menu), null, tint = colors.onSurfaceVariant, modifier = Modifier.size(ShellDimens.IconSize))
                 }
             }
         }
