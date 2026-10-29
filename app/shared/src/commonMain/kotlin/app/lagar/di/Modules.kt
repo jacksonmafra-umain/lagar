@@ -13,8 +13,10 @@ import app.lagar.domain.SearchQuery
 import app.lagar.settings.BookmarkStore
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.hierarki.HierarkiViewModel
+import app.lagar.ui.hierarki.MinistriesViewModel
 import app.lagar.ui.home.HomeViewModel
 import app.lagar.ui.list.LayerListViewModel
+import app.lagar.ui.list.MinistryFilter
 import app.lagar.ui.onboarding.OnboardingViewModel
 import app.lagar.ui.reader.ReaderViewModel
 import app.lagar.ui.search.SearchViewModel
@@ -52,7 +54,8 @@ fun appModule(config: DataSourceConfig) = module {
     viewModel { HierarkiViewModel(get()) }
     viewModel { HomeViewModel(get(), get(), get(), get()) }
     viewModel { OnboardingViewModel(get(), get()) }
-    viewModel { (layer: String, type: String?) -> LayerListViewModel(get(), layer, type) }
+    viewModel { (layer: String, type: String?, ministry: MinistryFilter?) -> LayerListViewModel(get(), layer, type, ministry, get()) }
+    viewModel { (layer: String, type: String) -> MinistriesViewModel(get(), layer, type) }
     viewModel { (id: String) -> ReaderViewModel(get(), id) }
     viewModel { (initial: SearchQuery) -> SearchViewModel(get(), get(), initial) }
 }

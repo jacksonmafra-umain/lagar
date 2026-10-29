@@ -7,6 +7,8 @@ import app.lagar.data.DocumentResponse
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
 import app.lagar.data.ListingPage
+import app.lagar.data.MinistryIndex
+import app.lagar.data.MinistryRepository
 import app.lagar.domain.LoadState
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
@@ -64,6 +66,45 @@ class LayerListViewModelTest {
         }
 
         override suspend fun document(id: String): DocumentResponse = error("unused")
+    }
+
+    /** Serves [pageCount] pages of one item for any ministry and records the requests. */
+    private class FakeMinistries(private val pageCount: Int = 2) : MinistryRepository {
+        val requests = mutableListOf<String>()
+
+        override suspend fun ministries(layer: String, type: String): MinistryIndex = error("unused")
+
+        override suspend fun ministryListing(layer: String, type: String, ministry: String, page: Int): ListingPage {
+            requests += "$layer/$type/$ministry/$page"
+            return ListingPage(
+                layer, type, page, pageCount, total = pageCount,
+                items = listOf(ListingItem("$ministry-$page", "T$page", "$page:1", type, null, null, ministry = ministry)),
+            )
+        }
+    }
+
+    @Test
+    fun ministryFilterPagesThroughTheMinistryListing() {
+        val repo = FakeRepository()
+        val ministries = FakeMinistries()
+        val vm = LayerListViewModel(repo, "sfs", "act", MinistryFilter("justitiedepartementet", "Justitiedepartementet"), ministries)
+        vm.loadNext()
+        vm.loadNext()
+        assertEquals(listOf("sfs/act/justitiedepartementet/1", "sfs/act/justitiedepartementet/2"), ministries.requests)
+        assertEquals(listOf("justitiedepartementet-1", "justitiedepartementet-2"), vm.items.value.map { it.id })
+        assertEquals(2, vm.total.value)
+        // Neither the layer listing nor the index is read, so the series switch stays hidden.
+        assertEquals(emptyList(), repo.calls)
+        assertEquals(emptyList(), vm.series.value)
+    }
+
+    @Test
+    fun ministryFilterIgnoresSeriesSwitch() {
+        val ministries = FakeMinistries(pageCount = 1)
+        val vm = LayerListViewModel(FakeRepository(), "sfs", "act", MinistryFilter("riksbanken", "Riksbanken"), ministries)
+        vm.selectSeries("ordinance")
+        assertEquals("act", vm.selectedType.value)
+        assertEquals(listOf("sfs/act/riksbanken/1"), ministries.requests)
     }
 
     @Test
