@@ -1,630 +1,942 @@
 {
-  "source": "https://www.lagrummet.se/rattskalla-sitemap.xml",
-  "fetched_at": "2026-10-29T15:28:34Z",
+  "source": "https://www.lagrummet.se/rattskalla/",
+  "fetched_at": "2026-10-29T20:40:10Z",
   "pages": [
     {
-      "slug": "125",
-      "lastmod": "2025-12-15"
-    },
-    {
-      "slug": "618",
-      "lastmod": "2026-03-16"
-    },
-    {
       "slug": "aklagarmyndighetens-forfattningssamling-afs",
-      "lastmod": "2025-12-12"
+      "title": "Åklagarmyndighetens författningssamling (ÅFS)",
+      "url": "https://www.aklagare.se/om-oss/dokument/forfattningssamling",
+      "description": null
     },
     {
       "slug": "allmanna-reklamationsnamnden-publiceras-i-konsumentverkets-serie",
-      "lastmod": "2026-03-16"
+      "title": "Allmänna reklamationsnämnden (publiceras i Konsumentverkets serie)",
+      "url": "https://publikationer.konsumentverket.se/filtrera-fram-forfattningssamling",
+      "description": "Allmänna reklamationsnämndens föreskrift om att anmälan ska göras på en särskild blankett."
     },
     {
       "slug": "arbetsformedlingens-forfattningssamling-affs",
-      "lastmod": "2026-03-16"
+      "title": "Arbetsförmedlingens författningssamling (AFFS)",
+      "url": "https://arbetsformedlingen.se/om-oss/var-verksamhet/styrning-och-resultat/forfattningssamling-AFFS",
+      "description": "Arbetsförmedlingens författningssamling (AFFS) innehåller gällande föreskrifter och allmänna råd för Arbetsförmedlingen. Samlingen innehåller även gällande föreskrifter och allmänna råd från tidigare Arbetsmarknadsstyrelsen (AMSFS), vars verksamhet övergick till Arbetsförmedlingen 1 januari 2008."
     },
     {
       "slug": "arbetsgivarverkets-forfattningssamling-agvfs",
-      "lastmod": "2026-03-16"
+      "title": "Arbetsgivarverkets författningssamling (AGVFS)",
+      "url": "https://www.arbetsgivarverket.se/avtal-och-skrifter?category=32",
+      "description": null
     },
     {
       "slug": "arbetsmiljoverkets-forfattningssamling-afs",
-      "lastmod": "2025-12-08"
+      "title": "Arbetsmiljöverkets författningssamling (AFS)",
+      "url": "https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/",
+      "description": "Arbetsmiljöverkets författningssamling (AFS) består av föreskrifter och allmänna råd."
     },
     {
       "slug": "betankanden",
-      "lastmod": "2025-12-08"
+      "title": "Betänkanden",
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&doktyp=bet&subtyp=bet",
+      "description": "Ett betänkande är en rapport från något av riksdagens utskott med förslag till hur riksdagen ska besluta i ett ärende. Det kallas ofta också utskottsbetänkande."
     },
     {
       "slug": "blekinge-lans-forfattningssamling-10fs",
-      "lastmod": "2026-03-16"
+      "title": "Blekinge läns författningssamling (10FS)",
+      "url": "https://www.lansstyrelsen.se/blekinge/om-oss/om-lansstyrelsen-blekinge/lanets-forfattningssamling.html",
+      "description": "Blekinge läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
-      "slug": "bokforingsnamndens-allmanna-rad-bfnar-2",
-      "lastmod": "2026-03-16"
+      "slug": "bokforingsnamndens-allmanna-rad-bfnar",
+      "title": "Bokföringsnämndens allmänna råd (BFNAR)",
+      "url": "https://www.bfn.se/redovisningsregler/allmanna-rad/",
+      "description": null
     },
     {
       "slug": "bolagsverkets-forfattningssamling-bolfs",
-      "lastmod": "2025-12-08"
+      "title": "Bolagsverkets författningssamling (BOLFS)",
+      "url": "https://bolagsverket.se/omoss/varverksamhet/styrochplaneringsdokument/bolagsverketsforeskrifterbolfs.2161.html",
+      "description": null
     },
     {
       "slug": "boverkets-forfattningssamling-bfs",
-      "lastmod": "2026-03-18"
+      "title": "Boverkets författningssamling (BFS)",
+      "url": "https://forfattningssamling.boverket.se/",
+      "description": "Boverkets författningssamling, BFS, innehåller Boverkets föreskrifter och allmänna råd. I författningssamlingen ingår även regler utgivna av den tidigare myndigheten Bostadsstyrelsen, BOFS."
     },
     {
       "slug": "brottsoffermyndigheten",
-      "lastmod": "2025-12-03"
+      "title": "Brottsoffermyndigheten",
+      "url": "https://referatsamling.brottsoffermyndigheten.se/",
+      "description": null
     },
     {
       "slug": "brottsoffermyndighetens-referatsamling",
-      "lastmod": "2025-12-08"
+      "title": "Brottsoffermyndighetens referatsamling",
+      "url": "https://referatsamling.brottsoffermyndigheten.se/",
+      "description": null
     },
     {
       "slug": "centrala-studiestodsnamndens-forfattningssamling-csnfs",
-      "lastmod": "2025-12-08"
+      "title": "Centrala studiestödsnämndens författningssamling (CSNFS)",
+      "url": "https://www.csn.se/om-csn/lag-och-ratt/forfattningssamling",
+      "description": null
     },
     {
       "slug": "dalarnas-lans-forfattningssamling-20fs",
-      "lastmod": "2026-03-16"
+      "title": "Dalarnas läns författningssamling (20FS)",
+      "url": "https://www.lansstyrelsen.se/dalarna/om-oss/om-lansstyrelsen-i-dalarnas-lan/lanets-forfattningssamling.html",
+      "description": "Dalarnas läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "departementsserien-ds",
-      "lastmod": "2026-03-18"
+      "title": "Departementsserien (DS)",
+      "url": "https://www.regeringen.se/rattsliga-dokument/departementsserien-och-promemorior/",
+      "description": "När regeringen har utrett en fråga kan den publicera sina slutsatser och förslag i Departementsserien (Ds)."
     },
     {
       "slug": "domstolsverkets-forfattningssamling-dvfs",
-      "lastmod": "2026-03-16"
+      "title": "Domstolsverkets författningssamling (DVFS)",
+      "url": "https://www.domstol.se/om-sveriges-domstolar/for-dig-som-aktor-i-domstol/stod-for-aktorer-i-domstol/dvfs/",
+      "description": "Domstolsverkets författningssamling, DVFS, innehåller Domstolsverkets och Notarienämndens föreskrifter och allmänna råd."
     },
     {
       "slug": "e-halsomyndighetens-foreskrifter-i-gemensamma-forfattningssamlingen-hslf-fs",
-      "lastmod": "2026-03-16"
+      "title": "E-hälsomyndighetens föreskrifter (i Gemensamma författningssamlingen HSLF-FS)",
+      "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
+      "description": "Innehåller föreskrifter om vissa avgifter för öppenvårdsapotek."
+    },
+    {
+      "slug": "elsakerhetsverkets-forfattningssamling-elsak-fs",
+      "title": "Elsäkerhetsverkets författningssamling (ELSÄK-FS)",
+      "url": "https://elsakerhetsverket.se/lag-och-ratt/foreskrifter",
+      "description": "Föreskrifterna innehåller bestämmelser som ska bidra till hög elsäkerhet och minska risker för att el orsakar personskada eller sakskada."
     },
     {
       "slug": "energimarknadsinspektionens-forfattningssamling-eifs",
-      "lastmod": "2025-12-08"
+      "title": "Energimarknadsinspektionens författningssamling (EIFS)",
+      "url": "https://ei.se/om-oss/lagar-och-regler/foreskrifter",
+      "description": "Föreskrifterna handlar om el, gas, fjärrvärme och fjärrkyla"
     },
     {
       "slug": "etikprovningsmyndighetens-foreskrifter-publiceras-i-vetenskapsradets-serie",
-      "lastmod": "2025-12-08"
+      "title": "Etikprövningsmyndighetens föreskrifter (publiceras i Vetenskapsrådets serie)",
+      "url": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html",
+      "description": null
     },
     {
       "slug": "eu-domstolen",
-      "lastmod": "2026-03-18"
+      "title": "EU-domstolen",
+      "url": "https://curia.europa.eu/site/",
+      "description": "Europeiska unionens domstol (EU-domstolen) dömer i tvister mellan medlemsländer och EU:s institutioner. Domstolen har också i uppgift att tolka EU-rätten. Under EU-domstolen finns tribunalen som dömer i mål som rör enskilda personer och företag samt en personaldomstol som dömer i mål som gäller anställda i EU."
     },
     {
       "slug": "eur-lex",
-      "lastmod": "2025-12-08"
+      "title": "EUR-Lex",
+      "url": "https://eur-lex.europa.eu/homepage.html?locale=sv",
+      "description": "EUR-Lex är en portal till gällande EU-rätt. På EUR-Lex finns olika databaser där du kan söka bland fördrag och lagstiftning, men även rättspraxis, parlamentsledamöternas frågor och Europeiska unionens officiella tidning (EUT)."
     },
     {
       "slug": "europadomstolen",
-      "lastmod": "2025-12-08"
+      "title": "Europadomstolen",
+      "url": "https://www.echr.coe.int/home",
+      "description": "Den europeiska domstolen för de mänskliga rättigheterna, Europadomstolen, prövar ärenden om brott mot den Europeiska konventionen om de mänskliga rättigheterna (Europakonventionen)."
     },
     {
       "slug": "fastighetsmaklarinspektionens-foreskrifter-publiceras-i-kammarkollegiets-serie",
-      "lastmod": "2025-12-08"
+      "title": "Fastighetsmäklarinspektionens föreskrifter (publiceras i Kammarkollegiets serie)",
+      "url": "https://fmi.se/det-har-ar-fmi/lag-och-ratt/foreskrifter/",
+      "description": "Föreskrifter rörande registrering av fastighetsmäklare samt om åtgärder mot penningtvätt och finansiering av terrorism."
     },
     {
       "slug": "finansinspektionens-forfattningssamling-fffs",
-      "lastmod": "2026-03-16"
+      "title": "Finansinspektionens författningssamling (FFFS)",
+      "url": "https://www.fi.se/sv/vara-register/fffs/sok-fffs/",
+      "description": null
     },
     {
       "slug": "folkhalsomyndighetens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs",
-      "lastmod": "2026-03-16"
+      "title": "Folkhälsomyndighetens föreskrifter (se också Gemensamma författningssamlingen HSLF-FS)",
+      "url": "https://www.folkhalsomyndigheten.se/publikationer-och-material/foreskrifter-och-allmanna-rad/",
+      "description": "Föreskrifter och allmänna råd inom smittskyddslagens, alkohollagens och lagen om tobak och andra produkters område. Även föreskrifter och allmänna råd inom miljöbalkens område kring bland annat dricksvatten, bekämpningsmedel, inomhustemperatur, ventilation och buller."
     },
     {
       "slug": "forordningsmotiv",
-      "lastmod": "2026-03-18"
+      "title": "Förordningsmotiv",
+      "url": "https://www.regeringen.se/rattsliga-dokument/forordningsmotiv/",
+      "description": "Till vissa av regeringens förordningar finns förordningsmotiv. I förordningsmotivet berättar regeringen varför förordningen kommit till och ger besked om hur förordningen ska tolkas och tillämpas."
     },
     {
       "slug": "forordningsmotiv-soktjanst",
-      "lastmod": "2026-03-18"
+      "title": "Förordningsmotiv (söktjänst)",
+      "url": "https://rkrattsdb.gov.se/forpdf/",
+      "description": "Förordningsmotiv i pdf från och med Fm 2000:1 till och med Fm 2016:1."
     },
     {
       "slug": "forsakringskassans-forfattningssamling-fkfs",
-      "lastmod": "2026-03-16"
+      "title": "Försäkringskassans författningssamling (FKFS)",
+      "url": "https://lagrummet.forsakringskassan.se/",
+      "description": "Innehåller föreskrifter om aktivitetsstöd, förmåner för totalförsvarspliktiga, tandvårdsersättning, ersättning för kostnader för internationell vård, sjukvårdsersättning,, arbetsgivaravgifter och egenavgifter, Fritidskortet, dataskydd och integritet, självbetjäningstjänster via Internet."
     },
     {
       "slug": "forsvarets-forfattningssamling-ffs",
-      "lastmod": "2026-03-18"
+      "title": "Försvarets författningssamling (FFS)",
+      "url": "https://www.forsvarsmakten.se/om-forsvarsmakten/myndighetsinformation/dokument/",
+      "description": null
     },
     {
       "slug": "framstallningar-och-redogorelser",
-      "lastmod": "2025-12-08"
+      "title": "Framställningar och redogörelser",
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=frsrdg",
+      "description": "Ett förslag från ett riksdagsorgan till riksdagen kallas framställning. När riksdagsorganet redovisar årets verksamhet till riksdagen är det en redogörelse. Exempel på riksdagsorgan är Riksdagens ombudsmän (JO) och Riksrevisionen."
     },
     {
       "slug": "gavleborgs-lans-forfattningssamling-21fs",
-      "lastmod": "2026-03-16"
+      "title": "Gävleborgs läns författningssamling (21FS)",
+      "url": "https://www.lansstyrelsen.se/gavleborg/om-oss/om-lansstyrelsen-i-gavleborgs-lan/lanets-forfattningssamling.html",
+      "description": "Gävleborgs läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "gemensamma-forfattningssamlingen-avseende-halso-och-sjukvard-socialtjanst-lakemedel-folkhalsa-m-m-hslf-fs",
-      "lastmod": "2026-03-16"
+      "title": "Gemensamma författningssamlingen avseende hälso- och sjukvård, socialtjänst, läkemedel, folkhälsa m.m. (HSLF-FS)",
+      "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
+      "description": "Utnyttjas av E-hälsomyndigheten, Folkhälsomyndigheten, Inspektionen för vård och omsorg, Läkemedelsverket, Myndigheten för familjerätt och föräldraskapsstöd, Rättsmedicinalverket, Socialstyrelsen och Tandvårds- och läkemedelsförmånsverket."
     },
     {
       "slug": "gotlands-lans-forfattningssamling-09fs",
-      "lastmod": "2026-03-16"
+      "title": "Gotlands läns författningssamling (09FS)",
+      "url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
+      "description": "Gotlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "hallands-lans-forfattningssamling-13fs",
-      "lastmod": "2026-03-16"
+      "title": "Hallands läns författningssamling (13FS)",
+      "url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling.html",
+      "description": "Hallands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "havs-och-vattenmyndighetens-forfattningssamling-hvmfs",
-      "lastmod": "2026-03-16"
+      "title": "Havs- och vattenmyndighetens författningssamling (HVMFS)",
+      "url": "https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/foreskrifter.html",
+      "description": null
     },
     {
       "slug": "inspektionen-for-arbetsloshetsforsakringens-forfattningssamling-iaffs",
-      "lastmod": "2026-03-16"
+      "title": "Inspektionen för arbetslöshetsförsäkringens författningssamling (IAFFS)",
+      "url": "https://www.iaf.se/Lag-ratt/Foreskrifter/",
+      "description": null
     },
     {
       "slug": "inspektionen-for-strategiska-produkters-foreskrifter-publiceras-i-tullverkets-serie",
-      "lastmod": "2026-09-15"
+      "title": "Inspektionen för strategiska produkters föreskrifter (publiceras i Tullverkets serie)",
+      "url": "https://www.tullverket.se/omoss/dethargortullverket/verksamhetochorganisation/lagarochforeskrifter/tullverketsforfattningssamlingtfs",
+      "description": null
     },
     {
       "slug": "inspektionen-for-vard-och-omsorgs-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs",
-      "lastmod": "2026-03-16"
+      "title": "Inspektionen för vård och omsorgs föreskrifter (se också Gemensamma författningssamlingen HSLF-FS)",
+      "url": "https://www.ivo.se/aktuellt/publikationer/foreskrifter/",
+      "description": "IVO ansvarar för tillsyn och tillståndsprövning inom hälso- och sjukvård, socialtjänst och verksamhet enligt lagen om stöd och service till vissa funktionshindrade (LSS). Myndigheten ansvarar även för prövning av klagomål enligt patientsäkerhetslagen och de flesta föreskrifterna berör detta område."
     },
     {
       "slug": "integritetsskyddsmyndighetens-forfattningssamling-imyfs",
-      "lastmod": "2026-03-16"
+      "title": "Integritetsskyddsmyndighetens författningssamling (IMYFS)",
+      "url": "https://www.imy.se/om-oss/beslut-publikationer-och-remisser/foreskrifter-och-allmanna-rad/",
+      "description": null
     },
     {
       "slug": "jamtlands-lans-forfattningssamling-23fs",
-      "lastmod": "2026-03-16"
+      "title": "Jämtlands läns författningssamling (23FS)",
+      "url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "description": "Jämtlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "jonkopings-lans-forfattningssamling-06fs",
-      "lastmod": "2026-03-16"
+      "title": "Jönköpings läns författningssamling (06FS)",
+      "url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "description": "Jönköpings läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "justitiekanslerns-beslut-och-yttranden",
-      "lastmod": "2025-12-08"
+      "title": "Justitiekanslerns beslut och yttranden",
+      "url": "https://www.jk.se/beslut-och-yttranden/",
+      "description": null
     },
     {
       "slug": "kalmars-lans-forfattningssamling-08fs",
-      "lastmod": "2026-03-16"
+      "title": "Kalmars läns författningssamling (08FS)",
+      "url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "description": "Kalmars läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "kammarkollegiets-forfattningssamling-kamfs",
-      "lastmod": "2026-03-16"
+      "title": "Kammarkollegiets författningssamling (KAMFS)",
+      "url": "https://www.kammarkollegiet.se/om-oss/kammarkollegiets-forfattningssamling-kamfs",
+      "description": null
     },
     {
       "slug": "kemikalieinspektionens-forfattningssamling-kifs",
-      "lastmod": "2026-03-16"
+      "title": "Kemikalieinspektionens författningssamling (KIFS)",
+      "url": "https://www.kemi.se/lagar-och-regler/lagstiftningar-inom-kemikalieomradet/kemikalieinspektionens-foreskrifter-kifs",
+      "description": null
     },
     {
       "slug": "kommerskollegiums-forfattningssamling-kfs",
-      "lastmod": "2026-03-16"
+      "title": "Kommerskollegiums författningssamling (KFS)",
+      "url": "https://www.kommerskollegium.se/uppdrag/forfattningssamling/",
+      "description": null
     },
     {
       "slug": "kommittedirektiv",
-      "lastmod": "2026-03-18"
+      "title": "Kommittédirektiv",
+      "url": "https://www.regeringen.se/rattsliga-dokument/kommittedirektiv/",
+      "description": "När en fråga ska utredas kan regeringen välja att tillsätta en kommitté. Regeringen ger då riktlinjer för arbetet i ett kommittédirektiv."
     },
     {
       "slug": "kommittedirektiv-rattsdatabas",
-      "lastmod": "2026-03-18"
+      "title": "Kommittédirektiv (rättsdatabas)",
+      "url": "https://rkrattsbaser.gov.se/dir/adv",
+      "description": null
     },
     {
-      "slug": "kommittedirektiv-soktjanst-2",
-      "lastmod": "2026-03-18"
+      "slug": "kommittedirektiv-soktjanst",
+      "title": "Kommittédirektiv (söktjänst)",
+      "url": "https://rkrattsdb.gov.se/kompdf/",
+      "description": "Kommittédirektiv i pdf från och med Dir. 2006:1 till och med Dir. 2019:25."
     },
     {
       "slug": "kommitteregistret",
-      "lastmod": "2026-03-18"
+      "title": "Kommittéregistret",
+      "url": "https://rkrattsbaser.gov.se/komm/adv",
+      "description": "Kommittéregistret innehåller uppgifter om pågående och avslutade kommittéer under regeringen. Registret visar ledamöter, arbetsplaner och vilka betänkanden som kommittéerna har publicerat."
     },
     {
       "slug": "konkurrensverkets-forfattningssamling-kkvfs",
-      "lastmod": "2026-03-16"
+      "title": "Konkurrensverkets författningssamling (KKVFS)",
+      "url": "https://www.konkurrensverket.se/om-oss/forfattningssamling/",
+      "description": null
     },
     {
       "slug": "konsumentverkets-forfattningssamling-kovfs",
-      "lastmod": "2026-03-16"
+      "title": "Konsumentverkets författningssamling (KOVFS)",
+      "url": "https://publikationer.konsumentverket.se/filtrera-fram-forfattningssamling",
+      "description": null
     },
     {
       "slug": "kriminalvardens-forfattningssamling-kvfs",
-      "lastmod": "2026-04-16"
+      "title": "Kriminalvårdens författningssamling (KVFS)",
+      "url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/kriminalvardens-foreskrifter/",
+      "description": null
     },
     {
       "slug": "kronobergs-lans-forfattningssamling-07fs",
-      "lastmod": "2026-03-16"
+      "title": "Kronobergs läns författningssamling (07FS)",
+      "url": "https://www.lansstyrelsen.se/kronoberg/om-oss/om-lansstyrelsen-i-kronobergs-lan/lanets-forfattningssamling.html",
+      "description": "Kronobergs läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "kronofogdemyndighetens-forfattningssamling-kfmfs",
-      "lastmod": "2026-03-16"
+      "title": "Kronofogdemyndighetens författningssamling (KFMFS)",
+      "url": "https://www.kronofogden.se/om-kronofogden/dina-rattigheter-lagar-och-regler/foreskrifter-allmanna-rad-och-meddelanden",
+      "description": null
     },
     {
       "slug": "kustbevakningens-forfattningssamling-kbvfs",
-      "lastmod": "2025-12-15"
+      "title": "Kustbevakningens författningssamling (KBVFS)",
+      "url": "https://www.kustbevakningen.se/om-oss/kustbevakningens-forfattningssamling/",
+      "description": "Föreskrifter och allmänna råd om förundersökningsledning vid utredning av brott, avgifter vid uppdragsverksamhet, sjösäkerhet på Kustbevakningens fartyg, rapportering av olyckor vid olje- och gasverksamhet till havs."
     },
     {
       "slug": "lagradets-yttranden",
-      "lastmod": "2025-12-08"
+      "title": "Lagrådets yttranden",
+      "url": "https://www.lagradet.se/yttranden/",
+      "description": "Lagrådet granskar lagförslag och ger sina synpunkter i form av yttranden när regeringen eller ett riksdagsutskott ber om det. Lagrådet ska normalt yttra sig över förslag som ändrar grundlagarna om tryckfrihet och yttrandefrihet, förslag som påverkar människors fri- och rättigheter, personliga eller ekonomiska förhållanden, och förslag som rör skyldigheter gentemot staten. Lagrådet bedömer också ofta om förslaget följer EU-rätten och Europakonventionen om mänskliga rättigheter."
     },
     {
       "slug": "lagradsremisser",
-      "lastmod": "2026-03-18"
+      "title": "Lagrådsremisser",
+      "url": "https://www.regeringen.se/rattsliga-dokument/lagradsremiss/",
+      "description": "Innan regeringen lämnar ett förslag till riksdagen om en ny lag skickar regeringen oftast först en lagrådsremiss till Lagrådet. Lagrådets uppgift är bland annat att granska att det nya lagförslaget inte kolliderar med grundlagen eller någon annan lag. Lagrådet lämnar sina synpunkter i ett Yttrande."
     },
     {
       "slug": "lakemedelsverkets-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs",
-      "lastmod": "2026-03-16"
+      "title": "Läkemedelsverkets föreskrifter (se också Gemensamma författningssamlingen HSLF-FS)",
+      "url": "https://www.lakemedelsverket.se/sv/lagar-och-regler/foreskrifter",
+      "description": null
     },
     {
       "slug": "lantmateriets-forfattningssamling-lmfs",
-      "lastmod": "2026-03-16"
+      "title": "Lantmäteriets författningssamling (LMFS)",
+      "url": "https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/",
+      "description": null
     },
     {
       "slug": "livsmedelsverkets-forfattningssamling-livsfs",
-      "lastmod": "2025-12-12"
+      "title": "Livsmedelsverkets författningssamling (LIVSFS)",
+      "url": "https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/",
+      "description": null
     },
     {
       "slug": "luftfartsverkets-foreskrifter-publiceras-i-transportstyrelsens-serie",
-      "lastmod": "2025-12-12"
+      "title": "Luftfartsverkets föreskrifter (publiceras i Transportstyrelsens serie)",
+      "url": "https://www.transportstyrelsen.se/sv/Regler/",
+      "description": null
     },
     {
       "slug": "mediemyndighetens-forfattningssamling-memyfs",
-      "lastmod": "2025-12-15"
+      "title": "Mediemyndighetens författningssamling (MEMYFS)",
+      "url": "https://mediemyndigheten.se/om-oss/lagar-forordningar-och-foreskrifter/",
+      "description": "Föreskrifter om sändningstillstånd för radio och tv, tillgänglighetskrav för audiovisuella verk, standarder för digital-tv, stöd till medier, skyldigheter att redovisa program med europeiskt ursprung."
     },
     {
       "slug": "mediemyndighetens-webbdiarium",
-      "lastmod": "2025-12-08"
+      "title": "Mediemyndighetens webbdiarium",
+      "url": "https://webbdiarium.mprt.se/",
+      "description": null
     },
     {
       "slug": "medlingsinstitutets-foreskrifter-publiceras-i-statistiska-centralbyrans-serie",
-      "lastmod": "2026-03-16"
+      "title": "Medlingsinstitutets föreskrifter (publiceras i Statistiska centralbyråns serie)",
+      "url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/",
+      "description": null
     },
     {
       "slug": "migrationsverkets-forfattningssamling-migrfs",
-      "lastmod": "2026-03-16"
+      "title": "Migrationsverkets författningssamling (MIGRFS)",
+      "url": "https://www.migrationsverket.se/om-migrationsverket/styrning-och-uppfoljning/foreskrifter.html",
+      "description": "Migrationsverket är förvaltningsmyndighet för frågor som rör uppehållstillstånd, arbetstillstånd, uppehållsrätt, visering, mottagande av asylsökande inklusive boenden, anvisning till kommuner av ensamkommande barn, anvisning till kommuner av nyanlända och personer med tillfälligt skydd, självmant återvändande, medborgarskap, och återvandring. Föreskrifterna innehåller bestämmelser på dessa områden."
     },
     {
       "slug": "motioner",
-      "lastmod": "2025-12-08"
+      "title": "Motioner",
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=mot",
+      "description": "En motion är ett förslag till riksdagen från en eller flera riksdagsledamöter."
     },
     {
       "slug": "myndigheten-for-civilt-forsvars-forfattningssamling-mcffs",
-      "lastmod": "2026-03-16"
+      "title": "Myndigheten för civilt försvars författningssamling (MCFFS)",
+      "url": "https://www.mcf.se/sv/regler/om-regler/",
+      "description": "I Myndigheten för civilt försvars författningssamling (MCFFS) ingår även regler utgivna av de tidigare myndigheterna MSB (MSBFS) Statens räddningsverk (SRVFS), Krisberedskapsmyndigheten (KBMFS) och Sprängämnesinspektionen (SÄIFS)."
     },
     {
-      "slug": "myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs-2",
-      "lastmod": "2026-03-16"
+      "slug": "myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs",
+      "title": "Myndigheten för digital förvaltnings författningssamling (MDFFS)",
+      "url": "https://www.digg.se/om-oss/forfattningssamling",
+      "description": null
     },
     {
       "slug": "myndigheten-for-familjeratt-och-foraldraskapsstods-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs",
-      "lastmod": "2026-09-15"
+      "title": "Myndigheten för familjerätt och föräldraskapsstöds föreskrifter (se också Gemensamma författningssamlingen HSLF-FS)",
+      "url": "https://www.mfof.se/familjeratt/regler-och-riktlinjer/foreskrifter-och-allmanna-rad",
+      "description": "Innehåller föreskrifter om adoption, faderskap och föräldraskap, samt vårdnad, boende och umgänge."
     },
     {
       "slug": "myndigheten-for-stod-till-trossamfunds-foreskrifter-publiceras-i-kammarkollegiets-serie",
-      "lastmod": "2026-03-16"
+      "title": "Myndigheten för stöd till trossamfunds föreskrifter (publiceras i Kammarkollegiets serie)",
+      "url": "https://www.kammarkollegiet.se/om-oss/kammarkollegiets-forfattningssamling-kamfs",
+      "description": "Innehåller föreskrifter om statsbidrag till trossamfund."
     },
     {
       "slug": "myndigheten-for-tillvaxtpolitiska-utvarderingar-och-analysers-forfattningssamling-mtfs",
-      "lastmod": "2026-03-16"
+      "title": "Myndigheten för tillväxtpolitiska utvärderingar och analysers författningssamling (MTFS)",
+      "url": "https://www.tillvaxtanalys.se/statistik/tillvaxtanalysforeskrifter.125740.html",
+      "description": null
     },
     {
       "slug": "myndigheten-for-yrkeshogskolans-forfattningssamling-myhfs",
-      "lastmod": "2025-12-12"
+      "title": "Myndigheten för yrkeshögskolans författningssamling (MYHFS)",
+      "url": "https://www.myh.se/lag-och-ratt/foreskrifter-och-allmanna-rad",
+      "description": null
     },
     {
       "slug": "naturvardsverkets-forfattningssamling-nfs",
-      "lastmod": "2026-03-16"
+      "title": "Naturvårdsverkets författningssamling (NFS)",
+      "url": "https://www.naturvardsverket.se/nfs",
+      "description": "Naturvårdsverket ansvarar för frågor som handlar om klimat och luft, mark, biologisk mångfald, förorenade områden, kretslopp och avfall, resurseffektivitet, miljöövervakning, jakt och vilt samt miljöforskning."
     },
     {
       "slug": "norrbottens-lans-forfattningssamling-25fs",
-      "lastmod": "2026-03-16"
+      "title": "Norrbottens läns författningssamling (25FS)",
+      "url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "description": "Norrbottens läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "notarienamndens-beslut",
-      "lastmod": "2025-12-08"
+      "title": "Notarienämndens beslut",
+      "url": "https://www.domstol.se/notarienamnden/om-notarienamnden/beslut/",
+      "description": null
     },
     {
       "slug": "notarienamndens-foreskrifter-publiceras-i-domstolsverkets-serie",
-      "lastmod": "2026-03-16"
+      "title": "Notarienämndens föreskrifter (publiceras i Domstolsverkets serie)",
+      "url": "https://www.domstol.se/om-sveriges-domstolar/for-dig-som-aktor-i-domstol/stod-for-aktorer-i-domstol/dvfs/?f=OrdinanceAuthority_list:notarienamnden&s=",
+      "description": null
     },
     {
       "slug": "orebro-lans-forfattningssamling-18fs",
-      "lastmod": "2026-03-16"
+      "title": "Örebro läns författningssamling (18FS)",
+      "url": "https://www.lansstyrelsen.se/orebro/om-oss/lanets-forfattningssamling.html",
+      "description": "Örebro läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "ostergotlands-lans-forfattningssamling-05fs",
-      "lastmod": "2026-03-16"
+      "title": "Östergötlands läns författningssamling (05FS)",
+      "url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
+      "description": "Östergötlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "overklagandenamnden-for-etikprovnings-beslut",
-      "lastmod": "2025-12-08"
+      "title": "Överklagandenämnden för etikprövnings beslut",
+      "url": "https://www.onep.se/soek-bland-oeverklagade-beslut/",
+      "description": null
     },
     {
       "slug": "overklagandenamnden-for-hogskolans-avgoranden",
-      "lastmod": "2025-12-08"
+      "title": "Överklagandenämnden för högskolans avgöranden",
+      "url": "https://www.onh.se/avgoranden/avgoranden",
+      "description": null
     },
     {
       "slug": "overklagandenamnden-for-namndemannauppdrags-beslut",
-      "lastmod": "2025-12-08"
+      "title": "Överklagandenämnden för nämndemannauppdrags beslut",
+      "url": "https://www.domstol.se/overklagandenamnden-for-namndemannauppdrag/om-overklagandenamnden/beslut-fattade-av-overklagandenamnden/",
+      "description": null
     },
     {
       "slug": "overklagandenamnden-for-studiestods-avgoranden",
-      "lastmod": "2025-12-08"
+      "title": "Överklagandenämnden för studiestöds avgöranden",
+      "url": "https://www.oks.se/avgoranden/",
+      "description": null
     },
     {
       "slug": "patent-och-registreringsverkets-forfattningssamling-prvfs",
-      "lastmod": "2026-03-16"
+      "title": "Patent- och registreringsverkets författningssamling (PRVFS)",
+      "url": "https://www.prv.se/sv/om-oss/var-verksamhet/styrdokument/prvs-forfattningssamling/",
+      "description": null
     },
     {
       "slug": "patentombudsnamndens-foreskrifter-publiceras-i-bolagsverkets-serie",
-      "lastmod": "2026-03-16"
+      "title": "Patentombudsnämndens föreskrifter (publiceras i Bolagsverkets serie)",
+      "url": "https://bolagsverket.se/omoss/flerverksamheter/patentombudsnamnden/ompatentombudsnamnden/patentombudsnamndensforeskrifterbolfs.2621.html",
+      "description": "Innehåller föreskrifter om auktorisation av patentombud."
+    },
+    {
+      "slug": "pensionsmyndighetens-forfattningssamling-pfs",
+      "title": "Pensionsmyndighetens författningssamling (PFS)",
+      "url": "https://www.pensionsmyndigheten.se/om-pensionsmyndigheten/allmanna-handlingar/lagar-och-regler",
+      "description": "Här publiceras Pensionsmyndighetens gällande och upphävda föreskrifter om pension, andra förmåner och e-tjänster. De föreskrifter som beslutats av Premiepensionsmyndigheten och Försäkringskassan (inklusive Riksförsäkringsverket) gäller även efter Pensionsmyndighetens inrättande 2010."
     },
     {
       "slug": "polismyndighetens-forfattningssamling-pmfs",
-      "lastmod": "2026-03-16"
+      "title": "Polismyndighetens författningssamling (PMFS)",
+      "url": "https://polisen.se/Lagar-och-regler/Polismyndighetens-forfattningssamling/",
+      "description": "Polismyndigheten föreskriver bland annat inom områdena vapen, bevakning, pass och nationellt identitetskort, trafikövervakning, utrustning i polisarbetet och delgivning."
     },
     {
       "slug": "post-och-telestyrelsens-forfattningssamling-ptsfs",
-      "lastmod": "2026-03-16"
+      "title": "Post- och telestyrelsens författningssamling (PTSFS)",
+      "url": "https://pts.se/regelbibliotek/",
+      "description": "Innehåller föreskrifter om elektronisk kommunikation, post, radioutrustning, produkter och tjänsters tillgänglighet."
     },
     {
       "slug": "propositioner-och-skrivelser",
-      "lastmod": "2026-03-18"
+      "title": "Propositioner och skrivelser",
+      "url": "https://rkrattsbaser.gov.se/prop/adv",
+      "description": "En proposition är ett förslag från regeringen till riksdagen. En proposition kan innehålla förslag till nya lagar eller riktlinjer. När regeringen vill lämna information till riksdagen i ett ärende kan regeringen göra det i en skrivelse."
     },
     {
       "slug": "propositioner-och-skrivelser-aldre",
-      "lastmod": "2026-03-18"
+      "title": "Propositioner och skrivelser, äldre",
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=prop",
+      "description": "Länken går till riksdagens webbplats där du kan söka propositioner och skrivelser från 1867 och framåt. De äldre dokumenten är inskannade."
     },
     {
       "slug": "propositioner-och-skrivelser-i-pdf",
-      "lastmod": "2026-03-18"
+      "title": "Propositioner och skrivelser i pdf",
+      "url": "https://www.regeringen.se/rattsliga-dokument/",
+      "description": "Länken går till en söksida där du själv får filtrera fram att du söker en proposition eller en skrivelse. På söksidan kan du också göra andra val för att förfina din sökning."
     },
     {
       "slug": "protokoll",
-      "lastmod": "2025-12-08"
+      "title": "Protokoll",
+      "url": "https://www.riksdagen.se/sv/sok/?sort=datum&sortorder=desc&doktyp=prot",
+      "description": "Debatter, beslut och annat som avhandlas i riksdagens kammare står i riksdagens protokoll."
     },
     {
       "slug": "radet-for-europeiska-socialfonden-i-sveriges-foreskrifter-publiceras-i-tillvaxtverkets-serie",
-      "lastmod": "2025-12-15"
+      "title": "Rådet för Europeiska socialfonden i Sveriges föreskrifter (publiceras i Tillväxtverkets serie)",
+      "url": "https://www.esf.se/uppfoljning-revision-och-regelverk/styrande-dokument/",
+      "description": null
     },
     {
       "slug": "rattshjalpsnamndens-vagledande-beslut",
-      "lastmod": "2025-12-08"
+      "title": "Rättshjälpsnämndens vägledande beslut",
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522RHN%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
+      "description": null
     },
     {
       "slug": "rattsmedicinalverkets-foreskrifter-i-gemensamma-forfattningssamlingen-hslf-fs",
-      "lastmod": "2026-03-16"
+      "title": "Rättsmedicinalverkets föreskrifter (i Gemensamma författningssamlingen HSLF-FS)",
+      "url": "https://www.rmv.se/om-oss/var-verksamhet/rattsmedicinalverkets-forfattningssamling/",
+      "description": "Innehåller föreskrifter om rättsmedicinsk, rättspsykiatrisk, rättsgenetisk och rättskemisk verksamhet."
     },
     {
       "slug": "register-over-svensk-forfattningssamling-sfs",
-      "lastmod": "2025-12-08"
+      "title": "Register över Svensk författningssamling (SFS)",
+      "url": "https://rkrattsbaser.gov.se/sfsr/adv",
+      "description": "SFS-registret är ett register över lagar och förordningar i Svensk författningssamling (SFS). Författningar som inte gäller längre finns också med."
     },
     {
       "slug": "revisorsinspektionens-forfattningssamling-rifs",
-      "lastmod": "2026-03-16"
+      "title": "Revisorsinspektionens författningssamling (RIFS)",
+      "url": "https://www.revisorsinspektionen.se/regelverk/samtliga-foreskrifter/",
+      "description": null
     },
     {
       "slug": "riksantikvarieambetets-foreskrifter-publiceras-i-statens-kulturrads-serie",
-      "lastmod": "2026-03-16"
+      "title": "Riksantikvarieämbetets föreskrifter (publiceras i Statens kulturråds serie)",
+      "url": "https://www.kulturradet.se/om-oss/forfattningssamling/",
+      "description": "Riksantikvarieämbetet har föreskrifter om verkställigheten av kulturmiljölagens bestämmelser om fornminnen, byggnadsminnen, kyrkliga kulturminnen och utförsel av vissa äldre kulturföremål. Riksantikvarieämbetet har även föreskrifter om utmärkning av kulturegendom enligt totalförsvarets folkrättsförordning."
     },
     {
       "slug": "riksarkivets-forfattningssamling-ra-fs",
-      "lastmod": "2025-12-15"
+      "title": "Riksarkivets författningssamling (RA-FS)",
+      "url": "https://riksarkivet.se/arkivera-och-forvalta/foreskrifter-och-vagledningar",
+      "description": "Föreskrifter om till exempel gallring (att förstöra allmäna handlingar) hos alla myndigheter, krav på arkivlokaler, hur handlingar ska hanteras, förvaras, skyddas, kunna återsökas och bevaras samt överlämnas mellan myndigheter. I föreskrifterna finns även stöd för enskilda att behandla personuppgifter för arkivändamål av allmänt intresse."
     },
     {
       "slug": "riksdagens-ombudmans-jo-beslut",
-      "lastmod": "2025-12-08"
+      "title": "Riksdagens ombudmäns (JO) beslut",
+      "url": "https://www.jo.se/jo-beslut/sokresultat/",
+      "description": null
     },
     {
       "slug": "riksdagsforvaltningens-forfattningssamling-rfs",
-      "lastmod": "2026-03-16"
+      "title": "Riksdagsförvaltningens författningssamling (RFS)",
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=rfs",
+      "description": null
     },
     {
       "slug": "riksdagsskrivelser",
-      "lastmod": "2025-12-08"
+      "title": "Riksdagsskrivelser",
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=rskr",
+      "description": "En skrivelse från riksdagen är ett meddelande till regeringen om vilka beslut som riksdagen har fattat, till exempel att en ny lag är införd."
     },
     {
       "slug": "riksgaldskontorets-forfattningssamling-rgkfs",
-      "lastmod": "2026-03-18"
+      "title": "Riksgäldskontorets författningssamling (RGKFS)",
+      "url": "https://www.riksgalden.se/press-och-publicerat/foreskrifter/",
+      "description": "Riksgälden är statens centrala finansförvaltning och har även uppdrag som bidrar till att värna finansiell stabilitet."
     },
     {
       "slug": "sakerhetspolisens-foreskrifter-publiceras-i-polismyndighetens-serie",
-      "lastmod": "2026-03-16"
+      "title": "Säkerhetspolisens föreskrifter (publiceras i Polismyndighetens serie)",
+      "url": "https://polisen.se/Lagar-och-regler/Polismyndighetens-forfattningssamling/",
+      "description": null
     },
     {
       "slug": "sametingets-forfattningssamling-stfs",
-      "lastmod": "2026-03-16"
+      "title": "Sametingets författningssamling (STFS)",
+      "url": "https://sametinget.se/dokumentbank?cat=72",
+      "description": null
     },
     {
       "slug": "sjofartsverkets-forfattningssamling-sjofs",
-      "lastmod": "2026-03-16"
+      "title": "Sjöfartsverkets författningssamling (SJÖFS)",
+      "url": "https://www.sjofartsverket.se/sv/om-oss/lagrum/systematisk-forteckning-n/",
+      "description": "Föreskrifter om bland annat säkerheten på fartyg, sjömanssociala frågor, föroreningar från fartyg, sjötrafik, sjöfartsskydd och hamnskydd."
     },
     {
       "slug": "skane-lans-forfattningssamling-12fs",
-      "lastmod": "2026-03-16"
+      "title": "Skåne läns författningssamling (12FS)",
+      "url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "description": "Skåne läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "skatteverkets-forfattningssamling-skvfs",
-      "lastmod": "2026-03-16"
+      "title": "Skatteverkets författningssamling (SKVFS)",
+      "url": "https://www4.skatteverket.se/rattsligvagledning/115.html?year=Alla",
+      "description": "Innehåller föreskrifter rörande följande områden enligt Förordning (2017:154) med instruktion för Skatteverket: Skatter och avgifter, fastighetstaxering, folkbokföringsverksamhet, identitetskort, bouppteckning, äktenskapsregistret, pensionsgrundande inkomst, lönegarantiutbetalning."
     },
     {
       "slug": "skogsstyrelsens-forfattningssamling-sksfs",
-      "lastmod": "2026-03-16"
+      "title": "Skogsstyrelsens författningssamling (SKSFS)",
+      "url": "https://www.skogsstyrelsen.se/lag-och-tillsyn/forfattningar/",
+      "description": null
     },
     {
       "slug": "socialstyrelsens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs",
-      "lastmod": "2026-03-16"
+      "title": "Socialstyrelsens föreskrifter (se också Gemensamma författningssamlingen HSLF-FS)",
+      "url": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/regler-och-riktlinjer/foreskrifter-och-allmanna-rad/",
+      "description": "Innehåller socialstyrelsens gällande bestämmelser för hälso- och sjukvård, tandvård, hälsoskydd och socialtjänst."
     },
     {
-      "slug": "socialstyrelsens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs-2",
-      "lastmod": "2026-03-16"
+      "slug": "socialstyrelsens-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs",
+      "title": "Socialstyrelsens föreskrifter (se också Gemensamma författningssamlingen HSLF-FS)",
+      "url": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/regler-och-riktlinjer/foreskrifter-och-allmanna-rad/",
+      "description": null
     },
     {
       "slug": "sodermanlands-lans-forfattningssamling-04fs",
-      "lastmod": "2026-03-16"
+      "title": "Södermanlands läns författningssamling (04FS)",
+      "url": "https://www.lansstyrelsen.se/sodermanland/om-oss/om-lansstyrelsen-i-sodermanlands-lan/lanets-forfattningssamling.html",
+      "description": "Södermanlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "sok-rattspraxis",
-      "lastmod": "2025-12-08"
+      "title": "Sök rättspraxis",
+      "url": "https://rattspraxis.etjanst.domstol.se/sok/",
+      "description": "Sök rättspraxis innehåller avgöranden från svenska överrätter och Arbetsdomstolen. Här kan du hitta domar och beslut, referat, notiser, prövningstillstånd och begäranden om förhandsavgörande. Referaten och merparten av domarna gäller sådant som är vägledande för andra domstolar och myndigheter, inte minst prejudikat från de högsta instanserna."
     },
     {
       "slug": "specialpedagogiska-skolmyndighetens-foreskrifter-publiceras-i-statens-skolverks-serie",
-      "lastmod": "2025-12-12"
+      "title": "Specialpedagogiska skolmyndighetens föreskrifter (publiceras i Statens skolverks serie)",
+      "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
+      "description": "Föreskrifterna rör i huvudsak reglering av statsbidrag inom myndighetens område."
     },
     {
       "slug": "spelinspektionens-forfattningssamling-sifs",
-      "lastmod": "2026-03-16"
+      "title": "Spelinspektionens författningssamling (SIFS)",
+      "url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/",
+      "description": null
     },
     {
       "slug": "statens-energimyndighets-forfattningssamling-stemfs",
-      "lastmod": "2025-12-15"
+      "title": "Statens energimyndighets författningssamling (STEMFS)",
+      "url": "https://energimyndigheten.a-w2m.se/System/TemplateNavigate.aspx?p=Arkitektkopia&l=t&view=672&cat=%2FF%C3%B6reskrifter",
+      "description": "Föreskrifter om bland annat försörjningsberedskap och säkerhetsskydd för olika energislag, klimat och hållbarhet på energiområdet, elcertifikat med mera."
     },
     {
       "slug": "statens-institutionsstyrelses-forfattningssamling-sisfs",
-      "lastmod": "2026-03-16"
+      "title": "Statens institutionsstyrelses författningssamling (SiSFS)",
+      "url": "https://www.stat-inst.se/om-sis/lagar-forordningar-forfattningar/sis-forfattningssamling/",
+      "description": "Statens institutionsstyrelse, SiS, är en myndighet som ansvarar för individuellt anpassad tvångsvård och behandling av ungdomar med allvarliga psykosociala problem och vuxna med missbruksproblem, och har föreskrifter inom de områdena."
     },
     {
       "slug": "statens-jordbruksverks-forfattningssamling-sjvfs",
-      "lastmod": "2026-03-16"
+      "title": "Statens jordbruksverks författningssamling (SJVFS)",
+      "url": "https://jordbruksverket.se/om-jordbruksverket/forfattningar/om-forfattningssamlingen",
+      "description": null
     },
     {
       "slug": "statens-kulturrads-forfattningssamling-krfs",
-      "lastmod": "2026-03-16"
+      "title": "Statens kulturråds författningssamling (KRFS)",
+      "url": "https://www.kulturradet.se/om-oss/forfattningssamling/",
+      "description": null
     },
     {
       "slug": "statens-offentliga-utredningar-sou",
-      "lastmod": "2026-03-18"
+      "title": "Statens offentliga utredningar (SOU)",
+      "url": "https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/",
+      "description": "Slutsatser och förslag från kommittéer redovisas oftast i ett betänkande som publiceras i serien Statens offentliga utredningar (SOU)."
     },
     {
       "slug": "statens-offentliga-utredningar-sou-aldre",
-      "lastmod": "2026-03-18"
+      "title": "Statens offentliga utredningar (SOU), äldre",
+      "url": "https://sou.kb.se/",
+      "description": "Länken går till Kungliga bibliotekets databas som innehåller digitaliserade SOU:er från 1922."
     },
     {
       "slug": "statens-skolinspektions-foreskrifter-publiceras-i-statens-skolverks-serie",
-      "lastmod": "2025-12-15"
+      "title": "Statens skolinspektions föreskrifter (publiceras i Statens skolverks serie)",
+      "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
+      "description": null
     },
     {
       "slug": "statens-skolverks-forfattningssamling-skolfs",
-      "lastmod": "2026-03-16"
+      "title": "Statens skolverks författningssamling (SKOLFS)",
+      "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
+      "description": "Skolverket ger ut föreskrifter och allmänna råd i Skolverkets författningssamling (SKOLFS). Författningssamlingen innehåller även föreskrifter beslutade av Myndigheten för ungdoms- och civilsamhällesfrågor, Skolinspektionen och Specialpedagogiska skolmyndigheten. Författningssamlingen innehåller även vissa förordningar – till exempel läroplaner – om regeringen har beslutat att dessa ska kungöras i SKOLFS i stället för i Svensk författningssamling (SFS)."
     },
     {
       "slug": "statens-tjanstepensionsverks-foreskrifter-publiceras-i-arbetsgivarverkets-serie",
-      "lastmod": "2026-03-16"
+      "title": "Statens tjänstepensionsverks föreskrifter (publiceras i Arbetsgivarverkets serie)",
+      "url": "https://www.arbetsgivarverket.se/avtal-och-skrifter?category=32",
+      "description": null
     },
     {
       "slug": "statistiska-centralbyrans-forfattningssamling-scb-fs",
-      "lastmod": "2025-12-12"
+      "title": "Statistiska centralbyråns författningssamling (SCB-FS)",
+      "url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/",
+      "description": "Föreskrifter om uppgiftsskyldighet till statistik, kvalitet och tillgängliggörande av statistik."
     },
     {
       "slug": "stockholms-lans-forfattningssamling-01fs",
-      "lastmod": "2026-03-16"
+      "title": "Stockholms läns författningssamling (01FS)",
+      "url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling.html",
+      "description": "Stockholms läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "stralsakerhetsmyndighetens-forfattningssamling-ssmfs",
-      "lastmod": "2026-03-16"
+      "title": "Strålsäkerhetsmyndighetens författningssamling (SSMFS)",
+      "url": "https://www.stralsakerhetsmyndigheten.se/regler/foreskrifter/",
+      "description": null
     },
     {
       "slug": "styrelsens-for-ackreditering-och-teknisk-kontroll-swedac-forfattningssamling-stafs",
-      "lastmod": "2025-12-15"
+      "title": "Styrelsens för ackreditering och teknisk kontroll (SWEDAC) författningssamling (STAFS)",
+      "url": "https://www.swedac.se/lag-ratt/swedacs-foreskrifter/",
+      "description": "Swedac föreskriver om krav på mätningar och mättekniska metoder, krav på kontroll av mätdon, krav på och kontroll av färdigförpackade varor och kontroll av mängduppgifter för färdigförpackade varor, krav i fråga om kundvågar i detaljhandel, kontroll av elmätare och registrering av namnstämplar avsedda för ädelmetallarbeten. Swedac föreskriver vidare om krav på ackrediterade och anmälda/utsedda organ, införande om OECD:s principer om god laboratoriesed (GLP) samt avgifter inom flera områden."
     },
     {
       "slug": "svensk-forfattningssamling-sfs-i-fulltext",
-      "lastmod": "2025-12-08"
+      "title": "Svensk författningssamling (SFS) i fulltext",
+      "url": "https://rkrattsbaser.gov.se/sfst/adv",
+      "description": "Här hittar du lagar och förordningar i den senaste versionen med alla ändringar införda i den ursprungliga texten."
     },
     {
       "slug": "svensk-forfattningssamling-sfs-i-tryckt-format",
-      "lastmod": "2025-12-08"
+      "title": "Svensk författningssamling (SFS) i tryckt format",
+      "url": "https://rkrattsdb.gov.se/sfspdf/",
+      "description": "Här hittar du lagar och förordningar presenterade som de såg ut när de gavs ut i tryckt format. Författningar i tryckt format (pdf) finns från och med SFS 1998:306 till och med SFS 2018:159."
     },
     {
       "slug": "svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se",
-      "lastmod": "2025-12-08"
+      "title": "Svensk författningssamling (SFS) på svenskforfattningssamling.se",
+      "url": "https://svenskforfattningssamling.se/",
+      "description": "På webbplatsen Svensk författningssamling publiceras den officiella och autentiska versionen av lagar, förordningar och vissa myndighetsföreskrifter."
     },
     {
       "slug": "svensk-trafikforeskriftssamling-stfs",
-      "lastmod": "2026-03-16"
+      "title": "Svensk trafikföreskriftssamling (STFS)",
+      "url": "https://rdt.transportstyrelsen.se/rdt/defaultstfs.aspx",
+      "description": "Trafikföreskrifter som i huvudsak meddelas av kommuner, länsstyrelser, polismyndigheter, Trafikverket och myndigheter som har hand om väg- eller gatuhållningen. Av förordningen (2007:231) om elektroniskt kungörande av vissa trafikföreskrifter framgår vilka slags trafikföreskrifter som ska publiceras i STFS."
     },
     {
       "slug": "svenska-kraftnats-forfattningssamling-svkfs",
-      "lastmod": "2026-03-16"
+      "title": "Svenska kraftnäts författningssamling (SvKFS)",
+      "url": "https://www.svk.se/om-kraftsystemet/legalt-ramverk/svenska-kraftnats-foreskrifter/",
+      "description": null
     },
     {
       "slug": "sveriges-geologiska-undersoknings-forfattningssamling-sgu-fs",
-      "lastmod": "2025-12-15"
+      "title": "Sveriges geologiska undersöknings författningssamling (SGU-FS)",
+      "url": "https://www.sgu.se/om-sgu/verksamhet/foreskrifter/",
+      "description": null
     },
     {
       "slug": "sveriges-internationella-overenskommelser-so",
-      "lastmod": "2025-12-08"
+      "title": "Sveriges internationella överenskommelser (SÖ)",
+      "url": "https://www.regeringen.se/rattsliga-dokument/sveriges-internationella-overenskommelser/",
+      "description": "Sverige ingår varje år ett stort antal internationella överenskommelser med andra stater och internationella organisationer. De förekommer under flera olika benämningar, till exempel traktater, konventioner och protokoll, skatteavtal och informationsutbytesavtal. Alla internationella överenskommelser som är bindande för Sverige offentliggörs i Sveriges internationella överenskommelser (SÖ)."
     },
     {
       "slug": "tandvards-och-lakemedelsformansverkets-foreskrifter-se-ocksa-gemensamma-forfattningssamlingen-hslf-fs",
-      "lastmod": "2026-03-16"
+      "title": "Tandvårds- och läkemedelsförmånsverkets föreskrifter (se också Gemensamma författningssamlingen HSLF-FS)",
+      "url": "https://www.tlv.se/om-tlv/regelverk/foreskrifter.html",
+      "description": "Innehåller föreskrifter om läkemedelsförmåner, pris och subvention på läkemedel och förbrukningsartiklar, bidrag till apotek i glesbygd, referenspriser i det statliga tandvårdsstödet, handelsmarginal för apotek."
     },
     {
       "slug": "tillvaxtverkets-forfattningssamling-tvfs",
-      "lastmod": "2026-03-16"
+      "title": "Tillväxtverkets författningssamling (TVFS)",
+      "url": "https://tillvaxtverket.se/tillvaxtverket/omtillvaxtverket/varverksamhet/foreskrifter.595.html",
+      "description": null
     },
     {
       "slug": "totalforsvarets-plikt-och-provningsverks-forfattningssamling-tppvfs",
-      "lastmod": "2026-03-16"
+      "title": "Totalförsvarets plikt- och prövningsverks författningssamling (TPPVFS)",
+      "url": "https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter",
+      "description": "Innehåller bland annat föreskrifter om totalförsvarsplikt och förmåner till totalförsvarspliktiga."
     },
     {
       "slug": "trafikanalys-foreskrifter-publiceras-i-kammarkollegiets-serie",
-      "lastmod": "2026-03-16"
+      "title": "Trafikanalys föreskrifter (publiceras i Kammarkollegiets serie)",
+      "url": "https://www.trafa.se/sidor/kvalitetsarbete-inom-statistik/foreskrifter/",
+      "description": null
     },
     {
       "slug": "trafikverkets-forfattningssamling-trvfs",
-      "lastmod": "2026-03-16"
+      "title": "Trafikverkets författningssamling (TRVFS)",
+      "url": "https://www.trafikverket.se/om-oss/var-verksamhet-vision-och-uppdrag/trafikverkets-forfattningssamling/",
+      "description": null
     },
     {
       "slug": "transportstyrelsen",
-      "lastmod": "2026-03-18"
+      "title": "Transportstyrelsen",
+      "url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/",
+      "description": "Transportstyrelsen arbetar för att uppnå god tillgänglighet, hög kvalitet, säkra och miljöanpassade transporter inom järnväg, luftfart, sjöfart och väg. Här kan du läsa om vår organisation samt om vårt uppdrag och hur vi arbetar."
     },
     {
       "slug": "transportstyrelsens-beslut-i-overklagningsarenden-om-trafikreglering",
-      "lastmod": "2025-12-08"
+      "title": "Transportstyrelsens beslut i överklagningsärenden om trafikreglering",
+      "url": "https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/trafikregler/beslut-i-overklagningsarenden/",
+      "description": null
     },
     {
       "slug": "transportstyrelsens-forfattningssamling-tsfs",
-      "lastmod": "2026-03-16"
+      "title": "Transportstyrelsens författningssamling (TSFS)",
+      "url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/",
+      "description": "Föreskrifter om järnväg, spårväg och tunnelbana, luftfart, sjöfart och vägtrafik."
     },
     {
       "slug": "tullverkets-forfattningssamling-tfs",
-      "lastmod": "2026-09-15"
+      "title": "Tullverkets författningssamling (TFS)",
+      "url": "https://www.tullverket.se/omoss/dethargortullverket/verksamhetochorganisation/lagarochforeskrifter/tullverketsforfattningssamlingtfs",
+      "description": null
     },
     {
       "slug": "universitets-och-hogskoleradets-forfattningssamling-uhrfs",
-      "lastmod": "2026-03-16"
+      "title": "Universitets- och högskolerådets författningssamling (UHRFS)",
+      "url": "https://www.uhr.se/publikationer/lagar-och-regler-for-hogre-utbildning/Universitets--och-hogskoleradets-forfattningssamling/",
+      "description": null
     },
     {
       "slug": "upphandlingmyndighetens-forfattningssamling-ufs",
-      "lastmod": "2026-03-18"
+      "title": "Upphandlingmyndighetens författningssamling (UFS)",
+      "url": "https://www.upphandlingsmyndigheten.se/rapporter-och-statistik/upphandlingsmyndighetens-forfattningssamling/",
+      "description": "Innehåller föreskrifter om upphandlingsstatistik."
     },
     {
       "slug": "uppsala-lans-forfattningssamling-03fs",
-      "lastmod": "2026-03-16"
+      "title": "Uppsala läns författningssamling (03FS)",
+      "url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "description": "Uppsala läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "valmyndighetens-forfattningssamling-valfs",
-      "lastmod": "2026-03-19"
+      "title": "Valmyndighetens författningssamling (VALFS)",
+      "url": "https://www.val.se/det-svenska-valsystemet/grunderna-i-det-svenska-valsystemet/lagar-och-regler",
+      "description": "Föreskrifter av praktiskt slag om avgifter för och utformning av vissa valrelaterade produkter som inte är reglerade i annan ordning."
     },
     {
       "slug": "varmlands-lans-forfattningssamling-17fs",
-      "lastmod": "2026-03-16"
+      "title": "Värmlands läns författningssamling (17FS)",
+      "url": "https://www.lansstyrelsen.se/varmland/om-oss/om-lansstyrelsen-varmland/forfattningar.html",
+      "description": "Värmlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "vasterbottens-lans-forfattningssamling-24fs",
-      "lastmod": "2026-03-16"
+      "title": "Västerbottens läns författningssamling (24FS)",
+      "url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
+      "description": "Västerbottens läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "vasternorrlands-lans-forfattningssamling-22fs",
-      "lastmod": "2026-03-16"
+      "title": "Västernorrlands läns författningssamling (22FS)",
+      "url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
+      "description": "Västernorrlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "vastmanlands-lans-forfattningssamling-19fs",
-      "lastmod": "2026-03-16"
+      "title": "Västmanlands läns författningssamling (19FS)",
+      "url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "description": "Västmanlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "vastra-gotalands-lans-forfattningssamling-14fs",
-      "lastmod": "2026-03-16"
+      "title": "Västra Götalands läns författningssamling (14FS)",
+      "url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "description": "Västra Götalands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS)."
     },
     {
       "slug": "vetenskapsradets-forfattningssamling-vrfs",
-      "lastmod": "2026-03-16"
+      "title": "Vetenskapsrådets författningssamling (VRFS)",
+      "url": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html",
+      "description": "Författningssamlingen innehåller Vetenskapsrådets föreskrifter om godkännande för forskningshuvudmän att ta emot gästforskare samt myndighetens föreskrifter om genomförande av elektorsförsamlingars val av ledamöter till forskningsråd och ämnesråd. Den innehåller även Etikprövningsmyndighetens föreskrifter och allmänna råd för etikprövning av forskning som avser människor m.m."
     },
     {
       "slug": "yttranden-fran-utskott",
-      "lastmod": "2025-12-08"
+      "title": "Yttranden från utskott",
+      "url": "https://www.riksdagen.se/sv/sok/?avd=dokument&sok=&doktyp=yttr",
+      "description": "Ett yttrande är när ett utskott får lämna sina synpunkter i ett ärende som ett annat utskott ansvarar för."
     }
   ]
 }

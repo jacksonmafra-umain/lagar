@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/site.css">
   <script src="js/lang.js" defer></script>
+  <script src="js/catalog.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="nav.skip">Hoppa till innehållet</a>
@@ -101,6 +102,88 @@
             <span class="badge" data-i18n="inside.coming">Kommer</span>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section id="catalog" class="section catalog">
+      <div class="wrap">
+        <h2 data-i18n="catalog.title">Rättskällor</h2>
+        <p class="catalog__lead" data-i18n="catalog.lead">Alla källor som lagar följer, med länk till den officiella publiceringen och status för insamlingen. Varje lucka har ett ärende på GitHub.</p>
+        <div class="catalog__tabs" role="tablist" data-i18n-attr="aria-label:catalog.tabs" aria-label="Typ av källa">
+            <button id="catalog-tab-series" class="catalog__tab" type="button" role="tab" aria-selected="true" aria-controls="catalog-panel" data-section="series" data-i18n="catalog.series">Myndighetsföreskrifter</button>
+            <button id="catalog-tab-shared" class="catalog__tab" type="button" role="tab" aria-selected="false" aria-controls="catalog-panel" data-section="shared" tabindex="-1" data-i18n="catalog.shared">I annan myndighets serie</button>
+            <button id="catalog-tab-counties" class="catalog__tab" type="button" role="tab" aria-selected="false" aria-controls="catalog-panel" data-section="counties" tabindex="-1" data-i18n="catalog.counties">Länsstyrelser</button>
+            <button id="catalog-tab-kommuner" class="catalog__tab" type="button" role="tab" aria-selected="false" aria-controls="catalog-panel" data-section="kommuner" tabindex="-1" data-i18n="catalog.kommuner">Kommuner</button>
+            <button id="catalog-tab-courts" class="catalog__tab" type="button" role="tab" aria-selected="false" aria-controls="catalog-panel" data-section="courts" tabindex="-1" data-i18n="catalog.courts">Domstolar</button>
+            <button id="catalog-tab-sources" class="catalog__tab" type="button" role="tab" aria-selected="false" aria-controls="catalog-panel" data-section="sources" tabindex="-1" data-i18n="catalog.sources">SFS, EU och andra källor</button>
+        </div>
+        <div id="catalog-panel" class="catalog__panel" role="tabpanel">
+            <div class="catalog__about" data-section="series">
+              <p><strong data-i18n="catalog.what">Vad är det?</strong> <span data-i18n="catalog.series_what">Myndigheternas författningssamlingar. Varje myndighet som får meddela föreskrifter publicerar dem i en egen serie, till exempel AFS för Arbetsmiljöverket.</span></p>
+              <p><strong data-i18n="catalog.why">Vad används det till?</strong> <span data-i18n="catalog.series_why">Föreskrifterna är bindande regler som preciserar lagar och förordningar inom myndighetens område: arbetsmiljö, livsmedel, trafik, skatter med mera.</span></p>
+            </div>
+            <div class="catalog__about" data-section="shared" hidden>
+              <p><strong data-i18n="catalog.what">Vad är det?</strong> <span data-i18n="catalog.shared_what">Myndigheter som saknar egen författningssamling och publicerar sina föreskrifter i en annan myndighets serie.</span></p>
+              <p><strong data-i18n="catalog.why">Vad används det till?</strong> <span data-i18n="catalog.shared_why">Föreskrifterna är lika bindande. De samlas in tillsammans med den serie där de publiceras.</span></p>
+            </div>
+            <div class="catalog__about" data-section="counties" hidden>
+              <p><strong data-i18n="catalog.what">Vad är det?</strong> <span data-i18n="catalog.counties_what">Länets författningssamling. Varje länsstyrelse publicerar sina föreskrifter i en serie med länets kod, till exempel 01FS för Stockholms län.</span></p>
+              <p><strong data-i18n="catalog.why">Vad används det till?</strong> <span data-i18n="catalog.counties_why">Regionala regler som gäller i länet: naturreservat, jakt, fiske, trafik, ordning och brandskydd.</span></p>
+            </div>
+            <div class="catalog__about" data-section="kommuner" hidden>
+              <p><strong data-i18n="catalog.what">Vad är det?</strong> <span data-i18n="catalog.kommuner_what">Kommunala författningssamlingar. Varje kommun samlar sina lokala föreskrifter, oftast på kommunens webbplats.</span></p>
+              <p><strong data-i18n="catalog.why">Vad används det till?</strong> <span data-i18n="catalog.kommuner_why">Lokala regler som binder invånarna: ordningsföreskrifter, avfall, taxor och avgifter, hälsoskydd.</span></p>
+            </div>
+            <div class="catalog__about" data-section="courts" hidden>
+              <p><strong data-i18n="catalog.what">Vad är det?</strong> <span data-i18n="catalog.courts_what">Vägledande avgöranden från Sveriges domstolar: referat och notiser publicerade i rättspraxis.</span></p>
+              <p><strong data-i18n="catalog.why">Vad används det till?</strong> <span data-i18n="catalog.courts_why">Prejudikat visar hur domstolarna tillämpar lagen och vägleder i liknande mål.</span></p>
+            </div>
+            <div class="catalog__about" data-section="sources" hidden>
+              <p><strong data-i18n="catalog.what">Vad är det?</strong> <span data-i18n="catalog.sources_what">Svensk författningssamling, EU-rätt och de andra rättskällor som lagrummet.se listar: förarbeten, register och beslut från nämnder.</span></p>
+              <p><strong data-i18n="catalog.why">Vad används det till?</strong> <span data-i18n="catalog.sources_why">SFS innehåller lagar och förordningar, och EU-rätten gäller direkt eller genom svensk lag. Förarbeten och nämndbeslut hjälper till att tolka reglerna men är inte normer.</span></p>
+            </div>
+          <div class="catalog__browser" hidden>
+            <div class="catalog__controls">
+              <label class="field">
+                <span data-i18n="catalog.filter">Filtrera</span>
+                <input id="catalog-filter" type="search" autocomplete="off">
+              </label>
+              <label class="field">
+                <span data-i18n="catalog.order">Sortera</span>
+                <select id="catalog-order">
+                  <option value="name" data-i18n="catalog.order_name">Namn A–Ö</option>
+                  <option value="status" data-i18n="catalog.order_status">Status</option>
+                  <option value="documents" data-i18n="catalog.order_documents">Flest dokument</option>
+                </select>
+              </label>
+              <p id="catalog-count" class="catalog__count" aria-live="polite"></p>
+            </div>
+            <ul id="catalog-list" class="catalog__list"></ul>
+            <nav class="pager" data-i18n-attr="aria-label:catalog.pages" aria-label="Sidor">
+              <button id="catalog-prev" class="button button--secondary" type="button" data-i18n="catalog.prev">Föregående</button>
+              <span id="catalog-page"></span>
+              <button id="catalog-next" class="button button--secondary" type="button" data-i18n="catalog.next">Nästa</button>
+            </nav>
+          </div>
+          <p class="catalog__fallback"><a href="https://github.com/jacksonmafra-umain/lagar/blob/main/AGENCIES.md" data-i18n="catalog.fallback">Hela förteckningen finns i AGENCIES.md på GitHub.</a></p>
+        </div>
+        <div id="catalog-labels" hidden>
+          <span data-i18n="catalog.count">{n} källor</span>
+          <span data-i18n="catalog.page">Sida {page} av {pages}</span>
+          <span data-i18n="catalog.documents">{n} dokument</span>
+          <span data-i18n="catalog.issue">Ärende #{n}</span>
+          <span data-i18n="catalog.published_in">publiceras i {series}</span>
+          <span data-i18n="catalog.status.collected">Insamlad</span>
+          <span data-i18n="catalog.status.collected_pdf">Metadata och PDF-länkar</span>
+          <span data-i18n="catalog.status.partial">Delvis insamlad</span>
+          <span data-i18n="catalog.status.blocked">Blockerad</span>
+          <span data-i18n="catalog.status.api_key">Kräver API-nyckel</span>
+          <span data-i18n="catalog.status.robots">Spärrad i robots.txt</span>
+          <span data-i18n="catalog.status.no_adapter">Inte insamlad än</span>
+          <span data-i18n="catalog.status.no_number">Saknar referatnummer</span>
+          <span data-i18n="catalog.status.out_of_scope">Utanför omfånget</span>
+          <span data-i18n="catalog.status.unclassified">Oklassificerad</span>
+        </div>
       </div>
     </section>
 

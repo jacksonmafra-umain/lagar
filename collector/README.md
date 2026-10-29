@@ -579,24 +579,36 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
 ## Agencies and sources log
 
 ```sh
-python3 -I collector/agencies.py             # rebuild from the cached sitemap
-python3 -I collector/agencies.py --refresh   # fetch lagrummet.se's sitemap again first
+python3 -I collector/agencies.py             # rebuild from the cached index and court list
+python3 -I collector/agencies.py --refresh   # fetch lagrummet.se's index and the court list again first
 ```
 
-Writes `AGENCIES.md` and `collector/data/agencies-report.json`: every agency regulation series
-(författningssamling), agency publishing in another agency's series, county, kommun, court and
-other legal source, with its status (collected, metadata and PDF links only, partly collected,
-blocked, API key needed, robots.txt, no adapter yet, out of scope) and the reason for each gap.
+Writes `AGENCIES.md`, `collector/data/agencies-report.json` and the landing page catalog
+`landing/data/sources.json`: every agency regulation series (författningssamling), agency
+publishing in another agency's series, county, kommun, court and other legal source, with a link to
+its official page, its status (collected, metadata and PDF links only, partly collected, blocked,
+API key needed, robots.txt, no adapter yet, no report number, out of scope), the reason for each gap
+and the issue that tracks it.
 
-- The list of series and sources is lagrummet.se's `rattskalla` sitemap
-  (`https://www.lagrummet.se/rattskalla-sitemap.xml`), cached in `collector/data/rattskalla.json`.
-  `--refresh` reads robots.txt, then the sitemap: two requests, `--rate` apart (default 2 s).
-- Agency names (the sitemap has only URL slugs), statuses and notes are curated in
-  `collector/data/agencies.json`, keyed by slug: `series` (own series), `shared` (an agency that
-  publishes in another series; it takes that series' status) and `sources` (SFS, case law, EU and
-  other sources). County series are recognised from their slug. A series without a status is
-  `collected` when the corpus has documents with its prefix, otherwise `no adapter yet`; a sitemap
-  page missing from the file is listed as unclassified.
+- The list of series and sources is lagrummet.se's rättskällor index
+  (`https://www.lagrummet.se/rattskalla/`), which lists every entry on one page with the link to the
+  official page and a Swedish description. It is cached in `collector/data/rattskalla.json`, keyed by
+  a slug of the entry's title. The per-entry pages in lagrummet.se's sitemap answer 404 and are not
+  used.
+- The courts are the rättspraxis API's court list (`/api/v1/domstolar`), cached in
+  `collector/data/courts.json`; each court links to its guiding decisions on rättspraxis.
+- `--refresh` reads each host's robots.txt, then the index and the court list: four requests,
+  `--rate` apart (default 2 s).
+- Agency names, statuses and notes are curated in `collector/data/agencies.json`, keyed by slug:
+  `series` (own series), `shared` (an agency that publishes in another series; it takes that series'
+  status) and `sources` (SFS, case law, EU and other sources); `courts` holds notes and statuses per
+  court code and `issues` the tracking issue per entry (`series:AFFS`, `county:01`, `kommun:0114`,
+  `court:KGG`, `source:<slug>`). County series are recognised from their slug. A series without a
+  status is `collected` when the corpus has documents with its prefix, otherwise `no adapter yet`; an
+  index entry missing from the file is listed as unclassified.
+- Kommun websites are in `collector/data/kommuner.json` (official website of each kommun in
+  Wikidata, normalised to the https root and checked by hand). The Wikidata query service disallows
+  `/sparql` in its robots.txt, so the file is maintained by hand rather than fetched.
 - Counts come from the corpus (series prefix of `number`, kommun code of `id`, `court`), the
   county and kommun configuration from `counties.json` and `municipalities.json`, the list of
   counties and kommuner from the app's `files/geo/sweden.json`, kommun gaps from

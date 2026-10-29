@@ -1,0 +1,79 @@
+name: Sync agencies log
+
+# Weekly refresh of the sources the agencies log is built from: lagrummet.se's
+# rättskällor index (every agency series and legal source, with its official
+# link) and the court list of the rättspraxis API. AGENCIES.md, its JSON report
+# and the landing page catalog are regenerated; changes land as one pull request
+# on the data/agencies-sync branch, and a run with no changes opens nothing.
+# The daily and weekly corpus syncs regenerate the same files offline.
+
+on:
+  schedule:
+    - cron: "17 5 * * 2" # Tuesdays
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-agencies
+  cancel-in-progress: false
+
+env:
+  BRANCH: data/agencies-sync
+  GH_TOKEN: ${{ github.token }}
+  GENERATED: AGENCIES.md collector/data/agencies-report.json landing/data/sources.json collector/data/rattskalla.json collector/data/courts.json
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Collector tests
+        run: python3 -I -m unittest discover -s collector/tests -t collector
+
+      - name: Refresh the sources and regenerate the log
+        run: python3 -I collector/agencies.py --refresh
+
+      - name: Summarise the run
+        run: |
+          {
+            echo "### Agencies log"
+            echo
+            jq -r '"- lagrummet.se entries: \(.index.pages)\n- agency series: \(.summary.series)\n- courts: \(.summary.courts_collected) of \(.summary.courts) with case law\n- unclassified entries: \(.unclassified | length)"' collector/data/agencies-report.json
+            jq -r '.unclassified[] | "  - \(.title): \(.url)"' collector/data/agencies-report.json
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit and open the pull request
+        env:
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          # The fetch date alone changes on every run; only open a pull request for real changes.
+          changed=$(git diff -U0 -- $GENERATED | grep -E '^[-+][^-+]' | grep -v -E '"fetched_at"|"generated"|\(fetched 20' || true)
+          if [ -z "$changed" ]; then
+            echo "No changes in the sources; nothing to commit."
+            exit 0
+          fi
+          git checkout -B "$BRANCH"
+          git add -- $GENERATED
+          git commit -q -m "data(agencies): refresh the agencies log from lagrummet.se and rättspraxis"
+          git push --force-with-lease origin "HEAD:$BRANCH"
+          if [ -z "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')" ]; then
+            gh pr create --base main --head "$BRANCH" \
+              --title "Sync agencies log" \
+              --label "type: data" --label "area: collector" \
+              --assignee "$OWNER" \
+              --body "Automated weekly refresh of the agencies log: lagrummet.se's rättskällor index and the rättspraxis court list. The run summary lists entries the curated list does not know yet; classify them in collector/data/agencies.json."
+          fi
