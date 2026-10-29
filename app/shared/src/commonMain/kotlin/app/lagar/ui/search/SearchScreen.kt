@@ -73,12 +73,15 @@ import app.lagar.resources.home_search_hint
 import app.lagar.resources.ic_expand_more
 import app.lagar.resources.ic_info
 import app.lagar.resources.ic_search
+import app.lagar.resources.search_in_nationell
 import app.lagar.resources.search_match_body
 import app.lagar.resources.search_no_results_text
 import app.lagar.resources.search_no_results_title
 import app.lagar.resources.search_prompt_text
 import app.lagar.resources.search_prompt_title
 import app.lagar.resources.search_result_count
+import app.lagar.resources.search_scope_empty_text
+import app.lagar.resources.search_scope_empty_title
 import app.lagar.resources.search_sort_label
 import app.lagar.resources.search_sort_newest
 import app.lagar.resources.search_sort_number
@@ -88,8 +91,11 @@ import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.common.ErrorState
 import app.lagar.ui.common.InputFrame
+import app.lagar.ui.common.LagarButton
 import app.lagar.ui.common.PillTab
 import app.lagar.ui.common.ShortcutHint
+import app.lagar.ui.common.StatusMessage
+import app.lagar.ui.common.iconColor
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.searchShortcutHint
 import app.lagar.ui.home.ScopeSheet
@@ -98,6 +104,7 @@ import app.lagar.ui.list.STATUTE_COLUMNS
 import app.lagar.ui.list.StatuteRow
 import app.lagar.ui.list.StatuteRowPair
 import app.lagar.ui.navigation.Search
+import app.lagar.ui.onboarding.nameRes
 import app.lagar.ui.shell.LocalWideLayout
 import app.lagar.ui.shell.ShellDimens
 import app.lagar.ui.shell.wideListPadding
@@ -139,6 +146,7 @@ fun SearchRoute(
         onOpenDocument = onOpenDocument,
         onOpenAdvancedSearch = onOpenAdvancedSearch,
         onChangeScope = { showScopeSheet = true },
+        onSearchNationell = { preferences.setScope(Scope.Nationell) },
         focusRequests = focusRequests,
     )
     if (showScopeSheet) ScopeSheet(onDismiss = { showScopeSheet = false })
@@ -147,7 +155,8 @@ fun SearchRoute(
 /**
  * [focusRequests] moves focus to the search field each time it grows (the web search shortcut). [localityMissing]
  * is a Region or Kommun scope without its län or kommun: there is nothing to search until one is chosen. The
- * searched scope shows as a chip above the results ([onChangeScope] opens the scope sheet).
+ * searched scope shows as a chip above the results ([onChangeScope] opens the scope sheet); a Region or Kommun
+ * search without results offers [onSearchNationell].
  */
 @Composable
 fun SearchScreen(
@@ -161,6 +170,7 @@ fun SearchScreen(
     onOpenDocument: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
     onChangeScope: () -> Unit,
+    onSearchNationell: () -> Unit,
     focusRequests: Int = 0,
 ) {
     val spacing = LagarTheme.spacing
@@ -203,6 +213,9 @@ fun SearchScreen(
                     }
                     !query.isActive -> item(key = "state") {
                         EmptyState(Res.drawable.ic_search, stringResource(Res.string.search_prompt_title), stringResource(Res.string.search_prompt_text))
+                    }
+                    state.value.isEmpty() && scope != Scope.Nationell -> item(key = "state") {
+                        ScopedEmptyState(localityName ?: stringResource(scope.nameRes()), onSearchNationell)
                     }
                     state.value.isEmpty() -> item(key = "state") {
                         EmptyState(Res.drawable.ic_search, stringResource(Res.string.search_no_results_title), stringResource(Res.string.search_no_results_text))
@@ -331,6 +344,22 @@ private fun ScopeLabelChip(scope: Scope, label: String, onClick: () -> Unit, mod
                 modifier = Modifier.weight(1f, fill = false),
             )
             Icon(painterResource(Res.drawable.ic_expand_more), null, tint = layers.onTint(scope.key), modifier = Modifier.size(ShellDimens.SmallIconSize))
+        }
+    }
+}
+
+/** No results in a Region or Kommun [place]: says the search was limited to it and offers all of Sweden. */
+@Composable
+private fun ScopedEmptyState(place: String, onSearchNationell: () -> Unit) {
+    val accent = LagarTheme.layers.accent(Scope.Nationell.key)
+    StatusMessage(
+        icon = Res.drawable.ic_search,
+        title = stringResource(Res.string.search_scope_empty_title, place),
+        text = stringResource(Res.string.search_scope_empty_text, place),
+        iconTint = LagarTheme.colors.onSurfaceVariant,
+    ) {
+        LagarButton(onClick = onSearchNationell, containerColor = accent, contentColor = accent.iconColor()) {
+            Text(stringResource(Res.string.search_in_nationell), fontWeight = FontWeight.Bold)
         }
     }
 }
