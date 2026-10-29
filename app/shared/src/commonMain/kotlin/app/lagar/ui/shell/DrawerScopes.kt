@@ -2,6 +2,7 @@ package app.lagar.ui.shell
 
 import app.lagar.domain.Locality
 import app.lagar.domain.Scope
+import app.lagar.domain.hasLocality
 
 /** What a tap on a scope row in the drawer does. */
 internal sealed interface DrawerScopeAction {
@@ -10,13 +11,6 @@ internal sealed interface DrawerScopeAction {
 
     /** Open the scope sheet with [scope] preselected, so the user can pick or change its locality. */
     data class OpenSheet(val scope: Scope) : DrawerScopeAction
-}
-
-/** Whether [locality] holds what [this] scope needs: nothing for Nationell, a län for Region, a kommun for Kommun. */
-internal fun Scope.hasLocality(locality: Locality): Boolean = when (this) {
-    Scope.Nationell -> true
-    Scope.Region -> locality.regionCode != null
-    Scope.Kommun -> locality.regionCode != null && locality.kommunCode != null
 }
 
 /**
