@@ -25,8 +25,8 @@
     <string name="explore_distribution_title">Normhierarkins fördelning</string>
     <string name="explore_layers_title">Normativa lager</string>
     <plurals name="document_count">
-        <item quantity="one">%1$d dokument</item>
-        <item quantity="other">%1$d dokument</item>
+        <item quantity="one">%1$s dokument</item>
+        <item quantity="other">%1$s dokument</item>
     </plurals>
     <string name="layer_numbered_title">%1$d. %2$s</string>
     <string name="coming_soon">Kommer snart</string>
@@ -37,8 +37,8 @@
     <string name="hierarchy_by_ministry">Per departement</string>
     <string name="hierarchy_by_ministry_a11y">Bläddra bland %1$s per departement</string>
     <plurals name="ministries_unassigned">
-        <item quantity="one">%1$d dokument saknar uppgift om departement.</item>
-        <item quantity="other">%1$d dokument saknar uppgift om departement.</item>
+        <item quantity="one">%1$s dokument saknar uppgift om departement.</item>
+        <item quantity="other">%1$s dokument saknar uppgift om departement.</item>
     </plurals>
     <string name="ministries_empty_title">Inga departement</string>
     <string name="ministries_empty_text">Inget av dessa dokument har ett utfärdande departement i nuvarande data.</string>
@@ -208,8 +208,8 @@
     <string name="search_prompt_title">Skriv för att söka</string>
     <string name="search_prompt_text">Sök bland lagar och förordningar på titel eller nummer.</string>
     <plurals name="search_result_count">
-        <item quantity="one">%1$d träff</item>
-        <item quantity="other">%1$d träffar</item>
+        <item quantity="one">%1$s träff</item>
+        <item quantity="other">%1$s träffar</item>
     </plurals>
     <string name="search_no_results_title">Inga träffar</string>
     <string name="search_no_results_text">Prova ett annat ord eller lätta på filtren.</string>

@@ -27,8 +27,8 @@ import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
+import app.lagar.i18n.documentCount
 import app.lagar.resources.Res
-import app.lagar.resources.document_count
 import app.lagar.resources.explore_distribution_title
 import app.lagar.resources.explore_layers_title
 import app.lagar.resources.hierarchy_hint
@@ -38,7 +38,6 @@ import app.lagar.ui.common.ComingSoonSheet
 import app.lagar.ui.common.LoadStateHost
 import app.lagar.ui.common.PillTab
 import app.lagar.ui.shell.maxContentWidth
-import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 
@@ -139,7 +138,7 @@ private fun LayerOverview(
         item {
             SectionHeader(
                 title = stringResource(Res.string.explore_distribution_title),
-                trailing = pluralStringResource(Res.plurals.document_count, total, total),
+                trailing = documentCount(total),
             )
         }
         item { LayerDistributionChart(summaries) }

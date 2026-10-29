@@ -28,9 +28,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
+import app.lagar.i18n.documentCount
 import app.lagar.resources.Res
 import app.lagar.resources.coming_soon
-import app.lagar.resources.document_count
 import app.lagar.resources.hierarchy_by_ministry
 import app.lagar.resources.hierarchy_by_ministry_a11y
 import app.lagar.resources.ic_chevron_right
@@ -43,7 +43,6 @@ import app.lagar.ui.common.iconRes
 import app.lagar.ui.common.level
 import app.lagar.ui.common.nameRes
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 /**
@@ -112,7 +111,7 @@ fun LayerRow(
                 ) {
                     Text(
                         text = if (summary.count > 0) {
-                            pluralStringResource(Res.plurals.document_count, summary.count, summary.count)
+                            documentCount(summary.count)
                         } else {
                             stringResource(Res.string.coming_soon)
                         },
