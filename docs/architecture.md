@@ -79,9 +79,8 @@ Navigation uses a 4-pillar App Shell with support for floating modal sheets:
 [ Splash & Loading ]
          │
          ▼
-[ Onboarding Flow ] ──► 1. Welcome and consolidation
-         │          ──► 2. Initial layer / scope selection
-         │          ──► 3. Location (Kommun / Region via GPS)
+[ Onboarding Flow ] ──► 1. Welcome and main focus
+         │          ──► 2. Scope, with its Kommun / län (GPS suggestion)
          ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                       MAIN APP SHELL                        │

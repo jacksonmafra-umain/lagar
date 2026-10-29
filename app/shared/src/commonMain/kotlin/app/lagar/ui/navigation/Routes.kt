@@ -8,8 +8,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable data object OnboardingScope
 
-@Serializable data object OnboardingLocality
-
 @Serializable data object Utforska
 
 @Serializable data object Hierarki

@@ -54,7 +54,6 @@ import app.lagar.ui.navigation.AdvancedSearch
 import app.lagar.ui.navigation.Hierarki
 import app.lagar.ui.navigation.LayerList
 import app.lagar.ui.navigation.Ministries
-import app.lagar.ui.navigation.OnboardingLocality
 import app.lagar.ui.navigation.OnboardingScope
 import app.lagar.ui.navigation.OnboardingWelcome
 import app.lagar.ui.navigation.Reader
@@ -64,7 +63,6 @@ import app.lagar.ui.navigation.Sparade
 import app.lagar.ui.navigation.Splash
 import app.lagar.ui.navigation.Tjanster
 import app.lagar.ui.navigation.Utforska
-import app.lagar.ui.onboarding.LocalityStepRoute
 import app.lagar.ui.onboarding.OnboardingViewModel
 import app.lagar.ui.onboarding.ScopeStepRoute
 import app.lagar.ui.onboarding.SplashRoute
@@ -270,14 +268,6 @@ fun AppShell(
                             val onboarding = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = onboardingEntry(entry))
                             ScopeStepRoute(
                                 viewModel = onboarding,
-                                onContinue = { navigateWhenResumed(OnboardingLocality) },
-                                onSkip = { leaveOnboarding(onboarding::skip) },
-                                onBack = ::previousOnboardingStep,
-                            )
-                        }
-                        composable<OnboardingLocality> { entry ->
-                            LocalityStepRoute(
-                                viewModel = koinViewModel<OnboardingViewModel>(viewModelStoreOwner = onboardingEntry(entry)),
                                 onDone = ::leaveOnboarding,
                                 onBack = ::previousOnboardingStep,
                             )

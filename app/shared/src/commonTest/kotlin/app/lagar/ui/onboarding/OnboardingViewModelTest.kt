@@ -79,16 +79,26 @@ class OnboardingViewModelTest {
     }
 
     @Test
-    fun skipFromALaterStepDropsScopeAndLocalityButKeepsFocus() {
+    fun skipKeepsAScopeWhoseLocalityIsChosen() {
         val (prefs, vm) = viewModel()
         vm.selectFocus(UserFocus.Student)
         vm.selectScope(Scope.Region)
         vm.selectRegion("01")
         vm.skip()
         assertTrue(prefs.onboardingDone.value)
-        assertEquals(Scope.Nationell, prefs.scope.value)
-        assertEquals(Locality(null, null), prefs.locality.value)
+        assertEquals(Scope.Region, prefs.scope.value)
+        assertEquals(Locality("01", null), prefs.locality.value)
         assertEquals(UserFocus.Student, prefs.focus.value)
+    }
+
+    @Test
+    fun skipFallsBackToNationellWhenTheScopeLacksItsLocality() {
+        val (prefs, vm) = viewModel()
+        vm.selectScope(Scope.Kommun)
+        vm.selectRegion("14")
+        vm.skip()
+        assertEquals(Scope.Nationell, prefs.scope.value)
+        assertEquals(Locality("14", null), prefs.locality.value)
     }
 
     @Test

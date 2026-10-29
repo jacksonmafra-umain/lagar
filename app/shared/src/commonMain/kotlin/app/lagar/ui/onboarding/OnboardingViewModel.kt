@@ -6,6 +6,7 @@ import app.lagar.data.LagarRepository
 import app.lagar.domain.Locality
 import app.lagar.domain.Scope
 import app.lagar.domain.count
+import app.lagar.domain.hasLocality
 import app.lagar.domain.withRegion
 import app.lagar.settings.UserFocus
 import app.lagar.settings.UserPreferences
@@ -66,8 +67,13 @@ class OnboardingViewModel(
     fun finish() = preferences.completeOnboarding(_scope.value, _locality.value, _focus.value)
 
     /**
-     * Leaves onboarding from any step with the defaults: the national scope and no locality. The focus is kept,
-     * since it is picked on the first step, next to the skip action, and every value of it is a valid default.
+     * Leaves onboarding from any step without throwing away what was picked: the focus and any län or kommun are kept,
+     * and so is the scope when it has the locality it needs. A Region or Kommun scope still missing its place falls
+     * back to Nationell, so Home never opens on a scope with nothing to show.
      */
-    fun skip() = preferences.completeOnboarding(Scope.Nationell, Locality(null, null), _focus.value)
+    fun skip() {
+        val locality = _locality.value
+        val scope = _scope.value.takeIf { it.hasLocality(locality) } ?: Scope.Nationell
+        preferences.completeOnboarding(scope, locality, _focus.value)
+    }
 }

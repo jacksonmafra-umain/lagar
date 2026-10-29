@@ -78,8 +78,9 @@ import org.koin.compose.koinInject
 private data class Option(val code: String, val name: String)
 
 /**
- * Searchable län and kommun selectors. The kommun field is disabled until a län is chosen; the caller
- * decides what a new län does to the kommun (both [onRegion] and [onKommun] receive null to clear).
+ * Searchable län and kommun selectors. The kommun field is disabled until a län is chosen, and left out when
+ * [showKommun] is false; the caller decides what a new län does to the kommun (both [onRegion] and [onKommun]
+ * receive null to clear).
  *
  * "Use my location" pre-selects the län and the kommun nearest to the device through the same callbacks, so the
  * caller treats it like a manual pick that the user still confirms. The position itself is not kept.
@@ -90,6 +91,7 @@ fun LocalityPickers(
     onRegion: (String?) -> Unit,
     onKommun: (String?) -> Unit,
     modifier: Modifier = Modifier,
+    showKommun: Boolean = true,
 ) {
     val geo = koinInject<GeoRepository>()
     // A failed load leaves the list empty (the sheet then shows "no matches") instead of crashing.
@@ -129,15 +131,17 @@ fun LocalityPickers(
             enabled = true,
             onClick = { open = Field.Region },
         )
-        PickerField(
-            label = stringResource(Res.string.picker_kommun_label),
-            value = kommuner.firstOrNull { it.code == locality.kommunCode }?.name,
-            placeholder = stringResource(
-                if (locality.regionCode == null) Res.string.picker_kommun_needs_region else Res.string.picker_kommun_placeholder,
-            ),
-            enabled = locality.regionCode != null,
-            onClick = { open = Field.Kommun },
-        )
+        if (showKommun) {
+            PickerField(
+                label = stringResource(Res.string.picker_kommun_label),
+                value = kommuner.firstOrNull { it.code == locality.kommunCode }?.name,
+                placeholder = stringResource(
+                    if (locality.regionCode == null) Res.string.picker_kommun_needs_region else Res.string.picker_kommun_placeholder,
+                ),
+                enabled = locality.regionCode != null,
+                onClick = { open = Field.Kommun },
+            )
+        }
     }
 
     when (open) {

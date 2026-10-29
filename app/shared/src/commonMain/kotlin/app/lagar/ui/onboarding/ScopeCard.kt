@@ -2,6 +2,7 @@ package app.lagar.ui.onboarding
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -89,7 +90,9 @@ fun ScopeCard(
                 modifier = Modifier
                     .size(28.dp)
                     .clip(CircleShape)
-                    .background(if (selected) accent else LagarTheme.colors.surfaceContainerHighest),
+                    // Unselected: an outlined ring, so the option still reads as a radio on the layer tint.
+                    .background(if (selected) accent else LagarTheme.colors.surfaceContainerLowest)
+                    .then(if (selected) Modifier else Modifier.border(2.dp, LagarTheme.colors.outline, CircleShape)),
                 contentAlignment = Alignment.Center,
             ) {
                 if (selected) {
@@ -97,20 +100,6 @@ fun ScopeCard(
                 }
             }
         })
-    }
-}
-
-/** The same card without selection, for the welcome overview. */
-@Composable
-internal fun ScopeInfoCard(scope: Scope, count: Int?, modifier: Modifier = Modifier) {
-    val layers = LagarTheme.layers
-    Surface(
-        modifier = modifier.fillMaxWidth(),
-        shape = MaterialTheme.shapes.large,
-        color = layers.tint(scope.key),
-        border = BorderStroke(1.dp, layers.border(scope.key)),
-    ) {
-        ScopeCardContent(scope, count, active = false, trailing = null)
     }
 }
 

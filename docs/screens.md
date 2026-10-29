@@ -104,35 +104,27 @@ Route: `OnboardingWelcome`. Code: `ui/onboarding/WelcomeScreen.kt`. Reference: S
 
 | Feature | Status | Issue |
 | --- | --- | --- |
-| Introduction, three scope cards with live document counts, step progress | Done | |
+| Introduction and step progress; the scopes are left to step 2, and the Lagar card shows only in the desktop side column so the focus choice stays above the fold on phones | Done | #153 |
 | Skip at the top right, as in Stitch; stores the defaults (Nationell, no locality) and leaves like the last step | Done | #29 |
 | Choice of main focus (Medborgare, Student, Jurist), stored on the device and changeable in Settings; it only orders the home key-law groups | Done | #29 |
 
-### Scope (step 2)
+### Scope and place (step 2)
 
-Route: `OnboardingScope`. Code: `ui/onboarding/ScopeStepScreen.kt`, `ScopeCard.kt`. Reference: Stitch `onboarding_sele_o_de_mbito`.
+Route: `OnboardingScope`. Code: `ui/onboarding/ScopeStepScreen.kt`, `ScopeCard.kt`, `LocalityPickers.kt`. References: Stitch `onboarding_sele_o_de_mbito` and `onboarding_localiza_o_e_munic_pio`.
 
 | Feature | Status | Issue |
 | --- | --- | --- |
 | Selectable Nationell, Region and Kommun cards with layer colours and counts | Done | |
-| Skip at the top right, and a "stored on this device" note | Done | #29 |
+| Choosing Region opens the län picker under its card, choosing Kommun opens the län and kommun pickers (searchable, all 21 län and 290 kommuner) | Done | #153 |
+| Done waits until the scope has its place; a line above it says what is missing | Done | #153 |
+| Skip at the top right; keeps the focus, any län or kommun, and the scope when its place is chosen (otherwise Nationell). A "stored on this device" note | Done | #29, #153 |
 | Back arrow at the top left, returning to the welcome step | Done | #128 |
-
-### Locality (step 3)
-
-Route: `OnboardingLocality`. Code: `ui/onboarding/LocalityStepScreen.kt`, `LocalityPickers.kt`. Reference: Stitch `onboarding_localiza_o_e_munic_pio`.
-
-| Feature | Status | Issue |
-| --- | --- | --- |
-| Searchable region and kommun pickers for all 21 regions and 290 kommuner, both optional | Done | |
-| Skip at the top right | Done | #29 |
-| Back arrow at the top left, returning to the scope step | Done | #128 |
 | Kommun suggested from the device location (offline nearest SCB centroid, coarse permission; pre-selected for the user to confirm, with denied, unavailable, timeout and abroad messages) | Done | #30 |
 | Linked kommun summary (council, document count) | Blocked: no municipal data | #38 |
 
 ### Desktop layout
 
-All three steps share `OnboardingScaffold` (`ui/onboarding/StepHeader.kt`). From 1024dp the frame is capped at 1040dp (`ShellDimens.FormMaxWidth`): the title, text and (on step 1) the Lagar card form a left column beside the choices, and the primary action follows the choices instead of spanning the window.
+Both steps share `OnboardingScaffold` (`ui/onboarding/StepHeader.kt`). From 1024dp the frame is capped at 1040dp (`ShellDimens.FormMaxWidth`): the title, text and (on step 1) the Lagar card form a left column beside the choices, and the primary action follows the choices instead of spanning the window.
 
 | Feature | Status | Issue |
 | --- | --- | --- |
