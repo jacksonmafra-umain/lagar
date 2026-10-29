@@ -1,6 +1,7 @@
 package app.lagar.ui.search
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsFocusedAsState
@@ -22,6 +23,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.selectableGroup
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -34,7 +36,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -50,6 +54,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import app.lagar.data.GeoRepository
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
@@ -63,7 +68,9 @@ import app.lagar.resources.Res
 import app.lagar.resources.home_advanced_search
 import app.lagar.resources.home_choose_location
 import app.lagar.resources.home_locality_choose_text
+import app.lagar.resources.home_scope_chip
 import app.lagar.resources.home_search_hint
+import app.lagar.resources.ic_expand_more
 import app.lagar.resources.ic_info
 import app.lagar.resources.ic_search
 import app.lagar.resources.search_match_body
@@ -85,6 +92,7 @@ import app.lagar.ui.common.PillTab
 import app.lagar.ui.common.ShortcutHint
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.searchShortcutHint
+import app.lagar.ui.home.ScopeSheet
 import app.lagar.ui.home.displayLayer
 import app.lagar.ui.list.STATUTE_COLUMNS
 import app.lagar.ui.list.StatuteRow
@@ -115,35 +123,44 @@ fun SearchRoute(
     val query by viewModel.query.collectAsState()
     val results by viewModel.results.collectAsState()
     val preferences = koinInject<UserPreferences>()
+    val geo = koinInject<GeoRepository>()
     val scope by preferences.scope.collectAsState()
     val locality by preferences.locality.collectAsState()
+    val localityName by produceState<String?>(null, scope, locality) { value = localityName(geo, scope, locality) }
+    var showScopeSheet by rememberSaveable { mutableStateOf(false) }
     SearchScreen(
         query = query,
         results = results,
         scope = scope,
+        localityName = localityName,
         localityMissing = scope != Scope.Nationell && scope.localityCode(locality) == null,
         onQueryChange = viewModel::update,
         onBack = onBack,
         onOpenDocument = onOpenDocument,
         onOpenAdvancedSearch = onOpenAdvancedSearch,
+        onChangeScope = { showScopeSheet = true },
         focusRequests = focusRequests,
     )
+    if (showScopeSheet) ScopeSheet(onDismiss = { showScopeSheet = false })
 }
 
 /**
  * [focusRequests] moves focus to the search field each time it grows (the web search shortcut). [localityMissing]
- * is a Region or Kommun scope without its län or kommun: there is nothing to search until one is chosen.
+ * is a Region or Kommun scope without its län or kommun: there is nothing to search until one is chosen. The
+ * searched scope shows as a chip above the results ([onChangeScope] opens the scope sheet).
  */
 @Composable
 fun SearchScreen(
     query: SearchQuery,
     results: LoadState<List<SearchHit>>,
     scope: Scope,
+    localityName: String?,
     localityMissing: Boolean,
     onQueryChange: (SearchQuery) -> Unit,
     onBack: () -> Unit,
     onOpenDocument: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
+    onChangeScope: () -> Unit,
     focusRequests: Int = 0,
 ) {
     val spacing = LagarTheme.spacing
@@ -172,7 +189,13 @@ fun SearchScreen(
             ) {
                 val showCount = !localityMissing && query.isActive && state.value.isNotEmpty()
                 item(key = "summary") {
-                    SummaryRow(count = state.value.size.takeIf { showCount }, scope = scope, onOpenAdvancedSearch = onOpenAdvancedSearch)
+                    SummaryRow(
+                        count = state.value.size.takeIf { showCount },
+                        scope = scope,
+                        scopeLabel = scopeLabel(scope, localityName),
+                        onChangeScope = onChangeScope,
+                        onOpenAdvancedSearch = onOpenAdvancedSearch,
+                    )
                 }
                 when {
                     localityMissing -> item(key = "state") {
@@ -227,25 +250,32 @@ private fun SearchHitRow(hit: SearchHit, text: String, onOpenDocument: (String) 
     )
 }
 
-/** Result count on the left, the advanced-search link on the right; wraps at large font sizes. */
+/**
+ * Result count and the searched scope on the left, the advanced-search link on the right; wraps at large font
+ * sizes and on narrow windows.
+ */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun SummaryRow(count: Int?, scope: Scope, onOpenAdvancedSearch: () -> Unit) {
+private fun SummaryRow(count: Int?, scope: Scope, scopeLabel: String, onChangeScope: () -> Unit, onOpenAdvancedSearch: () -> Unit) {
     val layers = LagarTheme.layers
     FlowRow(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
         itemVerticalAlignment = Alignment.CenterVertically,
     ) {
-        if (count != null) {
-            Text(
-                text = pluralStringResource(Res.plurals.search_result_count, count, count),
-                style = LagarTheme.type.labelMd,
-                color = LagarTheme.colors.onSurfaceVariant,
-                modifier = Modifier.padding(end = LagarTheme.spacing.sm),
-            )
-        } else {
-            Box(Modifier)
+        Row(
+            modifier = Modifier.padding(end = LagarTheme.spacing.sm),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
+        ) {
+            if (count != null) {
+                Text(
+                    text = pluralStringResource(Res.plurals.search_result_count, count, count),
+                    style = LagarTheme.type.labelMd,
+                    color = LagarTheme.colors.onSurfaceVariant,
+                )
+            }
+            ScopeLabelChip(scope, scopeLabel, onChangeScope, Modifier.weight(1f, fill = false))
         }
         Row(
             modifier = Modifier
@@ -263,6 +293,44 @@ private fun SummaryRow(count: Int?, scope: Scope, onOpenAdvancedSearch: () -> Un
                 fontWeight = FontWeight.Bold,
                 color = layers.onTint(scope.key),
             )
+        }
+    }
+}
+
+/**
+ * The searched scope as a layer-tinted pill ("Region: Skåne län") with an expand icon; ellipsized when long. It
+ * opens the scope sheet.
+ */
+@Composable
+private fun ScopeLabelChip(scope: Scope, label: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    val layers = LagarTheme.layers
+    val description = stringResource(Res.string.home_scope_chip, label)
+    Row(
+        modifier = modifier
+            .heightIn(min = ShellDimens.TouchTarget)
+            .clip(CircleShape)
+            .clickable(role = Role.Button, onClick = onClick)
+            .semantics(mergeDescendants = true) { contentDescription = description },
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Row(
+            modifier = Modifier
+                .clip(CircleShape)
+                .background(layers.tint(scope.key))
+                .border(ShellDimens.Hairline, layers.border(scope.key), CircleShape)
+                .padding(start = LagarTheme.spacing.sm, end = LagarTheme.spacing.xs, top = ShellDimens.PillPaddingVertical, bottom = ShellDimens.PillPaddingVertical),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = label,
+                style = LagarTheme.type.labelMd,
+                fontWeight = FontWeight.Bold,
+                color = layers.onTint(scope.key),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f, fill = false),
+            )
+            Icon(painterResource(Res.drawable.ic_expand_more), null, tint = layers.onTint(scope.key), modifier = Modifier.size(ShellDimens.SmallIconSize))
         }
     }
 }
