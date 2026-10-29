@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -92,5 +93,17 @@ fun StatuteRow(item: ListingItem, layer: DisplayLayer?, onClick: () -> Unit, mod
         }
     }
 }
+
+/** Up to two [StatuteRow]s side by side at equal height, for the desktop result grids; a lone last row keeps half the width. */
+@Composable
+internal fun StatuteRowPair(items: List<ListingItem>, layerOf: (ListingItem) -> DisplayLayer?, onOpen: (ListingItem) -> Unit) {
+    Row(Modifier.fillMaxWidth().height(IntrinsicSize.Min), horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
+        items.forEach { StatuteRow(it, layerOf(it), onClick = { onOpen(it) }, modifier = Modifier.weight(1f).fillMaxHeight()) }
+        repeat(STATUTE_COLUMNS - items.size) { Spacer(Modifier.weight(1f)) }
+    }
+}
+
+/** Columns of the desktop result grids. */
+internal const val STATUTE_COLUMNS = 2
 
 private const val YEAR_LENGTH = 4

@@ -6,6 +6,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsFocusedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
@@ -75,9 +76,13 @@ import app.lagar.ui.common.ShortcutHint
 import app.lagar.ui.common.rememberBackTopBarHeight
 import app.lagar.ui.common.searchShortcutHint
 import app.lagar.ui.home.displayLayer
+import app.lagar.ui.list.STATUTE_COLUMNS
 import app.lagar.ui.list.StatuteRow
+import app.lagar.ui.list.StatuteRowPair
 import app.lagar.ui.navigation.Search
+import app.lagar.ui.shell.LocalWideLayout
 import app.lagar.ui.shell.ShellDimens
+import app.lagar.ui.shell.wideListPadding
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import org.jetbrains.compose.resources.painterResource
@@ -129,8 +134,11 @@ fun SearchScreen(
     var headerHeight by rememberBackTopBarHeight()
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     val centered = Modifier.fillMaxSize().padding(top = headerHeight)
+    val wide = LocalWideLayout.current
 
-    Box(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
+    // On desktop the results fill two columns within the content width.
+    BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
+        val side = if (wide) wideListPadding(maxWidth, spacing.margin) else spacing.marginMobile
         // Only the national level has documents so far, so other scopes never reach the results.
         val state = if (scope == Scope.Nationell) results else LoadState.Loaded(emptyList())
         when (state) {
@@ -139,8 +147,8 @@ fun SearchScreen(
             is LoadState.Loaded -> LazyColumn(
                 modifier = Modifier.fillMaxSize().hazeSource(hazeState),
                 contentPadding = PaddingValues(
-                    start = spacing.marginMobile,
-                    end = spacing.marginMobile,
+                    start = side,
+                    end = side,
                     top = headerHeight + spacing.xs,
                     bottom = bottomInset + spacing.md,
                 ),
@@ -159,6 +167,9 @@ fun SearchScreen(
                     }
                     state.value.isEmpty() -> item(key = "state") {
                         EmptyState(Res.drawable.ic_search, stringResource(Res.string.search_no_results_title), stringResource(Res.string.search_no_results_text))
+                    }
+                    wide -> items(state.value.chunked(STATUTE_COLUMNS), key = { it.first().id }) { pair ->
+                        StatuteRowPair(pair, { it.displayLayer() ?: DisplayLayer.SfsAct }, onOpen = { onOpenDocument(it.id) })
                     }
                     else -> items(state.value, key = { it.id }) { item ->
                         StatuteRow(item, item.displayLayer() ?: DisplayLayer.SfsAct, onClick = { onOpenDocument(item.id) })
