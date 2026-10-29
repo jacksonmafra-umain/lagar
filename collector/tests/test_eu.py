@@ -149,6 +149,37 @@ class MetadataTest(unittest.TestCase):
         self.assertEqual((meta["id"], meta["number"], meta["issued"], meta["in_force"], meta["authoritative"]),
                          ("eu-02016r0679-20160504", "(EU) 2016/679", "2016-04-27", "2016-05-04", False))
 
+    def test_consolidated_version_amendments(self):
+        consolidates = [
+            "32016R0679 2016-04-27",  # the base act
+            "02016R0679-20160504 2016-05-04",  # an earlier consolidated version
+            "32016R0679R(02) 2018-05-23",  # a corrigendum
+            "32019R0001 2019-01-10",
+            "32021R0002 2021-03-04",
+            "32020L0003 2020-06-30",
+            "not-a-celex 2020-01-01",
+            "32022R0004 no-date",
+        ]
+        md = eu.parse_metadata(GDPR_CONS, consolidated_sparql(consolidates=consolidates))
+        self.assertEqual(md.amendments, [("2019-01-10", "32019R0001"), ("2020-06-30", "32020L0003"),
+                                         ("2021-03-04", "32021R0002")])
+        meta = eu.build_meta(md, "b" * 64, CONS_MANIFESTATION, "2026-10-29T00:00:00Z")
+        self.assertEqual(meta["amended_through"], "32021R0002")
+        self.assertEqual(meta["amended_by"], ["32019R0001", "32020L0003", "32021R0002"])
+        self.assertEqual(schema.validate(meta), [])
+
+    def test_oj_text_has_no_amendment_applied(self):
+        fields = gdpr_fields()
+        fields["consolidates"] = ["32019R0001 2019-01-10"]
+        meta = eu.build_meta(eu.Metadata(GDPR, fields), "a" * 64, MANIFESTATION, "2026-10-29T00:00:00Z")
+        self.assertIsNone(meta["amended_through"])
+        self.assertEqual(meta["amended_by"], [])
+
+    def test_metadata_query_reads_the_consolidated_amendments(self):
+        query = urllib.parse.parse_qs(urllib.parse.urlsplit(eu.metadata_url(GDPR_CONS)).query)["query"][0]
+        self.assertIn("cdm:act_consolidated_consolidates_resource_legal", query)
+        self.assertIn('BIND("consolidates" AS ?field)', query)
+
     def test_latest_consolidated_applying_today(self):
         md = eu.Metadata(GDPR, {"consolidated": ["02016R0679-20160504", "02016R0679-20260801",
                                                   "02016R0679-20200101", "bogus"]})

@@ -59,6 +59,7 @@ CELEX = re.compile(r"(?:3\d{4}[RLD]\d{4}|0\d{4}[RLD]\d{4}-\d{8})", re.ASCII)
 _KINDS = {"R": "eu_regulation", "L": "eu_directive", "D": "eu_decision"}
 _SCHEMA_CELEX = re.compile(r"[0-9CE]\d{4}[A-Z]{1,2}\d{4}(?:[A-Z]?\(\d{2}\))?(?:-\d{8})?", re.ASCII)
 _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}", re.ASCII)
+_CORRIGENDUM = re.compile(r"R\(\d{2}\)$", re.ASCII)
 
 # Institutions that adopt acts, by Publications Office corporate-body code.
 ISSUERS = {
@@ -91,6 +92,15 @@ SELECT ?field ?value WHERE {
             cdm:resource_legal_id_celex ?value BIND("consolidated" AS ?field) }
   UNION { ?work cdm:act_consolidated_based_on_resource_legal ?base .
           ?base cdm:work_date_document ?value BIND("base_date_document" AS ?field) }
+  UNION { ?work cdm:act_consolidated_based_on_resource_legal ?base ;
+            cdm:act_consolidated_date ?date .
+          ?version cdm:act_consolidated_based_on_resource_legal ?base ;
+            cdm:act_consolidated_date ?versionDate ;
+            cdm:act_consolidated_consolidates_resource_legal ?act .
+          FILTER(?versionDate <= ?date)
+          ?act cdm:resource_legal_id_celex ?actCelex ;
+            cdm:work_date_document ?actDate
+          BIND(CONCAT(STR(?actCelex), " ", STR(?actDate)) AS ?value) BIND("consolidates" AS ?field) }
 }
 """
 
@@ -159,6 +169,22 @@ class Metadata:
     @property
     def consolidated(self):
         return sorted(c for c in set(self.all("consolidated")) if CELEX.fullmatch(c))
+
+    @property
+    def amendments(self):
+        """(date of document, CELEX) of the amending acts a consolidated version incorporates.
+
+        The base act, earlier consolidated versions and corrigenda (`R(nn)`) are left out.
+        """
+        base = "3" + self.celex[1:10]
+        out = set()
+        for value in self.all("consolidates"):
+            celex, _, day = value.partition(" ")
+            day = _date(day)
+            if (day and _SCHEMA_CELEX.fullmatch(celex) and celex != base
+                    and not celex.startswith("0") and not _CORRIGENDUM.search(celex)):
+                out.add((day, celex))
+        return sorted(out)
 
 
 def metadata_url(celex):
@@ -253,6 +279,9 @@ def build_meta(metadata, raw_sha256, source, fetched_at):
     end = _date(metadata.first("end_of_validity"))
     issued = metadata.first("base_date_document") if consolidated else metadata.first("date_document")
     issuers = [ISSUERS[a] for a in ISSUERS if a in metadata.all("agent")]
+    amended_by = {c for c in metadata.all("amended_by") if _SCHEMA_CELEX.fullmatch(c)}
+    amendments = metadata.amendments if consolidated else []
+    amended_by.update(c for _, c in amendments)
     return {
         "id": corpus_id(celex),
         "title": metadata.title,
@@ -262,8 +291,9 @@ def build_meta(metadata, raw_sha256, source, fetched_at):
         "issued": _date(issued),
         "in_force": entry[0] if entry else None,
         "repealed": end if end and end != NO_END else None,
-        "amended_by": sorted(c for c in set(metadata.all("amended_by")) if _SCHEMA_CELEX.fullmatch(c)),
-        "amended_through": None,
+        "amended_by": sorted(amended_by),
+        # The latest amending act a consolidated version incorporates; the OJ text has none.
+        "amended_through": amendments[-1][1] if amendments else None,
         "reprinted_by": [],
         "ministry": None,
         "eli": metadata.first("eli"),
