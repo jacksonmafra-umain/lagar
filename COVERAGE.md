@@ -1,7 +1,8 @@
 # Coverage
 
 What the corpus covers, what it does not, and where the numbers come from.
-Counts per series are in [PROGRESS.md](PROGRESS.md). Volume does not prove
+Counts per series are in [PROGRESS.md](PROGRESS.md); which agencies and
+sources are processed, and why the others are not, is in [AGENCIES.md](AGENCIES.md). Volume does not prove
 completeness: read this file next to those numbers.
 
 ## Sources and cut-off
@@ -100,9 +101,11 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   for unamended AFS regulations, and AFS `in_force` only for those; FFFS and
   TSFS have no decision date on their pages. Arbetsmiljöverket's robots.txt
   disallows its folder of original PDFs, which is never requested. Boverket
-  (BFS, API key probably needed; not signed up for now), Skatteverket (SKVFS,
-  robots.txt request rejected by a WAF) and the other series are not collected
-  yet (#115).
+  (BFS, API key probably needed; not signed up for now), Skatteverket (SKVFS:
+  an earlier robots.txt request was rejected by a WAF, on 2026-10-29 it
+  answered normally), Migrationsverket (MIGRFS) and the other series are not
+  collected yet (#115). [AGENCIES.md](AGENCIES.md) lists every series and
+  source with its status.
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630

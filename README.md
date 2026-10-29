@@ -19,6 +19,7 @@ Website: <https://grundlagar.vercel.app> (the web app is at `/app/`).
 ## Documentation
 
 - [Progress](PROGRESS.md) and [coverage](COVERAGE.md)
+- [Agencies and sources](AGENCIES.md): which agencies, series and sources are processed, and why the others are not
 - [Design system](DESIGN.md)
 - [App architecture](docs/architecture.md)
 - [API contract](docs/api.md)
