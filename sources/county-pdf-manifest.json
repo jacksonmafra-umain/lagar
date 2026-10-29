@@ -2243,6 +2243,300 @@
       ],
       "number": "05FS 2026:29",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 87091,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:20Z",
+          "sha256": "b052cc169212ba95e77d04fb57c7d85f36c737bc5e4c8a5ec9805083173d9fae",
+          "url": "https://www.lansstyrelsen.se/download/18.57c2d35a1969f8a67de4f056/1747060100334/06FS%202025-01%20Sammanst%C3%A4llning%20%C3%B6ver%20allm%C3%A4nna%20v%C3%A4gar%202025.pdf"
+        }
+      ],
+      "number": "06FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 20614,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:21Z",
+          "sha256": "096fcbc4e1b2d60097ad79537c765dbd87c05cb2a1537687124f1f6cb6b710df",
+          "url": "https://www.lansstyrelsen.se/download/18.5ebb206919618bfe7bf3b172/1744880070954/06FS%202025-02%20F%C3%B6reskrifter%20om%20Kungshults%20naturreservat%20i%20Tran%C3%A5s%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 22885,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:22Z",
+          "sha256": "980609f0e6bfb3d3f492db949c465d2314f8b278010d6f5aaf83bf54278bbec3",
+          "url": "https://www.lansstyrelsen.se/download/18.5ebb206919618bfe7bf3b171/1744880070936/06FS%202025-03%20F%C3%B6reskrifter%20om%20K%C3%A4llen%C3%A4s%20naturreservat%20i%20J%C3%B6nk%C3%B6pings%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 2591423,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:23Z",
+          "sha256": "3f03406fc8d78010cb548e760cf603b939cbda74f34f1c2c7c1535174d8f57d8",
+          "url": "https://www.lansstyrelsen.se/download/18.5258db091969f6f37eb7a619/1747398410396/06FS%202025-04%20F%C3%B6reskrifter%20om%20tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5de%20i%20Munksj%C3%B6n,%20J%C3%B6nk%C3%B6ping,%20J%C3%B6nk%C3%B6pings%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 109269,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:24Z",
+          "sha256": "3f58a426b053c8f08e6565d261da1265d120ddfe39fb5732aac63421b78f7442",
+          "url": "https://www.lansstyrelsen.se/download/18.376917b71975d4650e51361f/1749804224405/06FS%202025-05%20Tillk%C3%A4nnagivande%20av%20Trafikverkets%20beslut%20om%20%C3%A4ndring%20av%20v%C3%A4gh%C3%A5llningsomr%C3%A5de,%20Tran%C3%A5s%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 175619,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:25Z",
+          "sha256": "f61f2af5312d472e9f4c59e0f11b0b6fbc731541cb616561ec01ac562a71ef4e",
+          "url": "https://www.lansstyrelsen.se/download/18.376917b71975d4650e513620/1749804224438/06FS%202025-06%20F%C3%B6reskrifter%20om%20Str%C3%A5kens%20strandskogars%20naturreservat.pdf"
+        }
+      ],
+      "number": "06FS 2025:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1149089,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:26Z",
+          "sha256": "984ce34ff9acb3876c0e29e9cdbef506bed24f7394fba451b9b6386a86e7bf1a",
+          "url": "https://www.lansstyrelsen.se/download/18.21610148198c5c5c74115e5b/1755848676226/06FS%202025-07%20F%C3%B6reskrifter%20om%20Skurugata%20naturreservat%20i%20Eksj%C3%B6%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2025:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 98913,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:27Z",
+          "sha256": "3a8b42b01b1f1612f2e8b7f963fd13a1ed61baf7ef9572c053ce1dafee7854ae",
+          "url": "https://www.lansstyrelsen.se/download/18.2cccdb1c19a769f7402196e0/1763122236873/06FS%202025-09%20F%C3%B6reskrifter%20f%C3%B6r%20Labbrams%C3%A4ngens%20naturreservat%20i%20V%C3%A4rnamo%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2025:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 120846,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:28Z",
+          "sha256": "ba9b33ef858c80c3c5114eedc956f1bfd65c8b9983d63400869a74c61134f81e",
+          "url": "https://www.lansstyrelsen.se/download/18.4a69e05c19afcc7377332abf/1765552405917/06FS%202025-10%20F%C3%B6reskrifter%20om%20Palsbos%20naturreservat%20i%20Vaggeryds%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2025:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 95281,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:29Z",
+          "sha256": "f93031286dc530b44910b4cf0e9892fdcce3400322bf0bfbc318b0509808af6a",
+          "url": "https://www.lansstyrelsen.se/download/18.4a69e05c19afcc7377332ac0/1765552412230/06FS%202025-11%20F%C3%B6reskrifter%20f%C3%B6r%20Anderstorps%20Stormosses%20naturreservat%20i%20Gnosj%C3%B6%20och%20Gislaveds%20kommuner.pdf"
+        }
+      ],
+      "number": "06FS 2025:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 122523,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:30Z",
+          "sha256": "df78d387c61cf131c60df297a58bd34d165e40b3e55843221d688c3f690afa7c",
+          "url": "https://www.lansstyrelsen.se/download/18.5a1f26ad19c47b25a417d0a4/1771581537587/06FS%202026-1%20F%C3%B6reskrifter%20om%20H%C3%B6kes%C3%A5n%20Lampens%20naturreservat%20i%20Habo%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 3574372,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:31Z",
+          "sha256": "731cd472b0f59308732acf0c62f4d0caf44bee58f103c79d51d2d7a4e00dd089",
+          "url": "https://www.lansstyrelsen.se/download/18.69ced119d24e4b4ca4f981/1774942179040/06FS%202026-2%20Sammanst%C3%A4llning%20av%20allm%C3%A4nna%20v%C3%A4gar%202026.pdf"
+        }
+      ],
+      "number": "06FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 108092,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:32Z",
+          "sha256": "f56581acbd7803233007c99847eeacaba7100a25bb7d66d5a5d8bc7d7dfb622c",
+          "url": "https://www.lansstyrelsen.se/download/18.402de13019d724145b26515/1775810690366/06FS%202026-3%20F%C3%B6reskrifter%20f%C3%B6r%20Huvabackens%20naturreservat%20i%20Vetlanda%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 114995,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:33Z",
+          "sha256": "de5939cf311c20a695109fc3b6b330b7c2417e12d639d9d86e9390295df4bb53",
+          "url": "https://www.lansstyrelsen.se/download/18.434dd5f319e0253f765872d6/1779082792402/06FS%202026-4%20F%C3%B6reskrifter%20om%20tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5de%20i%20Munksj%C3%B6n%20J%C3%B6nk%C3%B6pings%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 97825,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:34Z",
+          "sha256": "2af0aa110460410affdb481092b67b3ea88736c68bf4a00745c1f20289b49b51",
+          "url": "https://www.lansstyrelsen.se/download/18.5d397faa19e63389aaf24565/1780060512383/06FS%202026-5%20Ut%C3%B6kning%20av%20Sveds%20tallskogs%20naturreservat%20i%20Habo%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2026:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 123989,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:35Z",
+          "sha256": "25c1c66aec70081984ed59dcf4fffd2c9e36571feef51c39db9eb028da5e3c0a",
+          "url": "https://www.lansstyrelsen.se/download/18.5d397faa19e63389aaf245fe/1780060622803/06FS%202026-6%20Middagsm%C3%A4rkets%20naturreservat%20i%20Mullsj%C3%B6%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2026:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 121373,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:36Z",
+          "sha256": "c8f119a5d3c52bbbe0ca6864eb08f2262782be2fd8eb7560390ffac58af67f35",
+          "url": "https://www.lansstyrelsen.se/download/18.6fa4735719ed45ea9273f049/1782115820282/06FS%202026-7%20F%C3%B6reskrifter%20om%20Radans%20naturreservat%20i%20Gislaveds%20och%20J%C3%B6nk%C3%B6pings%20kommuner.pdf"
+        }
+      ],
+      "number": "06FS 2026:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1647895,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:37Z",
+          "sha256": "1c98d008a32bf250aa1d0caa4e242a629519d64aaa771c72257d903ae055e776",
+          "url": "https://www.lansstyrelsen.se/download/18.26b532601a0422867dbbf4e/1787903802652/06FS%202026-8%20Tillf%C3%A4llig%20avlysning%20av%20vattenomr%C3%A5det%20Munksj%C3%B6n,%20J%C3%B6nk%C3%B6ping,%20J%C3%B6nk%C3%B6pings%20kommun;.pdf"
+        }
+      ],
+      "number": "06FS 2026:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 142774,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:38Z",
+          "sha256": "6e7f0fb52e087d2d49407c3227c20aed66506d7b178fa9a8a25a0de825148958",
+          "url": "https://www.lansstyrelsen.se/download/18.531e1a571a0865dff1912874/1789120575869/06FS%202026-9%20f%C3%B6reskrifter%20om%20Kolbr%C3%A5nas%20naturreservat%20i%20Vetlanda%20kommun;.pdf"
+        }
+      ],
+      "number": "06FS 2026:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 131467,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:39Z",
+          "sha256": "acf6ff93e2f155f95a6b46f3f994f98662a882447e8f37f8e327e906a79fda10",
+          "url": "https://www.lansstyrelsen.se/download/18.531e1a571a0865dff19129a5/1789120728225/06FS%202026-10%20f%C3%B6reskrifter%20om%20Risaveds%20naturreservat%20i%20Habo%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2026:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 123828,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:01:40Z",
+          "sha256": "a1d217c2afae5a9d5d16de01acd91e3e261e8a6577aa90e0e888c658f67822fc",
+          "url": "https://www.lansstyrelsen.se/download/18.7865e6921a12f60a28832f83/1792137750865/06FS%202026-11%20F%C3%B6reskrifter%20om%20Ryfors%20naturreservat%20i%20Mullsj%C3%B6%20kommun;.pdf"
+        }
+      ],
+      "number": "06FS 2026:11",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
