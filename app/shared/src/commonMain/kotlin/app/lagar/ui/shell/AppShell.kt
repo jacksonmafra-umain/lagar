@@ -34,19 +34,25 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.toRoute
 import app.lagar.data.GeoRepository
+import app.lagar.data.LagarRepository
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.Scope
+import app.lagar.domain.count
 import app.lagar.resources.Res
+import app.lagar.settings.BookmarkStore
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.common.SearchShortcutEffect
 import app.lagar.ui.hierarki.HierarkiRoute
+import app.lagar.ui.hierarki.MinistriesRoute
 import app.lagar.ui.home.HomeRoute
 import app.lagar.ui.home.ScopeSheet
 import app.lagar.ui.list.LayerListRoute
+import app.lagar.ui.list.MinistryFilter
 import app.lagar.ui.navigation.AdvancedSearch
 import app.lagar.ui.navigation.Hierarki
 import app.lagar.ui.navigation.LayerList
+import app.lagar.ui.navigation.Ministries
 import app.lagar.ui.navigation.OnboardingLocality
 import app.lagar.ui.navigation.OnboardingScope
 import app.lagar.ui.navigation.OnboardingWelcome
@@ -71,6 +77,7 @@ import app.lagar.ui.sparade.SparadeRoute
 import app.lagar.ui.tjanster.TjansterScreen
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -93,8 +100,24 @@ fun AppShell(
     val activeScope by preferences.scope.collectAsState()
     val locality by preferences.locality.collectAsState()
     val geo = koinInject<GeoRepository>()
-    val localityName by produceState<String?>(null, activeScope, locality) { value = geo.localityName(activeScope, locality) }
+    val localityNames by produceState(emptyMap<Scope, String?>(), locality) {
+        value = Scope.entries.associateWith { geo.localityName(it, locality) }
+    }
+    val repository = koinInject<LagarRepository>()
+    // Counts are decoration: a failed index load just hides the badges.
+    val scopeCounts by produceState<Map<Scope, Int>?>(null) {
+        value = try {
+            val index = repository.index()
+            Scope.entries.associateWith { index.count(it) }
+        } catch (e: CancellationException) {
+            throw e
+        } catch (_: Exception) {
+            null
+        }
+    }
+    val bookmarks by koinInject<BookmarkStore>().bookmarks.collectAsState()
     var showScopeSheet by remember { mutableStateOf(false) }
+    var sheetScope by remember { mutableStateOf<Scope?>(null) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val backStackEntry by navController.currentBackStackEntryAsState()
     val destination = backStackEntry?.destination
@@ -184,12 +207,20 @@ fun AppShell(
             drawerContent = {
                 LagarDrawerContent(
                     hazeState = hazeState,
-                    scope = activeScope,
-                    localityName = localityName,
+                    activeScope = activeScope,
+                    localityNames = localityNames,
+                    scopeCounts = scopeCounts,
+                    savedCount = bookmarks.size,
                     selected = DrawerEntry.entries.firstOrNull { destination?.hasRoute(it.route::class) == true },
-                    onChangeScope = {
+                    onSelectScope = { target ->
                         scope.launch { drawerState.close() }
-                        showScopeSheet = true
+                        when (val action = drawerScopeAction(target, activeScope, locality)) {
+                            is DrawerScopeAction.Apply -> preferences.setScope(action.scope)
+                            is DrawerScopeAction.OpenSheet -> {
+                                sheetScope = action.scope
+                                showScopeSheet = true
+                            }
+                        }
                     },
                     onNavigate = { entry ->
                         scope.launch { drawerState.close() }
@@ -249,7 +280,14 @@ fun AppShell(
                                 onSelectScope = ::selectScope,
                             )
                         }
-                        composable<Hierarki> { HierarkiRoute(onOpenLayer = ::openLayer) }
+                        composable<Hierarki> {
+                            HierarkiRoute(
+                                onOpenLayer = ::openLayer,
+                                onBrowseByMinistry = { layer ->
+                                    layer.apiType?.let { navigateWhenResumed(Ministries(layer.apiLayer, it)) }
+                                },
+                            )
+                        }
                         composable<Sparade> { SparadeRoute(onOpenDocument = { navigateWhenResumed(Reader(it)) }) }
                         composable<Tjanster> { TjansterScreen() }
                         composable<LayerList> { entry ->
@@ -257,8 +295,20 @@ fun AppShell(
                             LayerListRoute(
                                 layer = route.layer,
                                 type = route.type,
+                                ministry = route.ministry?.let { MinistryFilter(it, route.ministryName ?: it) },
                                 onBack = { navController.popBackStack() },
                                 onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                            )
+                        }
+                        composable<Ministries> { entry ->
+                            val route = entry.toRoute<Ministries>()
+                            MinistriesRoute(
+                                layer = route.layer,
+                                type = route.type,
+                                onBack = { navController.popBackStack() },
+                                onOpenMinistry = {
+                                    navigateWhenResumed(LayerList(route.layer, route.type, ministry = it.id, ministryName = it.name))
+                                },
                             )
                         }
                         composable<Reader> { entry ->
@@ -320,7 +370,15 @@ fun AppShell(
                         modifier = Modifier.align(Alignment.BottomCenter).onSizeChanged { bottomBarPx = it.height },
                     )
                 }
-                if (showScopeSheet) ScopeSheet(onDismiss = { showScopeSheet = false })
+                if (showScopeSheet) {
+                    ScopeSheet(
+                        initialScope = sheetScope,
+                        onDismiss = {
+                            showScopeSheet = false
+                            sheetScope = null
+                        },
+                    )
+                }
             }
         }
     }

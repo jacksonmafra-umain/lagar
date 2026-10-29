@@ -5,6 +5,8 @@ import androidx.lifecycle.viewModelScope
 import app.lagar.data.ApiLayer
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
+import app.lagar.data.ListingPage
+import app.lagar.data.MinistryRepository
 import app.lagar.domain.LoadState
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
@@ -21,12 +23,19 @@ import kotlinx.coroutines.launch
  * The layer's entry in `index.json` gives the [series] to switch between and lets a layer or series
  * the index lists as empty load as an empty page without a request. If the index cannot be read, the
  * listing still loads and the switch stays hidden.
+ *
+ * With a [ministry] (and a [type]) the screen lists that ministry's documents from the per-ministry index
+ * through [ministries] instead; the series switch stays hidden, since the listing belongs to one series.
  */
 class LayerListViewModel(
     private val repository: LagarRepository,
     private val layer: String,
     type: String?,
+    val ministry: MinistryFilter? = null,
+    private val ministries: MinistryRepository? = null,
 ) : ViewModel() {
+    private val byMinistry = ministry != null && type != null && ministries != null
+
     private val _selectedType = MutableStateFlow(type)
 
     /** The series being listed; `null` lists the whole layer. */
@@ -67,9 +76,9 @@ class LayerListViewModel(
         _state.value = LoadState.Loading
         job = viewModelScope.launch {
             try {
-                readIndex()
+                if (!byMinistry) readIndex()
                 val type = _selectedType.value
-                if (indexRead && !indexLists(type)) {
+                if (!byMinistry && indexRead && !indexLists(type)) {
                     _items.value = emptyList()
                     _total.value = 0
                     pageCount = 1
@@ -77,7 +86,7 @@ class LayerListViewModel(
                     _state.value = LoadState.Loaded(Unit)
                     return@launch
                 }
-                val page = repository.listing(layer, type, 1)
+                val page = page(type, 1)
                 _items.value = page.items
                 _total.value = page.total
                 pageCount = page.pageCount
@@ -97,7 +106,7 @@ class LayerListViewModel(
         _appending.value = true
         job = viewModelScope.launch {
             try {
-                val page = repository.listing(layer, _selectedType.value, loadedPages + 1)
+                val page = page(_selectedType.value, loadedPages + 1)
                 // Ids are LazyColumn keys; a repeated id (a page boundary overlap) would crash the list.
                 _items.value = (_items.value + page.items).distinctBy { it.id }
                 loadedPages = page.page
@@ -114,7 +123,7 @@ class LayerListViewModel(
 
     /** Lists [type] instead (`null` for the whole layer), from its first page. */
     fun selectSeries(type: String?) {
-        if (type == _selectedType.value) return
+        if (byMinistry || type == _selectedType.value) return
         _selectedType.value = type
         _items.value = emptyList()
         _total.value = null
@@ -123,6 +132,16 @@ class LayerListViewModel(
         loadedPages = 0
         pageCount = 1
         loadFirst()
+    }
+
+    private suspend fun page(type: String?, number: Int): ListingPage {
+        val filter = ministry
+        val source = ministries
+        return if (filter != null && source != null && type != null) {
+            source.ministryListing(layer, type, filter.id, number)
+        } else {
+            repository.listing(layer, type, number)
+        }
     }
 
     /** Reads the layer's index entry once; a failure leaves it unknown and is retried on the next first load. */

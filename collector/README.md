@@ -2,8 +2,9 @@
 
 Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown files,
 records a SHA-256 manifest of the authoritative SFS PDFs, adds each statute's amendment
-register from SFSR, writes a metadata-only amendment history for git, and collects the
-published case law of the Swedish courts.
+register from SFSR, writes a metadata-only amendment history for git, collects the published case
+law of the Swedish courts, collects EU acts in Swedish from the Publications Office Cellar and
+collects agency regulations (pilot: AFS, FFFS, TSFS).
 Python standard library only.
 
 ## Usage
@@ -172,6 +173,60 @@ git fast-import --quiet < build/history.fi                 # creates history/pil
 
 The branch is not pushed by any workflow.
 
+## EU law (Cellar)
+
+The `eu` command collects EU regulations, directives and decisions in their Swedish language
+version from the Cellar, the Publications Office repository behind EUR-Lex:
+
+```
+python3 -I collector/collect.py eu --list collector/data/eu-acts.json [--consolidated] \
+    [--refresh] [--limit N] [--cache sources/cache/eu] [--corpus corpus] \
+    [--manifest sources/eu-manifest.json] [--state collector/data/eu-state.json] \
+    [--rate SECONDS] [--report FILE]
+python3 -I collector/collect.py eu --celex 32016R0679[,32022L2555 ...] [options]
+```
+
+- Metadata: one SPARQL query per act to `https://publications.europa.eu/webapi/rdf/sparql`
+  (date of document, entry into force, end of validity, ELI, adopting institutions, Swedish
+  title and manifestation types, amending acts and consolidated versions).
+- Text: `https://publications.europa.eu/resource/celex/<CELEX>` with `Accept-Language: swe`
+  and `Accept: application/xhtml+xml` (or `text/html` for older acts that only have the old
+  EUR-Lex HTML) answers 303 with the Swedish manifestation. It is converted to Markdown with
+  `html.parser`: divisions (KAPITEL, AVDELNING, AVSNITT, BILAGA) as `##`, articles as `###`,
+  article and chapter titles in bold, point labels kept with their text, other table rows on
+  one line with cells separated by ` | `. The OJ page header and the `►M1 … ◄` / `▼B`
+  markers of consolidated texts are dropped.
+- **eur-lex.europa.eu is never contacted.** Its front end answers automated clients with a
+  WAF challenge. Every request, and every redirect, must stay on `publications.europa.eu` or
+  `op.europa.eu` (where its robots.txt lives); redirects are followed over https only.
+- Acts without a Swedish expression, or with Swedish only as PDF or print (REACH, for
+  example), are recorded as gaps in the state file and in the manifest's `gaps`; nothing is
+  translated. `--consolidated` also collects each act's latest consolidated version that
+  applies today (CELEX `0…-YYYYMMDD`) and removes older consolidated versions of that act.
+- Frontmatter: `id` `eu-<celex lowercased>`, `number` in the Swedish citation form taken from
+  the Swedish title when it agrees with the CELEX number (else rebuilt from it: `(EU) 2016/679`,
+  `(EG) nr 1907/2006`, `95/46/EG`), `celex`, `issued` (date of document; for a consolidated
+  version, the base act's), `in_force` (earliest entry into force), `repealed` (end of
+  validity unless open-ended), `amended_by` (CELEX numbers of amending acts), `eli`, `issuer`
+  (adopting institutions in Swedish), `source` (the manifestation URL), `source_sha256`.
+  `authoritative` is true for the Official Journal text, false for consolidated versions.
+- The committed manifest `sources/eu-manifest.json` lists, per act, `celex`, `id`, `url`,
+  `content_type`, `bytes`, `sha256` and `retrieved_at` (kept while the bytes are unchanged),
+  plus the gaps. `--cache DIR` keeps the bytes as `DIR/<CELEX>.<format>` (use the git-ignored
+  `sources/cache/`).
+- Resume: the state file (git-ignored) keeps `done` (CELEX to SHA-256), `failed`, `gaps` and
+  `blocked`. Collected acts are skipped unless `--refresh`; a refresh rewrites a document only
+  when its frontmatter (apart from `fetched_at`) or its converted text changed.
+- `--rate` defaults to, and may not go below, 1 s. An HTTP 403, a long `Retry-After` or a
+  robots.txt disallow stops the run (exit code 2).
+- `--report` writes `{"written": [...], "unchanged": [...], "skipped": n, "gaps": [...],
+  "failed": [...], "blocked": bool}`.
+
+The curated list `collector/data/eu-acts.json` holds the acts the app highlights (data
+protection, digital, consumer, labour, environment, private international law). A wider
+in-force sweep is not implemented yet. Reuse is free with acknowledgement of the source
+(Commission Decision 2011/833/EU).
+
 ## Case law
 
 The `case-law` command (alias `caselaw`) collects the anonymised summaries that the courts
@@ -225,13 +280,130 @@ python3 -I collector/collect.py case-law [--court CODE ...] [--from YYYY-MM-DD] 
 - The site has no robots.txt (HTTP 404); one is honoured if it appears. An HTTP 403 stops the run
   (exit code 2). Entries may shift between pages while the courts publish; a rerun picks up any miss.
 
+## Agency regulations
+
+The `agency` command collects agency regulations (myndighetsföreskrifter) from each agency's own
+register. There is no central database; lagrummet.se lists the series and links to the
+registers. Regulations carry no copyright (9 § upphovsrättslagen).
+
+```
+python3 -I collector/collect.py agency --series AFS|FFFS|TSFS [--series ...] [--year YYYY ...] \
+    [--number 'AFS 2023:1' ...] [--limit N] [--refresh] [--rate SECONDS] \
+    [--state collector/data/agency-state.json] [--manifest sources/agency-pdf-manifest.json] \
+    [--corpus corpus] [--report FILE]
+```
+
+Each series has a small adapter in `collector/lagar/agency.py` that lists the regulations
+(`listing_urls`, `parse_listing`) and parses one detail page (`parse_detail`); the shared run
+loop does robots.txt, rate limiting, state, PDF hashing and writing. Adding a series means
+adding an adapter and registering it in `ADAPTERS`.
+
+| series | listing | detail | text |
+| --- | --- | --- | --- |
+| AFS (Arbetsmiljöverket) | `https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/`, "Gällande grundföreskrifter" plus the amending regulations in force | `.../foreskrifter/afs-20231/` | HTML, the latest consolidated version |
+| FFFS (Finansinspektionen) | `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/` (all regulations in force, newest first) | `.../sok-fffs/<year>/<yearnumber>/` | PDF only |
+| TSFS (Transportstyrelsen) | `.../ts-foreskrifter-i-nummerordning/<year>/` (in force and repealed) | `.../<year>/details?RuleNumber=<year>:<n>&ruleprefix=TSFS` | PDF only |
+
+- Only base regulations (grundförfattningar) are stored, in `corpus/agency/regulations/`.
+  Amending regulations are counted as `excluded` and appear in the base regulation's
+  `amended_by` and in its body. FFFS uses the register's own type; TSFS uses the title
+  (`Föreskrifter om ändring/ändringar/upphävande ...`), and a TSFS page that shows another
+  regulation which lists the requested number as an amendment is excluded too. FI classes its
+  repealing regulations (`Föreskrifter om upphävande av ...`) as base regulations; they are kept.
+- Mapping: `id` is the slug of the number (`afs-2023-1`, `hslf-fs-2016-40`), `number` the
+  series-prefixed number (`AFS 2023:1`), `issuer` the agency, `language: sv`, `eli: null`,
+  `authoritative: false` (the printed series is authoritative). AFS: `issued` is "Beslutad",
+  `in_force` "Träder i kraft" (both only on pages of unamended regulations) and `amended_through`
+  the "Ändringar är införda till och med" note of consolidated pages. FFFS: `in_force` is
+  "Gäller från". TSFS: `in_force` and `repealed` come from the year listing and the base PDF
+  entry. `source` is the detail page and `source_sha256` hashes it as served.
+- Body: a facts block (series, issuer, dates, version), the agency's own summary when there is
+  one, the amending regulations (with entry into force and scope where published), links to the
+  PDFs, then the text. AFS text is converted from the page's HTML: section signs in bold,
+  "Allmänna råd" captions, lettered and roman list markers, tables flattened to one row per line
+  and footnotes collected under `## Fotnoter`. FFFS and TSFS publish the text only as PDF;
+  their bodies say so and link the official PDFs. PDF text is not extracted.
+- PDFs listed on a detail page are downloaded once to record `url`, `bytes`, `sha256`,
+  `content_type` and `retrieved_at` in the committed manifest `sources/agency-pdf-manifest.json`
+  (keyed by regulation number). A response that is not a PDF fails the regulation. The bytes are
+  never stored. AFS PDFs are not requested: the text comes from HTML, and Arbetsmiljöverket's
+  robots.txt disallows the folder with the original PDFs
+  (`/globalassets/filer/publikationer/foreskrifter/ursprungs/`).
+- robots.txt is read per host before anything else and checked for every URL: a disallowed
+  listing stops the run as blocked (exit code 2), a disallowed detail page fails that
+  regulation and a disallowed PDF is listed in the manifest without a hash. A `Crawl-delay`
+  raises the interval. `--rate` defaults to, and may not go below, 1 s. An HTTP 403 stops the run.
+- `--year` keeps regulations numbered in those years; for TSFS it also picks the year listings
+  to read (without it, every year on the index). `--number` picks single regulations. `--limit`
+  stops after N written documents per series (unchanged and skipped ones do not count).
+- State (git-ignored) is `{"done": {number: page sha256}, "failed": {number: error},
+  "blocked": null|msg}`. Done regulations are skipped while their file exists; `--refresh`
+  refetches them and hashes their PDFs again (a consolidated PDF can change behind the same
+  URL). A document whose body and frontmatter, apart from `fetched_at` and `source_sha256`, are
+  unchanged is left untouched, so page chrome changes do not churn the corpus.
+- `--report` writes `{"written": [...], "unchanged": n, "skipped": n, "excluded": n, "pdfs": n,
+  "failed": [...], "blocked": bool}`.
+
+Not yet collected: Boverket (BFS) has an official API with full text from 2024 on, which probably
+needs a subscription key from `api-portal.boverket.se` (owner decision). Skatteverket's
+`www4.skatteverket.se` rejected the robots.txt request (WAF), so access must be confirmed first.
+Arbetsmiljöverket's regulation API is in a closed evaluation and needs a key; the public HTML
+pages are used instead.
+## County regulations
+
+The `county` command collects one county's regulations (länets författningssamling, series
+`01FS`–`25FS`) from the shared site of the county administrative boards, `www.lansstyrelsen.se`.
+There is no API or open data set; the texts are free of copyright (9 § upphovsrättslagen).
+
+```
+python3 -I collector/collect.py county --county CODE [--from-year YYYY] [--to-year YYYY] \
+    [--newest-first] [--limit N] [--no-pdf] [--landing-url URL] [--rate SECONDS] \
+    [--state collector/data/county-state.json] [--manifest sources/county-pdf-manifest.json] \
+    [--corpus corpus] [--report FILE]
+```
+
+- `--county` (alias `--region`) is the county code, `01` (Stockholm) to `25` (Norrbotten); `01FS`
+  is accepted too. The run reads `robots.txt` first, then the county's landing page
+  (`/<slug>/om-oss/om-lansstyrelsen-<slug>/lanets-forfattningssamling.html`), which links one index
+  page per year (`.../forfattningar-<year>.html`), then each regulation's detail page. Years and
+  numbers are walked oldest first unless `--newest-first` is given. Only Stockholm has been checked
+  against the live site; `--landing-url` overrides the landing page for a county whose site differs.
+- Each URL is checked against `robots.txt` before it is requested; a disallowed URL or an HTTP 403
+  stops the run (exit code 2). `--rate` must be at least 1 second (the default).
+- Mapping (`county_regulation`, `layer: region`, `corpus/region/county-regulations/`): `number` is the
+  printed number with the leading zeros of the ordinal dropped (`01FS 2026:01` -> `01FS 2026:1`),
+  `id` its slug (`01fs-2026-1`). A number outside the requested county's series fails. `title` is
+  the page's ingress without the final period, `issued` the decision date ("Beslutat den ...") or,
+  when the page has none, the publication date ("Utkom från trycket den ..."). `in_force` is set
+  only when the text names exactly one date in "träder i kraft den ..."; `repealed` and the
+  amendment fields stay empty. `issuer` is "Länsstyrelsen i <county>", `region_code` the county
+  code. `source` is the detail page and `source_sha256` hashes its heading, ingress and text
+  fragments (the full page carries a per-request script nonce, so it is not hashed whole).
+- Body: a facts block (number, publication and decision dates, entry into force, issuer), the text
+  of the detail page converted to Markdown (lists and nested lists kept; links keep their text),
+  then `## Tryckt version` with links to the printed PDF. Regulations published only as PDF get a
+  one-line note instead of text. The PDFs are never parsed.
+- PDFs: a paragraph made only of PDF links is the regulation's own printed version; PDF links in
+  running text point at other regulations and are not followed. Each own PDF is downloaded once
+  (where `robots.txt` allows) to record its size and SHA-256 in the committed manifest
+  `sources/county-pdf-manifest.json` (entries `number`, `detail_url`, `published`, `files[]` with
+  `url`, `bytes`, `sha256`, `content_type`, `retrieved_at`); the bytes are not kept. `--no-pdf`
+  records the links with null hashes; a later run without it fills them.
+- As for case law, a text containing a personal identity number is recorded as failed.
+- State (git-ignored) is `{"done": {number: source_sha256}, "failed": {number: error}, "blocked":
+  null|msg}`; a regulation is skipped without a request when it is done and its file exists. A
+  document whose frontmatter (apart from `fetched_at`) and body are unchanged is left untouched.
+- `--limit` stops after N written documents (unchanged ones do not count). `--report` writes
+  `{"written": [...], "unchanged": n, "skipped": n, "failed": [...], "blocked": bool}`.
+
 ## Exit codes
 
 - 0: finished (failures are listed, not fatal)
-- 1: the listing or robots.txt could not be read, or the state file is corrupt
+- 1: the listing, list file or robots.txt could not be read, or the state file is corrupt
 - 2: blocked (HTTP 403 or robots.txt disallow); recorded in the state file
 
-These apply to `sfs` and `case-law`.
+These apply to `sfs`, `case-law` and `agency`.
+These apply to `sfs`, `case-law` and `county`.
 
 ## Tests
 

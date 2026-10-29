@@ -103,6 +103,9 @@ fun ReaderRoute(
     val state by viewModel.state.collectAsState()
     val bookmarks by store.bookmarks.collectAsState()
     val links by viewModel.linkedAmendments.collectAsState()
+    val cited by viewModel.crossReferences.collectAsState()
+    // The layer colors a cross-reference; a type the app does not place falls back to SFS acts.
+    val crossReferences = remember(cited) { cited.mapValues { (_, type) -> DisplayLayer.forType(type)?.key ?: LayerKey.SfsAct } }
     // Bookmarks saved before the dates were stored (or before a repeal) catch up when the document is read.
     LaunchedEffect(state) { (state as? LoadState.Loaded)?.value?.meta?.let { store.refresh(it.toBookmark()) } }
     ReaderScreen(
@@ -113,6 +116,7 @@ fun ReaderRoute(
         anchor = anchor,
         amendmentLinks = links,
         onResolveAmendmentLinks = viewModel::resolveAmendmentLinks,
+        crossReferences = crossReferences,
         onOpenDocument = onOpenDocument,
     )
 }
@@ -130,6 +134,7 @@ fun ReaderScreen(
     anchor: String? = null,
     amendmentLinks: Map<String, String> = emptyMap(),
     onResolveAmendmentLinks: (List<String>) -> Unit = {},
+    crossReferences: Map<String, LayerKey> = emptyMap(),
     onOpenDocument: (String) -> Unit = {},
 ) = BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
     val spacing = LagarTheme.spacing
@@ -255,11 +260,11 @@ fun ReaderScreen(
                                         } else {
                                             null
                                         },
-                                    ) { LegalMarkdown(block.trimEnd()) }
+                                    ) { LegalMarkdown(block.trimEnd(), crossReferences = crossReferences, onOpenDocument = onOpenDocument) }
                                 } else if (block.startsWith("#")) {
                                     LegalMarkdown(block.trimEnd(), Modifier.semantics { heading() })
                                 } else {
-                                    LegalMarkdown(block.trimEnd())
+                                    LegalMarkdown(block.trimEnd(), crossReferences = crossReferences, onOpenDocument = onOpenDocument)
                                 }
                             }
                         }

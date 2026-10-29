@@ -13,6 +13,8 @@
     <string name="drawer_about">Om appen</string>
     <string name="drawer_data_built">Data byggd %1$s</string>
     <string name="drawer_credits">Svensk lagstiftning, rättspraxis och offentliga tjänster på ett ställe.</string>
+    <string name="drawer_section_scope">Byt omfattning</string>
+    <string name="drawer_section_navigate">Navigering</string>
     <string name="settings_title">Inställningar</string>
     <string name="navigate_back">Tillbaka</string>
     <string name="repealed">Upphävd</string>
@@ -32,6 +34,32 @@
     <string name="hierarchy_view_layers">Lager</string>
     <string name="hierarchy_view_pyramid">Pyramid</string>
     <string name="hierarchy_hint">Högre upp i pyramiden betyder högre i normordningen.</string>
+    <string name="hierarchy_by_ministry">Per departement</string>
+    <string name="hierarchy_by_ministry_a11y">Bläddra bland %1$s per departement</string>
+    <plurals name="ministries_unassigned">
+        <item quantity="one">%1$d dokument saknar uppgift om departement.</item>
+        <item quantity="other">%1$d dokument saknar uppgift om departement.</item>
+    </plurals>
+    <string name="ministries_empty_title">Inga departement</string>
+    <string name="ministries_empty_text">Inget av dessa dokument har ett utfärdande departement i nuvarande data.</string>
+    <string name="layer_fundamental_authority">Överordnad</string>
+    <string name="layer_sfs_act_authority">Riksdag</string>
+    <string name="layer_sfs_ordinance_authority">Regering</string>
+    <string name="layer_agency_authority">Verk</string>
+    <string name="layer_case_law_authority">Prejudikat</string>
+    <string name="layer_eu_authority">Unionsakt</string>
+    <string name="layer_region_authority">Regional</string>
+    <string name="layer_municipality_authority">Kommunal</string>
+    <string name="layer_service_authority">Service</string>
+    <string name="layer_fundamental_examples">Regeringsformen, Tryckfrihetsförordningen, Yttrandefrihetsgrundlagen, Successionsordningen</string>
+    <string name="layer_sfs_act_examples">Brottsbalken, Miljöbalken, Rättegångsbalken, Skollagen</string>
+    <string name="layer_sfs_ordinance_examples">Trafikförordningen, Arbetsmiljöförordningen, Skatteförfarandeförordningen</string>
+    <string name="layer_agency_examples">Finansinspektionen (FFFS), Arbetsmiljöverket (AFS), Skatteverket (SKVFS)</string>
+    <string name="layer_case_law_examples">Högsta domstolen (NJA), Högsta förvaltningsdomstolen (HFD), Arbetsdomstolen (AD)</string>
+    <string name="layer_eu_examples">Dataskyddsförordningen (GDPR), AI-förordningen, direktiv och förordningar</string>
+    <string name="layer_region_examples">Länsstyrelsernas föreskrifter, regional kollektivtrafik</string>
+    <string name="layer_municipality_examples">Lokala ordningsföreskrifter, bygglov och detaljplaner</string>
+    <string name="layer_service_examples">E-tjänster för medborgare, kungörelser och register</string>
     <string name="meta_issued">Utfärdad</string>
     <string name="meta_status">Status</string>
     <string name="meta_in_force">I kraft</string>
@@ -96,6 +124,7 @@
     <string name="scope_region">Region</string>
     <string name="scope_kommun">Kommun</string>
     <string name="scope_national_desc">Grundlagar, lagar, förordningar och myndighetsföreskrifter</string>
+    <string name="scope_national_short">Hela Sverige</string>
     <string name="scope_region_desc">Regionala föreskrifter i Sveriges 21 regioner</string>
     <string name="scope_kommun_desc">Lokala föreskrifter i Sveriges 290 kommuner</string>
     <string name="scope_step_title">Välj ditt startområde</string>
@@ -110,6 +139,14 @@
     <string name="picker_search">Sök</string>
     <string name="picker_no_results">Inga träffar</string>
     <string name="picker_clear">Rensa</string>
+    <string name="location_use">Använd min plats</string>
+    <string name="location_locating">Hämtar din plats…</string>
+    <string name="location_private">Din position används bara på enheten för att föreslå en kommun. Den sparas inte.</string>
+    <string name="location_suggested">Föreslaget utifrån din plats: %1$s. Kontrollera och ändra nedan om det inte stämmer.</string>
+    <string name="location_denied">Lagar har inte tillgång till din plats. Tillåt det i systeminställningarna eller välj kommun nedan.</string>
+    <string name="location_unavailable">Det gick inte att hitta din plats. Kontrollera att platstjänster är på eller välj kommun nedan.</string>
+    <string name="location_timeout">Det tog för lång tid att hitta din plats. Försök igen eller välj kommun nedan.</string>
+    <string name="location_outside">Din plats verkar vara utanför Sverige. Välj kommun nedan.</string>
     <string name="home_hero_title">Sveriges %1$s – samlade och sökbara på ett ställe</string>
     <string name="home_hero_emphasis">lagar, förordningar och föreskrifter</string>
     <string name="home_hero_subtitle">Konsoliderade författningar från Riksdagens öppna data</string>
@@ -175,8 +212,6 @@
     <string name="advanced_dates_title">Utfärdad mellan</string>
     <string name="advanced_date_from">Från</string>
     <string name="advanced_date_to">Till</string>
-    <string name="advanced_date_placeholder">ÅÅÅÅ-MM-DD</string>
-    <string name="advanced_date_invalid">Ogiltigt datum</string>
     <string name="advanced_range_invalid">Från-datum efter till-datum</string>
     <string name="advanced_clear_range">Rensa intervall</string>
     <string name="advanced_types_title">Dokumenttyper</string>
@@ -235,4 +270,35 @@
     <string name="type_eu_decision">EU-beslut</string>
     <string name="type_county_regulation">Länsföreskrift</string>
     <string name="type_municipal_regulation">Kommunal föreskrift</string>
+    <string name="search_sort_label">Sortera efter</string>
+    <string name="search_sort_relevance">Relevans</string>
+    <string name="search_sort_newest">Nyast</string>
+    <string name="search_sort_number">Nummer</string>
+    <string name="search_match_body">Träff i texten</string>
+    <string name="advanced_scope_title">Omfattning</string>
+    <string name="advanced_mode_fulltext_note">Söker även i dokumentens text</string>
+    <string name="advanced_in_force_title">Ikraftträdande mellan</string>
+    <string name="advanced_in_force_note">Bara dokument med känt datum för ikraftträdande matchar dessa filter.</string>
+    <string name="advanced_vacatio_legis">Ännu inte i kraft (vacatio legis)</string>
+    <string name="advanced_date_choose">Välj ett datum</string>
+    <string name="advanced_section_active">Aktiv</string>
+    <string name="advanced_section_expanded">Utfälld</string>
+    <string name="advanced_section_collapsed">Ihopfälld</string>
+    <string name="date_picker_ok">OK</string>
+    <string name="date_picker_cancel">Avbryt</string>
+    <string name="date_display">%1$d %2$s %3$d</string>
+    <string-array name="months_short">
+        <item>jan.</item>
+        <item>feb.</item>
+        <item>mars</item>
+        <item>apr.</item>
+        <item>maj</item>
+        <item>juni</item>
+        <item>juli</item>
+        <item>aug.</item>
+        <item>sep.</item>
+        <item>okt.</item>
+        <item>nov.</item>
+        <item>dec.</item>
+    </string-array>
 </resources>

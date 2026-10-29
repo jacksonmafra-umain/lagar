@@ -13,6 +13,7 @@ internal object ShellDimens {
     val AvatarSize = 32.dp
     val DrawerLogoSize = 40.dp
     val Hairline = 1.dp
+    val ActiveBorder = 2.dp
     val TextGap = 2.dp
     val PillPaddingVertical = 6.dp
 

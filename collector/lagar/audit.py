@@ -68,6 +68,8 @@ def audit(corpus, generated_at=None, fsck=None):
             continue
         ids.setdefault(meta["id"], []).append(rel)
         numbers.add(meta["number"])
+        if meta.get("celex"):
+            numbers.add(meta["celex"])  # EU references are CELEX numbers
         expected = _rel(writer.path_for(meta, root), root)
         if expected != rel:
             path_mismatches.append({"path": rel, "expected": expected})

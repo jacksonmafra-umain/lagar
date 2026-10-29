@@ -2,12 +2,11 @@ package app.lagar.ui.search
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.lagar.data.Catalog
-import app.lagar.data.ListingItem
+import app.lagar.data.SearchService
 import app.lagar.domain.LoadState
 import app.lagar.domain.Scope
+import app.lagar.domain.SearchHit
 import app.lagar.domain.SearchQuery
-import app.lagar.domain.search
 import app.lagar.settings.UserPreferences
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.FlowPreview
@@ -20,28 +19,34 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 
 /**
- * Client-side search over the [Catalog] of the active scope. [update] is debounced; the first query
- * (from the route) runs at once. A query with no text and no filter, and any scope other than
- * Nationell (no documents yet), resolve to an empty result without touching the catalog, so the
- * catalog is only downloaded once the user actually searches.
+ * Search of the active scope through the [SearchService] (static index, or the catalog when the API has none).
+ * [update] is debounced; the first query (from the route) runs at once, and so does a change of sort only. A
+ * query with no text and no filter, and any scope other than Nationell (no documents yet), resolve to an empty
+ * result without downloading anything, so data is only fetched once the user actually searches.
  */
 class SearchViewModel(
-    private val catalog: Catalog,
+    private val service: SearchService,
     preferences: UserPreferences,
     initial: SearchQuery = SearchQuery(""),
 ) : ViewModel() {
     private val _query = MutableStateFlow(initial)
     val query: StateFlow<SearchQuery> = _query.asStateFlow()
 
-    private val _results = MutableStateFlow<LoadState<List<ListingItem>>>(LoadState.Loading)
-    val results: StateFlow<LoadState<List<ListingItem>>> = _results.asStateFlow()
+    private val _results = MutableStateFlow<LoadState<List<SearchHit>>>(LoadState.Loading)
+    val results: StateFlow<LoadState<List<SearchHit>>> = _results.asStateFlow()
 
     private val attempt = MutableStateFlow(0)
 
     init {
         viewModelScope.launch {
+            var previous = initial
+
             @OptIn(FlowPreview::class)
-            val debounced = _query.debounce { if (it === initial) 0 else DEBOUNCE_MS }
+            val debounced = _query.debounce {
+                val sortOnly = it == previous.copy(sort = it.sort)
+                previous = it
+                if (it === initial || sortOnly) 0 else DEBOUNCE_MS
+            }
             combine(debounced, preferences.scope, attempt) { query, scope, _ -> query to scope }
                 .collectLatest { (query, scope) -> run(query, scope) }
         }
@@ -56,10 +61,10 @@ class SearchViewModel(
             _results.value = LoadState.Loaded(emptyList())
             return
         }
-        // The first search of a scope downloads its whole catalog; show progress rather than stale results.
-        if (_results.value !is LoadState.Loaded || !catalog.isLoaded(scope)) _results.value = LoadState.Loading
+        // The first search downloads the document table (or the whole catalog); show progress rather than stale results.
+        if (_results.value !is LoadState.Loaded || !service.isWarm(scope)) _results.value = LoadState.Loading
         _results.value = try {
-            LoadState.Loaded(catalog.items(scope).search(query).distinctBy { it.id })
+            LoadState.Loaded(service.search(query, scope))
         } catch (e: CancellationException) {
             throw e
         } catch (_: Exception) {

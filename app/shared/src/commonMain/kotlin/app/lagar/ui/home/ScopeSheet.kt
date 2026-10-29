@@ -48,14 +48,15 @@ import org.koin.compose.koinInject
 /**
  * Switches the scope and the locality. Edits a local draft: "Klar" writes it to [UserPreferences] and
  * closes, dismissing the sheet discards it. Home collects the preference flows, so it reloads by itself.
+ * [initialScope] preselects a scope in the draft (the drawer opens the sheet this way to pick its locality).
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ScopeSheet(onDismiss: () -> Unit) {
+fun ScopeSheet(onDismiss: () -> Unit, initialScope: Scope? = null) {
     val preferences = koinInject<UserPreferences>()
     val repository = koinInject<LagarRepository>()
     val activeScope by preferences.scope.collectAsState()
-    var draftScope by remember { mutableStateOf(preferences.scope.value) }
+    var draftScope by remember { mutableStateOf(initialScope ?: preferences.scope.value) }
     var draftLocality by remember { mutableStateOf(preferences.locality.value) }
     // Counts are decoration: a failed index load just hides the badges.
     val counts by produceState<Map<Scope, Int>?>(null) {

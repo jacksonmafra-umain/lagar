@@ -1,0 +1,16 @@
+
+{ "head": { "link": [], "vars": ["field", "value"] },
+  "results": { "distinct": false, "ordered": true, "bindings": [
+    { "field": { "type": "literal", "value": "date_document" }	, "value": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#date", "value": "2016-04-27" }},
+    { "field": { "type": "literal", "value": "eli" }	, "value": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#anyURI", "value": "http://data.europa.eu/eli/reg/2016/679/oj" }},
+    { "field": { "type": "literal", "value": "in_force" }	, "value": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#boolean", "value": "1" }},
+    { "field": { "type": "literal", "value": "entry_into_force" }	, "value": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#date", "value": "2016-05-24" }},
+    { "field": { "type": "literal", "value": "entry_into_force" }	, "value": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#date", "value": "2018-05-25" }},
+    { "field": { "type": "literal", "value": "end_of_validity" }	, "value": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#date", "value": "9999-12-31" }},
+    { "field": { "type": "literal", "value": "agent" }	, "value": { "type": "uri", "value": "http://publications.europa.eu/resource/authority/corporate-body/CONSIL" }},
+    { "field": { "type": "literal", "value": "agent" }	, "value": { "type": "uri", "value": "http://publications.europa.eu/resource/authority/corporate-body/EP" }},
+    { "field": { "type": "literal", "value": "title_sv" }	, "value": { "type": "literal", "value": "Europaparlamentets och r\u00E5dets f\u00F6rordning (EU) 2016/679 av den 27 april 2016 om skydd f\u00F6r fysiska personer med avseende p\u00E5 behandling av personuppgifter och om det fria fl\u00F6det av s\u00E5dana uppgifter och om upph\u00E4vande av direktiv 95/46/EG (allm\u00E4n dataskyddsf\u00F6rordning) (Text av betydelse f\u00F6r EES)" }},
+    { "field": { "type": "literal", "value": "manifestation_sv" }	, "value": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#string", "value": "xhtml" }},
+    { "field": { "type": "literal", "value": "manifestation_sv" }	, "value": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#string", "value": "fmx4" }},
+    { "field": { "type": "literal", "value": "manifestation_sv" }	, "value": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#string", "value": "pdfa1a" }},
+    { "field": { "type": "literal", "value": "consolidated" }	, "value": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#string", "value": "02016R0679-20160504" }} ] } }

@@ -55,4 +55,18 @@ class SampleRepositoryTest {
         assertEquals(1, page.pageCount)
         assertTrue(page.items.isEmpty())
     }
+
+    @Test
+    fun everyBundledMinistryListingMatchesItsIndex() = runTest {
+        for (type in listOf("act", "ordinance")) {
+            val index = repository.ministries("sfs", type)
+            assertEquals(repository.listing("sfs", type, 1).total, index.total)
+            assertEquals(index.total, index.ministries.sumOf { it.count } + index.unassigned)
+            index.ministries.forEach { ministry ->
+                val page = repository.ministryListing("sfs", type, ministry.id, 1)
+                assertEquals(ministry.count, page.total, ministry.id)
+                assertTrue(page.items.all { it.ministry?.startsWith(ministry.name) == true }, ministry.id)
+            }
+        }
+    }
 }

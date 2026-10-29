@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -21,6 +22,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -28,10 +31,13 @@ import app.lagar.designsystem.LagarTheme
 import app.lagar.resources.Res
 import app.lagar.resources.coming_soon
 import app.lagar.resources.document_count
+import app.lagar.resources.hierarchy_by_ministry
+import app.lagar.resources.hierarchy_by_ministry_a11y
 import app.lagar.resources.ic_chevron_right
 import app.lagar.resources.layer_numbered_title
 import app.lagar.ui.common.LayerBadge
-import app.lagar.ui.common.descriptionRes
+import app.lagar.ui.common.authorityRes
+import app.lagar.ui.common.examplesRes
 import app.lagar.ui.common.iconColor
 import app.lagar.ui.common.iconRes
 import app.lagar.ui.common.level
@@ -41,17 +47,23 @@ import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 
 /**
- * A layer in the Lager list: icon on the solid layer color, "N. Name" title, one-line
- * description, and a badge with the document count or "coming soon". Title and description
- * wrap instead of truncating once the font scale passes [WRAP_FONT_SCALE].
+ * A layer in the Lager list, after the Swedish Stitch screen: icon on the solid layer color, "N. Name" title with
+ * the authority badge (Riksdag, Regering, ...), a line of well-known examples and the document count or "coming
+ * soon". When [onBrowseByMinistry] is given and the layer has documents, a "By ministry" pill opens the ministry
+ * view. Text wraps instead of truncating once the font scale passes [WRAP_FONT_SCALE].
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun LayerRow(summary: LayerSummary, onClick: () -> Unit, modifier: Modifier = Modifier) {
+fun LayerRow(
+    summary: LayerSummary,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    onBrowseByMinistry: (() -> Unit)? = null,
+) {
     val layers = LagarTheme.layers
     val key = summary.layer.key
     val accent = layers.accent(key)
-    val maxLines = if (LocalDensity.current.fontScale > WRAP_FONT_SCALE) Int.MAX_VALUE else 1
+    val maxLines = if (LocalDensity.current.fontScale > WRAP_FONT_SCALE) Int.MAX_VALUE else 2
     Surface(
         onClick = onClick,
         modifier = modifier.fillMaxWidth(),
@@ -73,6 +85,7 @@ fun LayerRow(summary: LayerSummary, onClick: () -> Unit, modifier: Modifier = Mo
             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 FlowRow(
                     horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
+                    verticalArrangement = Arrangement.spacedBy(2.dp),
                     itemVerticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
@@ -83,29 +96,59 @@ fun LayerRow(summary: LayerSummary, onClick: () -> Unit, modifier: Modifier = Mo
                         maxLines = maxLines,
                         overflow = TextOverflow.Ellipsis,
                     )
-                    CountBadge(summary)
+                    LayerBadge(summary.layer, stringResource(summary.layer.authorityRes()))
                 }
                 Text(
-                    text = stringResource(summary.layer.descriptionRes()),
+                    text = stringResource(summary.layer.examplesRes()),
                     style = LagarTheme.type.labelSm,
                     color = LagarTheme.colors.onSurfaceVariant,
                     maxLines = maxLines,
                     overflow = TextOverflow.Ellipsis,
                 )
+                FlowRow(
+                    horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
+                    verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.xs),
+                    itemVerticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        text = if (summary.count > 0) {
+                            pluralStringResource(Res.plurals.document_count, summary.count, summary.count)
+                        } else {
+                            stringResource(Res.string.coming_soon)
+                        },
+                        style = LagarTheme.type.labelSm,
+                        color = layers.onTint(key),
+                    )
+                    if (onBrowseByMinistry != null && summary.count > 0) {
+                        BrowseByMinistryPill(summary, onBrowseByMinistry)
+                    }
+                }
             }
             Icon(painterResource(Res.drawable.ic_chevron_right), contentDescription = null, tint = layers.onTint(key))
         }
     }
 }
 
+/** Secondary action of a layer row, a pill with its own 48dp touch target and a full spoken label. */
 @Composable
-private fun CountBadge(summary: LayerSummary) {
-    val label = if (summary.count > 0) {
-        pluralStringResource(Res.plurals.document_count, summary.count, summary.count)
-    } else {
-        stringResource(Res.string.coming_soon)
+private fun BrowseByMinistryPill(summary: LayerSummary, onClick: () -> Unit) {
+    val layers = LagarTheme.layers
+    val key = summary.layer.key
+    val description = stringResource(Res.string.hierarchy_by_ministry_a11y, stringResource(summary.layer.nameRes()))
+    Surface(
+        onClick = onClick,
+        modifier = Modifier.semantics { contentDescription = description },
+        shape = CircleShape,
+        color = LagarTheme.colors.surface.copy(alpha = 0.6f),
+        border = BorderStroke(1.dp, layers.border(key)),
+    ) {
+        Text(
+            text = stringResource(Res.string.hierarchy_by_ministry),
+            style = LagarTheme.type.labelSm,
+            color = layers.onTint(key),
+            modifier = Modifier.padding(horizontal = LagarTheme.spacing.sm, vertical = LagarTheme.spacing.xs),
+        )
     }
-    LayerBadge(summary.layer, label)
 }
 
 private const val WRAP_FONT_SCALE = 1.3f
