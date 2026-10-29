@@ -3902,6 +3902,538 @@
       ],
       "number": "10FS 2026:14",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 128061,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:33Z",
+          "sha256": "af33f3688e2d6ed184d7b3ef47d00a46df1e8b98c95a3d8952dce1535e0b09a7",
+          "url": "https://www.lansstyrelsen.se/download/18.2e51eb54194f024fb2246ce/1739271054474/FS%202025-01%20Naturreservat%20Hovdala.pdf"
+        }
+      ],
+      "number": "12FS 2025:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 2636664,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:34Z",
+          "sha256": "4930e11aa03cb931394fffdb56cf69dd5cf272e323a9454c7650e00c3c4537f5",
+          "url": "https://www.lansstyrelsen.se/download/18.2ace232419540c6a2c776f07/1776069324965/FS%202025-02%20Sammanst%C3%A4llning%20%C3%B6ver%20allm%C3%A4nna%20v%C3%A4gar%202025.pdf"
+        }
+      ],
+      "number": "12FS 2025:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 78347,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:35Z",
+          "sha256": "27e5ee27c0de4ba28ded1fc766ce73dc5e7a7990954d66d1d0fcbf3412a35c95",
+          "url": "https://www.lansstyrelsen.se/download/18.41d990d6195adccd5ad6886/1742472709821/FS%202025-03%20Kung%C3%B6relse%20om%20Trafikverket%20S%C3%B6dra%20regionens%20f%C3%B6reskrifter%20om%20%C3%A4ndrade%20%C3%B6ppningstider%20f%C3%B6r%20bro%20%C3%B6ver%20Falsterbokanalen%20p%C3%A5%20v%C3%A4g%20100%20i%20Vellinge%20kommun,%20Sk%C3%A5ne%20l%C3%A4n;.pdf"
+        }
+      ],
+      "number": "12FS 2025:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 20532,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:36Z",
+          "sha256": "d4297d1147b3f8dc192530ab2e6283f4a42410d649cb4d2b60baff436e07885e",
+          "url": "https://www.lansstyrelsen.se/download/18.75dc539919618cb34bbab/1744175293374/FS%202025-04%20Vattenskyddsomr%C3%A5de.pdf"
+        }
+      ],
+      "number": "12FS 2025:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 137021,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:37Z",
+          "sha256": "c7bd8aa120ec430255018be272438927382001073f66e179d8c30ec2e12fffc9",
+          "url": "https://www.lansstyrelsen.se/download/18.5d22726519618d6580a989ce/1745389357256/FS%202025-05%20Naturreservat%20Ilstorp%20Sj%C3%B6bo%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 22815,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:38Z",
+          "sha256": "dbabbd150ca245d1ee22da1f09096e56fd880640f32a92de61179949e58a8cec",
+          "url": "https://www.lansstyrelsen.se/download/18.5cfa956b1969f62b01b13957/1746599356783/FS%202025-06%20Kung%C3%B6relse%20om%20Trafikverket%20S%C3%B6dra%20regionen%20f%C3%B6reskrifter%20om%20%C3%B6ppningstider%20f%C3%B6r%20bro%20%C3%B6ver%20Falsterbokanalen%20p%C3%A5%20v%C3%A4g%20100%20i%20Vellinge%20kommun,%20Sk%C3%A5ne%20l%C3%A4n.pdf"
+        }
+      ],
+      "number": "12FS 2025:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 182207,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:39Z",
+          "sha256": "ced6a1a94668f3356bae2ef4de43c71f36f3a9b05b91f20ef09f5ca12a262fcc",
+          "url": "https://www.lansstyrelsen.se/download/18.57a931ed1975d3a7bbf8fc08/1750744852736/FS%202025-07%20Skytteskogens%20naturreservat%20Lunds%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 169268,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:40Z",
+          "sha256": "dfb8bc57e7b47b5ed3e2e43d0dced8029b7484b9e8d03aa332cbbfa985dccb5e",
+          "url": "https://www.lansstyrelsen.se/download/18.57a931ed1975d3a7bbf8fc09/1750744875014/FS%202025-08%20Billingem%C3%B6lla%20naturreservat%20Esl%C3%B6vs%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 155718,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:41Z",
+          "sha256": "c9b4b3d1d7081c53829688ce41e1df5bb66a20727513b9566d3e91364d3c9c18",
+          "url": "https://www.lansstyrelsen.se/download/18.57a931ed1975d3a7bbf8fc0a/1750744891406/FS%202025-09%20Fj%C3%A4restad%20Gantofta%20naturreservat%20%20Helsingborg%20stad.pdf"
+        }
+      ],
+      "number": "12FS 2025:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 194509,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:42Z",
+          "sha256": "b9c0313cf3c2985fc0277610416c2e41842990eb65b7c75d1511f18e2f00c921",
+          "url": "https://www.lansstyrelsen.se/download/18.58adacb11999e1200ff476ae/1759818555636/FS%202025-10%20Bj%C3%A4rnums%20naturreservat%20H%C3%A4ssleholm%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 176266,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:43Z",
+          "sha256": "570184f7d6c7a679344866e6d2a82f3b40145dde165aca227d9bcad08d059472",
+          "url": "https://www.lansstyrelsen.se/download/18.58adacb11999e1200ff476af/1759818605163/FS%202025-11%20%C3%85keboda%20naturreservat%20Kristianstads%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 172987,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:44Z",
+          "sha256": "de011607b0dd6a0ab4f61659fd14b1ac12b08925b7190ed893fd7e31518694ea",
+          "url": "https://www.lansstyrelsen.se/download/18.58adacb11999e1200ff476da/1759818653197/FS%202025-12%20Stora%20%C3%84sper%C3%B6ds%20naturreservat%20Simrishamns%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 152431,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:45Z",
+          "sha256": "e2a664006d3b849f75dcfbd18dacd9327915b04d47c0765b290a3f683498b8de",
+          "url": "https://www.lansstyrelsen.se/download/18.1dbc321a19ae2c62a0d36/1764742168855/FS%202025-13%20Naturreservat%20Allarps%20mosse%20K%C3%A4vlinge%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 583729,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:46Z",
+          "sha256": "9f6b82628640d6f1525c7635e5db7e760aef450e906647c2d9b358c5922eb4b1",
+          "url": "https://www.lansstyrelsen.se/download/18.2b90509c19afce1b93822afd/1765433439880/FS%202025-14%20Vattenkyddsomr%C3%A5de%20Idrottsplatsen,%20Malen,%20Axelstorp,%20B%C3%A5stads%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 638144,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:47Z",
+          "sha256": "99241eb1c2407390f864cc83481772580b7af2a5f6b1d08314bd9c239a108102",
+          "url": "https://www.lansstyrelsen.se/download/18.2b90509c19afce1b93822afe/1765433453713/FS%202025-15%20Vattenskyddsomr%C3%A5de%20Eskilstorp,%20B%C3%A5stad%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 183363,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:48Z",
+          "sha256": "38fd486b7332ed0799b4cf225e6f4e527cc49219d207a3c5f8243d66f8086b0e",
+          "url": "https://www.lansstyrelsen.se/download/18.4a69e05c19afcc7377361a7a/1765870657842/FS%202025-16%20Naturreservat%20-%20Geografisk%20ut%C3%B6kning%20L%C3%B6vestads%20%C3%A5sar%20-%20Sj%C3%B6bo%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:16",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 278766,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:49Z",
+          "sha256": "c6bb3f57c8300bd84de7567891048624191fb099f3a5046b562d973929b6e73c",
+          "url": "https://www.lansstyrelsen.se/download/18.4a69e05c19afcc7377361a7b/1765870665663/FS%202025-17%20Naturreservat%20-%20Utvidgning%20av%20G%C3%B6inge%C3%A5sen%20-%20H%C3%A4ssleholms%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:17",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 165660,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:50Z",
+          "sha256": "b403ff58f81b24def5a3a61c1ffa966efe11c281d04d11c1d0afa2552ba9bcc5",
+          "url": "https://www.lansstyrelsen.se/download/18.4a69e05c19afcc7377361a7c/1765870672216/FS%202025-18%20Naturreservat%20-%20Upph%C3%A4vande%20av%20f%C3%B6reskrift%20i%20Lund%C3%A5krabukten%20-%20Landskrona%20och%20K%C3%A4vlinge%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2025:18",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 177741,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:51Z",
+          "sha256": "0adaa8d422c53463b6694bfe61d1bb78c734d5983c58ecf5b60562e04228dee8",
+          "url": "https://www.lansstyrelsen.se/download/18.3310b5dd19bfec8bd5d21953/1769768699473/FS%202026-01%20%20Naturreservat%20-%20Warrag%C3%A5rden%20-%20Osby%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:1",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 216744,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:52Z",
+          "sha256": "58f72818218448312141076486ed7eece812f225afc07b5856eeeefe982c2c01",
+          "url": "https://www.lansstyrelsen.se/download/18.3310b5dd19bfec8bd5d2195b/1769768706494/FS%202026-02%20Naturreservat%20-%20Wan%C3%A5s%20-%20%20%C3%96stra%20G%C3%B6inge%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:2",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 148772,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:53Z",
+          "sha256": "26d6562218bf5cfd498553a649326ff1b0c18f487dde82f4467e7084d52762e5",
+          "url": "https://www.lansstyrelsen.se/download/18.8a2d3da19bf0cc568b6dfc0/1770036036386/FS%202026-03%20Naturreservat%20-%20Slottet%20-%20%20B%C3%A5stads%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:3",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 1437209,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:54Z",
+          "sha256": "6c99f7765739dbab3e0684c5ff48c2c98a1e8c024fee72bae2e00a7f02ea0218",
+          "url": "https://www.lansstyrelsen.se/download/18.54abb3519c93374c29c9158/1773324953460/FS%202026-04%20Sammanst%C3%A4llning%20%C3%B6ver%20allm%C3%A4nna%20v%C3%A4gar%202026.pdf"
+        }
+      ],
+      "number": "12FS 2026:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 114944,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:55Z",
+          "sha256": "882c2d9d02d9e64aead6de71f55aae4fdc6ea3387a8b6e00811cb3c7b932350a",
+          "url": "https://www.lansstyrelsen.se/download/18.54abb3519c93374c29c91cb/1773325061788/FS%202026-05%20Naturreservat%20-%20Sk%C3%A4rn%C3%A4s%20-%20Kristianstad%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:5",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 133634,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:56Z",
+          "sha256": "7705d518846157f97c368a3687d8d7aeff7ea5ba64bfe79a61ba68d0042d2693",
+          "url": "https://www.lansstyrelsen.se/download/18.51b8c30c19d05558bd82c27c/1774246975360/FS%202026-06%20Naturreservat%20-%20G%C3%B6rsl%C3%B6vs%C3%A5ns%20mader%20-%20H%C3%B6gan%C3%A4s%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:6",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 100863,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:57Z",
+          "sha256": "368ae96c3c2bd32eed29cf3462cc744d9d346af39631a564eea7efefd91b7488",
+          "url": "https://www.lansstyrelsen.se/download/18.66497dab19d24baa6fea77f/1774508045798/FS%202026-07%20Vattenskyddsomr%C3%A5de%20-%20Nedraby%20-%20Tomelilla%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:7",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 676637,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:58Z",
+          "sha256": "e414e225964325de5d3b8f84e619fe6d17e5906a9e17c5d891d53a040a42906d",
+          "url": "https://www.lansstyrelsen.se/download/18.5d397faa19e63389aaf207dc/1780035184387/FS%202026-08%20Sj%C3%B6trafik%20-%20Ystads%20yttre%20hamn%20-%20Ystads%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:8",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 136368,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:03:59Z",
+          "sha256": "42bd2d193aade1da5a7c87f5cbb974104473eb3888eab7cd7541428a474d4164",
+          "url": "https://www.lansstyrelsen.se/download/18.5d397faa19e63389aaf207df/1780035202329/FS%202026-09%20Trafikverket%20-%20%C3%96ppningstider%20f%C3%B6r%20bro%20%C3%B6ver%20Falsterbokanalen%20-%20Vellinge%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:9",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 138564,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:00Z",
+          "sha256": "1c0b358145a94daaebab6825f8e468ddcf9ed1f9e5cfbc0ca3cbcfec4b169855",
+          "url": "https://www.lansstyrelsen.se/download/18.4a0f037319ed42b23719148/1781761891296/FS%202026-10%20Naturreservat%20-%20Gryt%C3%A5sa%20-%20%20%C3%96rkelljunga%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:10",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 685552,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:01Z",
+          "sha256": "fce8cda9051691cd6140c475adf91a20ebacd55690e822d4c63eeaf31ff9b307",
+          "url": "https://www.lansstyrelsen.se/download/18.1611710c19ed44d0beabcaed/1782968504553/FS%202026-11%20Vattenskyddsomr%C3%A5de%20-%20%C3%96nnek%C3%B6p%20-%20H%C3%B6rby%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:11",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 141107,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:02Z",
+          "sha256": "92c6cd5e714ba49ae984c9c05fd3723145bfb89cc47d26a58d10758bbb1a08a9",
+          "url": "https://www.lansstyrelsen.se/download/18.4a0f037319ed42b2371f0df7/1783320005405/FS%202026-12%20Naturreservat%20-%20Vombs%20fure%20-%20Lunds%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:12",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 197459,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:03Z",
+          "sha256": "ee657bd4106d48cfb686408e5d294843d7c87108995530bbca02e58b66a51e85",
+          "url": "https://www.lansstyrelsen.se/download/18.73648de71a1156ad9118ac9/1791435418067/FS%202026-13%20Naturreservat%20-%20Holmag%C3%A5rd%20-%20H%C3%B6%C3%B6r%20kommun%20.pdf"
+        }
+      ],
+      "number": "12FS 2026:13",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 155358,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:04Z",
+          "sha256": "1f8269cc81429feea0f684c22eb2c0acf7fe91edbf7651956ea5ddbaf1ebdbf9",
+          "url": "https://www.lansstyrelsen.se/download/18.73648de71a1156ad9118aca/1791435429861/FS%202026-14%20Naturreservat%20-%20Fransas%20skog%20-%20Kristianstad%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:14",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 154594,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:05Z",
+          "sha256": "c88b1d57f34f6b0dc63019a7a6f6a87a0d84e5eb41dd0e813d4e31971e5d1b60",
+          "url": "https://www.lansstyrelsen.se/download/18.73648de71a1156ad9118acb/1791435445031/FS%202026-15%20Naturreservat%20-%20Hallands%C3%A5s%20nordsluttning%20-%20B%C3%A5stads%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:15",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 610258,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:06Z",
+          "sha256": "eb38fbb3470931fa74c95d4597f460dbd9c8d1051ddc2c2486e35655b0fda804",
+          "url": "https://www.lansstyrelsen.se/download/18.61e273f01a0ad97ad415f55a/1790256801085/FS%202026-16%20Vattenskyddsomr%C3%A5de%20-%20%C3%96stra%20Ljungby%20-%20Klippans%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:16",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 100591,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:07Z",
+          "sha256": "e9c6c6f0436e459648c0a5401c35e523b1ca5d5717b4f8f0c14ca0f6ad574f77",
+          "url": "https://www.lansstyrelsen.se/download/18.20950a901a0fb5fce1130b5e/1791265146519/FS%202026-17%20Undantag%20fr%C3%A5n%20f%C3%B6rbud%20mot%20k%C3%B6rning%20i%20terr%C3%A4ng.pdf"
+        }
+      ],
+      "number": "12FS 2026:17",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 158516,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:08Z",
+          "sha256": "718dd42c48ddf42c5f6b8589e5d8c8f895bbc0f8c9ccd60d40a82b1dd90ba3ed",
+          "url": "https://www.lansstyrelsen.se/download/18.48349df1a162ec751430d3e/1792995387216/FS%202026-18%20Naturreservat%20-%20Kungsmarken%20-%20Lunds%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:18",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 323808,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:09Z",
+          "sha256": "2a592db6d44d41b63a47a20dd2a3e25f3195ec5576f7e1754df72ab268289c8c",
+          "url": "https://www.lansstyrelsen.se/download/18.42ad5fec1a1631d6daf4beb3/1793167158519/FS%202026-19%20Sj%C3%B6trafik%20-%20Borstahusens%20hamn%20-%20Landskrona%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:19",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 177243,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T03:04:10Z",
+          "sha256": "3d19a4e3983d1f0a3439cabcbc44b119899c5ee94b8823fef670cf0df87fd746",
+          "url": "https://www.lansstyrelsen.se/download/18.42ad5fec1a1631d6daf4beb7/1793167175260/FS%202026-20%20Naturreservat%20-%20St%C3%A5ngby%20mosse%20-%20Lunds%20kommun.pdf"
+        }
+      ],
+      "number": "12FS 2026:20",
+      "published": null
     }
   ],
   "source": "https://www.lansstyrelsen.se",
