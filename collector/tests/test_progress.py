@@ -28,6 +28,13 @@ class ProgressTests(unittest.TestCase):
     def rows(self):
         return progress.build_rows(TARGETS, progress.count_types(self.root))
 
+    def test_other_layers_count_all_their_types(self):
+        counts = {"eu_regulation": 3, "eu_directive": 2, "act": 7}
+        targets = [{"layer": "eu", "type": None, "label": "EU", "target": 10, "kind": "curated",
+                    "source": "s", "as_of": "2026-10-29"}]
+        [row] = progress.build_rows(targets, counts)
+        self.assertEqual((row["collected"], row["percent"]), (5, 50.0))
+
     def test_design_colors_parsed(self):
         self.assertEqual(self.colors["sfs-act"], {"base": "#005b99", "text": "#005b99", "dark": "#9ecaff"})
         self.assertEqual(self.colors["case-law"]["base"], "#7a2e4d")
