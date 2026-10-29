@@ -5,6 +5,7 @@ import app.lagar.domain.count
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
 import kotlin.test.assertNull
 
 class ApiModelsTest {
@@ -69,6 +70,30 @@ class ApiModelsTest {
         assertEquals("Justitiedepartementet KRIM", doc.meta.ministry)
         assertEquals(false, doc.meta.authoritative)
         assertEquals("sv", doc.meta.language)
+    }
+
+    @Test
+    fun legacyDocumentWithoutAmendmentsStillDecodes() {
+        val legacy = Json.decodeFromString<DocumentResponse>(ApiExamples.legacyDocument)
+        assertNull(legacy.meta.amendments)
+        val current = json.decodeFromString<DocumentResponse>(ApiExamples.document)
+        assertEquals(legacy, current)
+    }
+
+    @Test
+    fun decodesTheAmendmentList() {
+        val meta = json.decodeFromString<DocumentResponse>(ApiExamples.documentWithAmendments).meta
+        assertEquals("1975-01-01", meta.inForce)
+        assertEquals(listOf("2011:109"), meta.reprintedBy)
+        val amendments = assertNotNull(meta.amendments)
+        assertEquals(listOf("1976:871", "2022:1600"), amendments.map { it.number })
+        assertEquals("Lag (1976:871) om ändring i regeringsformen", amendments[0].title)
+        assertEquals("ändr. 1 kap 9 §", amendments[0].scope)
+        assertEquals("Prop. 1975/76:209", amendments[0].preparatoryWorks)
+        assertNull(amendments[0].inForce)
+        assertEquals("2023-01-01", amendments[1].inForce)
+        assertEquals("2023-01-01 överg.best.", amendments[1].inForceRaw)
+        assertNull(amendments[1].title)
     }
 
     @Test

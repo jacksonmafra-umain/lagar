@@ -43,6 +43,10 @@ data class ListingItem(
     val ministry: String? = null,
 )
 
+/**
+ * Document metadata. [amendments] was added within API v1 and is null until the statute has been read from the
+ * SFS register; it and the other lists and dates default so that older payloads still decode.
+ */
 @Serializable
 data class DocumentMeta(
     val id: String,
@@ -51,11 +55,11 @@ data class DocumentMeta(
     val layer: String,
     val number: String,
     val issued: String?,
-    @SerialName("in_force") val inForce: String?,
+    @SerialName("in_force") val inForce: String? = null,
     val repealed: String?,
-    @SerialName("amended_by") val amendedBy: List<String>,
-    @SerialName("amended_through") val amendedThrough: String?,
-    @SerialName("reprinted_by") val reprintedBy: List<String>,
+    @SerialName("amended_by") val amendedBy: List<String> = emptyList(),
+    @SerialName("amended_through") val amendedThrough: String? = null,
+    @SerialName("reprinted_by") val reprintedBy: List<String> = emptyList(),
     val ministry: String?,
     val eli: String?,
     val language: String,
@@ -63,6 +67,19 @@ data class DocumentMeta(
     val source: String,
     @SerialName("source_sha256") val sourceSha256: String,
     @SerialName("fetched_at") val fetchedAt: String,
+    val amendments: List<Amendment>? = null,
+)
+
+/** One amending act from the SFS register, in register order. Only [number] is always set. */
+@Serializable
+data class Amendment(
+    val number: String,
+    val title: String? = null,
+    val scope: String? = null,
+    @SerialName("preparatory_works") val preparatoryWorks: String? = null,
+    val celex: String? = null,
+    @SerialName("in_force") val inForce: String? = null,
+    @SerialName("in_force_raw") val inForceRaw: String? = null,
 )
 
 @Serializable
