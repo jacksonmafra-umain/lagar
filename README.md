@@ -56,7 +56,7 @@ Screen-by-screen status is in [docs/screens.md](docs/screens.md).
 ## Documentation
 
 - [Progress](PROGRESS.md) and [coverage](COVERAGE.md)
-- [Agencies and sources](AGENCIES.md): which agencies, series and sources are processed, and why the others are not
+- [Agencies and sources](AGENCIES.md): which agencies, series and sources are processed, and why the others are not (also browsable on the [landing page](https://grundlagar.vercel.app/#catalog))
 - [Design system](DESIGN.md)
 - [App architecture](docs/architecture.md)
 - [API contract](docs/api.md)
