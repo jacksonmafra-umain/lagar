@@ -35,7 +35,8 @@ FIELD_TITLE = 1
 FIELD_NUMBER = 2
 FIELD_BODY = 4
 FIELDS = {"title": FIELD_TITLE, "number": FIELD_NUMBER, "body": FIELD_BODY}
-DOC_FIELDS = ("id", "title", "number", "type", "issued", "repealed")
+# Columns of docs.json; the locality codes were added within v1, after the original ones.
+DOC_FIELDS = ("id", "title", "number", "type", "issued", "repealed", "region_code", "municipality_code")
 _KEY_CHARS = frozenset("abcdefghijklmnopqrstuvwxyz0123456789")
 
 
@@ -100,7 +101,7 @@ def build_files(docs, built_at, with_body):
     files = {
         "search/docs.json": _dumps({
             "fields": list(DOC_FIELDS),
-            "docs": [[meta[k] for k in DOC_FIELDS] for meta, _ in docs],
+            "docs": [[meta.get(k) for k in DOC_FIELDS] for meta, _ in docs],
         }),
     }
     shard_list = []

@@ -60,8 +60,10 @@ class BuildTest(unittest.TestCase):
         self.assertEqual([i["id"] for i in page["items"]], ["sfs-2010-800", "sfs-1999-100"])
         self.assertEqual(
             list(page["items"][0]),
-            ["id", "title", "number", "type", "issued", "repealed", "in_force", "amended_through", "ministry"],
+            ["id", "title", "number", "type", "issued", "repealed", "in_force", "amended_through", "ministry",
+             "region_code", "municipality_code"],
         )
+        self.assertEqual((page["items"][0]["region_code"], page["items"][0]["municipality_code"]), (None, None))
 
     def test_listing_item_optional_fields(self):
         page = read(self.out, "sfs/index-1.json")
@@ -86,6 +88,9 @@ class BuildTest(unittest.TestCase):
     def test_empty_layer_page(self):
         page = read(self.out, "eu/index-1.json")
         self.assertEqual((page["items"], page["page_count"], page["total"]), ([], 1, 0))
+        # An empty locality layer still has its code index, with no codes.
+        self.assertEqual(read(self.out, "region/by-code/index.json"),
+                         {"layer": "region", "field": "region_code", "total": 0, "codes": []})
 
     def test_doc_file(self):
         text = (CORPUS / "sfs" / "acts" / "2010-800.md").read_text(encoding="utf-8")
@@ -315,6 +320,70 @@ class NewLayersTest(unittest.TestCase):
         self.assertEqual(read(self.out, "docs/eu-32016r0679.json")["meta"]["celex"], "32016R0679")
         self.assertEqual(read(self.out, "docs/nja-2019-2.json")["meta"]["court"], "HDO")
         self.assertEqual(read(self.out, "docs/0180-2024-12.json")["meta"]["municipality_code"], "0180")
+
+    def test_listing_items_carry_locality_codes(self):
+        for rel, codes in (
+            ("region/index-1.json", ("01", None)),
+            ("region/county_regulation/index-1.json", ("01", None)),
+            ("municipality/index-1.json", ("01", "0180")),
+            ("municipality/municipal_regulation/index-1.json", ("01", "0180")),
+        ):
+            with self.subTest(rel=rel):
+                item = read(self.out, rel)["items"][0]
+                self.assertEqual(list(item)[-2:], ["region_code", "municipality_code"])
+                self.assertEqual((item["region_code"], item["municipality_code"]), codes)
+        item = read(self.out, "agency/index-1.json")["items"][0]
+        self.assertEqual((item["region_code"], item["municipality_code"]), (None, None))
+
+    def test_by_code_listings(self):
+        self.assertEqual(read(self.out, "region/by-code/index.json"), {
+            "layer": "region", "field": "region_code", "total": 1, "codes": [{"code": "01", "count": 1}],
+        })
+        self.assertEqual(read(self.out, "municipality/by-code/index.json"), {
+            "layer": "municipality", "field": "municipality_code", "total": 1, "codes": [{"code": "0180", "count": 1}],
+        })
+        page = read(self.out, "municipality/by-code/0180/index-1.json")
+        self.assertEqual(list(page), ["layer", "type", "code", "page", "page_count", "total", "items"])
+        self.assertEqual((page["layer"], page["type"], page["code"], page["page_count"], page["total"]),
+                         ("municipality", None, "0180", 1, 1))
+        self.assertEqual([i["id"] for i in page["items"]], ["0180-2024-12"])
+        # Only the locality layers are grouped by code.
+        for layer in ("fundamental", "sfs", "agency", "case_law", "eu", "service"):
+            self.assertFalse((self.out / layer / "by-code").exists(), layer)
+
+    def test_by_code_groups_sort_and_page(self):
+        from lagar import writer
+        templates = {m["type"]: m for m in (frontmatter.load(p.read_text(encoding="utf-8"))[0]
+                                            for p in LAYERS_CORPUS.rglob("*.md"))}
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus = Path(tmp) / "corpus"
+            # 51 Stockholm county regulations (two pages) and 2 from Skåne.
+            for n in range(1, 52):
+                meta = dict(templates["county_regulation"], id=f"01fs-2024-{n}", number=f"01FS 2024:{n}")
+                writer.write(meta, "# T\n", corpus)
+            for n in (1, 2):
+                meta = dict(templates["county_regulation"], id=f"12fs-2024-{n}", number=f"12FS 2024:{n}", region_code="12")
+                writer.write(meta, "# T\n", corpus)
+            for code, region in (("0180", "01"), ("1280", "12"), ("1280", "12")):
+                n = len(list(corpus.rglob(f"{code}-*.md"))) + 1
+                meta = dict(templates["municipal_regulation"], id=f"{code}-2024-{n}", number=f"KFS 2024:{n}",
+                            region_code=region, municipality_code=code)
+                writer.write(meta, "# T\n", corpus)
+            out = Path(tmp) / "out"
+            result = run_build(out, corpus=corpus)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            index = read(out, "region/by-code/index.json")
+            self.assertEqual((index["total"], index["codes"]),
+                             (53, [{"code": "01", "count": 51}, {"code": "12", "count": 2}]))
+            first, second = read(out, "region/by-code/01/index-1.json"), read(out, "region/by-code/01/index-2.json")
+            self.assertEqual((first["page_count"], first["total"], len(first["items"]), len(second["items"])), (2, 51, 50, 1))
+            self.assertEqual(first["items"][0]["number"], "01FS 2024:51")
+            self.assertEqual(second["items"][0]["number"], "01FS 2024:1")
+            self.assertEqual([i["region_code"] for i in read(out, "region/by-code/12/index-1.json")["items"]], ["12", "12"])
+            self.assertEqual(read(out, "municipality/by-code/index.json")["codes"],
+                             [{"code": "0180", "count": 1}, {"code": "1280", "count": 2}])
+            self.assertEqual([i["number"] for i in read(out, "municipality/by-code/1280/index-1.json")["items"]],
+                             ["KFS 2024:2", "KFS 2024:1"])
 
     def _sorted_numbers(self, type_, numbers):
         from lagar import writer
