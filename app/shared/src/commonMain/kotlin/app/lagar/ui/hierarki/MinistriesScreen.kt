@@ -150,7 +150,7 @@ fun MinistriesScreen(
     }
 }
 
-/** A tier 1 glass card: a 3dp layer edge, the ministry name and its document count. */
+/** A tier 1 glass card with a 1dp layer border: the ministry name and its document count. */
 @Composable
 private fun MinistryRow(ministry: ApiMinistry, key: LayerKey, onClick: () -> Unit) {
     val layers = LagarTheme.layers
