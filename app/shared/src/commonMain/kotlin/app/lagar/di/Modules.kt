@@ -1,11 +1,13 @@
 package app.lagar.di
 
+import app.lagar.data.ApiSource
 import app.lagar.data.CachingRepository
 import app.lagar.data.Catalog
 import app.lagar.data.DataSourceConfig
 import app.lagar.data.GeoRepository
 import app.lagar.data.HttpRepository
 import app.lagar.data.LagarRepository
+import app.lagar.data.MinistryRepository
 import app.lagar.data.SampleRepository
 import app.lagar.domain.SearchQuery
 import app.lagar.settings.BookmarkStore
@@ -39,9 +41,9 @@ fun appModule(config: DataSourceConfig) = module {
             install(ContentNegotiation) { json(Json { ignoreUnknownKeys = true }) }
         }
     }
-    single<LagarRepository> {
-        CachingRepository(if (config.useSample) SampleRepository() else HttpRepository(get(), config.baseUrl))
-    }
+    single<ApiSource> { if (config.useSample) SampleRepository() else HttpRepository(get(), config.baseUrl) }
+    single<LagarRepository> { CachingRepository(get<ApiSource>()) }
+    single<MinistryRepository> { get<ApiSource>() }
     single { Settings() }
     single { UserPreferences(get()) }
     single { BookmarkStore(get()) }

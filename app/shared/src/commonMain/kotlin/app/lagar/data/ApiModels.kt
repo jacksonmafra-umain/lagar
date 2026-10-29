@@ -43,6 +43,20 @@ data class ListingItem(
     val ministry: String? = null,
 )
 
+/** `<layer>/<type>/by-ministry/index.json`: the type's documents grouped by issuing ministry. */
+@Serializable
+data class MinistryIndex(
+    val layer: String,
+    val type: String,
+    val total: Int,
+    val unassigned: Int,
+    val ministries: List<ApiMinistry>,
+)
+
+/** One issuing ministry: [id] names its listing folder, [name] is the ministry without a unit code. */
+@Serializable
+data class ApiMinistry(val id: String, val name: String, val count: Int)
+
 @Serializable
 data class DocumentMeta(
     val id: String,

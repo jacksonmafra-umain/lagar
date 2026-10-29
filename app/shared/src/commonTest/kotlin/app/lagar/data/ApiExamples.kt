@@ -86,4 +86,31 @@ object ApiExamples {
   "body": "# Rättsinformationsförordning (1999:175)\n\nEtt offentligt rättsinformationssystem\n\n**1 §** I syfte att tillförsäkra den offentliga förvaltningen och enskilda tillgång till grundläggande rättsinformation i elektronisk form skall det finnas ett offentligt rättsinformationssystem.\n"
 }
 """
+
+    val ordinanceMinistries = """
+{
+  "layer": "sfs",
+  "type": "ordinance",
+  "total": 2,
+  "unassigned": 1,
+  "ministries": [
+    {"id": "justitiedepartementet", "name": "Justitiedepartementet", "count": 1}
+  ]
+}
+"""
+
+    val ordinanceMinistryListing = """
+{
+  "layer": "sfs",
+  "type": "ordinance",
+  "ministry_id": "justitiedepartementet",
+  "ministry": "Justitiedepartementet",
+  "page": 1,
+  "page_count": 1,
+  "total": 1,
+  "items": [
+    {"id": "sfs-1999-175", "title": "Rättsinformationsförordning (1999:175)", "number": "1999:175", "type": "ordinance", "issued": "1999-03-25", "repealed": null, "in_force": null, "amended_through": "2026:851", "ministry": "Justitiedepartementet KRIM"}
+  ]
+}
+"""
 }
