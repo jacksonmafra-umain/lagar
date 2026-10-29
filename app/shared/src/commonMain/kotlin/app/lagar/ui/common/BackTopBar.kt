@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
@@ -34,6 +35,7 @@ import app.lagar.designsystem.glass
 import app.lagar.resources.Res
 import app.lagar.resources.ic_arrow_back
 import app.lagar.resources.navigate_back
+import app.lagar.ui.shell.LocalWideLayout
 import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
 import org.jetbrains.compose.resources.painterResource
@@ -49,7 +51,10 @@ internal fun rememberBackTopBarHeight(): MutableState<Dp> {
     return remember { mutableStateOf(seed) }
 }
 
-/** Glass top bar of the pushed screens: a back button followed by the caller's [title] content. */
+/**
+ * Glass top bar of the pushed screens: a back button followed by the caller's [title] content. On desktop the bar
+ * spans the window but its content lines up with the wide top bar's content width.
+ */
 @Composable
 internal fun BackTopBar(
     hazeState: HazeState,
@@ -60,28 +65,36 @@ internal fun BackTopBar(
 ) {
     val density = LocalDensity.current
     val colors = LagarTheme.colors
-    Row(
+    val spacing = LagarTheme.spacing
+    val wide = LocalWideLayout.current
+    Box(
         modifier = modifier
             .onSizeChanged { with(density) { onHeightChange(it.height.toDp()) } }
             .fillMaxWidth()
             .glass(GlassTier.Bar, hazeState)
-            .windowInsetsPadding(WindowInsets.statusBars)
-            .heightIn(min = ShellDimens.TopBarMinHeight)
-            .padding(horizontal = LagarTheme.spacing.gutterMobile),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm),
+            .windowInsetsPadding(WindowInsets.statusBars),
+        contentAlignment = Alignment.Center,
     ) {
-        val backDescription = stringResource(Res.string.navigate_back)
-        Box(
-            modifier = Modifier
-                .size(ShellDimens.TouchTarget)
-                .clip(CircleShape)
-                .clickable(role = Role.Button, onClick = onBack)
-                .semantics { contentDescription = backDescription },
-            contentAlignment = Alignment.Center,
+        Row(
+            modifier = (if (wide) Modifier.widthIn(max = ShellDimens.MaxContentWidth + spacing.margin * 2) else Modifier)
+                .fillMaxWidth()
+                .heightIn(min = ShellDimens.TopBarMinHeight)
+                .padding(horizontal = if (wide) spacing.margin else spacing.gutterMobile),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(spacing.sm),
         ) {
-            Icon(painterResource(Res.drawable.ic_arrow_back), contentDescription = null, tint = colors.onSurfaceVariant)
+            val backDescription = stringResource(Res.string.navigate_back)
+            Box(
+                modifier = Modifier
+                    .size(ShellDimens.TouchTarget)
+                    .clip(CircleShape)
+                    .clickable(role = Role.Button, onClick = onBack)
+                    .semantics { contentDescription = backDescription },
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(painterResource(Res.drawable.ic_arrow_back), contentDescription = null, tint = colors.onSurfaceVariant)
+            }
+            title()
         }
-        title()
     }
 }
