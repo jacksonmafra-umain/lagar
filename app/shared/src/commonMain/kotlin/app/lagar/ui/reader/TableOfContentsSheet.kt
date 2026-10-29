@@ -26,6 +26,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
@@ -38,6 +39,8 @@ import app.lagar.resources.Res
 import app.lagar.resources.reader_toc
 import app.lagar.resources.reader_toc_go_to
 import app.lagar.resources.reader_toc_preamble
+import app.lagar.ui.common.SheetShape
+import app.lagar.ui.common.sheetGlass
 import app.lagar.ui.shell.ShellDimens
 import org.jetbrains.compose.resources.stringResource
 
@@ -52,7 +55,9 @@ internal fun TableOfContentsSheet(outline: Outline, layer: LayerKey, onSelect: (
     val bottom = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     ModalBottomSheet(
         onDismissRequest = onDismiss,
-        containerColor = LagarTheme.colors.surfaceContainerLowest,
+        modifier = Modifier.sheetGlass(SheetShape),
+        shape = SheetShape,
+        containerColor = Color.Transparent,
         contentColor = LagarTheme.colors.onSurface,
     ) {
         Text(
