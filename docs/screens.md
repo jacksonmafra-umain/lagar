@@ -155,7 +155,7 @@ Route: `LayerList(layer, type?)`. Code: `ui/list/`.
 
 ## Reader
 
-Route: `Reader(id)`. Code: `ui/reader/`. References: DESIGN.md (Legal Text Cards, Typography) and architecture §4 flow 5.
+Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 §) scrolled to once the text loads. Web links: `?doc=<id>&p=<anchor>`. Code: `ui/reader/`. References: DESIGN.md (Legal Text Cards, Typography) and architecture §4 flow 5.
 
 | Feature | Status | Issue |
 | --- | --- | --- |
@@ -163,7 +163,9 @@ Route: `Reader(id)`. Code: `ui/reader/`. References: DESIGN.md (Legal Text Cards
 | Source Serif 4 legal text, bold Inter § numbers, reading column width | Done | |
 | § cards with the layer indicator, bookmark toggle, text selection | Done | |
 | Repealed banner and strikethrough | Missing | #21 |
-| Table of contents, chapter and § shortcuts, amendment list, § deep links | Missing | #26 |
+| Table of contents sheet: chapters and § chips, jump to a chapter or § | Done | #26 |
+| Amendment list under the header (register list, else `amended_by`; reprints), numbers link to documents the API has | Done | #26 |
+| Share links to the document and to each § (platform share sheet; Web Share API or clipboard on the web); `?doc=&p=` links open the reader at that § | Done | #26 |
 | Cross-reference links between statutes | Missing | #27 |
 | Inline notes | Missing | #28 |
 | Table of contents pane and metadata inspector on wide screens | Missing | #35 |

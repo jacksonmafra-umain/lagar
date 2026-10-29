@@ -73,7 +73,9 @@ defined in `DESIGN.md` but have no screen that needs them yet.
 | Scope sheet | `ui/home/ScopeSheet.kt` | M3 modal sheet, scope cards in layer `tint` / `border`, "Active" and "Coming soon" badges, region and kommun pickers, primary "Done" button |
 | Scope chip (top bar) | `ui/shell/TopBar.kt` | layer `tint` fill, `labelMd` bold in `onTint`, expand icon; opens the scope sheet |
 | Location card (Region / Kommun home) | `ui/home/HomeScreen.kt` | `shapes.large`, `surfaceContainerLowest`, 1dp layer `border`, `labelSm` label in `onTint`, `bodyUi` bold name |
-| § container (legal text card) | `StatuteContainer` in `ui/reader/LegalMarkdown.kt` | `surfaceContainerLowest` fill, 1dp `outlineVariant` border, `shapes.medium`, 3dp layer `accent` indicator, `bodyLegalMd` text, reading column width |
+| § container (legal text card) | `StatuteContainer` in `ui/reader/LegalMarkdown.kt` | `surfaceContainerLowest` fill, 1dp `outlineVariant` border, `shapes.medium`, 3dp layer `accent` indicator, `bodyLegalMd` text, reading column width, 48dp link action (20dp `onSurfaceVariant` icon) in the upper right |
+| Table of contents sheet | `ui/reader/TableOfContentsSheet.kt` | M3 modal sheet, `surfaceContainerLowest` container, `headlineMd` title, `headlineSm` chapter rows (48dp), § chips in layer `tint` / `border` with `labelMd` bold `onTint` text (`shapes.small`, 48dp targets) |
+| Amendment list | `ui/reader/AmendmentsSection.kt` | 48dp toggle with `labelMd` count and expand icon; rows with `codeCitation` number (`onTint` and underlined when it links), `labelSm` entry into force and scope in `onSurfaceVariant`, `bodyUi` title |
 | Empty state ("coming soon") | `ui/common/EmptyState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `onSurfaceVariant` icon, `headlineSm` title, `bodyUi` text in `onSurfaceVariant` |
 | Error state with retry | `ui/common/ErrorState.kt` (`StatusMessage`) | 64dp `surfaceContainerHigh` circle, `error` icon tint, `headlineSm` title, `bodyUi` text, M3 `Button` for retry |
 | "Coming soon" sheet | `ui/common/ComingSoonSheet.kt` | M3 modal sheet, `surfaceContainerLowest` container |
