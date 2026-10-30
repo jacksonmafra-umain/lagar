@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://sundsvall.se/kommun/kommun-och-politik/kommunfakta/regler-och-forfattningssamlingar/kommunal-forfattningssamling": "2281-listing.html"
+  },
+  "count": 18,
+  "sample": {
+    "number": "18.235b114b198e57425bc77a90",
+    "title": "Sundsvalls kommuns taxa för förskola fritidshem och pedagogisk omsorg 2025",
+    "url": "https://sundsvall.se/download/18.235b114b198e57425bc77a90/1734686456054/Sundsvalls%20kommuns%20taxa%20f%C3%B6r%20f%C3%B6rskola%20fritidshem%20och%20pedagogisk%20omsorg%202025.pdf"
+  },
+  "excluded": [
+    "Arbetsordning-for-Sundsvalls-kommunfullmaktige-rev-2020-12-21",
+    "Bolagsordning-Midlanda-Fastigheter-AB-13-05-06",
+    "Bolagsordning-Midlanda-Flygplats-AB-2013-05-06"
+  ]
+}

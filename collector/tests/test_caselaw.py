@@ -118,6 +118,30 @@ class CaseLawMappingTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             caselaw.report_number({"referatNummerLista": ["B 1234-25"]})
 
+    def test_kammarratt_referat_without_reference_get_court_date_and_case_number(self):
+        item = {
+            "id": "c8ceaaeb-4b68-4a0b-96ff-90522b97f7c7",
+            "domstol": {"domstolKod": "KJO", "domstolNamn": "Kammarrätten i Jönköping"},
+            "publiceringsform": "REFERAT",
+            "typ": "VAGLEDANDE_MEN_EJ_PREJUDICERANDE",
+            "avgorandedatum": "2007-01-09",
+            "malNummerLista": ["1097-06"],
+            "referatNummerLista": [],
+            "sammanfattning": "Grannemedgivande gäller även efter att grannfastigheten bytt ägare.",
+        }
+        meta = caselaw.build_meta(item, "0" * 64, "2026-10-30T00:00:00Z")
+        self.assertEqual(meta["number"], "KRNJ 2007-01-09 mål nr 1097-06")
+        self.assertEqual(meta["id"], "krnj-2007-01-09-mal-nr-1097-06")
+        self.assertEqual(schema.validate(meta), [])
+        for court, series in (("KGG", "KRNG"), ("KST", "KRNS"), ("KSU", "KRSU")):
+            other = dict(item, domstol={"domstolKod": court})
+            self.assertTrue(caselaw.report_number(other).startswith(series + " 2007-01-09"))
+        # Other courts, notiser and items without a usable case number still fail.
+        for bad in (dict(item, domstol={"domstolKod": "HDO"}), dict(item, publiceringsform="NOTIS"),
+                    dict(item, malNummerLista=["B 1234-25"]), dict(item, avgorandedatum=None)):
+            with self.assertRaises(ValueError):
+                caselaw.report_number(bad)
+
     def test_only_referat_and_notis_are_stored(self):
         self.assertEqual(caselaw.corpus_type(NJA), "case_report")
         self.assertEqual(caselaw.corpus_type(HFD_NOT), "case_notice")

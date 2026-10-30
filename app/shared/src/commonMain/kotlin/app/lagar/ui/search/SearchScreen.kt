@@ -14,14 +14,17 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.BasicTextField
@@ -32,9 +35,11 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
@@ -106,6 +111,8 @@ import app.lagar.ui.list.StatuteRow
 import app.lagar.ui.list.StatuteRowPair
 import app.lagar.ui.navigation.Search
 import app.lagar.ui.onboarding.nameRes
+import app.lagar.ui.reader.ReaderRoute
+import app.lagar.ui.shell.LocalDetailPane
 import app.lagar.ui.shell.LocalWideLayout
 import app.lagar.ui.shell.ShellDimens
 import app.lagar.ui.shell.wideListPadding
@@ -136,6 +143,7 @@ fun SearchRoute(
     val locality by preferences.locality.collectAsState()
     val localityName by produceState<String?>(null, scope, locality) { value = localityName(geo, scope, locality) }
     var showScopeSheet by rememberSaveable { mutableStateOf(false) }
+    var opened by rememberSaveable { mutableStateOf<String?>(null) }
     SearchScreen(
         query = query,
         results = results,
@@ -149,6 +157,9 @@ fun SearchRoute(
         onChangeScope = { showScopeSheet = true },
         onSearchNationell = { preferences.setScope(Scope.Nationell) },
         focusRequests = focusRequests,
+        opened = opened,
+        onSelect = { opened = it },
+        detail = { id -> ReaderRoute(id = id, onBack = {}, onOpenDocument = onOpenDocument) },
     )
     if (showScopeSheet) ScopeSheet(onDismiss = { showScopeSheet = false })
 }
@@ -158,6 +169,9 @@ fun SearchRoute(
  * is a Region or Kommun scope without its län or kommun: there is nothing to search until one is chosen. The
  * searched scope shows as a chip above the results ([onChangeScope] opens the scope sheet); a Region or Kommun
  * search without results offers [onSearchNationell].
+ *
+ * On desktop, when [detail] is given, a result opens beside the list instead of being pushed: the two-column grid
+ * gives way to a single column of [ShellDimens.SearchListPaneWidth] and the [opened] document fills the rest.
  */
 @Composable
 fun SearchScreen(
@@ -173,6 +187,9 @@ fun SearchScreen(
     onChangeScope: () -> Unit,
     onSearchNationell: () -> Unit,
     focusRequests: Int = 0,
+    opened: String? = null,
+    onSelect: (String) -> Unit = onOpenDocument,
+    detail: (@Composable (String) -> Unit)? = null,
 ) {
     val spacing = LagarTheme.spacing
     val hazeState = remember { HazeState() }
@@ -180,58 +197,92 @@ fun SearchScreen(
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
     val centered = Modifier.fillMaxSize().padding(top = headerHeight)
     val wide = LocalWideLayout.current
+    val inPane = wide && detail != null
+    val open = if (inPane) onSelect else onOpenDocument
 
-    // On desktop the results fill two columns within the content width.
+    // On desktop the results fill two columns within the content width, or one beside the opened result.
     BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
         val side = if (wide) wideListPadding(maxWidth, spacing.margin) else spacing.marginMobile
+        val split = inPane && opened != null
         val state = if (localityMissing) LoadState.Loaded(emptyList()) else results
-        when (state) {
-            LoadState.Loading -> Box(centered, contentAlignment = Alignment.Center) { CircularProgressIndicator() }
-            is LoadState.Failed -> Box(centered, contentAlignment = Alignment.Center) { ErrorState(onRetry = state.retry) }
-            is LoadState.Loaded -> LazyColumn(
-                modifier = Modifier.fillMaxSize().hazeSource(hazeState),
-                contentPadding = PaddingValues(
-                    start = side,
-                    end = side,
-                    top = headerHeight + spacing.xs,
-                    bottom = bottomInset + spacing.md,
-                ),
-                verticalArrangement = Arrangement.spacedBy(spacing.sm),
-            ) {
-                val showCount = !localityMissing && query.isActive && state.value.isNotEmpty()
-                item(key = "summary") {
-                    SummaryRow(
-                        count = state.value.size.takeIf { showCount },
-                        scope = scope,
-                        scopeLabel = scopeLabel(scope, localityName),
-                        onChangeScope = onChangeScope,
-                        onOpenAdvancedSearch = onOpenAdvancedSearch,
-                    )
-                }
-                when {
-                    localityMissing -> item(key = "state") {
-                        EmptyState(Res.drawable.ic_info, stringResource(Res.string.home_choose_location), stringResource(Res.string.home_locality_choose_text))
-                    }
-                    !query.isActive -> item(key = "state") {
-                        EmptyState(Res.drawable.ic_search, stringResource(Res.string.search_prompt_title), stringResource(Res.string.search_prompt_text))
-                    }
-                    state.value.isEmpty() && scope != Scope.Nationell -> item(key = "state") {
-                        ScopedEmptyState(localityName ?: stringResource(scope.nameRes()), onSearchNationell)
-                    }
-                    state.value.isEmpty() -> item(key = "state") {
-                        EmptyState(Res.drawable.ic_search, stringResource(Res.string.search_no_results_title), stringResource(Res.string.search_no_results_text))
-                    }
-                    else -> {
-                        item(key = "sort") {
-                            SortRow(query.sort, scope) { onQueryChange(query.copy(sort = it)) }
+        val listState = rememberLazyListState()
+        // The grid's rows hold two results, the single column one: keep the opened result in view when it opens.
+        LaunchedEffect(split) {
+            val hits = (state as? LoadState.Loaded)?.value ?: return@LaunchedEffect
+            val index = hits.indexOfFirst { it.item.id == opened }
+            if (split && index >= 0) listState.scrollToItem(index + LEADING_ITEMS)
+        }
+        Row(Modifier.fillMaxSize().padding(horizontal = if (split) side else 0.dp)) {
+            Box(if (split) Modifier.width(ShellDimens.SearchListPaneWidth).fillMaxHeight() else Modifier.weight(1f).fillMaxHeight()) {
+                when (state) {
+                    LoadState.Loading -> Box(centered, contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+                    is LoadState.Failed -> Box(centered, contentAlignment = Alignment.Center) { ErrorState(onRetry = state.retry) }
+                    is LoadState.Loaded -> LazyColumn(
+                        state = listState,
+                        modifier = Modifier.fillMaxSize().hazeSource(hazeState),
+                        contentPadding = PaddingValues(
+                            start = if (split) 0.dp else side,
+                            end = if (split) 0.dp else side,
+                            top = headerHeight + spacing.xs,
+                            bottom = bottomInset + spacing.md,
+                        ),
+                        verticalArrangement = Arrangement.spacedBy(spacing.sm),
+                    ) {
+                        val showCount = !localityMissing && query.isActive && state.value.isNotEmpty()
+                        item(key = "summary") {
+                            SummaryRow(
+                                count = state.value.size.takeIf { showCount },
+                                scope = scope,
+                                scopeLabel = scopeLabel(scope, localityName),
+                                onChangeScope = onChangeScope,
+                                onOpenAdvancedSearch = onOpenAdvancedSearch,
+                            )
                         }
-                        // On desktop the results fill two columns.
-                        if (wide) {
-                            items(state.value.chunked(STATUTE_COLUMNS), key = { it.first().item.id }) { pair ->
-                                StatuteRowPair(pair) { hit, modifier -> SearchHitRow(hit, query.text, onOpenDocument, modifier) }
+                        when {
+                            localityMissing -> item(key = "state") {
+                                EmptyState(Res.drawable.ic_info, stringResource(Res.string.home_choose_location), stringResource(Res.string.home_locality_choose_text))
                             }
-                        } else {
-                            items(state.value, key = { it.item.id }) { hit -> SearchHitRow(hit, query.text, onOpenDocument) }
+                            !query.isActive -> item(key = "state") {
+                                EmptyState(Res.drawable.ic_search, stringResource(Res.string.search_prompt_title), stringResource(Res.string.search_prompt_text))
+                            }
+                            state.value.isEmpty() && scope != Scope.Nationell -> item(key = "state") {
+                                ScopedEmptyState(localityName ?: stringResource(scope.nameRes()), onSearchNationell)
+                            }
+                            state.value.isEmpty() -> item(key = "state") {
+                                EmptyState(Res.drawable.ic_search, stringResource(Res.string.search_no_results_title), stringResource(Res.string.search_no_results_text))
+                            }
+                            else -> {
+                                item(key = "sort") {
+                                    SortRow(query.sort, scope) { onQueryChange(query.copy(sort = it)) }
+                                }
+                                // On desktop the results fill two columns.
+                                if (wide && !split) {
+                                    items(state.value.chunked(STATUTE_COLUMNS), key = { it.first().item.id }) { pair ->
+                                        StatuteRowPair(pair) { hit, modifier -> SearchHitRow(hit, query.text, open, modifier) }
+                                    }
+                                } else {
+                                    items(state.value, key = { it.item.id }) { hit -> SearchHitRow(hit, query.text, open) }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if (split && opened != null && detail != null) {
+                Box(
+                    Modifier
+                        .weight(1f)
+                        .fillMaxHeight()
+                        .padding(start = spacing.md, top = headerHeight + spacing.sm, bottom = bottomInset + spacing.md)
+                        .clip(MaterialTheme.shapes.large),
+                ) {
+                    // The reader keeps its desktop panes only when the pane itself is desktop wide.
+                    BoxWithConstraints {
+                        CompositionLocalProvider(
+                            LocalDetailPane provides true,
+                            LocalWideLayout provides (maxWidth >= ShellDimens.WideBreakpoint),
+                        ) {
+                            key(opened) { detail(opened) }
                         }
                     }
                 }
@@ -444,3 +495,6 @@ private fun SearchInput(
         searchShortcutHint()?.let { ShortcutHint(it) }
     }
 }
+
+/** Rows above the results in the list: the summary and the sort row. */
+private const val LEADING_ITEMS = 2

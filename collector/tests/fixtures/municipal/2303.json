@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.ragunda.se/kommunochpolitik/politikochmoten/kommunensforeskrifter.1033.html": "2303-listing.html"
+  },
+  "count": 17,
+  "sample": {
+    "number": "18.1d2806cb1877920d953c621",
+    "title": "Lokala ordningsföreskrifter",
+    "url": "https://www.ragunda.se/download/18.1d2806cb1877920d953c621/1681738964556/Lokala%20ordningsfo%CC%88reskrifter.pdf"
+  },
+  "excluded": [
+    "Mål - Ragunda mitt i",
+    "Kommunstyrelsens verksamhetsplan 2026",
+    "Kommunstyrelsens verksamhetsplan 2025"
+  ]
+}

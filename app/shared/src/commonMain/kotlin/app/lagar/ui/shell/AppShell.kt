@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.rememberDrawerState
@@ -125,9 +126,14 @@ fun AppShell(
     val density = LocalDensity.current
     var topBarPx by remember { mutableStateOf(0) }
     var bottomBarPx by remember { mutableStateOf(0) }
+    var railPx by remember { mutableStateOf(0) }
     var widthPx by remember { mutableStateOf(0) }
-    val wide = with(density) { widthPx.toDp() } >= ShellDimens.WideBreakpoint
-    val padding = with(density) { PaddingValues(top = topBarPx.toDp(), bottom = if (wide) 0.dp else bottomBarPx.toDp()) }
+    val widthClass = WindowWidthClass.of(with(density) { widthPx.toDp() })
+    val wide = widthClass == WindowWidthClass.Expanded
+    val rail = widthClass == WindowWidthClass.Medium && selectedTab != null
+    // The rail sits beside the tab screens rather than over them, so they keep their full-width layouts.
+    val railInset = if (rail) with(density) { railPx.toDp() } else 0.dp
+    val padding = with(density) { PaddingValues(top = topBarPx.toDp(), bottom = if (wide || rail) 0.dp else bottomBarPx.toDp()) }
 
     // A second tap during the transition would push a duplicate entry; only navigate from a settled screen.
     fun navigateWhenResumed(route: Any, builder: NavOptionsBuilder.() -> Unit = {}) {
@@ -242,11 +248,12 @@ fun AppShell(
                 CompositionLocalProvider(
                     LocalShellPadding provides if (selectedTab != null) padding else PaddingValues(),
                     LocalWideLayout provides wide,
+                    LocalWindowWidthClass provides widthClass,
                 ) {
                     NavHost(
                         navController = navController,
                         startDestination = Splash,
-                        modifier = Modifier.fillMaxSize().hazeSource(hazeState),
+                        modifier = Modifier.fillMaxSize().padding(start = railInset).hazeSource(hazeState),
                     ) {
                         composable<Splash> {
                             SplashRoute(onLoaded = {
@@ -291,6 +298,7 @@ fun AppShell(
                                 onBrowseByMinistry = { layer ->
                                     layer.apiType?.let { navigateWhenResumed(Ministries(layer.apiLayer, it)) }
                                 },
+                                onOpenDocument = { navigateWhenResumed(Reader(it)) },
                             )
                         }
                         composable<Sparade> { SparadeRoute(onOpen = { id, anchor -> navigateWhenResumed(Reader(id, anchor)) }) }
@@ -367,14 +375,26 @@ fun AppShell(
                         onOpenSearch = { navigateWhenResumed(Search()) },
                         scope = activeScope,
                         onOpenScopeSheet = { showScopeSheet = true },
-                        modifier = Modifier.align(Alignment.TopCenter).onSizeChanged { topBarPx = it.height },
+                        modifier = Modifier
+                            .align(Alignment.TopCenter)
+                            .padding(start = railInset)
+                            .onSizeChanged { topBarPx = it.height },
                     )
-                    LagarBottomBar(
-                        selected = selectedTab,
-                        hazeState = hazeState,
-                        onSelect = ::selectTab,
-                        modifier = Modifier.align(Alignment.BottomCenter).onSizeChanged { bottomBarPx = it.height },
-                    )
+                    if (rail) {
+                        LagarNavigationRail(
+                            selected = selectedTab,
+                            hazeState = hazeState,
+                            onSelect = ::selectTab,
+                            modifier = Modifier.align(Alignment.CenterStart).onSizeChanged { railPx = it.width },
+                        )
+                    } else {
+                        LagarBottomBar(
+                            selected = selectedTab,
+                            hazeState = hazeState,
+                            onSelect = ::selectTab,
+                            modifier = Modifier.align(Alignment.BottomCenter).onSizeChanged { bottomBarPx = it.height },
+                        )
+                    }
                 }
                 if (showScopeSheet) {
                     ScopeSheet(

@@ -104,7 +104,7 @@ class Args:
 class ConfigTest(unittest.TestCase):
     def test_pilot_config_loads(self):
         config = municipal.load_config(CONFIG)
-        self.assertEqual(sorted(config), ["0180", "1280", "1480"])
+        self.assertLessEqual({"0180", "1280", "1480"}, set(config))
         self.assertEqual(config["1480"].strategy, "domino_view")
 
     def write(self, tmp, kommuner):
@@ -321,6 +321,22 @@ class MalmoTest(unittest.TestCase):
             manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
             self.assertEqual(manifest["documents"], [])
             self.assertEqual(len(manifest["gaps"]), 2)
+
+
+class RawLinkTest(unittest.TestCase):
+    def test_spaces_and_letters_in_links_are_percent_encoded(self):
+        listing = (
+            '<h2>Reglerande styrdokument</h2><a href="/globalassets/start/kommunal-forfattningssamling/'
+            'kfs 2024 Avfallstaxa för Stockholm.pdf">Avfallstaxa KFS 2024:3</a>'
+        ).encode()
+        entries, problems = municipal.parse_html_index(kommun("0180"), listing, STHLM_URL)
+        self.assertEqual(problems, [])
+        self.assertEqual(
+            entries[0].url,
+            "https://start.stockholm/globalassets/start/kommunal-forfattningssamling/"
+            "kfs%202024%20Avfallstaxa%20f%C3%B6r%20Stockholm.pdf",
+        )
+        self.assertEqual(entries[0].number, "KFS 2024:3")
 
 
 class GoteborgTest(unittest.TestCase):

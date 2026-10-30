@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.stromsund.se/733.html": "2313-listing1.html",
+    "https://www.stromsund.se/1472.html": "2313-listing2.html"
+  },
+  "count": 9,
+  "sample": {
+    "number": "18.60e2e10e1572b72bf31d04bc",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.stromsund.se/download/18.60e2e10e1572b72bf31d04bc/1475671685753/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20(1_1).pdf"
+  },
+  "excluded": []
+}

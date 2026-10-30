@@ -13,6 +13,10 @@ snapshots and writing. Pilot series:
 - TSFS (Transportstyrelsen): a year listing and a detail page per regulation
   with the base, consolidated and amending PDFs.
 
+Series whose official page is a plain list of links to the regulation PDFs need
+no code: `collector/data/agency-series.json` lists them, and `ListedAdapter`
+reads every regulation, its amendments and consolidated versions from the links.
+
 Only base regulations (grundförfattningar) are stored; amending regulations are
 listed in the base regulation's `amended_by`. PDFs are downloaded once to record
 their SHA-256 in a manifest; their text is not extracted, so a regulation that is
@@ -41,6 +45,7 @@ from .writer import existing_path, path_for, write
 
 DEFAULT_STATE = "collector/data/agency-state.json"
 DEFAULT_MANIFEST = "sources/agency-pdf-manifest.json"
+SERIES_CONFIG = Path(__file__).resolve().parents[1] / "data" / "agency-series.json"
 MANIFEST_VERSION = 1
 TYPE = "agency_regulation"
 MIN_RATE = 1.0
@@ -63,7 +68,8 @@ class ListingError(Exception):
 
 
 def _clean(value):
-    return _SPACE.sub(" ", (value or "").replace(" ", " ")).strip()
+    value = (value or "").replace("\u00a0", " ").replace("\u00ad", "").replace("\u200b", "")
+    return _SPACE.sub(" ", value).strip()
 
 
 def _date(text):
@@ -77,8 +83,12 @@ def number_key(number):
 
 
 def corpus_id(number):
-    """`AFS 2023:1` -> `afs-2023-1`, `HSLF-FS 2016:40` -> `hslf-fs-2016-40`."""
-    slug = number.lower().translate(str.maketrans({"å": "a", "ä": "a", "ö": "o"}))
+    """`AFS 2023:1` -> `afs-2023-1`, `HSLF-FS 2016:40` -> `hslf-fs-2016-40`.
+
+    `å` becomes `aa`, so Åklagarmyndigheten's `ÅFS 2023:7` (`aafs-2023-7`) does
+    not collide with Arbetsmiljöverket's `AFS 2023:7`.
+    """
+    slug = number.lower().translate(str.maketrans({"å": "aa", "ä": "a", "ö": "o"}))
     return re.sub(r"[^0-9a-z]+", "-", slug).strip("-")
 
 
@@ -190,6 +200,7 @@ class Entry:
     in_force: "str | None" = None
     repealed: "str | None" = None
     amended_by: "list[str]" = field(default_factory=list)
+    pdfs: "list[tuple[str, str]]" = field(default_factory=list)  # listed series: (label, url)
 
 
 @dataclass
@@ -353,6 +364,7 @@ def afs_text(provision):
 
 
 class AfsAdapter:
+    detail = True
     series = "AFS"
     issuer = "Arbetsmiljöverket"
     base_url = "https://www.av.se"
@@ -437,6 +449,7 @@ class AfsAdapter:
 # --- Finansinspektionen (FFFS) ---------------------------------------------
 
 class FffsAdapter:
+    detail = True
     series = "FFFS"
     issuer = "Finansinspektionen"
     base_url = "https://www.fi.se"
@@ -528,6 +541,7 @@ _TSFS_REF = re.compile(r"TSFS \d{4}:\d+")
 
 
 class TsfsAdapter:
+    detail = True
     series = "TSFS"
     issuer = "Transportstyrelsen"
     base_url = "https://www.transportstyrelsen.se"
@@ -621,7 +635,629 @@ class TsfsAdapter:
         return regulation
 
 
-ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter())}
+# --- Swedac (STAFS) ---------------------------------------------------------
+
+_MD_HEADING = re.compile(r"^(#{1,5}) ", re.M)
+_MD_ROOT_LINK = re.compile(r"\]\((/[^)\s]*)\)")
+_STAFS_REF = re.compile(r"STAFS \d{4}:\d+")
+
+
+class SwedacAdapter:
+    """Swedac's regulation register: a JSON index and one Markdown file per regulation.
+
+    `foreskrifter.json` lists every STAFS regulation, in force and repealed,
+    with its dates, the regulation it amends (`andrar`) or repeals, and links
+    to the PDF and to a Markdown version of the text (the consolidated version
+    when there is one). The Markdown file is the source of the stored text.
+    """
+
+    series = "STAFS"
+    issuer = "Styrelsen för ackreditering och teknisk kontroll"
+    base_url = "https://regelverk.swedac.se"
+    listing_url = base_url + "/foreskrifter.json"
+    detail = True
+    has_text = True
+
+    def __init__(self):
+        self.items, self.originals = {}, {}
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def parse_listing(self, text, url):
+        # A regulation with a consolidated version is listed twice: as issued and consolidated.
+        items, originals = {}, {}
+        for item in json.loads(text):
+            if not isinstance(item, dict) or not _STAFS_REF.fullmatch(item.get("id") or ""):
+                continue
+            if item["id"] in items and not item.get("konsoliderad_tom"):
+                originals[item["id"]] = item
+                continue
+            if item["id"] in items:
+                originals[item["id"]] = items[item["id"]]
+            items[item["id"]] = item
+        self.originals = originals
+        items = list(items.values())
+        amending = {}
+        for item in items:
+            targets = item.get("andrar") or []
+            for target in [targets] if isinstance(targets, str) else targets:
+                amending.setdefault(target, set()).add(item["id"])
+        by_id = {item["id"]: item for item in items}
+        entries = []
+        for item in items:
+            title = _clean(item.get("titel"))
+            base = not item.get("andrar") and not _AMENDING.search(title)
+            repealed = item.get("upphavd")
+            if repealed is True:  # repealed, date not given: the repealing regulation's entry into force
+                repealed = (by_id.get(item.get("upphavd_genom") or "") or {}).get("ikraft")
+                # Without any date the regulation would read as in force; it is not stored.
+                base = base and bool(repealed)
+            if base:
+                self.items[item["id"]] = item
+            entries.append(Entry(
+                number=item["id"],
+                title=title,
+                url=item.get("md_url") or item.get("html_url") or url,
+                base=base and bool(item.get("md_url") or item.get("pdf_url")),
+                in_force=_date(item.get("ikraft")),
+                repealed=_date(repealed) if isinstance(repealed, str) else None,
+                amended_by=sorted(amending.get(item["id"], ()), key=number_key),
+            ))
+        if not any(e.base for e in entries):
+            raise ValueError("no regulations in Swedac's index")
+        return entries
+
+    def parse_detail(self, text, entry):
+        item = self.items.get(entry.number, {})
+        meta, body = _markdown_document(text)
+        if meta.get("id") and meta["id"] != entry.number:
+            raise ValueError(f"Markdown file shows {meta['id']!r}, expected {entry.number}")
+        through = item.get("konsoliderad_tom")
+        pdfs = [(entry.number, (self.originals.get(entry.number) or {}).get("pdf_url"))]
+        if through:
+            pdfs.append((f"{entry.number} (konsoliderad version)", item.get("pdf_url")))
+        else:
+            pdfs = [(entry.number, item.get("pdf_url"))]
+        return Regulation(
+            number=entry.number,
+            title=entry.title,
+            issued=_date(item.get("beslutad")),
+            published=_date(item.get("publicerad")),
+            in_force=entry.in_force,
+            repealed=entry.repealed,
+            amended_by=list(entry.amended_by),
+            amended_through=through,
+            version="Konsoliderad version" if through else "Grundförfattning",
+            text=body,
+            pdfs=[(label, url) for label, url in pdfs if url],
+        )
+
+
+def _markdown_document(text):
+    """(frontmatter dict, body) of a Swedac Markdown file; the body loses its H1
+    and its headings move one level down, under the document's own sections."""
+    meta = {}
+    if text.startswith("---\n"):
+        head, _, text = text[4:].partition("\n---\n")
+        for line in head.splitlines():
+            key, sep, value = line.partition(":")
+            if sep:
+                meta[key.strip()] = value.strip()
+    lines = text.strip().splitlines()
+    if lines and lines[0].startswith("# "):
+        lines = lines[1:]
+    body = "\n".join(lines).strip()
+    body = _MD_HEADING.sub(lambda m: "#" + m.group(1) + " ", body)
+    body = _MD_ROOT_LINK.sub(lambda m: f"]({SwedacAdapter.base_url}{m.group(1)})", body)
+    return meta, body
+
+
+# --- Patent- och registreringsverket (PRVFS) --------------------------------
+
+_PRV_NUMBER = re.compile(r"(?:PRVFS\s*)?(\d{4}):\s?(\d+)\b")
+_PRV_FILE = re.compile(r"(?<![0-9])(\d{2})-?prvfs[-_]?(\d+)", re.I)
+
+
+class PrvAdapter:
+    """PRV's division A1, the base regulations in force: one paragraph each.
+
+    A paragraph starts with a link to the PDF labelled `2026:1, O:2` (number
+    and PRV's subject code), then the title and the enabling provision; links
+    to amending regulations follow, labelled with their number or unlabelled.
+    """
+
+    series = "PRVFS"
+    issuer = "Patent- och registreringsverket"
+    base_url = "https://www.prv.se"
+    listing_url = base_url + "/sv/om-oss/var-verksamhet/styrdokument/prvs-forfattningssamling/avdelning-a1---gallande-grundforfattningar/"
+    detail = False
+    has_text = False
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def _file_number(self, href):
+        match = _PRV_FILE.search(urllib.parse.unquote(href))
+        if match is None:
+            return None
+        year = int(match.group(1))
+        return f"PRVFS {year + (1900 if year >= 70 else 2000)}:{int(match.group(2))}"
+
+    def parse_listing(self, text, url):
+        main = parse_html(text).find("main")
+        entries = []
+        for paragraph in (main.find_all("p") if main is not None else []):
+            links = [a for a in paragraph.find_all("a") if ".pdf" in (a.attrs.get("href") or "")]
+            first = _PRV_NUMBER.match(links[0].text()) if links else None
+            if first is None:
+                continue
+            number = f"PRVFS {first.group(1)}:{int(first.group(2))}"
+            title = paragraph.text().removeprefix(links[0].text()).partition("Bemyndigande")[0]
+            amended_by, pdfs = set(), [(number, absolute(url, links[0].attrs["href"]))]
+            for link in links[1:]:
+                if link.text() and link.text() in title:
+                    continue  # a regulation the title refers to, e.g. the one it repeals
+                ref = _PRV_NUMBER.match(link.text())
+                other = f"PRVFS {ref.group(1)}:{int(ref.group(2))}" if ref else self._file_number(link.attrs["href"])
+                if other and other != number:
+                    amended_by.add(other)
+            entries.append(Entry(number=number, title=_clean(title).rstrip(".") or number,
+                                 url=pdfs[0][1], amended_by=sorted(amended_by, key=number_key), pdfs=pdfs))
+        if not entries:
+            raise ValueError("no regulations in PRV's division A1")
+        return entries
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, amended_by=list(entry.amended_by),
+                          version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
+# --- Åklagarmyndigheten (ÅFS) ----------------------------------------------
+
+_MONTHS = {name: i for i, name in enumerate((
+    "januari", "februari", "mars", "april", "maj", "juni",
+    "juli", "augusti", "september", "oktober", "november", "december"), 1)}
+_SWEDISH_DATE = re.compile(r"(\d{1,2}) (" + "|".join(_MONTHS) + r") (\d{4})")
+_AFS_A_REF = re.compile(r"ÅFS (\d{4}):0*(\d+)")
+# "Riksåklagarens föreskrifter (1999:178) om ...": a change to an older series' regulation.
+_OTHER_SERIES = re.compile(r"föreskrifter \((?:RÅFS )?\d{4}:\d+\)")
+
+
+def _swedish_date(text):
+    match = _SWEDISH_DATE.search(text or "")
+    if match is None:
+        return None
+    return f"{match.group(3)}-{_MONTHS[match.group(2)]:02d}-{int(match.group(1)):02d}"
+
+
+class AklagareAdapter:
+    """Åklagarmyndigheten's ÅFS page: one card per regulation, with its PDF.
+
+    A card has the number, the publication and decision dates, the title and
+    tags: "Gällande grundförfattningar" (base regulations in force),
+    "Ändringsförfattningar", "Upphävda författningar" (repealed) and "Notis".
+    Base regulations are the cards whose title neither amends nor repeals
+    another regulation; repealed ones and notices are not stored.
+    """
+
+    series = "ÅFS"
+    issuer = "Åklagarmyndigheten"
+    base_url = "https://www.aklagare.se"
+    listing_url = base_url + "/om-oss/dokument/forfattningssamling"
+    detail = False
+    has_text = False
+
+    def __init__(self):
+        self.cards = {}
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def _cards(self, root, url):
+        for item in root.find_all("li"):
+            link, heading = item.find("a"), item.find("h2")
+            match = _AFS_A_REF.fullmatch(heading.text()) if heading is not None else None
+            if link is None or match is None or ".pdf" not in (link.attrs.get("href") or ""):
+                continue
+            paragraphs = [p.text() for p in item.find_all("p")]
+            tags = {span.text() for span in item.find_all("span") if "rounded-full" in span.classes}
+            published = item.find("time")
+            dated = next((t for t in paragraphs if t.startswith("Publicerad")), "")
+            yield {
+                "number": f"ÅFS {match.group(1)}:{int(match.group(2))}",
+                "url": absolute(url, link.attrs["href"]),
+                "title": next((t for t in paragraphs if not t.startswith(("Storlek", "Publicerad", "Beslutad"))), ""),
+                "issued": _swedish_date(dated.partition("Beslutad")[2]) if "Beslutad" in dated else None,
+                "published": _date(published.attrs.get("datetime")) if published is not None else None,
+                "tags": tags,
+            }
+
+    def parse_listing(self, text, url):
+        entries, amending = {}, {}
+        for card in self._cards(parse_html(text), url):
+            title, tags = card["title"].rstrip(". "), card["tags"]
+            changes = _AMENDING.search(title)
+            if changes or "Ändringsförfattningar" in tags:
+                for ref in _AFS_A_REF.finditer(title[changes.start():] if changes else title):
+                    target = f"ÅFS {ref.group(1)}:{int(ref.group(2))}"
+                    if target != card["number"]:
+                        amending.setdefault(target, set()).add(card["number"])
+                entries.setdefault(card["number"], Entry(card["number"], title, card["url"], base=False))
+                continue
+            if "Notis" in tags or "Upphävda författningar" in tags or _OTHER_SERIES.search(title):
+                entries.setdefault(card["number"], Entry(card["number"], title, card["url"], base=False))
+                continue
+            card["title"] = title
+            self.cards[card["number"]] = card
+            entries[card["number"]] = Entry(card["number"], title, card["url"], pdfs=[(card["number"], card["url"])])
+        for number, entry in entries.items():
+            entry.amended_by = sorted(amending.get(number, ()), key=number_key)
+        if not any(e.base for e in entries.values()):
+            raise ValueError("no regulations found on the ÅFS page")
+        return sorted(entries.values(), key=lambda e: (not e.base, number_key(e.number)))
+
+    def regulation(self, entry):
+        card = self.cards.get(entry.number, {})
+        return Regulation(number=entry.number, title=entry.title, issued=card.get("issued"),
+                          published=card.get("published"), amended_by=list(entry.amended_by),
+                          version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
+# --- Polismyndigheten (PMFS) -------------------------------------------------
+
+_PMFS_REF = re.compile(r"(PMFS|RPSFS) (\d{4}):0*(\d+)")
+
+
+class PolisenAdapter:
+    """Polismyndigheten's författningssamling: a paginated list of regulations in force.
+
+    Each item has the title, the number (PMFS, or RPSFS for Rikspolisstyrelsen's
+    regulations still in force), the FAP number, and sections "Grundföreskrift",
+    "Ändringsföreskrift" and "Sammanställd version" with PDF links and dates.
+    """
+
+    series = "PMFS"
+    issuer = "Polismyndigheten"
+    base_url = "https://polisen.se"
+    listing_url = base_url + "/lagar-och-regler/polismyndighetens-forfattningssamling/"
+    detail = False
+    has_text = False
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def more_pages(self, text, url):
+        pages = {int(n) for n in re.findall(r'href="/lagar-och-regler/polismyndighetens-forfattningssamling/(\d+)/"', text)}
+        return [f"{self.listing_url}{n}/" for n in sorted(pages) if n > 1]
+
+    def parse_listing(self, text, url):
+        entries = []
+        for block in parse_html(text).find_all("div", "c-regulation"):
+            heading = block.find("h3")
+            labels = [d.text() for d in block.find_all("div", "c-regulation__label")]
+            number = next((_PMFS_REF.fullmatch(t) for t in labels if _PMFS_REF.fullmatch(t)), None)
+            if heading is None or number is None:
+                continue
+            number = f"{number.group(1)} {number.group(2)}:{int(number.group(3))}"
+            section, pdfs, amended_by, in_force = None, [], [], None
+            for node in block.iter():
+                if node.tag == "h4":
+                    section = node.text()
+                elif node.tag == "a" and node.attrs.get("href"):
+                    href = absolute(url, node.attrs["href"])
+                    ref = _PMFS_REF.search(node.text())
+                    if section == "Grundföreskrift":
+                        pdfs.insert(0, (number, href))
+                    elif section == "Ändringsföreskrift" and ref:
+                        amended_by.append(f"{ref.group(1)} {ref.group(2)}:{int(ref.group(3))}")
+                    elif section == "Sammanställd version":
+                        pdfs.append((f"{number} (sammanställd version)", href))
+                elif node.tag == "time" and section == "Grundföreskrift" and in_force is None:
+                    in_force = _date(node.attrs.get("datetime"))
+            if not pdfs:
+                continue
+            entries.append(Entry(number=number, title=heading.text(), url=pdfs[0][1], in_force=in_force,
+                                 amended_by=sorted(set(amended_by), key=number_key), pdfs=pdfs))
+        if not entries:
+            raise ValueError("no regulations on the PMFS page")
+        return entries
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, in_force=entry.in_force,
+                          amended_by=list(entry.amended_by), version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
+# --- Statistiska centralbyrån (SCB-FS) ----------------------------------------
+
+_SCB_REF = re.compile(r"SCB-FS:? (\d{4}):0*(\d+)")
+
+
+class ScbAdapter:
+    """SCB's table of regulations on reporting duties, and one HTML page per regulation.
+
+    Each table row gives the number, the title linking to the regulation's
+    page, the area and the kind (Ändringsföreskrift, Upphävandeföreskrift).
+    The page holds the text (`div.xhtmlText`), the publication date and the PDF.
+    """
+
+    series = "SCB-FS"
+    issuer = "Statistiska centralbyrån"
+    base_url = "https://www.scb.se"
+    listing_url = base_url + "/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/?currentpageId=98388&type=UL"
+    detail = True
+    has_text = True
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def parse_listing(self, text, url):
+        rows, amending = [], {}
+        for row in parse_html(text).find_all("tr"):
+            cells = [c for c in row.children if isinstance(c, Node) and c.tag in ("td", "th")]
+            match = _SCB_REF.fullmatch(cells[0].text()) if cells else None
+            link = row.find("a")
+            if match is None or link is None:
+                continue
+            number = f"SCB-FS {match.group(1)}:{int(match.group(2))}"
+            title = link.text().rstrip(";").strip()
+            changes = _AMENDING.search(title) or "föreskrifter som upphör att gälla" in title
+            if changes or any(c.text() in ("Ändringsföreskrift", "Upphävandeföreskrift") for c in cells[1:]):
+                for ref in _SCB_REF.finditer(title):
+                    amending.setdefault(f"SCB-FS {ref.group(1)}:{int(ref.group(2))}", set()).add(number)
+                rows.append(Entry(number, title, absolute(url, link.attrs.get("href", "")), base=False))
+                continue
+            rows.append(Entry(number, title, absolute(url, link.attrs.get("href", ""))))
+        for entry in rows:
+            entry.amended_by = sorted(amending.get(entry.number, ()), key=number_key)
+        if not any(e.base for e in rows):
+            raise ValueError("no regulations in SCB's table")
+        return rows
+
+    def parse_detail(self, text, entry):
+        root = parse_html(text)
+        label = next((b for b in root.find_all("b") if _SCB_REF.fullmatch(b.text())), None)
+        if label is None:
+            raise ValueError("no number on the detail page")
+        found = _SCB_REF.fullmatch(label.text())
+        _check_number(f"SCB-FS {found.group(1)}:{int(found.group(2))}", entry)
+        heading = root.find("h1")
+        body = root.find("div", "xhtmlText")
+        pdfs = []
+        for box in root.find_all("div", "box-highlight"):
+            for link in box.find_all("a"):
+                pdfs.append((entry.number, absolute(self.base_url, link.attrs.get("href", ""))))
+        published = next((p.text() for p in root.find_all("p") if p.text().startswith("Publicerad")), "")
+        return Regulation(
+            number=entry.number,
+            title=heading.text().rstrip(";").strip() if heading is not None else entry.title,
+            published=_date(published),
+            amended_by=list(entry.amended_by),
+            version="Grundförfattning",
+            text=htmlmd.to_markdown(to_html(body)) if body is not None else "",
+            pdfs=pdfs[:1],
+        )
+
+
+# --- series listed as links to their PDFs ----------------------------------
+
+_DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
+_AMENDING = re.compile(r"\b(?:om|till) (?:ändring|ändringar|upphävande)\b|\bändring (?:i|av)\b", re.I)
+_REPRINT = re.compile(r"\bomtryck", re.I)
+_CONSOLIDATED = re.compile(r"\bkonsoliderad|\bsenaste lydelse", re.I)
+_SIZE = re.compile(r"[\s,(.]*\b(?:pdf|PDF)\b[\s,)-]*(?:[\d.,]+\s*(?:kB|KB|kb|MB|Mb|mb|B)\b)?\.?\s*\)?\s*$")
+_DEFAULT_EXCLUDE = (r"tillämpningsstöd|förarbete|hemställan|beslutspromemoria|förteckning|register|"
+                    r"remiss|konsekvensutredning|vägledning|rättelseblad|\bbilag")
+
+
+class ListedAdapter:
+    """A series whose listing pages link straight to the regulation PDFs.
+
+    Each link to a document is read by its label (and, failing that, its file
+    name): a base regulation, an amending or repealing regulation (`om ändring
+    i ... (XFS 2015:2)`), or a consolidated version or reprint of a base
+    regulation. Amending regulations are not stored; they end up in their base
+    regulation's `amended_by`. The listing is the only page read, so every run
+    rebuilds the series from it; PDFs already in the manifest are not fetched
+    again.
+    """
+
+    has_text = False
+
+    def __init__(self, series, issuer, listing_urls, prefix=None, exclude=None, separator=None, base_href=None,
+                 detail_pages=False, documents=None):
+        self.series = series
+        self.issuer = issuer
+        self.urls = list(listing_urls)
+        parts = urllib.parse.urlsplit(self.urls[0])
+        self.base_url = f"{parts.scheme}://{parts.netloc}"
+        self.listing_url = self.urls[0]
+        prefix = prefix or re.escape(series)
+        separator = separator or ":"
+        self.number = re.compile(rf"(?<![A-Za-zÅÄÖåäö])(?:{prefix})\s?(\d{{4}})\s?(?:{separator})\s?(\d+)(?!\d)")
+        slug = "[^a-z0-9]?".join(re.escape(p) for p in re.split(r"[^a-z0-9]+", series.lower()) if p)
+        self.file_number = re.compile(
+            rf"(?<![a-z]){slug}[^a-z0-9]*(?:(\d{{4}})[^0-9]{{1,3}}(\d{{1,3}})(?!\d)|(\d{{1,3}})[^0-9]{{1,3}}(\d{{4}})(?!\d))")
+        self.exclude = re.compile(exclude or _DEFAULT_EXCLUDE, re.I)
+        # A site that files every amendment under its base regulation's folder:
+        # the year and ordinal of the base regulation in the link.
+        self.base_href = re.compile(base_href, re.I) if base_href else None
+        # The listing links to one page per base regulation, which links to its PDFs.
+        self.detail = detail_pages
+        self.documents = re.compile(documents, re.I) if documents else _DOCUMENT_HREF
+
+    def listing_urls(self, args):
+        return list(self.urls)
+
+    def _numbers(self, text):
+        return [(m.start(), f"{self.series} {m.group(1)}:{int(m.group(2))}") for m in self.number.finditer(text)]
+
+    def _file_number(self, href):
+        name = urllib.parse.unquote_plus(urllib.parse.urlsplit(href).path).lower()
+        name = name.rsplit("/", 1)[-1] or name
+        match = self.file_number.search(name) or self.file_number.search(urllib.parse.unquote_plus(href).lower())
+        if match is None:
+            return None
+        year, number = (match.group(1), match.group(2)) if match.group(1) else (match.group(4), match.group(3))
+        return f"{self.series} {year}:{int(number)}"
+
+    def title(self, label, number):
+        """The link label without the number, the file size and a trailing `pdf`."""
+        title = _SIZE.sub("", label)
+        title = re.sub(rf"\(\s*{self.number.pattern}\s*\)", lambda m: "" if self._numbers(m.group(0))[0][1] == number
+                       else m.group(0), title)
+        for _, found in self._numbers(title)[:1]:
+            if found == number:
+                title = self.number.sub("", title, count=1)
+        title = _clean(re.sub(r"\s+([,.])", r"\1", title)).strip(" -–,:")
+        return title or number
+
+    def classify(self, label, href):
+        """(kind, own number, base number) for one document link; kind is None to skip it."""
+        if self.exclude.search(label):
+            return None, None, None
+        numbers = self._numbers(label)
+        own = self._file_number(href)
+        if _CONSOLIDATED.search(label):
+            return ("consolidated", None, numbers[0][1]) if numbers else (None, None, None)
+        amending = _AMENDING.search(label)
+        folder = self.base_href.search(href) if self.base_href else None
+        if folder and numbers:
+            base = f"{self.series} {folder.group(1)}:{int(folder.group(2))}"
+            if numbers[0][1] != base:
+                reprint = _REPRINT.search(label) or _REPRINT.search(href)
+                return ("reprint" if reprint else "amending"), numbers[0][1], base
+        reprint = _REPRINT.search(label)
+        if reprint and numbers:
+            # "XFS 2015:1 omtryckt genom ... XFS 2021:1" or "XFS 2021:1 ... (XFS 2015:1) Omtryck"
+            before = [n for at, n in numbers if at < reprint.start()]
+            after = [n for at, n in numbers if at > reprint.start()]
+            if before and after:
+                return "reprint", after[-1], before[0]
+            if len(before) > 1:
+                return "reprint", before[0], before[1]
+            return "reprint", own if own != numbers[0][1] else None, numbers[0][1]
+        if amending:
+            before = [n for at, n in numbers if at < amending.start()]
+            after = [n for at, n in numbers if at > amending.start()]
+            # "XFS 2024:3 Föreskrifter om ändring i ... (XFS 2015:1)" or
+            # "Föreskrifter om ändring i ... (XFS 2015:1) om ... (XFS 2024:3)"
+            target = after[0] if after else None
+            if before:
+                own = before[0]
+            elif len(after) > 1:
+                own = after[-1]
+            elif own == target:
+                own = None
+            return "amending", own, target
+        if numbers:
+            return "base", numbers[0][1], None
+        return ("base", own, None) if own else (None, None, None)
+
+    def parse_listing(self, text, url):
+        if not self.detail:
+            return self.read_links(parse_html(text), url)
+        entries = {}
+        for link in parse_html(text).find_all("a"):
+            href = link.attrs.get("href") or ""
+            numbers = self._numbers(link.text())
+            if not href or href.startswith(("#", "mailto:")) or len(numbers) != 1:
+                continue
+            number = numbers[0][1]
+            if number not in entries and not self.exclude.search(link.text()):
+                entries[number] = Entry(number=number, title=self.title(link.text(), number), url=absolute(url, href))
+        if not entries:
+            raise ValueError(f"no {self.series} regulations found")
+        return list(entries.values())
+
+    def parse_detail(self, text, entry):
+        root = parse_html(text)
+        found = {e.number: e for e in self.read_links(root, entry.url)}.get(entry.number)
+        if found is None:
+            raise ValueError(f"{entry.number} has no PDF on its page")
+        if not found.base:
+            raise NotBase(f"{entry.number} is an amending regulation")
+        heading = (root.find("main") or root).find("h1")
+        title = self.title(heading.text(), entry.number) if heading is not None else ""
+        found.title = title if title and title != entry.number else found.title
+        return self.regulation(found)
+
+    def read_links(self, root, url):
+        """Entries for the document links on one page: base regulations first, then amending ones."""
+        entries, amending, own_folder = {}, set(), set()
+
+        def entry(number, title=None):
+            if number not in entries:
+                entries[number] = Entry(number=number, title=title or number, url="")
+            elif title and entries[number].title == number:
+                entries[number].title = title
+            return entries[number]
+
+        for link in root.find_all("a"):
+            href = link.attrs.get("href") or ""
+            if not href or href.startswith(("#", "mailto:")) or not self.documents.search(href):
+                continue
+            label = link.text()
+            kind, own, target = self.classify(label, href)
+            if kind is None:
+                continue
+            pdf = absolute(url, href)
+            if kind == "base" and self.base_href and self.base_href.search(href):
+                own_folder.add(own)  # filed in its own folder: a base regulation even if it also amends one
+            if kind == "base":
+                base = entry(own, self.title(label, own))
+                if not base.url:
+                    base.url = pdf
+                    base.pdfs.insert(0, (own, pdf))
+            elif kind == "consolidated":
+                entry(target).pdfs.append((f"{target} (konsoliderad version)", pdf))
+            elif kind == "reprint":
+                entry(target).pdfs.append((f"{target} (omtryck genom {own})" if own else f"{target} (omtryck)", pdf))
+                if own:
+                    amending.add(own)
+                    entry(target).amended_by.append(own)
+            else:
+                if own:
+                    amending.add(own)
+                if target:
+                    if own:
+                        entry(target).amended_by.append(own)
+        result = []
+        for number, item in entries.items():
+            if number in amending and number not in own_folder:
+                continue
+            item.pdfs = list(dict(reversed(item.pdfs)).items())[::-1]  # one PDF per label, the first
+            if not item.pdfs:
+                continue
+            item.url = item.url or item.pdfs[0][1]
+            item.amended_by = sorted(set(item.amended_by), key=number_key)
+            result.append(item)
+        for number in sorted(amending - own_folder, key=number_key):
+            result.append(Entry(number=number, title=number, url=url, base=False))
+        if not any(e.base for e in result):
+            raise ValueError(f"no {self.series} regulations found")
+        return result
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, amended_by=list(entry.amended_by),
+                          version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
+def load_series(path=SERIES_CONFIG):
+    """Listed series from the config file: {series: ListedAdapter}."""
+    try:
+        data = json.loads(Path(path).read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return {}
+    return {code: ListedAdapter(code, item["issuer"], item["listing_urls"], item.get("prefix"),
+                                item.get("exclude"), item.get("separator"), item.get("base_href"),
+                                item.get("detail_pages", False), item.get("documents"))
+            for code, item in data["series"].items() if item.get("listing_urls")}
+
+
+ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
+                                   PrvAdapter(), PolisenAdapter(), ScbAdapter())}
+ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
 # --- mapping ---------------------------------------------------------------
@@ -789,11 +1425,17 @@ def _entries(client, robots, adapter, args):
     urls = adapter.listing_urls(args)
     if urls is None:  # TSFS without --year: every year of the index
         urls = [adapter.year_url(y) for y in adapter.parse_index(_get_listing(client, robots, adapter.index_url))]
-    for url in urls:
+    urls, seen = list(urls), set(urls)
+    for url in urls:  # grows while a paginated listing names further pages
+        text = _get_listing(client, robots, url)
         try:
-            entries = adapter.parse_listing(_get_listing(client, robots, url), url)
+            entries = adapter.parse_listing(text, url)
         except ValueError as error:
             raise ListingError(f"{url}: {error}") from error
+        for page in getattr(adapter, "more_pages", lambda text, url: ())(text, url):
+            if page not in seen:
+                seen.add(page)
+                urls.append(page)
         yield from entries
 
 
@@ -860,15 +1502,25 @@ def _stored_source(doc_id, corpus):
 
 
 def _collect_one(client, robots, adapter, entry, args, manifest, summary):
-    if not robots.allows(entry.url):
-        raise ValueError(f"robots.txt disallows {entry.url}")
-    raw = client.get(entry.url)
-    regulation = adapter.parse_detail(raw.decode("utf-8"), entry)
+    if adapter.detail:
+        if not robots.allows(entry.url):
+            raise ValueError(f"robots.txt disallows {entry.url}")
+        raw = client.get(entry.url)
+        regulation = adapter.parse_detail(raw.decode("utf-8"), entry)
+        sha256 = hashlib.sha256(raw).hexdigest()
+    else:
+        regulation = adapter.regulation(entry)
     summary.pdfs += _snapshot_pdfs(client, robots, regulation, entry, manifest, args.refresh)
+    if not adapter.detail:
+        # The source is the regulation's own PDF; its hash is in the manifest.
+        files = {f["url"]: f for f in manifest.get(regulation.number, {}).get("files", [])}
+        sha256 = (files.get(entry.url) or {}).get("sha256")
+        if sha256 is None:
+            raise ValueError(f"source PDF not downloaded: {entry.url}")
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    meta = build_meta(adapter, entry, regulation, hashlib.sha256(raw).hexdigest(), fetched_at)
+    meta = build_meta(adapter, entry, regulation, sha256, fetched_at)
     other = _stored_source(meta["id"], args.corpus)
-    if other is not None and other != meta["source"]:
+    if adapter.detail and other is not None and other != meta["source"]:
         raise ValueError(f"{meta['number']} is already stored from {other}")
     body = to_markdown(adapter, meta, regulation)
     if _unchanged(meta, body, args.corpus):
@@ -909,7 +1561,7 @@ def run(client, args):
                     summary.excluded += 1
                     continue
                 doc_path = path_for({"id": corpus_id(entry.number), "type": TYPE}, args.corpus)
-                if not args.refresh and entry.number in state["done"] and doc_path.exists():
+                if adapter.detail and not args.refresh and entry.number in state["done"] and doc_path.exists():
                     summary.skipped += 1
                     continue
                 try:
@@ -940,8 +1592,9 @@ def run(client, args):
 # --- command line ----------------------------------------------------------
 
 def _series(value):
-    code = value.strip().upper()
-    if code not in ADAPTERS:
+    codes = {code.upper(): code for code in ADAPTERS}
+    code = codes.get(value.strip().upper())
+    if code is None:
         raise argparse.ArgumentTypeError(f"unknown series {value!r}; known: {', '.join(ADAPTERS)}")
     return code
 
@@ -968,10 +1621,12 @@ def _year(value):
 
 
 def _regulation_number(value):
-    number = _clean(value).upper()
-    if not re.fullmatch(r"[A-ZÅÄÖ][A-ZÅÄÖ0-9-]* \d{4}:\d+", number):
+    number = _clean(value)
+    if not re.fullmatch(r"[A-ZÅÄÖa-zåäö][A-ZÅÄÖa-zåäö0-9-]* \d{4}:\d+", number):
         raise argparse.ArgumentTypeError(f"not a regulation number (e.g. 'AFS 2023:1'): {value}")
-    return number
+    prefix, rest = number.split(" ", 1)
+    codes = {code.upper(): code for code in ADAPTERS}
+    return f"{codes.get(prefix.upper(), prefix.upper())} {rest}"
 
 
 def parse_args(argv):

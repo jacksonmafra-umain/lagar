@@ -52,6 +52,10 @@ DOCUMENT_ERRORS = (ValueError, KeyError, TypeError, AttributeError)
 
 # Mirrors the case-law number pattern in docs/schema/frontmatter.schema.json.
 _REFERENCE = re.compile(r"[A-ZÅÄÖ]{2,5} \d{4}(:\d+| (s\.|ref\.|not\.|nr|N) \d+)")
+# Kammarrätt referat published without a report reference are cited by court
+# abbreviation, decision date and case number: `KRNJ 2007-01-09 mål nr 1097-06`.
+KAMMARRATT_SERIES = {"KGG": "KRNG", "KJO": "KRNJ", "KST": "KRNS", "KSU": "KRSU"}
+_CASE_NUMBER = re.compile(r"\d{1,6}-\d{2}", re.ASCII)
 _ECLI = re.compile(r"ECLI:[A-Z]{2}:[A-Z0-9.]{1,7}:\d{4}:[A-Za-z0-9.]{1,25}")
 _COURT = re.compile(r"[A-ZÅÄÖ0-9]{2,10}")
 _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}", re.ASCII)
@@ -212,17 +216,36 @@ def references(item):
     return found
 
 
+def _kammarratt_number(item):
+    """`KRNJ 2007-01-09 mål nr 1097-06` for a kammarrätt referat without a reference, else None."""
+    series = KAMMARRATT_SERIES.get((item.get("domstol") or {}).get("domstolKod"))
+    decided = _clean(item.get("avgorandedatum"))[:10]
+    cases = [c for c in map(_clean, item.get("malNummerLista") or []) if _CASE_NUMBER.fullmatch(c)]
+    if series and item.get("publiceringsform") == "REFERAT" and _ISO_DATE.fullmatch(decided) and cases:
+        return f"{series} {decided} mål nr {cases[0]}"
+    return None
+
+
 def report_number(item):
-    """The reference used as `number`: the ordinal form (NJA 2026:38) when given, else the first."""
+    """The reference used as `number`: the ordinal form (NJA 2026:38) when given, else the first.
+
+    A kammarrätt referat with no reference gets its court, date and case number instead.
+    """
     refs = references(item)
     if not refs:
+        fallback = _kammarratt_number(item)
+        if fallback:
+            return fallback
         raise ValueError("no report reference in the schema's form: "
                          + repr(item.get("referatNummerLista")))
     return next((r for r in refs if ":" in r), refs[0])
 
 
 def corpus_id(number):
-    """`NJA 2026 s. 435` -> `nja-2026-s-435`, `RÅ 2010 ref. 5` -> `ra-2010-ref-5`."""
+    """`NJA 2026 s. 435` -> `nja-2026-s-435`, `RÅ 2010 ref. 5` -> `ra-2010-ref-5`.
+
+    `KRNJ 2007-01-09 mål nr 1097-06` -> `krnj-2007-01-09-mal-nr-1097-06`.
+    """
     slug = re.sub(r"[^0-9a-z]+", "-", number.lower().translate(_SLUG)).strip("-")
     return slug
 

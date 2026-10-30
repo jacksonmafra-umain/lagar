@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.soderhamn.se/sidor/kommun-och-politik/styrdokument/forfattningssamling.html": "2182-listing.html"
+  },
+  "count": 33,
+  "sample": {
+    "number": "18.bc7807e19a7bbdec8733e0a",
+    "title": "Allmänna lokala ordningsföreskrifter för Söderhamns kommun SKFS 02:2025:01",
+    "url": "https://www.soderhamn.se/download/18.bc7807e19a7bbdec8733e0a/1764658128712/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20S%C3%B6derhamns%20kommun%20SKFS%2002:2025:01.pdf"
+  },
+  "excluded": [
+    "Föreskrifter för Söderhamns kommuns författningssamling SKFS 01:2006:01",
+    "Arbetsordning för kommunfullmäktige SKFS 04:2025:09",
+    "Arbetsordning för kommunfullmäktige SKFS 04:2026:11"
+  ]
+}
