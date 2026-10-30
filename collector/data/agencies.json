@@ -1208,10 +1208,6 @@
       "status": "robots",
       "note": "karlstad.se lists SharePoint document ids; the files are served only through time-limited links on karlstadskommunonline.sharepoint.com, whose robots.txt disallows everything (checked 2026-10-30)."
     },
-    "2029": {
-      "status": "no_adapter",
-      "note": "leksand.se publishes its författningssamling in a Netpublicator reader (JavaScript, noindex); no adapter yet."
-    },
     "2180": {
       "status": "no_adapter",
       "note": "gavle.se publishes its documents through MediaFlow; no adapter yet."

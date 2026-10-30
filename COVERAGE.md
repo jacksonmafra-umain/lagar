@@ -358,9 +358,7 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
     page without headings, so their configs keep only listed file names; a new
     document with another name is not picked up until the config is updated.
-  - Not collected yet: Gävle (MediaFlow shares, whose download links need a
-    token and expire after minutes; an adapter is planned) and Leksand
-    (Netpublicator; an adapter is planned). Karlstad serves its files only
+  - Karlstad serves its files only
     through time-limited SharePoint links on a host whose robots.txt disallows
     everything, so it is not collected.
   - Skövde: only the taxor och avgifter page is collected; the lokala
