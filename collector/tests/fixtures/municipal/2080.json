@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.falun.se/kommun--demokrati/kommunens-organisation/regler-och-styrande-dokument/foreskrifter.html": "2080-listing1.html",
+    "https://www.falun.se/kommun--demokrati/kommunens-organisation/regler-och-styrande-dokument/avgifter-och-taxor.html": "2080-listing2.html"
+  },
+  "count": 15,
+  "sample": {
+    "number": "18.7cdf5ab19c8e3cd34d96eb5",
+    "title": "Antagna Allmänna lokala föreskrifter inklusive bilagor",
+    "url": "https://www.falun.se/download/18.7cdf5ab19c8e3cd34d96eb5/1772805890513/Antagna%20Allm%C3%A4nna%20lokal%20ordningsf%C3%B6reskrifter%20251120.ink%20bilagor.pdf"
+  },
+  "excluded": []
+}
