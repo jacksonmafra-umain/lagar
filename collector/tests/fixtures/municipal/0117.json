@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.osteraker.se/kommunpolitik/politikochdemokrati/osterakersstyrdokument/osterakersforfattningssamlingofs.4.40523b741958b6adf7413016.html": "0117-listing.html"
+  },
+  "count": 21,
+  "sample": {
+    "number": "18.40523b741958b6adf7414bc6",
+    "title": "Allmänna lokala ordningsföreskrifter (ÖFS 2025:15)",
+    "url": "https://www.osteraker.se/download/18.40523b741958b6adf7414bc6/1750787790428/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20%C3%96ster%C3%A5kers%20kommun%20-%20%C3%96FS%202025-15.pdf"
+  },
+  "excluded": [
+    "Bolagsordning Österåkers Stadshus AB (ÖFS 2024:12)",
+    "Bolagsordning Fastighets Holding i Österåker AB (ÖFS 2024:13)",
+    "Bolagsordning ÖGAB Fastighet 6 AB (ÖFS 2023:21)"
+  ]
+}

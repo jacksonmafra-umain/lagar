@@ -1,0 +1,20 @@
+{
+  "listings": {
+    "https://www.varmdo.se/kommunochpolitik/styrningmalochvisioner/forfattningssamling.4.3251048d16e2a7e78489c6e.html": "0120-listing.html",
+    "https://www.varmdo.se/kommunochpolitik/styrningmalochvisioner/forfattningssamling.4.3251048d16e2a7e78489c6e.html?lp-page=0": "0120-listing-2.html",
+    "https://www.varmdo.se/kommunochpolitik/styrningmalochvisioner/forfattningssamling.4.3251048d16e2a7e78489c6e.html?lp-page=1": "0120-listing-3.html",
+    "https://www.varmdo.se/kommunochpolitik/styrningmalochvisioner/forfattningssamling.4.3251048d16e2a7e78489c6e.html?lp-page=2": "0120-listing-4.html",
+    "https://www.varmdo.se/kommunochpolitik/styrningmalochvisioner/forfattningssamling.4.3251048d16e2a7e78489c6e.html?lp-page=3": "0120-listing-5.html"
+  },
+  "count": 25,
+  "sample": {
+    "number": "18.3a91f79168a7ed2a564f420",
+    "title": "Allmänna bestämmelser för användande av Värmdö kommuns allmänna vatten- och avloppsanläggning (ABVA)",
+    "url": "https://www.varmdo.se/download/18.3a91f79168a7ed2a564f420/1649750075882/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20V%C3%A4rmd%C3%B6%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning%20(ABVA).pdf"
+  },
+  "excluded": [
+    "Antagandehandling uppdaterad översiktsplan",
+    "Arbetsordning för Skärgårdsrådet",
+    "Arbetsordning för kommunfullmäktige"
+  ]
+}

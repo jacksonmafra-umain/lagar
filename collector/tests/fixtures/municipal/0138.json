@@ -1,0 +1,19 @@
+{
+  "listings": {
+    "https://www.tyreso.se/organisation--styrning/styrning-och-uppfoljning/lokala-foreskrifter.html": "0138-listing.html",
+    "https://www.tyreso.se/organisation--styrning/styrning-och-uppfoljning/lokala-foreskrifter/ordningsforeskrifter.html": "0138-listing-2.html",
+    "https://www.tyreso.se/organisation--styrning/styrning-och-uppfoljning/lokala-foreskrifter/taxor.html": "0138-listing-3.html",
+    "https://www.tyreso.se/boende--miljo/avfall-och-atervinning/foreskrifter-och-avfallsplan.html": "0138-listing-4.html"
+  },
+  "count": 9,
+  "sample": {
+    "number": "18.759467b919b99047d96e2bd",
+    "title": "Lokala föreskrifter för att skydda människors hälsa och miljön i Tyresö kommun",
+    "url": "https://www.tyreso.se/download/18.759467b919b99047d96e2bd/1767959685399/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n.pdf"
+  },
+  "excluded": [
+    "Avfallsplan 2030",
+    "Bilaga 1 - Uppföljning av avfallsplan 2008-2020",
+    "Bilaga 9 - Handlingsplan med uppföljning 2023"
+  ]
+}
