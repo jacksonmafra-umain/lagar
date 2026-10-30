@@ -47,7 +47,7 @@ The API now has case law (16,390 documents), so rows below marked "Blocked: no c
 | Bookmark icon in the document's layer colour | Missing | #22 |
 | Desktop layout (window ≥ 1024dp): top bar navigation, max content width, wide home | Done | #79 |
 | Desktop layouts of onboarding, search, advanced search, the layer list and the reader | Done | #35 |
-| Tablet two-pane layout (768–1023dp) | Missing | #35 |
+| Tablet layout: navigation rail on medium windows, list-detail Hierarki from 840dp | Done | #35 |
 | `docs/design.md` component inventory up to date | Done | #25 |
 | Swedish and English strings, no hardcoded UI text | Done | |
 
@@ -183,6 +183,7 @@ Route: `Search(text, types, from, to, mode, status, inForceFrom, inForceTo, vaca
 | Region and Kommun scopes: only the chosen län's or kommun's documents, by the `region_code` and `municipality_code` columns of `docs.json` (or listing items on the catalog path); a prompt to choose a locality when it is unset | Done | #99 |
 | Searched scope as a chip beside the result count ("Region: Skåne län", ellipsized; opens the scope sheet); a Region or Kommun search without results says it covered only the län or kommun and offers "Sök i Nationell" | Done | #126 |
 | Desktop: results in two equal-height columns within the 1280dp content width; the list stays full width so the whole window scrolls | Done | #35 |
+| Desktop list-detail: a result opens beside the list (one 440dp column, the opened result kept in view) instead of being pushed; the reader in the pane uses its compact layout until the pane is 1024dp wide | Done | #35 |
 
 ### Advanced search
 
@@ -255,7 +256,8 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | Private notes on the document (under the header) and on each § or chapter (under its text), edited in a sheet, stored on the device only | Done | #28 |
 | Desktop (≥ 1024dp): table of contents as a 300dp pane left of the text instead of a sheet | Done | #35 |
 | Desktop (≥ 1280dp, `ShellDimens.ReaderInspectorBreakpoint`): facts, source link and amendments in an inspector pane right of the text; the text keeps the badge, number and title | Done | #35 |
-| Tablet: frosted bottom sheet for the normative tree, sliding metadata drawer | Missing | #35 |
+| Below 1024dp (phones, tablets): table of contents in a frosted glass bottom sheet | Done | #26 |
+| Tablet: metadata (facts, source, amendments) in a sliding Liquid Glass drawer instead of under the title | Missing: waits for the reading layout rework (#154), which reshapes the reader | #35 |
 | Reading the text as of a past date, version comparator | Blocked: the API has no historical text; owner decision pending | #7 |
 
 ## Sparade

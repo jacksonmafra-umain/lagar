@@ -46,6 +46,9 @@ internal object ShellDimens {
     /** Width of the list pane of a list-detail layout (Hierarki), after DESIGN.md's left pane. */
     val ListPaneWidth = 360.dp
 
+    /** Width of the results column when a search result is open beside it on desktop. */
+    val SearchListPaneWidth = 440.dp
+
     /** Content width from which a list and its detail show side by side. */
     val ListDetailMinWidth = 840.dp
 }
