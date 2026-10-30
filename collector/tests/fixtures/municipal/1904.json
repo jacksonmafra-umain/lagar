@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.skinnskatteberg.se/kommun-och-demokrati/forfattningssamling/taxor-och-avgifter/": "1904-listing1.html",
+    "https://www.skinnskatteberg.se/bygga-bo-och-miljo/bostader/avfall/taxor/": "1904-listing2.html"
+  },
+  "count": 4,
+  "sample": {
+    "number": "2025/04/samhallsskydd-och-beredskap-taxor-och-avgifter-2025",
+    "title": "räddningstjänsten 2025",
+    "url": "https://www.skinnskatteberg.se/app/uploads/2025/04/samhallsskydd-och-beredskap-taxor-och-avgifter-2025.pdf"
+  },
+  "excluded": []
+}
