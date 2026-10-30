@@ -5086,6 +5086,213 @@
       "url": "https://www.tierp.se/download/18.fbfb1d6175a7870798ea67a/1782879605307/Taxa%20f%C3%B6r%20nyttjande%20av%20kommunens%20mark.pdf"
     },
     {
+      "bytes": 308154,
+      "content_type": "application/pdf",
+      "id": "0380-allmanna-bestammelser-for-anvandande-av-uppsala-kommuns-allmanna-vatten-och-avloppsanlaggning",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:01:17Z",
+      "sha256": "d451034a55b063bb2e9c9dd63cf3b4b20f718cffa5d9b1add2ec58a1311c1646",
+      "url": "https://www.uppsala.se/contentassets/e19fb741aad14ec1b6249e2b023f9fc6/abva--allm_nna-best_mmelser-f_r-uppsala-kommuns-vatten--och-avloppsanl_ggning-2025.pdf"
+    },
+    {
+      "bytes": 71338,
+      "content_type": "application/pdf",
+      "id": "0380-avgifter-for-platser-i-samband-med-evenemang-marknadsforing-massor-konserter-och-liknande",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:01:30Z",
+      "sha256": "47e9f118c01d87d0366fc9f8ae70af5b7dc3382fb9b4dbad3d30840023ebefb1",
+      "url": "https://www.uppsala.se/contentassets/0a352fff863e4e18ba420db8a056156a/avgift-ofta-frekventerade-platser-2026.pdf"
+    },
+    {
+      "bytes": 182926,
+      "content_type": "application/pdf",
+      "id": "0380-avgifter-for-upplatelse-av-offentlig-plats-i-uppsala-kommun",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:01:33Z",
+      "sha256": "58d52efc5fd21f8aa7d79d2baed0e0a445c8a8bff0024248be8c19d8217ffefa",
+      "url": "https://www.uppsala.se/contentassets/61a2232ad7354712aebcace435e7f40a/avgift-upplatelser-2026.pdf"
+    },
+    {
+      "bytes": 2480174,
+      "content_type": "application/pdf",
+      "id": "0380-foreskrifter-om-gangbanerenhallning-i-uppsala-kommun",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:02:46Z",
+      "sha256": "79df4e9a5cc7edc4523757d7f71c93a206f4baa3b3994d9a38ec56ecb587bdda",
+      "url": "https://www.uppsala.se/contentassets/cb376e9e2b6c4acfa2f4a745c152d45f/foreskrifter-gangbanerenhallning.pdf"
+    },
+    {
+      "bytes": 20430,
+      "content_type": "application/pdf",
+      "id": "0380-lokala-foreskrifter-for-allmanna-forsaljningsplatser",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:03:59Z",
+      "sha256": "1c09ddcc960d0e4cd27737fb5f15347a158558058ac75d6b6a272128cfc288c1",
+      "url": "https://www.uppsala.se/contentassets/223409932cfd415a9b5c7df69bc889aa/torghandelsforeskrifter.pdf"
+    },
+    {
+      "bytes": 191248,
+      "content_type": "application/pdf",
+      "id": "0380-lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:04:01Z",
+      "sha256": "944bd02166cdcfba6b192751f73a5a68342fa648d4600ca16beea61a81f84dc5",
+      "url": "https://www.uppsala.se/contentassets/63a4bbc5597e40668efe34e62d20afc5/lokala-f_reskrifter-f_r-att-skydda-m_nniskors-h_lsa.pdf"
+    },
+    {
+      "bytes": 707023,
+      "content_type": "application/pdf",
+      "id": "0380-lokala-ordningsforeskrifter-for-uppsala-kommun",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:04:04Z",
+      "sha256": "27d791e7e56ebac3311b90530b7ca6b8067370eb7502ff387164d8cb43e1a19c",
+      "url": "https://www.uppsala.se/contentassets/d4f7e2b5cc144f0685ec82b9346f2935/lokala-ordningsforeskrifter-for-uppsala-kommun.pdf"
+    },
+    {
+      "bytes": 964,
+      "content_type": "text/markdown",
+      "id": "0380-lokala-trafikforeskrifter",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:04:07Z",
+      "sha256": "d343f3de4e1baf8b39eea06b7680a0aa99a117412c92873ed24f2de49307f497",
+      "url": "https://www.uppsala.se/kommun-och-politik/publikationer/styrdokument/lokala-trafikforeskrifter/"
+    },
+    {
+      "bytes": 202760,
+      "content_type": "application/pdf",
+      "id": "0380-ordningsforeskrifter-for-uppsala-hamn",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:04:06Z",
+      "sha256": "0015436de030b59228b4b99f8bd45853da74ab932830b1226cb7e852f5124850",
+      "url": "https://www.uppsala.se/contentassets/acb529c58f2e400b90746aa7979b604c/lokala-ordningsforeskrifter_uppsalahamn2021.pdf"
+    },
+    {
+      "bytes": 1866819,
+      "content_type": "application/pdf",
+      "id": "0380-renhallningsordning-for-uppsala-kommun",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:05:08Z",
+      "sha256": "6f2478c11e3564497f8cacb255a7a72f5857ba07d29c89a17e9ab8fd9ad7151a",
+      "url": "https://www.uppsala.se/contentassets/31cd97b19e7c4ef5b50d5ee5dbee9d45/avfallsplan---program-for-ett-cirkulart-uppsala-utan-avfall-inklusive-bilagor.pdf"
+    },
+    {
+      "bytes": 462083,
+      "content_type": "application/pdf",
+      "id": "0380-taxa-alkohollagen",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:39Z",
+      "sha256": "8200fbff05608c1f1006e2f3d811d57a07d5f690e9f324fa73a71e5ed8de3104",
+      "url": "https://www.uppsala.se/contentassets/b380ea4efe1a447ba5e88229e6a6be1f/taxa-for-provning-och-tillsyn-enligt-alkohollagen-2026.pdf"
+    },
+    {
+      "bytes": 200426,
+      "content_type": "application/pdf",
+      "id": "0380-taxa-for-kontroll-enligt-lagen-2009730-om-handel-med-vissa-receptfria-lakemedel",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:35Z",
+      "sha256": "4c47097d1fc237f4ed2e63be7aeef1740011c43db6962c2a583f1b6846ca87a5",
+      "url": "https://www.uppsala.se/contentassets/1844e39cfccc42dea504ed58484603d0/taxa-for-kontroll-enligt-lagen-om-handel-med-vissa-receptfria-lakemedel-2026.pdf"
+    },
+    {
+      "bytes": 403609,
+      "content_type": "application/pdf",
+      "id": "0380-taxa-for-offentlig-kontroll-enligt-livsmedels-och-foderlagstiftningen",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:37Z",
+      "sha256": "6ca96f92d4e56f66e4350de9884d69ba9fbac6c6f567479d25aef111aa0cb45b",
+      "url": "https://www.uppsala.se/contentassets/a4ca833c530b4986b6a4874891c8a106/taxa-for-offentlig-kontroll-enligt-livsmedels--och-foderlagstiftningen-2026.pdf"
+    },
+    {
+      "bytes": 206038,
+      "content_type": "application/pdf",
+      "id": "0380-taxa-for-provning-och-tillsyn-enligt-lagen-20182088-om-tobak-och-liknande-produkter",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:41Z",
+      "sha256": "a74af64157e60d817d845e623c9f92a715fe4234f3fd6387fac0ea3ec15a2ecf",
+      "url": "https://www.uppsala.se/contentassets/3ecf48335562452180061938fe9b4702/taxa-for-provning-och-tillsyn-enligt-lagen-om-tobak-och-liknande-produkter-2026.pdf"
+    },
+    {
+      "bytes": 390743,
+      "content_type": "application/pdf",
+      "id": "0380-taxa-for-provning-och-tillsyn-enligt-lagen-om-atgarder-mot-fororeningar-fran-fartyg",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:43Z",
+      "sha256": "61330ecfd8cc1a85e8c403e6ddd49ef099d71bfbe9f216f0f84b25bac3cb6a08",
+      "url": "https://www.uppsala.se/contentassets/ef0e22aeff4947049b305bf17f7250bf/taxa-for-provning-och-tillsyn-enligt-lagen-om-atgarder-mot-fororening-fran-fartyg.pdf"
+    },
+    {
+      "bytes": 199348,
+      "content_type": "application/pdf",
+      "id": "0380-taxa-for-registrering-av-kommunala-lotterier-enligt-spellagen",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:45Z",
+      "sha256": "13ed0b3ad98f1ee674e0c8312c024d91863919e84c5c69af2bc82b84f727fdba",
+      "url": "https://www.uppsala.se/contentassets/21b9b66ab33143308b623fa523e5fef4/taxa-for-registrering-av-kommunala-lotterier-enligt-spellagen-2026.pdf"
+    },
+    {
+      "bytes": 206209,
+      "content_type": "application/pdf",
+      "id": "0380-taxa-for-tillsyn-enligt-lagen-2014799-om-sprangamnesprekursorer",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:47Z",
+      "sha256": "c3699e648ca327156e28e63b366d5bca46752f6d15e059f2e691ba87e8579361",
+      "url": "https://www.uppsala.se/contentassets/e389b6ea7960419085f8d435f961c597/taxa-for-tillsyn-enligt-lagen-om-sprangamnesprekursorer-2026.pdf"
+    },
+    {
+      "bytes": 199270,
+      "content_type": "application/pdf",
+      "id": "0380-taxa-for-tillsyn-enligt-lagen-om-tobaksfria-nikotinprodukter",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:49Z",
+      "sha256": "8b267fe3734ab1636b17429abe1830725ad00dd8c9c1649672a9454190a353e4",
+      "url": "https://www.uppsala.se/contentassets/c8ebfedef0e54cd39ba610a92cce6a7a/taxa-for-tillsyn-enligt-lagen-om-tobaksfria-nikotinprodukter-2026.pdf"
+    },
+    {
+      "bytes": 1534328,
+      "content_type": "application/pdf",
+      "id": "0380-taxa-inom-miljobalkens-och-stralskyddslagens-omraden",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:51Z",
+      "sha256": "748bbbfca81ce501a2fe769ab3dbfb1561641e6949cdbb0fa5485e72c286edb0",
+      "url": "https://www.uppsala.se/contentassets/b0696ecdb8f143749c99ebe0689b6069/taxa-inom-miljobalkens-mfl-omraden.pdf"
+    },
+    {
+      "bytes": 70705,
+      "content_type": "application/pdf",
+      "id": "0380-taxor-for-lso-och-lbe-i-tierp-uppsala-och-osthammars-kommun",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:54Z",
+      "sha256": "811224464df97c4da9d7687a7823010a4ad61a82861f02d0c56596ad9a741f63",
+      "url": "https://www.uppsala.se/contentassets/718bca2e5de64e1781947eb0da6e99a4/tierps-uppsala--osthammarskommuns-taxor--sotning--brandskyddskontroll-lagen-skydd-mot-olyckor-2025.pdf"
+    },
+    {
+      "bytes": 6303710,
+      "content_type": "application/pdf",
+      "id": "0380-taxor-och-avgifter-2026",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:06:57Z",
+      "sha256": "c70ed030975d43edbb5211410bb4de2b7a1a99e900ca595d7a2fe16bf75776c9",
+      "url": "https://www.uppsala.se/contentassets/4139f74d497740c4b94453c78e94554d/bilaga-3-taxor-och-avgifter-2026-rev-efter-kf.pdf"
+    },
+    {
+      "bytes": 188052,
+      "content_type": "application/pdf",
+      "id": "0380-uppsala-kommuns-torghandelsforeskrifter",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:07:01Z",
+      "sha256": "e7566ea8006eb2358d8fa1dd296a1fdc9c0fecd8f43f94a2847f9cc8b416b7e5",
+      "url": "https://www.uppsala.se/contentassets/4eda633b3502497a93e05d315a5dde51/torghandelsforeskrifter.pdf"
+    },
+    {
+      "bytes": 148278,
+      "content_type": "application/pdf",
+      "id": "0380-vard-och-omsorgsavgifter-i-uppsala-kommun",
+      "municipality_code": "0380",
+      "retrieved_at": "2026-10-30T21:07:20Z",
+      "sha256": "527e658ea850866a8f50ea1a147f78ff0898d67e29e04576f04b7336b7dd983a",
+      "url": "https://www.uppsala.se/contentassets/28638f921a58429e8bef977bf857c632/v_rd-och-omsorgsavgifter-i-uppsala-kommun-2026.pdf"
+    },
+    {
       "bytes": 158271,
       "content_type": "application/pdf",
       "id": "0381-18-10a3f1e9193dec94ff366a4b",
@@ -11024,6 +11231,42 @@
       "retrieved_at": "2026-10-30T13:50:22Z",
       "sha256": "e1982dd28d0a90be618438b48d95835e7f3010b06dc41d89b1724eca9e0d8ef5",
       "url": "https://hogsby.se/wp-content/uploads/Lokala_ordningsfoereskrifter_94879.pdf"
+    },
+    {
+      "bytes": 163515,
+      "content_type": "application/pdf",
+      "id": "0834-abva-2009-1",
+      "municipality_code": "0834",
+      "retrieved_at": "2026-10-30T20:51:45Z",
+      "sha256": "b215e8aa004a419004eb518f1574bcda15bbd50866c2e2c95bf68ea3aa62293b",
+      "url": "https://www.torsas.se/wp-content/uploads/abva-2009-1.pdf"
+    },
+    {
+      "bytes": 81573,
+      "content_type": "application/pdf",
+      "id": "0834-allmanna-lokala-ordningsforeskrifter-2010-1",
+      "municipality_code": "0834",
+      "retrieved_at": "2026-10-30T20:51:49Z",
+      "sha256": "17dea252e72cbd65ede152c92087f344b4b96a847f7ef6c2bcea5df727f4b386",
+      "url": "https://www.torsas.se/wp-content/uploads/allmanna_lokala_ordningsforeskrifter_2010-1.pdf"
+    },
+    {
+      "bytes": 176761,
+      "content_type": "application/pdf",
+      "id": "0834-lokala-halsoskyddsforeskrifter-antagen-kf-251215",
+      "municipality_code": "0834",
+      "retrieved_at": "2026-10-30T20:51:46Z",
+      "sha256": "dedf714caaadc2d4ef01dba334ee703c0d79f20c90df04920b28020aee0c0c38",
+      "url": "https://www.torsas.se/wp-content/uploads/Lokala-halsoskyddsforeskrifter-Antagen-KF-251215.pdf"
+    },
+    {
+      "bytes": 22091,
+      "content_type": "application/pdf",
+      "id": "0834-lokala-ordningsforeskrifter-torghandel-1",
+      "municipality_code": "0834",
+      "retrieved_at": "2026-10-30T20:51:47Z",
+      "sha256": "20f2ea0e98260e2aed774b4bfd42d04871b9825bdcc3e7a1d5e7a9ba42abec29",
+      "url": "https://www.torsas.se/wp-content/uploads/lokala_ordningsforeskrifter_torghandel-1.pdf"
     },
     {
       "bytes": 191757,
