@@ -261,7 +261,9 @@
     },
     "statens-jordbruksverks-forfattningssamling-sjvfs": {
       "series": "SJVFS",
-      "agency": "Statens jordbruksverk"
+      "agency": "Statens jordbruksverk",
+      "status": "blocked",
+      "note": "The regulations are PDFs on jvdoc.sharepoint.com, whose robots.txt disallows every path; Jordbruksverket's search page shows only the first 50 of 341 base regulations without JavaScript. Not collected (checked 2026-10-30)."
     },
     "statens-kulturrads-forfattningssamling-krfs": {
       "series": "KRFS",

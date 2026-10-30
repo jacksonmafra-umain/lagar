@@ -304,6 +304,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   instead of a PDF, and the collector rejects it.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
+- SJVFS (Statens jordbruksverk) is a gap: its regulations are PDFs on
+  `jvdoc.sharepoint.com`, whose robots.txt disallows every path, and
+  Jordbruksverket's search page lists only the first 50 of its 341 base
+  regulations without JavaScript (checked 2026-10-30, #202).
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630
