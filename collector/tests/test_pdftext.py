@@ -96,6 +96,33 @@ class ParagraphsTest(unittest.TestCase):
     def test_keeps_hyphen_before_capital(self):
         self.assertEqual(pdftext.paragraphs("Natura-\n2000-område"), ["Natura- 2000-område"])
 
+    def test_breaks_without_blank_lines(self):
+        long = "Länsstyrelsen föreskriver med stöd av 2 kap. 2 § sjötrafikförordningen"
+        text = "\n".join([
+            "03FS 2025:10",
+            "Länsstyrelsen i Uppsala läns föreskrifter",
+            "om avlysning av vattenområde;",
+            long,
+            "(1986:300) följande.",
+            "1 § Inom Pålsundet får vattenområdet inte användas för båttrafik under",
+            "lördagen den 16 augusti 2025.",
+            "___________",
+            "1. Dessa föreskrifter träder i kraft den 16 augusti 2025.",
+            "På Länsstyrelsens vägnar",
+            "\f",
+        ])
+        self.assertEqual(
+            pdftext.paragraphs(text),
+            [
+                "03FS 2025:10",
+                "Länsstyrelsen i Uppsala läns föreskrifter om avlysning av vattenområde;",
+                long + " (1986:300) följande.",
+                "1 § Inom Pålsundet får vattenområdet inte användas för båttrafik under lördagen den 16 augusti 2025.",
+                "1. Dessa föreskrifter träder i kraft den 16 augusti 2025.",
+                "På Länsstyrelsens vägnar",
+            ],
+        )
+
 
 class ExtractWithoutToolTest(unittest.TestCase):
     def test_missing_tool_raises(self):
@@ -113,7 +140,7 @@ class ExtractTest(unittest.TestCase):
         self.assertTrue(result.usable, result)
         self.assertEqual((result.pages, result.text_pages), (2, 2))
         self.assertIn("Stockholms län", result.text)
-        self.assertIn("2 § Länsstyrelsen får meddela undantag.", pdftext.paragraphs(result.text)[0])
+        self.assertEqual(pdftext.paragraphs(result.text)[1], "2 § Länsstyrelsen får meddela undantag.")
 
     def test_image_only_pdf_is_a_gap(self):
         result = pdftext.extract(make_pdf([None, None]))

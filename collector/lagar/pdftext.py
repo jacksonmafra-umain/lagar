@@ -27,12 +27,18 @@ MIN_TEXT_PAGES = 0.5
 # Share of letters and digits among the visible characters below which the text
 # layer is unreadable (fonts without a Unicode map).
 MIN_ALNUM_SHARE = 0.5
+# A line shorter than this share of the text width ends its paragraph when the
+# next line starts with a capital letter or a digit.
+SHORT_LINE = 0.75
 
 NO_TEXT_LAYER = "no text layer (scanned PDF)"
 UNREADABLE_TEXT = "text layer is not readable (fonts without a Unicode map)"
 
 _PAGE_NUMBER = re.compile(r"^\s*(?:-\s*)?(?:sid(?:a|an)?\s+)?\d{1,4}(?:\s*\(\d{1,4}\))?(?:\s*-)?\s*$", re.I)
 _HYPHENATED = re.compile(r"(\w)-$")
+_RULE = re.compile(r"^[_\-–—=*. ]{3,}$")
+# Section, chapter and list markers that open a paragraph of their own.
+_BREAK_BEFORE = re.compile(r"^(?:\d+\s?[a-z]?\s?§|\d+\s?kap\.|\d{1,2}[.)]\s|[a-z]\)\s|Bilaga\b|Övergångsbestämmelser\b|På .{0,40}vägnar\b)")
 _SPACES = re.compile(r"[ \t ]+")
 # "miljö- och hälsoskydd": a hyphen before these words is not a line-break hyphen.
 _CONJUNCTIONS = frozenset({"och", "eller", "samt", "respektive", "resp", "till", "som"})
@@ -100,10 +106,16 @@ def classify(raw):
 def paragraphs(text):
     """Reflow extracted text into paragraphs.
 
-    Lines are joined within a paragraph (blank lines separate paragraphs), a word
-    hyphenated across a line break is rejoined when the next line goes on in lower
-    case, and lines holding only a page number are dropped.
+    `pdftotext` ends every printed line, and often runs paragraphs together without
+    a blank line. A new paragraph starts after a blank line, before a section or
+    list marker (`3 §`, `2 kap.`, `1.`, `a)`), and after a line noticeably shorter
+    than the text width when the next line starts with a capital letter or a
+    digit. Other lines are joined; a word hyphenated across a line break is
+    rejoined when the next line goes on in lower case. Lines holding only a page
+    number or a rule (`_____`) are dropped.
     """
+    lines = [_SPACES.sub(" ", line).strip() for line in text.replace("\f", "\n\n").split("\n")]
+    width = _text_width(lines)
     result = []
     current = []
 
@@ -112,24 +124,36 @@ def paragraphs(text):
             result.append(" ".join(current))
             current.clear()
 
-    for line in text.split("\n"):
-        line = _SPACES.sub(" ", line.replace("\f", "")).strip()
-        if not line:
+    for line in lines:
+        if not line or _RULE.match(line):
             flush()
             continue
         if _PAGE_NUMBER.match(line):
             continue
-        if (
-            current
-            and _HYPHENATED.search(current[-1])
-            and line[:1].islower()
-            and line.split(" ", 1)[0].rstrip(",.;:") not in _CONJUNCTIONS
-        ):
-            current[-1] = current[-1][:-1] + line
-            continue
+        if current:
+            previous = current[-1]
+            if (
+                _HYPHENATED.search(previous)
+                and line[:1].islower()
+                and line.split(" ", 1)[0].rstrip(",.;:") not in _CONJUNCTIONS
+            ):
+                current[-1] = previous[:-1] + line
+                continue
+            if _BREAK_BEFORE.match(line) or (
+                len(previous) < width * SHORT_LINE and (line[:1].isupper() or line[:1].isdigit())
+            ):
+                flush()
         current.append(line)
     flush()
     return result
+
+
+def _text_width(lines):
+    """The usual length of a full line: the 90th percentile of the longer lines."""
+    lengths = sorted(len(line) for line in lines if len(line) >= 20)
+    if not lengths:
+        return 0
+    return lengths[min(len(lengths) - 1, int(len(lengths) * 0.9))]
 
 
 def _alnum(text):
