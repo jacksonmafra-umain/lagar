@@ -1,0 +1,14 @@
+{
+  "listings": {
+    "https://torsby.se/kommunpolitik/reglerochstyrandedokument/ordningsregler.4.7308326156ca7fa796c9c63.html": "1737-listing1.html",
+    "https://torsby.se/kommunpolitik/kommunfakta/ekonomi/avgifterochtaxoralla.4.7308326156ca7fa796c9bc6.html": "1737-listing2.html",
+    "https://torsby.se/byggabomiljo/bygganyttandraellerriva/avgifterforbygglovochanmalan.4.7308326156ca7fa796c4a61.html": "1737-listing3.html"
+  },
+  "count": 6,
+  "sample": {
+    "number": "18.7ef75b0c158cf4fe5018db64",
+    "title": "Lokala ordningsföreskrifter",
+    "url": "https://torsby.se/download/18.7ef75b0c158cf4fe5018db64/1482308636933/1-01%20Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": []
+}

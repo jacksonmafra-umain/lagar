@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.kristinehamn.se/kommun-och-politik/lokala-bestammelser-planer-och-policydokument/": "1781-listing1.html",
+    "https://www.kristinehamn.se/kommun-och-politik/ekonomi-och-budget/taxor-och-avgifter/": "1781-listing2.html"
+  },
+  "count": 19,
+  "sample": {
+    "number": "lokala-halsoskyddsforeskrifter-2025",
+    "title": "Lokala föreskrifter för att skydda människors fysiska hälsa och miljö",
+    "url": "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/lokala-halsoskyddsforeskrifter-2025.pdf"
+  },
+  "excluded": []
+}
