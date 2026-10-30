@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.almhult.se/kommunpolitik/saharstyrsalmhultskommun/styrdokument.1123.html": "0765-listing.html"
+  },
+  "count": 6,
+  "sample": {
+    "number": "18.2727e29417ee2988a502145a",
+    "title": "Allmänna Bestämmelser för Vatten och Avlopp",
+    "url": "https://www.almhult.se/download/18.2727e29417ee2988a502145a/1645024514348/Allm%C3%A4nna%20Best%C3%A4mmelser%20f%C3%B6r%20Vatten%20och%20Avlopp.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för styrelse och nämnder",
+    "Arbetsordning Kommunfullmäktige",
+    "Reglemente Brottsförebyggande Rådet"
+  ]
+}

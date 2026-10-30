@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.uddevalla.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument.html": "1485-listing.html"
+  },
+  "count": 54,
+  "sample": {
+    "number": "18.7c96063d1709e67f5331ff",
+    "title": "Arrendetaxa",
+    "url": "https://www.uddevalla.se/download/18.7c96063d1709e67f5331ff/1583475503721/Arrendetaxa.pdf"
+  },
+  "excluded": [
+    "Bestämmelser för jävsutskottet",
+    "Bestämmelser för kommunstyrelsens landsbygdsråd",
+    "Bestämmelser för personalutskottet"
+  ]
+}

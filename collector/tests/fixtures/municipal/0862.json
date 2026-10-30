@@ -1,0 +1,18 @@
+{
+  "listings": {
+    "https://www.emmaboda.se/kommun--politik/kommunfakta/regler-och-styrande-dokument.html?folder=19.b5cb4dd16388d2a64f74a&sv.url=12.1da71d9816cd3c3285f24a6f": "0862-listing.html",
+    "https://www.emmaboda.se/kommun--politik/kommunfakta/regler-och-styrande-dokument.html?folder=19.b5cb4dd16388d2a64f768&sv.url=12.1da71d9816cd3c3285f24a6f": "0862-listing-2.html",
+    "https://www.emmaboda.se/kommun--politik/kommunfakta/regler-och-styrande-dokument.html?folder=19.b5cb4dd16388d2a64f770&sv.url=12.1da71d9816cd3c3285f24a6f": "0862-listing-3.html"
+  },
+  "count": 11,
+  "sample": {
+    "number": "18.7eec88d11670cbf3cdf39561",
+    "title": "Allmän handling taxa",
+    "url": "https://www.emmaboda.se/download/18.7eec88d11670cbf3cdf39561/1544603636571/Allm%C3%A4n%20handling%20taxa.pdf"
+  },
+  "excluded": [
+    "Gång- och cykelplan 2019-2023",
+    "Näringslivsplan - Strategi för Emmaboda kommun",
+    "Plan för landsbygdsutveckling - Strategi för Emmaboda kommun"
+  ]
+}

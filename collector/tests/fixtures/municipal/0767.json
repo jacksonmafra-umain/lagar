@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.markaryd.se/sidor/kommun-och-politik/styrande-dokument.html": "0767-listing.html"
+  },
+  "count": 13,
+  "sample": {
+    "number": "18.3f6b11f5165860b26bf1fe13",
+    "title": "Avfallshantering",
+    "url": "https://www.markaryd.se/download/18.3f6b11f5165860b26bf1fe13/1771835342647/Avfallsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för adress- och namnärenden",
+    "Riktlinjer för enskilda avlopp",
+    "Riktlinjer för främjande av likabehandling och förebyggande av diskriminering, trakasserier och kränkande behandling"
+  ]
+}
