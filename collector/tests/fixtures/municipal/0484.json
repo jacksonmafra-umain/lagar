@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.eskilstuna.se/kommun-och-politik/ta-del-av-beslut/forfattningssamling": "0484-listing.html"
+  },
+  "count": 20,
+  "sample": {
+    "number": "18.5d8827b1961e0b8b6f60d5",
+    "title": "Avgifter för förskola, pedagogisk omsorg och fritidshem",
+    "url": "https://www.eskilstuna.se/download/18.5d8827b1961e0b8b6f60d5/1744807466779/Avgifter%20f%C3%B6r%20f%C3%B6rskola,%20pedagogisk%20omsorg%20och%20fritidshem.pdf"
+  },
+  "excluded": [
+    "Riktlinje för placering i fritidshem och öppen fritidsverksamhet",
+    "Riktlinje för placering i förskola och pedagogisk omsorg i Eskilstuna kommun",
+    "Riktlinje för placering vid förskoleklass och grundskola"
+  ]
+}

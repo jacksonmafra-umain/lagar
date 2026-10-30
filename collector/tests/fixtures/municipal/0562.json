@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://finspang.se/kommunochpolitik/kommunfakta/styrdokument": "0562-listing.html",
+    "https://finspang.se/bobyggaochmiljo/avfall-och-atervinning/avfallsplan-och-foreskrifter": "0562-listing-2.html"
+  },
+  "count": 22,
+  "sample": {
+    "number": "18.2a0514cf167c60922242c7c8",
+    "title": "Avgifter för avskrifter kopior utskrifter allmän handling",
+    "url": "https://finspang.se/download/18.2a0514cf167c60922242c7c8/1763126985929/Avgifter%20f%C3%B6r%20avskrifter%20kopior%20utskrifter%20allm%C3%A4n%20handling.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för fastställande av arvode och ersättning till ställföreträdare",
+    "Riktlinjer regler och avgifter i förskola fritidshem",
+    "Avfallsplan Finspångs kommun 2022-2030"
+  ]
+}
