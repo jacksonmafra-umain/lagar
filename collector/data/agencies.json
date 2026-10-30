@@ -1199,7 +1199,7 @@
       "note": "Härryda publishes no författningssamling or list of local rules: the avgifter och taxor page links to topic pages, where some taxor are HTML text and a few are single PDFs (plan- och bygglovstaxa, miljö- och hälsoskyddstaxa); no sitemap (checked 2026-10-30)."
     },
     "1435": {
-      "note": "Tanum's rules are web pages in its A–Z list and are collected as page text; the ABVA (a direct PDF link in the list) is not collected by the page strategy, and the avfallsföreskrifter page refers to Rambo AB's site (rambo.se) for the full text."
+      "note": "Tanum's rules are web pages in its A–Z list and are collected as page text; the avfallsföreskrifter page refers to Rambo AB's site (rambo.se) for the full text."
     },
     "1496": {
       "status": "no_adapter",

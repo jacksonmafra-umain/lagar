@@ -349,9 +349,8 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     pages hold rules that the configured listings do not cover; Kiruna covers
     its föreskrifter and bygglovstaxa only.
   - Tanum publishes its rules as web pages in an A–Z list; they are collected as
-    page text (`html_pages`). The ABVA, a direct PDF link in the same list, is not
-    collected by that strategy, and the avfallsföreskrifter page refers to Rambo
-    AB's site for the full text.
+    page text (`html_pages`), the ABVA as its PDF. The avfallsföreskrifter page
+    refers to Rambo AB's site for the full text.
 - Kommuner checked and not collected are listed with the reason in `AGENCIES.md`
   (curated in the `kommuner` section of `collector/data/agencies.json`):
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
