@@ -74,6 +74,16 @@ class ClassifyTest(unittest.TestCase):
         result = pdftext.classify(garbled)
         self.assertEqual(result.gap, pdftext.UNREADABLE_TEXT)
 
+    def test_shifted_font_encoding_is_unreadable(self):
+        garbled = "i®åëëíóêÉäëÉå= g®ãíä~åÇë=ä®å= Ñ∏êÑ~ííåáåÖëë~ãäáåÖ= =\n" * 20
+        self.assertEqual(pdftext.classify(garbled).gap, pdftext.UNREADABLE_TEXT)
+
+    def test_other_languages_are_readable(self):
+        sami = "Naturreservatet Bálggejávrre och Gáddejávrre i Kiruna kommun. " * 20
+        czech = "Ředitelství silnic a dálnic ČR, Léčebné lázně Mariánské Lázně. " * 20
+        self.assertTrue(pdftext.classify(sami).usable)
+        self.assertTrue(pdftext.classify(czech).usable)
+
     def test_empty_output(self):
         self.assertEqual(pdftext.classify("").gap, pdftext.NO_TEXT_LAYER)
 
