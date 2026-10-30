@@ -283,6 +283,23 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(len(entries), 6)
         self.assertEqual(client.calls.count(polisen.listing_url + "2/"), 1)
 
+    def test_scb_fs_table_and_detail(self):
+        scb = agency.ScbAdapter()
+        entries = scb.parse_listing(fixture("agency-scb-fs-listing.html"), scb.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [
+            ("SCB-FS 2004:9", False), ("SCB-FS 2018:20", False), ("SCB-FS 2019:15", True), ("SCB-FS 2020:16", False)])
+        base = entries[2]
+        self.assertEqual(base.amended_by, ["SCB-FS 2020:16"])
+        self.assertTrue(base.url.startswith("https://www.scb.se/link/"))
+        regulation = scb.parse_detail(fixture("agency-scb-fs-detail.html"), base)
+        self.assertEqual(regulation.published, "2019-04-04")
+        self.assertFalse(regulation.title.endswith(";"))
+        self.assertTrue(regulation.text.startswith("Statistiska centralbyrån (SCB) föreskriver"))
+        self.assertIn("1 § Ägare till nybyggda hus", regulation.text)
+        self.assertEqual(len(regulation.pdfs), 1)
+        with self.assertRaises(ValueError):
+            scb.parse_detail(fixture("agency-scb-fs-detail.html"), entries[3])
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

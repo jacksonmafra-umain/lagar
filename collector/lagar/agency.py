@@ -968,6 +968,77 @@ class PolisenAdapter:
                           amended_by=list(entry.amended_by), version="Grundförfattning", pdfs=list(entry.pdfs))
 
 
+# --- Statistiska centralbyrån (SCB-FS) ----------------------------------------
+
+_SCB_REF = re.compile(r"SCB-FS:? (\d{4}):0*(\d+)")
+
+
+class ScbAdapter:
+    """SCB's table of regulations on reporting duties, and one HTML page per regulation.
+
+    Each table row gives the number, the title linking to the regulation's
+    page, the area and the kind (Ändringsföreskrift, Upphävandeföreskrift).
+    The page holds the text (`div.xhtmlText`), the publication date and the PDF.
+    """
+
+    series = "SCB-FS"
+    issuer = "Statistiska centralbyrån"
+    base_url = "https://www.scb.se"
+    listing_url = base_url + "/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/?currentpageId=98388&type=UL"
+    detail = True
+    has_text = True
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def parse_listing(self, text, url):
+        rows, amending = [], {}
+        for row in parse_html(text).find_all("tr"):
+            cells = [c for c in row.children if isinstance(c, Node) and c.tag in ("td", "th")]
+            match = _SCB_REF.fullmatch(cells[0].text()) if cells else None
+            link = row.find("a")
+            if match is None or link is None:
+                continue
+            number = f"SCB-FS {match.group(1)}:{int(match.group(2))}"
+            title = link.text().rstrip(";").strip()
+            changes = _AMENDING.search(title) or "föreskrifter som upphör att gälla" in title
+            if changes or any(c.text() in ("Ändringsföreskrift", "Upphävandeföreskrift") for c in cells[1:]):
+                for ref in _SCB_REF.finditer(title):
+                    amending.setdefault(f"SCB-FS {ref.group(1)}:{int(ref.group(2))}", set()).add(number)
+                rows.append(Entry(number, title, absolute(url, link.attrs.get("href", "")), base=False))
+                continue
+            rows.append(Entry(number, title, absolute(url, link.attrs.get("href", ""))))
+        for entry in rows:
+            entry.amended_by = sorted(amending.get(entry.number, ()), key=number_key)
+        if not any(e.base for e in rows):
+            raise ValueError("no regulations in SCB's table")
+        return rows
+
+    def parse_detail(self, text, entry):
+        root = parse_html(text)
+        label = next((b for b in root.find_all("b") if _SCB_REF.fullmatch(b.text())), None)
+        if label is None:
+            raise ValueError("no number on the detail page")
+        found = _SCB_REF.fullmatch(label.text())
+        _check_number(f"SCB-FS {found.group(1)}:{int(found.group(2))}", entry)
+        heading = root.find("h1")
+        body = root.find("div", "xhtmlText")
+        pdfs = []
+        for box in root.find_all("div", "box-highlight"):
+            for link in box.find_all("a"):
+                pdfs.append((entry.number, absolute(self.base_url, link.attrs.get("href", ""))))
+        published = next((p.text() for p in root.find_all("p") if p.text().startswith("Publicerad")), "")
+        return Regulation(
+            number=entry.number,
+            title=heading.text().rstrip(";").strip() if heading is not None else entry.title,
+            published=_date(published),
+            amended_by=list(entry.amended_by),
+            version="Grundförfattning",
+            text=htmlmd.to_markdown(to_html(body)) if body is not None else "",
+            pdfs=pdfs[:1],
+        )
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1185,7 +1256,7 @@ def load_series(path=SERIES_CONFIG):
 
 
 ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
-                                   PrvAdapter(), PolisenAdapter())}
+                                   PrvAdapter(), PolisenAdapter(), ScbAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
