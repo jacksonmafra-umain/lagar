@@ -442,6 +442,11 @@ class HslffsTest(unittest.TestCase):
         regulation = self.HSLF.parse_detail(page, entry)
         self.assertEqual([url.rsplit("/", 1)[-1] for _, url in regulation.pdfs],
                          ["HSLF-FS_2015_17.pdf", "hslf_2015_17_konsoliderad.pdf"])
+        general = "<main><p>HSLF-FS 2015:17 om prissättning</p><a href='/a.pdf'>Broschyr</a><a href='/b.pdf'>Mall</a></main>"
+        with self.assertRaises(ValueError):
+            self.HSLF.parse_detail(general, entry)
+        with self.assertRaises(ValueError):
+            self.HSLF.parse_detail("<main><p>HSLF-FS 2015:17</p></main>", entry)
 
     def test_run_reads_robots_per_host_and_takes_a_listed_pdf_as_the_document(self):
         tmp = tempfile.TemporaryDirectory()

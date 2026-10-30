@@ -1072,7 +1072,7 @@ class HslffsAdapter(DetailPageAdapter):
                if entry.number in self.references(label) or self.url_number(url) == entry.number]
         if own:
             regulation.pdfs = own
-        elif len(regulation.pdfs) > 2:
+        elif len(regulation.pdfs) != 1:  # a general page, or a page of several regulations
             raise ValueError(f"no PDF on {entry.url} names {entry.number}")
         return regulation
 
