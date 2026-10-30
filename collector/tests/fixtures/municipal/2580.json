@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.lulea.se/kommun--politik/sa-styrs-lulea-kommun/styrande-dokument.html": "2580-listing.html"
+  },
+  "count": 12,
+  "sample": {
+    "number": "18.59c0d2cf1882445ebf713b50",
+    "title": "Föreskrifter om avfallshantering för Luleå kommun 2023-05-01",
+    "url": "https://www.lulea.se/download/18.59c0d2cf1882445ebf713b50/1685623357011/F%C3%B6reskrifter%20om%20avfallshantering%20f%C3%B6r%20Lule%C3%A5%20kommun%202023-05-01.pdf"
+  },
+  "excluded": [
+    "Avfallsplan 2021-2028",
+    "Avfallsplan Bilagor 2021-2028",
+    "Bostadsförsörjningsprogram"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://amal.se/kommun-och-politik/kommun/styrdokument-for-amals-kommun": "1492-listing1.html",
+    "https://amal.se/uppleva-och-gora/taxor": "1492-listing2.html"
+  },
+  "count": 7,
+  "sample": {
+    "number": "18.f11e32b18b848c78592174f",
+    "title": "Regler för tomtkö",
+    "url": "https://amal.se/download/18.f11e32b18b848c78592174f/1699261625201/tomtkoregler-amals-kommun.pdf"
+  },
+  "excluded": []
+}

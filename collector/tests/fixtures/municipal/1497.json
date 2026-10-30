@@ -1,0 +1,14 @@
+{
+  "listings": {
+    "https://hjo.se/kommun--politik/politik-och-organisation/styrdokument2/": "1497-listing.html"
+  },
+  "count": 21,
+  "sample": {
+    "number": "administration/kopiering-av-allmanna-handlingar-taxa",
+    "title": "Kopiering av allmänna handlingar, taxa",
+    "url": "https://hjo.se/globalassets/dokument/styrdokument/administration/kopiering-av-allmanna-handlingar-taxa.pdf"
+  },
+  "excluded": [
+    "Partistöd, regler"
+  ]
+}
