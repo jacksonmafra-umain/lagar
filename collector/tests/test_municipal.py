@@ -678,6 +678,94 @@ class JsonListTest(unittest.TestCase):
                 municipal.load_config(self.config(tmp, {**DOCWEB_ENTRY, "url_template": ""}))
 
 
+def _config(tmp, code, entry):
+    path = Path(tmp) / "municipalities.json"
+    path.write_text(json.dumps({"kommuner": {code: entry}}), encoding="utf-8")
+    return municipal.load_config(str(path))[code]
+
+
+TORSAS = {
+    "name": "Torsås", "issuer": "Torsås kommun", "region_code": "08", "collection": "Samlade styrdokument",
+    "strategy": "html_index", "resident_filter": True, "row_titles": True, "hosts": ["www.torsas.se"],
+    "listings": ["https://www.torsas.se/styrdokument/"],
+    "link_pattern": "/wp-content/uploads/.+\\.pdf$",
+    "number": [{"from": "href", "pattern": "/([^/]+)\\.pdf$"}],
+}
+UPPSALA = {
+    "name": "Uppsala", "issuer": "Uppsala kommun", "region_code": "03", "collection": "Styrdokument",
+    "strategy": "html_pages", "resident_filter": True, "page_titles": True, "hosts": ["www.uppsala.se"],
+    "listings": ["https://www.uppsala.se/sitemaps.xml"], "follow": "/sitemap\\d+\\.xml$",
+    "link_pattern": "^https://www\\.uppsala\\.se/kommun-och-politik/publikationer/styrdokument/[^/]+/$",
+    "number": [{"from": "href", "pattern": "/styrdokument/([^/]+)/$"}],
+    "document_pattern": "/contentassets/.+\\.pdf$",
+}
+UPPSALA_PAGE = (
+    "<html><body><main><nav><a href='/'>Start</a> Kommun och politik</nav>"
+    "<h1>Lokala ordningsföreskrifter för Uppsala kommun</h1><p>Föreskrifterna gäller från 1 juli 2026.</p>"
+    "<a href='/contentassets/d4f7/lokala-ordningsforeskrifter.pdf'>Lokala ordningsföreskrifter (pdf)</a>"
+    "</main></body></html>"
+).encode()
+UPPSALA_ARCHIVE = (
+    "<html><body><main><h1>Arkivreglemente för Uppsala kommun</h1><p>Reglementet styr arkivvården.</p>"
+    "<a href='/contentassets/aa/arkivreglemente.pdf'>Arkivreglemente (pdf)</a></main></body></html>"
+).encode()
+
+
+class ListingOptionsTest(unittest.TestCase):
+    def test_row_titles_come_from_the_other_cells(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = _config(tmp, "0834", TORSAS)
+        raw = (FIXTURES / "municipal-rows-listing.html").read_bytes()
+        entries, problems = municipal.parse_html_index(kommun, raw, TORSAS["listings"][0])
+        self.assertEqual(problems, [])
+        self.assertEqual([(e.number, e.title) for e in entries], [
+            ("Lokala-ordningsforeskrifter", "Lokala ordningsföreskrifter för Torsås kommun KF 2025-12-15"),
+            ("Avfallstaxa-2026", "Avfallstaxa 2026"),
+        ])
+
+    def test_sitemap_listing_with_titles_and_filter_from_the_rule_page(self):
+        base = "https://www.uppsala.se/kommun-och-politik/publikationer/styrdokument/"
+        client = FakeClient({
+            "https://www.uppsala.se/robots.txt": b"User-agent: *\nDisallow: /search/\n",
+            "https://www.uppsala.se/sitemaps.xml": (FIXTURES / "municipal-sitemap-index.xml").read_bytes(),
+            "https://www.uppsala.se/sitemap1.xml": (FIXTURES / "municipal-sitemap.xml").read_bytes(),
+            base + "lokala-ordningsforeskrifter/": UPPSALA_PAGE,
+            base + "arkivreglemente/": UPPSALA_ARCHIVE,
+            "https://www.uppsala.se/contentassets/d4f7/lokala-ordningsforeskrifter.pdf": PDF,
+        })
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "m.json"
+            path.write_text(json.dumps({"kommuner": {"0380": UPPSALA}}), encoding="utf-8")
+            args = Args(tmp, kommun=["0380"], config=str(path))
+            summary = municipal.run(client, args)
+            self.assertEqual(summary.written, ["0380-lokala-ordningsforeskrifter"])
+            self.assertEqual(summary.skipped, 1)
+            self.assertNotIn("https://www.uppsala.se/sitemap-news.xml", client.calls)
+            meta, body = frontmatter.load(next((Path(args.corpus) / "municipality" / "regulations").glob("*.md"))
+                                          .read_text(encoding="utf-8"))
+            self.assertEqual(meta["title"], "Lokala ordningsföreskrifter för Uppsala kommun")
+            self.assertEqual(meta["source"], "https://www.uppsala.se/contentassets/d4f7/lokala-ordningsforeskrifter.pdf")
+            self.assertNotIn("Start", body)
+
+    def test_html_pages_accepts_a_pdf_linked_from_the_listing(self):
+        entry = {**PAGES_ENTRY, "link_pattern": "^https://www\\.oskarshamn\\.se/(mer-om-kommunen/forfattningssamling/[^#?]+/|download/.+\\.pdf)$",
+                 "number": [{"from": "href", "pattern": "/([^/]+?)(\\.pdf)?/?$"}]}
+        listing = (b"<html><body><h2>Andra taxor och avgifter</h2>"
+                   b"<a href='/download/18.4f1e2/1700000000000/Lokala%20ordningsf%C3%B6reskrifter.pdf'>"
+                   b"Lokala ordningsf\xc3\xb6reskrifter</a></body></html>")
+        client = FakeClient({PAGES_BASE: listing, PAGES_PDF: PDF})
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "m.json"
+            path.write_text(json.dumps({"kommuner": {"0882": entry}}), encoding="utf-8")
+            args = Args(tmp, kommun=["0882"], config=str(path))
+            summary = municipal.run(client, args)
+            self.assertEqual(len(summary.written), 1)
+            meta, body = frontmatter.load(next((Path(args.corpus) / "municipality" / "regulations").glob("*.md"))
+                                          .read_text(encoding="utf-8"))
+            self.assertEqual(meta["source"], PAGES_PDF)
+            self.assertNotIn("Uppgifter från kommunen", body)
+
+
 class MainTest(unittest.TestCase):
     def test_bad_code_is_rejected(self):
         with self.assertRaises(SystemExit):

@@ -39,6 +39,7 @@ recorded as a gap, its corpus file then pointing at the listing page instead.
 import argparse
 import gzip
 import hashlib
+import html
 import json
 import re
 import sys
@@ -129,6 +130,10 @@ class UnsupportedEncoding(ValueError):
     """The server answered with a Content-Encoding the standard library cannot decode."""
 
 
+class NotForResidents(Exception):
+    """A rule page whose own title (`page_titles`) fails the kommun's title filter."""
+
+
 class ForbiddenHost(ValueError):
     """A request or redirect would leave the hosts configured for the kommun."""
 
@@ -158,6 +163,8 @@ class Kommun:
     title_include: "list[str]" = field(default_factory=list)
     title_exclude: "list[str]" = field(default_factory=list)
     follow: str = ""
+    row_titles: bool = False
+    page_titles: bool = False
     embedded_json: bool = False
     document_pattern: str = ""
     content_id: str = ""
@@ -216,6 +223,8 @@ def _kommun(code, entry):
         title_include=list(entry.get("title_include") or (RESIDENT_INCLUDE if resident else [])),
         title_exclude=list(entry.get("title_exclude") or (RESIDENT_EXCLUDE if resident else [])),
         follow=entry.get("follow", ""),
+        row_titles=bool(entry.get("row_titles", False)),
+        page_titles=bool(entry.get("page_titles", False)),
         embedded_json=bool(entry.get("embedded_json", False)),
         document_pattern=entry.get("document_pattern", ""),
         content_id=entry.get("content_id", ""),
@@ -524,10 +533,12 @@ class _Links(HTMLParser):
     anchors under the heading that precedes the script.
     """
 
-    def __init__(self, level, embedded_json=False):
+    def __init__(self, level, embedded_json=False, row_titles=False):
         super().__init__(convert_charrefs=True)
         self.level = level
         self.embedded_json = embedded_json
+        self.row_titles = row_titles
+        self._row = None  # [text parts, anchors] of the table row being read (row_titles)
         self.links = []  # (section, href, text)
         self.section = None
         self._heading = None  # [level, parts]
@@ -542,6 +553,8 @@ class _Links(HTMLParser):
         elif tag == "a":
             href = dict(attrs).get("href")
             self._anchor = [href, []] if href else None
+        elif tag == "tr" and self.row_titles:
+            self._row = [[], []]
 
     def handle_endtag(self, tag):
         if tag in ("script", "style", "template"):
@@ -550,8 +563,15 @@ class _Links(HTMLParser):
             self.section = _clean("".join(self._heading[1]))
             self._heading = None
         elif tag == "a" and self._anchor:
-            self.links.append((self.section, self._anchor[0], _clean("".join(self._anchor[1]))))
+            link = (self.section, self._anchor[0], _clean("".join(self._anchor[1])))
+            (self._row[1] if self._row is not None else self.links).append(link)
             self._anchor = None
+        elif tag == "tr" and self._row is not None:
+            # The row's other cells name the document; the link itself only says "Ladda ner".
+            row = _clean(" ".join(self._row[0]))
+            for section, href, text in self._row[1]:
+                self.links.append((section, href, _clean(row.replace(text, " ", 1)) if text else row))
+            self._row = None
 
     def handle_data(self, data):
         if self._skip:
@@ -562,6 +582,8 @@ class _Links(HTMLParser):
             self._heading[1].append(data)
         if self._anchor:
             self._anchor[1].append(data)
+        if self._row is not None:
+            self._row[0].append(data)
 
 
 def _number(kommun, href, text):
@@ -590,17 +612,39 @@ def binds_residents(kommun, title):
     return not any(re.search(p, title, re.IGNORECASE) for p in kommun.title_exclude)
 
 
-def parse_html_index(kommun, raw, listing_url):
-    """(entries, problems) of a listing page; problems are links that match but carry no number."""
-    parser = _Links(kommun.section_level, kommun.embedded_json)
+_SITEMAP = re.compile(rb"<(urlset|sitemapindex)\b")
+_LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>")
+
+
+def _sitemap_locs(raw):
+    """URLs of a sitemap (`<urlset>`) or sitemap index, or None when `raw` is not a sitemap."""
+    if not _SITEMAP.search(raw[:4096]):
+        return None
+    return [html.unescape(loc) for loc in _LOC.findall(_text(raw))]
+
+
+def _listing_links(kommun, raw):
+    locs = _sitemap_locs(raw)
+    if locs is not None:
+        return [] if b"<sitemapindex" in raw[:4096] else [(None, loc, "") for loc in locs]
+    parser = _Links(kommun.section_level, kommun.embedded_json, kommun.row_titles)
     parser.feed(_text(raw))
     parser.close()
+    return parser.links
+
+
+def parse_html_index(kommun, raw, listing_url):
+    """(entries, problems) of a listing page; problems are links that match but carry no number.
+
+    A listing may also be an XML sitemap; its URLs carry no title, so it needs `page_titles`.
+    """
+    links = _listing_links(kommun, raw)
     sha = hashlib.sha256(raw).hexdigest()
     sections = {s.casefold() for s in kommun.sections}
     entries, problems = [], []
     # Icon links next to the titled link carry no text; they are not documents of their own.
-    titled = {_uri(urllib.parse.urljoin(listing_url, href.strip())) for _, href, text in parser.links if text}
-    for section, href, text in parser.links:
+    titled = {_uri(urllib.parse.urljoin(listing_url, href.strip())) for _, href, text in links if text}
+    for section, href, text in links:
         if sections and (section or "").casefold() not in sections:
             continue
         url = _uri(urllib.parse.urljoin(listing_url, href.strip()))
@@ -608,7 +652,9 @@ def parse_html_index(kommun, raw, listing_url):
             continue
         number = _number(kommun, url, text)
         title = _title(kommun, text)
-        if not title or not binds_residents(kommun, title):
+        if kommun.page_titles and not title:
+            title = ""  # judged and named from the rule page itself
+        elif not title or not binds_residents(kommun, title):
             continue  # an image or icon link carries no title to judge or store
         if not number:
             problems.append(url)
@@ -621,6 +667,9 @@ def more_pages(kommun, raw, listing_url):
     """Further listing pages linked from this one (pagination), matched by `follow`."""
     if not kommun.follow:
         return []
+    locs = _sitemap_locs(raw)
+    if locs is not None:
+        return [loc for loc in locs if b"<sitemapindex" in raw[:4096] and re.search(kommun.follow, loc)]
     parser = _Links(kommun.section_level)
     parser.feed(_text(raw))
     parser.close()
@@ -814,6 +863,10 @@ class _PageLinks(HTMLParser):
 def parse_page(kommun, raw, url):
     """A rule's own page (html_pages): its text as Markdown and the documents it links to."""
     content = _element(_text(raw), kommun.content_id)
+    first = re.search(r"<h1\b", content, re.IGNORECASE)
+    if first:  # menus and breadcrumbs often sit inside <main> before the rule's own heading
+        content = content[first.start():]
+    heading = re.search(r"<h1\b[^>]*>(.*?)</h1\s*>", content, re.IGNORECASE | re.DOTALL)
     lines = htmlmd.to_markdown(content, heading_offset=2).splitlines()
     text = "\n".join(line for line in lines if not PAGE_NOISE.match(line.strip())).strip()
     text = re.sub(r"\n{3,}", "\n\n", text)
@@ -826,7 +879,8 @@ def parse_page(kommun, raw, url):
             target = _uri(urllib.parse.urljoin(url, href.strip()))
             if re.search(kommun.document_pattern, target, re.IGNORECASE):
                 attachments.append((target, label or _label(target)))
-    return Detail({}, text, list(dict.fromkeys(attachments)))
+    title = _clean(html.unescape(re.sub(r"<[^>]+>", " ", heading.group(1)))) if heading else ""
+    return Detail({"title": title}, text, list(dict.fromkeys(attachments)))
 
 
 def parse_detail(raw, url):
@@ -958,8 +1012,14 @@ def _collect_page(fetcher, kommun, entry, args, manifest):
     """A rule published as an HTML page: the page text is the document; a linked PDF wins."""
     if not fetcher.allows(entry.url):
         raise ListingError(f"robots.txt disallows {entry.url}")
-    raw, _, final = fetcher.get(kommun, entry.url)
+    raw, content_type, final = fetcher.get(kommun, entry.url)
+    if _is_pdf(raw, content_type):  # the listing links the rule's PDF directly
+        return None, Detail({}, "", [(final, entry.title)]), final
     detail = parse_page(kommun, raw, final)
+    if kommun.page_titles:
+        entry.title = _title(kommun, detail.fields.get("title") or "") or entry.title
+        if not entry.title or not binds_residents(kommun, entry.title):
+            raise NotForResidents(entry.url)
     if detail.attachments:
         return None, detail, final
     if not detail.text_ok():
@@ -988,6 +1048,8 @@ def collect_document(fetcher, kommun, entry, args, manifest):
             return done
         documents = detail.attachments
         fallback = (final, hashlib.sha256(detail.note.encode("utf-8")).hexdigest())
+        if not detail.note:
+            detail = None  # a PDF linked straight from the listing: no page to quote
     elif kommun.strategy == "domino_view":
         if not fetcher.allows(entry.url):
             raise ListingError(f"robots.txt disallows {entry.url}")
@@ -1148,6 +1210,9 @@ def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
             continue
         try:
             meta, changed, gap = collect_document(fetcher, kommun, entry, args, manifest)
+        except NotForResidents:
+            summary.skipped += 1
+            continue
         except Blocked:
             raise
         except (*DOCUMENT_ERRORS, ListingError) as error:
