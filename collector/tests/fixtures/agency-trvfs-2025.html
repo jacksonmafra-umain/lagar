@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Författningssamling</title>
+    
+    <link href="/TRVFS/Content/trv-style.css" rel="stylesheet" />
+    <link href="/TRVFS/Content/tv-extapp-structure.css" rel="stylesheet" />
+    
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/smoothness/jquery-ui.css" rel="stylesheet" />    
+    
+    
+    
+            
+    
+
+</head>
+<body id="AllColumns" class="Ext-Apps WideApp">
+
+    <div id="Head">
+        <a accesskey="S" class="hidden" href="#Content" tabindex="10" title="Gå till innehåll"></a>
+    </div>
+    <div id="Wrapper">
+        <div id="MainContent">
+            <div id="TopHolder">
+                <div class="Logo">
+                    <a accesskey="1" href="http://www.trafikverket.se" title="Länk till startsidan">
+                        <img alt="Logotyp" class="ScreenLogo" src="/TRVFS/images/trafikverket-logo.gif" /><img alt="Logotyp" class="PrintLogo" height="54" src="/TRVFS/images/trafikverket-logo-print.gif" width="284" />
+                    </a>
+                </div>
+                <div class="AppName">
+                    Författningssamling
+                </div>
+                <div class="TopRight">
+                </div>
+                <div id="TopMenuHolder">
+                    <ul class="TopMenu">
+                        <li id="home" class="ActiveItem"><a href="/TRVFS/"><span>Hem</span></a></li>
+                        <li id="senaste"><a href="/TRVFS/Home/ListDocumentByDate"><span>Senaste</span></a></li>
+                        <li id="search2"><a href="/TRVFS/Home/GetSpeedDocs"><span>Sök hastighetsföreskrifter</span></a></li>
+                        <li id="search"><a href="/TRVFS/Home/SearchInDocCollection"><span>Sök författningssamling</span></a></li>
+                    </ul>
+                    <span class="Bottom"><span></span></span>
+                    <div class="Breaker">
+                    </div>
+                </div>
+            </div>
+            <div class="MidContentTop">
+                <span class="Top"><span></span></span>
+            </div>
+            <div class="MidContent">
+                <div class="MidContentInner">
+                    <a id="Content"></a>
+                    <div id="AppContainer">
+                        <div class="ContentArea">
+                            
+
+
+
+<div class="FormArea cf">
+    <div class="FormColLeft" style="width:58%">
+        <div class="WorkArea cf ">
+            <div class="WorkGroup cf">
+
+
+                <table>
+                    <tr>
+                        <td valign="top" width="100%" align="left"><b>Sökning i Vägverkets föreskrifter</b><br></td>
+                        <td><a href="#" class="popper" data-popbox="pop1"><img src="/TRVFS/Images/Information-icon.png" /></a></td>
+                    </tr>
+                </table>
+                <div>
+                    Sökning i Trafikverkets författningssamling samt i Vägverkets föreskrifter VVFS och TSVFS. Föreskrifter som har beslutats av Vägverket under tiden 1 januari 2010 - 31 mars 2010 är endast sökbara med tillägget VVFS före författningens löpnummer.
+                </div>
+                
+
+<form action="/TRVFS/Home/SearchInDocCollection" method="post">                    <table>
+                        <tr>
+                            <td valign="top" width="50%" align="left">
+                                Dokumentbeteckning<br>
+                                <input type="TEXT" name="Dokumentbeteckning">
+                                <br>
+                                EG-direktiv/Celexnummer<br>
+                                <input type="TEXT" name="Celexnummer">
+                                <br>
+                                Ikraftträdande fr o m<br>
+                                <input type="text" id="datepicker-1" name="Ikrafttradandefrom"><br>
+                                Ikraftträdande t o m<br>
+                                <input type="text" id="datepicker-2" name="Ikrafttradandetom"><br>
+                                Titel<br>
+                                <input type="TEXT" name="Titel" size="38">
+                                <!--		<textarea Name = "Titel" cols="26" rows="3">		</textarea>-->
+                                <br>
+                                Hastighetsföreskrifter ska ingå
+                                
+                                <input id="Hastforeskrift" name="Hastforeskrift" type="checkbox" value="true" /><input name="Hastforeskrift" type="hidden" value="false" /><br>
+                                Upphävda föreskrifter ska ingå
+                                
+                                <input id="Upphavda" name="Upphavda" type="checkbox" value="true" /><input name="Upphavda" type="hidden" value="false" /><br>
+                                <br><br>
+                                <input type="submit" value="Visa föreskrifter">
+                                <input type="reset" value="Rensa">
+                            </td>
+                            <td valign="top" width="20%" align="left">
+
+                                Välj årtal<br>
+                                <select name="Ar" size="1">
+                                    <option value="Alla" selected>Alla</option>
+                                        <option>2026</option>
+                                        <option>2025</option>
+                                        <option>2024</option>
+                                        <option>2023</option>
+                                        <option>2022</option>
+                                        <option>2021</option>
+                                        <option>2020</option>
+                                        <option>2019</option>
+                                        <option>2018</option>
+                                        <option>2017</option>
+                                        <option>2016</option>
+                                        <option>2015</option>
+                                        <option>2014</option>
+                                        <option>2013</option>
+                                        <option>2012</option>
+                                        <option>2011</option>
+                                        <option>2010</option>
+                                        <option>2009</option>
+                                        <option>2008</option>
+                                        <option>2007</option>
+                                        <option>2006</option>
+                                        <option>2005</option>
+                                        <option>2004</option>
+                                        <option>2003</option>
+                                        <option>2002</option>
+                                        <option>2001</option>
+                                        <option>2000</option>
+                                        <option>1999</option>
+                                        <option>1998</option>
+                                        <option>1997</option>
+                                        <option>1996</option>
+                                        <option>1995</option>
+                                        <option>1994</option>
+                                        <option>1993</option>
+                                        <option>1992</option>
+                                        <option>1991</option>
+                                        <option>1990</option>
+                                        <option>1989</option>
+                                        <option>1988</option>
+                                        <option>1987</option>
+                                        <option>1986</option>
+                                        <option>1985</option>
+                                        <option>1984</option>
+                                        <option>1983</option>
+                                        <option>1982</option>
+                                        <option>1981</option>
+                                        <option>1980</option>
+                                        <option>1979</option>
+                                        <option>1978</option>
+                                        <option>1977</option>
+                                </select>
+                            </td>
+                            <td valign="top" width="30%" align="left"></td>
+                        </tr>
+                    </table>
+</form>                <table>
+    <tr>
+        <td valign="top" width="100%" align="left">
+
+            <table border="0">
+
+                    <tr>
+                        <td>
+                            
+                            <a href="/TRVFS/Home/DocumentHistory/2025-1">
+                                <b>
+                                    2025:1
+Grundföreskrift                                </b>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Trafikverkets f&#246;reskrifter 
+om l&#228;nsv&#228;g 363 genom V&#228;sterbottens l&#228;n;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ikraftträdande  2025-09-01
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="5"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                            <a href="/TRVFS/Home/DocumentHistory/2025-2">
+                                <b>
+                                    2025:2
+Grundföreskrift                                </b>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Trafikverkets f&#246;reskrifter 
+om statsbidrag till enskild v&#228;gh&#229;llning;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ikraftträdande  2026-01-01
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="5"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                            <a href="/TRVFS/Home/DocumentHistory/TSFS%202025-18">
+                                <b>
+                                    TSFS 2025:18
+Grundföreskrift                                </b>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Transportstyrelsens f&#246;reskrifter och allm&#228;nna r&#229;d
+om h&#246;gsta till&#229;tna hastighet f&#246;r bil med tv&#229; 
+sl&#228;pvagnar;
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ikraftträdande  2025-04-15
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="5"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                            <a href="/TRVFS/Home/DocumentHistory/TSFS%202025-54">
+                                <b>
+                                    TSFS 2025:54
+Grundföreskrift                                </b>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Transportstyrelsens f&#246;reskrifter och allm&#228;nna r&#229;d
+om undantag fr&#229;n kravet att anv&#228;nda bilb&#228;lte och 
+s&#228;rskild skyddsanordning f&#246;r barn;
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ikraftträdande  2025-12-01
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="5"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                            <a href="/TRVFS/Home/DocumentHistory/TSFS%202025-84">
+                                <b>
+                                    TSFS 2025:84
+Grundföreskrift                                </b>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Transportstyrelsens f&#246;reskrifter om upph&#228;vande av Trafiks&#228;kerhetsverkets 
+f&#246;reskrifter (TSVFS 1979:48) om kantstolpe;
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ikraftträdande  2026-03-01
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="5"></td>
+                    </tr>
+                
+            </table>
+        </td>
+    </tr>
+</table>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="pop1" class="popboxArende">
+    <h2>Söktips</h2>
+    <p>
+    <p>Det finns flera sätt att söka efter föreskrifter. Använd sökformuläret på sidan Sök författningssamling. Du kan söka på ord i föreskriftens titel eller på föreskriftens nummer i författningssamlingen. Du kan också söka efter föreskrifter utgivna ett visst år.</p>
+    <b>Sökning på titel, utgivningsår eller nummer</b>
+    <p>Använd sökformuläret på sidan " Sök författningssamling" om du vill söka på ord i en föreskrifts titel eller söka föreskrifter utgivna ett visst år eller med ett visst nummer. Du kan ange flera sökbegrepp. Sökningen sker på alla de angivna begreppen samtidigt. Om du till exempel skriver in ett årtal och söker på ett ord i titeln sker sökningen bara i titlar för föreskrifter utgivna detta år.</p>
+    <b>Dokumentbeteckning</b>
+    <p>Ange TRVFS-,VVFS- eller TSVFS-numret. Exempel: 2003:22. OBS! Skriv inte TRVFS-,VVFS- eller TSVFS-numret i sökrutan, med undantag för föreskrifter som har beslutats av Vägverket under tiden 1 januari 2010 - 31 mars 2010 som endast är sökbara med tillägget VVFS före författningens löpnummer. (Exempelvis VVFS2010:1.)</p>
+    <b>Välj årtal</b>
+    <p>Markera om du vill söka författningar från ett visst årtal.</p>
+    <b>EG-direktiv/Celexnummer</b>
+    <p>Ange Celexnumret. Exempel: 31991L0671</p>
+    <b>Ikraftträdande fr o m och Ikraftträdande t o m</b>
+    <p>Välj datum för när dokument har trätt i kraft</p>
+    <b>Titel</b>
+    <p>Ange ett eller flera ord som förekommer i författningens titel.</p>
+    <b>Hastighetsföreskrifter skall ingå/Upphävda föreskrifter skall ingå</b>
+    <p>Sökningen omfattar normalt inte hastighetsföreskrifter eller upphävda föreskrifter. Markera här om du vill söka efter även dessa författningar.</p>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Breaker">
+        </div>
+    </div>
+    <div class="Breaker">
+    </div>
+    <div id="FooterHolders">
+        <div class="FooterInner1">
+            <div class="FooterInner2">
+                <div id="Footer2">
+                    <div class="FooterContent">
+                        <div class="LogoHolder">
+                            <a href="www.trafikverket.se" title="Länk till startsidan">
+                                <img alt="Logo Trafikverket.se" height="35" src="/TRVFS/Images/logo-trafikverket.gif" width="179" />
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="Breaker">
+                    </div>
+                </div>
+                <div class="PageEnd">
+                    <div class="Bottom">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

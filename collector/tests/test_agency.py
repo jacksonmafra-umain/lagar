@@ -378,6 +378,29 @@ class ParseTest(unittest.TestCase):
         self.assertIn("SJÖFS 2026:13", entries[1].amended_by)
         self.assertEqual(sjofs.parse_listing(fixture("agency-sjofs-subject.html"), page), [])  # read once
 
+    def test_trvfs_search_form(self):
+        trv = agency.TrafikverketAdapter()
+        args = agency.parse_args(["--series", "TRVFS", "--year", "2025"])
+        self.assertEqual(trv.listing_urls(args), [trv.search_url + "?Ar=2025"])
+
+        class Poster:
+            def post(self, url, form):
+                self.sent = (url, form)
+                return b"ok"
+
+        poster = Poster()
+        self.assertEqual(trv.fetch_listing(poster, trv.search_url + "?Ar=2025"), b"ok")
+        self.assertEqual(poster.sent[0], trv.search_url)
+        self.assertEqual((poster.sent[1]["Ar"], poster.sent[1]["Hastforeskrift"]), ("2025", "false"))
+        entries = trv.parse_listing(fixture("agency-trvfs-2025.html"), trv.search_url + "?Ar=2025")
+        self.assertEqual([e.number for e in entries], ["TRVFS 2025:1", "TRVFS 2025:2"])  # not the TSFS ones
+        regulation = trv.parse_detail(fixture("agency-trvfs-2025-2.html"), entries[1])
+        self.assertEqual(regulation.title, "Trafikverkets föreskrifter om statsbidrag till enskild väghållning")
+        self.assertEqual(regulation.in_force, "2026-01-01")
+        self.assertEqual(regulation.pdfs, [("TRVFS 2025:2", "https://trvfs.ea.trafikverket.se/TRVFS/pdf/2025nr002.pdf")])
+        with self.assertRaises(ValueError):
+            trv.parse_detail(fixture("agency-trvfs-2025-2.html"), entries[0])
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

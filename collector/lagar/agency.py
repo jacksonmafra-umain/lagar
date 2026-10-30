@@ -1384,6 +1384,71 @@ class SjofartsverketAdapter:
                           version="Grundförfattning", pdfs=list(entry.pdfs))
 
 
+# --- Trafikverket (TRVFS) -----------------------------------------------------
+
+_TRVFS_FIRST_YEAR = 2010  # Trafikverket was formed on 1 April 2010
+_TRVFS_ITEM = re.compile(r"(\d{4}):(\d+)\s+(Grundföreskrift|Ändringsföreskrift|Upphävandeföreskrift)?")
+
+
+class TrafikverketAdapter:
+    """Trafikverket's författningssamling app: a search form per year, one page per regulation.
+
+    The search (a POST form, without speed regulations and repealed ones)
+    lists the regulations of a year: number, kind, title and entry into
+    force. Transportstyrelsen's regulations republished there keep their TSFS
+    number and are not stored here. The page per regulation links the PDF.
+    Road-specific speed regulations (hastighetsföreskrifter) are not collected.
+    """
+
+    series = "TRVFS"
+    issuer = "Trafikverket"
+    base_url = "https://trvfs.ea.trafikverket.se"
+    search_url = base_url + "/TRVFS/Home/SearchInDocCollection"
+    listing_url = search_url
+    detail = True
+    has_text = False
+
+    def listing_urls(self, args):
+        years = sorted(args.year, reverse=True) if args and args.year else range(
+            datetime.now(timezone.utc).year, _TRVFS_FIRST_YEAR - 1, -1)
+        return [f"{self.search_url}?Ar={year}" for year in years]
+
+    def fetch_listing(self, client, url):
+        year = urllib.parse.parse_qs(urllib.parse.urlsplit(url).query)["Ar"][0]
+        form = {"Dokumentbeteckning": "", "Celexnummer": "", "Ikrafttradandefrom": "", "Ikrafttradandetom": "",
+                "Titel": "", "Hastforeskrift": "false", "Upphavda": "false", "Ar": year}
+        return client.post(self.search_url, form)
+
+    def parse_listing(self, text, url):
+        entries = []
+        for link in parse_html(text).find_all("a"):
+            href = link.attrs.get("href") or ""
+            match = _TRVFS_ITEM.fullmatch(link.text())
+            if "/DocumentHistory/" not in href or match is None:
+                continue  # TSFS and VVFS numbers carry a prefix and do not match
+            number = f"TRVFS {match.group(1)}:{int(match.group(2))}"
+            entries.append(Entry(number=number, title=number, url=absolute(url, href),
+                                 base=match.group(3) in (None, "Grundföreskrift")))
+        return entries
+
+    def parse_detail(self, text, entry):
+        root = parse_html(text)
+        flat = root.text()
+        number = re.search(r"Dokumentbeteckning\s+(\d{4}:\d+)", flat)
+        if number is None or f"TRVFS {number.group(1)}" != entry.number:
+            raise ValueError(f"page shows {number.group(1) if number else None}, expected {entry.number}")
+        title = re.search(r"Rubrik\s+(.*?)\s+(?:Bemyndigande|Ikraftträdande)", flat)
+        in_force = re.search(r"Ikraftträdande\s+(\d{4}-\d{2}-\d{2})", flat)
+        pdf = next((a for a in root.find_all("a") if (a.attrs.get("href") or "").lower().endswith(".pdf")), None)
+        return Regulation(
+            number=entry.number,
+            title=title.group(1).rstrip(";").strip() if title else entry.title,
+            in_force=in_force.group(1) if in_force else None,
+            version="Grundförfattning",
+            pdfs=[(entry.number, absolute(self.base_url, pdf.attrs["href"]))] if pdf is not None else [],
+        )
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1604,7 +1669,7 @@ ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), Ak
                                    PrvAdapter(), PolisenAdapter(), ScbAdapter(),
                                    EnergimyndighetenAdapter(), RiksdagenAdapter(),
                                    RiksarkivetAdapter(), SkolverketAdapter(),
-                                   SjofartsverketAdapter())}
+                                   SjofartsverketAdapter(), TrafikverketAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
@@ -1758,11 +1823,12 @@ class _Robots:
         return float(delay) if delay else 0.0
 
 
-def _get_listing(client, robots, url):
+def _get_listing(client, robots, url, adapter=None):
     if not robots.allows(url):
         raise Blocked(f"robots.txt disallows {url}")
+    fetch = getattr(adapter, "fetch_listing", None)  # e.g. a search form that is POSTed
     try:
-        return client.get(url).decode("utf-8")
+        return (fetch(client, url) if fetch else client.get(url)).decode("utf-8")
     except Blocked:
         raise
     except (*NETWORK_ERRORS, UnicodeDecodeError) as error:
@@ -1775,7 +1841,7 @@ def _entries(client, robots, adapter, args):
         urls = [adapter.year_url(y) for y in adapter.parse_index(_get_listing(client, robots, adapter.index_url))]
     urls, seen = list(urls), set(urls)
     for url in urls:  # grows while a paginated listing names further pages
-        text = _get_listing(client, robots, url)
+        text = _get_listing(client, robots, url, adapter)
         try:
             entries = adapter.parse_listing(text, url)
         except ValueError as error:
