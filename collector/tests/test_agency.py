@@ -207,6 +207,20 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(agency.NotBase):
             zfs.parse_detail(fixture("agency-listed-detail.html"), entries[1])
 
+    def test_afs_a_listing(self):
+        adapter = agency.AklagareAdapter()
+        entries = adapter.parse_listing(fixture("agency-afs-a-listing.html"), adapter.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [
+            ("ÅFS 2023:7", True), ("ÅFS 2022:1", False), ("ÅFS 2024:7", False), ("ÅFS 2025:6", False),
+            ("ÅFS 2026:2", False)])
+        base = entries[0]
+        self.assertEqual(base.title, "Åklagarmyndighetens föreskrifter om internationellt samarbete")
+        self.assertEqual(base.amended_by, ["ÅFS 2026:2"])
+        regulation = adapter.regulation(base)
+        self.assertEqual((regulation.issued, regulation.published), ("2023-12-18", "2023-12-19"))
+        self.assertEqual(regulation.pdfs, [("ÅFS 2023:7", base.url)])
+        self.assertEqual(agency.corpus_id(base.number), "aafs-2023-7")
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

@@ -148,6 +148,16 @@
     "as_of": "2026-10-30"
   },
   {
+    "layer": "agency",
+    "type": null,
+    "series": "ÅFS",
+    "label": "ÅFS (Åklagarmyndigheten)",
+    "target": 23,
+    "kind": "counted",
+    "source": "https://www.aklagare.se/om-oss/dokument/forfattningssamling (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
     "layer": "case_law",
     "type": null,
     "label": "Case law",

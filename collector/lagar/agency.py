@@ -83,8 +83,12 @@ def number_key(number):
 
 
 def corpus_id(number):
-    """`AFS 2023:1` -> `afs-2023-1`, `HSLF-FS 2016:40` -> `hslf-fs-2016-40`."""
-    slug = number.lower().translate(str.maketrans({"å": "a", "ä": "a", "ö": "o"}))
+    """`AFS 2023:1` -> `afs-2023-1`, `HSLF-FS 2016:40` -> `hslf-fs-2016-40`.
+
+    `å` becomes `aa`, so Åklagarmyndigheten's `ÅFS 2023:7` (`aafs-2023-7`) does
+    not collide with Arbetsmiljöverket's `AFS 2023:7`.
+    """
+    slug = number.lower().translate(str.maketrans({"å": "aa", "ä": "a", "ö": "o"}))
     return re.sub(r"[^0-9a-z]+", "-", slug).strip("-")
 
 
@@ -631,6 +635,97 @@ class TsfsAdapter:
         return regulation
 
 
+# --- Åklagarmyndigheten (ÅFS) ----------------------------------------------
+
+_MONTHS = {name: i for i, name in enumerate((
+    "januari", "februari", "mars", "april", "maj", "juni",
+    "juli", "augusti", "september", "oktober", "november", "december"), 1)}
+_SWEDISH_DATE = re.compile(r"(\d{1,2}) (" + "|".join(_MONTHS) + r") (\d{4})")
+_AFS_A_REF = re.compile(r"ÅFS (\d{4}):0*(\d+)")
+# "Riksåklagarens föreskrifter (1999:178) om ...": a change to an older series' regulation.
+_OTHER_SERIES = re.compile(r"föreskrifter \((?:RÅFS )?\d{4}:\d+\)")
+
+
+def _swedish_date(text):
+    match = _SWEDISH_DATE.search(text or "")
+    if match is None:
+        return None
+    return f"{match.group(3)}-{_MONTHS[match.group(2)]:02d}-{int(match.group(1)):02d}"
+
+
+class AklagareAdapter:
+    """Åklagarmyndigheten's ÅFS page: one card per regulation, with its PDF.
+
+    A card has the number, the publication and decision dates, the title and
+    tags: "Gällande grundförfattningar" (base regulations in force),
+    "Ändringsförfattningar", "Upphävda författningar" (repealed) and "Notis".
+    Base regulations are the cards whose title neither amends nor repeals
+    another regulation; repealed ones and notices are not stored.
+    """
+
+    series = "ÅFS"
+    issuer = "Åklagarmyndigheten"
+    base_url = "https://www.aklagare.se"
+    listing_url = base_url + "/om-oss/dokument/forfattningssamling"
+    detail = False
+    has_text = False
+
+    def __init__(self):
+        self.cards = {}
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def _cards(self, root, url):
+        for item in root.find_all("li"):
+            link, heading = item.find("a"), item.find("h2")
+            match = _AFS_A_REF.fullmatch(heading.text()) if heading is not None else None
+            if link is None or match is None or ".pdf" not in (link.attrs.get("href") or ""):
+                continue
+            paragraphs = [p.text() for p in item.find_all("p")]
+            tags = {span.text() for span in item.find_all("span") if "rounded-full" in span.classes}
+            published = item.find("time")
+            dated = next((t for t in paragraphs if t.startswith("Publicerad")), "")
+            yield {
+                "number": f"ÅFS {match.group(1)}:{int(match.group(2))}",
+                "url": absolute(url, link.attrs["href"]),
+                "title": next((t for t in paragraphs if not t.startswith(("Storlek", "Publicerad", "Beslutad"))), ""),
+                "issued": _swedish_date(dated.partition("Beslutad")[2]) if "Beslutad" in dated else None,
+                "published": _date(published.attrs.get("datetime")) if published is not None else None,
+                "tags": tags,
+            }
+
+    def parse_listing(self, text, url):
+        entries, amending = {}, {}
+        for card in self._cards(parse_html(text), url):
+            title, tags = card["title"].rstrip(". "), card["tags"]
+            changes = _AMENDING.search(title)
+            if changes or "Ändringsförfattningar" in tags:
+                for ref in _AFS_A_REF.finditer(title[changes.start():] if changes else title):
+                    target = f"ÅFS {ref.group(1)}:{int(ref.group(2))}"
+                    if target != card["number"]:
+                        amending.setdefault(target, set()).add(card["number"])
+                entries.setdefault(card["number"], Entry(card["number"], title, card["url"], base=False))
+                continue
+            if "Notis" in tags or "Upphävda författningar" in tags or _OTHER_SERIES.search(title):
+                entries.setdefault(card["number"], Entry(card["number"], title, card["url"], base=False))
+                continue
+            card["title"] = title
+            self.cards[card["number"]] = card
+            entries[card["number"]] = Entry(card["number"], title, card["url"], pdfs=[(card["number"], card["url"])])
+        for number, entry in entries.items():
+            entry.amended_by = sorted(amending.get(number, ()), key=number_key)
+        if not any(e.base for e in entries.values()):
+            raise ValueError("no regulations found on the ÅFS page")
+        return sorted(entries.values(), key=lambda e: (not e.base, number_key(e.number)))
+
+    def regulation(self, entry):
+        card = self.cards.get(entry.number, {})
+        return Regulation(number=entry.number, title=entry.title, issued=card.get("issued"),
+                          published=card.get("published"), amended_by=list(entry.amended_by),
+                          version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -847,7 +942,7 @@ def load_series(path=SERIES_CONFIG):
             for code, item in data["series"].items() if item.get("listing_urls")}
 
 
-ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter())}
+ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 

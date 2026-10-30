@@ -131,6 +131,12 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   regulation and also listed in the older one's `amended_by`. SSMFS has one
   page per base regulation in force with the original and consolidated PDFs and
   the amendments.
+- ÅFS (Åklagarmyndigheten, 23 base regulations in force) as of 2026-10-30,
+  from the cards on its ÅFS page, which give the decision and publication
+  dates. The 77 repealed regulations, the 41 notices and the regulations
+  numbered in ÅFS that change Riksåklagarens older regulations (`föreskrifter
+  (1999:178)`) are not stored. Document ids map `å` to `aa` (`aafs-2023-7`) so
+  they do not collide with Arbetsmiljöverket's AFS.
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630

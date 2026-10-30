@@ -25,7 +25,9 @@
     },
     "aklagarmyndighetens-forfattningssamling-afs": {
       "series": "ÅFS",
-      "agency": "Åklagarmyndigheten"
+      "agency": "Åklagarmyndigheten",
+      "status": "collected_pdf",
+      "note": "Base regulations in force from the cards on Åklagarmyndigheten's ÅFS page, with decision and publication dates; repealed regulations and notices are not stored, and the text is published only as PDF."
     },
     "myndigheten-for-yrkeshogskolans-forfattningssamling-myhfs": {
       "series": "MYHFS",
