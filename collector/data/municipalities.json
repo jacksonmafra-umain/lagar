@@ -4442,12 +4442,23 @@
       "name": "Skövde",
       "issuer": "Skövde kommun",
       "region_code": "14",
-      "collection": "Skövde kommuns taxor och avgifter",
+      "collection": "Skövde kommuns författningssamling: lokala föreskrifter, taxor och avgifter",
       "strategy": "html_index",
       "resident_filter": true,
       "hosts": ["www.skovde.se", "static.skovde.se"],
       "listings": [
-        "https://www.skovde.se/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter"
+        "https://www.skovde.se/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter",
+        {
+          "url": "https://www.skovde.se/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/",
+          "strategy": "json_list",
+          "embedded": "next",
+          "items": "ordinancePages",
+          "title_field": "Heading",
+          "number_field": "FileUrl",
+          "number_pattern": "/([^/?#]+)\\.pdf$",
+          "url_template": "{FileUrl}",
+          "link_pattern": "^https://static\\.skovde\\.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/[^?#]+\\.pdf$"
+        }
       ],
       "link_pattern": "^https://static\\.skovde\\.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter/[^?#]+\\.pdf$",
       "number": [
