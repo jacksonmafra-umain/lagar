@@ -15942,6 +15942,328 @@
           "retrieved_at": "2026-10-29T23:58:22Z"
         }
       ]
+    },
+    {
+      "number": "ÅFS 2005:2",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-02.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2005:2",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-02.pdf",
+          "bytes": 19022,
+          "sha256": "2ce7f61543c0314c86945f82c9d3e3f11457deff29600c399e361773b521ace8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:23Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2005:9",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-09.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2005:9",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-09.pdf",
+          "bytes": 52464,
+          "sha256": "7f0c93f29d0d8ad0f0cce61bad042cfb7d5e4fb678a6c188eebc8d2fdd567932",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:25Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2005:17",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-17.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2005:17",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-17.pdf",
+          "bytes": 49671,
+          "sha256": "98dcd2491f8047bc26a6b108aab4691b6f70e2504cd79743ef5a11c77598fa47",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:28Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2005:18",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-18.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2005:18",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-18.pdf",
+          "bytes": 16913,
+          "sha256": "21fd34076747aacd5ad7465f4fb554bd938bcd0a326b8042be226735547753eb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:29Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2005:19",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-19.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2005:19",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-19.pdf",
+          "bytes": 19361,
+          "sha256": "77da4a3798f6858885cc8c5735ca8bc344005f635637f022f36c14672d3825ab",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:31Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2005:25",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-25.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2005:25",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-25.pdf",
+          "bytes": 19745,
+          "sha256": "e75c2f7dc7e5b898f095836d777897a262d5611ce246741b3cf75c5fb667b22e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:33Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2005:30",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-30.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2005:30",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-30.pdf",
+          "bytes": 18541,
+          "sha256": "4d7b9b8d0a8f114df896a2263178a828a12319c7d83d435feaf0b2b7269bea08",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:35Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2005:31",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-31.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2005:31",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2005-31.pdf",
+          "bytes": 17033,
+          "sha256": "67acc2a1b6095d62167f236ada0887d8907b5bd722a5c6af0f980923cbf0d51f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:37Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2007:3",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2007-03.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2007:3",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2007-03.pdf",
+          "bytes": 20964,
+          "sha256": "74c95fe6dc8ab581bee78d8612ed62edd504ce6f7952d127e381b02e585505a5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:39Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2007:5",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2007-05.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2007:5",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2007-05.pdf",
+          "bytes": 25748,
+          "sha256": "35937352d434cabe3a6287e60a80038388bb0256b2346295ef55bb010baeb5d7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:41Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2010:6",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2010-06.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2010:6",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2010-06.pdf",
+          "bytes": 27008,
+          "sha256": "529ca03ca7dedb1d801ad98017d72124a63a117a59033ed29eade805f34a7c78",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:43Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2011:2",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2011-02.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2011:2",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2011-02.pdf",
+          "bytes": 19800,
+          "sha256": "34e3cb893d53bc79fd7dd4d4f1036ae34c5bd7568e0e97b0ed3ff413f5bb1a64",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:45Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2011:6",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2011-06.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2011:6",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2011-06.pdf",
+          "bytes": 14002,
+          "sha256": "1596888ffbbf14d677e0fea029c57b1b82c66187eeeadaaf9a5cae6a4ebc9d29",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:47Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2011:9",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2011-09.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2011:9",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2011-09.pdf",
+          "bytes": 63209,
+          "sha256": "5e4105af21e9ec0050c45ee380bd2ea2b3c984a698b71a9510c71342adfa77e2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:49Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2012:2",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2012-02.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2012:2",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2012-02.pdf",
+          "bytes": 55271,
+          "sha256": "f61e68aef7ce2f9ac53d65a00ed7186a9652189027cd3f7401e2481bd686bda0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:51Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2013:3",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2013-03.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2013:3",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2013-03.pdf",
+          "bytes": 38529,
+          "sha256": "8f55e2dd93bbc410dafd508d388ad647042d00028ce65782b205a98375844f42",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:53Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2014:15",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2014-15.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2014:15",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2014-15.pdf",
+          "bytes": 23296,
+          "sha256": "90a0c30e55b5d0e2193249ddad1718edcc4af7aa44937646ffb608851469d163",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:55Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2019:3",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2019-03.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2019:3",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2019-03.pdf",
+          "bytes": 113138,
+          "sha256": "43994e42dfb9095752399e4b5830f93d3f746568b508aa650b9cc66e7d47ff13",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:57Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2022:8",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2022-08.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2022:8",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2022-08.pdf",
+          "bytes": 84653,
+          "sha256": "14ef07a133b45a9e65eeb45eb20954e18a9af39033454f8ab583d861db2dba2d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:29:59Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2023:2",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2023-02.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2023:2",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2023-02.pdf",
+          "bytes": 74002,
+          "sha256": "9dbbb57859844d741e5eb669b9539221bce4ccbb8ca0a27f05708c10e40041c3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:30:01Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2023:5",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2023-05.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2023:5",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2023-05.pdf",
+          "bytes": 212069,
+          "sha256": "11f85e483091faf565e12038ab6026c4388c59b8095e794b0a475653833d4e54",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:30:03Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2023:7",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2023-07.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2023:7",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2023-07.pdf",
+          "bytes": 289270,
+          "sha256": "3d5716de8ae5c03f45906b21639344da476e869ee31732ab3d3a3e9c8e06b296",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:30:05Z"
+        }
+      ]
+    },
+    {
+      "number": "ÅFS 2025:1",
+      "detail_url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2025-01.pdf",
+      "files": [
+        {
+          "label": "ÅFS 2025:1",
+          "url": "https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-alla-utom-konsoliderade/afs-2025-01.pdf",
+          "bytes": 210502,
+          "sha256": "84bbc76e4047b6fbf444cc0163a8d182bfe21711dd85c200af9598255b0718e8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:30:07Z"
+        }
+      ]
     }
   ]
 }
