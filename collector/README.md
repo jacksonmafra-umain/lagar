@@ -573,8 +573,11 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
 3. Choose `sections` or `kinds` so that only rules for residents are collected.
 4. `hosts` lists every host the collector may contact for that kommun; `region_code` must be the
    first two digits of the kommun code.
-5. Add a trimmed listing (and detail page) fixture and a test, then run a small sample with
-   `--kommun <code> --limit 5` and the audit.
+5. Add a trimmed listing fixture as `collector/tests/fixtures/municipal/<code>-listing.html` (headings
+   and links are all the parser reads) and its expectations as `collector/tests/fixtures/municipal/<code>.json`
+   (`listings`: listing URL to fixture file, `count`, a `sample` entry with `number`, `title` and `url`,
+   and `excluded` titles); `test_municipal_listings.py` checks every such pair against the config. Then
+   run a small sample with `--kommun <code> --limit 5` and the audit.
 
 ## Agencies and sources log
 
