@@ -1,0 +1,36 @@
+---
+id: "1489-2024-11-taxor-och-avgifter-inom-socialnamndens-verksamheter-2025"
+title: "Taxor och avgifter inom socialnämndens verksamheter 2025"
+type: "municipal_regulation"
+layer: "municipality"
+number: "2024/11/taxor-och-avgifter-inom-socialnamndens-verksamheter-2025"
+issued: null
+in_force: null
+repealed: null
+amended_by: []
+amended_through: null
+reprinted_by: []
+ministry: null
+eli: null
+language: "sv"
+authoritative: false
+source: "https://municipio.alingsas.se/wp-content/uploads/networks/1/sites/2/2024/11/taxor-och-avgifter-inom-socialnamndens-verksamheter-2025.pdf"
+source_sha256: "796eaf88020d9bf2ba1125726bba81ead09a9b09f56f6250039dd1ffaa6b6c24"
+fetched_at: "2026-10-30T13:14:11Z"
+issuer: "Alingsås kommun"
+region_code: "14"
+municipality_code: "1489"
+---
+# Taxor och avgifter inom socialnämndens verksamheter 2025
+
+Kommun: Alingsås (1489)  
+Författningssamling: Alingsås kommuns författningssamling  
+Nummer: 2024/11/taxor-och-avgifter-inom-socialnamndens-verksamheter-2025
+
+Förteckning: <https://www.alingsas.se/kommun-och-politik/politik-och-beslut/forfattningssamling-och-styrande-dokument/forfattningssamling/>
+
+## Dokument
+
+Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+
+- [Taxor och avgifter inom socialnämndens verksamheter 2025](<https://municipio.alingsas.se/wp-content/uploads/networks/1/sites/2/2024/11/taxor-och-avgifter-inom-socialnamndens-verksamheter-2025.pdf>)
