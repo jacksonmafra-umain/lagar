@@ -59,6 +59,198 @@
       "title_column": "$73",
       "number_column": "txtSerialnumber",
       "kinds": ["Lokal föreskrift", "Taxor/avgifter"]
+    },
+    "2161": {
+      "name": "Ljusdal",
+      "issuer": "Ljusdals kommun",
+      "region_code": "21",
+      "collection": "Ljusdals kommuns kommunala författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.ljusdal.se", "ljusdal.se"],
+      "listings": [
+        "https://www.ljusdal.se/kommunpolitik/lagarochstyrdokument/kommunalforfattningssamling/bestammelserlokalaforeskrifter.4.6eb3b7a17ca65d1feac650a.html",
+        "https://www.ljusdal.se/kommunpolitik/lagarochstyrdokument/kommunalforfattningssamling/taxorochavgifterforolikakommunalatjanster.4.6eb3b7a17ca65d1feac64fe.html"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.ljusdal\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
+    "2182": {
+      "name": "Söderhamn",
+      "issuer": "Söderhamns kommun",
+      "region_code": "21",
+      "collection": "Söderhamns kommuns författningssamling (SKFS)",
+      "strategy": "html_index",
+      "hosts": ["www.soderhamn.se", "soderhamn.se"],
+      "listings": ["https://www.soderhamn.se/sidor/kommun-och-politik/styrdokument/forfattningssamling.html"],
+      "section_level": 2,
+      "sections": ["Lokala föreskrifter för allmänheten", "Taxor och avgifter"],
+      "link_pattern": "^https://www\\.soderhamn\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*(?:\\.pub)?\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
+    "2183": {
+      "name": "Bollnäs",
+      "issuer": "Bollnäs kommun",
+      "region_code": "21",
+      "collection": "Bollnäs kommuns författningssamling",
+      "strategy": "html_index",
+      "hosts": ["bollnas.se", "www.bollnas.se"],
+      "listings": [
+        "https://bollnas.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/bollnas-kommuns-forfattningssamling",
+        "https://bollnas.se/kommun-och-politik/kommunfakta/ekonomi-och-budget/avgifter-och-taxor"
+      ],
+      "section_level": 3,
+      "sections": [
+        "Vatten",
+        "Hälsoskydd",
+        "Renhållningsordning",
+        "Taxor för miljö- och livsmedelsområdet",
+        "Från och med den 1 januari 2026 gäller följande timavgifter:"
+      ],
+      "link_pattern": "^https://bollnas\\.se/download/(?!18\\.(?:825d63f17dc1e8befb7a2c8|825d63f17dc1e8befb7a27c|7c8d7fba17f44b61bea1bd2)/)18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"]
+    },
+    "2260": {
+      "name": "Ånge",
+      "issuer": "Ånge kommun",
+      "region_code": "22",
+      "collection": "Regler och styrande dokument (Ånge kommun)",
+      "strategy": "html_index",
+      "hosts": ["invanare.ange.se", "www.ange.se", "ange.se"],
+      "listings": [
+        "https://invanare.ange.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument.html",
+        "https://invanare.ange.se/bo-bygga-miljo-trafik/bygga-nytt-andra-och-riva/avgifter-taxor.html"
+      ],
+      "section_level": 2,
+      "sections": ["Miljö och Klimat", "Vatten och avlopp", "Avgifter och taxor för olika åtgärder"],
+      "link_pattern": "^https://invanare\\.ange\\.se/download/(?!18\\.2467a4fd161230b4ac973c6c/)18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
+        "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"
+      ]
+    },
+    "2425": {
+      "name": "Dorotea",
+      "issuer": "Dorotea kommun",
+      "region_code": "24",
+      "collection": "Dorotea kommun, författningssamling och taxor",
+      "strategy": "html_index",
+      "hosts": ["www.dorotea.se", "dorotea.se"],
+      "listings": [
+        "https://www.dorotea.se/kommun-och-politik/planer-och-styrdokument/foreskrifter-policys/",
+        "https://www.dorotea.se/kommun-och-politik/planer-och-styrdokument/avgifter-och-taxor/"
+      ],
+      "section_level": 3,
+      "sections": ["Föreskrifter och bestämmelser", "Övrigt", "Taxor och avgifter"],
+      "link_pattern": "^https://www\\.dorotea\\.se/media/[a-z0-9]+/(?!faktureringsbestammelser)[^/?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/media/([a-z0-9]+)/"}
+      ],
+      "title_strip": ["\\.pdf\\s*$"]
+    },
+    "2460": {
+      "name": "Vännäs",
+      "issuer": "Vännäs kommun",
+      "region_code": "24",
+      "collection": "Vännäs kommun, planer, styrdokument och lagar",
+      "strategy": "html_index",
+      "hosts": ["www.vannas.se", "vannas.se"],
+      "listings": ["https://www.vannas.se/kommun-och-politik/planer-styrdokument-och-lagar"],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.vannas\\.se/download/18\\.[0-9a-f]+/\\d+/(Lokala%20f%C3%B6reskrifter|Kartbilaga%20A%20lokala|Lokala%20ordningsf%C3%B6reskrifter|2026%20Renh%C3%A5llningsf%C3%B6reskrift|Uthyrningsreglemente)[^?#]*\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B.*$"]
+    },
+    "2462": {
+      "name": "Vilhelmina",
+      "issuer": "Vilhelmina kommun",
+      "region_code": "24",
+      "collection": "Vilhelmina kommun, kommunala föreskrifter och taxor",
+      "strategy": "html_index",
+      "hosts": ["www.vilhelmina.se", "vilhelmina.se"],
+      "listings": [
+        "https://www.vilhelmina.se/kommun-och-politik/kommunala-foreskrifter/",
+        "https://www.vilhelmina.se/kommun-och-politik/taxor-och-avgifter/"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.vilhelmina\\.se/media/[a-z0-9]+/(?!avfallsplan|bilaga-|taxor-it-|justering-av-taxor-it|vilhelmina-miljoetaxa|va-taxa-2025)[^/?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/media/([a-z0-9]+)/"}
+      ],
+      "title_strip": []
+    },
+    "2463": {
+      "name": "Åsele",
+      "issuer": "Åsele kommun",
+      "region_code": "24",
+      "collection": "Åsele kommun, taxor och avgifter",
+      "strategy": "html_index",
+      "hosts": ["www.asele.se", "asele.se"],
+      "listings": ["https://www.asele.se/kommun-och-politik/taxor-och-avgifter/"],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.asele\\.se/media/[a-z0-9]+/(taxor-och-avgifter-2026|taxa-for-miljoenheten-2026|mb-2025-174-4-mb-2025-174-pbl-taxa)\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/media/([a-z0-9]+)/"}
+      ],
+      "title_strip": ["\\s+$"]
+    },
+    "2482": {
+      "name": "Skellefteå",
+      "issuer": "Skellefteå kommun",
+      "region_code": "24",
+      "collection": "Skellefteå kommuns författningssamling, styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["skelleftea.se", "www.skelleftea.se"],
+      "listings": [
+        "https://skelleftea.se/invanare/startsida/kommun-och-politik/om-skelleftea-kommun/skelleftea-kommuns-forfattningssamling-styrande-dokument/overgripande-styrdokument"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://skelleftea\\.se/download/18\\.[0-9a-f]+/\\d+/(Kommunala%20f%C3%B6reskrifter|Lokala%20f%C3%B6reskrifter|Lokala%20ordningsf%C3%B6reskrifter)[^?#]*\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*\\(?pdf,?\\s*nytt f.nster\\)?\\s*pdf,\\s*[\\d.,]+\\s*[kM]B.*$",
+        "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B.*$"
+      ]
+    },
+    "2506": {
+      "name": "Arjeplog",
+      "issuer": "Arjeplogs kommun",
+      "region_code": "25",
+      "collection": "Arjeplogs kommun, regler och styrande dokument samt taxor",
+      "strategy": "html_index",
+      "hosts": ["arjeplog.se", "www.arjeplog.se"],
+      "listings": [
+        "https://arjeplog.se/kommun-och-politik/regler-och-styrande-dokument/",
+        "https://arjeplog.se/kommun-och-politik/ekonomi-och-budget/taxor-och-avgifter/"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://arjeplog\\.se/wp-content/uploads/se/\\d{4}/\\d{2}/(foreskrift-om-reglering|lokala-foreskrifter|lokala-ordningsforeskrifter|renhallningsforeskrifter|skyddsforeskrifter|enkelriktad-trafik|forbud-|hogsta-tillatna|huvudled|parkering-pa|stannande-och-parkering|tatbebyggt-omrade|undantag-fran-parkering|vajningsplikt|taxor-|taxebestammelser|taxa-pbl)[^/?#]*\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/wp-content/uploads/se/\\d{4}/\\d{2}/([^/?#]+)\\.pdf$"}
+      ],
+      "title_strip": ["\\.pdf\\s*$"]
     }
   }
 }

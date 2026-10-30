@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.dorotea.se/kommun-och-politik/planer-och-styrdokument/foreskrifter-policys/": "2425-listing1.html",
+    "https://www.dorotea.se/kommun-och-politik/planer-och-styrdokument/avgifter-och-taxor/": "2425-listing2.html"
+  },
+  "count": 14,
+  "sample": {
+    "number": "cnxlihd3",
+    "title": "Allmänna lokala ordningsföreskrifter för Dorotea kommun",
+    "url": "https://www.dorotea.se/media/cnxlihd3/lokal-ordningsstadga-foer-dorotea-kommun.pdf"
+  },
+  "excluded": [
+    "Förtroendevaldas arvoden",
+    "Riktlinjer för partistöd",
+    "Avloppspolicy"
+  ]
+}
