@@ -2980,6 +2980,29 @@
         "https://kungsbacka.se/kommun-och-politik/politik-och-demokrati/foreskrifter-och-styrande-dokument/foreskrifter"
       ]
     },
+    "1401": {
+      "name": "Härryda",
+      "issuer": "Härryda kommun",
+      "region_code": "14",
+      "collection": "Härryda kommuns avgifter och taxor, och Härryda Vatten och Avfall AB:s taxor och avfallsföreskrifter",
+      "strategy": "html_pages",
+      "hosts": ["www.harryda.se", "www.hvaa.se", "hvaa.se"],
+      "listings": [
+        "https://www.harryda.se/kommunochpolitik/kommunfakta/avgifterochtaxor.4.1439a0061817fd1d94051f0.html",
+        "https://www.hvaa.se/vatten-och-avlopp/avgifter-for-vatten-och-avlopp.html",
+        "https://hvaa.se/avfall-och-atervinning/avgifter-for-avfall-och-slam.html",
+        "https://hvaa.se/avfall-och-atervinning/avfallsregler-och-foreskrifter.html"
+      ],
+      "link_pattern": "^https://(?:www\\.harryda\\.se/(?:barnochutbildning|omsorgochstod|foretagande/tillstandreglerochtillsyn|trafikochresor|kommunochpolitik/diariumocharkiv|byggaboochmiljo/bygganyttandraellerriva)/[a-z0-9/]+\\.4\\.[0-9a-f]+\\.html|(?:www\\.)?hvaa\\.se/download/18\\.[0-9a-f]+/\\d+/(?:Taxa|Kompletterande|Avfallsf)[^/?#]*\\.pdf)$",
+      "number": [
+        {"from": "href", "pattern": "\\.(4\\.[0-9a-f]+)\\.html$"},
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "document_pattern": "/download/18\\.[0-9a-f]+/\\d+/[^?#]*(?:taxa|TAXEBILAGA)[^?#]*\\.pdf$",
+      "page_titles": true,
+      "title_strip": ["\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[km]?B\\b.*$"],
+      "title_exclude": ["kortversion", "popul(ä|a)rversion", "vattentj(ä|a)nster 2023", "\\b(k(ä|a)rl|avfall) 2024\\b"]
+    },
     "1402": {
       "name": "Partille",
       "issuer": "Partille kommun",
