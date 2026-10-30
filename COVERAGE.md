@@ -111,7 +111,18 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   the title, the amending regulations named on the listing and links to the
   PDFs (SHA-256 in `sources/agency-pdf-manifest.json`); the text will follow
   through the shared PDF text helper. Titles come from the listings; dates are
-  not on them, so `issued` and `in_force` are null. [AGENCIES.md](AGENCIES.md) lists every series and
+  not on them, so `issued` and `in_force` are null.
+  Eleven more series follow on 2026-10-30: NFS (164 of the 166 base
+  regulation pages in Naturvårdsverket's sitemap, in force and repealed, with
+  `repealed` set where the page says so; NFS 2000:2 and NFS 2001:20 do not
+  name their number), FKFS (147 in force, with dates from Försäkringskassan's
+  register; three old ones are Word files, not hashed), KOVFS (22), HVMFS
+  (21), MCFFS (11), AFFS (9), MDFFS (6), AGVFS (5), ELSÄK-FS (3), KIFS (3) and
+  IAFFS (3). AFFS and MDFFS publish the full text as HTML and have it; the
+  others publish the text only as PDF. Predecessor series listed on the same
+  pages (RFFS, MSBFS, FIFS, AMSFS) are not collected. Bolagsverket (BOLFS)
+  answers with a bot check and Konkurrensverket (KKVFS) with 403 Forbidden;
+  neither is bypassed, both are gaps. [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.

@@ -367,8 +367,12 @@ adding an adapter and registering it in `ADAPTERS`.
 
 Series published as a plain page of links use the configurable adapters in
 `collector/lagar/agency_generic.py`: `PdfListAdapter` when the listing links straight to the
-PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS) and `DetailPageAdapter` when it links to one
-HTML page per regulation. A series there is a subclass that sets the listing URLs and, where
+PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS) and `DetailPageAdapter` when it links to one
+HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS); `SitemapAdapter`
+finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS).
+A detail page's HTML text is kept when the series sets `text_nodes` (MDFFS). AFFS reads the
+list from the Sitevision page state and FKFS the JSON register of Försäkringskassan's
+lagrummet; both have their own small adapters in the same module. A series there is a subclass that sets the listing URLs and, where
 needed, the list item element. The number comes from either end of the item's text, else from
 the PDF's file name; amending and repealing regulations are recognised by their titles ("om
 ändring i", "om upphävande av") and listed in the `amended_by` of the base regulation they
