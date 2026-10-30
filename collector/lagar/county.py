@@ -122,6 +122,8 @@ _YEAR_FOLDER = re.compile(r"\s*((?:19|20)\d{2})\s*")
 _ANY_YEAR = re.compile(r"(?<![0-9])((?:19|20)\d{2})(?![0-9])")
 _REPEALED_MARK = re.compile(r"^\s*UPPHÄVD\b[\s:_-]*", re.I)
 _SPACE = re.compile(r"\s+")
+# A number glued into a file name, "06FS1977239" or "06_FS_2014_20", dropped from titles.
+_FS_TOKEN = re.compile(r"(?<![0-9])[0-9]{2}[\s_]*FS[\s_]*(?:19|20)[0-9]{2}[0-9_: -]*", re.I)
 _SV_DATE = re.compile(r"(\d{1,2}) (" + "|".join(MONTHS) + r") (\d{4})", re.I)
 _PUBLISHED = re.compile(r"Utkom från trycket\s+(?:den\s+)?" + _SV_DATE.pattern, re.I)
 _DECIDED = re.compile(r"Beslut(?:at|ad|ade)\s+(?:den\s+)?" + _SV_DATE.pattern, re.I)
@@ -790,7 +792,7 @@ def _number_from_text(client, robots, args, config, landing, items, loose, manif
             items.append(item)
         item.files.append((url, text))
         if not item.title:
-            item.title = file_title(text, None, None, config["title_strip"]) or None
+            item.title = file_title(_FS_TOKEN.sub(" ", text), None, None, config["title_strip"]) or None
     return remaining
 
 
