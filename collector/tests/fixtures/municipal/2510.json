@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.jokkmokk.se/kommun-och-politik/kommunal-foerfattningssamling/styrdokument-och-foereskrifter/": "2510-listing1.html",
+    "https://www.jokkmokk.se/kommun-och-politik/kommunal-foerfattningssamling/taxor-och-avgifter/": "2510-listing2.html"
+  },
+  "count": 30,
+  "sample": {
+    "number": "piakpcai",
+    "title": "Allmänna bestämmelser för brukande av allmänna vatten- och avloppsanläggningar, ABVA",
+    "url": "https://www.jokkmokk.se/media/piakpcai/jokkmokk-abva.pdf"
+  },
+  "excluded": []
+}
