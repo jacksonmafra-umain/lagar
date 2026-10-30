@@ -5372,6 +5372,20 @@
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
     },
+    "2180": {
+      "name": "Gävle",
+      "issuer": "Gävle kommun",
+      "region_code": "21",
+      "collection": "Gävle kommuns styrande dokument: föreskrifter samt taxor och avgifter",
+      "strategy": "mediaflow",
+      "hosts": ["www.gavle.se", "shareapi.mediaflow.com", "files.mediaflow.com"],
+      "listings": [
+        "https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=3KATTCX4I1",
+        "https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=XOATPC2411"
+      ],
+      "page": "https://www.gavle.se/kommun-och-politik/forvaltning-och-organisation/styrande-dokument/",
+      "resident_filter": true
+    },
     "2181": {
       "name": "Sandviken",
       "issuer": "Sandvikens kommun",

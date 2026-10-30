@@ -1,0 +1,15 @@
+{
+  "listings": {
+    "https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=3KATTCX4I1": "2180-token1.json",
+    "https://shareapi.mediaflow.com/1/files?access_token=fixture1": "2180-files1.json",
+    "https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=XOATPC2411": "2180-token2.json",
+    "https://shareapi.mediaflow.com/1/files?access_token=fixture2": "2180-files2.json"
+  },
+  "count": 24,
+  "sample": {
+    "number": "17DFVQAWHJ",
+    "title": "Kommunala föreskrifter om användning av den allmänna VA anläggningen inom Gästrike Vatten koncernen",
+    "url": "https://shareapi.mediaflow.com/1/file/3143522/downloads?share=3KATTCX4I1"
+  },
+  "excluded": []
+}
