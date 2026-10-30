@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.alvdalen.se/kommun-och-politik/politik-och-demokrati/styrande-dokument-och-regler.html": "2039-listing.html"
+  },
+  "count": 9,
+  "sample": {
+    "number": "18.49aea3841699f115d841afef",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.alvdalen.se/download/18.49aea3841699f115d841afef/1568384913991/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": [
+    "Ersättningsbestämmelser för förtroendevalda antagna KF 2025 107",
+    "Kommunfullmäktige arbetsordning",
+    "Kommunstyrelsens reglemente antaget KF 2023 102 rev KF 2024 15 16"
+  ]
+}
