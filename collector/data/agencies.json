@@ -57,7 +57,9 @@
     },
     "styrelsens-for-ackreditering-och-teknisk-kontroll-swedac-forfattningssamling-stafs": {
       "series": "STAFS",
-      "agency": "Styrelsen för ackreditering och teknisk kontroll (Swedac)"
+      "agency": "Styrelsen för ackreditering och teknisk kontroll (Swedac)",
+      "status": "collected",
+      "note": "Full text from Swedac's regulation register (regelverk.swedac.se): a JSON index of every STAFS regulation, in force and repealed, and a Markdown file per regulation, the consolidated version where there is one."
     },
     "riksarkivets-forfattningssamling-ra-fs": {
       "series": "RA-FS",
@@ -88,8 +90,8 @@
     "skatteverkets-forfattningssamling-skvfs": {
       "series": "SKVFS",
       "agency": "Skatteverket",
-      "status": "no_adapter",
-      "note": "An earlier robots.txt request was rejected by a WAF; on 2026-10-29 robots.txt answered normally and allows the regulation pages. Proposed as a next series on #115."
+      "status": "blocked",
+      "note": "www4.skatteverket.se answers robots.txt and the SKVFS listing with a WAF 'Request Rejected' page (rechecked 2026-10-30); not collected."
     },
     "kronofogdemyndighetens-forfattningssamling-kfmfs": {
       "series": "KFMFS",
@@ -164,7 +166,9 @@
     },
     "patent-och-registreringsverkets-forfattningssamling-prvfs": {
       "series": "PRVFS",
-      "agency": "Patent- och registreringsverket"
+      "agency": "Patent- och registreringsverket",
+      "status": "collected_pdf",
+      "note": "Base regulations in force from PRV's division A1, with links to amending regulations; the text is published only as PDF."
     },
     "polismyndighetens-forfattningssamling-pmfs": {
       "series": "PMFS",
@@ -308,7 +312,9 @@
     },
     "pensionsmyndighetens-forfattningssamling-pfs": {
       "series": "PFS",
-      "agency": "Pensionsmyndigheten"
+      "agency": "Pensionsmyndigheten",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Pensionsmyndigheten's regulation page; the text is published only as PDF."
     }
   },
   "shared": {

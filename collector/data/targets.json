@@ -50,6 +50,26 @@
   {
     "layer": "agency",
     "type": null,
+    "series": "PFS",
+    "label": "PFS (Pensionsmyndigheten)",
+    "target": 81,
+    "kind": "counted",
+    "source": "https://www.pensionsmyndigheten.se/om-pensionsmyndigheten/allmanna-handlingar/lagar-och-regler (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "PRVFS",
+    "label": "PRVFS (PRV)",
+    "target": 17,
+    "kind": "counted",
+    "source": "https://www.prv.se/sv/om-oss/var-verksamhet/styrdokument/prvs-forfattningssamling/avdelning-a1---gallande-grundforfattningar/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
     "series": "RGKFS",
     "label": "RGKFS (Riksgälden)",
     "target": 6,
@@ -105,6 +125,16 @@
     "target": 41,
     "kind": "counted",
     "source": "https://www.stralsakerhetsmyndigheten.se/regler/foreskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "STAFS",
+    "label": "STAFS (Swedac)",
+    "target": 187,
+    "kind": "counted",
+    "source": "https://regelverk.swedac.se/foreskrifter.json (base regulations, in force and repealed with a repeal date)",
     "as_of": "2026-10-30"
   },
   {

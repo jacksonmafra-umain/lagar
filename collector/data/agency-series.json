@@ -1,5 +1,11 @@
 {
   "series": {
+    "PFS": {
+      "issuer": "Pensionsmyndigheten",
+      "listing_urls": [
+        "https://www.pensionsmyndigheten.se/om-pensionsmyndigheten/allmanna-handlingar/lagar-och-regler"
+      ]
+    },
     "RGKFS": {
       "issuer": "Riksgäldskontoret",
       "listing_urls": [
