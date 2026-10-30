@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.skara.se/kommunochpolitik/styrandedokument/taxorochavgifter.html": "1495-listing1.html",
+    "https://www.skara.se/kommunochpolitik/styrandedokument/foreskrifter.html": "1495-listing2.html"
+  },
+  "count": 26,
+  "sample": {
+    "number": "875",
+    "title": "Allmänna bestämmelser - taxa för prövning och tillsyn enligt miljöbalken",
+    "url": "https://www.skara.se/kommunochpolitik/styrandedokument/taxorochavgifter/allmannabestammelsertaxaforprovningochtillsynenligtmiljobalken.875.html"
+  },
+  "excluded": []
+}
