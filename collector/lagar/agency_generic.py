@@ -1092,6 +1092,9 @@ class HslffsAdapter(DetailPageAdapter):
         return regulation
 
 
+          FfsAdapter(), HslffsAdapter(), SosfsAdapter(), FohmfsAdapter(), TlvfsAdapter())
+
+
 # --- predecessor series --------------------------------------------------------
 # Regulations of an agency's earlier series that are still listed (and often still in force) on
 # the page its current series is read from; each reads that page for its own numbers.
@@ -1161,7 +1164,7 @@ SERIES = (MigrfsAdapter(), KamfsAdapter(), KfmfsAdapter(), KfsAdapter(), KrfsAda
           KovfsAdapter(), HvmfsAdapter(), FkfsAdapter(), IaffsAdapter(), AffsAdapter(), BfnarAdapter(),
           CsnfsAdapter(), ImyfsAdapter(), LmfsAdapter(), MtfsAdapter(),
           KvfsAdapter(), LivsfsAdapter(), MyhfsAdapter(), DvfsAdapter(), EifsAdapter(), KbvfsAdapter(),
-          FfsAdapter(), HslffsAdapter(), LmvfsAdapter(), FifsAdapter(), MsbfsAdapter(), RffsAdapter(),
-          SlvfsAdapter(), LfsAdapter(), JvsfsAdapter(), VvfsAdapter())
+          FfsAdapter(), HslffsAdapter(), SosfsAdapter(), FohmfsAdapter(), TlvfsAdapter(), LmvfsAdapter(),
+          FifsAdapter(), MsbfsAdapter(), RffsAdapter(), SlvfsAdapter(), LfsAdapter(), JvsfsAdapter(), VvfsAdapter())
 
 agency.ADAPTERS.update({a.series: a for a in SERIES})

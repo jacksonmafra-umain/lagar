@@ -504,7 +504,11 @@ agency's own site, so the adapter sets `multi_host = True` and the run reads rob
 the agency becomes the document's `issuer`. A link straight to a PDF makes the PDF the document,
 and on a page that lists many regulations (TLV) only the PDFs naming the number are kept.
 Läkemedelsverket's regulations are not collected: its pages need JavaScript and its robots.txt
-disallows PDFs. Predecessor series on the same list (SOSFS, FoHMFS and others) are not collected.
+disallows PDFs. The series used before HSLF-FS on the same list, SOSFS (Socialstyrelsen),
+FoHMFS (Folkhälsomyndigheten) and TLVFS (TLV), have adapters of their own built on it. Links to a
+page of repealed regulations are left out, and a SOSFS regulation is collected only when
+Socialstyrelsen's index (its regulations in force) names a publication page for it. LVFS
+(Läkemedelsverket) and FHIFS, whose listed regulations only repeal earlier ones, are not collected.
 
 Predecessor series still listed where the current series is read get adapters of their own that
 read the same page for their own numbers: LMVFS (LMFS page), FIFS (HVMFS list, issuer
@@ -832,6 +836,14 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      stable file URL (`.../1/file/<id>/downloads?share=<share id>`) and `page`, the kommun's page that
      embeds the shares, is the document's `source`. `hosts` lists the kommun's host,
      `shareapi.mediaflow.com` and `files.mediaflow.com`.
+   - `ciceron`: a Ciceron meeting portal ("sammanträdesportal", Östra Göinge's `sok-og.unikom.se`).
+     The listing is the portal's address. Its single-page app talks JSON-RPC to `<portal>/json`; the
+     collector calls `CiceronsokServer:Test` (which hands out a session id), `Search` for the
+     information type 512 ("Styrande dokument"), `ReadItems` in pages of 100 and, for each title the
+     resident filter keeps, `ReadObjectDetails`, which names the document's files. The number is the
+     document id (`dok_id`) and the source the first PDF at
+     `<portal>/download/document?filename=<base64 name>&id=<file id>`, a link that needs no session.
+     A kept document without a PDF is reported as a problem.
    - `href_titles` (`html_index`, `html_pages`): a link without text takes its title from the URL's
      file name (Vallentuna's sitemap lists `2.4.3 Avfallstaxa.pdf`). Sitemaps may be gzipped files
      (`sitemap1.xml.gz`).
