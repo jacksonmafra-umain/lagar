@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.stenungsund.se/kommun-och-politik/kommunfakta/forfattningssamling": "1415-listing.html"
+  },
+  "count": 42,
+  "sample": {
+    "number": "18.37f7d8f819bba8a93c2f525",
+    "title": "Avfalls- och slamtaxa 2026",
+    "url": "https://www.stenungsund.se/download/18.37f7d8f819bba8a93c2f525/1768379681170/Avfalls-%20och%20slamtaxa%202026.pdf"
+  },
+  "excluded": [
+    "Taxebilaga A Tilläggstjänster (fr.o.m. 2024-07-01)",
+    "Taxebilaga A Tilläggstjänster 2026",
+    "Taxebilaga A tilläggstjänster 2027"
+  ]
+}

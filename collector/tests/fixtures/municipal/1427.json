@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.sotenas.se/kommun--politik/kommunfakta/regler-och-styrande-dokument": "1427-listing.html"
+  },
+  "count": 19,
+  "sample": {
+    "number": "18.5f7820591805fb6a474b4cf3",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.sotenas.se/download/18.5f7820591805fb6a474b4cf3/1651730931968/G%C3%A4llande%20lokala%20ordningsf%C3%B6reskrifter%20KF%202022-03-23%20Lst%202022-05-02.pdf"
+  },
+  "excluded": [
+    "Alkohol- och drogriktlinjer",
+    "Arbetsmiljöpolicy",
+    "Arbetsordning Kommunfullmäktige"
+  ]
+}
