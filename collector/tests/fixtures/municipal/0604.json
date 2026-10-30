@@ -1,0 +1,14 @@
+{
+  "listings": {
+    "https://www.aneby.se/sidor/boende-miljo-och-trafik/gata-och-trafik.html": "0604-listing.html",
+    "https://www.aneby.se/sidor/boende-miljo-och-trafik/miljo-och-halsa/miljoskydd/taxor-och-avgifter.html": "0604-listing-2.html",
+    "https://www.aneby.se/sidor/boende-miljo-och-trafik/miljo-och-halsa.html": "0604-listing-3.html"
+  },
+  "count": 6,
+  "sample": {
+    "number": "allmanna-lokala-ordningsforeskrifter",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.aneby.se/sidor/boende-miljo-och-trafik/gata-och-trafik/allmanna-lokala-ordningsforeskrifter.html"
+  },
+  "excluded": []
+}

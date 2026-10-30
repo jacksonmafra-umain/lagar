@@ -51,6 +51,74 @@
         "fördelning"
       ]
     },
+    "0115": {
+      "name": "Vallentuna",
+      "issuer": "Vallentuna kommun",
+      "region_code": "01",
+      "collection": "Den kommunala författningssamlingen",
+      "strategy": "html_index",
+      "hosts": ["www.vallentuna.se"],
+      "listings": ["https://www.vallentuna.se/sitemapindex.xml"],
+      "href_titles": true,
+      "follow": "/sitemap\\d+\\.xml\\.gz$",
+      "link_pattern": "^https://www\\.vallentuna\\.se/download/18\\.[0-9a-f]+/\\d+/\\d{1,2}(\\.\\d{1,3})+(%20|\\+)[^/]+\\.pdf$",
+      "number": [{"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}],
+      "title_strip": ["^\\d{1,2}(\\.\\d{1,3})+\\s+"],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "gallring"
+      ]
+    },
     "0117": {
       "name": "Österåker",
       "issuer": "Österåkers kommun",
@@ -728,6 +796,23 @@
       "section_level": 2,
       "sections": ["Föreskrifter Visa Dölj"]
     },
+    "0186": {
+      "name": "Lidingö",
+      "issuer": "Lidingö stad",
+      "region_code": "01",
+      "collection": "Lidingö stads författningssamling",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "hosts": ["docweb.evolution.lidingo.se"],
+      "listings": [
+        "https://docweb.evolution.lidingo.se/api/folders/db351e4a-67c0-4c27-889a-1280378e072c",
+        "https://docweb.evolution.lidingo.se/api/folders/ae3b3c3e-1143-40c2-8c84-36e800ef4845"
+      ],
+      "items": "documents",
+      "title_field": "name",
+      "number_field": "id",
+      "url_template": "/api/download/{id}/{folderId}"
+    },
     "0187": {
       "name": "Vaxholm",
       "issuer": "Vaxholms stad",
@@ -753,6 +838,76 @@
       "number": [{"from": "href", "pattern": "/dokument-foreskrifter/([^/?#]+)\\.pdf$"}],
       "title_strip": ["\\s*\\(pdf\\)\\s*$", "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"],
       "title_exclude": ["arkivreglemente"]
+    },
+    "0191": {
+      "name": "Sigtuna",
+      "issuer": "Sigtuna kommun",
+      "region_code": "01",
+      "collection": "Sigtuna kommuns författningssamling",
+      "strategy": "json_list",
+      "hosts": ["docs.netpublicator.com"],
+      "listings": [
+        "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730&isr=false"
+      ],
+      "items": "items",
+      "title_field": "text",
+      "number_field": "id",
+      "url_template": "document/{id}?hash={_hash}",
+      "follow_items": {"field": "type", "value": "channel", "url_template": "read?hash={_hash}-{id}&isr=false"},
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "hemst(ä|a)llan"
+      ]
     },
     "0192": {
       "name": "Nynäshamn",
@@ -1690,6 +1845,32 @@
         "\\.pdf\\s*$"
       ]
     },
+    "0604": {
+      "name": "Aneby",
+      "issuer": "Aneby kommun",
+      "region_code": "06",
+      "collection": "Lokala föreskrifter och taxor",
+      "strategy": "html_pages",
+      "resident_filter": true,
+      "hosts": ["www.aneby.se"],
+      "listings": [
+        "https://www.aneby.se/sidor/boende-miljo-och-trafik/gata-och-trafik.html",
+        "https://www.aneby.se/sidor/boende-miljo-och-trafik/miljo-och-halsa/miljoskydd/taxor-och-avgifter.html",
+        "https://www.aneby.se/sidor/boende-miljo-och-trafik/miljo-och-halsa.html"
+      ],
+      "link_pattern": "^https://www\\.aneby\\.se/(sidor/boende-miljo-och-trafik/.*allmanna-lokala-ordningsforeskrifter\\.html|download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf)$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"},
+        {"from": "href", "pattern": "/([^/]+)\\.html$"}
+      ],
+      "title_strip": [
+        ",?\\s*(\\(?\\s*)?(ö|o)ppnas i (ett )?nytt f(ö|o)nster\\.?\\)?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\.(pdf|docx?)\\s*$",
+        "\\s*\\([\\d.,]+\\s*[kMG]?B\\)\\s*$"
+      ],
+      "document_pattern": "\\.pdf$"
+    },
     "0617": {
       "name": "Gnosjö",
       "issuer": "Gnosjö kommun",
@@ -1751,6 +1932,25 @@
       "hosts": ["www.vaggeryd.se"],
       "listings": [
         "https://www.vaggeryd.se/kommun-och-politik/mal-styrning-och-uppfoljning/planer-styrdokument-och-foreskrifter.html"
+      ]
+    },
+    "0680": {
+      "name": "Jönköping",
+      "issuer": "Jönköpings kommun",
+      "region_code": "06",
+      "collection": "Lokala föreskrifter och taxor",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.jonkoping.se"],
+      "listings": [
+        "https://www.jonkoping.se/kommun--politik/kommunens-organisation/forvaltningar/miljo--och-halsoskyddskontoret/taxor-och-avgifter-hos-miljo--och-halsoskyddskontoret",
+        "https://www.jonkoping.se/for-foretag/guide-for-tillstand-regler-och-tillsyn/anvanda-kommunal-mark-soka-tillstand/hyra-allman-platsmark---taxor-och-avgifter"
+      ],
+      "title_strip": [
+        ",?\\s*(\\(?\\s*)?(ö|o)ppnas i (ett )?nytt f(ö|o)nster\\.?\\)?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\.(pdf|docx?)\\s*$",
+        "\\s*L(ä|a)nk till annan webbplats\\.?\\s*$"
       ]
     },
     "0682": {
@@ -2195,6 +2395,21 @@
       "number": [{"from": "href", "pattern": "/([^/]+)/$"}],
       "document_pattern": "\\.pdf$"
     },
+    "0883": {
+      "name": "Västervik",
+      "issuer": "Västerviks kommun",
+      "region_code": "08",
+      "collection": "Regler och styrande dokument",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "hosts": ["document.vastervik.se"],
+      "listings": ["https://document.vastervik.se/api/folders/b40aa1a5-c8e4-4956-85b1-a1c8f6574300"],
+      "recursive": true,
+      "items": "documents",
+      "title_field": "name",
+      "number_field": "id",
+      "url_template": "/api/download/{id}/{folderId}"
+    },
     "0884": {
       "name": "Vimmerby",
       "issuer": "Vimmerby kommun",
@@ -2223,6 +2438,76 @@
       "link_pattern": "^https://www\\.borgholm\\.se/wp-content/uploads/.*\\.pdf$",
       "number": [{"from": "href", "pattern": "/uploads/\\d{4}/\\d{2}/([^/]+)\\.pdf$"}],
       "title_strip": ["\\s*\\(?pdf\\)?\\s*$"]
+    },
+    "0980": {
+      "name": "Gotland",
+      "issuer": "Region Gotland",
+      "region_code": "09",
+      "collection": "Författningssamling och styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["gotland.se", "dokument.gotland.se"],
+      "listings": [
+        "https://gotland.se/region-och-politik/sa-styrs-region-gotland/forfattningssamling-och-styrande-dokument/avgifter-och-taxor",
+        "https://gotland.se/region-och-politik/sa-styrs-region-gotland/forfattningssamling-och-styrande-dokument/avtal-bestammelser-foreskrifter-och-ordningar"
+      ],
+      "link_pattern": "^https://dokument\\.gotland\\.se(:443)?/IntegrationService\\.svc/doc/content/\\d+$",
+      "number": [{"from": "href", "pattern": "/doc/content/(\\d+)$"}],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "tandv(å|a)rd",
+        "engelska",
+        "laboratori"
+      ]
     },
     "1060": {
       "name": "Olofström",
@@ -2700,6 +2985,22 @@
       "number": [{"from": "href", "pattern": "/uploads/(?:\\d{4}/\\d{2}/)?([^/]+)\\.pdf$"}],
       "title_strip": ["\\s*\\(pdf(,\\s*[\\d.,]+\\s*[kMG]?B)?\\)\\s*$"]
     },
+    "1283": {
+      "name": "Helsingborg",
+      "issuer": "Helsingborgs stad",
+      "region_code": "12",
+      "collection": "Helsingborgs stads författningssamling",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["styrning.helsingborg.se", "media.helsingborg.se"],
+      "listings": [
+        "https://styrning.helsingborg.se/sa-styrs-helsingborg/kommunens-regelverk/foreskrifter-och-stadgar/",
+        "https://styrning.helsingborg.se/sa-styrs-helsingborg/kommunens-regelverk/kommunala-avgifter/"
+      ],
+      "link_pattern": "^https://media\\.helsingborg\\.se/uploads/.*\\.pdf$",
+      "number": [{"from": "href", "pattern": "/uploads/(?:[^/]+/)*([^/]+)\\.pdf$"}],
+      "title_strip": ["\\s*\\(pdf,[^)]*\\).*$"]
+    },
     "1284": {
       "name": "Höganäs",
       "issuer": "Höganäs kommun",
@@ -2979,6 +3280,29 @@
       "listings": [
         "https://kungsbacka.se/kommun-och-politik/politik-och-demokrati/foreskrifter-och-styrande-dokument/foreskrifter"
       ]
+    },
+    "1401": {
+      "name": "Härryda",
+      "issuer": "Härryda kommun",
+      "region_code": "14",
+      "collection": "Härryda kommuns avgifter och taxor, och Härryda Vatten och Avfall AB:s taxor och avfallsföreskrifter",
+      "strategy": "html_pages",
+      "hosts": ["www.harryda.se", "www.hvaa.se", "hvaa.se"],
+      "listings": [
+        "https://www.harryda.se/kommunochpolitik/kommunfakta/avgifterochtaxor.4.1439a0061817fd1d94051f0.html",
+        "https://www.hvaa.se/vatten-och-avlopp/avgifter-for-vatten-och-avlopp.html",
+        "https://hvaa.se/avfall-och-atervinning/avgifter-for-avfall-och-slam.html",
+        "https://hvaa.se/avfall-och-atervinning/avfallsregler-och-foreskrifter.html"
+      ],
+      "link_pattern": "^https://(?:www\\.harryda\\.se/(?:barnochutbildning|omsorgochstod|foretagande/tillstandreglerochtillsyn|trafikochresor|kommunochpolitik/diariumocharkiv|byggaboochmiljo/bygganyttandraellerriva)/[a-z0-9/]+\\.4\\.[0-9a-f]+\\.html|(?:www\\.)?hvaa\\.se/download/18\\.[0-9a-f]+/\\d+/(?:Taxa|Kompletterande|Avfallsf)[^/?#]*\\.pdf)$",
+      "number": [
+        {"from": "href", "pattern": "\\.(4\\.[0-9a-f]+)\\.html$"},
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "document_pattern": "/download/18\\.[0-9a-f]+/\\d+/[^?#]*(?:taxa|TAXEBILAGA)[^?#]*\\.pdf$",
+      "page_titles": true,
+      "title_strip": ["\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[km]?B\\b.*$"],
+      "title_exclude": ["kortversion", "popul(ä|a)rversion", "vattentj(ä|a)nster 2023", "\\b(k(ä|a)rl|avfall) 2024\\b"]
     },
     "1402": {
       "name": "Partille",
@@ -4114,6 +4438,23 @@
         "fastighetsf(ö|o)rs(ä|a)ljning"
       ]
     },
+    "1496": {
+      "name": "Skövde",
+      "issuer": "Skövde kommun",
+      "region_code": "14",
+      "collection": "Skövde kommuns taxor och avgifter",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["www.skovde.se", "static.skovde.se"],
+      "listings": [
+        "https://www.skovde.se/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter"
+      ],
+      "link_pattern": "^https://static\\.skovde\\.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/taxor-och-avgifter/([^/?#]+)\\.pdf$"}
+      ],
+      "title_strip": ["\\s*t\\.o\\.m\\.?.*$"]
+    },
     "1497": {
       "name": "Hjo",
       "issuer": "Hjo kommun",
@@ -4709,6 +5050,19 @@
         "\\.pdf\\s*$"
       ]
     },
+    "1864": {
+      "name": "Ljusnarsberg",
+      "issuer": "Ljusnarsbergs kommun",
+      "region_code": "18",
+      "collection": "Ljusnarsbergs kommuns styrande dokument: föreskrifter och taxor",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["ljusnarsberg.se", "www.ljusnarsberg.se"],
+      "listings": [
+        "https://ljusnarsberg.se/kommun-och-politik/kommunfakta/avgifter-och-lokala-foreskrifter",
+        "https://ljusnarsberg.se/omsorg-och-stod/taxor-och-avgifter-for-vard-och-omsorg"
+      ]
+    },
     "1880": {
       "name": "Örebro",
       "issuer": "Örebro kommun",
@@ -4866,6 +5220,25 @@
         "https://karlskoga.se/kommun--politik/politik-och-demokrati/kommunal-forfattningssamling.html"
       ]
     },
+    "1884": {
+      "name": "Nora",
+      "issuer": "Nora kommun",
+      "region_code": "18",
+      "collection": "Nora kommuns taxor och avgifter",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["www.nora.se", "nora.se"],
+      "listings": [
+        "https://www.nora.se/bygga-bo-och-miljo/bygglov/avgifter-inom-bygglov/",
+        "https://www.nora.se/bygga-bo-och-miljo/vatten-och-avlopp/avgifter-och-regler-abonnemang/taxor-och-avgifter-for-vatten-och-slamtomning/",
+        "https://www.nora.se/bygga-bo-och-miljo/avfall-och-atervinning/abonnemang/avfallstaxa/"
+      ],
+      "link_pattern": "^https://www\\.nora\\.se/wp-content/uploads/\\d{4}/\\d{2}/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/([^/?#]+)\\.pdf$"}
+      ],
+      "title_exclude": ["(ä|a)lgavfall"]
+    },
     "1885": {
       "name": "Lindesberg",
       "issuer": "Lindesbergs kommun",
@@ -4919,6 +5292,40 @@
       "listings": [
         "https://kungsor.se/kommun-och-politik/styrande-dokument/allmanhet-och-naringsliv.html",
         "https://kungsor.se/kommun-och-politik/styrande-dokument/taxor-och-avgifter.html"
+      ]
+    },
+    "1961": {
+      "name": "Hallstahammar",
+      "issuer": "Hallstahammars kommun",
+      "region_code": "19",
+      "collection": "Hallstahammars kommuns författningssamling: taxor och föreskrifter",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "title_field": "name",
+      "number_field": "id",
+      "hosts": ["dokument.hallstahammar.se"],
+      "listings": ["https://dokument.hallstahammar.se/api/folders/64fda324-26d0-44a3-b3ef-74e1facd7d7f"],
+      "items": "documents",
+      "url_template": "/api/download/{id}/{folderId}",
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "gr(ä|a)vbest(ä|a)mmelse"
       ]
     },
     "1962": {
@@ -5019,6 +5426,56 @@
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kKM]B\\.?\\s*$", "\\.pdf\\s*$"]
     },
+    "2021": {
+      "name": "Vansbro",
+      "issuer": "Vansbro kommun",
+      "region_code": "20",
+      "collection": "Vansbro kommuns styrande dokument: föreskrifter, taxor och avgifter",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["www.vansbro.se", "vansbro.se", "vansbro-sok.ciceron.cloud"],
+      "listings": ["https://www.vansbro.se/kommun-och-politik/kommunens-organisation/styrande-dokument.html"],
+      "link_pattern": "^https://vansbro-sok\\.ciceron\\.cloud/download/document\\?[^#]*\\bid=\\d+",
+      "number": [
+        {"from": "href", "pattern": "[?&]id=(\\d+)"}
+      ],
+      "title_strip": ["\\s*L(ä|a)nk till annan webbplats.*$"],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "tillsynsplan"
+      ]
+    },
     "2023": {
       "name": "Malung-Sälen",
       "issuer": "Malung-Sälens kommun",
@@ -5057,6 +5514,43 @@
         {"from": "href", "pattern": "/wp-content/uploads/(\\d{4}/\\d{2}/[^/?#]+?)\\.pdf"}
       ],
       "title_strip": ["\\s*\\.pdf\\s*$"]
+    },
+    "2031": {
+      "name": "Rättvik",
+      "issuer": "Rättviks kommun",
+      "region_code": "20",
+      "collection": "Rättviks kommuns styrande dokument: taxor och avgifter, förordningar och föreskrifter",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "title_field": "name",
+      "number_field": "id",
+      "hosts": ["ess-app.rattvik.se"],
+      "listings": [
+        "https://ess-app.rattvik.se/api/folders/69f123d1-73ba-4056-950e-41f9e5b691f8",
+        "https://ess-app.rattvik.se/api/folders/dfe70b07-15e4-4cd6-aae6-7019f31eaa3e"
+      ],
+      "items": "documents",
+      "url_template": "/api/download/{id}/{folderId}",
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "taxebilaga"
+      ]
     },
     "2034": {
       "name": "Orsa",
@@ -5150,6 +5644,25 @@
         "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
         "\\s*\\.pdf\\s*$"
       ]
+    },
+    "2081": {
+      "name": "Borlänge",
+      "issuer": "Borlänge kommun",
+      "region_code": "20",
+      "collection": "Borlänge kommuns författningssamling: lokala föreskrifter, taxor och avgifter",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "title_field": "name",
+      "number_field": "id",
+      "hosts": ["www.borlange.se", "borlange.se"],
+      "listings": [
+        "https://www.borlange.se/appresource/4.38f9fe4d170346e58ae75f/12.7565929c19be70efec837e84/files?folderId=19.dfa374d19e90a69f6a24b",
+        "https://www.borlange.se/appresource/4.38f9fe4d170346e58ae75f/12.7565929c19be70efec837e84/files?folderId=19.dfa374d19e90a69f6a256"
+      ],
+      "items": "files",
+      "url_template": "{url}",
+      "link_pattern": "/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "title_strip": ["\\.pdf\\s*$"]
     },
     "2082": {
       "name": "Säter",
@@ -6242,6 +6755,57 @@
         {"from": "href", "pattern": "/([^/?#]+)\\.pdf$"}
       ],
       "title_strip": ["\\.pdf\\s*$"]
+    },
+    "2518": {
+      "name": "Övertorneå",
+      "issuer": "Övertorneå kommun",
+      "region_code": "25",
+      "collection": "Övertorneå kommuns författningssamling: föreskrifter och taxor",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "title_field": "post_title",
+      "number_field": "ID",
+      "hosts": ["overtornea.se"],
+      "listings": [
+        "https://overtornea.se/wp-admin/admin-ajax.php?juwpfisadmin=false&action=wpfd&task=files.display&view=files&id=41&rootcat=41",
+        "https://overtornea.se/wp-admin/admin-ajax.php?juwpfisadmin=false&action=wpfd&task=files.display&view=files&id=190&rootcat=190"
+      ],
+      "items": "files",
+      "url_template": "{linkdownload}",
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-| och bygg)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning"
+      ]
     },
     "2521": {
       "name": "Pajala",
