@@ -1198,6 +1198,34 @@
       "status": "blocked",
       "note": "www.karlskrona.se answers every request, robots.txt included, with an HTTP 403 \"Åtkomst nekad\" bot-check page (checked 2026-10-30); not bypassed."
     },
+    "1233": {
+      "status": "no_adapter",
+      "note": "Vellinge publishes its lokala ordningsföreskrifter and hälsoskyddsföreskrifter as HTML text on topic pages under /kommun-och-politik/kommunfakta/styrande-dokument/, and the styrande-dokument page lists no documents in its static HTML; only an attachment PDF is linked. Needs an HTML-page strategy (checked 2026-10-30)."
+    },
+    "1256": {
+      "status": "no_adapter",
+      "note": "Östra Göinge's page \"Styrande dokument och kommunala författningar\" is a search filled in by the browser; the static HTML lists no documents (the KFS PDFs live under /wp-content/uploads/). Needs an adapter for its search (checked 2026-10-30)."
+    },
+    "1262": {
+      "status": "no_adapter",
+      "note": "Lomma's pages \"Regler och styrande dokument\", \"Ordningsregler\" and \"Avgifter och taxor\" list no documents in the static HTML or in Sitevision's embedded state; the list is loaded by the browser. Needs an adapter (checked 2026-10-30)."
+    },
+    "1267": {
+      "status": "no_adapter",
+      "note": "Höör's \"Styrande dokument\" page is a search and filter form filled in by the browser; the static HTML lists no documents. Needs an adapter for its search (checked 2026-10-30)."
+    },
+    "1275": {
+      "status": "no_adapter",
+      "note": "Perstorp's \"Kommunal författningssamling\" page lists no documents in its static HTML; the list is loaded by the browser. Needs an adapter (checked 2026-10-30)."
+    },
+    "1278": {
+      "status": "no_adapter",
+      "note": "No page listing Båstad's författningssamling or lokala föreskrifter was found; its rules are spread over topic pages (checked 2026-10-30)."
+    },
+    "1283": {
+      "status": "no_adapter",
+      "note": "Helsingborg's \"Regler och styrande dokument – författningssamling\" page (WordPress, Municipio) renders its document list in the browser; needs an adapter (checked 2026-10-30)."
+    },
     "1496": {
       "status": "no_adapter",
       "note": "skovde.se lists its regulations only as JSON embedded in the page script (OrdinanceCategory, FileUrl); the collector has no strategy for that list yet."

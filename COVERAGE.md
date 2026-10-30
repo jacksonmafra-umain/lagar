@@ -348,6 +348,17 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Boden's taxor pages and Örnsköldsvik's, Sandviken's and Tidaholm's topic
     pages hold rules that the configured listings do not cover; Kiruna covers
     its föreskrifter and bygglovstaxa only.
+  - Trelleborg: robots.txt disallows `/app/uploads/`, where every PDF lives, so
+    the PDFs are never fetched; the documents point at the listing page and are
+    recorded as gaps in the manifest. Its taxor page lists no PDFs.
+  - Ystad's taxor section of the författningssamling is empty on the page; only
+    section A (allmänna föreskrifter) is collected. Lund links two of its avgifter
+    as HTML pages, which are not collected. Ängelholm covers its lokala
+    ordningsregler page only.
+  - Not collected in Skåne, with the reason per kommun in `AGENCIES.md`: Vellinge
+    (rules as HTML text), Östra Göinge, Lomma, Höör, Perstorp and Helsingborg
+    (document lists rendered in the browser) and Båstad (no collection page).
+    Their issues stay open.
 - Kommuner checked and not collected are listed with the reason in `AGENCIES.md`
   (curated in the `kommuner` section of `collector/data/agencies.json`):
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
