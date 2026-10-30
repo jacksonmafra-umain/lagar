@@ -2,7 +2,7 @@
 
 There is no national dataset: each kommun publishes its own författningssamling on
 its own website, mostly as PDFs. A config file (collector/data/municipalities.json)
-maps each kommun code to its listing pages and to one of two parsing strategies:
+maps each kommun code to its listing pages and to one of three parsing strategies:
 
 - `html_index`: a listing page whose links point straight at the documents. Links
   are kept when they sit under one of the configured section headings and match
@@ -10,6 +10,9 @@ maps each kommun code to its listing pages and to one of two parsing strategies:
 - `domino_view`: an IBM Domino (Lotus Notes) database whose view is read as XML
   (`?ReadViewEntries`); each kept entry has a detail page with metadata, a short
   note and the PDF attachments.
+
+- `html_pages`: a listing whose links lead to one web page per rule; the page
+  text is the document, unless the page links a PDF, which then is.
 
 Most kommuner run Sitevision and list their documents as one flat file list.
 `"preset": "sitevision"` fills in the link pattern, number (the file's node id)
@@ -57,7 +60,7 @@ DEFAULT_STATE = "collector/data/municipal-state.json"
 DEFAULT_MANIFEST = "sources/municipal-manifest.json"
 DEFAULT_RATE = 1.0
 MANIFEST_VERSION = 1
-STRATEGIES = ("html_index", "domino_view")
+STRATEGIES = ("html_index", "domino_view", "html_pages")
 
 # Defaults merged under a kommun entry that names a preset; the entry's own keys win.
 PRESETS = {
@@ -94,6 +97,13 @@ RESIDENT_EXCLUDE = (
 )
 ENCODING_ATTEMPTS = 3
 MAX_LISTING_PAGES = 100
+MIN_PAGE_TEXT = 40  # characters outside headings; less is an empty page, not a rule
+# Page furniture that ends up in a rule page's text: print and feedback links, review dates.
+PAGE_NOISE = re.compile(
+    r"^(skriv ut( sidan)?|lämna synpunkter|dela( sidan)?|tipsa|lyssna|innehållsansvarig|"
+    r"senast (uppdaterad|ändrad|granskad)|sidan (uppdaterades|granskades))\b",
+    re.IGNORECASE,
+)
 AGENT_TOKEN = USER_AGENT.split("/", 1)[0].lower()
 
 DOCUMENT_ERRORS = NETWORK_ERRORS + (UnicodeDecodeError, ValueError, KeyError, TypeError)
@@ -145,6 +155,8 @@ class Kommun:
     title_exclude: "list[str]" = field(default_factory=list)
     follow: str = ""
     embedded_json: bool = False
+    document_pattern: str = ""
+    content_id: str = ""
 
 
 def _required(entry, key, code, kind=str):
@@ -197,18 +209,20 @@ def _kommun(code, entry):
         title_exclude=list(entry.get("title_exclude") or (RESIDENT_EXCLUDE if resident else [])),
         follow=entry.get("follow", ""),
         embedded_json=bool(entry.get("embedded_json", False)),
+        document_pattern=entry.get("document_pattern", ""),
+        content_id=entry.get("content_id", ""),
     )
     for url in listings:
         if urllib.parse.urlsplit(url).hostname not in hosts:
             raise ConfigError(f"{code}: listing {url} is not on a configured host")
     try:
-        patterns = [kommun.link_pattern, kommun.follow, *kommun.title_strip, *kommun.title_include, *kommun.title_exclude]
+        patterns = [kommun.link_pattern, kommun.follow, kommun.document_pattern, *kommun.title_strip, *kommun.title_include, *kommun.title_exclude]
         for pattern in [*patterns, *(r["pattern"] for r in kommun.number_rules)]:
             re.compile(pattern)
     except (re.error, KeyError, TypeError) as error:
         raise ConfigError(f"{code}: bad pattern: {error}") from None
-    if strategy == "html_index" and not (kommun.link_pattern and kommun.number_rules):
-        raise ConfigError(f"{code}: html_index needs link_pattern and number")
+    if strategy in ("html_index", "html_pages") and not (kommun.link_pattern and kommun.number_rules):
+        raise ConfigError(f"{code}: {strategy} needs link_pattern and number")
     if strategy == "domino_view" and not (
         kommun.kinds and kommun.kind_column and kommun.title_column and kommun.number_column
     ):
@@ -580,9 +594,9 @@ def parse_html_index(kommun, raw, listing_url):
             continue
         number = _number(kommun, url, text)
         title = _title(kommun, text)
-        if title and not binds_residents(kommun, title):
-            continue
-        if not number or not title:
+        if not title or not binds_residents(kommun, title):
+            continue  # an image or icon link carries no title to judge or store
+        if not number:
             problems.append(url)
             continue
         entries.append(Entry(kommun.code, number, title, url, listing_url, sha))
@@ -631,7 +645,8 @@ def parse_domino_view(kommun, raw, listing_url):
     return entries, []
 
 
-PARSERS = {"html_index": parse_html_index, "domino_view": parse_domino_view}
+# html_pages lists its rule pages the way html_index lists documents.
+PARSERS = {"html_index": parse_html_index, "domino_view": parse_domino_view, "html_pages": parse_html_index}
 
 
 # --- Domino detail pages ------------------------------------------------------
@@ -642,6 +657,10 @@ class Detail:
     fields: "dict[str, str]"
     note: str
     attachments: "list[tuple[str, str]]"  # (url, label)
+
+    def text_ok(self):
+        body = [line for line in self.note.splitlines() if not line.startswith("#")]
+        return len("".join(body).strip()) >= MIN_PAGE_TEXT
 
 
 _DETAIL_IDS = {
@@ -696,6 +715,62 @@ def _body_field(html):
         if depth == 0:
             return html[pos:pos + tag.start()]
     return html[pos:]
+
+
+def _element(html, content_id):
+    """Inner HTML of the element with id `content_id`, else of `<main>`, else the whole page."""
+    if content_id:
+        start = re.search(r"<([a-z0-9]+)\b[^>]*\bid\s*=\s*[\"']?%s[\"'\s>]" % re.escape(content_id), html, re.IGNORECASE)
+        if start:
+            tag = start.group(1)
+            begin = html.index(">", start.start()) + 1
+            depth = 1
+            for match in re.finditer(r"<(/?)%s\b[^>]*>" % tag, html[begin:], re.IGNORECASE):
+                depth += -1 if match.group(1) else 1
+                if depth == 0:
+                    return html[begin:begin + match.start()]
+            return html[begin:]
+    main = re.search(r"<main\b[^>]*>(.*)</main\s*>", html, re.IGNORECASE | re.DOTALL)
+    return main.group(1) if main else html
+
+
+class _PageLinks(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.links = []
+        self._anchor = None
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "a":
+            href = dict(attrs).get("href")
+            self._anchor = [href, []] if href else None
+
+    def handle_endtag(self, tag):
+        if tag == "a" and self._anchor:
+            self.links.append((self._anchor[0], _clean("".join(self._anchor[1]))))
+            self._anchor = None
+
+    def handle_data(self, data):
+        if self._anchor:
+            self._anchor[1].append(data)
+
+
+def parse_page(kommun, raw, url):
+    """A rule's own page (html_pages): its text as Markdown and the documents it links to."""
+    content = _element(_text(raw), kommun.content_id)
+    lines = htmlmd.to_markdown(content, heading_offset=2).splitlines()
+    text = "\n".join(line for line in lines if not PAGE_NOISE.match(line.strip())).strip()
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    attachments = []
+    if kommun.document_pattern:
+        links = _PageLinks()
+        links.feed(content)
+        links.close()
+        for href, label in links.links:
+            target = _uri(urllib.parse.urljoin(url, href.strip()))
+            if re.search(kommun.document_pattern, target, re.IGNORECASE):
+                attachments.append((target, label or _label(target)))
+    return Detail({}, text, list(dict.fromkeys(attachments)))
 
 
 def parse_detail(raw, url):
@@ -757,8 +832,11 @@ def build_meta(kommun, entry, source, sha, fetched_at):
     }
 
 
-def build_body(kommun, entry, documents, detail=None, gap=None):
-    """Markdown body: metadata, the kommun's own note and links to the official documents."""
+def build_body(kommun, entry, documents, detail=None, gap=None, text=None):
+    """Markdown body: metadata, the kommun's own note and links to the official documents.
+
+    With `text` (a rule published as an HTML page), the body holds that text instead.
+    """
     lines = [
         f"# {entry.title}",
         "",
@@ -780,6 +858,9 @@ def build_body(kommun, entry, documents, detail=None, gap=None):
         lines += ["", f"Kommunens sida: <{entry.url}>"]
     else:
         lines += ["", f"Förteckning: <{entry.listing}>"]
+    if text is not None:
+        lines += ["", "## Text", "", "Texten är hämtad från kommunens webbsida.", "", text]
+        return "\n".join(lines) + "\n"
     if detail is not None and detail.note:
         lines += ["", "## Uppgifter från kommunen", "", detail.note]
     lines += [
@@ -817,10 +898,41 @@ def _fetch_pdf(fetcher, kommun, url):
     return sha, {"url": final, "content_type": content_type, "bytes": len(raw), "sha256": sha}
 
 
+def _collect_page(fetcher, kommun, entry, args, manifest):
+    """A rule published as an HTML page: the page text is the document; a linked PDF wins."""
+    if not fetcher.allows(entry.url):
+        raise ListingError(f"robots.txt disallows {entry.url}")
+    raw, _, final = fetcher.get(kommun, entry.url)
+    detail = parse_page(kommun, raw, final)
+    if detail.attachments:
+        return None, detail, final
+    if not detail.text_ok():
+        raise ValueError(f"no text on {entry.url}")
+    doc_id = corpus_id(kommun.code, entry.number)
+    data = detail.note.encode("utf-8")
+    sha = hashlib.sha256(data).hexdigest()  # of the text, so markup changes do not count
+    now = _now()
+    _record_document(manifest, {"id": doc_id, "municipality_code": kommun.code, "url": final,
+                                "content_type": "text/markdown", "bytes": len(data), "sha256": sha,
+                                "retrieved_at": now})
+    meta = build_meta(kommun, entry, final, sha, now)
+    body = build_body(kommun, entry, [], detail, None, text=detail.note)
+    if _unchanged(meta, body, args.corpus):
+        return (meta, False, None), detail, final
+    writer.write(meta, body, args.corpus)
+    return (meta, True, None), detail, final
+
+
 def collect_document(fetcher, kommun, entry, args, manifest):
     """Write one document; returns (meta, changed, gap reason or None)."""
     detail = None
-    if kommun.strategy == "domino_view":
+    if kommun.strategy == "html_pages":
+        done, detail, final = _collect_page(fetcher, kommun, entry, args, manifest)
+        if done is not None:
+            return done
+        documents = detail.attachments
+        fallback = (final, hashlib.sha256(detail.note.encode("utf-8")).hexdigest())
+    elif kommun.strategy == "domino_view":
         if not fetcher.allows(entry.url):
             raise ListingError(f"robots.txt disallows {entry.url}")
         raw, _, final = fetcher.get(kommun, entry.url)
@@ -967,7 +1079,7 @@ def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
     known = _known(manifest)
     for url in problems:
         summary.failed.append(url)
-        state["failed"][url] = "listing link without a number or title"
+        state["failed"][url] = "listing link without a number"
     written = 0
     for entry in entries:
         if args.limit is not None and written >= args.limit:
