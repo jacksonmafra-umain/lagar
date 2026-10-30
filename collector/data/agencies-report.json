@@ -7,15 +7,14 @@
   "summary": {
     "series": 68,
     "by_status": {
-      "collected": 54,
-      "collected_pdf": 3,
-      "blocked": 4,
-      "api_key": 1,
-      "no_adapter": 6
+      "collected": 60,
+      "collected_pdf": 2,
+      "blocked": 5,
+      "api_key": 1
     },
     "shared": 24,
     "kommuner": 290,
-    "kommuner_configured": 241,
+    "kommuner_configured": 277,
     "courts": 23,
     "courts_collected": 20
   },
@@ -76,6 +75,28 @@
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/162"
     },
     {
+      "series": "DVFS",
+      "agency": "Domstolsverket",
+      "status": "collected",
+      "documents": 154,
+      "target": 154,
+      "note": "Domstolsverket's DVFS register needs JavaScript; each base regulation has a page in domstol.se's sitemap that links its PDF and amendments. The title and text are read from the PDF.",
+      "url": "https://www.domstol.se/om-sveriges-domstolar/for-dig-som-aktor-i-domstol/stod-for-aktorer-i-domstol/dvfs/",
+      "description": "Domstolsverkets författningssamling, DVFS, innehåller Domstolsverkets och Notarienämndens föreskrifter och allmänna råd.",
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/164"
+    },
+    {
+      "series": "EIFS",
+      "agency": "Energimarknadsinspektionen",
+      "status": "collected",
+      "documents": 34,
+      "target": 34,
+      "note": "Ei lists its regulations in three tables (el, naturgas, fjärrvärme och fjärrkyla) with a page per regulation linking its PDF; the title and text are read from the PDF. STEMFS regulations Ei administers are not part of EIFS.",
+      "url": "https://ei.se/om-oss/lagar-och-regler/foreskrifter",
+      "description": "Föreskrifterna handlar om el, gas, fjärrvärme och fjärrkyla",
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/165"
+    },
+    {
       "series": "ELSÄK-FS",
       "agency": "Elsäkerhetsverket",
       "status": "collected",
@@ -87,6 +108,17 @@
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/166"
     },
     {
+      "series": "FFS",
+      "agency": "Försvarsmakten",
+      "status": "collected",
+      "documents": 68,
+      "target": 68,
+      "note": "Försvarsmakten's four Gällande FFS pages load their lists of PDFs from the site's content API, which only gives file names; the title, text and whether a regulation is an amendment are read from the PDF. Some old prints are scans without a text layer.",
+      "url": "https://www.forsvarsmakten.se/om-forsvarsmakten/myndighetsinformation/dokument/",
+      "description": null,
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/167"
+    },
+    {
       "series": "FKFS",
       "agency": "Försäkringskassan",
       "status": "collected",
@@ -96,6 +128,17 @@
       "url": "https://lagrummet.forsakringskassan.se/",
       "description": "Innehåller föreskrifter om aktivitetsstöd, förmåner för totalförsvarspliktiga, tandvårdsersättning, ersättning för kostnader för internationell vård, sjukvårdsersättning,, arbetsgivaravgifter och egenavgifter, Fritidskortet, dataskydd och integritet, självbetjäningstjänster via Internet.",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/168"
+    },
+    {
+      "series": "HSLF-FS",
+      "agency": "Socialstyrelsen and other health and social-care agencies",
+      "status": "collected",
+      "documents": 119,
+      "target": 155,
+      "note": "Listed on kunskapsguiden.se and read from each agency's site with that site's robots.txt. Läkemedelsverket's regulations are a gap: its pages need JavaScript and its robots.txt disallows PDFs. Some links on the list are dead or moved, and predecessor series on the list (SOSFS, FoHMFS and others) are not collected.",
+      "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
+      "description": "Utnyttjas av E-hälsomyndigheten, Folkhälsomyndigheten, Inspektionen för vård och omsorg, Läkemedelsverket, Myndigheten för familjerätt och föräldraskapsstöd, Rättsmedicinalverket, Socialstyrelsen och Tandvårds- och läkemedelsförmånsverket.",
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
       "series": "HVMFS",
@@ -140,6 +183,17 @@
       "url": "https://www.kammarkollegiet.se/om-oss/kammarkollegiets-forfattningssamling-kamfs",
       "description": null,
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/173"
+    },
+    {
+      "series": "KBVFS",
+      "agency": "Kustbevakningen",
+      "status": "collected",
+      "documents": 4,
+      "target": 4,
+      "note": "Kustbevakningen lists the regulations in force in a table whose rows link to the PDFs; the text is read from the PDF.",
+      "url": "https://www.kustbevakningen.se/om-oss/kustbevakningens-forfattningssamling/",
+      "description": "Föreskrifter och allmänna råd om förundersökningsledning vid utredning av brott, avgifter vid uppdragsverksamhet, sjösäkerhet på Kustbevakningens fartyg, rapportering av olyckor vid olje- och gasverksamhet till havs.",
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/174"
     },
     {
       "series": "KFMFS",
@@ -428,6 +482,17 @@
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/203"
     },
     {
+      "series": "SKOLFS",
+      "agency": "Statens skolverk",
+      "status": "collected",
+      "documents": 965,
+      "target": 965,
+      "note": "Base regulations in force from the API behind Skolverket's SKOLFS search app, with dates, the text of the issued PDF and links to the issued and latest consolidated PDFs; expired regulations are not stored (no repeal date).",
+      "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
+      "description": "Skolverket ger ut föreskrifter och allmänna råd i Skolverkets författningssamling (SKOLFS). Författningssamlingen innehåller även föreskrifter beslutade av Myndigheten för ungdoms- och civilsamhällesfrågor, Skolinspektionen och Specialpedagogiska skolmyndigheten. Författningssamlingen innehåller även vissa förordningar – till exempel läroplaner – om regeringen har beslutat att dessa ska kungöras i SKOLFS i stället för i Svensk författningssamling (SFS).",
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/204"
+    },
+    {
       "series": "SKSFS",
       "agency": "Skogsstyrelsen",
       "status": "collected",
@@ -626,17 +691,6 @@
       "issue": null
     },
     {
-      "series": "SKOLFS",
-      "agency": "Statens skolverk",
-      "status": "collected_pdf",
-      "documents": 965,
-      "target": 965,
-      "note": "Base regulations in force from the API behind Skolverket's SKOLFS search app, with dates and links to the issued and latest consolidated PDFs; expired regulations are not stored (no repeal date).",
-      "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
-      "description": "Skolverket ger ut föreskrifter och allmänna råd i Skolverkets författningssamling (SKOLFS). Författningssamlingen innehåller även föreskrifter beslutade av Myndigheten för ungdoms- och civilsamhällesfrågor, Skolinspektionen och Specialpedagogiska skolmyndigheten. Författningssamlingen innehåller även vissa förordningar – till exempel läroplaner – om regeringen har beslutat att dessa ska kungöras i SKOLFS i stället för i Svensk författningssamling (SFS).",
-      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/204"
-    },
-    {
       "series": "TSFS",
       "agency": "Transportstyrelsen",
       "status": "collected_pdf",
@@ -681,6 +735,17 @@
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/194"
     },
     {
+      "series": "SJVFS",
+      "agency": "Statens jordbruksverk",
+      "status": "blocked",
+      "documents": 0,
+      "target": null,
+      "note": "The regulations are PDFs on jvdoc.sharepoint.com, whose robots.txt disallows every path; Jordbruksverket's search page shows only the first 50 of 341 base regulations without JavaScript. Not collected (checked 2026-10-30).",
+      "url": "https://jordbruksverket.se/om-jordbruksverket/forfattningar/om-forfattningssamlingen",
+      "description": null,
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/202"
+    },
+    {
       "series": "SKVFS",
       "agency": "Skatteverket",
       "status": "blocked",
@@ -701,72 +766,6 @@
       "url": "https://forfattningssamling.boverket.se/",
       "description": "Boverkets författningssamling, BFS, innehåller Boverkets föreskrifter och allmänna råd. I författningssamlingen ingår även regler utgivna av den tidigare myndigheten Bostadsstyrelsen, BOFS.",
       "issue": null
-    },
-    {
-      "series": "DVFS",
-      "agency": "Domstolsverket",
-      "status": "no_adapter",
-      "documents": 0,
-      "target": null,
-      "note": null,
-      "url": "https://www.domstol.se/om-sveriges-domstolar/for-dig-som-aktor-i-domstol/stod-for-aktorer-i-domstol/dvfs/",
-      "description": "Domstolsverkets författningssamling, DVFS, innehåller Domstolsverkets och Notarienämndens föreskrifter och allmänna råd.",
-      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/164"
-    },
-    {
-      "series": "EIFS",
-      "agency": "Energimarknadsinspektionen",
-      "status": "no_adapter",
-      "documents": 0,
-      "target": null,
-      "note": null,
-      "url": "https://ei.se/om-oss/lagar-och-regler/foreskrifter",
-      "description": "Föreskrifterna handlar om el, gas, fjärrvärme och fjärrkyla",
-      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/165"
-    },
-    {
-      "series": "FFS",
-      "agency": "Försvarsmakten",
-      "status": "no_adapter",
-      "documents": 0,
-      "target": null,
-      "note": null,
-      "url": "https://www.forsvarsmakten.se/om-forsvarsmakten/myndighetsinformation/dokument/",
-      "description": null,
-      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/167"
-    },
-    {
-      "series": "HSLF-FS",
-      "agency": "Socialstyrelsen and other health and social-care agencies",
-      "status": "no_adapter",
-      "documents": 0,
-      "target": null,
-      "note": null,
-      "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
-      "description": "Utnyttjas av E-hälsomyndigheten, Folkhälsomyndigheten, Inspektionen för vård och omsorg, Läkemedelsverket, Myndigheten för familjerätt och föräldraskapsstöd, Rättsmedicinalverket, Socialstyrelsen och Tandvårds- och läkemedelsförmånsverket.",
-      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
-    },
-    {
-      "series": "KBVFS",
-      "agency": "Kustbevakningen",
-      "status": "no_adapter",
-      "documents": 0,
-      "target": null,
-      "note": null,
-      "url": "https://www.kustbevakningen.se/om-oss/kustbevakningens-forfattningssamling/",
-      "description": "Föreskrifter och allmänna råd om förundersökningsledning vid utredning av brott, avgifter vid uppdragsverksamhet, sjösäkerhet på Kustbevakningens fartyg, rapportering av olyckor vid olje- och gasverksamhet till havs.",
-      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/174"
-    },
-    {
-      "series": "SJVFS",
-      "agency": "Statens jordbruksverk",
-      "status": "no_adapter",
-      "documents": 0,
-      "target": null,
-      "note": null,
-      "url": "https://jordbruksverket.se/om-jordbruksverket/forfattningar/om-forfattningssamlingen",
-      "description": null,
-      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/202"
     }
   ],
   "shared_series": [
@@ -783,7 +782,7 @@
       "published_in": "HSLF-FS",
       "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
       "description": "Innehåller föreskrifter om vissa avgifter för öppenvårdsapotek.",
-      "status": "no_adapter",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
@@ -807,7 +806,7 @@
       "published_in": "HSLF-FS",
       "url": "https://www.folkhalsomyndigheten.se/publikationer-och-material/foreskrifter-och-allmanna-rad/",
       "description": "Föreskrifter och allmänna råd inom smittskyddslagens, alkohollagens och lagen om tobak och andra produkters område. Även föreskrifter och allmänna råd inom miljöbalkens område kring bland annat dricksvatten, bekämpningsmedel, inomhustemperatur, ventilation och buller.",
-      "status": "no_adapter",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
@@ -823,7 +822,7 @@
       "published_in": "HSLF-FS",
       "url": "https://www.ivo.se/aktuellt/publikationer/foreskrifter/",
       "description": "IVO ansvarar för tillsyn och tillståndsprövning inom hälso- och sjukvård, socialtjänst och verksamhet enligt lagen om stöd och service till vissa funktionshindrade (LSS). Myndigheten ansvarar även för prövning av klagomål enligt patientsäkerhetslagen och de flesta föreskrifterna berör detta område.",
-      "status": "no_adapter",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
@@ -839,7 +838,7 @@
       "published_in": "HSLF-FS",
       "url": "https://www.lakemedelsverket.se/sv/lagar-och-regler/foreskrifter",
       "description": null,
-      "status": "no_adapter",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
@@ -855,7 +854,7 @@
       "published_in": "HSLF-FS",
       "url": "https://www.mfof.se/familjeratt/regler-och-riktlinjer/foreskrifter-och-allmanna-rad",
       "description": "Innehåller föreskrifter om adoption, faderskap och föräldraskap, samt vårdnad, boende och umgänge.",
-      "status": "no_adapter",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
@@ -871,7 +870,7 @@
       "published_in": "DVFS",
       "url": "https://www.domstol.se/om-sveriges-domstolar/for-dig-som-aktor-i-domstol/stod-for-aktorer-i-domstol/dvfs/?f=OrdinanceAuthority_list:notarienamnden&s=",
       "description": null,
-      "status": "no_adapter",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/164"
     },
     {
@@ -895,7 +894,7 @@
       "published_in": "HSLF-FS",
       "url": "https://www.rmv.se/om-oss/var-verksamhet/rattsmedicinalverkets-forfattningssamling/",
       "description": "Innehåller föreskrifter om rättsmedicinsk, rättspsykiatrisk, rättsgenetisk och rättskemisk verksamhet.",
-      "status": "no_adapter",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
@@ -911,7 +910,7 @@
       "published_in": "HSLF-FS",
       "url": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/regler-och-riktlinjer/foreskrifter-och-allmanna-rad/",
       "description": "Innehåller socialstyrelsens gällande bestämmelser för hälso- och sjukvård, tandvård, hälsoskydd och socialtjänst.",
-      "status": "no_adapter",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
@@ -919,7 +918,7 @@
       "published_in": "SKOLFS",
       "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
       "description": "Föreskrifterna rör i huvudsak reglering av statsbidrag inom myndighetens område.",
-      "status": "collected_pdf",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/204"
     },
     {
@@ -927,7 +926,7 @@
       "published_in": "SKOLFS",
       "url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/sok-forordningar-och-foreskrifter-skolfs#/",
       "description": null,
-      "status": "collected_pdf",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/204"
     },
     {
@@ -951,7 +950,7 @@
       "published_in": "HSLF-FS",
       "url": "https://www.tlv.se/om-tlv/regelverk/foreskrifter.html",
       "description": "Innehåller föreskrifter om läkemedelsförmåner, pris och subvention på läkemedel och förbrukningsartiklar, bidrag till apotek i glesbygd, referenspriser i det statliga tandvårdsstödet, handelsmarginal för apotek.",
-      "status": "no_adapter",
+      "status": "collected",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169"
     },
     {
@@ -1234,10 +1233,10 @@
         "kommun": "Vallentuna",
         "url": "https://www.vallentuna.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/245",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Vallentuna's författningssamling is a Sitevision file-share module with folders; the folder pages answer 404 to a plain request, so the files cannot be listed without the browser client (checked 2026-10-30)."
+        "collection": "Den kommunala författningssamlingen",
+        "status": "partial",
+        "documents": 29,
+        "note": null
       },
       {
         "code": "0117",
@@ -1434,10 +1433,10 @@
         "kommun": "Lidingö",
         "url": "https://www.lidingo.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/265",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Lidingö publishes its collection in Evolution DocumentWeb, a JavaScript application with no static document list; needs an adapter for its API."
+        "collection": "Lidingö stads författningssamling",
+        "status": "partial",
+        "documents": 18,
+        "note": null
       },
       {
         "code": "0187",
@@ -1464,10 +1463,10 @@
         "kommun": "Sigtuna",
         "url": "https://www.sigtuna.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/268",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Sigtuna's collection is a Netpublicator reader embedded in the page; needs a Netpublicator adapter."
+        "collection": "Sigtuna kommuns författningssamling",
+        "status": "partial",
+        "documents": 34,
+        "note": null
       },
       {
         "code": "0192",
@@ -1537,7 +1536,7 @@
         "collection": "Styrdokument",
         "status": "partial",
         "documents": 23,
-        "note": "Uppsala has no index page: each rule is its own page under /kommun-och-politik/publikationer/styrdokument/ with the PDF under /contentassets/, findable only through the sitemap; needs a sitemap-driven listing."
+        "note": null
       },
       {
         "code": "0381",
@@ -1784,10 +1783,10 @@
         "kommun": "Aneby",
         "url": "https://www.aneby.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/301",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Aneby has no collection page: the lokala ordningsföreskrifter are an HTML page and the hälsoskydd rules one PDF on the miljö page; the avfallsföreskrifter adopted 2026-02-23 were not found."
+        "collection": "Lokala föreskrifter och taxor",
+        "status": "partial",
+        "documents": 6,
+        "note": null
       },
       {
         "code": "0617",
@@ -1844,10 +1843,10 @@
         "kommun": "Jönköping",
         "url": "https://www.jonkoping.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/307",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Jönköping publishes its rules as PDFs scattered over topic pages with no index; the sitemap answers 401."
+        "collection": "Lokala föreskrifter och taxor",
+        "status": "partial",
+        "documents": 6,
+        "note": null
       },
       {
         "code": "0682",
@@ -1867,7 +1866,7 @@
         "collection": null,
         "status": "no_adapter",
         "documents": 0,
-        "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30."
+        "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30; retried on 2026-10-31, still no answer (robots.txt times out)."
       },
       {
         "code": "0684",
@@ -2007,7 +2006,7 @@
         "collection": "Samlade styrdokument",
         "status": "partial",
         "documents": 4,
-        "note": "Torsås lists its rules in accordion tables where every link reads 'Ladda ner' and the title is in another table cell; needs a row-aware listing."
+        "note": null
       },
       {
         "code": "0840",
@@ -2037,7 +2036,7 @@
         "collection": null,
         "status": "no_adapter",
         "documents": 0,
-        "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30; retry later."
+        "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30 and again on 2026-10-31 (no TCP connection on port 443); retry later."
       },
       {
         "code": "0862",
@@ -2084,10 +2083,10 @@
         "kommun": "Västervik",
         "url": "https://www.vastervik.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/331",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Västervik's file list (/globalassets/forfattningssamlingen/) is not in the static HTML and its folder URL answers HTTP 500."
+        "collection": "Regler och styrande dokument",
+        "status": "partial",
+        "documents": 35,
+        "note": null
       },
       {
         "code": "0884",
@@ -2114,10 +2113,10 @@
         "kommun": "Gotland",
         "url": "https://www.gotland.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/334",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Region Gotland's document lists point at dokument.gotland.se/IntegrationService.svc/doc/content/<id>, not at files on the website; needs an adapter for that document service."
+        "collection": "Författningssamling och styrande dokument",
+        "status": "partial",
+        "documents": 29,
+        "note": null
       },
       {
         "code": "1060",
@@ -2200,6 +2199,26 @@
         "note": null
       },
       {
+        "code": "1233",
+        "kommun": "Vellinge",
+        "url": "https://www.vellinge.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/343",
+        "collection": null,
+        "status": "no_adapter",
+        "documents": 0,
+        "note": "Vellinge publishes its lokala ordningsföreskrifter and hälsoskyddsföreskrifter as HTML text on topic pages under /kommun-och-politik/kommunfakta/styrande-dokument/, and the styrande-dokument page lists no documents in its static HTML; only an attachment PDF is linked. Needs an HTML-page strategy (checked 2026-10-30)."
+      },
+      {
+        "code": "1256",
+        "kommun": "Östra Göinge",
+        "url": "https://www.ostragoinge.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/344",
+        "collection": null,
+        "status": "no_adapter",
+        "documents": 0,
+        "note": "Östra Göinge's page \"Styrande dokument och kommunala författningar\" is a search filled in by the browser; the static HTML lists no documents (the KFS PDFs live under /wp-content/uploads/). Needs an adapter for its search (checked 2026-10-30)."
+      },
+      {
         "code": "1257",
         "kommun": "Örkelljunga",
         "url": "https://www.orkelljunga.se/",
@@ -2230,6 +2249,36 @@
         "note": null
       },
       {
+        "code": "1262",
+        "kommun": "Lomma",
+        "url": "https://lomma.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/348",
+        "collection": null,
+        "status": "no_adapter",
+        "documents": 0,
+        "note": "Lomma publishes its författningssamling in a Netpublicator reader embedded in the \"Regler och styrande dokument\" page; the static HTML lists no documents. Needs a Netpublicator adapter (checked 2026-10-30)."
+      },
+      {
+        "code": "1263",
+        "kommun": "Svedala",
+        "url": "https://www.svedala.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/349",
+        "collection": "Svedala kommuns författningssamling",
+        "status": "partial",
+        "documents": 12,
+        "note": null
+      },
+      {
+        "code": "1264",
+        "kommun": "Skurup",
+        "url": "https://www.skurup.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/350",
+        "collection": "Skurups kommuns styrande dokument",
+        "status": "partial",
+        "documents": 2,
+        "note": null
+      },
+      {
         "code": "1265",
         "kommun": "Sjöbo",
         "url": "https://www.sjobo.se/",
@@ -2248,6 +2297,16 @@
         "status": "partial",
         "documents": 6,
         "note": null
+      },
+      {
+        "code": "1267",
+        "kommun": "Höör",
+        "url": "https://www.hoor.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/353",
+        "collection": null,
+        "status": "no_adapter",
+        "documents": 0,
+        "note": "Höör's \"Styrande dokument\" page is a search and filter form filled in by the browser; the static HTML lists no documents. Needs an adapter for its search (checked 2026-10-30)."
       },
       {
         "code": "1270",
@@ -2280,6 +2339,16 @@
         "note": null
       },
       {
+        "code": "1275",
+        "kommun": "Perstorp",
+        "url": "https://www.perstorp.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/357",
+        "collection": null,
+        "status": "no_adapter",
+        "documents": 0,
+        "note": "Perstorp's \"Kommunal författningssamling\" page lists no documents in its static HTML; the list is loaded by the browser. Needs an adapter (checked 2026-10-30)."
+      },
+      {
         "code": "1276",
         "kommun": "Klippan",
         "url": "https://www.klippan.se/",
@@ -2300,6 +2369,16 @@
         "note": null
       },
       {
+        "code": "1278",
+        "kommun": "Båstad",
+        "url": "https://www.bastad.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/360",
+        "collection": null,
+        "status": "no_adapter",
+        "documents": 0,
+        "note": "No page listing Båstad's författningssamling or lokala föreskrifter was found; its rules are spread over topic pages (checked 2026-10-30)."
+      },
+      {
         "code": "1280",
         "kommun": "Malmö",
         "url": "https://www.malmo.se/",
@@ -2310,6 +2389,16 @@
         "note": "14 documents not fetched: robots.txt disallows the document URL"
       },
       {
+        "code": "1281",
+        "kommun": "Lund",
+        "url": "https://www.lund.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/362",
+        "collection": "Lunds kommuns författningssamling",
+        "status": "partial",
+        "documents": 29,
+        "note": null
+      },
+      {
         "code": "1282",
         "kommun": "Landskrona",
         "url": "https://www.landskrona.se/",
@@ -2317,6 +2406,16 @@
         "collection": "Landskrona stads författningssamling",
         "status": "partial",
         "documents": 29,
+        "note": null
+      },
+      {
+        "code": "1283",
+        "kommun": "Helsingborg",
+        "url": "https://www.helsingborg.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/364",
+        "collection": "Helsingborgs stads författningssamling",
+        "status": "partial",
+        "documents": 10,
         "note": null
       },
       {
@@ -2340,6 +2439,36 @@
         "note": null
       },
       {
+        "code": "1286",
+        "kommun": "Ystad",
+        "url": "https://www.ystad.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/367",
+        "collection": "Ystads kommuns författningssamling",
+        "status": "partial",
+        "documents": 14,
+        "note": null
+      },
+      {
+        "code": "1287",
+        "kommun": "Trelleborg",
+        "url": "https://www.trelleborg.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/368",
+        "collection": "Trelleborgs kommuns författningssamling",
+        "status": "partial",
+        "documents": 7,
+        "note": "7 documents not fetched: robots.txt disallows the document URL"
+      },
+      {
+        "code": "1290",
+        "kommun": "Kristianstad",
+        "url": "https://www.kristianstad.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/369",
+        "collection": "Kristianstads kommuns författningssamling",
+        "status": "partial",
+        "documents": 27,
+        "note": null
+      },
+      {
         "code": "1291",
         "kommun": "Simrishamn",
         "url": "https://www.simrishamn.se/",
@@ -2347,6 +2476,26 @@
         "collection": "Simrishamns kommuns författningssamling",
         "status": "partial",
         "documents": 1,
+        "note": null
+      },
+      {
+        "code": "1292",
+        "kommun": "Ängelholm",
+        "url": "https://www.engelholm.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/371",
+        "collection": "Ängelholms kommuns författningssamling",
+        "status": "partial",
+        "documents": 4,
+        "note": null
+      },
+      {
+        "code": "1293",
+        "kommun": "Hässleholm",
+        "url": "https://www.hassleholm.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/372",
+        "collection": "Hässleholms kommuns författningssamling",
+        "status": "partial",
+        "documents": 39,
         "note": null
       },
       {
@@ -2414,10 +2563,20 @@
         "kommun": "Härryda",
         "url": "https://www.harryda.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/379",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Härryda publishes no författningssamling or list of local rules: the avgifter och taxor page links to topic pages, where some taxor are HTML text and a few are single PDFs (plan- och bygglovstaxa, miljö- och hälsoskyddstaxa); no sitemap (checked 2026-10-30)."
+        "collection": "Härryda kommuns avgifter och taxor, och Härryda Vatten och Avfall AB:s taxor och avfallsföreskrifter",
+        "status": "partial",
+        "documents": 13,
+        "note": "Härryda publishes no författningssamling: the rules are read from its avgifter och taxor page (topic pages as text, or the taxa PDF a page links) and from Härryda Vatten och Avfall AB's VA and avfall taxor and avfallsföreskrifter on hvaa.se."
+      },
+      {
+        "code": "1402",
+        "kommun": "Partille",
+        "url": "https://www.partille.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/380",
+        "collection": "Partille kommuns författningssamling",
+        "status": "partial",
+        "documents": 22,
+        "note": null
       },
       {
         "code": "1407",
@@ -2447,6 +2606,16 @@
         "collection": "Tjörns kommuns författningssamling",
         "status": "partial",
         "documents": 15,
+        "note": null
+      },
+      {
+        "code": "1421",
+        "kommun": "Orust",
+        "url": "https://www.orust.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/384",
+        "collection": "Orusts kommuns författningssamling (OKFS)",
+        "status": "partial",
+        "documents": 40,
         "note": null
       },
       {
@@ -2650,6 +2819,26 @@
         "note": null
       },
       {
+        "code": "1470",
+        "kommun": "Vara",
+        "url": "https://www.vara.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/405",
+        "collection": "Föreskrifter och taxor",
+        "status": "partial",
+        "documents": 25,
+        "note": null
+      },
+      {
+        "code": "1471",
+        "kommun": "Götene",
+        "url": "https://www.gotene.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/406",
+        "collection": "Kommunens författningar",
+        "status": "partial",
+        "documents": 19,
+        "note": null
+      },
+      {
         "code": "1472",
         "kommun": "Tibro",
         "url": "https://www.tibro.se/",
@@ -2810,14 +2999,24 @@
         "note": null
       },
       {
+        "code": "1495",
+        "kommun": "Skara",
+        "url": "https://www.skara.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/423",
+        "collection": "Föreskrifter, taxor och avgifter",
+        "status": "partial",
+        "documents": 26,
+        "note": null
+      },
+      {
         "code": "1496",
         "kommun": "Skövde",
         "url": "https://www.skovde.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/424",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "skovde.se lists its regulations only as JSON embedded in the page script (OrdinanceCategory, FileUrl); the collector has no strategy for that list yet."
+        "collection": "Skövde kommuns taxor och avgifter",
+        "status": "partial",
+        "documents": 10,
+        "note": "Only the taxor och avgifter page is collected; the lokala föreskrifter are listed as JSON inside the Next.js page's script data (static.skovde.se), which the collector cannot read yet."
       },
       {
         "code": "1497",
@@ -2837,6 +3036,16 @@
         "collection": "Tidaholms kommuns författningssamling",
         "status": "partial",
         "documents": 10,
+        "note": null
+      },
+      {
+        "code": "1499",
+        "kommun": "Falköping",
+        "url": "https://www.falkoping.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/427",
+        "collection": "Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser",
+        "status": "partial",
+        "documents": 30,
         "note": null
       },
       {
@@ -2945,9 +3154,9 @@
         "url": "https://karlstad.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/438",
         "collection": null,
-        "status": "no_adapter",
+        "status": "robots",
         "documents": 0,
-        "note": "karlstad.se serves its documents from a SharePoint-backed list whose download links are built in the browser; no adapter yet."
+        "note": "karlstad.se lists SharePoint document ids; the files are served only through time-limited links on karlstadskommunonline.sharepoint.com, whose robots.txt disallows everything (checked 2026-10-30)."
       },
       {
         "code": "1781",
@@ -2977,6 +3186,16 @@
         "collection": "Hagfors kommun, taxor och renhållningsordning",
         "status": "partial",
         "documents": 6,
+        "note": null
+      },
+      {
+        "code": "1784",
+        "kommun": "Arvika",
+        "url": "https://www.arvika.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/442",
+        "collection": "Författningssamling",
+        "status": "partial",
+        "documents": 7,
         "note": null
       },
       {
@@ -3044,10 +3263,10 @@
         "kommun": "Ljusnarsberg",
         "url": "https://www.ljusnarsberg.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/449",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "ljusnarsberg.se lists only internal documents on its styrande dokument page; föreskrifter and taxor are spread over topic pages."
+        "collection": "Ljusnarsbergs kommuns styrande dokument: föreskrifter och taxor",
+        "status": "partial",
+        "documents": 9,
+        "note": null
       },
       {
         "code": "1880",
@@ -3094,10 +3313,10 @@
         "kommun": "Nora",
         "url": "https://www.nora.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/454",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "nora.se has no page listing its rules for residents; föreskrifter and taxor are spread over topic pages."
+        "collection": "Nora kommuns taxor och avgifter",
+        "status": "partial",
+        "documents": 3,
+        "note": null
       },
       {
         "code": "1885",
@@ -3144,10 +3363,10 @@
         "kommun": "Hallstahammar",
         "url": "https://www.hallstahammar.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/459",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "hallstahammar.se publishes its documents through Evolution DocumentWeb (a JavaScript app over a JSON API); no adapter yet."
+        "collection": "Hallstahammars kommuns författningssamling: taxor och föreskrifter",
+        "status": "partial",
+        "documents": 32,
+        "note": null
       },
       {
         "code": "1962",
@@ -3214,10 +3433,10 @@
         "kommun": "Vansbro",
         "url": "https://www.vansbro.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/466",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "vansbro.se links its documents through Ciceron with a per-visit session id in every link; no adapter yet."
+        "collection": "Vansbro kommuns styrande dokument: föreskrifter, taxor och avgifter",
+        "status": "partial",
+        "documents": 20,
+        "note": null
       },
       {
         "code": "2023",
@@ -3254,10 +3473,10 @@
         "kommun": "Rättvik",
         "url": "https://www.rattvik.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/470",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "rattvik.se publishes its taxor and föreskrifter through DocumentWeb (ess-app.rattvik.se, a JavaScript app over a JSON API); no adapter yet."
+        "collection": "Rättviks kommuns styrande dokument: taxor och avgifter, förordningar och föreskrifter",
+        "status": "partial",
+        "documents": 26,
+        "note": null
       },
       {
         "code": "2034",
@@ -3314,10 +3533,20 @@
         "kommun": "Borlänge",
         "url": "https://www.borlange.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/476",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "borlange.se uses the Sitevision file-share module with folders loaded in the browser; the PDFs are not in the served page, only in the sitemap."
+        "collection": "Borlänge kommuns författningssamling: lokala föreskrifter, taxor och avgifter",
+        "status": "partial",
+        "documents": 32,
+        "note": null
+      },
+      {
+        "code": "2082",
+        "kommun": "Säter",
+        "url": "https://www.sater.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/477",
+        "collection": "Regler och föreskrifter, taxor och avgifter",
+        "status": "partial",
+        "documents": 17,
+        "note": null
       },
       {
         "code": "2083",
@@ -3437,6 +3666,16 @@
         "collection": "Bollnäs kommuns författningssamling",
         "status": "partial",
         "documents": 7,
+        "note": null
+      },
+      {
+        "code": "2184",
+        "kommun": "Hudiksvall",
+        "url": "https://www.hudiksvall.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/490",
+        "collection": "Författningssamling - Styrdokument",
+        "status": "partial",
+        "documents": 29,
         "note": null
       },
       {
@@ -3567,6 +3806,16 @@
         "collection": "Bergs kommuns författningssamling och styrande dokument",
         "status": "partial",
         "documents": 26,
+        "note": null
+      },
+      {
+        "code": "2361",
+        "kommun": "Härjedalen",
+        "url": "https://www.herjedalen.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/504",
+        "collection": "Styrdokument och regler",
+        "status": "partial",
+        "documents": 29,
         "note": null
       },
       {
@@ -3784,10 +4033,10 @@
         "kommun": "Övertorneå",
         "url": "https://www.overtornea.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/526",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "overtornea.se lists its föreskrifter and taxor through the WordPress File Download plugin, loaded from an admin-ajax JSON endpoint; no adapter yet."
+        "collection": "Övertorneå kommuns författningssamling: föreskrifter och taxor",
+        "status": "partial",
+        "documents": 17,
+        "note": null
       },
       {
         "code": "2521",
@@ -3807,6 +4056,16 @@
         "collection": "Gällivare kommuns författningssamling",
         "status": "partial",
         "documents": 60,
+        "note": null
+      },
+      {
+        "code": "2560",
+        "kommun": "Älvsbyn",
+        "url": "https://www.alvsbyn.se/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/529",
+        "collection": "Taxor (styrdokumentdatabas)",
+        "status": "partial",
+        "documents": 11,
         "note": null
       },
       {
@@ -3860,206 +4119,7 @@
         "note": null
       }
     ],
-    "not_configured": [
-      {
-        "region_code": "12",
-        "county": "Skåne län",
-        "kommuner": [
-          {
-            "code": "1233",
-            "kommun": "Vellinge",
-            "url": "https://www.vellinge.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/343"
-          },
-          {
-            "code": "1256",
-            "kommun": "Östra Göinge",
-            "url": "https://www.ostragoinge.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/344"
-          },
-          {
-            "code": "1262",
-            "kommun": "Lomma",
-            "url": "https://lomma.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/348"
-          },
-          {
-            "code": "1263",
-            "kommun": "Svedala",
-            "url": "https://www.svedala.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/349"
-          },
-          {
-            "code": "1264",
-            "kommun": "Skurup",
-            "url": "https://www.skurup.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/350"
-          },
-          {
-            "code": "1267",
-            "kommun": "Höör",
-            "url": "https://www.hoor.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/353"
-          },
-          {
-            "code": "1275",
-            "kommun": "Perstorp",
-            "url": "https://www.perstorp.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/357"
-          },
-          {
-            "code": "1278",
-            "kommun": "Båstad",
-            "url": "https://www.bastad.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/360"
-          },
-          {
-            "code": "1281",
-            "kommun": "Lund",
-            "url": "https://www.lund.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/362"
-          },
-          {
-            "code": "1283",
-            "kommun": "Helsingborg",
-            "url": "https://www.helsingborg.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/364"
-          },
-          {
-            "code": "1286",
-            "kommun": "Ystad",
-            "url": "https://www.ystad.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/367"
-          },
-          {
-            "code": "1287",
-            "kommun": "Trelleborg",
-            "url": "https://www.trelleborg.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/368"
-          },
-          {
-            "code": "1290",
-            "kommun": "Kristianstad",
-            "url": "https://www.kristianstad.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/369"
-          },
-          {
-            "code": "1292",
-            "kommun": "Ängelholm",
-            "url": "https://www.angelholm.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/371"
-          },
-          {
-            "code": "1293",
-            "kommun": "Hässleholm",
-            "url": "https://www.hassleholm.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/372"
-          }
-        ]
-      },
-      {
-        "region_code": "14",
-        "county": "Västra Götalands län",
-        "kommuner": [
-          {
-            "code": "1402",
-            "kommun": "Partille",
-            "url": "https://www.partille.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/380"
-          },
-          {
-            "code": "1421",
-            "kommun": "Orust",
-            "url": "https://www.orust.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/384"
-          },
-          {
-            "code": "1470",
-            "kommun": "Vara",
-            "url": "https://www.vara.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/405"
-          },
-          {
-            "code": "1471",
-            "kommun": "Götene",
-            "url": "https://www.gotene.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/406"
-          },
-          {
-            "code": "1495",
-            "kommun": "Skara",
-            "url": "https://www.skara.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/423"
-          },
-          {
-            "code": "1499",
-            "kommun": "Falköping",
-            "url": "https://www.falkoping.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/427"
-          }
-        ]
-      },
-      {
-        "region_code": "17",
-        "county": "Värmlands län",
-        "kommuner": [
-          {
-            "code": "1784",
-            "kommun": "Arvika",
-            "url": "https://www.arvika.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/442"
-          }
-        ]
-      },
-      {
-        "region_code": "20",
-        "county": "Dalarnas län",
-        "kommuner": [
-          {
-            "code": "2082",
-            "kommun": "Säter",
-            "url": "https://www.sater.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/477"
-          }
-        ]
-      },
-      {
-        "region_code": "21",
-        "county": "Gävleborgs län",
-        "kommuner": [
-          {
-            "code": "2184",
-            "kommun": "Hudiksvall",
-            "url": "https://www.hudiksvall.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/490"
-          }
-        ]
-      },
-      {
-        "region_code": "23",
-        "county": "Jämtlands län",
-        "kommuner": [
-          {
-            "code": "2361",
-            "kommun": "Härjedalen",
-            "url": "https://www.herjedalen.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/504"
-          }
-        ]
-      },
-      {
-        "region_code": "25",
-        "county": "Norrbottens län",
-        "kommuner": [
-          {
-            "code": "2560",
-            "kommun": "Älvsbyn",
-            "url": "https://www.alvsbyn.se/",
-            "issue": "https://github.com/jacksonmafra-umain/lagar/issues/529"
-          }
-        ]
-      }
-    ]
+    "not_configured": []
   },
   "courts": [
     {

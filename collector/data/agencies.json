@@ -261,7 +261,9 @@
     },
     "statens-jordbruksverks-forfattningssamling-sjvfs": {
       "series": "SJVFS",
-      "agency": "Statens jordbruksverk"
+      "agency": "Statens jordbruksverk",
+      "status": "blocked",
+      "note": "The regulations are PDFs on jvdoc.sharepoint.com, whose robots.txt disallows every path; Jordbruksverket's search page shows only the first 50 of 341 base regulations without JavaScript. Not collected (checked 2026-10-30)."
     },
     "statens-kulturrads-forfattningssamling-krfs": {
       "series": "KRFS",
@@ -1158,11 +1160,11 @@
     },
     "0683": {
       "status": "no_adapter",
-      "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30."
+      "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30; retried on 2026-10-31, still no answer (robots.txt times out)."
     },
     "0861": {
       "status": "no_adapter",
-      "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30; retry later."
+      "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30 and again on 2026-10-31 (no TCP connection on port 443); retry later."
     },
     "1080": {
       "status": "blocked",
@@ -1185,12 +1187,8 @@
       "note": "Höör's \"Styrande dokument\" page is a search and filter form filled in by the browser; the static HTML lists no documents. Needs an adapter for its search (checked 2026-10-30)."
     },
     "1275": {
-      "status": "no_adapter",
-      "note": "Perstorp's \"Kommunal författningssamling\" page lists no documents in its static HTML; the list is loaded by the browser. Needs an adapter (checked 2026-10-30)."
-    },
-    "1278": {
-      "status": "no_adapter",
-      "note": "No page listing Båstad's författningssamling or lokala föreskrifter was found; its rules are spread over topic pages (checked 2026-10-30)."
+      "status": "robots",
+      "note": "Perstorp's \"Kommunal författningssamling\" page keeps its document list in a minimised layout that opens only through ?sv.state=normal, which robots.txt disallows (Disallow: /*?sv.state=*); the site has no sitemap. Not bypassed (checked 2026-10-31)."
     },
     "1401": {
       "note": "Härryda publishes no författningssamling: the rules are read from its avgifter och taxor page (topic pages as text, or the taxa PDF a page links) and from Härryda Vatten och Avfall AB's VA and avfall taxor and avfallsföreskrifter on hvaa.se."
@@ -1205,10 +1203,6 @@
     "1780": {
       "status": "robots",
       "note": "karlstad.se lists SharePoint document ids; the files are served only through time-limited links on karlstadskommunonline.sharepoint.com, whose robots.txt disallows everything (checked 2026-10-30)."
-    },
-    "2029": {
-      "status": "no_adapter",
-      "note": "leksand.se publishes its författningssamling in a Netpublicator reader (JavaScript, noindex); no adapter yet."
     }
   }
 }

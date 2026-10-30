@@ -801,6 +801,19 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      `{linkdownload}`), resolved against the listing URL. `link_pattern`, when set, filters the
      built links; `resident_filter` and `title_include`/`title_exclude` filter the titles. An item
      with no number or a template field it lacks is reported as a problem.
+     `"embedded": "next"` reads the list from a Next.js page instead of a JSON document: the
+     page's streamed data (`self.__next_f.push` strings) is joined and `items` names the key whose
+     value is the list (Skövde's `ordinancePages`). `number_pattern` (regex, first group) cuts the
+     number out of `number_field` (Skövde's ids end in `_sv_Published`). A Sitevision file-share
+     module's folder is read the same way from its files JSON
+     (`/appresource/<page>/<portlet>/files?folderId=<folder>`, items `files`; Borlänge).
+     With `"recursive": true`, the lists at `items` are collected from every nested folder object as
+     well (DocumentWeb returns a whole folder tree in one answer); each item's section is the title
+     field of the folder that holds it, so `sections` can keep only some folders. `follow_items`
+     (`{"field": "type", "value": "channel", "url_template": "read?hash={_hash}-{id}&isr=false"}`)
+     reads the items that match as further listings (a Netpublicator channel); in every template the
+     listing URL's query parameters are available as `_name` (`{_hash}`). JSON titles are
+     HTML-unescaped.
    - `mediaflow`: MediaFlow shares embedded on the kommun's page (Gävle). Each listing is a share's
      token URL, `https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=<share id>`
      (the share id is in the page's `MediaFlowShareLinks` box); the share's files are listed through
@@ -809,13 +822,6 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      stable file URL (`.../1/file/<id>/downloads?share=<share id>`) and `page`, the kommun's page that
      embeds the shares, is the document's `source`. `hosts` lists the kommun's host,
      `shareapi.mediaflow.com` and `files.mediaflow.com`.
-     With `"recursive": true`, the lists at `items` are collected from every nested folder object as
-     well (DocumentWeb returns a whole folder tree in one answer); each item's section is the title
-     field of the folder that holds it, so `sections` can keep only some folders. `follow_items`
-     (`{"field": "type", "value": "channel", "url_template": "read?hash={_hash}-{id}&isr=false"}`)
-     reads the items that match as further listings (a Netpublicator channel); in every template the
-     listing URL's query parameters are available as `_name` (`{_hash}`). JSON titles are
-     HTML-unescaped.
    - `href_titles` (`html_index`, `html_pages`): a link without text takes its title from the URL's
      file name (Vallentuna's sitemap lists `2.4.3 Avfallstaxa.pdf`). Sitemaps may be gzipped files
      (`sitemap1.xml.gz`).
@@ -829,9 +835,14 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
    replace the built-in lists for a kommun.
 4. `--dry-run` prints each listed document (`id`, title, URL) without fetching documents or writing
    anything; use it to check a new entry.
-5. `hosts` lists every host the collector may contact for that kommun; `region_code` must be the
+5. A listing may be an object instead of a URL: `{"url": "...", "strategy": "json_list", ...}`. It
+   is read with the entry's settings overridden by its own keys, so one kommun can read a page of
+   PDF links and an embedded document list (Skövde's taxor page and its Next.js
+   författningssamling). Documents are still fetched with the entry's strategy, so only
+   `html_index` and `json_list` listings may be combined.
+6. `hosts` lists every host the collector may contact for that kommun; `region_code` must be the
    first two digits of the kommun code.
-6. Add a trimmed listing fixture as `collector/tests/fixtures/municipal/<code>-listing.html` (headings
+7. Add a trimmed listing fixture as `collector/tests/fixtures/municipal/<code>-listing.html` (headings
    and links are all the parser reads) and its expectations as `collector/tests/fixtures/municipal/<code>.json`
    (`listings`: every page read, followed pages included, to its fixture file, `count`, a `sample` entry with `number`, `title` and `url`,
    and `excluded` titles); `test_municipal_listings.py` checks every such pair against the config. Then
