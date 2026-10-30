@@ -5338,6 +5338,204 @@
       "url": "https://enkoping.se/download/18.c24f8a81725c79a7b35617d/1777272634551/taxa-offentlig-kontroll-livsmedel.pdf"
     },
     {
+      "bytes": 1118339,
+      "content_type": "application/pdf",
+      "id": "0382-avfallsforeskrifter",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:49Z",
+      "sha256": "eb64d9199a1e1bd85514fcc041fc996189bed0574d9a98a4a26347376b278b78",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/ks-2023-817_bilaga-5-kf-194-2023.pdf"
+    },
+    {
+      "bytes": 491131,
+      "content_type": "application/pdf",
+      "id": "0382-avfallsstaxa",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:23Z",
+      "sha256": "5c852b60e363a516c7475a8805cb4ee471af9e7558876690b24747930c954976",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/bilaga-1.-avfallstaxa-2026-1.2-mars.pdf"
+    },
+    {
+      "bytes": 760305,
+      "content_type": "application/pdf",
+      "id": "0382-avgift-for-torghandel",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:25Z",
+      "sha256": "a0df642b01e9560dbabc36bebc04c3fb863d7e2e25be332d33efccb090ec65f8",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/avgift-for-torghandel---bilaga-4-kf-59-2024.pdf"
+    },
+    {
+      "bytes": 776272,
+      "content_type": "application/pdf",
+      "id": "0382-avgift-for-upplatelse-av-allman-plats",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:27Z",
+      "sha256": "9becc8e871bebc941fa05c59c2230d532b51a866da76e5422c46b4240cf29d4d",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/revidering-avseende-avgift-for-upplatelse-av-allman-plats.-bilaga-5-kf-60-2024.pdf"
+    },
+    {
+      "bytes": 517951,
+      "content_type": "application/pdf",
+      "id": "0382-avgifter-for-stallplatser",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:21Z",
+      "sha256": "41353689a103959301ecd670269930121825d26fbfa41109e203b9a1a284bb66",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/avgiftsniva-for-stallplatser_protokollsutdrag-kf-2025-11-04--150.pdf"
+    },
+    {
+      "bytes": 171146,
+      "content_type": "application/pdf",
+      "id": "0382-avgifter-vard-och-omsorg",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:17Z",
+      "sha256": "7603469c759d2ceac62d1cf00d0d9a99869430810c8527dac5e4b5185be061ea",
+      "url": "https://www.osthammar.se/globalassets/dokument/information/omsorg-och-stod/avgifter-inom-omsorg---informationsblad-2026.pdf"
+    },
+    {
+      "bytes": 924301,
+      "content_type": "application/pdf",
+      "id": "0382-foreskrifter-for-lotterikontrollant-samt-tillsyn-och-kontroll-av-lotterier",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:53Z",
+      "sha256": "56830ebe6fcf750d55366ac9c91d88b0495e59d3739031f9dbeeb0c59c6ffa89",
+      "url": "https://www.osthammar.se/globalassets/dokument/ordningsregler-och-foreskrifter/tillsyn-och-kontroll-av-lotteri-samt-foreskrift-for-lotterikontrollant.pdf"
+    },
+    {
+      "bytes": 1204029,
+      "content_type": "application/pdf",
+      "id": "0382-foreskrifter-om-hamnordning-for-harg-hamn",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:52Z",
+      "sha256": "d139c84859db5b132df46d8037dda634534e23b0f058008c044e0479b7394633",
+      "url": "https://www.osthammar.se/globalassets/dokument/ordningsregler-och-foreskrifter/foreskrifter-om-hargs-hamn.pdf"
+    },
+    {
+      "bytes": 861672,
+      "content_type": "application/pdf",
+      "id": "0382-kultur-och-fritidsnamndens-hyror-och-avgifter",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:29Z",
+      "sha256": "67b26d136e71f479be24e1d1ecac5953d343097efbadd9614a399d19966a38dc",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/kultur--och-fritidsnamnden_taxor-2026.pdf"
+    },
+    {
+      "bytes": 3859861,
+      "content_type": "application/pdf",
+      "id": "0382-lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:58Z",
+      "sha256": "79a8f65adbacaab773ab306244018f4fd14a9a6c9d7af58af1c79356b413c100",
+      "url": "https://www.osthammar.se/globalassets/dokument/ordningsregler-och-foreskrifter/lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo.pdf"
+    },
+    {
+      "bytes": 4019463,
+      "content_type": "application/pdf",
+      "id": "0382-lokala-ordningsforeskrifter",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:26:01Z",
+      "sha256": "0180d95061db78236494747d85e9a256394d3a5c5c9d94304f2a91545fc0b39f",
+      "url": "https://www.osthammar.se/globalassets/dokument/ordningsregler-och-foreskrifter/lokala-ordningsforeskrifter-for-osthammars-kommun.pdf"
+    },
+    {
+      "bytes": 43787,
+      "content_type": "application/pdf",
+      "id": "0382-parkeringsavgifter",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:19Z",
+      "sha256": "09744b93ad66d86077b68696c6c14ca369cec1f798d30b9a0442aab9ddbb71d3",
+      "url": "https://www.osthammar.se/globalassets/dokument/information/parkeringsavgifter_2011.pdf"
+    },
+    {
+      "bytes": 1077734,
+      "content_type": "application/pdf",
+      "id": "0382-plan-och-bygglovstaxa",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:31Z",
+      "sha256": "193b9865e933ed8ebff4744d7853f04c08094e168f803056b6fa1b3f2dcacc0d",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/taxa---plan--och-bygglagen.pdf"
+    },
+    {
+      "bytes": 840185,
+      "content_type": "application/pdf",
+      "id": "0382-taxa-enligt-livsmedelslagen",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:35Z",
+      "sha256": "3acedec66415d00f1c97710ffef93ad662c54da16cb4d28122cf06f0c10895e3",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/taxa-for-offentlig-kontroll-enligt-livsmedelslagstiftningen.pdf"
+    },
+    {
+      "bytes": 305672,
+      "content_type": "application/pdf",
+      "id": "0382-taxa-for-gravtillstand-och-vitesbelopp",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:43Z",
+      "sha256": "8c8b724018cf1c3c64618254fb5c2f0ea8aab3d3302795c9d95a46dc1a5c8b74",
+      "url": "https://www.osthammar.se/globalassets/dokument/styrdokument/beslut-fran-kf-2020-02-18_--6.pdf"
+    },
+    {
+      "bytes": 613183,
+      "content_type": "application/pdf",
+      "id": "0382-taxa-for-kopiering-av-allmanna-handlingar",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:33Z",
+      "sha256": "a8c0202109ca1e81d589af665a2fdff7dfd57bff3bf5e490fca51789d14089d4",
+      "url": "https://www.osthammar.se/globalassets/dokument/policy/avgift-for-kopior-och-avskrifter-av-allmanna-handlingar-samt-tillampningsanvisningar-2017.pdf"
+    },
+    {
+      "bytes": 669578,
+      "content_type": "application/pdf",
+      "id": "0382-taxa-for-lag-1980424-om-atgarder-mot-fororening-fran-fartyg",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:45Z",
+      "sha256": "c64347816126a4c3e7e9384998408d87d8c9eefe1ba8dc63ff7c95720810123a",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/taxa-for-lag-atgarder-mot-fororening-ks-2023-875_bilaga-9-kf-198-2023.pdf"
+    },
+    {
+      "bytes": 2263477,
+      "content_type": "application/pdf",
+      "id": "0382-taxa-for-provning-inom-miljobalken",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:40Z",
+      "sha256": "579ed1fdb7bce16a67f4c5eca708bf9c6980c8393ee89101c4068e14a74492c9",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/taxa---miljobalken-med-taxebilaga-1-och-2-2021.pdf"
+    },
+    {
+      "bytes": 845639,
+      "content_type": "application/pdf",
+      "id": "0382-taxa-for-uthyrning-av-skolans-lokaler",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:37Z",
+      "sha256": "52cb608fbfa600d4bdea6ac00fbdae9b0ca0cfc93eb6ebb10e2f0af60206117e",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/bestammelser-och-avgifter-vid-uthyrning-av-skol--och-barnomsorgslokaler-2023-beslut-2020-02-06-reviderad-2023-08-08.pdf"
+    },
+    {
+      "bytes": 2864,
+      "content_type": "text/markdown",
+      "id": "0382-taxa-inom-den-gemensamma-raddningsnamndens-omrade",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:41Z",
+      "sha256": "9050b7775a65d785d1ead7e5808b6438dbda2c83ea2c4211a986fd14f7ba7a8a",
+      "url": "https://www.osthammar.se/dokument/avgifter-och-taxor/taxa-inom-den-gemensamma-raddningsnamndens-omrade/"
+    },
+    {
+      "bytes": 724867,
+      "content_type": "application/pdf",
+      "id": "0382-torghandelsforeskrifter",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:26:03Z",
+      "sha256": "e629498dd86918870215b69e8b1688ba54156f537cc30d6566b3fef00d51260b",
+      "url": "https://www.osthammar.se/globalassets/dokument/ordningsregler-och-foreskrifter/torghandelsforeskrifter-vers-2.pdf"
+    },
+    {
+      "bytes": 543450,
+      "content_type": "application/pdf",
+      "id": "0382-va-taxa",
+      "municipality_code": "0382",
+      "retrieved_at": "2026-10-30T20:25:47Z",
+      "sha256": "87e15aa22ec9ef973cb279b516ce0202690defe31e60637e2977dc32e7de5edb",
+      "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/va-taxa-2019-o-hammar.pdf"
+    },
+    {
       "bytes": 89978,
       "content_type": "application/pdf",
       "id": "0428-18-12354f29193678fefd088b",
