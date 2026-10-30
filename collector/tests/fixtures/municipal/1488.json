@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.trollhattan.se/startsida/kommun-och-politik/planer-och-styrdokument/foreskrifter/": "1488-listing1.html",
+    "https://www.trollhattan.se/startsida/kommun-och-politik/planer-och-styrdokument/avgifter-och-taxor/": "1488-listing2.html"
+  },
+  "count": 28,
+  "sample": {
+    "number": "192408",
+    "title": "Allmänna lokala ordningsföreskrifter för Trollhättans kommun fastställd 230626",
+    "url": "https://www.trollhattan.se/File/Download?contentRef=192408"
+  },
+  "excluded": []
+}

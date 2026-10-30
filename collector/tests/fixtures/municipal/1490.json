@@ -1,0 +1,20 @@
+{
+  "listings": {
+    "https://www.boras.se/kommunochpolitik/styrandedokument/forfattningssamling/allmanforvaltning.4.2ab8b45f1584d51f7f4ec55b.html": "1490-listing1.html",
+    "https://www.boras.se/kommunochpolitik/styrandedokument/forfattningssamling/samhallsskydd.4.143f48f4158d2c5dae2deb49.html": "1490-listing2.html",
+    "https://www.boras.se/kommunochpolitik/styrandedokument/forfattningssamling/fastigheterochbostader.4.143f48f4158d2c5dae2df88e.html": "1490-listing3.html",
+    "https://www.boras.se/kommunochpolitik/styrandedokument/forfattningssamling/samhallsbyggnadtrafiknaturvardochfritid.4.143f48f4158d2c5dae2dffc4.html": "1490-listing4.html",
+    "https://www.boras.se/kommunochpolitik/styrandedokument/forfattningssamling/kommunikationnaringsliv.4.47a68bf5158f34c0299402b4.html": "1490-listing5.html",
+    "https://www.boras.se/kommunochpolitik/styrandedokument/forfattningssamling/tekniskforsorjning.4.47a68bf5158f34c0299421ef.html": "1490-listing6.html",
+    "https://www.boras.se/kommunochpolitik/styrandedokument/forfattningssamling/utbildningochkultur.4.47a68bf5158f34c0299425fa.html": "1490-listing7.html",
+    "https://www.boras.se/kommunochpolitik/styrandedokument/forfattningssamling/socialtjanstochomsorgforfattningssamling.4.47a68bf5158f34c029942a21.html": "1490-listing8.html",
+    "https://www.boras.se/kommunochpolitik/styrandedokument/forfattningssamling/miljoochhalsaforfattningssamling.4.47a68bf5158f34c029942fb0.html": "1490-listing9.html"
+  },
+  "count": 56,
+  "sample": {
+    "number": "18.5b4fa15a177cda291b0bfa1c",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.boras.se/download/18.5b4fa15a177cda291b0bfa1c/1791888964804/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": []
+}

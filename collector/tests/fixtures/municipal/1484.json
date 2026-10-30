@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://lysekil.se/kommun-och-politik/kommunfakta/styrande-dokument": "1484-listing.html"
+  },
+  "count": 15,
+  "sample": {
+    "number": "18.3d9cb60318ec4ef8342bbe22",
+    "title": "Avgifter för kopiering och utlämnande av allmänna handlingar",
+    "url": "https://lysekil.se/download/18.3d9cb60318ec4ef8342bbe22/1714468646101/Avgifter%20f%C3%B6r%20kopiering%20och%20utl%C3%A4mnande%20av%20allm%C3%A4n%20handling%202024.pdf"
+  },
+  "excluded": [
+    "Regler för förskola, pedagogisk omsorg och fritidshem",
+    "Regler för inköp och upphandling",
+    "Regler för uppvaktning och avtackning av medarbetare i Lysekils kommun"
+  ]
+}

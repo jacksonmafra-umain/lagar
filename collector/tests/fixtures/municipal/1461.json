@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://mellerud.se/kommun-och-politik/taxor/byggnadsnamnden/": "1461-listing1.html",
+    "https://mellerud.se/kommun-och-politik/taxor/kommunstyrelsen/": "1461-listing2.html",
+    "https://mellerud.se/kommun-och-politik/taxor/samhallsbyggnadsforvaltningen/": "1461-listing3.html",
+    "https://mellerud.se/kommun-och-politik/taxor/socialnamnden/": "1461-listing4.html",
+    "https://mellerud.se/kommun-och-politik/taxor/kultur-och-utbildningsnamnden/": "1461-listing5.html"
+  },
+  "count": 28,
+  "sample": {
+    "number": "4icldw4c",
+    "title": "Plan- och bygglovstaxa 2026",
+    "url": "https://mellerud.se/media/4icldw4c/plan-och-bygglovstaxa-2026.pdf"
+  },
+  "excluded": []
+}

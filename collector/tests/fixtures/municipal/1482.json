@@ -1,0 +1,15 @@
+{
+  "listings": {
+    "https://www.kungalv.se/kommun--politik/styrande-dokument/avgifter-och-taxor/": "1482-listing1.html",
+    "https://www.kungalv.se/kommun--politik/styrande-dokument/styrdokument-uppdelade-per-omrade/": "1482-listing2.html"
+  },
+  "count": 37,
+  "sample": {
+    "number": "avgifter-och-taxor/avfallstaxa-2026",
+    "title": "Avfallstaxa 2026",
+    "url": "https://www.kungalv.se/siteassets/dokument/kommun-och-politik/styrdokument/avgifter-och-taxor/avfallstaxa-2026.pdf"
+  },
+  "excluded": [
+    "Föreskrift för kommunalt partistöd i Kungälvs kommun"
+  ]
+}

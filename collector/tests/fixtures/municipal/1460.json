@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.bengtsfors.se/kommun-och-politik/sa-styrs-kommunen/styrande-dokument-och-planer": "1460-listing.html"
+  },
+  "count": 3,
+  "sample": {
+    "number": "6b6fc869-861b-4c36-8faa-bbcd68403b05",
+    "title": "Allmänna lokala ordningsföreskrifter efter Länsstyrelsens beslut",
+    "url": "https://evoldocs.bengtsfors.se/api/download/6b6fc869-861b-4c36-8faa-bbcd68403b05/88d9ea54-32ca-4a69-a045-396d95dd11e3?api-version=1.0"
+  },
+  "excluded": [
+    "Riktlinjer för nationella minoriteter och minoritetsspråk, antagen 2025",
+    "Riktlinjer för skolskjuts och elevresor - antagen av kommunstyrelsen § 32/25",
+    "Riktlinjer och avgifter för fritidshem"
+  ]
+}

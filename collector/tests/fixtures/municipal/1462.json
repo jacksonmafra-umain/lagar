@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://lillaedet.se/kommun-och-politik/planer-och-styrdokument/lokala-foreskrifter": "1462-listing1.html",
+    "https://lillaedet.se/kommun-och-politik/ekonomi-och-budget/avgifter-och-taxor": "1462-listing2.html"
+  },
+  "count": 49,
+  "sample": {
+    "number": "18.465e3be018529d9c61f3dbf",
+    "title": "Allmänna lokala ordningsföreskrifter med kartbilaga",
+    "url": "https://lillaedet.se/download/18.465e3be018529d9c61f3dbf/1672320698796/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20med%20kartbilaga.pdf"
+  },
+  "excluded": []
+}
