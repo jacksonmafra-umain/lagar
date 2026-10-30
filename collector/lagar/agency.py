@@ -1040,3 +1040,6 @@ def main(argv, client=None):
         return 2
     return 0
 
+
+
+from . import agency_generic  # noqa: E402,F401  (registers the generic series)
