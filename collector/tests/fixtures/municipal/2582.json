@@ -1,0 +1,15 @@
+{
+  "listings": {
+    "https://boden.se/tillstand-och-avgifter/lokala-foreskrifter/avfallsforeskrifter": "2582-listing1.html",
+    "https://boden.se/tillstand-och-avgifter/lokala-foreskrifter/fyrverkeriforbud": "2582-listing2.html",
+    "https://boden.se/tillstand-och-avgifter/lokala-foreskrifter/foreskrifter-for-halsa-och-miljo": "2582-listing3.html",
+    "https://boden.se/tillstand-och-avgifter/lokala-foreskrifter/foreskrifter-for-torghandel": "2582-listing4.html"
+  },
+  "count": 10,
+  "sample": {
+    "number": "18.1e36d0fd199c8b5630811413",
+    "title": "Föreskrifter: Avfall",
+    "url": "https://boden.se/download/18.1e36d0fd199c8b5630811413/1760678995440/F%C3%B6reskrifter:%20Avfall.pdf"
+  },
+  "excluded": []
+}

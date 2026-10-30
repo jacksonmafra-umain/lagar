@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://olofstrom.se/kommun-och-politik/kommunfakta/styrande-dokument": "1060-listing.html"
+  },
+  "count": 5,
+  "sample": {
+    "number": "18.30eb2ed016f19a67e6c2ca27",
+    "title": "lokala-ordningsforeskrifter-for-torghandel",
+    "url": "https://olofstrom.se/download/18.30eb2ed016f19a67e6c2ca27/1577959820777/lokala-ordningsforeskrifter-for-torghandel.pdf"
+  },
+  "excluded": [
+    "Arbetsordning kommunfullmäktige",
+    "Delegationsordning byggnadsnämnden (PBL)",
+    "Delegationsordning kommunstyrelsen"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://nybro.se/kommun-politik/ekonomi-budget/taxor-avgifter/": "0881-listing.html",
+    "https://nybro.se/bygga-bo-miljo/miljo-halsa-livsmedel/halsoskydd/lokala-halsoskyddsforeskrifter/": "0881-listing-2.html"
+  },
+  "count": 23,
+  "sample": {
+    "number": "Taxa-for-alkohollagen-lag-om-tobak-och-liknande-produkter-lagen-om-handel-med-vissa-receptfria-lakemedel-samt-spellagen",
+    "title": "Taxa för alkohollagen, lag om tobak och liknande produkter, lagen om handel med vissa receptfria läkemedel samt spellagen",
+    "url": "https://nybro.se/wp-content/uploads/2025/12/Taxa-for-alkohollagen-lag-om-tobak-och-liknande-produkter-lagen-om-handel-med-vissa-receptfria-lakemedel-samt-spellagen.pdf"
+  },
+  "excluded": [
+    "Taxa för extern uthyrning Åkrahällskolans aula 2024",
+    "Taxa för lokaluthyrning i Kulturhuset Kristallen",
+    "Taxa Kulturskolan"
+  ]
+}

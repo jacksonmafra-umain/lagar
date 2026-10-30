@@ -126,7 +126,7 @@ class IndexTest(unittest.TestCase):
         self.assertEqual((sfs["layers"], sfs["doc_count"], sfs["fields"]), (["sfs"], 2, ["title", "number", "body"]))
         self.assertEqual(sfs["bytes"], sum(len(t.encode("utf-8")) for f, t in files.items() if f.startswith("search/sfs/")))
         self.assertEqual(sfs["budget"], si.DEFAULT_BUDGET_BYTES)
-        self.assertEqual(top["groups"][1]["budget"], si.BUDGET_BYTES["case_law"])
+        self.assertEqual(top["groups"][1]["budget"], si.DEFAULT_BUDGET_BYTES)
         self.assertEqual(top["term_count"], sum(self.group(files, g["id"])["term_count"] for g in top["groups"]))
         self.assertFalse(any(f.startswith("search/fundamental/") for f in files))
 
@@ -183,6 +183,21 @@ class IndexTest(unittest.TestCase):
         # "Domstolen" is only in the case's body.
         self.assertNotIn("search/case_law/shards/do.json", files)
         self.assertIn("search/sfs/shards/be.json", files)
+
+    def test_case_law_body_indexed_up_to_referat(self):
+        body = "Domstol: Högsta domstolen\n\n## Nyckelord\n\n- Hyra\n\n## Referat\n\nParterna tvistade."
+        rows = docs(("nja-2020-1", "Fråga om ränta", "NJA 2020 s. 1", "case_report", body))
+        files = si.build_index(rows, BUILT_AT)
+        self.assertEqual(self.group(files, "case_law")["fields"], ["title", "number", "body"])
+        self.assertEqual(json.loads(files["search/case_law/shards/hy.json"])["terms"]["hyra"], [si.FIELD_BODY])
+        self.assertNotIn("search/case_law/shards/pa.json", files)
+
+    def test_indexed_body(self):
+        self.assertEqual(si.indexed_body("case_law", "Huvud\n## Referat\nText"), "Huvud")
+        self.assertEqual(si.indexed_body("case_law", "## Referat\nText"), "")
+        self.assertEqual(si.indexed_body("case_law", "Notis utan referat"), "Notis utan referat")
+        self.assertEqual(si.indexed_body("case_law", "Se ## Referat\nText"), "Se ## Referat\nText")
+        self.assertEqual(si.indexed_body("sfs", "Huvud\n## Referat\nText"), "Huvud\n## Referat\nText")
 
 
 class FixtureQueryTest(unittest.TestCase):

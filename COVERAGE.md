@@ -282,10 +282,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   county marks "UPPHÄVD" gets a note in the body), and `in_force` only when an
   HTML text names one date. Local traffic regulations (Transportstyrelsen's STFS)
   and the self-governing regions are out of scope.
-- Municipal regulations: only a pilot sample of 15 documents (five each from
-  Stockholm, Göteborg and Malmö) is in the corpus; the other 287 kommuner have no
-  config entry yet and there is no known target (roughly 30–150 documents per
-  kommun). Scope decision: only rules that bind residents are collected (lokala
+- Municipal regulations: every kommun with an entry in
+  `collector/data/municipalities.json` is collected in full; kommuner without an
+  entry are not collected yet, and there is no known target (roughly 30–150
+  documents per kommun). Scope decision: only rules that bind residents are collected (lokala
   ordningsföreskrifter, föreskrifter om avfall, renhållning and naturreservat,
   hamnordningar, taxor and avgifter); internal governance documents
   (reglementen, arbetsordningar, instruktioner, bolagsordningar, ägardirektiv,
@@ -312,6 +312,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
     page without headings, so their configs keep only listed file names; a new
     document with another name is not picked up until the config is updated.
+  - Not collected yet because their sites need a strategy the collector lacks:
+    one HTML page per document, with the text or the PDF only on that page (Vara,
+    Götene, Skara, Falköping, Arvika, Hudiksvall, Härjedalen, Älvsbyn), an
+    embedded JSON list (Skövde), SharePoint (Karlstad), MediaFlow (Gävle),
+    Evolution DocumentWeb (Hallstahammar) and a WordPress file-download plugin
+    (Övertorneå). Nora and Ljusnarsberg have no page listing their resident
+    rules; they are spread over topic pages. Their issues stay open.
+  - Boden's taxor pages and Örnsköldsvik's, Sandviken's and Tidaholm's topic
+    pages hold rules that the configured listings do not cover; Kiruna covers
+    its föreskrifter and bygglovstaxa only.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources

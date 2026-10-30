@@ -547,10 +547,10 @@
     "layer": "region",
     "type": null,
     "label": "Regional regulations",
-    "target": 630,
-    "kind": "counted",
-    "source": "https://www.lansstyrelsen.se (numbered regulations on the 21 county landing pages in collector/data/counties.json, 2025–2026)",
-    "as_of": "2026-10-29"
+    "target": null,
+    "kind": "unknown",
+    "source": null,
+    "as_of": null
   },
   {
     "layer": "municipality",
