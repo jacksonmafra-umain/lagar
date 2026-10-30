@@ -165,6 +165,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   pages (RFFS, MSBFS, FIFS, AMSFS) are not collected. Bolagsverket (BOLFS)
   answers with a bot check and Konkurrensverket (KKVFS) with 403 Forbidden;
   neither is bypassed, both are gaps.
+  Since 2026-10-30 the text of these series comes from their PDFs through
+  `collector/lagar/pdftext.py` (pdftotext): the consolidated version where the
+  agency publishes one, else the regulation's own PDF; the masthead also gives
+  the title where the listing only had the number, and `issued`, `published`
+  and `in_force` where the listing had none. 484 of the 494 regulations of
+  those 15 series have text; 10 PDFs are scans without a text layer (9 NFS, 1
+  KOVFS) and are recorded as such in their bodies.
   [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Agency series published as a list of PDF links (configured in

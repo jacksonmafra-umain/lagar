@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.overkalix.se/kommun-och-politik/politik-och-organisation/forfattningsregister/": "2513-listing1.html",
+    "https://www.overkalix.se/kommun-och-politik/avgifter-och-taxor/": "2513-listing2.html"
+  },
+  "count": 15,
+  "sample": {
+    "number": "utwldnnu",
+    "title": "ABVA 2012 Allmänna Bestämmelser För Användande Av Överkalix Kommuns Allmänna Vatten Och Avloppsanläggning",
+    "url": "https://www.overkalix.se/media/utwldnnu/abva-2012-allmanna-bestammelser-for-anvandande-av-overkalix-kommuns-allmanna-vatten-och-avloppsanlaggning.pdf"
+  },
+  "excluded": [
+    "Arbetsordning Kommunfullmäktige",
+    "Arkivbeskrivning Samt Klassificeringsstruktur Overkalix Kommun 2021 09 22",
+    "Arkivreglemente För Overkalix Kommun 2021 10 29"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.kalix.se/kommun/Forfattningssamling/Ordningar-och-stadgar/": "2514-listing1.html",
+    "https://www.kalix.se/kommun/Forfattningssamling/Avgifter-och-taxor/": "2514-listing2.html"
+  },
+  "count": 25,
+  "sample": {
+    "number": "allmanna-lokala-ordningsforeskrifter",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.kalix.se/globalassets/politik-och-styrning/kommunstyrelsen/ny-katalog/allmanna-lokala-ordningsforeskrifter.pdf"
+  },
+  "excluded": []
+}

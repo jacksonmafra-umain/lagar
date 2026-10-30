@@ -37,7 +37,7 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
-from . import frontmatter, htmlmd
+from . import agency_text, frontmatter, htmlmd, pdftext
 from .caselaw import NETWORK_ERRORS, USER_AGENT, StateError, _load_state, _save_state
 from .http import Blocked, PoliteClient
 from .vocabulary import TYPES
@@ -229,6 +229,8 @@ class Regulation:
     footnotes: "list[str]" = field(default_factory=list)
     pdfs: "list[tuple[str, str]]" = field(default_factory=list)  # (label, url)
     amendments: "list[Amendment]" = field(default_factory=list)
+    text_source: "str | None" = None  # label of the PDF the text was read from
+    text_gap: "str | None" = None  # why the PDF's text could not be read
 
 
 def _check_number(found, entry):
@@ -1737,13 +1739,20 @@ def to_markdown(adapter, meta, regulation):
     if regulation.pdfs:
         blocks.extend(["## Dokument", "\n".join("- " + _link(label, url) for label, url in regulation.pdfs)])
     if regulation.text:
-        blocks.extend(["## Författningstext", regulation.text])
+        if regulation.text_source:
+            blocks.extend(["## Författningstext", f"Texten är hämtad ur pdf:en {regulation.text_source}. "
+                                                  "Den tryckta författningssamlingen är den officiella versionen.",
+                           regulation.text])
+        else:
+            blocks.extend(["## Författningstext", regulation.text])
         if regulation.footnotes:
             blocks.extend(["## Fotnoter", "\n\n".join(
                 f"[{i}] {note}" for i, note in enumerate(regulation.footnotes, 1))])
     else:
+        gap = {pdftext.NO_TEXT_LAYER: " Pdf:en är inskannad och saknar textlager.",
+               pdftext.UNREADABLE_TEXT: " Pdf:ens textlager går inte att läsa."}.get(regulation.text_gap, "")
         blocks.extend(["## Författningstext", (
-            f"{adapter.issuer} publicerar texten endast som pdf; se Dokument ovan. "
+            f"{adapter.issuer} publicerar texten endast som pdf; se Dokument ovan.{gap} "
             "Den tryckta författningssamlingen är den officiella versionen.")])
     return "\n\n".join(b for b in blocks if b) + "\n"
 
@@ -1860,8 +1869,12 @@ def _selected(entry, args):
     return not args.year or number_key(entry.number)[0] in args.year
 
 
-def _snapshot_pdfs(client, robots, regulation, entry, manifest, refresh):
-    """Hash every PDF of `regulation` once; returns the number downloaded."""
+def _snapshot_pdfs(client, robots, regulation, entry, manifest, refresh, keep=None):
+    """Hash every PDF of `regulation` once; returns the number downloaded.
+
+    The bytes of the URLs in `keep` that are downloaded are stored in it
+    (a {url: bytes or None} dict) for the text step.
+    """
     previous = {f["url"]: f for f in manifest.get(regulation.number, {}).get("files", [])}
     files, downloaded = [], 0
     for label, url in regulation.pdfs:
@@ -1876,6 +1889,8 @@ def _snapshot_pdfs(client, robots, regulation, entry, manifest, refresh):
         body, content_type = client.fetch(url)
         if not body.startswith(b"%PDF-"):
             raise ValueError(f"not a PDF: {url}")
+        if keep is not None and url in keep:
+            keep[url] = body
         files.append({
             "label": label,
             "url": url,
@@ -1916,6 +1931,36 @@ def _stored_source(doc_id, corpus):
     return stored.get("source")
 
 
+def _text_pdf(regulation, entry):
+    """The PDF to read the text from: a consolidated version, else the regulation's own, else the first."""
+    for label, url in regulation.pdfs:
+        if "konsolid" in (label + " " + url).lower():
+            return label, url
+    own = next(((label, url) for label, url in regulation.pdfs if url == entry.url), None)
+    return own or (regulation.pdfs[0] if regulation.pdfs else None)
+
+
+def _add_pdf_text(client, robots, regulation, label, url, body):
+    """Fill the text, and dates and title the listing lacked, from the PDF's text layer."""
+    if body is None:
+        if not robots.allows(url):
+            return
+        body = client.get(url)
+    read = agency_text.read(body, regulation.number)
+    if not read.text:
+        regulation.text_gap = read.gap
+        return
+    regulation.text, regulation.text_source = read.text, label
+    if "konsolid" in (label + " " + url).lower():
+        regulation.version = "Konsoliderad version"
+    else:  # dates of a consolidated print may be those of its last amendment
+        regulation.issued = regulation.issued or read.issued
+        regulation.published = regulation.published or read.published
+        regulation.in_force = regulation.in_force or read.in_force
+    if read.title and (regulation.title == regulation.number or not regulation.title):
+        regulation.title = read.title
+
+
 def _collect_one(client, robots, adapter, entry, args, manifest, summary):
     if adapter.detail:
         if not robots.allows(entry.url):
@@ -1925,7 +1970,13 @@ def _collect_one(client, robots, adapter, entry, args, manifest, summary):
         sha256 = hashlib.sha256(raw).hexdigest()
     else:
         regulation = adapter.regulation(entry)
-    summary.pdfs += _snapshot_pdfs(client, robots, regulation, entry, manifest, args.refresh)
+    text_pdf = None
+    if args.pdf_text and not adapter.has_text and not regulation.text:
+        text_pdf = _text_pdf(regulation, entry)
+    keep = {text_pdf[1]: None} if text_pdf else None
+    summary.pdfs += _snapshot_pdfs(client, robots, regulation, entry, manifest, args.refresh, keep)
+    if text_pdf:
+        _add_pdf_text(client, robots, regulation, *text_pdf, keep[text_pdf[1]])
     if not adapter.detail:
         # The source is the regulation's own PDF; its hash is in the manifest.
         files = {f["url"]: f for f in manifest.get(regulation.number, {}).get("files", [])}
@@ -2056,6 +2107,8 @@ def parse_args(argv):
     parser.add_argument("--limit", type=_non_negative, help="stop after N written documents per series")
     parser.add_argument("--refresh", action="store_true",
                         help="refetch regulations and PDFs already done")
+    parser.add_argument("--no-pdf-text", dest="pdf_text", action="store_false",
+                        help="do not read the text of series published only as PDF (needs pdftotext)")
     parser.add_argument("--report", metavar="FILE", help="write a JSON run report")
     parser.add_argument("--rate", type=_rate, default=MIN_RATE, metavar="SECONDS",
                         help=f"minimum interval between requests (at least {MIN_RATE} s)")
@@ -2077,6 +2130,10 @@ def main(argv, client=None):
     if argv and argv[0] == "agency":
         argv = argv[1:]
     args = parse_args(argv)
+    if args.pdf_text and not pdftext.available() and any(not ADAPTERS[s].has_text for s in args.series):
+        print(f"error: {pdftext.TOOL} is not installed (poppler-utils); install it or pass --no-pdf-text",
+              file=sys.stderr, flush=True)
+        return 1
     if client is None:
         client = PoliteClient(USER_AGENT, min_interval=args.rate)
     try:

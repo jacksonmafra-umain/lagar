@@ -1981,6 +1981,91 @@
       ],
       "title_strip": ["\\s*pdf,.*$"]
     },
+    "1491": {
+      "name": "Ulricehamn",
+      "issuer": "Ulricehamns kommun",
+      "region_code": "14",
+      "collection": "Ulricehamns kommun, styrdokument samt taxor och avgifter",
+      "strategy": "html_index",
+      "hosts": ["www.ulricehamn.se", "ulricehamn.se"],
+      "listings": [
+        "https://www.ulricehamn.se/kommun-och-politik/kommunens-styrdokument",
+        "https://www.ulricehamn.se/kommun-och-politik/kommunens-styrdokument/ordningsregler",
+        "https://www.ulricehamn.se/kommun-och-politik/kommunfakta/ekonomi/taxor-och-avgifter"
+      ],
+      "section_level": 3,
+      "sections": ["Regler", "Taxor och avgifter", "Ordningsregler"],
+      "link_pattern": "(?i)^https://www\\.ulricehamn\\.se/download/18\\.[0-9a-f]+/\\d+/(?=[^?#]*(?:reskrift|taxa|taxor|avgift|regler|bilaga))(?![^?#]*(?:upphandling|partist|brandskydd|pedagogisk|delegation|reglemente|arbetsordning|arvode|ers%C3%A4ttningar|instruktion|intern|grafiska|flaggning|bidrag|pris|arkitektur|samverkan|tillampning|till%C3%A4mpning|hemsandning|resursf|f%C3%B6rtroendevalda))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*\\(pdf\\)\\s*pdf,.*$", "\\s*pdf,.*$"]
+    },
+    "1492": {
+      "name": "Åmål",
+      "issuer": "Åmåls kommun",
+      "region_code": "14",
+      "collection": "Åmåls kommun, styrdokument",
+      "strategy": "html_index",
+      "hosts": ["amal.se", "www.amal.se"],
+      "listings": [
+        "https://amal.se/kommun-och-politik/kommun/styrdokument-for-amals-kommun",
+        "https://amal.se/uppleva-och-gora/taxor"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Bygga, bo och leva hållbart",
+        "Taxor",
+        "Taxa båtplatser",
+        "Omsorg och stöd",
+        "Kommun och politik"
+      ],
+      "link_pattern": "(?i)^https://amal\\.se/download/18\\.[0-9a-f]+/\\d+/(?=[^?#]*(?:reskrift|taxa|taxor|tomtk|avgift))(?![^?#]*(?:riktlinje|reglemente|policy|program|strategi|plan))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,.*$", "\\s*\\(Öppnas i nytt fönster\\)\\s*$"]
+    },
+    "1493": {
+      "name": "Mariestad",
+      "issuer": "Mariestads kommun",
+      "region_code": "14",
+      "collection": "Mariestads kommun, kommunal författningssamling",
+      "strategy": "html_index",
+      "hosts": ["mariestad.se", "www.mariestad.se"],
+      "listings": ["https://mariestad.se/kommun-och-politik/kommunfakta/styrande-dokument-taxor-och-avgifter"],
+      "section_level": 2,
+      "sections": ["Kommunal författningssamling"],
+      "link_pattern": "(?i)^https://mariestad\\.se/download/18\\.[0-9a-f]+/\\d+/(?![^?#]*(?:reglemente|arbetsordning|gardirektiv|%C3%84gardirektiv|bolagsordning|regelverk|arvode))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["[,\\s]*PDF[^,]*$"]
+    },
+    "1497": {
+      "name": "Hjo",
+      "issuer": "Hjo kommun",
+      "region_code": "14",
+      "collection": "Hjo kommun, styrdokument",
+      "strategy": "html_index",
+      "hosts": ["hjo.se", "www.hjo.se"],
+      "listings": ["https://hjo.se/kommun--politik/politik-och-organisation/styrdokument2/"],
+      "section_level": 2,
+      "sections": [
+        "Ordningsföreskrifter",
+        "Samhällsbyggnad",
+        "Ekonomi och Budget",
+        "Barn och utbildning",
+        "Socialtjänst",
+        "Kultur, turism och fritid",
+        "Administration"
+      ],
+      "link_pattern": "(?i)^https://hjo\\.se/globalassets/dokument/styrdokument/[^?#]*(?:foreskrift|taxa|taxor|avgift|tomtk|regler)[^?#]*\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/styrdokument/([^?#]+?)\\.pdf$"}
+      ],
+      "title_strip": ["\\.pdf.*$"]
+    },
     "1715": {
       "name": "Kil",
       "issuer": "Kils kommun",
@@ -3182,6 +3267,126 @@
         {"from": "href", "pattern": "/media/([a-z0-9]+)/"}
       ],
       "title_strip": []
+    },
+    "2513": {
+      "name": "Överkalix",
+      "issuer": "Överkalix kommun",
+      "region_code": "25",
+      "collection": "Överkalix kommuns författningsregister",
+      "strategy": "html_index",
+      "hosts": ["www.overkalix.se", "overkalix.se"],
+      "listings": [
+        "https://www.overkalix.se/kommun-och-politik/politik-och-organisation/forfattningsregister/",
+        "https://www.overkalix.se/kommun-och-politik/avgifter-och-taxor/"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Bestämmelser och lokala föreskrifter",
+        "Avfall & återvinning",
+        "Taxa gällande alkohollagen, tobakslagen och receptfria läkemedel",
+        "Vatten & Avlopp",
+        "Taxa för livsmedel Överkalix kommun",
+        "Vård och omsorg",
+        "Taxa inom miljöbalkensområde"
+      ],
+      "link_pattern": "^https://www\\.overkalix\\.se/media/[a-z0-9]+/(?!ersattning-till|anmalan-om)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/media/([a-z0-9]+)/"}
+      ],
+      "title_strip": []
+    },
+    "2514": {
+      "name": "Kalix",
+      "issuer": "Kalix kommun",
+      "region_code": "25",
+      "collection": "Kalix kommuns författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.kalix.se", "kalix.se"],
+      "listings": [
+        "https://www.kalix.se/kommun/Forfattningssamling/Ordningar-och-stadgar/",
+        "https://www.kalix.se/kommun/Forfattningssamling/Avgifter-och-taxor/"
+      ],
+      "section_level": 3,
+      "sections": [],
+      "link_pattern": "^https://www\\.kalix\\.se/(?:globalassets|contentassets)/(?:[^?#]*/)?(?!taxa-for-anslutningar-och-hyra-av-fiber|bostadsanpassningsbidrag)[^/?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/([^/?#]+)\\.pdf$"}
+      ],
+      "title_strip": ["\\.pdf\\s*$"]
+    },
+    "2521": {
+      "name": "Pajala",
+      "issuer": "Pajala kommun",
+      "region_code": "25",
+      "collection": "Pajala kommuns styrdokument",
+      "strategy": "html_index",
+      "hosts": ["www.pajala.se", "pajala.se"],
+      "listings": [
+        "https://www.pajala.se/kommun-politik-och-service/ledning-styrning-och-politik/styrdokument/"
+      ],
+      "section_level": 3,
+      "sections": ["Föreskrifter", "Taxor"],
+      "link_pattern": "^https://www\\.pajala\\.se/media/[a-z0-9]+/(?!regional-avfallsplan|regler-g)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/media/([a-z0-9]+)/"}
+      ],
+      "title_strip": []
+    },
+    "2580": {
+      "name": "Luleå",
+      "issuer": "Luleå kommun",
+      "region_code": "25",
+      "collection": "Luleå kommuns styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.lulea.se", "lulea.se"],
+      "listings": ["https://www.lulea.se/kommun--politik/sa-styrs-lulea-kommun/styrande-dokument.html"],
+      "section_level": 2,
+      "sections": ["Föreskrifter och regler", "Taxor och avgifter"],
+      "link_pattern": "^https://www\\.lulea\\.se/download/18\\.[0-9a-f]+/\\d+/(?!Parkeringsnorm|Parkeringsplan|Serveringstillst|Allm%C3%A4nna%20villkor)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kMK]B\\.?\\s*$"]
+    },
+    "2581": {
+      "name": "Piteå",
+      "issuer": "Piteå kommun",
+      "region_code": "25",
+      "collection": "Piteå kommuns styrande dokument: kommunal föreskrift och taxa",
+      "strategy": "html_index",
+      "hosts": ["www.pitea.se", "pitea.se"],
+      "listings": [
+        "https://www.pitea.se/invanare/Kommun-politik/politik/Styrning-och-ledning/styrande-dokument/kommunal-foreskrift/",
+        "https://www.pitea.se/invanare/Kommun-politik/politik/Styrning-och-ledning/styrande-dokument/taxa/"
+      ],
+      "section_level": 2,
+      "sections": ["Kommunal föreskrift", "Taxa"],
+      "link_pattern": "^https://www\\.pitea\\.se/BOKHYLLAN/Styrande%20dokument/(?:13\\.%20Taxa|15\\.%20Kommunal%20f(?:%C3%B6|o%CC%88)reskrift)/(?!Plan%20f(?:%C3%B6|o%CC%88)r%20r(?:%C3%A4|a%CC%88)tt%20fart)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/(13|15)\\. [^/]+/([^/]+)\\.pdf$", "format": "{0}/{1}"}
+      ],
+      "title_strip": ["\\.pdf\\s*$"]
+    },
+    "2583": {
+      "name": "Haparanda",
+      "issuer": "Haparanda stad",
+      "region_code": "25",
+      "collection": "Haparanda stads författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.haparanda.se", "haparanda.se"],
+      "listings": ["https://www.haparanda.se/kommun-och-politik/demokrati-och-insyn/forfattningssamling-"],
+      "section_level": 3,
+      "sections": [
+        "Avgifter och taxor",
+        "Hälsoskyddsföreskrifter",
+        "Miljöföreskrifter",
+        "Ordningsföreskrifter"
+      ],
+      "link_pattern": "^https://www\\.haparanda\\.se/download/18\\.[0-9a-f]+/\\d+/(?!AVFALLSPLAN|V%C3%A4gbelysning|Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20administration)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kMK]B.*$"]
     }
   }
 }
