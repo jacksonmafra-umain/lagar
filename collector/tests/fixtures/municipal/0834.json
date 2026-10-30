@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.torsas.se/kommun-och-politik/planer-lagar-och-styrdokument/samlade-styrdokument/": "0834-listing.html"
+  },
+  "count": 4,
+  "sample": {
+    "number": "abva-2009-1",
+    "title": "Abva 2009",
+    "url": "https://www.torsas.se/wp-content/uploads/abva-2009-1.pdf"
+  },
+  "excluded": [
+    "Biblioteksplan",
+    "Läsfrämjandeplan",
+    "Ladda ner"
+  ]
+}

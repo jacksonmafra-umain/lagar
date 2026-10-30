@@ -907,6 +907,23 @@
         "folkomröstning"
       ]
     },
+    "0380": {
+      "name": "Uppsala",
+      "issuer": "Uppsala kommun",
+      "region_code": "03",
+      "collection": "Styrdokument",
+      "strategy": "html_pages",
+      "resident_filter": true,
+      "hosts": ["www.uppsala.se"],
+      "listings": ["https://www.uppsala.se/sitemaps.xml"],
+      "page_titles": true,
+      "title_include": ["f(ö|o)reskrift", "taxa\\b", "\\btaxor", "avgift", "avfall", "renh(å|a)llning", "sotning", "brandskydd", "h(ä|a)lsoskydd", "naturreservat", "hamnordning", "torghandel", "allm(ä|a)nna best(ä|a)mmelser", "\\bABVA\\b", "ordningsstadga", "lokala ordnings", "maxtaxa"],
+      "title_exclude": ["reglemente", "arbetsordning", "bolagsordning", "delegation", "instruktion", "(ä|a)gardirektiv", "informationshanteringsplan", "dokumenthanteringsplan", "arkiv", "policy", "riktlinje", "strategi", "handlingsplan", "avfallsplan", "\\bplan\\b(?!-)", "program\\b", "budget", "ans(ö|o)kan", "blankett", "revision", "protokoll", "tj(ä|a)nsteskrivelse", "arvode", "intern ?kontroll", "attest", "remiss", "granskning", "(ö|o)versyn", "beslut om", "f(ö|o)rslag", "rapport", "utredning", "(råd(et)?|beredning(en)?|forum)$", "f(ö|o)r r(å|a)det"],
+      "follow": "^https://www\\.uppsala\\.se/sitemap-uppsala\\.se\\.xml$",
+      "link_pattern": "^https://www\\.uppsala\\.se/kommun-och-politik/publikationer/styrdokument/[^/]+/$",
+      "number": [{"from": "href", "pattern": "/styrdokument/([^/]+)/$"}],
+      "document_pattern": "^https://www\\.uppsala\\.se/contentassets/.+\\.pdf$"
+    },
     "0381": {
       "name": "Enköping",
       "issuer": "Enköpings kommun",
@@ -1991,6 +2008,21 @@
         "(?i)allmänna bestämmelser"
       ],
       "title_exclude": ["(?i)förtroendevalda", "(?i)delegationsordning", "(?i)bolagsordning"]
+    },
+    "0834": {
+      "name": "Torsås",
+      "issuer": "Torsås kommun",
+      "region_code": "08",
+      "collection": "Samlade styrdokument",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["www.torsas.se"],
+      "listings": [
+        "https://www.torsas.se/kommun-och-politik/planer-lagar-och-styrdokument/samlade-styrdokument/"
+      ],
+      "row_titles": true,
+      "link_pattern": "^https://www\\.torsas\\.se/wp-content/uploads/.+\\.pdf$",
+      "number": [{"from": "href", "pattern": "/uploads/(?:\\d{4}/\\d{2}/)?([^/]+)\\.pdf$"}]
     },
     "0840": {
       "name": "Mörbylånga",

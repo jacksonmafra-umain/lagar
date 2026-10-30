@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.uppsala.se/sitemaps.xml": "0380-listing.xml",
+    "https://www.uppsala.se/sitemap-uppsala.se.xml": "0380-listing-2.xml"
+  },
+  "count": 362,
+  "sample": {
+    "number": "affarsplan-och-budget-for-uppsala-bostadsformedling",
+    "title": "affarsplan-och-budget-for-uppsala-bostadsformedling",
+    "url": "https://www.uppsala.se/kommun-och-politik/publikationer/styrdokument/affarsplan-och-budget-for-uppsala-bostadsformedling/"
+  },
+  "excluded": []
+}
