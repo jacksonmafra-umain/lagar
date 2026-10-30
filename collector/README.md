@@ -273,6 +273,38 @@ protection, digital, consumer, labour, environment, private international law). 
 in-force sweep is not implemented yet. Reuse is free with acknowledgement of the source
 (Commission Decision 2011/833/EU).
 
+## EU case law (Cellar)
+
+```sh
+python3 -I collector/collect.py eu-case-law --list collector/data/eu-acts.json \
+    [--refresh] [--changed-since DATE[TIME]] [--limit N] [--cache DIR] [--report FILE]
+python3 -I collector/collect.py eu-case-law --celex 62014CJ0362[,62012CJ0293 ...] [options]
+```
+
+The collection is bounded to judgments of the Court of Justice (CELEX type `CJ`) and the
+General Court (`TJ`) that Cellar records as interpreting an act of the curated list
+(`cdm:case-law_interpretes_resource_legal`). One SPARQL query lists them with their newest
+Cellar modification; per judgment one query reads the metadata (date, ECLI, language of the
+case, joined cases, interpreted acts, Swedish title and manifestations) and content
+negotiation on `/resource/celex/<CELEX>` with `Accept-Language: swe` returns the Swedish
+XHTML or HTML, converted with the EU act converter. The same host rules apply as for EU acts:
+only publications.europa.eu and op.europa.eu, robots.txt checked, at least 1 s between
+requests, eur-lex.europa.eu refused even as a redirect target.
+
+Documents are `eu_judgment` in layer `eu`, under `corpus/eu/judgments/`, with the case
+number as `number` (`C-362/14`, `T-12/19`, `26/62` before 1989), `court` `CJ` or `TJ`, the
+judgment's `ecli` and `celex`. The body starts with the case numbers (joined cases
+included), the ECLI and the interpreted acts. Only the language of the case is authentic,
+so `authoritative` is true only for cases conducted in Swedish. A judgment without a Swedish
+XHTML or HTML expression is a gap in the manifest `sources/eu-case-law-manifest.json` (size
+and SHA-256 of every source); nothing is translated. Orders (`CO`), Advocate General
+opinions (`CC`) and judgments that interpret no curated act are not collected.
+
+The daily `Sync EU` workflow runs `eu-case-law --list collector/data/eu-acts.json
+--changed-since <marker>` after the acts, with its own marker
+`collector/data/eu-case-law-sync.json`, so new judgments and Cellar corrections arrive in
+the same pull request as the acts.
+
 ## Case law
 
 The `case-law` command (alias `caselaw`) collects the anonymised summaries that the courts
