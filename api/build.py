@@ -65,6 +65,8 @@ _NUMBER_RE = re.compile(r"([A-Za-z]*)(\d{4}):\D*(\d*)(.*)")
 _SERIES_RE = re.compile(r"(\S+) (\d{4}):(\d+)")
 # Case law: NJA 2019 s. 2, HFD 2020 ref. 5, HFD 2020 not. 3, AD 2020 nr 45, MIG 2026:10.
 _CASE_RE = re.compile(r"(\S+) (\d{4})(:| s\. | ref\. | not\. | nr | N )(\d+)")
+# Kammarrätt referat without a report reference: KRNJ 2007-01-09 mål nr 1097-06.
+_CASE_DATE_RE = re.compile(r"(\S+) (\d{4})-\d{2}-\d{2} mål nr (\d+)-\d{2}")
 # EU acts: (EU) 2016/679 is year/number; with "nr", (EG) nr 1907/2006 is number/year;
 # 95/46/EG and 2004/18/EG are year/number/institution. Two-digit years are 19xx.
 _EU_YEAR_FIRST_RE = re.compile(r"\([^)]+\) (\d{4})/(\d+)")
@@ -106,6 +108,9 @@ def _number_key(number, type_="act"):
         m = _CASE_RE.fullmatch(number)
         if m:
             return (int(m.group(2)), int(m.group(4)), True, m.group(1) + m.group(3))
+        m = _CASE_DATE_RE.fullmatch(number)
+        if m:
+            return (int(m.group(2)), int(m.group(3)), True, m.group(1) + " mål nr")
     elif type_ in ("eu_regulation", "eu_directive", "eu_decision"):
         key = _eu_key(number)
         if key:

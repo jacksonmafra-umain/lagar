@@ -83,12 +83,12 @@
       }
     },
     {
-      "$comment": "Case law: report references such as NJA 2019 s. 2, HFD 2020 ref. 5, MIG 2026:10 or AD 2020 nr 45; reports are never amended.",
+      "$comment": "Case law: report references such as NJA 2019 s. 2, HFD 2020 ref. 5, MIG 2026:10 or AD 2020 nr 45, or for kammarrätt referat without one KRNJ 2007-01-09 mål nr 1097-06; reports are never amended.",
       "if": {"required": ["type"], "properties": {"type": {"enum": ["case_report", "case_notice"]}}},
       "then": {
         "required": ["court"],
         "properties": {
-          "number": {"pattern": "^[A-ZÅÄÖ]{2,5} \\d{4}(:\\d+| (s\\.|ref\\.|not\\.|nr|N) \\d+)$"},
+          "number": {"pattern": "^[A-ZÅÄÖ]{2,5} \\d{4}(:\\d+| (s\\.|ref\\.|not\\.|nr|N) \\d+|-\\d{2}-\\d{2} mål nr \\d{1,6}-\\d{2})$"},
           "amended_by": {"maxItems": 0},
           "amended_through": {"type": "null"},
           "reprinted_by": {"maxItems": 0},

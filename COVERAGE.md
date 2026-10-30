@@ -74,11 +74,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   Rulings the courts publish in full (`DOM_ELLER_BESLUT`, about 760),
   leave-to-appeal and preliminary-ruling notices and all attachments (PDF) are
   left out by design (19 such items appeared in the referat/notis listing). 231
-  publications are recorded as failed instead of written: 213 have no report
+  publications were recorded as failed instead of written: 213 had no report
   reference in the schema's form (mostly older kammarrätt and Marknadsdomstolen
   referat with only a case number), 9 repeat a reference already stored from
   another publication (joined cases published twice, e.g. NJA 2017:88, MÖD
-  2025:53), and 9 contain what looks like a personal identity number. SFS
+  2025:53), and 9 contain what looks like a personal identity number. The
+  kammarrätt referat the courts list without a report reference (76 on
+  2026-10-30: KGG 8, KJO 23, KST 42, KSU 3, decided 2000 to 2007) are collected
+  since then under the court's abbreviation, decision date and case number,
+  such as `KRNJ 2007-01-09 mål nr 1097-06`; a per-court scan that day found no
+  other referat or notis without a reference. SFS
   references (`lagrumLista`) stay plain text in the body; the app's reader links
   the citation forms to the SFS documents the API publishes.
 - Agency regulations: three of about 100 series (lagrummet.se lists them) are
