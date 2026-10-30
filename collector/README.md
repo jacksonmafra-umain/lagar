@@ -305,6 +305,37 @@ The daily `Sync EU` workflow runs `eu-case-law --list collector/data/eu-acts.jso
 `collector/data/eu-case-law-sync.json`, so new judgments and Cellar corrections arrive in
 the same pull request as the acts.
 
+## Treaties (SÖ)
+
+```sh
+python3 -I collector/collect.py so [--from-year YYYY] [--to-year YYYY] [--text-from-year 2010] \
+    [--changed-since YYYY-MM-DD] [--url URL ...] [--refresh] [--limit N] [--report FILE]
+```
+
+Sveriges internationella överenskommelser (SÖ) publishes every international
+agreement binding Sweden. Regeringen.se has one page per agreement under
+`/rattsliga-dokument/sveriges-internationella-overenskommelser/`; the collector finds
+them in the site's sitemap (one request, with each page's last modification), reads
+robots.txt once and honours it for every URL, and fetches at most one page a second.
+Each page gives the title, the place and date of signature (`issued`), the SÖ number,
+the ministry, a note on the government's decision and the entry into force
+(`in_force`, when the note states it) and the PDF links. Pages without an SÖ number,
+such as declarations of intent published in the same section, are skipped.
+
+Documents are `treaty` in layer `sfs`, under `corpus/sfs/treaties/`, with ids such as
+`so-2023-3`. The text is only published as PDF: for SÖ years from `--text-from-year`
+(default 2010) the PDFs are downloaded and their text extracted with
+`collector/lagar/pdftext.py`; size, SHA-256, page count and the extraction result go
+into `sources/so-pdf-manifest.json`, and the bytes are not kept. Older treaties, and
+scanned PDFs, keep the page metadata and the PDF link only. Many treaties are printed
+in Swedish and one or more other languages side by side; the extracted text keeps
+every language, as printed. `authoritative` stays false: the text is not tied to a
+verified snapshot of the print.
+
+The weekly `Sync SÖ` workflow (`.github/workflows/sync-so.yml`) runs
+`collect.py so --changed-since <15 days ago>`, so new treaties and updated pages land
+in one pull request on `data/so-sync`.
+
 ## Case law
 
 The `case-law` command (alias `caselaw`) collects the anonymised summaries that the courts
