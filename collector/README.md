@@ -469,9 +469,10 @@ PDFs already in the manifest are not downloaded again unless `--refresh`. An ada
 
 Series published as a plain page of links use the configurable adapters in
 `collector/lagar/agency_generic.py`: `PdfListAdapter` when the listing links straight to the
-PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS, BFNAR, CSNFS, IMYFS, LMFS, MTFS, LIVSFS, MYHFS) and `DetailPageAdapter` when it links to one
-HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS); `SitemapAdapter`
-finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS, KVFS).
+PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS, BFNAR, CSNFS, IMYFS, LMFS, MTFS, LIVSFS, MYHFS, KBVFS, FFS) and `DetailPageAdapter` when it links to one
+HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS, EIFS); `SitemapAdapter`
+finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS, KVFS, DVFS; `path_pattern` keeps one page per base
+regulation).
 A detail page's HTML text is kept when the series sets `text_nodes` (MDFFS). AFFS reads the
 list from the Sitevision page state and FKFS the JSON register of Försäkringskassan's
 lagrummet; both have their own small adapters in the same module.
@@ -486,8 +487,12 @@ IMYFS), take the number from one cell of a table row (`number_node`: BFNAR), lea
 under a heading such as "Upphävda föreskrifter" (`skip_section`) and mark the PDFs under a heading
 such as "Fulltext" (`consolidated_section`: CSNFS) or behind a "konsoliderad version" link as
 consolidated versions. Companion documents (vägledning, konsekvensutredning, rättelseblad) are
-left out. `pdf_title = True` takes the title from the PDF when the listing only gives a short name
-(BFNAR).
+left out. A table row that links through `data-href` instead of a link is read too (KBVFS).
+`pdf_title = True` takes the title from the PDF when the listing only gives a short name
+(BFNAR). FFS reads its four lists from Försvarsmakten's content API
+(`/api/episerver/v3.0/content/<page>?expand=PDFFilesArea`), which only gives file names; the
+title, and whether a regulation is an amendment, come from the PDF. When the listing only named
+the number and the PDF title shows an amendment, the regulation is excluded.
 
 Adapters whose site publishes no HTML text (`has_text = False`) get their text from a PDF:
 the consolidated version when one is linked, else the regulation's own PDF, read with
