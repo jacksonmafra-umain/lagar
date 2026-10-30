@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ab9/1611065813318/Sotningsfrister%20f%C3%B6r%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "53737bd3ff0ea7233385bbe669b8677d41546ec01a4ce31c308e508fe7e761a6"
-fetched_at: "2026-10-30T20:44:36Z"
+fetched_at: "2026-10-30T21:12:45Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: sotningsfrister-for-falkopings-kommun
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/sotningsfrister-for-falkopings-kommun>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Sotningsfrister för Falköpings kommun
-
-Sidans innehåll
 
 ### Sotningsfrister för Falköpings kommun
 

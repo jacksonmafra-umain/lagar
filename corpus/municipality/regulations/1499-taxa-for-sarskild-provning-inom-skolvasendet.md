@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ace/1634801141016/Taxa%20f%C3%B6r%20s%C3%A4rskild%20pr%C3%B6vning%20inom%20skolv%C3%A4sendet.pdf"
 source_sha256: "d4fe83f2b006bcc83d302e453a6b9cd93d096e3a0b994d24b4bd474bef6c62b8"
-fetched_at: "2026-10-30T20:44:58Z"
+fetched_at: "2026-10-30T21:13:07Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-for-sarskild-provning-inom-skolvasendet
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-for-sarskild-provning-inom-skolvasendet>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa för särskild prövning inom skolväsendet
-
-Sidans innehåll
 
 ### Taxa för särskild prövning inom skolväsendet
 

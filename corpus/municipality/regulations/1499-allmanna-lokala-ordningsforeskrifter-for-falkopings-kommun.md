@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ad7/1698133042419/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "8d7095eba4e120214b3061ecc9e2661b091dc9299819c8441689f9d906381f9b"
-fetched_at: "2026-10-30T20:44:13Z"
+fetched_at: "2026-10-30T21:12:22Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: allmanna-lokala-ordningsforeskrifter-for-falkopings-kommun
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/allmanna-lokala-ordningsforeskrifter-for-falkopings-kommun>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Allmänna lokala ordningsföreskrifter för Falköpings kommun
-
-Sidans innehåll
 
 ### Allmänna lokala ordningsföreskrifter för Falköpings kommun
 

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.582b050219c0f3580a68b40/1771498432788/Taxa%20f%C3%B6r%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggningar%20g%C3%A4ller%20fr%C3%A5n%20och%20med%201%20juli%202026.pdf"
 source_sha256: "4967a1564bd51dc25f82f6aa6cf464eeacc85863ddb82dd2ff6479ef5c2de6cd"
-fetched_at: "2026-10-30T20:44:40Z"
+fetched_at: "2026-10-30T21:12:49Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-for-allmanna-vatten--och-avloppsanlaggningar
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-for-allmanna-vatten--och-avloppsanlaggningar>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa för allmänna vatten- och avloppsanläggningar
-
-Sidans innehåll
 
 ### Taxa för allmänna vatten- och avloppsledningar gäller från och med 1 juli 2026
 

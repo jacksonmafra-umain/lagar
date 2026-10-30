@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.538abe0919e0227e509470/1778584082855/Taxa%20f%C3%B6r%20mottagning%20av%20massor%20till%20slutt%C3%A4ckning%20av%20deponier.pdf"
 source_sha256: "17b64333c12346bc59eac33c2e042ce4f103fccc6f0b0659f4698d47c6f7f425"
-fetched_at: "2026-10-30T20:44:52Z"
+fetched_at: "2026-10-30T21:13:01Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-for-mottagning-av-massor-till-sluttackning-av-deponier
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-for-mottagning-av-massor-till-sluttackning-av-deponier>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa för mottagning av massor till sluttäckning av deponier
-
-Sidans innehåll
 
 ### Taxa för mottagning av massor till sluttäckning av deponier
 

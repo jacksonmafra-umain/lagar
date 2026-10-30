@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/regler-och-foreskrifter/saters-kommun-foreskrifter-om-frister-for-rengoring-sotning/"
-source_sha256: "4e2d564b67a595c113fb1734dbb6ea5408f673deafb5c03fed04f9af9c4f9ec8"
-fetched_at: "2026-10-30T20:32:00Z"
+source_sha256: "decb131fa65f9a7e3c07460d1d6aa9a2e50cf85ce525ed686de031a5e2f247f9"
+fetched_at: "2026-10-30T21:13:36Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -32,67 +32,6 @@ Kommunens sida: <https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument
 ## Text
 
 Texten är hämtad från kommunens webbsida.
-
-Du är här:
-
-1. Hem
-2. Kommun och demokrati
-3. Planer och styrdokument
-4. Regler och föreskrifter
-5. Säters kommun föreskrifter om …
-
-- Skriv ut
-
-- Anslagstavla
-- Visselblåsning
-- Val 2026
-- EU-val 2024
-- Kommunens organisation
-- Mål, ekonomi och budget
-- Möten och handlingar
-- Månadens blomma kommunfullmäktige
-- Planer och styrdokument
-   - Taxor och avgifter
-   - Barn- och utbildningsnämndens styrdokument
-   - Regler och föreskrifter
-      - Föreskrifter om avfallshantering
-      - Riktlinjer för behandling av personuppgifter – Integritetsskydd enligt dataskyddsförordningen
-      - ABVA och information till fastighetsägare
-      - Skolskjutsreglemente
-      - Riktlinjer för gatubelysning
-      - Regler för föreningsbidrag
-      - Lokala ordningsföreskrifter för torghandel i Säters kommun
-      - Allmänna lokala ordningsföreskrifter för Säters kommun
-      - Reglemente för Säters kommuns miljö- och naturvårdsstipendium
-      - Policy för bidrag till enskilda vägar i Säters kommun – Regler och modell
-      - Fördelningsprincip och prioriteringsordning för gymnastiksalar samt sim- och sporthallar i Säters kommun
-      - Riktlinjer vid stöd till personer med nedsatt rörelseförmåga eller funktionshinder avseende snöskottning
-      - Lokala hälsoskyddsföreskrifter för Säters kommun
-      - Riktlinjer för markanvisning Säters kommun
-      - Riktlinjer för exploateringsavtal
-      - Säters kommun föreskrifter om frister för rengöring (sotning)
-      - Regler för beslut om gångbanerenhållning i Säters kommun
-      - Kretsloppsplan 2023–2030
-      - Riktlinjer Blomlådor för ökad trafiksäkerhet
-      - Riktlinjer för digitala informationsskyltar i offentlig miljö
-      - Riktlinjer måltider särskilda boenden
-   - Reglementen
-   - Program, planer och strategier
-   - Socialnämndens styrdokument
-   - Bolag och förbund
-- Medborgardialog och påverkan
-- För politiker
-- Stiftelser, stipendier och priser
-- Synpunkter, beröm och klagomål
-- Behandling av personuppgifter
-- Arkiv och forskning
-- E-arkiv Mitt
-- Svenskt medborgarskap
-- Att gifta sig – Borgerlig vigsel
-- Borgerlig begravning
-- För medier
-- Säters kommuns sociala medier
-- Om Säter
 
 ### Säters kommun föreskrifter om frister för rengöring (sotning)
 

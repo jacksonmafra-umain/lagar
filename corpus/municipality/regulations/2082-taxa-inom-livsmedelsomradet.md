@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/taxa-inom-livsmedelsomradet/"
-source_sha256: "4766a620c0121ce83f2a2deb1179db0a9fa548ade603e04a5db69a2395c869c0"
-fetched_at: "2026-10-30T20:32:07Z"
+source_sha256: "728354206c17799f2f4ac0d19ab1d421174e0da6a422c1d8d6070222e0937f79"
+fetched_at: "2026-10-30T21:13:43Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -32,57 +32,6 @@ Kommunens sida: <https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument
 ## Text
 
 Texten är hämtad från kommunens webbsida.
-
-Du är här:
-
-1. Hem
-2. Kommun och demokrati
-3. Planer och styrdokument
-4. Taxor och avgifter
-5. Taxa inom livsmedelsområdet
-
-- Skriv ut
-
-- Anslagstavla
-- Visselblåsning
-- Val 2026
-- EU-val 2024
-- Kommunens organisation
-- Mål, ekonomi och budget
-- Möten och handlingar
-- Månadens blomma kommunfullmäktige
-- Planer och styrdokument
-   - Taxor och avgifter
-      - Avfallstaxa
-      - Va-taxa
-      - Avgifter för slamtjänster
-      - Avgifter inom äldreomsorg och funktionsnedsättning
-      - Plan- och bygglovstaxa
-      - Avgifter och hyror Skönvikshallen och sportanläggningar
-      - Taxa inom livsmedelsområdet
-      - Taxa för upplåtelse på offentlig plats
-      - Taxa vid utlämnande och kopiering av handlingar vid Säters kommun
-      - Taxa för prövning och tillsyn inom miljöbalkens område
-      - Taxa enligt plan- och bygglagen 2026
-   - Barn- och utbildningsnämndens styrdokument
-   - Regler och föreskrifter
-   - Reglementen
-   - Program, planer och strategier
-   - Socialnämndens styrdokument
-   - Bolag och förbund
-- Medborgardialog och påverkan
-- För politiker
-- Stiftelser, stipendier och priser
-- Synpunkter, beröm och klagomål
-- Behandling av personuppgifter
-- Arkiv och forskning
-- E-arkiv Mitt
-- Svenskt medborgarskap
-- Att gifta sig – Borgerlig vigsel
-- Borgerlig begravning
-- För medier
-- Säters kommuns sociala medier
-- Om Säter
 
 ### Taxa inom livsmedelsområdet
 

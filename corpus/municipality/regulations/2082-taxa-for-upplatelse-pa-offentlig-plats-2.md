@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/taxa-for-upplatelse-pa-offentlig-plats-2/"
-source_sha256: "d289965ddbb635f326ba5c06ab5a2468238e1f5b60c145fde260e24684a3db60"
-fetched_at: "2026-10-30T20:32:08Z"
+source_sha256: "9857c89a95c8fa761898946d26b68aea895ad9e633ca0c10655c18762a3ca417"
+fetched_at: "2026-10-30T21:13:44Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -32,57 +32,6 @@ Kommunens sida: <https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument
 ## Text
 
 Texten är hämtad från kommunens webbsida.
-
-Du är här:
-
-1. Hem
-2. Kommun och demokrati
-3. Planer och styrdokument
-4. Taxor och avgifter
-5. Taxa för upplåtelse på offentl…
-
-- Skriv ut
-
-- Anslagstavla
-- Visselblåsning
-- Val 2026
-- EU-val 2024
-- Kommunens organisation
-- Mål, ekonomi och budget
-- Möten och handlingar
-- Månadens blomma kommunfullmäktige
-- Planer och styrdokument
-   - Taxor och avgifter
-      - Avfallstaxa
-      - Va-taxa
-      - Avgifter för slamtjänster
-      - Avgifter inom äldreomsorg och funktionsnedsättning
-      - Plan- och bygglovstaxa
-      - Avgifter och hyror Skönvikshallen och sportanläggningar
-      - Taxa inom livsmedelsområdet
-      - Taxa för upplåtelse på offentlig plats
-      - Taxa vid utlämnande och kopiering av handlingar vid Säters kommun
-      - Taxa för prövning och tillsyn inom miljöbalkens område
-      - Taxa enligt plan- och bygglagen 2026
-   - Barn- och utbildningsnämndens styrdokument
-   - Regler och föreskrifter
-   - Reglementen
-   - Program, planer och strategier
-   - Socialnämndens styrdokument
-   - Bolag och förbund
-- Medborgardialog och påverkan
-- För politiker
-- Stiftelser, stipendier och priser
-- Synpunkter, beröm och klagomål
-- Behandling av personuppgifter
-- Arkiv och forskning
-- E-arkiv Mitt
-- Svenskt medborgarskap
-- Att gifta sig – Borgerlig vigsel
-- Borgerlig begravning
-- För medier
-- Säters kommuns sociala medier
-- Om Säter
 
 ### Taxa för upplåtelse på offentlig plats
 

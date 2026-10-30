@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ae2/1587130551926/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandeln%20i%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "dd35517a350a87b1b82bf6e7e563eb5957c93d475d2b254f2e0cdef16389a8a3"
-fetched_at: "2026-10-30T20:44:30Z"
+fetched_at: "2026-10-30T21:12:39Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: lokala-ordningsforeskrifter-for-torghandel
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/lokala-ordningsforeskrifter-for-torghandel>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Lokala ordningsföreskrifter för torghandel
-
-Sidans innehåll
 
 ### Lokala ordningsföreskrifter för torghandel
 

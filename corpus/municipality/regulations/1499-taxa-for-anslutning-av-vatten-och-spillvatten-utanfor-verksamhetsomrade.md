@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ac5/1734678302105/Taxa%20f%C3%B6r%20anslutning%20av%20vatten%20och%20spillvatten%20utanf%C3%B6r%20verksamhetsomr%C3%A5de.pdf"
 source_sha256: "6dbbd8ffec621ca0284f415568883db4d8100a2d9c1bf1b2b9d51d525663d390"
-fetched_at: "2026-10-30T20:44:42Z"
+fetched_at: "2026-10-30T21:12:51Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-for-anslutning-av-vatten-och-spillvatten-utanfor-verksamhetsomrade
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-for-anslutning-av-vatten-och-spillvatten-utanfor-verksamhetsomrade>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa för anslutning av vatten och spillvatten utanför verksamhetsområde
-
-Sidans innehåll
 
 ### Taxa för anslutning av vatten och spillvatten utanför verksamhetsområde
 

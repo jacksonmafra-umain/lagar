@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/regler-och-foreskrifter/foreskrifter-om-avfallshantering/"
-source_sha256: "18715604ca705e6d7315db3c75dfa1f8d35340854570fe6570e1462246c0b59e"
-fetched_at: "2026-10-30T20:31:55Z"
+source_sha256: "a50f04446cb34ebb713f6fcd51c8e7ab0e0f724e2d5fdcd803677fa8ff008321"
+fetched_at: "2026-10-30T21:13:31Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -32,67 +32,6 @@ Kommunens sida: <https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument
 ## Text
 
 Texten är hämtad från kommunens webbsida.
-
-Du är här:
-
-1. Hem
-2. Kommun och demokrati
-3. Planer och styrdokument
-4. Regler och föreskrifter
-5. Föreskrifter om avfallshanteri…
-
-- Skriv ut
-
-- Anslagstavla
-- Visselblåsning
-- Val 2026
-- EU-val 2024
-- Kommunens organisation
-- Mål, ekonomi och budget
-- Möten och handlingar
-- Månadens blomma kommunfullmäktige
-- Planer och styrdokument
-   - Taxor och avgifter
-   - Barn- och utbildningsnämndens styrdokument
-   - Regler och föreskrifter
-      - Föreskrifter om avfallshantering
-      - Riktlinjer för behandling av personuppgifter – Integritetsskydd enligt dataskyddsförordningen
-      - ABVA och information till fastighetsägare
-      - Skolskjutsreglemente
-      - Riktlinjer för gatubelysning
-      - Regler för föreningsbidrag
-      - Lokala ordningsföreskrifter för torghandel i Säters kommun
-      - Allmänna lokala ordningsföreskrifter för Säters kommun
-      - Reglemente för Säters kommuns miljö- och naturvårdsstipendium
-      - Policy för bidrag till enskilda vägar i Säters kommun – Regler och modell
-      - Fördelningsprincip och prioriteringsordning för gymnastiksalar samt sim- och sporthallar i Säters kommun
-      - Riktlinjer vid stöd till personer med nedsatt rörelseförmåga eller funktionshinder avseende snöskottning
-      - Lokala hälsoskyddsföreskrifter för Säters kommun
-      - Riktlinjer för markanvisning Säters kommun
-      - Riktlinjer för exploateringsavtal
-      - Säters kommun föreskrifter om frister för rengöring (sotning)
-      - Regler för beslut om gångbanerenhållning i Säters kommun
-      - Kretsloppsplan 2023–2030
-      - Riktlinjer Blomlådor för ökad trafiksäkerhet
-      - Riktlinjer för digitala informationsskyltar i offentlig miljö
-      - Riktlinjer måltider särskilda boenden
-   - Reglementen
-   - Program, planer och strategier
-   - Socialnämndens styrdokument
-   - Bolag och förbund
-- Medborgardialog och påverkan
-- För politiker
-- Stiftelser, stipendier och priser
-- Synpunkter, beröm och klagomål
-- Behandling av personuppgifter
-- Arkiv och forskning
-- E-arkiv Mitt
-- Svenskt medborgarskap
-- Att gifta sig – Borgerlig vigsel
-- Borgerlig begravning
-- För medier
-- Säters kommuns sociala medier
-- Om Säter
 
 ### Föreskrifter om avfallshantering
 

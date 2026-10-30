@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ad1/1587130415697/Taxa%20f%C3%B6r%20uppl%C3%A5telse%20av%20allm%C3%A4n%20plats%20i%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "cbf0583e32f4e13f0b426994b5ea127615cb22e03985f5a3d3394ee4d07bd39d"
-fetched_at: "2026-10-30T20:45:00Z"
+fetched_at: "2026-10-30T21:13:09Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-for-upplatelse-av-allman-plats
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-for-upplatelse-av-allman-plats>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa för upplåtelse av allmän plats
-
-Sidans innehåll
 
 ### Taxa för upplåtelse av allmän plats
 

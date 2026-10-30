@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.1adde54a17861a73b1e131a/1772456269298/Taxa%20och%20regler%20f%C3%B6r%20brandskyddskontroll%20f%C3%B6r%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "a289fabf7323ead320e7ff7831a35bbf51f1c44d59da17916b652cdebb017676"
-fetched_at: "2026-10-30T20:45:04Z"
+fetched_at: "2026-10-30T21:13:13Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-och-regler-for-brandskyddskontroll
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-och-regler-for-brandskyddskontroll>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa och regler för brandskyddskontroll
-
-Sidans innehåll
 
 ### Taxa och regler för brandskyddskontroll
 

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.7bdef21a19ac5f61f0122ef/1787572835109/Avgift%20f%C3%B6r%20f%C3%B6rskola%20och%20fritidshem%20-%20maxtaxa%20f%C3%B6r%20%C3%A5r%202026.pdf"
 source_sha256: "b575673b2e9c1d1f1cc27aa4391ad256c7c2251c492614f81b89eb674ebf9dd6"
-fetched_at: "2026-10-30T20:44:19Z"
+fetched_at: "2026-10-30T21:12:28Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: avgift-for-forskola-och-fritidshem---maxtaxa-for-ar-2026
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/bus-styrdokument/avgift-for-forskola-och-fritidshem---maxtaxa-for-ar-2026>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Avgift för förskola och fritidshem - maxtaxa för år 2026
-
-Sidans innehåll
 
 ### Avgift för förskola och fritidshem - maxtaxa för år 2026
 

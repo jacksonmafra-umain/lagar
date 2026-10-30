@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ae0/1587130551911/F%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20Bestorp%20i%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "b7a9e12f7815693be565b32ebc7bebee54264033e99951fe96170bd324d7bc1d"
-fetched_at: "2026-10-30T20:44:26Z"
+fetched_at: "2026-10-30T21:12:35Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: foreskrifter-for-naturreservatet-bestorp
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/foreskrifter-for-naturreservatet-bestorp>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Föreskrifter för naturreservatet Bestorp
-
-Sidans innehåll
 
 ### Föreskrifter för naturreservatet Bestorp
 

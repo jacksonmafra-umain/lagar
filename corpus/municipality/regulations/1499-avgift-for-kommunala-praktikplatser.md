@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404abb/1587130210624/Avgift%20f%C3%B6r%20kommunala%20praktikplatser.pdf"
 source_sha256: "82672211f3a4e003a46130468eae655508f864f1ce95dcfd7ec0ea1125a52dd0"
-fetched_at: "2026-10-30T20:44:21Z"
+fetched_at: "2026-10-30T21:12:30Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: avgift-for-kommunala-praktikplatser
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/avgift-for-kommunala-praktikplatser>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Avgift för kommunala praktikplatser
-
-Sidans innehåll
 
 ### Avgift för kommunala praktikplatser
 

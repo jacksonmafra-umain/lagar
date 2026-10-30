@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.776f65f5193732fee2e4222/1772456062561/Sotningstaxa.pdf"
 source_sha256: "deaec136acfcacb21ad70ea278160b9ce7ad15f4b928a7fec6b031bbcb90dfed"
-fetched_at: "2026-10-30T20:44:38Z"
+fetched_at: "2026-10-30T21:12:47Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: sotningstaxa
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/sotningstaxa>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Sotningstaxa
-
-Sidans innehåll
 
 ### Sotningstaxa
 

@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/taxa-for-provning-och-tillsyn-inom-miljobalkens-omrade/"
-source_sha256: "6049c447fbec04bba3c275fb8e0b0e8b4c13ce8cbd6ce2b66aa0d268ed31167c"
-fetched_at: "2026-10-30T20:32:10Z"
+source_sha256: "e4e83061fdb8cd1098e4e19c55f8d6b3de8af4eaf4bfc95c08e9e855e7a80bd3"
+fetched_at: "2026-10-30T21:13:46Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -32,57 +32,6 @@ Kommunens sida: <https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument
 ## Text
 
 Texten är hämtad från kommunens webbsida.
-
-Du är här:
-
-1. Hem
-2. Kommun och demokrati
-3. Planer och styrdokument
-4. Taxor och avgifter
-5. Taxa för prövning och tillsyn …
-
-- Skriv ut
-
-- Anslagstavla
-- Visselblåsning
-- Val 2026
-- EU-val 2024
-- Kommunens organisation
-- Mål, ekonomi och budget
-- Möten och handlingar
-- Månadens blomma kommunfullmäktige
-- Planer och styrdokument
-   - Taxor och avgifter
-      - Avfallstaxa
-      - Va-taxa
-      - Avgifter för slamtjänster
-      - Avgifter inom äldreomsorg och funktionsnedsättning
-      - Plan- och bygglovstaxa
-      - Avgifter och hyror Skönvikshallen och sportanläggningar
-      - Taxa inom livsmedelsområdet
-      - Taxa för upplåtelse på offentlig plats
-      - Taxa vid utlämnande och kopiering av handlingar vid Säters kommun
-      - Taxa för prövning och tillsyn inom miljöbalkens område
-      - Taxa enligt plan- och bygglagen 2026
-   - Barn- och utbildningsnämndens styrdokument
-   - Regler och föreskrifter
-   - Reglementen
-   - Program, planer och strategier
-   - Socialnämndens styrdokument
-   - Bolag och förbund
-- Medborgardialog och påverkan
-- För politiker
-- Stiftelser, stipendier och priser
-- Synpunkter, beröm och klagomål
-- Behandling av personuppgifter
-- Arkiv och forskning
-- E-arkiv Mitt
-- Svenskt medborgarskap
-- Att gifta sig – Borgerlig vigsel
-- Borgerlig begravning
-- För medier
-- Säters kommuns sociala medier
-- Om Säter
 
 ### Taxa för prövning och tillsyn inom miljöbalkens område
 

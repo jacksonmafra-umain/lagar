@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ad3/1587130454000/Taxa%20f%C3%B6r%20uthyrning%20av%20lokaler%20p%C3%A5%20L%C3%A4rCenter.pdf"
 source_sha256: "f769c4aef4223ded3d4243972f97464a275ef265accee30781aa8a9dff8268da"
-fetched_at: "2026-10-30T20:45:02Z"
+fetched_at: "2026-10-30T21:13:11Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-for-uthyrning-av-lokaler-pa-larcenter
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-for-uthyrning-av-lokaler-pa-larcenter>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa för uthyrning av lokaler på LärCenter
-
-Sidans innehåll
 
 ### Taxa för uthyrning av lokaler på LärCenter
 

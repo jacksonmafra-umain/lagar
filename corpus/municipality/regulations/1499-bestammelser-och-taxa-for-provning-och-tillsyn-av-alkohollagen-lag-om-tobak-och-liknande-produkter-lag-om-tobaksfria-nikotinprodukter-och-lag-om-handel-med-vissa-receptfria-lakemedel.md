@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/bestammelser-och-taxa-for-provning-och-tillsyn-av-alkohollagen-lag-om-tobak-och-liknande-produkter-lag-om-tobaksfria-nikotinprodukter-och-lag-om-handel-med-vissa-receptfria-lakemedel"
-source_sha256: "93599ec80272d4fe56146d4fdebb9d9a7a09585b313f740b67f71949e59906e1"
-fetched_at: "2026-10-30T20:44:24Z"
+source_sha256: "07d1cad093ad6f57a6ba2150bdac6885eea1ded9eef13457cf63224023ffa4b9"
+fetched_at: "2026-10-30T21:12:33Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -32,13 +32,6 @@ Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-regleme
 ## Text
 
 Texten är hämtad från kommunens webbsida.
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Bestämmelser och taxa för prövning och tillsyn av alkohollagen, lag om tobak och liknande produkter, lag om tobaksfria nikotinprodukter och lag om handel med vissa receptfria läkemedel
-
-Sidans innehåll
 
 ### Taxa för prövning och tillsyn av alkohollagen, lag om tobak och liknande produkter, lag om tobaksfria nikotinprodukter och lag om handel med vissa receptfria läkemedel
 

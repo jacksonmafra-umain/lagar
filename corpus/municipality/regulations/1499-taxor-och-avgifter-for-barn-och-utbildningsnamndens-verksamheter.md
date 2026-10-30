@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.7bdef21a19ac5f61f0122b8/1766136502504/Taxor%20och%20avgifter%20f%C3%B6r%20Barn-och%20utbildningsn%C3%A4mndens%20verksamheter.pdf"
 source_sha256: "e6027c0a177e82bd421d5019eb9142d861c7a728c7f20c81c9495a68ffe5c97d"
-fetched_at: "2026-10-30T20:45:06Z"
+fetched_at: "2026-10-30T21:13:15Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxor-och-avgifter-for-barn-och-utbildningsnamndens-verksamheter
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/bus-styrdokument/taxor-och-avgifter-for-barn-och-utbildningsnamndens-verksamheter>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxor och avgifter för Barn-och utbildningsnämndens verksamheter
-
-Sidans innehåll
 
 ### Taxor och avgifter för Barn-och utbildningsnämndens verksamheter
 

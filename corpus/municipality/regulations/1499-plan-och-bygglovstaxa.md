@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.776f65f5193732fee2e2ded/1766476623824/Plan-%20och%20bygglovstaxa.pdf"
 source_sha256: "8a0c30dfe5ab0b14a7a8286f67a50fcf058306ef353f7093f54a0dd7e87342d7"
-fetched_at: "2026-10-30T20:44:32Z"
+fetched_at: "2026-10-30T21:12:41Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: plan--och-bygglovstaxa
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/plan--och-bygglovstaxa>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Plan- och bygglovstaxa
-
-Sidans innehåll
 
 ### Plan- och bygglovstaxa
 

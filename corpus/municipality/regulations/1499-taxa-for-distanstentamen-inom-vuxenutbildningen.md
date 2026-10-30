@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5b7f4af4172139070c676af/1709190733937/Taxa%20f%C3%B6r%20distanstentamen%20inom%20vuxenutbildningen.pdf"
 source_sha256: "48bd9f5c4e34728a44aaf2805eb65b45e6e41eeec4117d9668db1f21af94223e"
-fetched_at: "2026-10-30T20:44:46Z"
+fetched_at: "2026-10-30T21:12:55Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-for-distanstentamen-inom-vuxenutbildningen
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-for-distanstentamen-inom-vuxenutbildningen>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa för distanstentamen inom vuxenutbildningen
-
-Sidans innehåll
 
 ### Taxa för distanstentamen inom vuxenutbildningen
 

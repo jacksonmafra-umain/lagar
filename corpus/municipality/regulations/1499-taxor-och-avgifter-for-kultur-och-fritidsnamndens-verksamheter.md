@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.126386df18adc128daf82ad/1777896580671/Taxor%20och%20avgifter%20f%C3%B6r%20kultur-%20och%20fritidsn%C3%A4mndens%20verksamheter.pdf"
 source_sha256: "c7f05bbeb1ecb8f4013601dda4ce91a2f840b951ead81e8bfdd326dc9529f4f7"
-fetched_at: "2026-10-30T20:45:08Z"
+fetched_at: "2026-10-30T21:13:17Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxor-och-avgifter-for-kultur--och-fritidsnamndens-verksamheter
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxor-och-avgifter-for-kultur--och-fritidsnamndens-verksamheter>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxor och avgifter för kultur- och fritidsnämndens verksamheter
-
-Sidans innehåll
 
 ### Taxor och avgifter för kultur- och fritidsnämndens verksamheter
 

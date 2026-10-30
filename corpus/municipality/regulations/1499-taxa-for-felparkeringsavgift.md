@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ac8/1734679142800/Taxa%20f%C3%B6r%20felparkeringsavgift%20inom%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "b34448876f45b39cb40f502ec40a99b340168a68b15aa0cce747c7bc724e3b72"
-fetched_at: "2026-10-30T20:44:48Z"
+fetched_at: "2026-10-30T21:12:57Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-for-felparkeringsavgift
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-for-felparkeringsavgift>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa för felparkeringsavgift
-
-Sidans innehåll
 
 ### Taxa för felparkeringsavgift
 

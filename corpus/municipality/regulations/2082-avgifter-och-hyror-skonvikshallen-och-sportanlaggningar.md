@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/avgifter-och-hyror-skonvikshallen-och-sportanlaggningar/"
-source_sha256: "3755bf58ee862690add1ccb8855dd0e3f936e65d8cfd06e606f7f4c99c820b89"
-fetched_at: "2026-10-30T20:32:06Z"
+source_sha256: "d40a9045e103359c2f1c14c6bf5df4910fa60a4a7e2750a6e435fb55c36f5e80"
+fetched_at: "2026-10-30T21:13:42Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -32,57 +32,6 @@ Kommunens sida: <https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument
 ## Text
 
 Texten är hämtad från kommunens webbsida.
-
-Du är här:
-
-1. Hem
-2. Kommun och demokrati
-3. Planer och styrdokument
-4. Taxor och avgifter
-5. Avgifter och hyror Skönvikshal…
-
-- Skriv ut
-
-- Anslagstavla
-- Visselblåsning
-- Val 2026
-- EU-val 2024
-- Kommunens organisation
-- Mål, ekonomi och budget
-- Möten och handlingar
-- Månadens blomma kommunfullmäktige
-- Planer och styrdokument
-   - Taxor och avgifter
-      - Avfallstaxa
-      - Va-taxa
-      - Avgifter för slamtjänster
-      - Avgifter inom äldreomsorg och funktionsnedsättning
-      - Plan- och bygglovstaxa
-      - Avgifter och hyror Skönvikshallen och sportanläggningar
-      - Taxa inom livsmedelsområdet
-      - Taxa för upplåtelse på offentlig plats
-      - Taxa vid utlämnande och kopiering av handlingar vid Säters kommun
-      - Taxa för prövning och tillsyn inom miljöbalkens område
-      - Taxa enligt plan- och bygglagen 2026
-   - Barn- och utbildningsnämndens styrdokument
-   - Regler och föreskrifter
-   - Reglementen
-   - Program, planer och strategier
-   - Socialnämndens styrdokument
-   - Bolag och förbund
-- Medborgardialog och påverkan
-- För politiker
-- Stiftelser, stipendier och priser
-- Synpunkter, beröm och klagomål
-- Behandling av personuppgifter
-- Arkiv och forskning
-- E-arkiv Mitt
-- Svenskt medborgarskap
-- Att gifta sig – Borgerlig vigsel
-- Borgerlig begravning
-- För medier
-- Säters kommuns sociala medier
-- Om Säter
 
 ### Avgifter och hyror Skönvikshallen och sportanläggningar
 

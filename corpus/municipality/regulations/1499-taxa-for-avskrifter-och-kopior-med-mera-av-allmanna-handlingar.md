@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ac6/1587130296734/Taxa%20f%C3%B6r%20avskrifter%20och%20kopior%20med%20mera%20av%20allm%C3%A4nna%20handlingar.pdf"
 source_sha256: "8b1cb58b32b1a6ade6ab84e6bc0b2edd811c5ac24c3e12270906a89b2603ec5a"
-fetched_at: "2026-10-30T20:44:44Z"
+fetched_at: "2026-10-30T21:12:53Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-for-avskrifter-och-kopior-med-mera-av-allmanna-handlingar
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-for-avskrifter-och-kopior-med-mera-av-allmanna-handlingar>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa för avskrifter och kopior med mera av allmänna handlingar
-
-Sidans innehåll
 
 ### Taxa för avskrifter och kopior med mera av allmänna handlingar
 

@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/taxa-enligt-plan-och-bygglagen/"
-source_sha256: "c3f27aeda660e9a602e41df5c2d35262e31364189bdc7c683e87e8d34abd6bc0"
-fetched_at: "2026-10-30T20:32:11Z"
+source_sha256: "5f47f749a1707fcf4ceccd176ea39ea9c4b5cfa95a30a66a1ef6c70bb54933d8"
+fetched_at: "2026-10-30T21:13:47Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -32,57 +32,6 @@ Kommunens sida: <https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument
 ## Text
 
 Texten är hämtad från kommunens webbsida.
-
-Du är här:
-
-1. Hem
-2. Kommun och demokrati
-3. Planer och styrdokument
-4. Taxor och avgifter
-5. Taxa enligt plan- och bygglage…
-
-- Skriv ut
-
-- Anslagstavla
-- Visselblåsning
-- Val 2026
-- EU-val 2024
-- Kommunens organisation
-- Mål, ekonomi och budget
-- Möten och handlingar
-- Månadens blomma kommunfullmäktige
-- Planer och styrdokument
-   - Taxor och avgifter
-      - Avfallstaxa
-      - Va-taxa
-      - Avgifter för slamtjänster
-      - Avgifter inom äldreomsorg och funktionsnedsättning
-      - Plan- och bygglovstaxa
-      - Avgifter och hyror Skönvikshallen och sportanläggningar
-      - Taxa inom livsmedelsområdet
-      - Taxa för upplåtelse på offentlig plats
-      - Taxa vid utlämnande och kopiering av handlingar vid Säters kommun
-      - Taxa för prövning och tillsyn inom miljöbalkens område
-      - Taxa enligt plan- och bygglagen 2026
-   - Barn- och utbildningsnämndens styrdokument
-   - Regler och föreskrifter
-   - Reglementen
-   - Program, planer och strategier
-   - Socialnämndens styrdokument
-   - Bolag och förbund
-- Medborgardialog och påverkan
-- För politiker
-- Stiftelser, stipendier och priser
-- Synpunkter, beröm och klagomål
-- Behandling av personuppgifter
-- Arkiv och forskning
-- E-arkiv Mitt
-- Svenskt medborgarskap
-- Att gifta sig – Borgerlig vigsel
-- Borgerlig begravning
-- För medier
-- Säters kommuns sociala medier
-- Om Säter
 
 ### Taxa enligt plan- och bygglagen 2026
 

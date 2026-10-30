@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ae1/1587130551923/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6.pdf"
 source_sha256: "9c7ac621ee954e957e3f069ed5aad55a2a7682d90174d5e66eb0f134de1c97a2"
-fetched_at: "2026-10-30T20:44:28Z"
+fetched_at: "2026-10-30T21:12:37Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Lokala föreskrifter för att skydda människors hälsa och miljö
-
-Sidans innehåll
 
 ### Lokala föreskrifter för att skydda människors hälsa och miljö
 

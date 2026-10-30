@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ad6/1587130532934/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20kommunens%20allm%C3%A4nna%20vatten%20och%20avloppsanl%C3%A4ggning.pdf"
 source_sha256: "f01cd153198ddd74e52c836981f6e61cc9585906eacdf3892bc896e0e3e890ae"
-fetched_at: "2026-10-30T20:44:09Z"
+fetched_at: "2026-10-30T21:12:18Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: allmanna-bestammelser-for-anvandande-av-kommunens-allmanna-vatten-och-av
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/allmanna-bestammelser-for-anvandande-av-kommunens-allmanna-vatten-och-avloppsanlaggning>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Allmänna bestämmelser för användande av kommunens allmänna vatten och avloppsanläggning
-
-Sidans innehåll
 
 ### Allmänna bestämmelser för användande av kommunens allmänna vatten och avloppsanläggning
 

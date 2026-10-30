@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.126386df18adc128daf82b9/1767010971755/Taxa%20f%C3%B6r%20r%C3%A4ddningstj%C3%A4nstens%20tillst%C3%A5ndspr%C3%B6vning%20enligt%20lagen%20om%20brandfarliga%20och%20explosiva%20varor.pdf"
 source_sha256: "6db8e005dee7117128d7f996fd0c652f9913cc98c88c44fa958ab3b709d781ce"
-fetched_at: "2026-10-30T20:44:54Z"
+fetched_at: "2026-10-30T21:13:03Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: taxa-for-raddningstjanstens-tillstandsprovning-enligt-lagen-om-brandfarl
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/taxa-for-raddningstjanstens-tillstandsprovning-enligt-lagen-om-brandfarliga-och-explosiva-varor>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Taxa för räddningstjänstens tillståndsprövning enligt lagen om brandfarliga och explosiva varor
-
-Sidans innehåll
 
 ### Taxa för räddningstjänstens tillståndsprövning enligt lagen om brandfarliga och explosiva varor
 

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.7b2a2321741104b9d66c55/1602139535488/Avgifter%20tillh%C3%B6rande%20Anvisningar%20f%C3%B6r%20gr%C3%A4vning%20i%20allm%C3%A4n%20platsmark%20och%20kommunal%20mark.pdf"
 source_sha256: "9a1532bb97a412c2cd08fbaf72c6086470b0dc6f440bb797b215ddff891c7211"
-fetched_at: "2026-10-30T20:44:17Z"
+fetched_at: "2026-10-30T21:12:26Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -30,13 +30,6 @@ Nummer: avgifter-tillhorande-anvisningar-for-gravning-i-allman-platsmark-och-kom
 Kommunens sida: <https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/avgifter-tillhorande-anvisningar-for-gravning-i-allman-platsmark-och-kommunal-mark>
 
 ## Uppgifter från kommunen
-
-1. Startsida
-2. /Kommun & politik
-3. /Avgifter, taxor, reglementen, föreskrifter, styrdokument och lokala bestämmelser
-4. /Avgifter tillhörande anvisningar för grävning i allmän platsmark och kommunal mark
-
-Sidans innehåll
 
 ### Avgifter tillhörande anvisningar för grävning i allmän platsmark och kommunal mark
 
