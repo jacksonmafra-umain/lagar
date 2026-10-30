@@ -527,6 +527,67 @@ class McffsAdapter(DetailPageAdapter):
         return entry if entry is not None and "/regler/" in entry.url else None
 
 
+class _McfPredecessor(McffsAdapter):
+    """A series MCF's list of regulations in force still holds from its predecessors (MSB and older).
+
+    The list is paged (`?selectedpage=N`); a page without regulations of the
+    series is not an error, and the newest regulations repeated on every page
+    are read once. The number comes from the page's URL slug (`/msbfs-202510/`):
+    an item's text often names the regulation it repeals.
+    """
+
+    def __init__(self):
+        self.seen = set()
+
+    def entry_from_link(self, link, url):
+        entry = super().entry_from_link(link, url)
+        if entry is None or self.slug_number(entry.url) != entry.number:
+            return None
+        entry.title = self.clean_title(re.sub(r"\s*Status:.*$", "", link.text()), entry.number)
+        entry.base = not is_amending(entry.title)
+        return entry
+
+    def more_pages(self, text, url):
+        """Each page links only a few others (1, 2, 3, 4, 10), so every page is followed."""
+        pages = {int(n) for n in re.findall(r'href="/sv/regler/gallande-regler/\?selectedpage=(\d+)"', text)}
+        return [f"{self.listing_url}?selectedpage={n}" for n in sorted(pages) if n > 1]
+
+    def parse_listing(self, text, url):
+        if url == self.listing_url:
+            self.seen = set()
+        try:
+            entries = super().parse_listing(text, url)
+        except ValueError:
+            return []
+        entries = [e for e in entries if e.number not in self.seen]
+        self.seen.update(e.number for e in entries)
+        return entries
+
+
+class MsbfsAdapter(_McfPredecessor):
+    series = "MSBFS"
+    issuer = "Myndigheten för samhällsskydd och beredskap"
+    title_prefix = "Myndigheten för samhällsskydd och beredskaps"
+
+
+class SrvfsAdapter(_McfPredecessor):
+    series = "SRVFS"
+    issuer = "Statens räddningsverk"
+    title_prefix = "Statens räddningsverks"
+
+
+class SaifsAdapter(_McfPredecessor):
+    series = "SÄIFS"
+    issuer = "Sprängämnesinspektionen"
+    title_prefix = "Sprängämnesinspektionens"
+
+
+class KbmfsAdapter(_McfPredecessor):
+    series = "KBMFS"
+    issuer = "Krisberedskapsmyndigheten"
+    title_prefix = "Krisberedskapsmyndighetens"
+
+
 class MdffsAdapter(DetailPageAdapter):
     series = "MDFFS"
     issuer = "Myndigheten för digital förvaltning"
@@ -1078,7 +1139,8 @@ class HslffsAdapter(DetailPageAdapter):
 
 
 SERIES = (MigrfsAdapter(), KamfsAdapter(), KfmfsAdapter(), KfsAdapter(), KrfsAdapter(), MemyfsAdapter(),
-          ElsakfsAdapter(), McffsAdapter(), MdffsAdapter(), NfsAdapter(), KifsAdapter(), AgvfsAdapter(),
+          ElsakfsAdapter(), McffsAdapter(), MsbfsAdapter(), SrvfsAdapter(), SaifsAdapter(),
+          KbmfsAdapter(), MdffsAdapter(), NfsAdapter(), KifsAdapter(), AgvfsAdapter(),
           KovfsAdapter(), HvmfsAdapter(), FkfsAdapter(), IaffsAdapter(), AffsAdapter(), BfnarAdapter(),
           CsnfsAdapter(), ImyfsAdapter(), LmfsAdapter(), MtfsAdapter(),
           KvfsAdapter(), LivsfsAdapter(), MyhfsAdapter(), DvfsAdapter(), EifsAdapter(), KbvfsAdapter(),

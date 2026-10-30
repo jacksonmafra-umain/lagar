@@ -385,6 +385,35 @@ class DvfsEifsKbvfsFfsTest(unittest.TestCase):
         self.assertEqual(entries[2].title, "FFS 2017:5")  # the title comes from the PDF
 
 
+class McfPredecessorTest(unittest.TestCase):
+    PAGE1 = """<main>
+      <a href="/sv/regler/gallande-regler/mcffs-20261/">MCFFS 2026:1</a>
+      <a href="/sv/regler/gallande-regler/msbfs-202510/">MSBFS 2025:10 upphävande av Statens räddningsverks
+        föreskrifter (SRVFS 2004:11) om kontroll av brandposter <span>Status: Gällande</span></a>
+      <a href="/sv/regler/gallande-regler/srvfs-20071/">SRVFS 2007:1 allmänna råd och kommentarer om brandvarnare
+        i bostäder <span>Status: Gällande</span></a>
+      <a href="/sv/regler/gallande-regler/?selectedpage=2">2</a>
+      <a href="/sv/regler/gallande-regler/?selectedpage=10">10</a></main>"""
+    PAGE10 = """<main>
+      <a href="/sv/regler/gallande-regler/msbfs-202510/">MSBFS 2025:10</a>
+      <a href="/sv/regler/gallande-regler/srvfs-20043/">SRVFS 2004:3 föreskrifter om tillsyn</a>
+      <a href="/sv/regler/gallande-regler/?selectedpage=9">9</a></main>"""
+
+    def test_paged_list_numbered_from_the_slug_and_read_once(self):
+        srvfs = type(agency.ADAPTERS["SRVFS"])()
+        url = srvfs.listing_url
+        first = srvfs.parse_listing(self.PAGE1, url)
+        self.assertEqual([(e.number, e.title) for e in first],
+                         [("SRVFS 2007:1", "allmänna råd och kommentarer om brandvarnare i bostäder")])
+        self.assertEqual(srvfs.more_pages(self.PAGE1, url), [url + "?selectedpage=2", url + "?selectedpage=10"])
+        self.assertEqual(srvfs.more_pages(self.PAGE10, url + "?selectedpage=10"), [url + "?selectedpage=9"])
+        self.assertEqual([e.number for e in srvfs.parse_listing(self.PAGE10, url + "?selectedpage=10")],
+                         ["SRVFS 2004:3"])
+        msbfs = type(agency.ADAPTERS["MSBFS"])()
+        self.assertEqual([e.number for e in msbfs.parse_listing(self.PAGE1, url)], ["MSBFS 2025:10"])
+        self.assertEqual(msbfs.parse_listing(self.PAGE10, url + "?selectedpage=10"), [])  # repeated, read once
+        self.assertEqual(type(agency.ADAPTERS["KBMFS"])().parse_listing(self.PAGE1, url), [])
+
 class HslffsTest(unittest.TestCase):
     HSLF = agency.ADAPTERS["HSLF-FS"]
     FOHM = "https://www.folkhalsomyndigheten.se/publikationsarkiv/f/folkhalsomyndighetens-foreskrifter-hslf-fs-2025-55/"
