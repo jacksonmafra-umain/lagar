@@ -179,6 +179,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   (1). Five PDFs are scans without a text layer (4 CSNFS, 1 LMFS). Repealed
   regulations listed on the LMFS and MTFS pages, and the predecessor series
   LMVFS and DIFS, are not collected.
+  Three more on 2026-10-30, also with text from their PDFs: KVFS (17 base
+  regulations, found through Kriminalvården's sitemap because its listing
+  needs JavaScript), LIVSFS (39 in force, from Livsmedelsverket's yearly
+  tables since 2005) and MYHFS (21 in force and 23 repealed, dated from the
+  list or from the regulation that repealed them). Repealed LIVSFS
+  regulations (no repeal date on the page), 23 MYHFS ones without a known
+  repeal date and the predecessor series SLVFS are not collected.
   [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Agency series published as a list of PDF links (configured in
