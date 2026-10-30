@@ -15805,6 +15805,15 @@
       "url": "https://laholm.se/download/18.162ad65718a92ee55e31528e/1695040086061/LFS%202.5%20F%C3%B6rskole-%20och%20fritidshemstaxa.pdf"
     },
     {
+      "bytes": 70226,
+      "content_type": "application/pdf",
+      "id": "1381-18-162ad65718a92ee55e3152b6",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:35Z",
+      "sha256": "6e70cd3af5ba465e9c8f2e0c78470fbdeb5a774221f676a778de206c6144862d",
+      "url": "https://laholm.se/download/18.162ad65718a92ee55e3152b6/1695040387441/LFS%202.10%20Taxa%20f%C3%B6r%20uppl%C3%A5telse%20av%20lokaler%20och%20utrustning%20i%20Laholms%20L%C3%A4rcentrum.pdf"
+    },
+    {
       "bytes": 465910,
       "content_type": "application/pdf",
       "id": "1381-18-162ad65718a92ee55e3152cd",
@@ -15821,6 +15830,15 @@
       "retrieved_at": "2026-10-30T15:27:46Z",
       "sha256": "95c750c7bc9019f8862778a9a042e6516441cd46ffa8640658531248b1159521",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e315301/1695040730757/LFS%202.15%20Avgift%20f%C3%B6r%20cykelparkering%20i%20cykelgarage.pdf"
+    },
+    {
+      "bytes": 99059,
+      "content_type": "application/pdf",
+      "id": "1381-18-162ad65718a92ee55e315414",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:37Z",
+      "sha256": "e05db76e5915729d89054acc0fe44f707e20502a49f3bf753d5a869f86820ad0",
+      "url": "https://laholm.se/download/18.162ad65718a92ee55e315414/1695041482986/LFS%202.21%20Avgifter%20f%C3%B6r%20ans%C3%B6kan%20om%20godk%C3%A4nnande%20av%20frist%C3%A5ende%20f%C3%B6rskola%20och%20frist%C3%A5ende%20friliggande%20fritidshem%20enligt%20skollagen.pdf"
     },
     {
       "bytes": 147966,
@@ -15841,6 +15859,15 @@
       "url": "https://laholm.se/download/18.162ad65718a92ee55e319a44/1695108223693/LFS%202.24%20Avgifter%20f%C3%B6r%20gr%C3%A4vtillst%C3%A5nd%20och%20trafikanordningsplan.pdf"
     },
     {
+      "bytes": 2401472,
+      "content_type": "application/pdf",
+      "id": "1381-18-162ad65718a92ee55e31a418",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:25Z",
+      "sha256": "a51777b873fa35d4c2c7d186b3c5fc02b36bba30d8aebfa4cd5284031d082a4f",
+      "url": "https://laholm.se/download/18.162ad65718a92ee55e31a418/1695113929011/lfs1-2%20Kartbilagor.pdf"
+    },
+    {
       "bytes": 204454,
       "content_type": "application/pdf",
       "id": "1381-18-162ad65718a92ee55e31ba19",
@@ -15857,6 +15884,15 @@
       "retrieved_at": "2026-10-30T15:27:23Z",
       "sha256": "188ab640aa75816439efa7ad7e7e59494465b78c91235433357b8070355e2170",
       "url": "https://laholm.se/download/18.17211e651984f52e92bfbb0/1753862789429/Bilaga%201-3%20till%20%C2%A7%2013%20allm%C3%A4nna%20lokala%20f%C3%B6reskrifter.pdf"
+    },
+    {
+      "bytes": 156511,
+      "content_type": "application/pdf",
+      "id": "1381-18-356a004a19b2bf461eb8338c",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:34Z",
+      "sha256": "2af06a248db3f92899d196fe3d86efc969fbc7fdc2932b44c9a58c622265a73f",
+      "url": "https://laholm.se/download/18.356a004a19b2bf461eb8338c/1767180047614/LFS%202.1%20Avgift%20f%C3%B6r%20anv%C3%A4ndning%20av%20offentlig%20plats.pdf"
     },
     {
       "bytes": 209868,
@@ -16012,6 +16048,24 @@
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83c93/1767185520915/LFS%202.25%20Hyror%20och%20avgifter%20f%C3%B6r%20lokaler%20inom%20utbildningsf%C3%B6rvaltningen.pdf"
     },
     {
+      "bytes": 164892,
+      "content_type": "application/pdf",
+      "id": "1381-18-356a004a19b2bf461eb83cf2",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:38Z",
+      "sha256": "24fe897bd0c5e8fa9e28403b53d17907b3aa1e90e68d260d5dce4635c7a661db",
+      "url": "https://laholm.se/download/18.356a004a19b2bf461eb83cf2/1767185983840/LFS%207.14%20Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20Laholms%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning.pdf"
+    },
+    {
+      "bytes": 247721,
+      "content_type": "application/pdf",
+      "id": "1381-18-356a004a19b2bf461eb83d29",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:39Z",
+      "sha256": "62f84af8eb103989adb4a0ad880350b8be12c81a037b5a53b1945ab74c942f77",
+      "url": "https://laholm.se/download/18.356a004a19b2bf461eb83d29/1767186153058/LFS%207.14%202026%20Information%20till%20fastighets%C3%A4gare%20om%20Laholms%20kommuns%20allm%C3%A4nna%20vattentj%C3%A4nster%2020260101.pdf"
+    },
+    {
       "bytes": 109775,
       "content_type": "application/pdf",
       "id": "1381-18-356a004a19b2bf461ebcafe1",
@@ -16021,6 +16075,42 @@
       "url": "https://laholm.se/download/18.356a004a19b2bf461ebcafe1/1767873192047/LFS%202.7%20Avgifter%20f%C3%B6r%20m%C3%A5ltidsservice%20i%20socialn%C3%A4mndens%20verksamheter%20_%20(002).pdf"
     },
     {
+      "bytes": 336772,
+      "content_type": "application/pdf",
+      "id": "1381-18-3a6ebd0a18df279a76132ed9",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:33Z",
+      "sha256": "0ece43acbe2ff721d77f82f7313895689d5aa3d95a933567a829de9b62ee016a",
+      "url": "https://laholm.se/download/18.3a6ebd0a18df279a76132ed9/1709651450449/LFS%201.5%20Bilaga%201%20Stortorget.pdf"
+    },
+    {
+      "bytes": 721411,
+      "content_type": "application/pdf",
+      "id": "1381-18-3a6ebd0a18df279a76132edd",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:34Z",
+      "sha256": "5fd590e0bd33cde5c2dde517ee49d773d1e2c1ba4cffab96aaa07e64bbe5937c",
+      "url": "https://laholm.se/download/18.3a6ebd0a18df279a76132edd/1709651485752/LFS%201.5%20Bilaga%202%20Strandtorget.pdf"
+    },
+    {
+      "bytes": 788625,
+      "content_type": "application/pdf",
+      "id": "1381-18-3eded986192bd271c0f6467a",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:32Z",
+      "sha256": "80f1ebfaf6cda39ff50e8ff6088b6c551682a58c0eea1def5402586e33930d77",
+      "url": "https://laholm.se/download/18.3eded986192bd271c0f6467a/1730963030708/LFS%201.4%20Avfallsf%C3%B6reskrifter.pdf"
+    },
+    {
+      "bytes": 105647,
+      "content_type": "application/pdf",
+      "id": "1381-18-3eded986192bd271c0f64717",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:23Z",
+      "sha256": "0fe77ded5df019e4b6dfa922f7c7f0c0d3299e75d32d94e9df9c9fd8be98c985",
+      "url": "https://laholm.se/download/18.3eded986192bd271c0f64717/1730963263336/LFS%201.2.pdf"
+    },
+    {
       "bytes": 145709,
       "content_type": "application/pdf",
       "id": "1381-18-4cd1e90119d05297ae92bd69",
@@ -16028,6 +16118,60 @@
       "retrieved_at": "2026-10-30T15:27:24Z",
       "sha256": "fab95a96a9fcbf6156be37effb7d95eeaea55fc0d0f46570ccf38ff19f7933b1",
       "url": "https://laholm.se/download/18.4cd1e90119d05297ae92bd69/1774276044842/LFS%201.5%20Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandel%20i%20Laholms%20kommun.pdf"
+    },
+    {
+      "bytes": 2933827,
+      "content_type": "application/pdf",
+      "id": "1381-18-608dac54191e51917217db31",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:28Z",
+      "sha256": "cf87632942d6728410e07263fdd77f31d2be14756f831341eaa8846510a56d47",
+      "url": "https://laholm.se/download/18.608dac54191e51917217db31/1727855130339/Bilaga%20till%20LFS%201.3%20-Kn%C3%A4redsslingan.pdf"
+    },
+    {
+      "bytes": 99341,
+      "content_type": "application/pdf",
+      "id": "1381-18-608dac54191e51917217db6b",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:25Z",
+      "sha256": "37900d9cc5ef0acdcd68c89c445eee083a6f57dc82bd32eacb756166303f19a9",
+      "url": "https://laholm.se/download/18.608dac54191e51917217db6b/1727855185752/Bilaga%20till%20LFS%201.3%20-%20Genevadslingan.pdf"
+    },
+    {
+      "bytes": 639223,
+      "content_type": "application/pdf",
+      "id": "1381-18-608dac54191e51917217db75",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:27Z",
+      "sha256": "c3cf16c815f26646b6fc1a9c9464fb960dd62573d4c7e4685c52e27bc58e51fe",
+      "url": "https://laholm.se/download/18.608dac54191e51917217db75/1727855243319/Bilaga%20till%20LFS%201.3%20Gl%C3%A4nningeslingan.pdf"
+    },
+    {
+      "bytes": 536252,
+      "content_type": "application/pdf",
+      "id": "1381-18-608dac54191e51917217db7d",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:29Z",
+      "sha256": "837107d1ef39d7760e94e4e6bcb35adb45f5a6ed37f8e7a763dcd0a48c8c1aaf",
+      "url": "https://laholm.se/download/18.608dac54191e51917217db7d/1727855348931/Bilaga%20till%20LFS%201.3%20-%20Mellbystrandsslingan,%20Hokaslingan.pdf"
+    },
+    {
+      "bytes": 3000332,
+      "content_type": "application/pdf",
+      "id": "1381-18-608dac54191e51917217dba1",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:30Z",
+      "sha256": "58cb188e5520ee6853955f73ccdaf95b861f77ca55a366358fad73e3e3cc890b",
+      "url": "https://laholm.se/download/18.608dac54191e51917217dba1/1727855394714/Bilaga%20till%20LFS%201.3%20-%20Veingeslingan.pdf"
+    },
+    {
+      "bytes": 2896350,
+      "content_type": "application/pdf",
+      "id": "1381-18-608dac54191e51917217dba9",
+      "municipality_code": "1381",
+      "retrieved_at": "2026-10-30T21:17:31Z",
+      "sha256": "29cbdb55adb41b4a260f9f44d16c2ad66c6d04af061732eec83f97b78b784b34",
+      "url": "https://laholm.se/download/18.608dac54191e51917217dba9/1727855437625/Bilaga%20till%20LFS%201.3%20-%20V%C3%A5xtorpsslingan.pdf"
     },
     {
       "bytes": 153613,
