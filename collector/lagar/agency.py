@@ -803,8 +803,12 @@ def _selected(entry, args):
     return not args.year or number_key(entry.number)[0] in args.year
 
 
-def _snapshot_pdfs(client, robots, regulation, entry, manifest, refresh):
-    """Hash every PDF of `regulation` once; returns the number downloaded."""
+def _snapshot_pdfs(client, robots, regulation, entry, manifest, refresh, detail=None):
+    """Hash every PDF of `regulation` once; returns the number hashed.
+
+    `detail` is the body of `entry.url` when that is itself a PDF: it is hashed
+    without downloading it again.
+    """
     previous = {f["url"]: f for f in manifest.get(regulation.number, {}).get("files", [])}
     files, downloaded = [], 0
     for label, url in regulation.pdfs:
@@ -816,7 +820,10 @@ def _snapshot_pdfs(client, robots, regulation, entry, manifest, refresh):
                           "content_type": None, "retrieved_at": None,
                           "note": "robots.txt disallows this path; not downloaded"})
             continue
-        body, content_type = client.fetch(url)
+        if detail is not None and url == entry.url:
+            body, content_type = detail, "application/pdf"
+        else:
+            body, content_type = client.fetch(url)
         if not body.startswith(b"%PDF-"):
             raise ValueError(f"not a PDF: {url}")
         files.append({
@@ -863,8 +870,13 @@ def _collect_one(client, robots, adapter, entry, args, manifest, summary):
     if not robots.allows(entry.url):
         raise ValueError(f"robots.txt disallows {entry.url}")
     raw = client.get(entry.url)
-    regulation = adapter.parse_detail(raw.decode("utf-8"), entry)
-    summary.pdfs += _snapshot_pdfs(client, robots, regulation, entry, manifest, args.refresh)
+    if getattr(adapter, "raw_detail", False):  # the detail is the PDF itself
+        regulation = adapter.parse_detail(raw, entry)
+        detail = raw
+    else:
+        regulation = adapter.parse_detail(raw.decode("utf-8"), entry)
+        detail = None
+    summary.pdfs += _snapshot_pdfs(client, robots, regulation, entry, manifest, args.refresh, detail)
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     meta = build_meta(adapter, entry, regulation, hashlib.sha256(raw).hexdigest(), fetched_at)
     other = _stored_source(meta["id"], args.corpus)
@@ -1027,3 +1039,4 @@ def main(argv, client=None):
         print("blocked: see state file", file=sys.stderr)
         return 2
     return 0
+
