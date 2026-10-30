@@ -135,9 +135,11 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   series are collected, so those are a gap. The earliest TSFS base regulation
   in the corpus is TSFS 2009:1. AFS has the consolidated text from
   Arbetsmiljöverket's HTML pages. FFFS and TSFS publish the text only as PDF:
-  their bodies hold metadata, the agency's summary and links to the PDFs,
-  whose SHA-256 is in `sources/agency-pdf-manifest.json`; PDF text is not
-  extracted (owner decision: no non-stdlib dependency). `issued` is known only
+  since 2026-10-31 their bodies hold the text read from the PDF (the
+  consolidated version where one is linked) besides metadata, the agency's
+  summary and links to the PDFs, whose SHA-256 is in
+  `sources/agency-pdf-manifest.json`; one TSFS PDF is a scan without a text
+  layer. `issued` is known only
   for unamended AFS regulations, and AFS `in_force` only for those; FFFS and
   TSFS have no decision date on their pages. Arbetsmiljöverket's robots.txt
   disallows its folder of original PDFs, which is never requested. Boverket
