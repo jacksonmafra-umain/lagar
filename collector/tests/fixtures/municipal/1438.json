@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.dalsed.se/kommun-och-politik/forfattningssamling/": "1438-listing.html"
+  },
+  "count": 5,
+  "sample": {
+    "number": "jgwblqts",
+    "title": "Allmänna bestämmelser vatten och avlopp",
+    "url": "https://www.dalsed.se/media/jgwblqts/abva2009.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för folkhälsorådet",
+    "Arbetsordning för kommunfullmäktige",
+    "Reglemente för kommunens revisorer"
+  ]
+}
