@@ -1642,6 +1642,74 @@
         "(?i)Regler för i vilken ordning"
       ]
     },
+    "1214": {
+      "name": "Svalöv",
+      "issuer": "Svalövs kommun",
+      "region_code": "12",
+      "collection": "Svalövs kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.svalov.se"],
+      "listings": [
+        "https://www.svalov.se/kommun--politik/forfattningssamling",
+        "https://www.svalov.se/kommun--politik/forfattningssamling/bestammelser-som-riktar-sig-till-dig-som-medborgare",
+        "https://www.svalov.se/kommun--politik/forfattningssamling/taxor-och-avgifter"
+      ]
+    },
+    "1257": {
+      "name": "Örkelljunga",
+      "issuer": "Örkelljunga kommun",
+      "region_code": "12",
+      "collection": "Örkelljunga kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.orkelljunga.se"],
+      "listings": [
+        "https://www.orkelljunga.se/16/kommun-och-politik/kommunal-forfattningssamling/allmanna-foreskrifter.html",
+        "https://www.orkelljunga.se/16/kommun-och-politik/kommunal-forfattningssamling/avgifter-och-taxor.html",
+        "https://www.orkelljunga.se/16/kommun-och-politik/kommunal-forfattningssamling/natur-och-miljo.html"
+      ]
+    },
+    "1270": {
+      "name": "Tomelilla",
+      "issuer": "Tomelilla kommun",
+      "region_code": "12",
+      "collection": "Tomelilla kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["tomelilla.se"],
+      "listings": [
+        "https://tomelilla.se/kommunochpolitik/kommunensorganisation/organisationochstyrning/styrdokument/forfattningssamling.1670.html"
+      ],
+      "title_include": ["^A \\d", "^E \\d", "allm(ä|a)nna best(ä|a)mmelser f(ö|o)r anv(ä|a)ndande"],
+      "title_exclude": ["riktlinje", "plan\\b", "milj(ö|o)konsekvens", "avtal"]
+    },
+    "1273": {
+      "name": "Osby",
+      "issuer": "Osby kommun",
+      "region_code": "12",
+      "collection": "Osby kommuns lokala föreskrifter",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.osby.se"],
+      "listings": ["https://www.osby.se/kommun--kontakt/kommunfakta/lokala-foreskrifter.html"],
+      "title_strip": [
+        ",?\\s*(\\(?\\s*)?(ö|o)ppnas i (ett )?nytt f(ö|o)nster\\.?\\)?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\.(pdf|docx?)\\s*$",
+        "\\s*\\(pdf\\)\\s*$"
+      ]
+    },
+    "1277": {
+      "name": "Åstorp",
+      "issuer": "Åstorps kommun",
+      "region_code": "12",
+      "collection": "Åstorps kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["astorp.se"],
+      "listings": ["https://astorp.se/kommun-och-politik/kommunal-forfattningssamling.html"]
+    },
     "1280": {
       "name": "Malmö",
       "issuer": "Malmö stad",
@@ -1667,6 +1735,73 @@
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
+    "1282": {
+      "name": "Landskrona",
+      "issuer": "Landskrona stad",
+      "region_code": "12",
+      "collection": "Landskrona stads författningssamling",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["www.landskrona.se", "cms.landskrona.se"],
+      "listings": [
+        "https://www.landskrona.se/kommun-och-politik/kommunfakta/forfattningssamling-och-styrdokument/foreskrifter-och-bestammelser/",
+        "https://www.landskrona.se/kommun-och-politik/kommunfakta/forfattningssamling-och-styrdokument/avgifter-och-taxor/"
+      ],
+      "link_pattern": "^https://(www\\.landskrona\\.se|cms\\.landskrona\\.se)/(wp-content|app)/uploads/.*\\.pdf$",
+      "number": [{"from": "href", "pattern": "/uploads/(?:\\d{4}/\\d{2}/)?([^/]+)\\.pdf$"}],
+      "title_strip": ["\\s*\\(pdf(,\\s*[\\d.,]+\\s*[kMG]?B)?\\)\\s*$"]
+    },
+    "1284": {
+      "name": "Höganäs",
+      "issuer": "Höganäs kommun",
+      "region_code": "12",
+      "collection": "Höganäs kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.hoganas.se"],
+      "listings": [
+        "https://www.hoganas.se/kommun--ledning/politik-och-demokrati/regler-policydokument-och-forfattningssamling/kommunal-forfattningssamling.html"
+      ]
+    },
+    "1285": {
+      "name": "Eslöv",
+      "issuer": "Eslövs kommun",
+      "region_code": "12",
+      "collection": "Eslövs kommuns författningssamling",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["eslov.se"],
+      "listings": [
+        "https://eslov.se/kommun-politik/kommunfakta/regler-och-styrande-dokument/foreskrifter-och-allmanna-bestammelser/",
+        "https://eslov.se/kommun-politik/kommunfakta/regler-och-styrande-dokument/taxor-och-avgifter/"
+      ],
+      "link_pattern": "^https://(eslov\\.se)/(wp-content|app)/uploads/.*\\.pdf$",
+      "number": [{"from": "href", "pattern": "/uploads/(?:\\d{4}/\\d{2}/)?([^/]+)\\.pdf$"}],
+      "title_strip": ["\\s*\\(pdf(,\\s*[\\d.,]+\\s*[kMG]?B)?\\)\\s*$"]
+    },
+    "1291": {
+      "name": "Simrishamn",
+      "issuer": "Simrishamns kommun",
+      "region_code": "12",
+      "collection": "Simrishamns kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.simrishamn.se"],
+      "listings": ["https://www.simrishamn.se/politik-och-paverkan/kommunal-forfattningssamling"]
+    },
+    "1315": {
+      "name": "Hylte",
+      "issuer": "Hylte kommun",
+      "region_code": "13",
+      "collection": "Hylte kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.hylte.se"],
+      "listings": [
+        "https://www.hylte.se/kommun-och-politik/forfattningssamling---regler-taxor-och-styrande-dokument/lokala-foreskrifter",
+        "https://www.hylte.se/kommun-och-politik/forfattningssamling---regler-taxor-och-styrande-dokument/taxor-och-avgifter"
+      ]
     },
     "1440": {
       "name": "Ale",

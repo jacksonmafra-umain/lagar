@@ -1,0 +1,18 @@
+{
+  "listings": {
+    "https://www.svalov.se/kommun--politik/forfattningssamling": "1214-listing.html",
+    "https://www.svalov.se/kommun--politik/forfattningssamling/bestammelser-som-riktar-sig-till-dig-som-medborgare": "1214-listing-2.html",
+    "https://www.svalov.se/kommun--politik/forfattningssamling/taxor-och-avgifter": "1214-listing-3.html"
+  },
+  "count": 27,
+  "sample": {
+    "number": "18.1727c61419bac4a6a0f5510b",
+    "title": "Lokala föreskrifter för människors hälsa och miljö",
+    "url": "https://www.svalov.se/download/18.1727c61419bac4a6a0f5510b/1768221167211/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n,%20antagna%202025-08-25.pdf"
+  },
+  "excluded": [
+    "Bestämmelser för utdelning av kulturpris",
+    "Bestämmelser för utdelning av kulturstipendium",
+    "Bestämmelser för utdelning av miljöpris"
+  ]
+}

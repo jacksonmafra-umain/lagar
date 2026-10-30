@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.hylte.se/kommun-och-politik/forfattningssamling---regler-taxor-och-styrande-dokument/lokala-foreskrifter": "1315-listing.html",
+    "https://www.hylte.se/kommun-och-politik/forfattningssamling---regler-taxor-och-styrande-dokument/taxor-och-avgifter": "1315-listing-2.html"
+  },
+  "count": 19,
+  "sample": {
+    "number": "18.8cccb0a187da6d9bebc8c",
+    "title": "Lokala hälsoskyddsföreskrifter KF § 76 2020",
+    "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc8c/1683033170268/Lokala%20h%C3%A4lsoskyddsf%C3%B6reskrifter%20KF%20%C2%A7%2076%202020.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för grävning i allmän platsmark - beslutad version",
+    "Plan och byggtaxa 2026"
+  ]
+}
