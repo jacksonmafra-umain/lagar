@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://mariestad.se/kommun-och-politik/kommunfakta/styrande-dokument-taxor-och-avgifter": "1493-listing.html"
+  },
+  "count": 19,
+  "sample": {
+    "number": "18.4aee9a2b1946375fe5539b",
+    "title": "Avgifter inom Äldre- och omsorgsförvaltningen",
+    "url": "https://mariestad.se/download/18.4aee9a2b1946375fe5539b/1766053275703/Avgifter%20inom%20%C3%84ldre%20och%20omsorgsf%C3%B6rvaltningen%202026%20-%20broschyr.pdf"
+  },
+  "excluded": [
+    "Landsbygdsstrategi",
+    "Strategi för Agenda 2030",
+    "Bilaga till strategi för Agenda 2030"
+  ]
+}

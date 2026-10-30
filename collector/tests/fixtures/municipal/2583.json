@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.haparanda.se/kommun-och-politik/demokrati-och-insyn/forfattningssamling-": "2583-listing.html"
+  },
+  "count": 18,
+  "sample": {
+    "number": "18.31f8a54518fa4be5f643e335",
+    "title": "Egenavgifter färdtjänst",
+    "url": "https://www.haparanda.se/download/18.31f8a54518fa4be5f643e335/1717072942176/Egenavgifter%20f%C3%A4rdtj%C3%A4nst.pdf"
+  },
+  "excluded": [
+    "Kommunfullmäktiges arbetsordning",
+    "Delegationsordning barn-och ungdomsnämnden",
+    "Delegationsordning kommunstyrelsen"
+  ]
+}

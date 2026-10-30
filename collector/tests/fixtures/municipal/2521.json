@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.pajala.se/kommun-politik-och-service/ledning-styrning-och-politik/styrdokument/": "2521-listing.html"
+  },
+  "count": 11,
+  "sample": {
+    "number": "z5tjxj4l",
+    "title": "Avfallsföreskrifter 2025-01-01",
+    "url": "https://www.pajala.se/media/z5tjxj4l/pajala-avfallsf%C3%B6reskrifter-20241115.pdf"
+  },
+  "excluded": [
+    "Kommunfullmäktiges arbetsordning",
+    "Styrdokument krisberedskap",
+    "Arbetsmiljöpolicy"
+  ]
+}

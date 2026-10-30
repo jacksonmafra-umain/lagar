@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.pitea.se/invanare/Kommun-politik/politik/Styrning-och-ledning/styrande-dokument/kommunal-foreskrift/": "2581-listing1.html",
+    "https://www.pitea.se/invanare/Kommun-politik/politik/Styrning-och-ledning/styrande-dokument/taxa/": "2581-listing2.html"
+  },
+  "count": 57,
+  "sample": {
+    "number": "15/Allmänna bestämmelser om användande av va-och avloppsanläggningar (ABVA 07)",
+    "title": "Allmänna bestämmelser om användande av va-och avloppsanläggningar (ABVA 07)",
+    "url": "https://www.pitea.se/BOKHYLLAN/Styrande%20dokument/15.%20Kommunal%20f%C3%B6reskrift/Allm%C3%A4nna%20best%C3%A4mmelser%20om%20anv%C3%A4ndande%20av%20va-och%20avloppsanl%C3%A4ggningar%20(ABVA%2007).pdf"
+  },
+  "excluded": []
+}
