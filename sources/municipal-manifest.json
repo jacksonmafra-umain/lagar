@@ -15274,6 +15274,24 @@
       "url": "https://burlov.se/download/18.e03cf9c198e617a9003391e/1756911323112/F%C3%B6reskrifter%20f%C3%B6r%20avfallshantering.pdf"
     },
     {
+      "bytes": 6255,
+      "content_type": "text/markdown",
+      "id": "1233-lokala-halsoskyddsforeskrifter",
+      "municipality_code": "1233",
+      "retrieved_at": "2026-10-30T22:29:49Z",
+      "sha256": "886a617c4b744b6f39732836fa262794c278c042dc432d37f430a0826a2643bc",
+      "url": "https://vellinge.se/kommun-och-politik/kommunfakta/styrande-dokument/lokala-halsoskyddsforeskrifter"
+    },
+    {
+      "bytes": 11579,
+      "content_type": "text/markdown",
+      "id": "1233-lokala-ordningsforeskrifter",
+      "municipality_code": "1233",
+      "retrieved_at": "2026-10-30T22:29:50Z",
+      "sha256": "7037ed337010c6d57b8ab2cc0a012bcef0cd95b3b3db5301b58bcbcc58a99fda",
+      "url": "https://vellinge.se/kommun-och-politik/kommunfakta/styrande-dokument/lokala-ordningsforeskrifter"
+    },
+    {
       "bytes": 173631,
       "content_type": "application/pdf",
       "id": "1257-18-11841f7e17e30004e6f481b6",
@@ -15650,6 +15668,456 @@
       "retrieved_at": "2026-10-30T15:26:39Z",
       "sha256": "77521cf1f3c354759be04181dab1be947101e628c895402e3ac5c84efc314366",
       "url": "https://www.kavlinge.se/download/18.d00da2619368103fcfd97/1732885155902/Avgift%20f%C3%B6r%20utskrift%20och%20kopiering.pdf"
+    },
+    {
+      "bytes": 8482682,
+      "content_type": "application/pdf",
+      "id": "1262-06ced53241f3bca1f6d5-15c1-4f28-ae38-5533d6638b36",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:07Z",
+      "sha256": "763e997fb6e072e34b8e02d7671b64de9b9313b9e900bbbb4ad88840382e286d",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/06ced53241f3bca1f6d5-15c1-4f28-ae38-5533d6638b36?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211"
+    },
+    {
+      "bytes": 4078319,
+      "content_type": "application/pdf",
+      "id": "1262-0c799eb0c4bc73a1eca2-bea8-48b4-80e1-4a396fbae142",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:22Z",
+      "sha256": "8c43cbeae7926b28d2dc4e8712977cdb0b3ce5f1ebe65912da5bea005bed6c72",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/0c799eb0c4bc73a1eca2-bea8-48b4-80e1-4a396fbae142?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 153022,
+      "content_type": "application/pdf",
+      "id": "1262-0dc2f5c49c2815a0421b-1814-4f43-8247-c1a56fa318cf",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:41Z",
+      "sha256": "d5514033502d89fe8939e7fe8049c79caadfc11f4619c2423c619ff3a9783638",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/0dc2f5c49c2815a0421b-1814-4f43-8247-c1a56fa318cf?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 141394,
+      "content_type": "application/pdf",
+      "id": "1262-0f0cdcef919ced9b57e5-9e81-4c62-90ed-c2ab9ee7124a",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:29Z",
+      "sha256": "9776efda28d7f867590bc9c983a8861be8d3ed27c33e625e988618f5a064e1da",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/0f0cdcef919ced9b57e5-9e81-4c62-90ed-c2ab9ee7124a?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-a1d17bce35538298225"
+    },
+    {
+      "bytes": 1671028,
+      "content_type": "application/pdf",
+      "id": "1262-16096fe70b8892976cc9-aaa5-4f44-a928-fb03127abe59",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:21:35Z",
+      "sha256": "4666d1f8321f8a8a821b89dbcd76ec810cf9f6a246dbaff87360a87e19418651",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/16096fe70b8892976cc9-aaa5-4f44-a928-fb03127abe59?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211"
+    },
+    {
+      "bytes": 197764,
+      "content_type": "application/pdf",
+      "id": "1262-1a09c452a5fb97fb1a7e-8579-4f5a-8c5f-b3a8e9897a54",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:53Z",
+      "sha256": "bc770ec6fabef0c9dbf9f3a8daca4e4511940f19a9ae647a7204fe1b3aab9a78",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/1a09c452a5fb97fb1a7e-8579-4f5a-8c5f-b3a8e9897a54?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-86bb1dfbdada8298246"
+    },
+    {
+      "bytes": 188742,
+      "content_type": "application/pdf",
+      "id": "1262-1a962c06ceee1e5e3ea4-0b2f-4a67-bcb4-3840400f4c91",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:28Z",
+      "sha256": "2e5f13364401506246a3a6c90bcdf70a58f91f165149bbc56bc59a2beb1b6666",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/1a962c06ceee1e5e3ea4-0b2f-4a67-bcb4-3840400f4c91?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-a1d17bce35538298225"
+    },
+    {
+      "bytes": 140398,
+      "content_type": "application/pdf",
+      "id": "1262-28e0a7b0176fd9c5fabe-87b4-49f6-aeb1-eae395d8a1e7",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:42Z",
+      "sha256": "8fcf6993d485fc6490dee35248d317df965601fc9dc209aab28e2833662b6857",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/28e0a7b0176fd9c5fabe-87b4-49f6-aeb1-eae395d8a1e7?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 711601,
+      "content_type": "application/pdf",
+      "id": "1262-30bca513fab731936576-33f7-468c-8057-b11ea3e002e1",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:26Z",
+      "sha256": "35d44fc6abbb165d308745e39321b1827d3e84478fb3a0d956aefe917b47523e",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/30bca513fab731936576-33f7-468c-8057-b11ea3e002e1?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 569481,
+      "content_type": "application/pdf",
+      "id": "1262-30fcccd42160e75d2531-4c08-4237-98c7-e607d18396db",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:34Z",
+      "sha256": "4185d2ffa1a8d0cb37939a575f122a13c7e310058aa8e8124bd7dffde4b69cc0",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/30fcccd42160e75d2531-4c08-4237-98c7-e607d18396db?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 1080803,
+      "content_type": "application/pdf",
+      "id": "1262-326873eb08c9a27065bc-7b1b-4d40-ae9d-695116f728ed",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:15Z",
+      "sha256": "3d712cc5c7acf679893297f06d420b4fa2ba4b0981cfc5ab88c10f5aa52f4bc2",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/326873eb08c9a27065bc-7b1b-4d40-ae9d-695116f728ed?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 153894,
+      "content_type": "application/pdf",
+      "id": "1262-3475824c10734a6b539c-5a0f-4daa-b268-8d84560e0609",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:40Z",
+      "sha256": "9210be9707645721e552d4ce06457f0bef223ca8bbdf796825151d210df8ae0a",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/3475824c10734a6b539c-5a0f-4daa-b268-8d84560e0609?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 230920,
+      "content_type": "application/pdf",
+      "id": "1262-387f4be220e6f2f984bf-ba01-4178-a80b-cbcda90aab2b",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:32Z",
+      "sha256": "9b30a49a32655d5aa631233bd3a106236649ca60723cdfa8c82bb124932f84f1",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/387f4be220e6f2f984bf-ba01-4178-a80b-cbcda90aab2b?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 717852,
+      "content_type": "application/pdf",
+      "id": "1262-3a2fee0a9ea67a547d8b-cd04-4a6e-9fba-b42c37d530e9",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:35Z",
+      "sha256": "5755f77e9068db43ba96f4ba8d388a14dea2825ae8498a2aedd59e0538cd11be",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/3a2fee0a9ea67a547d8b-cd04-4a6e-9fba-b42c37d530e9?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 7816579,
+      "content_type": "application/pdf",
+      "id": "1262-3b0f57df224cef821aef-b7b8-4aed-af3c-8540b58cebea",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:14Z",
+      "sha256": "327ab3db16b80fb88714c44208ff4716d43eb13755290f9d3c3fba29bb9468d0",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/3b0f57df224cef821aef-b7b8-4aed-af3c-8540b58cebea?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 902587,
+      "content_type": "application/pdf",
+      "id": "1262-3dca5f121d07928e15a2-3584-426f-8ce4-d79274b22661",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:53Z",
+      "sha256": "b5fa6a03c4b9d1187da00a8500c48730a7b6784c8588ec02bd61ea3b3a4951bb",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/3dca5f121d07928e15a2-3584-426f-8ce4-d79274b22661?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-5f230e0c944e8298243"
+    },
+    {
+      "bytes": 175829,
+      "content_type": "application/pdf",
+      "id": "1262-3f563abaec568586b82c-64b5-4c33-85fa-29aff7707d1c",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:33Z",
+      "sha256": "87a9a300cfe62d27e176226e5030d7b6672623c904693c695e069cf0fcae80db",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/3f563abaec568586b82c-64b5-4c33-85fa-29aff7707d1c?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 3646646,
+      "content_type": "application/pdf",
+      "id": "1262-48673dd9b65dc717c072-eb8d-4918-a0c5-cb125a9a3452",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:23Z",
+      "sha256": "9bfbc0d0b168e870546d56ff8ad672e68f58bbe6b4649b05c6e0fce94bb37862",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/48673dd9b65dc717c072-eb8d-4918-a0c5-cb125a9a3452?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 197203,
+      "content_type": "application/pdf",
+      "id": "1262-49f5322fa9bafcdf1055-7a1a-4cae-b58f-43f1470cfe7a",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:51Z",
+      "sha256": "0377a0affd0253ebcbcb3a53d03fe6f65c9f510986e5a2fc80a315786d1c196d",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/49f5322fa9bafcdf1055-7a1a-4cae-b58f-43f1470cfe7a?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-9d6d23a44a418298231"
+    },
+    {
+      "bytes": 307436,
+      "content_type": "application/pdf",
+      "id": "1262-4eceba0e298a5274f49b-445d-4fd2-9504-9e832b05ff3c",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:45Z",
+      "sha256": "1804fe9bfbff1187efaa9419ae33e58d92a1141d30a724e9d715e590892218fd",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/4eceba0e298a5274f49b-445d-4fd2-9504-9e832b05ff3c?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 140648,
+      "content_type": "application/pdf",
+      "id": "1262-540de7c2ae510202ec0d-6732-46f0-be51-efe52305f260",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:30Z",
+      "sha256": "7f89a21f67c48a1391726264bbb7bd6ad16a8c48cdaca3756b486546259f8003",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/540de7c2ae510202ec0d-6732-46f0-be51-efe52305f260?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-a1d17bce35538298225"
+    },
+    {
+      "bytes": 162461,
+      "content_type": "application/pdf",
+      "id": "1262-5b0b878d0d289d88ffd6-bd4d-4a52-b6c7-243d0c0226cd",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:37Z",
+      "sha256": "2f8df634f7e5723494240856682227acea62d1ba1d0470fe82de2c1e0091ce6a",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/5b0b878d0d289d88ffd6-bd4d-4a52-b6c7-243d0c0226cd?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 1349078,
+      "content_type": "application/pdf",
+      "id": "1262-5b808a53171bda5a89ec-cc09-45bb-bcea-241a7b0216fe",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:19Z",
+      "sha256": "0723006e8bcbc835e027c5037e5446861ba81fd3ddcf5878f4e606a5df021c06",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/5b808a53171bda5a89ec-cc09-45bb-bcea-241a7b0216fe?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 278342,
+      "content_type": "application/pdf",
+      "id": "1262-6833c6d2ad4c6ea340ca-becf-4633-b198-2a809b4d0905",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:46Z",
+      "sha256": "33b0d4c751e417b9ba3e8cbebf873cfb4231a9cdfe12dda424b2085bbc28921c",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/6833c6d2ad4c6ea340ca-becf-4633-b198-2a809b4d0905?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-43ff12c2b8088298234"
+    },
+    {
+      "bytes": 702316,
+      "content_type": "application/pdf",
+      "id": "1262-6d497b9611f3f7c07d36-0013-4fe6-9fdc-52260c47ddc5",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:55Z",
+      "sha256": "092dfacc608acd8fed1426131f1c71e89ba138199c0ae252c726dfb50b1322d0",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/6d497b9611f3f7c07d36-0013-4fe6-9fdc-52260c47ddc5?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-86bb1dfbdada8298246"
+    },
+    {
+      "bytes": 317820,
+      "content_type": "application/pdf",
+      "id": "1262-6e1e675247c9fb499720-ebdf-4b91-bc4a-816357f28c5f",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:31Z",
+      "sha256": "e07bd7c2e32bf4d1495fc294fe0962e41dbaf0b294d7c79c3160f76bdb12cb50",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/6e1e675247c9fb499720-ebdf-4b91-bc4a-816357f28c5f?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 1258015,
+      "content_type": "application/pdf",
+      "id": "1262-7615994d3bc56fca69ac-661e-40de-b977-5376af78c203",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:11Z",
+      "sha256": "083fe9bad8febf32d328ed266796df19bb97f4ca70c65ef5e66bb67fa1ffe335",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/7615994d3bc56fca69ac-661e-40de-b977-5376af78c203?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211"
+    },
+    {
+      "bytes": 104704,
+      "content_type": "application/pdf",
+      "id": "1262-772dea836064e67a9092-01f7-4ee7-a6dd-2099fb34c469",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:36Z",
+      "sha256": "cc2cac22efd8a803e2def56bed21ee251266dce3eeeaafc1da5eb942c14a17e8",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/772dea836064e67a9092-01f7-4ee7-a6dd-2099fb34c469?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 192005,
+      "content_type": "application/pdf",
+      "id": "1262-87041e8fd16d830509dc-b299-4fda-b054-c34af817249d",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:49Z",
+      "sha256": "5b8c614349df67a9a0192b9f9a2fc2a5d0139ea6c447794118008359e0b681aa",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/87041e8fd16d830509dc-b299-4fda-b054-c34af817249d?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-9d6d23a44a418298231"
+    },
+    {
+      "bytes": 3105759,
+      "content_type": "application/pdf",
+      "id": "1262-90eb6aed07cf3e432b76-6ae9-45d4-98e2-aa9670299c41",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:24Z",
+      "sha256": "dfd2a5c0b7bb85581ea5797f5e59639f4fc78082cc14f772f68ee8aaeeadcdd2",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/90eb6aed07cf3e432b76-6ae9-45d4-98e2-aa9670299c41?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 2542999,
+      "content_type": "application/pdf",
+      "id": "1262-9241a7390961248ce003-1e7c-4758-bbcd-6503dc7d92fd",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:08Z",
+      "sha256": "76a2ca6b594cabbbc388f4c77e6485e2d64f7a35d939b608d9b7caa1586a4b13",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/9241a7390961248ce003-1e7c-4758-bbcd-6503dc7d92fd?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211"
+    },
+    {
+      "bytes": 87707,
+      "content_type": "application/pdf",
+      "id": "1262-92c50585a0e742df7a42-a011-4437-b319-1091b77a88bf",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:50Z",
+      "sha256": "cdda7bf1031624c4c73a7cea0dbeb3b592fed129bcfca08b83f1d5585c7d877a",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/92c50585a0e742df7a42-a011-4437-b319-1091b77a88bf?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-9d6d23a44a418298231"
+    },
+    {
+      "bytes": 211883,
+      "content_type": "application/pdf",
+      "id": "1262-9dc6a792508472a7103e-f4ca-4a77-8450-1b3131881c15",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:52Z",
+      "sha256": "1fa0e2831d32a472b95e2c7efd51f842fee142522a8dce0fb7bef1a707590ad3",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/9dc6a792508472a7103e-f4ca-4a77-8450-1b3131881c15?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-9d6d23a44a418298231"
+    },
+    {
+      "bytes": 5869137,
+      "content_type": "application/pdf",
+      "id": "1262-a52063c1e3156bd89360-245b-4e7a-a88b-cc8fbf232eef",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:21:34Z",
+      "sha256": "f34212b8922754f3b413725ceb51f4fc78ecf7f18a0f83a1fc75e95fc5f558b5",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/a52063c1e3156bd89360-245b-4e7a-a88b-cc8fbf232eef?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211"
+    },
+    {
+      "bytes": 2224882,
+      "content_type": "application/pdf",
+      "id": "1262-abb0f9f63ab836bcb423-d254-4462-8d17-465e938f73c2",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:25Z",
+      "sha256": "d095273f6f31d7492f734a477d91481881d53ae74d87733364c2ee8f4199a3a9",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/abb0f9f63ab836bcb423-d254-4462-8d17-465e938f73c2?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 168682,
+      "content_type": "application/pdf",
+      "id": "1262-b3047d880dd53cf42bdb-46eb-4fc2-b8e4-f60e40d01798",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:03Z",
+      "sha256": "ad9112f404fce9422be2d17f2c59d1f105a6d3c9b4a66de3a93db7f26bb76942",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/b3047d880dd53cf42bdb-46eb-4fc2-b8e4-f60e40d01798?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211"
+    },
+    {
+      "bytes": 551941,
+      "content_type": "application/pdf",
+      "id": "1262-b6a5c7903064d4c12d19-ad87-4790-b118-3560cd7f7083",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:46Z",
+      "sha256": "920da9e02bfa6db99739cdbf530eecd6538a6f875509dc1f15f4dd9a82d1f1ed",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/b6a5c7903064d4c12d19-ad87-4790-b118-3560cd7f7083?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-43ff12c2b8088298234"
+    },
+    {
+      "bytes": 312707,
+      "content_type": "application/pdf",
+      "id": "1262-ba776ac4e938ed7f76ab-9eef-4a41-939e-61e206b8af7f",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:05Z",
+      "sha256": "607931d4b55956211ce2de24204a03a13dae5407f8f989028582a30940bada08",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/ba776ac4e938ed7f76ab-9eef-4a41-939e-61e206b8af7f?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211"
+    },
+    {
+      "bytes": 220892,
+      "content_type": "application/pdf",
+      "id": "1262-c6292beef38856c972e2-f54e-471f-bc9a-243b19b72480",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:39Z",
+      "sha256": "f9ffcdf5a825d4b37996dfd5f9cc6020669f14b3d8fe78befd31c6c43bb86acc",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/c6292beef38856c972e2-f54e-471f-bc9a-243b19b72480?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 85585,
+      "content_type": "application/pdf",
+      "id": "1262-c9b3f08ae400dad4b995-522f-40f8-bcfc-d6724a685a33",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:38Z",
+      "sha256": "931c628632a942e39ab490f391781e30dca9602db61619b9e91985107e8aea75",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/c9b3f08ae400dad4b995-522f-40f8-bcfc-d6724a685a33?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 2035453,
+      "content_type": "application/pdf",
+      "id": "1262-cac96b58f24d9a9031d6-66e0-419b-bd21-06c15273599c",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:19Z",
+      "sha256": "54362770080b1d5b24329d1892edfe2ced799a2dc1cbc3e19469a09b26a13508",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/cac96b58f24d9a9031d6-66e0-419b-bd21-06c15273599c?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 2303698,
+      "content_type": "application/pdf",
+      "id": "1262-cc2524918f8895eeedb5-6616-4fae-8537-de8974db08f1",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:18Z",
+      "sha256": "be0240dbc92ac50d3efda4d6acc3b3b8a6be368f19577606241cb011ac9e54c0",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/cc2524918f8895eeedb5-6616-4fae-8537-de8974db08f1?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 486958,
+      "content_type": "application/pdf",
+      "id": "1262-cce6e2f55413befcb700-138e-4944-bd07-71dc77b33a5e",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:43Z",
+      "sha256": "dc9a6be4bfefb91d525137dd37be7e28030d5c05a357b2c3e25dc2fdedb15885",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/cce6e2f55413befcb700-138e-4944-bd07-71dc77b33a5e?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228"
+    },
+    {
+      "bytes": 156289,
+      "content_type": "application/pdf",
+      "id": "1262-ce275c40b587e488cb83-6ff6-4948-adcc-39dcb3d6d793",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:09Z",
+      "sha256": "044bbf2ed353d9c3d0bb380a08cdd3e5ddda0f61e851e390519cc8e6dd2dfc79",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/ce275c40b587e488cb83-6ff6-4948-adcc-39dcb3d6d793?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211"
+    },
+    {
+      "bytes": 1182012,
+      "content_type": "application/pdf",
+      "id": "1262-cf9db7bf5e63897d69f1-6bb2-4f31-b141-a3510114450e",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:14Z",
+      "sha256": "d514e6517d3672c3e484bc5715508be2542683fe8ed739bb457291b3d14db244",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/cf9db7bf5e63897d69f1-6bb2-4f31-b141-a3510114450e?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 139725,
+      "content_type": "application/pdf",
+      "id": "1262-d55829457b6c2fe98161-d1ef-4666-8f10-fb33032a1682",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:47Z",
+      "sha256": "b75d69a759cd37e9e5b2a494c5fd165dedb2c955a544e6ac614d57d2fef08506",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/d55829457b6c2fe98161-d1ef-4666-8f10-fb33032a1682?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-9d6d23a44a418298231"
+    },
+    {
+      "bytes": 2202482,
+      "content_type": "application/pdf",
+      "id": "1262-ddd53a1cd2f46d9e663b-0e2b-4fd9-9ccc-81c16dd5ddf9",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:21Z",
+      "sha256": "024df41d8d725fb54f0c57b16c82373e349df07f5f5949e6b8fc00aef2db5867",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/ddd53a1cd2f46d9e663b-0e2b-4fd9-9ccc-81c16dd5ddf9?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 2094856,
+      "content_type": "application/pdf",
+      "id": "1262-ded1f961ae4a56d7f899-4bf7-4d91-a7ae-b3ec5fefa317",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:17Z",
+      "sha256": "45e0a3082bb5c6e55b299ee083cd05c5b75b56469b56f8461e230217b6049517",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/ded1f961ae4a56d7f899-4bf7-4d91-a7ae-b3ec5fefa317?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064"
+    },
+    {
+      "bytes": 152050,
+      "content_type": "application/pdf",
+      "id": "1262-e5fb6b5524b4e75d7f3d-bca4-4f09-aea7-e6661bc6c690",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:12Z",
+      "sha256": "37159a8dc024a6ac62a195da7f41e40f82c31aa58034518a4b1bc7526417d448",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/e5fb6b5524b4e75d7f3d-bca4-4f09-aea7-e6661bc6c690?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211"
+    },
+    {
+      "bytes": 356758,
+      "content_type": "application/pdf",
+      "id": "1262-f65b2899f5b2bebb6fc3-4ce5-4674-9834-448269afa4ca",
+      "municipality_code": "1262",
+      "retrieved_at": "2026-10-30T22:22:27Z",
+      "sha256": "373d1ee7edd0e37e8158c20a1888ac82fb8b9da695cbadd6fd95af5b7e839919",
+      "url": "https://docs.netpublicator.com/api/public/r01696490/document/f65b2899f5b2bebb6fc3-4ce5-4674-9834-448269afa4ca?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-a1d17bce35538298225"
     },
     {
       "bytes": 89356,
@@ -16874,6 +17342,267 @@
       "retrieved_at": "2026-10-30T14:58:14Z",
       "sha256": "4c74982a96954f252f15877f028449dc509222d6603c55ec9384d77a5c6ba9a1",
       "url": "https://astorp.se/download/18.b986b9d1768421a1b549f5d/1610022996820/Taxor%20f%C3%B6r%20m%C3%A5ltider%20p%C3%A5%20trygghetsboendenas%20restauranger.pdf"
+    },
+    {
+      "bytes": 287133,
+      "content_type": "application/pdf",
+      "id": "1278-18-1dbe752318bf2416daa4423",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:56Z",
+      "sha256": "8cfaddfc5a5aee82e0221c9f94f9f3870dae067e25fc99b046f7044922fb782c",
+      "url": "https://www.bastad.se/download/18.1dbe752318bf2416daa4423/1700668849821/Taxa-for-offentlig-kontroll-enligt-lag-om-foder-och-animaliska-biprodukter.pdf"
+    },
+    {
+      "bytes": 324361,
+      "content_type": "application/pdf",
+      "id": "1278-18-1dbe752318bf2416daa4438",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:55Z",
+      "sha256": "4d8a049f927a4e685ae04bcdc99e3406c072fceb5fa5023981de2ca83fcdcf16",
+      "url": "https://www.bastad.se/download/18.1dbe752318bf2416daa4438/1700668977672/Taxa-for-offentlig-kontroll-och-annan-offentlig-verksamhet-inom-livsmedelslagstiftningens-omr%C3%A5de.pdf"
+    },
+    {
+      "bytes": 34699,
+      "content_type": "application/pdf",
+      "id": "1278-18-2d1dbb0319a154a8a0726050",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:45Z",
+      "sha256": "d902d235b2e041b7fb3134e6eb6478c914a7962bee33803ea8a7b352eafff7c3",
+      "url": "https://www.bastad.se/download/18.2d1dbb0319a154a8a0726050/1761749339770/Bibliotekstaxa.pdf"
+    },
+    {
+      "bytes": 385670,
+      "content_type": "application/pdf",
+      "id": "1278-18-3611e8ab193955c004666d2d",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:48Z",
+      "sha256": "abd42868620b61aa8cf40f36f2c1260639b8cfe050134be5cf5761c4d160d33e",
+      "url": "https://www.bastad.se/download/18.3611e8ab193955c004666d2d/1734604760906/Plan-och-bygglovtaxa.pdf"
+    },
+    {
+      "bytes": 161486,
+      "content_type": "application/pdf",
+      "id": "1278-18-3611e8ab193955c004666d2e",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:50Z",
+      "sha256": "5bcc10be06e508a77c17cf9a65f32e73665bdb4495500b95b498538fb6a69d3e",
+      "url": "https://www.bastad.se/download/18.3611e8ab193955c004666d2e/1734604761007/Taxa-for-geodata.pdf"
+    },
+    {
+      "bytes": 1057553,
+      "content_type": "application/pdf",
+      "id": "1278-18-46edf62d1949f16b8e015714",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:55:11Z",
+      "sha256": "25ee958b89537155ca6ca183ebb47dc69732adae7142dd652148ab339d852b96",
+      "url": "https://www.bastad.se/download/18.46edf62d1949f16b8e015714/1737984207521/Renhallningsordning-2025-2032-for-Bastads-kommun.pdf"
+    },
+    {
+      "bytes": 1629515,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388560",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:41Z",
+      "sha256": "29a5526651d0318baa11df26778f4b02c081be6adb437f067db87d560dc73d5c",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388560/1737013176485/Avfallstaxa.pdf"
+    },
+    {
+      "bytes": 511588,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388561",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:42Z",
+      "sha256": "9baf4ef2d40dc50e624074e11c8213325111d9911744b9a4768d335aac690d34",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388561/1737013192881/Avgifter-vard-och-omsorg.pdf"
+    },
+    {
+      "bytes": 127593,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388562",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:42Z",
+      "sha256": "71bd4c961975881b28f3e7e85918fda4d1e96ee8a4de559ded5cbd39f747bf0c",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388562/1697612084370/Avgifter-vid-utfardande-av-parkeringsanmarkningar-i-Bastads-kommun.pdf"
+    },
+    {
+      "bytes": 232738,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388564",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:43Z",
+      "sha256": "5b43f78da07fb64f3f6a6a386a4b2c60c198e27a2da5974680126047faf73543",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388564/1737013563500/Barnomsorgstaxa.pdf"
+    },
+    {
+      "bytes": 18631,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388565",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:44Z",
+      "sha256": "482498e18a8801d9d7847a2f02156ddea6125a414f5ee625a3f8dc144bc67c77",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388565/1697612084437/Begravningsavgifter-och-medlemsavgift-till-Svenska-Kyrkan-vid-berakning-av-avgiften-f%C3%B6r-vard-och-omsorg.pdf"
+    },
+    {
+      "bytes": 4643986,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388569",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:48Z",
+      "sha256": "95998f743eb88cde761f09a2900802a90ed437cea6a5ab688337a7449bbd9823",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388569/1697612084517/Miljo-och-halsoskyddstaxa-for-Bastads-kommun.pdf"
+    },
+    {
+      "bytes": 224476,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb738856e",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:49Z",
+      "sha256": "a5ef366bca0d5e5609f04773c4ea277640d257ba8c6d6239a2eb425c278b371f",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb738856e/1697612084843/Samlad-taxa-for-provning-och-tillsyn-enligt-lagen-om-tobak-och-liknande-produkter-lag-om-tobaksfria-nikotinprodukter-samt-lag-om-kontroll-av-handel-med-vissa-receptfria-lakemedel.pdf"
+    },
+    {
+      "bytes": 173877,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388570",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:52Z",
+      "sha256": "00e70c420bca5cfb55ba208a5c449f4c70c5f3a9f14d6a31c82ea2ce548494ba",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388570/1697612084887/Taxa-for-kopiering-av-allmanna-handlingar-med-tillampningsanvisningar-for-kopiering-av-allmanna-handlingar.pdf"
+    },
+    {
+      "bytes": 194113,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388571",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:53Z",
+      "sha256": "1524b8c0c99add337b4eaa93dc8843fc673b1656489baf012a7673778ba76598",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388571/1697612084909/Taxa-for-marknadskontroll.pdf"
+    },
+    {
+      "bytes": 277092,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388573",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:57Z",
+      "sha256": "7b04447884eb1a8f5ac7b8d7b0c9e1fdff3a0c41e5cf29d8c6fc0f7cbc6df30d",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388573/1748856779478/Taxa-for-provning-och-tillsyn-enligt-alkohollagen.pdf"
+    },
+    {
+      "bytes": 174706,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388574",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:58Z",
+      "sha256": "0bad991344e1b39110939012434c2a3bb61a7d50657361eafaf63e134876a7f6",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388574/1697612084992/Taxa-for-tillsyn-enligt-LSO-samt-tillsyn-och-tillstand-enligt-LBE.pdf"
+    },
+    {
+      "bytes": 193915,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388575",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:59Z",
+      "sha256": "70fa3763ead51c4deae1eb460d4723a428f701d9dd2b9853673712d7968d6c26",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388575/1697612085014/Taxa-for-tillsyn-och-provning-enligt-lag-om-atgarder-mot-fororening-fran-fartyg.pdf"
+    },
+    {
+      "bytes": 215240,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388576",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:59Z",
+      "sha256": "069d413182ac4cff104698614aaafc4c49185626bdc7129bcd918299c57569cc",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388576/1766395666109/Taxa-for-upplatelse-av-offentlig-plats-och-torgplats-pa-salutorg-inom-Bastads-kommun.pdf"
+    },
+    {
+      "bytes": 94715,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388579",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:54:52Z",
+      "sha256": "a61f955c6024ff400b4c5f4643169fb5c307ec6ece5e76205d640c6217fe6894",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388579/1697612085088/Taxa-for-larmmottagning-av-automatiska-brandlarm.pdf"
+    },
+    {
+      "bytes": 77883,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb738857b",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:55:00Z",
+      "sha256": "c5a0b4476daf4e20bdafd360881ea129a6c1f4c127c6af83234a7e034ab6c656",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb738857b/1697612085121/Taxor-och-avgifter-for-kulturskolan.pdf"
+    },
+    {
+      "bytes": 1456208,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb738857c",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:55:02Z",
+      "sha256": "5f5bcb27016270e53e513332d96028aa04fc318e755197e47e716f000940c5a0",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb738857c/1766127880335/VA-taxa.pdf"
+    },
+    {
+      "bytes": 38613,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb738857d",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:55:04Z",
+      "sha256": "3d7245aedd2e31f7ff032bb82f8ce0398e078c4e346cd26fd40a323fc8c4a004",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb738857d/1697612085218/Yrkestaxa-f%C3%B6r-Torekovs-hamn.pdf"
+    },
+    {
+      "bytes": 90137,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb7388859",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:55:04Z",
+      "sha256": "6416326e942c7675fad9c49af90a514bdcbdebf154045a2d913cc927b01086ba",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb7388859/1697614773797/ABVA-Allmanna-bestammelser-f%C3%B6r-vatten-och-avlopp.pdf"
+    },
+    {
+      "bytes": 469798,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb738885a",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:55:06Z",
+      "sha256": "186de2da49f84c073791bef827607d5dd92c6d8500f5b735cd3f45cd749efbdc",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb738885a/1697614773823/Allmanna-lokala-ordningsforeskrifter-for-Bastads-kommun.pdf"
+    },
+    {
+      "bytes": 116048,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb738885c",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:55:08Z",
+      "sha256": "97a2251d132e0f7cef86e0d1f28783f2afbd41280e997e2f8e35987fd8a5d6d4",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb738885c/1748593257779/Lokala-foreskrifter-for-att-skydda-manniskans-halsa-och-miljo.pdf"
+    },
+    {
+      "bytes": 146015,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb738885d",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:55:09Z",
+      "sha256": "7e90221e56ec747a5834405868250c2d4b00d5590d2be34a3ca6a748342c4fe7",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb738885d/1697614773918/Lokala-ordningsforeskrifter-for-torghandel-i-Bastads-kommun.pdf"
+    },
+    {
+      "bytes": 30410,
+      "content_type": "application/pdf",
+      "id": "1278-18-767116d318b37dcb738885e",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:55:08Z",
+      "sha256": "32b0db8d301d2b4cb9019e0e7f80b73aeefb946ec4d555d13da92683fd63f314",
+      "url": "https://www.bastad.se/download/18.767116d318b37dcb738885e/1697614773941/Lokala-ordnings-och-trafikforeskrifter-f%C3%B6r-Bastads-och-Torekovs-hamnar.pdf"
+    },
+    {
+      "bytes": 62294,
+      "content_type": "application/pdf",
+      "id": "1278-18-78072fe418e5fb41ac17c97b",
+      "municipality_code": "1278",
+      "retrieved_at": "2026-10-30T22:55:06Z",
+      "sha256": "57400278ca44c4d9fbf9568e8787ce522e0d19ed7ee5605afac3aea7483a6abb",
+      "url": "https://www.bastad.se/download/18.78072fe418e5fb41ac17c97b/1745561539393/Foreskrifter-om-eldningsforbud.pdf"
     },
     {
       "bytes": 2045273,
@@ -30340,6 +31069,33 @@
       "url": "https://www.skara.se/kommunochpolitik/styrandedokument/taxorochavgifter/allmannabestammelsertaxaforprovningochtillsynenligtmiljobalken.875.html"
     },
     {
+      "bytes": 372013,
+      "content_type": "application/pdf",
+      "id": "1496-allmanna-bestammelser-for-brukande-av-skovde-kommuns-va-anlaggning",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-10-30T23:08:06Z",
+      "sha256": "3fcd1494b7878219217862b2180c09744d683148dc0e11f55c51168c1dcde69a",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/allmanna-bestammelser-for-brukande-av-skovde-kommuns-va-anlaggning.pdf"
+    },
+    {
+      "bytes": 20732107,
+      "content_type": "application/pdf",
+      "id": "1496-allmanna-lokala-ordningsforeskrifter-for-skovde-kommun",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-10-30T23:08:14Z",
+      "sha256": "0847f2f6e4566374afacf7966868cf5c28237f2e1466da50533323611175dfc0",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/allmanna-lokala-ordningsforeskrifter-for-skovde-kommun.pdf"
+    },
+    {
+      "bytes": 391345,
+      "content_type": "application/pdf",
+      "id": "1496-avfallsforeskrifter",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-10-30T23:08:10Z",
+      "sha256": "110c7a3c17c7d3f6c86b6e1c6255f34ce1f2a71bc6cbc29e2e279cce675f16f0",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/avfallsforeskrifter.pdf"
+    },
+    {
       "bytes": 940296,
       "content_type": "application/pdf",
       "id": "1496-avgifter-for-kopior-av-allmanna-handlingar",
@@ -30347,6 +31103,24 @@
       "retrieved_at": "2026-10-30T21:59:18Z",
       "sha256": "5e1a94ab41d0eef1d0addf810c3686118f2d79d46caf3f4ad6dc932920bff590",
       "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter/avgifter-for-kopior-av-allmanna-handlingar.pdf"
+    },
+    {
+      "bytes": 5602734,
+      "content_type": "application/pdf",
+      "id": "1496-lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-10-30T23:08:09Z",
+      "sha256": "2d7c80e95b9be583f36a03d969dd03d1ef62144a41b8a0976b41be3e6a1b6510",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo.pdf"
+    },
+    {
+      "bytes": 1257239,
+      "content_type": "application/pdf",
+      "id": "1496-lokala-ordningsforeskrifter-for-torghandel",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-10-30T23:08:07Z",
+      "sha256": "9eedb8f693c9d9308bb80018066f42310a08fc587b851c52a0abf0688c1209f6",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/lokala-ordningsforeskrifter-for-torghandel.pdf"
     },
     {
       "bytes": 260938,
@@ -36703,6 +37477,186 @@
       "url": "https://gagnef.se/wp-content/uploads/2023/06/Lokala-ordningsforeskrifter-for-torghandel-i-Gagnefs-kommun.pdf"
     },
     {
+      "bytes": 209391,
+      "content_type": "application/pdf",
+      "id": "2029-1a17e448f643976f2c49-313a-47df-89d2-dfbf6cb9dbef",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:42Z",
+      "sha256": "55b06d280427453b2bd6462f483c8b5ee818f349b15a3baca78fb0b4b89d9c75",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/1a17e448f643976f2c49-313a-47df-89d2-dfbf6cb9dbef?hash=2b5ddd99fd11365-c852205d0d836408848-cf6556acb8da6412478"
+    },
+    {
+      "bytes": 250716,
+      "content_type": "application/pdf",
+      "id": "2029-1c1beefc8b4d7d5e9c5f-dacc-4eb9-817b-f4a7291716d7",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:51Z",
+      "sha256": "4a4fcd4b1c53786317a2cc06e0252c7da7c1bfd942ca34a237d71ff3aad185be",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/1c1beefc8b4d7d5e9c5f-dacc-4eb9-817b-f4a7291716d7?hash=2b5ddd99fd11365-c852205d0d836408848-cf6556acb8da6412478"
+    },
+    {
+      "bytes": 907884,
+      "content_type": "application/pdf",
+      "id": "2029-216d4ac21fca9c763bcd-0389-49f4-bc1a-9f897abe760f",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:54Z",
+      "sha256": "d1581b819c17329119c00879c2b813f33f2e16a391f0a279764f078840eaa87d",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/216d4ac21fca9c763bcd-0389-49f4-bc1a-9f897abe760f?hash=2b5ddd99fd11365-c852205d0d836408848-6815ed67ca376412481"
+    },
+    {
+      "bytes": 181706,
+      "content_type": "application/pdf",
+      "id": "2029-2a8129efc02d3ae1d082-5927-4dfc-a2af-a5deea3f8673",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:50:01Z",
+      "sha256": "be40a0a9b9856d91d70afa375d88c9624e93128ddde568562d4784b4925d83af",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/2a8129efc02d3ae1d082-5927-4dfc-a2af-a5deea3f8673?hash=2b5ddd99fd11365-c852205d0d836408848-6815ed67ca376412481-af650122c29e8283213"
+    },
+    {
+      "bytes": 250716,
+      "content_type": "application/pdf",
+      "id": "2029-63572f1ca570758ccdf0-6321-4ed6-89d7-bbec5c38b50b",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:59Z",
+      "sha256": "4a4fcd4b1c53786317a2cc06e0252c7da7c1bfd942ca34a237d71ff3aad185be",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/63572f1ca570758ccdf0-6321-4ed6-89d7-bbec5c38b50b?hash=2b5ddd99fd11365-c852205d0d836408848-6815ed67ca376412481"
+    },
+    {
+      "bytes": 739295,
+      "content_type": "application/pdf",
+      "id": "2029-6a49eee7592a8f3270ac-69b7-46e3-9ac5-35f95b79b088",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:56Z",
+      "sha256": "390da49d396dad39b60c070321e741ba32007a3eb9d13f692e92761443fc0ff0",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/6a49eee7592a8f3270ac-69b7-46e3-9ac5-35f95b79b088?hash=2b5ddd99fd11365-c852205d0d836408848-6815ed67ca376412481"
+    },
+    {
+      "bytes": 245819,
+      "content_type": "application/pdf",
+      "id": "2029-6adda93935cfce940157-69e9-4c1f-8c8e-df9396961bf0",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:50:00Z",
+      "sha256": "bddcf6b04203e77d6fa242ed347de57fc5cdfc7b8d72b17ea4bee3777285501a",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/6adda93935cfce940157-69e9-4c1f-8c8e-df9396961bf0?hash=2b5ddd99fd11365-c852205d0d836408848-6815ed67ca376412481-af650122c29e8283213"
+    },
+    {
+      "bytes": 1410518,
+      "content_type": "application/pdf",
+      "id": "2029-6c0474aee8e7f2de00eb-b267-42cd-86ef-a7bac333b93d",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:48Z",
+      "sha256": "b8c7ec027c3231b4053f2b6701166f76a91cbd28285d8617fa5c7aa574f2a877",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/6c0474aee8e7f2de00eb-b267-42cd-86ef-a7bac333b93d?hash=2b5ddd99fd11365-c852205d0d836408848-cf6556acb8da6412478"
+    },
+    {
+      "bytes": 99752,
+      "content_type": "application/pdf",
+      "id": "2029-737df38ebda92b28d422-d804-4457-b32c-d354b8fce789",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:45Z",
+      "sha256": "f3ca1c1d6d9c2f33c667064196c60cbb76815a1ee7f00a33af48b315565b1062",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/737df38ebda92b28d422-d804-4457-b32c-d354b8fce789?hash=2b5ddd99fd11365-c852205d0d836408848-cf6556acb8da6412478"
+    },
+    {
+      "bytes": 231556,
+      "content_type": "application/pdf",
+      "id": "2029-77531c96f885a56e7b9c-e64f-4208-b2af-d66725b5d064",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:53Z",
+      "sha256": "4d7818b3512566002e9fa30262fac9d9b6625a63f0db9ed5d1355c8139b0469c",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/77531c96f885a56e7b9c-e64f-4208-b2af-d66725b5d064?hash=2b5ddd99fd11365-c852205d0d836408848-6815ed67ca376412481"
+    },
+    {
+      "bytes": 144489,
+      "content_type": "application/pdf",
+      "id": "2029-8180f71bd0ba312c6429-d49e-4076-a510-e19a4bc84c1b",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:50Z",
+      "sha256": "07bac3b69ef3f771a3ece1a2e0543d397ebf57c575b2869aa8640c1539b2e008",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/8180f71bd0ba312c6429-d49e-4076-a510-e19a4bc84c1b?hash=2b5ddd99fd11365-c852205d0d836408848-cf6556acb8da6412478"
+    },
+    {
+      "bytes": 329296,
+      "content_type": "application/pdf",
+      "id": "2029-84b75d38ceebbdd9f85c-56f2-4922-a6a7-fbd4db50d0f1",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:57Z",
+      "sha256": "82f86d07eb62484bcfe7885733d74891168e49ec6ff68ced8b9feb4a893bb5d8",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/84b75d38ceebbdd9f85c-56f2-4922-a6a7-fbd4db50d0f1?hash=2b5ddd99fd11365-c852205d0d836408848-6815ed67ca376412481"
+    },
+    {
+      "bytes": 97098,
+      "content_type": "application/pdf",
+      "id": "2029-8d0723615b69e385f058-bab8-41d4-8516-b0c48160b85d",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:58Z",
+      "sha256": "08231e4c45bf7ae848dd735fba5f8568154882aa98447a0ee29ad5ea8b4cf636",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/8d0723615b69e385f058-bab8-41d4-8516-b0c48160b85d?hash=2b5ddd99fd11365-c852205d0d836408848-6815ed67ca376412481"
+    },
+    {
+      "bytes": 102864,
+      "content_type": "application/pdf",
+      "id": "2029-8d7a68ff5e5dc3b10ae7-73cf-44a9-8ac4-09d333f7112e",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:56Z",
+      "sha256": "d39cd1911c736568f7132cff31d6d05f61d6ae981acaa9219146c03d52b4f2c6",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/8d7a68ff5e5dc3b10ae7-73cf-44a9-8ac4-09d333f7112e?hash=2b5ddd99fd11365-c852205d0d836408848-6815ed67ca376412481"
+    },
+    {
+      "bytes": 696637,
+      "content_type": "application/pdf",
+      "id": "2029-a13ea663c75154bc7efb-7247-4e2d-8c2d-b3c7ec8b395b",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:43Z",
+      "sha256": "dc0c27b013408dd71bd406a449ccca25f218ee8605fd577bb395fa5e98f430cd",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/a13ea663c75154bc7efb-7247-4e2d-8c2d-b3c7ec8b395b?hash=2b5ddd99fd11365-c852205d0d836408848-cf6556acb8da6412478"
+    },
+    {
+      "bytes": 1415192,
+      "content_type": "application/pdf",
+      "id": "2029-a4a7a053b9978361c4b2-33af-4e83-b5d7-af612f567431",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:49Z",
+      "sha256": "93b49ba8f1efa57f8a59f27e9c6462b4f6e09d0fe4495bae4e920a98b953a061",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/a4a7a053b9978361c4b2-33af-4e83-b5d7-af612f567431?hash=2b5ddd99fd11365-c852205d0d836408848-cf6556acb8da6412478"
+    },
+    {
+      "bytes": 135576,
+      "content_type": "application/pdf",
+      "id": "2029-ace761cc2c5a786a6f2c-ac74-4cc4-b815-dc4ee3f23ac9",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:52Z",
+      "sha256": "b18f24ba7c06b100aaec9c94c6537e0f083431e2d5e9b03678ded4a829ebe010",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/ace761cc2c5a786a6f2c-ac74-4cc4-b815-dc4ee3f23ac9?hash=2b5ddd99fd11365-c852205d0d836408848-6815ed67ca376412481"
+    },
+    {
+      "bytes": 125083,
+      "content_type": "application/pdf",
+      "id": "2029-bf982aa8f692bd82d781-8e11-4dd0-832e-1589ca5ef29c",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:44Z",
+      "sha256": "6e09c713ca28ed87cf13e47b9869195ae7786e9d7f8a6a4efe718c0d6b517dfc",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/bf982aa8f692bd82d781-8e11-4dd0-832e-1589ca5ef29c?hash=2b5ddd99fd11365-c852205d0d836408848-cf6556acb8da6412478"
+    },
+    {
+      "bytes": 97069,
+      "content_type": "application/pdf",
+      "id": "2029-c09adc4e8eec7e690359-d38c-4866-bcd1-80dde501c5e4",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:47Z",
+      "sha256": "8420d3b3d482763d8cdd223557540b659f53d089b4298bacf9996a66d9d34b92",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/c09adc4e8eec7e690359-d38c-4866-bcd1-80dde501c5e4?hash=2b5ddd99fd11365-c852205d0d836408848-cf6556acb8da6412478"
+    },
+    {
+      "bytes": 734550,
+      "content_type": "application/pdf",
+      "id": "2029-d44826f75896bcbf4c6e-3e7c-4bd6-bd7e-df9e27d3447b",
+      "municipality_code": "2029",
+      "retrieved_at": "2026-10-30T22:49:46Z",
+      "sha256": "fc92fced91f39924a36a5e97124a9ca73082f4374d43ff3762786eb137fae67d",
+      "url": "https://docs.netpublicator.com/api/public/r67748107/document/d44826f75896bcbf4c6e-3e7c-4bd6-bd7e-df9e27d3447b?hash=2b5ddd99fd11365-c852205d0d836408848-cf6556acb8da6412478"
+    },
+    {
       "bytes": 436407,
       "content_type": "application/pdf",
       "id": "2031-09cc2aa1-c7bb-430d-a9df-3e0ffbc30398",
@@ -39212,6 +40166,222 @@
       "retrieved_at": "2026-10-30T00:50:11Z",
       "sha256": "083d406a2b2d2b6d7d5685f8bde205d68198e61f746fe5198b3024d5526d1422",
       "url": "https://www.ljusdal.se/download/18.95f2c4e18bca993eb52bfa6/1699947352483/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20renh%C3%A5llning%20av%20g%C3%A5ngbana%20med%20mera.pdf"
+    },
+    {
+      "bytes": 91627,
+      "content_type": "application/octet-stream",
+      "id": "2180-04cfp4umd1",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:27:11Z",
+      "sha256": "c7ae4d5f889a16ab907ae9c2bfd0177d1e6179f0291f1dd45faebbd50a5f348e",
+      "url": "https://shareapi.mediaflow.com/1/file/1713269/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 104272,
+      "content_type": "application/octet-stream",
+      "id": "2180-06df8avqy0",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:56Z",
+      "sha256": "cc0b80ef76ddcbb723bb0cc04b2e3aae76b34b2d1eabac4f07a79ccee1dfab61",
+      "url": "https://shareapi.mediaflow.com/1/file/2834587/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 844412,
+      "content_type": "application/octet-stream",
+      "id": "2180-15cfujtmny",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:24Z",
+      "sha256": "65f3dbbb2e02d3314b36d1385f3281d5f39660fd22d6b62f08f69f0f23d6107d",
+      "url": "https://shareapi.mediaflow.com/1/file/1391262/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 68958,
+      "content_type": "application/octet-stream",
+      "id": "2180-16dfk8uqyr",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:27:05Z",
+      "sha256": "cbd7dfe1c83d7e79d831e3da97beeebda00ca84f496a4bd5db98bcf3b8e00949",
+      "url": "https://shareapi.mediaflow.com/1/file/2146325/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 382018,
+      "content_type": "application/octet-stream",
+      "id": "2180-16dfmqmt2k",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:44Z",
+      "sha256": "4476f7e83ff8c2d2d3d091a12d56898515c80f67ee1f2afd8a5be554db298f40",
+      "url": "https://shareapi.mediaflow.com/1/file/3138986/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 142820,
+      "content_type": "application/octet-stream",
+      "id": "2180-17dfvqawhj",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:06Z",
+      "sha256": "abdd46b680af595399bd54bd0a358bca9d266a8b8cd89ae24eabb543cce94db6",
+      "url": "https://shareapi.mediaflow.com/1/file/3143522/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 5842341,
+      "content_type": "application/octet-stream",
+      "id": "2180-23cf3hytlo",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:33Z",
+      "sha256": "b4e492570d0f97363673065770de3c71ddea4a0537d13586d3fe1b1e82e9c5b5",
+      "url": "https://shareapi.mediaflow.com/1/file/592043/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 14671045,
+      "content_type": "application/octet-stream",
+      "id": "2180-30atqct4lt",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:41Z",
+      "sha256": "97782dd403b760d8c823173b312ca54e09b8c58d222e8b8dd7b6861837b66828",
+      "url": "https://shareapi.mediaflow.com/1/file/489745/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 3591102,
+      "content_type": "application/octet-stream",
+      "id": "2180-32cfvjkmdy",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:18Z",
+      "sha256": "8264593658bf4bad1c9ee7e2bafe6775c62cd53a10e6c02ba731000abbf1d0a7",
+      "url": "https://shareapi.mediaflow.com/1/file/1391268/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 2081917,
+      "content_type": "application/octet-stream",
+      "id": "2180-36cf0jzmrk",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:30Z",
+      "sha256": "a3441992df6ad1fd434d345bd6192ade85b80a7cd9ea0d7138c5af4cb83195f9",
+      "url": "https://shareapi.mediaflow.com/1/file/1391250/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 109438,
+      "content_type": "application/octet-stream",
+      "id": "2180-39df73qs78",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:12Z",
+      "sha256": "1534d045387bf9b8081bf51ee49c4bd228c118854814d79f510b9cdc40eb67f3",
+      "url": "https://shareapi.mediaflow.com/1/file/2370619/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 402105,
+      "content_type": "application/octet-stream",
+      "id": "2180-41dffc7fax",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:09Z",
+      "sha256": "7e2b7224cfe1b5b7c99196dff69b0c98ad6a39c7d01a586d858feac3d5f05a73",
+      "url": "https://shareapi.mediaflow.com/1/file/2574950/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 99166,
+      "content_type": "application/octet-stream",
+      "id": "2180-46atoc34lt",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:36Z",
+      "sha256": "fa381afda43c4ef37a6b532582f43819cbc2dd133277a8a39d8c2b2d4e47c171",
+      "url": "https://shareapi.mediaflow.com/1/file/489746/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 113981,
+      "content_type": "application/octet-stream",
+      "id": "2180-46atycm4bx",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:27:14Z",
+      "sha256": "4835cc6cafcae6825efd44efb99b18718d01057676ed424c41600d28040c0fac",
+      "url": "https://shareapi.mediaflow.com/1/file/489864/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 3513474,
+      "content_type": "application/octet-stream",
+      "id": "2180-53cfqjemfy",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:21Z",
+      "sha256": "f26a180df30f06a19f034f12ba96a133d3b484ec0314e6f77871db5a24651cb8",
+      "url": "https://shareapi.mediaflow.com/1/file/1391265/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 19973,
+      "content_type": "application/octet-stream",
+      "id": "2180-57dfntf677",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:27:02Z",
+      "sha256": "60dbfe8cbac7cfcde92c845283776e484ea76311ffbbbc98f244d0af90e57910",
+      "url": "https://shareapi.mediaflow.com/1/file/2363698/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 1285215,
+      "content_type": "application/octet-stream",
+      "id": "2180-60cfhbkkb5",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:15Z",
+      "sha256": "25e58c935ef79c70f160a7b43762505e5fdd2abd36f78c1df20b8714dc023b09",
+      "url": "https://shareapi.mediaflow.com/1/file/1629918/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 88202,
+      "content_type": "application/octet-stream",
+      "id": "2180-60df1k2sxc",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:53Z",
+      "sha256": "f654509ff008ad32a42b55e940ffab33d1b89483020bdc27ac4346c0461cea5f",
+      "url": "https://shareapi.mediaflow.com/1/file/2849571/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 154426,
+      "content_type": "application/octet-stream",
+      "id": "2180-62dfskgnd5",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:47Z",
+      "sha256": "8b115fa6673a91909ccd25f121dc4155ad6252342cd7a342d86196c23c02f324",
+      "url": "https://shareapi.mediaflow.com/1/file/2372332/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 276149,
+      "content_type": "application/octet-stream",
+      "id": "2180-64atvcy4nx",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:27:17Z",
+      "sha256": "0397d2620f26822522fcc30845e4268d9a84a4e4e0c0f265498c132e5d89033e",
+      "url": "https://shareapi.mediaflow.com/1/file/489863/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 3200171,
+      "content_type": "application/octet-stream",
+      "id": "2180-67cfljlmwy",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:27Z",
+      "sha256": "ffe60f0bb0282f85214b8ad95ac5b1d127f8a2ae392b82929302a3abaedec6dc",
+      "url": "https://shareapi.mediaflow.com/1/file/1391253/downloads?share=3KATTCX4I1"
+    },
+    {
+      "bytes": 181138,
+      "content_type": "application/octet-stream",
+      "id": "2180-67dfm8pqqr",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:27:08Z",
+      "sha256": "1a067fdc89bacc2889f4dfe229916ef1ea0c09c67d9bd885991f22c9eb6e50fb",
+      "url": "https://shareapi.mediaflow.com/1/file/2146328/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 246543,
+      "content_type": "application/octet-stream",
+      "id": "2180-72df7knl8q",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:50Z",
+      "sha256": "29ddd7c13a2ac2eb4bb1aa687e9e14a2052cf771b108dab5dab3c403f6226707",
+      "url": "https://shareapi.mediaflow.com/1/file/2851066/downloads?share=XOATPC2411"
+    },
+    {
+      "bytes": 144475,
+      "content_type": "application/octet-stream",
+      "id": "2180-79dfpajqu0",
+      "municipality_code": "2180",
+      "retrieved_at": "2026-10-30T22:26:59Z",
+      "sha256": "205ddbcea32cdd4944dfa2b6a929f46c649d8c8f9feab4cd8d4f1455e0b68ea2",
+      "url": "https://shareapi.mediaflow.com/1/file/2834575/downloads?share=XOATPC2411"
     },
     {
       "bytes": 289778,

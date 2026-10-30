@@ -2747,6 +2747,19 @@
         "principer"
       ]
     },
+    "1233": {
+      "name": "Vellinge",
+      "issuer": "Vellinge kommun",
+      "region_code": "12",
+      "collection": "Vellinge kommuns styrande dokument",
+      "strategy": "html_pages",
+      "hosts": ["vellinge.se"],
+      "listings": ["https://vellinge.se/sitemap.xml"],
+      "link_pattern": "^https://vellinge\\.se/kommun-och-politik/kommunfakta/styrande-dokument/[^/]+$",
+      "number": [{"from": "href", "pattern": "/styrande-dokument/([^/]+)$"}],
+      "page_titles": true,
+      "follow": "/sitemap\\d+\\.xml\\.gz$"
+    },
     "1257": {
       "name": "Örkelljunga",
       "issuer": "Örkelljunga kommun",
@@ -2779,6 +2792,28 @@
       "resident_filter": true,
       "hosts": ["www.kavlinge.se"],
       "listings": ["https://www.kavlinge.se/kommun-och-politik/vision-mal-och-styrning/styrdokument"]
+    },
+    "1262": {
+      "name": "Lomma",
+      "issuer": "Lomma kommun",
+      "region_code": "12",
+      "collection": "Lomma kommuns författningssamling",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "hosts": ["docs.netpublicator.com"],
+      "listings": [
+        "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162&isr=false",
+        "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165&isr=false"
+      ],
+      "items": "items",
+      "title_field": "text",
+      "number_field": "id",
+      "url_template": "document/{id}?hash={_hash}",
+      "follow_items": {
+        "field": "type",
+        "value": "channel",
+        "url_template": "read?hash={_hash}-{id}&isr=false"
+      }
     },
     "1263": {
       "name": "Svedala",
@@ -2930,6 +2965,68 @@
       "resident_filter": true,
       "hosts": ["astorp.se"],
       "listings": ["https://astorp.se/kommun-och-politik/kommunal-forfattningssamling.html"]
+    },
+    "1278": {
+      "name": "Båstad",
+      "issuer": "Båstads kommun",
+      "region_code": "12",
+      "collection": "Båstads kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.bastad.se"],
+      "listings": [
+        "https://www.bastad.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument.html"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!- och)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "gallring",
+        "bevarande",
+        "hanteringsanvisning",
+        "investering",
+        "strategi",
+        "bidrag",
+        "fördelning",
+        "skolskjuts",
+        "prisindex",
+        "firmateckning",
+        "pension",
+        "inkallelse",
+        "uppdragsbeskrivning",
+        "tolkning",
+        "förteckning",
+        "skötselplan"
+      ]
     },
     "1280": {
       "name": "Malmö",
@@ -4442,12 +4539,23 @@
       "name": "Skövde",
       "issuer": "Skövde kommun",
       "region_code": "14",
-      "collection": "Skövde kommuns taxor och avgifter",
+      "collection": "Skövde kommuns författningssamling: lokala föreskrifter, taxor och avgifter",
       "strategy": "html_index",
       "resident_filter": true,
       "hosts": ["www.skovde.se", "static.skovde.se"],
       "listings": [
-        "https://www.skovde.se/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter"
+        "https://www.skovde.se/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter",
+        {
+          "url": "https://www.skovde.se/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/",
+          "strategy": "json_list",
+          "embedded": "next",
+          "items": "ordinancePages",
+          "title_field": "Heading",
+          "number_field": "FileUrl",
+          "number_pattern": "/([^/?#]+)\\.pdf$",
+          "url_template": "{FileUrl}",
+          "link_pattern": "^https://static\\.skovde\\.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/[^?#]+\\.pdf$"
+        }
       ],
       "link_pattern": "^https://static\\.skovde\\.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter/[^?#]+\\.pdf$",
       "number": [
@@ -5515,6 +5623,60 @@
       ],
       "title_strip": ["\\s*\\.pdf\\s*$"]
     },
+    "2029": {
+      "name": "Leksand",
+      "issuer": "Leksands kommun",
+      "region_code": "20",
+      "collection": "Leksands kommuns författningssamling: föreskrifter samt taxor och avgifter",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "hosts": ["docs.netpublicator.com"],
+      "listings": [
+        "https://docs.netpublicator.com/api/public/r67748107/read?hash=2b5ddd99fd11365-c852205d0d836408848&isr=false"
+      ],
+      "items": "items",
+      "title_field": "text",
+      "number_field": "id",
+      "url_template": "document/{id}?hash={_hash}",
+      "follow_items": {
+        "field": "type",
+        "value": "channel",
+        "url_template": "read?hash={_hash}-{id}&isr=false"
+      },
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning"
+      ]
+    },
     "2031": {
       "name": "Rättvik",
       "issuer": "Rättviks kommun",
@@ -5884,6 +6046,20 @@
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
+    "2180": {
+      "name": "Gävle",
+      "issuer": "Gävle kommun",
+      "region_code": "21",
+      "collection": "Gävle kommuns styrande dokument: föreskrifter samt taxor och avgifter",
+      "strategy": "mediaflow",
+      "hosts": ["www.gavle.se", "shareapi.mediaflow.com", "files.mediaflow.com"],
+      "listings": [
+        "https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=3KATTCX4I1",
+        "https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=XOATPC2411"
+      ],
+      "page": "https://www.gavle.se/kommun-och-politik/forvaltning-och-organisation/styrande-dokument/",
+      "resident_filter": true
     },
     "2181": {
       "name": "Sandviken",

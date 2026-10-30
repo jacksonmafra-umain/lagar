@@ -1178,29 +1178,17 @@
       "status": "blocked",
       "note": "www.karlskrona.se answers every request, robots.txt included, with an HTTP 403 \"Åtkomst nekad\" bot-check page (checked 2026-10-30); not bypassed."
     },
-    "1233": {
-      "status": "no_adapter",
-      "note": "Vellinge publishes its lokala ordningsföreskrifter and hälsoskyddsföreskrifter as HTML text on topic pages under /kommun-och-politik/kommunfakta/styrande-dokument/, and the styrande-dokument page lists no documents in its static HTML; only an attachment PDF is linked. Needs an HTML-page strategy (checked 2026-10-30)."
-    },
     "1256": {
       "status": "no_adapter",
       "note": "Östra Göinge's page \"Styrande dokument och kommunala författningar\" is a search filled in by the browser; the static HTML lists no documents (the KFS PDFs live under /wp-content/uploads/). Needs an adapter for its search (checked 2026-10-30)."
-    },
-    "1262": {
-      "status": "no_adapter",
-      "note": "Lomma publishes its författningssamling in a Netpublicator reader embedded in the \"Regler och styrande dokument\" page; the static HTML lists no documents. Needs a Netpublicator adapter (checked 2026-10-30)."
     },
     "1267": {
       "status": "no_adapter",
       "note": "Höör's \"Styrande dokument\" page is a search and filter form filled in by the browser; the static HTML lists no documents. Needs an adapter for its search (checked 2026-10-30)."
     },
     "1275": {
-      "status": "no_adapter",
-      "note": "Perstorp's \"Kommunal författningssamling\" page lists no documents in its static HTML; the list is loaded by the browser. Needs an adapter (checked 2026-10-30)."
-    },
-    "1278": {
-      "status": "no_adapter",
-      "note": "No page listing Båstad's författningssamling or lokala föreskrifter was found; its rules are spread over topic pages (checked 2026-10-30)."
+      "status": "robots",
+      "note": "Perstorp's \"Kommunal författningssamling\" page keeps its document list in a minimised layout that opens only through ?sv.state=normal, which robots.txt disallows (Disallow: /*?sv.state=*); the site has no sitemap. Not bypassed (checked 2026-10-31)."
     },
     "1401": {
       "note": "Härryda publishes no författningssamling: the rules are read from its avgifter och taxor page (topic pages as text, or the taxa PDF a page links) and from Härryda Vatten och Avfall AB's VA and avfall taxor and avfallsföreskrifter on hvaa.se."
@@ -1208,21 +1196,9 @@
     "1435": {
       "note": "Tanum's rules are web pages in its A–Z list and are collected as page text; the avfallsföreskrifter page refers to Rambo AB's site (rambo.se) for the full text."
     },
-    "1496": {
-      "status": "partial",
-      "note": "Only the taxor och avgifter page is collected; the lokala föreskrifter are listed as JSON inside the Next.js page's script data (static.skovde.se), which the collector cannot read yet."
-    },
     "1780": {
       "status": "robots",
       "note": "karlstad.se lists SharePoint document ids; the files are served only through time-limited links on karlstadskommunonline.sharepoint.com, whose robots.txt disallows everything (checked 2026-10-30)."
-    },
-    "2029": {
-      "status": "no_adapter",
-      "note": "leksand.se publishes its författningssamling in a Netpublicator reader (JavaScript, noindex); no adapter yet."
-    },
-    "2180": {
-      "status": "no_adapter",
-      "note": "gavle.se publishes its documents through MediaFlow; no adapter yet."
     }
   }
 }
