@@ -390,20 +390,26 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Tanum publishes its rules as web pages in an A–Z list; they are collected as
     page text (`html_pages`), the ABVA as its PDF. The avfallsföreskrifter page
     refers to Rambo AB's site for the full text.
+  - Härryda has no författningssamling or list of its rules. Its avgifter och
+    taxor page links to topic pages, collected as page text (`html_pages`) or as
+    the taxa PDF a page links; the VA and avfall taxor and the avfallsföreskrifter
+    come as PDFs from the pages of Härryda Vatten och Avfall AB (hvaa.se), the
+    current versions only; library fees and hall hire are left out, and no lokala
+    ordningsföreskrifter were found on either site: 13 documents (2026-10-30).
 - Kommuner checked and not collected are listed with the reason in `AGENCIES.md`
   (curated in the `kommuner` section of `collector/data/agencies.json`):
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
     included, with an HTTP 403 "Åtkomst nekad" bot-check page; not bypassed.
-  - Not collected yet in Stockholm, Uppsala, Östergötland, Jönköping, Kalmar
-    and Gotland counties, with the reason per kommun in `AGENCIES.md`:
-    Vallentuna (file-share folders answer 404), Lidingö (Evolution
-    DocumentWeb), Sigtuna (Netpublicator), Uppsala (no index; sitemap only),
-    Aneby and Jönköping (no collection page), Värnamo (document service down),
-    Torsås (titles outside the links), Mönsterås (site did not answer),
-    Västervik (file list not in the HTML) and Gotland (external document
-    service). Linköping links its rules to Google Drive and waits for an owner
-    decision. Härryda has no författningssamling or list of its rules: its
-    taxor are spread over topic pages, some as HTML text. Their issues stay open.
+  - Not collected yet, with the reason per kommun in `AGENCIES.md`: Värnamo
+    (its DocumentWeb host did not answer), Mönsterås (site did not answer) and
+    Linköping (rules on Google Drive; waits for an owner decision). Their issues
+    stay open.
+  - Collected through platform adapters: Lidingö and Västervik (Evolution
+    DocumentWeb API), Sigtuna (Netpublicator), Gotland (its document service),
+    Vallentuna (gzipped sitemap of the file-share module), Uppsala (sitemap and
+    the rule pages' own titles), Torsås (titles from table rows) and Aneby and
+    Jönköping (curated topic pages; Jönköping's avfall rules are on
+    juneavfall.se and not collected).
     Östhammar's robots.txt shuts named AI crawlers out of its rule pages but
     allows this collector's agent; the owner approved collecting it.
 - Public services have no collector yet and no known target.
