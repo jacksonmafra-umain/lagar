@@ -39,8 +39,6 @@ internal fun listingPath(layer: String, type: String?, page: Int) =
 
 internal fun documentPath(id: String) = "docs/$id.json"
 
-internal fun gzipDocumentPath(id: String) = "docs/$id.json.gz"
-
 internal fun ministryIndexPath(layer: String, type: String) = "$layer/$type/by-ministry/index.json"
 
 internal fun ministryListingPath(layer: String, type: String, ministry: String, page: Int) =
