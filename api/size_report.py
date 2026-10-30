@@ -11,7 +11,6 @@ Exit status: 0, or 2 on bad arguments or a missing API. MB are 1 000 000 bytes.
 """
 
 import argparse
-import gzip
 import json
 import os
 import re
@@ -34,17 +33,15 @@ def _files(root):
 
 
 def doc_layer(path):
-    """The `meta.layer` of an API document file (`.json` or `.json.gz`), or None when it has none."""
-    opener = gzip.open if path.suffix == ".gz" else open
+    """The `meta.layer` of an API document file, or None when it has none."""
+    with open(path, "rb") as f:
+        head = f.read(_HEAD_BYTES).decode("utf-8", "ignore")
+    m = _LAYER_RE.search(head)
+    if m:
+        return m.group(1)
     try:
-        with opener(path, "rb") as f:
-            head = f.read(_HEAD_BYTES).decode("utf-8", "ignore")
-        m = _LAYER_RE.search(head)
-        if m:
-            return m.group(1)
-        with opener(path, "rb") as f:
-            return json.loads(f.read().decode("utf-8"))["meta"]["layer"]
-    except (OSError, EOFError, ValueError, KeyError, TypeError):
+        return json.loads(path.read_text(encoding="utf-8"))["meta"]["layer"]
+    except (ValueError, KeyError, TypeError):
         return None
 
 

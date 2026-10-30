@@ -48,12 +48,6 @@ class ServeLocalTests(unittest.TestCase):
         with urllib.request.urlopen(base + "/api/v1/index.json") as response:
             self.assertEqual(response.headers["Content-Type"], "application/json")
             self.assertEqual(response.headers["Cache-Control"], "no-store")
-        (self.api / "docs" / "x.json.gz").write_bytes(b"\x1f\x8b")
-        with urllib.request.urlopen(base + "/api/v1/docs/x.json.gz") as response:
-            # Served as is: the client decompresses gzip documents itself (docs/api.md).
-            self.assertEqual(response.headers["Content-Type"], "application/gzip")
-            self.assertIsNone(response.headers["Content-Encoding"])
-            self.assertEqual(response.read(), b"\x1f\x8b")
         with urllib.request.urlopen(base + "/app.wasm") as response:
             self.assertEqual(response.headers["Content-Type"], "application/wasm")
         with self.assertRaises(urllib.error.HTTPError) as caught:
