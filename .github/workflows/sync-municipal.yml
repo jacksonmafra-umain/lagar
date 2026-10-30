@@ -103,23 +103,28 @@ jobs:
           CODES: ${{ steps.kommuner.outputs.codes }}
         run: |
           mkdir -p "$REPORTS"
-          status=0
+          failed=()
           # One kommun's failure (a changed page, a block) must not stop the others.
           for code in $CODES; do
             python3 -I collector/collect.py municipal --kommun "$code" \
-              --report "$REPORTS/$code.json" || status=1
+              --report "$REPORTS/$code.json" || failed+=("$code")
           done
-          exit $status
+          # The run still commits what the others collected; the summary and the commit
+          # message list the failures, and the next run tries them again.
+          echo "failed=${failed[*]}" >> "$GITHUB_OUTPUT"
+          for code in "${failed[@]}"; do echo "::warning::kommun $code failed; see the step log"; done
 
       - name: Summarise the run
         if: always() && steps.kommuner.outcome == 'success'
         env:
           CODES: ${{ steps.kommuner.outputs.codes }}
           OUTCOME: ${{ steps.collect.outcome }}
+          FAILED: ${{ steps.collect.outputs.failed }}
         run: |
           {
             echo "### Municipal sync"
             echo "- Collector: $OUTCOME"
+            echo "- Failed: ${FAILED:-none}"
             echo
             echo "| kommun | written | unchanged | skipped | gaps | failed | blocked |"
             echo "| --- | --- | --- | --- | --- | --- | --- |"
@@ -136,6 +141,7 @@ jobs:
       - name: Commit and open the pull request
         env:
           PR: ${{ steps.base.outputs.pr }}
+          FAILED: ${{ steps.collect.outputs.failed }}
           OWNER: ${{ github.repository_owner }}
         run: |
           if [ -z "$(git status --porcelain -- corpus)" ]; then
@@ -151,6 +157,7 @@ jobs:
             echo "data(municipal): sync $count municipal regulations"
             echo
             echo "Written: $written"
+            if [ -n "$FAILED" ]; then echo; echo "Failed: $FAILED"; fi
           } > "$RUNNER_TEMP/message"
           git add -- corpus $GENERATED
           git commit -q -F "$RUNNER_TEMP/message"
