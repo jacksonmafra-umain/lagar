@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.partille.se/kommun--politik/planer--styrdokument/": "1402-listing.html"
+  },
+  "count": 22,
+  "sample": {
+    "number": "ffs_sbk_avfallstaxa",
+    "title": "Avfallstaxa för Partille kommun",
+    "url": "https://www.partille.se/siteassets/kommun--politik/styrdokument/bygga-bo-miljo-och-avfall/ffs_sbk_avfallstaxa.pdf"
+  },
+  "excluded": [
+    "Avfallsplan för Göteborgsregionens kommuner till 2030",
+    "Ersättning vid gymnasiestudier utomlands - riktlinjer",
+    "Elevresor och inackorderingstillägg - riktlinjer"
+  ]
+}
