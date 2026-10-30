@@ -2462,6 +2462,19 @@
         "principer"
       ]
     },
+    "1233": {
+      "name": "Vellinge",
+      "issuer": "Vellinge kommun",
+      "region_code": "12",
+      "collection": "Vellinge kommuns styrande dokument",
+      "strategy": "html_pages",
+      "hosts": ["vellinge.se"],
+      "listings": ["https://vellinge.se/sitemap.xml"],
+      "link_pattern": "^https://vellinge\\.se/kommun-och-politik/kommunfakta/styrande-dokument/[^/]+$",
+      "number": [{"from": "href", "pattern": "/styrande-dokument/([^/]+)$"}],
+      "page_titles": true,
+      "follow": "/sitemap\\d+\\.xml\\.gz$"
+    },
     "1257": {
       "name": "Örkelljunga",
       "issuer": "Örkelljunga kommun",
@@ -2494,6 +2507,28 @@
       "resident_filter": true,
       "hosts": ["www.kavlinge.se"],
       "listings": ["https://www.kavlinge.se/kommun-och-politik/vision-mal-och-styrning/styrdokument"]
+    },
+    "1262": {
+      "name": "Lomma",
+      "issuer": "Lomma kommun",
+      "region_code": "12",
+      "collection": "Lomma kommuns författningssamling",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "hosts": ["docs.netpublicator.com"],
+      "listings": [
+        "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162&isr=false",
+        "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165&isr=false"
+      ],
+      "items": "items",
+      "title_field": "text",
+      "number_field": "id",
+      "url_template": "document/{id}?hash={_hash}",
+      "follow_items": {
+        "field": "type",
+        "value": "channel",
+        "url_template": "read?hash={_hash}-{id}&isr=false"
+      }
     },
     "1263": {
       "name": "Svedala",
