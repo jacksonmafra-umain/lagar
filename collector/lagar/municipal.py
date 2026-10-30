@@ -64,8 +64,9 @@ PRESETS = {
         "strategy": "html_index",
         "link_pattern": r"/download/18\.[0-9a-f]+/\d+/[^?#]+\.pdf$",
         "number": [{"from": "href", "pattern": r"/download/(18\.[0-9a-f]+)/"}],
-        "title_strip": [r"\s*(\.pdf)?\s*,?\s*\(?pdf,?\s*[\d.,]+\s*[kMG]?B\)?\.?\s*$", r"\.pdf\s*$"],
+        "title_strip": [r"\s*(\.pdf)?\s*,?\s*\(?pdf,?\s*[\d.,]+\s*[kMG]?B\)?\.?\s*$", r"\.(pdf|docx?)\s*$"],
         "follow": r"[?&]lp-page=\d+",  # the file list's own pagination
+        "embedded_json": True,
     },
 }
 
@@ -137,6 +138,7 @@ class Kommun:
     title_include: "list[str]" = field(default_factory=list)
     title_exclude: "list[str]" = field(default_factory=list)
     follow: str = ""
+    embedded_json: bool = False
 
 
 def _required(entry, key, code, kind=str):
@@ -188,6 +190,7 @@ def _kommun(code, entry):
         title_include=list(entry.get("title_include") or (RESIDENT_INCLUDE if resident else [])),
         title_exclude=list(entry.get("title_exclude") or (RESIDENT_EXCLUDE if resident else [])),
         follow=entry.get("follow", ""),
+        embedded_json=bool(entry.get("embedded_json", False)),
     )
     for url in listings:
         if urllib.parse.urlsplit(url).hostname not in hosts:
@@ -443,12 +446,47 @@ def _clean(text):
     return " ".join((text or "").split())
 
 
-class _Links(HTMLParser):
-    """Anchors with the heading they sit under (the latest heading at or above `level`)."""
+_INITIAL_STATE = re.compile(r"registerInitialState\(\s*'[^']*'\s*,\s*")
 
-    def __init__(self, level):
+
+def _state_files(script):
+    """(href, title) of the files in Sitevision `AppRegistry.registerInitialState` JSON.
+
+    File-share and file-list modules render their list in the browser from this
+    state; the static HTML then carries no anchors for the files.
+    """
+    found = []
+    for match in _INITIAL_STATE.finditer(script):
+        try:
+            state, _ = json.JSONDecoder().raw_decode(script, match.end())
+        except ValueError:
+            continue
+        stack = [state]
+        while stack:
+            node = stack.pop()
+            if isinstance(node, list):
+                stack.extend(reversed(node))
+            elif isinstance(node, dict):
+                href = node.get("url") or node.get("uri")
+                title = node.get("title") or node.get("name")
+                if isinstance(href, str) and isinstance(title, str) and "/download/" in href:
+                    found.append((href, title))
+                else:
+                    stack.extend(reversed(list(node.values())))
+    return found
+
+
+class _Links(HTMLParser):
+    """Anchors with the heading they sit under (the latest heading at or above `level`).
+
+    With `embedded_json`, files listed in Sitevision's embedded module state count as
+    anchors under the heading that precedes the script.
+    """
+
+    def __init__(self, level, embedded_json=False):
         super().__init__(convert_charrefs=True)
         self.level = level
+        self.embedded_json = embedded_json
         self.links = []  # (section, href, text)
         self.section = None
         self._heading = None  # [level, parts]
@@ -476,6 +514,8 @@ class _Links(HTMLParser):
 
     def handle_data(self, data):
         if self._skip:
+            if self.embedded_json and "registerInitialState" in data:
+                self.links += [(self.section, href, _clean(title)) for href, title in _state_files(data)]
             return
         if self._heading:
             self._heading[1].append(data)
@@ -510,7 +550,7 @@ def binds_residents(kommun, title):
 
 def parse_html_index(kommun, raw, listing_url):
     """(entries, problems) of a listing page; problems are links that match but carry no number."""
-    parser = _Links(kommun.section_level)
+    parser = _Links(kommun.section_level, kommun.embedded_json)
     parser.feed(_text(raw))
     parser.close()
     sha = hashlib.sha256(raw).hexdigest()

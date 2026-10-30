@@ -430,6 +430,27 @@ class SitevisionPresetTest(unittest.TestCase):
             entries, _ = municipal.list_entries(municipal.Fetcher(sitevision_client()), kommun)
         self.assertEqual([e.title for e in entries], ["Avfallsföreskrifter", "Avfallstaxa"])
 
+    def test_files_in_embedded_module_state_are_listed_under_their_heading(self):
+        olofstrom = "https://olofstrom.se/kommun-och-politik/kommunfakta/styrande-dokument"
+        with tempfile.TemporaryDirectory() as tmp:
+            config = sitevision_config(
+                tmp, hosts=["olofstrom.se"], listings=[olofstrom], resident_filter=False,
+                sections=["Föreskrifter"],
+            )
+            kommun = municipal.load_config(config)["0120"]
+        raw = (FIXTURES / "municipal-sitevision-state.html").read_bytes()
+        entries, problems = municipal.parse_html_index(kommun, raw, olofstrom)
+        self.assertEqual(problems, [])
+        self.assertEqual(
+            [(e.number, e.title) for e in entries],
+            [
+                ("18.506734c51817fe18b912cee", "Föreskrift för avfallshantering"),
+                ("18.30eb2ed016f19a67e6c2ca27", "lokala-ordningsforeskrifter-for-torghandel"),
+            ],
+        )
+        kommun.embedded_json = False
+        self.assertEqual(municipal.parse_html_index(kommun, raw, olofstrom)[0], [])
+
     def test_unknown_preset_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(municipal.ConfigError):
