@@ -83,10 +83,11 @@ def corpus_id(number):
 
 
 def absolute(base, href):
-    """An absolute URL for `href`, with spaces and other unsafe path characters quoted."""
+    """An absolute URL for `href`, with spaces and other unsafe path and query characters quoted."""
     parts = urllib.parse.urlsplit(urllib.parse.urljoin(base, html.unescape(href.strip())))
     path = urllib.parse.quote(urllib.parse.unquote(parts.path), safe="/:@!$&'()*+,;=-._~")
-    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, path, parts.query, ""))
+    query = urllib.parse.quote(urllib.parse.unquote(parts.query), safe="/:@!$&'()*+,;=-._~?")
+    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, path, query, ""))
 
 
 # --- a small DOM -----------------------------------------------------------
