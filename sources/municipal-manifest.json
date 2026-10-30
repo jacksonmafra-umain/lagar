@@ -15985,6 +15985,96 @@
       "url": "https://cms.landskrona.se/wp-content/uploads/2026/05/va-taxa-2026-landskrona_nsva_kf_2025-12-15.pdf"
     },
     {
+      "bytes": 477288,
+      "content_type": "application/pdf",
+      "id": "1283-00097-2021-avgifter",
+      "municipality_code": "1283",
+      "retrieved_at": "2026-10-30T21:56:40Z",
+      "sha256": "f55485ae2c286c8eb0bdf5d5256541bcb951a9a14a746976c051d67b3b18e0f5",
+      "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2021/04/00097-2021-avgifter.pdf"
+    },
+    {
+      "bytes": 389027,
+      "content_type": "application/pdf",
+      "id": "1283-00097-2021-tillampningsanvisningar",
+      "municipality_code": "1283",
+      "retrieved_at": "2026-10-30T21:56:41Z",
+      "sha256": "9b8c54b70a093f2f6e38b822f0a61661b4b203130734857e456368e0c36a2ca8",
+      "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2021/04/00097-2021-tillampningsanvisningar.pdf"
+    },
+    {
+      "bytes": 778961,
+      "content_type": "application/pdf",
+      "id": "1283-abva2019-webb",
+      "municipality_code": "1283",
+      "retrieved_at": "2026-10-30T21:56:32Z",
+      "sha256": "395eb4d30eba44ce38dac4bb818bad4ae3133e5aed12ca1ec176402e0255e73b",
+      "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2021/01/abva2019-webb.pdf"
+    },
+    {
+      "bytes": 8753997,
+      "content_type": "application/pdf",
+      "id": "1283-allm-lok-ordn-foreskr-m-bilaga-1-4",
+      "municipality_code": "1283",
+      "retrieved_at": "2026-10-30T21:56:34Z",
+      "sha256": "73909a0de4d106b75e8149f7082395d0638e083a59109f55156c0edb4fbd1a93",
+      "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2024/12/allm-lok-ordn-foreskr-m-bilaga-1_4.pdf"
+    },
+    {
+      "bytes": 223991,
+      "content_type": "application/pdf",
+      "id": "1283-foreskrifter-eldningsforbud",
+      "municipality_code": "1283",
+      "retrieved_at": "2026-10-30T21:56:34Z",
+      "sha256": "c225c670547389c26f99011062b4481f6c6ce973d8e554807081f076cfef2de5",
+      "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2025/03/foreskrifter-eldningsforbud.pdf"
+    },
+    {
+      "bytes": 15527,
+      "content_type": "application/pdf",
+      "id": "1283-foreskrifter-for-gatu-och-gangbanerenhallning",
+      "municipality_code": "1283",
+      "retrieved_at": "2026-10-30T21:56:35Z",
+      "sha256": "01a492ffbc3ffbadd917fe7da4de68786ac7d931e9bf887556df350eae906ca0",
+      "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2014/10/Foreskrifter_for_gatu_och_gangbanerenhallning.pdf"
+    },
+    {
+      "bytes": 36577,
+      "content_type": "application/pdf",
+      "id": "1283-foreskrifter-for-torghandeln",
+      "municipality_code": "1283",
+      "retrieved_at": "2026-10-30T21:56:36Z",
+      "sha256": "ffb8b0418c400f810cc0db728568741c544cbd74e06c8f1791427bcdbc97d7f7",
+      "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2014/10/Foreskrifter_for_torghandeln.pdf"
+    },
+    {
+      "bytes": 431329,
+      "content_type": "application/pdf",
+      "id": "1283-hamnordning-med-karta",
+      "municipality_code": "1283",
+      "retrieved_at": "2026-10-30T21:56:37Z",
+      "sha256": "a0fdbddd04f873f0e77ebb78ce406e5cf03ebdc896de5ab2e98d80298aacee93",
+      "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2016/09/hamnordning_med-karta.pdf"
+    },
+    {
+      "bytes": 222747,
+      "content_type": "application/pdf",
+      "id": "1283-lokala-miljo-och-halsoskyddsforeskrifter-2025",
+      "municipality_code": "1283",
+      "retrieved_at": "2026-10-30T21:56:38Z",
+      "sha256": "b5f3cbfd8797008948db5f87e594e9c099c30caf4198fa2452de3c6271cb26c5",
+      "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2025/11/lokala-miljo-och-halsoskyddsforeskrifter_2025.pdf"
+    },
+    {
+      "bytes": 1025633,
+      "content_type": "application/pdf",
+      "id": "1283-renhallningsordning-helsingborg-2025-2032-rev",
+      "municipality_code": "1283",
+      "retrieved_at": "2026-10-30T21:56:39Z",
+      "sha256": "85acafd9a19f03f12705919bdf426a8be94e8604df8a90e2e9afb71dd0795fcd",
+      "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2025/09/renhallningsordning_helsingborg-2025-2032_rev.pdf"
+    },
+    {
       "bytes": 1067057,
       "content_type": "application/pdf",
       "id": "1284-18-1502ad28193ded80dc437313",
