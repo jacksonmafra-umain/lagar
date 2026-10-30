@@ -1,3 +1,4 @@
+import gzip
 import json
 import subprocess
 import sys
@@ -99,6 +100,15 @@ class SizeReportTest(unittest.TestCase):
         path.write_text(json.dumps({"meta": {"title": 'a "layer":"sfs" b', "layer": "eu"}}, separators=(",", ":")),
                         encoding="utf-8")
         self.assertEqual(sr.doc_layer(path), "eu")
+
+    def test_doc_layer_reads_gzip_documents(self):
+        path = Path(self._tmp.name) / "doc.json.gz"
+        path.write_bytes(gzip.compress(b'{"meta":{"id":"x","layer":"case_law"},"body":""}'))
+        self.assertEqual(sr.doc_layer(path), "case_law")
+        path.write_bytes(gzip.compress(json.dumps({"meta": {"title": "x" * 10000, "layer": "eu"}}).encode()))
+        self.assertEqual(sr.doc_layer(path), "eu")
+        path.write_bytes(b"not gzip")
+        self.assertIsNone(sr.doc_layer(path))
 
     def test_status_thresholds(self):
         report = {"total": 850 * sr.MB}

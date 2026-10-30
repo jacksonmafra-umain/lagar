@@ -919,6 +919,23 @@
       "sections": ["Föreskrifter", "Taxor och avgifter", "Bestämmelser"],
       "link_pattern": "^https://enkoping\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$"
     },
+    "0382": {
+      "name": "Östhammar",
+      "issuer": "Östhammars kommun",
+      "region_code": "03",
+      "collection": "Kommunal författningssamling",
+      "strategy": "html_pages",
+      "resident_filter": true,
+      "hosts": ["www.osthammar.se"],
+      "listings": [
+        "https://www.osthammar.se/kommunpolitik/kommunen/kommunfakta-och-dokument/kommunal-forfattningssamling/?step=1",
+        "https://www.osthammar.se/kommunpolitik/kommunen/kommunfakta-och-dokument/kommunal-forfattningssamling/?step=2",
+        "https://www.osthammar.se/kommunpolitik/kommunen/kommunfakta-och-dokument/kommunal-forfattningssamling/?step=3"
+      ],
+      "link_pattern": "^https://www\\.osthammar\\.se/dokument/(avgifter-och-taxor|ordningsregler-och-foreskrifter)/[^#?]+/$",
+      "number": [{"from": "href", "pattern": "/dokument/[^/]+/([^/]+)/$"}],
+      "document_pattern": "^https://www\\.osthammar\\.se/globalassets/.+\\.pdf$"
+    },
     "0428": {
       "name": "Vingåker",
       "issuer": "Vingåkers kommun",
