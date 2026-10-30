@@ -37,7 +37,7 @@ class DisplayLayerTest {
     fun everyApiTypeMapsToTheLevelOfItsLayer() {
         API_TYPES.forEach { (type, layer) ->
             val level = DisplayLayer.forType(type)
-            if (type == "other_statute") {
+            if (type == "other_statute" || type == "treaty") {
                 assertNull(level)
             } else {
                 assertEquals(DisplayLayer.fromRoute(layer, type), level, type)
@@ -100,6 +100,7 @@ class DisplayLayerTest {
             "act" to "sfs",
             "ordinance" to "sfs",
             "other_statute" to "sfs",
+            "treaty" to "sfs",
             "agency_regulation" to "agency",
             "case_report" to "case_law",
             "case_notice" to "case_law",

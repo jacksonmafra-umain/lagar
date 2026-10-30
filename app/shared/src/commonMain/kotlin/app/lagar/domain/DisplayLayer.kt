@@ -30,7 +30,7 @@ enum class DisplayLayer(val apiLayer: String, val apiType: String?, val key: Lay
         fun fromRoute(layer: String, type: String?): DisplayLayer? =
             entries.firstOrNull { it.apiLayer == layer && (it.apiType == null || it.apiType == type) }
 
-        /** The level of a document of API `type`; null for `other_statute` and unknown types. */
+        /** The level of a document of API `type`; null for `other_statute`, `treaty` (both national) and unknown types. */
         fun forType(type: String): DisplayLayer? = when (type) {
             "fundamental_law" -> Fundamental
             "act" -> SfsAct
