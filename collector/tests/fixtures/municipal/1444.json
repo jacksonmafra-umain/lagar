@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.grastorp.se/kommun-och-politik/kommunens-organisation/styrning-och-ledning/styrande-dokument.html": "1444-listing.html"
+  },
+  "count": 17,
+  "sample": {
+    "number": "18.7012916f1875001995113d7a",
+    "title": "Maxtaxa inom äldre- och handikappomsorg",
+    "url": "https://www.grastorp.se/download/18.7012916f1875001995113d7a/1682597514182/Antagen%20maxtaxa%20f%C3%B6r%20%C3%A4ldre%20och%20handikappomsorg%20%20att%20g%C3%A4lla%20fr%C3%A5n%20och%20med%202023-01-01.pdf"
+  },
+  "excluded": [
+    "Delegationsordning för byggärenden under miljö- och byggnämndens verksamheter",
+    "Delegationsordning för miljö- och hälsoärenden under miljö- och byggnämndens verksamheter",
+    "Delegationsordning för sociala myndighetsnämnden"
+  ]
+}

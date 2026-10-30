@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://gullspang.se/kommun-och-politik/kommunfakta-och-styrdokument/styrande-dokument-taxor-och-avgifter": "1447-listing.html"
+  },
+  "count": 31,
+  "sample": {
+    "number": "18.41bad2218e5fb193683be0",
+    "title": "Maxtaxa för förskola och fritidshem",
+    "url": "https://gullspang.se/download/18.41bad2218e5fb193683be0/1712737087747/Maxtaxa%20f%C3%B6r%20f%C3%B6rskola%20och%20fritidshem.pdf"
+  },
+  "excluded": [
+    "Instruktion för kommundirektör",
+    "Länsövergripande jämställdhetsstrategi - Jämställt Västra Götaland 2024-2027",
+    "Planeringsstrategi Gullspång 2024"
+  ]
+}
