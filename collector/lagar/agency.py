@@ -1108,6 +1108,81 @@ class EnergimyndighetenAdapter:
                           version="Grundförfattning", pdfs=list(entry.pdfs))
 
 
+# --- Riksdagsförvaltningen (RFS) ----------------------------------------------
+
+_RFS_REF = re.compile(r"RFS (\d{4}):0*(\d+)")
+_RFS_THROUGH = re.compile(r"Ändring införd:\s*\|?\s*t\.o\.m\. (RFS \d{4}:\d+)")
+_RFS_ISSUED = re.compile(r"Utfärdad:\s*\|?\s*(\d{1,2} \w+ \d{4})")
+
+
+class RiksdagenAdapter:
+    """Riksdagsförvaltningen's RFS from Riksdagen's open data (doktyp rfs).
+
+    The document list gives every RFS document with its kind (Grund, Ändring,
+    Omtryck, Fulltext: a consolidated text) and status (Gällande, Upphävd).
+    Base regulations in force are stored with the text of their consolidated
+    version where there is one, else of the regulation as issued. Repealed
+    regulations are not stored: the data gives no repeal date.
+    """
+
+    series = "RFS"
+    issuer = "Riksdagsförvaltningen"
+    base_url = "https://data.riksdagen.se"
+    listing_url = base_url + "/dokumentlista/?doktyp=rfs&utformat=json&sz=500&sort=datum&sortorder=desc"
+    detail = True
+    has_text = True
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def parse_listing(self, text, url):
+        documents = json.loads(text)["dokumentlista"].get("dokument") or []
+        fulltext, amending, entries = {}, {}, []
+        for doc in documents:
+            if doc.get("subtyp") == "Fulltext":
+                fulltext[(doc.get("rm"), doc.get("beteckning"))] = doc
+        for doc in documents:
+            number = f"RFS {doc.get('rm')}:{doc.get('beteckning')}"
+            if not re.fullmatch(r"RFS \d{4}:\d+", number) or doc.get("subtyp") not in ("Grund", "Ändring", "Omtryck"):
+                continue
+            title = _clean(doc.get("titel")).rstrip(";")
+            changes = _AMENDING.search(title)
+            if doc["subtyp"] != "Grund" or changes:
+                for ref in _RFS_REF.finditer(title[changes.start():] if changes else title):
+                    amending.setdefault(f"RFS {ref.group(1)}:{int(ref.group(2))}", set()).add(number)
+                entries.append(Entry(number, title, url, base=False))
+                continue
+            source = fulltext.get((doc.get("rm"), doc.get("beteckning"))) or doc
+            entries.append(Entry(number, title, f"{self.base_url}/dokument/{source['dok_id']}.html",
+                                 base=doc.get("status") == "Gällande"))
+        for entry in entries:
+            entry.amended_by = sorted(amending.get(entry.number, ()), key=number_key)
+        if not any(e.base for e in entries):
+            raise ValueError("no RFS regulations in the document list")
+        return entries
+
+    def parse_detail(self, text, entry):
+        body = htmlmd.to_markdown(text)
+        lines = body.splitlines()
+        # The header block (RFS nr, Rubrik, Utfärdad, Ändring införd) is kept in the facts.
+        start = max((i for i, line in enumerate(lines[:30]) if line.startswith(("Ändring införd", "Utfärdad"))),
+                    default=-1)
+        number = re.search(r"RFS nr:\s*\|?\s*(\d{4}:\d+)", body)
+        if number and f"RFS {number.group(1)}" != entry.number:
+            raise ValueError(f"document shows RFS {number.group(1)}, expected {entry.number}")
+        through = _RFS_THROUGH.search(body)
+        issued = _RFS_ISSUED.search(body)
+        return Regulation(
+            number=entry.number,
+            title=entry.title,
+            issued=_swedish_date(issued.group(1)) if issued else None,
+            amended_by=list(entry.amended_by),
+            amended_through=through.group(1) if through else None,
+            version="Konsoliderad version" if through else "Grundförfattning",
+            text="\n".join(lines[start + 1:]).strip() if start >= 0 else body,
+        )
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1326,7 +1401,7 @@ def load_series(path=SERIES_CONFIG):
 
 ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
                                    PrvAdapter(), PolisenAdapter(), ScbAdapter(),
-                                   EnergimyndighetenAdapter())}
+                                   EnergimyndighetenAdapter(), RiksdagenAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
