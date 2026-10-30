@@ -1077,11 +1077,49 @@ class HslffsAdapter(DetailPageAdapter):
         return regulation
 
 
+class _HslffsPredecessor(HslffsAdapter):
+    """A series the health and social-care agencies used before HSLF-FS (2015), from the same list.
+
+    Kunskapsguiden still lists their regulations under the old designations.
+    Links to an agency's page of repealed regulations are left out, as are
+    Socialstyrelsen regulations its own index does not name a publication page
+    for (that index lists the regulations in force).
+    """
+
+    def url_number(self, url):
+        letters = re.sub(r"[^a-z]", "", self.series.lower())
+        match = re.search(rf"(?<![a-z]){letters}[-_]?(\d{{4}})[-_]?(\d{{1,3}})(?!\d)",
+                          urllib.parse.unquote(url), re.IGNORECASE)
+        return f"{self.series} {match.group(1)}:{int(match.group(2))}" if match else None
+
+    def clean_title(self, text, number):
+        return super().clean_title(re.sub(r"^\s*Konsoliderad föreskrift\s+", "", text or ""), number)
+
+    def parse_listing(self, text, url):
+        return [e for e in super().parse_listing(text, url) if "upphavda" not in e.url
+                and not (e.url.startswith(self.SOS) and not re.search(r"/publikationer/[^/]+", e.url))]
+
+
+class SosfsAdapter(_HslffsPredecessor):
+    series = "SOSFS"
+    issuer = "Socialstyrelsen"
+
+
+class FohmfsAdapter(_HslffsPredecessor):
+    series = "FoHMFS"
+    issuer = "Folkhälsomyndigheten"
+
+
+class TlvfsAdapter(_HslffsPredecessor):
+    series = "TLVFS"
+    issuer = "Tandvårds- och läkemedelsförmånsverket"
+
+
 SERIES = (MigrfsAdapter(), KamfsAdapter(), KfmfsAdapter(), KfsAdapter(), KrfsAdapter(), MemyfsAdapter(),
           ElsakfsAdapter(), McffsAdapter(), MdffsAdapter(), NfsAdapter(), KifsAdapter(), AgvfsAdapter(),
           KovfsAdapter(), HvmfsAdapter(), FkfsAdapter(), IaffsAdapter(), AffsAdapter(), BfnarAdapter(),
           CsnfsAdapter(), ImyfsAdapter(), LmfsAdapter(), MtfsAdapter(),
           KvfsAdapter(), LivsfsAdapter(), MyhfsAdapter(), DvfsAdapter(), EifsAdapter(), KbvfsAdapter(),
-          FfsAdapter(), HslffsAdapter())
+          FfsAdapter(), HslffsAdapter(), SosfsAdapter(), FohmfsAdapter(), TlvfsAdapter())
 
 agency.ADAPTERS.update({a.series: a for a in SERIES})

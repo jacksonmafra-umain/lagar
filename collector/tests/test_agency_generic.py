@@ -477,6 +477,52 @@ if __name__ == "__main__":
     unittest.main()
 
 
+
+class HslffsPredecessorTest(unittest.TestCase):
+    SOSFS = agency.ADAPTERS["SOSFS"]
+    TLVFS = agency.ADAPTERS["TLVFS"]
+    FOHMFS = agency.ADAPTERS["FoHMFS"]
+    FOHM = "https://www.folkhalsomyndigheten.se/publikationer-och-material/foreskrifter-och-allmanna-rad/"
+
+    def listing(self):
+        def item(designation, heading, url):
+            return {"Designation": designation, "Heading": heading, "Authority": "x", "Url": url}
+
+        items = [
+            item("SOSFS 2011:9", "Ledningssystem för systematiskt kvalitetsarbete (SOSFS 2011:9)", self.SOSFS.SOS_INDEX),
+            item("SOSFS 2015:9", "Upphävande av allmänna råden (SOSFS 1989:20) om hälsoundersökning",
+                 self.SOSFS.SOS_INDEX),
+            item("SOSFS 1997:14", "Delegering av medicinska arbetsuppgifter", self.SOSFS.SOS_INDEX),
+            item("HSLF-FS 2025:21", "Socialstyrelsens föreskrifter om ändring i föreskrifterna (SOSFS 2011:9)",
+                 "https://www.socialstyrelsen.se/publikationer/hslf-fs-202521-andring-sosfs-20119/"),
+            item("TLVFS 2009:3", "Konsoliderad föreskrift Tandvårds- och läkemedelsförmånsverkets föreskrifter "
+                 "om handelsmarginal", "https://www.tlv.se/om-tlv/regelverk/foreskrifter.html"),
+            item("FoHMFS 2014:7", "Folkhälsomyndighetens föreskrifter om kunskapsprov",
+                 self.FOHM + "fohmfs-20147/"),
+            item("FoHMFS 2014:9", "Folkhälsomyndighetens föreskrifter om varningstexter",
+                 self.FOHM + "upphavda-foreskrifter/"),
+        ]
+        return "<script>React.createElement(SOS.Components.FilterList, " + json.dumps(
+            {"filterItems": items}) + ")</script>"
+
+    def test_sosfs_from_the_shared_list_and_socialstyrelsens_index(self):
+        sosfs = type(self.SOSFS)()
+        self.assertEqual(sosfs.parse_listing(self.listing(), sosfs.listing_url), [])  # all wait for the index
+        index = '[{"name":"SOSFS 2011:9 Ledningssystem","url":"/publikationer/sosfs-20119-ledningssystem/"}]'
+        entries = sosfs.parse_listing(index, sosfs.SOS_INDEX)
+        # SOSFS 1997:14 has no publication page in the index of regulations in force
+        self.assertEqual([(e.number, e.url, e.amended_by) for e in entries], [
+            ("SOSFS 2011:9", "https://www.socialstyrelsen.se/publikationer/sosfs-20119-ledningssystem/", [])])
+
+    def test_titles_and_repealed_pages(self):
+        tlvfs = type(self.TLVFS)()
+        [entry] = tlvfs.parse_listing(self.listing(), tlvfs.listing_url)
+        self.assertEqual((entry.number, entry.title),
+                         ("TLVFS 2009:3", "Tandvårds- och läkemedelsförmånsverkets föreskrifter om handelsmarginal"))
+        fohmfs = type(self.FOHMFS)()
+        self.assertEqual([e.number for e in fohmfs.parse_listing(self.listing(), fohmfs.listing_url)],
+                         ["FoHMFS 2014:7"])
+
 class KvfsLivsfsMyhfsTest(unittest.TestCase):
     KVFS = agency.ADAPTERS["KVFS"]
     LIVSFS = agency.ADAPTERS["LIVSFS"]
