@@ -519,6 +519,24 @@ class CountyTextTests(unittest.TestCase):
 
     run_main = CountyRunTests.run_main
 
+    def test_unnumbered_link_takes_the_number_printed_in_the_pdf(self):
+        text = PDF_TEXT.replace("24FS 2026:1", "22FS 2025:1")
+        with fake_extract(text):
+            code, report = self.run_files(FilesClient(), "22", "--from-year", "2025")
+        self.assertEqual(code, 0)
+        self.assertEqual(report["unnumbered"], [])
+        self.assertIn("22FS 2025:1", report["written"])
+        meta, body = self.body("22FS 2025:1")
+        self.assertEqual(schema.validate(meta), [])
+        self.assertIn("Karta%202025", meta["source"])
+        self.assertIn("1 § Det är förbjudet att elda utomhus", body)
+        self.assertEqual(county.number_in_text(["Ändring i 14FS 2021:43", "22FS 2025:01"], "22"), "22FS 2025:1")
+        self.assertIsNone(county.number_in_text(["Informationsblad 2017"], "22"))
+        client = FilesClient()
+        with fake_extract(text) as extract:
+            self.run_files(client, "22", "--from-year", "2025")
+        extract.assert_not_called()  # known from the manifest, nothing downloaded
+
     def test_missing_pdftotext_exits_1_unless_no_text(self):
         with mock.patch.object(county.pdftext, "available", return_value=False):
             self.assertEqual(self.run_files(FilesClient(), "24", "--from-year", "2026")[0], 1)

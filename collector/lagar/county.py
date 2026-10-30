@@ -673,10 +673,10 @@ def _in_range(year, args):
     )
 
 
-def _candidates(client, robots, args, config, unnumbered):
+def _candidates(client, robots, args, config, unnumbered, manifest=None):
     landing = args.landing_url or config["landing"]
     if config["layout"] == "files":
-        yield from _file_candidates(client, robots, args, config, landing, unnumbered)
+        yield from _file_candidates(client, robots, args, config, landing, unnumbered, manifest or {})
         return
     years = parse_landing(_get_page(client, robots, landing, "landing page"), landing)
     if not years:
@@ -692,7 +692,7 @@ def _candidates(client, robots, args, config, unnumbered):
         yield from items
 
 
-def _file_candidates(client, robots, args, config, landing, unnumbered):
+def _file_candidates(client, robots, args, config, landing, unnumbered, manifest):
     links, folders = parse_files_landing(_get_page(client, robots, landing, "landing page"), landing)
     in_folders = set()
     for year in sorted(y for y in folders if _in_range(y, args)):
@@ -707,12 +707,15 @@ def _file_candidates(client, robots, args, config, landing, unnumbered):
     if not links:
         raise ListingError(f"no PDF linked from {landing}")
     items, loose = group_files(links, args.county, config, landing)
-    # Unnumbered links are reported when they sit in a requested year's folder or name
-    # a year in the requested range.
-    unnumbered.extend(
-        t for u, t in loose
+    # Unnumbered links count when they sit in a requested year's folder or name a
+    # year in the requested range; those are read for the number they print.
+    loose = [
+        (u, t) for u, t in loose
         if u in in_folders or any(_in_range(int(y), args) for y in _ANY_YEAR.findall(t))
-    )
+        or (args.from_year is None and args.to_year is None)
+    ]
+    loose = _number_from_text(client, robots, args, config, landing, items, loose, manifest)
+    unnumbered.extend(t for _u, t in loose)
     items = [i for i in items if _in_range(number_key(i.number)[1], args)]
     items.sort(key=lambda i: number_key(i.number), reverse=args.newest_first)
     yield from items
@@ -728,6 +731,67 @@ def read_text(body):
         return result.gap, None
     paragraphs = pdftext.paragraphs(result.text)
     return (TEXT_EXTRACTED, paragraphs) if paragraphs else (pdftext.NO_TEXT_LAYER, None)
+
+
+class Prefetched:
+    """A client that serves PDFs already downloaded once in this run without a new request."""
+
+    def __init__(self, client):
+        self.client = client
+        self.bodies = {}
+
+    def fetch(self, url):
+        if url in self.bodies:
+            return self.bodies.pop(url)
+        return self.client.fetch(url)
+
+    def get(self, url):
+        return self.fetch(url)[0]
+
+
+def number_in_text(paragraphs, region_code):
+    """The first county number of the series printed near the top of a PDF's text, or None."""
+    head = " ".join(paragraphs)[:600]
+    for match in _NUMBER.finditer(head):
+        if match.group(1) == region_code:
+            return normalise_number(match.group(0), region_code)
+    return None
+
+
+def _number_from_text(client, robots, args, config, landing, items, loose, manifest):
+    """Give links without a number in their name the number printed in the PDF.
+
+    A link already in the manifest keeps the number it was stored under. Others are
+    downloaded once (kept for the manifest step) and the number is read from the top
+    of their text. Returns the links that stay without a number.
+    """
+    known = {f["url"]: number for number, entry in manifest.items() for f in entry.get("files", [])}
+    by_number = {item.number: item for item in items}
+    remaining = []
+    for url, text in loose:
+        number = known.get(url)
+        if number is None and args.pdf and args.text and _on_site(url) and robots.allows(url):
+            try:
+                body, content_type = client.fetch(url)
+            except NETWORK_ERRORS:
+                body = b""
+            if body.startswith(b"%PDF-"):
+                client.bodies[url] = (body, content_type)
+                _status, paragraphs = read_text(body)
+                number = number_in_text(paragraphs or [], args.county)
+            if number is None:
+                client.bodies.pop(url, None)
+        if number is None or not _in_range(number_key(number)[1], args):
+            remaining.append((url, text))
+            continue
+        item = by_number.get(number)
+        if item is None:
+            item = by_number[number] = ListingItem(number, landing, files=[])
+            items.append(item)
+        item.files.append((url, text))
+        if not item.title:
+            item.title = file_title(text, None, None, config["title_strip"]) or None
+    return remaining
 
 
 def _hash_pdfs(client, robots, pdfs, download, want_text=False):
@@ -986,8 +1050,9 @@ def run(client, args):
         return summary
 
     try:
+        client = Prefetched(client)
         robots = Robots(client)
-        for item in _candidates(client, robots, args, config, summary.unnumbered):
+        for item in _candidates(client, robots, args, config, summary.unnumbered, manifest):
             if args.limit is not None and summary.written >= args.limit:
                 break
             if _already_done(state, item, args.corpus):
