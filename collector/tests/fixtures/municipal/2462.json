@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.vilhelmina.se/kommun-och-politik/kommunala-foreskrifter/": "2462-listing1.html",
+    "https://www.vilhelmina.se/kommun-och-politik/taxor-och-avgifter/": "2462-listing2.html"
+  },
+  "count": 22,
+  "sample": {
+    "number": "2586",
+    "title": "Allmänna bestämmelser för vatten och avlopp, ABVA",
+    "url": "https://www.vilhelmina.se/media/2586/abvaplusinformation-vilhelmina-kommun-foerslag-2009-10-27.pdf"
+  },
+  "excluded": []
+}

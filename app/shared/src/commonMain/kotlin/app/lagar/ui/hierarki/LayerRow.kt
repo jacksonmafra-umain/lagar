@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -61,6 +62,7 @@ fun LayerRow(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     onBrowseByMinistry: (() -> Unit)? = null,
+    selected: Boolean = false,
 ) {
     val layers = LagarTheme.layers
     val key = summary.layer.key
@@ -68,10 +70,11 @@ fun LayerRow(
     val maxLines = if (LocalDensity.current.fontScale > WRAP_FONT_SCALE) Int.MAX_VALUE else 2
     Surface(
         onClick = onClick,
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth().semantics { this.selected = selected },
         shape = MaterialTheme.shapes.large,
         color = layers.tint(key),
-        border = BorderStroke(1.dp, layers.border(key)),
+        // The layer open in the detail pane of the list-detail layout keeps a solid accent outline.
+        border = if (selected) BorderStroke(2.dp, accent) else BorderStroke(1.dp, layers.border(key)),
     ) {
         Row(
             modifier = Modifier.heightIn(min = 64.dp).padding(horizontal = LagarTheme.spacing.md, vertical = LagarTheme.spacing.sm),

@@ -1,0 +1,12 @@
+{
+  "listings": {
+    "https://www.asele.se/kommun-och-politik/taxor-och-avgifter/": "2463-listing.html"
+  },
+  "count": 3,
+  "sample": {
+    "number": "yccpm15r",
+    "title": "Taxor och Avgifter 2026",
+    "url": "https://www.asele.se/media/yccpm15r/taxor-och-avgifter-2026.pdf"
+  },
+  "excluded": []
+}

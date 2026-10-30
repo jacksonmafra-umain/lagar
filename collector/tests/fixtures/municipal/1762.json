@@ -1,0 +1,15 @@
+{
+  "listings": {
+    "https://www.munkfors.se/kommun-och-politik/om-munkfors/styrdokument/": "1762-listing1.html",
+    "https://www.munkfors.se/boende-miljo-trafik/vatten-och-avlopp/taxa-for-vatten-och-avloppsanlaggning/": "1762-listing2.html",
+    "https://www.munkfors.se/naringsliv-och-arbete/tillstand-inom-naringslivsverksamhet/handel-och-evenemang/torghandel/": "1762-listing3.html",
+    "https://www.munkfors.se/naringsliv-och-arbete/tillstand-inom-naringslivsverksamhet/tobak/": "1762-listing4.html"
+  },
+  "count": 5,
+  "sample": {
+    "number": "lokala-ordningsforeskrifter-ks-2020-395",
+    "title": "Lokala ordningsföreskrifter",
+    "url": "https://www.munkfors.se/wp-content/uploads/2024/01/lokala-ordningsforeskrifter-ks-2020-395.pdf"
+  },
+  "excluded": []
+}

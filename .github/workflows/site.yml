@@ -23,6 +23,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: read
   pull-requests: write
 
@@ -33,7 +34,7 @@ concurrency:
 jobs:
   site:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 80
     env:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -80,6 +81,29 @@ jobs:
         run: |
           gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --edit-last --create-if-none \
             --body "Landing page preview: $URL (commit ${GITHUB_SHA::7})"
+
+      # The web app reads the API from GitHub Pages. When this push also deploys Pages, wait for
+      # it so the new app does not go live against the previous API. A failed or cancelled Pages
+      # run does not block: a newer push deploys again, and the home tolerates a missing listing.
+      - name: Wait for the API deploy
+        if: env.DEPLOY == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        timeout-minutes: 50
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          run=""
+          for _ in 1 2 3 4 5 6; do
+            run=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow pages.yml --commit "$GITHUB_SHA" \
+              --event push --limit 1 --json databaseId --jq '.[0].databaseId // empty')
+            [ -n "$run" ] && break
+            sleep 10
+          done
+          if [ -z "$run" ]; then
+            echo "No Pages run for $GITHUB_SHA; deploying without waiting."
+            exit 0
+          fi
+          gh run watch "$run" --repo "$GITHUB_REPOSITORY" --interval 30 --exit-status > /dev/null \
+            || echo "::warning::Pages run $run did not succeed; deploying anyway."
 
       - name: Deploy production
         if: env.DEPLOY == 'true' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
