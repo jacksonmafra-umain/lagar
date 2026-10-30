@@ -39,6 +39,7 @@ recorded as a gap, its corpus file then pointing at the listing page instead.
 import argparse
 import gzip
 import hashlib
+import html
 import json
 import re
 import sys
@@ -477,6 +478,24 @@ def corpus_id(kommun_code, number):
     return f"{kommun_code}-{slug(number)}"
 
 
+_HREF = re.compile(r"""\shref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))""", re.IGNORECASE)
+_TERMINATED_REF = re.compile(r"&(?:#[0-9]+|#[xX][0-9a-fA-F]+|[A-Za-z][A-Za-z0-9]*);")
+
+
+def _href(parser, attrs):
+    """The tag's href with only `;`-terminated character references decoded.
+
+    HTMLParser decodes legacy entities without a semicolon inside attributes, so a
+    query like `?documentId=1&currentPageId=4` turns into `?documentId=1¤tPageId=4`
+    (`&curren`); browsers leave such a reference alone when a letter follows it.
+    """
+    match = _HREF.search(parser.get_starttag_text() or "")
+    if not match:
+        return dict(attrs).get("href")
+    raw = next(group for group in match.groups() if group is not None)
+    return _TERMINATED_REF.sub(lambda ref: html.unescape(ref.group(0)), raw)
+
+
 def _uri(url):
     """Percent-encode what some listings leave raw in their links (spaces, å, ä, ö)."""
     return urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~")
@@ -540,7 +559,7 @@ class _Links(HTMLParser):
         elif re.fullmatch(r"h[1-6]", tag) and int(tag[1]) <= self.level:
             self._heading = [int(tag[1]), []]
         elif tag == "a":
-            href = dict(attrs).get("href")
+            href = _href(self, attrs)
             self._anchor = [href, []] if href else None
 
     def handle_endtag(self, tag):
@@ -741,7 +760,7 @@ class _DetailParser(HTMLParser):
         if tag == "div" and attrs.get("id") in _DETAIL_IDS:
             self._field = [_DETAIL_IDS[attrs["id"]], []]
         elif tag == "a":
-            href = (attrs.get("href") or "").replace("\\", "/")
+            href = (_href(self, attrs.items()) or "").replace("\\", "/")
             if "/$File/" in href:
                 self._anchor = [urllib.parse.urljoin(self.base, href), []]
 
@@ -798,7 +817,7 @@ class _PageLinks(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         if tag == "a":
-            href = dict(attrs).get("href")
+            href = _href(self, attrs)
             self._anchor = [href, []] if href else None
 
     def handle_endtag(self, tag):
