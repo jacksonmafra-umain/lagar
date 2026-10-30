@@ -301,6 +301,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
     page without headings, so their configs keep only listed file names; a new
     document with another name is not picked up until the config is updated.
+- Kommuner checked and not collected are listed with the reason in `AGENCIES.md`
+  (curated in the `kommuner` section of `collector/data/agencies.json`):
+  - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
+    included, with an HTTP 403 "Åtkomst nekad" bot-check page; not bypassed.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources
