@@ -48,6 +48,86 @@
     "as_of": "2026-10-29"
   },
   {
+    "layer": "agency",
+    "type": null,
+    "series": "RGKFS",
+    "label": "RGKFS (Riksgälden)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.riksgalden.se/press-och-publicerat/foreskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "RIFS",
+    "label": "RIFS (Revisorsinspektionen)",
+    "target": 14,
+    "kind": "counted",
+    "source": "https://www.revisorsinspektionen.se/regelverk/samtliga-foreskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SGU-FS",
+    "label": "SGU-FS (SGU)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.sgu.se/om-sgu/verksamhet/foreskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SiSFS",
+    "label": "SiSFS (SiS)",
+    "target": 30,
+    "kind": "counted",
+    "source": "https://www.stat-inst.se/om-sis/lagar-forordningar-forfattningar/sis-forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TVFS",
+    "label": "TVFS (Tillväxtverket)",
+    "target": 10,
+    "kind": "counted",
+    "source": "https://tillvaxtverket.se/tillvaxtverket/omtillvaxtverket/varverksamhet/foreskrifter.595.html (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "UFS",
+    "label": "UFS (Upphandlingsmyndigheten)",
+    "target": 5,
+    "kind": "counted",
+    "source": "https://www.upphandlingsmyndigheten.se/om-oss/upphandlingsmyndighetens-forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "VALFS",
+    "label": "VALFS (Valmyndigheten)",
+    "target": 17,
+    "kind": "counted",
+    "source": "https://www.val.se/det-svenska-valsystemet/grunderna-i-det-svenska-valsystemet/lagar-och-regler (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "VRFS",
+    "label": "VRFS (Vetenskapsrådet)",
+    "target": 3,
+    "kind": "counted",
+    "source": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
     "layer": "case_law",
     "type": null,
     "label": "Case law",
