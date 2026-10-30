@@ -1,0 +1,14 @@
+{
+  "listings": {
+    "https://www.vaxjo.se/sidor/politik-och-demokrati/styrande-dokument/lokala-foreskrifter.html": "0780-listing.html"
+  },
+  "count": 6,
+  "sample": {
+    "number": "18.313cf36515d1bde9ee3225f3",
+    "title": "Allmänna lokala ordningsföreskrifter för Växjö kommun",
+    "url": "https://www.vaxjo.se/download/18.313cf36515d1bde9ee3225f3/1726840385997/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20V%C3%A4xj%C3%B6%20kommun.pdf"
+  },
+  "excluded": [
+    "kartor"
+  ]
+}

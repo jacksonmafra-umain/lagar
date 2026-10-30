@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.ljungby.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument": "0781-listing.html",
+    "https://www.ljungby.se/bygga-bo-och-miljo/vatten-och-avlopp/kommunala-foreskrifter-om-vatten--och-avloppsanlaggningen": "0781-listing-2.html"
+  },
+  "count": 14,
+  "sample": {
+    "number": "18.363d724819367f30f043301",
+    "title": "Taxa för kontroll enligt lag om foder och animaliska biprodukter",
+    "url": "https://www.ljungby.se/download/18.363d724819367f30f043301/1767105140665/Taxa%20f%C3%B6r%20kontroll%20enligt%20lag%20om%20foder%20och%20animaliska%20biprodukter.pdf"
+  },
+  "excluded": [
+    "Länsgemensam folkhälsopolicy för Kronobergs län",
+    "Policy för arbetet med barnets rättigheter i Ljungby kommun",
+    "Policy för arbetsmiljö"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://hogsby.se/kommun-och-politik/demokrati-och-politik/styrande-dokument/": "0821-listing.html"
+  },
+  "count": 5,
+  "sample": {
+    "number": "Avgifter_foer_kopiering_vid_ut_94876",
+    "title": "Avgifter för kopiering vid utlämnande av allmän handling",
+    "url": "https://hogsby.se/wp-content/uploads/Avgifter_foer_kopiering_vid_ut_94876.pdf"
+  },
+  "excluded": [
+    "Riktlinje för Högsby kommuns arbetsmarknadsenhet",
+    "Riktlinje för fastställande av arkivorganisation",
+    "Riktlinje gallring tillfällig ringa betydelse"
+  ]
+}

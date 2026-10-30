@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.alvesta.se/kommun-och-politik/sa-styrs-alvesta-kommun/styrande-dokument-och-forfattningssamling/forfattningssamling/": "0764-listing.html"
+  },
+  "count": 21,
+  "sample": {
+    "number": "Avfallsforeskrifter-for-Alvesta-kommun-reviderade-2026-02-24",
+    "title": "Avfallsföreskrifter för Alvesta kommun",
+    "url": "https://www.alvesta.se/wp-content/uploads/2026/03/Avfallsforeskrifter-for-Alvesta-kommun-reviderade-2026-02-24.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för avgiftshandläggning inom omsorg, vård och stöd",
+    "Arbetsordning för kommunfullmäktige",
+    "Gemensamt reglemente för kommunstyrelse och nämnder"
+  ]
+}
