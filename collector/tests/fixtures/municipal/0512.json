@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.ydre.se/ydre-kommun/kommun-och-politik/styrande-dokument---forfattningssamling": "0512-listing.html"
+  },
+  "count": 12,
+  "sample": {
+    "number": "18.c0a4fce18180017910d1ee",
+    "title": "Lokala föreskrifter avseende alkoholförtäring",
+    "url": "https://www.ydre.se/download/18.c0a4fce18180017910d1ee/1657539435675/Lokala%20ordningsf%C3%B6reskrifter%20avseende%20alkoholf%C3%B6rt%C3%A4ring.pdf"
+  },
+  "excluded": [
+    "Arbetsordningen för kommunfullmäktige",
+    "Reglemente för kommunstyrelsen",
+    "Reglemente för krisledningsnämnden"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.nykoping.se/kommun--politik/kommunfakta/forfattningssamling/": "0480-listing.html"
+  },
+  "count": 33,
+  "sample": {
+    "number": "abva-allmanna-bestammelser-for-brukandet-av-nykopings-kommuns-allmanna-vatten-och-avloppsanlaggningar",
+    "title": "ABVA - Allmänna bestämmelser för brukandet av Nyköpings kommuns allmänna vatten- och avloppsanläggningar",
+    "url": "https://www.nykoping.se/globalassets/nykoping.se/dokument/styrande-dokument/reglerande/abva-allmanna-bestammelser-for-brukandet-av-nykopings-kommuns-allmanna-vatten-och-avloppsanlaggningar.pdf"
+  },
+  "excluded": [
+    "Nya riktlinjer för kommunala enskilda vägar utanför detaljplanelagt område.",
+    "Reglemente för kommunalt partistöd",
+    "Riktlinjer för kommunala bidrag till tätortsvägsamfälligheter"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "listings": {
+    "https://www.odeshog.se/kommunochpolitik/kommunfakta/reglerochstyrandedokument/foreskrifter.4.50544c211605519723d27cd6.html": "0509-listing.html",
+    "https://www.odeshog.se/kommunochpolitik/kommunfakta/reglerochstyrandedokument/ordningsregler.4.2939d52f17dc1ece08065af4.html": "0509-listing-2.html",
+    "https://www.odeshog.se/kommunochpolitik/kommunfakta/reglerochstyrandedokument/taxorochavgifter.4.50544c211605519723d197.html": "0509-listing-3.html"
+  },
+  "count": 14,
+  "sample": {
+    "number": "18.78ae827d1605526e94b6704c",
+    "title": "Allmanna-bestammelser-for-vatten-och-avlopp",
+    "url": "https://www.odeshog.se/download/18.78ae827d1605526e94b6704c/1551166618868/Allmanna-bestammelser-for-vatten-och-avlopp.pdf"
+  },
+  "excluded": [
+    "Forskola-och-fritidshem-riktlinjer-avgiftert",
+    "Plan-och-bygglovstaxa-t",
+    "Allmanna-bestammelser-om-ekonomiska-formaner-till-fortroendevalda-t"
+  ]
+}

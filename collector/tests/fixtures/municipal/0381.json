@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://enkoping.se/kommun-och-politik/forfattningssamling.html": "0381-listing.html"
+  },
+  "count": 28,
+  "sample": {
+    "number": "18.3a53caf818f99bb683e30028",
+    "title": "Bestämmelser för arbeten på allmän plats",
+    "url": "https://enkoping.se/download/18.3a53caf818f99bb683e30028/1772804768053/bestammelser-arbeten-allman-plats.pdf"
+  },
+  "excluded": [
+    "Kommunfullmäktiges arbetsordning",
+    "Kommunstyrelsens delegationsordning",
+    "Miljö- och byggnadsnämndens delegationsordning"
+  ]
+}
