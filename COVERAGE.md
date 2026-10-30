@@ -390,15 +390,20 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Tanum publishes its rules as web pages in an A–Z list; they are collected as
     page text (`html_pages`), the ABVA as its PDF. The avfallsföreskrifter page
     refers to Rambo AB's site for the full text.
+  - Härryda has no författningssamling or list of its rules. Its avgifter och
+    taxor page links to topic pages, collected as page text (`html_pages`) or as
+    the taxa PDF a page links; the VA and avfall taxor and the avfallsföreskrifter
+    come as PDFs from the pages of Härryda Vatten och Avfall AB (hvaa.se), the
+    current versions only; library fees and hall hire are left out, and no lokala
+    ordningsföreskrifter were found on either site: 13 documents (2026-10-30).
 - Kommuner checked and not collected are listed with the reason in `AGENCIES.md`
   (curated in the `kommuner` section of `collector/data/agencies.json`):
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
     included, with an HTTP 403 "Åtkomst nekad" bot-check page; not bypassed.
   - Not collected yet, with the reason per kommun in `AGENCIES.md`: Värnamo
     (its DocumentWeb host did not answer), Mönsterås (site did not answer) and
-    Linköping (rules on Google Drive; waits for an owner decision). Härryda has
-    no författningssamling or list of its rules: its taxor are spread over topic
-    pages, some as HTML text. Their issues stay open.
+    Linköping (rules on Google Drive; waits for an owner decision). Their issues
+    stay open.
   - Collected through platform adapters: Lidingö and Västervik (Evolution
     DocumentWeb API), Sigtuna (Netpublicator), Gotland (its document service),
     Vallentuna (gzipped sitemap of the file-share module), Uppsala (sitemap and

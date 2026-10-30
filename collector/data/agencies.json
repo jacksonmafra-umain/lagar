@@ -1193,8 +1193,7 @@
       "note": "No page listing Båstad's författningssamling or lokala föreskrifter was found; its rules are spread over topic pages (checked 2026-10-30)."
     },
     "1401": {
-      "status": "no_adapter",
-      "note": "Härryda publishes no författningssamling or list of local rules: the avgifter och taxor page links to topic pages, where some taxor are HTML text and a few are single PDFs (plan- och bygglovstaxa, miljö- och hälsoskyddstaxa); no sitemap (checked 2026-10-30)."
+      "note": "Härryda publishes no författningssamling: the rules are read from its avgifter och taxor page (topic pages as text, or the taxa PDF a page links) and from Härryda Vatten och Avfall AB's VA and avfall taxor and avfallsföreskrifter on hvaa.se."
     },
     "1435": {
       "note": "Tanum's rules are web pages in its A–Z list and are collected as page text; the avfallsföreskrifter page refers to Rambo AB's site (rambo.se) for the full text."

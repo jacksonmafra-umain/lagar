@@ -1,0 +1,21 @@
+{
+  "listings": {
+    "https://www.harryda.se/kommunochpolitik/kommunfakta/avgifterochtaxor.4.1439a0061817fd1d94051f0.html": "1401-listing.html",
+    "https://www.hvaa.se/vatten-och-avlopp/avgifter-for-vatten-och-avlopp.html": "1401-va.html",
+    "https://hvaa.se/avfall-och-atervinning/avgifter-for-avfall-och-slam.html": "1401-avfallstaxa.html",
+    "https://hvaa.se/avfall-och-atervinning/avfallsregler-och-foreskrifter.html": "1401-avfallsregler.html"
+  },
+  "count": 13,
+  "sample": {
+    "number": "18.611879ac17f0d70a52c5c45",
+    "title": "Avfallsföreskrifter",
+    "url": "https://hvaa.se/download/18.611879ac17f0d70a52c5c45/1646299496327/Avfallsf%C3%B6reskrifter_2017.pdf"
+  },
+  "excluded": [
+    "Taxa för vattentjänster 2024 - kortversion",
+    "Taxa för vattentjänster 2023",
+    "Taxa för avfall 2024",
+    "Taxa för containrar och stora kärl 2024",
+    "Föreskrifterna som populärversion"
+  ]
+}

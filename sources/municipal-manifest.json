@@ -20494,6 +20494,123 @@
       "url": "https://kungsbacka.se/download/18.eb3c2f918c80d364265bf/1703001614066/Pr%C3%B6vning%20och%20tillsyn%202024%20milj%C3%B6balken,%20str%C3%A5lskydd,%20spr%C3%A4ng%C3%A4mne,%20gaturenh%C3%A5llning,%20skyltning,%20fartyg,%20taxa.pdf"
     },
     {
+      "bytes": 357242,
+      "content_type": "application/pdf",
+      "id": "1401-18-1abb884718c8ab9a9f739ec8",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:30Z",
+      "sha256": "45c9307c25540db8c8c703935b03f6302ad1fddc103e6bc021ffb9e000a8311c",
+      "url": "https://www.hvaa.se/download/18.1abb884718c8ab9a9f739ec8/1705325518506/Taxa%20f%C3%B6r%20vattentj%C3%A4nster%202024.pdf"
+    },
+    {
+      "bytes": 299927,
+      "content_type": "application/pdf",
+      "id": "1401-18-2bd99fa118e5fb3b33ba2c",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:35Z",
+      "sha256": "029f2e9fd3eff5f577d9ee9af54eff304df5ac7f242b8d4c8ec72725d93c7ed1",
+      "url": "https://hvaa.se/download/18.2bd99fa118e5fb3b33ba2c/1712230875120/Taxa%20fo%CC%88r%20slam%20april%202024.pdf"
+    },
+    {
+      "bytes": 303205,
+      "content_type": "application/pdf",
+      "id": "1401-18-351964301943ea33b03e18ca",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:33Z",
+      "sha256": "d2d1e5bad59bd76ebf09022784c379cf6311177facd84c749a69f9f49fc5c831",
+      "url": "https://hvaa.se/download/18.351964301943ea33b03e18ca/1741009514045/Kompletterande%20avfallstaxa%202025.pdf"
+    },
+    {
+      "bytes": 1305610,
+      "content_type": "application/pdf",
+      "id": "1401-18-611879ac17f0d70a52c5c45",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:37Z",
+      "sha256": "d26b7fd2def76a55137f477db273397a655a601edd86dde12155468124e47df5",
+      "url": "https://hvaa.se/download/18.611879ac17f0d70a52c5c45/1646299496327/Avfallsf%C3%B6reskrifter_2017.pdf"
+    },
+    {
+      "bytes": 463546,
+      "content_type": "application/pdf",
+      "id": "1401-18-6f2d5e8e19474742dbc72db3",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:31Z",
+      "sha256": "b958812a8bc60f81953b20113e8e41f6d7c70f40bdbd08a90bf52d3c03106e14",
+      "url": "https://hvaa.se/download/18.6f2d5e8e19474742dbc72db3/1739177870210/Taxa%20fo%CC%88r%20avfall%202025.pdf"
+    },
+    {
+      "bytes": 627272,
+      "content_type": "application/pdf",
+      "id": "1401-4-1439a0061817fd1d940409c",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:27Z",
+      "sha256": "b283b85ffb33fc14735c9f7d2c5a8872d5b6b4fa8fbeb4be061edb62de8db69a",
+      "url": "https://www.harryda.se/download/18.69c60334199373fa6cc14f48/1758806277829/Taxa%20f%C3%B6r%20f%C3%A4rdtj%C3%A4nst%201%20oktober%202025%20TAP%20250925.pdf"
+    },
+    {
+      "bytes": 2658,
+      "content_type": "text/markdown",
+      "id": "1401-4-1439a0061817fd1d9405628",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:27Z",
+      "sha256": "08663211c4e3c4aa190cfe11141de6ea13d249048b798b75b3baaa5c9e971a57",
+      "url": "https://www.harryda.se/kommunochpolitik/diariumocharkiv/avgiftstaxaforutlamnandeavallmannahandlingar.4.1439a0061817fd1d9405628.html"
+    },
+    {
+      "bytes": 13408,
+      "content_type": "text/markdown",
+      "id": "1401-4-1439a0061817fd1d9409a6",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:17Z",
+      "sha256": "a1208b5841e52cb41b30f364d7cd14da3901c01d8b69eb112746c5d202a70833",
+      "url": "https://www.harryda.se/barnochutbildning/forskola/avgifterforbarnomsorg.4.1439a0061817fd1d9409a6.html"
+    },
+    {
+      "bytes": 3093,
+      "content_type": "text/markdown",
+      "id": "1401-4-42a851691818a5d975f120e",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:20Z",
+      "sha256": "2296078c1112a9077f0b8ca691ffd5d7738c2db5def2b8dccb539cd35a79c08f",
+      "url": "https://www.harryda.se/omsorgochstod/hjalpihemmet/hemtjanst/avgifterinomhemtjanst.4.42a851691818a5d975f120e.html"
+    },
+    {
+      "bytes": 4623,
+      "content_type": "text/markdown",
+      "id": "1401-4-42a851691818a5d975ff1f",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:21Z",
+      "sha256": "30a238f8d92f7c034c56a8dba2200b1a2278c1d42068e30f023e9f4a03679563",
+      "url": "https://www.harryda.se/omsorgochstod/funktionsnedsattning/stodochserviceenligtlss/avgifterinomlss.4.42a851691818a5d975ff1f.html"
+    },
+    {
+      "bytes": 1142911,
+      "content_type": "application/pdf",
+      "id": "1401-4-446cba66182e9265b81e8ff",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:24Z",
+      "sha256": "8a3031e53f0d905db7312552f6dee66db3f7480817cd59eef5a506add3621d34",
+      "url": "https://www.harryda.se/download/18.3da1370619b356540622c40/1766406565329/TAXEBILAGA.pdf"
+    },
+    {
+      "bytes": 3003,
+      "content_type": "text/markdown",
+      "id": "1401-4-bfa8f9c1817fcd67e815a42",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:22Z",
+      "sha256": "d35010de379aeee3bfa0b45ba8b29c434283dd8f50d5e0a43ed4e0a3aca02268",
+      "url": "https://www.harryda.se/barnochutbildning/kulturskolan/avgifterochvillkor.4.bfa8f9c1817fcd67e815a42.html"
+    },
+    {
+      "bytes": 855808,
+      "content_type": "application/pdf",
+      "id": "1401-4-c0a4fce181800179102352",
+      "municipality_code": "1401",
+      "retrieved_at": "2026-10-30T22:31:19Z",
+      "sha256": "5afcb8e4853ac614d98da659d7b91bbd58409d1eb788350a0c46d48b72b3b5cc",
+      "url": "https://www.harryda.se/download/18.547c225d19b3559cdd12027f/1770023901880/Plan-%20och%20bygglovstaxa%202026%20inkl%20kart-%20och%20m%C3%A4ttaxa.pdf"
+    },
+    {
       "bytes": 72074,
       "content_type": "application/pdf",
       "id": "1402-avgifter-for-kopior-bevis-och-registerutdrag-mm",
