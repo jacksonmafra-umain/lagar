@@ -20,6 +20,7 @@ import hashlib
 import json
 import re
 import sys
+import urllib.error
 import urllib.parse
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -382,14 +383,15 @@ def fetch_metadata(client, celex, cache):
     return parse_metadata(celex, raw)
 
 
-def _text_format(metadata):
+def _text_formats(metadata):
+    """The Swedish manifestations to try, XHTML before HTML."""
     if not metadata.title_parts:
         raise Gap("no Swedish expression")
-    for name in FORMATS:
-        if name in metadata.manifestations:
-            return name
-    found = ", ".join(sorted(metadata.manifestations)) or "none"
-    raise Gap(f"no Swedish XHTML or HTML manifestation (found: {found})")
+    formats = [name for name in FORMATS if name in metadata.manifestations]
+    if not formats:
+        found = ", ".join(sorted(metadata.manifestations)) or "none"
+        raise Gap(f"no Swedish XHTML or HTML manifestation (found: {found})")
+    return formats
 
 
 def _fetch_text(client, celex, fmt, cache):
@@ -424,8 +426,18 @@ def _done(state, celex, corpus):
 def _store(client, celex, args, manifest, cache):
     """Fetch, convert and write one judgment; returns (sha256, corpus changed)."""
     metadata = fetch_metadata(client, celex, cache)
-    fmt = _text_format(metadata)
-    raw, content_type, source = _fetch_text(client, celex, fmt, cache)
+    formats = _text_formats(metadata)
+    for n, fmt in enumerate(formats):
+        try:
+            raw, content_type, source = _fetch_text(client, celex, fmt, cache)
+            break
+        except urllib.error.HTTPError as error:
+            # Cellar lists some XHTML manifestations it cannot serve (404): try HTML next.
+            # 300: the expression has several Swedish documents and none is chosen.
+            if error.code == 300:
+                raise Gap(f"several Swedish {fmt} documents (HTTP 300)") from None
+            if error.code != 404 or n == len(formats) - 1:
+                raise
     sha = hashlib.sha256(raw).hexdigest()
     meta = build_meta(metadata, sha, source, _now())
     stored, stored_body = _stored(meta, args.corpus)

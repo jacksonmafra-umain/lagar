@@ -6,7 +6,7 @@ from pathlib import Path
 from lagar import eu, eucaselaw, frontmatter, schema
 from lagar.http import Blocked
 
-from tests.test_eu import FakeClient, bindings
+from tests.test_eu import FakeClient, bindings, http_error
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 XHTML = (FIXTURES / "eu-62014cj0362.xhtml").read_bytes()
@@ -144,6 +144,27 @@ class RunTest(unittest.TestCase):
         self.assertIn("no Swedish XHTML or HTML", gaps[0]["reason"])
         sparql = bindings(schrems_fields(title_sv=[], manifestation_sv=[]))
         self.assertEqual(eucaselaw.run(FakeClient(routes(sparql)), self.args("--celex", SCHREMS)).gaps, [SCHREMS])
+
+    def test_html_is_tried_when_xhtml_is_not_served(self):
+        sparql = bindings(schrems_fields(manifestation_sv=["xhtml", "html"]))
+        r = routes(sparql)
+        r[eu.CELEX_URL.format(celex=SCHREMS)] = (XHTML, "text/html", MANIFESTATION)
+
+        class XhtmlMissing(FakeClient):
+            def fetch_final(self, url, headers=None):
+                if (headers or {}).get("Accept") == "application/xhtml+xml":
+                    self.calls.append((url, dict(headers)))
+                    raise http_error(url, 404)
+                return super().fetch_final(url, headers)
+
+        summary = eucaselaw.run(XhtmlMissing(r), self.args("--celex", SCHREMS))
+        self.assertEqual(summary.written, [SCHREMS])
+
+    def test_several_swedish_documents_are_a_gap(self):
+        r = routes()
+        r[eu.CELEX_URL.format(celex=SCHREMS)] = http_error(eu.CELEX_URL.format(celex=SCHREMS), 300)
+        summary = eucaselaw.run(FakeClient(r), self.args("--celex", SCHREMS))
+        self.assertEqual(summary.gaps, [SCHREMS])
 
     def test_list_collects_the_judgments_interpreting_the_acts(self):
         r = routes()
