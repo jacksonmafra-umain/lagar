@@ -594,9 +594,9 @@ def parse_html_index(kommun, raw, listing_url):
             continue
         number = _number(kommun, url, text)
         title = _title(kommun, text)
-        if title and not binds_residents(kommun, title):
-            continue
-        if not number or not title:
+        if not title or not binds_residents(kommun, title):
+            continue  # an image or icon link carries no title to judge or store
+        if not number:
             problems.append(url)
             continue
         entries.append(Entry(kommun.code, number, title, url, listing_url, sha))
@@ -1078,7 +1078,7 @@ def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
     known = _known(manifest)
     for url in problems:
         summary.failed.append(url)
-        state["failed"][url] = "listing link without a number or title"
+        state["failed"][url] = "listing link without a number"
     written = 0
     for entry in entries:
         if args.limit is not None and written >= args.limit:
