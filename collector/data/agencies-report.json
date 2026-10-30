@@ -9,9 +9,8 @@
     "by_status": {
       "collected": 60,
       "collected_pdf": 2,
-      "blocked": 4,
-      "api_key": 1,
-      "no_adapter": 1
+      "blocked": 5,
+      "api_key": 1
     },
     "shared": 24,
     "kommuner": 290,
@@ -736,6 +735,17 @@
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/194"
     },
     {
+      "series": "SJVFS",
+      "agency": "Statens jordbruksverk",
+      "status": "blocked",
+      "documents": 0,
+      "target": null,
+      "note": "The regulations are PDFs on jvdoc.sharepoint.com, whose robots.txt disallows every path; Jordbruksverket's search page shows only the first 50 of 341 base regulations without JavaScript. Not collected (checked 2026-10-30).",
+      "url": "https://jordbruksverket.se/om-jordbruksverket/forfattningar/om-forfattningssamlingen",
+      "description": null,
+      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/202"
+    },
+    {
       "series": "SKVFS",
       "agency": "Skatteverket",
       "status": "blocked",
@@ -756,17 +766,6 @@
       "url": "https://forfattningssamling.boverket.se/",
       "description": "Boverkets författningssamling, BFS, innehåller Boverkets föreskrifter och allmänna råd. I författningssamlingen ingår även regler utgivna av den tidigare myndigheten Bostadsstyrelsen, BOFS.",
       "issue": null
-    },
-    {
-      "series": "SJVFS",
-      "agency": "Statens jordbruksverk",
-      "status": "no_adapter",
-      "documents": 0,
-      "target": null,
-      "note": null,
-      "url": "https://jordbruksverket.se/om-jordbruksverket/forfattningar/om-forfattningssamlingen",
-      "description": null,
-      "issue": "https://github.com/jacksonmafra-umain/lagar/issues/202"
     }
   ],
   "shared_series": [
@@ -1867,7 +1866,7 @@
         "collection": null,
         "status": "no_adapter",
         "documents": 0,
-        "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30."
+        "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30; retried on 2026-10-31, still no answer (robots.txt times out)."
       },
       {
         "code": "0684",
@@ -2037,7 +2036,7 @@
         "collection": null,
         "status": "no_adapter",
         "documents": 0,
-        "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30; retry later."
+        "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30 and again on 2026-10-31 (no TCP connection on port 443); retry later."
       },
       {
         "code": "0862",

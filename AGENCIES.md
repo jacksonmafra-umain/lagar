@@ -10,9 +10,8 @@ Which Swedish legal sources the corpus processes and which it does not, with the
 | --- | ---: |
 | collected | 60 |
 | collected: metadata and PDF links (text only in PDF, not extracted yet) | 2 |
-| not collected: blocked by a WAF | 4 |
+| not collected: blocked by a WAF | 5 |
 | not collected: API key needed | 1 |
-| not collected: no adapter yet | 1 |
 
 Other layers in the corpus: 4 fundamental laws, 11428 SFS statutes, 16466 case-law documents, 675 EU documents (a curated list, from the Publications Office Cellar).
 
@@ -85,9 +84,9 @@ Other layers in the corpus: 4 fundamental laws, 11428 SFS statutes, 16466 case-l
 | [BOLFS](https://bolagsverket.se/omoss/varverksamhet/styrochplaneringsdokument/bolagsverketsforeskrifterbolfs.2161.html) | Bolagsverket | not collected: blocked by a WAF | 0 | - | [#161](https://github.com/jacksonmafra-umain/lagar/issues/161) | bolagsverket.se answers the collector with a bot check (an image code to type); not bypassed. |
 | [KKVFS](https://www.konkurrensverket.se/om-oss/forfattningssamling/) | Konkurrensverket | not collected: blocked by a WAF | 0 | - | [#178](https://github.com/jacksonmafra-umain/lagar/issues/178) | konkurrensverket.se answers the collector's request for the listing page with 403 Forbidden; not bypassed. |
 | [PTSFS](https://pts.se/regelbibliotek/) | Post- och telestyrelsen | not collected: blocked by a WAF | 0 | - | [#194](https://github.com/jacksonmafra-umain/lagar/issues/194) | pts.se answers the regulation library with a Radware 'Verifying your browser' bot challenge (2026-10-30); not collected. |
+| [SJVFS](https://jordbruksverket.se/om-jordbruksverket/forfattningar/om-forfattningssamlingen) | Statens jordbruksverk | not collected: blocked by a WAF | 0 | - | [#202](https://github.com/jacksonmafra-umain/lagar/issues/202) | The regulations are PDFs on jvdoc.sharepoint.com, whose robots.txt disallows every path; Jordbruksverket's search page shows only the first 50 of 341 base regulations without JavaScript. Not collected (checked 2026-10-30). |
 | [SKVFS](https://www4.skatteverket.se/rattsligvagledning/115.html?year=Alla) | Skatteverket | not collected: blocked by a WAF | 0 | - | [#206](https://github.com/jacksonmafra-umain/lagar/issues/206) | www4.skatteverket.se answers robots.txt and the SKVFS listing with a WAF 'Request Rejected' page (rechecked 2026-10-30); not collected. |
 | [BFS](https://forfattningssamling.boverket.se/) | Boverket | not collected: API key needed | 0 | - | - | Boverket's regulation API probably needs a subscription key; the owner has not signed up for one. |
-| [SJVFS](https://jordbruksverket.se/om-jordbruksverket/forfattningar/om-forfattningssamlingen) | Statens jordbruksverk | not collected: no adapter yet | 0 | - | [#202](https://github.com/jacksonmafra-umain/lagar/issues/202) | - |
 
 ## Agencies publishing in another series
 
@@ -216,7 +215,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 0665 | [Vaggeryd](https://www.vaggeryd.se/) | Planer, styrdokument och föreskrifter | partly collected | 12 | [#306](https://github.com/jacksonmafra-umain/lagar/issues/306) | - |
 | 0680 | [Jönköping](https://www.jonkoping.se/) | Lokala föreskrifter och taxor | partly collected | 6 | [#307](https://github.com/jacksonmafra-umain/lagar/issues/307) | - |
 | 0682 | [Nässjö](https://www.nassjo.se/) | Författningssamling | partly collected | 18 | [#308](https://github.com/jacksonmafra-umain/lagar/issues/308) | - |
-| 0683 | [Värnamo](https://kommun.varnamo.se/) | - | not collected: no adapter yet | 0 | [#309](https://github.com/jacksonmafra-umain/lagar/issues/309) | Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30. |
+| 0683 | [Värnamo](https://kommun.varnamo.se/) | - | not collected: no adapter yet | 0 | [#309](https://github.com/jacksonmafra-umain/lagar/issues/309) | Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30; retried on 2026-10-31, still no answer (robots.txt times out). |
 | 0684 | [Sävsjö](https://www.savsjo.se/) | Styrande dokument | partly collected | 2 | [#310](https://github.com/jacksonmafra-umain/lagar/issues/310) | - |
 | 0685 | [Vetlanda](https://kommun.vetlanda.se/) | Styrdokument (alphabetical index) | partly collected | 12 | [#311](https://github.com/jacksonmafra-umain/lagar/issues/311) | - |
 | 0686 | [Eksjö](https://www.eksjo.se/) | Lokala föreskrifter | partly collected | 4 | [#312](https://github.com/jacksonmafra-umain/lagar/issues/312) | - |
@@ -233,7 +232,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 0834 | [Torsås](https://www.torsas.se/) | Samlade styrdokument | partly collected | 4 | [#323](https://github.com/jacksonmafra-umain/lagar/issues/323) | - |
 | 0840 | [Mörbylånga](https://www.morbylanga.se/) | Taxor och skyddsföreskrifter | partly collected | 4 | [#324](https://github.com/jacksonmafra-umain/lagar/issues/324) | - |
 | 0860 | [Hultsfred](https://www.hultsfred.se/) | Styrdokument | partly collected | 5 | [#325](https://github.com/jacksonmafra-umain/lagar/issues/325) | - |
-| 0861 | [Mönsterås](https://www.monsteras.se/) | - | not collected: no adapter yet | 0 | [#326](https://github.com/jacksonmafra-umain/lagar/issues/326) | www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30; retry later. |
+| 0861 | [Mönsterås](https://www.monsteras.se/) | - | not collected: no adapter yet | 0 | [#326](https://github.com/jacksonmafra-umain/lagar/issues/326) | www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30 and again on 2026-10-31 (no TCP connection on port 443); retry later. |
 | 0862 | [Emmaboda](https://www.emmaboda.se/) | Regler och styrande dokument | partly collected | 11 | [#327](https://github.com/jacksonmafra-umain/lagar/issues/327) | - |
 | 0880 | [Kalmar](https://kalmar.se/) | Författningssamlingen | partly collected | 39 | [#328](https://github.com/jacksonmafra-umain/lagar/issues/328) | - |
 | 0881 | [Nybro](https://www.nybro.se/) | Taxor och avgifter, lokala föreskrifter | partly collected | 23 | [#329](https://github.com/jacksonmafra-umain/lagar/issues/329) | - |
