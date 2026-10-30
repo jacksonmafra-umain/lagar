@@ -6,8 +6,9 @@ import tempfile
 import unittest
 import urllib.error
 from pathlib import Path
+from unittest import mock
 
-from lagar import county, frontmatter, schema
+from lagar import county, frontmatter, pdftext, schema
 from lagar.http import Blocked
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
@@ -434,6 +435,94 @@ class CountyFilesRunTests(unittest.TestCase):
     def test_landing_without_pdfs_exits_1(self):
         client = FilesClient({CONFIG["22"]["landing"]: "<html><main></main></html>"})
         self.assertEqual(self.run_files(client, "22")[0], 1)
+
+
+PDF_TEXT = (
+    "Västerbottens läns författningssamling\n\n24FS 2026:1\n"
+    "Länsstyrelsen i Västerbottens läns föreskrifter\nom eldningsförbud;\n\n"
+    "beslutade den 3 juni 2026.\n"
+    "Länsstyrelsen föreskriver med stöd av 2 kap. 7 § förordningen (2003:789) om skydd mot olyckor följande.\n"
+    "1 § Det är förbjudet att elda utomhus i länet. Förbudet gäller också grillning på\n"
+    "allmän plats.\n"
+    "___________\n"
+    "Dessa föreskrifter träder i kraft den 5 juni 2026.\n\n1\n\f"
+)
+
+
+def fake_extract(text=PDF_TEXT, gap=None):
+    return mock.patch.object(
+        county.pdftext, "extract",
+        return_value=pdftext.PdfText(text=text, pages=1, text_pages=0 if gap else 1, gap=gap),
+    )
+
+
+class CountyTextTests(unittest.TestCase):
+    setUp = CountyRunTests.setUp
+    tearDown = CountyRunTests.tearDown
+    run_files = CountyFilesRunTests.run_files
+
+    def body(self, number):
+        path = self.corpus / f"region/county-regulations/{county.corpus_id(number)}.md"
+        return frontmatter.load(path.read_text(encoding="utf-8"))
+
+    def test_files_layout_body_is_the_pdf_text(self):
+        with fake_extract():
+            code, report = self.run_files(FilesClient(), "24", "--from-year", "2026")
+        self.assertEqual((code, len(report["written"])), (0, 3))
+        meta, body = self.body("24FS 2026:1")
+        self.assertEqual(schema.validate(meta), [])
+        self.assertEqual((meta["issued"], meta["in_force"]), ("2026-06-03", "2026-06-05"))
+        self.assertIn("1 § Det är förbjudet att elda utomhus i länet. Förbudet gäller också grillning på "
+                      "allmän plats.\n\nDessa föreskrifter träder i kraft den 5 juni 2026.", body)
+        self.assertIn("Ikraftträdande: 2026-06-05", body)
+        self.assertNotIn(county.PDF_ONLY, body)
+        self.assertIn("## Tryckt version", body)
+        entry = json.loads(self.manifest.read_text(encoding="utf-8"))["entries"][0]
+        self.assertEqual(entry["files"][0]["text"], county.TEXT_EXTRACTED)
+
+    def test_scanned_pdf_is_a_gap(self):
+        with fake_extract("\f\f", pdftext.NO_TEXT_LAYER):
+            self.run_files(FilesClient(), "24", "--from-year", "2026")
+        _, body = self.body("24FS 2026:2")
+        self.assertIn(county.NO_TEXT, body)
+        entry = json.loads(self.manifest.read_text(encoding="utf-8"))["entries"][1]
+        self.assertEqual(entry["files"][0]["text"], pdftext.NO_TEXT_LAYER)
+
+    def test_rerun_does_not_download_read_pdfs_again(self):
+        with fake_extract():
+            self.run_files(FilesClient(), "24", "--from-year", "2026")
+        before = {p: p.read_bytes() for p in self.corpus.rglob("*.md")}
+        self.state.unlink()
+        client = FilesClient()
+        with fake_extract() as extract:
+            _, report = self.run_files(client, "24", "--from-year", "2026")
+        self.assertEqual((report["written"], report["unchanged"]), ([], 3))
+        self.assertFalse(any(c.endswith(".pdf") for c in client.calls))
+        extract.assert_not_called()
+        self.assertEqual({p: p.read_bytes() for p in self.corpus.rglob("*.md")}, before)
+        self.state.unlink()
+        client = FilesClient()
+        with fake_extract():
+            self.run_files(client, "24", "--from-year", "2026", "--refresh-pdf")
+        self.assertEqual(sum(c.endswith(".pdf") for c in client.calls), 3)
+
+    def test_pages_layout_without_html_text_reads_the_pdf(self):
+        client = FakeClient({DETAIL_URL.format(1): pdf_only(DETAIL)})
+        with fake_extract(PDF_TEXT.replace("24FS", "01FS")):
+            code, _ = self.run_main(client, "--from-year", "2026")
+        self.assertEqual(code, 0)
+        meta, body = self.body("01FS 2026:1")
+        self.assertIn("1 § Det är förbjudet att elda utomhus i länet.", body)
+        self.assertEqual(meta["in_force"], "2026-06-05")
+        _, body = self.body("01FS 2026:2")
+        self.assertNotIn("Det är förbjudet att elda", body)  # HTML text wins
+
+    run_main = CountyRunTests.run_main
+
+    def test_missing_pdftotext_exits_1_unless_no_text(self):
+        with mock.patch.object(county.pdftext, "available", return_value=False):
+            self.assertEqual(self.run_files(FilesClient(), "24", "--from-year", "2026")[0], 1)
+            self.assertEqual(self.run_files(FilesClient(), "24", "--from-year", "2026", "--no-text")[0], 0)
 
 
 if __name__ == "__main__":
