@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://norsjo.se/kommun-politik/styrdokument/for-invanare-och-foretag/": "2417-listing1.html",
+    "https://norsjo.se/kommun-politik/styrdokument/avgifter-och-taxor/": "2417-listing2.html"
+  },
+  "count": 14,
+  "sample": {
+    "number": "-80-abva-2024",
+    "title": "ABVA 2024",
+    "url": "https://norsjo.se/wp-content/uploads/2024/11/-80-abva-2024.pdf"
+  },
+  "excluded": []
+}

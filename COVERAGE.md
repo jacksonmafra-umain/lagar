@@ -14,6 +14,7 @@ completeness: read this file next to those numbers.
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
 | agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/` | 2026-10-29 (full run of AFS, FFFS and TSFS: 15, 121 and 622 base regulations) |
 | EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list with latest consolidated versions; daily `Sync EU` since then) |
+| EU case law | Publications Office Cellar, as for EU law; judgments listed by SPARQL (`cdm:case-law_interpretes_resource_legal`) | 2026-10-30 (judgments interpreting the curated acts; daily `Sync EU` since then) |
 | regional (county) | Länsstyrelserna, `https://www.lansstyrelsen.se`: the 21 landing pages in `collector/data/counties.json`, their year index and detail pages (Stockholm, Halland, Gävleborg), PDF links, file-share modules and year folders (the other 18) | 2026-10-29 (2025–2026, all 21 counties) |
 | case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (full run: publications up to 2026-10-28; daily sync from then on) |
 | municipal regulations | Stockholm `https://start.stockholm/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/`, Göteborg Domino view `https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf/vyHandBok`, Malmö `https://malmo.se/Om-Malmo-stad/Demokrati-och-politik/Sa-styrs-Malmo/Forfattningssamling/` (citizen rules and taxor pages) | 2026-10-29 (sample: five documents per kommun) |
@@ -68,6 +69,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   Official Journal texts keep it `null`. Rows of a table nested inside another
   table's cell stay on one line, and the `M1`, `M2` … labels of a consolidated
   text's amendment list are dropped with the other modification markers.
+- EU case law covers only the judgments of the Court of Justice and the
+  General Court that Cellar records as interpreting an act of the curated EU
+  list: 611 on 2026-10-30, of which 605 are in the corpus in Swedish
+  (`eu_judgment`, `corpus/eu/judgments/`). Six are gaps in
+  `sources/eu-case-law-manifest.json`: four have no Swedish XHTML or HTML
+  manifestation and two (C-45/12, C-244/13) answer content negotiation with
+  several Swedish documents (HTTP 300). Orders, Advocate General opinions,
+  judgments interpreting other acts and the Civil Service Tribunal are not
+  collected. The Swedish text is authentic only in cases conducted in Swedish,
+  so the others are stored with `authoritative: false`.
 - Case law: 16390 of the 16640 referat and notiser the API listed on
   2026-10-29 are in the corpus; the daily `Sync case law` workflow adds new and
   republished ones. Only the anonymised referat and notiser are collected.
@@ -199,6 +210,12 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Göteborg prints no KFS-style number. The detail pages carry a
     `noindex,nofollow` robots meta tag (a search-engine indexing hint);
     robots.txt allows the paths.
+  - Malå, Storuman and Åsele publish part of their taxor and hälsoskydd rules only as
+    HTML pages, which the PDF listings do not cover; Lycksele's lokala
+    ordningsföreskrifter PDF was not found. Nordmaling, Norsjö, Malå, Storuman,
+    Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
+    page without headings, so their configs keep only listed file names; a new
+    document with another name is not picked up until the config is updated.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources

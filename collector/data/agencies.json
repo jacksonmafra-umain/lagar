@@ -457,8 +457,8 @@
     "eu-domstolen": {
       "name": "Court of Justice of the European Union",
       "layer": "eu",
-      "status": "no_adapter",
-      "note": "EU case law is not collected."
+      "status": "partial",
+      "note": "Judgments of the Court of Justice and the General Court that interpret the curated EU acts, in Swedish from the Publications Office Cellar (collect.py eu-case-law). Orders, Advocate General opinions and other judgments are not collected."
     },
     "europadomstolen": {
       "name": "European Court of Human Rights",
@@ -1060,7 +1060,6 @@
     "series:VALFS": 220,
     "series:VRFS": 221,
     "series:ÅFS": 222,
-    "source:eu-domstolen": 538,
     "source:register-over-svensk-forfattningssamling-sfs": 537,
     "source:svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": 536,
     "source:sveriges-internationella-overenskommelser-so": 539

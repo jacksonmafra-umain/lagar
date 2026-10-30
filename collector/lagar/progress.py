@@ -99,7 +99,9 @@ def count_series(corpus):
 
 def build_rows(targets, type_counts, series_counts=None):
     """One row per target. A target with `series` counts documents of its layer
-    whose number carries that prefix (`AFS 2023:1`); otherwise `type`, or the layer."""
+    whose number carries that prefix (`AFS 2023:1`); otherwise `type`, or the layer
+    without the types that have a target row of their own."""
+    own_rows = {entry["type"] for entry in targets if entry["type"] is not None}
     rows = []
     for entry in targets:
         layer, type_ = entry["layer"], entry["type"]
@@ -112,7 +114,7 @@ def build_rows(targets, type_counts, series_counts=None):
             breakdown = {t: type_counts.get(t, 0) for t in SFS_TYPES}
             collected = sum(breakdown.values())
         else:
-            collected = sum(n for t, n in type_counts.items() if TYPES.get(t) == layer)
+            collected = sum(n for t, n in type_counts.items() if TYPES.get(t) == layer and t not in own_rows)
         target = entry["target"]
         percent = round(min(collected, target) / target * 100, 1) if target else None
         rows.append({**entry, "collected": collected, "percent": percent, "breakdown": breakdown})
