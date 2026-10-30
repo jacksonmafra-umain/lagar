@@ -764,6 +764,15 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      feedback and "senast granskad" lines; `source` is the page URL and `source_sha256` hashes the
      converted text, so markup changes alone do not count as a new version. A page with less than
      40 characters of text outside its headings is a failure (an empty page, not a rule).
+   - `json_list`: the listing is a JSON document list from the platform's own API, such as an
+     Evolution DocumentWeb folder (`/api/folders/<folder id>`) or a WordPress File Download
+     category (`/wp-admin/admin-ajax.php?action=wpfd&task=files.display&id=<category>`). `items`
+     is the dotted path to the list (`documents`, `files`; empty when the document is the list),
+     `title_field` and `number_field` name the item fields for the title and number, and
+     `url_template` builds the document's link from the item's fields (`/api/download/{id}/{folderId}`,
+     `{linkdownload}`), resolved against the listing URL. `link_pattern`, when set, filters the
+     built links; `resident_filter` and `title_include`/`title_exclude` filter the titles. An item
+     with no number or a template field it lacks is reported as a problem.
 3. Choose `sections` or `kinds` so that only rules for residents are collected. Where the list mixes
    rules and internal documents with no headings to tell them apart, `"resident_filter": true`
    keeps a title only when it names a rule for residents (föreskrifter, taxor, avgifter, avfall,

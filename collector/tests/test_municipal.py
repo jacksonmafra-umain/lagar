@@ -606,6 +606,78 @@ class HtmlPagesTest(unittest.TestCase):
                 municipal.load_config(self.config(tmp, number=[]))
 
 
+DOCWEB = "https://dokument.example.se"
+DOCWEB_FOLDER = DOCWEB + "/api/folders/64fda324"
+DOCWEB_ENTRY = {
+    "name": "Exempla", "issuer": "Exempla kommun", "region_code": "19",
+    "collection": "Exempla kommuns taxor och föreskrifter", "strategy": "json_list",
+    "hosts": ["dokument.example.se"], "listings": [DOCWEB_FOLDER], "resident_filter": True,
+    "items": "documents", "title_field": "name", "number_field": "id",
+    "url_template": "/api/download/{id}/{folderId}",
+}
+DOCWEB_LIST = json.dumps({"id": "64fda324", "folders": [], "documents": [
+    {"id": "e3b7", "folderId": "64fda324", "name": "Lokala ordningsfo\u0308reskrifter 2024", "extension": ".pdf"},
+    {"id": "a1c2", "folderId": "64fda324", "name": "Avfallstaxa 2026", "extension": ".pdf"},
+    {"id": "b9d0", "folderId": "64fda324", "name": "Policy för föreningsbidrag", "extension": ".pdf"},
+    {"id": "", "folderId": "64fda324", "name": "Taxa utan id", "extension": ".pdf"},
+]}).encode()
+WPFD_ENTRY = {
+    **DOCWEB_ENTRY, "hosts": ["example.se"],
+    "listings": ["https://example.se/wp-admin/admin-ajax.php?action=wpfd&task=files.display&id=190"],
+    "items": "files", "title_field": "post_title", "number_field": "ID", "url_template": "{linkdownload}",
+}
+WPFD_LIST = json.dumps({"files": [
+    {"ID": 18192, "post_title": "Renhållningstaxa 2025", "ext": "pdf",
+     "linkdownload": "https://example.se/laddaner/190/taxor/18192/renhallningstaxa-2025.pdf"},
+    {"ID": 18193, "post_title": "Avgift för bygglov", "ext": "pdf"},
+]}).encode()
+
+
+class JsonListTest(unittest.TestCase):
+    def config(self, tmp, entry):
+        path = Path(tmp) / "municipalities.json"
+        path.write_text(json.dumps({"kommuner": {"1961": entry}}), encoding="utf-8")
+        return str(path)
+
+    def test_document_list_builds_links_from_item_fields(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(self.config(tmp, DOCWEB_ENTRY))["1961"]
+        entries, problems = municipal.parse_json_list(kommun, DOCWEB_LIST, DOCWEB_FOLDER)
+        self.assertEqual([(e.number, e.title, e.url) for e in entries], [
+            ("e3b7", "Lokala ordningsföreskrifter 2024", DOCWEB + "/api/download/e3b7/64fda324"),
+            ("a1c2", "Avfallstaxa 2026", DOCWEB + "/api/download/a1c2/64fda324"),
+        ])
+        self.assertEqual(problems, [DOCWEB + "/api/download//64fda324"])
+
+    def test_item_without_a_template_field_is_a_problem(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(self.config(tmp, WPFD_ENTRY))["1961"]
+        entries, problems = municipal.parse_json_list(kommun, WPFD_LIST, WPFD_ENTRY["listings"][0])
+        self.assertEqual([(e.number, e.url) for e in entries],
+                         [("18192", "https://example.se/laddaner/190/taxor/18192/renhallningstaxa-2025.pdf")])
+        self.assertEqual(problems, ["Avgift för bygglov"])
+
+    def test_run_writes_the_pdfs(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            args = Args(tmp, kommun=["1961"], config=self.config(tmp, DOCWEB_ENTRY))
+            client = FakeClient({
+                DOCWEB_FOLDER: (DOCWEB_LIST, "application/json", DOCWEB_FOLDER),
+                DOCWEB + "/api/download/e3b7/64fda324": PDF + b"1",
+                DOCWEB + "/api/download/a1c2/64fda324": PDF + b"2",
+            })
+            summary = municipal.run(client, args)
+            self.assertEqual(sorted(summary.written), ["1961-a1c2", "1961-e3b7"])
+            folder = Path(args.corpus) / "municipality" / "regulations"
+            meta, _ = frontmatter.load((folder / "1961-e3b7.md").read_text(encoding="utf-8"))
+            self.assertEqual(schema.validate(meta), [])
+            self.assertEqual(meta["source"], DOCWEB + "/api/download/e3b7/64fda324")
+
+    def test_json_list_needs_its_fields(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with self.assertRaises(municipal.ConfigError):
+                municipal.load_config(self.config(tmp, {**DOCWEB_ENTRY, "url_template": ""}))
+
+
 class MainTest(unittest.TestCase):
     def test_bad_code_is_rejected(self):
         with self.assertRaises(SystemExit):
