@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.landskrona.se/kommun-och-politik/kommunfakta/forfattningssamling-och-styrdokument/foreskrifter-och-bestammelser/": "1282-listing.html",
+    "https://www.landskrona.se/kommun-och-politik/kommunfakta/forfattningssamling-och-styrdokument/avgifter-och-taxor/": "1282-listing-2.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "avfallsforeskrifter-2024-landskrona-stad_kf_2023-11-27",
+    "title": "Avfallsföreskrifter 2024 Landskrona stad – LSR 2023-11-27",
+    "url": "https://cms.landskrona.se/wp-content/uploads/2024/09/avfallsforeskrifter-2024-landskrona-stad_kf_2023-11-27.pdf"
+  },
+  "excluded": [
+    "Kommunalt partistöd i Landskrona 2027 – regler",
+    "Kulturprojektstöd – kulturnämndens regler 2024-05-02",
+    "Kulturstipendium Landskrona – regler 2025-11-06"
+  ]
+}
