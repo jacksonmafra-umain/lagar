@@ -989,6 +989,77 @@ class MediaflowTest(unittest.TestCase):
                 municipal.load_config(self.config(tmp, {**MF_ENTRY, "page": "https://elsewhere.se/x"}))
 
 
+
+CIC = "https://sok-xx.example.se/"
+CIC_ENTRY = {
+    "name": "Exempla", "issuer": "Exempla kommun", "region_code": "12", "collection": "KFS",
+    "strategy": "ciceron", "resident_filter": True, "hosts": ["sok-xx.example.se"], "listings": [CIC],
+}
+CIC_ITEMS = [
+    {"id": "0", "doctype": 512, "title": "TAXA SOTNING: KFS 51 - Taxa för\nsotning", "contains_files": True},
+    {"id": "1", "doctype": 512, "title": "RIKTLINJE: KFS 85 - Biblioteksplan", "contains_files": True},
+    {"id": "2", "doctype": 512, "title": "FÖRESKRIFT: KFS 2 - Lokala föreskrifter utan fil", "contains_files": False},
+]
+CIC_DETAILS = {
+    "0": {"dok_id": "72748", "files": [
+        {"filename": "bilaga.docx", "filename_b64": "YmlsYWdh", "id": "1"},
+        {"filename": "KFS 51.pdf", "filename_b64": "S0ZTIDUxLnBkZg==", "id": "6601"}]},
+    "2": {"dok_id": "72697", "files": []},
+}
+
+
+class CiceronClient(FakeClient):
+    """A Ciceron portal: every JSON-RPC call is a POST to /json, answered by method."""
+
+    def fetch_final(self, url, headers=None, data=None):
+        if data is None or url != CIC + "json":
+            return super().fetch_final(url, headers, data)
+        call = json.loads(data)
+        self.posts.append((url, call))
+        method, params = call["method"].split(":", 1)[1], call["params"]
+        if method == "Test":
+            result = {"result": "ok"}
+        elif call.get("session_id") != "S1":
+            return json.dumps({"error": {"code": 1000, "message": "invalid session"}}).encode(), "application/json", url
+        elif method == "Search":
+            self.searched = params
+            result = {"result": json.dumps({"hits": len(CIC_ITEMS)})}
+        elif method == "ReadItems":
+            result = {"results": CIC_ITEMS[params["offset"]:params["offset"] + params["limit"]]}
+        else:
+            result = {"type": 512, "value": json.dumps(CIC_DETAILS[params["id"]])}
+        return json.dumps({"jsonrpc": "2.0", "result": result, "session_id": "S1"}).encode(), "application/json", url
+
+
+class CiceronTest(unittest.TestCase):
+    def test_styrande_dokument_become_entries_numbered_by_document_id(self):
+        client = CiceronClient({})
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = _config(tmp, "1256", CIC_ENTRY)
+            entries, problems = municipal.list_entries(municipal.Fetcher(client), kommun)
+        self.assertEqual(client.searched, {"search_id": "lagar", "doctype": 512, "text": "", "param": "{}"})
+        self.assertEqual([(e.number, e.title, e.url, e.listing) for e in entries], [(
+            "72748", "TAXA SOTNING: KFS 51 - Taxa för sotning",
+            CIC + "download/document?filename=S0ZTIDUxLnBkZg%3D%3D&id=6601", CIC)])
+        # the plan is dropped by its title before its details are read; the rule without a PDF is a problem
+        self.assertEqual(problems, ["FÖRESKRIFT: KFS 2 - Lokala föreskrifter utan fil"])
+        read = [c["params"]["id"] for _, c in client.posts if c["method"].endswith("ReadObjectDetails")]
+        self.assertEqual(read, ["0", "2"])
+
+    def test_a_document_is_fetched_from_the_portal_download_link(self):
+        url = CIC + "download/document?filename=S0ZTIDUxLnBkZg%3D%3D&id=6601"
+        client = CiceronClient({url: PDF})
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "municipalities.json"
+            path.write_text(json.dumps({"kommuner": {"1256": CIC_ENTRY}}), encoding="utf-8")
+            args = Args(tmp, kommun=["1256"])
+            args.config = str(path)
+            summary = municipal.run(client, args)
+            self.assertEqual(summary.written, ["1256-72748"])
+            meta = (Path(args.corpus) / "municipality" / "regulations" / "1256-72748.md").read_text(encoding="utf-8")
+        self.assertIn(f'source: "{url}"', meta)
+
+
 class MainTest(unittest.TestCase):
     def test_bad_code_is_rejected(self):
         with self.assertRaises(SystemExit):
