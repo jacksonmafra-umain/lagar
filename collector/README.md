@@ -478,6 +478,10 @@ PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS, BFNAR, CSNFS, IMYFS, LMFS,
 HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS, EIFS); `SitemapAdapter`
 finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS, KVFS, DVFS; `path_pattern` keeps one page per base
 regulation).
+MCF's list of regulations in force also holds its predecessors' series (MSBFS, SRVFS, SÄIFS,
+KBMFS); each has its own `McffsAdapter` subclass that follows the paged list (`?selectedpage=N`,
+every page linking only a few others) and takes the number from the page's URL slug, since an
+item's text often names the regulation it repeals.
 A detail page's HTML text is kept when the series sets `text_nodes` (MDFFS). AFFS reads the
 list from the Sitevision page state and FKFS the JSON register of Försäkringskassan's
 lagrummet; both have their own small adapters in the same module.
