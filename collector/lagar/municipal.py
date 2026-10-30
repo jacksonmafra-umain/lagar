@@ -13,6 +13,10 @@ maps each kommun code to its listing pages and to one of three parsing strategie
 
 - `html_pages`: a listing whose links lead to one web page per rule; the page
   text is the document, unless the page links a PDF, which then is.
+- `json_list`: a JSON document list served by a document platform's own API
+  (Evolution DocumentWeb folders, WordPress File Download categories); the
+  config names the list, the title and number fields and a URL template that
+  builds each document's link from the item's fields.
 
 Most kommuner run Sitevision and list their documents as one flat file list.
 `"preset": "sitevision"` fills in the link pattern, number (the file's node id)
@@ -60,7 +64,7 @@ DEFAULT_STATE = "collector/data/municipal-state.json"
 DEFAULT_MANIFEST = "sources/municipal-manifest.json"
 DEFAULT_RATE = 1.0
 MANIFEST_VERSION = 1
-STRATEGIES = ("html_index", "domino_view", "html_pages")
+STRATEGIES = ("html_index", "domino_view", "html_pages", "json_list")
 
 # Defaults merged under a kommun entry that names a preset; the entry's own keys win.
 PRESETS = {
@@ -157,6 +161,10 @@ class Kommun:
     embedded_json: bool = False
     document_pattern: str = ""
     content_id: str = ""
+    json_items: str = ""
+    json_title: str = ""
+    json_number: str = ""
+    json_url: str = ""
 
 
 def _required(entry, key, code, kind=str):
@@ -211,6 +219,10 @@ def _kommun(code, entry):
         embedded_json=bool(entry.get("embedded_json", False)),
         document_pattern=entry.get("document_pattern", ""),
         content_id=entry.get("content_id", ""),
+        json_items=entry.get("items", ""),
+        json_title=entry.get("title_field", ""),
+        json_number=entry.get("number_field", ""),
+        json_url=entry.get("url_template", ""),
     )
     for url in listings:
         if urllib.parse.urlsplit(url).hostname not in hosts:
@@ -227,6 +239,8 @@ def _kommun(code, entry):
         kommun.kinds and kommun.kind_column and kommun.title_column and kommun.number_column
     ):
         raise ConfigError(f"{code}: domino_view needs kinds and the kind, title and number columns")
+    if strategy == "json_list" and not (kommun.json_title and kommun.json_number and kommun.json_url):
+        raise ConfigError(f"{code}: json_list needs title_field, number_field and url_template")
     return kommun
 
 
@@ -645,8 +659,50 @@ def parse_domino_view(kommun, raw, listing_url):
     return entries, []
 
 
+def _item(data, path):
+    """The value at a dotted path (`documents`, `data.files`); the whole document for ''."""
+    for key in path.split(".") if path else []:
+        data = data.get(key) if isinstance(data, dict) else None
+    return data
+
+
+def parse_json_list(kommun, raw, listing_url):
+    """Entries of a JSON document list; problems are items whose link or number is missing."""
+    items = _item(json.loads(_text(raw)), kommun.json_items)
+    if not isinstance(items, list):
+        raise ValueError(f"no list at {kommun.json_items!r}")
+    sha = hashlib.sha256(raw).hexdigest()
+    entries, problems = [], []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        title = _title(kommun, str(item.get(kommun.json_title) or ""))
+        if not title or not binds_residents(kommun, title):
+            continue
+        fields = {k: v for k, v in item.items() if isinstance(v, (str, int)) and not isinstance(v, bool)}
+        try:
+            href = kommun.json_url.format_map(fields)
+        except (KeyError, IndexError, ValueError):
+            problems.append(title)
+            continue
+        url = _uri(urllib.parse.urljoin(listing_url, href.strip()))
+        if kommun.link_pattern and not re.search(kommun.link_pattern, url, re.IGNORECASE):
+            continue
+        number = _clean(str(item.get(kommun.json_number) or ""))
+        if not number:
+            problems.append(url)
+            continue
+        entries.append(Entry(kommun.code, number, title, url, listing_url, sha))
+    return entries, problems
+
+
 # html_pages lists its rule pages the way html_index lists documents.
-PARSERS = {"html_index": parse_html_index, "domino_view": parse_domino_view, "html_pages": parse_html_index}
+PARSERS = {
+    "html_index": parse_html_index,
+    "domino_view": parse_domino_view,
+    "html_pages": parse_html_index,
+    "json_list": parse_json_list,
+}
 
 
 # --- Domino detail pages ------------------------------------------------------
@@ -1086,7 +1142,7 @@ def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
             break
         doc_id = corpus_id(kommun.code, entry.number)
         path = writer.path_for({"id": doc_id, "type": TYPE}, args.corpus)
-        done = doc_id in state["done"] or (kommun.strategy == "html_index" and known.get(doc_id) == entry.url)
+        done = doc_id in state["done"] or (kommun.strategy in ("html_index", "json_list") and known.get(doc_id) == entry.url)
         if not args.refresh and done and path.exists():
             summary.skipped += 1
             continue
