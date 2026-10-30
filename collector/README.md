@@ -469,9 +469,10 @@ PDFs already in the manifest are not downloaded again unless `--refresh`. An ada
 
 Series published as a plain page of links use the configurable adapters in
 `collector/lagar/agency_generic.py`: `PdfListAdapter` when the listing links straight to the
-PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS, BFNAR, CSNFS, IMYFS, LMFS, MTFS, LIVSFS, MYHFS) and `DetailPageAdapter` when it links to one
-HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS); `SitemapAdapter`
-finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS, KVFS).
+PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS, BFNAR, CSNFS, IMYFS, LMFS, MTFS, LIVSFS, MYHFS, KBVFS, FFS) and `DetailPageAdapter` when it links to one
+HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS, EIFS); `SitemapAdapter`
+finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS, KVFS, DVFS; `path_pattern` keeps one page per base
+regulation).
 A detail page's HTML text is kept when the series sets `text_nodes` (MDFFS). AFFS reads the
 list from the Sitevision page state and FKFS the JSON register of Försäkringskassan's
 lagrummet; both have their own small adapters in the same module.
@@ -486,8 +487,12 @@ IMYFS), take the number from one cell of a table row (`number_node`: BFNAR), lea
 under a heading such as "Upphävda föreskrifter" (`skip_section`) and mark the PDFs under a heading
 such as "Fulltext" (`consolidated_section`: CSNFS) or behind a "konsoliderad version" link as
 consolidated versions. Companion documents (vägledning, konsekvensutredning, rättelseblad) are
-left out. `pdf_title = True` takes the title from the PDF when the listing only gives a short name
-(BFNAR).
+left out. A table row that links through `data-href` instead of a link is read too (KBVFS).
+`pdf_title = True` takes the title from the PDF when the listing only gives a short name
+(BFNAR). FFS reads its four lists from Försvarsmakten's content API
+(`/api/episerver/v3.0/content/<page>?expand=PDFFilesArea`), which only gives file names; the
+title, and whether a regulation is an amendment, come from the PDF. When the listing only named
+the number and the PDF title shows an amendment, the regulation is excluded.
 
 Adapters whose site publishes no HTML text (`has_text = False`) get their text from a PDF:
 the consolidated version when one is linked, else the regulation's own PDF, read with
@@ -763,7 +768,26 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      element (or the element whose id is `content_id`) converted with `htmlmd`, without print,
      feedback and "senast granskad" lines; `source` is the page URL and `source_sha256` hashes the
      converted text, so markup changes alone do not count as a new version. A page with less than
-     40 characters of text outside its headings is a failure (an empty page, not a rule).
+     40 characters of text outside its headings is a failure (an empty page, not a rule). The text
+     starts at the content's first `<h1>`, so menus and breadcrumbs placed before it inside `<main>`
+     are left out. A listing link that answers with a PDF is taken as the document itself.
+   - `page_titles` (`html_pages`): links without a usable title are kept, and each rule's title is
+     its page's `<h1>`; the title filter is applied to that title after the page is read (a page
+     that fails it is skipped). Needed when the listing is a sitemap.
+   - Sitemap listings: a listing that is an XML sitemap (`<urlset>`) yields its URLs as untitled
+     links; a sitemap index (`<sitemapindex>`) yields nothing itself and its child sitemaps are
+     read when they match `follow`.
+   - `row_titles` (`html_index`, `html_pages`): for links inside a table row, the title is the text
+     of the row's other cells (Torsås's links all read "Ladda ner").
+   - `json_list`: the listing is a JSON document list from the platform's own API, such as an
+     Evolution DocumentWeb folder (`/api/folders/<folder id>`) or a WordPress File Download
+     category (`/wp-admin/admin-ajax.php?action=wpfd&task=files.display&id=<category>`). `items`
+     is the dotted path to the list (`documents`, `files`; empty when the document is the list),
+     `title_field` and `number_field` name the item fields for the title and number, and
+     `url_template` builds the document's link from the item's fields (`/api/download/{id}/{folderId}`,
+     `{linkdownload}`), resolved against the listing URL. `link_pattern`, when set, filters the
+     built links; `resident_filter` and `title_include`/`title_exclude` filter the titles. An item
+     with no number or a template field it lacks is reported as a problem.
 3. Choose `sections` or `kinds` so that only rules for residents are collected. Where the list mixes
    rules and internal documents with no headings to tell them apart, `"resident_filter": true`
    keeps a title only when it names a rule for residents (föreskrifter, taxor, avgifter, avfall,

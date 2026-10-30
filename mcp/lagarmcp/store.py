@@ -1,5 +1,6 @@
 """Read access to the static API (docs/api.md): a local folder or an HTTP base URL."""
 
+import gzip
 import json
 import re
 import urllib.error
@@ -44,6 +45,8 @@ class ApiStore:
             if not file.is_file():
                 raise NotFound(path)
             raw = file.read_bytes()
+        if path.endswith(".gz"):
+            raw = gzip.decompress(raw)
         data = json.loads(raw.decode("utf-8"))
         if not path.startswith("docs/"):
             self._cache[path] = data
@@ -55,7 +58,8 @@ class ApiStore:
     def document(self, doc_id):
         if not _ID.match(doc_id or ""):
             raise ValueError(f"not a document id: {doc_id!r}")
-        return self.read(f"docs/{doc_id}.json")
+        suffix = ".json.gz" if self.index().get("docs_encoding") == "gzip" else ".json"
+        return self.read(f"docs/{doc_id}{suffix}")
 
     def listing(self, layer, type_=None, page=1):
         for part in (layer, type_):

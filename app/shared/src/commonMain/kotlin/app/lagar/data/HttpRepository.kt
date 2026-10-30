@@ -5,21 +5,31 @@ import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.isSuccess
+import kotlinx.serialization.json.Json
 
-/** Fetches the static API over HTTP; non-2xx responses and transport errors throw. */
+/**
+ * Fetches the static API over HTTP; non-2xx responses and transport errors throw. Documents are read as the API's
+ * `docs_encoding` says (docs/api.md): plain JSON, or gzip files that are decompressed here.
+ */
 class HttpRepository(
     private val client: HttpClient,
     baseUrl: String,
 ) : ApiSource,
     SearchIndexSource {
     private val base = baseUrl.trimEnd('/') + "/"
+    private var docsEncoding: String? = null
 
-    override suspend fun index(): ApiIndex = fetch(indexPath())
+    override suspend fun index(): ApiIndex = fetch<ApiIndex>(indexPath()).also { docsEncoding = it.docsEncoding }
 
     override suspend fun listing(layer: String, type: String?, page: Int): ListingPage =
         fetch(listingPath(layer, type, page))
 
-    override suspend fun document(id: String): DocumentResponse = fetch(documentPath(id))
+    override suspend fun document(id: String): DocumentResponse {
+        val encoding = docsEncoding ?: index().docsEncoding.also { docsEncoding = it }
+        if (encoding != DOCS_GZIP) return fetch(documentPath(id))
+        val text = Gzip.decompress(fetch<ByteArray>(gzipDocumentPath(id))).decodeToString()
+        return DocumentJson.decodeFromString(DocumentResponse.serializer(), text)
+    }
 
     override suspend fun ministries(layer: String, type: String): MinistryIndex = fetch(ministryIndexPath(layer, type))
 
@@ -47,6 +57,8 @@ class HttpRepository(
         return response.body()
     }
 }
+
+private val DocumentJson = Json { ignoreUnknownKeys = true }
 
 /** A failed API request; [status] is the HTTP status when the server answered. */
 class ApiException(message: String, val status: Int? = null) : Exception(message) {
