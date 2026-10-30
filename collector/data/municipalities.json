@@ -902,6 +902,7 @@
       "preset": "sitevision",
       "hosts": ["www.oxelosund.se"],
       "listings": ["https://www.oxelosund.se/kommun-och-politik/planer-och-styrdokument"],
+      "link_pattern": "^https://www\\.oxelosund\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
       "title_strip": [
         "\\s*pdf,\\s*[\\d.,]+\\s*[kMG]?B.*$",
         "\\s*Länk till annan webbplats.*$",
