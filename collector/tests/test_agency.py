@@ -332,6 +332,18 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             rfs.parse_detail(fixture("agency-rfs-2019-1.html"), entries["RFS 2018:6"])
 
+    def test_rafs_register(self):
+        ra = agency.RiksarkivetAdapter()
+        entries = {e.number: e for e in ra.parse_listing(fixture("agency-rafs-sok.json"), ra.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base), ["RA-FS 2013:3", "RA-FS 2026:1"])
+        self.assertFalse(entries["RA-FS 2015:2"].base)  # repealed by a regulation not in the fixture: no date
+        repealed = entries["RA-FS 2013:3"]
+        self.assertEqual(repealed.repealed, entries["RA-FS 2022:3"].in_force)
+        self.assertEqual(repealed.amended_by, ["RA-FS 2018:9", "RA-FS 2022:3"])  # amended, then repealed
+        current = entries["RA-FS 2026:1"]
+        self.assertEqual((current.in_force, current.repealed), ("2026-10-05", None))
+        self.assertEqual(current.url, "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202026-1.pdf")
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

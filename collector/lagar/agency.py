@@ -1183,6 +1183,65 @@ class RiksdagenAdapter:
         )
 
 
+# --- Riksarkivet (RA-FS) ------------------------------------------------------
+
+_RAFS_REPEALED_BY = re.compile(r"upphävda genom: (RA-FS \d{4}:\d+)")
+
+
+class RiksarkivetAdapter:
+    """Riksarkivet's register of general regulations (RA-FS), read through its JSON API.
+
+    `api/rafs/sok` returns every regulation, in force (Giltig) and repealed
+    (Upphävd), with its number, the base regulation it belongs to, entry into
+    force, the regulations that amended or repealed it, and its PDF. A
+    repealed base regulation gets the repealing regulation's entry into force
+    as its `repealed` date; without one it is not stored.
+    """
+
+    series = "RA-FS"
+    issuer = "Riksarkivet"
+    base_url = "https://foreskrifter.riksarkivet.se"
+    listing_url = (base_url + "/api/rafs/sok?nummer=&rubrik=&fulltext=&sokBlandGiltiga=true"
+                   "&sokBlandUpphavda=true&rafsSort=1")
+    detail = False
+    has_text = False
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def _pdf(self, path):
+        return f"{self.base_url}/api/rafs/pdf/{urllib.parse.quote(path, safe='')}"
+
+    def parse_listing(self, text, url):
+        items = [i for i in json.loads(text).get("traffLista") or [] if re.fullmatch(r"\d{4}:\d+", i.get("nummer") or "")]
+        in_force = {f"RA-FS {i['nummer']}": _date(i.get("ikrafttradandedatum")) for i in items}
+        amended = {}
+        for item in items:
+            if item.get("grundforfattning") and item["grundforfattning"] != item["nummer"]:
+                amended.setdefault(f"RA-FS {item['grundforfattning']}", set()).add(f"RA-FS {item['nummer']}")
+        entries = []
+        for item in items:
+            number = f"RA-FS {item['nummer']}"
+            title = _clean(item.get("rubrik"))
+            base = item.get("grundforfattning") == item["nummer"] and not _AMENDING.search(title)
+            repealed = None
+            if item.get("statusText") == "Upphävd":
+                by = _RAFS_REPEALED_BY.search(item.get("efterfoljareString") or "")
+                repealed = in_force.get(by.group(1)) if by else None
+                base = base and bool(repealed)
+            pdfs = [(number, self._pdf(d["path"])) for d in item.get("huvuddokument") or [] if d.get("path")][:1]
+            entries.append(Entry(number=number, title=title, url=pdfs[0][1] if pdfs else url, base=base and bool(pdfs),
+                                 in_force=_date(item.get("ikrafttradandedatum")), repealed=repealed,
+                                 amended_by=sorted(amended.get(number, ()), key=number_key), pdfs=pdfs))
+        if not any(e.base for e in entries):
+            raise ValueError("no regulations in Riksarkivet's register")
+        return entries
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, in_force=entry.in_force, repealed=entry.repealed,
+                          amended_by=list(entry.amended_by), version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1401,7 +1460,8 @@ def load_series(path=SERIES_CONFIG):
 
 ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
                                    PrvAdapter(), PolisenAdapter(), ScbAdapter(),
-                                   EnergimyndighetenAdapter(), RiksdagenAdapter())}
+                                   EnergimyndighetenAdapter(), RiksdagenAdapter(),
+                                   RiksarkivetAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
