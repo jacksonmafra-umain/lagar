@@ -469,7 +469,7 @@ PDFs already in the manifest are not downloaded again unless `--refresh`. An ada
 
 Series published as a plain page of links use the configurable adapters in
 `collector/lagar/agency_generic.py`: `PdfListAdapter` when the listing links straight to the
-PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS) and `DetailPageAdapter` when it links to one
+PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS, BFNAR, CSNFS, IMYFS, LMFS, MTFS) and `DetailPageAdapter` when it links to one
 HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS); `SitemapAdapter`
 finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS).
 A detail page's HTML text is kept when the series sets `text_nodes` (MDFFS). AFFS reads the
@@ -480,7 +480,14 @@ needed, the list item element. The number comes from either end of the item's te
 the PDF's file name; amending and repealing regulations are recognised by their titles ("om
 ändring i", "om upphävande av") and listed in the `amended_by` of the base regulation they
 name. For PDF entries (`detail = False`) the PDF is the document: `source` is its URL and
-`source_sha256` its hash.
+`source_sha256` its hash. A `PdfListAdapter` can also read a list item as a heading and what
+follows it (`group_by = "h3"`: LMFS, MTFS) or a link and the text after it (`group_by = "a"`:
+IMYFS), take the number from one cell of a table row (`number_node`: BFNAR), leave out the items
+under a heading such as "Upphävda föreskrifter" (`skip_section`) and mark the PDFs under a heading
+such as "Fulltext" (`consolidated_section`: CSNFS) or behind a "konsoliderad version" link as
+consolidated versions. Companion documents (vägledning, konsekvensutredning, rättelseblad) are
+left out. `pdf_title = True` takes the title from the PDF when the listing only gives a short name
+(BFNAR).
 
 Adapters whose site publishes no HTML text (`has_text = False`) get their text from a PDF:
 the consolidated version when one is linked, else the regulation's own PDF, read with
