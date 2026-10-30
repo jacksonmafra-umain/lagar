@@ -47,6 +47,18 @@
       "detail_pages": true,
       "documents": "/contentassets/"
     },
+    "TPPVFS": {
+      "issuer": "Totalförsvarets plikt- och prövningsverk",
+      "listing_urls": [
+        "https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter"
+      ],
+      "aliases": [
+        "TRMFS"
+      ],
+      "numbers": {
+        "TPPV Föreskrifter om förmåner_slutlig.pdf": "TPPVFS 2024:1"
+      }
+    },
     "TVFS": {
       "issuer": "Tillväxtverket",
       "listing_urls": [

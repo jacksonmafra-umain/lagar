@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.huddinge.se/organisation-och-styrning/sa-styrs-huddinge/huddinge-kommuns-forfattningssamling": "0126-listing.html"
+  },
+  "count": 36,
+  "sample": {
+    "number": "HKF 1100",
+    "title": "HKF 1100, Allmänna lokala ordningsföreskrifter för Huddinge kommun",
+    "url": "https://www.huddinge.se/download/18.5b265d7b19bafeb4365201e3/1782976805674/HKF%201100,%20Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Huddinge%20kommun.pdf"
+  },
+  "excluded": [
+    "HKF 1400, Reglemente för krisledningsnämnden",
+    "HKF 1500, Riktlinjer för behandling av personuppgifter",
+    "HKF 1610, Riktlinjer för säkerhetsskydd i Huddinge kommun"
+  ]
+}

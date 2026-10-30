@@ -108,6 +108,75 @@
       "sections": ["Taxor och avgifter", "Lokala föreskrifter"],
       "title_strip": ["\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$", "\\.pdf\\s*$"]
     },
+    "0126": {
+      "name": "Huddinge",
+      "issuer": "Huddinge kommun",
+      "region_code": "01",
+      "collection": "Huddinge kommuns författningssamling (HKF)",
+      "preset": "sitevision",
+      "hosts": ["www.huddinge.se", "huddinge.se"],
+      "listings": [
+        "https://www.huddinge.se/organisation-och-styrning/sa-styrs-huddinge/huddinge-kommuns-forfattningssamling"
+      ],
+      "number": [
+        {"from": "text", "pattern": "HKF\\s*(\\d{4})", "format": "HKF {0}"},
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_include": [
+        "f(ö|o\\u0308?)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a\\u030a?)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a\\u0308?)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a\\u0308?)nna best(ä|a\\u0308?)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a\\u0308?)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o\\u0308?)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a\\u0308?)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o\\u0308?)versyn",
+        "beslut om",
+        "f(ö|o\\u0308?)rslag",
+        "rapport",
+        "utredning",
+        "Södertörns Renhållningsverk"
+      ]
+    },
     "0127": {
       "name": "Botkyrka",
       "issuer": "Botkyrka kommun",
@@ -964,6 +1033,70 @@
         "omställningsstöd"
       ]
     },
+    "0482": {
+      "name": "Flen",
+      "issuer": "Flen kommun",
+      "region_code": "04",
+      "collection": "Flen kommuns författningssamling",
+      "preset": "sitevision",
+      "hosts": ["flen.se", "www.flen.se"],
+      "listings": ["https://flen.se/kommun--politik/forfattningssamling"],
+      "title_include": [
+        "f(ö|o\\u0308?)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a\\u030a?)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a\\u0308?)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a\\u0308?)nna best(ä|a\\u0308?)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a\\u0308?)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o\\u0308?)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a\\u0308?)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o\\u0308?)versyn",
+        "beslut om",
+        "f(ö|o\\u0308?)rslag",
+        "rapport",
+        "utredning",
+        "riktlinje",
+        "bidrag"
+      ]
+    },
     "0483": {
       "name": "Katrineholm",
       "issuer": "Katrineholms kommun",
@@ -989,6 +1122,133 @@
         "^\\d+-\\d+\\s+",
         "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
         "\\.pdf\\s*$"
+      ]
+    },
+    "0484": {
+      "name": "Eskilstuna",
+      "issuer": "Eskilstuna kommun",
+      "region_code": "04",
+      "collection": "Eskilstuna kommuns författningssamling",
+      "preset": "sitevision",
+      "hosts": ["www.eskilstuna.se", "eskilstuna.se"],
+      "listings": ["https://www.eskilstuna.se/kommun-och-politik/ta-del-av-beslut/forfattningssamling"],
+      "title_include": [
+        "f(ö|o\\u0308?)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a\\u030a?)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a\\u0308?)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a\\u0308?)nna best(ä|a\\u0308?)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a\\u0308?)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o\\u0308?)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a\\u0308?)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o\\u0308?)versyn",
+        "beslut om",
+        "f(ö|o\\u0308?)rslag",
+        "rapport",
+        "utredning"
+      ]
+    },
+    "0486": {
+      "name": "Strängnäs",
+      "issuer": "Strängnäs kommun",
+      "region_code": "04",
+      "collection": "Styrande dokument (allmänna föreskrifter, taxor och avgifter)",
+      "preset": "sitevision",
+      "hosts": ["www.strangnas.se", "strangnas.se"],
+      "listings": [
+        "https://www.strangnas.se/kommun-och-politik/styrande-dokument?folder=19.1f2eb9891753411bef565b0c&sv.url=12.7546977617592429b91c2cbd",
+        "https://www.strangnas.se/kommun-och-politik/styrande-dokument?folder=19.1f2eb9891753411bef565b0e&sv.url=12.7546977617592429b91c2cbd"
+      ],
+      "title_include": [
+        "f(ö|o\\u0308?)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a\\u030a?)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a\\u0308?)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a\\u0308?)nna best(ä|a\\u0308?)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a\\u0308?)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o\\u0308?)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a\\u0308?)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o\\u0308?)versyn",
+        "beslut om",
+        "f(ö|o\\u0308?)rslag",
+        "rapport",
+        "utredning"
       ]
     },
     "0488": {
@@ -1094,6 +1354,70 @@
       "hosts": ["www.ydre.se"],
       "listings": ["https://www.ydre.se/ydre-kommun/kommun-och-politik/styrande-dokument---forfattningssamling"]
     },
+    "0513": {
+      "name": "Kinda",
+      "issuer": "Kinda kommun",
+      "region_code": "05",
+      "collection": "Kinda kommuns författningssamling",
+      "preset": "sitevision",
+      "hosts": ["www.kinda.se", "kinda.se"],
+      "listings": [
+        "https://www.kinda.se/kommunochpolitik/kvalitetochutveckling/styrdokument/forfattningssamling.4.6e3f21d91563590162e8ece1.html"
+      ],
+      "title_include": [
+        "f(ö|o\\u0308?)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a\\u030a?)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a\\u0308?)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a\\u0308?)nna best(ä|a\\u0308?)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a\\u0308?)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o\\u0308?)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a\\u0308?)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o\\u0308?)versyn",
+        "beslut om",
+        "f(ö|o\\u0308?)rslag",
+        "rapport",
+        "utredning"
+      ]
+    },
     "0560": {
       "name": "Boxholm",
       "issuer": "Boxholms kommun",
@@ -1173,6 +1497,77 @@
       "listings": ["https://www.atvidaberg.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument"],
       "section_level": 2,
       "sections": ["Föreskrifter och regler", "Taxor och avgifter"]
+    },
+    "0562": {
+      "name": "Finspång",
+      "issuer": "Finspång kommun",
+      "region_code": "05",
+      "collection": "Mål- och styrdokument (avgifter och taxor, avfallsföreskrifter)",
+      "preset": "sitevision",
+      "hosts": ["finspang.se", "www.finspang.se"],
+      "listings": [
+        "https://finspang.se/kommunochpolitik/kommunfakta/styrdokument",
+        "https://finspang.se/bobyggaochmiljo/avfall-och-atervinning/avfallsplan-och-foreskrifter"
+      ],
+      "title_strip": [
+        ",?\\s*(\\(?\\s*)?(ö|o)ppnas i (ett )?nytt f(ö|o)nster\\.?\\)?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\.(pdf|docx?)\\s*$",
+        "\\s*\\(pdf\\)\\s*$"
+      ],
+      "title_include": [
+        "f(ö|o\\u0308?)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a\\u030a?)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a\\u0308?)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a\\u0308?)nna best(ä|a\\u0308?)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a\\u0308?)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o\\u0308?)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a\\u0308?)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o\\u0308?)versyn",
+        "beslut om",
+        "f(ö|o\\u0308?)rslag",
+        "rapport",
+        "utredning"
+      ]
     },
     "0563": {
       "name": "Valdemarsvik",
@@ -1642,32 +2037,261 @@
         "(?i)Regler för i vilken ordning"
       ]
     },
+    "0881": {
+      "name": "Nybro",
+      "issuer": "Nybro kommun",
+      "region_code": "08",
+      "collection": "Taxor och avgifter, lokala föreskrifter",
+      "strategy": "html_index",
+      "hosts": ["nybro.se"],
+      "listings": [
+        "https://nybro.se/kommun-politik/ekonomi-budget/taxor-avgifter/",
+        "https://nybro.se/bygga-bo-miljo/miljo-halsa-livsmedel/halsoskydd/lokala-halsoskyddsforeskrifter/"
+      ],
+      "link_pattern": "^https://nybro\\.se/wp-content/uploads/.*\\.pdf$",
+      "number": [{"from": "href", "pattern": "/uploads/\\d{4}/\\d{2}/([^/]+)\\.pdf$"}],
+      "title_strip": ["\\s*\\(?pdf\\)?\\s*$"],
+      "title_exclude": [
+        "(?i)uthyrning",
+        "(?i)lokaluthyrning",
+        "(?i)kulturskolan",
+        "(?i)verkstad",
+        "(?i)förrådspåslag",
+        "(?i)park och anläggning",
+        "(?i)lunch",
+        "(?i)^Broschyr",
+        "(?i)^Taxa-for-uppdrag"
+      ]
+    },
+    "0884": {
+      "name": "Vimmerby",
+      "issuer": "Vimmerby kommun",
+      "region_code": "08",
+      "collection": "Lokala föreskrifter och taxor",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.vimmerby.se"],
+      "listings": [
+        "https://www.vimmerby.se/bygga-bo-och-miljo/livsmedel-och-halsa/lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon",
+        "https://www.vimmerby.se/trafik-gator-och-infrastruktur/offentliga-platser-och-nyttjande-av-dem/parker-lekplatser-och-fontaner"
+      ],
+      "title_include": ["(?i)föreskrift", "(?i)taxor", "(?i)taxa", "(?i)avgifter"],
+      "title_exclude": ["(?i)riktlinjer"]
+    },
+    "0885": {
+      "name": "Borgholm",
+      "issuer": "Borgholms kommun",
+      "region_code": "08",
+      "collection": "Styrdokument",
+      "strategy": "html_index",
+      "hosts": ["www.borgholm.se"],
+      "listings": ["https://www.borgholm.se/styrdokument/"],
+      "section_level": 2,
+      "sections": ["Föreskrifter"],
+      "link_pattern": "^https://www\\.borgholm\\.se/wp-content/uploads/.*\\.pdf$",
+      "number": [{"from": "href", "pattern": "/uploads/\\d{4}/\\d{2}/([^/]+)\\.pdf$"}],
+      "title_strip": ["\\s*\\(?pdf\\)?\\s*$"]
+    },
+    "1060": {
+      "name": "Olofström",
+      "issuer": "Olofström kommun",
+      "region_code": "10",
+      "collection": "Olofström kommuns författningssamling",
+      "preset": "sitevision",
+      "hosts": ["olofstrom.se", "www.olofstrom.se"],
+      "listings": ["https://olofstrom.se/kommun-och-politik/kommunfakta/styrande-dokument"],
+      "title_include": [
+        "f(ö|o\\u0308?)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a\\u030a?)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a\\u0308?)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a\\u0308?)nna best(ä|a\\u0308?)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a\\u0308?)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o\\u0308?)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a\\u0308?)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o\\u0308?)versyn",
+        "beslut om",
+        "f(ö|o\\u0308?)rslag",
+        "rapport",
+        "utredning"
+      ]
+    },
+    "1081": {
+      "name": "Ronneby",
+      "issuer": "Ronneby kommun",
+      "region_code": "10",
+      "collection": "Lokala föreskrifter",
+      "preset": "sitevision",
+      "hosts": ["www.ronneby.se"],
+      "listings": [
+        "https://www.ronneby.se/kommun--politik/regler-och-styrande-dokument/lokala-foreskrifter.html"
+      ],
+      "title_strip": ["(?i)\\s*\\.?pdf\\b.*$"]
+    },
+    "1082": {
+      "name": "Karlshamn",
+      "issuer": "Karlshamn kommun",
+      "region_code": "10",
+      "collection": "Författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.karlshamn.se"],
+      "listings": [
+        "https://www.karlshamn.se/kommun-och-politik/kommunfakta/forfattningssamling/lokala-forordningar/",
+        "https://www.karlshamn.se/kommun-och-politik/kommunfakta/forfattningssamling/avgifter-och-taxor/"
+      ],
+      "link_pattern": "^https://www\\.karlshamn\\.se/wp-content/uploads/\\d+[-._].*\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "uploads/(\\d+)[-._]+(\\d+)[-._]+(\\d+)[-_]", "format": "{0}.{1}.{2}"},
+        {"from": "href", "pattern": "uploads/(\\d+)[-._]+(\\d+)[-_]", "format": "{0}.{1}"}
+      ],
+      "title_strip": ["(?i)\\s*\\.?(pdf|doc)\\b.*$", "^\\d+(\\.\\d+)*\\s+"],
+      "title_exclude": ["Avfallsplan", "^Bilaga", "Kartbilaga", "^Karta", "(?i)^riktlinjer"]
+    },
+    "1083": {
+      "name": "Sölvesborg",
+      "issuer": "Sölvesborg kommun",
+      "region_code": "10",
+      "collection": "Författningssamling",
+      "preset": "sitevision",
+      "hosts": ["solvesborg.se"],
+      "listings": [
+        "https://solvesborg.se/kommun-och-politik-/regler-och-styrande-dokument/forfattningssamling.html"
+      ],
+      "section_level": 2,
+      "sections": ["Lokala förordningar", "Taxor och avgifter"],
+      "title_strip": ["(?i)\\s*\\.?pdf\\b.*$"],
+      "title_exclude": ["Avfallsplan", "^Bilaga", "Bilaga \\d", "(?i)reglemente", "Månadsavgifter"]
+    },
     "1214": {
       "name": "Svalöv",
-      "issuer": "Svalövs kommun",
+      "issuer": "Svalöv kommun",
       "region_code": "12",
-      "collection": "Svalövs kommuns författningssamling",
+      "collection": "Författningssamling",
       "preset": "sitevision",
       "resident_filter": true,
       "hosts": ["www.svalov.se"],
       "listings": [
-        "https://www.svalov.se/kommun--politik/forfattningssamling",
         "https://www.svalov.se/kommun--politik/forfattningssamling/bestammelser-som-riktar-sig-till-dig-som-medborgare",
-        "https://www.svalov.se/kommun--politik/forfattningssamling/taxor-och-avgifter"
+        "https://www.svalov.se/kommun--politik/forfattningssamling/taxor-och-avgifter",
+        "https://www.svalov.se/kommun--politik/forfattningssamling"
+      ],
+      "title_strip": ["(?i)\\s*\\.?pdf\\b.*$"]
+    },
+    "1231": {
+      "name": "Burlöv",
+      "issuer": "Burlöv kommun",
+      "region_code": "12",
+      "collection": "Burlövs kommuns författningssamling (BKFS)",
+      "preset": "sitevision",
+      "hosts": ["burlov.se", "www.burlov.se"],
+      "listings": [
+        "https://burlov.se/kommunpolitik/forfattningssamlingochstyrdokument.4.4c64ddf815a141b0e4e6a14e.html"
+      ],
+      "title_include": [
+        "f(ö|o\\u0308?)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a\\u030a?)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a\\u0308?)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a\\u0308?)nna best(ä|a\\u0308?)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a\\u0308?)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o\\u0308?)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a\\u0308?)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o\\u0308?)versyn",
+        "beslut om",
+        "f(ö|o\\u0308?)rslag",
+        "rapport",
+        "utredning",
+        "stöd till föreningar",
+        "principer"
       ]
     },
     "1257": {
       "name": "Örkelljunga",
       "issuer": "Örkelljunga kommun",
       "region_code": "12",
-      "collection": "Örkelljunga kommuns författningssamling",
+      "collection": "Kommunal författningssamling",
       "preset": "sitevision",
       "resident_filter": true,
       "hosts": ["www.orkelljunga.se"],
       "listings": [
         "https://www.orkelljunga.se/16/kommun-och-politik/kommunal-forfattningssamling/allmanna-foreskrifter.html",
-        "https://www.orkelljunga.se/16/kommun-och-politik/kommunal-forfattningssamling/avgifter-och-taxor.html",
-        "https://www.orkelljunga.se/16/kommun-och-politik/kommunal-forfattningssamling/natur-och-miljo.html"
+        "https://www.orkelljunga.se/16/kommun-och-politik/kommunal-forfattningssamling/avgifter-och-taxor.html"
       ]
     },
     "1270": {
@@ -3119,6 +3743,16 @@
         "https://karlskoga.se/kommun--politik/politik-och-demokrati/kommunal-forfattningssamling.html"
       ]
     },
+    "1885": {
+      "name": "Lindesberg",
+      "issuer": "Lindesbergs kommun",
+      "region_code": "18",
+      "collection": "Lindesbergs kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.lindesberg.se", "lindesberg.se"],
+      "listings": ["https://www.lindesberg.se/kommun-och-politik/kommunfakta/regler-och-styrdokument-"]
+    },
     "1904": {
       "name": "Skinnskatteberg",
       "issuer": "Skinnskattebergs kommun",
@@ -3137,6 +3771,32 @@
         {"from": "href", "pattern": "/app/uploads/(\\d{4}/\\d{2}/[^/?#]+?)\\.pdf"}
       ],
       "title_strip": ["\\s*\\(pdf(,\\s*[\\d.,]+\\s*[kKM]B)?\\)\\s*$", "^Taxor och avgifter\\s*\\|\\s*"]
+    },
+    "1907": {
+      "name": "Surahammar",
+      "issuer": "Surahammars kommun",
+      "region_code": "19",
+      "collection": "Surahammars kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["surahammar.se", "www.surahammar.se"],
+      "listings": [
+        "https://surahammar.se/kommun-styrdokument-ekonomi-och-politik/forfattningssamling-och-styrande-dokument/foreskrifter.html",
+        "https://surahammar.se/kommun-styrdokument-ekonomi-och-politik/forfattningssamling-och-styrande-dokument/taxor-och-avgifter.html"
+      ]
+    },
+    "1960": {
+      "name": "Kungsör",
+      "issuer": "Kungsörs kommun",
+      "region_code": "19",
+      "collection": "Kungsörs kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["kungsor.se", "www.kungsor.se"],
+      "listings": [
+        "https://kungsor.se/kommun-och-politik/styrande-dokument/allmanhet-och-naringsliv.html",
+        "https://kungsor.se/kommun-och-politik/styrande-dokument/taxor-och-avgifter.html"
+      ]
     },
     "1962": {
       "name": "Norberg",
@@ -3205,6 +3865,18 @@
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kKM]B\\.?\\s*$"]
     },
+    "1983": {
+      "name": "Köping",
+      "issuer": "Köpings kommun",
+      "region_code": "19",
+      "collection": "Köpings kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["koping.se", "www.koping.se"],
+      "listings": [
+        "https://koping.se/kommun--politik/kvalitet-utveckling-policyer-och-riktlinjer/forfattningssamling.html"
+      ]
+    },
     "1984": {
       "name": "Arboga",
       "issuer": "Arboga kommun",
@@ -3263,6 +3935,16 @@
       ],
       "title_strip": ["\\s*\\.pdf\\s*$"]
     },
+    "2034": {
+      "name": "Orsa",
+      "issuer": "Orsa kommun",
+      "region_code": "20",
+      "collection": "Orsa kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["orsa.se", "www.orsa.se"],
+      "listings": ["https://orsa.se/kommun-och-politik/styrande-dokument-och-regler.html"]
+    },
     "2039": {
       "name": "Älvdalen",
       "issuer": "Älvdalens kommun",
@@ -3290,6 +3972,194 @@
         "\\s*\\.pdf\\s*$"
       ]
     },
+    "2061": {
+      "name": "Smedjebacken",
+      "issuer": "Smedjebacken kommun",
+      "region_code": "20",
+      "collection": "Smedjebackens kommuns styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.smedjebacken.se", "smedjebacken.se"],
+      "listings": [
+        "https://www.smedjebacken.se/kommun-och-politik/styrande-dokument/foreskrifter.html",
+        "https://www.smedjebacken.se/kommun-och-politik/styrande-dokument/avgifter.html"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.smedjebacken\\.se/download/18\\.[0-9a-f]+/\\d+/(?![^?#]*(?:Personalmatl|Lunchpris|tryckeri))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
+    },
+    "2062": {
+      "name": "Mora",
+      "issuer": "Mora kommun",
+      "region_code": "20",
+      "collection": "Mora kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["morakommun.se", "www.morakommun.se"],
+      "listings": ["https://morakommun.se/kommun-och-politik/styrande-dokument-och-regler.html"]
+    },
+    "2080": {
+      "name": "Falun",
+      "issuer": "Falu kommun",
+      "region_code": "20",
+      "collection": "Falu kommuns regler och styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.falun.se", "falun.se"],
+      "listings": [
+        "https://www.falun.se/kommun--demokrati/kommunens-organisation/regler-och-styrande-dokument/foreskrifter.html",
+        "https://www.falun.se/kommun--demokrati/kommunens-organisation/regler-och-styrande-dokument/avgifter-och-taxor.html"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.falun\\.se/download/18\\.[0-9a-f]+/\\d+/(?![^?#]*(?:avgifter_tillsyn|serveringsst))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
+    },
+    "2083": {
+      "name": "Hedemora",
+      "issuer": "Hedemora kommun",
+      "region_code": "20",
+      "collection": "Hedemora kommuns styrande dokument och regler",
+      "strategy": "html_index",
+      "hosts": ["hedemora.se", "www.hedemora.se"],
+      "listings": [
+        "https://hedemora.se/kommun-och-demokrati/sa-fungerar-kommunen/regler-och-styrande-dokument/"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://(www\\.)?hedemora\\.se/wp-content/uploads/\\d{4}/\\d{2}/(?=[^?#/]*(?:ABVA|ordningsforeskrifter|avfallsforeskrifter|Torghandel|foreskrift-va|forslag-pa-lokala-foreskrifter|Gangbanor|Felparkeringsavgifter|taxa|taxor|avgift|tillampning))[^?#/]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/wp-content/uploads/(\\d{4}/\\d{2}/[^/?#]+?)\\.pdf"}
+      ],
+      "title_strip": ["\\s*\\.pdf\\s*$"]
+    },
+    "2084": {
+      "name": "Avesta",
+      "issuer": "Avesta kommun",
+      "region_code": "20",
+      "collection": "Avesta kommuns styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["avesta.se", "www.avesta.se"],
+      "listings": [
+        "https://avesta.se/kommun-demokrati/styrande-dokument/miljo-och-avfall/",
+        "https://avesta.se/kommun-demokrati/styrande-dokument/foreskrifter/"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://(www\\.)?avesta\\.se/(globalassets|contentassets)/[^?#]*(?:ordningsforeskrifter|avfallsforeskrifter|abva|halsoskyddsforeskrifter)[^?#]*\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/(?:globalassets|contentassets)/.*/([^/?#]+?)\\.pdf"}
+      ],
+      "title_strip": ["\\s*\\(?adobe reader[^)]*\\)?\\s*$", "\\s*\\.\\s*$"]
+    },
+    "2085": {
+      "name": "Ludvika",
+      "issuer": "Ludvika kommun",
+      "region_code": "20",
+      "collection": "Ludvika kommuns styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.ludvika.se", "ludvika.se", "dokumentwebb.ludvika.se"],
+      "listings": [
+        "https://www.ludvika.se/kommun-och-politik/styrande-dokument",
+        "https://www.ludvika.se/kommun-och-politik/fakta-om-kommunen/taxor-och-avgifter"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Föreskrifter",
+        "Avgifter och taxor inom vård- och omsorg",
+        "Taxor och avgifter inom kultur- och samhällsutveckling",
+        "Taxor inom avfall"
+      ],
+      "link_pattern": "^https://dokumentwebb\\.ludvika\\.se/api/download/(?!(?:55ced140|a36b9d82|44592fda|d8bea59c|ce606c39|e1c70f2e)-)[0-9a-f-]{36}/[0-9a-f-]{36}$",
+      "number": [
+        {"from": "href", "pattern": "/api/download/([0-9a-f-]{36})/"}
+      ],
+      "title_strip": ["\\s*\\.pdf\\s*$"]
+    },
+    "2101": {
+      "name": "Ockelbo",
+      "issuer": "Ockelbo kommun",
+      "region_code": "21",
+      "collection": "Ockelbo kommuns styrdokument",
+      "strategy": "html_index",
+      "hosts": ["ockelbo.se", "www.ockelbo.se"],
+      "listings": ["https://ockelbo.se/kommun--politik/beslut--handlingar/styrdokument-"],
+      "section_level": 2,
+      "sections": ["Föreskrifter"],
+      "link_pattern": "^https://ockelbo\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
+    },
+    "2104": {
+      "name": "Hofors",
+      "issuer": "Hofors kommun",
+      "region_code": "21",
+      "collection": "Hofors kommuns styrdokument",
+      "strategy": "html_index",
+      "hosts": ["www.hofors.se", "hofors.se"],
+      "listings": ["https://www.hofors.se/kommun--politik/styrdokument.html"],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.hofors\\.se/download/18\\.[0-9a-f]+/\\d+/(?=[^?#]*(?:%C3%B6reskrift|ordningsf|taxa|avgifter))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
+    },
+    "2121": {
+      "name": "Ovanåker",
+      "issuer": "Ovanåkers kommun",
+      "region_code": "21",
+      "collection": "Ovanåkers kommuns lokala föreskrifter",
+      "preset": "sitevision",
+      "hosts": ["www.ovanaker.se", "ovanaker.se"],
+      "listings": ["https://www.ovanaker.se/trafikochgator/allmannaplatser/lokalaforeskrifter.313.html"]
+    },
+    "2132": {
+      "name": "Nordanstig",
+      "issuer": "Nordanstigs kommun",
+      "region_code": "21",
+      "collection": "Nordanstigs kommuns styrdokument",
+      "strategy": "html_index",
+      "hosts": ["nordanstig.se", "www.nordanstig.se"],
+      "listings": [
+        "https://nordanstig.se/startsida/sidor/kommun-och-politik/sa-styrs-nordanstig---styrdokument.html"
+      ],
+      "section_level": 2,
+      "sections": ["Taxor och avgifter", "Lokala föreskrifter"],
+      "link_pattern": "^https://nordanstig\\.se/download/18\\.[0-9a-f]+/\\d+/(?![^?#]*Kretslop)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
+    },
     "2161": {
       "name": "Ljusdal",
       "issuer": "Ljusdals kommun",
@@ -3308,6 +4178,16 @@
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
+    "2181": {
+      "name": "Sandviken",
+      "issuer": "Sandvikens kommun",
+      "region_code": "21",
+      "collection": "Sandvikens kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["sandviken.se", "www.sandviken.se"],
+      "listings": ["https://sandviken.se/kommunochpolitik/lokalaforeskrifterochstyrdokument.14615.html"]
     },
     "2182": {
       "name": "Söderhamn",
@@ -3440,6 +4320,39 @@
         "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"
       ]
     },
+    "2282": {
+      "name": "Kramfors",
+      "issuer": "Kramfors kommun",
+      "region_code": "22",
+      "collection": "Kramfors kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.kramfors.se", "kramfors.se"],
+      "listings": [
+        "https://www.kramfors.se/kommun--demokrati/styrning-och-ledning/styrande-dokument/lokala-foreskrifter.html",
+        "https://www.kramfors.se/kommun--demokrati/styrning-och-ledning/styrande-dokument/avgifter-och-taxor.html"
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "best(ä|a)mmelser.{0,80}(vatten|avlopp)"
+      ]
+    },
     "2283": {
       "name": "Sollefteå",
       "issuer": "Sollefteå kommun",
@@ -3462,6 +4375,38 @@
         "[\\s,-]*KF\\s*\\d{4}-\\d{2}-\\d{2}.*$"
       ]
     },
+    "2284": {
+      "name": "Örnsköldsvik",
+      "issuer": "Örnsköldsviks kommun",
+      "region_code": "22",
+      "collection": "Örnsköldsviks kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.ornskoldsvik.se", "ornskoldsvik.se"],
+      "listings": [
+        "https://www.ornskoldsvik.se/om-kommunen/politiska-beslut-och-handlingar/lokala-foreskrifter/lokala-foreskrifter"
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "sn(ö|o)skoter"
+      ]
+    },
     "2303": {
       "name": "Ragunda",
       "issuer": "Ragunda kommun",
@@ -3477,6 +4422,39 @@
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$", "^\\u200b"]
+    },
+    "2305": {
+      "name": "Bräcke",
+      "issuer": "Bräcke kommun",
+      "region_code": "23",
+      "collection": "Bräcke kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.bracke.se", "bracke.se"],
+      "listings": [
+        "https://www.bracke.se/kommun--och-demokrati/ekonomi-mal-och-styrdokument/styrande-dokument"
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "taxe(best|tabell)|taxebest",
+        "best(ä|a)mm(else)?r.{0,20}(vatten|avlopp)"
+      ]
     },
     "2309": {
       "name": "Krokom",
@@ -3514,6 +4492,77 @@
         "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
         "\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
         "\\s*\\(\\d+_\\d+\\)\\s*$"
+      ]
+    },
+    "2321": {
+      "name": "Åre",
+      "issuer": "Åre kommun",
+      "region_code": "23",
+      "collection": "Åre kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["are.se", "www.are.se"],
+      "listings": [
+        "https://are.se/kommun-och-politik/ekonomi-kvalitet-och-styrande-dokument/taxor-och-avgifter",
+        "https://are.se/kommun-och-politik/ekonomi-kvalitet-och-styrande-dokument/kommunal-forfattningssamling"
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "taxe(best|bilaga)|timtaxor",
+        "alkohol.?f(ö|o)rbud"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "verksamhetsplan",
+        "v(ä|a)gledning",
+        "^F(ö|o)reskrift \\d{4}-\\d{2}-\\d{2}$"
       ]
     },
     "2326": {
@@ -3861,6 +4910,16 @@
         "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B.*$"
       ]
     },
+    "2505": {
+      "name": "Arvidsjaur",
+      "issuer": "Arvidsjaurs kommun",
+      "region_code": "25",
+      "collection": "Arvidsjaurs kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["arvidsjaur.se", "www.arvidsjaur.se"],
+      "listings": ["https://arvidsjaur.se/kommunpolitik/politikochbeslutsfattande/styrdokument.888.html"]
+    },
     "2506": {
       "name": "Arjeplog",
       "issuer": "Arjeplogs kommun",
@@ -3963,6 +5022,53 @@
       ],
       "title_strip": []
     },
+    "2523": {
+      "name": "Gällivare",
+      "issuer": "Gällivare kommun",
+      "region_code": "25",
+      "collection": "Gällivare kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["gallivare.se", "www.gallivare.se"],
+      "listings": [
+        "https://gallivare.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument",
+        "https://gallivare.se/kommun-och-politik/kommunfakta/ekonomi-och-budget/avgifter-och-taxor"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-| och bygg)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning"
+      ]
+    },
     "2580": {
       "name": "Luleå",
       "issuer": "Luleå kommun",
@@ -3998,6 +5104,21 @@
       ],
       "title_strip": ["\\.pdf\\s*$"]
     },
+    "2582": {
+      "name": "Boden",
+      "issuer": "Bodens kommun",
+      "region_code": "25",
+      "collection": "Bodens kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": false,
+      "hosts": ["boden.se", "www.boden.se"],
+      "listings": [
+        "https://boden.se/tillstand-och-avgifter/lokala-foreskrifter/avfallsforeskrifter",
+        "https://boden.se/tillstand-och-avgifter/lokala-foreskrifter/fyrverkeriforbud",
+        "https://boden.se/tillstand-och-avgifter/lokala-foreskrifter/foreskrifter-for-halsa-och-miljo",
+        "https://boden.se/tillstand-och-avgifter/lokala-foreskrifter/foreskrifter-for-torghandel"
+      ]
+    },
     "2583": {
       "name": "Haparanda",
       "issuer": "Haparanda stad",
@@ -4014,6 +5135,25 @@
         "Ordningsföreskrifter"
       ],
       "link_pattern": "^https://www\\.haparanda\\.se/download/18\\.[0-9a-f]+/\\d+/(?!AVFALLSPLAN|V%C3%A4gbelysning|Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20administration)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kMK]B.*$"]
+    },
+    "2584": {
+      "name": "Kiruna",
+      "issuer": "Kiruna kommun",
+      "region_code": "25",
+      "collection": "Kiruna kommuns regler och styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["kiruna.se", "www.kiruna.se"],
+      "listings": [
+        "https://kiruna.se/kommun--demokrati/regler-och-styrande-dokument.html",
+        "https://kiruna.se/bygga-bo--miljo/bygga-nytt-andra-eller-riva/taxa.html"
+      ],
+      "section_level": 2,
+      "sections": ["Lokala föreskrifter", "Mer information"],
+      "link_pattern": "^https://kiruna\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
       "number": [
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],

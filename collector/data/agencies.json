@@ -15,7 +15,9 @@
     },
     "centrala-studiestodsnamndens-forfattningssamling-csnfs": {
       "series": "CSNFS",
-      "agency": "Centrala studiestödsnämnden"
+      "agency": "Centrala studiestödsnämnden",
+      "status": "collected",
+      "note": "CSN lists its regulations by subject, each with the consolidated text (Fulltext) and the printed regulation and amendments (Tryckt version), with a link to each PDF; the text is read from the PDF (consolidated version where published). The annual regleringstal notices numbered in CSNFS are included; four old PDFs are scans without a text layer."
     },
     "energimarknadsinspektionens-forfattningssamling-eifs": {
       "series": "EIFS",
@@ -24,7 +26,7 @@
     "statistiska-centralbyrans-forfattningssamling-scb-fs": {
       "series": "SCB-FS",
       "agency": "Statistiska centralbyrån",
-      "status": "partial",
+      "status": "collected",
       "note": "Full text from SCB's page per regulation, listed in its table of regulations on reporting duties (uppgiftslämnande) in force. The monthly consumer price index notices and the regulations on official statistics (published only as PDF) are not collected."
     },
     "aklagarmyndighetens-forfattningssamling-afs": {
@@ -83,7 +85,9 @@
     },
     "totalforsvarets-plikt-och-provningsverks-forfattningssamling-tppvfs": {
       "series": "TPPVFS",
-      "agency": "Totalförsvarets plikt- och prövningsverk"
+      "agency": "Totalförsvarets plikt- och prövningsverk",
+      "status": "collected",
+      "note": "Base regulations in force from Pliktverket's page, with the predecessor TRMFS regulations under their own prefix; text from the PDFs."
     },
     "havs-och-vattenmyndighetens-forfattningssamling-hvmfs": {
       "series": "HVMFS",
@@ -124,7 +128,8 @@
     "bokforingsnamndens-allmanna-rad-bfnar": {
       "series": "BFNAR",
       "agency": "Bokföringsnämnden",
-      "note": "General advice (allmänna råd), not binding regulations."
+      "status": "collected",
+      "note": "General advice (allmänna råd), not binding regulations. BFN lists the general advice in force in a table with the original and, where there is one, the consolidated PDF; the title and text are read from the PDF (consolidated version where published)."
     },
     "migrationsverkets-forfattningssamling-migrfs": {
       "series": "MIGRFS",
@@ -150,7 +155,9 @@
     },
     "integritetsskyddsmyndighetens-forfattningssamling-imyfs": {
       "series": "IMYFS",
-      "agency": "Integritetsskyddsmyndigheten"
+      "agency": "Integritetsskyddsmyndigheten",
+      "status": "collected",
+      "note": "IMY lists its regulations with a link to each PDF; the text is read from the PDF. Repealing regulations and the predecessor series DIFS on the same page are not collected."
     },
     "kammarkollegiets-forfattningssamling-kamfs": {
       "series": "KAMFS",
@@ -178,7 +185,9 @@
     },
     "lantmateriets-forfattningssamling-lmfs": {
       "series": "LMFS",
-      "agency": "Lantmäteriet"
+      "agency": "Lantmäteriet",
+      "status": "collected",
+      "note": "Lantmäteriet lists the regulations in force, each with its title and a link to the PDF; the text is read from the PDF. Repealed regulations and the predecessor series LMVFS are not collected; one PDF (LMFS 2015:5) is a scan without a text layer."
     },
     "myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs": {
       "series": "MDFFS",
@@ -194,7 +203,9 @@
     },
     "myndigheten-for-tillvaxtpolitiska-utvarderingar-och-analysers-forfattningssamling-mtfs": {
       "series": "MTFS",
-      "agency": "Myndigheten för tillväxtpolitiska utvärderingar och analyser"
+      "agency": "Myndigheten för tillväxtpolitiska utvärderingar och analyser",
+      "status": "collected",
+      "note": "Tillväxtanalys lists the regulations in force with a link to each PDF; the text is read from the PDF. Repealed regulations listed on the same page are not collected."
     },
     "patent-och-registreringsverkets-forfattningssamling-prvfs": {
       "series": "PRVFS",
@@ -234,7 +245,9 @@
     },
     "spelinspektionens-forfattningssamling-sifs": {
       "series": "SIFS",
-      "agency": "Spelinspektionen"
+      "agency": "Spelinspektionen",
+      "status": "collected",
+      "note": "Regulations in force from Spelinspektionen's list (a PDF) and the page per regulation; the former Lotteriinspektionen's LIFS are stored under that prefix; text from the PDFs."
     },
     "statens-jordbruksverks-forfattningssamling-sjvfs": {
       "series": "SJVFS",
@@ -260,7 +273,9 @@
     },
     "svenska-kraftnats-forfattningssamling-svkfs": {
       "series": "SvKFS",
-      "agency": "Affärsverket svenska kraftnät"
+      "agency": "Affärsverket svenska kraftnät",
+      "status": "collected",
+      "note": "Regulations from the JSON document list behind Svenska kraftnät's regulations page, in force and repealed (archived, with the date from the description); text from the PDFs."
     },
     "trafikverkets-forfattningssamling-trvfs": {
       "series": "TRVFS",
@@ -305,8 +320,8 @@
     "svensk-trafikforeskriftssamling-stfs": {
       "series": "STFS",
       "agency": "Transportstyrelsen (local traffic regulations)",
-      "status": "out_of_scope",
-      "note": "Local traffic regulations; out of scope for the county layer (COVERAGE.md)."
+      "status": "collected",
+      "note": "Regulations from Sametinget's document bank (the JSON its search page reads); text from the PDFs."
     },
     "naturvardsverkets-forfattningssamling-nfs": {
       "series": "NFS",
@@ -316,7 +331,8 @@
     },
     "sametingets-forfattningssamling-stfs": {
       "series": "STFS",
-      "agency": "Sametinget"
+      "agency": "Sametinget",
+      "status": "collected"
     },
     "skogsstyrelsens-forfattningssamling-sksfs": {
       "series": "SKSFS",
@@ -358,7 +374,9 @@
     },
     "tullverkets-forfattningssamling-tfs": {
       "series": "TFS",
-      "agency": "Tullverket"
+      "agency": "Tullverket",
+      "status": "collected",
+      "note": "Base regulations in force from Tullverket's document search (a POSTed form listing every TFS document); repealed ones carry no date and are not stored; text from the PDFs."
     },
     "elsakerhetsverkets-forfattningssamling-elsak-fs": {
       "series": "ELSÄK-FS",

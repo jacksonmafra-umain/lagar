@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://burlov.se/kommunpolitik/forfattningssamlingochstyrdokument.4.4c64ddf815a141b0e4e6a14e.html": "1231-listing.html"
+  },
+  "count": 34,
+  "sample": {
+    "number": "18.3a799d2c15f6e390d70ba94e",
+    "title": "Anslutningsavgifter till öppet stadsnät 2017-5",
+    "url": "https://burlov.se/download/18.3a799d2c15f6e390d70ba94e/1509962669722/Anslutningsavgifter%20till%20%C3%B6ppet%20stadsn%C3%A4t%202017-5.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige i Burlövs kommun",
+    "Bolagsordning för Burlövs Bostäder AB",
+    "Bolagsordning för Skärfläckan AB"
+  ]
+}

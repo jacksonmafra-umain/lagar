@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://surahammar.se/kommun-styrdokument-ekonomi-och-politik/forfattningssamling-och-styrande-dokument/foreskrifter.html": "1907-listing1.html",
+    "https://surahammar.se/kommun-styrdokument-ekonomi-och-politik/forfattningssamling-och-styrande-dokument/taxor-och-avgifter.html": "1907-listing2.html"
+  },
+  "count": 34,
+  "sample": {
+    "number": "18.5d8e596c179f5fcc77c120bc",
+    "title": "Ordningsföreskrifter-inlusive-bilagor",
+    "url": "https://surahammar.se/download/18.5d8e596c179f5fcc77c120bc/1624968092054/Ordningsf%C3%B6reskrifter-inlusive-bilagor.pdf"
+  },
+  "excluded": []
+}

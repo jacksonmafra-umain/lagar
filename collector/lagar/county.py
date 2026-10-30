@@ -244,7 +244,11 @@ def parse_year(page, page_url, region_code):
         link = _ITEM_LINK.search(chunk)
         if not link:
             continue
-        number = normalise_number(_text(link.group(2)), region_code)
+        label = _text(link.group(2))
+        match = _NUMBER.search(label)
+        if match and match.group(1) != region_code:
+            continue  # another county's regulation announced in this series' index
+        number = normalise_number(label, region_code)
         ingress = [_text(s) for s in _INGRESS.findall(chunk)]
         ingress = [s for s in ingress if s]
         published = next((d for d in (_find_date(_PUBLISHED, s) for s in ingress) if d), None)

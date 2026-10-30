@@ -172,6 +172,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   and `in_force` where the listing had none. 484 of the 494 regulations of
   those 15 series have text; 10 PDFs are scans without a text layer (9 NFS, 1
   KOVFS) and are recorded as such in their bodies.
+  Five more series follow the same way on 2026-10-30, with titles, dates and
+  text read from their PDFs: CSNFS (63, the consolidated version where CSN
+  publishes one, including the annual regleringstal notices), BFNAR (17
+  general advice in force), LMFS (14 in force), MTFS (3 in force) and IMYFS
+  (1). Five PDFs are scans without a text layer (4 CSNFS, 1 LMFS). Repealed
+  regulations listed on the LMFS and MTFS pages, and the predecessor series
+  LMVFS and DIFS, are not collected.
   [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Agency series published as a list of PDF links (configured in
@@ -220,9 +227,8 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
 - SCB-FS (Statistiska centralbyrån, 48 base regulations on reporting duties in
   force) as of 2026-10-30, in full text from SCB's page per regulation. SCB's
   table also lists amending and repealing regulations (44, in `amended_by`).
-  Not collected: the monthly consumer price index notices (KPI, about 110) and
-  the regulations on official statistics, published only as PDF on a separate
-  page; the series is partial.
+  The regulations on official statistics are collected from their own page
+  (see below).
 - UHRFS (Universitets- och högskolerådet, 13 base regulations in force with
   their consolidated PDFs), STEMFS (Energimyndigheten's document archive,
   read at the 10 s crawl delay its robots.txt asks for) and RFS
@@ -249,6 +255,26 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   (hastighetsföreskrifter) and the older VVFS and BVFS series are not
   collected, and Transportstyrelsen's regulations republished there are
   already in TSFS.
+- SvKFS (Svenska kraftnät, 6 regulations: 4 in force, 2 repealed in 2022) and
+  TFS (Tullverket, 24 base regulations in force, including Inspektionen för
+  strategiska produkter's) as of 2026-10-30, in full text from the PDFs.
+  SvKFS comes from the JSON document list behind its regulations page. TFS
+  comes from Tullverket's document search, a POSTed form; repealed TFS
+  regulations carry no date there and are not stored, nor are notices
+  (tillkännagivanden). Older consolidated TFS versions are HTML pages and are
+  not kept.
+- TPPVFS (Pliktverket, TPPVFS 2024:1 and the predecessor's TRMFS 2017:1 and
+  2017:4, stored under TRMFS), SIFS (Spelinspektionen, 9 SIFS and 6 of the
+  former Lotteriinspektionen's LIFS) and STFS (Sametinget, 13) as of
+  2026-10-30, in full text from the PDFs' text layer. Pliktverket's TPPVFS
+  2024:1 PDF carries no number in its link; the number was read from the PDF.
+  Spelinspektionen's list of regulations in force is itself a PDF; three
+  regulations on it (LIFS 2018:3, LIFS 2018:8, SIFS 2019:3) have no page on
+  the site and are not collected. Sametinget's document bank is read through
+  the JSON its search page uses.
+- SCB-FS now also holds SCB's three regulations on official statistics (SCB-FS
+  2016:17, 2021:26, 2023:6). The monthly consumer price index notices (KPI)
+  are notices of index values, not rules, and are not collected.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - Public services have no collector yet; what the Tjänster tab should hold is
@@ -271,10 +297,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   county marks "UPPHÄVD" gets a note in the body), and `in_force` only when an
   HTML text names one date. Local traffic regulations (Transportstyrelsen's STFS)
   and the self-governing regions are out of scope.
-- Municipal regulations: only a pilot sample of 15 documents (five each from
-  Stockholm, Göteborg and Malmö) is in the corpus; the other 287 kommuner have no
-  config entry yet and there is no known target (roughly 30–150 documents per
-  kommun). Scope decision: only rules that bind residents are collected (lokala
+- Municipal regulations: every kommun with an entry in
+  `collector/data/municipalities.json` is collected in full; kommuner without an
+  entry are not collected yet, and there is no known target (roughly 30–150
+  documents per kommun). Scope decision: only rules that bind residents are collected (lokala
   ordningsföreskrifter, föreskrifter om avfall, renhållning and naturreservat,
   hamnordningar, taxor and avgifter); internal governance documents
   (reglementen, arbetsordningar, instruktioner, bolagsordningar, ägardirektiv,
@@ -301,6 +327,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
     page without headings, so their configs keep only listed file names; a new
     document with another name is not picked up until the config is updated.
+  - Not collected yet because their sites need a strategy the collector lacks:
+    one HTML page per document, with the text or the PDF only on that page (Vara,
+    Götene, Skara, Falköping, Arvika, Hudiksvall, Härjedalen, Älvsbyn), an
+    embedded JSON list (Skövde), SharePoint (Karlstad), MediaFlow (Gävle),
+    Evolution DocumentWeb (Hallstahammar) and a WordPress file-download plugin
+    (Övertorneå). Nora and Ljusnarsberg have no page listing their resident
+    rules; they are spread over topic pages. Their issues stay open.
+  - Boden's taxor pages and Örnsköldsvik's, Sandviken's and Tidaholm's topic
+    pages hold rules that the configured listings do not cover; Kiruna covers
+    its föreskrifter and bygglovstaxa only.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources

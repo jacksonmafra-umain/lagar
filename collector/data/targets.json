@@ -132,9 +132,9 @@
     "type": null,
     "series": "SCB-FS",
     "label": "SCB-FS (SCB)",
-    "target": 48,
+    "target": 51,
     "kind": "counted",
-    "source": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/?currentpageId=98388&type=UL (base regulations on reporting duties)",
+    "source": "SCB's tables of regulations on reporting duties and on official statistics (base regulations in force)",
     "as_of": "2026-10-30"
   },
   {
@@ -458,6 +458,126 @@
     "as_of": "2026-10-30"
   },
   {
+    "layer": "agency",
+    "type": null,
+    "series": "BFNAR",
+    "label": "BFNAR (BFN)",
+    "target": 17,
+    "kind": "counted",
+    "source": "https://www.bfn.se/redovisningsregler/allmanna-rad/ (base general advice in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "CSNFS",
+    "label": "CSNFS (CSN)",
+    "target": 63,
+    "kind": "counted",
+    "source": "https://www.csn.se/om-csn/lag-och-ratt/forfattningssamling (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "IMYFS",
+    "label": "IMYFS (IMY)",
+    "target": 1,
+    "kind": "counted",
+    "source": "https://www.imy.se/om-oss/beslut-publikationer-och-remisser/foreskrifter-och-allmanna-rad/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "LMFS",
+    "label": "LMFS (LM)",
+    "target": 14,
+    "kind": "counted",
+    "source": "https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "MTFS",
+    "label": "MTFS (TVA)",
+    "target": 3,
+    "kind": "counted",
+    "source": "https://www.tillvaxtanalys.se/statistik/tillvaxtanalysforeskrifter.125740.html (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TPPVFS",
+    "label": "TPPVFS (Pliktverket)",
+    "target": 1,
+    "kind": "counted",
+    "source": "https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TRMFS",
+    "label": "TRMFS (Pliktverket)",
+    "target": 2,
+    "kind": "counted",
+    "source": "https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter (predecessor regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SIFS",
+    "label": "SIFS (Spelinspektionen)",
+    "target": 9,
+    "kind": "counted",
+    "source": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/spelinspektionens-foreskriftsforteckning.pdf (SIFS base regulations in force with a page)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "LIFS",
+    "label": "LIFS (Spelinspektionen)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/spelinspektionens-foreskriftsforteckning.pdf (Lotteriinspektionen regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "STFS",
+    "label": "STFS (Sametinget)",
+    "target": 13,
+    "kind": "counted",
+    "source": "https://sametinget.se/dokumentbank?cat=72 (base regulations)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SvKFS",
+    "label": "SvKFS (Svenska kraftnät)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.svk.se/services/documents/v1/get?categories=28 (regulations, in force and repealed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TFS",
+    "label": "TFS (Tullverket)",
+    "target": 24,
+    "kind": "counted",
+    "source": "Tullverket's search of steering documents, all TFS documents (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
     "layer": "case_law",
     "type": null,
     "label": "Case law",
@@ -497,10 +617,10 @@
     "layer": "region",
     "type": null,
     "label": "Regional regulations",
-    "target": 630,
-    "kind": "counted",
-    "source": "https://www.lansstyrelsen.se (numbered regulations on the 21 county landing pages in collector/data/counties.json, 2025–2026)",
-    "as_of": "2026-10-29"
+    "target": null,
+    "kind": "unknown",
+    "source": null,
+    "as_of": null
   },
   {
     "layer": "municipality",
