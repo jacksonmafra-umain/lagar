@@ -7,8 +7,10 @@ records how much of it the printed statute confirms, in a committed report
 (`sources/sfs-pdf-verification.json`).
 
 Riksdagen serves the current (consolidated) text, the PDF the text as first
-printed, so statutes amended since then are reported as `amended` and never
-flagged. A PDF whose number has no statute in the corpus is an amendment or a
+printed, so statutes amended or repealed since then are reported as `amended`
+or `repealed` and never flagged; run it after the amendment register (sfsr).
+A statute Riksdagen has only in print is reported as `print_only`: the PDF is
+then the only text. A PDF whose number has no statute in the corpus is an amendment or a
 statute Riksdagen does not publish; it is counted, not compared.
 """
 
@@ -21,7 +23,8 @@ import urllib.parse
 from dataclasses import dataclass
 from pathlib import Path
 
-from . import frontmatter, writer
+from . import frontmatter, pdftext, writer
+from .riksdagen import PRINT_ONLY_NOTE
 from .sfs import StateError, _save_state
 from .sfspdf import DEFAULT_MANIFEST, load_manifest, number_key
 
@@ -37,6 +40,10 @@ _WORD = re.compile(r"\w+(?:[.,:]\d+)*")
 _SOFT_BREAK = re.compile(r"(\w)-[ \t]*\n[ \t]*(?=[a-zåäöé])")
 # Riksdagen markers such as "/Träder i kraft I:2027-01-01/" are not in the print.
 _MARKER = re.compile(r"/(?:Träder i kraft|Upphör att gälla|Rubriken träder|Rubriken upphör)[^/\n]*/")
+
+
+class NoText(Exception):
+    """The PDF has no usable text layer; the message is the pdftext gap reason."""
 
 
 @dataclass
@@ -102,16 +109,20 @@ def verify(number, entry, corpus, cache, extract):
     if not pdfs or not all(p.exists() for p in pdfs):
         return Result(number, "pdf_not_cached")
     meta, body = frontmatter.load(path.read_text(encoding="utf-8"))
+    if PRINT_ONLY_NOTE in body:
+        return Result(number, "print_only")
     try:
         printed = [w for p in pdfs for w in pdf_words(extract(p))]
-    except Exception as error:  # noqa: BLE001 - any extractor failure is a per-file result
+    except NoText as gap:
+        return Result(number, "no_pdf_text", error=str(gap))
+    except (pdftext.PdfTextError, OSError, ValueError) as error:
         return Result(number, "extract_failed", error=f"{type(error).__name__}: {error}")
     words = corpus_words(body)
     coverage, first = compare(words, printed)
-    if meta.get("amendments") or meta.get("amended_by"):
+    if meta.get("repealed"):
+        status = "repealed"
+    elif meta.get("amendments") or meta.get("amended_by"):
         status = "amended"
-    elif not printed:
-        status = "no_pdf_text"
     elif coverage >= THRESHOLD:
         status = "match"
     else:
@@ -133,9 +144,10 @@ def parse_args(argv):
 
 
 def _default_extract(path):
-    from . import pdftext
-
-    return pdftext.extract_text(Path(path).read_bytes())
+    result = pdftext.extract(Path(path).read_bytes())
+    if not result.usable:
+        raise NoText(result.gap)
+    return result.text
 
 
 def run(args, extract=None):

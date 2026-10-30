@@ -78,14 +78,16 @@ class RunTests(unittest.TestCase):
         self.cache = self.tmp / "cache"
         self.manifest = self.tmp / "sfs-pdf-manifest.json"
         self.out = self.tmp / "verification.json"
-        numbers = ["2026:1700", "2026:1701", "2026:1702", "2026:1703", "2026:1704"]
+        numbers = ["2026:1700", "2026:1701", "2026:1702", "2026:1703", "2026:1704", "2026:1705", "2026:1706"]
         self.manifest.write_text(json.dumps({"entries": [pdf_entry(n) for n in numbers]}), encoding="utf-8")
         writer.write(meta("2026:1700"), BODY, self.corpus)
         writer.write(meta("2026:1701"), BODY.replace("regeringsformen", "regeringsformen och tryckfrihetsförordningen"),
                      self.corpus)
         writer.write(meta("2026:1702", amended_by=["2026:1800"]), BODY + "Ny paragraf.\n", self.corpus)
         writer.write(meta("2026:1703"), BODY, self.corpus)  # PDF not cached
-        for number in ("2026:1700", "2026:1701", "2026:1702", "2026:1704"):
+        writer.write(meta("2026:1705", repealed="2026-12-31"), BODY + "Upphävd.\n", self.corpus)
+        writer.write(meta("2026:1706"), "# Förordning (2026:1706)\n\n_Text available only in print._\n", self.corpus)
+        for number in ("2026:1700", "2026:1701", "2026:1702", "2026:1704", "2026:1705", "2026:1706"):
             path = self.cache / "2026" / f"SFS2026-{number.split(':')[1]}.pdf"
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(b"%PDF-")
@@ -100,6 +102,7 @@ class RunTests(unittest.TestCase):
         summary = sfsverify.run(self.args(), extract=lambda path: PDF_TEXT)
         self.assertEqual(summary, {
             "match": 1, "differs": 1, "amended": 1, "pdf_not_cached": 1, "no_corpus_document": 1,
+            "repealed": 1, "print_only": 1,
         })
         report = json.loads(self.out.read_text(encoding="utf-8"))
         self.assertEqual(report["threshold"], sfsverify.THRESHOLD)
@@ -108,6 +111,15 @@ class RunTests(unittest.TestCase):
         self.assertEqual(by_number["2026:1701"]["first_difference"], "och tryckfrihetsförordningen")
         self.assertNotIn("first_difference", by_number["2026:1702"])
         self.assertEqual(by_number["2026:1704"], {"number": "2026:1704", "status": "no_corpus_document"})
+
+    def test_scanned_pdf_is_a_gap(self):
+        def scanned(path):
+            raise sfsverify.NoText("no text layer (scanned PDF)")
+
+        summary = sfsverify.run(self.args("--number", "2026:1700"), extract=scanned)
+        self.assertEqual(summary, {"no_pdf_text": 1})
+        entry = json.loads(self.out.read_text(encoding="utf-8"))["entries"][0]
+        self.assertEqual(entry["error"], "no text layer (scanned PDF)")
 
     def test_extractor_failure_is_recorded(self):
         def broken(path):
