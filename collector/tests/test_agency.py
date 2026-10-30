@@ -300,6 +300,20 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             scb.parse_detail(fixture("agency-scb-fs-detail.html"), entries[3])
 
+    def test_stemfs_archive(self):
+        stem = agency.EnergimyndighetenAdapter()
+        text = fixture("agency-stemfs-listing.html")
+        self.assertEqual(stem.more_pages(text, stem.listing_url), [stem.listing_url + "&page=2"])
+        entries = stem.parse_listing(text, stem.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries],
+                         [("STEMFS 2026:1", False), ("STEMFS 2025:4", True), ("STEMFS 2025:1", True)])
+        self.assertEqual(entries[1].title,
+                         "Statens energimyndighets föreskrifter om tillsynsavgifter för tillhandahållande och "
+                         "användning av hållbara flygbränslen")
+        self.assertNotIn("\u00ad", entries[2].title)
+        self.assertIn("fn=STEMFS%202025_1webb.pdf", entries[2].url)
+        self.assertIn("Upph%C3%A4vande", entries[0].url)
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():
