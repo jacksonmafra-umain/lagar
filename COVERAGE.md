@@ -12,6 +12,7 @@ completeness: read this file next to those numbers.
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
 | SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
+| SÖ treaties | Regeringen.se, `https://www.regeringen.se/sitemap.xml` and the pages under `/rattsliga-dokument/sveriges-internationella-overenskommelser/`, PDFs under `/contentassets/` | 2026-10-30 (full run, every year; weekly `Sync SÖ` since then) |
 | agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/` | 2026-10-29 (full run of AFS, FFFS and TSFS: 15, 121 and 622 base regulations) |
 | EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list with latest consolidated versions; daily `Sync EU` since then) |
 | EU case law | Publications Office Cellar, as for EU law; judgments listed by SPARQL (`cdm:case-law_interpretes_resource_legal`) | 2026-10-30 (judgments interpreting the curated acts; daily `Sync EU` since then) |
@@ -51,6 +52,22 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   SHA-256, but only a five-act sample of 2026 is in it so far; the full crawl
   has not run. The PDF bytes are not stored, and the documents stay marked
   `authoritative: false` until the corpus text is tied to a snapshot.
+- SÖ treaties: all 3515 SÖ numbers published on regeringen.se on
+  2026-10-30 are in the corpus (`treaty`, `corpus/sfs/treaties/`). Text is
+  extracted from the PDFs only for SÖ 2010 onward (298 treaties); 36 of them
+  have no usable text layer (35 scanned PDFs, one without a Unicode font map)
+  and, like every older treaty, keep the page metadata and the PDF link only.
+  The PDFs are recorded in `sources/so-pdf-manifest.json` with size and
+  SHA-256; the bytes are not kept. 214 pages repeat an SÖ number already used
+  by another page: mostly the same treaty published again (bulk folders such
+  as `1994/01/` and `2012/12/`, often with extra PDFs such as reservations or
+  succession notes), and a few 1920s pages whose number belongs to a
+  different treaty. The page whose URL sorts first keeps the number; the
+  extra PDFs and the misnumbered treaties are not in the corpus. 272 pages in
+  the section have no SÖ number (declarations of intent and similar) and are
+  skipped. `issued` is the date of signature; `in_force` is set only when the
+  page states the entry into force. Treaties are kept with
+  `authoritative: false`.
 - EU law covers only the curated list in `collector/data/eu-acts.json` (43
   acts, 70 documents: 40 Official Journal texts and 30 latest consolidated
   versions); its target is that list, not the roughly 47,000 acts in force.
