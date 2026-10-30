@@ -17,6 +17,7 @@ av") and listed in the `amended_by` of the base regulation they name.
 import html
 import json
 import re
+import unicodedata
 import urllib.parse
 from dataclasses import dataclass, field
 
@@ -27,7 +28,8 @@ _AMENDING = re.compile(
     r"\b(om )?(ändring|ändringar|upphävande)\b( av| i| om)?|ändringsförfattning|ändringsföreskrift",
     re.IGNORECASE)
 # PDFs on a regulation page that are not the regulation: impact assessments, memos, errata.
-_NOT_REGULATION = re.compile(r"konsekvens|\bPM\b|\bpm-|remiss|vägledning|rättelse|engelsk|english", re.IGNORECASE)
+_NOT_REGULATION = re.compile(r"konsekvens|\bPM\b|\bpm-|remiss|vägledning|rättelse|engelsk|english|skriv ut",
+                             re.IGNORECASE)
 # A link on a listing that is a companion document, not a regulation.
 _COMPANION = re.compile(r"\s*([a-zåäö-]+\s+)?(\d{4}:\d+\s+)?(konsekvensutredning|vägledning|rättelse|pm\b|remiss)",
                         re.IGNORECASE)
@@ -177,7 +179,7 @@ class _LinkAdapter:
         title = re.sub(r"\s+\.$", "", title)
         if self.bare_numbers:
             title = re.sub(rf"^\s*{year}:{serial}(?!\d)", "", title)
-        title = re.sub(r"(?<=[a-zåäö]{3})\.\s*$", "", title)
+        title = re.sub(r"(?<=[A-Za-zÅÄÖåäö]{2})\.\s*$", "", title)
         return _clean(title).strip(" -–:,|*") or number
 
     def _items(self, root):
@@ -239,6 +241,11 @@ class _LinkAdapter:
     def _links(node):
         return [node] if node.tag == "a" else node.find_all("a")
 
+    @staticmethod
+    def amending_title(entry, regulation):
+        """True when a listing that only named the number hid an amending or repealing regulation."""
+        return entry.title == entry.number and is_amending(regulation.title)
+
     def link_amendments(self, entries):
         """Fill each base entry's `amended_by` from the amending titles that name it."""
         bases = {e.number: e for e in entries if e.base}
@@ -273,7 +280,10 @@ class PdfListAdapter(_LinkAdapter):
         for node, section in items:
             if self.skip_section is not None and self.skip_section.search(section):
                 continue
-            links = [a for a in self._links(node)
+            anchors = self._links(node)
+            if not anchors and node.attrs.get("data-href"):  # a clickable row without a link
+                anchors = [agency.Node("a", {"href": node.attrs["data-href"]})]
+            links = [a for a in anchors
                      if _is_pdf_link(a.attrs.get("href", "")) and not _COMPANION.match(a.text())]
             if not links:
                 continue
@@ -316,11 +326,6 @@ class PdfListAdapter(_LinkAdapter):
         if not entries:
             raise ValueError(f"no {self.series} regulations found on {url}")
         return self.link_amendments(list(entries.values()))
-
-    @staticmethod
-    def amending_title(entry, regulation):
-        """True when a listing that only named the number hid an amending or repealing regulation."""
-        return entry.title == entry.number and is_amending(regulation.title)
 
     def regulation(self, entry):
         pdfs = list(getattr(entry, "pdfs", ()) or [(entry.number, entry.url)])
@@ -401,7 +406,7 @@ class DetailPageAdapter(_LinkAdapter):
         pdfs, seen = [], set()
         for link in page.find_all("a"):
             href = link.attrs.get("href", "")
-            label = _clean(_PDF_NOISE.sub(" ", link.text()))
+            label = _clean(re.sub(r"(?i)pdf\s*[\d.,]+\s*[km]?b\s*$", "", _PDF_NOISE.sub(" ", link.text())))
             if not _is_pdf_link(href) or _NOT_REGULATION.search(label + " " + href.rsplit("/", 1)[-1]):
                 continue
             pdf_url = absolute(entry.url, href)
@@ -421,6 +426,7 @@ class SitemapAdapter(DetailPageAdapter):
     """The regulation pages are found in the site's XML sitemap (the listing needs JavaScript)."""
 
     path_prefix = ""  # only sitemap URLs whose path starts with this
+    path_pattern: "re.Pattern | None" = None  # and, when set, matches this (one page per base regulation)
 
     def names_number(self, page, entry):
         """The page text, or the file name of a PDF it links to, names the number of its URL."""
@@ -434,7 +440,10 @@ class SitemapAdapter(DetailPageAdapter):
         entries = {}
         for loc in re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", text):
             page_url = html.unescape(loc)
-            if not urllib.parse.urlsplit(page_url).path.startswith(self.path_prefix):
+            path = urllib.parse.urlsplit(page_url).path
+            if not path.startswith(self.path_prefix):
+                continue
+            if self.path_pattern is not None and not self.path_pattern.search(path):
                 continue
             number = self.slug_number(page_url)
             if number is not None and number not in entries:
@@ -914,10 +923,71 @@ class MyhfsAdapter(PdfListAdapter):
         return self.link_amendments(list(entries.values()))
 
 
+
+class DvfsAdapter(SitemapAdapter):
+    series = "DVFS"
+    issuer = "Domstolsverket"
+    base_url = "https://www.domstol.se"
+    listings = (base_url + "/sitemap.xml",)
+    path_prefix = "/om-sveriges-domstolar/for-dig-som-aktor-i-domstol/stod-for-aktorer-i-domstol/dvfs/"
+    # `.../dvfs/2020/dvfs-20202/`; the pages below it are its amendments
+    path_pattern = re.compile(r"/dvfs/\d{4}/dvfs-\d+/$")
+
+
+class EifsAdapter(DetailPageAdapter):
+    series = "EIFS"
+    issuer = "Energimarknadsinspektionen"
+    base_url = "https://ei.se"
+    listings = (base_url + "/om-oss/lagar-och-regler/foreskrifter/foreskrifter---el",
+                base_url + "/om-oss/lagar-och-regler/foreskrifter/foreskrifter---naturgas",
+                base_url + "/om-oss/lagar-och-regler/foreskrifter/foreskrifter---fjarrvarme-och-fjarrkyla")
+    item = ("tr", None)
+    heading_title = False  # the page heading is "Föreskrift"; the title comes from the PDF
+
+
+class KbvfsAdapter(PdfListAdapter):
+    series = "KBVFS"
+    issuer = "Kustbevakningen"
+    base_url = "https://www.kustbevakningen.se"
+    listings = (base_url + "/om-oss/kustbevakningens-forfattningssamling/",)
+    item = ("tr", None)  # the row itself links to the PDF (data-href)
+    title_node = ("p", "ml-6")
+
+
+class FfsAdapter(PdfListAdapter):
+    """Försvarsmakten lists FFS on four pages whose lists come from the site's content API (JSON).
+
+    Each list item is a PDF named by its file name (`ffs-2015-5-militar-grundutbildning.pdf`),
+    so the title, and whether it is an amendment, comes from the PDF.
+    """
+
+    series = "FFS"
+    issuer = "Försvarsmakten"
+    base_url = "https://www.forsvarsmakten.se"
+    # gallande-ffs-1978-1994, -1995-2011, -2012-2013 and -2014-
+    listings = tuple(f"https://www.forsvarsmakten.se/api/episerver/v3.0/content/{page}?expand=PDFFilesArea"
+                     for page in (2562, 2563, 2564, 2565))
+
+    def parse_listing(self, text, url):
+        entries = {}
+        for item in json.loads(text).get("pdfFilesArea") or []:
+            pdf = (item.get("contentLink") or {}).get("expanded") or {}
+            name = unicodedata.normalize("NFC", pdf.get("name") or "")  # the API decomposes å, ä, ö
+            pdf_url = pdf.get("url") or ""
+            number = self.item_number(name, [pdf_url])
+            if number is None or not pdf_url or number in entries:
+                continue
+            entries[number] = LinkEntry(number=number, title=number, url=pdf_url, pdfs=[(number, pdf_url)],
+                                        base=not is_amending(re.sub(r"\bandring", "ändring", re.sub(r"[-_]", " ", name))))
+        if not entries:
+            raise ValueError(f"no {self.series} regulations found on {url}")
+        return list(entries.values())
+
 SERIES = (MigrfsAdapter(), KamfsAdapter(), KfmfsAdapter(), KfsAdapter(), KrfsAdapter(), MemyfsAdapter(),
           ElsakfsAdapter(), McffsAdapter(), MdffsAdapter(), NfsAdapter(), KifsAdapter(), AgvfsAdapter(),
           KovfsAdapter(), HvmfsAdapter(), FkfsAdapter(), IaffsAdapter(), AffsAdapter(), BfnarAdapter(),
           CsnfsAdapter(), ImyfsAdapter(), LmfsAdapter(), MtfsAdapter(),
-          KvfsAdapter(), LivsfsAdapter(), MyhfsAdapter())
+          KvfsAdapter(), LivsfsAdapter(), MyhfsAdapter(), DvfsAdapter(), EifsAdapter(), KbvfsAdapter(),
+          FfsAdapter())
 
 agency.ADAPTERS.update({a.series: a for a in SERIES})
