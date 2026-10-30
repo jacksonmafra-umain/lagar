@@ -54,6 +54,10 @@ NEW_TYPES = {
     },
     "eu_directive": {"id": "eu-31995l0046", "number": "95/46/EG", "celex": "31995L0046"},
     "eu_decision": {"id": "eu-32019d0001", "number": "(EU) 2019/1", "celex": "32019D0001"},
+    "eu_judgment": {
+        "id": "eu-62014cj0362", "number": "C-362/14", "celex": "62014CJ0362", "court": "CJ",
+        "issuer": "Europeiska unionens domstol", "ecli": "ECLI:EU:C:2015:650",
+    },
     "county_regulation": {
         "id": "01fs-2024-3", "number": "01FS 2024:3", "region_code": "01",
         "issuer": "L\u00e4nsstyrelsen i Stockholms l\u00e4n", "amended_by": ["01FS 2025:1"],
@@ -218,6 +222,7 @@ class SchemaTest(unittest.TestCase):
             "eu_regulation": ["(EU) 2016/679", "(EG) nr 1907/2006", "(EEG) nr 1408/71", "(EU, Euratom) 2018/1046"],
             "eu_directive": ["95/46/EG", "2004/18/EG", "(EU) 2022/2555", "2013/59/Euratom"],
             "eu_decision": ["(EU) 2019/1", "(Gusp) 2019/797"],
+            "eu_judgment": ["C-362/14", "T-12/19", "26/62", "C-1234/24"],
             "county_regulation": ["01FS 2024:3", "25FS 2020:004"],
             "municipal_regulation": ["SKFS 2024:12", "Kf 2019-03-11 \u00a7 45", "1.7.3"],
         }
@@ -228,6 +233,7 @@ class SchemaTest(unittest.TestCase):
             "eu_regulation": ["2016/679", "EU 2016/679", "32016R0679"],
             "eu_directive": ["95/46", "95/46/XX"],
             "eu_decision": ["(EU)2019/1"],
+            "eu_judgment": ["C-362/2014", "C 362/14", "F-1/10", "(EU) 2016/679"],
             "county_regulation": ["02FS 2024:3", "01 FS 2024:3", "1FS 2024:3", "AFS 2024:3"],
             "municipal_regulation": ["", " SKFS 2024:12", "SKFS 2024:12\n"],
         }
@@ -276,7 +282,7 @@ class SchemaTest(unittest.TestCase):
 
     def test_required_fields_per_type(self):
         for type_, field in (("case_report", "court"), ("case_notice", "court"), ("eu_regulation", "celex"),
-                             ("eu_directive", "celex"), ("eu_decision", "celex"),
+                             ("eu_directive", "celex"), ("eu_decision", "celex"), ("eu_judgment", "celex"), ("eu_judgment", "court"),
                              ("county_regulation", "region_code"), ("municipal_regulation", "municipality_code")):
             with self.subTest(type_=type_):
                 meta = new_layer_meta(type_)
