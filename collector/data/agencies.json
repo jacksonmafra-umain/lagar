@@ -37,11 +37,15 @@
     },
     "myndigheten-for-yrkeshogskolans-forfattningssamling-myhfs": {
       "series": "MYHFS",
-      "agency": "Myndigheten för yrkeshögskolan"
+      "agency": "Myndigheten för yrkeshögskolan",
+      "status": "collected",
+      "note": "Myndigheten för yrkeshögskolan lists the regulations in force and the repealed ones with a link to each PDF, the date in force and, for some repealed ones, the repeal date; the text is read from the PDF. A repeal date missing from the list is taken from the date in force of the regulation that repeals it; repealed regulations without a known date are not collected."
     },
     "livsmedelsverkets-forfattningssamling-livsfs": {
       "series": "LIVSFS",
-      "agency": "Livsmedelsverket"
+      "agency": "Livsmedelsverket",
+      "status": "collected",
+      "note": "Livsmedelsverket lists LIVSFS in one table per year from 2005 (number, status, subject) with a link to each PDF; titles and text are read from the PDFs. Repealed regulations have no repeal date on the page and are not collected, nor is the predecessor series SLVFS (before 2005)."
     },
     "mediemyndighetens-forfattningssamling-memyfs": {
       "series": "MEMYFS",
@@ -370,7 +374,9 @@
     },
     "kriminalvardens-forfattningssamling-kvfs": {
       "series": "KVFS",
-      "agency": "Kriminalvården"
+      "agency": "Kriminalvården",
+      "status": "collected",
+      "note": "Kriminalvården's KVFS listing needs JavaScript (a server-side Blazor component), so the regulation pages are taken from the site's sitemap; each page gives the full title and links to the PDF, and the text is read from the PDF. Amending and repealing regulations are not stored as documents."
     },
     "tullverkets-forfattningssamling-tfs": {
       "series": "TFS",

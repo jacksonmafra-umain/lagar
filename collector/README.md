@@ -469,9 +469,9 @@ PDFs already in the manifest are not downloaded again unless `--refresh`. An ada
 
 Series published as a plain page of links use the configurable adapters in
 `collector/lagar/agency_generic.py`: `PdfListAdapter` when the listing links straight to the
-PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS, BFNAR, CSNFS, IMYFS, LMFS, MTFS) and `DetailPageAdapter` when it links to one
+PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS, BFNAR, CSNFS, IMYFS, LMFS, MTFS, LIVSFS, MYHFS) and `DetailPageAdapter` when it links to one
 HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS); `SitemapAdapter`
-finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS).
+finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS, KVFS).
 A detail page's HTML text is kept when the series sets `text_nodes` (MDFFS). AFFS reads the
 list from the Sitevision page state and FKFS the JSON register of Försäkringskassan's
 lagrummet; both have their own small adapters in the same module.

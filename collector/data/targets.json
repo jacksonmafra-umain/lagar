@@ -510,6 +510,36 @@
   {
     "layer": "agency",
     "type": null,
+    "series": "KVFS",
+    "label": "KVFS (KV)",
+    "target": 17,
+    "kind": "counted",
+    "source": "https://www.kriminalvarden.se/sitemap_kriminalvarden.se.xml (base regulations in the KVFS pages)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "LIVSFS",
+    "label": "LIVSFS (SLV)",
+    "target": 39,
+    "kind": "counted",
+    "source": "https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/ (base regulations in force, 2005 on)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "MYHFS",
+    "label": "MYHFS (MYH)",
+    "target": 44,
+    "kind": "counted",
+    "source": "https://www.myh.se/lag-och-ratt/foreskrifter-och-allmanna-rad (21 in force, 23 repealed with a known date)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
     "series": "TPPVFS",
     "label": "TPPVFS (Pliktverket)",
     "target": 1,
