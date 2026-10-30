@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.upplandsvasby.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument": "0114-listing.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "18.66ce593c19b05d40f291c13",
+    "title": "Avgiftsregler för förskola, fritidshem, pedagogisk omsorg och omsorg på obekväm arbetstid",
+    "url": "https://www.upplandsvasby.se/download/18.66ce593c19b05d40f291c13/1766993094766/Avgiftsregler-%20F%C3%B6rskola,%20fritidshem,%20pedagogisk%20omsorg%202026.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för systematiskt kvalitetsarbete",
+    "Riktlinjer för planering av förskola och skola avseende lokaler och utemiljö",
+    "Utbildningsnämndens riktlinjer för systematiskt kvalitetsarbete"
+  ]
+}

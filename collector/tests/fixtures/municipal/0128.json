@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://salem.se/kommunochpolitik/styrdokumentochekonomi/styrandedokument.4.9ddaf25191e4e511cf65501.html": "0128-listing.html"
+  },
+  "count": 11,
+  "sample": {
+    "number": "18.55b90bd619306d1f40b409d",
+    "title": "Avgifter för kopior, avskrifter mm av allmänna handlingar",
+    "url": "https://salem.se/download/18.55b90bd619306d1f40b409d/1730998891557/Avgifter%20f%C3%B6r%20kopior,%20avskrifter%20mm%20av%20allm%C3%A4nna%20handlingar.pdf"
+  },
+  "excluded": [
+    "Reglemente för ekonomiska ersättningar till förtroendevalda - KF 16 juni 2022 § 25",
+    "Bilaga till reglemente för ekonomiska ersättningar till förtroendevalda - KF 16 juni 2022 § 25",
+    "Taxa för plan- och bygglov samt geografisk information och kart- och mättjänster, till och med 2026-07-14"
+  ]
+}

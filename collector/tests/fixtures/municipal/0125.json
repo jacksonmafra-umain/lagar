@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.ekero.se/kommun-politik/moten-handlingar--protokoll/styrande-dokument": "0125-listing.html"
+  },
+  "count": 34,
+  "sample": {
+    "number": "18.d9ec095172e6db96372bf78",
+    "title": "Maxtaxa inom förskola, pedagogisk omsorg och fritidshem",
+    "url": "https://www.ekero.se/download/18.d9ec095172e6db96372bf78/1594713614383/KFS%2040-4%20Taxa%20f%C3%B6rskola,%20fritidshem,%20pedagogisk%20omsorg.pdf"
+  },
+  "excluded": [
+    "Reglemente för barn- och utbildningsnämnden",
+    "Riktlinjer för skolskjuts",
+    "Riktlinjer för förskolor och fritids med mera"
+  ]
+}
