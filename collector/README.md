@@ -504,7 +504,11 @@ agency's own site, so the adapter sets `multi_host = True` and the run reads rob
 the agency becomes the document's `issuer`. A link straight to a PDF makes the PDF the document,
 and on a page that lists many regulations (TLV) only the PDFs naming the number are kept.
 Läkemedelsverket's regulations are not collected: its pages need JavaScript and its robots.txt
-disallows PDFs. Predecessor series on the same list (SOSFS, FoHMFS and others) are not collected.
+disallows PDFs. The series used before HSLF-FS on the same list, SOSFS (Socialstyrelsen),
+FoHMFS (Folkhälsomyndigheten) and TLVFS (TLV), have adapters of their own built on it. Links to a
+page of repealed regulations are left out, and a SOSFS regulation is collected only when
+Socialstyrelsen's index (its regulations in force) names a publication page for it. LVFS
+(Läkemedelsverket) and FHIFS, whose listed regulations only repeal earlier ones, are not collected.
 
 Adapters whose site publishes no HTML text (`has_text = False`) get their text from a PDF:
 the consolidated version when one is linked, else the regulation's own PDF, read with
