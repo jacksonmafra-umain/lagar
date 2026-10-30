@@ -91,6 +91,1266 @@
       "url": "https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf//852F66C39ACE0CFFC1258E83002E3CF8/$File/C12574360024D6C7MSKDDYFBVW.pdf?OpenElement"
     },
     {
+      "bytes": 253796,
+      "content_type": "application/pdf",
+      "id": "1737-18-713503f4199c8e4355681d",
+      "municipality_code": "1737",
+      "retrieved_at": "2026-10-30T01:02:47Z",
+      "sha256": "a6d54577e2c412e3c97c78c8a2d5efb3199ea94cdea35201aa512284c159227e",
+      "url": "https://torsby.se/download/18.713503f4199c8e4355681d/1760098279128/Kommunala%20f%C3%B6reskrifter%20om%20anv%C3%A4ndningen%20av%20den%20allm%C3%A4nna%20VA-anl%C3%A4ggningen.pdf"
+    },
+    {
+      "bytes": 281411,
+      "content_type": "application/pdf",
+      "id": "1737-18-713503f4199c8e4355681f",
+      "municipality_code": "1737",
+      "retrieved_at": "2026-10-30T01:02:46Z",
+      "sha256": "3105dcf97c13bec31e321dbcc612b24051e76d3abd58e1b456293d0ad0bacbbf",
+      "url": "https://torsby.se/download/18.713503f4199c8e4355681f/1760098519802/VA-taxa%202026.pdf"
+    },
+    {
+      "bytes": 608583,
+      "content_type": "application/pdf",
+      "id": "1737-18-72b173ca19c935805fd1a1",
+      "municipality_code": "1737",
+      "retrieved_at": "2026-10-30T01:02:48Z",
+      "sha256": "825bc789963f1aa9d08496a73d2ce02dd001ae18bd670915f4b171bc5e852794",
+      "url": "https://torsby.se/download/18.72b173ca19c935805fd1a1/1772455909274/Taxa%20inom%20plan-%20och%20bygglagens%20omr%C3%A5de%20f%C3%B6r%20bygglovs-%20och%20anm%C3%A4lnings%C3%A4renden.pdf"
+    },
+    {
+      "bytes": 1750454,
+      "content_type": "application/pdf",
+      "id": "1737-18-7ef75b0c158cf4fe5018db64",
+      "municipality_code": "1737",
+      "retrieved_at": "2026-10-30T01:02:43Z",
+      "sha256": "afc129a6f77a9d031b01f17221e005db5fa73941862040644a0efcb90b9de166",
+      "url": "https://torsby.se/download/18.7ef75b0c158cf4fe5018db64/1482308636933/1-01%20Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
+    },
+    {
+      "bytes": 103975,
+      "content_type": "application/pdf",
+      "id": "1737-18-7ef75b0c158cf4fe5018db65",
+      "municipality_code": "1737",
+      "retrieved_at": "2026-10-30T01:02:44Z",
+      "sha256": "42053a186a97748946329da254749ac50e001a79fd11da4c16bde7e710531a5e",
+      "url": "https://torsby.se/download/18.7ef75b0c158cf4fe5018db65/1482308637028/1-02%20Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Torghandel.pdf"
+    },
+    {
+      "bytes": 45086,
+      "content_type": "application/pdf",
+      "id": "1737-18-7ef75b0c158cf4fe5018db66",
+      "municipality_code": "1737",
+      "retrieved_at": "2026-10-30T01:02:45Z",
+      "sha256": "5076440e41696159d1c024d39c6d2101cca9e63c94ac8e3969250e89e5c7d0b1",
+      "url": "https://torsby.se/download/18.7ef75b0c158cf4fe5018db66/1482308637040/1-03%20Lokal%20f%C3%B6reskrift%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n%20i%20Torsby%20kommun.pdf"
+    },
+    {
+      "bytes": 120314,
+      "content_type": "application/pdf",
+      "id": "1760-17-fs-1997-58",
+      "municipality_code": "1760",
+      "retrieved_at": "2026-10-30T01:02:58Z",
+      "sha256": "742a0cd8cacd3052944ab13e51a8f104f934c798d1cf600d218c008d56026a91",
+      "url": "https://www.storfors.se/download/18.7f1aedeb14e64fcd26ce561f/1548835981491/17%20FS%201997_58%20Torghandelsstadga.pdf"
+    },
+    {
+      "bytes": 103157,
+      "content_type": "application/pdf",
+      "id": "1760-17-fs-1997-70",
+      "municipality_code": "1760",
+      "retrieved_at": "2026-10-30T01:02:57Z",
+      "sha256": "13b993740e444778ce8008215b54627d6c396ad0d453c9bebfec227e4a42d09a",
+      "url": "https://www.storfors.se/download/18.7f1aedeb14e64fcd26ce561c/1548835981483/17%20FS%201997_70%20Lokala%20f%C3%B6reskrifter%20om%20gatu%20o%20g%C3%A5ngbanerenh%C3%A5llning.pdf"
+    },
+    {
+      "bytes": 380272,
+      "content_type": "application/pdf",
+      "id": "1760-17-fs-2007-89",
+      "municipality_code": "1760",
+      "retrieved_at": "2026-10-30T01:02:51Z",
+      "sha256": "79629b995e3c3baeb04de7cf19f3a53479f12ab8fa2657538fa69d088ffe15f8",
+      "url": "https://www.storfors.se/download/18.7f1aedeb14e64fcd26ce5610/1548835981522/17%20FS%202007_89%20Lokala%20ordningsf%C3%B6reskrifter.pdf"
+    },
+    {
+      "bytes": 47699,
+      "content_type": "application/pdf",
+      "id": "1760-17-fs-2008-50",
+      "municipality_code": "1760",
+      "retrieved_at": "2026-10-30T01:02:52Z",
+      "sha256": "97d8dcef90767f7c558689ebc2a89f63d40b5b0f4fd8132b3a9a3970ac047665",
+      "url": "https://www.storfors.se/download/18.7f1aedeb14e64fcd26ce5612/1548835981517/17%20FS%202008_50%20%C3%84ndringar%20lokala%20ordningsf%C3%B6reskrifter.pdf"
+    },
+    {
+      "bytes": 149845,
+      "content_type": "application/pdf",
+      "id": "1760-18-2adfd59014c367ed3ee4aee2",
+      "municipality_code": "1760",
+      "retrieved_at": "2026-10-30T01:02:54Z",
+      "sha256": "c80c257a47231ec7d1914037d6748af79de9de8663a21cf52e2290c16e4c5140",
+      "url": "https://www.storfors.se/download/18.2adfd59014c367ed3ee4aee2/1548835902178/Bilaga%201%20KF%202015-03-12%20%20106%20Lokala%20h%C3%A4lsoskyddsf%C3%B6reskrifter%20f%C3%B6r%20Storfors%20kommun.pdf"
+    },
+    {
+      "bytes": 1605171,
+      "content_type": "application/pdf",
+      "id": "1760-18-5089c2c314bc50ae53a80cb0",
+      "municipality_code": "1760",
+      "retrieved_at": "2026-10-30T01:02:55Z",
+      "sha256": "05cf4690a6287334124a857cdec19d8b92fa21e7285eccfefa589c3de3158c58",
+      "url": "https://www.storfors.se/download/18.5089c2c314bc50ae53a80cb0/1548836013908/Allm%C3%A4nna%20best%C3%A4mmelser.pdf"
+    },
+    {
+      "bytes": 199964,
+      "content_type": "application/pdf",
+      "id": "1760-18-55cd3a5d147583335eb1f39",
+      "municipality_code": "1760",
+      "retrieved_at": "2026-10-30T01:02:53Z",
+      "sha256": "a47af5f9abb5f3e5eeea2f8321611460aa550f00cb40802fea37effa230f5bc0",
+      "url": "https://www.storfors.se/download/18.55cd3a5d147583335eb1f39/1548835983432/lokala%20ordningsf%C3%B6reskrifter%20bilaga%201o2.pdf"
+    },
+    {
+      "bytes": 202674,
+      "content_type": "application/pdf",
+      "id": "1761-18-1b8420211917935a5d52f662",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:11Z",
+      "sha256": "57289f5b1d88e89536a94fb34342485037a1651edfd8b453e79d0fa2f5ed6d79",
+      "url": "https://hammaro.se/download/18.1b8420211917935a5d52f662/1724660880086/Taxa%20f%C3%B6r%20kart-%20och%20m%C3%A4ttj%C3%A4nster%202023.pdf"
+    },
+    {
+      "bytes": 161408,
+      "content_type": "application/pdf",
+      "id": "1761-18-1b8420211917935a5d52f693",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:13Z",
+      "sha256": "09cfd131180e0ab33421f0a6a63a71f8fbe30f630622982f285c136b920d3fb6",
+      "url": "https://hammaro.se/download/18.1b8420211917935a5d52f693/1724660916266/Taxa%20f%C3%B6r%20kontroll%20inom%20livsmedelsomr%C3%A5det%20samt%20f%C3%B6r%20kontroll%20inom%20ekologisk%20produktion%20och%20material%20i%20kontakt%20med%20livsmedel%20-240501.pdf"
+    },
+    {
+      "bytes": 170638,
+      "content_type": "application/pdf",
+      "id": "1761-18-1b8420211917935a5d52f767",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:16Z",
+      "sha256": "49e510fb864f4b2335068e3fc997178f36284630d6655030ed162889db2953dd",
+      "url": "https://hammaro.se/download/18.1b8420211917935a5d52f767/1773829288085/Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20enligt%20milj%C3%B6balken%20-%20240501.pdf"
+    },
+    {
+      "bytes": 84931,
+      "content_type": "application/pdf",
+      "id": "1761-18-1b8420211917935a5d52f79a",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:18Z",
+      "sha256": "c64fc87f7e0b86d20b6ccb2388f03834c8d68681e2789241d50314f6ff12ecbe",
+      "url": "https://hammaro.se/download/18.1b8420211917935a5d52f79a/1724661303220/Bilaga%202%20-%20milj%C3%B6balkstaxan.pdf"
+    },
+    {
+      "bytes": 48814,
+      "content_type": "application/pdf",
+      "id": "1761-18-1b8420211917935a5d52f79b",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:19Z",
+      "sha256": "8f651a3ce02065309340ef4d37a446bdb3d389033116d04accc661dbd0729d7b",
+      "url": "https://hammaro.se/download/18.1b8420211917935a5d52f79b/1724661303241/Bilaga%203%20-%20milj%C3%B6balkstaxan.pdf"
+    },
+    {
+      "bytes": 158491,
+      "content_type": "application/pdf",
+      "id": "1761-18-1b8420211917935a5d52f79c",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:17Z",
+      "sha256": "a024d5c81bf957be9bbd921c206ff58dd3e520c8c97abff790e13e4799a85a7c",
+      "url": "https://hammaro.se/download/18.1b8420211917935a5d52f79c/1724661303259/Bilaga%201%20-%20milj%C3%B6balkstaxan.pdf"
+    },
+    {
+      "bytes": 141696,
+      "content_type": "application/pdf",
+      "id": "1761-18-1b8420211917935a5d52f834",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:26Z",
+      "sha256": "a5e6648caf7e3dbbb21c723e5632705102b57accce4b6637ffc5b74204042ce0",
+      "url": "https://hammaro.se/download/18.1b8420211917935a5d52f834/1773828880024/Taxa%20f%C3%B6r%20tillsyn%20enligt%20str%C3%A5lskyddslagen%20-%20200701.pdf"
+    },
+    {
+      "bytes": 131888,
+      "content_type": "application/pdf",
+      "id": "1761-18-1b8420211917935a5d52f837",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:27Z",
+      "sha256": "9fbb06a75b949f910dc104daeb2a2b294d86498faebfce31fe2132a56dd4f0f3",
+      "url": "https://hammaro.se/download/18.1b8420211917935a5d52f837/1724661478109/Taxa%20f%C3%B6r%20tillsyn%20av%20individuell%20m%C3%A4tning%20och%20debitering%20%20IMD.pdf"
+    },
+    {
+      "bytes": 143327,
+      "content_type": "application/pdf",
+      "id": "1761-18-1b8420211917935a5d52f838",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:23Z",
+      "sha256": "8c4dc6961b1cea1ec7f83dcbf672b7ab0038739a284cf2ee210b63c6d1f1659a",
+      "url": "https://hammaro.se/download/18.1b8420211917935a5d52f838/1773828675949/Taxa%20f%C3%B6r%20tillsyn%20%C3%B6ver%20avfallshantering%20i%20fritidsb%C3%A5tshamnar%20-%20231218.pdf"
+    },
+    {
+      "bytes": 214218,
+      "content_type": "application/pdf",
+      "id": "1761-18-2636d32719ae7ee68622002",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:21Z",
+      "sha256": "833418bb969d1f8df83bf89965679b048ce51ecd25d22964c357863c3b78a07f",
+      "url": "https://hammaro.se/download/18.2636d32719ae7ee68622002/1764942613078/Taxa%20f%C3%B6r%20pr%C3%B6vning%20%20tillsyn%20och%20kontroll%20enligt%20lagen%20om%20tobak%20och%20liknande%20produkter%20%20lag%20om%20handel%20med%20receptfria%20l%C3%A4kemed.pdf"
+    },
+    {
+      "bytes": 104523,
+      "content_type": "application/pdf",
+      "id": "1761-18-2a0f08051a04216b2b613014",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:20Z",
+      "sha256": "a422e2937310399e4a270793d8f6323d147f558e67b7aa1698b9b00b6a540992",
+      "url": "https://hammaro.se/download/18.2a0f08051a04216b2b613014/1788854042372/Avgiftsniv%C3%A5er%20-%20milj%C3%B6balkstaxan.pdf"
+    },
+    {
+      "bytes": 214355,
+      "content_type": "application/pdf",
+      "id": "1761-18-2a0f08051a04216b2b6e52d",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:09Z",
+      "sha256": "c090f9a4694a4092f612a00f6bea6bf9e6389f63744ba2ddf7cd64080b2f4d35",
+      "url": "https://hammaro.se/download/18.2a0f08051a04216b2b6e52d/1788523105423/Avgifter%20och%20regler%20i%20f%C3%B6rskola.pdf"
+    },
+    {
+      "bytes": 307768,
+      "content_type": "application/pdf",
+      "id": "1761-18-349cab4319afcf0e54a9650",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:08Z",
+      "sha256": "9c4090afc5d065a41ab8c6c3231284b58174ba08082142951ef12fe539bf8ef6",
+      "url": "https://hammaro.se/download/18.349cab4319afcf0e54a9650/1788523085447/Avgifter%20och%20regler%20f%C3%B6r%20fritidshem%202026.pdf"
+    },
+    {
+      "bytes": 313376,
+      "content_type": "application/pdf",
+      "id": "1761-18-390fd9a619afce03599c9bf",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:29Z",
+      "sha256": "e735e9dd452bb9506b0909355c58ae2eadbc4b45e443e5d199e7de2cda10bf95",
+      "url": "https://hammaro.se/download/18.390fd9a619afce03599c9bf/1767776547147/Taxa%20f%C3%B6r%20Hammar%C3%B6%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning%202026.pdf"
+    },
+    {
+      "bytes": 144197,
+      "content_type": "application/pdf",
+      "id": "1761-18-3b5615e719c98aa331123246",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:24Z",
+      "sha256": "f408918e6877944958171af781503b4146fe678b4d9604064e51abcb0a1326a5",
+      "url": "https://hammaro.se/download/18.3b5615e719c98aa331123246/1773828732887/Taxa%20-%20skydd%20mot%20internationella%20hot%20mot%20m%C3%A4nniskors%20h%C3%A4lsa%20-%20090307.pdf"
+    },
+    {
+      "bytes": 141672,
+      "content_type": "application/pdf",
+      "id": "1761-18-3b5615e719c98aa331123257",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:25Z",
+      "sha256": "5314cdb0e7acb7276b0fd7a1cb504cd40cbf6af84a208b608ba3e7102e85a214",
+      "url": "https://hammaro.se/download/18.3b5615e719c98aa331123257/1773828784189/Taxa%20f%C3%B6r%20tillsyn%20enligt%20lagen%20om%20spr%C3%A4ng%C3%A4mnesprekursorer%20-%20220401.pdf"
+    },
+    {
+      "bytes": 407612,
+      "content_type": "application/pdf",
+      "id": "1761-18-3e08275119ed48485f1df31",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:10Z",
+      "sha256": "db4745c92c4020043c93b0e4a6fd49af1db036801dc71f94759e0f8738c524de",
+      "url": "https://hammaro.se/download/18.3e08275119ed48485f1df31/1782831398747/Byggtaxa%20enligt%20plan-%20och%20bygglagen%20-%20260701.pdf"
+    },
+    {
+      "bytes": 153678,
+      "content_type": "application/pdf",
+      "id": "1761-18-422120061932993201e70f8",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:28Z",
+      "sha256": "02a95cf380c618795a79b17f437857b1632cc7f25a92ce74c32d6e5d666fe86c",
+      "url": "https://hammaro.se/download/18.422120061932993201e70f8/1732258967171/Taxor%20och%20taxef%C3%B6reskrifter%20f%C3%B6r%20uppl%C3%A5telse%20av%20offentlig%20plats.pdf"
+    },
+    {
+      "bytes": 50873,
+      "content_type": "application/pdf",
+      "id": "1761-18-52f3a6d419b2c03c5931d7f",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:12Z",
+      "sha256": "cd13e4a12b5ac3f0ca916b08f8a9c60e0a24b1eb5999dd95519781a4a08ae944",
+      "url": "https://hammaro.se/download/18.52f3a6d419b2c03c5931d7f/1766072223619/Indexuppr%C3%A4kning%20av%20taxan%202026%20-%20Livsmedel.pdf"
+    },
+    {
+      "bytes": 50431,
+      "content_type": "application/pdf",
+      "id": "1761-18-52f3a6d419b2c03c5931d85",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:15Z",
+      "sha256": "4870fc460b38a939d48dd0a8af246c91d4a6605240361003dcc9a61a32e099de",
+      "url": "https://hammaro.se/download/18.52f3a6d419b2c03c5931d85/1766072286487/Indexuppr%C3%A4kning%20av%20taxan%202026%20-%20Milj%C3%B6balken.pdf"
+    },
+    {
+      "bytes": 354503,
+      "content_type": "application/pdf",
+      "id": "1761-18-52f3a6d419b2c03c5936154",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:14Z",
+      "sha256": "c76541a11f7b3a93caa554eb009304eba03250a109f97d8507a8740c569e6f7a",
+      "url": "https://hammaro.se/download/18.52f3a6d419b2c03c5936154/1766399699033/Hammar%C3%B6%20kommuns%20renh%C3%A5llningstaxa%20och%20taxef%C3%B6reskrifter%202026%20inklusive%20bilagor.pdf"
+    },
+    {
+      "bytes": 244436,
+      "content_type": "application/pdf",
+      "id": "1761-18-617417b191793a32bea5",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:03Z",
+      "sha256": "8b6041208a1521e05cd44230700c0eb032f323833aaa889a14088cf950c8adb0",
+      "url": "https://hammaro.se/download/18.617417b191793a32bea5/1724322735419/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20torghandel%20i%20Hammar%C3%B6%20kommun.pdf"
+    },
+    {
+      "bytes": 127759,
+      "content_type": "application/pdf",
+      "id": "1761-18-617417b191793a32bea7",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:01Z",
+      "sha256": "ae516a195abda298560396735df220cb697aa9151cef3a8cd07c41b82ebf3029",
+      "url": "https://hammaro.se/download/18.617417b191793a32bea7/1724322774599/Lokal%20f%C3%B6reskrift%20f%C3%B6r%20%C3%A5l%C3%A4ggande%20om%20g%C3%A5ngbanerenh%C3%A5llning%20.pdf"
+    },
+    {
+      "bytes": 742890,
+      "content_type": "application/pdf",
+      "id": "1761-18-617417b191793a32beaa",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:06Z",
+      "sha256": "25af2dc76464875954fc18c27cf5f8a80d447589c2e1436211619ebeebf7da06",
+      "url": "https://hammaro.se/download/18.617417b191793a32beaa/1724322846565/Lokala%20f%C3%B6reskrifter%20om%20avfallshantering%20f%C3%B6r%20Hammar%C3%B6%20kommun%202023.pdf"
+    },
+    {
+      "bytes": 123647,
+      "content_type": "application/pdf",
+      "id": "1761-18-617417b191793a32beab",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:05Z",
+      "sha256": "363b0355f14f83a91926b0fa2166cb688331a33a492cae6d8c195f1a0a6f4916",
+      "url": "https://hammaro.se/download/18.617417b191793a32beab/1724322872569/Lokala%20milj%C3%B6-%20och%20h%C3%A4lsoskyddsf%C3%B6reskrifter%20antagna%202020.pdf"
+    },
+    {
+      "bytes": 282600,
+      "content_type": "application/pdf",
+      "id": "1761-18-71cc813619ddcb31f4330c",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:04Z",
+      "sha256": "150ca0da431fd74812a65647915303433eeb0ad2986cde965283b12ef380a75c",
+      "url": "https://hammaro.se/download/18.71cc813619ddcb31f4330c/1777537741329/Regler%20f%C3%B6r%20gr%C3%A4vning%20i%20allm%C3%A4n%20platsmark.pdf"
+    },
+    {
+      "bytes": 179559,
+      "content_type": "application/pdf",
+      "id": "1761-18-78f029bc19b2bd17e01241b7",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:22Z",
+      "sha256": "780ce41c2ec593d4ca9a87a5654974a8e474c7706561027cdb39d7955f2383c1",
+      "url": "https://hammaro.se/download/18.78f029bc19b2bd17e01241b7/1768820001922/Taxa%20f%C3%B6r%20offentlig%20kontroll%20av%20ABP%20-%20260101.pdf"
+    },
+    {
+      "bytes": 161327,
+      "content_type": "application/pdf",
+      "id": "1761-18-950325c198caefa6295165",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:02Z",
+      "sha256": "cf580f5ab8a65879dab68ed3d70ff4bf85b4b79e8eb8386d22dc3466bfb803c6",
+      "url": "https://hammaro.se/download/18.950325c198caefa6295165/1756110373796/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Hammar%C3%B6%20kommun.pdf"
+    },
+    {
+      "bytes": 138539,
+      "content_type": "application/pdf",
+      "id": "1761-18-d7e5e6d19afd019f79421d",
+      "municipality_code": "1761",
+      "retrieved_at": "2026-10-30T01:03:07Z",
+      "sha256": "6b0425f865fa2ca9ee8b36508e093511e0d524d7c8fecfb666553873d624619c",
+      "url": "https://hammaro.se/download/18.d7e5e6d19afd019f79421d/1765444305946/Taxa%20f%C3%B6r%20avgifter%20vid%20kopiering%20av%20allm%C3%A4n%20handling.pdf"
+    },
+    {
+      "bytes": 22771,
+      "content_type": "application/pdf",
+      "id": "1762-halsoskyddsforeskrifter-1990-pdf",
+      "municipality_code": "1762",
+      "retrieved_at": "2026-10-30T01:03:36Z",
+      "sha256": "b1e9d283cd022eb14779a2dfba40558ffa28eeb50e5ccd3b4122f55a3ef937c7",
+      "url": "https://www.munkfors.se/wp-content/uploads/2020/10/halsoskyddsforeskrifter-1990-pdf.pdf"
+    },
+    {
+      "bytes": 111697,
+      "content_type": "application/pdf",
+      "id": "1762-lokala-ordningsforeskrifter-ks-2020-395",
+      "municipality_code": "1762",
+      "retrieved_at": "2026-10-30T01:03:35Z",
+      "sha256": "c40799a2eb570d95adc867f6c6aa025d58dd9c2d020ad6ab0c2c2313892aa752",
+      "url": "https://www.munkfors.se/wp-content/uploads/2024/01/lokala-ordningsforeskrifter-ks-2020-395.pdf"
+    },
+    {
+      "bytes": 229472,
+      "content_type": "application/pdf",
+      "id": "1762-munkfors-kommuns-va-taxa-2026",
+      "municipality_code": "1762",
+      "retrieved_at": "2026-10-30T01:03:37Z",
+      "sha256": "a513cc1ed5cde99ab47aa9e14ac1280558c3fe9d97c90d6b6ffd7685fc1d1c36",
+      "url": "https://www.munkfors.se/wp-content/uploads/2026/01/munkfors-kommuns-va-taxa-2026.pdf"
+    },
+    {
+      "bytes": 150272,
+      "content_type": "application/pdf",
+      "id": "1762-ordningsstadga-regler-for-torghandel",
+      "municipality_code": "1762",
+      "retrieved_at": "2026-10-30T01:03:38Z",
+      "sha256": "5ccc7ce976cb2420567cec9e45a03c5c6abf4b95374b8a03c33fec8fe7417190",
+      "url": "https://www.munkfors.se/wp-content/uploads/2015/11/Ordningsstadga-regler-f%C3%B6r-torghandel.pdf"
+    },
+    {
+      "bytes": 1037533,
+      "content_type": "application/pdf",
+      "id": "1762-taxa-for-provning-och-tillsyn-enligt-lag-om-tobak-och-liknande-produkter-2019-10-01",
+      "municipality_code": "1762",
+      "retrieved_at": "2026-10-30T01:03:39Z",
+      "sha256": "c89a19e011dc35637ef54f165d14944dc287cefe886f39986d7d092aac8d07ed",
+      "url": "https://www.munkfors.se/wp-content/uploads/2020/02/taxa-for-provning-och-tillsyn-enligt-lag-om-tobak-och-liknande-produkter-2019-10-01.pdf"
+    },
+    {
+      "bytes": 38991,
+      "content_type": "application/pdf",
+      "id": "1764-18-12fbb16f1636a2d63526115",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:47Z",
+      "sha256": "1fb5011ea697354b2532a40e7abbebb78a281bc3ad1b41a06c28cdee90e93139",
+      "url": "https://www.grums.se/download/18.12fbb16f1636a2d63526115/1530257066015/Avgiftsnormer%20f%C3%B6r%20kopior%20och%20avskrifter%20med%20mera%20av%20allm%C3%A4n%20handling_KF180222_%C2%A78.pdf"
+    },
+    {
+      "bytes": 356549,
+      "content_type": "application/pdf",
+      "id": "1764-18-14aafdf119b356771e01095d",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:46Z",
+      "sha256": "11199e3dfbbaf05fe6e8562aa5adce371ccb109a2e36a1b73b4e18a245c867f9",
+      "url": "https://www.grums.se/download/18.14aafdf119b356771e01095d/1766488829341/Avgifter%20Karlbergs%20avfallsstation%20KF%2020251216%20%C2%A7103.pdf"
+    },
+    {
+      "bytes": 803366,
+      "content_type": "application/pdf",
+      "id": "1764-18-14aafdf119b356771e01095f",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:49Z",
+      "sha256": "8fab06cb85c2a9dc20d40dcd20b9bfe2dcb05efb30ec4fd02014a429f5490480",
+      "url": "https://www.grums.se/download/18.14aafdf119b356771e01095f/1766488884221/Renh%C3%A5llningstaxa%20med%20taxef%C3%B6reskrift%20KF%2020251216%20%C2%A7101.pdf"
+    },
+    {
+      "bytes": 25477,
+      "content_type": "application/pdf",
+      "id": "1764-18-21b7119b169c5dc66933fa9",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:51Z",
+      "sha256": "7e4e4e8a6db4d8b2707169e70538ab893bb1453080dbdf6c793ff3c1c3cd01f1",
+      "url": "https://www.grums.se/download/18.21b7119b169c5dc66933fa9/1556518509727/Taxa%20f%C3%B6r%20d%C3%B6dsbof%C3%B6rvaltning_KF190417_%C2%A723.pdf"
+    },
+    {
+      "bytes": 342667,
+      "content_type": "application/pdf",
+      "id": "1764-18-2fdc946f18a2623e2103bbc",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:50Z",
+      "sha256": "aaaa34d18b754ae16f132175ddb3d428cb71372b7ccebb08bd41d2f57ef44e2a",
+      "url": "https://www.grums.se/download/18.2fdc946f18a2623e2103bbc/1693309517174/Plan%20och%20bygglovstaxa%202011.pdf"
+    },
+    {
+      "bytes": 45350,
+      "content_type": "application/pdf",
+      "id": "1764-18-32dd843c17dc23cdd2a1ecfe",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:48Z",
+      "sha256": "bdacb00ef205d6035eef98581a5e504c78e8f28b626478e7f68877508e349d78",
+      "url": "https://www.grums.se/download/18.32dd843c17dc23cdd2a1ecfe/1642171195770/KF%20%C2%A795%20Indexh%C3%B6jning%20av%20taxa%20f%C3%B6r%20milj%C3%B6%20och%20h%C3%A4lsa%202022.pdf"
+    },
+    {
+      "bytes": 1482995,
+      "content_type": "application/pdf",
+      "id": "1764-18-32dd843c17dc23cdd2a1ecff",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:54Z",
+      "sha256": "6f9c3b494bd15e030f05705a89caf162ca7adf4b5cb436d2379b31d8d977906a",
+      "url": "https://www.grums.se/download/18.32dd843c17dc23cdd2a1ecff/1642171195789/Taxebest%C3%A4mmelser%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20inom%20milj%C3%B6balkens%20omr%C3%A5de,%20rev%20211209.pdf"
+    },
+    {
+      "bytes": 578115,
+      "content_type": "application/pdf",
+      "id": "1764-18-4364492019b355c08545b1f4",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:56Z",
+      "sha256": "97136a0a39759d285598a85619fc4b92e086e1ceb66087ac3e0f49c9a6bc4529",
+      "url": "https://www.grums.se/download/18.4364492019b355c08545b1f4/1767781227513/VA-taxa%20Grums%20KF%20251216%20%C2%A7102.pdf"
+    },
+    {
+      "bytes": 587083,
+      "content_type": "application/pdf",
+      "id": "1764-18-542301d218418c937a71a5b2",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:42Z",
+      "sha256": "bea72f0465dd74f74a0a816a909d1b775302b7511aacd92b4b4f51e0dff40064",
+      "url": "https://www.grums.se/download/18.542301d218418c937a71a5b2/1669131024568/Lokala%20f%C3%B6reskrifter%20om%20avfallshantering%20f%C3%B6r%20Grums%20kommun%20KF221110%20%C2%A789%20g%C3%A4ller%20from%20230101.pdf"
+    },
+    {
+      "bytes": 333801,
+      "content_type": "application/pdf",
+      "id": "1764-18-65f6a01b198caee7acf69c",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:53Z",
+      "sha256": "51ca62eb801530d05b8064e6d1d5cb49da596507ab0cd424434978b524c29d9b",
+      "url": "https://www.grums.se/download/18.65f6a01b198caee7acf69c/1755847247003/Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20av%20alkohol,%20tobak%20och%20receptfria%20l%C3%A4kemedel.pdf"
+    },
+    {
+      "bytes": 43655,
+      "content_type": "application/pdf",
+      "id": "1764-18-67eb62ee16db20b5fc56bc5",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:55Z",
+      "sha256": "1d2020b63d23752a77f261486d80ed1b67875d52488f5e488bcd0db655b6c568",
+      "url": "https://www.grums.se/download/18.67eb62ee16db20b5fc56bc5/1574850757379/Taxebest%C3%A4mmelser%20f%C3%B6r%20tillsyn%20inom%20str%C3%A5lskydd_KF191010_%C2%A766.pdf"
+    },
+    {
+      "bytes": 2913517,
+      "content_type": "application/pdf",
+      "id": "1764-18-6a9a7b521784b12f8661946e",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:45Z",
+      "sha256": "f84a990e30f9b9b042872c7158548e0270be7b21ad967735b418b6ca6175e6de",
+      "url": "https://www.grums.se/download/18.6a9a7b521784b12f8661946e/1616591617647/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Grums%20kommun_KF210211_%C2%A74.pdf"
+    },
+    {
+      "bytes": 53242,
+      "content_type": "application/pdf",
+      "id": "1764-18-70ecf50e153dc3e64dc5d4",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:43Z",
+      "sha256": "4b40f8dbd2146edf3cbd6a3da3b53b4db56b562fb3d49675394bc2b4f87055a4",
+      "url": "https://www.grums.se/download/18.70ecf50e153dc3e64dc5d4/1459858709796/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20Grums%20kommun%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6%20KF2004_%C2%A711.pdf"
+    },
+    {
+      "bytes": 107988,
+      "content_type": "application/pdf",
+      "id": "1764-18-70ecf50e153dc3e64dc5d6",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:45Z",
+      "sha256": "6a0d6cab573ce6ca5f0f071ec1cbe3e905fac46d514e2cc532e045883e03a30c",
+      "url": "https://www.grums.se/download/18.70ecf50e153dc3e64dc5d6/1459858709854/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandeln%20i%20Grums%20kommun_KF010614_%C2%A736.pdf"
+    },
+    {
+      "bytes": 190183,
+      "content_type": "application/pdf",
+      "id": "1764-18-960ab3019367d928b140c5",
+      "municipality_code": "1764",
+      "retrieved_at": "2026-10-30T01:03:52Z",
+      "sha256": "720903fdab4aaa26a4e286590f84620ad0db2ff8f4f25acac5f5667d7a609aa7",
+      "url": "https://www.grums.se/download/18.960ab3019367d928b140c5/1733125501274/Taxa%20f%C3%B6r%20offentlig%20kontroll%20inom%20livsmedelslagstiftningen.pdf"
+    },
+    {
+      "bytes": 99571,
+      "content_type": "application/pdf",
+      "id": "1765-18-1419f63817f44a724d8133b",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:05Z",
+      "sha256": "6e8478834aa07f0af8ec0637aa77fc4b3c6df968b468cc038297caadd7dae315",
+      "url": "https://www.arjang.se/download/18.1419f63817f44a724d8133b/1646228374433/ABVA%20och%20LAV%20%C3%85rj%C3%A4ng.pdf"
+    },
+    {
+      "bytes": 586870,
+      "content_type": "application/pdf",
+      "id": "1765-18-1419f63817f44a724d8133c",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:06Z",
+      "sha256": "c9eee8b75cbb37225f021eaf16df3793608a1e702db9c78ca1cb2cbbe3a5cf1e",
+      "url": "https://www.arjang.se/download/18.1419f63817f44a724d8133c/1646228374462/Till%C3%A4ggsbest%C3%A4mmelser%20till%20ABVA.pdf"
+    },
+    {
+      "bytes": 80715,
+      "content_type": "application/pdf",
+      "id": "1765-18-1f815e8318fa417be2bdea4",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:13Z",
+      "sha256": "d6b170ef3f391eabc91ca95d851a873912924d8c73e01bd9b7a991ddef2f219a",
+      "url": "https://www.arjang.se/download/18.1f815e8318fa417be2bdea4/1717062853594/Taxa%202024%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20inom%20milj%C3%B6balkens%20omr%C3%A5de%20antagen%20av%20KF%202024-03-25%20%C2%A7%2031.pdf"
+    },
+    {
+      "bytes": 57323,
+      "content_type": "application/pdf",
+      "id": "1765-18-1f815e8318fa417be2bdea6",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:14Z",
+      "sha256": "8842cb25faede672035e96231718906a2bd522565c72cf9cd8bfd58b172ea086",
+      "url": "https://www.arjang.se/download/18.1f815e8318fa417be2bdea6/1717063034214/Taxa%20f%C3%B6r%20offentlig%20kontroll%20inom%20livsmedelslagstiftningen%20f%C3%B6r%20%C3%85rj%C3%A4ngs%20kommun%20antagen%20av%20KF%202024-03-25%20%C2%A731.pdf"
+    },
+    {
+      "bytes": 597402,
+      "content_type": "application/pdf",
+      "id": "1765-18-34133d8619ed43a3532c311",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:18Z",
+      "sha256": "9c6fd248505b694c32ee47164009a24afb39c0a4f7d01967d0095ff982861bea",
+      "url": "https://www.arjang.se/download/18.34133d8619ed43a3532c311/1782894450813/Bygglovstaxa%20beslutad%2020260615.pdf"
+    },
+    {
+      "bytes": 144230,
+      "content_type": "application/pdf",
+      "id": "1765-18-4ab30ae2193deb6993a71cc8",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:15Z",
+      "sha256": "68f0f71ba9b35316ede5348f4d8b36af15e8a18507b4fd2f9c6d93591dd9c0f9",
+      "url": "https://www.arjang.se/download/18.4ab30ae2193deb6993a71cc8/1737964669410/Taxa%20r%C3%A4ddningstj%C3%A4nsten%202025.pdf"
+    },
+    {
+      "bytes": 205671,
+      "content_type": "application/pdf",
+      "id": "1765-18-56265b50197a1f657b614287",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:16Z",
+      "sha256": "21de0f2ca8284362968bb55e3662ea3092f045f711187c7eab57df6fe9fe7600",
+      "url": "https://www.arjang.se/download/18.56265b50197a1f657b614287/1751457087256/Taxa%20alkohol%20och%20tobak%20antagen%20av%20KF%202025-06-16%20%C2%A779.pdf"
+    },
+    {
+      "bytes": 139561,
+      "content_type": "application/pdf",
+      "id": "1765-18-5bab3b6419b3567c264476de",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:17Z",
+      "sha256": "d10b99500ca21d8eb163d123328adca357198ee96e061d99c3ebdef2616eb456",
+      "url": "https://www.arjang.se/download/18.5bab3b6419b3567c264476de/1768482414189/Taxa_2026.pdf"
+    },
+    {
+      "bytes": 181229,
+      "content_type": "application/pdf",
+      "id": "1765-18-630fe69b1a1156ad328323",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:19Z",
+      "sha256": "392aed9503d80390d97b3e9dfe1b9135dd90de24de261c6c69881b75e631a8b4",
+      "url": "https://www.arjang.se/download/18.630fe69b1a1156ad328323/1791458016838/Avgiftstaxa%202026%20St%C3%B6d%20och%20omsorg.pdf"
+    },
+    {
+      "bytes": 1201940,
+      "content_type": "application/pdf",
+      "id": "1765-18-6613d0a517c11a2aa1111a32",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:03:59Z",
+      "sha256": "365302b13daec6f86ee17cf25ba58ed5fc05bc713f7231a39ca5c33a6b8f7ddb",
+      "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111a32/1632831104540/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6.pdf"
+    },
+    {
+      "bytes": 124678,
+      "content_type": "application/pdf",
+      "id": "1765-18-6613d0a517c11a2aa1111a33",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:00Z",
+      "sha256": "aaf81227fa9233fe04c1be350cebf2685742412baae2b2297da713f0b18df057",
+      "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111a33/1632831104616/Lokala%20f%C3%B6reskrifter%20om%20frister%20f%C3%B6r%20sotning.pdf"
+    },
+    {
+      "bytes": 2022874,
+      "content_type": "application/pdf",
+      "id": "1765-18-6613d0a517c11a2aa1111a34",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:02Z",
+      "sha256": "ded623292c3e20c4cc61e0dcaca28b55e4ba8c5f5841dbaad4f05318f3ed3ad7",
+      "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111a34/1632831104633/Lokala%20f%C3%B6reskrifter%20om%20torghandel.pdf"
+    },
+    {
+      "bytes": 327577,
+      "content_type": "application/pdf",
+      "id": "1765-18-6613d0a517c11a2aa1111a35",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:02Z",
+      "sha256": "ba8ea98be282b90edc4fd354a9fbbb37e31e3e12583e0f36241d3b9bca0559a2",
+      "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111a35/1632831104742/Lokala%20ordningsf%C3%B6rskrifter%20f%C3%B6r%20%C3%85rj%C3%A4ngs%20kommun_antagen.pdf"
+    },
+    {
+      "bytes": 1152054,
+      "content_type": "application/pdf",
+      "id": "1765-18-6613d0a517c11a2aa1111a41",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:04Z",
+      "sha256": "1d4a040c584acfdb5d3b7b0130b836d299cd5513bcddf4fd27bd5bc7a2cdc763",
+      "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111a41/1632831655735/lokala%20ordningsf%C3%B6reskrifter%20Bilaga%201.pdf"
+    },
+    {
+      "bytes": 1093094,
+      "content_type": "application/pdf",
+      "id": "1765-18-6613d0a517c11a2aa1111a42",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:04Z",
+      "sha256": "ae6c37b2f7c452260c03e3918d18d5cc71f76050372b1b2dc5a9b02abcce4ff4",
+      "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111a42/1632831655793/lokala%20ordningsf%C3%B6reskrifter%20Bilaga%202.pdf"
+    },
+    {
+      "bytes": 22137,
+      "content_type": "application/pdf",
+      "id": "1765-18-6613d0a517c11a2aa1111cf6",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:07Z",
+      "sha256": "c479deb1bd6f143786a049037670b9ca3134d1bdb9569a263cb3bac4efb4c298",
+      "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111cf6/1632835582002/Barnomsorgstaxa%20.pdf"
+    },
+    {
+      "bytes": 583096,
+      "content_type": "application/pdf",
+      "id": "1765-18-6613d0a517c11a2aa1111cfa",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:08Z",
+      "sha256": "d5535a839a7a5bf3cc0331cd841db3d39474d406f1e564533e1ed34c14f38f60",
+      "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111cfa/1632835582073/Taxa%20f%C3%B6r%20kart_GIS-verksamhet.pdf"
+    },
+    {
+      "bytes": 222620,
+      "content_type": "application/pdf",
+      "id": "1765-18-6613d0a517c11a2aa1111cfb",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:09Z",
+      "sha256": "5aa3c3ec9341c9be177e654a54b6e3a625b4ff6d85fd0e7c578afae341d545c0",
+      "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111cfb/1632835582111/Taxa%20kopiering%20av%20allm%C3%A4nna%20handlingar.pdf"
+    },
+    {
+      "bytes": 22585,
+      "content_type": "application/pdf",
+      "id": "1765-18-6613d0a517c11a2aa1111cfd",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:10Z",
+      "sha256": "e0192cb150dda1e6bf9d1398911cf14cc5babc703e31e850cdbb2a1964e87d3c",
+      "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111cfd/1632835582160/Taxevillkor%20f%C3%B6r%20reng%C3%B6ring%20(sotning).pdf"
+    },
+    {
+      "bytes": 404389,
+      "content_type": "application/pdf",
+      "id": "1765-18-70bf1f4418d8763438126bf9",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:11Z",
+      "sha256": "6e42a277a09fa4ed9a38292ca228c5d27866b8472ccf0c08f8aa9c0b7faf04bb",
+      "url": "https://www.arjang.se/download/18.70bf1f4418d8763438126bf9/1709106608818/Renh%C3%A5llningstaxa%202024.pdf"
+    },
+    {
+      "bytes": 475768,
+      "content_type": "application/pdf",
+      "id": "1765-18-70bf1f4418d8763438126bfa",
+      "municipality_code": "1765",
+      "retrieved_at": "2026-10-30T01:04:12Z",
+      "sha256": "62ed2f1efbcb46073e1dfca01a61a9bee608a466ee2ac473ab0cdecc760c9673",
+      "url": "https://www.arjang.se/download/18.70bf1f4418d8763438126bfa/1709106661240/VA-taxa%202024.pdf"
+    },
+    {
+      "bytes": 436764,
+      "content_type": "application/pdf",
+      "id": "1766-2024-plan-och-karttaxa-inom-ramen-for-plan-och-bygglagen-under-kommunstyrelsens-verksamhet-kf-2020-09-07-ny-mall",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:33Z",
+      "sha256": "b8d648c14a2f6c49eac9406426f88072fb132ca4e636efacf046f5df321598ce",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2024-plan--och-karttaxa-inom-ramen-for-plan--och-bygglagen-under-kommunstyrelsens-verksamhet-kf-2020-09-07-ny-mall.pdf"
+    },
+    {
+      "bytes": 818365,
+      "content_type": "application/pdf",
+      "id": "1766-2024-taxa-for-plan-och-bygglov-ny-mall-1",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:43Z",
+      "sha256": "d3bc372765da6bebbab43c0d47d992200392cc90868328fe4ade4e8d4861f886",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2024-taxa-for-plan--och-bygglov-ny-mall-1.pdf"
+    },
+    {
+      "bytes": 1127174,
+      "content_type": "application/pdf",
+      "id": "1766-2026-06-01-taxa-for-miljotillsyn-och-halsoskydd-kf-2026-04-27",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:42Z",
+      "sha256": "5ac5fdac99396fa26f49d9055d115ed1ded0871669e8e399eb3cd0382c56a7d9",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-06-01-taxa-for-miljotillsyn-och-halsoskydd-kf-2026-04-27.pdf"
+    },
+    {
+      "bytes": 199809,
+      "content_type": "application/pdf",
+      "id": "1766-2026-avgift-for-forskola-fritidshem-och-pedagogisk-omsorg",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:37Z",
+      "sha256": "37fa471b68ace033d82fdf31f6c62d2088dfe91785d1609b5ae61efe32ebee94",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-avgift-for-forskola-fritidshem-och-pedagogisk-omsorg.pdf"
+    },
+    {
+      "bytes": 533473,
+      "content_type": "application/pdf",
+      "id": "1766-2026-avgifter-och-prissattning-for-sunne-kommuns-mark",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:34Z",
+      "sha256": "16c7cc2052852f99cb481059034b9307084ba02c46b6f533452ff536224c3dc6",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-avgifter-och-prissattning-for-sunne-kommuns-mark.pdf"
+    },
+    {
+      "bytes": 245322,
+      "content_type": "application/pdf",
+      "id": "1766-2026-avgifter-simskola-motionssim-uthyrning-idrottsanlaggningar-och-utrustning-biblioteket-samt-kulturskolan",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:31Z",
+      "sha256": "961eefdc0b293f836f5ec6ecf741ed0f614b45391260e227b30477d10417684f",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-avgifter-simskola-motionssim-uthyrning-idrottsanlaggningar-och-utrustning-biblioteket-samt-kulturskolan.pdf"
+    },
+    {
+      "bytes": 222018,
+      "content_type": "application/pdf",
+      "id": "1766-2026-avgifter-sol-och-lss",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:39Z",
+      "sha256": "987c839d1708b7cbe4f6c6b913fe916e233d69735439338501ced327892c5696",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-avgifter-sol-och-lss.pdf"
+    },
+    {
+      "bytes": 184031,
+      "content_type": "application/pdf",
+      "id": "1766-2026-elevhemsavgift-gymnasieskolan-sg-sodra-viken",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:38Z",
+      "sha256": "9dd8cebe86b2b4601b778c766a97f420eb07cddb3497d6a18efbbb26a3ea3f13",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-elevhemsavgift-gymnasieskolan---sg_sodra-viken-.pdf"
+    },
+    {
+      "bytes": 501970,
+      "content_type": "application/pdf",
+      "id": "1766-2026-renhallningstaxa",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:35Z",
+      "sha256": "5d4fc125bb93c640296c321d2e1e26a8d4cb501b91db0017627ba3f499ba2dd5",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-renhallningstaxa.pdf"
+    },
+    {
+      "bytes": 271893,
+      "content_type": "application/pdf",
+      "id": "1766-2026-taxa-for-offentlig-kontroll-och-annan-offentlig-verksamhet-inom-livsmedelslagstiftning",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:40Z",
+      "sha256": "29b0882ed6feb09b531c16572b46b2f6ffc3d66ae6d63632c55507b3bd0adc36",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-taxa-for-offentlig-kontroll-och-annan-offentlig-verksamhet-inom-livsmedelslagstiftning.pdf"
+    },
+    {
+      "bytes": 277140,
+      "content_type": "application/pdf",
+      "id": "1766-2026-taxa-for-provning-och-tillsyn-enligt-alkohollagen-lag-om-tobak-och-liknande-produkter",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:41Z",
+      "sha256": "06a9ce958c6d3f4c5d5f9e43f29b8766faef023674eb6a67e059a8ad3c72d14b",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-taxa-for-provning-och-tillsyn-enligt-alkohollagen-lag-om-tobak-och-liknande-produkter.pdf"
+    },
+    {
+      "bytes": 269314,
+      "content_type": "application/pdf",
+      "id": "1766-2026-taxa-for-sotning-och-brandskyddskontroll",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:44Z",
+      "sha256": "fc095c5c1e5e8e09fec554dd7288c31aba7ffe7667fc7b34912b2924f050bf8a",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-taxa-for-sotning-och-brandskyddskontroll.pdf"
+    },
+    {
+      "bytes": 247976,
+      "content_type": "application/pdf",
+      "id": "1766-2026-taxa-for-tillstandshantering-i-enlighet-med-lag-om-brandfarliga-och-explosiva-varor",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:45Z",
+      "sha256": "a5c50ee21e45491d06ae7b04a123462ee6aec483b6c2560fa9f28fecba707aca",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-taxa-for-tillstandshantering-i-enlighet-med-lag-om-brandfarliga-och-explosiva-varor.pdf"
+    },
+    {
+      "bytes": 238616,
+      "content_type": "application/pdf",
+      "id": "1766-2026-taxa-for-tillsyn-enligt-lag-om-skydd-mot-olyckor-lso-och-for-tillsyn-enligt-lag-om-brandfarliga-och-explosiva-varor-lbe",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:46Z",
+      "sha256": "4515573156168cd7acb5078e261a02551f69bc4c8a4b769a2847f84528e04df5",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-taxa-for-tillsyn-enligt-lag-om-skydd-mot-olyckor-lso-och-for-tillsyn-enligt-lag-om-brandfarliga-och-explosiva-varor-lbe.pdf"
+    },
+    {
+      "bytes": 231268,
+      "content_type": "application/pdf",
+      "id": "1766-2026-taxa-raddningstjanstens-verksamhetsomrade",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:32Z",
+      "sha256": "6eb8aacebdfb3c016de2208ca25ee7a561356bbf2804d8c36e7b43c21a76f899",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-taxa-raddningstjanstens-verksamhetsomrade.pdf"
+    },
+    {
+      "bytes": 462581,
+      "content_type": "application/pdf",
+      "id": "1766-2026-vatten-och-avloppstaxa",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:36Z",
+      "sha256": "6edd440d374f20bc4d94ecdd188da528e7771400e0f4c4f613057b42446e5394",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/2026-vatten--och-avloppstaxa.pdf"
+    },
+    {
+      "bytes": 273210,
+      "content_type": "application/pdf",
+      "id": "1766-kommunala-foreskrifter-om-anvandningen-av-den-allmanna-va-anlaggningen-kf-2026-09-21",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:29Z",
+      "sha256": "fb4d5acc8f6f223f4aea807bebb5e0e401e785900e3fd5c9f9d011396756178e",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/bygga-bo-och-miljo/kommunala-foreskrifter-om-anvandningen-av-den-allmanna-va-anlaggningen-kf-2026-09-21.pdf"
+    },
+    {
+      "bytes": 313828,
+      "content_type": "application/pdf",
+      "id": "1766-ks-2024-dokumenthanteringstaxa",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:30Z",
+      "sha256": "673c900ef61d22bc58b05590b027a55267fd09ab7a3ca9794d74666fed6424ed",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/ks_2024-dokumenthanteringstaxa.pdf"
+    },
+    {
+      "bytes": 259277,
+      "content_type": "application/pdf",
+      "id": "1766-lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo-kf-2022-03-21-ny-mall",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:28Z",
+      "sha256": "dfbf2eb3aaf143bef7841baf70ebf1a352470182b52a5e90f228a3eceafb290d",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/bygga-bo-och-miljo/lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo-kf-2022-03-21-ny-mall.pdf"
+    },
+    {
+      "bytes": 225445,
+      "content_type": "application/pdf",
+      "id": "1766-lokala-foreskrifter-om-gatu-och-gangbanerenhallning-m-m-for-sunne-kommun-kf-1996-01-29-ny-mall",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:26Z",
+      "sha256": "ce59c823d204554139e9dcba7277b0834a4261857039613d57efc69f796b4a9f",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/bygga-bo-och-miljo/lokala-foreskrifter-om-gatu--och-gangbanerenhallning-m.m-for-sunne-kommun-kf-1996-01-29-ny-mall.pdf"
+    },
+    {
+      "bytes": 2577996,
+      "content_type": "application/pdf",
+      "id": "1766-lokala-ordningsforeskrifter-for-sunne-kommun-kf-2022-06-27-ny-mall",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:25Z",
+      "sha256": "a88fd1dcb86636a110a842134c9b10d6070d1c88d479c83ade1f39a39b49fd5b",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/bygga-bo-och-miljo/lokala-ordningsforeskrifter-for-sunne-kommun-kf-2022-06-27-ny-mall.pdf"
+    },
+    {
+      "bytes": 1880407,
+      "content_type": "application/pdf",
+      "id": "1766-lokala-ordningsforeskrifter-for-torghandel-kf-2024-09-16-ny-mall",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:27Z",
+      "sha256": "7e5c379049f312c2c741887a2e1f99cd4a3308ad26c350fb97ba1c55bd595a85",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/bygga-bo-och-miljo/lokala-ordningsforeskrifter-for-torghandel-kf-2024-09-16-ny-mall.pdf"
+    },
+    {
+      "bytes": 252774,
+      "content_type": "application/pdf",
+      "id": "1766-sotningsfrister-i-sunne-kommun-kf-2015-08-31-ny-mall",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:47Z",
+      "sha256": "5b60ea215f6b7cd07ec937cbac228e482b9bdb78ae3b197332098b330cab00a5",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/samhallsskydd-och-sakerhet/sotningsfrister-i-sunne-kommun-kf-2015-08-31-ny-mall.pdf"
+    },
+    {
+      "bytes": 409774,
+      "content_type": "application/pdf",
+      "id": "1766-sunne-kommuns-regler-for-plats-och-avgifter-i-forskola-pedagogisk-omsorg-och-fritidshem-ks-2022-12-08-ny-mall",
+      "municipality_code": "1766",
+      "retrieved_at": "2026-10-30T01:04:49Z",
+      "sha256": "9e7ce1ce5f6f54c50029a1c563854f253ee65c7f252c474b4b98577b0faf8add",
+      "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/utbildning-och-barnomsorg/sunne-kommuns-regler-for-plats-och-avgifter-i-forskola-pedagogisk-omsorg-och-fritidshem-ks-2022-12-08-ny-mall.pdf"
+    },
+    {
+      "bytes": 178621,
+      "content_type": "application/pdf",
+      "id": "1781-2026-taxetabeller-for-geodataverksamhet",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:07Z",
+      "sha256": "87a32152ed89edcc44bca8bf8a70c108b20cdeac0f99441c19ff977c962498b7",
+      "url": "https://www.kristinehamn.se/contentassets/7b6780c2be9c4cacabd7b236e8771c40/2026-taxetabeller-for-geodataverksamhet.pdf"
+    },
+    {
+      "bytes": 1083194,
+      "content_type": "application/pdf",
+      "id": "1781-abva-kristinehamn-2025",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:04:53Z",
+      "sha256": "c134feec0a1440a5e305a8a0b2f60be5481e4946eab74fb8d13f4476be9e473e",
+      "url": "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/abva_kristinehamn_2025.pdf"
+    },
+    {
+      "bytes": 466887,
+      "content_type": "application/pdf",
+      "id": "1781-allman-vatten-och-avloppstaxa-2026",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:03Z",
+      "sha256": "f6cb35a9fe009f2418889e0ed1430bdd7ae0320b236ea3569e4c3b4fd57bda94",
+      "url": "https://www.kristinehamn.se/contentassets/7b6780c2be9c4cacabd7b236e8771c40/allman-vatten-och-avloppstaxa-2026.pdf"
+    },
+    {
+      "bytes": 2213147,
+      "content_type": "application/pdf",
+      "id": "1781-avfallstaxa-2026",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:04Z",
+      "sha256": "adf6f4d538ff9c9f6dd518bf30c0f012670aa70f53319bcb380bc25fbc274ed5",
+      "url": "https://www.kristinehamn.se/contentassets/7b6780c2be9c4cacabd7b236e8771c40/avfallstaxa-2026.pdf"
+    },
+    {
+      "bytes": 1931474,
+      "content_type": "application/pdf",
+      "id": "1781-bilaga-1",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:04:59Z",
+      "sha256": "237abcaa6949bae8e5702e412c423e2978966989db04ddca10e373ac13d4166a",
+      "url": "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/bilaga_1.pdf"
+    },
+    {
+      "bytes": 2600216,
+      "content_type": "application/pdf",
+      "id": "1781-bilaga-4",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:02Z",
+      "sha256": "98bf333f22aaf753604bee0574dd28a2ace37bdde9a1b22397b477ec96f9f74f",
+      "url": "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/bilaga_4.pdf"
+    },
+    {
+      "bytes": 103346,
+      "content_type": "application/pdf",
+      "id": "1781-livsmedelstaxa-2026",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:08Z",
+      "sha256": "dc6730b7f7485978a6b5e70251ec1f1253e6f6b8172042a57fb3ae5a7901818a",
+      "url": "https://www.kristinehamn.se/contentassets/7b6780c2be9c4cacabd7b236e8771c40/livsmedelstaxa-2026.pdf"
+    },
+    {
+      "bytes": 84275,
+      "content_type": "application/pdf",
+      "id": "1781-lokala-halsoskyddsforeskrifter-2025",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:04:52Z",
+      "sha256": "a2ed372f2fac5a3dc2088fc783ca2410bedaf1526940e486cfe53a2c22018671",
+      "url": "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/lokala-halsoskyddsforeskrifter-2025.pdf"
+    },
+    {
+      "bytes": 1553079,
+      "content_type": "application/pdf",
+      "id": "1781-lokala-ordningsforeskrifter-bilaga-2-omraden-som-jamstalls-med-offentlig-plats",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:00Z",
+      "sha256": "73bb820e2e9ff306d7be9367854d84e850b7c7a81e242bbd25e82c770dc4e57d",
+      "url": "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/lokala-ordningsforeskrifter.-bilaga-2-omraden-som-jamstalls-med-offentlig-plats.pdf"
+    },
+    {
+      "bytes": 3603743,
+      "content_type": "application/pdf",
+      "id": "1781-lokala-ordningsforeskrifter-bilaga-3-forbud-mot-alkoholfortaring",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:01Z",
+      "sha256": "034d1ce965a1823e528631cc1812c8499e37ac1e12f85d2a86b884229a92cf32",
+      "url": "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/lokala-ordningsforeskrifter.-bilaga-3-forbud-mot-alkoholfortaring.pdf"
+    },
+    {
+      "bytes": 688508,
+      "content_type": "application/pdf",
+      "id": "1781-lokala-ordningsforeskrifter-for-kristinehamns-kommun",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:04:58Z",
+      "sha256": "0a1fc61abb422144bb64dfc12e82739785a512a792fc8c3ef9720601d539e0a5",
+      "url": "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/lokala-ordningsforeskrifter-for-kristinehamns-kommun.pdf"
+    },
+    {
+      "bytes": 734408,
+      "content_type": "application/pdf",
+      "id": "1781-plantaxa-bestammelser-inom-pbl-gallande-planering-2024",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:09Z",
+      "sha256": "31a7f5ba4d819c483fe4f6a11dc0e04b48d7fb2b2ee1d34dde60c41141d5f684",
+      "url": "https://www.kristinehamn.se/contentassets/7b6780c2be9c4cacabd7b236e8771c40/plantaxa--bestammelser-inom-pbl-gallande-planering-2024.pdf"
+    },
+    {
+      "bytes": 328154,
+      "content_type": "application/pdf",
+      "id": "1781-regler-och-avgifter-for-barnomsorg-och-fritidshem-2021-rev-2401112",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:11Z",
+      "sha256": "bf531341f1679d3c4fc2b6bef3e567ac8cab37860adcbe8654eaecfb16e9ca4e",
+      "url": "https://www.kristinehamn.se/contentassets/842a33458a8b458eaf207afbe9ab8ef0/regler-och-avgifter-for-barnomsorg-och-fritidshem-2021-rev-2401112.pdf"
+    },
+    {
+      "bytes": 9301372,
+      "content_type": "application/pdf",
+      "id": "1781-renhallningsanvisningar-tnra-inklusive-bilagor-2024",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:04:57Z",
+      "sha256": "2f8a297c60c4f2ca4a7b87cbc21df219a71cb52c632e60a2de96a4a4b4b610b0",
+      "url": "https://www.kristinehamn.se/globalassets/kontaktregister/renhallningsanvisningar-tnra-inklusive-bilagor-2024.pdf"
+    },
+    {
+      "bytes": 360505,
+      "content_type": "application/pdf",
+      "id": "1781-renhallningsforeskrifter-2024-01-01",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:04:54Z",
+      "sha256": "23b77a2f9bb09103ec48859b186541e8f4b6980ec54ff4742934abaf6e68627f",
+      "url": "https://www.kristinehamn.se/globalassets/kontaktregister/renhallningsforeskrifter_2024-01-01.pdf"
+    },
+    {
+      "bytes": 231438,
+      "content_type": "application/pdf",
+      "id": "1781-taxa-bygg-2026",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:06Z",
+      "sha256": "c04c5ed0d7b3adef3a5194778f5b6a9fe3118de244b24875fa844999376d51c9",
+      "url": "https://www.kristinehamn.se/contentassets/7b6780c2be9c4cacabd7b236e8771c40/taxa-bygg-2026.pdf"
+    },
+    {
+      "bytes": 992294,
+      "content_type": "application/pdf",
+      "id": "1781-taxa-tillsyn-enligt-miljobalken-2026",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:10Z",
+      "sha256": "ac464a52763576baf7a6bdff9e59471700b244cff3b84cb557fef915c0d390f4",
+      "url": "https://www.kristinehamn.se/contentassets/7b6780c2be9c4cacabd7b236e8771c40/taxa-tillsyn-enligt-miljobalken-2026.pdf"
+    },
+    {
+      "bytes": 135520,
+      "content_type": "application/pdf",
+      "id": "1781-taxebilaga-bryggtaxa-2020",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:05:05Z",
+      "sha256": "f303f4474dce15d2dc5605a9245596cad12965d7018c64fad525ce92c47051de",
+      "url": "https://www.kristinehamn.se/contentassets/7b6780c2be9c4cacabd7b236e8771c40/taxebilaga-bryggtaxa-2020.pdf"
+    },
+    {
+      "bytes": 176057,
+      "content_type": "application/pdf",
+      "id": "1781-torghandelsstadgar",
+      "municipality_code": "1781",
+      "retrieved_at": "2026-10-30T01:04:57Z",
+      "sha256": "eea10cb97782f563343776cd12c03c62ed884546035b68eb0d94bd8d93eee547",
+      "url": "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/torghandelsstadgar.pdf"
+    },
+    {
+      "bytes": 222894,
+      "content_type": "application/pdf",
+      "id": "1782-18-167fb7f712709ae7e4e80008151",
+      "municipality_code": "1782",
+      "retrieved_at": "2026-10-30T01:05:16Z",
+      "sha256": "5356c954360b288d09e8fbaedb2f8bc8c65979817f3a6f429b508842b7b44ce1",
+      "url": "https://www.filipstad.se/download/18.167fb7f712709ae7e4e80008151/1380273864691/Renh%C3%A5llningsf%C3%B6reskrifter.pdf"
+    },
+    {
+      "bytes": 16766,
+      "content_type": "application/pdf",
+      "id": "1782-18-1c2d0a671442e3a523cdc",
+      "municipality_code": "1782",
+      "retrieved_at": "2026-10-30T01:05:17Z",
+      "sha256": "c9ae0bf02e145dbeb7cccefa7d4a73313df5026dd2dc2a5e477d08dcabfafc9e",
+      "url": "https://www.filipstad.se/download/18.1c2d0a671442e3a523cdc/1392965343509/Lokala%20f%C3%B6reskrifter%20gata-%20och%20g%C3%A5ngbanerenh%C3%A5llning.pdf"
+    },
+    {
+      "bytes": 99304,
+      "content_type": "application/pdf",
+      "id": "1782-18-3cf8623515b746ff52b166",
+      "municipality_code": "1782",
+      "retrieved_at": "2026-10-30T01:05:21Z",
+      "sha256": "542de3e7ba385a7cd99d144376914ec5c10cf9ccd79bcabb9cd5f2cfb8864bdd",
+      "url": "https://www.filipstad.se/download/18.3cf8623515b746ff52b166/1493381469925/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandel%20i%20FIlipstads%20kommun%202017.pdf"
+    },
+    {
+      "bytes": 594139,
+      "content_type": "application/pdf",
+      "id": "1782-18-52aaa70714d2a0c0bec611",
+      "municipality_code": "1782",
+      "retrieved_at": "2026-10-30T01:05:19Z",
+      "sha256": "18a821cb9ce749c01d3a56435e9ce3560fc406725e147ece75922d4f4b17011e",
+      "url": "https://www.filipstad.se/download/18.52aaa70714d2a0c0bec611/1438158242552/Skyddsf%C3%B6reskrift%20f%C3%B6r%20Nordmark%20VSO.pdf"
+    },
+    {
+      "bytes": 322082,
+      "content_type": "application/pdf",
+      "id": "1782-18-6667106019bcbdfddb1d163b",
+      "municipality_code": "1782",
+      "retrieved_at": "2026-10-30T01:05:23Z",
+      "sha256": "78266516573f21c4a91da69a84d30bb9e776e3d6c0159db554b2985d62ef04de",
+      "url": "https://www.filipstad.se/download/18.6667106019bcbdfddb1d163b/1768900096437/VA-taxa%202026.pdf"
+    },
+    {
+      "bytes": 471873,
+      "content_type": "application/pdf",
+      "id": "1782-18-6667106019bcbdfddb1d64ae",
+      "municipality_code": "1782",
+      "retrieved_at": "2026-10-30T01:05:22Z",
+      "sha256": "7df3bd61ff186473da080a731f06bde5af57f18c55e1162a42ee3a789255ee29",
+      "url": "https://www.filipstad.se/download/18.6667106019bcbdfddb1d64ae/1768905824440/Avfallstaxa%20Filipstads%20kommun%202026.pdf"
+    },
+    {
+      "bytes": 18627,
+      "content_type": "application/pdf",
+      "id": "1782-18-75d9291213c6f3a61b380002454",
+      "municipality_code": "1782",
+      "retrieved_at": "2026-10-30T01:05:18Z",
+      "sha256": "f1c285b8e532aa655054a937f25ef240164e4b5b8f12e74a883dd19ab8b0e4ba",
+      "url": "https://www.filipstad.se/download/18.75d9291213c6f3a61b380002454/1380273864132/ABVA.pdf"
+    },
+    {
+      "bytes": 34425,
+      "content_type": "application/pdf",
+      "id": "1782-18-79763fb014558bfe688db",
+      "municipality_code": "1782",
+      "retrieved_at": "2026-10-30T01:05:20Z",
+      "sha256": "92ab303f1efb18a2afaff01642bccbdb37aa0cff9874c2f5e8d7060272f43f10",
+      "url": "https://www.filipstad.se/download/18.79763fb014558bfe688db/1397564692569/Lokala%20ordningsf%C3%B6reskrifter.pdf"
+    },
+    {
+      "bytes": 1396915,
+      "content_type": "application/pdf",
+      "id": "1783-18-42224fb19ed4385c2465b84",
+      "municipality_code": "1783",
+      "retrieved_at": "2026-10-30T01:05:32Z",
+      "sha256": "793ce753a8472a005fd28a71ae428f881d79cd262d1cab5f9a2a89f058c83e8b",
+      "url": "https://www.hagfors.se/download/18.42224fb19ed4385c2465b84/1784708059674/Renh%C3%A5llningsordning%20f%C3%B6r%20SuToHaMu_Hagfors%20Antagen%20dec%202022.pdf"
+    },
+    {
+      "bytes": 348475,
+      "content_type": "application/pdf",
+      "id": "1783-18-4abd76d419fcc3b224517a27",
+      "municipality_code": "1783",
+      "retrieved_at": "2026-10-30T01:05:27Z",
+      "sha256": "63cc0542dc8df0ea23bf4f963c4b4dc143cbcb58266a9634bc2dfa5ac978e073",
+      "url": "https://www.hagfors.se/download/18.4abd76d419fcc3b224517a27/1786521822311/Avgiftstaxa%20och%20till%C3%A4mpningsanvisningar.pdf"
+    },
+    {
+      "bytes": 165128,
+      "content_type": "application/pdf",
+      "id": "1783-18-528369f319fcc349b851486d",
+      "municipality_code": "1783",
+      "retrieved_at": "2026-10-30T01:05:31Z",
+      "sha256": "ad7ea844cd14ce8cf0a272244590914ac8af6f6c032275a6c2cb47d6f7fe7a8a",
+      "url": "https://www.hagfors.se/download/18.528369f319fcc349b851486d/1787118885430/VA-taxa%20Hagfors%20Kommun%202024-07-01.docx.pdf"
+    },
+    {
+      "bytes": 472581,
+      "content_type": "application/pdf",
+      "id": "1783-18-62a1e8061a01f3276f015b",
+      "municipality_code": "1783",
+      "retrieved_at": "2026-10-30T01:05:30Z",
+      "sha256": "b27186e5f1c7633347964dff67b0b7e24ac4b9e2d9245449b0ac997f19e35494",
+      "url": "https://www.hagfors.se/download/18.62a1e8061a01f3276f015b/1787233590170/Renh%C3%A5llningstaxa%202026-02-01.pdf"
+    },
+    {
+      "bytes": 160528,
+      "content_type": "application/pdf",
+      "id": "1783-18-62a1e8061a01f3276f025f",
+      "municipality_code": "1783",
+      "retrieved_at": "2026-10-30T01:05:28Z",
+      "sha256": "ffd2a1e8f1ca85bc3c93ea4e2938a278a72fe71e9aaee597383fe8aba2015d3f",
+      "url": "https://www.hagfors.se/download/18.62a1e8061a01f3276f025f/1787233878881/2024-Hagfors-kommuns-sotningstaxa.pdf"
+    },
+    {
+      "bytes": 173903,
+      "content_type": "application/pdf",
+      "id": "1783-18-62a1e8061a01f3276f0260",
+      "municipality_code": "1783",
+      "retrieved_at": "2026-10-30T01:05:29Z",
+      "sha256": "f85648b2690b3cf51cb98e7f1506484d5514b93cd97c638574aa2d222536a0bd",
+      "url": "https://www.hagfors.se/download/18.62a1e8061a01f3276f0260/1787233886945/Hagfors-kommuns-brandskyddstaxa.pdf"
+    },
+    {
       "bytes": 2138556,
       "content_type": "application/pdf",
       "id": "2161-18-3ad8749019c2712301f6c7f",
