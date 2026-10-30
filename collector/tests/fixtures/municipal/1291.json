@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.simrishamn.se/politik-och-paverkan/kommunal-forfattningssamling": "1291-listing.html"
+  },
+  "count": 1,
+  "sample": {
+    "number": "18.9104a081900fe8bab3230a1",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.simrishamn.se/download/18.9104a081900fe8bab3230a1/1718702294747/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20beslutade%20i%20KF%202024-04-29%20%C2%A740.pdf"
+  },
+  "excluded": [
+    "Läs Simrishamns kommuns hållbarhetspolicy (PDF)",
+    "Läs mer om kommunens styrdokument och olika dokumentstyper (PDF)",
+    "Allmänt nämndsreglemente"
+  ]
+}

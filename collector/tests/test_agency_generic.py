@@ -326,6 +326,65 @@ class RunTest(unittest.TestCase):
         self.assertEqual(files["MIGRFS 2026:14"][0]["bytes"], len(b"%PDF-1.7 fourteen"))
 
 
+class DvfsEifsKbvfsFfsTest(unittest.TestCase):
+    DVFS = agency.ADAPTERS["DVFS"]
+    EIFS = agency.ADAPTERS["EIFS"]
+    KBVFS = agency.ADAPTERS["KBVFS"]
+    FFS = agency.ADAPTERS["FFS"]
+
+    def test_dvfs_base_pages_from_the_sitemap(self):
+        prefix = "https://www.domstol.se" + self.DVFS.path_prefix
+        sitemap = f"""<urlset><url><loc>{prefix}2020/dvfs-20202/</loc></url>
+          <url><loc>{prefix}2006/dvfs-20069/dvfs-20212/</loc></url>
+          <url><loc>{prefix}2021/dvfs-202112/dvfs-202112/</loc></url>
+          <url><loc>{prefix}</loc></url></urlset>"""
+        entries = self.DVFS.parse_listing(sitemap, self.DVFS.listing_url)
+        self.assertEqual([e.number for e in entries], ["DVFS 2020:2"])
+        page = """<main><h1>DVFS 2020:2</h1><h2>Grundförfattning</h2><p>Domstolsverkets föreskrifter om
+          kvällsberedskap</p><a href="/globalassets/dvfs/2020/dvfs_2020-2.pdf">DVFS 2020:2<span>pdf</span>165 kB</a>
+          <h2>Ändringsföreskrifter</h2><a href="/globalassets/dvfs/2026/dvfs-2026-2.pdf">DVFS 2026:2pdf121 kB</a></main>"""
+        regulation = self.DVFS.parse_detail(page, entries[0])
+        self.assertEqual(regulation.title, "DVFS 2020:2")  # the title comes from the PDF
+        self.assertEqual([label for label, _ in regulation.pdfs], ["DVFS 2020:2", "DVFS 2026:2"])
+
+    def test_eifs_rows_link_to_pages_without_the_print_pdf(self):
+        listing = """<table><tr><th>Publiceringsår</th><th>Föreskrift</th></tr><tr><td>2026</td><td>
+          <a href="/om-oss/publikationer/publikationer/foreskrifter-el/2026/foreskrift-eifs-20268">EIFS 2026:8</a>
+          Energimarknadsinspektionens föreskrifter om information</td></tr></table>"""
+        entries = self.EIFS.parse_listing(listing, self.EIFS.listing_url)
+        self.assertEqual([e.number for e in entries], ["EIFS 2026:8"])
+        page = """<main><h1>Föreskrift</h1><p>EIFS 2026:8</p>
+          <a href="/download/18.1/1/EIFS-2026-8-om-information.pdf">Energimarknadsinspektionens föreskrifter
+            EIFS 2026:8</a><a href="/4.19e22.pdf?properties=12.5b0e">Skriv ut som PDF</a></main>"""
+        regulation = self.EIFS.parse_detail(page, entries[0])
+        self.assertEqual(regulation.title, "EIFS 2026:8")
+        self.assertEqual([url.rsplit("/", 1)[-1] for _, url in regulation.pdfs], ["EIFS-2026-8-om-information.pdf"])
+
+    def test_kbvfs_clickable_rows(self):
+        listing = """<table><tr><th>Titel</th></tr>
+          <tr class="js-documentRow" data-href="/globalassets/kbvfs-2021-3-rapportering.pdf"><td>
+            <p class="ml-6 md:ml-4">KBVFS 2021:3 Kustbevakningens föreskrifter om rapportering till havs utanför EU.pdf</p>
+            Beslutad den 5 maj 2021.</td><td>140 kb</td></tr></table>"""
+        entries = self.KBVFS.parse_listing(listing, self.KBVFS.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("KBVFS 2021:3", True)])
+        self.assertEqual(entries[0].title, "Kustbevakningens föreskrifter om rapportering till havs utanför EU")
+        self.assertEqual(entries[0].url, "https://www.kustbevakningen.se/globalassets/kbvfs-2021-3-rapportering.pdf")
+
+    def test_ffs_content_api_list(self):
+        def pdf(name, url):
+            return {"contentLink": {"expanded": {"name": name, "url": "https://www.forsvarsmakten.se/globalassets/" + url}}}
+
+        listing = json.dumps({"pdfFilesArea": [
+            pdf("FFS 2026.3 a\u0308ndring av FFS 1996.16 om fo\u0308rma\u030aner.pdf", "ffs-2026.3-andring.pdf"),
+            pdf("ffs-2013.1_andring-fm-skyddsforeskrifter-ffs-2010.5.pdf", "ffs-2013.1_andring.pdf"),
+            pdf("ffs--2017-5.pdf", "ffs--2017-5.pdf"),
+            {"contentLink": {"expanded": None}}]})
+        entries = self.FFS.parse_listing(listing, self.FFS.listings[-1])
+        self.assertEqual([(e.number, e.base) for e in entries],
+                         [("FFS 2026:3", False), ("FFS 2013:1", False), ("FFS 2017:5", True)])
+        self.assertEqual(entries[2].title, "FFS 2017:5")  # the title comes from the PDF
+
+
 if __name__ == "__main__":
     unittest.main()
 

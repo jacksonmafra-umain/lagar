@@ -282,6 +282,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
 - SCB-FS now also holds SCB's three regulations on official statistics (SCB-FS
   2016:17, 2021:26, 2023:6). The monthly consumer price index notices (KPI)
   are notices of index values, not rules, and are not collected.
+- Since 2026-10-30 the PDF-only series above (RGKFS, RIFS, SGU-FS, SiSFS,
+  TVFS, UFS, VALFS, VRFS, SKSFS, SSMFS, UHRFS, PFS, ÅFS, PRVFS, PMFS and
+  RPSFS, STEMFS, RA-FS, SJÖFS, TRVFS) carry the regulation text read from
+  the PDF's text layer. SKOLFS still holds metadata and PDF links only.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - Public services have no collector yet; what the Tjänster tab should hold is
@@ -360,9 +364,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Aneby and Jönköping (no collection page), Värnamo (document service down),
     Torsås (titles outside the links), Mönsterås (site did not answer),
     Västervik (file list not in the HTML) and Gotland (external document
-    service). Östhammar's robots.txt shuts named AI crawlers out of its rule
-    pages and Linköping links its rules to Google Drive; both wait for an owner
-    decision. Their issues stay open.
+    service). Linköping links its rules to Google Drive and waits for an owner
+    decision. Their issues stay open. Östhammar's robots.txt shuts named AI
+    crawlers out of its rule pages but allows this collector's agent; the owner
+    approved collecting it.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources

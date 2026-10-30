@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://tomelilla.se/kommunochpolitik/kommunensorganisation/organisationochstyrning/styrdokument/forfattningssamling.1670.html": "1270-listing.html"
+  },
+  "count": 25,
+  "sample": {
+    "number": "18.398b0c521900fce4d5762d94",
+    "title": "A 1601 Reglemente med lokala ordningsföreskrifter för Tomelilla kommun",
+    "url": "https://tomelilla.se/download/18.398b0c521900fce4d5762d94/1719491301909/A%201601%20Reglemente%20med%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Tomelilla%20kommun.pdf"
+  },
+  "excluded": [
+    "A 2301 Riktlinje för alkoholförtäring i kommunala lokaler",
+    "F 1803 Riktlinje för trafiksäkerhet i Tomelilla kommun",
+    "A 2003 Gemensam kretsloppsplan 2021–2030"
+  ]
+}

@@ -37331,7 +37331,7 @@
           "bytes": 1954932,
           "sha256": "54155098695ddf3c72821502c9daf6442621bda60145d9de4182e162672c7adb",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:20:15Z"
+          "retrieved_at": "2026-10-30T15:31:34Z"
         },
         {
           "label": "SSMFS 2008:1 (konsoliderad version)",
@@ -37339,7 +37339,7 @@
           "bytes": 694235,
           "sha256": "484c899da73258d93bf58233a5c2f8a698e0c9ef56cfe1789f22d3aee6ec7ee7",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:20:16Z"
+          "retrieved_at": "2026-10-30T15:31:35Z"
         }
       ]
     },
@@ -37353,7 +37353,7 @@
           "bytes": 693618,
           "sha256": "d36ae1a55d5f55c9504da36c5a1e7eb4dab833715936e1209fb37d14dd1b722e",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:20:10Z"
+          "retrieved_at": "2026-10-30T15:31:32Z"
         },
         {
           "label": "SSMFS 2008:12 (konsoliderad version)",
@@ -37361,7 +37361,7 @@
           "bytes": 649038,
           "sha256": "62fa8cd6a45d11bf90ded5a9cd346df09ea04aa57a36420859c66fbab2135708",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:20:10Z"
+          "retrieved_at": "2026-10-30T15:31:32Z"
         }
       ]
     },
@@ -37375,7 +37375,7 @@
           "bytes": 288100,
           "sha256": "12e3f8b3902a4388be4d82484f3c5a073a9004cae7f46e7330b3bb691d6bca7e",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:20:06Z"
+          "retrieved_at": "2026-10-30T15:31:27Z"
         },
         {
           "label": "SSMFS 2008:13 (konsoliderad version)",
@@ -37383,7 +37383,7 @@
           "bytes": 825009,
           "sha256": "10e0c8a832abf0c83f86c3fd98932c5b535dcc1f995971179effeb02445e1baf",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:20:08Z"
+          "retrieved_at": "2026-10-30T15:31:28Z"
         }
       ]
     },
@@ -37397,7 +37397,7 @@
           "bytes": 149685,
           "sha256": "5de2e2446fd55085a7171cc5903484c8615d86b96bc4e94b71036fb8398ccc01",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:20:04Z"
+          "retrieved_at": "2026-10-30T15:31:25Z"
         }
       ]
     },
@@ -37411,7 +37411,7 @@
           "bytes": 201448,
           "sha256": "2a34fbd73a9dd7fa537486a2b5bc8bb663fe2c174ebddeef09863b922f647b24",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:20:01Z"
+          "retrieved_at": "2026-10-30T15:31:22Z"
         },
         {
           "label": "SSMFS 2008:21 (konsoliderad version)",
@@ -37419,7 +37419,7 @@
           "bytes": 319806,
           "sha256": "c70c484679ed552fa9ca570893ca15e06dd06b473895b439525dff71ef232295",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:20:02Z"
+          "retrieved_at": "2026-10-30T15:31:23Z"
         }
       ]
     },
@@ -37433,7 +37433,7 @@
           "bytes": 162251,
           "sha256": "b93bafec750f1c3d5f24d2570f977430c160a91ce9eda8cd9a7b8101badaa1b9",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:58Z"
+          "retrieved_at": "2026-10-30T15:31:19Z"
         },
         {
           "label": "SSMFS 2008:23 (konsoliderad version)",
@@ -37441,7 +37441,7 @@
           "bytes": 307738,
           "sha256": "9a3d75d0c881b0cdff89db5f26665cd5d8edbb69280b6bf07029f51a8d7ee58c",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:59Z"
+          "retrieved_at": "2026-10-30T15:31:20Z"
         }
       ]
     },
@@ -37455,7 +37455,7 @@
           "bytes": 122804,
           "sha256": "c21b280395c1bc81e7c5662070ab4da527f09ae0a96c356f344b43ee654bc8f7",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:55Z"
+          "retrieved_at": "2026-10-30T15:31:16Z"
         },
         {
           "label": "SSMFS 2008:24 (konsoliderad version)",
@@ -37463,7 +37463,7 @@
           "bytes": 153320,
           "sha256": "8682c3b47e913842576ae6ae5b0411b0ea8f6cb9a1fb742fbcedab73b5956c3c",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:56Z"
+          "retrieved_at": "2026-10-30T15:31:17Z"
         }
       ]
     },
@@ -37477,7 +37477,7 @@
           "bytes": 162215,
           "sha256": "5e5841070599b4d4fb0d2b2e132be2a5c2fa476f9c26b48c84ba6763ccdc7350",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:52Z"
+          "retrieved_at": "2026-10-30T15:31:13Z"
         },
         {
           "label": "SSMFS 2008:26 (konsoliderad version)",
@@ -37485,7 +37485,7 @@
           "bytes": 181087,
           "sha256": "82e24e4f619bc01a10545c73effe270d12ed3af416feaed9c538de2f84fe0bf2",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:53Z"
+          "retrieved_at": "2026-10-30T15:31:14Z"
         }
       ]
     },
@@ -37499,7 +37499,7 @@
           "bytes": 180907,
           "sha256": "50ffb45a8c80fc1f9848043c31072ea459136147e3b434e7bfd33e93a022715c",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:49Z"
+          "retrieved_at": "2026-10-30T15:31:10Z"
         },
         {
           "label": "SSMFS 2008:32 (konsoliderad version)",
@@ -37507,7 +37507,7 @@
           "bytes": 388316,
           "sha256": "93e2259f3d75aec929c36201aade0a19c79aaf562d43e8fcac2e8bbe6f59202a",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:50Z"
+          "retrieved_at": "2026-10-30T15:31:11Z"
         }
       ]
     },
@@ -37521,7 +37521,7 @@
           "bytes": 230570,
           "sha256": "f1d0c78eaa18e3aea3004ca0f21a168aebac0e45b26b6fecb3b30c1f8ceff814",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:47Z"
+          "retrieved_at": "2026-10-30T15:31:07Z"
         },
         {
           "label": "SSMFS 2008:37 (konsoliderad version)",
@@ -37529,7 +37529,7 @@
           "bytes": 373150,
           "sha256": "9f8b7ff5416253686638a49eb26ba83184e64d7998afb5bfe0e56d06eabcf272",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:47Z"
+          "retrieved_at": "2026-10-30T15:31:08Z"
         }
       ]
     },
@@ -37543,7 +37543,7 @@
           "bytes": 121460,
           "sha256": "fad2a450d31d6fc6dcb5a2044e5488d3315194d50c816b51efe0f520783118dc",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:43Z"
+          "retrieved_at": "2026-10-30T15:31:04Z"
         },
         {
           "label": "SSMFS 2008:38 (konsoliderad version)",
@@ -37551,7 +37551,7 @@
           "bytes": 172862,
           "sha256": "06eb21fb14f5d92949c19cb6922d5ad7ea1e02378cb5315e6c24b1e945d88a66",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:44Z"
+          "retrieved_at": "2026-10-30T15:31:05Z"
         }
       ]
     },
@@ -37565,7 +37565,7 @@
           "bytes": 123110,
           "sha256": "04b4c4f41abd4d9a2a901c75bbf34a75e141d43b47f48500f32fe84186930bf4",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:40Z"
+          "retrieved_at": "2026-10-30T15:31:01Z"
         },
         {
           "label": "SSMFS 2008:44 (konsoliderad version)",
@@ -37573,7 +37573,7 @@
           "bytes": 200671,
           "sha256": "e8e1ca08ed8056d510244432404e2252b1043a3d228e2f464d8a0c49b7c52893",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:41Z"
+          "retrieved_at": "2026-10-30T15:31:02Z"
         }
       ]
     },
@@ -37587,7 +37587,7 @@
           "bytes": 125510,
           "sha256": "c16feae649eb0388c18dd09d698b68f3b3e8e6d021c50c962076724ec6297028",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:37Z"
+          "retrieved_at": "2026-10-30T15:30:58Z"
         },
         {
           "label": "SSMFS 2008:47 (konsoliderad version)",
@@ -37595,7 +37595,7 @@
           "bytes": 199552,
           "sha256": "bd77a031a5386d3cb73576210099345f104307e2761498955163de754f2c22c8",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:38Z"
+          "retrieved_at": "2026-10-30T15:30:59Z"
         }
       ]
     },
@@ -37609,7 +37609,7 @@
           "bytes": 136609,
           "sha256": "458bb4085d4b1630af5eba1612e2372ae73d99f77a3cc9aa46bfb906f9047ac6",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:35Z"
+          "retrieved_at": "2026-10-30T15:30:56Z"
         }
       ]
     },
@@ -37623,7 +37623,7 @@
           "bytes": 405899,
           "sha256": "4d1e753fb2ce4db060ccca88c90c9939b13b4ad33a841ec3719a022bae7908dd",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:32Z"
+          "retrieved_at": "2026-10-30T15:30:53Z"
         },
         {
           "label": "SSMFS 2009:1 (konsoliderad version)",
@@ -37631,7 +37631,7 @@
           "bytes": 245055,
           "sha256": "fdbff5e696b97d1c4597bf25920762cfe85027b43e223fb00f73f72ce50c4368",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:33Z"
+          "retrieved_at": "2026-10-30T15:30:54Z"
         }
       ]
     },
@@ -37645,7 +37645,7 @@
           "bytes": 268544,
           "sha256": "30081bbba32b4e1901cda69ab2dbc1d4ef4df8f2bab13ca4140df05a2e64a21f",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:29Z"
+          "retrieved_at": "2026-10-30T15:30:50Z"
         },
         {
           "label": "SSMFS 2012:2 (konsoliderad version)",
@@ -37653,7 +37653,7 @@
           "bytes": 186478,
           "sha256": "8c9329bb3705281168448b10a970450f3ece553bf1e1ca3c297bfb0f552710a5",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:30Z"
+          "retrieved_at": "2026-10-30T15:30:51Z"
         }
       ]
     },
@@ -37667,7 +37667,7 @@
           "bytes": 394716,
           "sha256": "7080377958e7bcfd7271e91f88652cbf5ee26945d666905ae238ffaba974a001",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:26Z"
+          "retrieved_at": "2026-10-30T15:30:47Z"
         },
         {
           "label": "SSMFS 2012:3 (konsoliderad version)",
@@ -37675,7 +37675,7 @@
           "bytes": 337598,
           "sha256": "12ee84d7a1da7f622f3cf8d6e9d5dc5c08cd3743c10fc358f3e079d29aab252b",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:27Z"
+          "retrieved_at": "2026-10-30T15:30:48Z"
         }
       ]
     },
@@ -37689,7 +37689,7 @@
           "bytes": 199327,
           "sha256": "104a352f3dd069cbc11baba3e69671952818b111801e85f02fa448e1dca3ff76",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:23Z"
+          "retrieved_at": "2026-10-30T15:30:44Z"
         },
         {
           "label": "SSMFS 2014:2 (konsoliderad version)",
@@ -37697,7 +37697,7 @@
           "bytes": 307050,
           "sha256": "5de5f2665884b50f7a2820a35c9dcde81fab86a77f84c360214775fe462075d9",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:24Z"
+          "retrieved_at": "2026-10-30T15:30:45Z"
         }
       ]
     },
@@ -37711,7 +37711,7 @@
           "bytes": 501772,
           "sha256": "aec7372c322e82fb0246f46d388eaaf4ed8f596d212d03ccf903d22a33a10a0c",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:20Z"
+          "retrieved_at": "2026-10-30T15:30:41Z"
         },
         {
           "label": "SSMFS 2014:4 (konsoliderad version)",
@@ -37719,7 +37719,7 @@
           "bytes": 359304,
           "sha256": "f442056b64d3032e97b73479ec733945731b6d0fb7d834d1d4ff371d98909b96",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:21Z"
+          "retrieved_at": "2026-10-30T15:30:42Z"
         }
       ]
     },
@@ -37733,7 +37733,7 @@
           "bytes": 403745,
           "sha256": "3b603c696e68818814d067aa4aa45047eacb3b99a43c3d45c4b9306f1e7f4343",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:17Z"
+          "retrieved_at": "2026-10-30T15:30:38Z"
         },
         {
           "label": "SSMFS 2018:1 (konsoliderad version)",
@@ -37741,7 +37741,7 @@
           "bytes": 1056840,
           "sha256": "58cc747357f05a7ac6c6eb3aacbf23a528cef40b4f11aa3749256807b705fc38",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:19Z"
+          "retrieved_at": "2026-10-30T15:30:39Z"
         }
       ]
     },
@@ -37755,7 +37755,7 @@
           "bytes": 509560,
           "sha256": "34a8d55fc899f186d84097e3cf67a69ebb42bce2e7795bcb8199e5dbc38c1546",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:14Z"
+          "retrieved_at": "2026-10-30T15:30:35Z"
         },
         {
           "label": "SSMFS 2018:2 (konsoliderad version)",
@@ -37763,7 +37763,7 @@
           "bytes": 2365121,
           "sha256": "c1ddfb19ee39389570b583eee11ae35edc6ac08a9a3b04b1bf045a4451fc4db1",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:16Z"
+          "retrieved_at": "2026-10-30T15:30:36Z"
         }
       ]
     },
@@ -37777,7 +37777,7 @@
           "bytes": 534637,
           "sha256": "de457553983cace818b718362d344e7ab0ac65e1d2c39fc00744c82fe8478014",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:12Z"
+          "retrieved_at": "2026-10-30T15:30:32Z"
         }
       ]
     },
@@ -37791,7 +37791,7 @@
           "bytes": 206657,
           "sha256": "85500ce6aaaebfa6e7150005155873d528533108d71f88ee988b4bf930f4b977",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:10Z"
+          "retrieved_at": "2026-10-30T15:30:31Z"
         }
       ]
     },
@@ -37805,7 +37805,7 @@
           "bytes": 1297240,
           "sha256": "7469a168372905bd9a05c4054009ab03a57c12672af098eddbf15555a565c683",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:07Z"
+          "retrieved_at": "2026-10-30T15:30:28Z"
         },
         {
           "label": "SSMFS 2018:5 (konsoliderad version)",
@@ -37813,7 +37813,7 @@
           "bytes": 399748,
           "sha256": "4de85f37923d4264b0dbdee91880c0c3b4ee73a0201a3c188d6b92dea9116001",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:08Z"
+          "retrieved_at": "2026-10-30T15:30:29Z"
         }
       ]
     },
@@ -37827,7 +37827,7 @@
           "bytes": 239893,
           "sha256": "9c8e6c88a9abf0f668432d94f7d844b670b34e7360cedbde5a1656e2cc1b5c1d",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:05Z"
+          "retrieved_at": "2026-10-30T15:30:26Z"
         }
       ]
     },
@@ -37841,7 +37841,7 @@
           "bytes": 168063,
           "sha256": "3540f7a38eae211c18bf1ee12bca8ef699c4d7227360a3ef44816d6948798fd5",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:03Z"
+          "retrieved_at": "2026-10-30T15:30:24Z"
         }
       ]
     },
@@ -37855,7 +37855,7 @@
           "bytes": 182548,
           "sha256": "133f65ad36ed8b4eea92b256cbda9bea84ec6f6d8416188182683da9d2a101da",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:19:01Z"
+          "retrieved_at": "2026-10-30T15:30:21Z"
         }
       ]
     },
@@ -37869,7 +37869,7 @@
           "bytes": 209968,
           "sha256": "faa905843e97a3addf7ec9261778745566b326372d0bc416f59dd69b63c87fb0",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:58Z"
+          "retrieved_at": "2026-10-30T15:30:18Z"
         },
         {
           "label": "SSMFS 2018:9 (konsoliderad version)",
@@ -37877,7 +37877,7 @@
           "bytes": 240145,
           "sha256": "7be37cb6bba072a103f69537b51e7a6970a7c939236d5700bc175600593f1928",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:59Z"
+          "retrieved_at": "2026-10-30T15:30:19Z"
         }
       ]
     },
@@ -37891,7 +37891,7 @@
           "bytes": 193133,
           "sha256": "d3f2d607dfb5e1217ca4ce0220505dd451fb0f7bc13cfac16953fe4cbf191338",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:56Z"
+          "retrieved_at": "2026-10-30T15:30:16Z"
         }
       ]
     },
@@ -37905,7 +37905,7 @@
           "bytes": 163810,
           "sha256": "32444070cf310ab4b49f213bcb03db9e6eb25e1dfa407d55ea1e27f5c94e8227",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:54Z"
+          "retrieved_at": "2026-10-30T15:30:14Z"
         }
       ]
     },
@@ -37919,7 +37919,7 @@
           "bytes": 124019,
           "sha256": "0ed2dd9c58b801f6a122be276c19f9817b31a0c642b7406be4256073cfb94a52",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:52Z"
+          "retrieved_at": "2026-10-30T15:30:12Z"
         }
       ]
     },
@@ -37933,7 +37933,7 @@
           "bytes": 747047,
           "sha256": "dca1d332eb254310c52c5d49733759ed6eb4fe1c9d87e6f0a6f838f57408c4f7",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:49Z"
+          "retrieved_at": "2026-10-30T15:30:10Z"
         },
         {
           "label": "SSMFS 2021:4 (konsoliderad version)",
@@ -37941,7 +37941,7 @@
           "bytes": 1232827,
           "sha256": "81b3e546a7e8f9bd13ac87ab82c27a86383ffb7d36e4fb9a895506702e317b31",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:50Z"
+          "retrieved_at": "2026-10-30T15:30:11Z"
         }
       ]
     },
@@ -37955,7 +37955,7 @@
           "bytes": 873305,
           "sha256": "f256bb4a6da53e461b501f20a1dccfde3ffd49c33c1482c601df34bc8ecb0ac7",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:46Z"
+          "retrieved_at": "2026-10-30T15:30:07Z"
         },
         {
           "label": "SSMFS 2021:5 (konsoliderad version)",
@@ -37963,7 +37963,7 @@
           "bytes": 514067,
           "sha256": "65814b5f796c1fd6c944fa383a11286d84d96aef451c35b5a86296ffdd2fcddb",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:47Z"
+          "retrieved_at": "2026-10-30T15:30:08Z"
         }
       ]
     },
@@ -37977,7 +37977,7 @@
           "bytes": 903057,
           "sha256": "b6325a43d70f5a330d36e34d8e46992dba56d5ee7364701101434f3219280d5d",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:40Z"
+          "retrieved_at": "2026-10-30T15:30:03Z"
         },
         {
           "label": "SSMFS 2021:6 (konsoliderad version)",
@@ -37985,7 +37985,7 @@
           "bytes": 1228176,
           "sha256": "86ee91ec29b6c632d4224bf30605c01eaf5b8b76ecfc83bcb9effb01f53f15f0",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:45Z"
+          "retrieved_at": "2026-10-30T15:30:05Z"
         }
       ]
     },
@@ -37999,7 +37999,7 @@
           "bytes": 286740,
           "sha256": "de0b4ccf4ed16b0597d07bb494c268384c9cbd5f3621579b842c087e47006b64",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:36Z"
+          "retrieved_at": "2026-10-30T15:30:01Z"
         }
       ]
     },
@@ -38013,7 +38013,7 @@
           "bytes": 20272,
           "sha256": "d964c362f4ad82ed098220c02f5320b16b269c5cce430f25157cc58210f9e9c1",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:34Z"
+          "retrieved_at": "2026-10-30T15:29:58Z"
         }
       ]
     },
@@ -38027,7 +38027,7 @@
           "bytes": 158405,
           "sha256": "a8691941cdc4f5347ebed851c2db5b4c2b6917d814e9ed2013da1cdafe9ae00a",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:32Z"
+          "retrieved_at": "2026-10-30T15:29:56Z"
         }
       ]
     },
@@ -38041,7 +38041,7 @@
           "bytes": 2588298,
           "sha256": "7264ce0733c590b937997b140eaee60ae66d1056dc450e10de5ec21161e73a40",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:31Z"
+          "retrieved_at": "2026-10-30T15:29:54Z"
         }
       ]
     },
@@ -38055,7 +38055,7 @@
           "bytes": 2173408,
           "sha256": "c5822bd5f55df71dccee38a15b8292d9c3778906c76a9d829f81c828a7a4919a",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:29Z"
+          "retrieved_at": "2026-10-30T15:29:52Z"
         }
       ]
     },
@@ -38069,7 +38069,7 @@
           "bytes": 194524,
           "sha256": "216580e48d7bb41297fc5588d6c8b61672cb9999ba877bd98b2ea0a046ba7b3e",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:25Z"
+          "retrieved_at": "2026-10-30T15:29:49Z"
         },
         {
           "label": "SSMFS 2026:1 (konsoliderad version)",
@@ -38077,7 +38077,7 @@
           "bytes": 193152,
           "sha256": "a85679188e7c82f72fa1f2f843ea0f05dbb3266b0b68401452f539b74f07fd95",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:26Z"
+          "retrieved_at": "2026-10-30T15:29:50Z"
         }
       ]
     },
@@ -38091,7 +38091,7 @@
           "bytes": 603260,
           "sha256": "bef40aaf54d87cf37839e6d4c91e5c143ec59f48a539d28d651333a3def7b0a0",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T00:18:24Z"
+          "retrieved_at": "2026-10-30T15:29:47Z"
         }
       ]
     },
@@ -42443,7 +42443,7 @@
           "bytes": 84406,
           "sha256": "8f72b07a1c40f156b6919d8f3b6719ffc0400c22f756a43e028002ba989aaab7",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:18Z"
+          "retrieved_at": "2026-10-30T15:32:53Z"
         }
       ]
     },
@@ -42457,7 +42457,7 @@
           "bytes": 71362,
           "sha256": "4a4ccc43288050ae907d74dd9a8686b84ae97d4a2d38c1df385b25eaf42cb332",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:20Z"
+          "retrieved_at": "2026-10-30T15:32:55Z"
         }
       ]
     },
@@ -42471,7 +42471,7 @@
           "bytes": 97956,
           "sha256": "6f0d7602493530a0bb2c55cfbb529c6326b289529b80e0b6d0b3a365eaf25b63",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:22Z"
+          "retrieved_at": "2026-10-30T15:32:57Z"
         }
       ]
     },
@@ -42485,7 +42485,7 @@
           "bytes": 92590,
           "sha256": "7e243f4a45540e903f01a30e627f0bd9018b65e74506a5bfb4b599308a1954cf",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:24Z"
+          "retrieved_at": "2026-10-30T15:32:59Z"
         }
       ]
     },
@@ -42499,7 +42499,7 @@
           "bytes": 102323,
           "sha256": "79d8ed91378d372553353d7822368dc12886c024fc60ac2ee88a101677ae8c2d",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:26Z"
+          "retrieved_at": "2026-10-30T15:33:01Z"
         }
       ]
     },
@@ -42513,7 +42513,7 @@
           "bytes": 90905,
           "sha256": "94958a294a54a9be8d797a615b5df44fdd6cd12f1ec203f819796117ace57434",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:28Z"
+          "retrieved_at": "2026-10-30T15:33:03Z"
         }
       ]
     },
@@ -42527,7 +42527,7 @@
           "bytes": 158945,
           "sha256": "65f440d77e719503798946c80114ea0d17a4174ff0ac49bd21abf0905b9c8ad8",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:30Z"
+          "retrieved_at": "2026-10-30T15:33:05Z"
         }
       ]
     },
@@ -42541,7 +42541,7 @@
           "bytes": 81965,
           "sha256": "989c89cd4b40d232d6318abfa09aee0b3dd7a562dd55533684c7ef8e45ae64df",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:32Z"
+          "retrieved_at": "2026-10-30T15:33:07Z"
         }
       ]
     },
@@ -42555,7 +42555,7 @@
           "bytes": 70745,
           "sha256": "ae23310dbfe6eeadd9c6bafafd521a00a9cf781ef91d04544ef373e6c2854020",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:34Z"
+          "retrieved_at": "2026-10-30T15:33:09Z"
         }
       ]
     },
@@ -42569,7 +42569,7 @@
           "bytes": 84836,
           "sha256": "d82259d02478e890e09b16464919423abb450cda01de6065b03c86b010da037e",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:36Z"
+          "retrieved_at": "2026-10-30T15:33:11Z"
         }
       ]
     },
@@ -42583,7 +42583,7 @@
           "bytes": 65387,
           "sha256": "9c73d16d7b1fda18f69ba715e223872ebf66199007045ebded8b89a40bbc4185",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:38Z"
+          "retrieved_at": "2026-10-30T15:33:13Z"
         }
       ]
     },
@@ -42597,7 +42597,7 @@
           "bytes": 66398,
           "sha256": "5af3b6540af53ea6ec5d694ecf0d6c5323bd51ea6c6976043e7ea8b30e87c56e",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:40Z"
+          "retrieved_at": "2026-10-30T15:33:15Z"
         }
       ]
     },
@@ -42611,7 +42611,7 @@
           "bytes": 66631,
           "sha256": "333f7c39abd585ba0cf5c9dcd0da18330b8bf3d72042263e6158aa17e9a39ad3",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:42Z"
+          "retrieved_at": "2026-10-30T15:33:17Z"
         }
       ]
     },
@@ -42625,7 +42625,7 @@
           "bytes": 311240,
           "sha256": "145e9299ec691c990e14b8adb2c75538a4ea33c685ae6dbd3253a53830041c79",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:44Z"
+          "retrieved_at": "2026-10-30T15:33:19Z"
         }
       ]
     },
@@ -42639,7 +42639,7 @@
           "bytes": 139073,
           "sha256": "59f459728730bc89be87ad8bfc4d86b69ecf720cbeeecd0ba591529826d6c00e",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:46Z"
+          "retrieved_at": "2026-10-30T15:33:21Z"
         }
       ]
     },
@@ -42653,7 +42653,7 @@
           "bytes": 110597,
           "sha256": "53458108d4b6c016f044e021e9192a821c15fde9857e4ab84ade05379c919447",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:48Z"
+          "retrieved_at": "2026-10-30T15:33:23Z"
         }
       ]
     },
@@ -42667,7 +42667,7 @@
           "bytes": 142943,
           "sha256": "384f8c7fc8d6fe434de7049cbbc796c2954e1ed2302cf27a5bbb972f9065ae4c",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:15Z"
+          "retrieved_at": "2026-10-30T15:32:50Z"
         }
       ]
     },
@@ -42681,7 +42681,7 @@
           "bytes": 17825,
           "sha256": "d6b18e94544fdb352227ec150caa23d79f2922715f0fb2831fa35bacb37c2af8",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:10Z"
+          "retrieved_at": "2026-10-30T15:32:45Z"
         }
       ]
     },
@@ -42695,7 +42695,7 @@
           "bytes": 18478,
           "sha256": "5e00dd8130eee58a1883fd8f40a54719279c63c5b8e406b3cd1a7e879d8e7064",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:12Z"
+          "retrieved_at": "2026-10-30T15:32:47Z"
         }
       ]
     },
@@ -42709,7 +42709,7 @@
           "bytes": 187369,
           "sha256": "4765e28cb9d5c557335b33d7915a4c9f74dcfb01e0f9127df2edffc2d800cba8",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:05Z"
+          "retrieved_at": "2026-10-30T15:32:40Z"
         }
       ]
     },
@@ -42723,7 +42723,7 @@
           "bytes": 142208,
           "sha256": "94bae7799a0ee26ce1ce066c3734457c4adcd2d2fd79b9b1f967a494e26b0eec",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:07Z"
+          "retrieved_at": "2026-10-30T15:32:42Z"
         }
       ]
     },
@@ -42737,7 +42737,7 @@
           "bytes": 155853,
           "sha256": "8f8c53797c5cb95dfa5265bbbde7382d2fe584eb9835402ebab2e33f82714ec8",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:57Z"
+          "retrieved_at": "2026-10-30T15:32:32Z"
         }
       ]
     },
@@ -42751,7 +42751,7 @@
           "bytes": 157610,
           "sha256": "98b9935dc77dfd8854eab01abc1b192590db0b7cf9685b696c4eb0c13500df8e",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:59Z"
+          "retrieved_at": "2026-10-30T15:32:34Z"
         }
       ]
     },
@@ -42765,7 +42765,7 @@
           "bytes": 135991,
           "sha256": "ecda2b8731859768283410a75728a188f8dc519229223430176ec687ae062e56",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:45:01Z"
+          "retrieved_at": "2026-10-30T15:32:36Z"
         }
       ]
     },
@@ -42779,7 +42779,7 @@
           "bytes": 119218,
           "sha256": "c18da0c4e274964f19c16e17d41f388f235e6d999c036e8c8f9f40709f1acdd8",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:45Z"
+          "retrieved_at": "2026-10-30T15:32:20Z"
         }
       ]
     },
@@ -42793,7 +42793,7 @@
           "bytes": 120606,
           "sha256": "7f275b80570ea8253b305150761566795ee4e41a2479f8c7b126bd6f10d09bbc",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:47Z"
+          "retrieved_at": "2026-10-30T15:32:22Z"
         }
       ]
     },
@@ -42807,7 +42807,7 @@
           "bytes": 119445,
           "sha256": "d5ae26c131415da725cca6e98d81eafef6dbcfab6d6e2685d4e8f712d5614331",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:49Z"
+          "retrieved_at": "2026-10-30T15:32:24Z"
         }
       ]
     },
@@ -42821,7 +42821,7 @@
           "bytes": 119801,
           "sha256": "cbc72ef04d3e9bf3b621941c197c6c37f0cbaf1a22ea052c0f856f40600ab575",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:51Z"
+          "retrieved_at": "2026-10-30T15:32:26Z"
         }
       ]
     },
@@ -42835,7 +42835,7 @@
           "bytes": 118068,
           "sha256": "cbfa3488e8dad77d3d73f891487a08369e9190b65690a82d77356223a30a77cf",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:42Z"
+          "retrieved_at": "2026-10-30T15:32:17Z"
         }
       ]
     },
@@ -42849,7 +42849,7 @@
           "bytes": 116972,
           "sha256": "6c177de3f8900fb6d83285cbd09b2eefef8000f57da3a86a62773c9b62e5a9b1",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:37Z"
+          "retrieved_at": "2026-10-30T15:32:12Z"
         }
       ]
     },
@@ -42863,7 +42863,7 @@
           "bytes": 117184,
           "sha256": "e2286c76b059aa5796d6472b470e0aaa167181bbfbe92d34e7d1f0b8f7a77826",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:39Z"
+          "retrieved_at": "2026-10-30T15:32:14Z"
         }
       ]
     },
@@ -42877,7 +42877,7 @@
           "bytes": 23749,
           "sha256": "1d37340fa094b92b6eda8e5838d2c043f7647b1eb9d1c4a1894531a5f4542483",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:33Z"
+          "retrieved_at": "2026-10-30T15:32:08Z"
         }
       ]
     },
@@ -42891,7 +42891,7 @@
           "bytes": 117933,
           "sha256": "1315a40c932dbe7bfc97ab8733a6d628e5c8947781ee5ddb886fbcb94ec45014",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:22Z"
+          "retrieved_at": "2026-10-30T15:31:57Z"
         }
       ]
     },
@@ -42905,7 +42905,7 @@
           "bytes": 14841,
           "sha256": "0e94407eca38e52ebd2305b5859daa6a71308ccee51036ba70fc18b697259323",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:24Z"
+          "retrieved_at": "2026-10-30T15:31:59Z"
         }
       ]
     },
@@ -42919,7 +42919,7 @@
           "bytes": 70502,
           "sha256": "320b77557a783d325e66eb5b93450a84c8e7c26a556a59b5df42f117b42f2d60",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:26Z"
+          "retrieved_at": "2026-10-30T15:32:01Z"
         }
       ]
     },
@@ -42933,7 +42933,7 @@
           "bytes": 67931,
           "sha256": "0d99b9bc085279ff317ee4d0539d5fa38849cb347019b6ec1d1e05a71c1dc8e4",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:28Z"
+          "retrieved_at": "2026-10-30T15:32:03Z"
         }
       ]
     },
@@ -42947,7 +42947,7 @@
           "bytes": 67673,
           "sha256": "e4690edc06aa2ec23095f7ecdc409794b7351c0703bce3f71a0be34d2b84ae9d",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:30Z"
+          "retrieved_at": "2026-10-30T15:32:05Z"
         }
       ]
     },
@@ -42961,7 +42961,7 @@
           "bytes": 68465,
           "sha256": "7d05fb776d55587c492d3bbf87fd4fb332cca0b5a3ffc22ec81c62f898de32dc",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:17Z"
+          "retrieved_at": "2026-10-30T15:31:52Z"
         }
       ]
     },
@@ -42975,7 +42975,7 @@
           "bytes": 341637,
           "sha256": "ac1aaae09a395999aa1a5b0649457e532296701186fef2f12a13fefb51ef0d5e",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:19Z"
+          "retrieved_at": "2026-10-30T15:31:54Z"
         }
       ]
     },
@@ -42989,7 +42989,7 @@
           "bytes": 54976,
           "sha256": "bd05d561eeff2e2e4ae5a4c2e9619e79a5ec546270fc9b845f3827c9c4846b00",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:10Z"
+          "retrieved_at": "2026-10-30T15:31:45Z"
         }
       ]
     },
@@ -43003,7 +43003,7 @@
           "bytes": 64616,
           "sha256": "aeebdb5e8c7938070217c7e85a4ae1f2e053b823fc6889e59bcca2495cdae6d4",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:12Z"
+          "retrieved_at": "2026-10-30T15:31:47Z"
         }
       ]
     },
@@ -43017,7 +43017,7 @@
           "bytes": 69270,
           "sha256": "b878045414d8e12ae296d92f0ed560c3c37ce139396150604ed28bcddeb30ad3",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:44:14Z"
+          "retrieved_at": "2026-10-30T15:31:49Z"
         }
       ]
     },
@@ -54020,14 +54020,6 @@
           "sha256": "1b5ca862f8a90fefff7e8abe249cccbc7b9e18843fb6bbbcdd26cf14dc461aa7",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-29T23:57:00Z"
-        },
-        {
-          "label": "TVFS 2009:1 (omtryck genom TVFS 2019:2)",
-          "url": "https://tillvaxtverket.se/download/18.3c5778e419300021cb968293/1731412766331/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20(TVFS%202009_1)%20om%20kontaktpunkten%20f%C3%B6r%20tj%C3%A4nster%20p%C3%A5%20den%20inre%20marknaden.pdf",
-          "bytes": 246716,
-          "sha256": "28d7aab6c185b5fbba477e9cf4752aad90476b19eff317ea30ca2ff66f9830c8",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-29T23:57:00Z"
         }
       ]
     },
@@ -54084,14 +54076,6 @@
           "sha256": "d900e9c8295b190226e06dee4ac01e05a6a4bc0bf6dbdab4a3b210ee8e0b9c3a",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-29T23:56:54Z"
-        },
-        {
-          "label": "TVFS 2015:1 (omtryck genom TVFS 2019:1)",
-          "url": "https://tillvaxtverket.se/download/18.3c5778e419300021cb96820a/1731412575821/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20(TVFS%202015_1)%20om%20st%C3%B6d%20fr%C3%A5n%20de%20regionala%20strukturfondsprogrammen%20inom%20m%C3%A5let%20Investering%20f%C3%B6r%20tillv%C3%A4xt%20och%20syssels%C3%A4ttning.pdf",
-          "bytes": 255266,
-          "sha256": "e7f05783f93919736b71afbead43929331e5bca95f4aeb5fd3725514fa39e880",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-29T23:56:55Z"
         }
       ]
     },
