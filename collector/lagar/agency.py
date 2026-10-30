@@ -1538,6 +1538,77 @@ class SpelinspektionenAdapter:
                           version="Grundförfattning", pdfs=[(entry.number, pdf)])
 
 
+# --- Sametinget (STFS) --------------------------------------------------------
+
+_STFS_REF = re.compile(r"STFS (\d{4}):(\d+)")
+
+
+class SametingetAdapter:
+    """Sametinget's document bank, category STFS, through the JSON its search page reads.
+
+    `/servlet/DocBankServlet?cat=72` returns ten documents a page as HTML (all
+    pages are read as one listing): a
+    heading with the number and a short title, a description and a link to
+    the PDF. Descriptions tell amending regulations ("om ändring i ... (STFS
+    2007:9)") and consolidated versions apart from base regulations; a
+    regulation listed twice is read once, newest first.
+    """
+
+    series = "STFS"
+    issuer = "Sametinget"
+    base_url = "https://sametinget.se"
+    listing_url = base_url + "/servlet/DocBankServlet?path=&cat=72&subCat=&q=&isOnLoad=true"
+    detail = False
+    has_text = False
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def fetch_listing(self, client, url):
+        """Every page in one listing, so amendments and consolidated versions meet their base regulation."""
+        first = json.loads(client.get(url))
+        html_pages = [first.get("html") or ""]
+        for n in sorted({int(n) for n in re.findall(r"dokumentbank\?idx=(\d+)", html_pages[0])} - {0, 1}):
+            page = client.get(f"{self.base_url}/servlet/DocBankServlet?path=&cat=72&subCat=&q=&isOnLoad=false&idx={n}")
+            html_pages.append(json.loads(page).get("html") or "")
+        return json.dumps({"html": "\n".join(html_pages)}).encode("utf-8")
+
+    def parse_listing(self, text, url):
+        entries, amending, consolidated = {}, {}, {}
+        for item in parse_html(json.loads(text).get("html") or "").find_all("div", "item"):
+            heading, description = item.find("h3"), item.find("div", "text")
+            link = next((a for a in item.find_all("a") if "file_id=" in (a.attrs.get("href") or "")), None)
+            match = _STFS_REF.match(heading.text()) if heading is not None else None
+            if match is None or link is None:
+                continue
+            number = f"STFS {match.group(1)}:{int(match.group(2))}"
+            name = _clean(heading.text()[match.end():])
+            note = _clean((description.text() if description is not None else "").removeprefix("[PDF]"))
+            pdf = absolute(self.base_url, link.attrs["href"])
+            if note.startswith("Konsoliderad version"):
+                consolidated.setdefault(number, pdf)
+                continue
+            changes = _AMENDING.search(note) or _AMENDING.search(name) or name.startswith("Ändring")
+            if changes:
+                for ref in _STFS_REF.finditer(f"{name} {note}"):
+                    target = f"STFS {ref.group(1)}:{int(ref.group(2))}"
+                    if target != number:
+                        amending.setdefault(target, set()).add(number)
+            if number not in entries:
+                entries[number] = Entry(number=number, title=name or number, url=pdf, base=not changes,
+                                        in_force=_date(note.partition("Gäller från")[2]),
+                                        pdfs=[(number, pdf)])
+        for number, entry in entries.items():
+            entry.amended_by = sorted(amending.get(number, ()), key=number_key)
+            if number in consolidated:
+                entry.pdfs.append((f"{number} (konsoliderad version)", consolidated[number]))
+        return list(entries.values())
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, in_force=entry.in_force,
+                          amended_by=list(entry.amended_by), version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1774,7 +1845,7 @@ ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), Ak
                                    EnergimyndighetenAdapter(), RiksdagenAdapter(),
                                    RiksarkivetAdapter(), SkolverketAdapter(),
                                    SjofartsverketAdapter(), TrafikverketAdapter(),
-                                   SpelinspektionenAdapter())}
+                                   SpelinspektionenAdapter(), SametingetAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 

@@ -439,6 +439,29 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             spel.parse_detail(fixture("agency-sifs-detail.html"), entries["SIFS 2026:1"])
 
+    def test_stfs_document_bank(self):
+        stfs = agency.SametingetAdapter()
+        first = fixture("agency-stfs-page1.json").encode()
+
+        class Client:
+            calls = []
+
+            def get(self, url):
+                self.calls.append(url)
+                return first if "idx=" not in url else json.dumps({"html": ""}).encode()
+
+        client = Client()
+        text = stfs.fetch_listing(client, stfs.listing_url).decode()
+        self.assertEqual([u.rsplit("idx=", 1)[-1] for u in client.calls[1:]], ["2", "3", "4"])
+        entries = {e.number: e for e in stfs.parse_listing(text, stfs.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base),
+                         ["STFS 2016:1", "STFS 2017:1", "STFS 2018:1", "STFS 2024:1"])
+        self.assertFalse(entries["STFS 2025:1"].base)  # "Föreskrifter om ändring i ..."
+        self.assertFalse(entries["STFS 2019:1"].base)  # "Ändring Katastrofskadeskydd"
+        self.assertEqual(entries["STFS 2016:1"].amended_by, ["STFS 2019:1"])
+        self.assertTrue(entries["STFS 2024:1"].url.endswith("/6371?file_id=1"))  # the newest of two listings
+        self.assertNotIn("STFS 2007:9", {n for n, e in entries.items() if e.base})  # only its consolidated version here
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():
