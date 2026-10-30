@@ -101,6 +101,13 @@ class CountyParsingTests(unittest.TestCase):
         self.assertEqual(items[0].published, "2026-02-16")
         self.assertTrue(items[1].title.startswith("Länsstyrelsen i Stockholms läns beslut om avgränsning"))
 
+    def test_year_index_skips_other_series(self):
+        other = YEAR.replace("01FS 2026:02", "14FS 2021:43", 1)
+        items = county.parse_year(other, YEAR_URL.format(2026), "01")
+        self.assertEqual([i.number for i in items], ["01FS 2026:1", "01FS 2026:3"])
+        with self.assertRaises(ValueError):
+            county.parse_year(YEAR.replace("01FS 2026:02", "Bekantgörelse", 1), YEAR_URL.format(2026), "01")
+
     def test_detail_page_maps_to_valid_frontmatter_and_body(self):
         item = county.parse_year(YEAR, YEAR_URL.format(2026), "01")[0]
         detail = county.parse_detail(DETAIL, item.url, "01")

@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.ludvika.se/kommun-och-politik/styrande-dokument": "2085-listing1.html",
+    "https://www.ludvika.se/kommun-och-politik/fakta-om-kommunen/taxor-och-avgifter": "2085-listing2.html"
+  },
+  "count": 19,
+  "sample": {
+    "number": "3ec50c7f-49a6-488c-90da-c2fb8b69f55e",
+    "title": "Allmänna bestämmelser för användande av Ludvika kommuns allmänna vatten- och avloppsanläggning samt information till fastighetsägare 2021",
+    "url": "https://dokumentwebb.ludvika.se/api/download/3ec50c7f-49a6-488c-90da-c2fb8b69f55e/8c47f05e-d418-40f9-a31a-e99cf80aee22"
+  },
+  "excluded": [
+    "Bolagspolicy",
+    "Brandskyddspolicy",
+    "Finanspolicy"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://ockelbo.se/kommun--politik/beslut--handlingar/styrdokument-": "2101-listing.html"
+  },
+  "count": 4,
+  "sample": {
+    "number": "18.4737f1df1980752c7d185c7",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://ockelbo.se/download/18.4737f1df1980752c7d185c7/1752586343988/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20reviderade.pdf"
+  },
+  "excluded": [
+    "Ägardirektiv Ockelbogårdar AB",
+    "Dataskyddspolicy",
+    "Kostpolicy"
+  ]
+}

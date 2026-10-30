@@ -755,6 +755,15 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
    - `follow` (regex, `html_index`): links on a listing whose absolute URL matches are read as
      further listing pages (pagination), up to 100 pages, skipping those robots.txt disallows. The
      Sitevision preset follows its file list's `?lp-page=N` links.
+   - `html_pages`: kommuner that publish each rule as its own web page (Oskarshamn's taxor are page
+     text, with no PDF). The listing is read as for `html_index`, with `link_pattern` matching the
+     rule pages. Each page is fetched: when it links a document matching `document_pattern`
+     (for example `\\.pdf$`), that PDF is the source and the page text goes into the body as the
+     kommun's note; otherwise the page text itself is the document. The text is the page's `<main>`
+     element (or the element whose id is `content_id`) converted with `htmlmd`, without print,
+     feedback and "senast granskad" lines; `source` is the page URL and `source_sha256` hashes the
+     converted text, so markup changes alone do not count as a new version. A page with less than
+     40 characters of text outside its headings is a failure (an empty page, not a rule).
 3. Choose `sections` or `kinds` so that only rules for residents are collected. Where the list mixes
    rules and internal documents with no headings to tell them apart, `"resident_filter": true`
    keeps a title only when it names a rule for residents (föreskrifter, taxor, avgifter, avfall,
