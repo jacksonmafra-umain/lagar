@@ -1,0 +1,15 @@
+{
+  "listings": {
+    "https://www.gislaved.se/kommun-och-politik/politik-och-demokrati/regler-och-styrande-dokument/foreskrifter": "0662-listing.html",
+    "https://www.gislaved.se/kommun-och-politik/politik-och-demokrati/regler-och-styrande-dokument/kommunens-samlade-taxor": "0662-listing-2.html"
+  },
+  "count": 22,
+  "sample": {
+    "number": "18.6c7bb61c1851412f92b21e54",
+    "title": "Allmänna bestämmelser för Gislaveds kommuns VA, ABVA, antagna den 20 november 2008",
+    "url": "https://www.gislaved.se/download/18.6c7bb61c1851412f92b21e54/1672837741568/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20Gislaveds%20kommuns%20VA,%20ABVA,%20antagna%20den%2020%20november%202008.pdf"
+  },
+  "excluded": [
+    "Bestämmelser om omställningsstöd, pension och familjeskydd för förtroendevalda (OPFKR 26), antagen den 22 juni 2026"
+  ]
+}

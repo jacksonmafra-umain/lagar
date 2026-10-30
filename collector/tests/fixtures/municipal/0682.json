@@ -1,0 +1,20 @@
+{
+  "listings": {
+    "https://nassjo.se/kommun-och-politik/kommunens-handlingar/forfattningssamling/ovriga-styrdokument/taxor-och-avgifter.html": "0682-listing.html",
+    "https://nassjo.se/kommun-och-politik/kommunens-handlingar/forfattningssamling/ovriga-styrdokument/renhallning-och-va.html": "0682-listing-2.html",
+    "https://nassjo.se/kommun-och-politik/kommunens-handlingar/forfattningssamling/ovriga-styrdokument/samhallsplanering.html": "0682-listing-3.html",
+    "https://nassjo.se/kommun-och-politik/kommunens-handlingar/forfattningssamling/ovriga-styrdokument/miljo.html": "0682-listing-4.html",
+    "https://nassjo.se/kommun-och-politik/kommunens-handlingar/forfattningssamling/ovriga-styrdokument/trafik-och-transporter.html": "0682-listing-5.html"
+  },
+  "count": 18,
+  "sample": {
+    "number": "18.1416ad461869be21f644982",
+    "title": "Avfallstaxa",
+    "url": "https://nassjo.se/download/18.1416ad461869be21f644982/1767779480030/Avfallstaxa.pdf"
+  },
+  "excluded": [
+    "Avfallsplan 2025-2035",
+    "Riktlinje för hantering av medel avsatta till offentlig medfinansiering av externa utvecklingsprojekt",
+    "Riktlinjer för belysning i gataparkverksamheten i Nässjö kommun"
+  ]
+}

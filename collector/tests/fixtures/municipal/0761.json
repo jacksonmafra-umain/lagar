@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.lessebo.se/kommun-och-politik/regler-och-styrande-dokument.html": "0761-listing.html"
+  },
+  "count": 9,
+  "sample": {
+    "number": "18.642b1a04195ffff91a1aa1f",
+    "title": "Lokala hälsoskyddsföreskrifter",
+    "url": "https://www.lessebo.se/download/18.642b1a04195ffff91a1aa1f/1762104149406/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n%20antagna%202024-10-28%20%20%20107.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige",
+    "Reglemente och arbetsordning för kommunstyrelsen",
+    "Reglemente och arbetsordning för barn- och utbildningsnämnden"
+  ]
+}

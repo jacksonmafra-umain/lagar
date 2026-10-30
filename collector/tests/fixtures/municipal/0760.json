@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.uppvidinge.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/kommunala-foreskrifter.html": "0760-listing.html",
+    "https://www.uppvidinge.se/bo-bygga-och-miljo/trafik-resor-och-gator/torg-parker-och-allmanna-platser/tillstand-och-regler.html": "0760-listing-2.html"
+  },
+  "count": 2,
+  "sample": {
+    "number": "18.42c2c9ca162f6e008c829ed3",
+    "title": "Allmänna föreskrifter miljö och hälsa",
+    "url": "https://www.uppvidinge.se/download/18.42c2c9ca162f6e008c829ed3/1543402371838/Allm%C3%A4nna%20f%C3%B6reskrifter%20milj%C3%B6%20och%20h%C3%A4lsa.pdf"
+  },
+  "excluded": []
+}
