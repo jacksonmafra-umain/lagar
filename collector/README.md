@@ -545,13 +545,14 @@ python3 -I collector/collect.py county --county CODE [--from-year YYYY] [--to-ye
     ..."). `in_force` is set only when the text names exactly one date in "träder i kraft den ...".
     `source` is the detail page and `source_sha256` hashes its heading, ingress and text fragments
     (the full page carries a per-request script nonce, so it is not hashed whole).
-  - `files`: `title` is the link text without the number, `.pdf` and an "UPPHÄVD" mark (plus the
-    county's `title_strip` patterns); when nothing is left, the paragraph following a plain link is
-    used (Dalarna), or else the number itself. `issued` is the decision date of that paragraph when
-    there is one, otherwise the "beslutade den ..." date of the PDF text; `in_force` comes from the
-    PDF text like for `pages`. `source` is the PDF and `source_sha256` its
-    SHA-256 (with `--no-pdf`, a hash of the link URLs and texts). Files sharing a number (a
-    regulation and its map) form one document.
+  - `files`: `title` is the title printed in the PDF (an early paragraph ending in `;` that names a
+    regulation or decision) when its text was read; otherwise the link text without the number,
+    `.pdf` and an "UPPHÄVD" mark (plus the county's `title_strip` patterns); when nothing is left,
+    the paragraph following a plain link is used (Dalarna), or else the number itself. `issued` is
+    the decision date of that paragraph when there is one, otherwise the "beslutade den ..." date of
+    the PDF text; `in_force` comes from the PDF text like for `pages`. `source` is the PDF and
+    `source_sha256` its SHA-256 (with `--no-pdf`, a hash of the link URLs and texts). Files sharing
+    a number (a regulation and its map) form one document.
 - Body: a facts block (number, publication and decision dates, entry into force, issuer; for
   `files` also the landing page), the text of the detail page converted to Markdown (lists and
   nested lists kept; links keep their text), then `## Tryckt version` with links to the printed
