@@ -763,7 +763,7 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      element (or the element whose id is `content_id`) converted with `htmlmd`, without print,
      feedback and "senast granskad" lines; `source` is the page URL and `source_sha256` hashes the
      converted text, so markup changes alone do not count as a new version. A page with less than
-     200 characters of text is a failure (a menu, not a rule).
+     40 characters of text outside its headings is a failure (an empty page, not a rule).
 3. Choose `sections` or `kinds` so that only rules for residents are collected. Where the list mixes
    rules and internal documents with no headings to tell them apart, `"resident_filter": true`
    keeps a title only when it names a rule for residents (föreskrifter, taxor, avgifter, avfall,

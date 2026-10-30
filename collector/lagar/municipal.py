@@ -97,7 +97,7 @@ RESIDENT_EXCLUDE = (
 )
 ENCODING_ATTEMPTS = 3
 MAX_LISTING_PAGES = 100
-MIN_PAGE_TEXT = 200  # characters; less is a menu or an empty page, not a rule
+MIN_PAGE_TEXT = 40  # characters outside headings; less is an empty page, not a rule
 # Page furniture that ends up in a rule page's text: print and feedback links, review dates.
 PAGE_NOISE = re.compile(
     r"^(skriv ut( sidan)?|lämna synpunkter|dela( sidan)?|tipsa|lyssna|innehållsansvarig|"
@@ -659,7 +659,8 @@ class Detail:
     attachments: "list[tuple[str, str]]"  # (url, label)
 
     def text_ok(self):
-        return len(self.note) >= MIN_PAGE_TEXT
+        body = [line for line in self.note.splitlines() if not line.startswith("#")]
+        return len("".join(body).strip()) >= MIN_PAGE_TEXT
 
 
 _DETAIL_IDS = {
