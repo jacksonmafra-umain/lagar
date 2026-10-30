@@ -364,6 +364,20 @@ class ParseTest(unittest.TestCase):
             skolfs.parse_detail(fixture("agency-skolfs-2026-67.json"), consolidated)
         self.assertIn("SKOLFS 2011:153", skolfs.consolidated)
 
+    def test_sjofs_subject_pages(self):
+        sjofs = agency.SjofartsverketAdapter()
+        index = '<a href="/sv/om-oss/lagrum/systematisk-forteckning-n/fartyg/">a</a>' * 2
+        self.assertEqual(sjofs.more_pages(index, sjofs.listing_url), [sjofs.listing_url + "fartyg/"])
+        self.assertEqual(sjofs.more_pages(index, sjofs.listing_url + "fartyg/"), [])
+        page = sjofs.listing_url + "fartyg/"
+        entries = sjofs.parse_listing(fixture("agency-sjofs-subject.html"), page)
+        # 1952:A9 has no plain ordinal and 1968:A19 is repealed: neither is stored.
+        self.assertEqual([e.number for e in entries], ["SJÖFS 1984:14", "SJÖFS 1999:27"])
+        self.assertEqual(entries[0].amended_by, ["SJÖFS 1999:12"])
+        self.assertEqual(entries[1].title, "Säkerheten på fiskefartyg som har en längd av 24 meter eller mer")
+        self.assertIn("SJÖFS 2026:13", entries[1].amended_by)
+        self.assertEqual(sjofs.parse_listing(fixture("agency-sjofs-subject.html"), page), [])  # read once
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

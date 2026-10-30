@@ -1323,6 +1323,67 @@ class SkolverketAdapter:
         )
 
 
+# --- Sjöfartsverket (SJÖFS) ---------------------------------------------------
+
+_SJOFS_NUMBER = re.compile(r"(\d{4}):(\d+)")
+
+
+class SjofartsverketAdapter:
+    """Sjöfartsverket's systematic list of regulations in force, one page per subject.
+
+    The index links to the subject pages; each has a table whose rows give the
+    base regulation's number (linked to its PDF), the title and the amending
+    regulations. Regulations numbered before the series used plain ordinals
+    (`1952:A9`) and rows marked repealed are not stored. A regulation listed
+    under several subjects is read once.
+    """
+
+    series = "SJÖFS"
+    issuer = "Sjöfartsverket"
+    base_url = "https://www.sjofartsverket.se"
+    listing_url = base_url + "/sv/om-oss/lagrum/systematisk-forteckning-n/"
+    detail = False
+    has_text = False
+
+    def __init__(self):
+        self.seen = set()
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def more_pages(self, text, url):
+        if url != self.listing_url:
+            return []
+        pages = re.findall(r'href="(/sv/om-oss/lagrum/systematisk-forteckning-n/[a-z0-9-]+/)"', text)
+        return [absolute(url, p) for p in dict.fromkeys(pages)]
+
+    def parse_listing(self, text, url):
+        entries = []
+        for row in parse_html(text).find_all("tr"):
+            cells = [c for c in row.children if isinstance(c, Node) and c.tag == "td"]
+            if len(cells) < 2:
+                continue
+            link = cells[0].find("a")
+            match = _SJOFS_NUMBER.fullmatch(link.text()) if link is not None else None
+            if match is None or "Upphävd" in cells[0].text():
+                continue
+            number = f"SJÖFS {match.group(1)}:{int(match.group(2))}"
+            if number in self.seen:
+                continue
+            self.seen.add(number)
+            title = cells[1].text().partition("Ändringsföreskrifter")[0]
+            amended_by = {f"SJÖFS {ref.group(1)}:{int(ref.group(2))}"
+                          for ref in (_SJOFS_NUMBER.fullmatch(a.text()) for a in cells[1].find_all("a")) if ref}
+            pdf = absolute(url, link.attrs.get("href", ""))
+            entries.append(Entry(number=number, title=_clean(title) or number, url=pdf,
+                                 amended_by=sorted(amended_by, key=number_key), pdfs=[(number, pdf)]))
+        return entries
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, amended_by=list(entry.amended_by),
+                          version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1542,7 +1603,8 @@ def load_series(path=SERIES_CONFIG):
 ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
                                    PrvAdapter(), PolisenAdapter(), ScbAdapter(),
                                    EnergimyndighetenAdapter(), RiksdagenAdapter(),
-                                   RiksarkivetAdapter(), SkolverketAdapter())}
+                                   RiksarkivetAdapter(), SkolverketAdapter(),
+                                   SjofartsverketAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
