@@ -28,6 +28,96 @@
       "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2020-05-avgifter-for-kopior-m.m.-av-allmanna-handlingar.pdf"
     },
     {
+      "bytes": 199831,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2025-10",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T23:59:32Z",
+      "sha256": "43dc64f56df6da53c8b2542c513aae70d09cead566a3ddb268e35d4b8f383e2d",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2025-10-taxa-for-upplatelse-av-offentlig-plats-med-polistillstand.pdf"
+    },
+    {
+      "bytes": 749650,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-01",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T23:59:23Z",
+      "sha256": "048c84ed91a2d235469444ba9f3a726378df774722d477749388179090bd0e6b",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-01-taxa-for-stockholms-miljo--och-halsoskyddsnamnds-verksamhet-enligt-miljobalken.pdf"
+    },
+    {
+      "bytes": 236128,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-02",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T23:59:19Z",
+      "sha256": "607e3269234737ab35235dbb5db25b0c86189ed44934d0df6cf3512a1e410bf7",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-02-taxa-for-miljo--och-halsoskyddsnamnds-offentliga-kontroll-enligt-livsmedels--och-foderlagstiftningen.pdf"
+    },
+    {
+      "bytes": 217196,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-03",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T23:59:29Z",
+      "sha256": "364ce2a1fcb570e1af2ab613d86fd3a71939eb14701af875cc9dda7ec4c2ebc5",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-03-taxa-for-miljo--och-halsoskyddsnamndens-tillsynsverksamhet-enligt-lagen-1980424-om-atgarder-mot-fororening-fran-fartyg.pdf"
+    },
+    {
+      "bytes": 166008,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-04",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T23:59:20Z",
+      "sha256": "61767aa3979c0ccb86a0c37ff9535284c604ea58674c345a3efaf41d5c30b79f",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-04-taxa-for-miljo--och-halsoskyddsnamndens-tillsynsverksamhet-enligt-lagen-om-sprangamnesprekursorer.pdf"
+    },
+    {
+      "bytes": 192200,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-05",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T23:59:29Z",
+      "sha256": "07c79904af8cfdf90d302a55f23e819b95fde41e9028045f8c5ff37f385f0c74",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-05-taxa-for-miljo--och-halsoskyddsnamndens-tillsynsverksamhet-enligt-lagen-om-skydd-mot-internationella-hot-mot-manniskors-halsa.pdf"
+    },
+    {
+      "bytes": 197465,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-06",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T23:59:22Z",
+      "sha256": "cfbf27b231120f7d95e5472c0f50c2b73285ab098cc0d1b1f40923fcc4538e8d",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-06-taxa-for-stockholms-miljo--och-halsoskyddsnamnds-tillsynsverksamhet-enligt-stralskyddslagen.pdf"
+    },
+    {
+      "bytes": 193175,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-07",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T23:59:19Z",
+      "sha256": "678faff1dcccb4524bc6dfcb2156df73bba65fd57aae280c956922bf5da8a39e",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-07-taxa-for-stockholms-miljo--och-halsoskyddsnamnds-marknadskontroll.pdf"
+    },
+    {
+      "bytes": 436844,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-08",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T23:59:31Z",
+      "sha256": "10f2cde44df40116a2f6b4cbd5f90d77631594854bbe83ef99e168753b5d4295",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-08-taxa-for-vatten-och-avlopp-2026.pdf"
+    },
+    {
+      "bytes": 578746,
+      "content_type": "application/pdf",
+      "id": "0180-kfs-2026-09",
+      "municipality_code": "0180",
+      "retrieved_at": "2026-10-29T23:59:18Z",
+      "sha256": "05af1671052eaf9325a3a21514b57636b66f9662e8d09ffdd994c4347d783bef",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/kfs-2026-09-taxa-for-avfall-under-kommunalt-ansvar-for-2026.pdf"
+    },
+    {
       "bytes": 305367,
       "content_type": "application/pdf",
       "id": "0180-kfs-2026-12",
@@ -93,10 +183,40 @@
   ],
   "gaps": [
     {
+      "id": "1280-18-101fe1f419377e181aa1265",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.101fe1f419377e181aa1265/1733911700525/Hamnordning%20f%C3%B6r%20Malm%C3%B6%20hamn%20och%20Limhamns%20norra%20hamn%20250101.pdf"
+    },
+    {
       "id": "1280-18-50574bcf196ed960a5523b7d",
       "municipality_code": "1280",
       "reason": "robots.txt disallows the document URL",
       "url": "https://malmo.se/download/18.50574bcf196ed960a5523b7d/1763450396903/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20renh%C3%A5llning%20av%20g%C3%A5ngbana%20-%20Tillg%C3%A4nglighetsanpassad.pdf"
+    },
+    {
+      "id": "1280-18-50574bcf196ed960a5527136",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.50574bcf196ed960a5527136/1772804951764/Taxa%20f%C3%B6r%20uppl%C3%A5telser%20p%C3%A5%20offentlig%20plats%202026.pdf"
+    },
+    {
+      "id": "1280-18-630778b81a03e20b4c51db6",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.630778b81a03e20b4c51db6/1788877327950/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Malm%C3%B6%20kommun%20-%20tillg%C3%A4nglighetsanpassad.dotx(TN-2024-562-26)%20(0).pdf"
+    },
+    {
+      "id": "1280-18-643a1d3d18c018b25693fcda",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.643a1d3d18c018b25693fcda/1701181702857/Avfallstaxa%202024%20-%20tillg.pdf"
+    },
+    {
+      "id": "1280-18-6f4cd7c416cadbf90b2173dd",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.6f4cd7c416cadbf90b2173dd/1571147358086/Beslut%20med%20f%C3%B6reskrifter%20Klagshamns%20naturreservat.pdf"
     },
     {
       "id": "1280-18-7413819a18bf1f2a7976409",
@@ -121,6 +241,30 @@
       "municipality_code": "1280",
       "reason": "robots.txt disallows the document URL",
       "url": "https://malmo.se/download/18.7413819a18bf1f2a7976493/1700832665110/torghandelsstadga%20-%20tillg.pdf"
+    },
+    {
+      "id": "1280-18-7413819a18bf1f2a7976659",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.7413819a18bf1f2a7976659/1700836309868/SBNTaxa-tom-2023-06-30.webb%20-%20tillg.pdf"
+    },
+    {
+      "id": "1280-18-7413819a18bf1f2a797665b",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.7413819a18bf1f2a797665b/1700836381105/AVGIFT~1.PDF"
+    },
+    {
+      "id": "1280-18-dd8076019c51cb8e6759e3",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.dd8076019c51cb8e6759e3/1776760036034/SBNTaxa_20260109_tillg%C3%A4nglig.pdf"
+    },
+    {
+      "id": "1280-18-e99dd2f1a08fc27cf986c1",
+      "municipality_code": "1280",
+      "reason": "robots.txt disallows the document URL",
+      "url": "https://malmo.se/download/18.e99dd2f1a08fc27cf986c1/1790846346857/Lokala%20milj%C3%B6f%C3%B6reskrifter%20f%C3%B6r%20Malm%C3%B6%20fr%202026-10-01.pdf"
     }
   ],
   "version": 1
