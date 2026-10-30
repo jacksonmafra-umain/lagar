@@ -179,6 +179,7 @@ Route: `Search(text, types, from, to, mode, status, inForceFrom, inForceTo, vaca
 | Region and Kommun scopes: only the chosen län's or kommun's documents, by the `region_code` and `municipality_code` columns of `docs.json` (or listing items on the catalog path); a prompt to choose a locality when it is unset | Done | #99 |
 | Searched scope as a chip beside the result count ("Region: Skåne län", ellipsized; opens the scope sheet); a Region or Kommun search without results says it covered only the län or kommun and offers "Sök i Nationell" | Done | #126 |
 | Desktop: results in two equal-height columns within the 1280dp content width; the list stays full width so the whole window scrolls | Done | #35 |
+| Desktop list-detail: a result opens beside the list (one 440dp column, the opened result kept in view) instead of being pushed; the reader in the pane uses its compact layout until the pane is 1024dp wide | Done | #35 |
 
 ### Advanced search
 
