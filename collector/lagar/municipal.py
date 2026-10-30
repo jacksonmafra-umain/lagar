@@ -35,6 +35,7 @@ import hashlib
 import json
 import re
 import sys
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -454,7 +455,8 @@ def _uri(url):
 
 
 def _clean(text):
-    return " ".join((text or "").split())
+    """Whitespace collapsed and NFC: file names often spell ä as a plus a combining diaeresis."""
+    return unicodedata.normalize("NFC", " ".join((text or "").split()))
 
 
 _INITIAL_STATE = re.compile(r"registerInitialState\(\s*'[^']*'\s*,\s*")
@@ -547,6 +549,7 @@ def _number(kommun, href, text):
 
 
 def _title(kommun, text):
+    text = _clean(text)
     for pattern in kommun.title_strip:
         text = re.sub(pattern, "", text, flags=re.IGNORECASE)
     return _clean(text)
