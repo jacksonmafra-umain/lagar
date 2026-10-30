@@ -1,14 +1,13 @@
-"""Size report and budget check for the published site (docs/api.md, "Size budget").
+"""Size report for a built API (docs/api.md, "Size report").
 
-GitHub Pages publishes at most 1 GB per site. The report sums the bytes of every
-file under --site (the API under --api, plus the web app when it is there), by
-top-level folder, by layer and by search group, and fails above the budget.
+The report sums the bytes of every file under --site (the API under --api, plus
+the web app when it is there), by top-level folder, by layer and by search
+group. It only reports: there is no size limit, since the API is built and
+served per machine.
 
-Usage: python3 -I api/size_report.py --api build/api/v1 [--site build] [--budget-mb 900]
-       [--warn-mb 800] [--summary FILE] [--json FILE]
+Usage: python3 -I api/size_report.py --api build/api/v1 [--site build] [--summary FILE] [--json FILE]
 
-Exit status: 0 within budget (a warning is printed above --warn-mb), 1 above
---budget-mb, 2 on bad arguments or a missing API. MB are 1 000 000 bytes.
+Exit status: 0, or 2 on bad arguments or a missing API. MB are 1 000 000 bytes.
 """
 
 import argparse
@@ -19,9 +18,6 @@ import re
 import sys
 from pathlib import Path
 
-BUDGET_MB = 900
-WARN_MB = 800
-PAGES_LIMIT_MB = 1000
 MB = 1_000_000
 # Meta keys come first in docs/<id>.json, so `layer` is near the start of the file.
 _LAYER_RE = re.compile(r'(?<!\\)"layer":"([a-z_]+)"')
@@ -102,15 +98,6 @@ def measure(api, site=None):
     return report
 
 
-def status(report, budget_mb=BUDGET_MB, warn_mb=WARN_MB):
-    """'fail' above the budget, 'warn' above the warning threshold, else 'ok'."""
-    if report["total"] > budget_mb * MB:
-        return "fail"
-    if report["total"] > warn_mb * MB:
-        return "warn"
-    return "ok"
-
-
 def _mb(n):
     return f"{n / MB:,.1f} MB" if n >= MB else f"{n / 1000:,.1f} KB"
 
@@ -119,14 +106,11 @@ def _rows(sizes):
     return [f"| `{k}` | {_mb(v)} |" for k, v in sorted(sizes.items(), key=lambda kv: (-kv[1], kv[0]))]
 
 
-def markdown(report, budget_mb=BUDGET_MB, warn_mb=WARN_MB):
-    state = status(report, budget_mb, warn_mb)
-    verdict = {"ok": "within budget", "warn": "above the warning threshold", "fail": "OVER BUDGET"}[state]
+def markdown(report):
     lines = [
         "### Site size",
         "",
-        f"**{_mb(report['total'])}** in {report['files']:,} files: {verdict} "
-        f"(budget {budget_mb} MB, warning at {warn_mb} MB, GitHub Pages limit {PAGES_LIMIT_MB} MB).",
+        f"**{_mb(report['total'])}** in {report['files']:,} files.",
         "",
     ]
     if report["site"] is not None:
@@ -150,35 +134,23 @@ def markdown(report, budget_mb=BUDGET_MB, warn_mb=WARN_MB):
 
 
 def main(argv):
-    parser = argparse.ArgumentParser(description="Report the site size and fail above the budget.")
+    parser = argparse.ArgumentParser(description="Report the size of a built API and site.")
     parser.add_argument("--api", required=True, help="the built API directory (api/v1)")
     parser.add_argument("--site", help="the whole published site, when it holds more than the API")
-    parser.add_argument("--budget-mb", type=int, default=BUDGET_MB)
-    parser.add_argument("--warn-mb", type=int, default=WARN_MB)
     parser.add_argument("--summary", help="append the Markdown report to this file (the step summary)")
     parser.add_argument("--json", help="write the report as JSON to this file")
     args = parser.parse_args(argv)
     if not (Path(args.api) / "index.json").is_file():
         print(f"error: no API at {args.api} (index.json missing)", file=sys.stderr)
         return 2
-    if args.warn_mb > args.budget_mb:
-        print("error: --warn-mb must not exceed --budget-mb", file=sys.stderr)
-        return 2
     report = measure(args.api, args.site)
-    text = markdown(report, args.budget_mb, args.warn_mb)
+    text = markdown(report)
     print(text)
     if args.summary:
         with open(args.summary, "a", encoding="utf-8") as f:
             f.write(text + "\n")
     if args.json:
         Path(args.json).write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    state = status(report, args.budget_mb, args.warn_mb)
-    if state == "fail":
-        print(f"::error::site is {_mb(report['total'])}, over the {args.budget_mb} MB budget", file=sys.stderr)
-        return 1
-    if state == "warn":
-        print(f"::warning::site is {_mb(report['total'])}, above the {args.warn_mb} MB warning threshold",
-              file=sys.stderr)
     return 0
 
 

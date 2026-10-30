@@ -2760,6 +2760,21 @@
       "hosts": ["www.sotenas.se"],
       "listings": ["https://www.sotenas.se/kommun--politik/kommunfakta/regler-och-styrande-dokument"]
     },
+    "1435": {
+      "name": "Tanum",
+      "issuer": "Tanums kommun",
+      "region_code": "14",
+      "collection": "Tanums författningssamling",
+      "strategy": "html_pages",
+      "resident_filter": true,
+      "hosts": ["www.tanum.se"],
+      "listings": [
+        "https://www.tanum.se/kommunpolitik/planerochstyrdokument/tanumsforfattningssamling.4.7664b4813898b7df98451bf.html"
+      ],
+      "link_pattern": "^https://www\\.tanum\\.se/(?:download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$|(?!kommunpolitik/(?:kontaktaoss|omwebbplatsen|informationsmaterial|kommunfakta)|byggabomiljoinfrastruktur/(?:avfallochatervinning|brandskyddsotning|gaturenhallningvintervaghallningochstrandstadning)\\.|.*snorenhallningriktlinjer)[a-z0-9/]+\\.[0-9]+\\.[0-9a-f]+\\.html$)",
+      "number": [{"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}, {"from": "href", "pattern": "\\.([0-9]+\\.[0-9a-f]+)\\.html$"}],
+      "content_id": "svid10_64e5a5e514f98052b379644"
+    },
     "1440": {
       "name": "Ale",
       "issuer": "Ale kommun",

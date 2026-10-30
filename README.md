@@ -5,7 +5,7 @@ Markdown, one file per norm, with a static JSON API and Compose Multiplatform
 apps for Android, iOS and the web.
 
 - Web app: <https://grundlagar.vercel.app/app/> (landing page at <https://grundlagar.vercel.app>)
-- API: <https://jacksonmafra-umain.github.io/lagar/api/v1/index.json> ([contract](docs/api.md))
+- API: built and served per machine with `python3 -I scripts/serve_local.py` ([contract](docs/api.md)); the copy at <https://jacksonmafra-umain.github.io/lagar/api/v1/index.json> is frozen and no longer updated
 
 ## Progress
 
@@ -46,7 +46,7 @@ Screen-by-screen status is in [docs/screens.md](docs/screens.md).
 
 - `corpus/` - one YAML-fronted Markdown file per norm
 - `collector/` - Python collectors that build the corpus from official sources
-- `api/` - generator for the static JSON API served on GitHub Pages
+- `api/` - generator for the static JSON API, built and served per machine
 - `app/` - Compose Multiplatform app (Android, iOS, web)
 - `mcp/` - MCP server that searches and reads the API
 - `landing/` - static landing page (Swedish and English), deployed to Vercel with the web app
@@ -73,8 +73,8 @@ python3 -I scripts/serve_local.py   # http://127.0.0.1:8001/
 
 Search and read the corpus from an MCP client (Claude Code, Claude Desktop and others) with the
 stdio server in `mcp/`, standard library only. `.mcp.json` registers it for this checkout against
-`build/api/v1` (`python3 -I api/build.py --corpus corpus --out build/api/v1` first); pass the
-published API instead to skip the build:
+`build/api/v1` (`python3 -I api/build.py --corpus corpus --out build/api/v1` first); the frozen
+published copy also works, but it is no longer updated:
 
 ```json
 {
