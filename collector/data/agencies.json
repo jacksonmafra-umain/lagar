@@ -272,8 +272,8 @@
     "statens-skolverks-forfattningssamling-skolfs": {
       "series": "SKOLFS",
       "agency": "Statens skolverk",
-      "status": "collected_pdf",
-      "note": "Base regulations in force from the API behind Skolverket's SKOLFS search app, with dates and links to the issued and latest consolidated PDFs; expired regulations are not stored (no repeal date)."
+      "status": "collected",
+      "note": "Base regulations in force from the API behind Skolverket's SKOLFS search app, with dates, the text of the issued PDF and links to the issued and latest consolidated PDFs; expired regulations are not stored (no repeal date)."
     },
     "stralsakerhetsmyndighetens-forfattningssamling-ssmfs": {
       "series": "SSMFS",

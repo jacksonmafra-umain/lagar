@@ -298,7 +298,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
 - Since 2026-10-30 the PDF-only series above (RGKFS, RIFS, SGU-FS, SiSFS,
   TVFS, UFS, VALFS, VRFS, SKSFS, SSMFS, UHRFS, PFS, ÅFS, PRVFS, PMFS and
   RPSFS, STEMFS, RA-FS, SJÖFS, TRVFS) carry the regulation text read from
-  the PDF's text layer. SKOLFS still holds metadata and PDF links only.
+  the PDF's text layer. SKOLFS carries the text of each regulation as issued
+  (not the consolidated version). SKOLFS 2011:22 keeps metadata and PDF links
+  only: Skolverket now serves its latest consolidated version as a Word file
+  instead of a PDF, and the collector rejects it.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - Public services have no collector yet; what the Tjänster tab should hold is
