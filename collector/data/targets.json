@@ -167,6 +167,15 @@
     "as_of": "2026-10-29"
   },
   {
+    "layer": "sfs",
+    "type": "treaty",
+    "label": "SÖ treaties",
+    "target": 3515,
+    "kind": "counted",
+    "source": "regeringen.se sitemap: distinct SÖ numbers on pages under /rattsliga-dokument/sveriges-internationella-overenskommelser/",
+    "as_of": "2026-10-30"
+  },
+  {
     "layer": "eu",
     "type": null,
     "label": "EU law (curated list)",
