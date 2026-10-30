@@ -181,6 +181,12 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Göteborg prints no KFS-style number. The detail pages carry a
     `noindex,nofollow` robots meta tag (a search-engine indexing hint);
     robots.txt allows the paths.
+  - Malå, Storuman and Åsele publish part of their taxor and hälsoskydd rules only as
+    HTML pages, which the PDF listings do not cover; Lycksele's lokala
+    ordningsföreskrifter PDF was not found. Nordmaling, Norsjö, Malå, Storuman,
+    Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
+    page without headings, so their configs keep only listed file names; a new
+    document with another name is not picked up until the config is updated.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources
