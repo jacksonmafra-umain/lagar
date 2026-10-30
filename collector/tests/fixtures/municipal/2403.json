@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.bjurholm.se/kommun-och-politik/kommun/styrande-dokument": "2403-listing.html"
+  },
+  "count": 47,
+  "sample": {
+    "number": "18.12b012b4183e1cbc75c87bb",
+    "title": "Allmänna lokala ordningsföreskrifter för Bjurholms kommun",
+    "url": "https://www.bjurholm.se/download/18.12b012b4183e1cbc75c87bb/1677045175789/TA-Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Bjurholms%20kommun.pdf"
+  },
+  "excluded": [
+    "Avfallsplan Umeåregionen",
+    "Bilaga1 Handlingsplan",
+    "Bilaga 2 Nulägesbeskrivning"
+  ]
+}

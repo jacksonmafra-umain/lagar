@@ -160,6 +160,8 @@ class WriterTests(unittest.TestCase):
             ("eu_regulation", "eu-32016r0679", "corpus/eu/regulations/32016r0679.md"),
             ("eu_directive", "eu-31995l0046", "corpus/eu/directives/31995l0046.md"),
             ("eu_decision", "eu-32019d0001", "corpus/eu/decisions/32019d0001.md"),
+            ("treaty", "so-2023-3", "corpus/sfs/treaties/so-2023-3.md"),
+            ("eu_judgment", "eu-62014cj0362", "corpus/eu/judgments/62014cj0362.md"),
             ("county_regulation", "01fs-2024-3", "corpus/region/county-regulations/01fs-2024-3.md"),
             ("municipal_regulation", "0180-2024-12", "corpus/municipality/regulations/0180-2024-12.md"),
         ]:

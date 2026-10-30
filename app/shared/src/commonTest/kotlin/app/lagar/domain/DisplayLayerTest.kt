@@ -37,7 +37,7 @@ class DisplayLayerTest {
     fun everyApiTypeMapsToTheLevelOfItsLayer() {
         API_TYPES.forEach { (type, layer) ->
             val level = DisplayLayer.forType(type)
-            if (type == "other_statute") {
+            if (type == "other_statute" || type == "treaty") {
                 assertNull(level)
             } else {
                 assertEquals(DisplayLayer.fromRoute(layer, type), level, type)
@@ -53,6 +53,7 @@ class DisplayLayerTest {
         assertEquals(DisplayLayer.Eu, DisplayLayer.forType("eu_regulation"))
         assertEquals(DisplayLayer.Eu, DisplayLayer.forType("eu_directive"))
         assertEquals(DisplayLayer.Eu, DisplayLayer.forType("eu_decision"))
+        assertEquals(DisplayLayer.Eu, DisplayLayer.forType("eu_judgment"))
         assertEquals(DisplayLayer.Agency, DisplayLayer.forType("agency_regulation"))
         assertEquals(DisplayLayer.Region, DisplayLayer.forType("county_regulation"))
         assertEquals(DisplayLayer.Municipality, DisplayLayer.forType("municipal_regulation"))
@@ -99,12 +100,14 @@ class DisplayLayerTest {
             "act" to "sfs",
             "ordinance" to "sfs",
             "other_statute" to "sfs",
+            "treaty" to "sfs",
             "agency_regulation" to "agency",
             "case_report" to "case_law",
             "case_notice" to "case_law",
             "eu_regulation" to "eu",
             "eu_directive" to "eu",
             "eu_decision" to "eu",
+            "eu_judgment" to "eu",
             "county_regulation" to "region",
             "municipal_regulation" to "municipality",
         )

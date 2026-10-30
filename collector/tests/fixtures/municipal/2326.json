@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://berg.se/kommun-och-politik/verksamhet-och-organisation/forfattningssamling-och-styrande-dokument": "2326-listing1.html",
+    "https://berg.se/kommun-och-politik/ekonomi-och-budget/avgifter-och-taxor": "2326-listing2.html"
+  },
+  "count": 26,
+  "sample": {
+    "number": "18.12a5b1201849980bbaa1542",
+    "title": "ABVA Bergs kommun 2022",
+    "url": "https://berg.se/download/18.12a5b1201849980bbaa1542/1669105917027/ABVA%20Bergs%20kommun%202022.pdf"
+  },
+  "excluded": [
+    "Arbetsgivarpolitiska mål",
+    "Arbetsmiljöpolicy för Bergs kommun",
+    "Chefspolicy"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://kil.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/forfattningssamling": "1715-listing1.html",
+    "https://kil.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/forfattningssamling/avfallsplan": "1715-listing2.html",
+    "https://kil.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/forfattningssamling/regler-for-anslutning-till-vatten-och-avlopp": "1715-listing3.html"
+  },
+  "count": 7,
+  "sample": {
+    "number": "18.28161b9e18f38463483107ea",
+    "title": "Hälsoskyddsföreskrifter",
+    "url": "https://kil.se/download/18.28161b9e18f38463483107ea/1715347565302/lokala_halsoskyddsforeskrifter.pdf"
+  },
+  "excluded": [
+    "Avfallsplan 2017-2027 för Kils kommun.",
+    "Om du säljer din fastighet (eller liknande förändring) ska du anmäla det genom att fylla i och skicka in den här blanketten."
+  ]
+}

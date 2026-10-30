@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://invanare.ange.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument.html": "2260-listing1.html",
+    "https://invanare.ange.se/bo-bygga-miljo-trafik/bygga-nytt-andra-och-riva/avgifter-taxor.html": "2260-listing2.html"
+  },
+  "count": 9,
+  "sample": {
+    "number": "18.1fc96f7a15aa40b071a56b37",
+    "title": "Lokala föreskrifter för att skydda människors hälsa och miljön",
+    "url": "https://invanare.ange.se/download/18.1fc96f7a15aa40b071a56b37/1495798788007/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för hantering av arkiv i Ånge kommun",
+    "Avgift för kopior av allmänna handlingar",
+    "Styrmodell för Ånge kommun"
+  ]
+}

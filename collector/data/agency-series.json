@@ -1,5 +1,11 @@
 {
   "series": {
+    "PFS": {
+      "issuer": "Pensionsmyndigheten",
+      "listing_urls": [
+        "https://www.pensionsmyndigheten.se/om-pensionsmyndigheten/allmanna-handlingar/lagar-och-regler"
+      ]
+    },
     "RGKFS": {
       "issuer": "Riksgäldskontoret",
       "listing_urls": [
@@ -51,6 +57,12 @@
       "issuer": "Upphandlingsmyndigheten",
       "listing_urls": [
         "https://www.upphandlingsmyndigheten.se/om-oss/upphandlingsmyndighetens-forfattningssamling/"
+      ]
+    },
+    "UHRFS": {
+      "issuer": "Universitets- och högskolerådet",
+      "listing_urls": [
+        "https://www.uhr.se/publikationer/lagar-och-regler-for-hogre-utbildning/Universitets--och-hogskoleradets-forfattningssamling/grundforeskrifter-med-andringsforeskrifter/"
       ]
     },
     "VALFS": {

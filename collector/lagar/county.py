@@ -9,15 +9,18 @@ collections in two layouts, configured per county in
 - `pages`: the landing page links one index page per year; each index entry
   links a detail page carrying the number, the publication note ("Utkom från
   trycket den …"), the title, the text as HTML and a link to the printed PDF.
-  The body is taken from the HTML text; the PDFs are never parsed.
+  The body is taken from the HTML text; a page without text gets the
+  printed PDF's text.
 - `files`: the landing page lists the printed PDFs only, as plain links or in
   Sitevision's file-share module (either the files themselves or one folder per
   year, whose listing is read from the module's JSON endpoint). The number and
-  title come from the link text or file name; the document records the
-  metadata and links to the PDF.
+  title come from the link text or file name; the body is the PDF's text.
 
 Each linked PDF is downloaded once to record its size and SHA-256 in a
 committed manifest (`sources/county-pdf-manifest.json`); the bytes are not kept.
+Text is read with `pdftext` (poppler's `pdftotext`). A scanned PDF without a
+text layer is recorded as a gap in the manifest (`text`) and the body says the
+text is only in the PDF; nothing is guessed.
 """
 
 import argparse
@@ -33,7 +36,7 @@ from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from . import frontmatter, htmlmd
+from . import frontmatter, htmlmd, pdftext
 from .caselaw import NETWORK_ERRORS, StateError, _load_state, _save_state, personal_numbers
 from .http import Blocked, PoliteClient
 from .vocabulary import TYPES
@@ -92,6 +95,12 @@ MONTHS = {
 
 DOCUMENT_ERRORS = (ValueError, KeyError, UnicodeDecodeError)
 
+# Manifest `text` values besides pdftext's gap reasons.
+TEXT_EXTRACTED = "extracted"
+TEXT_UNREADABLE = "unreadable PDF"
+PDF_ONLY = "Författningen publiceras bara som pdf."
+NO_TEXT = "Texten kan inte läsas ur den tryckta författningen (inskannad pdf utan textlager); den finns bara i pdf-filen."
+
 _NUMBER = re.compile(r"(\d{2})\s*FS\s+(\d{4})\s*:\s*0*(\d+)", re.IGNORECASE)
 _YEAR_LINK = re.compile(r"""href="([^"]*/lanets-forfattningssamling/forfattningar-(\d{4})\.html)\"""")
 _ITEM = re.compile(r'<li class="sv-channel-item[^"]*"[^>]*>(.*?)</li>', re.S)
@@ -113,6 +122,11 @@ _YEAR_FOLDER = re.compile(r"\s*((?:19|20)\d{2})\s*")
 _ANY_YEAR = re.compile(r"(?<![0-9])((?:19|20)\d{2})(?![0-9])")
 _REPEALED_MARK = re.compile(r"^\s*UPPHÄVD\b[\s:_-]*", re.I)
 _SPACE = re.compile(r"\s+")
+_FOOTNOTE = re.compile(r"(?<=[^\W\d_])\d{1,2}(?=\s*;\s*$)")
+_ENDS_LOWER = re.compile(r"(?:^|\s)[a-zåäö.]+$")
+_TITLE_WORD = re.compile(r"föreskrift|beslut|kungörelse|ändring|upphävande", re.I)
+# A number glued into a file name, "06FS1977239" or "06_FS_2014_20", dropped from titles.
+_FS_TOKEN = re.compile(r"(?<![0-9])[0-9]{2}[\s_]*FS[\s_]*(?:19|20)[0-9]{2}[0-9_: -]*", re.I)
 _SV_DATE = re.compile(r"(\d{1,2}) (" + "|".join(MONTHS) + r") (\d{4})", re.I)
 _PUBLISHED = re.compile(r"Utkom från trycket\s+(?:den\s+)?" + _SV_DATE.pattern, re.I)
 _DECIDED = re.compile(r"Beslut(?:at|ad|ade)\s+(?:den\s+)?" + _SV_DATE.pattern, re.I)
@@ -500,7 +514,54 @@ def build_meta(detail, item, region_code, fetched_at):
     }
 
 
-def to_markdown(meta, detail):
+def text_blocks(files, texts):
+    """Markdown blocks of the PDFs' text, in file order.
+
+    `texts` maps a PDF url to its paragraphs, or to None when the file has no
+    readable text; files missing from it were not read. With several readable
+    files each gets a heading with its link text.
+    """
+    readable = [(label, texts[url]) for url, label in files if texts.get(url)]
+    blocks = []
+    for label, paragraphs in readable:
+        if len(readable) > 1:
+            blocks.append("## " + label)
+        blocks.append("\n\n".join(htmlmd.escape_block(p) for p in paragraphs))
+    if not readable:
+        blocks.append(NO_TEXT if any(url in texts for url, _ in files) else PDF_ONLY)
+    return blocks
+
+
+def title_in_text(paragraphs):
+    """The title printed in a PDF: an early paragraph ending in `;` that names a regulation.
+
+    A title broken over a short line (`... m.m. i` / `Aneby kommun;`) is joined
+    back; a footnote mark before the `;` is dropped.
+    """
+    head = paragraphs[:12]
+    for i, paragraph in enumerate(head):
+        text = _FOOTNOTE.sub("", paragraph).strip()
+        if not text.endswith(";"):
+            continue
+        title = text[:-1].strip()
+        j = i
+        while j > 0 and not _TITLE_WORD.search(title) and _ENDS_LOWER.search(head[j - 1]) and not _NUMBER.search(
+            head[j - 1]
+        ) and "författningssamling" not in head[j - 1]:
+            title = head[j - 1] + " " + title
+            j -= 1
+        if 10 <= len(title) <= 400 and _TITLE_WORD.search(title):
+            return title
+    return None
+
+
+def pdf_facts(texts):
+    """(decided, published, in force) read from the PDFs' text."""
+    text = "\n".join(" ".join(p) for p in texts.values() if p)
+    return _find_date(_DECIDED, text), _find_date(_PUBLISHED, text), _in_force(text)
+
+
+def to_markdown(meta, detail, texts=None):
     published = detail.published
     facts = [
         ("Författningssamling", meta["number"]),
@@ -514,7 +575,7 @@ def to_markdown(meta, detail):
     if text:
         blocks.append(text)
     else:
-        blocks.append("Författningen publiceras bara som pdf.")
+        blocks.extend(text_blocks(detail.pdfs, texts or {}))
     if detail.pdfs:
         blocks.append("## Tryckt version")
         blocks.append(
@@ -524,7 +585,7 @@ def to_markdown(meta, detail):
     return "\n\n".join(b for b in blocks if b) + "\n"
 
 
-def build_file_meta(item, region_code, source, source_sha256, fetched_at):
+def build_file_meta(item, region_code, source, source_sha256, fetched_at, in_force=None):
     """Frontmatter of a `files` layout regulation: only what the link gives."""
     return {
         "id": corpus_id(item.number),
@@ -533,7 +594,7 @@ def build_file_meta(item, region_code, source, source_sha256, fetched_at):
         "layer": TYPES[TYPE],
         "number": item.number,
         "issued": item.decided,
-        "in_force": None,
+        "in_force": in_force,
         "repealed": None,
         "amended_by": [],
         "amended_through": None,
@@ -554,17 +615,19 @@ def build_file_meta(item, region_code, source, source_sha256, fetched_at):
     }
 
 
-def file_markdown(meta, item):
+def file_markdown(meta, item, texts=None, published=None):
     facts = [
         ("Författningssamling", meta["number"]),
+        ("Utkom från trycket", published),
         ("Beslutad", item.decided),
+        ("Ikraftträdande", meta["in_force"]),
         ("Utfärdare", meta["issuer"]),
         ("Förteckning", item.url),
     ]
     blocks = ["# " + meta["title"], "  \n".join(f"{k}: {v}" for k, v in facts if v)]
     if item.marked_repealed:
         blocks.append("Länsstyrelsen markerar författningen som upphävd.")
-    blocks.append("Författningen publiceras bara som pdf.")
+    blocks.extend(text_blocks(item.files, texts or {}))
     blocks.append("## Tryckt version")
     blocks.append(
         "Den tryckta författningen i länets författningssamling (pdf):\n\n"
@@ -638,10 +701,10 @@ def _in_range(year, args):
     )
 
 
-def _candidates(client, robots, args, config, unnumbered):
+def _candidates(client, robots, args, config, unnumbered, manifest=None):
     landing = args.landing_url or config["landing"]
     if config["layout"] == "files":
-        yield from _file_candidates(client, robots, args, config, landing, unnumbered)
+        yield from _file_candidates(client, robots, args, config, landing, unnumbered, manifest or {})
         return
     years = parse_landing(_get_page(client, robots, landing, "landing page"), landing)
     if not years:
@@ -657,7 +720,7 @@ def _candidates(client, robots, args, config, unnumbered):
         yield from items
 
 
-def _file_candidates(client, robots, args, config, landing, unnumbered):
+def _file_candidates(client, robots, args, config, landing, unnumbered, manifest):
     links, folders = parse_files_landing(_get_page(client, robots, landing, "landing page"), landing)
     in_folders = set()
     for year in sorted(y for y in folders if _in_range(y, args)):
@@ -672,19 +735,96 @@ def _file_candidates(client, robots, args, config, landing, unnumbered):
     if not links:
         raise ListingError(f"no PDF linked from {landing}")
     items, loose = group_files(links, args.county, config, landing)
-    # Unnumbered links are reported when they sit in a requested year's folder or name
-    # a year in the requested range.
-    unnumbered.extend(
-        t for u, t in loose
+    # Unnumbered links count when they sit in a requested year's folder or name a
+    # year in the requested range; those are read for the number they print.
+    loose = [
+        (u, t) for u, t in loose
         if u in in_folders or any(_in_range(int(y), args) for y in _ANY_YEAR.findall(t))
-    )
+        or (args.from_year is None and args.to_year is None)
+    ]
+    loose = _number_from_text(client, robots, args, config, landing, items, loose, manifest)
+    unnumbered.extend(t for _u, t in loose)
     items = [i for i in items if _in_range(number_key(i.number)[1], args)]
     items.sort(key=lambda i: number_key(i.number), reverse=args.newest_first)
     yield from items
 
 
-def _hash_pdfs(client, robots, pdfs, download):
-    files = []
+def read_text(body):
+    """(manifest `text` value, paragraphs or None) for the bytes of one PDF."""
+    try:
+        result = pdftext.extract(body)
+    except pdftext.PdfTextError:
+        return TEXT_UNREADABLE, None
+    if not result.usable:
+        return result.gap, None
+    paragraphs = pdftext.paragraphs(result.text)
+    return (TEXT_EXTRACTED, paragraphs) if paragraphs else (pdftext.NO_TEXT_LAYER, None)
+
+
+class Prefetched:
+    """A client that serves PDFs already downloaded once in this run without a new request."""
+
+    def __init__(self, client):
+        self.client = client
+        self.bodies = {}
+
+    def fetch(self, url):
+        if url in self.bodies:
+            return self.bodies.pop(url)
+        return self.client.fetch(url)
+
+    def get(self, url):
+        return self.fetch(url)[0]
+
+
+def number_in_text(paragraphs, region_code):
+    """The first county number of the series printed near the top of a PDF's text, or None."""
+    head = " ".join(paragraphs)[:600]
+    for match in _NUMBER.finditer(head):
+        if match.group(1) == region_code:
+            return normalise_number(match.group(0), region_code)
+    return None
+
+
+def _number_from_text(client, robots, args, config, landing, items, loose, manifest):
+    """Give links without a number in their name the number printed in the PDF.
+
+    A link already in the manifest keeps the number it was stored under. Others are
+    downloaded once (kept for the manifest step) and the number is read from the top
+    of their text. Returns the links that stay without a number.
+    """
+    known = {f["url"]: number for number, entry in manifest.items() for f in entry.get("files", [])}
+    by_number = {item.number: item for item in items}
+    remaining = []
+    for url, text in loose:
+        number = known.get(url)
+        if number is None and args.pdf and args.text and _on_site(url) and robots.allows(url):
+            try:
+                body, content_type = client.fetch(url)
+            except NETWORK_ERRORS:
+                body = b""
+            if body.startswith(b"%PDF-"):
+                client.bodies[url] = (body, content_type)
+                _status, paragraphs = read_text(body)
+                number = number_in_text(paragraphs or [], args.county)
+            if number is None:
+                client.bodies.pop(url, None)
+        if number is None or not _in_range(number_key(number)[1], args):
+            remaining.append((url, text))
+            continue
+        item = by_number.get(number)
+        if item is None:
+            item = by_number[number] = ListingItem(number, landing, files=[])
+            items.append(item)
+        item.files.append((url, text))
+        if not item.title:
+            item.title = file_title(_FS_TOKEN.sub(" ", text), None, None, config["title_strip"]) or None
+    return remaining
+
+
+def _hash_pdfs(client, robots, pdfs, download, want_text=False):
+    """Manifest file entries for `pdfs` and {url: paragraphs or None} for those read."""
+    files, texts = [], {}
     for url, _label in pdfs:
         entry = {"url": url, "bytes": None, "sha256": None, "content_type": None, "retrieved_at": None}
         if download and _on_site(url) and robots.allows(url):
@@ -697,8 +837,30 @@ def _hash_pdfs(client, robots, pdfs, download):
                 content_type=content_type,
                 retrieved_at=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             )
+            if want_text:
+                entry["text"], texts[url] = read_text(body)
         files.append(entry)
-    return files
+    return files, texts
+
+
+def _needs_fetch(stored, urls, args, want_text):
+    """Whether the PDFs must be downloaded again for the manifest or for their text."""
+    if stored is None or [f["url"] for f in stored.get("files", [])] != urls:
+        return True
+    if not args.pdf:
+        return False
+    if args.refresh_pdf or any(f.get("sha256") is None for f in stored["files"]):
+        return True
+    return want_text and any("text" not in f for f in stored["files"])
+
+
+def _stored_meta(meta, corpus):
+    """The frontmatter already stored for `meta`'s document, or None."""
+    try:
+        stored, _ = frontmatter.load(path_for(meta, corpus).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    return stored
 
 
 def _unchanged(meta, body, corpus):
@@ -726,21 +888,31 @@ def _store(client, robots, item, args, manifest):
     other = existing_path(meta["id"], args.corpus)
     if other is not None and other != path_for(meta, args.corpus):
         raise ValueError(f"{meta['number']} is already stored as {other}")
-    body = to_markdown(meta, detail)
-    found = personal_numbers(body)
-    if found:
-        raise ValueError(f"possible personal identity number in the text ({len(found)} found)")
+    # The PDF text is the body only when the page itself carries no text.
+    want_text = args.text and bool(detail.pdfs) and not htmlmd.to_markdown(detail.text_html)
     stored = manifest.get(meta["number"])
-    stored_urls = [f["url"] for f in (stored or {}).get("files", [])]
-    if stored is None or stored_urls != [u for u, _ in detail.pdfs] or (
-        args.pdf and any(f.get("sha256") is None for f in stored["files"])
+    texts = {}
+    if _needs_fetch(stored, [u for u, _ in detail.pdfs], args, want_text) or (
+        want_text and _stored_meta(meta, args.corpus) is None
     ):
+        files, texts = _hash_pdfs(client, robots, detail.pdfs, args.pdf, want_text)
         manifest[meta["number"]] = {
             "number": meta["number"],
             "detail_url": item.url,
             "published": detail.published or item.published,
-            "files": _hash_pdfs(client, robots, detail.pdfs, args.pdf),
+            "files": files,
         }
+    elif want_text:
+        # The text was read on an earlier run; the PDFs are not downloaded again.
+        return _stored_meta(meta, args.corpus), False
+    if texts:
+        decided, _published, in_force = pdf_facts(texts)
+        meta["issued"] = meta["issued"] or decided
+        meta["in_force"] = meta["in_force"] or in_force
+    body = to_markdown(meta, detail, texts)
+    found = personal_numbers(body)
+    if found:
+        raise ValueError(f"possible personal identity number in the text ({len(found)} found)")
     return _write_if_changed(meta, body, args.corpus)
 
 
@@ -752,31 +924,43 @@ def _write_if_changed(meta, body, corpus):
 
 
 def _store_files(client, robots, item, args, manifest):
-    """Hash the PDFs of one `files` layout regulation, then map and write it."""
+    """Hash and read the PDFs of one `files` layout regulation, then map and write it."""
     urls = [u for u, _ in item.files]
+    want_text = args.text and args.pdf
+    probe = {"id": corpus_id(item.number), "type": TYPE}
     stored = manifest.get(item.number)
-    stored_urls = [f["url"] for f in (stored or {}).get("files", [])]
-    if stored is None or stored_urls != urls or (
-        args.pdf and any(f.get("sha256") is None for f in stored["files"])
-    ):
+    texts = {}
+    if _needs_fetch(stored, urls, args, want_text) or (want_text and _stored_meta(probe, args.corpus) is None):
+        files, texts = _hash_pdfs(client, robots, item.files, args.pdf, want_text)
         stored = manifest[item.number] = {
             "number": item.number,
             "detail_url": item.url,
             "published": None,
-            "files": _hash_pdfs(client, robots, item.files, args.pdf),
+            "files": files,
         }
+    elif want_text:
+        # The text was read on an earlier run; the PDFs are not downloaded again.
+        return _stored_meta(probe, args.corpus), False
+    decided, published, in_force = pdf_facts(texts)
+    item.decided = item.decided or decided
+    printed = next((title_in_text(p) for p in texts.values() if p), None)
+    if printed:
+        item.title = printed
+    if published:
+        stored["published"] = published
     first = stored["files"][0]
     sha = first.get("sha256") or hashlib.sha256(
         "\n".join(f"{u}\t{t}" for u, t in item.files).encode("utf-8")
     ).hexdigest()
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    meta = build_file_meta(item, args.county, first["url"], sha, fetched_at)
+    meta = build_file_meta(item, args.county, first["url"], sha, fetched_at, in_force)
     other = existing_path(meta["id"], args.corpus)
     if other is not None and other != path_for(meta, args.corpus):
         raise ValueError(f"{meta['number']} is already stored as {other}")
-    body = file_markdown(meta, item)
-    if personal_numbers(body):
-        raise ValueError("possible personal identity number in the title")
+    body = file_markdown(meta, item, texts, published)
+    found = personal_numbers(body)
+    if found:
+        raise ValueError(f"possible personal identity number in the text ({len(found)} found)")
     return _write_if_changed(meta, body, args.corpus)
 
 
@@ -853,6 +1037,14 @@ def parse_args(argv):
         "--no-pdf", dest="pdf", action="store_false",
         help="record PDF links without downloading them to hash",
     )
+    parser.add_argument(
+        "--no-text", dest="text", action="store_false",
+        help="do not read the PDFs' text (it is read with poppler's pdftotext)",
+    )
+    parser.add_argument(
+        "--refresh-pdf", action="store_true",
+        help="download and read PDFs again even when the manifest already has them",
+    )
     parser.add_argument("--landing-url", help="override the county's landing page URL")
     parser.add_argument(
         "--config", default=DEFAULT_CONFIG, help="county landing pages and layouts (JSON)",
@@ -872,6 +1064,8 @@ def run(client, args):
     config = load_config(args.config).get(args.county)
     if config is None:
         raise ConfigError(f"county {args.county} is not in {args.config}")
+    if args.pdf and args.text and not pdftext.available():
+        raise ConfigError(f"{pdftext.TOOL} is not installed (poppler-utils); install it or pass --no-text")
     state = _load_state(args.state)
     state["blocked"] = None
     manifest = load_manifest(args.manifest)
@@ -887,8 +1081,9 @@ def run(client, args):
         return summary
 
     try:
+        client = Prefetched(client)
         robots = Robots(client)
-        for item in _candidates(client, robots, args, config, summary.unnumbered):
+        for item in _candidates(client, robots, args, config, summary.unnumbered, manifest):
             if args.limit is not None and summary.written >= args.limit:
                 break
             if _already_done(state, item, args.corpus):
