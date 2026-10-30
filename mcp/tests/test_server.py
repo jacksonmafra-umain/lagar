@@ -94,6 +94,17 @@ class ServerTests(unittest.TestCase):
             result, _ = call(self.srv, "get_document", id=bad)
             self.assertTrue(result["isError"], bad)
 
+    def test_get_document_reads_gzip_documents(self):
+        packed = Path(TMP.name) / "packed" / "v1"
+        if not packed.exists():
+            corpus = Path(TMP.name) / "corpus"
+            subprocess.run([sys.executable, "-I", str(ROOT / "api" / "build.py"), "--corpus", str(corpus),
+                            "--out", str(packed), "--docs-encoding", "gzip"], check=True, capture_output=True)
+        self.assertFalse((packed / "docs" / "sfs-2010-800.json").exists())
+        srv = server.LagarServer(ApiStore(packed), self.repo)
+        _, doc = call(srv, "get_document", id="sfs-2010-800")
+        self.assertEqual(doc["meta"]["title"], "Skollag (2010:800)")
+
     def test_layers_and_listing(self):
         _, layers = call(self.srv, "list_layers")
         self.assertEqual(layers["layers"][0]["id"], "fundamental")
