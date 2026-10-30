@@ -351,13 +351,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
     page without headings, so their configs keep only listed file names; a new
     document with another name is not picked up until the config is updated.
-  - Not collected yet because their sites need a strategy the collector lacks:
-    one HTML page per document, with the text or the PDF only on that page (Vara,
-    Götene, Skara, Falköping, Arvika, Hudiksvall, Härjedalen, Älvsbyn), an
-    embedded JSON list (Skövde), SharePoint (Karlstad), MediaFlow (Gävle),
-    Evolution DocumentWeb (Hallstahammar) and a WordPress file-download plugin
-    (Övertorneå). Nora and Ljusnarsberg have no page listing their resident
-    rules; they are spread over topic pages. Their issues stay open.
+  - Not collected yet: Gävle (MediaFlow shares, whose download links need a
+    token and expire after minutes; an adapter is planned) and Leksand
+    (Netpublicator; an adapter is planned). Karlstad serves its files only
+    through time-limited SharePoint links on a host whose robots.txt disallows
+    everything, so it is not collected.
+  - Skövde: only the taxor och avgifter page is collected; the lokala
+    föreskrifter are listed as JSON in the Next.js page's script data. Nora
+    publishes only three taxor as PDFs (bygglov, VA, avfall); no ordnings-,
+    avfalls- or hälsoskyddsföreskrifter were found on its site. Arvika's taxor
+    page and Älvsbyn's föreskrifter (no index page) are not covered.
   - Boden's taxor pages and Örnsköldsvik's, Sandviken's and Tidaholm's topic
     pages hold rules that the configured listings do not cover; Kiruna covers
     its föreskrifter and bygglovstaxa only.
