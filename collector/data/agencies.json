@@ -1187,12 +1187,8 @@
       "note": "Höör's \"Styrande dokument\" page is a search and filter form filled in by the browser; the static HTML lists no documents. Needs an adapter for its search (checked 2026-10-30)."
     },
     "1275": {
-      "status": "no_adapter",
-      "note": "Perstorp's \"Kommunal författningssamling\" page lists no documents in its static HTML; the list is loaded by the browser. Needs an adapter (checked 2026-10-30)."
-    },
-    "1278": {
-      "status": "no_adapter",
-      "note": "No page listing Båstad's författningssamling or lokala föreskrifter was found; its rules are spread over topic pages (checked 2026-10-30)."
+      "status": "robots",
+      "note": "Perstorp's \"Kommunal författningssamling\" page keeps its document list in a minimised layout that opens only through ?sv.state=normal, which robots.txt disallows (Disallow: /*?sv.state=*); the site has no sitemap. Not bypassed (checked 2026-10-31)."
     },
     "1401": {
       "note": "Härryda publishes no författningssamling: the rules are read from its avgifter och taxor page (topic pages as text, or the taxa PDF a page links) and from Härryda Vatten och Avfall AB's VA and avfall taxor and avfallsföreskrifter on hvaa.se."

@@ -380,10 +380,15 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     (PDFs on media.helsingborg.se); its föreskrifter page and the two avgifter
     PDFs are collected. Its avfallstaxa lives on NSR's site and its environment
     fees on a separate site for companies; neither is collected.
+  - Båstad's "Regler och styrande dokument" page (under Kommunfakta) lists its
+    författningssamling as one Sitevision file list; its 29 föreskrifter and
+    taxor are collected, internal documents left out by title.
+  - Perstorp: its "Kommunal författningssamling" page keeps the document list in
+    a minimised layout that opens only through `?sv.state=normal`, which
+    robots.txt disallows, and the site has no sitemap. Not bypassed; a gap.
   - Not collected in Skåne, with the reason per kommun in `AGENCIES.md`: Vellinge
-    (rules as HTML text), Östra Göinge, Lomma, Höör and Perstorp (document lists
-    rendered in the browser) and Båstad (no collection page).
-    Their issues stay open.
+    (rules as HTML text), Östra Göinge, Lomma and Höör (document lists rendered
+    in the browser). Their issues stay open.
   - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
     the PDFs are never fetched; the documents point at the listing page and are
     recorded as gaps in the manifest.

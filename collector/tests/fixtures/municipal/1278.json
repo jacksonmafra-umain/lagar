@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.bastad.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument.html": "1278-listing.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "18.767116d318b37dcb738885a",
+    "title": "Allmänna lokala ordningsföreskrifter för Båstads kommun",
+    "url": "https://www.bastad.se/download/18.767116d318b37dcb738885a/1697614773823/Allmanna-lokala-ordningsforeskrifter-for-Bastads-kommun.pdf"
+  },
+  "excluded": [
+    "Reglemente för kommunstyrelsen i Båstads kommun",
+    "Delegationsordning för socialnämnden",
+    "Skötselplan avseende grönytor och renhållning av allmän platsmark i Båstads kommun"
+  ]
+}
