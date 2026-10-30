@@ -1,0 +1,15 @@
+{
+  "listings": {
+    "https://www.strangnas.se/kommun-och-politik/styrande-dokument?folder=19.1f2eb9891753411bef565b0c&sv.url=12.7546977617592429b91c2cbd": "0486-listing.html",
+    "https://www.strangnas.se/kommun-och-politik/styrande-dokument?folder=19.1f2eb9891753411bef565b0e&sv.url=12.7546977617592429b91c2cbd": "0486-listing-2.html"
+  },
+  "count": 31,
+  "sample": {
+    "number": "18.309cecf919752f11e6d19962",
+    "title": "Allmänna lokala ordningsföreskrifter för Strängnäs kommun, med bilagor",
+    "url": "https://www.strangnas.se/download/18.309cecf919752f11e6d19962/1749650414033/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Str%C3%A4ngn%C3%A4s%20kommun,%20med%20bilagor.pdf"
+  },
+  "excluded": [
+    "Taxa och villkor för schaktansökan och ledningsåterställning"
+  ]
+}

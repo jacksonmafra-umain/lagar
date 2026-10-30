@@ -15,7 +15,9 @@
     },
     "centrala-studiestodsnamndens-forfattningssamling-csnfs": {
       "series": "CSNFS",
-      "agency": "Centrala studiestödsnämnden"
+      "agency": "Centrala studiestödsnämnden",
+      "status": "collected",
+      "note": "CSN lists its regulations by subject, each with the consolidated text (Fulltext) and the printed regulation and amendments (Tryckt version), with a link to each PDF; the text is read from the PDF (consolidated version where published). The annual regleringstal notices numbered in CSNFS are included; four old PDFs are scans without a text layer."
     },
     "energimarknadsinspektionens-forfattningssamling-eifs": {
       "series": "EIFS",
@@ -124,7 +126,8 @@
     "bokforingsnamndens-allmanna-rad-bfnar": {
       "series": "BFNAR",
       "agency": "Bokföringsnämnden",
-      "note": "General advice (allmänna råd), not binding regulations."
+      "status": "collected",
+      "note": "General advice (allmänna råd), not binding regulations. BFN lists the general advice in force in a table with the original and, where there is one, the consolidated PDF; the title and text are read from the PDF (consolidated version where published)."
     },
     "migrationsverkets-forfattningssamling-migrfs": {
       "series": "MIGRFS",
@@ -150,7 +153,9 @@
     },
     "integritetsskyddsmyndighetens-forfattningssamling-imyfs": {
       "series": "IMYFS",
-      "agency": "Integritetsskyddsmyndigheten"
+      "agency": "Integritetsskyddsmyndigheten",
+      "status": "collected",
+      "note": "IMY lists its regulations with a link to each PDF; the text is read from the PDF. Repealing regulations and the predecessor series DIFS on the same page are not collected."
     },
     "kammarkollegiets-forfattningssamling-kamfs": {
       "series": "KAMFS",
@@ -178,7 +183,9 @@
     },
     "lantmateriets-forfattningssamling-lmfs": {
       "series": "LMFS",
-      "agency": "Lantmäteriet"
+      "agency": "Lantmäteriet",
+      "status": "collected",
+      "note": "Lantmäteriet lists the regulations in force, each with its title and a link to the PDF; the text is read from the PDF. Repealed regulations and the predecessor series LMVFS are not collected; one PDF (LMFS 2015:5) is a scan without a text layer."
     },
     "myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs": {
       "series": "MDFFS",
@@ -194,7 +201,9 @@
     },
     "myndigheten-for-tillvaxtpolitiska-utvarderingar-och-analysers-forfattningssamling-mtfs": {
       "series": "MTFS",
-      "agency": "Myndigheten för tillväxtpolitiska utvärderingar och analyser"
+      "agency": "Myndigheten för tillväxtpolitiska utvärderingar och analyser",
+      "status": "collected",
+      "note": "Tillväxtanalys lists the regulations in force with a link to each PDF; the text is read from the PDF. Repealed regulations listed on the same page are not collected."
     },
     "patent-och-registreringsverkets-forfattningssamling-prvfs": {
       "series": "PRVFS",
