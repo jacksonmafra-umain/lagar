@@ -186,6 +186,19 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   list or from the regulation that repealed them). Repealed LIVSFS
   regulations (no repeal date on the page), 23 MYHFS ones without a known
   repeal date and the predecessor series SLVFS are not collected.
+  Five more on 2026-10-30, also with titles, dates and text from their PDFs:
+  DVFS (154 base regulations, one page each in domstol.se's sitemap because
+  the register needs JavaScript), FFS (68 in force, from the lists that
+  Försvarsmakten's four "Gällande FFS" pages load from the site's content API;
+  8 old prints are scans without a text layer), EIFS (34, from Ei's el,
+  naturgas and fjärrvärme tables), KBVFS (4) and HSLF-FS (119 of about 155
+  base regulations listed on kunskapsguiden.se, read from each agency's site
+  with its own robots.txt: Socialstyrelsen 62, Folkhälsomyndigheten 37, TLV 7,
+  Rättsmedicinalverket 7, IVO 5 and one joint regulation). HSLF-FS gaps:
+  Läkemedelsverket's regulations are not collected (its pages need JavaScript
+  and its robots.txt disallows PDFs); about 30 more fail on dead or moved links,
+  MFOF's redirects and TLV regulations no longer on TLV's page. Predecessor
+  series on kunskapsguiden's list (SOSFS, FoHMFS and others) are not collected.
   [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Agency series published as a list of PDF links (configured in
@@ -348,6 +361,25 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Boden's taxor pages and Örnsköldsvik's, Sandviken's and Tidaholm's topic
     pages hold rules that the configured listings do not cover; Kiruna covers
     its föreskrifter and bygglovstaxa only.
+  - Trelleborg: robots.txt disallows `/app/uploads/`, where every PDF lives, so
+    the PDFs are never fetched; the documents point at the listing page and are
+    recorded as gaps in the manifest. Its taxor page lists no PDFs.
+  - Ystad's taxor section of the författningssamling is empty on the page; only
+    section A (allmänna föreskrifter) is collected. Lund links two of its avgifter
+    as HTML pages, which are not collected. Ängelholm covers its lokala
+    ordningsregler page only.
+  - Not collected in Skåne, with the reason per kommun in `AGENCIES.md`: Vellinge
+    (rules as HTML text), Östra Göinge, Lomma, Höör, Perstorp and Helsingborg
+    (document lists rendered in the browser) and Båstad (no collection page).
+    Their issues stay open.
+  - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
+    the PDFs are never fetched; the documents point at the listing page and are
+    recorded as gaps in the manifest.
+  - Simrishamn publishes its taxor as HTML text on its taxor page, which is not
+    collected; only the allmänna lokala ordningsföreskrifter are a PDF.
+  - Tanum publishes its rules as web pages in an A–Z list; they are collected as
+    page text (`html_pages`), the ABVA as its PDF. The avfallsföreskrifter page
+    refers to Rambo AB's site for the full text.
 - Kommuner checked and not collected are listed with the reason in `AGENCIES.md`
   (curated in the `kommuner` section of `collector/data/agencies.json`):
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
@@ -360,9 +392,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Torsås (titles outside the links), Mönsterås (site did not answer),
     Västervik (file list not in the HTML) and Gotland (external document
     service). Linköping links its rules to Google Drive and waits for an owner
-    decision. Their issues stay open. Östhammar's robots.txt shuts named AI
-    crawlers out of its rule pages but allows this collector's agent; the owner
-    approved collecting it.
+    decision. Härryda has no författningssamling or list of its rules: its
+    taxor are spread over topic pages, some as HTML text. Their issues stay open.
+    Östhammar's robots.txt shuts named AI crawlers out of its rule pages but
+    allows this collector's agent; the owner approved collecting it.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources

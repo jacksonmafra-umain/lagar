@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.skurup.se/kommun-och-politik/politik-och-demokrati/styrande-dokument": "1264-listing.html"
+  },
+  "count": 2,
+  "sample": {
+    "number": "18.4325347919d9a4b4c3b4a6a0",
+    "title": "Allmäna lokala ordningsföreskrifter för Skurups kommun, antagen av KF 2025-03-24, § 29",
+    "url": "https://www.skurup.se/download/18.4325347919d9a4b4c3b4a6a0/1777034922380/KS%202025.297%20Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Skurups%20kommun,%20antagen%20av%20KF%202025-03-24,%20%C2%A7%2029%20(ny%20mall).pdf"
+  },
+  "excluded": [
+    "Vision 2045, antagen av KF 2022-08-29, § 237",
+    "Plan för mat och måltider, fastställd av KF 2025-05-26",
+    "Gemensam kretsloppsplan 2021-2030"
+  ]
+}

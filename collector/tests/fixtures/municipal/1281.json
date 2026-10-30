@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://lund.se/kommun-och-politik/sa-styrs-lunds-kommun/styrande-dokument": "1281-listing.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "18.520907719a7ba1a08714c57",
+    "title": "Avfallstaxa 2026",
+    "url": "https://lund.se/download/18.520907719a7ba1a08714c57/1763711101832/Avfallstaxa%202026.pdf"
+  },
+  "excluded": [
+    "Taxa för detaljplaner, program och områdesbestämmelser 2025",
+    "Taxa för detaljplaner, program och områdesbestämmelser indexjusterad 2026",
+    "Taxebilaga 1 för miljönämndens verksamhet"
+  ]
+}

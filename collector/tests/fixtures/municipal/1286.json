@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://ystad.se/kommun-och-politik/sa-styrs-ystads-kommun/kommunal-forfattningssamling": "1286-listing.html"
+  },
+  "count": 14,
+  "sample": {
+    "number": "2c152b88-d585-4898-86fa-a95300fbc178",
+    "title": "A 12 01 bilaga Alkoholförbud på offentlig plats inom angivet område - § 13 lokala ordningsföreskrifter",
+    "url": "https://ystad.se/appresource/4.1537f1c6192bd251bfc60c9/12.3433db6019301deaa6b2891/download?file=2c152b88-d585-4898-86fa-a95300fbc178&folder=59480cc7-75a7-418a-9980-4d82c5f3d4c8"
+  },
+  "excluded": [
+    "A 16 01 Arbetsordning för kommunfullmäktige",
+    "B 16 01 Arvoden och ersättningar till förtroendevalda i Ystads kommun",
+    "B 22 01 Samverkansavtal om gemensam organisation för överförmyndarverksamheten"
+  ]
+}

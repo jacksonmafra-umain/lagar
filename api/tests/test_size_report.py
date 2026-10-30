@@ -1,4 +1,3 @@
-import gzip
 import json
 import subprocess
 import sys
@@ -101,23 +100,7 @@ class SizeReportTest(unittest.TestCase):
                         encoding="utf-8")
         self.assertEqual(sr.doc_layer(path), "eu")
 
-    def test_doc_layer_reads_gzip_documents(self):
-        path = Path(self._tmp.name) / "doc.json.gz"
-        path.write_bytes(gzip.compress(b'{"meta":{"id":"x","layer":"case_law"},"body":""}'))
-        self.assertEqual(sr.doc_layer(path), "case_law")
-        path.write_bytes(gzip.compress(json.dumps({"meta": {"title": "x" * 10000, "layer": "eu"}}).encode()))
-        self.assertEqual(sr.doc_layer(path), "eu")
-        path.write_bytes(b"not gzip")
-        self.assertIsNone(sr.doc_layer(path))
-
-    def test_status_thresholds(self):
-        report = {"total": 850 * sr.MB}
-        self.assertEqual(sr.status(report), "warn")
-        self.assertEqual(sr.status({"total": 800 * sr.MB}), "ok")
-        self.assertEqual(sr.status({"total": 900 * sr.MB + 1}), "fail")
-        self.assertEqual(sr.status(report, budget_mb=1000, warn_mb=900), "ok")
-
-    def test_within_budget_writes_summary_and_json(self):
+    def test_writes_summary_and_json(self):
         summary = Path(self._tmp.name) / "summary.md"
         summary.write_text("before\n", encoding="utf-8")
         out = Path(self._tmp.name) / "report.json"
@@ -125,24 +108,19 @@ class SizeReportTest(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         text = summary.read_text(encoding="utf-8")
         self.assertTrue(text.startswith("before\n### Site size"))
-        self.assertIn("within budget", text)
+        self.assertNotIn("budget", text.split("| API folder")[0])
         self.assertIn("| `case_law` |", text)
         self.assertEqual(json.loads(out.read_text(encoding="utf-8"))["total"], sum(self.sizes(self.site).values()))
 
-    def test_over_budget_fails(self):
-        result = run_report("--api", self.api, "--budget-mb", 0, "--warn-mb", 0)
-        self.assertEqual(result.returncode, 1)
-        self.assertIn("OVER BUDGET", result.stdout)
-        self.assertIn("::error::", result.stderr)
-
-    def test_warning_does_not_fail(self):
-        result = run_report("--api", self.api, "--budget-mb", 1, "--warn-mb", 0)
-        self.assertEqual(result.returncode, 0)
-        self.assertIn("::warning::", result.stderr)
+    def test_reports_without_failing(self):
+        result = run_report("--api", self.api)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stderr, "")
+        self.assertIn("### Site size", result.stdout)
+        self.assertEqual(run_report("--api", self.api, "--budget-mb", 1).returncode, 2)  # the option is gone
 
     def test_bad_arguments(self):
         self.assertEqual(run_report("--api", Path(self._tmp.name) / "missing").returncode, 2)
-        self.assertEqual(run_report("--api", self.api, "--budget-mb", 1, "--warn-mb", 2).returncode, 2)
 
 
 if __name__ == "__main__":

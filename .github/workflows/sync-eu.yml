@@ -3,10 +3,11 @@ name: Sync EU
 # Daily check of the Publications Office Cellar for changes to the curated EU acts
 # (collector/data/eu-acts.json): the act itself, a new consolidated version or a new
 # amending act. One SPARQL query finds the changed acts; only those are collected
-# again, with their latest consolidated version. A second query finds the judgments
-# of the Court of Justice and the General Court interpreting those acts that changed
-# (or appeared) in Cellar, and collects them. Changes land as one pull request on
-# the data/eu-sync branch; a run with no changes opens nothing.
+# again, with their latest consolidated version. A second query finds the judgments of
+# the Court of Justice and the General Court interpreting those acts that changed (or
+# appeared) in Cellar, and collects them. Changes land as one pull request on the
+# data/eu-sync branch. The job merges that pull request into main once its collector
+# tests and the corpus audit pass; a run with no changes opens nothing.
 #
 # The sync markers (collector/data/eu-sync.json for the acts,
 # collector/data/eu-case-law-sync.json for the judgments) only move inside a commit
@@ -82,6 +83,9 @@ jobs:
             git add -- $conflicted
             git commit --no-edit
           fi
+
+      - name: Install poppler-utils
+        run: sudo apt-get update -q && sudo apt-get install -y -q --no-install-recommends poppler-utils
 
       - name: Collector tests
         run: python3 -I -m unittest discover -s collector/tests -t collector
@@ -208,3 +212,31 @@ jobs:
               --assignee "$OWNER" \
               --body "Automated sync of the curated EU acts that changed in the Publications Office Cellar, with their latest consolidated version, and of the Court of Justice and General Court judgments interpreting them. Each run adds one commit that lists the documents it wrote; the workflow run summaries list failures and gaps."
           fi
+
+      - name: Merge the pull request into main
+        run: |
+          # Land the sync on main once this job's collector tests and the corpus audit have
+          # passed. A sync pull request left open by an earlier run is merged the same way.
+          pr=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then
+            echo "No open sync pull request; nothing to merge."
+            exit 0
+          fi
+          # The start step may have merged main into an older sync branch without pushing it.
+          git fetch -q origin "$BRANCH"
+          if [ "$(git branch --show-current)" = "$BRANCH" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
+            git push --force-with-lease="$BRANCH:$(git rev-parse FETCH_HEAD)" origin "HEAD:$BRANCH"
+          fi
+          python3 -I collector/audit.py
+          head=$(git ls-remote origin "refs/heads/$BRANCH" | cut -f1)
+          # GitHub may need a moment to compute mergeability of a pull request it just got.
+          for attempt in 1 2 3 4 5 6; do
+            if gh pr merge "$pr" --merge --match-head-commit "$head"; then
+              git push origin --delete "$BRANCH" || true
+              echo "Merged #$pr into main." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "::error::could not merge #$pr into main; it stays open for the next run"
+          exit 1

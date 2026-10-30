@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.munkedal.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument": "1430-listing.html"
+  },
+  "count": 3,
+  "sample": {
+    "number": "18.76dc7ad6190095a3dc5d830",
+    "title": "Torghandelsföreskrifter",
+    "url": "https://munkedal.se/download/18.76dc7ad6190095a3dc5d830/1718267027414/Torghandelsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": [
+    "Vision 2040 - Styrdokument - Munkedals kommun",
+    "Reglemente Revisorerna",
+    "Riktlinjer för styrande dokument"
+  ]
+}
