@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://nordanstig.se/startsida/sidor/kommun-och-politik/sa-styrs-nordanstig---styrdokument.html": "2132-listing.html"
+  },
+  "count": 8,
+  "sample": {
+    "number": "18.522bccfd1773f5ebeb0aa6ee",
+    "title": "Taxa för kopior av allmänna handlingar",
+    "url": "https://nordanstig.se/download/18.522bccfd1773f5ebeb0aa6ee/1612527662274/Taxa-for-kopior-av-allmanna-handlingar.pdf"
+  },
+  "excluded": [
+    "Agenda 2030",
+    "Miljöbokslut 2021",
+    "Mål och budget 2026-2029"
+  ]
+}

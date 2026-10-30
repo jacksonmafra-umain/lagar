@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.smedjebacken.se/kommun-och-politik/styrande-dokument/foreskrifter.html": "2061-listing1.html",
+    "https://www.smedjebacken.se/kommun-och-politik/styrande-dokument/avgifter.html": "2061-listing2.html"
+  },
+  "count": 35,
+  "sample": {
+    "number": "18.7c121e571863c06725a43b5",
+    "title": "Allmänna bestämmelser för användandet av allmänna vatten- och avloppsanläggning",
+    "url": "https://www.smedjebacken.se/download/18.7c121e571863c06725a43b5/1676385730362/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndandet%20av%20kommunens%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggningar%20ABVA%2020.pdf"
+  },
+  "excluded": []
+}
