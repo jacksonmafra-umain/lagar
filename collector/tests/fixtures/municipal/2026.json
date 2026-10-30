@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.gagnef.se/kommun-och-politik/kommunala-styrdokument/": "2026-listing.html"
+  },
+  "count": 4,
+  "sample": {
+    "number": "2023/06/Antagen-KF-230619-§-79-Allmanna-lokala-ordningsforeskrifter-for-Gagnefs-kommun",
+    "title": "Allmänna lokala ordningsföreskrifter för Gagnefs kommun",
+    "url": "https://gagnef.se/wp-content/uploads/2023/06/Antagen-KF-230619-%C2%A7-79-Allmanna-lokala-ordningsforeskrifter-for-Gagnefs-kommun.pdf"
+  },
+  "excluded": [
+    "Bredbandsstrategi",
+    "Digitaliseringsstrategi",
+    "Näringslivsstrategi"
+  ]
+}

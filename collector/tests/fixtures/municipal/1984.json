@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://arboga.se/kommun-och-politik/ekonomi-och-budget/avgifter-och-taxor.html": "1984-listing1.html",
+    "https://arboga.se/kommun-och-politik/mal-utveckling-och-styrande-dokument/styrande-dokument.html": "1984-listing2.html"
+  },
+  "count": 31,
+  "sample": {
+    "number": "18.6c8035df1965c8cd26524ba2",
+    "title": "Ekbacksbadet",
+    "url": "https://arboga.se/download/18.6c8035df1965c8cd26524ba2/1745469766811/Taxa%20Ekbacksbadet%202025.pdf"
+  },
+  "excluded": []
+}
