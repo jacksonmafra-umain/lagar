@@ -1586,7 +1586,7 @@ class SametingetAdapter:
             note = _clean((description.text() if description is not None else "").removeprefix("[PDF]"))
             pdf = absolute(self.base_url, link.attrs["href"])
             if note.startswith("Konsoliderad version"):
-                consolidated.setdefault(number, pdf)
+                consolidated.setdefault(number, (pdf, name))
                 continue
             changes = _AMENDING.search(note) or _AMENDING.search(name) or name.startswith("Ändring")
             if changes:
@@ -1601,7 +1601,10 @@ class SametingetAdapter:
         for number, entry in entries.items():
             entry.amended_by = sorted(amending.get(number, ()), key=number_key)
             if number in consolidated:
-                entry.pdfs.append((f"{number} (konsoliderad version)", consolidated[number]))
+                pdf, name = consolidated[number]
+                entry.pdfs.append((f"{number} (konsoliderad version)", pdf))
+                if entry.title == number and name:
+                    entry.title = name
         return list(entries.values())
 
     def regulation(self, entry):
