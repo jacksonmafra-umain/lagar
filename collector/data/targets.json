@@ -48,6 +48,66 @@
     "as_of": "2026-10-29"
   },
   {
+    "layer": "agency",
+    "type": null,
+    "series": "MIGRFS",
+    "label": "MIGRFS (Migrationsverket)",
+    "target": 21,
+    "kind": "counted",
+    "source": "https://www.migrationsverket.se/om-migrationsverket/styrning-och-uppfoljning/foreskrifter.html (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KAMFS",
+    "label": "KAMFS (Kammarkollegiet)",
+    "target": 74,
+    "kind": "counted",
+    "source": "https://www.kammarkollegiet.se/om-oss/kammarkollegiets-forfattningssamling-kamfs (base regulations listed, in force and earlier)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KRFS",
+    "label": "KRFS (Statens kulturråd)",
+    "target": 12,
+    "kind": "counted",
+    "source": "https://www.kulturradet.se/om-oss/forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KFMFS",
+    "label": "KFMFS (Kronofogdemyndigheten)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.kronofogden.se/om-kronofogden/dina-rattigheter-lagar-och-regler/foreskrifter-allmanna-rad-och-meddelanden (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KFS",
+    "label": "KFS (Kommerskollegium)",
+    "target": 4,
+    "kind": "counted",
+    "source": "https://www.kommerskollegium.se/uppdrag/forfattningssamling/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "MEMYFS",
+    "label": "MEMYFS (Mediemyndigheten)",
+    "target": 4,
+    "kind": "counted",
+    "source": "https://mediemyndigheten.se/om-oss/lagar-forordningar-och-foreskrifter/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
     "layer": "case_law",
     "type": null,
     "label": "Case law",
