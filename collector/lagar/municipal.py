@@ -16,7 +16,8 @@ maps each kommun code to its listing pages and to one of three parsing strategie
 - `json_list`: a JSON document list served by a document platform's own API
   (Evolution DocumentWeb folders, WordPress File Download categories); the
   config names the list, the title and number fields and a URL template that
-  builds each document's link from the item's fields.
+  builds each document's link from the item's fields. The list may also sit in
+  a Next.js page's streamed data (`embedded: "next"`).
 
 Most kommuner run Sitevision and list their documents as one flat file list.
 `"preset": "sitevision"` fills in the link pattern, number (the file's node id)
@@ -175,6 +176,8 @@ class Kommun:
     json_recursive: bool = False
     json_follow: "dict" = field(default_factory=dict)
     href_titles: bool = False
+    json_embedded: str = ""
+    json_number_pattern: str = ""
 
 
 def _required(entry, key, code, kind=str):
@@ -238,12 +241,15 @@ def _kommun(code, entry):
         json_recursive=bool(entry.get("recursive", False)),
         json_follow=dict(entry.get("follow_items") or {}),
         href_titles=bool(entry.get("href_titles", False)),
+        json_embedded=entry.get("embedded", ""),
+        json_number_pattern=entry.get("number_pattern", ""),
     )
     for url in listings:
         if urllib.parse.urlsplit(url).hostname not in hosts:
             raise ConfigError(f"{code}: listing {url} is not on a configured host")
     try:
-        patterns = [kommun.link_pattern, kommun.follow, kommun.document_pattern, *kommun.title_strip, *kommun.title_include, *kommun.title_exclude]
+        patterns = [kommun.link_pattern, kommun.follow, kommun.document_pattern, kommun.json_number_pattern,
+                    *kommun.title_strip, *kommun.title_include, *kommun.title_exclude]
         for pattern in [*patterns, *(r["pattern"] for r in kommun.number_rules)]:
             re.compile(pattern)
     except (re.error, KeyError, TypeError) as error:
@@ -256,6 +262,10 @@ def _kommun(code, entry):
         raise ConfigError(f"{code}: domino_view needs kinds and the kind, title and number columns")
     if strategy == "json_list" and not (kommun.json_title and kommun.json_number and kommun.json_url):
         raise ConfigError(f"{code}: json_list needs title_field, number_field and url_template")
+    if kommun.json_embedded not in ("", "next"):
+        raise ConfigError(f"{code}: unknown embedded list {kommun.json_embedded!r}")
+    if kommun.json_embedded and not kommun.json_items:
+        raise ConfigError(f"{code}: an embedded list needs items (the key of the list)")
     return kommun
 
 
@@ -823,12 +833,36 @@ def _follows(kommun, item):
     return bool(rule) and str(item.get(rule.get("field", ""))) == str(rule.get("value"))
 
 
+_NEXT_CHUNK = re.compile(r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)')
+
+
+def _next_list(page, key):
+    """The JSON value of `key` in a Next.js page's streamed data (`self.__next_f.push` strings)."""
+    data = "".join(json.loads(chunk) for chunk in _NEXT_CHUNK.findall(page))
+    marker = f'"{key}":'
+    start = data.find(marker)
+    if start < 0:
+        return None
+    return json.JSONDecoder().raw_decode(data, start + len(marker))[0]
+
+
+def _json_document(kommun, raw):
+    """The JSON document of a listing; with `embedded: "next"`, the list found in a Next.js page."""
+    if kommun.json_embedded == "next":
+        return {kommun.json_items: _next_list(_text(raw), kommun.json_items)}
+    return json.loads(_text(raw))
+
+
 def parse_json_list(kommun, raw, listing_url):
-    """Entries of a JSON document list; problems are items whose link or number is missing."""
+    """Entries of a JSON document list; problems are items whose link or number is missing.
+
+    With `embedded: "next"` the list is the value of `items` in the streamed data of a
+    Next.js page (Skövde), not a JSON document of its own.
+    """
     sha = hashlib.sha256(raw).hexdigest()
     sections = {s.casefold() for s in kommun.sections}
     entries, problems = [], []
-    for section, item in _json_items(kommun, json.loads(_text(raw))):
+    for section, item in _json_items(kommun, _json_document(kommun, raw)):
         if not isinstance(item, dict) or _follows(kommun, item):
             continue
         if sections and (section or "").casefold() not in sections:
@@ -846,6 +880,9 @@ def parse_json_list(kommun, raw, listing_url):
         if kommun.link_pattern and not re.search(kommun.link_pattern, url, re.IGNORECASE):
             continue
         number = _clean(str(item.get(kommun.json_number) or ""))
+        if number and kommun.json_number_pattern:
+            match = re.search(kommun.json_number_pattern, number)
+            number = match.group(1) if match else ""
         if not number:
             problems.append(url)
             continue

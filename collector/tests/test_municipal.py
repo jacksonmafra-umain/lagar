@@ -684,6 +684,31 @@ class JsonListTest(unittest.TestCase):
             self.assertEqual(schema.validate(meta), [])
             self.assertEqual(meta["source"], DOCWEB + "/api/download/e3b7/64fda324")
 
+    def test_list_in_a_next_js_page(self):
+        entry = {**DOCWEB_ENTRY, "hosts": ["www.example.se", "static.example.se"],
+                 "listings": ["https://www.example.se/forfattningssamling/"], "embedded": "next",
+                 "items": "ordinancePages", "title_field": "Heading", "number_field": "Id",
+                 "number_pattern": "^([0-9a-f-]{36})", "url_template": "{FileUrl}"}
+        pages = [
+            {"Heading": "Avfallsföreskrifter", "FileUrl": "https://static.example.se/avfallsforeskrifter.pdf",
+             "Id": "0f1e2d3c-4b5a-6978-8091-a2b3c4d5e6f7_sv_Published"},
+            {"Heading": "Riktlinje för donationer", "FileUrl": "https://static.example.se/riktlinje.pdf",
+             "Id": "11111111-2222-3333-4444-555555555555_sv_Published"},
+        ]
+        flight = '3c:["$","main",null,{"children":[["$","$L3f",null,{"ordinancePages":' + json.dumps(pages) + "}]]}]"
+        half = len(flight) // 2  # the data arrives in several pushes
+        html = "".join(f"<script>self.__next_f.push([1,{json.dumps(part)}])</script>"
+                       for part in (flight[:half], flight[half:])).encode()
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(self.config(tmp, entry))["1961"]
+            with self.assertRaises(municipal.ConfigError):
+                municipal.load_config(self.config(tmp, {**entry, "embedded": "nuxt"}))
+        entries, problems = municipal.parse_json_list(kommun, html, entry["listings"][0])
+        self.assertEqual([(e.number, e.title, e.url) for e in entries], [
+            ("0f1e2d3c-4b5a-6978-8091-a2b3c4d5e6f7", "Avfallsföreskrifter",
+             "https://static.example.se/avfallsforeskrifter.pdf")])
+        self.assertEqual(problems, [])
+
     def test_json_list_needs_its_fields(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(municipal.ConfigError):

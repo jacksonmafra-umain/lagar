@@ -800,6 +800,12 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      `{linkdownload}`), resolved against the listing URL. `link_pattern`, when set, filters the
      built links; `resident_filter` and `title_include`/`title_exclude` filter the titles. An item
      with no number or a template field it lacks is reported as a problem.
+     `"embedded": "next"` reads the list from a Next.js page instead of a JSON document: the
+     page's streamed data (`self.__next_f.push` strings) is joined and `items` names the key whose
+     value is the list (Skövde's `ordinancePages`). `number_pattern` (regex, first group) cuts the
+     number out of `number_field` (Skövde's ids end in `_sv_Published`). A Sitevision file-share
+     module's folder is read the same way from its files JSON
+     (`/appresource/<page>/<portlet>/files?folderId=<folder>`, items `files`; Borlänge).
      With `"recursive": true`, the lists at `items` are collected from every nested folder object as
      well (DocumentWeb returns a whole folder tree in one answer); each item's section is the title
      field of the folder that holds it, so `sections` can keep only some folders. `follow_items`
