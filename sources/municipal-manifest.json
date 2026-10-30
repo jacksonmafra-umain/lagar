@@ -25093,6 +25093,276 @@
       "url": "https://www.stromsund.se/download/18.feee518159b54f1b662b71f/1485179152367/Reglering%20av%20sn%C3%B6skotertrafiken%20inom%20omr%C3%A5de%20Frostviken%20V%C3%A4st%20(8_9).pdf"
     },
     {
+      "bytes": 565583,
+      "content_type": "application/pdf",
+      "id": "2321-18-122e248b199c9254310f82",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:53Z",
+      "sha256": "415dcef3f583c972b53ff63ac49ee5710d38d60886a293efa9a05bf06f298fe1",
+      "url": "https://are.se/download/18.122e248b199c9254310f82/1760099459014/Taxa%20f%C3%B6r%20alkohol,%20tobak%20och%20tobaksfria%20nikotinprodukter.pdf"
+    },
+    {
+      "bytes": 2944055,
+      "content_type": "application/pdf",
+      "id": "2321-18-1ecb75a5194d8462828e501",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:16Z",
+      "sha256": "1736871100eb41fb29bc82778aac289e844aa034c098327b4f0cb470aa12c5fe",
+      "url": "https://are.se/download/18.1ecb75a5194d8462828e501/1739794605729/F%C3%B6reskrift%20om%20f%C3%B6rbud%20mot%20k%C3%B6rning%20i%20terr%C3%A4ng%20p%C3%A5%20sn%C3%B6t%C3%A4ckt%20mark%20med%20motordrivet%20fordon.pdf"
+    },
+    {
+      "bytes": 104628,
+      "content_type": "application/pdf",
+      "id": "2321-18-1ecb75a5194d8462828e53c",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:08Z",
+      "sha256": "2dea93e1169cde3209258f773adb88cecf82fe2d4d099ce285e5246aea758f48",
+      "url": "https://are.se/download/18.1ecb75a5194d8462828e53c/1739795016047/Allm%C3%A4nna%20lokala%20ordningf%C3%B6reskrifter%20f%C3%B6r%20%C3%85re%20kommun.pdf"
+    },
+    {
+      "bytes": 139967,
+      "content_type": "application/pdf",
+      "id": "2321-18-1ecb75a5194d8462828e562",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:07Z",
+      "sha256": "ba31368848ade2767114a490ade14c4c2eae1ce3c93a43307081223a1c38f9b6",
+      "url": "https://are.se/download/18.1ecb75a5194d8462828e562/1739795299489/F%C3%B6reskrift%20lokala%20fo%CC%88reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6.pdf"
+    },
+    {
+      "bytes": 172834,
+      "content_type": "application/pdf",
+      "id": "2321-18-1fb23bd019a0f60c9142da4",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:57Z",
+      "sha256": "b4a8afd63a74a3e3d85ba54e528ab330534b89d4a87069272ce5e53cd97abb42",
+      "url": "https://are.se/download/18.1fb23bd019a0f60c9142da4/1761296659218/Taxa%20f%C3%B6r%20tillsyn%20%C3%B6ver%20avfallshantering%20i%20fritidsb%C3%A5tshamnar.pdf"
+    },
+    {
+      "bytes": 152740,
+      "content_type": "application/pdf",
+      "id": "2321-18-25c48a5b194a7cb8518637c",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:56Z",
+      "sha256": "d10b671620a1bede4b5fa10a3d27320b4978064921e10d01b5ab3a1759c9e861",
+      "url": "https://are.se/download/18.25c48a5b194a7cb8518637c/1738146339344/Taxa%20f%C3%B6r%20offentlig%20kontroll%20inom%20livsmedelslagstiftningen.pdf"
+    },
+    {
+      "bytes": 120262,
+      "content_type": "application/pdf",
+      "id": "2321-18-25c48a5b194a7cb8518637d",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:46Z",
+      "sha256": "4ea13185f50ad5deaae7c4a93d363b843192fdd0b8314d5083b9b9d931ce4a8a",
+      "url": "https://are.se/download/18.25c48a5b194a7cb8518637d/1738146339369/L%C3%A4kemedelstaxa.pdf"
+    },
+    {
+      "bytes": 688228,
+      "content_type": "application/pdf",
+      "id": "2321-18-25c48a5b194a7cb85186382",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:51Z",
+      "sha256": "d357ad9c6f2cba219b60f2a917daa32e8ff70794a327449262790fba8b67245c",
+      "url": "https://are.se/download/18.25c48a5b194a7cb85186382/1738146339507/Parkeringsavgifter%20i%20centrala%20%C3%85re.pdf"
+    },
+    {
+      "bytes": 98509,
+      "content_type": "application/pdf",
+      "id": "2321-18-25c48a5b194a7cb85186383",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:54Z",
+      "sha256": "54da2678425a09baa269d3cb845270e336927c8b78b74f3c5e29c6633e38c693",
+      "url": "https://are.se/download/18.25c48a5b194a7cb85186383/1738146339542/Taxa%20f%C3%B6r%20felparkeringsavgift%20i%20%C3%85re%20kommun.pdf"
+    },
+    {
+      "bytes": 205748,
+      "content_type": "application/pdf",
+      "id": "2321-18-25c48a5b194a7cb85186384",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:55Z",
+      "sha256": "8063bd41c1812465b0b42e9ea14846e984938dcc4876c1c0cfbb0bd39b00ac07",
+      "url": "https://are.se/download/18.25c48a5b194a7cb85186384/1738146339558/Taxa%20f%C3%B6r%20fordonsflytt.pdf"
+    },
+    {
+      "bytes": 89332,
+      "content_type": "application/pdf",
+      "id": "2321-18-25c48a5b194a7cb85186386",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:58Z",
+      "sha256": "b4287cd7878db34c18ae20abd08e8c19cb035425f99821e66cac14cc87e2053b",
+      "url": "https://are.se/download/18.25c48a5b194a7cb85186386/1738146339597/Taxa%20f%C3%B6r%20trafik%C3%A4renden.pdf"
+    },
+    {
+      "bytes": 302079,
+      "content_type": "application/pdf",
+      "id": "2321-18-25c48a5b194a7cb85186387",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:59Z",
+      "sha256": "b5d637335fed6339c4a51cfbefdf8bfd9d11090a65912cb96e576b738a3cf2ac",
+      "url": "https://are.se/download/18.25c48a5b194a7cb85186387/1738146339613/Taxa%20f%C3%B6r%20utl%C3%A4mnande%20av%20allm%C3%A4nna%20handlingar.pdf"
+    },
+    {
+      "bytes": 115647,
+      "content_type": "application/pdf",
+      "id": "2321-18-25c48a5b194a7cb8518638a",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:02Z",
+      "sha256": "750b2a35a529f30983e5c3e73e65533720cc66ea6a9fe830a6b313a3222a063f",
+      "url": "https://are.se/download/18.25c48a5b194a7cb8518638a/1738146339674/Taxor%20f%C3%B6r%20offentlig%20platsmark.pdf"
+    },
+    {
+      "bytes": 122802,
+      "content_type": "application/pdf",
+      "id": "2321-18-25c48a5b194a7cb8518638b",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:04Z",
+      "sha256": "fa0a1ab6f903b43e45a4bad9a9ac047723a3ce0137e14847888f3bdf55f5e1eb",
+      "url": "https://are.se/download/18.25c48a5b194a7cb8518638b/1738146339690/Timdebiteringstaxa%20f%C3%B6r%20mark-%20och%20exploatering.pdf"
+    },
+    {
+      "bytes": 413483,
+      "content_type": "application/pdf",
+      "id": "2321-18-46b641141a042285fe78eab",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:52Z",
+      "sha256": "a91c1e1c7f06961ef518a2068a81040d8175542b8d0278c60666f6469e8d8ce8",
+      "url": "https://are.se/download/18.46b641141a042285fe78eab/1788442557038/SBSF%20timtaxor.pdf"
+    },
+    {
+      "bytes": 754728,
+      "content_type": "application/pdf",
+      "id": "2321-18-5e484f4b19ed4844be316cf3",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:09Z",
+      "sha256": "62d6a2758b7ef321919972ee484b77ee639d0d8bb7af0bf836f9583e2e5242ba",
+      "url": "https://are.se/download/18.5e484f4b19ed4844be316cf3/1782718717258/F%C3%B6reskrift%20om%20avfallshantering%202026-06-25.pdf"
+    },
+    {
+      "bytes": 327645,
+      "content_type": "application/pdf",
+      "id": "2321-18-5e917d4d19a7bb0e43b364",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:16Z",
+      "sha256": "9fc466e44f292686cccbd9cc77c9f6cf0e62b8bfac164069ce051b5db705ff9b",
+      "url": "https://are.se/download/18.5e917d4d19a7bb0e43b364/1763025674645/Kommunala%20f%C3%B6reskrifter%20om%20anv%C3%A4ndningen%20av%20%C3%85re%20kommuns%20allm%C3%A4nna%20VA-anl%C3%A4ggning.pdf"
+    },
+    {
+      "bytes": 95457,
+      "content_type": "application/pdf",
+      "id": "2321-18-61451f6119b2bf1630034d2",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:05Z",
+      "sha256": "e8a4171ff5de3de7e51a82e75b1de7c93742ae348268fa32df2b28b87eb128fe",
+      "url": "https://are.se/download/18.61451f6119b2bf1630034d2/1766142188173/Timtaxa%20f%C3%B6r%20intern%20debitering%20av%20arbeten%20som%20VA-huvudmannen%20utf%C3%B6r%20utanf%C3%B6r%20verksamhetsomr%C3%A5de.pdf"
+    },
+    {
+      "bytes": 340461,
+      "content_type": "application/pdf",
+      "id": "2321-18-61451f6119b2bf16300428b7",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:44Z",
+      "sha256": "a2c8852f495a98b8d3fc0ba4afdcedbff5e9fe875e02b6dc03996028b0f2c2ea",
+      "url": "https://are.se/download/18.61451f6119b2bf16300428b7/1768903090270/Avfallstaxa2026.pdf"
+    },
+    {
+      "bytes": 81845,
+      "content_type": "application/pdf",
+      "id": "2321-18-69755fc319b2be124e4520cd",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:03Z",
+      "sha256": "0f8fbb7e58f20d087a3c78942e72935b27bfb773977347ebdb20e997a4ea1b2f",
+      "url": "https://are.se/download/18.69755fc319b2be124e4520cd/1768826409170/Taxor%20och%20avgifter%20i%20hemv%C3%A5rden%202026.pdf"
+    },
+    {
+      "bytes": 9060272,
+      "content_type": "application/pdf",
+      "id": "2321-18-6af26f14198976c7bb749c",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:12Z",
+      "sha256": "b6e9ec78558b6a0ef0637f489998faa8bfe808945d228489455ebfa77e54d10e",
+      "url": "https://are.se/download/18.6af26f14198976c7bb749c/1754915191248/alkoholf%C3%B6rbud-p%C3%A5-allm%C3%A4n-plats-j%C3%A4rpen.pdf"
+    },
+    {
+      "bytes": 8646264,
+      "content_type": "application/pdf",
+      "id": "2321-18-6af26f14198976c7bb749d",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:15Z",
+      "sha256": "666fb4d6d92bda7d10ca1d43b02cae335b85d05e0f321e61006b291b514445fb",
+      "url": "https://are.se/download/18.6af26f14198976c7bb749d/1754915191647/alkohol-f%C3%B6rbud-p%C3%A5-allm%C3%A4n-plats-%C3%A5re.pdf"
+    },
+    {
+      "bytes": 431109,
+      "content_type": "application/pdf",
+      "id": "2321-18-6ec5c3f319b2c01e8772dcbd",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:01Z",
+      "sha256": "9708a19427a691fa31a444e3a035b3823732c282ad499aa0cfea8c81a8f6d693",
+      "url": "https://are.se/download/18.6ec5c3f319b2c01e8772dcbd/1767970890377/Taxa%20med%20taxebest%C3%A4mmelser%202026.pdf"
+    },
+    {
+      "bytes": 224730,
+      "content_type": "application/pdf",
+      "id": "2321-18-72cb607e197a221fbaa4e",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:47Z",
+      "sha256": "910fce2d3a108c54628959fa262f8a9b4c2ed6f526ee5c1e6f2cc3dad7e57e1c",
+      "url": "https://are.se/download/18.72cb607e197a221fbaa4e/1750773845748/Milj%C3%B6balken%20Taxebest%C3%A4mmelser.pdf"
+    },
+    {
+      "bytes": 416420,
+      "content_type": "application/pdf",
+      "id": "2321-18-72cb607e197a221fbaa4f",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:48Z",
+      "sha256": "8482b2047ff96f205ee274c7d7c381ef8db22768f23a35e6415e6cde7ce04abd",
+      "url": "https://are.se/download/18.72cb607e197a221fbaa4f/1750773845779/Milj%C3%B6balken%20Taxebilaga%201.pdf"
+    },
+    {
+      "bytes": 685461,
+      "content_type": "application/pdf",
+      "id": "2321-18-72cb607e197a221fbaa50",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:49Z",
+      "sha256": "590d4fdb1c3058fff4a186f424649430eaa669453ae7dcfd78c50191a32467e1",
+      "url": "https://are.se/download/18.72cb607e197a221fbaa50/1750773845817/Milj%C3%B6balken%20Taxebilaga%202.pdf"
+    },
+    {
+      "bytes": 195056,
+      "content_type": "application/pdf",
+      "id": "2321-18-72cb607e197a221fbaa51",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:50Z",
+      "sha256": "1a8580b030d91d95cecdb89c7a82bb999bcb1a110221bfb1fd75fe02c8e2b663",
+      "url": "https://are.se/download/18.72cb607e197a221fbaa51/1750773845870/Milj%C3%B6balken%20Taxebilaga%203.pdf"
+    },
+    {
+      "bytes": 423976,
+      "content_type": "application/pdf",
+      "id": "2321-18-74e34ace19545e0fec24cd9",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:07:45Z",
+      "sha256": "f30136656241f757f69cd1de13154baafbbf981698696b671a4a7c229278b2db",
+      "url": "https://are.se/download/18.74e34ace19545e0fec24cd9/1741086497405/Bygglovstaxa%202025.pdf"
+    },
+    {
+      "bytes": 138137,
+      "content_type": "application/pdf",
+      "id": "2321-18-7757873c19c988c66572d0b4",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:06Z",
+      "sha256": "8462edbd8f630e011645cf0200e59539ea9d510837ad97a6100fe2fbcb78ce71",
+      "url": "https://are.se/download/18.7757873c19c988c66572d0b4/1773671435238/Timtaxa%20f%C3%B6r%20planavdelningen.pdf"
+    },
+    {
+      "bytes": 299192,
+      "content_type": "application/pdf",
+      "id": "2321-18-7b3815c319a7bc9c7f3174bc",
+      "municipality_code": "2321",
+      "retrieved_at": "2026-10-30T14:08:00Z",
+      "sha256": "1e89ece980b81c6337303439a122504a8a41a57a393021b448d1e12291965e23",
+      "url": "https://are.se/download/18.7b3815c319a7bc9c7f3174bc/1764066377379/Taxa%20f%C3%B6r%20%C3%85re%20kommuns%20allm%C3%A4nna%20vatten-%20och%20spillvattenanl%C3%A4ggning.pdf"
+    },
+    {
       "bytes": 151662,
       "content_type": "application/pdf",
       "id": "2326-18-12a5b1201849980bbaa1542",
@@ -27487,6 +27757,114 @@
       "url": "https://skelleftea.se/download/18.6a4147c8197a204f703743a/1751531042298/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6%20faststst%C3%A4llda%20kommunfullm%C3%A4ktige%202025-06-18%20%C2%A7%20205.pdf"
     },
     {
+      "bytes": 385114,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d0316",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:20Z",
+      "sha256": "b4a54c4befd972178c5db357f7d928783d841205b4f265f8234fffeae5b2a3f6",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d0316/1775713360273/Taxa%20f%C3%B6r%20utskrift%20och%20kopiering%20-%20Allm%C3%A4nna%20handlingar.pdf"
+    },
+    {
+      "bytes": 1147278,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d0327",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:19Z",
+      "sha256": "770ecb8dfcac61692ee0cb4a85452f5e4b8b747975756c6a825adebebec0fbe6",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d0327/1775713361940/Lokala%20ordningsf%C3%B6reskrifter.pdf"
+    },
+    {
+      "bytes": 518334,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d0349",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:21Z",
+      "sha256": "92f12eba43ec8871f4c356c3a0329cf3d45c172a5f7d3f9160893c9b61c7aa03",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d0349/1775713364365/Taxa%20-%20R%C3%A4ddningstj%C3%A4nsten.pdf"
+    },
+    {
+      "bytes": 397926,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d0375",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:22Z",
+      "sha256": "c1ef2e21d1efce10dcd255a1477c9dda0e31726963f40605e78b458aebf26b2f",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d0375/1775713701384/Taxor%20och%20avgifter%20inom%20%C3%A4ldreomsorgen%20och%20avdelningen%20f%C3%B6r%20st%C3%B6d%20och%20omsorg.pdf"
+    },
+    {
+      "bytes": 498074,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d03c8",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:23Z",
+      "sha256": "da6f62ac5fc28aa3e1faa4e94f6d32da768d5a13d379d0a137e0fef595fe1399",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d03c8/1775713836147/Avgift%20f%C3%B6r%20kartdata.pdf"
+    },
+    {
+      "bytes": 514146,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d03cd",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:24Z",
+      "sha256": "d43af855020bb952f2a7a41f0a0c1b88b5d3c0d1320771b2ebcaad92c6946a6b",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d03cd/1775713836785/Plan-%20och%20bygglovstaxa.pdf"
+    },
+    {
+      "bytes": 1107425,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d03ce",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:25Z",
+      "sha256": "867a290d04e0c78dcb6ce358d4fc5cc8a8e051abd4e6eee5e6fd7bca62432983",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d03ce/1775713836864/Renh%C3%A5llningsf%C3%B6reskrifter%20f%C3%B6r%20Arvidsjaurs%20kommun.pdf"
+    },
+    {
+      "bytes": 434787,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d03d4",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:26Z",
+      "sha256": "f69a3fdf27846a46f81dee4c3701ba5a8080eb10ddc990c1e03b9da8f653035a",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d03d4/1775713837324/Sotnings-%20och%20brandkontrolltaxa%202025-05-01-2026-04-31.pdf"
+    },
+    {
+      "bytes": 1126330,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d03d5",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:27Z",
+      "sha256": "e1f41c75538f73c2ebdc364696fa17857aba0cade29030bd2b80c3fa7741c3d3",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d03d5/1775713837427/Taxa%20f%C3%B6r%20Arvidsjaurs%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning%20(VA-taxa).pdf"
+    },
+    {
+      "bytes": 262423,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d03d6",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:28Z",
+      "sha256": "82a62513a0918faf05c66365e8a08405d9e3deb9141d1eb9bc3b6f787a5e7425",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d03d6/1775713837543/Taxa%20f%C3%B6r%20handl%C3%A4ggning%20av%20transportdispenser.pdf"
+    },
+    {
+      "bytes": 239196,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d03d7",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:29Z",
+      "sha256": "12d6e5023be1b4b0fc69e5bd4f82a61478b83664c3d3135762400cd255c40049",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d03d7/1775713837598/Taxa%20f%C3%B6r%20nyttjande%20av%20stadsn%C3%A4tet.pdf"
+    },
+    {
+      "bytes": 507191,
+      "content_type": "application/pdf",
+      "id": "2505-18-52dff55c19d707416d03d8",
+      "municipality_code": "2505",
+      "retrieved_at": "2026-10-30T14:08:30Z",
+      "sha256": "a143b4d6857b2aa3dbf519fe96e93a1e4a09057b774451044960001123edadb0",
+      "url": "https://arvidsjaur.se/download/18.52dff55c19d707416d03d8/1775713837645/Taxa%20f%C3%B6r%20tillsyn%20enligt%20tobakslagen,%20alkohollagen%20samt%20lagen%20om%20handel%20med%20vissa%20receptfria%20l%C3%A4kemedel.pdf"
+    },
+    {
       "bytes": 56812,
       "content_type": "application/pdf",
       "id": "2506-enkelriktad-trafik-pa-drottninggatan",
@@ -28639,6 +29017,546 @@
       "url": "https://www.pajala.se/media/z5tjxj4l/pajala-avfallsf%C3%B6reskrifter-20241115.pdf"
     },
     {
+      "bytes": 112742,
+      "content_type": "application/pdf",
+      "id": "2523-18-133412ff19c2ca9e9a321972",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:58Z",
+      "sha256": "1e0e4c4082ef2bfd83212b8a7ed6af1227788afb4e74c173d23ab2d5584f3042",
+      "url": "https://gallivare.se/download/18.133412ff19c2ca9e9a321972/1770360221928/Taxa%20f%C3%B6r%20hemtj%C3%A4nst%202026.pdf"
+    },
+    {
+      "bytes": 107022,
+      "content_type": "application/pdf",
+      "id": "2523-18-133412ff19c2ca9e9a321a84",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:59Z",
+      "sha256": "119a62ddd3feae6620b219dd21d156336516a89607514025becb415b04a4b093",
+      "url": "https://gallivare.se/download/18.133412ff19c2ca9e9a321a84/1770360410589/Taxa%20f%C3%B6r%20f%C3%B6rbrukningsartiklar%20hemtj%C3%A4nst%202026.pdf"
+    },
+    {
+      "bytes": 107451,
+      "content_type": "application/pdf",
+      "id": "2523-18-133412ff19c2ca9e9a321ba8",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:00Z",
+      "sha256": "b5447bdccbd3cdd9b3da639cbf5a104ac61b869d7e288a6593fdddec3a78e1b1",
+      "url": "https://gallivare.se/download/18.133412ff19c2ca9e9a321ba8/1770360640322/Taxa%20f%C3%B6r%20Trygghetslarm%20%202026.pdf"
+    },
+    {
+      "bytes": 163851,
+      "content_type": "application/pdf",
+      "id": "2523-18-17d03d1819c98916cf1e81fa",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:24Z",
+      "sha256": "3ec5d253b17183ff3803757c3479922a9f8e203549d1a065832fa35ece8d817a",
+      "url": "https://gallivare.se/download/18.17d03d1819c98916cf1e81fa/1772631664028/Taxa%20f%C3%B6r%20torghandel%202026.pdf"
+    },
+    {
+      "bytes": 158762,
+      "content_type": "application/pdf",
+      "id": "2523-18-17d03d1819c98916cf1e830d",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:09Z",
+      "sha256": "ee4becf0f544e4cf39bc78b1290012fe4b239b4dec55c891dbe9b40f3b8116aa",
+      "url": "https://gallivare.se/download/18.17d03d1819c98916cf1e830d/1772631897880/Taxa%20Kulturskolan%20tillsvidare.pdf"
+    },
+    {
+      "bytes": 359723,
+      "content_type": "application/pdf",
+      "id": "2523-18-17d03d1819c98916cf1e860e",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:41Z",
+      "sha256": "20f357d0b1ed88566c3081eb32c08724a6cfcee73c5c4c1d16aa0ef99333d60c",
+      "url": "https://gallivare.se/download/18.17d03d1819c98916cf1e860e/1772632434063/Taxa%20f%C3%B6r%20uthyrning%20av%20skollokaler%202026.pdf"
+    },
+    {
+      "bytes": 85417,
+      "content_type": "application/pdf",
+      "id": "2523-18-30823dae19546018f6d1b2c1",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:07Z",
+      "sha256": "97b2bcfc89b719ba9cd70cbc92b098b6a0c082a863016501c5c4f8769e14f371",
+      "url": "https://gallivare.se/download/18.30823dae19546018f6d1b2c1/1740731942876/Taxa%20f%C3%B6r%20fj%C3%A4rrl%C3%A5neavgift%20biblioteksverksamheten%202025.pdf"
+    },
+    {
+      "bytes": 85966,
+      "content_type": "application/pdf",
+      "id": "2523-18-30823dae19546018f6d1b2c2",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:08Z",
+      "sha256": "6a57686ea85899b67d17f92e1c3a086ecb0ee7ae4c95b4743c365c86d05a2439",
+      "url": "https://gallivare.se/download/18.30823dae19546018f6d1b2c2/1740731943037/Taxa%20f%C3%B6rseningsavgifter%20inom%20biblioteksverksamheten%202025.pdf"
+    },
+    {
+      "bytes": 276233,
+      "content_type": "application/pdf",
+      "id": "2523-18-30823dae19546018f6d31c9",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:25Z",
+      "sha256": "bc8ba68a14ff83c41b4fa5c86e8a12ba5b9c4b9c9a746aee0b976100574dcb0f",
+      "url": "https://gallivare.se/download/18.30823dae19546018f6d31c9/1740648071055/Taxa%20f%C3%B6r%20motorv%C3%A4rmare%202025.pdf"
+    },
+    {
+      "bytes": 1961301,
+      "content_type": "application/pdf",
+      "id": "2523-18-3202e8c919d0c501ab36a202",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:16Z",
+      "sha256": "01a37cfa0786e4c443a490e056017f74145d636387cefcbbec14a05eb9e8665b",
+      "url": "https://gallivare.se/download/18.3202e8c919d0c501ab36a202/1774354442804/Taxa%20f%C3%B6r%20plan%20och%20bygglov%202026.pdf"
+    },
+    {
+      "bytes": 348280,
+      "content_type": "application/pdf",
+      "id": "2523-18-3202e8c919d0c501ab36a807",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:04Z",
+      "sha256": "dd0dc19fdfae5846319377062c4c31ea87061a8b6af6e41a0573f3691269f3d6",
+      "url": "https://gallivare.se/download/18.3202e8c919d0c501ab36a807/1774355248903/Taxa%20sotning-reng%C3%B6ring%20och%20brandskyddskontroll%202026.pdf"
+    },
+    {
+      "bytes": 134719,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da279b2",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:40Z",
+      "sha256": "9a398b67bcb484db5eb9e2a832186950b45dd5fa2dc647c984a7790a547950a4",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da279b2/1768554982860/Taxa%20f%C3%B6r%20uppr%C3%A4ttande%20av%20kopia%20p%C3%A5%20originalbetyg%202026.pdf"
+    },
+    {
+      "bytes": 169633,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a0e9",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:32Z",
+      "sha256": "b1bf301c8c7dc0838c55b7caafefaabc9906552547546f692252b2707d5a6b7d",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a0e9/1768569434029/Taxa%20f%C3%B6r%20kopiering%20av%20allm%C3%A4n%20handling,%20samt%20digitalisering%20av%20pappershandling%202026.pdf"
+    },
+    {
+      "bytes": 210412,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a13c",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:05Z",
+      "sha256": "51b9008db4e28580536f4650a75125eba743c0ce8dd59005ac16453261f6b5e6",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a13c/1768569556910/Taxa%20bilbarnstolar%202026.pdf"
+    },
+    {
+      "bytes": 127118,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a13d",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:06Z",
+      "sha256": "739b950248df54d0caf103223f7ca0a33b836db1822c74147e7cb31e1d4fe926",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a13d/1768569556957/Taxa%20f%C3%B6r%20flytv%C3%A4star%202026.pdf"
+    },
+    {
+      "bytes": 241700,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a1a2",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:33Z",
+      "sha256": "23d2ac8b2c61b25b632cd5c3040d55188dda9bb1faa03e3d10b6a0a39f1b7826",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a1a2/1768569693953/Taxa%20f%C3%B6r%20bredbandsrelaterade%20avgifter%202026.pdf"
+    },
+    {
+      "bytes": 135243,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a1cb",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:26Z",
+      "sha256": "77060004045400c83790779b34efedfcf851c40185501fc6e9fd56d5a9edcaec",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a1cb/1768569765184/Taxa%20f%C3%B6r%20ans%C3%B6kningsavgifter%20f%C3%B6r%20transportdispenser%202026.pdf"
+    },
+    {
+      "bytes": 126689,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a1cc",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:27Z",
+      "sha256": "1bb6143d086d82abbcf6b33413fedcdd83245f1678afc4ed004081eb43f99a67",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a1cc/1768569765227/Taxa%20f%C3%B6r%20felparkeringsavgifter%202026.pdf"
+    },
+    {
+      "bytes": 139242,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a1cd",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:28Z",
+      "sha256": "cc83d8301ecf43f2ca37f839e4cd8c59d68be0a536d84e3f9be4d1c0026ee2a8",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a1cd/1768569765268/Taxa%20f%C3%B6r%20kollektivtrafiken%202026.pdf"
+    },
+    {
+      "bytes": 436855,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a1ce",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:29Z",
+      "sha256": "f965dfa6188c405b8f6549061b6ec2f67d148b53e2646605b68e0eee651b48c4",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a1ce/1768569765308/Taxa%20f%C3%B6r%20schakttillst%C3%A5nd%20och%20trafikanordningsplan%202026.pdf"
+    },
+    {
+      "bytes": 127521,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a1cf",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:30Z",
+      "sha256": "e37d449089afc627d3d2a4610450e725af6b6e5cdfcbe3ef2eb4752f0d4dbef7",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a1cf/1768569765380/Taxa%20f%C3%B6r%20tillf%C3%A4llig%20f%C3%B6rvaring%20av%20skrotbilar%202026.pdf"
+    },
+    {
+      "bytes": 338986,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a2da",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:17Z",
+      "sha256": "0f36a3f46a7fc53bbbd11b6d760b4bddc8efa60c334ce75eedec06c66e5d6f4d",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a2da/1768570080712/Taxa%20f%C3%B6r%20allm%C3%A4nna%20vatten%20och-%20avloppsanl%C3%A4ggningar%202026.pdf"
+    },
+    {
+      "bytes": 202814,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a2db",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:18Z",
+      "sha256": "9acbf029e9669459f3089662bdb01c1cb160a526ffd1161cb60f4e2d86f8ce78",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a2db/1768570080767/Taxa%20f%C3%B6r%20Kavahedens%20avfallsanl%C3%A4ggning%202026.pdf"
+    },
+    {
+      "bytes": 306986,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a2dc",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:19Z",
+      "sha256": "baef12f3878b9cca734ba7d9e40b3445b2e29c3d56a8e4c001c9cca4e58195ad",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a2dc/1768570080796/Taxa%20f%C3%B6r%20renh%C3%A5llning%202026.pdf"
+    },
+    {
+      "bytes": 213712,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a2dd",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:20Z",
+      "sha256": "33f4b125f31b67825de5b5675c8fccf9405fdf89c70951382e7c7b51b86210f7",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a2dd/1768570080832/Taxa%20f%C3%B6r%20slamt%C3%B6mning%20av%20enskilda%20avloppsanl%C3%A4ggningar%202026.pdf"
+    },
+    {
+      "bytes": 162310,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a2de",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:21Z",
+      "sha256": "c42aa435b04f766807dfb36929fabe92d11217e71d42bdc9c9d193940a1f1cac",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a2de/1768570080861/Taxa%20f%C3%B6r%20t%C3%B6mning%20av%20fettavskiljare%202026.pdf"
+    },
+    {
+      "bytes": 489880,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a307",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:23Z",
+      "sha256": "bb3a14f58bad69a5014e90819173c584837b4b365e8d5b02e1ffe4c665fa83b2",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a307/1768570150094/Taxa%20f%C3%B6r%20uppl%C3%A5telse%20av%20offentlig%20plats%202026.pdf"
+    },
+    {
+      "bytes": 124509,
+      "content_type": "application/pdf",
+      "id": "2523-18-331f6e0819bb6cbb0da2a588",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:31Z",
+      "sha256": "7f2d9e0d0d3e30e8087566b16a92017384165ee457f3b48361e1080f91e8b44a",
+      "url": "https://gallivare.se/download/18.331f6e0819bb6cbb0da2a588/1768571078461/Taxa%20f%C3%B6r%20parkering%20i%20kunskapshusets%20garage%20samt%20laddning%20av%20elfordon%202026.pdf"
+    },
+    {
+      "bytes": 448718,
+      "content_type": "application/pdf",
+      "id": "2523-18-5dae8706191786e54364abda",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:34Z",
+      "sha256": "1a58867293eff02d93252f13c600444d9b7af24505c14c7e68f5a6f71ca8dff4",
+      "url": "https://gallivare.se/download/18.5dae8706191786e54364abda/1724658607162/F%C3%B6reskrift%20ABVA.pdf"
+    },
+    {
+      "bytes": 116000,
+      "content_type": "application/pdf",
+      "id": "2523-18-61ad9c3619c29ffe44513fec",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:57Z",
+      "sha256": "0fe7c66049794e44e777bd29c139465dc15addd563097795388381bc47b83624",
+      "url": "https://gallivare.se/download/18.61ad9c3619c29ffe44513fec/1770275104446/Taxa%20f%C3%B6r%20medboende%202026.pdf"
+    },
+    {
+      "bytes": 147330,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e763",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:43Z",
+      "sha256": "5333c74cc8f2d9077717e93c44ca89be52275bfe97d6ba37ac39b91d2790cf14",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e763/1768474471953/Taxa%20avlastning-korttidsv%C3%A5rd%202026.pdf"
+    },
+    {
+      "bytes": 132499,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e764",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:44Z",
+      "sha256": "25ca9d43b4437d5a167ad8e940590f24f1f956e2d4e785665a879f8841caa99d",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e764/1768474472009/Taxa%20f%C3%B6r%20boende%20i%20familjehem%20%20HVB%20%202026.pdf"
+    },
+    {
+      "bytes": 233522,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e765",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:45Z",
+      "sha256": "b36f33eacc08b55d7e5d234e9245aa3817b804230974e453bd3dd9e7ae9c85d8",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e765/1768474472056/Taxa%20f%C3%B6r%20boende%20vid%20studier%20p%C3%A5%20annan%20ort%202026.pdf"
+    },
+    {
+      "bytes": 153998,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e766",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:46Z",
+      "sha256": "6ce6598030189d84e0d4427c9e9af5c65f3f1a4df5f1ad650a5054e449a1a23c",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e766/1768474472124/Taxa%20f%C3%B6r%20den%20kommunaliserade%20hemsjukv%C3%A5rden%20%C3%A5r%202026.pdf"
+    },
+    {
+      "bytes": 135456,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e767",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:47Z",
+      "sha256": "09236994273719793fc7661049bc7e42ea9ced9787d9f4b497920af75ac94603",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e767/1768474472178/Taxa%20f%C3%B6r%20familjer%C3%A5dgivning%20inom%20socialtj%C3%A4nsten%202026.pdf"
+    },
+    {
+      "bytes": 156594,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e768",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:48Z",
+      "sha256": "b9818fc4d4cd8ccf063acc21d9741ed983d6cc50470ac5527ba745959e9d849d",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e768/1768474472225/Taxa%20f%C3%B6r%20f%C3%A4rdtj%C3%A4nst%202026.pdf"
+    },
+    {
+      "bytes": 126461,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e769",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:49Z",
+      "sha256": "bae7010944dddb63dcd8a7d4e20aebf27b79b577a18b98be365040d067a5e499",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e769/1768474472272/Taxa%20f%C3%B6r%20F%C3%B6rbrukningsartiklar%202026.pdf"
+    },
+    {
+      "bytes": 128194,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e76c",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:50Z",
+      "sha256": "490dddf239813d234b6562c9b5b4e2b94d413473f302cd6aa607d1e82cc8600f",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e76c/1768474472395/Taxa%20f%C3%B6r%20kost%202026.pdf"
+    },
+    {
+      "bytes": 125926,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e76d",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:51Z",
+      "sha256": "00da69a6b0f35bf404fe11e373d8f05917498737fb1dcc6afa6fa0f4170c64b0",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e76d/1768474472434/Taxa%20f%C3%B6r%20kost%20inom%20socialtst%C3%B6d%202026.pdf"
+    },
+    {
+      "bytes": 543508,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e76e",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:52Z",
+      "sha256": "24806f7d9daeea1550e22454f91e745622424a7bd71155be66f2a854d544a386",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e76e/1768474472474/Taxa%20f%C3%B6r%20tillf%C3%A4llig%20d%C3%B6dsbof%C3%B6rvaltning%202026.pdf"
+    },
+    {
+      "bytes": 134729,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e771",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:53Z",
+      "sha256": "791ae09eb575998071a99f9da5605764f7912106329bc4511ef06dc1ac302443",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e771/1768474472618/Taxa%20f%C3%B6r%20uppr%C3%A4ttande%20av%20kopia%20p%C3%A5%20originalbetyg%202026.pdf"
+    },
+    {
+      "bytes": 578028,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e772",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:54Z",
+      "sha256": "68f3f5b426bb478af4b672943eeff55b7855b6fd03fbb80eb64decf07e68b43b",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e772/1768474472656/Taxa%20f%C3%B6r%20v%C3%A5rd%20och%20behandling%20inom%20missbruksv%C3%A5rd%202026.pdf"
+    },
+    {
+      "bytes": 141646,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4e773",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:55Z",
+      "sha256": "fbd71d138adb7b2729b49d4a335be643e09805593e974dc4d5eb89558cf81c41",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4e773/1768474472779/Taxa%20f%C3%B6r%20v%C3%A5rd-%20och%20omsorgsavgift%202026.pdf"
+    },
+    {
+      "bytes": 254139,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf4ea5c",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:56Z",
+      "sha256": "a674c136f491fe7a58b313a4770a074046358746f89066e09b63fe8fd13e9c37",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf4ea5c/1768474685333/Taxa%20Pension%C3%A4rsservice%202026.pdf"
+    },
+    {
+      "bytes": 253204,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf51284",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:01Z",
+      "sha256": "7f61b3b6b685880cd98eef288e5688081830d94ae8677ed84cf05b3c746d3454",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf51284/1768485349118/Taxa%20f%C3%B6r%20r%C3%A4ddningstj%C3%A4nsten%20extern%20teknisk%20service%202026.pdf"
+    },
+    {
+      "bytes": 252612,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf51285",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:02Z",
+      "sha256": "e847f429805a0ee5d5edcfa1c4fdac40fc82639823becf0292e4939621e541ad",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf51285/1768485349177/Taxa%20f%C3%B6r%20r%C3%A4ddningstj%C3%A4nsten%20intern%20teknisk%20service%202026.pdf"
+    },
+    {
+      "bytes": 342103,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf51287",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:03Z",
+      "sha256": "7b3566adea0f386fd315a0b1d8580383bbf983d1a83564717ce1e11e13c14f72",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf51287/1768485349332/Taxa%20f%C3%B6r%20tillsyn%20och%20tillst%C3%A5nd%20enligt%20LSO%20och%20LBE%202026.pdf"
+    },
+    {
+      "bytes": 405863,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf51544",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:10Z",
+      "sha256": "6872862199aff849dd63d184e05d6425b9eb0b4f7a0d68444d7a99f571469114",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf51544/1768485457532/Taxa%20enligt%20alkohollagen,%20lag%20om%20tobak%20och%20liknande%20produkter%20samt%20lag%20om%20tobaksfria%20nikotinprodukter%202026.pdf"
+    },
+    {
+      "bytes": 1952262,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf51546",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:12Z",
+      "sha256": "292ad37632878cf5d5742e45cd045ee57683a0003b51cebe6323225d4f7dad55",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf51546/1768485457965/Taxa%20f%C3%B6r%20tillsyn%20enligt%20milj%C3%B6balken%202026.pdf"
+    },
+    {
+      "bytes": 324218,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf51547",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:12Z",
+      "sha256": "2e4924b8db2758e6602441485f096df342eaa5a60ce7d327c761cef7bce308f7",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf51547/1768485458282/Taxa%20f%C3%B6r%20tillsyn%20%C3%B6ver%20handel%20med%20vissa%20receptfria%20l%C3%A4kemedel%202026.pdf"
+    },
+    {
+      "bytes": 355611,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf51548",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:13Z",
+      "sha256": "637a7791caf7df5ca0bf7f88a1549b852dee6b88e504d080b14080ceed649a18",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf51548/1768485458351/Taxor%20f%C3%B6r%20kontroll%20inom%20livsmedel-%20och%20foderlagstiftning%202026.pdf"
+    },
+    {
+      "bytes": 170934,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf515d9",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:14Z",
+      "sha256": "f1927f62eb7465d7c08c302ff0fd884cd169840f01774bdd6eb5dad84474144b",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf515d9/1768485656586/Taxa%20f%C3%B6r%20planbesked%20och%20planhandl%C3%A4ggningskostnad%202026.pdf"
+    },
+    {
+      "bytes": 462896,
+      "content_type": "application/pdf",
+      "id": "2523-18-61e8f8fd19bac5bb2cf516b7",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:22Z",
+      "sha256": "23ff51014d2544d669f519e690974940bcbe753c4222b16ac583033c35b76ec5",
+      "url": "https://gallivare.se/download/18.61e8f8fd19bac5bb2cf516b7/1768486034573/Taxa%20f%C3%B6r%20lotteritillst%C3%A5nd%202026.pdf"
+    },
+    {
+      "bytes": 113008,
+      "content_type": "application/pdf",
+      "id": "2523-18-68e2eedd19acb73aebb40d2a",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:37Z",
+      "sha256": "1128160fca897b43587f60e7eeffa2c27d186e8e0e55fc9c1d49f8c803eb737e",
+      "url": "https://gallivare.se/download/18.68e2eedd19acb73aebb40d2a/1764587024131/F%C3%B6reskrift%20om%20tillf%C3%A4lliga%20skoterf%C3%B6rbud%20enligt%20terr%C3%A4ngk%C3%B6rningslagen%20G%C3%A4llivare.pdf"
+    },
+    {
+      "bytes": 826375,
+      "content_type": "application/pdf",
+      "id": "2523-18-74e9a08e19ce092d4aeade10",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:42Z",
+      "sha256": "92d6e8e77c50bfa70d36b80ec34dd8f95202b509f69b481b9ed5bd135ab59a91",
+      "url": "https://gallivare.se/download/18.74e9a08e19ce092d4aeade10/1773753986613/Taxa%20f%C3%B6r%20maxtaxa%20f%C3%B6rskola,%20pedagogisk%20omsorg%20och%20fritidshem%202026..pdf"
+    },
+    {
+      "bytes": 815591,
+      "content_type": "application/pdf",
+      "id": "2523-18-788e0571978f2ebb566a909",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:35Z",
+      "sha256": "c120ba8efb79c5a4f43bda948261a6958f11c3486b17915e5f997add3a3d08e6",
+      "url": "https://gallivare.se/download/18.788e0571978f2ebb566a909/1750756392836/F%C3%B6reskrifter%20om%20avfallshantering%20f%C3%B6r%20G%C3%A4llivare%20kommun.pdf"
+    },
+    {
+      "bytes": 64750,
+      "content_type": "application/pdf",
+      "id": "2523-18-78a524f319f0dc979ee763eb",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:09:16Z",
+      "sha256": "5fa62740763258682f1e3759c3c534ebc09e226b0f856fc794b390ebe2e4c04b",
+      "url": "https://gallivare.se/download/18.78a524f319f0dc979ee763eb/1782882658777/Taxa%20m%C3%A4t-%20och%20karttj%C3%A4nster%202026.pdf"
+    },
+    {
+      "bytes": 107011,
+      "content_type": "application/pdf",
+      "id": "2523-18-79a301f518851710d0a37881",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:36Z",
+      "sha256": "a20253c616b33f6bf91c9cca0f6e7f74f65b176e2f1fc6a4565168103835d810",
+      "url": "https://gallivare.se/download/18.79a301f518851710d0a37881/1685437175386/F%C3%B6reskrift%20om%20den%20allm%C3%A4nna%20ordningen%20enligt%20ordningslagen.pdf"
+    },
+    {
+      "bytes": 110666,
+      "content_type": "application/pdf",
+      "id": "2523-18-79a301f518851710d0a37883",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:38Z",
+      "sha256": "620d0206a0811c404ee062efdcda6499824725e226c0cb76adac9cb21823bee8",
+      "url": "https://gallivare.se/download/18.79a301f518851710d0a37883/1685437175623/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20liv%20och%20h%C3%A4lsa.pdf"
+    },
+    {
+      "bytes": 175620,
+      "content_type": "application/pdf",
+      "id": "2523-18-79a301f518851710d0a37894",
+      "municipality_code": "2523",
+      "retrieved_at": "2026-10-30T14:08:39Z",
+      "sha256": "360995c393afe7a7d173c11e686eb4bbd5ebe33d370a21eb50da27f79e78fa4d",
+      "url": "https://gallivare.se/download/18.79a301f518851710d0a37894/1685437202236/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20G%C3%A4llivare%20kommun.pdf"
+    },
+    {
       "bytes": 173662,
       "content_type": "application/pdf",
       "id": "2580-18-16e39c8a18dcc82dd4e66ad",
@@ -29260,6 +30178,96 @@
       "url": "https://www.pitea.se/BOKHYLLAN/Styrande%20dokument/15.%20Kommunal%20f%C3%B6reskrift/Taxa%20inom%20offentlig%20plats%20och%20parkering.pdf"
     },
     {
+      "bytes": 701702,
+      "content_type": "application/pdf",
+      "id": "2582-18-1e36d0fd199c8b5630811413",
+      "municipality_code": "2582",
+      "retrieved_at": "2026-10-30T14:09:39Z",
+      "sha256": "ddcecc30ac1acd3fbb82a0d2f0052c47fa1dc0998e5a591115397ece88876125",
+      "url": "https://boden.se/download/18.1e36d0fd199c8b5630811413/1760678995440/F%C3%B6reskrifter:%20Avfall.pdf"
+    },
+    {
+      "bytes": 12996,
+      "content_type": "application/pdf",
+      "id": "2582-18-285d4ca51991385e83c11616",
+      "municipality_code": "2582",
+      "retrieved_at": "2026-10-30T14:09:48Z",
+      "sha256": "a8eea7bdbf7b890f63b4a11de4ec7140b934f9eacc43e9bf9032a800e3c33bd4",
+      "url": "https://boden.se/download/18.285d4ca51991385e83c11616/1757484978006/Fo%CC%88reskrifter:%20Torghandel.pdf"
+    },
+    {
+      "bytes": 615279,
+      "content_type": "application/pdf",
+      "id": "2582-18-285d4ca51991385e83c11851",
+      "municipality_code": "2582",
+      "retrieved_at": "2026-10-30T14:09:40Z",
+      "sha256": "b806a74fbe1552d02efbcb5a40a4aa1d66f2927c0bd7eec8f5a57a087c9e15ef",
+      "url": "https://boden.se/download/18.285d4ca51991385e83c11851/1757488204235/Omr%C3%A5den%20fria%20fr%C3%A5n%20fyrverkeri.pdf"
+    },
+    {
+      "bytes": 250743,
+      "content_type": "application/pdf",
+      "id": "2582-18-285d4ca51991385e83cfe49",
+      "municipality_code": "2582",
+      "retrieved_at": "2026-10-30T14:09:41Z",
+      "sha256": "aed3733510d15b3a754fe3c5c06e43ffd434d08ddb82461cd8e26c171b6ac23e",
+      "url": "https://boden.se/download/18.285d4ca51991385e83cfe49/1757424147890/Bilaga%201:%20Karta%20Budbbytra%CC%88sket.pdf"
+    },
+    {
+      "bytes": 354137,
+      "content_type": "application/pdf",
+      "id": "2582-18-285d4ca51991385e83cfe4a",
+      "municipality_code": "2582",
+      "retrieved_at": "2026-10-30T14:09:42Z",
+      "sha256": "483a0759cd7533700a0fa55a2fb951f1e867726ed11c077ce73dd6da628c4325",
+      "url": "https://boden.se/download/18.285d4ca51991385e83cfe4a/1757424147934/Bilaga%202:%20Karta%20Bodtra%CC%88sket.pdf"
+    },
+    {
+      "bytes": 312145,
+      "content_type": "application/pdf",
+      "id": "2582-18-285d4ca51991385e83cfe4b",
+      "municipality_code": "2582",
+      "retrieved_at": "2026-10-30T14:09:43Z",
+      "sha256": "4e4c3d1a640491b9766877262370a387e1822003a6b2a9553a2002b3dfe8b8b5",
+      "url": "https://boden.se/download/18.285d4ca51991385e83cfe4b/1757424147962/Bilaga%203:%20Karta%20Svartbytra%CC%88sket.pdf"
+    },
+    {
+      "bytes": 186560,
+      "content_type": "application/pdf",
+      "id": "2582-18-285d4ca51991385e83cfe4c",
+      "municipality_code": "2582",
+      "retrieved_at": "2026-10-30T14:09:44Z",
+      "sha256": "4b9711c4d707f013303fbfd6a3ee48b3436f445172344039fc80da3510d89a2f",
+      "url": "https://boden.se/download/18.285d4ca51991385e83cfe4c/1757424148004/Bilaga%204:%20Karta%20Vittja%CC%88rvstra%CC%88sket.pdf"
+    },
+    {
+      "bytes": 254248,
+      "content_type": "application/pdf",
+      "id": "2582-18-285d4ca51991385e83cfe4d",
+      "municipality_code": "2582",
+      "retrieved_at": "2026-10-30T14:09:45Z",
+      "sha256": "651146af0ec594e7aa4d8a2b0f1b50dce74f9a4d4a240b835b852ea8b9cbff1d",
+      "url": "https://boden.se/download/18.285d4ca51991385e83cfe4d/1757424148025/Bilaga%205:%20Karta%20Vittra%CC%88sket.pdf"
+    },
+    {
+      "bytes": 236585,
+      "content_type": "application/pdf",
+      "id": "2582-18-285d4ca51991385e83cfe4e",
+      "municipality_code": "2582",
+      "retrieved_at": "2026-10-30T14:09:46Z",
+      "sha256": "9f6621d108b1988d67164eb3ff73f20a895c67353b3b6f50b4c5157bf29a9ffa",
+      "url": "https://boden.se/download/18.285d4ca51991385e83cfe4e/1757424148065/Bilaga%206:%20Karta%20Lule%20a%CC%88lv.pdf"
+    },
+    {
+      "bytes": 34568,
+      "content_type": "application/pdf",
+      "id": "2582-18-285d4ca51991385e83cfe4f",
+      "municipality_code": "2582",
+      "retrieved_at": "2026-10-30T14:09:47Z",
+      "sha256": "a13b4bb3628e8c14d8d51cecee8d106d53f521cb2edefe76de5b4f65443ea7f8",
+      "url": "https://boden.se/download/18.285d4ca51991385e83cfe4f/1757424148089/Fo%CC%88reskrifter:%20Ha%CC%88lsa%20och%20miljo%CC%88.pdf"
+    },
+    {
       "bytes": 160455,
       "content_type": "application/pdf",
       "id": "2583-18-21e2e2e11919744a8e9dfb4",
@@ -29420,6 +30428,69 @@
       "retrieved_at": "2026-10-30T13:29:14Z",
       "sha256": "6573cec972a539c4cce6c55b897d51826ed26e44cbf47d01e8af1a6a6295b4fd",
       "url": "https://www.haparanda.se/download/18.506ff8b0191e4ffa87b8048/1726816002809/Markpristaxa%20Haparanda%20kommun,%20reviderad%202024-02-22.pdf"
+    },
+    {
+      "bytes": 705677,
+      "content_type": "application/pdf",
+      "id": "2584-18-22bd3f5d17597b58e4e486",
+      "municipality_code": "2584",
+      "retrieved_at": "2026-10-30T14:09:56Z",
+      "sha256": "d1836946bb51a171fcf9a8a8257f730b8b5ad243e335a0c7bcbcc1806b6c6eef",
+      "url": "https://kiruna.se/download/18.22bd3f5d17597b58e4e486/1604915768873/foreskrifter-for-avfallshantering-i-kiruna-kommun.pdf"
+    },
+    {
+      "bytes": 5606898,
+      "content_type": "application/pdf",
+      "id": "2584-18-23ac6e87177d7ef7ee0bc1f7",
+      "municipality_code": "2584",
+      "retrieved_at": "2026-10-30T14:09:55Z",
+      "sha256": "e5e6ab822128aec400c31b850160d56ee24bc39536b4d583237db44be93fca8f",
+      "url": "https://kiruna.se/download/18.23ac6e87177d7ef7ee0bc1f7/1616140051327/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n,%20Kf%20210222,%20%C2%A7%208.pdf"
+    },
+    {
+      "bytes": 159225,
+      "content_type": "application/pdf",
+      "id": "2584-18-304a60d18c431330a81fe9",
+      "municipality_code": "2584",
+      "retrieved_at": "2026-10-30T14:09:55Z",
+      "sha256": "104312e96697f4cfff2e68c3180619f0b6c95fd3bd92f71a840b28d104f62767",
+      "url": "https://kiruna.se/download/18.304a60d18c431330a81fe9/1702302472053/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20torghandel%20i%20Kiruna%20kommun.pdf"
+    },
+    {
+      "bytes": 179593,
+      "content_type": "application/pdf",
+      "id": "2584-18-316fdfc819c9896f99c13219",
+      "municipality_code": "2584",
+      "retrieved_at": "2026-10-30T14:09:58Z",
+      "sha256": "56715d3e9d85adff8b5ba6b428b2ce9bbdfa17a01513932dd71f3d0275a53858",
+      "url": "https://kiruna.se/download/18.316fdfc819c9896f99c13219/1772448079459/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20uteserveringar%20i%20Kiruna%20kommun.pdf"
+    },
+    {
+      "bytes": 68268,
+      "content_type": "application/pdf",
+      "id": "2584-18-33c9241b197626b98405f07",
+      "municipality_code": "2584",
+      "retrieved_at": "2026-10-30T14:09:57Z",
+      "sha256": "b78e8ac3eb4a1294b887e3796a8546cce141a36e86491a5e95e7a26d8ea5f819",
+      "url": "https://kiruna.se/download/18.33c9241b197626b98405f07/1750765387051/Kommunala%20f%C3%B6reskrifter%20om%20anv%C3%A4ndningen%20av%20den%20allm%C3%A4nna%20VA%20kf%20250616%20%C2%A7%20106.pdf"
+    },
+    {
+      "bytes": 525368,
+      "content_type": "application/pdf",
+      "id": "2584-18-5107cd66188bdb2a38dde0f",
+      "municipality_code": "2584",
+      "retrieved_at": "2026-10-30T14:09:52Z",
+      "sha256": "767cbe437286dcc0661bed75275e91587f7d62aa703cbe23a95b281f863f56da",
+      "url": "https://kiruna.se/download/18.5107cd66188bdb2a38dde0f/1688377343780/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Kiruna%20kommun%20Kf%20230619.pdf"
+    },
+    {
+      "bytes": 873465,
+      "content_type": "application/pdf",
+      "id": "2584-18-5d7b726219b3549d5f641488",
+      "municipality_code": "2584",
+      "retrieved_at": "2026-10-30T14:09:59Z",
+      "sha256": "dc3aaebac15c78bdb985dd1010565227e581bca478bb114de595f0eefebdf457",
+      "url": "https://kiruna.se/download/18.5d7b726219b3549d5f641488/1767344114956/Bygglovstaxa%202026.pdf"
     }
   ],
   "gaps": [
