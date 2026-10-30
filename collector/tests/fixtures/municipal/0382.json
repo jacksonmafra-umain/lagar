@@ -1,0 +1,14 @@
+{
+  "listings": {
+    "https://www.osthammar.se/kommunpolitik/kommunen/kommunfakta-och-dokument/kommunal-forfattningssamling/?step=1": "0382-listing.html",
+    "https://www.osthammar.se/kommunpolitik/kommunen/kommunfakta-och-dokument/kommunal-forfattningssamling/?step=2": "0382-listing-2.html",
+    "https://www.osthammar.se/kommunpolitik/kommunen/kommunfakta-och-dokument/kommunal-forfattningssamling/?step=3": "0382-listing-3.html"
+  },
+  "count": 22,
+  "sample": {
+    "number": "avgifter-vard-och-omsorg",
+    "title": "Avgifter inom vård och omsorg",
+    "url": "https://www.osthammar.se/dokument/avgifter-och-taxor/avgifter-vard-och-omsorg/"
+  },
+  "excluded": []
+}

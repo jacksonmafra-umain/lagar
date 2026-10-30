@@ -359,9 +359,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Aneby and Jönköping (no collection page), Värnamo (document service down),
     Torsås (titles outside the links), Mönsterås (site did not answer),
     Västervik (file list not in the HTML) and Gotland (external document
-    service). Östhammar's robots.txt shuts named AI crawlers out of its rule
-    pages and Linköping links its rules to Google Drive; both wait for an owner
-    decision. Their issues stay open.
+    service). Linköping links its rules to Google Drive and waits for an owner
+    decision. Their issues stay open. Östhammar's robots.txt shuts named AI
+    crawlers out of its rule pages but allows this collector's agent; the owner
+    approved collecting it.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources
