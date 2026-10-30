@@ -172,6 +172,9 @@ class Kommun:
     json_title: str = ""
     json_number: str = ""
     json_url: str = ""
+    json_recursive: bool = False
+    json_follow: "dict" = field(default_factory=dict)
+    href_titles: bool = False
 
 
 def _required(entry, key, code, kind=str):
@@ -232,6 +235,9 @@ def _kommun(code, entry):
         json_title=entry.get("title_field", ""),
         json_number=entry.get("number_field", ""),
         json_url=entry.get("url_template", ""),
+        json_recursive=bool(entry.get("recursive", False)),
+        json_follow=dict(entry.get("follow_items") or {}),
+        href_titles=bool(entry.get("href_titles", False)),
     )
     for url in listings:
         if urllib.parse.urlsplit(url).hostname not in hosts:
@@ -623,6 +629,21 @@ def _title(kommun, text):
     return _clean(text)
 
 
+_JS_URL = re.compile(r"""^javascript:.*?['"]((?:https?://|/)[^'"]+)['"]""", re.IGNORECASE)
+
+
+def _js_href(href):
+    """The URL inside `javascript:void(window.open('/download/...'))`, else the href itself."""
+    match = _JS_URL.match(href.strip())
+    return match.group(1) if match else href
+
+
+def _file_title(url):
+    """A title from the URL's file name (`href_titles`): unquoted, without extension."""
+    name = urllib.parse.unquote(urllib.parse.urlsplit(url).path.rsplit("/", 1)[-1])
+    return _clean(re.sub(r"\.[a-z0-9]{2,4}$", "", name, flags=re.IGNORECASE).replace("_", " "))
+
+
 def binds_residents(kommun, title):
     """Whether the title passes the kommun's include and exclude title patterns."""
     if kommun.title_include and not any(re.search(p, title, re.IGNORECASE) for p in kommun.title_include):
@@ -635,16 +656,30 @@ _LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>")
 
 
 def _sitemap_locs(raw):
-    """URLs of a sitemap (`<urlset>`) or sitemap index, or None when `raw` is not a sitemap."""
+    """URLs of a sitemap (`<urlset>`) or sitemap index, or None when `raw` is not a sitemap.
+
+    A gzipped sitemap file (`sitemap1.xml.gz`, served as a file, not as an encoding) is unpacked.
+    """
+    if raw[:2] == b"\x1f\x8b":
+        try:
+            raw = gzip.decompress(raw)
+        except (OSError, EOFError):
+            return None
     if not _SITEMAP.search(raw[:4096]):
         return None
     return [html.unescape(loc) for loc in _LOC.findall(_text(raw))]
 
 
+def _is_sitemap_index(raw):
+    if raw[:2] == b"\x1f\x8b":
+        raw = gzip.decompress(raw)
+    return b"<sitemapindex" in raw[:4096]
+
+
 def _listing_links(kommun, raw):
     locs = _sitemap_locs(raw)
     if locs is not None:
-        return [] if b"<sitemapindex" in raw[:4096] else [(None, loc, "") for loc in locs]
+        return [] if _is_sitemap_index(raw) else [(None, loc, "") for loc in locs]
     parser = _Links(kommun.section_level, kommun.embedded_json, kommun.row_titles)
     parser.feed(_text(raw))
     parser.close()
@@ -661,13 +696,15 @@ def parse_html_index(kommun, raw, listing_url):
     sections = {s.casefold() for s in kommun.sections}
     entries, problems = [], []
     # Icon links next to the titled link carry no text; they are not documents of their own.
-    titled = {_uri(urllib.parse.urljoin(listing_url, href.strip())) for _, href, text in links if text}
+    titled = {_uri(urllib.parse.urljoin(listing_url, _js_href(href).strip())) for _, href, text in links if text}
     for section, href, text in links:
         if sections and (section or "").casefold() not in sections:
             continue
-        url = _uri(urllib.parse.urljoin(listing_url, href.strip()))
+        url = _uri(urllib.parse.urljoin(listing_url, _js_href(href).strip()))
         if not re.search(kommun.link_pattern, url, re.IGNORECASE) or (not text and url in titled):
             continue
+        if not text and kommun.href_titles:
+            text = _file_title(url)
         number = _number(kommun, url, text)
         title = _title(kommun, text)
         if kommun.page_titles and not title:
@@ -682,12 +719,28 @@ def parse_html_index(kommun, raw, listing_url):
 
 
 def more_pages(kommun, raw, listing_url):
-    """Further listing pages linked from this one (pagination), matched by `follow`."""
+    """Further listing pages linked from this one (pagination), matched by `follow`.
+
+    For `json_list` with `follow_items`, the items that match it (a channel or a folder) are
+    further listings at the item's `url_template`.
+    """
+    if kommun.strategy == "json_list":
+        if not kommun.json_follow:
+            return []
+        pages = []
+        for _, item in _json_items(kommun, json.loads(_text(raw))):
+            if isinstance(item, dict) and _follows(kommun, item):
+                try:
+                    href = kommun.json_follow["url_template"].format_map(_json_fields(item, listing_url))
+                except (KeyError, IndexError, ValueError):
+                    continue
+                pages.append(_uri(urllib.parse.urljoin(listing_url, href)))
+        return list(dict.fromkeys(pages))
     if not kommun.follow:
         return []
     locs = _sitemap_locs(raw)
     if locs is not None:
-        return [loc for loc in locs if b"<sitemapindex" in raw[:4096] and re.search(kommun.follow, loc)]
+        return [loc for loc in locs if _is_sitemap_index(raw) and re.search(kommun.follow, loc)]
     parser = _Links(kommun.section_level)
     parser.feed(_text(raw))
     parser.close()
@@ -733,20 +786,57 @@ def _item(data, path):
     return data
 
 
+def _json_items(kommun, data):
+    """(section, item) pairs; with `recursive`, the lists at `items` in every nested folder too.
+
+    The section of an item is the title field of the folder object that holds its list.
+    """
+    if not kommun.json_recursive:
+        items = _item(data, kommun.json_items)
+        if not isinstance(items, list):
+            raise ValueError(f"no list at {kommun.json_items!r}")
+        return [(None, item) for item in items]
+    key = kommun.json_items.rsplit(".", 1)[-1]
+    found, stack = [], [data]
+    while stack:
+        node = stack.pop()
+        if isinstance(node, list):
+            stack.extend(reversed(node))
+        elif isinstance(node, dict):
+            section = node.get(kommun.json_title)
+            for item in node.get(key) or []:
+                found.append((section if isinstance(section, str) else None, item))
+            stack.extend(reversed([v for k, v in node.items() if k != key and isinstance(v, (list, dict))]))
+    return found
+
+
+def _json_fields(item, listing_url):
+    fields = {k: v for k, v in item.items() if isinstance(v, (str, int)) and not isinstance(v, bool)}
+    # The listing URL's query parameters, as `_name`, for templates that carry them on.
+    for name, value in urllib.parse.parse_qsl(urllib.parse.urlsplit(listing_url).query):
+        fields.setdefault("_" + name, value)
+    return fields
+
+
+def _follows(kommun, item):
+    rule = kommun.json_follow
+    return bool(rule) and str(item.get(rule.get("field", ""))) == str(rule.get("value"))
+
+
 def parse_json_list(kommun, raw, listing_url):
     """Entries of a JSON document list; problems are items whose link or number is missing."""
-    items = _item(json.loads(_text(raw)), kommun.json_items)
-    if not isinstance(items, list):
-        raise ValueError(f"no list at {kommun.json_items!r}")
     sha = hashlib.sha256(raw).hexdigest()
+    sections = {s.casefold() for s in kommun.sections}
     entries, problems = [], []
-    for item in items:
-        if not isinstance(item, dict):
+    for section, item in _json_items(kommun, json.loads(_text(raw))):
+        if not isinstance(item, dict) or _follows(kommun, item):
             continue
-        title = _title(kommun, str(item.get(kommun.json_title) or ""))
+        if sections and (section or "").casefold() not in sections:
+            continue
+        title = _title(kommun, html.unescape(str(item.get(kommun.json_title) or "")))
         if not title or not binds_residents(kommun, title):
             continue
-        fields = {k: v for k, v in item.items() if isinstance(v, (str, int)) and not isinstance(v, bool)}
+        fields = _json_fields(item, listing_url)
         try:
             href = kommun.json_url.format_map(fields)
         except (KeyError, IndexError, ValueError):
