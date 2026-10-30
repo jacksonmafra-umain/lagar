@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.solleftea.se/Kommun--politik/kommunfakta/regler-och-styrande-dokument/allmanna-och-lokala-foreskrifter": "2283-listing1.html",
+    "https://www.solleftea.se/Kommun--politik/kommunfakta/regler-och-styrande-dokument/taxor-och-avgifter": "2283-listing2.html"
+  },
+  "count": 13,
+  "sample": {
+    "number": "18.10f7270b1a12f688cbe577",
+    "title": "Allmänna ordningsföreskrifter",
+    "url": "https://www.solleftea.se/download/18.10f7270b1a12f688cbe577/1792482064697/Allm%C3%A4nna%20ordningsf%C3%B6reskrifter,%20KF%202026-09-28%20%C2%A7%2079.pdf"
+  },
+  "excluded": []
+}
