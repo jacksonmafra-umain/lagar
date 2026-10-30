@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.halmstad.se/kommunochpolitik/kommunfakta/lokalaforeskrifter.n1402.html": "1380-listing.html",
+    "https://www.halmstad.se/kommunochpolitik/kommunfakta/styrandedokumentochlokalaforeskrifter.n2584.html": "1380-listing-2.html"
+  },
+  "count": 8,
+  "sample": {
+    "number": "18.35afc4c81756ed4e2d32b39",
+    "title": "Åläggande om gångbanerenhållning",
+    "url": "https://www.halmstad.se/download/18.35afc4c81756ed4e2d32b39/1610955211358/Alaggande-om-gangbanerenhallning.pdf"
+  },
+  "excluded": [
+    "Kommunfullmäktiges riktlinje för avfallshantering – avfallsföreskrifter",
+    "Gatubelysningsanläggningar",
+    "Gatubyggnadskostnader"
+  ]
+}

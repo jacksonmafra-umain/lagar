@@ -493,6 +493,13 @@ left out. A table row that links through `data-href` instead of a link is read t
 (`/api/episerver/v3.0/content/<page>?expand=PDFFilesArea`), which only gives file names; the
 title, and whether a regulation is an amendment, come from the PDF. When the listing only named
 the number and the PDF title shows an amendment, the regulation is excluded.
+HSLF-FS, the series the health and social-care agencies share, comes from the JSON behind
+kunskapsguiden.se's list (designation, heading, agency, link). Its regulations sit on each
+agency's own site, so the adapter sets `multi_host = True` and the run reads robots.txt per host;
+the agency becomes the document's `issuer`. A link straight to a PDF makes the PDF the document,
+and on a page that lists many regulations (TLV) only the PDFs naming the number are kept.
+Läkemedelsverket's regulations are not collected: its pages need JavaScript and its robots.txt
+disallows PDFs. Predecessor series on the same list (SOSFS, FoHMFS and others) are not collected.
 
 Adapters whose site publishes no HTML text (`has_text = False`) get their text from a PDF:
 the consolidated version when one is linked, else the regulation's own PDF, read with

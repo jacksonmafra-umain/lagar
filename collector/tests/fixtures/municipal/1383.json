@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://varberg.se/kommun-och-politik/kommunfakta/ordningsregler-och-styrande-dokument": "1383-listing.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "18.2b514d9b18a92e6fafc33884",
+    "title": "Lokala föreskrifter om miljöfarlig verksamhet och hälsoskydd för Varbergs kommun",
+    "url": "https://varberg.se/download/18.2b514d9b18a92e6fafc33884/1672752444080/Lokala%20f%C3%B6reskrifter%20om%20milj%C3%B6farlig%20verksamhet%20och%20h%C3%A4lsoskydd%20f%C3%B6r%20Varbergs%20kommun.pdf"
+  },
+  "excluded": [
+    "Regler för kommunalt bidrag, enskilda vägar övrigt styrande dokument 20130917",
+    "Bilaga 1. Skötselplan för Nedregårdens naturreservat, 2026-06-16",
+    "Arbetsordning för kommunfullmäktige"
+  ]
+}

@@ -15,8 +15,7 @@ object ApiExamples {
     {"id": "region", "count": 0, "series": []},
     {"id": "municipality", "count": 0, "series": []},
     {"id": "service", "count": 0, "series": []}
-  ],
-  "docs_encoding": "json"
+  ]
 }
 """
 
