@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.alingsas.se/kommun-och-politik/politik-och-beslut/forfattningssamling-och-styrande-dokument/forfattningssamling/": "1489-listing.html"
+  },
+  "count": 36,
+  "sample": {
+    "number": "2024/11/allmanna-lokala-ordningsforeskrifter-antagen-version-efter-lansstyrelsens-beslut",
+    "title": "Allmänna lokala ordningsföreskrifter för Alingsås kommun",
+    "url": "https://municipio.alingsas.se/wp-content/uploads/networks/1/sites/2/2024/11/allmanna-lokala-ordningsforeskrifter-antagen-version-efter-lansstyrelsens-beslut.pdf"
+  },
+  "excluded": [
+    "Ägardirektiv för AB Alingsås Rådhus",
+    "Ägardirektiv för fastighetskoncernen Alingsåshem AB",
+    "Ägardirektiv för Alingsåshem AB"
+  ]
+}

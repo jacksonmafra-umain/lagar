@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://toreboda.se/kommun-och-politik/kommunfakta/styrande-dokument-taxor-och-avgifter": "1473-listing.html"
+  },
+  "count": 15,
+  "sample": {
+    "number": "18.62c7056a18f0f9c228a10a6",
+    "title": "Avgifter för felparkering",
+    "url": "https://toreboda.se/download/18.62c7056a18f0f9c228a10a6/1714124148682/Avgifter%20f%C3%B6r%20felparkering.pdf"
+  },
+  "excluded": [
+    "Arbetsmiljömål 2027-2030",
+    "Kulturpolitiskt program",
+    "Program för ungdomsplattform - Ung i Töreboda"
+  ]
+}
