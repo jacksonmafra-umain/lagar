@@ -3865,6 +3865,29 @@
         "\\s*\\.pdf\\s*$"
       ]
     },
+    "2061": {
+      "name": "Smedjebacken",
+      "issuer": "Smedjebacken kommun",
+      "region_code": "20",
+      "collection": "Smedjebackens kommuns styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.smedjebacken.se", "smedjebacken.se"],
+      "listings": [
+        "https://www.smedjebacken.se/kommun-och-politik/styrande-dokument/foreskrifter.html",
+        "https://www.smedjebacken.se/kommun-och-politik/styrande-dokument/avgifter.html"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.smedjebacken\\.se/download/18\\.[0-9a-f]+/\\d+/(?![^?#]*(?:Personalmatl|Lunchpris|tryckeri))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
+    },
     "2062": {
       "name": "Mora",
       "issuer": "Mora kommun",
@@ -3874,6 +3897,161 @@
       "resident_filter": true,
       "hosts": ["morakommun.se", "www.morakommun.se"],
       "listings": ["https://morakommun.se/kommun-och-politik/styrande-dokument-och-regler.html"]
+    },
+    "2080": {
+      "name": "Falun",
+      "issuer": "Falu kommun",
+      "region_code": "20",
+      "collection": "Falu kommuns regler och styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.falun.se", "falun.se"],
+      "listings": [
+        "https://www.falun.se/kommun--demokrati/kommunens-organisation/regler-och-styrande-dokument/foreskrifter.html",
+        "https://www.falun.se/kommun--demokrati/kommunens-organisation/regler-och-styrande-dokument/avgifter-och-taxor.html"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.falun\\.se/download/18\\.[0-9a-f]+/\\d+/(?![^?#]*(?:avgifter_tillsyn|serveringsst))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
+    },
+    "2083": {
+      "name": "Hedemora",
+      "issuer": "Hedemora kommun",
+      "region_code": "20",
+      "collection": "Hedemora kommuns styrande dokument och regler",
+      "strategy": "html_index",
+      "hosts": ["hedemora.se", "www.hedemora.se"],
+      "listings": [
+        "https://hedemora.se/kommun-och-demokrati/sa-fungerar-kommunen/regler-och-styrande-dokument/"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://(www\\.)?hedemora\\.se/wp-content/uploads/\\d{4}/\\d{2}/(?=[^?#/]*(?:ABVA|ordningsforeskrifter|avfallsforeskrifter|Torghandel|foreskrift-va|forslag-pa-lokala-foreskrifter|Gangbanor|Felparkeringsavgifter|taxa|taxor|avgift|tillampning))[^?#/]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/wp-content/uploads/(\\d{4}/\\d{2}/[^/?#]+?)\\.pdf"}
+      ],
+      "title_strip": ["\\s*\\.pdf\\s*$"]
+    },
+    "2084": {
+      "name": "Avesta",
+      "issuer": "Avesta kommun",
+      "region_code": "20",
+      "collection": "Avesta kommuns styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["avesta.se", "www.avesta.se"],
+      "listings": [
+        "https://avesta.se/kommun-demokrati/styrande-dokument/miljo-och-avfall/",
+        "https://avesta.se/kommun-demokrati/styrande-dokument/foreskrifter/"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://(www\\.)?avesta\\.se/(globalassets|contentassets)/[^?#]*(?:ordningsforeskrifter|avfallsforeskrifter|abva|halsoskyddsforeskrifter)[^?#]*\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/(?:globalassets|contentassets)/.*/([^/?#]+?)\\.pdf"}
+      ],
+      "title_strip": ["\\s*\\(?adobe reader[^)]*\\)?\\s*$", "\\s*\\.\\s*$"]
+    },
+    "2085": {
+      "name": "Ludvika",
+      "issuer": "Ludvika kommun",
+      "region_code": "20",
+      "collection": "Ludvika kommuns styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.ludvika.se", "ludvika.se", "dokumentwebb.ludvika.se"],
+      "listings": [
+        "https://www.ludvika.se/kommun-och-politik/styrande-dokument",
+        "https://www.ludvika.se/kommun-och-politik/fakta-om-kommunen/taxor-och-avgifter"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Föreskrifter",
+        "Avgifter och taxor inom vård- och omsorg",
+        "Taxor och avgifter inom kultur- och samhällsutveckling",
+        "Taxor inom avfall"
+      ],
+      "link_pattern": "^https://dokumentwebb\\.ludvika\\.se/api/download/(?!(?:55ced140|a36b9d82|44592fda|d8bea59c|ce606c39|e1c70f2e)-)[0-9a-f-]{36}/[0-9a-f-]{36}$",
+      "number": [
+        {"from": "href", "pattern": "/api/download/([0-9a-f-]{36})/"}
+      ],
+      "title_strip": ["\\s*\\.pdf\\s*$"]
+    },
+    "2101": {
+      "name": "Ockelbo",
+      "issuer": "Ockelbo kommun",
+      "region_code": "21",
+      "collection": "Ockelbo kommuns styrdokument",
+      "strategy": "html_index",
+      "hosts": ["ockelbo.se", "www.ockelbo.se"],
+      "listings": ["https://ockelbo.se/kommun--politik/beslut--handlingar/styrdokument-"],
+      "section_level": 2,
+      "sections": ["Föreskrifter"],
+      "link_pattern": "^https://ockelbo\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
+    },
+    "2104": {
+      "name": "Hofors",
+      "issuer": "Hofors kommun",
+      "region_code": "21",
+      "collection": "Hofors kommuns styrdokument",
+      "strategy": "html_index",
+      "hosts": ["www.hofors.se", "hofors.se"],
+      "listings": ["https://www.hofors.se/kommun--politik/styrdokument.html"],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.hofors\\.se/download/18\\.[0-9a-f]+/\\d+/(?=[^?#]*(?:%C3%B6reskrift|ordningsf|taxa|avgifter))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
+    },
+    "2121": {
+      "name": "Ovanåker",
+      "issuer": "Ovanåkers kommun",
+      "region_code": "21",
+      "collection": "Ovanåkers kommuns lokala föreskrifter",
+      "preset": "sitevision",
+      "hosts": ["www.ovanaker.se", "ovanaker.se"],
+      "listings": ["https://www.ovanaker.se/trafikochgator/allmannaplatser/lokalaforeskrifter.313.html"]
+    },
+    "2132": {
+      "name": "Nordanstig",
+      "issuer": "Nordanstigs kommun",
+      "region_code": "21",
+      "collection": "Nordanstigs kommuns styrdokument",
+      "strategy": "html_index",
+      "hosts": ["nordanstig.se", "www.nordanstig.se"],
+      "listings": [
+        "https://nordanstig.se/startsida/sidor/kommun-och-politik/sa-styrs-nordanstig---styrdokument.html"
+      ],
+      "section_level": 2,
+      "sections": ["Taxor och avgifter", "Lokala föreskrifter"],
+      "link_pattern": "^https://nordanstig\\.se/download/18\\.[0-9a-f]+/\\d+/(?![^?#]*Kretslop)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
     },
     "2161": {
       "name": "Ljusdal",

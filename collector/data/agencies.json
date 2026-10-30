@@ -277,7 +277,9 @@
     },
     "svenska-kraftnats-forfattningssamling-svkfs": {
       "series": "SvKFS",
-      "agency": "Affärsverket svenska kraftnät"
+      "agency": "Affärsverket svenska kraftnät",
+      "status": "collected",
+      "note": "Regulations from the JSON document list behind Svenska kraftnät's regulations page, in force and repealed (archived, with the date from the description); text from the PDFs."
     },
     "trafikverkets-forfattningssamling-trvfs": {
       "series": "TRVFS",
@@ -378,7 +380,9 @@
     },
     "tullverkets-forfattningssamling-tfs": {
       "series": "TFS",
-      "agency": "Tullverket"
+      "agency": "Tullverket",
+      "status": "collected",
+      "note": "Base regulations in force from Tullverket's document search (a POSTed form listing every TFS document); repealed ones carry no date and are not stored; text from the PDFs."
     },
     "elsakerhetsverkets-forfattningssamling-elsak-fs": {
       "series": "ELSÄK-FS",

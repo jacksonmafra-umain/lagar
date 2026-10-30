@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://avesta.se/kommun-demokrati/styrande-dokument/miljo-och-avfall/": "2084-listing1.html",
+    "https://avesta.se/kommun-demokrati/styrande-dokument/foreskrifter/": "2084-listing2.html"
+  },
+  "count": 4,
+  "sample": {
+    "number": "avfallsforeskrifter-avesta-kommun-revidering-2021",
+    "title": "Avfallsföreskrifter",
+    "url": "https://avesta.se/globalassets/for-alla-sidor/kommun-och-demokrati/styrande-dokument/miljo-halsa-och-avfall/avfallsforeskrifter-avesta-kommun-revidering-2021.pdf"
+  },
+  "excluded": []
+}
