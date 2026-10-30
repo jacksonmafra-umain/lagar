@@ -64,9 +64,11 @@ import app.lagar.resources.bookmark_add
 import app.lagar.resources.bookmark_remove
 import app.lagar.resources.ic_bookmark
 import app.lagar.resources.ic_bookmark_filled
+import app.lagar.resources.ic_info
 import app.lagar.resources.ic_share
 import app.lagar.resources.ic_toc
 import app.lagar.resources.reader_inspector
+import app.lagar.resources.reader_inspector_open
 import app.lagar.resources.reader_link_copied
 import app.lagar.resources.reader_provision_removed
 import app.lagar.resources.reader_provision_saved
@@ -163,6 +165,10 @@ fun ReaderScreen(
     val spacing = LagarTheme.spacing
     val wide = LocalWideLayout.current
     val inspector = wide && maxWidth >= ShellDimens.ReaderInspectorBreakpoint
+    // Tablet widths (and desktop below the inspector breakpoint): the metadata slides in from a drawer instead.
+    val drawer = !inspector && maxWidth >= ShellDimens.MediumBreakpoint
+    // The facts and amendments sit beside the text, in the inspector pane or the drawer, not under the title.
+    val sideFacts = inspector || drawer
     val hazeState = remember { HazeState() }
     var barHeight by rememberBackTopBarHeight()
     val bottomInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
@@ -174,6 +180,7 @@ fun ReaderScreen(
     val failed = stringResource(Res.string.reader_share_failed)
     var showToc by rememberSaveable { mutableStateOf(false) }
     var amendmentsOpen by rememberSaveable { mutableStateOf(false) }
+    var drawerOpen by rememberSaveable { mutableStateOf(false) }
     // The note being edited: open with the anchor of its §, or no anchor for the document note.
     var noteOpen by rememberSaveable { mutableStateOf(false) }
     var noteAnchor by rememberSaveable { mutableStateOf<String?>(null) }
@@ -192,9 +199,9 @@ fun ReaderScreen(
     val amendments = remember(document?.meta) { document?.meta?.let(::amendmentRows).orEmpty() }
     val reprints = document?.meta?.reprintedBy.orEmpty()
     val hasAmendments = amendments.isNotEmpty() || reprints.isNotEmpty()
-    // Lazy items before the first block: the header and the document note, then (unless the inspector holds them) the
-    // amendments toggle, the open list and a divider.
-    val leadingItems = if (inspector) {
+    // Lazy items before the first block: the header and the document note, then (unless the inspector or the drawer
+    // holds them) the amendments toggle, the open list and a divider.
+    val leadingItems = if (sideFacts) {
         2
     } else {
         2 + (if (hasAmendments) 2 else 0) +
@@ -222,10 +229,7 @@ fun ReaderScreen(
         }
         is LoadState.Loaded -> {
             val meta = state.value.meta
-            val key = remember(meta) {
-                if (meta.repealed != null) LayerKey.Repealed
-                else DisplayLayer.fromRoute(meta.layer, meta.type)?.key ?: LayerKey.Repealed
-            }
+            val key = remember(meta) { readerLayer(meta) }
             val shareBase = remember { shareBaseUrl() }
             val sectionActions: @Composable (String, String, String) -> Unit = { anchor, label, block ->
                 val saved = anchor in savedAnchors
@@ -257,6 +261,18 @@ fun ReaderScreen(
                     })
                 }
             }
+            val inspectorContent = @Composable {
+                DocumentInspector(
+                    meta = meta,
+                    amendments = amendments,
+                    reprints = reprints,
+                    amendmentsOpen = amendmentsOpen,
+                    onToggleAmendments = { amendmentsOpen = !amendmentsOpen },
+                    amendmentLinks = amendmentLinks,
+                    layer = key,
+                    onOpenDocument = onOpenDocument,
+                )
+            }
             val text = @Composable { modifier: Modifier ->
                 LazyColumn(
                     state = listState,
@@ -265,7 +281,7 @@ fun ReaderScreen(
                 ) {
                     item(key = "header") {
                         ReadingItem {
-                            if (inspector) {
+                            if (sideFacts) {
                                 Column(Modifier.readingColumn(), verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
                                     DocumentTitle(meta)
                                     HorizontalDivider(Modifier.padding(top = spacing.xs), color = LagarTheme.colors.outlineVariant)
@@ -285,7 +301,7 @@ fun ReaderScreen(
                             }
                         }
                     }
-                    if (hasAmendments && !inspector) {
+                    if (hasAmendments && !sideFacts) {
                         item(key = "amendments") {
                             ReadingItem {
                                 AmendmentsToggle(amendments.size, amendmentsOpen, { amendmentsOpen = !amendmentsOpen }, Modifier.readingColumn())
@@ -386,15 +402,7 @@ fun ReaderScreen(
                             verticalArrangement = Arrangement.spacedBy(spacing.sm),
                         ) {
                             PaneHeading(stringResource(Res.string.reader_inspector))
-                            DocumentFacts(meta)
-                            if (hasAmendments) {
-                                HorizontalDivider(color = LagarTheme.colors.outlineVariant)
-                                AmendmentsToggle(amendments.size, amendmentsOpen, { amendmentsOpen = !amendmentsOpen })
-                                if (amendmentsOpen) {
-                                    if (reprints.isNotEmpty()) ReprintsItem(reprints, amendmentLinks, key, onOpenDocument)
-                                    amendments.forEach { row -> AmendmentItem(row, amendmentLinks[row.number], key, onOpenDocument) }
-                                }
-                            }
+                            inspectorContent()
                         }
                     }
                 }
@@ -450,6 +458,9 @@ fun ReaderScreen(
             if (!outline.isEmpty && !tocPane) {
                 BarAction(painterResource(Res.drawable.ic_toc), stringResource(Res.string.reader_toc)) { showToc = true }
             }
+            if (drawer) {
+                BarAction(painterResource(Res.drawable.ic_info), stringResource(Res.string.reader_inspector_open)) { drawerOpen = true }
+            }
             val shareBase = remember { shareBaseUrl() }
             BarAction(painterResource(Res.drawable.ic_share), stringResource(Res.string.reader_share_link, meta.title)) {
                 share(meta.title, readerLink(shareBase, meta.id))
@@ -457,20 +468,30 @@ fun ReaderScreen(
             BookmarkAction(meta, bookmarked, onToggleBookmark)
         }
     }
+    val loaded = (state as? LoadState.Loaded)?.value?.meta
+    if (drawer && loaded != null) {
+        InspectorDrawer(open = drawerOpen, hazeState = hazeState, onClose = { drawerOpen = false }) {
+            DocumentInspector(
+                meta = loaded,
+                amendments = amendments,
+                reprints = reprints,
+                amendmentsOpen = amendmentsOpen,
+                onToggleAmendments = { amendmentsOpen = !amendmentsOpen },
+                amendmentLinks = amendmentLinks,
+                layer = remember(loaded) { readerLayer(loaded) },
+                onOpenDocument = {
+                    drawerOpen = false
+                    onOpenDocument(it)
+                },
+            )
+        }
+    }
     SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter).navigationBarsPadding())
 }
 
-/** Title of a desktop side pane. */
-@Composable
-private fun PaneHeading(text: String) {
-    Text(
-        text = text,
-        style = LagarTheme.type.labelMd,
-        fontWeight = FontWeight.Bold,
-        color = LagarTheme.colors.onSurfaceVariant,
-        modifier = Modifier.semantics { heading() },
-    )
-}
+/** The layer colour of a document in the reader: its layer's, or the repealed grey once it is repealed. */
+private fun readerLayer(meta: DocumentMeta): LayerKey =
+    if (meta.repealed != null) LayerKey.Repealed else DisplayLayer.fromRoute(meta.layer, meta.type)?.key ?: LayerKey.Repealed
 
 /** Centers one lazy item in the reading column with the screen margins. */
 @Composable
