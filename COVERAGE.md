@@ -337,6 +337,11 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Boden's taxor pages and Örnsköldsvik's, Sandviken's and Tidaholm's topic
     pages hold rules that the configured listings do not cover; Kiruna covers
     its föreskrifter and bygglovstaxa only.
+  - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
+    the PDFs are never fetched; the documents point at the listing page and are
+    recorded as gaps in the manifest.
+  - Simrishamn publishes its taxor as HTML text on its taxor page, which is not
+    collected; only the allmänna lokala ordningsföreskrifter are a PDF.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources
