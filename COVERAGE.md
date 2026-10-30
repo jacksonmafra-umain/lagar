@@ -299,9 +299,9 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   TVFS, UFS, VALFS, VRFS, SKSFS, SSMFS, UHRFS, PFS, ÅFS, PRVFS, PMFS and
   RPSFS, STEMFS, RA-FS, SJÖFS, TRVFS) carry the regulation text read from
   the PDF's text layer. SKOLFS carries the text of each regulation as issued
-  (not the consolidated version). SKOLFS 2011:22 keeps metadata and PDF links
-  only: Skolverket now serves its latest consolidated version as a Word file
-  instead of a PDF, and the collector rejects it.
+  (not the consolidated version). Skolverket serves the latest consolidated
+  version of SKOLFS 2011:22 as a Word file instead of a PDF; it is noted in the
+  manifest and not linked.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - SJVFS (Statens jordbruksverk) is a gap: its regulations are PDFs on
@@ -358,9 +358,7 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
     page without headings, so their configs keep only listed file names; a new
     document with another name is not picked up until the config is updated.
-  - Not collected yet: Gävle (MediaFlow shares, whose download links need a
-    token and expire after minutes; an adapter is planned) and Leksand
-    (Netpublicator; an adapter is planned). Karlstad serves its files only
+  - Karlstad serves its files only
     through time-limited SharePoint links on a host whose robots.txt disallows
     everything, so it is not collected.
   - Skövde: the taxor och avgifter page and the five lokala föreskrifter
@@ -407,9 +405,9 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
     included, with an HTTP 403 "Åtkomst nekad" bot-check page; not bypassed.
   - Not collected yet, with the reason per kommun in `AGENCIES.md`: Värnamo
-    (its DocumentWeb host did not answer), Mönsterås (site did not answer) and
-    Linköping (rules on Google Drive; waits for an owner decision). Their issues
-    stay open.
+    (its DocumentWeb host did not answer; retried 2026-10-31), Mönsterås (site
+    did not answer; retried 2026-10-31) and Linköping (rules on Google Drive;
+    waits for an owner decision). Their issues stay open.
   - Collected through platform adapters: Lidingö and Västervik (Evolution
     DocumentWeb API), Sigtuna (Netpublicator), Gotland (its document service),
     Vallentuna (gzipped sitemap of the file-share module), Uppsala (sitemap and
