@@ -3068,7 +3068,7 @@
         "https://www.pitea.se/invanare/Kommun-politik/politik/Styrning-och-ledning/styrande-dokument/taxa/"
       ],
       "section_level": 2,
-      "sections": ["Kommunal föreskrift", "Taxa"],
+      "sections": ["Kommunal föreskrift", "Taxa"],
       "link_pattern": "^https://www\\.pitea\\.se/BOKHYLLAN/Styrande%20dokument/(?:13\\.%20Taxa|15\\.%20Kommunal%20f(?:%C3%B6|o%CC%88)reskrift)/(?!Plan%20f(?:%C3%B6|o%CC%88)r%20r(?:%C3%A4|a%CC%88)tt%20fart)[^?#]+\\.pdf$",
       "number": [
         {"from": "href", "pattern": "/(13|15)\\. [^/]+/([^/]+)\\.pdf$", "format": "{0}/{1}"}
