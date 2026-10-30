@@ -30601,6 +30601,33 @@
       "url": "https://www.skara.se/kommunochpolitik/styrandedokument/taxorochavgifter/allmannabestammelsertaxaforprovningochtillsynenligtmiljobalken.875.html"
     },
     {
+      "bytes": 372013,
+      "content_type": "application/pdf",
+      "id": "1496-allmanna-bestammelser-for-brukande-av-skovde-kommuns-va-anlaggning",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-10-30T23:08:06Z",
+      "sha256": "3fcd1494b7878219217862b2180c09744d683148dc0e11f55c51168c1dcde69a",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/allmanna-bestammelser-for-brukande-av-skovde-kommuns-va-anlaggning.pdf"
+    },
+    {
+      "bytes": 20732107,
+      "content_type": "application/pdf",
+      "id": "1496-allmanna-lokala-ordningsforeskrifter-for-skovde-kommun",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-10-30T23:08:14Z",
+      "sha256": "0847f2f6e4566374afacf7966868cf5c28237f2e1466da50533323611175dfc0",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/allmanna-lokala-ordningsforeskrifter-for-skovde-kommun.pdf"
+    },
+    {
+      "bytes": 391345,
+      "content_type": "application/pdf",
+      "id": "1496-avfallsforeskrifter",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-10-30T23:08:10Z",
+      "sha256": "110c7a3c17c7d3f6c86b6e1c6255f34ce1f2a71bc6cbc29e2e279cce675f16f0",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/avfallsforeskrifter.pdf"
+    },
+    {
       "bytes": 940296,
       "content_type": "application/pdf",
       "id": "1496-avgifter-for-kopior-av-allmanna-handlingar",
@@ -30608,6 +30635,24 @@
       "retrieved_at": "2026-10-30T21:59:18Z",
       "sha256": "5e1a94ab41d0eef1d0addf810c3686118f2d79d46caf3f4ad6dc932920bff590",
       "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter/avgifter-for-kopior-av-allmanna-handlingar.pdf"
+    },
+    {
+      "bytes": 5602734,
+      "content_type": "application/pdf",
+      "id": "1496-lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-10-30T23:08:09Z",
+      "sha256": "2d7c80e95b9be583f36a03d969dd03d1ef62144a41b8a0976b41be3e6a1b6510",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo.pdf"
+    },
+    {
+      "bytes": 1257239,
+      "content_type": "application/pdf",
+      "id": "1496-lokala-ordningsforeskrifter-for-torghandel",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-10-30T23:08:07Z",
+      "sha256": "9eedb8f693c9d9308bb80018066f42310a08fc587b851c52a0abf0688c1209f6",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/forfattningssamling/lokala-ordningsforeskrifter-for-torghandel.pdf"
     },
     {
       "bytes": 260938,
