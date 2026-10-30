@@ -161,6 +161,17 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   of 2026-10-30, with links to the PDFs. Pensionsmyndigheten's page also lists
   regulations of the predecessor series (FKFS, RFFS, PPMFS) still in force;
   only PFS numbers are collected.
+- PMFS (Polismyndigheten, 50 regulations in force) and RPSFS (29 regulations of
+  the former Rikspolisstyrelsen still in force) as of 2026-10-30, from the four
+  pages of Polismyndigheten's list, with entry into force, amendments and the
+  consolidated (sammanställd) PDFs. Repealed regulations are only listed
+  separately and are not collected.
+- SCB-FS (Statistiska centralbyrån, 48 base regulations on reporting duties in
+  force) as of 2026-10-30, in full text from SCB's page per regulation. SCB's
+  table also lists amending and repealing regulations (44, in `amended_by`).
+  Not collected: the monthly consumer price index notices (KPI, about 110) and
+  the regulations on official statistics, published only as PDF on a separate
+  page; the series is partial.
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630

@@ -260,6 +260,46 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(regulation.pdfs, [("ÅFS 2023:7", base.url)])
         self.assertEqual(agency.corpus_id(base.number), "aafs-2023-7")
 
+    def test_pmfs_listing_and_pages(self):
+        polisen = agency.PolisenAdapter()
+        text = fixture("agency-pmfs-listing.html")
+        self.assertEqual(polisen.more_pages(text, polisen.listing_url),
+                         [polisen.listing_url + "2/", polisen.listing_url + "3/"])
+        entries = polisen.parse_listing(text, polisen.listing_url)
+        self.assertEqual([e.number for e in entries], ["PMFS 2026:25", "PMFS 2023:7"])
+        self.assertEqual(entries[0].in_force, "2026-11-01")
+        self.assertTrue(entries[0].title.startswith("Polismyndighetens föreskrifter och allmänna råd om"))
+        self.assertEqual(entries[1].amended_by, ["PMFS 2024:10"])
+        self.assertEqual([label for label, _ in entries[1].pdfs], ["PMFS 2023:7", "PMFS 2023:7 (sammanställd version)"])
+
+    def test_paginated_listing_reads_every_page(self):
+        polisen = agency.PolisenAdapter()
+        first = fixture("agency-pmfs-listing.html")
+        pages = {polisen.listing_url: first.encode(), polisen.listing_url + "2/": first.encode(),
+                 polisen.listing_url + "3/": first.encode()}
+        client = FakeClient(pages)
+        args = agency.parse_args(["--series", "PMFS"])
+        entries = list(agency._entries(client, agency._Robots(client, polisen.base_url), polisen, args))
+        self.assertEqual(len(entries), 6)
+        self.assertEqual(client.calls.count(polisen.listing_url + "2/"), 1)
+
+    def test_scb_fs_table_and_detail(self):
+        scb = agency.ScbAdapter()
+        entries = scb.parse_listing(fixture("agency-scb-fs-listing.html"), scb.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [
+            ("SCB-FS 2004:9", False), ("SCB-FS 2018:20", False), ("SCB-FS 2019:15", True), ("SCB-FS 2020:16", False)])
+        base = entries[2]
+        self.assertEqual(base.amended_by, ["SCB-FS 2020:16"])
+        self.assertTrue(base.url.startswith("https://www.scb.se/link/"))
+        regulation = scb.parse_detail(fixture("agency-scb-fs-detail.html"), base)
+        self.assertEqual(regulation.published, "2019-04-04")
+        self.assertFalse(regulation.title.endswith(";"))
+        self.assertTrue(regulation.text.startswith("Statistiska centralbyrån (SCB) föreskriver"))
+        self.assertIn("1 § Ägare till nybyggda hus", regulation.text)
+        self.assertEqual(len(regulation.pdfs), 1)
+        with self.assertRaises(ValueError):
+            scb.parse_detail(fixture("agency-scb-fs-detail.html"), entries[3])
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

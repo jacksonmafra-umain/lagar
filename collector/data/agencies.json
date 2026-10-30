@@ -21,7 +21,9 @@
     },
     "statistiska-centralbyrans-forfattningssamling-scb-fs": {
       "series": "SCB-FS",
-      "agency": "Statistiska centralbyrån"
+      "agency": "Statistiska centralbyrån",
+      "status": "partial",
+      "note": "Full text from SCB's page per regulation, listed in its table of regulations on reporting duties (uppgiftslämnande) in force. The monthly consumer price index notices and the regulations on official statistics (published only as PDF) are not collected."
     },
     "aklagarmyndighetens-forfattningssamling-afs": {
       "series": "ÅFS",
@@ -172,7 +174,9 @@
     },
     "polismyndighetens-forfattningssamling-pmfs": {
       "series": "PMFS",
-      "agency": "Polismyndigheten"
+      "agency": "Polismyndigheten",
+      "status": "collected_pdf",
+      "note": "Regulations in force from Polismyndigheten's paginated list, with entry into force, amendments and consolidated versions; it also holds Rikspolisstyrelsen's RPSFS regulations still in force, stored with their RPSFS numbers. The text is published only as PDF."
     },
     "post-och-telestyrelsens-forfattningssamling-ptsfs": {
       "series": "PTSFS",

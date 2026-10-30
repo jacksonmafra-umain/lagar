@@ -3742,6 +3742,762 @@
       ]
     },
     {
+      "number": "PMFS 2015:6",
+      "detail_url": "https://polisen.se/12f3bb4dd11c0341e3f95f52dae48159/siteassets/forfattningssamling/fap-nummer/fap279-01-pmfs2015-06/",
+      "files": [
+        {
+          "label": "PMFS 2015:6",
+          "url": "https://polisen.se/12f3bb4dd11c0341e3f95f52dae48159/siteassets/forfattningssamling/fap-nummer/fap279-01-pmfs2015-06/",
+          "bytes": 28441,
+          "sha256": "5a428dd7e26268bca11f7037beafaa62d95dbefb04fbde8a3969fb3b7c2e55e4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:29Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2015:7",
+      "detail_url": "https://polisen.se/c9ca43da80e3f72759aa4ec18a734ee1/siteassets/forfattningssamling/fap-nummer/fap102-01-pmfs2015-07/",
+      "files": [
+        {
+          "label": "PMFS 2015:7",
+          "url": "https://polisen.se/c9ca43da80e3f72759aa4ec18a734ee1/siteassets/forfattningssamling/fap-nummer/fap102-01-pmfs2015-07/",
+          "bytes": 37208,
+          "sha256": "327f64a0f4a642aaab69d2b3364313abb498f51a8a55ef41cfd37d8bd989ef74",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:27Z"
+        },
+        {
+          "label": "PMFS 2015:7 (sammanställd version)",
+          "url": "https://polisen.se/8aa56c5ea9910290850b9bbf96dda2e9/siteassets/forfattningssamling/fap-nummer/fap102-01-sammanstalld/",
+          "bytes": 171615,
+          "sha256": "916e4e0683ccbacad6349bb1fd8c1f7371a9062e85c279abb23082e013f7cc18",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:28Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2016:2",
+      "detail_url": "https://polisen.se/fe197df4ea0cb54ebc163231f3b5f5e7/siteassets/forfattningssamling/fap-nummer/fap979-01-pmfs2016-02/",
+      "files": [
+        {
+          "label": "PMFS 2016:2",
+          "url": "https://polisen.se/fe197df4ea0cb54ebc163231f3b5f5e7/siteassets/forfattningssamling/fap-nummer/fap979-01-pmfs2016-02/",
+          "bytes": 41097,
+          "sha256": "3868004b85c24a0bf4feb0fbcb1cbb6f48f9aec0f8bcda0d743f9e93c41eadf1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:26Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2016:6",
+      "detail_url": "https://polisen.se/da2de060672a83ed4dda11fb3994f169/siteassets/forfattningssamling/fap-nummer/fap104-04-pmfs2016-06/",
+      "files": [
+        {
+          "label": "PMFS 2016:6",
+          "url": "https://polisen.se/da2de060672a83ed4dda11fb3994f169/siteassets/forfattningssamling/fap-nummer/fap104-04-pmfs2016-06/",
+          "bytes": 42955,
+          "sha256": "41c433a04b49adc4f0650ceac44ec0bde31661be3df2aae1bec87b8c4c1a43fe",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:24Z"
+        },
+        {
+          "label": "PMFS 2016:6 (sammanställd version)",
+          "url": "https://polisen.se/cbd117566a2bb00756459427ac0a347a/siteassets/forfattningssamling/fap-nummer/fap104-04-sammanstalld/",
+          "bytes": 176075,
+          "sha256": "00c5e0a62b95e71fb3b02c5e13455725d6b65b1911617ffd009a7bdfbfb93c18",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:25Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2016:9",
+      "detail_url": "https://polisen.se/4ca6d1e3d93a966fe0102f302476b013/siteassets/forfattningssamling/fap-nummer/fap776-01-pmfs2016-09/",
+      "files": [
+        {
+          "label": "PMFS 2016:9",
+          "url": "https://polisen.se/4ca6d1e3d93a966fe0102f302476b013/siteassets/forfattningssamling/fap-nummer/fap776-01-pmfs2016-09/",
+          "bytes": 33133,
+          "sha256": "88c98f02c69b1c06110f3532203ccb71dec6028ccc8365e23a62d88ff3a5ad0d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:23Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2016:10",
+      "detail_url": "https://polisen.se/028388b0cad95f1e306b00a7cb3f6d63/siteassets/forfattningssamling/fap-nummer/fap104-1-pmfs2016-10/",
+      "files": [
+        {
+          "label": "PMFS 2016:10",
+          "url": "https://polisen.se/028388b0cad95f1e306b00a7cb3f6d63/siteassets/forfattningssamling/fap-nummer/fap104-1-pmfs2016-10/",
+          "bytes": 48281,
+          "sha256": "24c226810b4f8850eada03f2822885651a73178896369707b646eccddbe6703e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:21Z"
+        },
+        {
+          "label": "PMFS 2016:10 (sammanställd version)",
+          "url": "https://polisen.se/0adb9b17f281a48c9ad91c587affc72d/siteassets/forfattningssamling/fap-nummer/fap104-01-sammanstalld/",
+          "bytes": 161409,
+          "sha256": "d865a33ecaf400bed61156c5046f464f528db3908477aded2a68eea73b1caef9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:22Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2016:31",
+      "detail_url": "https://polisen.se/f5bf5fd09843f09ceadc58f1df83b1d4/siteassets/forfattningssamling/fap-nummer/fap480-01-pmfs2016-31/",
+      "files": [
+        {
+          "label": "PMFS 2016:31",
+          "url": "https://polisen.se/f5bf5fd09843f09ceadc58f1df83b1d4/siteassets/forfattningssamling/fap-nummer/fap480-01-pmfs2016-31/",
+          "bytes": 121427,
+          "sha256": "f6fa4396dc2cfeffce551f8140eeda3ff6f4f559bcffdec4c1780dbf319598a4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:20Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2017:2",
+      "detail_url": "https://polisen.se/29e4f8ec77fc2bf654a9b14f081421d5/siteassets/forfattningssamling/fap-nummer/fap579-03-pmfs2017-02/",
+      "files": [
+        {
+          "label": "PMFS 2017:2",
+          "url": "https://polisen.se/29e4f8ec77fc2bf654a9b14f081421d5/siteassets/forfattningssamling/fap-nummer/fap579-03-pmfs2017-02/",
+          "bytes": 70271,
+          "sha256": "898f1263b9360f38909eed623aa845dd92ba5077b1a9db15665e8fa3f661688e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:19Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2017:3",
+      "detail_url": "https://polisen.se/b26d1463f7821851fee9e5f3902d275d/siteassets/forfattningssamling/fap-nummer/fap579-01-pmfs2017-03/",
+      "files": [
+        {
+          "label": "PMFS 2017:3",
+          "url": "https://polisen.se/b26d1463f7821851fee9e5f3902d275d/siteassets/forfattningssamling/fap-nummer/fap579-01-pmfs2017-03/",
+          "bytes": 59720,
+          "sha256": "8e0d5d61b82fcdb113f48d758ada808e13a8cb9683bf9036c05dc63934c9febc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:18Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2017:9",
+      "detail_url": "https://polisen.se/f0b4b71cfc3934b9f6b1f6ea35eb9893/siteassets/forfattningssamling/fap-nummer/fap694-01-pmfs2017-09/",
+      "files": [
+        {
+          "label": "PMFS 2017:9",
+          "url": "https://polisen.se/f0b4b71cfc3934b9f6b1f6ea35eb9893/siteassets/forfattningssamling/fap-nummer/fap694-01-pmfs2017-09/",
+          "bytes": 296879,
+          "sha256": "cdf6da80314da2bcd1b9d0deae9acfa74c03bd3ca0abc1299f8591be9d03cbd7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:17Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2017:10",
+      "detail_url": "https://polisen.se/51c6d188c6f3e356864df71f694502a6/siteassets/forfattningssamling/fap-nummer/fap573-01-pmfs2017-10/",
+      "files": [
+        {
+          "label": "PMFS 2017:10",
+          "url": "https://polisen.se/51c6d188c6f3e356864df71f694502a6/siteassets/forfattningssamling/fap-nummer/fap573-01-pmfs2017-10/",
+          "bytes": 332052,
+          "sha256": "92a8d6bbcb4fb94ca1d9a0ef62bc75aaada611f1dff2057c72d713412cca4b70",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:16Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2017:12",
+      "detail_url": "https://polisen.se/7ca681389ece3c8635cac94f4bef5a12/siteassets/forfattningssamling/fap-nummer/fap670-01-pmfs2017-12/",
+      "files": [
+        {
+          "label": "PMFS 2017:12",
+          "url": "https://polisen.se/7ca681389ece3c8635cac94f4bef5a12/siteassets/forfattningssamling/fap-nummer/fap670-01-pmfs2017-12/",
+          "bytes": 1164947,
+          "sha256": "85ddf23f83e356296db896c0aa3f0ecff21b975ae1f33fd8ecca230413de3fb6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:15Z"
+        },
+        {
+          "label": "PMFS 2017:12 (sammanställd version)",
+          "url": "https://polisen.se/6fcbd1da2bddfac83957d7a372646b76/siteassets/forfattningssamling/fap-nummer/fap670-01-sammanstalld/",
+          "bytes": 1124439,
+          "sha256": "2662315fffa6743445ce45b0a4993122814883d3f1bed8b3ed4abe37eb2efb72",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:16Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2018:9",
+      "detail_url": "https://polisen.se/f4efe3f8ec5de88b1ee4b76b63fbbb93/siteassets/forfattningssamling/fap-nummer/fap650-01-pmfs2018-09/",
+      "files": [
+        {
+          "label": "PMFS 2018:9",
+          "url": "https://polisen.se/f4efe3f8ec5de88b1ee4b76b63fbbb93/siteassets/forfattningssamling/fap-nummer/fap650-01-pmfs2018-09/",
+          "bytes": 25458,
+          "sha256": "8a52d71fd52af8d85306ce26625dae71f330108be58e570ce1022cd6329e16ec",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:13Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2019:4",
+      "detail_url": "https://polisen.se/86bb6863b06f69b91d5648e5cd2ad24c/siteassets/forfattningssamling/fap-nummer/fap104-06-pmfs2019-04/",
+      "files": [
+        {
+          "label": "PMFS 2019:4",
+          "url": "https://polisen.se/86bb6863b06f69b91d5648e5cd2ad24c/siteassets/forfattningssamling/fap-nummer/fap104-06-pmfs2019-04/",
+          "bytes": 29559,
+          "sha256": "8b5e4aba1563a8d4eccc644aa0e18921e997f0f0f27217a2ef1a189bf0c2788e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:11Z"
+        },
+        {
+          "label": "PMFS 2019:4 (sammanställd version)",
+          "url": "https://polisen.se/da1b056ec284bffc4e3625088e684b38/siteassets/forfattningssamling/fap-nummer/fap104-06-sammanstalld/",
+          "bytes": 38231,
+          "sha256": "1145389c239e848d95f8de60355ea7908c7ef9510addb840a8d7fe6fa8d2a2d4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:12Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2019:5",
+      "detail_url": "https://polisen.se/36bd1843ce0c8f0fc0ab9c1f51777c25/siteassets/forfattningssamling/fap-nummer/fap104-09-pmfs2019-05/",
+      "files": [
+        {
+          "label": "PMFS 2019:5",
+          "url": "https://polisen.se/36bd1843ce0c8f0fc0ab9c1f51777c25/siteassets/forfattningssamling/fap-nummer/fap104-09-pmfs2019-05/",
+          "bytes": 26980,
+          "sha256": "593d56df61d51a97b6f9ae2187c5d976e6a4c49a7a3dd2147116cdd7957b97d2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:10Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2020:4",
+      "detail_url": "https://polisen.se/8ea652eecefec1b221c8f9116ee3a4f0/siteassets/forfattningssamling/fap-nummer/fap791-01-pmfs2020-04/",
+      "files": [
+        {
+          "label": "PMFS 2020:4",
+          "url": "https://polisen.se/8ea652eecefec1b221c8f9116ee3a4f0/siteassets/forfattningssamling/fap-nummer/fap791-01-pmfs2020-04/",
+          "bytes": 62532,
+          "sha256": "9526de0a54c46b6aff8c28cbade0e9a4c419ef35cc344032193d6a5e8a804b39",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:09Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2020:9",
+      "detail_url": "https://polisen.se/857e3733dc008e475b2dda20f704b4a6/siteassets/forfattningssamling/fap-nummer/fap261-01-pmfs2020-09/",
+      "files": [
+        {
+          "label": "PMFS 2020:9",
+          "url": "https://polisen.se/857e3733dc008e475b2dda20f704b4a6/siteassets/forfattningssamling/fap-nummer/fap261-01-pmfs2020-09/",
+          "bytes": 45630,
+          "sha256": "bcf88c3e322a14f11686fb73c1127f71b0f6932a49f93cf52df89521288d1a18",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:08Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2020:10",
+      "detail_url": "https://polisen.se/c601d04ec7c09868fc302203e6e5ac8d/siteassets/forfattningssamling/fap-nummer/fap338-01-pmfs2020-10/",
+      "files": [
+        {
+          "label": "PMFS 2020:10",
+          "url": "https://polisen.se/c601d04ec7c09868fc302203e6e5ac8d/siteassets/forfattningssamling/fap-nummer/fap338-01-pmfs2020-10/",
+          "bytes": 44349,
+          "sha256": "0b212640c6babe2bade38a10c117db0887424455cb55dbfb6f00335352ba1f15",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:07Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2020:18",
+      "detail_url": "https://polisen.se/c0f3e006dfdb0a62db6c67ba9d418815/siteassets/forfattningssamling/fap-nummer/fap573-02-pmfs2020-18/",
+      "files": [
+        {
+          "label": "PMFS 2020:18",
+          "url": "https://polisen.se/c0f3e006dfdb0a62db6c67ba9d418815/siteassets/forfattningssamling/fap-nummer/fap573-02-pmfs2020-18/",
+          "bytes": 178589,
+          "sha256": "dd66302b4cbe915b4659e37080f4c487e4c38b8cf468350f3003f18a968f3e6a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:06Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2020:19",
+      "detail_url": "https://polisen.se/57087942dc9db42922ab358e0afc8fc5/siteassets/forfattningssamling/fap-nummer/fap694-02-pmfs2020-19/",
+      "files": [
+        {
+          "label": "PMFS 2020:19",
+          "url": "https://polisen.se/57087942dc9db42922ab358e0afc8fc5/siteassets/forfattningssamling/fap-nummer/fap694-02-pmfs2020-19/",
+          "bytes": 130427,
+          "sha256": "9e22876a9e4432c6675c408e477410e4523c2ba6d3cb7f4122db21e56cdb6888",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:05Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2021:1",
+      "detail_url": "https://polisen.se/f23d8f69ebb3a9db0f146f30280a8df3/siteassets/forfattningssamling/fap-nummer/fap791-02-pmfs2021-01/",
+      "files": [
+        {
+          "label": "PMFS 2021:1",
+          "url": "https://polisen.se/f23d8f69ebb3a9db0f146f30280a8df3/siteassets/forfattningssamling/fap-nummer/fap791-02-pmfs2021-01/",
+          "bytes": 223010,
+          "sha256": "fbf622833d899bd0851242fd661b8c42ddad0ae7f6c6ef8a955fdf347ac41e2f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:04Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2021:3",
+      "detail_url": "https://polisen.se/52e73a9df031a22f56cf516f30ab6b8a/siteassets/forfattningssamling/fap-nummer/fap530-01-pmfs2021-03/",
+      "files": [
+        {
+          "label": "PMFS 2021:3",
+          "url": "https://polisen.se/52e73a9df031a22f56cf516f30ab6b8a/siteassets/forfattningssamling/fap-nummer/fap530-01-pmfs2021-03/",
+          "bytes": 842498,
+          "sha256": "2ce464bd10b139ebd6586cdb6103740d3b0050ce49044c7288159a3c01e0461a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:03Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2021:4",
+      "detail_url": "https://polisen.se/e87a4b866c002f69e7acfb55be4ff92b/siteassets/forfattningssamling/fap-nummer/fap104-07-pmfs2021-04/",
+      "files": [
+        {
+          "label": "PMFS 2021:4",
+          "url": "https://polisen.se/e87a4b866c002f69e7acfb55be4ff92b/siteassets/forfattningssamling/fap-nummer/fap104-07-pmfs2021-04/",
+          "bytes": 182546,
+          "sha256": "f496cb3870a03f9206ccc93b41ccd30b196a5b8a6b5e8af4f4a8f0698f8639e7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:01Z"
+        },
+        {
+          "label": "PMFS 2021:4 (sammanställd version)",
+          "url": "https://polisen.se/c908c8b576d1206abd6e942631b7d0ec/siteassets/forfattningssamling/fap-nummer/fap104-07-sammanstalld/",
+          "bytes": 162742,
+          "sha256": "0c6ff7426630d6a32f1d01a78ea52a0759022519ae654d998bcf08d84046494d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:02Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2022:1",
+      "detail_url": "https://polisen.se/1a0ba7cedee18b04cabfba666939bf1b/siteassets/forfattningssamling/fap-nummer/pmfs2022-01/",
+      "files": [
+        {
+          "label": "PMFS 2022:1",
+          "url": "https://polisen.se/1a0ba7cedee18b04cabfba666939bf1b/siteassets/forfattningssamling/fap-nummer/pmfs2022-01/",
+          "bytes": 349836,
+          "sha256": "45c3d6cc42d93510673b401bb0bcabfc119b3074d6ec58a52f70931d686487dd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:00Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2022:5",
+      "detail_url": "https://polisen.se/1ad653804e8eb05da859fe1025fbff86/siteassets/forfattningssamling/fap-nummer/fap791-03-pmfs2022-05/",
+      "files": [
+        {
+          "label": "PMFS 2022:5",
+          "url": "https://polisen.se/1ad653804e8eb05da859fe1025fbff86/siteassets/forfattningssamling/fap-nummer/fap791-03-pmfs2022-05/",
+          "bytes": 197727,
+          "sha256": "9a7127a481dcd0b30be2aee40afeae24d959027da4fdf9bbfbe340f7050d862e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:59Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2022:8",
+      "detail_url": "https://polisen.se/d7c2d0a826b0bb8addb1dd0d9e8bd058/siteassets/forfattningssamling/fap-nummer/fap488-01-pmfs2022-08/",
+      "files": [
+        {
+          "label": "PMFS 2022:8",
+          "url": "https://polisen.se/d7c2d0a826b0bb8addb1dd0d9e8bd058/siteassets/forfattningssamling/fap-nummer/fap488-01-pmfs2022-08/",
+          "bytes": 184350,
+          "sha256": "4222b89bb0e075d49c972c6d7e68d5ab0f3812a31c34e31b31c9a5ec582acb04",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:57Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2023:1",
+      "detail_url": "https://polisen.se/fd0b8630fb25c92bed0e5106d6e47027/siteassets/forfattningssamling/fap-nummer/fap331-01-pmfs2023-01/",
+      "files": [
+        {
+          "label": "PMFS 2023:1",
+          "url": "https://polisen.se/fd0b8630fb25c92bed0e5106d6e47027/siteassets/forfattningssamling/fap-nummer/fap331-01-pmfs2023-01/",
+          "bytes": 208914,
+          "sha256": "c40d064ba178db76fb2ea57ed1a9c43c81858c9eea529150f5343a2805db2969",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:56Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2023:5",
+      "detail_url": "https://polisen.se/c944203900b7c130d36a43c33714a417/siteassets/forfattningssamling/fap-nummer/fap459-01-pmfs2023-05/",
+      "files": [
+        {
+          "label": "PMFS 2023:5",
+          "url": "https://polisen.se/c944203900b7c130d36a43c33714a417/siteassets/forfattningssamling/fap-nummer/fap459-01-pmfs2023-05/",
+          "bytes": 142743,
+          "sha256": "f01119bb402e411fcd8d63392e13866212f7d8f06f10688b8a54dcf90b49e66d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:55Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2023:6",
+      "detail_url": "https://polisen.se/feebb8d743bbf51aa11369717ddc6950/siteassets/forfattningssamling/fap-nummer/pmfs2023-06/",
+      "files": [
+        {
+          "label": "PMFS 2023:6",
+          "url": "https://polisen.se/feebb8d743bbf51aa11369717ddc6950/siteassets/forfattningssamling/fap-nummer/pmfs2023-06/",
+          "bytes": 172235,
+          "sha256": "517fe3db64fb7dab8f6f37dd3ceed0f40963add0803c38a65f160b0ace5b2436",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:54Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2023:7",
+      "detail_url": "https://polisen.se/0b94d2674ce0d6185e47e61595f93644/siteassets/forfattningssamling/fap-nummer/fap102-02-pmfs2023-07/",
+      "files": [
+        {
+          "label": "PMFS 2023:7",
+          "url": "https://polisen.se/0b94d2674ce0d6185e47e61595f93644/siteassets/forfattningssamling/fap-nummer/fap102-02-pmfs2023-07/",
+          "bytes": 132343,
+          "sha256": "e22e9f830d981d5940459a8e480dd5adf4f004d4e0285fa2e8f7c21499c8a7d4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:52Z"
+        },
+        {
+          "label": "PMFS 2023:7 (sammanställd version)",
+          "url": "https://polisen.se/207c3d34dfebd825b3e8b9f4e82d54d1/siteassets/forfattningssamling/fap-nummer/fap102-02-sammanstalld/",
+          "bytes": 139572,
+          "sha256": "17cbdd216a12bdbfa2c51f23f56c222fadfebb834f224a134ed404959beaaefc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:53Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2023:17",
+      "detail_url": "https://polisen.se/d5ba0808cd3bfa533b82e12a549fad80/siteassets/forfattningssamling/fap-nummer/pmfs2023-17/",
+      "files": [
+        {
+          "label": "PMFS 2023:17",
+          "url": "https://polisen.se/d5ba0808cd3bfa533b82e12a549fad80/siteassets/forfattningssamling/fap-nummer/pmfs2023-17/",
+          "bytes": 185945,
+          "sha256": "25c1ff579a1299f7755b3a9f37addbf8d02f0c9cc39b3fc7292472d2f1b9289a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:51Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2023:19",
+      "detail_url": "https://polisen.se/5a5081ded82e21c20c4f5645e2af918e/siteassets/forfattningssamling/fap-nummer/fap552-01-pmfs2023-19/",
+      "files": [
+        {
+          "label": "PMFS 2023:19",
+          "url": "https://polisen.se/5a5081ded82e21c20c4f5645e2af918e/siteassets/forfattningssamling/fap-nummer/fap552-01-pmfs2023-19/",
+          "bytes": 149362,
+          "sha256": "d8e98cfac1702cf37aaac9ed6da1debe8350b8e266ff3e09da8eff31b758d719",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:50Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2024:5",
+      "detail_url": "https://polisen.se/e264ff479d1fedaf1e569be8db77cfef/siteassets/forfattningssamling/fap-nummer/fap761-01-pmfs-2024-05/",
+      "files": [
+        {
+          "label": "PMFS 2024:5",
+          "url": "https://polisen.se/e264ff479d1fedaf1e569be8db77cfef/siteassets/forfattningssamling/fap-nummer/fap761-01-pmfs-2024-05/",
+          "bytes": 201041,
+          "sha256": "53979594b6f75a60bfe8fa7009d878f683cee55281a3334cc55b41e785aa4600",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:49Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2024:8",
+      "detail_url": "https://polisen.se/d61e99ba936c85664d7c2f5f058ed69f/siteassets/forfattningssamling/fap-nummer/fap905-01-pmfs2024-08/",
+      "files": [
+        {
+          "label": "PMFS 2024:8",
+          "url": "https://polisen.se/d61e99ba936c85664d7c2f5f058ed69f/siteassets/forfattningssamling/fap-nummer/fap905-01-pmfs2024-08/",
+          "bytes": 130710,
+          "sha256": "26c837d537aeaca9e491d091a58b90fba13c611d85496caea374ab31eecbb226",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:48Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2024:11",
+      "detail_url": "https://polisen.se/5da5a8e0c53b07d9158eef3cd1a5f5fa/siteassets/forfattningssamling/fap-nummer/fap103-01-pmfs2024-11/",
+      "files": [
+        {
+          "label": "PMFS 2024:11",
+          "url": "https://polisen.se/5da5a8e0c53b07d9158eef3cd1a5f5fa/siteassets/forfattningssamling/fap-nummer/fap103-01-pmfs2024-11/",
+          "bytes": 140757,
+          "sha256": "bd986f0fac4c134f00f4d685a41ccaffff30cc822a058e18c0bbf297e82a7b79",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:47Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2025:3",
+      "detail_url": "https://polisen.se/859334de05039b995544ac52be466fc9/siteassets/forfattningssamling/fap-nummer/fap104-11-pmfs2025-03/",
+      "files": [
+        {
+          "label": "PMFS 2025:3",
+          "url": "https://polisen.se/859334de05039b995544ac52be466fc9/siteassets/forfattningssamling/fap-nummer/fap104-11-pmfs2025-03/",
+          "bytes": 184830,
+          "sha256": "09b24c281d82f3446f2b97ecb913e5071549bda0c51fd347110c5c4b810572d2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:46Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2025:4",
+      "detail_url": "https://polisen.se/50f511b901d0e830e456c72ca859d59b/siteassets/forfattningssamling/fap-nummer/fap438-01-pmfs2025-04/",
+      "files": [
+        {
+          "label": "PMFS 2025:4",
+          "url": "https://polisen.se/50f511b901d0e830e456c72ca859d59b/siteassets/forfattningssamling/fap-nummer/fap438-01-pmfs2025-04/",
+          "bytes": 158710,
+          "sha256": "18cea46555ecdbead91b978c9ef1064f79f90c06c2406daebb01e4b314ea7ef2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:45Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2025:5",
+      "detail_url": "https://polisen.se/597506c6859b9c8bc58df45c18278a83/siteassets/forfattningssamling/fap-nummer/fap434-01-pmfs2025-05/",
+      "files": [
+        {
+          "label": "PMFS 2025:5",
+          "url": "https://polisen.se/597506c6859b9c8bc58df45c18278a83/siteassets/forfattningssamling/fap-nummer/fap434-01-pmfs2025-05/",
+          "bytes": 154537,
+          "sha256": "be6f19e039993f5e5e045404bcf04213c20bd12e8c228fd547ad8cd143c86e63",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:44Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2025:7",
+      "detail_url": "https://polisen.se/4577a32a05fbdd65ccafbbf210e5b6fd/siteassets/forfattningssamling/fap-nummer/fap550-01-pmfs2025-07/",
+      "files": [
+        {
+          "label": "PMFS 2025:7",
+          "url": "https://polisen.se/4577a32a05fbdd65ccafbbf210e5b6fd/siteassets/forfattningssamling/fap-nummer/fap550-01-pmfs2025-07/",
+          "bytes": 163246,
+          "sha256": "4ebbd9f5e06973676a0d4d8c2ea0037e143d982e06e7fd4a96a7bd3606f1ac57",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:43Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2025:8",
+      "detail_url": "https://polisen.se/3b729d5ef32fac1f58aa69bfcb641ff7/siteassets/forfattningssamling/fap-nummer/fap473-01-pmfs2025-08/",
+      "files": [
+        {
+          "label": "PMFS 2025:8",
+          "url": "https://polisen.se/3b729d5ef32fac1f58aa69bfcb641ff7/siteassets/forfattningssamling/fap-nummer/fap473-01-pmfs2025-08/",
+          "bytes": 189606,
+          "sha256": "e87627557a93c570e804425746f5aba6ce759ad6e78f04a342472219e1a4d0a9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:42Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2025:9",
+      "detail_url": "https://polisen.se/3bb447b91484abe0f7005b5054f3da34/siteassets/forfattningssamling/fap-nummer/fap525-01-pmfs2025-09/",
+      "files": [
+        {
+          "label": "PMFS 2025:9",
+          "url": "https://polisen.se/3bb447b91484abe0f7005b5054f3da34/siteassets/forfattningssamling/fap-nummer/fap525-01-pmfs2025-09/",
+          "bytes": 1117000,
+          "sha256": "be02459e1a516f79b8f70b6a1d2bfdbb493c01ba3fe9d7a07598006316dba581",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:42Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2025:11",
+      "detail_url": "https://polisen.se/fe956e6af1340c2a22db38343f09ae95/siteassets/forfattningssamling/fap-nummer/fap261-02-pmfs2025-11/",
+      "files": [
+        {
+          "label": "PMFS 2025:11",
+          "url": "https://polisen.se/fe956e6af1340c2a22db38343f09ae95/siteassets/forfattningssamling/fap-nummer/fap261-02-pmfs2025-11/",
+          "bytes": 210987,
+          "sha256": "df5d07fbf5bd5c3070339bc899340d25d8d927f503239379b55053782229e250",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:40Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2026:1",
+      "detail_url": "https://polisen.se/61cfca2a84d4b3c150d31f388eb2c2ae/siteassets/forfattningssamling/fap-nummer/pmfs-01-2026-tillg.pdf",
+      "files": [
+        {
+          "label": "PMFS 2026:1",
+          "url": "https://polisen.se/61cfca2a84d4b3c150d31f388eb2c2ae/siteassets/forfattningssamling/fap-nummer/pmfs-01-2026-tillg.pdf",
+          "bytes": 124735,
+          "sha256": "273bfe0f14242e3e383fe358ce0c2fcc40e79dab7013dc56a0048613bb20a295",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:39Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2026:5",
+      "detail_url": "https://polisen.se/1529fa72765664e469dbac86d2c466df/siteassets/forfattningssamling/fap-nummer/fap272-02pmfs-2026-05.pdf",
+      "files": [
+        {
+          "label": "PMFS 2026:5",
+          "url": "https://polisen.se/1529fa72765664e469dbac86d2c466df/siteassets/forfattningssamling/fap-nummer/fap272-02pmfs-2026-05.pdf",
+          "bytes": 239532,
+          "sha256": "34d76cdb2f6b8b9a1b22b39178590ad4368368ca019ae3a91996f68e7e8717b3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:38Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2026:10",
+      "detail_url": "https://polisen.se/a493dd1df2c7c1e9cefb30a29216c0fe/siteassets/forfattningssamling/fap-nummer/fap104-05-pmfs2026-10/",
+      "files": [
+        {
+          "label": "PMFS 2026:10",
+          "url": "https://polisen.se/a493dd1df2c7c1e9cefb30a29216c0fe/siteassets/forfattningssamling/fap-nummer/fap104-05-pmfs2026-10/",
+          "bytes": 198344,
+          "sha256": "1f792fd2a4e1295a2c04d947c6c0cec5bad6d9667c85abb4951d451952c122dd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:37Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2026:14",
+      "detail_url": "https://polisen.se/d285b6e128d8c8f2e5ed4c16586855fe/siteassets/forfattningssamling/fap-nummer/fap513-01-pmfs2026-14.pdf",
+      "files": [
+        {
+          "label": "PMFS 2026:14",
+          "url": "https://polisen.se/d285b6e128d8c8f2e5ed4c16586855fe/siteassets/forfattningssamling/fap-nummer/fap513-01-pmfs2026-14.pdf",
+          "bytes": 221385,
+          "sha256": "54687572a0d2291d04bc2c31a87dfcb52dea39e94fe29ef15648ce9fe5a95539",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:36Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2026:17",
+      "detail_url": "https://polisen.se/307b1086a7f30fec03315863d8a86919/siteassets/forfattningssamling/fap-nummer/fap638-1_pmfs-202617.pdf",
+      "files": [
+        {
+          "label": "PMFS 2026:17",
+          "url": "https://polisen.se/307b1086a7f30fec03315863d8a86919/siteassets/forfattningssamling/fap-nummer/fap638-1_pmfs-202617.pdf",
+          "bytes": 240722,
+          "sha256": "411141f20d795580752d922514d3eae957145862661620be334ba41fb57ccbcf",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:35Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2026:18",
+      "detail_url": "https://polisen.se/2f27ccebd5a45e4c44e774d23515d446/siteassets/forfattningssamling/fap-nummer/fap798-01-pmfs2026_18.pdf",
+      "files": [
+        {
+          "label": "PMFS 2026:18",
+          "url": "https://polisen.se/2f27ccebd5a45e4c44e774d23515d446/siteassets/forfattningssamling/fap-nummer/fap798-01-pmfs2026_18.pdf",
+          "bytes": 1929247,
+          "sha256": "992d10232d9b4bc0994dde96a4024cacbbf7d59f8f6dabac378c1f089340f98a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:35Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2026:23",
+      "detail_url": "https://polisen.se/fa8219b77da8321e81e2b804f3cad83c/siteassets/forfattningssamling/fap-nummer/pmfs-202623.pdf",
+      "files": [
+        {
+          "label": "PMFS 2026:23",
+          "url": "https://polisen.se/fa8219b77da8321e81e2b804f3cad83c/siteassets/forfattningssamling/fap-nummer/pmfs-202623.pdf",
+          "bytes": 1385350,
+          "sha256": "5321122d4042f8d811802979b1bad21948612aec9c3fa80c6f25474b875856f9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:33Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2026:25",
+      "detail_url": "https://polisen.se/1dcdbc9714398d3ff5cf70275d798955/siteassets/forfattningssamling/fap-nummer/fap303-01-pmfs2026-25.pdf",
+      "files": [
+        {
+          "label": "PMFS 2026:25",
+          "url": "https://polisen.se/1dcdbc9714398d3ff5cf70275d798955/siteassets/forfattningssamling/fap-nummer/fap303-01-pmfs2026-25.pdf",
+          "bytes": 180491,
+          "sha256": "dab1b3ade4fc45f6b9ba5f27d1585707b8849fbfaf82966f448bb5fea56c61fb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:56:32Z"
+        }
+      ]
+    },
+    {
       "number": "PRVFS 1977:1",
       "detail_url": "https://www.prv.se/globalassets/dokument/om-prv/prvfs/77prvfs_m1.pdf",
       "files": [
@@ -4256,6 +5012,1100 @@
           "sha256": "03d2626129feeabeef995df20d241c5c446d5f854982847f60dda1a03c9332dd",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-29T23:56:35Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 1974:1",
+      "detail_url": "https://polisen.se/8a72d07c1a77de281e0e55b80e6e3363/siteassets/forfattningssamling/fap-nummer/fap799-01-1974/",
+      "files": [
+        {
+          "label": "RPSFS 1974:1",
+          "url": "https://polisen.se/8a72d07c1a77de281e0e55b80e6e3363/siteassets/forfattningssamling/fap-nummer/fap799-01-1974/",
+          "bytes": 7514,
+          "sha256": "24c7cfb6f2b7cbe3c7dfe13e46b24472fd9ba203d99f625af7d8fea22eb0c2d5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:58:02Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 1999:4",
+      "detail_url": "https://polisen.se/836100b2a15da630853812a3a9739fba/siteassets/forfattningssamling/fap-nummer/fap333-03-rpsfs1999-04/",
+      "files": [
+        {
+          "label": "RPSFS 1999:4",
+          "url": "https://polisen.se/836100b2a15da630853812a3a9739fba/siteassets/forfattningssamling/fap-nummer/fap333-03-rpsfs1999-04/",
+          "bytes": 285663,
+          "sha256": "d3e031358836eba66174c010ecda9cc2b321be9ef83a79093ad78c0396a27b69",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:58:01Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2000:12",
+      "detail_url": "https://polisen.se/e96512177f6f2cfabeaf29ec6d61fe60/siteassets/forfattningssamling/fap-nummer/fap942-02-rpsfs2000-12/",
+      "files": [
+        {
+          "label": "RPSFS 2000:12",
+          "url": "https://polisen.se/e96512177f6f2cfabeaf29ec6d61fe60/siteassets/forfattningssamling/fap-nummer/fap942-02-rpsfs2000-12/",
+          "bytes": 12072,
+          "sha256": "e29ce0399bf5cb1527c0402a59209b4dc9f6ee275b80eb872f0943bf591b2ce0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:58:00Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2000:22",
+      "detail_url": "https://polisen.se/b32891188a6a1cbb560f263191a2aa68/siteassets/forfattningssamling/fap-nummer/fap255-01-rpsfs2000-22/",
+      "files": [
+        {
+          "label": "RPSFS 2000:22",
+          "url": "https://polisen.se/b32891188a6a1cbb560f263191a2aa68/siteassets/forfattningssamling/fap-nummer/fap255-01-rpsfs2000-22/",
+          "bytes": 11095,
+          "sha256": "373ce0ee4428c1a22387c5c3d76f8b3bae47f854a7429d91e54e248952bf2fee",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:59Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2000:28",
+      "detail_url": "https://polisen.se/8fad84ae69ad9b2d554e183f867d1c6b/siteassets/forfattningssamling/fap-nummer/fap696-01-rpsfs2000-28/",
+      "files": [
+        {
+          "label": "RPSFS 2000:28",
+          "url": "https://polisen.se/8fad84ae69ad9b2d554e183f867d1c6b/siteassets/forfattningssamling/fap-nummer/fap696-01-rpsfs2000-28/",
+          "bytes": 97698,
+          "sha256": "1db69b5a565e164a068c2c86d785d77d9fd048b7fe9e469bc4d1128a9c1d91d8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:57Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2000:29",
+      "detail_url": "https://polisen.se/b5b7dd302171621f5e1536895d670dfe/siteassets/forfattningssamling/fap-nummer/fap696-02-rpsfs2000-29/",
+      "files": [
+        {
+          "label": "RPSFS 2000:29",
+          "url": "https://polisen.se/b5b7dd302171621f5e1536895d670dfe/siteassets/forfattningssamling/fap-nummer/fap696-02-rpsfs2000-29/",
+          "bytes": 12129,
+          "sha256": "d8f85322af7fdd031b583e774522b6b2c80207733441555abbfa68ecda4d1bae",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:56Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2000:37",
+      "detail_url": "https://polisen.se/b6f7c392f01568c72d4e21646691f0f5/siteassets/forfattningssamling/fap-nummer/fap772-01-rpsfs2000-37/",
+      "files": [
+        {
+          "label": "RPSFS 2000:37",
+          "url": "https://polisen.se/b6f7c392f01568c72d4e21646691f0f5/siteassets/forfattningssamling/fap-nummer/fap772-01-rpsfs2000-37/",
+          "bytes": 14145,
+          "sha256": "8a8f137d0b91fa0274d4eef0df499170ea079e2dfa6fede143981ea6ba13afde",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:55Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2000:51",
+      "detail_url": "https://polisen.se/07077fa8db82544d73d22f4f2729b551/siteassets/forfattningssamling/fap-nummer/fap331-06-rpsfs2000-51/",
+      "files": [
+        {
+          "label": "RPSFS 2000:51",
+          "url": "https://polisen.se/07077fa8db82544d73d22f4f2729b551/siteassets/forfattningssamling/fap-nummer/fap331-06-rpsfs2000-51/",
+          "bytes": 235810,
+          "sha256": "73ea32332a1b08e659ca1f0370c76852f9532bac54acbbdd4862cfdea128a322",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:54Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2000:57",
+      "detail_url": "https://polisen.se/4f2da6c24c40f45137bc30fbf264097a/siteassets/forfattningssamling/fap-nummer/fap023-01-rpsfs2000-57/",
+      "files": [
+        {
+          "label": "RPSFS 2000:57",
+          "url": "https://polisen.se/4f2da6c24c40f45137bc30fbf264097a/siteassets/forfattningssamling/fap-nummer/fap023-01-rpsfs2000-57/",
+          "bytes": 106638,
+          "sha256": "c76f322a5a09690cf9e74191a2990d64c4dfd622a42af52b9f61eeecec4035cf",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:53Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2000:59",
+      "detail_url": "https://polisen.se/dabc464bbcbb89f112fa7d51ad6813d1/siteassets/forfattningssamling/fap-nummer/fap553-01-rpsfs2000-59/",
+      "files": [
+        {
+          "label": "RPSFS 2000:59",
+          "url": "https://polisen.se/dabc464bbcbb89f112fa7d51ad6813d1/siteassets/forfattningssamling/fap-nummer/fap553-01-rpsfs2000-59/",
+          "bytes": 445401,
+          "sha256": "fa545f850f406382d8b618cb5e8f3e2a669ec1c3b3b928afdf8cbcb6874f931e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:53Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2002:1",
+      "detail_url": "https://polisen.se/8d316f5b1b2cbaec6888b5739d138b0b/siteassets/forfattningssamling/fap-nummer/fap759-01-rpsfs2002-01/",
+      "files": [
+        {
+          "label": "RPSFS 2002:1",
+          "url": "https://polisen.se/8d316f5b1b2cbaec6888b5739d138b0b/siteassets/forfattningssamling/fap-nummer/fap759-01-rpsfs2002-01/",
+          "bytes": 156312,
+          "sha256": "047b1442fbd1f395ebe08343fc25da0d53483b7198c4ba051cb28d6ecc124ce3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:51Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2003:6",
+      "detail_url": "https://polisen.se/7e01bfdd8005bf44b57032ab7e585c92/siteassets/forfattningssamling/fap-nummer/fap331-02-rpsfs2003-06/",
+      "files": [
+        {
+          "label": "RPSFS 2003:6",
+          "url": "https://polisen.se/7e01bfdd8005bf44b57032ab7e585c92/siteassets/forfattningssamling/fap-nummer/fap331-02-rpsfs2003-06/",
+          "bytes": 84779,
+          "sha256": "abbad820bd29aa8668d106e0727e03f72884cb21388e0f4cf506f66f54c29655",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:50Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2003:7",
+      "detail_url": "https://polisen.se/9030aee2e17d0650a59c6539caf41124/siteassets/forfattningssamling/fap-nummer/fap361-01-rpsfs2003-07/",
+      "files": [
+        {
+          "label": "RPSFS 2003:7",
+          "url": "https://polisen.se/9030aee2e17d0650a59c6539caf41124/siteassets/forfattningssamling/fap-nummer/fap361-01-rpsfs2003-07/",
+          "bytes": 96523,
+          "sha256": "ea8660edde4740bd816da3fe380dc430491e8f93d9dd04e0a89dcf20dfa92b30",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:49Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2005:4",
+      "detail_url": "https://polisen.se/5bbe4cccaaf98d7dd0063381e01d1ad7/siteassets/forfattningssamling/fap-nummer/fap556-02-rpsfs2005-04/",
+      "files": [
+        {
+          "label": "RPSFS 2005:4",
+          "url": "https://polisen.se/5bbe4cccaaf98d7dd0063381e01d1ad7/siteassets/forfattningssamling/fap-nummer/fap556-02-rpsfs2005-04/",
+          "bytes": 124171,
+          "sha256": "c826f66cf32712e395e128b8585419ff02128441adfb3089f0b65b3dd8789e40",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:48Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2005:9",
+      "detail_url": "https://polisen.se/ab02f251b33a97f8b0f68f8d770c5209/siteassets/forfattningssamling/fap-nummer/fap943-01-rpsfs2005-09/",
+      "files": [
+        {
+          "label": "RPSFS 2005:9",
+          "url": "https://polisen.se/ab02f251b33a97f8b0f68f8d770c5209/siteassets/forfattningssamling/fap-nummer/fap943-01-rpsfs2005-09/",
+          "bytes": 143769,
+          "sha256": "b9e1e3a2f274ecc3f68300e2179d24b9bcbb27100b57d2cb500991359d7a5421",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:46Z"
+        },
+        {
+          "label": "RPSFS 2005:9 (sammanställd version)",
+          "url": "https://polisen.se/973a6a13574599ba36525d45093ffb05/siteassets/forfattningssamling/fap-nummer/fap-943-1-sammanstalld.pdf",
+          "bytes": 173995,
+          "sha256": "d8cdd0c667fe8abcdbd8876c068dc44094ccb9113b2be41bdef47386de2c0999",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:47Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2006:13",
+      "detail_url": "https://polisen.se/30da9dd10037ca46869390944e3db568/siteassets/forfattningssamling/fap-nummer/fap556-01-rpsfs2006-13/",
+      "files": [
+        {
+          "label": "RPSFS 2006:13",
+          "url": "https://polisen.se/30da9dd10037ca46869390944e3db568/siteassets/forfattningssamling/fap-nummer/fap556-01-rpsfs2006-13/",
+          "bytes": 141430,
+          "sha256": "5bcb296f144dc9aa912fab4f4790d6bfec2e5ab7705f6a4ef6c56a3afc539be7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:45Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2007:3",
+      "detail_url": "https://polisen.se/37088f0f78f733f35613867611872d30/siteassets/forfattningssamling/fap-nummer/fap779-01-rpsfs2007-03/",
+      "files": [
+        {
+          "label": "RPSFS 2007:3",
+          "url": "https://polisen.se/37088f0f78f733f35613867611872d30/siteassets/forfattningssamling/fap-nummer/fap779-01-rpsfs2007-03/",
+          "bytes": 84463,
+          "sha256": "eede521ebbd05ee40289292b5a7971e97299301db994f234d909d388caa932c7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:44Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2009:9",
+      "detail_url": "https://polisen.se/fc9fa4bc7e04e276ad5871214f4bd7b8/siteassets/forfattningssamling/fap-nummer/fap512-01-rpsfs2009-09/",
+      "files": [
+        {
+          "label": "RPSFS 2009:9",
+          "url": "https://polisen.se/fc9fa4bc7e04e276ad5871214f4bd7b8/siteassets/forfattningssamling/fap-nummer/fap512-01-rpsfs2009-09/",
+          "bytes": 192053,
+          "sha256": "a46016df3180c2d61b9fe112eb88b124ac7748377a12d08de90e5164966866f1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:43Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2009:13",
+      "detail_url": "https://polisen.se/bafe8683e5e347149a71c4f60f15ef47/siteassets/forfattningssamling/fap-nummer/fap551-3-rpsfs2009-13/",
+      "files": [
+        {
+          "label": "RPSFS 2009:13",
+          "url": "https://polisen.se/bafe8683e5e347149a71c4f60f15ef47/siteassets/forfattningssamling/fap-nummer/fap551-3-rpsfs2009-13/",
+          "bytes": 191147,
+          "sha256": "a6e9b370e32a4c52fd527739595d4ea3d87976eae7656f96eb7a256d9b710a35",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:41Z"
+        },
+        {
+          "label": "RPSFS 2009:13 (sammanställd version)",
+          "url": "https://polisen.se/d20f5f314b60e8d1167326efce574e50/siteassets/forfattningssamling/fap-nummer/fap551-03-sammanstalld/",
+          "bytes": 325420,
+          "sha256": "86359597350d46de54c672c9357289455689a54f1bbcb35cdfe5908adca0bea0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:43Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2009:21",
+      "detail_url": "https://polisen.se/b8ad68063b377aac792fc6dd7a5a9f68/siteassets/forfattningssamling/fap-nummer/fap699-01-rpsfs2009-21/",
+      "files": [
+        {
+          "label": "RPSFS 2009:21",
+          "url": "https://polisen.se/b8ad68063b377aac792fc6dd7a5a9f68/siteassets/forfattningssamling/fap-nummer/fap699-01-rpsfs2009-21/",
+          "bytes": 151701,
+          "sha256": "87afc349e86d717b2d75e54ef35cd5aa29c0a5ca47107bfb166865a1c5787097",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:40Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2009:22",
+      "detail_url": "https://polisen.se/22c5e5b28676cb64329ce4a289262e81/siteassets/forfattningssamling/fap-nummer/fap512-02-rpsfs2009-22/",
+      "files": [
+        {
+          "label": "RPSFS 2009:22",
+          "url": "https://polisen.se/22c5e5b28676cb64329ce4a289262e81/siteassets/forfattningssamling/fap-nummer/fap512-02-rpsfs2009-22/",
+          "bytes": 110897,
+          "sha256": "c332e4543247ff65cdbe4aa98f08d844869aba8778a9ab917dbe7ebf4532f012",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:39Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2011:5",
+      "detail_url": "https://polisen.se/d71450b23b9cf9557447382c2bf88dd8/siteassets/forfattningssamling/fap-nummer/fap335-01-rpsfs2011-05/",
+      "files": [
+        {
+          "label": "RPSFS 2011:5",
+          "url": "https://polisen.se/d71450b23b9cf9557447382c2bf88dd8/siteassets/forfattningssamling/fap-nummer/fap335-01-rpsfs2011-05/",
+          "bytes": 40385,
+          "sha256": "ac4a1413e4acf5dfce7e467be902486351dc9667ea15fc39d72bc4dd4998a557",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:38Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2011:20",
+      "detail_url": "https://polisen.se/e19424e7635bc68c0920431b2db41d10/siteassets/forfattningssamling/fap-nummer/fap712-01-rpsfs2011-20/",
+      "files": [
+        {
+          "label": "RPSFS 2011:20",
+          "url": "https://polisen.se/e19424e7635bc68c0920431b2db41d10/siteassets/forfattningssamling/fap-nummer/fap712-01-rpsfs2011-20/",
+          "bytes": 38131,
+          "sha256": "92fb06c526ebfff430c65560b4c564bc7cde8e8fd48a0c6faea545f220f6f8fe",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:37Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2012:4",
+      "detail_url": "https://polisen.se/37bc7a008e65292df9e7ad2b302e671a/siteassets/forfattningssamling/fap-nummer/fap331-07-rpsfs2012-04/",
+      "files": [
+        {
+          "label": "RPSFS 2012:4",
+          "url": "https://polisen.se/37bc7a008e65292df9e7ad2b302e671a/siteassets/forfattningssamling/fap-nummer/fap331-07-rpsfs2012-04/",
+          "bytes": 58705,
+          "sha256": "b9e4c471e1f71c5e9b9c6c328fbf22e0d1e400afdc47ca365567dc1529f1964c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:36Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2012:6",
+      "detail_url": "https://polisen.se/c6b71918fffcfea8e2b291055af988c6/siteassets/forfattningssamling/fap-nummer/fap523-01-rpsfs2012-06/",
+      "files": [
+        {
+          "label": "RPSFS 2012:6",
+          "url": "https://polisen.se/c6b71918fffcfea8e2b291055af988c6/siteassets/forfattningssamling/fap-nummer/fap523-01-rpsfs2012-06/",
+          "bytes": 47225,
+          "sha256": "57aec3b2911364a7ef287176c9f872b3330ff10571e3e23a74fbc7181b9f69d8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:35Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2012:19",
+      "detail_url": "https://polisen.se/4752239a12a02d9fda05d351becfe2b1/siteassets/forfattningssamling/fap-nummer/fap333-02-rpsfs2012-19/",
+      "files": [
+        {
+          "label": "RPSFS 2012:19",
+          "url": "https://polisen.se/4752239a12a02d9fda05d351becfe2b1/siteassets/forfattningssamling/fap-nummer/fap333-02-rpsfs2012-19/",
+          "bytes": 117558,
+          "sha256": "37f1bac5cd1b953911370a8e6f6421ddab70772bba8da9a9e2ec0b6796327365",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:34Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2012:22",
+      "detail_url": "https://polisen.se/084d8ec577875d1bfbddfdfffd5e2565/siteassets/forfattningssamling/fap-nummer/fap331-08-rpsfs2012-22/",
+      "files": [
+        {
+          "label": "RPSFS 2012:22",
+          "url": "https://polisen.se/084d8ec577875d1bfbddfdfffd5e2565/siteassets/forfattningssamling/fap-nummer/fap331-08-rpsfs2012-22/",
+          "bytes": 49110,
+          "sha256": "fe6356172853dfd5c9b73f170c92c20dea7a6f817f968e71af6128fbda7fbac0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:33Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2012:25",
+      "detail_url": "https://polisen.se/c1259fa935742e0e97430b8ede21fe9f/siteassets/forfattningssamling/fap-nummer/fap640-01-rpsfs2012-25/",
+      "files": [
+        {
+          "label": "RPSFS 2012:25",
+          "url": "https://polisen.se/c1259fa935742e0e97430b8ede21fe9f/siteassets/forfattningssamling/fap-nummer/fap640-01-rpsfs2012-25/",
+          "bytes": 38780,
+          "sha256": "2a70739efe689dc19f3f2634b3230091472f86dc378f31e1b0611499e8c2fb22",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:33Z"
+        }
+      ]
+    },
+    {
+      "number": "RPSFS 2012:30",
+      "detail_url": "https://polisen.se/1bd3d2221dd444397b0b37eaed657c1e/siteassets/forfattningssamling/fap-nummer/fap331-09-rpsfs2012-30/",
+      "files": [
+        {
+          "label": "RPSFS 2012:30",
+          "url": "https://polisen.se/1bd3d2221dd444397b0b37eaed657c1e/siteassets/forfattningssamling/fap-nummer/fap331-09-rpsfs2012-30/",
+          "bytes": 36935,
+          "sha256": "8970e035a0b8d4e4da5c1747ab04015ea25046edf9ae32b7b0804367fe3cfd32",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T00:57:31Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2009:21",
+      "detail_url": "https://www.scb.se/link/211af8520e5f4f4f9609bd3c73d8ec1b.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2009:21",
+          "url": "https://www.scb.se/contentassets/bea2a4c68c5d4a00a2292bd2dfb8a478/scb-fs-2009-21.pdf",
+          "bytes": 17241,
+          "sha256": "7cbd1f6d16eb317b0a06b6c338b01e2099b31dca2e48b051b437ab408c47ac92",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:19Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2010:6",
+      "detail_url": "https://www.scb.se/link/8d63adc8297a4d9dacf651d6a8de93d2.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2010:6",
+          "url": "https://www.scb.se/contentassets/8622346a13294155bb6eafa9b7abf41e/scb-fs-2010-6.pdf",
+          "bytes": 19446,
+          "sha256": "0b828135b59218c373f7f4fc9a7f07dcd7b25efb0520e322a1400a667523b76b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:23Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2016:7",
+      "detail_url": "https://www.scb.se/link/dcff7b5a99ba4402b011acae4a2c9fc2.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2016:7",
+          "url": "https://www.scb.se/contentassets/00ebd8be86f540299d4c6291536ee24c/scb-fs-2016-7.pdf",
+          "bytes": 24679,
+          "sha256": "6332ccb8839e908504b91125e9544be6c242e7a46ce3eebcd9ebe74ce1076e15",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:06:01Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2017:5",
+      "detail_url": "https://www.scb.se/link/ba726bd39d0742faa3451fb6895fbb2c.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2017:5",
+          "url": "https://www.scb.se/contentassets/81ea93f0b6b447e7ab2a1bf959baf153/scb-fs-2017-5.pdf",
+          "bytes": 186395,
+          "sha256": "df74b55ee5f52cdc42c02c07a3d6d1a5559ad516824429678e07aa3c4249cee5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:06:00Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2019:13",
+      "detail_url": "https://www.scb.se/link/36495b07384a4fd5a982031f1c30cfaa.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2019:13",
+          "url": "https://www.scb.se/contentassets/13dde7079bd14f1386d498a39b1e98ab/82630-scb-fs-2019-13-bo0201-tryck.pdf",
+          "bytes": 661122,
+          "sha256": "1dcf5070bb24f6d24c18ec9cc5fe7d594fb7ce3600dea3b085fc0eec478a4854",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:28Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2019:15",
+      "detail_url": "https://www.scb.se/link/3e03796f38d04b50a7cfa6d4cfe162e9.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2019:15",
+          "url": "https://www.scb.se/contentassets/e6f4d7e3365d470884daceac3f4fc80c/statistiska-centralbyrans-foreskrifter-om-skyldighet-for-fastighetsagare-att-lamna-uppgifter-till-statistik-om-avgifter-och-hyror-for-nybyggda-lagenheter/",
+          "bytes": 471554,
+          "sha256": "91040d43f31292d43dbd632dafe54ce5850c13b62cc9338e6de9702a98c0eef9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:30Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2019:24",
+      "detail_url": "https://www.scb.se/link/014fd3c9b53d4da0ae0d67d34a1a8558.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2019:24",
+          "url": "https://www.scb.se/contentassets/4b909f40ac7743579b81950a1f786cda/84511-foreksrift-scb-fs-2019-24.pdf",
+          "bytes": 431279,
+          "sha256": "ab6c82906333ea8288073c5e4a3ddf44167779e5ee1fffc436f4344ec3407d76",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:33Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:3",
+      "detail_url": "https://www.scb.se/link/854d321a89e04d1e8f7c1f828c2a4def.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:3",
+          "url": "https://www.scb.se/contentassets/e4b6cc8dbfea4b63bfbaa4327075a227/86468-scb-fs-2021-3-foreskrift-2021.pdf",
+          "bytes": 523733,
+          "sha256": "3e3ec2657df974750b16ea34736c08ac3c39103e805f9bafef032e28ca94e8da",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:35Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:15",
+      "detail_url": "https://www.scb.se/link/ff66b226e6a245e39a47996dc8d3e9c6.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:15",
+          "url": "https://www.scb.se/contentassets/ab0928bf1c1248778f0472acada3be47/86901-scb-fs-2021-15-bygglovsstatistik-a2021_0338.pdf",
+          "bytes": 691066,
+          "sha256": "73e77308dfdd3432134a735bef7fe374bc62e6267f90afa6ae81607fc6bdde5f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:37Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:19",
+      "detail_url": "https://www.scb.se/link/73f1e03bc78c4acc94201fd93b881e8a.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:19",
+          "url": "https://www.scb.se/contentassets/3b2d1b76dcca404ebf3b57a4038027bd/87082-foreskrift-scb-fs-2021-19.pdf",
+          "bytes": 270135,
+          "sha256": "174731ce9cf8eb56527cc237d5b7265b07f0a78cdab50730dccf16cb4689737b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:39Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:28",
+      "detail_url": "https://www.scb.se/link/c756fffa448742bcac06c3b0c9208c63.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:28",
+          "url": "https://www.scb.se/contentassets/3f800130bb994e2b9a9424dbe13e7912/87582-scb-fs-2021-28-mineralgodsel.pdf",
+          "bytes": 291806,
+          "sha256": "23b40c8521636845b204dd5d89e156c150a30bc9b080035dfb223eebfc8ff35c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:41Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:33",
+      "detail_url": "https://www.scb.se/link/c618bd9a4883447d9e2afe4d32500d16.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:33",
+          "url": "https://www.scb.se/contentassets/2887705fd73c40db9d2cbee471b2ce84/87799-foreskrift-scb-fs-2021-33.pdf",
+          "bytes": 402075,
+          "sha256": "95a59405b35cbf19b137c0d9fd32d7f5b44a13badcf00bc686a7aca8b885a54d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:43Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:34",
+      "detail_url": "https://www.scb.se/link/6cb1156c536a4cb1a4771e221fad8c22.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:34",
+          "url": "https://www.scb.se/contentassets/0c5308317aae41ba887b2258405ebb36/87800-foreskrift-scb-fs-2021-34.pdf",
+          "bytes": 224863,
+          "sha256": "9f749ff19c95214c235a995412a23fe667e2dda810d5b2dd822003b0d1ddf0bd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:45Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:35",
+      "detail_url": "https://www.scb.se/link/6349e017446743f9a17cedfe6cf65a1d.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:35",
+          "url": "https://www.scb.se/contentassets/5a9aa029759b41688a13dbf357ce5d87/87801-foreskrift-scb-fs-2021-35.pdf",
+          "bytes": 298431,
+          "sha256": "f2bbe4f6d8cf1636ec4a38384d6e613577458320eeaa5335863a0eedb47b7e63",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:47Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:39",
+      "detail_url": "https://www.scb.se/link/f2f8d2fd85c047c28594da5f1d52ef20.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:39",
+          "url": "https://www.scb.se/contentassets/7d31f09ad9af40eaaf5d95248e442eec/87875-scb-fs-2021-39-pr0301-ppi.pdf",
+          "bytes": 466505,
+          "sha256": "349ce1257f26f4da7390aef783669a04ebc718b286ab9c4a4f2fe8fc638366bd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:49Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:6",
+      "detail_url": "https://www.scb.se/link/e5b63d4e736149e59f98d93d3e150beb.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:6",
+          "url": "https://www.scb.se/contentassets/30835a6be9f142a8af757031daeb8f2f/88164-mi-slp-foreskrift-2022.pdf",
+          "bytes": 1076421,
+          "sha256": "9be3503603328105ed5a3380130cac869e3d47d14ee5cb77ae596d72cde88520",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:26Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:9",
+      "detail_url": "https://www.scb.se/link/f6ec455034d04e4a89c504cd01bcca9c.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:9",
+          "url": "https://www.scb.se/contentassets/b917ae6bf6b54010aec8c51c161aaf25/88214-foreskrift-scb-fs-2022-9.pdf",
+          "bytes": 1472235,
+          "sha256": "71710e8b6acc475a7f12bd43b6f123ab6fbfd87dd077bbcfdd31064460e9daeb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:52Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:11",
+      "detail_url": "https://www.scb.se/link/70a8c9c34182422dac0e46b9c30ff601.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:11",
+          "url": "https://www.scb.se/contentassets/3ca4e916625b4392bf2a2f8ba71e43d4/88216-foreskrift-scb-fs-2022-11.pdf",
+          "bytes": 210338,
+          "sha256": "5283826f8254322cd8290bba7fe9c8276ddf605f9e1bb918de69728329c8960d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:53Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:16",
+      "detail_url": "https://www.scb.se/link/fa73daba43724e828f008fb5c02c1782.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:16",
+          "url": "https://www.scb.se/contentassets/3d12a7944aa4405e8d315258356cbbd2/88439-foreskrift-scb-fs-2022-16.pdf",
+          "bytes": 1972510,
+          "sha256": "58dad6e041279921b3a1550adeefeeefec620e88d00c28f98dbb0b9d9deb87f5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:56Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:18",
+      "detail_url": "https://www.scb.se/link/6e0c248ef05a4d0faacb0bc18a2e8dee.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:18",
+          "url": "https://www.scb.se/contentassets/8b5df97319664a4bbf36a83056c5157c/88463-foreskrift-scb-fs-2022-18.pdf",
+          "bytes": 732568,
+          "sha256": "d5b4ccd51bed78d3abbcde78eb832366cbc5c83acb0867635f5229814a969ba2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:58Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:20",
+      "detail_url": "https://www.scb.se/link/c15cf5db21714b92af86066fe51e7dc2.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:20",
+          "url": "https://www.scb.se/contentassets/e04d88fe01424b5a84f048d587afab17/88585-foreskrift-scb-fs-2022-20.pdf",
+          "bytes": 550675,
+          "sha256": "0b92df4ff7ebba4a281c5aa33bce119e3479bb857aa8f2f260d9d77768bfcf24",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:59Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2023:20",
+      "detail_url": "https://www.scb.se/link/f5fd67c499eb419da32f5bfd3390c0eb.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2023:20",
+          "url": "https://www.scb.se/contentassets/548731d4162b4b11acdc91c07c214255/90047-foreskrift-scb-fs-2023-20.pdf",
+          "bytes": 143953,
+          "sha256": "4b393aae990bdba041b6ad11845ecddbc5a328ea7191bd9520cacac6bc3d6c51",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:01Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2023:23",
+      "detail_url": "https://www.scb.se/link/a618f35ac2c4458fba89c742efc47877.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2023:23",
+          "url": "https://www.scb.se/contentassets/f546e7d3562943f1b1380c452f526e96/90094-foreskrift-scb-fs-2023-23_ny.pdf",
+          "bytes": 314250,
+          "sha256": "4bf911e5c9fbcf0f97c5bfa501df32760089f7e4ceb9707847c25266723dd254",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:03Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2024:9",
+      "detail_url": "https://www.scb.se/link/b3922f8d82e94abfa784d206603be41e.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2024:9",
+          "url": "https://www.scb.se/contentassets/5172d56767314e1c8320c808a82654e0/90588-foreskrift-scb-fs-2024_9_4-sid.pdf",
+          "bytes": 373471,
+          "sha256": "22e37abd380b574746990e0b05c01775e1d7689c95de64aae5ebae1e64414df5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:06Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2024:12",
+      "detail_url": "https://www.scb.se/link/1571910ff2034d58b8c55768a283f5fc.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2024:12",
+          "url": "https://www.scb.se/contentassets/e98eea570faa48ceb602225a3d1825b3/90600-foreskrift-scb-fs-2024_12_1-sid.pdf",
+          "bytes": 186902,
+          "sha256": "e17e00ac81654f3ee8ee1d5dbdad498cd599aa488be90de4275226cd08d3bb33",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:07Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:2",
+      "detail_url": "https://www.scb.se/link/678d9e261bc94d08be836b33c3122633.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:2",
+          "url": "https://www.scb.se/contentassets/00ccf8bf72684d8d8261845c9cd04eb1/foreskrift_scb-fs_2025_2.pdf",
+          "bytes": 708524,
+          "sha256": "1de23562e09d0ebec6b67101dac7b28e3685847a8e88af217a86d5f37758d1f2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:10Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:5",
+      "detail_url": "https://www.scb.se/link/65b7866a525b452f87e7c0145c88215a.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:5",
+          "url": "https://www.scb.se/contentassets/91dc009363d84e7bbaad127fba96ee4c/scb-fs-2025-5-handel-med-lander-utanfor-eu-1-sid.pdf",
+          "bytes": 101679,
+          "sha256": "0cf6515031b915d578336223a3b51765c1c15936d40c382a7b2a40db68538e04",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:11Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:8",
+      "detail_url": "https://www.scb.se/link/5a7efd01c6824f34a8c3c91a30c9e670.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:8",
+          "url": "https://www.scb.se/contentassets/8f0d84d51a4e46d78f66c9aebb2f0c9b/91561-scb-fs-2025-8-byggkostnadsindex-m-bilaga-4-sid_korrad.pdf",
+          "bytes": 370010,
+          "sha256": "6604bbbcbfd0a9d038938012564552e5cdd3fc42985cffbacafeb9a32739a686",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:14Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:9",
+      "detail_url": "https://www.scb.se/link/a0c2e6f2f89f4d24a1de66f016dfea3c.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:9",
+          "url": "https://www.scb.se/contentassets/9e834555b39143a1bed9bf1250a5168d/91603-scb-fs-2025-9-lediga-jobb-och-rekryteringsbehov.pdf",
+          "bytes": 228819,
+          "sha256": "b48a8d651f8450950d46b5d4e935dae9e901ceb6e0c125d6796e0773a22361e5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:15Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:10",
+      "detail_url": "https://www.scb.se/link/3239e654e09a482f883d2134932c1392.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:10",
+          "url": "https://www.scb.se/contentassets/8486d4cfa7284f71bb7496bce4e3092d/91633-foreskrift-scb-fs-2025_10_1-sid.pdf",
+          "bytes": 117579,
+          "sha256": "0022358c1865f849bb7319b07f1c7039af9e5e296300b1cd81b21f4935846a17",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:17Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:14",
+      "detail_url": "https://www.scb.se/link/1bd6a75216514702a131d8d3f131157e.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:14",
+          "url": "https://www.scb.se/contentassets/abef2226310549f38bb62088a3a0031c/91860-foreskrift-scb-fs-2025_14_4-sid.pdf",
+          "bytes": 245219,
+          "sha256": "0418eda57ca7baf648340c8af9daab0e66ff9821a821ed1d1b6144c46c440bd3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:20Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:18",
+      "detail_url": "https://www.scb.se/link/11da5ce8516a422d895f0b7acc38e098.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:18",
+          "url": "https://www.scb.se/contentassets/9af14b4ab25b4221b5b306a8f3077a91/91953_foreskrift_scb-fs_2025-18_72sid_pdfkorr.pdf",
+          "bytes": 1723902,
+          "sha256": "038d3f784ade98a649614e7d46b42a86c5e1b8a5b5788f4efdc739cbaa610f58",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:22Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:19",
+      "detail_url": "https://www.scb.se/link/6fbbfab3f8204737a976405d349f92d2.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:19",
+          "url": "https://www.scb.se/contentassets/fc434ac2550548bcbab57886c357c81c/92030-scb-fs-2025-19-mkost_pdfkorr.pdf",
+          "bytes": 3678078,
+          "sha256": "91895b7535ce28864e6ec17d95387aadc069b6b9f9ed70508db60552434ca651",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:25Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:22",
+      "detail_url": "https://www.scb.se/link/02df5b22618d439d8d550c2e9fd8f76d.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:22",
+          "url": "https://www.scb.se/contentassets/b3b3f28579ff44acb1f8fe8bbd48a1aa/92063-foreskrift-scb-fs-2025-22_56-sid_pdfkorr.pdf",
+          "bytes": 1047625,
+          "sha256": "3b3f3975be0cb1a1c8b875059d609fa209922ea5678883214ccf3d74926d4e84",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:27Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:1",
+      "detail_url": "https://www.scb.se/link/f28d5555d0fc49dbb0e387b4183d8ad2.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:1",
+          "url": "https://www.scb.se/contentassets/4d368412e74540fbbe6b5467c135a0bc/foreskrift-scb-fs-2026-1_24sid_icke-vinstdrivande-organisationer-out.pdf",
+          "bytes": 344909,
+          "sha256": "8e3afd7046f7bbe85b96aad29ad15feab8d4dcf7933523258ccf2a6ffb22ef83",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:34Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:2",
+      "detail_url": "https://www.scb.se/link/7c179ccc116943d4bd7d1410880d2727.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:2",
+          "url": "https://www.scb.se/contentassets/f0b5048f8b514be1ad91d2c5c2ae6d16/92266-foreskrift-scb-fs-2026-02_32s_trycks-23jan-out.pdf",
+          "bytes": 438969,
+          "sha256": "f16a2ddaf17988f9c771734b2be6ebeb3b39455446326ec6dae950d840eb9a6e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:29Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:3",
+      "detail_url": "https://www.scb.se/link/082c053c55bc4849ab07528cca758b24.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:3",
+          "url": "https://www.scb.se/contentassets/d70803ec529140baa5fe9b7fd97ef1e3/92267-foreskrift-scb-fs-2026-03_28s_trycks-23jan-out.pdf",
+          "bytes": 406721,
+          "sha256": "5facd0d2bfc6eb1ba3750ab3de3b39240b443757f10f53472c6719a11d175ee1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:31Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:4",
+      "detail_url": "https://www.scb.se/link/095f91a00de94e679b9d1b8df17a9fb5.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:4",
+          "url": "https://www.scb.se/contentassets/0ff1bca6426a465496159f53cba584de/92268-foreskrift-scb-fs-2026-04_56s-trycks-23jan-out.pdf",
+          "bytes": 504770,
+          "sha256": "a9de6109b32082ed7214baec6c73a6f8a2ba8df3da1ea9f6fb6132b66348045a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:33Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:5",
+      "detail_url": "https://www.scb.se/link/7ee7b01706634048a35ea3d303ecf7ef.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:5",
+          "url": "https://www.scb.se/contentassets/d6f928fe58b94ce0a84a7a5eecb74016/92296-foreskrift_scb-fs_2026-05_16s_trycks_3_feb.pdf",
+          "bytes": 585800,
+          "sha256": "e1dd6cc67ffe29665e6c11f2248b30bbcb29f5d3a69fafb45843d08f634c252c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:37Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:6",
+      "detail_url": "https://www.scb.se/link/0cbb06d0a84e414e8963b747dd2eefcc.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:6",
+          "url": "https://www.scb.se/contentassets/299914f0e6484a0e8c914e94cf3ee0f8/92298-foreskrift_scb-fs_2026-06_16s_trycks_4_feb.pdf",
+          "bytes": 303880,
+          "sha256": "228fb7e6d560f0b248f6b2e89861cd8e9d3111fd6a3cecf50eca5c397366351a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:39Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:7",
+      "detail_url": "https://www.scb.se/link/db63515ab8a3459da646b4e950f2686a.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:7",
+          "url": "https://www.scb.se/contentassets/00801a3bd20c476fa23b6b92349403a2/92298-foreskrift_scb-fs-2026-07_4s_trycks_3_feb.pdf",
+          "bytes": 157571,
+          "sha256": "f6f7c6e102b1fc65fb5f84b429d2db2e617de0457410755f76a2a5ecffb9929c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:41Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:8",
+      "detail_url": "https://www.scb.se/link/732feeaad4644d36b159872eb88a68fe.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:8",
+          "url": "https://www.scb.se/contentassets/d51491c3765044dcbae395e6d28256d4/scb-fs-2026-8-industrins-vattenanvandning.pdf",
+          "bytes": 560198,
+          "sha256": "445e54deb41df8a59015120e1b284419e82258d05bcf1d401ea9e688f2e3f98f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:43Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:9",
+      "detail_url": "https://www.scb.se/link/0a7db3ac5acd450ca0b56019bb692d7b.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:9",
+          "url": "https://www.scb.se/contentassets/d0f5da01327f430db057794ff2c14b27/92405-foreskrift-scb-fs-2026-9_8s_pdfkorr2.pdf",
+          "bytes": 304007,
+          "sha256": "5c0dbbe022a343b38a024ecb102fe65940ed9dfcfb9fee5d7e08bdc57cae2184",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:45Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:10",
+      "detail_url": "https://www.scb.se/link/b544d427a02941348b3fdca934ca16ad.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:10",
+          "url": "https://www.scb.se/contentassets/888992b310e148f38bba020b854adbba/92406-foreskrift-scb-fs-2026-10_16s_pdfkorr.pdf",
+          "bytes": 1461016,
+          "sha256": "e862af098de6c702f7687bae0a217641006fa78e220187fd7fe429b3bfdd5cb9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:48Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:12",
+      "detail_url": "https://www.scb.se/link/9cb5016e2893449fa24eee75b6c01d22.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:12",
+          "url": "https://www.scb.se/contentassets/8951fc187bb8465db9ed80c66b3df85e/92563-scb-fs-2026-12-fek.pdf",
+          "bytes": 556423,
+          "sha256": "12fec95701bee7bd1f40b3354a71002f845e1d338a1be94b69e0592a863372d5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:50Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:14",
+      "detail_url": "https://www.scb.se/link/b7b0bb6c1cb04df0bd23a632f84daa02.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:14",
+          "url": "https://www.scb.se/contentassets/26725b2ca3cc41cb96b56b377dc17767/92641-foreskrift-14-12s-omtryck_pdfkorr2.pdf",
+          "bytes": 5407501,
+          "sha256": "d46ff1bab01cbd513fd15db46affb817cc5c48f43a35ac0d57d225d83c34aaa4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:54Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:16",
+      "detail_url": "https://www.scb.se/link/e54d70f85fee4011a787b5e6cdae8ad6.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:16",
+          "url": "https://www.scb.se/contentassets/6a53289e5d5d4f58afeae4f50d09026c/92732_foreskrift_scb-fs-2026_16_4s_trycks_10_juni_pdfkorr.pdf",
+          "bytes": 274427,
+          "sha256": "092055f536563b4dd3b66dea238eb65388fc5e6d3df80210cee9f5b9e762aa6c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:56Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:18",
+      "detail_url": "https://www.scb.se/link/b682e9f854284dcdaeb97f3575bc7c3c.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:18",
+          "url": "https://www.scb.se/contentassets/c00592cc71914caba9e66a657463418b/92830-foreskrift-scb-fs-2026-18_4s_pdfkorr.pdf",
+          "bytes": 189346,
+          "sha256": "22c7922dab280d7a54a888209f21b692c76f4203e75d1fe93d1adb964c1ea4c5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:58Z"
         }
       ]
     },
