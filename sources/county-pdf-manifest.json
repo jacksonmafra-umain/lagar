@@ -1,6 +1,2486 @@
 {
   "entries": [
     {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-01-16-01fs-202001.html",
+      "files": [
+        {
+          "bytes": 100449,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:07Z",
+          "sha256": "4e9e741a73fbd438676c4fde96b95755556e3d0d228ec8ea92acfab7d0817d33",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0319fe/1630418307281/W-00010117.pdf"
+        }
+      ],
+      "number": "01FS 2020:1",
+      "published": "2020-01-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-01-16-01fs-202002.html",
+      "files": [
+        {
+          "bytes": 103343,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:09Z",
+          "sha256": "e5049af33ff751826258db2b312583115fa70606a9a72861065054bf87f59b96",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce031a9e/1630420206547/W-00020117.pdf"
+        }
+      ],
+      "number": "01FS 2020:2",
+      "published": "2020-01-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-01-16-01fs-202003.html",
+      "files": [
+        {
+          "bytes": 102385,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:11Z",
+          "sha256": "5b63a8b158e1f17165d813d4c00b6752392aad6942aa69b432d3d8d98a7db133",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce031aaa/1630420396591/W-00030117.pdf"
+        }
+      ],
+      "number": "01FS 2020:3",
+      "published": "2020-01-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-05-13-01fs-202004.html",
+      "files": [
+        {
+          "bytes": 1433579,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:13Z",
+          "sha256": "cf31f3df61686815600cf89838da4cd5fd2fcdc610a691031ce6d7a72bec7261",
+          "url": "https://www.lansstyrelsen.se/download/18.4a4eb7416faedec1257e5b/1579700738532/01FS%202020%20004%20F%C3%B6rteckning%20%C3%B6ver%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20utf%C3%A4rdade%20av%20L%C3%A4nsstyrelsen%20i%20Stockholms%20l%C3%A4n%20och%20som%20g%C3%A4ller%20den%2031%20december%202019.pdf"
+        }
+      ],
+      "number": "01FS 2020:4",
+      "published": "2020-01-24"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-01-27-01fs-202005.html",
+      "files": [
+        {
+          "bytes": 257095,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:15Z",
+          "sha256": "6e54fa8fb01e5372d4868a7b6582962f4f71254be1a3db26ccc35d1ae5577f4c",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce031acd/1630421236733/W-00050129.pdf"
+        }
+      ],
+      "number": "01FS 2020:5",
+      "published": "2020-01-23"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-02-11-01fs-202006.html",
+      "files": [
+        {
+          "bytes": 100172,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:17Z",
+          "sha256": "e6ac4203b7faf46700efe80f6adfe6cde4e060f31e2b336206d42c99f7311ca5",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce031ae5/1630421746223/W-00060214.pdf"
+        }
+      ],
+      "number": "01FS 2020:6",
+      "published": "2020-01-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-02-19-01fs-202007.html",
+      "files": [
+        {
+          "bytes": 101040,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:19Z",
+          "sha256": "d8be330f099a472469ed485386b702cc896e833052c3150c4ad56c9972ee5275",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032069/1630479608222/W-00070221.pdf"
+        }
+      ],
+      "number": "01FS 2020:7",
+      "published": "2020-02-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-03-12-01fs-202008.html",
+      "files": [
+        {
+          "bytes": 5586958,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:22Z",
+          "sha256": "6d085682fa7dc07ea8c2bdd97af9ade7596d3fbabb690c17c340791b4ce83d0a",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0323b6/1630487497015/W-00080313.pdf"
+        }
+      ],
+      "number": "01FS 2020:8",
+      "published": "2020-03-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-05-04-01fs-202009.html",
+      "files": [
+        {
+          "bytes": 144022,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:23Z",
+          "sha256": "4ba15403598b57b91ba332e3ed3b0388e2d569d2817a20a4554b4b637f6caa1f",
+          "url": "https://www.lansstyrelsen.se/download/18.3db3ed8a171ac1fbfcb6cfd/1588604254502/01FS%202020%20009%20L%C3%A4nsstyrelsen%20i%20Stockholms%20l%C3%A4ns%20sammanst%C3%A4llning%20%C3%B6ver%20v%C3%A4gar%20och%20vissa%20lokala%20trafikf%C3%B6reskrifter%20inom%20Stockholms%20l%C3%A4n.pdf"
+        }
+      ],
+      "number": "01FS 2020:9",
+      "published": "2020-03-16"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-04-27-01fs-202010.html",
+      "files": [
+        {
+          "bytes": 143445,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:25Z",
+          "sha256": "6b15cd9cd9810d1f5525f911e4883a0a34a02ba13111dd47b6c883191021cf33",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0323f1/1630487879066/W-00100429.pdf"
+        }
+      ],
+      "number": "01FS 2020:10",
+      "published": "2020-04-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-05-05-01fs-202011.html",
+      "files": [
+        {
+          "bytes": 104543,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:27Z",
+          "sha256": "1ad0c0ab805258c04ea99b271bb7853ab3b6df6cad6b9b44eb8eebe7091fdfad",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032429/1630488572278/W-00110508.pdf"
+        }
+      ],
+      "number": "01FS 2020:11",
+      "published": "2020-05-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-05-07-01fs-202012.html",
+      "files": [
+        {
+          "bytes": 99306,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:29Z",
+          "sha256": "ab0ab236ce579d0f879758984f0e2a253a1fb73f3a845afb43f865df664c5c32",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032448/1630488857592/W-00120513.pdf"
+        }
+      ],
+      "number": "01FS 2020:12",
+      "published": "2020-05-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-05-13-01fs-202013.html",
+      "files": [
+        {
+          "bytes": 100678,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:31Z",
+          "sha256": "7db28052bd2a889812ec5e4522e4fa9faa71e4612c467e7d2487d22af51f0ab7",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce031784/1630410446299/W-00130515.pdf"
+        }
+      ],
+      "number": "01FS 2020:13",
+      "published": "2020-05-15"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-05-13-01fs-202014.html",
+      "files": [
+        {
+          "bytes": 102732,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:33Z",
+          "sha256": "5db8ed5a4b618da557a41ea522e45b7057ce46bd7d1247daf53ed5c4ea363705",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03244b/1630488971630/W-00140515.pdf"
+        }
+      ],
+      "number": "01FS 2020:14",
+      "published": "2020-05-15"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-05-27-01fs-202015.html",
+      "files": [
+        {
+          "bytes": 100054,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:35Z",
+          "sha256": "d9af30619c3b65b5105279708a663172b97bdf80d0a7d0ead012c65b31758e89",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03244d/1630489026947/W-00150529.pdf"
+        }
+      ],
+      "number": "01FS 2020:15",
+      "published": "2020-05-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-06-02-01fs-202016.html",
+      "files": [
+        {
+          "bytes": 577675,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:37Z",
+          "sha256": "ffe6de082c79b0cab9548e7e654b79f88ac7b27d1d7564f8a954ca982fbfcd9e",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032454/1630489205947/W-00160605.pdf"
+        }
+      ],
+      "number": "01FS 2020:16",
+      "published": "2020-06-05"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-07-02-01fs-202017.html",
+      "files": [
+        {
+          "bytes": 100988,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:39Z",
+          "sha256": "5e28d2c90ae0a0986a19e2b81438edfae7bd38890aa68937561b82576aa6d46f",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032456/1630489276262/W-00170708.pdf"
+        }
+      ],
+      "number": "01FS 2020:17",
+      "published": "2020-07-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-07-29-01fs-202018.html",
+      "files": [
+        {
+          "bytes": 98100,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:41Z",
+          "sha256": "4cec1a23fcd420d9d2fe2773dc7aedd13eae449b0f67267588be508169f58d65",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03245a/1630489342819/W-00180805.pdf"
+        }
+      ],
+      "number": "01FS 2020:18",
+      "published": "2020-08-05"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-07-29-01fs-202019.html",
+      "files": [
+        {
+          "bytes": 98971,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:43Z",
+          "sha256": "b5c72e78a4fdfd43eec44dd512a3788c57fdc1b58739ab81ab343b297e21bcd0",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03245d/1630489421427/W-00190805.pdf"
+        }
+      ],
+      "number": "01FS 2020:19",
+      "published": "2020-08-05"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-07-29-01fs-202020.html",
+      "files": [
+        {
+          "bytes": 99245,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:45Z",
+          "sha256": "2091f8f01f9b47613bb477d4794fa86058be92e585ae9de84a94963da3221376",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032467/1630489476376/W-00200807.pdf"
+        }
+      ],
+      "number": "01FS 2020:20",
+      "published": "2020-08-07"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-07-29-01fs-202021.html",
+      "files": [
+        {
+          "bytes": 615879,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:48Z",
+          "sha256": "f0ca3c57111d4a64844688ec4269e25c758add7ea193587bf864f538cbc12641",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03246b/1630489534311/W-00210812.pdf"
+        }
+      ],
+      "number": "01FS 2020:21",
+      "published": "2020-08-12"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-08-10-01fs-202022.html",
+      "files": [
+        {
+          "bytes": 119600,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:49Z",
+          "sha256": "7570be91b68834765fa9cfe66d27dfdc679d95400cecba255139bdd82e65daba",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03246f/1630489611963/W-00220814.pdf"
+        }
+      ],
+      "number": "01FS 2020:22",
+      "published": "2020-08-14"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-08-10-01fs-202023.html",
+      "files": [
+        {
+          "bytes": 121283,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:51Z",
+          "sha256": "36f04fba3abe223ff394e631a771886eb06b3776f314e2bc93d7bec58595fe24",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032474/1630489669264/W-00230814.pdf"
+        }
+      ],
+      "number": "01FS 2020:23",
+      "published": "2020-08-14"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-08-14-01fs-202024.html",
+      "files": [
+        {
+          "bytes": 285028,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:54Z",
+          "sha256": "459a0148fb9849b29d8f75b4480591090a2e242f244f010e6b9d561023257f85",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032476/1630489726017/W-00240821.pdf"
+        }
+      ],
+      "number": "01FS 2020:24",
+      "published": "2020-08-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-10-19-01fs-202025.html",
+      "files": [
+        {
+          "bytes": 118910,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:55Z",
+          "sha256": "2353919272bc9bf3c07b1494b2f2014493d14125ebdcc74ac545e257317af329",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032478/1630489782372/W-00251023.pdf"
+        }
+      ],
+      "number": "01FS 2020:25",
+      "published": "2020-10-23"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-10-27-01fs-202026.html",
+      "files": [
+        {
+          "bytes": 607280,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:57:58Z",
+          "sha256": "7bdf1d198f3eba78f4493936714cb81c0af7b2c1fe650786455e05f8a0b3a7ec",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03247a/1630489862288/W-00261030.pdf"
+        }
+      ],
+      "number": "01FS 2020:26",
+      "published": "2020-10-30"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-10-30-01fs-202027.html",
+      "files": [
+        {
+          "bytes": 121530,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:00Z",
+          "sha256": "c687698f07793629309d2c6dcb1b580b5944ded406dc99b71bea65a15b885848",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03247c/1630489939038/W-00271101.pdf"
+        }
+      ],
+      "number": "01FS 2020:27",
+      "published": "2020-11-01"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-11-17-01fs-202028.html",
+      "files": [
+        {
+          "bytes": 811803,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:02Z",
+          "sha256": "283c4d1202f801c792dc9bd78f727ac473e23c58706941792fdd82398c7dad4e",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03247e/1630490013579/W-00281120.pdf"
+        }
+      ],
+      "number": "01FS 2020:28",
+      "published": "2020-11-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-11-19-01fs-202029.html",
+      "files": [
+        {
+          "bytes": 120397,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:04Z",
+          "sha256": "844803095650ed4eca9f2ce972bccaaa4d7cf7f56e25ec49410e77ff4ebed78b",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032480/1630490068562/W-00291120.pdf"
+        }
+      ],
+      "number": "01FS 2020:29",
+      "published": "2020-11-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-11-23-01fs-202030.html",
+      "files": [
+        {
+          "bytes": 120282,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:06Z",
+          "sha256": "aa21fda945b726a6092fc81798043259641e5de454428d690a10f6d143f13190",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03249e/1630490135128/W-00301124.pdf"
+        }
+      ],
+      "number": "01FS 2020:30",
+      "published": "2020-11-24"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-12-10-01fs-202031.html",
+      "files": [
+        {
+          "bytes": 141818,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:08Z",
+          "sha256": "b9196678204943f698550e5b730985c0dae2c44a8c273216cbac855495da80e4",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0324a1/1630490306415/W-00311211.pdf"
+        }
+      ],
+      "number": "01FS 2020:31",
+      "published": "2020-12-11"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-12-10-01fs-202032.html",
+      "files": [
+        {
+          "bytes": 142445,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:10Z",
+          "sha256": "1ed55bbda3cc1b2a741f9c3906264384e65c074a7a5baee9d45c61195ef7c0bf",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0324a5/1630490363706/W-00321211.pdf"
+        }
+      ],
+      "number": "01FS 2020:32",
+      "published": "2020-12-11"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-12-10-01fs-202033.html",
+      "files": [
+        {
+          "bytes": 142203,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:12Z",
+          "sha256": "d61477e8a0bbf71def266fe62fe0e3a1413658a7ca264f6020766f1e5af6c1b9",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0324ae/1630490508293/W-00331211.pdf"
+        }
+      ],
+      "number": "01FS 2020:33",
+      "published": "2020-12-11"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2020/forfattningar-2020/2020-12-16-01fs-202034.html",
+      "files": [
+        {
+          "bytes": 210323,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:14Z",
+          "sha256": "9e79c265abed36ac402591dee422e1fc2f89e82d676649a1fe790510aaa4805f",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0324b2/1630490583614/W-00341216.pdf"
+        }
+      ],
+      "number": "01FS 2020:34",
+      "published": "2020-12-16"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-01-12-01fs-202101.html",
+      "files": [
+        {
+          "bytes": 440651,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:17Z",
+          "sha256": "cb87aefad2743c1efb00df11fbaed46e6ee8fdca023f1240ede1267af35391ff",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032562/1630496571144/W-00010113.pdf"
+        }
+      ],
+      "number": "01FS 2021:1",
+      "published": "2021-01-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-01-12-01fs-202102.html",
+      "files": [
+        {
+          "bytes": 118900,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:19Z",
+          "sha256": "2c8b02af4202628bd36640e1a88f6316c91e098e7d6d8c4ed9fd4eaa92cf7f57",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032566/1630496633511/W-00020113.pdf"
+        }
+      ],
+      "number": "01FS 2021:2",
+      "published": "2021-01-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-01-12-01fs-202103.html",
+      "files": [
+        {
+          "bytes": 117024,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:21Z",
+          "sha256": "200b9020ed2e37f02e1684af9b5d7f0c975bdb9e6e1ab183dee851b87bdce644",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032568/1630496693569/W-00030113.pdf"
+        }
+      ],
+      "number": "01FS 2021:3",
+      "published": "2021-01-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-01-12-01fs-202104.html",
+      "files": [
+        {
+          "bytes": 450792,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:23Z",
+          "sha256": "5d9b837890fa266b91a8bf3d7fd6815db8100c34ec5c317d10eac41ece984809",
+          "url": "https://www.lansstyrelsen.se/download/18.60f68c2017684324024e6ff/1610461853975/01FS%202021%2004%20F%C3%B6rteckning%20%C3%B6ver%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20utf%C3%A4rdade%20av%20L%C3%A4nsstyrelsen%20i%20Stockholms%20l%C3%A4n%20och%20som%20g%C3%A4ller%20den%2031%20december%202020.pdf"
+        }
+      ],
+      "number": "01FS 2021:4",
+      "published": "2021-01-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-01-18-01fs-202105.html",
+      "files": [
+        {
+          "bytes": 120676,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:25Z",
+          "sha256": "28a02887ca6602c747421a65efec5b98b9aced4cfae04082d187be091d129140",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032573/1630496858574/W-00050122.pdf"
+        }
+      ],
+      "number": "01FS 2021:5",
+      "published": "2021-01-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-01-18-01fs-202106.html",
+      "files": [
+        {
+          "bytes": 119006,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:27Z",
+          "sha256": "c73826dddbc3df23f97fb88bb736486afc6976e9e7cc90418db523008ae6fb06",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032591/1630496912514/W-00060122.pdf"
+        }
+      ],
+      "number": "01FS 2021:6",
+      "published": "2021-01-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-01-22-01fs-202107.html",
+      "files": [
+        {
+          "bytes": 119442,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:29Z",
+          "sha256": "407ca627317893010de4bbde9c68764803de8232e205f434ef60f9deb480466a",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032593/1630496964544/W-00070122.pdf"
+        }
+      ],
+      "number": "01FS 2021:7",
+      "published": "2021-01-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-01-28-01fs-202108.html",
+      "files": [
+        {
+          "bytes": 101165,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:33Z",
+          "sha256": "cd91656d22454be21d98200ee58a1549bebd732742b181ca89e856ca73790c97",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032595/1630497021403/W-00080129.pdf"
+        }
+      ],
+      "number": "01FS 2021:8",
+      "published": "2021-01-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-01-28-01fs-202109.html",
+      "files": [
+        {
+          "bytes": 261120,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:34Z",
+          "sha256": "94d2dc256d0bb5db0a3752ff9c5b52a665a2d2d806249488683074333e0d6b20",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032598/1630497069378/W-00090129.pdf"
+        }
+      ],
+      "number": "01FS 2021:9",
+      "published": "2021-01-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-01-28-01fs-202110.html",
+      "files": [
+        {
+          "bytes": 120405,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:37Z",
+          "sha256": "c92d500074dc55affe7f132036a391fefa874769c21af4cf4ae310b5a1a4adbd",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03259a/1630497122132/W-00100203.pdf"
+        }
+      ],
+      "number": "01FS 2021:10",
+      "published": "2021-02-03"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-02-23-01fs-202111.html",
+      "files": [
+        {
+          "bytes": 120405,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:39Z",
+          "sha256": "c92d500074dc55affe7f132036a391fefa874769c21af4cf4ae310b5a1a4adbd",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03259a/1630497122132/W-00100203.pdf"
+        }
+      ],
+      "number": "01FS 2021:11",
+      "published": "2021-02-24"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-03-10-01fs-202112.html",
+      "files": [
+        {
+          "bytes": 177194,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:41Z",
+          "sha256": "3b64da010182afaa542a748181eac75fe6609db7ee5d0a0a9b415be7907bb1a0",
+          "url": "https://www.lansstyrelsen.se/download/18.3b68ed3d177d806751d12845/1615390567267/01FS%202021-12%20L%C3%A4nsstyrelsen%20i%20Stockholms%20l%C3%A4ns%20sammanst%C3%A4llning%20%C3%B6ver%20v%C3%A4gar%20och%20vissa%20lokala%20trafikf%C3%B6reskrifter%20inom%20Stockholms%20l%C3%A4n.pdf"
+        }
+      ],
+      "number": "01FS 2021:12",
+      "published": "2021-03-10"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-03-31-01fs-202113.html",
+      "files": [
+        {
+          "bytes": 101450,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:43Z",
+          "sha256": "9582d43f130a684bff008f81a88b091ab359a7f075c30082bdb33693842d10de",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0325a1/1630497320654/W-00130326.pdf"
+        }
+      ],
+      "number": "01FS 2021:13",
+      "published": "2021-03-26"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-03-30-01fs-202114.html",
+      "files": [
+        {
+          "bytes": 102486,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:44Z",
+          "sha256": "c52a66583a798ed3f8c2f8b915bea153b1d3f6be71978192da4c006c41a4466f",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0325a3/1630497368592/W-00140407.pdf"
+        }
+      ],
+      "number": "01FS 2021:14",
+      "published": "2021-04-07"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-04-22-01fs-202115.html",
+      "files": [
+        {
+          "bytes": 489386,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:47Z",
+          "sha256": "0de6786ae763e63b238d24d4409e2fbdb6a1aa62e0427c4279de36ea1b51d8e8",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0325a6/1630497475082/W-00150428.pdf"
+        }
+      ],
+      "number": "01FS 2021:15",
+      "published": "2021-04-28"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-05-04-01fs-202116.html",
+      "files": [
+        {
+          "bytes": 528823,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:49Z",
+          "sha256": "f8143a03e4ad6591379ba2d472a49735c78a25ac894a6a30ad304a55a84d7a67",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0325ab/1630497526863/W-00160507.pdf"
+        }
+      ],
+      "number": "01FS 2021:16",
+      "published": "2021-05-07"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-05-17-01fs-202117.html",
+      "files": [
+        {
+          "bytes": 402253,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:51Z",
+          "sha256": "4929c534ab5c909b530aa8b92cecf8042ad51a0ede1e25fd82658b8cde143b65",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0325ad/1630497568114/W-00170521.pdf"
+        }
+      ],
+      "number": "01FS 2021:17",
+      "published": "2021-05-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-05-19-01fs-202118.html",
+      "files": [
+        {
+          "bytes": 210006,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:53Z",
+          "sha256": "4e1554440209e4e434df9ea81f1ca23426ba80a06ad4720fa2e055629697fbf2",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0325af/1630497612153/W-00180521.pdf"
+        }
+      ],
+      "number": "01FS 2021:18",
+      "published": "2021-05-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-05-28-01fs-202119.html",
+      "files": [
+        {
+          "bytes": 96172,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:55Z",
+          "sha256": "98536357a2dc5bddfc81515cbdbf28052416af4779a71c9f897a65e61cf30ff4",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0325b8/1630497653515/W-00190531.pdf"
+        }
+      ],
+      "number": "01FS 2021:19",
+      "published": "2021-05-31"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-05-28-01fs-202120.html",
+      "files": [
+        {
+          "bytes": 101342,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:57Z",
+          "sha256": "00c7c6f99bd176512efb073acdc0d0e73f20f13d25ea32a065aca85c8bfa4a07",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0325ba/1630497710292/W-00200531.pdf"
+        }
+      ],
+      "number": "01FS 2021:20",
+      "published": "2021-05-31"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-06-10-01fs-202121.html",
+      "files": [
+        {
+          "bytes": 1682983,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:58:59Z",
+          "sha256": "1a4d7818ace5930edf30b72550f6efd3ab46874263a52e2c47ccff3517568211",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce0325c9/1630497778743/W-00210611.pdf"
+        }
+      ],
+      "number": "01FS 2021:21",
+      "published": "2021-06-11"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-06-14-01fs-202122.html",
+      "files": [
+        {
+          "bytes": 102029,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:01Z",
+          "sha256": "a6eb36f5fbb8f7faa2b620b5a922855860e3243712b1e54337faf137c63d8230",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032605/1630499037405/W-00220618.pdf"
+        }
+      ],
+      "number": "01FS 2021:22",
+      "published": "2021-06-18"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-06-18-01fs-202123.html",
+      "files": [
+        {
+          "bytes": 102370,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:03Z",
+          "sha256": "f0c11179c3c486f697f8c2c58d453ec1a0ae0cbb4d55324ebab6062a3eb6a73b",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032613/1630499255882/W-00230623.pdf"
+        }
+      ],
+      "number": "01FS 2021:23",
+      "published": "2021-06-23"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-06-28-01fs-202124.html",
+      "files": [
+        {
+          "bytes": 100358,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:05Z",
+          "sha256": "3c92920d71a006ff5865bd56b394782a11bbaea22518c07419d257ca87717ed8",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032619/1630499301144/W-00240702.pdf"
+        }
+      ],
+      "number": "01FS 2021:24",
+      "published": "2021-07-02"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-07-05-01fs-202125.html",
+      "files": [
+        {
+          "bytes": 261979,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:07Z",
+          "sha256": "febea9c046c8091627c51eb2fbde157c50900be43bcee69e9d1286a6229faa79",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce03261c/1630499348640/W-00250709.pdf"
+        }
+      ],
+      "number": "01FS 2021:25",
+      "published": "2021-07-09"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-07-13-01fs-202126.html",
+      "files": [
+        {
+          "bytes": 100640,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:09Z",
+          "sha256": "267476ad66bc47d44c42b1e3a8fb02ee6d2da133e61b35ae963d26ebfcce52e0",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032620/1630499392935/W-00260716.pdf"
+        }
+      ],
+      "number": "01FS 2021:26",
+      "published": "2021-07-16"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-08-02-01fs-202127.html",
+      "files": [
+        {
+          "bytes": 280079,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:11Z",
+          "sha256": "a57bf7207011d90ebc4333c7df7c5e334f6f62d31401a8cb4b6d841632214746",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032632/1630499438727/W-00270806.pdf"
+        }
+      ],
+      "number": "01FS 2021:27",
+      "published": "2021-08-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-08-02-01fs-202128.html",
+      "files": [
+        {
+          "bytes": 387964,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:13Z",
+          "sha256": "fef6e339557c03c3bd7d7950f1cda2ac665e2da665e23593c7583f278cb95f05",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032638/1630499481959/W-00280806.pdf"
+        },
+        {
+          "bytes": 387964,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:14Z",
+          "sha256": "fef6e339557c03c3bd7d7950f1cda2ac665e2da665e23593c7583f278cb95f05",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032638/1630499481959/W-00280806.pdf"
+        }
+      ],
+      "number": "01FS 2021:28",
+      "published": "2021-08-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-08-02-01fs-202129.html",
+      "files": [
+        {
+          "bytes": 429731,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:16Z",
+          "sha256": "60fb33ddae3afe32b3d7ff1caca4ec505d6281469c322d76340441908de5ed61",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032641/1630499529581/W-00290806.pdf"
+        }
+      ],
+      "number": "01FS 2021:29",
+      "published": "2021-08-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-08-02-01fs-202130.html",
+      "files": [
+        {
+          "bytes": 100216,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:18Z",
+          "sha256": "02ac3ff311f613932d8c1757592e5ac8aa2e13da9b315d6bd820fc4ad60576a3",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032650/1630499572236/W-00300806.pdf"
+        }
+      ],
+      "number": "01FS 2021:30",
+      "published": "2021-08-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-08-02-01fs-202131.html",
+      "files": [
+        {
+          "bytes": 98390,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:20Z",
+          "sha256": "5caedc4489156adac9498b5342a7453607352412915778c7589a2d22b4eeac42",
+          "url": "https://www.lansstyrelsen.se/download/18.2b1344c417a75f02ce032655/1630499613654/W-00310806.pdf"
+        }
+      ],
+      "number": "01FS 2021:31",
+      "published": "2021-08-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-10-26-01fs-202132.html",
+      "files": [
+        {
+          "bytes": 100066,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:22Z",
+          "sha256": "18f42c01a136bafff534cf9990d85953d453265a8e2b7590ba09f13d9b150120",
+          "url": "https://www.lansstyrelsen.se/download/18.792af7217dc282214375d6a/1643818845444/W-00321029.pdf"
+        }
+      ],
+      "number": "01FS 2021:32",
+      "published": "2021-10-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-11-17-01fs-202133.html",
+      "files": [
+        {
+          "bytes": 277923,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:24Z",
+          "sha256": "c5b0b77230d5ba2ca056ec9834d589329db00fc51bf55078a541498292200f9d",
+          "url": "https://www.lansstyrelsen.se/download/18.792af7217dc282214375d8d/1643818979271/W-00331119.pdf"
+        }
+      ],
+      "number": "01FS 2021:33",
+      "published": "2021-11-19"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-12-02-01fs-202134.html",
+      "files": [
+        {
+          "bytes": 102060,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:26Z",
+          "sha256": "bc8de68125dec24946de4901ba43072bb363c829d0bc3018dbc9bf5d0fec5835",
+          "url": "https://www.lansstyrelsen.se/download/18.11bea54017ce98c9ce63b9c6/1638454937041/01FS%202021-34%20L%C3%A4nsstyrelsen%20i%20Stockholms%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20f%C3%B6rbud%20mot%20brytande%20av%20is%20i%20sundet%20mellan%20Rams%C3%B6%20och%20Tynning%C3%B6,%20Vaxholms%20kommun.pdf"
+        }
+      ],
+      "number": "01FS 2021:34",
+      "published": "2021-12-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-12-09-01fs-202135.html",
+      "files": [
+        {
+          "bytes": 120625,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:28Z",
+          "sha256": "5c7f69d77467def0427ea8c103481b84f55ad9482bd19ed295474a423e453670",
+          "url": "https://www.lansstyrelsen.se/download/18.74bb1bce17ce9bbba5940dd5/1639041622821/01FS%202021-35%20L%C3%A4nsstyrelsen%20i%20Stockholms%20l%C3%A4ns%20beslut%20om%20bildande%20av%20H%C3%A5llviksj%C3%B6ns%20naturreservat,%20Norrt%C3%A4lje%20kommun,%20samt%20f%C3%B6reskrifter%20f%C3%B6r%20naturreservatet.pdf"
+        }
+      ],
+      "number": "01FS 2021:35",
+      "published": "2021-12-10"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2021/forfattningssamling-2021/2021-12-27-01fs-202136.html",
+      "files": [
+        {
+          "bytes": 172685,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:30Z",
+          "sha256": "d2c5a570393a39eadff68c8aae714fb21e639440b4720ce45614e29d7b5a7ed4",
+          "url": "https://www.lansstyrelsen.se/download/18.792af7217dc282214375db5/1643819232609/W-00361229.pdf"
+        }
+      ],
+      "number": "01FS 2021:36",
+      "published": "2021-12-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-01-03-01fs-202201.html",
+      "files": [
+        {
+          "bytes": 102646,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:33Z",
+          "sha256": "100b964b10bd7023ab943a5ed18015683b24e567f8a8c04f6946a4b3cf1a57a1",
+          "url": "https://www.lansstyrelsen.se/download/18.792af7217dc282214375df7/1643819618407/W-00010107.pdf"
+        }
+      ],
+      "number": "01FS 2022:1",
+      "published": "2022-01-07"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-02-02-01fs-202202.html",
+      "files": [
+        {
+          "bytes": 117540,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:38Z",
+          "sha256": "1d7e5e8726c3ffd3e0fb75f9a38562d3bf5ecff10e379ad17efadaab3021b3af",
+          "url": "https://www.lansstyrelsen.se/download/18.792af7217dc282214375e0b/1643819764667/W-00020204.pdf"
+        }
+      ],
+      "number": "01FS 2022:2",
+      "published": "2022-02-04"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-02-02-01fs-202203.html",
+      "files": [
+        {
+          "bytes": 99338,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:39Z",
+          "sha256": "ce429ec7047f12b24d1ee42e72bf6db4356d76c590ee0c58900d8bde238b2ed8",
+          "url": "https://www.lansstyrelsen.se/download/18.792af7217dc282214375e16/1643819820721/W-00030204.pdf"
+        }
+      ],
+      "number": "01FS 2022:3",
+      "published": "2022-02-04"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-02-07-01fs-202204.html",
+      "files": [
+        {
+          "bytes": 1398466,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:41Z",
+          "sha256": "58ac36f3932dc9b39e8a9f01ad7c1869bc5327e8d0fed92d8ca6012691928c47",
+          "url": "https://www.lansstyrelsen.se/download/18.63dca67817dc1ece7ef7bb82/1644325866578/1184286%20F%C3%B6rteckning%202022-4%20k2.pdf"
+        }
+      ],
+      "number": "01FS 2022:4",
+      "published": "2022-02-09"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-03-15-01fs-202205.html",
+      "files": [
+        {
+          "bytes": 181518,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:43Z",
+          "sha256": "30d94f3dcdf300699d6a08de484a7d5f5cecd10ccdc54e94ca38b6980e5decf7",
+          "url": "https://www.lansstyrelsen.se/download/18.4e75588c17f447017bf265c8/1647333789106/W-00050318.pdf"
+        }
+      ],
+      "number": "01FS 2022:5",
+      "published": "2022-03-18"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-03-15-01fs-202206.html",
+      "files": [
+        {
+          "bytes": 101045,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:46Z",
+          "sha256": "cc5ae88c4c73ae7c3e250c86a83fd5f37b93578b1d2a6444584e60f6c87f16a3",
+          "url": "https://www.lansstyrelsen.se/download/18.4e75588c17f447017bf26643/1647334240531/W-00060318.pdf"
+        }
+      ],
+      "number": "01FS 2022:6",
+      "published": "2022-03-18"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-03-18-01fs-202207.html",
+      "files": [
+        {
+          "bytes": 108489,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:48Z",
+          "sha256": "373bf156d048bbb8cbcd558b89be05398b42a5c99112fd0473d8fa71a25ef25d",
+          "url": "https://www.lansstyrelsen.se/download/18.4e75588c17f447017bf2f135/1647590264959/W-00070323.pdf"
+        }
+      ],
+      "number": "01FS 2022:7",
+      "published": "2022-03-23"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-03-23-01fs-202208.html",
+      "files": [
+        {
+          "bytes": 103517,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:50Z",
+          "sha256": "bbbe33ce28f281fb2712f1ad40b1a0a941a887876790bef08d4a8f1a20ac863e",
+          "url": "https://www.lansstyrelsen.se/download/18.4e75588c17f447017bf3e015/1648052182040/W-00080325.pdf"
+        }
+      ],
+      "number": "01FS 2022:8",
+      "published": "2022-03-25"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-03-28-01fs-202209.html",
+      "files": [
+        {
+          "bytes": 430091,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:52Z",
+          "sha256": "52cbc5a5b45c7c1d6c0b473647708c4a6cd05e6646741bdb7c5697c5d41d2d8b",
+          "url": "https://www.lansstyrelsen.se/download/18.4e75588c17f447017bf4ba43/1648474375966/01FS%202022-9.pdf"
+        }
+      ],
+      "number": "01FS 2022:9",
+      "published": "2022-04-01"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-03-28-01fs-202210.html",
+      "files": [
+        {
+          "bytes": 231879,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:54Z",
+          "sha256": "5b3ad1971a96e420411493f3ca24fdb92addc7748337b7837f9d6b43d82bb4ea",
+          "url": "https://www.lansstyrelsen.se/download/18.4e75588c17f447017bf4bb12/1648475397617/01FS%202022-10.pdf"
+        }
+      ],
+      "number": "01FS 2022:10",
+      "published": "2022-04-01"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-03-29-01fs-202211.html",
+      "files": [
+        {
+          "bytes": 108669,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:56Z",
+          "sha256": "1f51146bcd979608d55446761279dbadc28b34402ba412e9da5e08a75e0e6db5",
+          "url": "https://www.lansstyrelsen.se/download/18.4e75588c17f447017bf4e5a4/1648561265285/01FS%202022-11.pdf"
+        }
+      ],
+      "number": "01FS 2022:11",
+      "published": "2022-04-01"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-04-11-01fs-202212.html",
+      "files": [
+        {
+          "bytes": 102691,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:59:58Z",
+          "sha256": "1f06f31821e0c67dc1b0afb9381e04b0f61f64ead0daf7e62b3ff2ddaddfdd6d",
+          "url": "https://www.lansstyrelsen.se/download/18.382c024b1800285d586a13b/1649663128822/01FS%202022-12%20.pdf"
+        }
+      ],
+      "number": "01FS 2022:12",
+      "published": "2022-04-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-05-02-01fs-202213.html",
+      "files": [],
+      "number": "01FS 2022:13",
+      "published": "2022-05-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-05-02-01fs-202214.html",
+      "files": [],
+      "number": "01FS 2022:14",
+      "published": "2022-05-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-05-02-01fs-202215.html",
+      "files": [],
+      "number": "01FS 2022:15",
+      "published": "2022-05-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-05-02-01fs-202216.html",
+      "files": [],
+      "number": "01FS 2022:16",
+      "published": "2022-05-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-05-04-01fs-202217.html",
+      "files": [
+        {
+          "bytes": 251362,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:04Z",
+          "sha256": "1e7f7fcef385d1db7689519034761159f7b44c528f7be916355c5bef9bd2f17a",
+          "url": "https://www.lansstyrelsen.se/download/18.382c024b1800285d5864b4a0/1651666649331/01FS%202022-17%20L%C3%A4nsstyrelsen%20i%20Stockholms%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20avst%C3%A4ngning%20av%20vattenomr%C3%A5de%20i%20K%C3%A4lltorpssj%C3%B6n%20med%20anledning%20av%20simt%C3%A4vling,%20Nacka%20kommun.pdf"
+        }
+      ],
+      "number": "01FS 2022:17",
+      "published": "2022-05-11"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-05-30-01fs-202218.html",
+      "files": [
+        {
+          "bytes": 1056684,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:07Z",
+          "sha256": "d5bba3d4b2d8557bee2658c3624510887ea0bcb3367abf583bcbd5c6eda18005",
+          "url": "https://www.lansstyrelsen.se/download/18.547ce5e918093c78a794a667/1653915030234/01FS%202022-18.pdf"
+        }
+      ],
+      "number": "01FS 2022:18",
+      "published": "2022-06-03"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-06-01-01fs-202219.html",
+      "files": [
+        {
+          "bytes": 287944,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:08Z",
+          "sha256": "fbc84df7d1c0dd6e70d96893c4d726d7baa381c915ffd1229315c69d2f6e8e18",
+          "url": "https://www.lansstyrelsen.se/download/18.2377e2a18093e0c8ac4cf2f/1654087680181/01FS%202022-19.pdf"
+        }
+      ],
+      "number": "01FS 2022:19",
+      "published": "2022-06-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-07-18-01fs-202220.html",
+      "files": [
+        {
+          "bytes": 316188,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:10Z",
+          "sha256": "584a2f8a44f49c239328baac920d9b7aac3814ca5ebad7773071bad952a79792",
+          "url": "https://www.lansstyrelsen.se/download/18.45f58e4d18180023efb533b0/1658131656896/W-00200610.pdf"
+        }
+      ],
+      "number": "01FS 2022:20",
+      "published": "2022-06-10"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-06-17-01fs-202221.html",
+      "files": [
+        {
+          "bytes": 240398,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:12Z",
+          "sha256": "09c8fc05f86a193183b28d0ad8d9b252e4215b57380d5e5559f7b669934b0ba7",
+          "url": "https://www.lansstyrelsen.se/download/18.730f76c418120ef39f929fe2/1655451423341/W-00210622.pdf"
+        }
+      ],
+      "number": "01FS 2022:21",
+      "published": "2022-06-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-07-05-01fs-202222.html",
+      "files": [
+        {
+          "bytes": 93657,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:14Z",
+          "sha256": "9bf9eaa0d538ce870e9c4e443d24a9140db3b2f884c2ad088ecb4ef6dc6f83d6",
+          "url": "https://www.lansstyrelsen.se/download/18.74b418a31817ff11b1128def/1657004487250/01FS%202022-22.pdf"
+        }
+      ],
+      "number": "01FS 2022:22",
+      "published": "2022-07-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-07-05-01fs-202223.html",
+      "files": [
+        {
+          "bytes": 92048,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:16Z",
+          "sha256": "e72cc56ae92393c0737663a894d33de7d76ff1cfbc5ee47ece4081c644eae6b8",
+          "url": "https://www.lansstyrelsen.se/download/18.74b418a31817ff11b1128e1b/1657004940439/01FS%202022-23.pdf"
+        }
+      ],
+      "number": "01FS 2022:23",
+      "published": "2022-07-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-07-05-01fs-202224.html",
+      "files": [
+        {
+          "bytes": 90531,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:18Z",
+          "sha256": "c073d1768102be309501de33f6d8f8edb14c6efca4d339ffb6485b3bbaebf142",
+          "url": "https://www.lansstyrelsen.se/download/18.74b418a31817ff11b1128eef/1657006036793/01FS%202022-24.pdf"
+        }
+      ],
+      "number": "01FS 2022:24",
+      "published": "2022-07-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-07-05-01fs-202225.html",
+      "files": [
+        {
+          "bytes": 90298,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:20Z",
+          "sha256": "ac11f30cfe04772d4c6a84a791eccce7b291eddf9d5f71100ff0cd498071b1af",
+          "url": "https://www.lansstyrelsen.se/download/18.74b418a31817ff11b1128f21/1657006346455/01FS%202022-25.pdf"
+        }
+      ],
+      "number": "01FS 2022:25",
+      "published": "2022-07-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-07-12-01fs-202226.html",
+      "files": [
+        {
+          "bytes": 379442,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:22Z",
+          "sha256": "e66ef650f95ce97f1739963af4ba2e17b2c4fa0b4474c4c3f846f54e13db0ae9",
+          "url": "https://www.lansstyrelsen.se/download/18.45f58e4d18180023efb3f0e2/1657623887706/01FS%202022-26.pdf"
+        }
+      ],
+      "number": "01FS 2022:26",
+      "published": "2022-07-15"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-08-17-01fs-202227.html",
+      "files": [
+        {
+          "bytes": 1307513,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:24Z",
+          "sha256": "3eead6d5c296e8ebdd9e813108e8941ecc9f5f16085e354c6c1a28f35b6fdb9d",
+          "url": "https://www.lansstyrelsen.se/download/18.45f58e4d18180023efbbfe90/1660741038800/01FS%202022-27.pdf"
+        }
+      ],
+      "number": "01FS 2022:27",
+      "published": "2022-08-19"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-09-08-01fs-202228.html",
+      "files": [
+        {
+          "bytes": 109015,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:26Z",
+          "sha256": "23f1a22284c91e44d4f645736b48a9a0d3ae14b8e98fb031ee744926bb436f41",
+          "url": "https://www.lansstyrelsen.se/download/18.59cefb71182e95d1be81bb4e/1662637864735/01FS%202022-28.pdf"
+        }
+      ],
+      "number": "01FS 2022:28",
+      "published": "2022-09-14"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-09-28-01fs-202229.html",
+      "files": [
+        {
+          "bytes": 594368,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:28Z",
+          "sha256": "b639864d0d803d63b91c23a716b6e5af1ee86f9490297d69de8e1d490c36fa8b",
+          "url": "https://www.lansstyrelsen.se/download/18.2dbccfdf183839b7f4d4a/1664362049167/W-00290930.pdf"
+        }
+      ],
+      "number": "01FS 2022:29",
+      "published": "2022-09-30"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-10-14-01fs-202230.html",
+      "files": [
+        {
+          "bytes": 92155,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:30Z",
+          "sha256": "861359271cbf25d595ccbe0eff4c83f65cd9e0df5d43dccd7d409e35c2f60ee4",
+          "url": "https://www.lansstyrelsen.se/download/18.2fa1124418383cc20f534ed0/1665750191030/01FS%202022-30.pdf"
+        }
+      ],
+      "number": "01FS 2022:30",
+      "published": "2022-10-19"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-10-31-01fs-202231.html",
+      "files": [
+        {
+          "bytes": 333591,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:32Z",
+          "sha256": "00a705b1d944c95b5f2cd6171c97c3137f98b255f9771a88c493414dd4995bc5",
+          "url": "https://www.lansstyrelsen.se/download/18.4f32505e18419bc46a2c86b/1667231583819/W-00311104.pdf"
+        }
+      ],
+      "number": "01FS 2022:31",
+      "published": "2022-11-04"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-11-22-01fs-202232.html",
+      "files": [
+        {
+          "bytes": 93557,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:34Z",
+          "sha256": "c1d450b58291b5bdf7f39cba6b4bc7789bd1b0c0e54652facce317159df2e9c8",
+          "url": "https://www.lansstyrelsen.se/download/18.219d3e3e1841d5d5b366f192/1669113107484/01FS%202022-32.pdf"
+        }
+      ],
+      "number": "01FS 2022:32",
+      "published": "2022-11-25"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-11-28-01fs-202233.html",
+      "files": [
+        {
+          "bytes": 573651,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:36Z",
+          "sha256": "313b3d043c87b31c8c8938bff8739e1c496a188f39c4ab5683f43c0d501d5107",
+          "url": "https://www.lansstyrelsen.se/download/18.230c6413184b3f2010d4a72/1669647426530/01FS%202022-33.pdf"
+        }
+      ],
+      "number": "01FS 2022:33",
+      "published": "2022-12-02"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2022/forfattningssamling-2022/2022-12-13-01fs-202234.html",
+      "files": [
+        {
+          "bytes": 96926,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:44Z",
+          "sha256": "ac3acecb21e8de265017c66f5eee70cef73bdf1bf04bf07448623339625b485a",
+          "url": "https://www.lansstyrelsen.se/download/18.29e9fe3b184b92799504a716/1670933199813/01FS%202022-34.pdf"
+        },
+        {
+          "bytes": 3105910,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:45Z",
+          "sha256": "1c1a6989c7cc17b664d13475b94d271c0ab1970fc0b704d59bc08d081c574370",
+          "url": "https://www.lansstyrelsen.se/download/18.52ea1660172a20ba65c37829/1600762780609/01FS%202015%20035%20L%C3%A4nsstyrelsen%20i%20Stockholms%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20statsbidrag%20till%20kommuner%20och%20landsting%20f%C3%B6r%20merkostnader%20och%20%C3%A5tg%C3%A4rder,%20nationella%20minoriteter%20m..pdf"
+        },
+        {
+          "bytes": 71020,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:46Z",
+          "sha256": "652d478d718fdd775a08344cfeec2a790d3a5834c6f40e56313619db2541185a",
+          "url": "https://www.lansstyrelsen.se/download/18.186a2548185299da53e76016/1674218470473/Konsoliderad%20f%C3%B6reskrift%202015%2035%20efter%20%C3%A4ndring%202022%2034.pdf"
+        }
+      ],
+      "number": "01FS 2022:34",
+      "published": "2022-12-16"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-01-04-01fs-202301.html",
+      "files": [
+        {
+          "bytes": 106045,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:49Z",
+          "sha256": "d437ae963df52027d260afdbb60a86f203c0541d35723d0bbf54a78c450cb76e",
+          "url": "https://www.lansstyrelsen.se/download/18.51ffc12418529b39b7345d66/1672819059858/01FS%202023-01.pdf"
+        }
+      ],
+      "number": "01FS 2023:1",
+      "published": "2023-01-11"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-01-13-01fs-202302.html",
+      "files": [
+        {
+          "bytes": 409869,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:51Z",
+          "sha256": "6578524f020eea376f65c78399e32ab27bece1ecb0e451379b01200739d334cb",
+          "url": "https://www.lansstyrelsen.se/download/18.518491c118529d7e6f75d6aa/1673615381948/01FS%202023-02.pdf"
+        }
+      ],
+      "number": "01FS 2023:2",
+      "published": "2023-01-18"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-01-15-01fs-202303.html",
+      "files": [
+        {
+          "bytes": 90564,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:53Z",
+          "sha256": "3f22a73d4b8ae7a79aee33d37175d44d25f083621335e335b30098acfb6fc758",
+          "url": "https://www.lansstyrelsen.se/download/18.51ffc12418529b39b739aa97/1673804134629/01FS%202023-03.pdf"
+        }
+      ],
+      "number": "01FS 2023:3",
+      "published": "2023-01-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-03-20-01fs-202304.html",
+      "files": [
+        {
+          "bytes": 241788,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:55Z",
+          "sha256": "57f8b239b1dd0efb258b349cc919b3cbf0d56d7d45484eefcbcfa3acf615b66b",
+          "url": "https://www.lansstyrelsen.se/download/18.3ff98c301869c957bbc64d3c/1679312783816/01FS%202023-04.pdf"
+        }
+      ],
+      "number": "01FS 2023:4",
+      "published": "2023-03-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-03-27-01fs-202305.html",
+      "files": [
+        {
+          "bytes": 277911,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:57Z",
+          "sha256": "475990059b67b5c2741f728ca9b7ac52f6b1dce873652ea76cdf800fed1c4611",
+          "url": "https://www.lansstyrelsen.se/download/18.17ca814318721c566c22ba/1679906263283/01FS%202023-05.pdf"
+        }
+      ],
+      "number": "01FS 2023:5",
+      "published": "2023-03-31"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-05-02-01fs-202306.html",
+      "files": [
+        {
+          "bytes": 190260,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:00:59Z",
+          "sha256": "b615b0f93fde675bd11a6f0f780519ac60b08862ad409ebe81c52d6179f78273",
+          "url": "https://www.lansstyrelsen.se/download/18.302b35d7187743872df5d12b/1683038908360/01FS%202023-06.pdf"
+        }
+      ],
+      "number": "01FS 2023:6",
+      "published": "2023-05-05"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-05-03-01fs-202307.html",
+      "files": [
+        {
+          "bytes": 1046971,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:02Z",
+          "sha256": "30d529bef5449a55ba80692f2e1b03b0f9af5a6d2fd1009101b37847b386ce8f",
+          "url": "https://www.lansstyrelsen.se/download/18.4aee1f33187e0df29f1df/1683107921356/01FS%202023-07.pdf"
+        }
+      ],
+      "number": "01FS 2023:7",
+      "published": "2023-05-05"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-05-03-01fs-202308.html",
+      "files": [
+        {
+          "bytes": 90604,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:03Z",
+          "sha256": "a22f13500137f1246148477fe545eff5e66e742879e2d28bd26a2c77cf547da0",
+          "url": "https://www.lansstyrelsen.se/download/18.4aee1f33187e0df29f1361/1683114997279/01FS%202023-08.pdf"
+        }
+      ],
+      "number": "01FS 2023:8",
+      "published": "2023-05-05"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-05-04-01fs-202309.html",
+      "files": [
+        {
+          "bytes": 2931533,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:06Z",
+          "sha256": "ac35a39ba8d871ba7406298cd7d8107bed920e00c3880772a52df6cb74c6b92e",
+          "url": "https://www.lansstyrelsen.se/download/18.66f92895187e09b44df268b/1683198615401/01FS%202023-09.pdf"
+        }
+      ],
+      "number": "01FS 2023:9",
+      "published": "2023-05-10"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-05-16-01fs-202310.html",
+      "files": [
+        {
+          "bytes": 89330,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:07Z",
+          "sha256": "f9a6a233814e839be1f1c2c0acc44f009730ebc4100331ebffaf1808684ad324",
+          "url": "https://www.lansstyrelsen.se/download/18.5b359630187eb0572412e1d4/1684234133892/01FS%202023-10.pdf"
+        }
+      ],
+      "number": "01FS 2023:10",
+      "published": "2023-05-19"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-05-16-01fs-202311.html",
+      "files": [
+        {
+          "bytes": 200202,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:09Z",
+          "sha256": "9064d74bc8a321af5302b1daf560879e27160ba20b4ea638a783a630309bab53",
+          "url": "https://www.lansstyrelsen.se/download/18.5b359630187eb0572412e206/1684234412646/01FS%202023-11.pdf"
+        }
+      ],
+      "number": "01FS 2023:11",
+      "published": "2023-05-19"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-05-25-01fs-202312.html",
+      "files": [
+        {
+          "bytes": 107116,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:11Z",
+          "sha256": "c9f939967559d1851c72f2ffe7336af34072a80e8de96f19a3c1be6de1d8cc1b",
+          "url": "https://www.lansstyrelsen.se/download/18.66d708c61884c7cf9282f78/1685004318427/01FS%202023-12.pdf"
+        }
+      ],
+      "number": "01FS 2023:12",
+      "published": "2023-05-31"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-06-01-01fs-202313.html",
+      "files": [
+        {
+          "bytes": 246817,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:13Z",
+          "sha256": "7db3278b6b752444061f7869f0c6ff782ed3b86032c7edd66e2b42dc65dda32a",
+          "url": "https://www.lansstyrelsen.se/download/18.309eb1601884c65b7dd261cf/1685617590431/01FS%202023-13.pdf"
+        }
+      ],
+      "number": "01FS 2023:13",
+      "published": "2023-06-07"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-06-16-01fs-202314.html",
+      "files": [
+        {
+          "bytes": 2096772,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:15Z",
+          "sha256": "e194449d6c4c9bcbbc129842ef012bb11552e86837eaa1c6ef9d32b6f2922967",
+          "url": "https://www.lansstyrelsen.se/download/18.d135c3f188ba3e920d6866/1686921749737/01FS%202023-14.pdf"
+        }
+      ],
+      "number": "01FS 2023:14",
+      "published": "2023-06-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-06-16-01fs-202315.html",
+      "files": [
+        {
+          "bytes": 1520657,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:17Z",
+          "sha256": "124a478d2a1d596f1bec3b81aadb81cf13e91e1c7bd93470b96669ab94f7640e",
+          "url": "https://www.lansstyrelsen.se/download/18.d135c3f188ba3e920d68d9/1686922364647/01FS%202023-15.pdf"
+        }
+      ],
+      "number": "01FS 2023:15",
+      "published": "2023-06-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-06-16-01fs-202316.html",
+      "files": [
+        {
+          "bytes": 1658302,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:20Z",
+          "sha256": "ecb389fbdb25345446f19555f5a2c5d6904c489de8e898ef319d2032a7bee2cd",
+          "url": "https://www.lansstyrelsen.se/download/18.d135c3f188ba3e920d698e/1686923080270/01FS%202023-16.pdf"
+        }
+      ],
+      "number": "01FS 2023:16",
+      "published": "2023-06-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-07-17-01fs-202317.html",
+      "files": [
+        {
+          "bytes": 90713,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:21Z",
+          "sha256": "cca98898f6b8d8ab88f1a7d474856f3881a78d6d80425c952f63f3a4bfbf14e6",
+          "url": "https://www.lansstyrelsen.se/download/18.21c8a118188b9f529409ec9e/1689600751068/01FS%202023-17.pdf"
+        }
+      ],
+      "number": "01FS 2023:17",
+      "published": "2023-07-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-07-17-01fs-202318.html",
+      "files": [
+        {
+          "bytes": 89891,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:23Z",
+          "sha256": "0d0593215bbb645ddff2926a9627b614ea8b9fc944d4d3235da10b7837efb488",
+          "url": "https://www.lansstyrelsen.se/download/18.21c8a118188b9f529409ecd4/1689601059523/01FS%202023-18.pdf"
+        }
+      ],
+      "number": "01FS 2023:18",
+      "published": "2023-07-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-07-20-01fs-202319.html",
+      "files": [
+        {
+          "bytes": 299292,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:25Z",
+          "sha256": "5d719cdcf88c45f587b5f971f1fa75912497481745554d49642278063ab9347a",
+          "url": "https://www.lansstyrelsen.se/download/18.d135c3f188ba3e920db55b6/1689861791763/01FS%202023-19.pdf"
+        }
+      ],
+      "number": "01FS 2023:19",
+      "published": "2023-07-26"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-07-20-01fs-202320.html",
+      "files": [
+        {
+          "bytes": 244124,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:27Z",
+          "sha256": "22aa8f763c1d366a4f7fc3a120a05d31d0367a82439fd4372cb5e3e8b280228a",
+          "url": "https://www.lansstyrelsen.se/download/18.d135c3f188ba3e920db55f4/1689862105603/01FS%202023-20.pdf"
+        }
+      ],
+      "number": "01FS 2023:20",
+      "published": "2023-07-26"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-07-28-01fs-202321.html",
+      "files": [
+        {
+          "bytes": 838163,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:29Z",
+          "sha256": "08d4a5d085b2272208e9662012bc9118faa17a435c675d238bd350b61ab7366d",
+          "url": "https://www.lansstyrelsen.se/download/18.cfca5e7188ba0cfa44f0786/1690536727670/01FS%202023-21.pdf"
+        }
+      ],
+      "number": "01FS 2023:21",
+      "published": "2023-08-02"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-08-02-01fs-202322.html",
+      "files": [
+        {
+          "bytes": 349917,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:32Z",
+          "sha256": "54d060aa078ca1a2d4a88a6a4b118c21011e5573d78936349cf41ef7cb2c20fa",
+          "url": "https://www.lansstyrelsen.se/download/18.66d49d02188ba23f03fef82f/1690965433967/01FS%202023-22.pdf"
+        }
+      ],
+      "number": "01FS 2023:22",
+      "published": "2023-08-04"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-08-02-01fs-202323.html",
+      "files": [
+        {
+          "bytes": 323150,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:33Z",
+          "sha256": "ef4b9d6e3d0498bdfc614de79fd35d39b8d81ad67f8a7100349c04c4a60be343",
+          "url": "https://www.lansstyrelsen.se/download/18.66d49d02188ba23f03ff0699/1690979476677/01FS%202023-23.pdf"
+        }
+      ],
+      "number": "01FS 2023:23",
+      "published": "2023-08-09"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-09-04-01fs-202324.html",
+      "files": [
+        {
+          "bytes": 91562,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:35Z",
+          "sha256": "a750fa21e938e0cf17eb0b965e257883934ac67b113b19d2b3e78c18680b7055",
+          "url": "https://www.lansstyrelsen.se/download/18.6eca1f4618a5eea6966ea8/1693832333977/01FS%202023-24.pdf"
+        }
+      ],
+      "number": "01FS 2023:24",
+      "published": "2023-09-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-10-24-01fs-202325.html",
+      "files": [
+        {
+          "bytes": 92582,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:37Z",
+          "sha256": "1d4b99e5a4caa9c55d369a67f2379a58d59381ee6ebd34f2207ecac122e48bce",
+          "url": "https://www.lansstyrelsen.se/download/18.3581480b18b37f787ba243e6/1698135273129/01FS%202023-25.pdf"
+        }
+      ],
+      "number": "01FS 2023:25",
+      "published": "2023-10-27"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-10-24-01fs-202326.html",
+      "files": [
+        {
+          "bytes": 462399,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:39Z",
+          "sha256": "5c542163783714ecc73be68321430947b55684c9775417bac73e4ad757c207a7",
+          "url": "https://www.lansstyrelsen.se/download/18.3581480b18b37f787ba2447a/1698135590572/01FS%202023-26.pdf"
+        }
+      ],
+      "number": "01FS 2023:26",
+      "published": "2023-10-27"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-11-01-01fs-202327.html",
+      "files": [
+        {
+          "bytes": 399127,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:41Z",
+          "sha256": "fbe2cd4b2f560c579662cc3f17cd86cc54619c653b4b279aa46ae99790cfbe12",
+          "url": "https://www.lansstyrelsen.se/download/18.48b45e2218b85f08c1a441f/1698850298105/01FS%202023-27.pdf"
+        }
+      ],
+      "number": "01FS 2023:27",
+      "published": "2023-11-03"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-11-01-01fs-202328.html",
+      "files": [
+        {
+          "bytes": 260297,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:43Z",
+          "sha256": "046437000fc9c800ad9dd5d2d4647298016806bba4ba95a7898bcc3eddd00faa",
+          "url": "https://www.lansstyrelsen.se/download/18.48b45e2218b85f08c1a453c/1698851470728/01FS%202023-28.pdf"
+        }
+      ],
+      "number": "01FS 2023:28",
+      "published": "2023-11-03"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-11-10-01fs-202329.html",
+      "files": [
+        {
+          "bytes": 318850,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:45Z",
+          "sha256": "affe98fb16fdd9af3949e0b8a1c56da143b93bb255fe54d1a3d30c63c65541c7",
+          "url": "https://www.lansstyrelsen.se/download/18.7bd8236b18bab71ba6bb429/1699627475993/01FS%202023-29.pdf"
+        }
+      ],
+      "number": "01FS 2023:29",
+      "published": "2023-11-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-12-04-01fs-202330.html",
+      "files": [
+        {
+          "bytes": 254413,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:47Z",
+          "sha256": "2fa7ff45e7fabe49c499d3804dded53eee1b66569932822a4bb62525da6e622c",
+          "url": "https://www.lansstyrelsen.se/download/18.207bf5ee18bf5d7781f416d5/1701697089654/01FS%202023-30.pdf"
+        }
+      ],
+      "number": "01FS 2023:30",
+      "published": "2023-12-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-12-11-01fs-202331.html",
+      "files": [
+        {
+          "bytes": 94067,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:49Z",
+          "sha256": "7422fd4a4200c892388da3bdf9b38a3c5927b7283cfe4c8b7c137702a602c0f0",
+          "url": "https://www.lansstyrelsen.se/download/18.48816e0618c3e13565918f40/1702299613923/01FS%202023-31.pdf"
+        }
+      ],
+      "number": "01FS 2023:31",
+      "published": "2023-12-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2023/forfattningssamling-2023/2023-12-11-01fs-202332.html",
+      "files": [
+        {
+          "bytes": 299667,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:51Z",
+          "sha256": "8bce1d4393ed784dc97240cc0f70a9133c7673e354f00c08717732e304c3c0e3",
+          "url": "https://www.lansstyrelsen.se/download/18.48816e0618c3e1356591904c/1702300925388/01FS%202023-32.pdf"
+        }
+      ],
+      "number": "01FS 2023:32",
+      "published": "2023-12-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-01-25-01fs-202401.html",
+      "files": [
+        {
+          "bytes": 109731,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:55Z",
+          "sha256": "2cd8091037bdaf4f896bb4ab26c447ada113847683be2dfd25c053704e28c1ad",
+          "url": "https://www.lansstyrelsen.se/download/18.2a78e72318d2a59aabdd0eb/1706102035890/01FS%202024-1.pdf"
+        }
+      ],
+      "number": "01FS 2024:1",
+      "published": "2024-01-26"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-01-25-01fs-202402.html",
+      "files": [
+        {
+          "bytes": 447099,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:57Z",
+          "sha256": "036a0147cdf10a3016a8393cab23f664f90b12e3e085fcd3c94ae675fee8f0a5",
+          "url": "https://www.lansstyrelsen.se/download/18.2a78e72318d2a59aabdd17e/1706102520836/01FS%202024-2.pdf"
+        }
+      ],
+      "number": "01FS 2024:2",
+      "published": "2024-01-26"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-01-26-01fs-202403.html",
+      "files": [
+        {
+          "bytes": 91949,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:01:59Z",
+          "sha256": "d70c64bc4652db28c6c5de1f77eef4499d582f24b397dd764a8ca9ff5031d0d8",
+          "url": "https://www.lansstyrelsen.se/download/18.811b3fa18d2a8423fe19dc4/1706275572149/01FS%202024-3.pdf"
+        }
+      ],
+      "number": "01FS 2024:3",
+      "published": "2024-01-31"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-02-01-01fs-202404.html",
+      "files": [
+        {
+          "bytes": 358849,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:01Z",
+          "sha256": "d7cffa1a03b1eb41b9b5fc257fea9b4fb31c0be9d38bc114b7ef1ebb6d7decde",
+          "url": "https://www.lansstyrelsen.se/download/18.f5ed7df18d54bce0d710b56/1706810479582/01FS%202024-4.pdf"
+        }
+      ],
+      "number": "01FS 2024:4",
+      "published": "2024-02-07"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-02-05-01fs-202405.html",
+      "files": [
+        {
+          "bytes": 426957,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:03Z",
+          "sha256": "7c013a03214333c043a5727ad27d17c62fdc0878f91f814bc37d59035baeb2c9",
+          "url": "https://www.lansstyrelsen.se/download/18.3e3dcd4918d54a58c9c25de7/1707126379458/01FS%202024-5.pdf"
+        }
+      ],
+      "number": "01FS 2024:5",
+      "published": "2024-02-07"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-02-08-01fs-202406.html",
+      "files": [
+        {
+          "bytes": 94564,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:05Z",
+          "sha256": "9567b2356e2dbff1539c0762d79d7532663b0dbe09fda63a0586046708202bce",
+          "url": "https://www.lansstyrelsen.se/download/18.4db94f1718d82a6a06852a6/1707400550896/01FS%202024-6.pdf"
+        }
+      ],
+      "number": "01FS 2024:6",
+      "published": "2024-02-14"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-02-21-01fs-202407.html",
+      "files": [
+        {
+          "bytes": 287779,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:07Z",
+          "sha256": "20996663247320bb68c1292ed00441d83c232aec09a538095cc3ae8cba15b33b",
+          "url": "https://www.lansstyrelsen.se/download/18.6c8413e418d827a39014feac/1708519294437/01FS%202024-7.pdf"
+        }
+      ],
+      "number": "01FS 2024:7",
+      "published": "2024-02-28"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-03-06-01fs-202408.html",
+      "files": [
+        {
+          "bytes": 269585,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:09Z",
+          "sha256": "bab09aa48a1cd472e8674f26305376dc518fc14ed84f866edd214ae9b9358086",
+          "url": "https://www.lansstyrelsen.se/download/18.2089be8218df2a70b1721e43/1709730894396/01FS%202024-8.pdf"
+        }
+      ],
+      "number": "01FS 2024:8",
+      "published": "2024-03-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-03-06-01fs-202409.html",
+      "files": [
+        {
+          "bytes": 258802,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:11Z",
+          "sha256": "d1ba4dfd741574ad0d433530dac4cb1c36f2dba681c19b42fc8aff459dfd194c",
+          "url": "https://www.lansstyrelsen.se/download/18.2089be8218df2a70b1721f58/1709731713219/01FS%202024-9.pdf"
+        }
+      ],
+      "number": "01FS 2024:9",
+      "published": "2024-03-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-03-20-01fs-202410.html",
+      "files": [
+        {
+          "bytes": 170110,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:13Z",
+          "sha256": "68604394ce7ea20c291c597107face1de9d0a15b16f204256190855b19cde36b",
+          "url": "https://www.lansstyrelsen.se/download/18.217dece018e5a4c5ced12ff/1710946167846/01FS%202024-10.pdf"
+        }
+      ],
+      "number": "01FS 2024:10",
+      "published": "2024-03-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-04-11-01fs-202411.html",
+      "files": [
+        {
+          "bytes": 91932,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:15Z",
+          "sha256": "5d90818fb3cdca258d4b94350e16ff89de0300095cc263cc9fb2a37b61a15751",
+          "url": "https://www.lansstyrelsen.se/download/18.791d03ad18e75f375cd5b60b/1712822434965/01FS%202024-11.pdf"
+        }
+      ],
+      "number": "01FS 2024:11",
+      "published": "2024-04-12"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-04-11-01fs-202412.html",
+      "files": [
+        {
+          "bytes": 215403,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:17Z",
+          "sha256": "d55006eeeac03079eacbd4233c27361746d0c8c433a86f338eea356c410a7e58",
+          "url": "https://www.lansstyrelsen.se/download/18.217dece018e5a4c5ced7cc94/1712847111579/01FS%202024-12.pdf"
+        }
+      ],
+      "number": "01FS 2024:12",
+      "published": "2024-04-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-04-11-01fs-202413.html",
+      "files": [
+        {
+          "bytes": 3179110,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:19Z",
+          "sha256": "5349bcc4dec5c47c602f8d2ab16ac2ea3c1ea6247ff305928f1c358213aaaa15",
+          "url": "https://www.lansstyrelsen.se/download/18.217dece018e5a4c5ced7cd05/1712847419504/01FS%202024-13.pdf"
+        }
+      ],
+      "number": "01FS 2024:13",
+      "published": "2024-04-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-04-29-01fs-202414.html",
+      "files": [
+        {
+          "bytes": 523263,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:21Z",
+          "sha256": "c81bb3285357c65cb1bafdb865751580a50cc6670da52dca83383fc8b858721e",
+          "url": "https://www.lansstyrelsen.se/download/18.1b24206318f0f893d431b34c/1714396852107/01FS%202024-14.pdf"
+        }
+      ],
+      "number": "01FS 2024:14",
+      "published": "2024-05-03"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-05-14-01fs-202415.html",
+      "files": [
+        {
+          "bytes": 468597,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:23Z",
+          "sha256": "318d3ab11cca9fc227731c07fbbf659669c78cf9c845570502a74408fa4ceac9",
+          "url": "https://www.lansstyrelsen.se/download/18.535d931118f5376b5ee25f6b/1715686352457/01FS%202024-15.pdf"
+        }
+      ],
+      "number": "01FS 2024:15",
+      "published": "2024-05-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-05-14-01fs-202416.html",
+      "files": [
+        {
+          "bytes": 343783,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:25Z",
+          "sha256": "ca63041250cf3a8cef27208ac7875b286d25f5e4987a3b1768124857fe846b2b",
+          "url": "https://www.lansstyrelsen.se/download/18.535d931118f5376b5ee2600d/1715686965716/01FS%202024-16.pdf"
+        }
+      ],
+      "number": "01FS 2024:16",
+      "published": "2024-05-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-05-14-01fs-202417.html",
+      "files": [
+        {
+          "bytes": 219476,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:27Z",
+          "sha256": "e8bbf32425f7f2a469a0e6e7c34fc55503e7fca9de0b563bae850571fbba901d",
+          "url": "https://www.lansstyrelsen.se/download/18.535d931118f5376b5ee260da/1715687382307/01FS%202024-17.pdf"
+        }
+      ],
+      "number": "01FS 2024:17",
+      "published": "2024-05-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-05-17-01fs-202418.html",
+      "files": [
+        {
+          "bytes": 141028,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:29Z",
+          "sha256": "4bf88fdd757609194c3e908e19c49e61fb81b193b2381fe04d0337c95b9c7aae",
+          "url": "https://www.lansstyrelsen.se/download/18.535d931118f5376b5ee390cd/1715955429122/01FS%202024-18.pdf"
+        }
+      ],
+      "number": "01FS 2024:18",
+      "published": "2024-05-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-05-24-01fs-202419.html",
+      "files": [
+        {
+          "bytes": 319717,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:31Z",
+          "sha256": "76a6706abe32b5f7da398ed1e3022cce74f750a96bdf59990053bb2c6b991a19",
+          "url": "https://www.lansstyrelsen.se/download/18.74c322ef18f9ee08a297fbb/1716537657610/01FS%202024-19.pdf"
+        }
+      ],
+      "number": "01FS 2024:19",
+      "published": "2024-05-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-06-03-01fs-202420.html",
+      "files": [],
+      "number": "01FS 2024:20",
+      "published": "2024-06-05"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-07-17-01fs-202421.html",
+      "files": [
+        {
+          "bytes": 90971,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:34Z",
+          "sha256": "76871d22b330445bb8797df0cbdef34eb6572950cf1a1a93ab42a3d9dd20869c",
+          "url": "https://www.lansstyrelsen.se/download/18.4dc71cd190a2dcf8e71bda8/1721200375903/01FS%202024-21.pdf"
+        }
+      ],
+      "number": "01FS 2024:21",
+      "published": "2024-07-19"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-07-17-01fs-202422.html",
+      "files": [
+        {
+          "bytes": 93280,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:36Z",
+          "sha256": "8dfd77aa52eb75d3dadf6d1900c18a95e6098ae9d40a9172c090b184f4831fcd",
+          "url": "https://www.lansstyrelsen.se/download/18.4dc71cd190a2dcf8e71be37/1721200940103/01FS%202024-22.pdf"
+        }
+      ],
+      "number": "01FS 2024:22",
+      "published": "2024-07-19"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-07-17-01fs-202423.html",
+      "files": [
+        {
+          "bytes": 114744,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:38Z",
+          "sha256": "1c47c234e031834b7a3a7e0ecc5dd8435c86df4c11326d10e1f8c49345efc15a",
+          "url": "https://www.lansstyrelsen.se/download/18.4dc71cd190a2dcf8e71bebf/1721201529819/01FS%202024-23.pdf"
+        }
+      ],
+      "number": "01FS 2024:23",
+      "published": "2024-07-19"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-07-17-01fs-202424.html",
+      "files": [
+        {
+          "bytes": 89240,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:40Z",
+          "sha256": "046a15f0e9bd553bed3b3efc4f00b46c8d280bd0acf9bd115ad837fad28fe5bd",
+          "url": "https://www.lansstyrelsen.se/download/18.4dc71cd190a2dcf8e71c04b/1721202563222/01FS%202024-24.pdf"
+        }
+      ],
+      "number": "01FS 2024:24",
+      "published": "2024-07-19"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-07-19-01fs-202425.html",
+      "files": [
+        {
+          "bytes": 90224,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:42Z",
+          "sha256": "74bfce6e7f1b37616631b00f06b4a4464692a2890c6a5ab60ae9ac08b0d4e5c9",
+          "url": "https://www.lansstyrelsen.se/download/18.3e20a976190a2eac0102bac9/1721390211140/01FS%202024-25.pdf"
+        }
+      ],
+      "number": "01FS 2024:25",
+      "published": "2024-07-24"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-08-07-01fs-202426.html",
+      "files": [
+        {
+          "bytes": 91920,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:44Z",
+          "sha256": "eacfc0519d211acf8957d0654d01209db32a3cb94469f88dfa114b26ae558a02",
+          "url": "https://www.lansstyrelsen.se/download/18.3e20a976190a2eac010a1699/1723037680893/01FS%202024-26.pdf"
+        }
+      ],
+      "number": "01FS 2024:26",
+      "published": "2024-08-14"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-08-21-01fs-202427.html",
+      "files": [
+        {
+          "bytes": 156925,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:46Z",
+          "sha256": "aa916de63ee230af15d150896073e2daf4cbb4b9e31d40066c01512b382e05dd",
+          "url": "https://www.lansstyrelsen.se/download/18.31fff77519173266095396/1724226280646/01FS%202024-27.pdf"
+        }
+      ],
+      "number": "01FS 2024:27",
+      "published": "2024-08-23"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-08-21-01fs-202428.html",
+      "files": [
+        {
+          "bytes": 154818,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:48Z",
+          "sha256": "a59e8739c015b645589b6208940954ae61c1474c043dc6c1f0577663f5648326",
+          "url": "https://www.lansstyrelsen.se/download/18.31fff77519173266095689/1724231907478/01FS%202024-28.pdf"
+        }
+      ],
+      "number": "01FS 2024:28",
+      "published": "2024-08-23"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-08-22-01fs-202429.html",
+      "files": [
+        {
+          "bytes": 562893,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:50Z",
+          "sha256": "852ac495251bb8822b7d7f063fa7170044516bd9ecbc6cd7f06d3a6607da0125",
+          "url": "https://www.lansstyrelsen.se/download/18.fab3911191733320c76ae6/1724336280127/01FS%202024-29.pdf"
+        }
+      ],
+      "number": "01FS 2024:29",
+      "published": "2024-08-28"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-08-30-01fs-202430.html",
+      "files": [
+        {
+          "bytes": 92331,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:52Z",
+          "sha256": "3cfb9d7705040a044bcf27c7b0028724c87698417b22d4e9d6273d1c274414f1",
+          "url": "https://www.lansstyrelsen.se/download/18.1ef918eb19197433b3da4b2/1725001461005/01FS%202024-30.pdf"
+        },
+        {
+          "bytes": 697335,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:54Z",
+          "sha256": "8d73a36f9e4e400566edab80d1048aa47c2cc27fc1d4b5ef55fc605093fb25b5",
+          "url": "https://www.lansstyrelsen.se/download/18.1ef918eb19197433b3dabb7/1725007446462/01FS%202024-30_Kartbilagor.pdf"
+        }
+      ],
+      "number": "01FS 2024:30",
+      "published": "2024-08-30"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-08-30-01fs-202431.html",
+      "files": [
+        {
+          "bytes": 93215,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:55Z",
+          "sha256": "a14f4c2dfde1f53ce9b3ea7ed8f3efd8c044538691ab05c732d05431656e1c80",
+          "url": "https://www.lansstyrelsen.se/download/18.1ef918eb19197433b3da525/1725001864062/01FS%202024-31.pdf"
+        }
+      ],
+      "number": "01FS 2024:31",
+      "published": "2024-08-30"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-09-25-01fs-202432.html",
+      "files": [
+        {
+          "bytes": 95140,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:57Z",
+          "sha256": "c73b290cf421ffba440ac941b6be9cf06da6c4f8c77be0ddfd9e5a00a08d4906",
+          "url": "https://www.lansstyrelsen.se/download/18.73ce22a4191dfb551a350c1d/1727268057985/01FS%202024-32.pdf"
+        }
+      ],
+      "number": "01FS 2024:32",
+      "published": "2024-10-02"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-10-04-01fs-202433.html",
+      "files": [
+        {
+          "bytes": 133241,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:02:59Z",
+          "sha256": "57d81fd235324edd2e2b37957660f7ec90e9a2ca5c33228cf2d0d1506f62934c",
+          "url": "https://www.lansstyrelsen.se/download/18.2be62c911924c707a6286f0/1728034806292/01FS%202024-33.pdf"
+        }
+      ],
+      "number": "01FS 2024:33",
+      "published": "2024-10-09"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-10-09-01fs-202434.html",
+      "files": [
+        {
+          "bytes": 92561,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:03:01Z",
+          "sha256": "dd12df6cebe9a5a6a8e01e17ba67d12217c95a539738a3b34be8e341eb781ee2",
+          "url": "https://www.lansstyrelsen.se/download/18.5bb363a1927054e694762/1728472788752/01FS%202024-34.pdf"
+        }
+      ],
+      "number": "01FS 2024:34",
+      "published": "2024-10-11"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-10-09-01fs-202435.html",
+      "files": [
+        {
+          "bytes": 92349,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:03:03Z",
+          "sha256": "0deb9dd638a423458849e61b26426f324141bac42a481fe6430b32c7e4cf5ba1",
+          "url": "https://www.lansstyrelsen.se/download/18.5bb363a1927054e6947dc/1728473176932/01FS%202024-35.pdf"
+        }
+      ],
+      "number": "01FS 2024:35",
+      "published": "2024-10-11"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-10-24-01fs-202436.html",
+      "files": [
+        {
+          "bytes": 347942,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:03:05Z",
+          "sha256": "e68a6cc0a79c3cc4b282521881d6e3affb5348ca16630507a62e23123d350a80",
+          "url": "https://www.lansstyrelsen.se/download/18.78cbbdaa192b79e32086a75/1729767453372/01FS%202024-36.pdf"
+        }
+      ],
+      "number": "01FS 2024:36",
+      "published": "2024-10-25"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-10-31-01fs-202437.html",
+      "files": [
+        {
+          "bytes": 94892,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:03:07Z",
+          "sha256": "3783bfd9dc9387c53b4008ecce52624c43801bdceba03d5c1c352e90762e154c",
+          "url": "https://www.lansstyrelsen.se/download/18.418f4381192b7936dd32f6d7/1730361539460/01FS%202024-37.pdf"
+        }
+      ],
+      "number": "01FS 2024:37",
+      "published": "2024-11-01"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-11-11-01fs-202438.html",
+      "files": [
+        {
+          "bytes": 303342,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:03:09Z",
+          "sha256": "b8150bd5a1434d0356ce03e12118a5d4d67aaf12b4f13e6ce222cb600d09663e",
+          "url": "https://www.lansstyrelsen.se/download/18.72519181192b7a9257f748b8/1731330701416/01FS%202024-38.pdf"
+        }
+      ],
+      "number": "01FS 2024:38",
+      "published": "2024-11-15"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-11-12-01fs-202439.html",
+      "files": [
+        {
+          "bytes": 94308,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:03:11Z",
+          "sha256": "0edc9be23c3523772c715f5df1649200aa9fd053951160004b8a44b9fffe5408",
+          "url": "https://www.lansstyrelsen.se/download/18.214f175d192b7b439f1796ff/1731420136802/01FS%202024-39.pdf"
+        }
+      ],
+      "number": "01FS 2024:39",
+      "published": "2024-11-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-11-27-01fs-202440.html",
+      "files": [
+        {
+          "bytes": 104860,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:03:13Z",
+          "sha256": "a114427c38625fca3553728a61964f0726d108732af0ced3f9d485fd986df1ba",
+          "url": "https://www.lansstyrelsen.se/download/18.2401504e19367f3eb644aa7/1732726251480/W-00401129.pdf"
+        }
+      ],
+      "number": "01FS 2024:40",
+      "published": "2024-11-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-11-27-01fs-202441.html",
+      "files": [
+        {
+          "bytes": 113830,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:03:15Z",
+          "sha256": "fedd351a4a71f233604162f6c8bf482b31ad80f1abd055cd21e6e1c9fe51699f",
+          "url": "https://www.lansstyrelsen.se/download/18.2401504e19367f3eb644b77/1732726985955/W-00411129.pdf"
+        }
+      ],
+      "number": "01FS 2024:41",
+      "published": "2024-11-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2024/forfattningssamling-2024/2024-11-27-01fs-202442.html",
+      "files": [
+        {
+          "bytes": 96563,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:03:17Z",
+          "sha256": "181850a0ea18cb5b9375e71a26768538c5efc8d69506bb46aa9a6fb037a95e2c",
+          "url": "https://www.lansstyrelsen.se/download/18.2401504e19367f3eb644bdb/1732727317223/W-00421129.pdf"
+        }
+      ],
+      "number": "01FS 2024:42",
+      "published": "2024-11-29"
+    },
+    {
       "detail_url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling/forfattningar-2025/forfattningar-2025/2025-01-15-01fs-202501.html",
       "files": [
         {
