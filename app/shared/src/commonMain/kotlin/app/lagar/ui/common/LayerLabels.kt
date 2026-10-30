@@ -53,8 +53,8 @@ import app.lagar.resources.type_case_notice
 import app.lagar.resources.type_case_report
 import app.lagar.resources.type_county_regulation
 import app.lagar.resources.type_eu_decision
-import app.lagar.resources.type_eu_judgment
 import app.lagar.resources.type_eu_directive
+import app.lagar.resources.type_eu_judgment
 import app.lagar.resources.type_eu_regulation
 import app.lagar.resources.type_fundamental_law
 import app.lagar.resources.type_municipal_regulation
