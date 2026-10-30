@@ -209,6 +209,7 @@ Route: `Hierarki`. Code: `ui/hierarki/`. References: Stitch `lagar_normhierarki_
 | Authority badge (Överordnad, Riksdag, Regering, Verk, Prejudikat, Unionsakt, Regional, Kommunal, Service) and real examples on each layer row | Done | #34 |
 | Browse SFS acts and ordinances by ministry: "By ministry" pill on their rows, from the API's per-ministry index | Done | #34 |
 | Browse agency, case law and other layers by issuer or court | Blocked: no data in those layers, and no per-issuer index yet | #38 |
+| List-detail from 840dp of content width: the layer list keeps 360dp and the selected layer's documents (first layer with documents by default) open in a pane beside it, without a back button; the selected row has a solid accent outline | Done | #35 |
 
 ### By ministry
 
