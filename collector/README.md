@@ -116,8 +116,10 @@ poppler-utils`, `brew install poppler`); the collector and sync workflows instal
   less than half of the visible characters are letters or digits (fonts without a Unicode map),
   `gap` is `"text layer is not readable ..."`. Callers record the gap and keep the PDF link and
   SHA-256; they never guess or OCR the text.
-- `paragraphs(text)` reflows the text into paragraphs: lines joined, line-break hyphens removed
-  (not before "och", "eller" and similar), lines holding only a page number dropped.
+- `paragraphs(text)` reflows the text into paragraphs: a new one starts after a blank line, before
+  `N §`, `N kap.`, `1.` or `a)`, and after a short line followed by a capital or digit; other lines
+  are joined, line-break hyphens removed (not before "och", "eller" and similar), lines holding
+  only a page number or a rule dropped.
 - A missing tool, a timeout or a file `pdftotext` cannot open raises `pdftext.PdfTextError`.
 - Tests that run the tool skip when it is not installed, unless `LAGAR_REQUIRE_PDFTOTEXT=1`
   (set in CI).
