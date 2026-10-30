@@ -82,8 +82,9 @@ def _start(lines):
 
 
 def _is_title_line(line):
-    """A line naming the kind of regulation; not the series name or an upper-case masthead line."""
-    return bool(_TITLE.search(line)) and "författningssamling" not in line.lower() and not line.isupper()
+    """A capitalised line naming the kind of regulation; not the series name or an upper-case masthead line."""
+    return (bool(_TITLE.search(line)) and line[:1].isupper() and "författningssamling" not in line.lower()
+            and not line.isupper())
 
 
 def _first_title(lines):

@@ -12,6 +12,7 @@ Exit status: 0 within budget (a warning is printed above --warn-mb), 1 above
 """
 
 import argparse
+import gzip
 import json
 import os
 import re
@@ -37,15 +38,17 @@ def _files(root):
 
 
 def doc_layer(path):
-    """The `meta.layer` of an API document file, or None when it has none."""
-    with open(path, "rb") as f:
-        head = f.read(_HEAD_BYTES).decode("utf-8", "ignore")
-    m = _LAYER_RE.search(head)
-    if m:
-        return m.group(1)
+    """The `meta.layer` of an API document file (`.json` or `.json.gz`), or None when it has none."""
+    opener = gzip.open if path.suffix == ".gz" else open
     try:
-        return json.loads(path.read_text(encoding="utf-8"))["meta"]["layer"]
-    except (ValueError, KeyError, TypeError):
+        with opener(path, "rb") as f:
+            head = f.read(_HEAD_BYTES).decode("utf-8", "ignore")
+        m = _LAYER_RE.search(head)
+        if m:
+            return m.group(1)
+        with opener(path, "rb") as f:
+            return json.loads(f.read().decode("utf-8"))["meta"]["layer"]
+    except (OSError, EOFError, ValueError, KeyError, TypeError):
         return None
 
 

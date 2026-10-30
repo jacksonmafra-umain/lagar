@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://eslov.se/kommun-politik/kommunfakta/regler-och-styrande-dokument/foreskrifter-och-allmanna-bestammelser/": "1285-listing.html",
+    "https://eslov.se/kommun-politik/kommunfakta/regler-och-styrande-dokument/taxor-och-avgifter/": "1285-listing-2.html"
+  },
+  "count": 32,
+  "sample": {
+    "number": "avfallsforeskrifter-for-eslovs-kommun-1",
+    "title": "Avfallsföreskrifter för Eslövs kommun",
+    "url": "https://eslov.se/wp-content/uploads/avfallsforeskrifter-for-eslovs-kommun-1.pdf"
+  },
+  "excluded": [
+    "Avfallsplan för Eslövs kommun",
+    "Brandsynefrister"
+  ]
+}

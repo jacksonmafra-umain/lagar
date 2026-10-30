@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.hoganas.se/kommun--ledning/politik-och-demokrati/regler-policydokument-och-forfattningssamling/kommunal-forfattningssamling.html": "1284-listing.html"
+  },
+  "count": 40,
+  "sample": {
+    "number": "18.3d4a511a188bd9ee1364e16",
+    "title": "Ordningsföreskrifter för torghandel och street food KFS 2023:06",
+    "url": "https://www.hoganas.se/download/18.3d4a511a188bd9ee1364e16/1687336210088/Ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandel%20och%20street%20food%20KFS%202023:06.pdf"
+  },
+  "excluded": [
+    "Bolagsordning för AB Höganäshem KFS 2014:11",
+    "Bolagsordning för Höganäs Energi AB KFS 2022:19",
+    "Bolagsordning för Höganäs Energi Handel AB KFS 2022:20"
+  ]
+}
