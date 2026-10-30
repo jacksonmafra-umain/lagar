@@ -10864,6 +10864,51 @@
       "url": "https://www.morbylanga.se/wp-content/uploads/2023/05/vattenskyddsomrade-med-foreskrifter-for-gardby-1.pdf"
     },
     {
+      "bytes": 336955,
+      "content_type": "application/pdf",
+      "id": "0860-abva-hultsfred",
+      "municipality_code": "0860",
+      "retrieved_at": "2026-10-30T15:22:53Z",
+      "sha256": "2ef480d12b656688432b209fa3d60ff536a0d2743102a96ae61bc871887b33ef",
+      "url": "https://www.hultsfred.se/files/2024/12/ABVA-Hultsfred-2021-06-21.pdf"
+    },
+    {
+      "bytes": 250761,
+      "content_type": "application/pdf",
+      "id": "0860-avgifter-for-kopiering-vid-utlamnande-av-allman-handling",
+      "municipality_code": "0860",
+      "retrieved_at": "2026-10-30T15:22:55Z",
+      "sha256": "ad48ab0cecfcbe79b1d075feb471cf64ca4a780ce1c37e7295f7511b419c977f",
+      "url": "https://www.hultsfred.se/files/2017/06/Avgifter-for-kopior-vid-utlamnande-av-allman-handling.pdf"
+    },
+    {
+      "bytes": 970981,
+      "content_type": "application/pdf",
+      "id": "0860-lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon",
+      "municipality_code": "0860",
+      "retrieved_at": "2026-10-30T15:22:57Z",
+      "sha256": "00cc9e7e5e9fdcc149eb8c65940b61d36b214faf5f3ac39a0ee1c2871447cfdc",
+      "url": "https://www.hultsfred.se/files/2023/05/Lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon-KF-%C2%A7-86_2016.pdf"
+    },
+    {
+      "bytes": 152736,
+      "content_type": "application/pdf",
+      "id": "0860-lokala-ordningsforeskrifter",
+      "municipality_code": "0860",
+      "retrieved_at": "2026-10-30T15:23:00Z",
+      "sha256": "3adb3b7b724febcaa4c66c4cc0be1c76f678f1a31f12f2b9ff8de157c83c9785",
+      "url": "https://www.hultsfred.se/files/2025/04/Lokala_-ordningsforeskrifter_Hultsfreds_kommun_20250519.pdf"
+    },
+    {
+      "bytes": 120134,
+      "content_type": "application/pdf",
+      "id": "0860-nyttjande-av-allman-platsmark-inklusive-torghandel-hultsfreds-kommun",
+      "municipality_code": "0860",
+      "retrieved_at": "2026-10-30T15:23:02Z",
+      "sha256": "5a26cb7777a2c8076b1eca4015ad9cc3c141c68f5ff6b4ffd80c6df6fa332692",
+      "url": "https://www.hultsfred.se/files/2024/12/Foreskrifter-nyttjande-allman-platsmark.pdf"
+    },
+    {
       "bytes": 625790,
       "content_type": "application/pdf",
       "id": "0862-18-111d400a1977e8b5ced4cd1",
@@ -11519,6 +11564,321 @@
       "retrieved_at": "2026-10-30T14:00:00Z",
       "sha256": "a973a695eb281b92331977fa5f3d594054ae0277c6c992bb08595e5c48d9335c",
       "url": "https://nybro.se/wp-content/uploads/2024/12/VA-taxa-for-Nybro-kommuns-allmanna-vatten-och-avloppsanlaggning-2025-1.pdf"
+    },
+    {
+      "bytes": 135,
+      "content_type": "text/markdown",
+      "id": "0882-avgift-for-forlorat-skolkort-for-bussresor",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:25:22Z",
+      "sha256": "7d7a0d269457ab234f472f9926206aa190a69b512e3c1096b27edb8f041cf3ba",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgift-for-forlorat-skolkort-for-bussresor/"
+    },
+    {
+      "bytes": 301,
+      "content_type": "text/markdown",
+      "id": "0882-avgift-for-kopiering-utskrift-scanning-for-privat-bruk",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:06Z",
+      "sha256": "ca64bc5f7c5c39511cd481c775146231c36bf25e89add5b6a97ea7c3a48a76d4",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgift-for-kopiering-utskrift-scanning-for-privat-bruk/"
+    },
+    {
+      "bytes": 646,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-bibliotek",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:31Z",
+      "sha256": "74991450c7d58a0d2a98020c9da41d11ea026c664f3cf62c989d1e706d25c2c5",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-bibliotek/"
+    },
+    {
+      "bytes": 1008,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-doderhultarmuseet-och-sjofartsmuseet",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:32Z",
+      "sha256": "6162b248b7e769ac9fbddcad20a9407f65f83f62be22d78e66c0bd6a6d82470a",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-doderhultarmuseet-och-sjofartsmuseet/"
+    },
+    {
+      "bytes": 790,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-ekonomi",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:07Z",
+      "sha256": "d2906da73cae0c93926c8253c6805b8090a87fe139ad92371b77131f1b60faa1",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-ekonomi/"
+    },
+    {
+      "bytes": 368,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-for-gravtillstand-och-trafikanordningsplaner",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:18Z",
+      "sha256": "a86cc636d8f4ba7e671efe15c04fb7f7541ba484d1720cd4f5f63078d5905d23",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-for-gravtillstand-och-trafikanordningsplaner/"
+    },
+    {
+      "bytes": 128,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-for-hyra-av-utrustning",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:25:23Z",
+      "sha256": "f3f92f61d9d97488a4725e55ad2cdb998c0874eea67b58154b8190ad4bae5d57",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-for-hyra-av-utrustning/"
+    },
+    {
+      "bytes": 2400,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-forskola-fritidshem-och-pedagogisk-omsorg",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:29Z",
+      "sha256": "725ec80307ebe121b2070f7f9a233393b526303cef78e7f2260633c44a7c526a",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-forskola-fritidshem-och-pedagogisk-omsorg/"
+    },
+    {
+      "bytes": 332,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-fredriksbergs-herrgard",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:33Z",
+      "sha256": "1eab453ec58597279a40405e4c4508618505cdca610fcd811d2201f002f0e63a",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-fredriksbergs-herrgard/"
+    },
+    {
+      "bytes": 151,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-grundskola-gymnasieskola-komvux-och-sfi",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:25:21Z",
+      "sha256": "87bdfc568762ccb034efbdd581a4dcdea6aa7e5aff1ed96957b7f1d924dbc94d",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-grundskola-gymnasieskola-komvux-och-sfi/"
+    },
+    {
+      "bytes": 1385,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-kultur-allmant",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:34Z",
+      "sha256": "633e57467200cb0c717efbbd662021348e8a32117c8eaacc4bdfd30a72808235",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-kultur-allmant/"
+    },
+    {
+      "bytes": 287,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-kulturskolan-oskarshamn",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:35Z",
+      "sha256": "e0b3de06018763f5b149ac5b1ad4907e41086068a943d7b1a5243c54cfef720c",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-kulturskolan-oskarshamn/"
+    },
+    {
+      "bytes": 646,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-nova-utbildning-fu-och-affarsutveckling",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:05Z",
+      "sha256": "ab1de08bb64551b4c9b2c7e6f7133b8ce1b0a039d96316f16fde7c5d5cfbedab",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-nova--utbildning-fu-och-affarsutveckling/"
+    },
+    {
+      "bytes": 1738,
+      "content_type": "text/markdown",
+      "id": "0882-avgifter-simhallen",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:30Z",
+      "sha256": "c2c701dce82129fb851879ac301bfd4de911ad4fd178ca0f06dc5016002b6ab1",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-simhallen/"
+    },
+    {
+      "bytes": 8802,
+      "content_type": "text/markdown",
+      "id": "0882-lokala-ordningsforeskrifter",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:44Z",
+      "sha256": "d907bf4e8edce72bfd133f5ce8912125b5e6f3395cb2a009542cc7c8b755af03",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/lokala-ordningsforeskrifter/"
+    },
+    {
+      "bytes": 5583,
+      "content_type": "text/markdown",
+      "id": "0882-normer-for-uttagande-av-avgifter-for-gatu-och-torgplatser",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:09Z",
+      "sha256": "3926c464f0dda743cc7e023cc570fbe36337956629741216557c6882e66ea038",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/normer-for-uttagande-av-avgifter-for-gatu--och-torgplatser/"
+    },
+    {
+      "bytes": 1671,
+      "content_type": "text/markdown",
+      "id": "0882-parkeringsavgifter",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:17Z",
+      "sha256": "ba582709b334286da4e072d3bce4d0a4fc15d253a86bb0456814a4726b8efa24",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/parkeringsavgifter/"
+    },
+    {
+      "bytes": 3076,
+      "content_type": "text/markdown",
+      "id": "0882-regler-och-avgifter-for-tomtko",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:11Z",
+      "sha256": "6ad3255aeec2228933c4b00d50ab1b83f8d48719b73b4f6347534551fdef6131",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/regler-och-avgifter-for-tomtko/"
+    },
+    {
+      "bytes": 2591,
+      "content_type": "text/markdown",
+      "id": "0882-taxa-for-anmalan-och-tillsyn-av-verksamhet-enligt-stralskyddslagen",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:25Z",
+      "sha256": "e4819d33c200e7fa33fab882dfffdbcc50817f1430c8d2999f10bd313cb1aefd",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxa-for-anmalan-och-tillsyn-av-verksamhet-enligt-stralskyddslagen/"
+    },
+    {
+      "bytes": 9127,
+      "content_type": "text/markdown",
+      "id": "0882-taxa-for-offentlig-kontroll-av-livsmedel",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:20Z",
+      "sha256": "3816063411ab3e726a5541400c00c5b4ed3440473c751e41de1c0fe8598dd0c0",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxa-for-offentlig-kontroll-av-livsmedel/"
+    },
+    {
+      "bytes": 27776,
+      "content_type": "text/markdown",
+      "id": "0882-taxa-for-plan-och-bygglovsverksamhet-samt-geografisk-information",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:19Z",
+      "sha256": "bd0e05918548da5df006635788d1c2f6e36ede05a7a3732700feb916c3fb1317",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxa-for-plan--och-bygglovsverksamhet-samt-geografisk-information/"
+    },
+    {
+      "bytes": 16943,
+      "content_type": "text/markdown",
+      "id": "0882-taxa-for-provning-och-tillsyn-inom-miljobalkens-omrade",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:23Z",
+      "sha256": "376592937dd0945c588ab2a63522a0b4adf9f3c75b1b7f711596f583c917e3e5",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxa-for-provning-och-tillsyn-inom-miljobalkens-omrade/"
+    },
+    {
+      "bytes": 5168,
+      "content_type": "text/markdown",
+      "id": "0882-taxa-for-samhallsbyggnadsnamndens-uppdragsverksamhet",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:28Z",
+      "sha256": "70aa621b94b832e9d41cc58835f311c36f614125c42c7f63dd723c8e00c333f6",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxa-for-samhallsbyggnadsnamndens-uppdragsverksamhet/"
+    },
+    {
+      "bytes": 3196,
+      "content_type": "text/markdown",
+      "id": "0882-taxa-for-tillsyn-av-verksamhet-enligt-lagen-om-sprangamnesprekursorer",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:26Z",
+      "sha256": "2f5328e25c1ceeb5eb954084bf5d24a743cf9de260ddca306cbc3fe73b84360b",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxa-for-tillsyn-av-verksamhet-enligt-lagen-om-sprangamnesprekursorer/"
+    },
+    {
+      "bytes": 2444,
+      "content_type": "text/markdown",
+      "id": "0882-taxa-for-tillsyn-enligt-lagen-om-internationella-hot-mot-manniskors-halsa",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:24Z",
+      "sha256": "ce8f100a76decdac64cd1abb42d91393db08af96bae810f49938b2c2c730c8b2",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxa-for-tillsyn-enligt-lagen-om-internationella-hot-mot-manniskors-halsa/"
+    },
+    {
+      "bytes": 4744,
+      "content_type": "text/markdown",
+      "id": "0882-taxa-for-tobak-receptfria-lakemedel-och-folkol",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:21Z",
+      "sha256": "733e71ad3145c18faa668b27e59f1c39cf86c73bde22ac90b9111ad62fec5f64",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxa-for-tobak-receptfria-lakemedel-och-folkol/"
+    },
+    {
+      "bytes": 270,
+      "content_type": "text/markdown",
+      "id": "0882-taxa-for-transporttillstand-och-transportdispenser",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:18Z",
+      "sha256": "d582e3df8abc0aa04610d091ac9aa7dcc9ab477c10a105f30e55cefaf06a4656",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxa-for-transporttillstand-och-transportdispenser/"
+    },
+    {
+      "bytes": 2857,
+      "content_type": "text/markdown",
+      "id": "0882-taxa-for-viss-tillsyn-enligt-lagen-om-atgarder-mot-fororening-fran-fartyg",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:27Z",
+      "sha256": "cd458bfa3c32fe780510ac37cb75fafa975011fd7c7c97933627e7f63d8a41e9",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxa-for-viss-tillsyn-enligt-lagen-om-atgarder-mot-fororening-fran-fartyg/"
+    },
+    {
+      "bytes": 772,
+      "content_type": "text/markdown",
+      "id": "0882-taxor-for-maltider-inom-omsorgerna-med-flera",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:10Z",
+      "sha256": "157d589d4d0ab1406c4df6f4e15daf6f030137f4ff1eeb7855120f0cf833f4ab",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxor-for-maltider-inom-omsorgerna-med-flera/"
+    },
+    {
+      "bytes": 6711,
+      "content_type": "text/markdown",
+      "id": "0882-taxor-och-avgifter-for-serveringstillstand-och-tillsyn",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:22Z",
+      "sha256": "35b74bffed9eefbb01f10f0b431b83a20fae9ca97bab9a9b006ec6f6776a0853",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxor-och-avgifter-for-serveringstillstand-och-tillsyn/"
+    },
+    {
+      "bytes": 3569,
+      "content_type": "text/markdown",
+      "id": "0882-taxor-och-avgifter-inom-aldreomsorgen",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:43Z",
+      "sha256": "1a0286df8aeb3f790fbf2f7adc57cc65c5a9b5c3c6f604f9e1b07a7ccbfd0346",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxor-och-avgifter-inom-aldreomsorgen/"
+    },
+    {
+      "bytes": 496,
+      "content_type": "text/markdown",
+      "id": "0882-taxor-och-avgifter-inom-individ-och-familjeomsorgen",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:40Z",
+      "sha256": "98a3664b86d164984812a325464c53ceb33eb31179a4750b443e2ce02fc75280",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxor-och-avgifter-inom-individ--och-familjeomsorgen/"
+    },
+    {
+      "bytes": 4870,
+      "content_type": "text/markdown",
+      "id": "0882-taxor-och-avgifter-inom-kommunal-halso-och-sjukvard",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:39Z",
+      "sha256": "232352d2fdd7b359107c80e056ca6770d7743aff5dd76ee0edccf392d4118666",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxor-och-avgifter-inom-kommunal-halso--och-sjukvard/"
+    },
+    {
+      "bytes": 4279,
+      "content_type": "text/markdown",
+      "id": "0882-taxor-och-avgifter-inom-omsorg-for-personer-med-funktionsnedsattning",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:41Z",
+      "sha256": "28da07380e6028a7be5449d2e57d9f5cbcf4fcd8f86091f1bd0a5806a0a26337",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/taxor-och-avgifter-inom-omsorg-for-personer-med-funktionsnedsattning/"
+    },
+    {
+      "bytes": 23953,
+      "content_type": "text/markdown",
+      "id": "0882-va-taxa",
+      "municipality_code": "0882",
+      "retrieved_at": "2026-10-30T15:23:08Z",
+      "sha256": "ea4e5becb2395cdf9b2baf9c526eb938ad28b9cf1248ae18ef8e1e6dfe717218",
+      "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/va-taxa/"
     },
     {
       "bytes": 219178,
