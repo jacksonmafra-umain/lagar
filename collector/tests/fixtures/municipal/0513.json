@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.kinda.se/kommunochpolitik/kvalitetochutveckling/styrdokument/forfattningssamling.4.6e3f21d91563590162e8ece1.html": "0513-listing.html"
+  },
+  "count": 14,
+  "sample": {
+    "number": "18.3634973316e64f8343da2b11",
+    "title": "Lokala ordningsföreskrifter 2019",
+    "url": "https://www.kinda.se/download/18.3634973316e64f8343da2b11/1574168885123/Lokala%20ordningsf%C3%B6reskrifter%202019.pdf"
+  },
+  "excluded": [
+    "Avfallsplan 2022-2025 Kinda kommun med bilagor",
+    "Policy för skötsel av tätortsnära skog",
+    "Fordonspolicy"
+  ]
+}

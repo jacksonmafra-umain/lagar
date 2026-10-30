@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.karlshamn.se/kommun-och-politik/kommunfakta/forfattningssamling/lokala-forordningar/": "1082-listing.html",
+    "https://www.karlshamn.se/kommun-och-politik/kommunfakta/forfattningssamling/avgifter-och-taxor/": "1082-listing-2.html"
+  },
+  "count": 60,
+  "sample": {
+    "number": "4.1",
+    "title": "Lokala ordningsföreskrifter",
+    "url": "https://www.karlshamn.se/wp-content/uploads/4.1-Lokala-ordningsforeskrifter-2022-11-07.pdf"
+  },
+  "excluded": [
+    "Avfallsplan för Karlshamns kommun",
+    "Riktlinjer för avgifter inom förvaltningen för omsorg och arbetsmarknad",
+    "Riktlinjer för samhällsinformerande verksamhet i samband med val"
+  ]
+}

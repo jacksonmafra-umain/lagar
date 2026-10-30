@@ -88,6 +88,70 @@ class PdfListTest(unittest.TestCase):
         self.assertEqual((regulation.number, regulation.title, regulation.pdfs), (entry.number, entry.title, entry.pdfs))
 
 
+class SectionedListTest(unittest.TestCase):
+    def test_table_rows_with_consolidated_column(self):
+        bfnar = agency.ADAPTERS["BFNAR"]
+        listing = """<table><tr><td>Allmänna råd</td><td>Grundtext</td><th>Konsoliderad version</th></tr>
+          <tr><td>BFNAR 2026:2</td><td><a href="/u/bfnar-2026-2.pdf">Ändringar i Bokföringsnämndens allmänna råd
+            (BFNAR 2006:11) om gränsvärden</a></td><th></th></tr>
+          <tr><td>BFNAR 2006:11</td><td><a href="/u/bfnar06-11-grund.pdf">Gränsvärden</a></td>
+            <th><a href="/u/bfnar06-11-kons3.pdf">konsoliderad version</a></th></tr></table>"""
+        entries = bfnar.parse_listing(listing, bfnar.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("BFNAR 2026:2", False), ("BFNAR 2006:11", True)])
+        base = entries[1]
+        self.assertEqual((base.title, base.amended_by), ("Gränsvärden", ["BFNAR 2026:2"]))
+        self.assertEqual(base.url, "https://www.bfn.se/u/bfnar06-11-grund.pdf")
+        self.assertEqual([label for label, _ in base.pdfs], ["BFNAR 2006:11", "BFNAR 2006:11 (konsoliderad version)"])
+
+    def test_items_under_consolidated_and_printed_headings(self):
+        csnfs = agency.ADAPTERS["CSNFS"]
+        listing = """<main><h3>Studiehjälp</h3>
+          <h3><a href="#">Fulltext - studiehjälp</a></h3>
+          <ul><li><a href="/download/1/2001-6-2023-4.pdf">2001:6 Centrala studiestödsnämndens föreskrifter och
+            allmänna råd om studiehjälp Pdf, 417 kB.</a> · 417 kB</li></ul>
+          <h3><a href="#">Tryckt version - studiehjälp</a></h3>
+          <ul><li><a href="/download/2/2001:6%20CSN.pdf">2001:6 Centrala studiestödsnämndens föreskrifter och
+            allmänna råd om studiehjälp Pdf, 112 kB.</a> · 112 kB</li>
+          <li><a href="/download/3/2001:6%20R%C3%A4ttelseblad.pdf">2001:6 Rättelseblad Pdf, 466 kB.</a></li>
+          <li><a href="/download/4/2023:4%20%C3%84ndring.pdf">2023:4 Ändring Pdf, 176 kB.</a></li></ul></main>"""
+        entries = csnfs.parse_listing(listing, csnfs.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("CSNFS 2001:6", True), ("CSNFS 2023:4", False)])
+        base = entries[0]
+        self.assertEqual(base.title, "Centrala studiestödsnämndens föreskrifter och allmänna råd om studiehjälp")
+        self.assertEqual(base.url, "https://www.csn.se/download/2/2001:6%20CSN.pdf")  # as issued, not consolidated
+        self.assertEqual(base.pdfs, [("CSNFS 2001:6 (konsoliderad version)", "https://www.csn.se/download/1/2001-6-2023-4.pdf"),
+                                     ("CSNFS 2001:6", "https://www.csn.se/download/2/2001:6%20CSN.pdf")])
+
+    def test_heading_groups_skip_repealed_and_link_bare_references(self):
+        lmfs = agency.ADAPTERS["LMFS"]
+        listing = """<main><h2>Gällande föreskrifter</h2>
+          <h3>LMFS 2026:3</h3><p>Lantmäteriets föreskrifter om ändringar i Lantmäteriets föreskrifter (2022:4) om
+            avgifter.</p><p><a href="/f/andringsforeskrift-lmfs-2026-3.pdf">LMFS 2026:3 (pdf, nytt fönster)</a></p>
+          <h3>LMFS 2022:4</h3><p>Lantmäteriets föreskrifter om avgifter.</p>
+            <p><a href="/f/lmfs-2022-4.pdf">LMFS 2022:4 (pdf, nytt fönster)</a></p>
+          <h2>Upphävda föreskrifter</h2>
+          <h3>LMFS 2015:1</h3><p>Lantmäteriets föreskrifter om avgifter.</p>
+            <p><a href="/f/lmfs_151.pdf">LMFS 2015:1 (pdf, nytt fönster)</a></p></main>"""
+        entries = lmfs.parse_listing(listing, lmfs.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("LMFS 2026:3", False), ("LMFS 2022:4", True)])
+        self.assertEqual(entries[1].title, "Lantmäteriets föreskrifter om avgifter")
+        self.assertEqual(entries[1].amended_by, ["LMFS 2026:3"])
+
+    def test_link_groups_take_the_title_after_the_link(self):
+        imyfs = agency.ADAPTERS["IMYFS"]
+        listing = """<main><h2>Föreskrifter</h2>
+          <p><a href="/link/1.aspx">IMYFS 2024:1 (pdf, 3 MB)</a>Föreskrifter om behandling av personuppgifter.</p>
+          <p><a href="/link/2.aspx">Vägledning – föreskrifter (IMYFS 2024:1) (pdf, 441 kB)</a></p>
+          <h3>Upphävande av tidigare gällande föreskrifter</h3>
+          <p><a href="/link/3.aspx">IMYFS 2023:1 (pdf, 26 kB)</a>Föreskrifter om upphävande av Datainspektionens
+            föreskrifter (DIFS 1989:1)</p>
+          <p><a href="/link/4.aspx">DIFS 2018:1 (pdf, 63 kB)</a>Föreskrifter om upphävande.</p></main>"""
+        entries = imyfs.parse_listing(listing, imyfs.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("IMYFS 2024:1", True), ("IMYFS 2023:1", False)])
+        self.assertEqual(entries[0].title, "Föreskrifter om behandling av personuppgifter")
+        self.assertEqual(entries[0].pdfs, [("IMYFS 2024:1", "https://www.imy.se/link/1.aspx")])
+
+
 class DetailPageTest(unittest.TestCase):
     def test_slug_numbers_and_quoted_queries(self):
         self.assertEqual(NFS.slug_number("https://www.naturvardsverket.se/x/2026/nfs-20269/"), "NFS 2026:9")

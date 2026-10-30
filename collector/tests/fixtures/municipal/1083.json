@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://solvesborg.se/kommun-och-politik-/regler-och-styrande-dokument/forfattningssamling.html": "1083-listing.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "18.20c796bf194998f129f27251",
+    "title": "6.1 Allmänna lokala ordningsföreskrifter för Sölvesborgs kommun",
+    "url": "https://solvesborg.se/download/18.20c796bf194998f129f27251/1738337365794/FFS%206.1%20Lokala%20allm%C3%A4nna%20ordningsf%C3%B6reskrifter%20-%20beslutad%20%2020250127.pdf"
+  },
+  "excluded": [
+    "1.1 Arbetsordning för kommunfullmäktige i Sölvesborg",
+    "2.1 Reglemente för kommunstyrelsen",
+    "2.2 Reglemente för valnämnden"
+  ]
+}

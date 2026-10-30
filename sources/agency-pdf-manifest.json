@@ -188,6 +188,1342 @@
       ]
     },
     {
+      "number": "BFNAR 2002:1",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-1-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2002:1",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-1-grund.pdf",
+          "bytes": 21462,
+          "sha256": "dfd77ea745aa4a7059147437d4eea64953b385afdb3485f0a6170b6c591b3197",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:25Z"
+        },
+        {
+          "label": "BFNAR 2002:1 (konsoliderad version)",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-1-kons2.pdf",
+          "bytes": 21484,
+          "sha256": "89f8c2ccd6d78fe37ea5a2d352e4c3ba9357af7d89977fd4eac7f31baa46a605",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:26Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2002:2",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-2-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2002:2",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-2-grund.pdf",
+          "bytes": 20370,
+          "sha256": "9eba18a429b4eb66750ef6619d18f87d1b2c30aac06356e1e20e6c95f32aff4f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:23Z"
+        },
+        {
+          "label": "BFNAR 2002:2 (konsoliderad version)",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-2-kons2.pdf",
+          "bytes": 20062,
+          "sha256": "a48a4d566eb430f49c45938e3def7971eefda74add411c7b9214ca3b300a15ba",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:24Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2002:3",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-3-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2002:3",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-3-grund.pdf",
+          "bytes": 17695,
+          "sha256": "ee97d318c5232d59bd6264bc89ab8e32fb93c3307fb7cd25f31238568e51cf2c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:21Z"
+        },
+        {
+          "label": "BFNAR 2002:3 (konsoliderad version)",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-3-kons2.pdf",
+          "bytes": 17779,
+          "sha256": "c4eb09d06debfd924f0a1c4a5741235ee90b6e87a3270725653090dd2a07754e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:22Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2002:12",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-12-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2002:12",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-12-grund.pdf",
+          "bytes": 23044,
+          "sha256": "748ff11b6f8a53bef0cba439e7f491033783a91a58539eb3181f58cedd983cda",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:19Z"
+        },
+        {
+          "label": "BFNAR 2002:12 (konsoliderad version)",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar02-12-kons1.pdf",
+          "bytes": 14451,
+          "sha256": "ac3a4379f414024de8e797f119ef0d0c4f873226069b3af9aa5504edfe339a06",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:20Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2004:2",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar04-2-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2004:2",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar04-2-grund.pdf",
+          "bytes": 72059,
+          "sha256": "481d97a82684b84e0383b5a532d073ad7703470d647ce9439778e6741a9ed47b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:17Z"
+        },
+        {
+          "label": "BFNAR 2004:2 (konsoliderad version)",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar04-2-kons1.pdf",
+          "bytes": 103341,
+          "sha256": "2174cd996f42744d071fada03e154cfa69af41b684b0d21ce5855adbcea42336",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:18Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2006:1",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar06-1-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2006:1",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar06-1-grund.pdf",
+          "bytes": 223198,
+          "sha256": "1fb1c058e6a3995730b47c5dbe3e2a7720d8b99ec21aababff1057c61257391c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:16Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2006:11",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar06-11-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2006:11",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar06-11-grund.pdf",
+          "bytes": 18188,
+          "sha256": "733eb095a51df242b9db5ae28a94414c11a254a39c61d65909d0d79597403816",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:14Z"
+        },
+        {
+          "label": "BFNAR 2006:11 (konsoliderad version)",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar06-11-kons3.pdf",
+          "bytes": 74063,
+          "sha256": "a24d81b282fc91e509c936f1663a8e861c36be134207b72254bde62ddcac0b7e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:15Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2010:1",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar10-1-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2010:1",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar10-1-grund.pdf",
+          "bytes": 237723,
+          "sha256": "d1b8c811a43b119457c699bf0672e4a46c6edffbb55400d974ac0042381ca41b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:13Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2012:1",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar12-1-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2012:1",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar12-1-grund.pdf",
+          "bytes": 580409,
+          "sha256": "9fe65db6bdd4d736e6588619a4adcb47db924d73b701e05e3526dcd2bc4ed7db",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:12Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2012:3",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar12-3-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2012:3",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar12-3-grund.pdf",
+          "bytes": 17236,
+          "sha256": "5c20282fd2c714f34223ecf61241d07201b0e047807dafa978bb8670571fb001",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:10Z"
+        },
+        {
+          "label": "BFNAR 2012:3 (konsoliderad version)",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar12-3kons3-1.pdf",
+          "bytes": 179772,
+          "sha256": "884a526c3acc6539b06359a769d0c3354bffb17b1ea87823b8233c0faef15664",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:11Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2012:4",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar12-4-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2012:4",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar12-4-grund.pdf",
+          "bytes": 13153,
+          "sha256": "043becf60df942f15e426979df3d607522f533b3ce4bb31082d1d0c9558c571e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:08Z"
+        },
+        {
+          "label": "BFNAR 2012:4 (konsoliderad version)",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar12-4-kons1.pdf",
+          "bytes": 103096,
+          "sha256": "82b8228498f9d8e062ce84085b68e39a5855c97d81bcea5eb45c5dee64ae9c5f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:09Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2013:2",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar13-2-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2013:2",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar13-2-grund.pdf",
+          "bytes": 296067,
+          "sha256": "ebd65c592ef5962988154cf509eebb95c74f8e12efb3746101f164164471fd55",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:07Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2016:10",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar16-10-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2016:10",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar16-10-grund.pdf",
+          "bytes": 1124916,
+          "sha256": "4afa5ec29b54c7f5bf642050118fb37722ce51f83cb62f19f65010f86d970013",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:06Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2017:3",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar17-3.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2017:3",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/06/bfnar17-3.pdf",
+          "bytes": 906383,
+          "sha256": "1801641c3347b51571491bb71feb2baa7015476352e2ab67964edf720ab94295",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:05Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2019:3",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/2020/05/bfnar19-3.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2019:3",
+          "url": "https://www.bfn.se/wp-content/uploads/2020/05/bfnar19-3.pdf",
+          "bytes": 12106,
+          "sha256": "c4ca1a30455e366423bab9b2bae8384cc7ac814babc7b1019978532200028c87",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:03Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2020:5",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/bfnar2020-5-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2020:5",
+          "url": "https://www.bfn.se/wp-content/uploads/bfnar2020-5-grund.pdf",
+          "bytes": 248057,
+          "sha256": "e7ce78456f3110e328d71d8a956a465a617b718f5abee30597d3e974d3e22230",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:03Z"
+        }
+      ]
+    },
+    {
+      "number": "BFNAR 2023:1",
+      "detail_url": "https://www.bfn.se/wp-content/uploads/bfnar2023-1-grund.pdf",
+      "files": [
+        {
+          "label": "BFNAR 2023:1",
+          "url": "https://www.bfn.se/wp-content/uploads/bfnar2023-1-grund.pdf",
+          "bytes": 471483,
+          "sha256": "838a6bbc554672e6c81dfc2ac9127f909ce9040a76e710e5fade908024b6323f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:02Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1978:27",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d7fe/1517286951857/1978:27%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201978%20.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1978:27",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d7fe/1517286951857/1978:27%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201978%20.pdf",
+          "bytes": 13303,
+          "sha256": "4701532cff677db2a0d8e8135769f1e08f2a9d83430ff3b10c3b154705673656",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:46Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1979:21",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d7ff/1517286951854/1979:21%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201979.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1979:21",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d7ff/1517286951854/1979:21%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201979.pdf",
+          "bytes": 13304,
+          "sha256": "8bf958d8288dc7ee6680615f19837b7a5f66608fe04da82006ec9a74cdf9b181",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:47Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1980:20",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d800/1517286952041/1980:20%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201980.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1980:20",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d800/1517286952041/1980:20%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201980.pdf",
+          "bytes": 12779,
+          "sha256": "e5af4c46fd6b70eb1c4e4486b4e7551d6acf427da34101df97ff1eec276049eb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:48Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1981:15",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d801/1517286952039/1981:15%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201981.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1981:15",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d801/1517286952039/1981:15%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201981.pdf",
+          "bytes": 13388,
+          "sha256": "c4b22179a032ee9d39c68dc3e3047f185b2945b3f54fef3b9bb42a86a9edc690",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:49Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1982:24",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d802/1517286952047/1982:24%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201982.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1982:24",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d802/1517286952047/1982:24%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201982.pdf",
+          "bytes": 13471,
+          "sha256": "4be34f59f9e523257300ae28f9d3eca82700f72e2dcb545bfc6309fc8aa180cc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:50Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1983:17",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d441/1517286954094/1983:17%20F%C3%B6rordning%20om%20bidrag%20till%20utlandsstuderande%20f%C3%B6r%20dagliga%20resor.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1983:17",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d441/1517286954094/1983:17%20F%C3%B6rordning%20om%20bidrag%20till%20utlandsstuderande%20f%C3%B6r%20dagliga%20resor.pdf",
+          "bytes": 14999,
+          "sha256": "78b4637493816be68078d5f5d58ca2a6c318302e637a3791d1b72dee21711e08",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:37Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1983:25",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d803/1517286952044/1983:25%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201983.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1983:25",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d803/1517286952044/1983:25%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201983.pdf",
+          "bytes": 13490,
+          "sha256": "aa43c4c1957c25b8f5bf848c1586b96e0b356bdfdaba21afe83d15773daeee7f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:51Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1984:20",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d804/1517286952031/1984:20%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201984.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1984:20",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d804/1517286952031/1984:20%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201984.pdf",
+          "bytes": 13508,
+          "sha256": "8e019fb87eac9c2d275c8034c9a66115b2db086e1ec197498c34e008ade50042",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:52Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1985:18",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d805/1517286952029/1985:18%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201985.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1985:18",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d805/1517286952029/1985:18%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201985.pdf",
+          "bytes": 13500,
+          "sha256": "eab791947c7256061f735d7e51e9ef900a0e3b0a7f90e9b86d7ca0ed81b214f6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:53Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1986:25",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21dcb0/1517286954350/1986:25%20F%C3%B6rordning%20om%20register%20med%20vissa%20uppgifter%20i%20gymnasieskolan.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1986:25",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21dcb0/1517286954350/1986:25%20F%C3%B6rordning%20om%20register%20med%20vissa%20uppgifter%20i%20gymnasieskolan.pdf",
+          "bytes": 15975,
+          "sha256": "ae7de430ec361e3d8f8cdc688792bec835dddf13e78d1f478dc6775773491053",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:00Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1986:29",
+      "detail_url": "https://www.csn.se/download/18.25c8284616ffa19f1e71f4/1583420685947/1986:29%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201986.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1986:29",
+          "url": "https://www.csn.se/download/18.25c8284616ffa19f1e71f4/1583420685947/1986:29%20F%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201986.pdf",
+          "bytes": 61897,
+          "sha256": "2cf55a0d523e0e8bcba1541879b24af0bcb5c3fc6780f3138b38bed34ab25c28",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:55Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1987:23",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d806/1517286952037/1987:23%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201987.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1987:23",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d806/1517286952037/1987:23%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201987.pdf",
+          "bytes": 13510,
+          "sha256": "d22b571348b207c7b6e7e176ea7493367d923bb24879528f15f6b75bd29c7d36",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:55Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1988:27",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d807/1517286952034/1988:27%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201988.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1988:27",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d807/1517286952034/1988:27%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201988.pdf",
+          "bytes": 13376,
+          "sha256": "4c35344ab12d016bbb9088da4cdbb7411a9552eec0f0b35f4780c962543ec71d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:56Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1990:1",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d808/1517286952130/1990:1%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201989.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1990:1",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d808/1517286952130/1990:1%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201989.pdf",
+          "bytes": 13411,
+          "sha256": "2972393194fbd30b06c3e857249c765f310fec440208bb43a9a9abc5c04201ab",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:57Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1990:17",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d809/1517286952127/1990:17%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201990.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1990:17",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d809/1517286952127/1990:17%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201990.pdf",
+          "bytes": 13416,
+          "sha256": "88c0d794093302788f4429a08b49e27aaf77f3b636670ae2fd0fa0400079e237",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:58Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1991:14",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80a/1517286952168/1991:14%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201991.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1991:14",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80a/1517286952168/1991:14%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201991.pdf",
+          "bytes": 13403,
+          "sha256": "ae3eaba754f39160be6e50f1c96431868ecf3723fd7749da056f99955aa4e452",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:59Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1992:47",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80b/1517286952172/1992:47%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201992.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1992:47",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80b/1517286952172/1992:47%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201992.pdf",
+          "bytes": 13389,
+          "sha256": "39d5be19c4ba85d84f82b3403768b4bd951e2e14f25f1559d21ab2eb7cc8617d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:00Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1993:17",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80c/1517286952170/1993:17%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201993.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1993:17",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80c/1517286952170/1993:17%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20regleringstal%20f%C3%B6r%201993.pdf",
+          "bytes": 12998,
+          "sha256": "4c25a27e17d519e165a2e7508f93cf0f93459df538dd5430b5a68efbe0112dda",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:01Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1994:18",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80d/1517286952163/1994:18%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201994.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1994:18",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80d/1517286952163/1994:18%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201994.pdf",
+          "bytes": 13037,
+          "sha256": "8e6e221e36290071afaeb4352e6cc3608a4fb92f4a5d4ca1b072de68a9803064",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:02Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1995:26",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d960/1517286951956/1995:26%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20bidrag%20till%20vissa%20funktionshindrade%20elever%20i%20gymnasieskolan.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1995:26 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.576bb93d18c7ec11015ca/1703154900520/1995-26-2023-9.pdf",
+          "bytes": 204000,
+          "sha256": "1afacee8717189649e8bac8d1d1ee376f43f4bf4dc6130ed0ea9292f1e5dcb4b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:52Z"
+        },
+        {
+          "label": "CSNFS 1995:26",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d960/1517286951956/1995:26%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20bidrag%20till%20vissa%20funktionshindrade%20elever%20i%20gymnasieskolan.pdf",
+          "bytes": 27670,
+          "sha256": "c65b6b28dcf2cbb46fab5b05bc3d5d3ac9917c5a37c38820b6be87d24d4f8f86",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:53Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1995:34",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80e/1517286952160/1995:34%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201995.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1995:34",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80e/1517286952160/1995:34%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201995.pdf",
+          "bytes": 12983,
+          "sha256": "7c64336ebbe501c4e5c2805bc59b2cbd93632f0503c27104fe192744b7f77122",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:03Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1996:11",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80f/1517286952165/1996:11%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201996.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1996:11",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d80f/1517286952165/1996:11%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201996.pdf",
+          "bytes": 13103,
+          "sha256": "93b59398bc567e3498c5490a72da2f2e701252b4bce5fd284de362717c1e8b49",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:05Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1997:18",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d810/1517286952125/1997:18%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201997.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1997:18",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d810/1517286952125/1997:18%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201997.pdf",
+          "bytes": 13022,
+          "sha256": "d12a3dc8839cc722d35c46c524ebbf9e75366563e0bcfedab8ff2ff8b5a8a967",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:06Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1998:7",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21dc99/1517286954423/1998:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20ers%C3%A4ttning%20till%20deltagare%20i%20teckenspr%C3%A5ksutbildning%20f%C3%B6r%20vissa%20f%C3%B6r%C3%A4ldrar.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1998:7 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.67536c7c19b23e409df62/1766126615634/1998-7-2025-3.pdf",
+          "bytes": 182948,
+          "sha256": "c7811b92cc572b69bd4021c8b7c64935aa67f7f66ae4599f6832c477eefaed27",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:54Z"
+        },
+        {
+          "label": "CSNFS 1998:7",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21dc99/1517286954423/1998:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20ers%C3%A4ttning%20till%20deltagare%20i%20teckenspr%C3%A5ksutbildning%20f%C3%B6r%20vissa%20f%C3%B6r%C3%A4ldrar.pdf",
+          "bytes": 25366,
+          "sha256": "875e2887d53e16308014569299de1a26b114d0b467b3e34697f1dc9169823a34",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:55Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1998:19",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d811/1517286952117/1998:19%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201998.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1998:19",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d811/1517286952117/1998:19%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201998.pdf",
+          "bytes": 40230,
+          "sha256": "51fa8ff2dc6e6a022e5ea3711a3123fdace42ebda54ccdcf6acd5cadba1a1b4f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:07Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 1999:12",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d812/1517286952114/1999:12%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201999.pdf",
+      "files": [
+        {
+          "label": "CSNFS 1999:12",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d812/1517286952114/1999:12%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%201999.pdf",
+          "bytes": 12495,
+          "sha256": "0bbc6926dcce151192f7813eb4b9f8074156a3cb8caef52630ea0b04ea7dad85",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:08Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2000:9",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d813/1517286952123/2000:9%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202000.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2000:9",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d813/1517286952123/2000:9%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202000.pdf",
+          "bytes": 12491,
+          "sha256": "adcfbd5567c17f860bf1b61ac0f96102aef9bc082bed0a33976f735a765b3726",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:09Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2001:1",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d267/1517286957568/2001:1%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20beviljning.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2001:1 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.744b4d3219d02ca14d2d2d/1782391622626/2001-1-2025-4%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20beviljning%20av%20studiemedel.pdf",
+          "bytes": 1255663,
+          "sha256": "1323413eee931fe2ee0b71ca72ebbae125fefd535fa04178b3c4712ed4cb9f48",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:29Z"
+        },
+        {
+          "label": "CSNFS 2001:1",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d267/1517286957568/2001:1%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20beviljning.pdf",
+          "bytes": 85063,
+          "sha256": "3c5abd2eb27ebe7075981ea2db027b9a516ccec86f3bb3ccb953d795c0a7193a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:30Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2001:3",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d5c3/1517286952325/2001:3%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20%C3%A5terbetalning%20av%20studiel%C3%A5n%20tagna%20efter%20den%2030%20juni%202001.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2001:3 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.7bdc5cbf184e2e1001c378/1671712940904/CSNFS%202001%203%20om%20%C3%A5terbetalning%20%20av%20studiel%C3%A5n%20tagna%20efter%20den%2030%20juni%202001.pdf",
+          "bytes": 362538,
+          "sha256": "0119b3d1f02190a1d5e9c0aa3b4ea1b559871e43a65eefc9fcb04b5e5be91ad0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:40Z"
+        },
+        {
+          "label": "CSNFS 2001:3",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d5c3/1517286952325/2001:3%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20%C3%A5terbetalning%20av%20studiel%C3%A5n%20tagna%20efter%20den%2030%20juni%202001.pdf",
+          "bytes": 71446,
+          "sha256": "cc0da24c66f372de48b0650b8f22f5414abac3527b4941be5bf25b16844cb721",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:41Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2001:4",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d7dc/1517286951893/2001:4%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20%C3%A5terbetalning%20av%20studiel%C3%A5n%20tagna%20mellan%20den%201%20januari%201989%20och%20den%2030%20juni%202001.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2001:4 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.7bdc5cbf184e2e1001c379/1671712967860/CSNFS%202001%204%20om%20%C3%A5terbetalning%20av%20studiel%C3%A5n%20tagna%20mellan%20den%201%20januari%201989%20och%20den%2030%20juni%202001.pdf",
+          "bytes": 277603,
+          "sha256": "e66564f61e3ddfe9df7f3d25a2e37197e4688228eda13cfd4ff673e7b1132188",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:42Z"
+        },
+        {
+          "label": "CSNFS 2001:4",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d7dc/1517286951893/2001:4%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20%C3%A5terbetalning%20av%20studiel%C3%A5n%20tagna%20mellan%20den%201%20januari%201989%20och%20den%2030%20juni%202001.pdf",
+          "bytes": 65411,
+          "sha256": "c6e97ae74bd738f8ec5487975b2663739e7ffee5765d464ca4b2ef83f7010d33",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:43Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2001:5",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d7ef/1517286951807/2001:5%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20%C3%A5terbetalning%20av%20%C3%A5terbetalningspliktiga%20studiemedel%20tagna%20f%C3%B6re%20den%201%20januari%201989.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2001:5 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.7bdc5cbf184e2e1001c37a/1671712987926/CSNFS%202001%205%20om%20%C3%A5terbetalning%20av%20%C3%A5terbetalningspliktiga%20studiemedel%20tagna%20f%C3%B6re%20den%201%20januari%201989.pdf",
+          "bytes": 273047,
+          "sha256": "8642215c34a21b4b6111f4c581ec42b1e4e3745b839aa2a2062a83fae6a12ec1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:44Z"
+        },
+        {
+          "label": "CSNFS 2001:5",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d7ef/1517286951807/2001:5%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20%C3%A5terbetalning%20av%20%C3%A5terbetalningspliktiga%20studiemedel%20tagna%20f%C3%B6re%20den%201%20januari%201989.pdf",
+          "bytes": 65623,
+          "sha256": "312e6bff94b6fa457d246a9e06cfd44a5406d8afbefbf7ac37b153a88671d928",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:45Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2001:6",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d442/1517286954130/2001:6%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20studiehj%C3%A4lp.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2001:6 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.1509aee2188d54dbf101/1687248286890/2001-6-2023-4.pdf",
+          "bytes": 426584,
+          "sha256": "f9cdf2fe55fd6e87ec56b79e2c3ce54ac53320b008859116d63c2dea185e8c9b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:35Z"
+        },
+        {
+          "label": "CSNFS 2001:6",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d442/1517286954130/2001:6%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20studiehj%C3%A4lp.pdf",
+          "bytes": 115177,
+          "sha256": "44ced13ddb098fb3acd170d8084e8bae1d28ec1fc91aa90876d439d9fa65a710",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:36Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2001:15",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d814/1517286952120/2001:15%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202001.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2001:15",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d814/1517286952120/2001:15%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202001.pdf",
+          "bytes": 20022,
+          "sha256": "d714ec51d66df145dd65701f818f3fb896442ac4ad6eefdcfd9a10a3313c906c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:11Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2002:20",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d815/1517286952097/2002:20%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202002%20.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2002:20",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d815/1517286952097/2002:20%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202002%20.pdf",
+          "bytes": 60747,
+          "sha256": "55b524f9ba82e4a38ea03366e56a21ca92f885bc7aab6cbecf23a04209addf8f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:12Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2003:11",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d816/1517286952084/2003:11%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202003.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2003:11",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d816/1517286952084/2003:11%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202003.pdf",
+          "bytes": 447093,
+          "sha256": "2c1d1c9f0005ab4f02266e140bea7ed6d50baee32fca7ebf2ce1de911c725d9c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:13Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2004:15",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d817/1517286952104/2004:15%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202004.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2004:15",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d817/1517286952104/2004:15%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202004.pdf",
+          "bytes": 445419,
+          "sha256": "a0fcb26e393a3c1c38164071f47ccb529c3110fd09e809064e8ddd97398bfe28",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:14Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2005:15",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d818/1517286952101/2005:15%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202005.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2005:15",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d818/1517286952101/2005:15%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202005.pdf",
+          "bytes": 25716,
+          "sha256": "b143fc0cc964958eed8d5b5f973bd479e345d8067b1c2f3a7bafa42013ed1f8e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:15Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2006:7",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21dcb1/1517286954356/2006:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20utl%C3%A4ndska%20medborgares%20r%C3%A4tt%20till%20studiest%C3%B6d%20och%20rekryteringsbidrag.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2006:7 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.40fb4f5918356ebb178152/1664536845241/2006-7-2022-4.pdf",
+          "bytes": 229211,
+          "sha256": "b1b40969aa4a27e685e3381a4829dad0e5452512fb9a2e0af4ace285a37a29cc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:58Z"
+        },
+        {
+          "label": "CSNFS 2006:7",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21dcb1/1517286954356/2006:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20utl%C3%A4ndska%20medborgares%20r%C3%A4tt%20till%20studiest%C3%B6d%20och%20rekryteringsbidrag.pdf",
+          "bytes": 68896,
+          "sha256": "0f2b5fb55a390226550a311d0dc66226d418e12fb5cebd0fe9894a49bd0b841d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:59Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2006:16",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d819/1517286952175/2006:16%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202006.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2006:16",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d819/1517286952175/2006:16%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202006.pdf",
+          "bytes": 26835,
+          "sha256": "f000306f0692e9b15460f86ff869f3c3328451e11116859b7f0d4781403eef5b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:16Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2007:13",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81a/1517286952065/2007:13%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202007.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2007:13",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81a/1517286952065/2007:13%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%20f%C3%B6r%202007.pdf",
+          "bytes": 19744,
+          "sha256": "b9c1872eed7df4646fd911d800831f3e566cd1db2ba4fa7c0821f1cbb0b3a173",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:17Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2008:8",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81b/1517286952062/2008:8%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202008.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2008:8",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81b/1517286952062/2008:8%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202008.pdf",
+          "bytes": 20434,
+          "sha256": "50dfb6630106dd6b3ef6259557710c76b377023842c66a2fe9d5d72cdbafb521",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:18Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2009:14",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81c/1517286952070/2009:14%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202009.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2009:14",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81c/1517286952070/2009:14%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202009.pdf",
+          "bytes": 19777,
+          "sha256": "01485b1afb748926089bfd57aa6563f5dc4db07ae1207833f78d332c543264ef",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:19Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2010:6",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d91c/1517286951959/2010:6%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20l%C3%A5n%20till%20hemutrustning%20f%C3%B6r%20flyktingar%20och%20vissa%20andra%20utl%C3%A4nningar.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2010:6 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.2639ba8617c4bb0dbdcd4e/1640177671446/2010-6-2021-7.pdf",
+          "bytes": 251293,
+          "sha256": "3ba0a4063e41254b4f92bd73553b828bc5304fba49919928542686e1d7336153",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:50Z"
+        },
+        {
+          "label": "CSNFS 2010:6",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d91c/1517286951959/2010:6%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20l%C3%A5n%20till%20hemutrustning%20f%C3%B6r%20flyktingar%20och%20vissa%20andra%20utl%C3%A4nningar.pdf",
+          "bytes": 31242,
+          "sha256": "073289366dbb441e44c37be4d56a4eae1669d1c90ac81a0ac2afad4d752f3d26",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:51Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2010:7",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81d/1517286952068/2010:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202010.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2010:7",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81d/1517286952068/2010:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202010.pdf",
+          "bytes": 19874,
+          "sha256": "04ce0d23dd2c0364e46f524dede7676628229bb25fa233bb95ef1e8c81e1fec8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:20Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2011:13",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81e/1517286952060/2011:13%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202011.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2011:13",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81e/1517286952060/2011:13%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202011.pdf",
+          "bytes": 18387,
+          "sha256": "5de824af15050375d4d8e2effd343b0ec2a527d0104302829aa51b25d245478a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:21Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2012:5",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81f/1517286952057/2012:5%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202012.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2012:5",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d81f/1517286952057/2012:5%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202012.pdf",
+          "bytes": 12287,
+          "sha256": "09ceee4725f9807a736d463afcb4e22afc23e9447e9a53160f02a9d029358b86",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:22Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2013:7",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d820/1517286952156/2013:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202013.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2013:7",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d820/1517286952156/2013:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202013.pdf",
+          "bytes": 78836,
+          "sha256": "19199bed8883d510404dd33a48fb2cc6c9488a3cb601b28219260d8e736344df",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:23Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2013:8",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d471/1517286954170/2013:8%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20l%C3%A4rlingsers%C3%A4ttning.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2013:8 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.7b64842c163e9731aa723e2/1534767659238/2013:8%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20(CSNFS%202013:8)%20om%20l%C3%A4rlingsers%C3%A4ttning.pdf",
+          "bytes": 26415,
+          "sha256": "f210199dd44f5436a8761a390c11abc91d9d7c69daa4ea902ddacf278f817998",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:38Z"
+        },
+        {
+          "label": "CSNFS 2013:8",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d471/1517286954170/2013:8%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20om%20l%C3%A4rlingsers%C3%A4ttning.pdf",
+          "bytes": 84045,
+          "sha256": "69f2d64f407a3623dd8dc400b5ffd2ab6fe402a76d87f2cc358172efc629bff5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:39Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2014:6",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d821/1517286952151/2014:6%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202014.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2014:6",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d821/1517286952151/2014:6%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202014.pdf",
+          "bytes": 91910,
+          "sha256": "4862fe37bcfc107117ac68371654c9b7b0d40ce72f138a86fb9f1f6051d60919",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:24Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2015:7",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d822/1517286952146/2015:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202015.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2015:7",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d822/1517286952146/2015:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202015.pdf",
+          "bytes": 91981,
+          "sha256": "b407ca66c39289c541690bb6b17abab0b7cd472a5da10f82da209ae913e7d966",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:25Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2016:6",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d823/1517286952139/2016:6%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202016.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2016:6",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d823/1517286952139/2016:6%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202016.pdf",
+          "bytes": 89223,
+          "sha256": "78cd05794aa16b0176505ff8013cd9d045e90ea73e5bd596b9c0151900068972",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:26Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2017:1",
+      "detail_url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d432/1517286954051/2017:1%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20(CSNFS%202017:1)%20om%20beviljning%20av%20studiestartsst%C3%B6d.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2017:1 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.67536c7c19b23e409dfb7/1766389730863/2017-1-2025-6.pdf",
+          "bytes": 480183,
+          "sha256": "f628c868da2804941a5ff549878a80b882fe5a49c61774c0318079f52438a929",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:31Z"
+        },
+        {
+          "label": "CSNFS 2017:1",
+          "url": "https://www.csn.se/download/18.1ba9ecae15f9080d21d432/1517286954051/2017:1%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20(CSNFS%202017:1)%20om%20beviljning%20av%20studiestartsst%C3%B6d.pdf",
+          "bytes": 141419,
+          "sha256": "c9bb7e4b5c8d5979798372eab254238c95db64ae886f21711be651209a7e4d3f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:32Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2017:8",
+      "detail_url": "https://www.csn.se/download/18.56ed604c160506de914363/1517286955722/2017:8%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202017.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2017:8",
+          "url": "https://www.csn.se/download/18.56ed604c160506de914363/1517286955722/2017:8%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202017.pdf",
+          "bytes": 27280,
+          "sha256": "30327082960522c06cfef8916dcb72a54f5937a3a964afd45af54e621b10e62b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:28Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2018:5",
+      "detail_url": "https://www.csn.se/download/18.6f0b7956163e94fc5bf2993/1535610107945/2018:5%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20(CSNFS%202018:5)%20om%20k%C3%B6rkortsl%C3%A5n.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2018:5 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.576bb93d18c7ec11015c9/1703154829792/2018-5-2023-11.pdf",
+          "bytes": 207510,
+          "sha256": "6a58eea84b08d513e87addfc933b98c4f34ef16a174a3b58e86c171f7af24b79",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:56Z"
+        },
+        {
+          "label": "CSNFS 2018:5",
+          "url": "https://www.csn.se/download/18.6f0b7956163e94fc5bf2993/1535610107945/2018:5%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20f%C3%B6reskrifter%20(CSNFS%202018:5)%20om%20k%C3%B6rkortsl%C3%A5n.pdf",
+          "bytes": 14712,
+          "sha256": "d14a9719a1d6fee6023344cc782489ce617e53548b67b81737ddfe090c47ae45",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:57Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2018:7",
+      "detail_url": "https://www.csn.se/download/18.14bcc7aa16687bd9471fad/1545291242603/2018:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202018.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2018:7",
+          "url": "https://www.csn.se/download/18.14bcc7aa16687bd9471fad/1545291242603/2018:7%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202018.pdf",
+          "bytes": 108253,
+          "sha256": "bf90505f2cd336c45875c3f8ad899a93f6b13e684c4ed50f0eee786ae1744fb4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:31Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2019:8",
+      "detail_url": "https://www.csn.se/download/18.2c3e13be16ef9c6a65512d/1576583316627/2019:8%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202019.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2019:8",
+          "url": "https://www.csn.se/download/18.2c3e13be16ef9c6a65512d/1576583316627/2019:8%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202019.pdf",
+          "bytes": 108733,
+          "sha256": "0eed4f187f575937e97da8455f1d5dc34688fd6503ffb42cb483fc6697772634",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:32Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2020:8",
+      "detail_url": "https://www.csn.se/download/18.5c1bcb8417605a1e35b2fa/1608123490637/2020%208%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2020:8",
+          "url": "https://www.csn.se/download/18.5c1bcb8417605a1e35b2fa/1608123490637/2020%208%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om.pdf",
+          "bytes": 119038,
+          "sha256": "b81476d49b4b57d7e030fa24d40a2b025196e396327f662d8b51fe18ef236b83",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:34Z"
+        },
+        {
+          "label": "CSNFS 2020:8",
+          "url": "https://www.csn.se/download/18.5c1bcb8417605a1e35b2fb/1608123577856/2020%208%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om.pdf",
+          "bytes": 119038,
+          "sha256": "b81476d49b4b57d7e030fa24d40a2b025196e396327f662d8b51fe18ef236b83",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:35Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2021:6",
+      "detail_url": "https://www.csn.se/download/18.2639ba8617c4bb0dbdcd12/1640158767862/2021:6%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202021.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2021:6",
+          "url": "https://www.csn.se/download/18.2639ba8617c4bb0dbdcd12/1640158767862/2021:6%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202021.pdf",
+          "bytes": 153514,
+          "sha256": "3785e5bfcf3c8127dda4c752c7b89d40b426d9310adf1958fded055792d214b0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:36Z"
+        },
+        {
+          "label": "CSNFS 2021:6",
+          "url": "https://www.csn.se/download/18.2639ba8617c4bb0dbdcd0e/1640158547331/2021-6.pdf",
+          "bytes": 153514,
+          "sha256": "3785e5bfcf3c8127dda4c752c7b89d40b426d9310adf1958fded055792d214b0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:37Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2022:5",
+      "detail_url": "https://www.csn.se/download/18.23482852182a85261ae2b6/1663075145270/2022-5.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2022:5 (konsoliderad version)",
+          "url": "https://www.csn.se/download/18.7cb89072194507dc9faaa8b/1743406387150/2022-5-2025-1.pdf",
+          "bytes": 427818,
+          "sha256": "a285cde6d3bee8cba0dabd0c8e5dba8ffe944a6678cf4bf839bbf3e753e573e8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:33Z"
+        },
+        {
+          "label": "CSNFS 2022:5",
+          "url": "https://www.csn.se/download/18.23482852182a85261ae2b6/1663075145270/2022-5.pdf",
+          "bytes": 282950,
+          "sha256": "14301f7c6d3d70bf37bf8333c863ae03a8e09748331606e9e416b64e3f5aa5bf",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:34Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2022:9",
+      "detail_url": "https://www.csn.se/download/18.7bdc5cbf184e2e1001c349/1671553256233/2022:9%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202022.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2022:9",
+          "url": "https://www.csn.se/download/18.7bdc5cbf184e2e1001c349/1671553256233/2022:9%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202022.pdf",
+          "bytes": 112234,
+          "sha256": "e522bef234b4033f9c49d527763c684bc6b2b1f34ce556c54d5610c3ea376764",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:38Z"
+        },
+        {
+          "label": "CSNFS 2022:9",
+          "url": "https://www.csn.se/download/18.7bdc5cbf184e2e1001c34a/1671553350333/2022:9%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202022.pdf",
+          "bytes": 112234,
+          "sha256": "e522bef234b4033f9c49d527763c684bc6b2b1f34ce556c54d5610c3ea376764",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:39Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2023:10",
+      "detail_url": "https://www.csn.se/download/18.576bb93d18c7ec1101570/1703058865193/2023:10%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202023.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2023:10",
+          "url": "https://www.csn.se/download/18.576bb93d18c7ec1101570/1703058865193/2023:10%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202023.pdf",
+          "bytes": 112702,
+          "sha256": "232b73118408ee83746577c9f777c44b432ac94963b5ed2107cdf45999908d44",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:40Z"
+        },
+        {
+          "label": "CSNFS 2023:10",
+          "url": "https://www.csn.se/download/18.576bb93d18c7ec110156e/1703058755319/2023-10.pdf",
+          "bytes": 112702,
+          "sha256": "232b73118408ee83746577c9f777c44b432ac94963b5ed2107cdf45999908d44",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:41Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2024:4",
+      "detail_url": "https://www.csn.se/download/18.615289631938df271081679/1734685842851/2024:4%20F%C3%B6reskrift%20om%20regleringstal%20f%C3%B6r%202024.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2024:4",
+          "url": "https://www.csn.se/download/18.615289631938df271081679/1734685842851/2024:4%20F%C3%B6reskrift%20om%20regleringstal%20f%C3%B6r%202024.pdf",
+          "bytes": 120463,
+          "sha256": "5d3dd9d141313b33cdfa71b10f967687f5bd5cd7dbf81da5ba5d32b29e8458f1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:42Z"
+        },
+        {
+          "label": "CSNFS 2024:4",
+          "url": "https://www.csn.se/download/18.615289631938df27108167e/1734686002913/2024:4%20F%C3%B6reskrift%20om%20regleringstal%20f%C3%B6r%202024.pdf",
+          "bytes": 120463,
+          "sha256": "5d3dd9d141313b33cdfa71b10f967687f5bd5cd7dbf81da5ba5d32b29e8458f1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:43Z"
+        }
+      ]
+    },
+    {
+      "number": "CSNFS 2025:5",
+      "detail_url": "https://www.csn.se/download/18.67536c7c19b23e409df2f/1765982664253/2025:5%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202025.pdf",
+      "files": [
+        {
+          "label": "CSNFS 2025:5",
+          "url": "https://www.csn.se/download/18.67536c7c19b23e409df2f/1765982664253/2025:5%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202025.pdf",
+          "bytes": 120478,
+          "sha256": "5411322357f54c3708d46170e056f48f18b19fa6a2bdc8e729c2dc9a96dc73c2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:44Z"
+        },
+        {
+          "label": "CSNFS 2025:5",
+          "url": "https://www.csn.se/download/18.67536c7c19b23e409df30/1765982742026/2025:5%20Centrala%20studiest%C3%B6dsn%C3%A4mndens%20meddelande%20om%20regleringstal%202025.pdf",
+          "bytes": 120478,
+          "sha256": "5411322357f54c3708d46170e056f48f18b19fa6a2bdc8e729c2dc9a96dc73c2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:28:45Z"
+        }
+      ]
+    },
+    {
       "number": "ELSÄK-FS 2022:1",
       "detail_url": "https://elsakerhetsverket.se/lag-och-ratt/foreskrifter/foreskrift?id=ELS%C3%84K-FS%202022:1&lang=sv",
       "files": [
@@ -7112,6 +8448,20 @@
       ]
     },
     {
+      "number": "IMYFS 2024:1",
+      "detail_url": "https://www.imy.se/link/54bce19c04bc4f85bd60844fec293e67.aspx",
+      "files": [
+        {
+          "label": "IMYFS 2024:1",
+          "url": "https://www.imy.se/link/54bce19c04bc4f85bd60844fec293e67.aspx",
+          "bytes": 3303201,
+          "sha256": "03899fe96a3168a260e1029aa198fb0ead86bf30843fb07ed8312f1a064c723d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:03Z"
+        }
+      ]
+    },
+    {
       "number": "KAMFS 1994:2",
       "detail_url": "https://www.kammarkollegiet.se/download/18.7e040f53167c64b3cd37bf2b/1551777027920/Translatorsforeskrifter%20(kamfs%201994_2).pdf",
       "files": [
@@ -9054,6 +10404,286 @@
       ]
     },
     {
+      "number": "LIFS 2018:2",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20182/",
+      "files": [
+        {
+          "label": "LIFS 2018:2",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/lifs-2018-2-foreskrifter-och-allmanna-rad-om-spelansvar.pdf",
+          "bytes": 198354,
+          "sha256": "3aa13ac3cd324428225f71dd60630da3b46a96c3c30798c5ff6dc6ea001ff6fe",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:16Z"
+        }
+      ]
+    },
+    {
+      "number": "LIFS 2018:4",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20184/",
+      "files": [
+        {
+          "label": "LIFS 2018:4",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/konsoliderade-versioner/konsoliderad-version-av-lifs-2018_4-inkl-andring-enl.-sifs-2024_2.pdf",
+          "bytes": 199470,
+          "sha256": "a6fa12be7f6e0d03b94bc3db45b8f94e00a77b44261b26042c3d468e2b756e31",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:19Z"
+        }
+      ]
+    },
+    {
+      "number": "LIFS 2018:5",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20185/",
+      "files": [
+        {
+          "label": "LIFS 2018:5",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/lifs-2018_5-foreskrifter-och-allmanna-rad-om-kommersiellt-onlinespel-och-vadhallning.pdf",
+          "bytes": 27630,
+          "sha256": "1ec288d0dece955250fcb046d2341e85009f0168388447140630d4eb46ee2d67",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:21Z"
+        }
+      ]
+    },
+    {
+      "number": "LIFS 2018:6",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20186/",
+      "files": [
+        {
+          "label": "LIFS 2018:6",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/lifs-2018_6-foreskrifter-och-allmanna-rad-om-landbaserat-kommersiellt-spel.pdf",
+          "bytes": 25863,
+          "sha256": "1074357b181a2ae53dd5d07e3167473a169fa4ebbba8971ec3dd1b120572281c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:23Z"
+        }
+      ]
+    },
+    {
+      "number": "LIFS 2018:7",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20187/",
+      "files": [
+        {
+          "label": "LIFS 2018:7",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/lifs-2018_7-foreskrifter-och-allmanna-rad-om-spel-pa-fartyg-i-internationell-trafik.pdf",
+          "bytes": 22661,
+          "sha256": "25280fbf035b68d5c20f278d453fa6be5b40848d8bb128a9ffc300abdb763ccc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:25Z"
+        }
+      ]
+    },
+    {
+      "number": "LIFS 2018:10",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-201810/",
+      "files": [
+        {
+          "label": "LIFS 2018:10",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/lifs-2018_10-lotteriinspektionens-foreskrifter-och-allmanna-rad-om-tekniska-krav-pa-vardeautomater-och-automatiserat-kasinospel-samt-ackreditering-av-organ-for-den-som-ska-kontrollera-prova-och-certifiera-vardeau.pdf",
+          "bytes": 294415,
+          "sha256": "a57ee02945f566368e6c292a0ad5da09d65fd404f2520d14843f7f06e7cc9208",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:28Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2009:1",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs_091.pdf",
+      "files": [
+        {
+          "label": "LMFS 2009:1",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs_091.pdf",
+          "bytes": 69290,
+          "sha256": "7036b39e85c647377f0e4232a3c0168f79e02d99faf8fbc6e21c0d53ddf9853a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:20Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2012:4",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs124.pdf",
+      "files": [
+        {
+          "label": "LMFS 2012:4",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs124.pdf",
+          "bytes": 82727,
+          "sha256": "d1053540d51a3cdb302d38018a64cb48f12c9479c17c2fe7024a1aa703a0e535",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:19Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2015:5",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs155_slutlig.pdf",
+      "files": [
+        {
+          "label": "LMFS 2015:5",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs155_slutlig.pdf",
+          "bytes": 2023552,
+          "sha256": "11133f30cc71933863c13237d445b753664220551b2c6c0ba8873cc04eaef889",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:18Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2016:1",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs161.pdf",
+      "files": [
+        {
+          "label": "LMFS 2016:1",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs161.pdf",
+          "bytes": 95429,
+          "sha256": "707be1dfcb3ca3333b3144e7f7e8b5a5a72bb0df2ff138c24442f62364b8a16a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:16Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2017:4",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs174.pdf",
+      "files": [
+        {
+          "label": "LMFS 2017:4",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs174.pdf",
+          "bytes": 11505,
+          "sha256": "e1ef64615e6b9f7282307ca14420b8e4f29a424db8bf46bc571a2fcc1a6fd131",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:15Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2018:1",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs181.pdf",
+      "files": [
+        {
+          "label": "LMFS 2018:1",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs181.pdf",
+          "bytes": 518252,
+          "sha256": "7c15d6c8c08d1bad7297109ec6356c08db81eafccd74c3176d7087f218e6c1fc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:14Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2018:2",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs182.pdf",
+      "files": [
+        {
+          "label": "LMFS 2018:2",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs182.pdf",
+          "bytes": 520879,
+          "sha256": "aabf610f1262bc505017179861f4a3b6d2897b5a4122babb48e66df8815d1a4f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:13Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2018:3",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs183.pdf",
+      "files": [
+        {
+          "label": "LMFS 2018:3",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs183.pdf",
+          "bytes": 584722,
+          "sha256": "39f92eb175dcb24c246580f0eaec70df5b3d6903ffd8643ec034bc3c4bae36a1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:12Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2020:1",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2020-1.pdf",
+      "files": [
+        {
+          "label": "LMFS 2020:1",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2020-1.pdf",
+          "bytes": 232302,
+          "sha256": "bd8daa9dd0951684dd40d4d0451a1719f5107e74fd0c807f5317a9320b30fea5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:12Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2021:4",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2021-4.pdf",
+      "files": [
+        {
+          "label": "LMFS 2021:4",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2021-4.pdf",
+          "bytes": 148854,
+          "sha256": "02b8b5a03b6e2a56b1e298a6a054d2183c45a7bd44b06a001a6584afe6a01b56",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:10Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2021:6",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2021-6.pdf",
+      "files": [
+        {
+          "label": "LMFS 2021:6",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2021-6.pdf",
+          "bytes": 75302,
+          "sha256": "48ab800e9e354d4df3aa4be4416286a8c50319f58699a27c217820c7cd6045c3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:09Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2022:4",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2022-4.pdf",
+      "files": [
+        {
+          "label": "LMFS 2022:4",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2022-4.pdf",
+          "bytes": 646604,
+          "sha256": "a73026815a0e503c023a00d7a9fa4550a4b3e077cbb12aa849a77f5f37da7dd2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:08Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2022:5",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2022-5.pdf",
+      "files": [
+        {
+          "label": "LMFS 2022:5",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2022-5.pdf",
+          "bytes": 27917,
+          "sha256": "4715e14145bc02a5f096b538aabe43bce96117012be743011ac7442384cf21b7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:07Z"
+        }
+      ]
+    },
+    {
+      "number": "LMFS 2023:3",
+      "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2023-3.pdf",
+      "files": [
+        {
+          "label": "LMFS 2023:3",
+          "url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs-2023-3.pdf",
+          "bytes": 95117,
+          "sha256": "8d9f30f97d968069f41967d75e87fbfcb72803e069de682d70d06d4869fa10aa",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:06Z"
+        }
+      ]
+    },
+    {
       "number": "MCFFS 2026:1",
       "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/mcffs-20261/",
       "files": [
@@ -9604,6 +11234,48 @@
           "sha256": "1b4ef8cf9261e0fd604dcb2df90b3b4e899d0148378320f180149b391557586c",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T08:35:22Z"
+        }
+      ]
+    },
+    {
+      "number": "MTFS 2016:2",
+      "detail_url": "https://www.tillvaxtanalys.se/download/18.62dd45451715a00666f20317/1586366204878/MTFS%202016-2%20F%C3%B6reskrift%20om%20uppgiftsl%C3%A4mning%20statsst%C3%B6d.pdf",
+      "files": [
+        {
+          "label": "MTFS 2016:2",
+          "url": "https://www.tillvaxtanalys.se/download/18.62dd45451715a00666f20317/1586366204878/MTFS%202016-2%20F%C3%B6reskrift%20om%20uppgiftsl%C3%A4mning%20statsst%C3%B6d.pdf",
+          "bytes": 538782,
+          "sha256": "39639fde3a79aad962dc22facefaf900c872a49e3c5be16ae20afcf299ad5c83",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:25Z"
+        }
+      ]
+    },
+    {
+      "number": "MTFS 2018:2",
+      "detail_url": "https://www.tillvaxtanalys.se/download/18.62dd45451715a00666f1d0af/1586366174610/MTFS%202018%202%20F%C3%B6reskrift%20om%20FoU%20internationella%20ftg%20med%20bilaga.pdf",
+      "files": [
+        {
+          "label": "MTFS 2018:2",
+          "url": "https://www.tillvaxtanalys.se/download/18.62dd45451715a00666f1d0af/1586366174610/MTFS%202018%202%20F%C3%B6reskrift%20om%20FoU%20internationella%20ftg%20med%20bilaga.pdf",
+          "bytes": 219314,
+          "sha256": "7c00935da21ec58e8735ad1bdd2e8ddff8a6e55e227e45cca9db896f0f742e7f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:24Z"
+        }
+      ]
+    },
+    {
+      "number": "MTFS 2023:3",
+      "detail_url": "https://www.tillvaxtanalys.se/download/18.7c642acd1877956246c434ec/1681903493166/MTFS%202023_3%20F%C3%B6reskrift%20om%20statistik%20om%20uppgifter%20till%20statistik%20om%20svenska%20koncerner.pdf",
+      "files": [
+        {
+          "label": "MTFS 2023:3",
+          "url": "https://www.tillvaxtanalys.se/download/18.7c642acd1877956246c434ec/1681903493166/MTFS%202023_3%20F%C3%B6reskrift%20om%20statistik%20om%20uppgifter%20till%20statistik%20om%20svenska%20koncerner.pdf",
+          "bytes": 720726,
+          "sha256": "3b8d62bf21149fe2ea02f592586e89cee2cfc6423320c89c610015bb5cfe7741",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:29:23Z"
         }
       ]
     },
@@ -17150,6 +18822,20 @@
       ]
     },
     {
+      "number": "SCB-FS 2016:17",
+      "detail_url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/scbs-foreskrifter-for-offentliggorande-m.m.-av-officiell-statistik/scb-fs-201617/",
+      "files": [
+        {
+          "label": "SCB-FS 2016:17",
+          "url": "https://www.scb.se/contentassets/62d36ba3d75048c4a58bd54e97d35fc0/scb-fs-2016-17.pdf",
+          "bytes": 533415,
+          "sha256": "5f50fc295a0c4d59c414135e8356bf0f0ab440328497e0acc5e32eab94b711b2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:36:11Z"
+        }
+      ]
+    },
+    {
       "number": "SCB-FS 2017:5",
       "detail_url": "https://www.scb.se/link/ba726bd39d0742faa3451fb6895fbb2c.aspx",
       "files": [
@@ -17244,6 +18930,20 @@
           "sha256": "174731ce9cf8eb56527cc237d5b7265b07f0a78cdab50730dccf16cb4689737b",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T01:04:39Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:26",
+      "detail_url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/scbs-foreskrifter-for-offentliggorande-m.m.-av-officiell-statistik/scb-fs-202126/",
+      "files": [
+        {
+          "label": "SCB-FS 2021:26",
+          "url": "https://www.scb.se/contentassets/b24fc7cfd5894550bb332cc6376d2434/87363-scb-fs-2021-26-foreskrift-2021_20-sid.pdf",
+          "bytes": 834318,
+          "sha256": "4921ce03d5c415dfaf9df97e714c90fca64e3c0fcb42a15d6e7ac2fcc16bd479",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:36:14Z"
         }
       ]
     },
@@ -17398,6 +19098,20 @@
           "sha256": "0b92df4ff7ebba4a281c5aa33bce119e3479bb857aa8f2f260d9d77768bfcf24",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T01:04:59Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2023:6",
+      "detail_url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/scbs-foreskrifter-for-offentliggorande-m.m.-av-officiell-statistik/scb-fs-202306/",
+      "files": [
+        {
+          "label": "SCB-FS 2023:6",
+          "url": "https://www.scb.se/contentassets/fe60728f49404b59a3c06db5c3f5e845/89331-foreskrift-scb-fs_2023-06_4_sid_k1.pdf",
+          "bytes": 181611,
+          "sha256": "84974991e2cf99fd2903f10093ad3cb623a107989d79e578ec9c9dc43c83d3a6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:36:09Z"
         }
       ]
     },
@@ -17876,6 +19590,132 @@
           "sha256": "f56df2757091ed638c9d47973c23a67bc53caa68da0167ab68da582c6498e64e",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-29T23:56:49Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2019:1",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20191/",
+      "files": [
+        {
+          "label": "SIFS 2019:1",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2019-1-spelinspektionens-foreskrifter-och-allmanna-rad-om-bingo-for-allmannyttiga-andamal2.pdf",
+          "bytes": 208379,
+          "sha256": "00491411bc5d4e28e83ee4f096a3d8c1602616aa246dd7ae12fd61980ed66428",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:30Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2019:2",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20192/",
+      "files": [
+        {
+          "label": "SIFS 2019:2",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/konsoliderade-versioner/konsoliderad-version-av-sifs-2019_2-inkl.-andring-enl.-sifs-2026_2.pdf",
+          "bytes": 194091,
+          "sha256": "9a78b71d210d7f60f2b92db86a2e95e3667ea3818d0d335d47bef7278b697ae6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:32Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2020:2",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20202/",
+      "files": [
+        {
+          "label": "SIFS 2020:2",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/konsoliderade-versioner/konsoliderad-version-av-sifs-2020_2-inkl-andring-enl.-2024_3-1.pdf",
+          "bytes": 163818,
+          "sha256": "dff2afe1006017b5b22f4c476ffca34b5515f08237a732d0f3a800e8f29a3efc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:35Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2022:2",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20222/",
+      "files": [
+        {
+          "label": "SIFS 2022:2",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2022_2-spelinspektionens-foreskrifter-om-undantag-fran-kravet-pa-registrering-1.pdf",
+          "bytes": 148359,
+          "sha256": "b6c44940f45979f112b45347b07772e6e9223e1408deace1e7b1d5f632f27db5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:37Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2022:3",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20223/",
+      "files": [
+        {
+          "label": "SIFS 2022:3",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2022_3-spelinspektionens-foreskrifter-och-allmanna-rad-om-tekniska-krav-samt-ackreditering-av-organ-for-den-som-ska-kontrollera-prova-och-certifiera-spelverksamhet.pdf",
+          "bytes": 368137,
+          "sha256": "bc8833569959d28bd767b39b6c87c65da876801239226baf01a54a44cb06cea0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:39Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2024:1",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20241/",
+      "files": [
+        {
+          "label": "SIFS 2024:1",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2024_1-spelinspektionens-foreskrifter-och-allmanna-rad-om-dragningar-utanfor-spelsystem.pdf",
+          "bytes": 169974,
+          "sha256": "b2832b2cfea53c9eb00089718cc1b129e6c20a82ea68746415eebc872eae33e5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:41Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2025:1",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20251/",
+      "files": [
+        {
+          "label": "SIFS 2025:1",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2025_1-foreskrifter-och-allmanna-rad-om-spel-pa-vardeautomater.pdf",
+          "bytes": 228134,
+          "sha256": "aa03980b1f2992367b558675c332cd31169581c5edf5addef2982e65a46fc0ba",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:43Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2026:1",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20261-spelinspektionens-foreskrifter-om-avgifter-for-tillsyn/",
+      "files": [
+        {
+          "label": "SIFS 2026:1",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2026_1-spelinspektionens-foreskrifter-om-avgifter-for-tillsyn.pdf",
+          "bytes": 135988,
+          "sha256": "bc548138fd959d7ae91418dd59697a5c9b351e26d3146ee47ac9a05e28d4cffc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:45Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2026:3",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20263/",
+      "files": [
+        {
+          "label": "SIFS 2026:3",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2026_3-spelinspektionens-foreskrifter-om-det-nationella-sjalvavstangningsregistret.pdf",
+          "bytes": 162255,
+          "sha256": "3a286406e3a52ae904d047a05ec872560f1108a9486d888e80002a8baf1c0fae",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:47Z"
         }
       ]
     },
@@ -38066,6 +39906,196 @@
       ]
     },
     {
+      "number": "STFS 2007:1",
+      "detail_url": "https://sametinget.se/4539?file_id=STFS+2007_1_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:1",
+          "url": "https://sametinget.se/4539?file_id=STFS+2007_1_ny2.pdf",
+          "bytes": 265350,
+          "sha256": "175aaf4bc3e8f6759dac2ea661965b4ac65d1caf0fc92daba0509e0a61d57603",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:58Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:2",
+      "detail_url": "https://sametinget.se/4538?file_id=STFS+2007_2_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:2",
+          "url": "https://sametinget.se/4538?file_id=STFS+2007_2_ny2.pdf",
+          "bytes": 117468,
+          "sha256": "3ff30e376de357a1b6f4a9a9d446db9c954bf9ee60ec45f19bbbe19bad0efcdd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:57Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:3",
+      "detail_url": "https://sametinget.se/4537?file_id=STFS+2007_3_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:3",
+          "url": "https://sametinget.se/4537?file_id=STFS+2007_3_ny2.pdf",
+          "bytes": 118029,
+          "sha256": "2f223f84f8b5bf7f69528af8e0be76bbb631721cfc19052eac8146b91d3821c3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:55Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:4",
+      "detail_url": "https://sametinget.se/4339?file_id=STFS+2007_4_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:4",
+          "url": "https://sametinget.se/4339?file_id=STFS+2007_4_ny2.pdf",
+          "bytes": 158939,
+          "sha256": "2e62b5ff24580661f1d89a621dd89cf93d1049b401b6ba74bae5bcea12e78049",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:47Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:5",
+      "detail_url": "https://sametinget.se/4489?file_id=STFS+2007_5_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:5",
+          "url": "https://sametinget.se/4489?file_id=STFS+2007_5_ny2.pdf",
+          "bytes": 174271,
+          "sha256": "b7afb940e6d31e3cf0093f5f2ce0b4e5735c63e65843e8bdfde7fb3c4050cbd5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:52Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:6",
+      "detail_url": "https://sametinget.se/4535?file_id=STFS+2007_6_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:6",
+          "url": "https://sametinget.se/4535?file_id=STFS+2007_6_ny2.pdf",
+          "bytes": 148118,
+          "sha256": "a8ffa01daf5d66f14912067c4b080291e26f35e9e2a8e8089c2701d515209e46",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:7",
+      "detail_url": "https://sametinget.se/4331?file_id=STFS+2007_7_ny.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:7",
+          "url": "https://sametinget.se/4331?file_id=STFS+2007_7_ny.pdf",
+          "bytes": 1034461,
+          "sha256": "f3b8c0485d9561051c84cfd450edc2ced22fe994ebf3df6fc21702aeeb647ecb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:46Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:9",
+      "detail_url": "https://sametinget.se/4417?file_id=STFS+2007_9_rovdjursersattning_ny.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:9",
+          "url": "https://sametinget.se/4417?file_id=STFS+2007_9_rovdjursersattning_ny.pdf",
+          "bytes": 174117,
+          "sha256": "ed2818338f254d1a4437fea80892ecb50a9d026b3f52132b28499061186ea651",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:49Z"
+        },
+        {
+          "label": "STFS 2007:9 (konsoliderad version)",
+          "url": "https://sametinget.se/6341?file_id=1",
+          "bytes": 280048,
+          "sha256": "124fcaf1ceae95608055ac9ef60fb9f3f2de13f9fb050eb168cc153cc55f2f7d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:50Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2008:1",
+      "detail_url": "https://sametinget.se/4377?file_id=F%C3%B6reskrifter+om+statsbidrag+vid+vissa+studier+i+samiska+STFS+2008-1_3+sidor_ny.pdf",
+      "files": [
+        {
+          "label": "STFS 2008:1",
+          "url": "https://sametinget.se/4377?file_id=F%C3%B6reskrifter+om+statsbidrag+vid+vissa+studier+i+samiska+STFS+2008-1_3+sidor_ny.pdf",
+          "bytes": 250059,
+          "sha256": "78a50a6cb1b6aae101f127647d7bfebb4ece62ba048ef1a43a82ae811619d2d5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:48Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2016:1",
+      "detail_url": "https://sametinget.se/3689?file_id=STFS+2016-1.pdf",
+      "files": [
+        {
+          "label": "STFS 2016:1",
+          "url": "https://sametinget.se/3689?file_id=STFS+2016-1.pdf",
+          "bytes": 249845,
+          "sha256": "79b7c4aeea2aaaa3d70249db31eb4e23f7b8e0115cf3ebf7f0121938b4b6fe68",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:44Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2017:1",
+      "detail_url": "https://sametinget.se/3566?file_id=STFS+2017_1+om+statsbidrag+vid+vissa+studier+i+samiska.pdf",
+      "files": [
+        {
+          "label": "STFS 2017:1",
+          "url": "https://sametinget.se/3566?file_id=STFS+2017_1+om+statsbidrag+vid+vissa+studier+i+samiska.pdf",
+          "bytes": 279996,
+          "sha256": "be2d853ab8fd18540c682911e22b5f166563adf192ef47b5f005d16cd58111c3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:43Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2018:1",
+      "detail_url": "https://sametinget.se/3480?file_id=STFS+2018_1+F%C3%B6reskrifter+om+partist%C3%B6d.pdf",
+      "files": [
+        {
+          "label": "STFS 2018:1",
+          "url": "https://sametinget.se/3480?file_id=STFS+2018_1+F%C3%B6reskrifter+om+partist%C3%B6d.pdf",
+          "bytes": 188025,
+          "sha256": "953ace6fc2664eb77791ff1a3b4376d0a34306df86c059a5fc134cdf0ea365c9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:42Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2024:1",
+      "detail_url": "https://sametinget.se/6371?file_id=1",
+      "files": [
+        {
+          "label": "STFS 2024:1",
+          "url": "https://sametinget.se/6371?file_id=1",
+          "bytes": 229465,
+          "sha256": "9d7184aa875f00a739291ee9e18e2b8a2270c69edce991c813e98b31ca7fd734",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:41Z"
+        }
+      ]
+    },
+    {
       "number": "SiSFS 2012:1",
       "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs2012-1-statens-institutionsstyrelses-foreskrifter-om-vissa-vardavgifter-vid-sarskilda-ungdomshem.pdf",
       "files": [
@@ -38482,6 +40512,48 @@
           "sha256": "fc20199e54aabb0db28c0072fe7560c3aaa1ac171581e34676a28608df530e34",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-29T23:57:23Z"
+        }
+      ]
+    },
+    {
+      "number": "TPPVFS 2024:1",
+      "detail_url": "https://www.pliktverket.se/download/18.3447a8a918c8afb6c075718/1704199706713/TPPV%20F%C3%B6reskrifter%20om%20f%C3%B6rm%C3%A5ner_slutlig.pdf",
+      "files": [
+        {
+          "label": "TPPVFS 2024:1",
+          "url": "https://www.pliktverket.se/download/18.3447a8a918c8afb6c075718/1704199706713/TPPV%20F%C3%B6reskrifter%20om%20f%C3%B6rm%C3%A5ner_slutlig.pdf",
+          "bytes": 245179,
+          "sha256": "18be7f9143337c3aa3d7ad6c045837c27ee41dcf3952f6b93ffe52be292c20d9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:13:56Z"
+        }
+      ]
+    },
+    {
+      "number": "TRMFS 2017:1",
+      "detail_url": "https://www.pliktverket.se/download/18.42d9d0f61768423b5862296/1612187907484/trmfs-2017_1.pdf",
+      "files": [
+        {
+          "label": "TRMFS 2017:1",
+          "url": "https://www.pliktverket.se/download/18.42d9d0f61768423b5862296/1612187907484/trmfs-2017_1.pdf",
+          "bytes": 288145,
+          "sha256": "e9e619882921867448fce1f45df943f5a0d7190eb406f0dc71ee179934c244ba",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:13:55Z"
+        }
+      ]
+    },
+    {
+      "number": "TRMFS 2017:4",
+      "detail_url": "https://www.pliktverket.se/download/18.42d9d0f61768423b5862299/1612187907566/trmfs-2017_4.pdf",
+      "files": [
+        {
+          "label": "TRMFS 2017:4",
+          "url": "https://www.pliktverket.se/download/18.42d9d0f61768423b5862299/1612187907566/trmfs-2017_4.pdf",
+          "bytes": 158373,
+          "sha256": "7b65918797b4acb7bd049478baf8fe620d1e0614532ccb8bf78b5c93f3f611c6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:13:56Z"
         }
       ]
     },
