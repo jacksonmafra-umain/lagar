@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter/torghandelstaxa-for-skovde-kommun.pdf"
 source_sha256: "1c0890912901144f56cae86c332741d43797a9041ff2d020606bcda7bf00df11"
-fetched_at: "2026-10-30T21:59:10Z"
+fetched_at: "2026-10-30T23:07:57Z"
 issuer: "Skövde kommun"
 region_code: "14"
 municipality_code: "1496"
@@ -24,7 +24,7 @@ municipality_code: "1496"
 # Torghandelstaxa för Skövde kommun
 
 Kommun: Skövde (1496)  
-Författningssamling: Skövde kommuns taxor och avgifter  
+Författningssamling: Skövde kommuns författningssamling: lokala föreskrifter, taxor och avgifter  
 Nummer: torghandelstaxa-for-skovde-kommun
 
 Förteckning: <https://www.skovde.se/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter>

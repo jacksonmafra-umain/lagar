@@ -1,0 +1,22 @@
+{
+  "listings": {
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162&isr=false": "1262-listing.json",
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165&isr=false": "1262-listing-2.json",
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211&isr=false": "1262-listing-3.json",
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-d2e236f846fb8312064&isr=false": "1262-listing-4.json",
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-e30e47cd09a28312217&isr=false": "1262-listing-5.json",
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-a1d17bce35538298225&isr=false": "1262-listing-6.json",
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-d1f9ac3d566c8298228&isr=false": "1262-listing-7.json",
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-43ff12c2b8088298234&isr=false": "1262-listing-8.json",
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-9d6d23a44a418298231&isr=false": "1262-listing-9.json",
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-5f230e0c944e8298243&isr=false": "1262-listing-10.json",
+    "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165-86bb1dfbdada8298246&isr=false": "1262-listing-11.json"
+  },
+  "count": 50,
+  "sample": {
+    "number": "a52063c1e3156bd89360-245b-4e7a-a88b-cc8fbf232eef",
+    "title": "E.2.1 Lokala ordningsföreskrifter för Lomma kommun",
+    "url": "https://docs.netpublicator.com/api/public/r01696490/document/a52063c1e3156bd89360-245b-4e7a-a88b-cc8fbf232eef?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162-c9454a2ccbde8312211"
+  },
+  "excluded": []
+}

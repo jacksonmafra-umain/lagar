@@ -360,13 +360,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
     page without headings, so their configs keep only listed file names; a new
     document with another name is not picked up until the config is updated.
-  - Not collected yet: Gävle (MediaFlow shares, whose download links need a
-    token and expire after minutes; an adapter is planned) and Leksand
-    (Netpublicator; an adapter is planned). Karlstad serves its files only
+  - Karlstad serves its files only
     through time-limited SharePoint links on a host whose robots.txt disallows
     everything, so it is not collected.
-  - Skövde: only the taxor och avgifter page is collected; the lokala
-    föreskrifter are listed as JSON in the Next.js page's script data. Nora
+  - Skövde: the taxor och avgifter page and the five lokala föreskrifter
+    (ordnings-, avfalls-, hälsoskydds- and torghandelsföreskrifter and ABVA),
+    which its författningssamling lists only as JSON in the Next.js page's
+    script data (read with `embedded: "next"`), are collected. Nora
     publishes only three taxor as PDFs (bygglov, VA, avfall); no ordnings-,
     avfalls- or hälsoskyddsföreskrifter were found on its site. Arvika's taxor
     page and Älvsbyn's föreskrifter (no index page) are not covered.
@@ -384,10 +384,19 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     (PDFs on media.helsingborg.se); its föreskrifter page and the two avgifter
     PDFs are collected. Its avfallstaxa lives on NSR's site and its environment
     fees on a separate site for companies; neither is collected.
-  - Not collected in Skåne, with the reason per kommun in `AGENCIES.md`: Vellinge
-    (rules as HTML text), Östra Göinge, Lomma, Höör and Perstorp (document lists
-    rendered in the browser) and Båstad (no collection page).
-    Their issues stay open.
+  - Båstad's "Regler och styrande dokument" page (under Kommunfakta) lists its
+    författningssamling as one Sitevision file list; its 29 föreskrifter and
+    taxor are collected, internal documents left out by title.
+  - Perstorp: its "Kommunal författningssamling" page keeps the document list in
+    a minimised layout that opens only through `?sv.state=normal`, which
+    robots.txt disallows, and the site has no sitemap. Not bypassed; a gap.
+  - Lomma publishes its författningssamling in a Netpublicator reader; its channels
+    E (lokala föreskrifter) and F (taxor) are read through Netpublicator's public
+    API (`json_list` with `follow_items`). Vellinge publishes its lokala
+    ordningsföreskrifter and hälsoskyddsföreskrifter as web pages, collected as
+    page text (`html_pages` over its gzipped sitemap).
+  - Not collected in Skåne, with the reason per kommun in `AGENCIES.md`: Östra
+    Göinge and Höör (Ciceron meeting portals). Their issues stay open.
   - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
     the PDFs are never fetched; the documents point at the listing page and are
     recorded as gaps in the manifest.
@@ -407,9 +416,9 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
     included, with an HTTP 403 "Åtkomst nekad" bot-check page; not bypassed.
   - Not collected yet, with the reason per kommun in `AGENCIES.md`: Värnamo
-    (its DocumentWeb host did not answer), Mönsterås (site did not answer) and
-    Linköping (rules on Google Drive; waits for an owner decision). Their issues
-    stay open.
+    (its DocumentWeb host did not answer; retried 2026-10-31), Mönsterås (site
+    did not answer; retried 2026-10-31) and Linköping (rules on Google Drive;
+    waits for an owner decision). Their issues stay open.
   - Collected through platform adapters: Lidingö and Västervik (Evolution
     DocumentWeb API), Sigtuna (Netpublicator), Gotland (its document service),
     Vallentuna (gzipped sitemap of the file-share module), Uppsala (sitemap and

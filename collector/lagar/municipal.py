@@ -22,6 +22,10 @@ maps each kommun code to its listing pages and to one of three parsing strategie
   share's token URL; the share's files are listed through its API, and each
   PDF is fetched through a download link that is signed for a few minutes, so
   the kommun's page (`page`) is the document's source.
+- `ciceron`: a Ciceron meeting portal ("sammanträdesportal"). Each listing is the
+  portal's address; its "Styrande dokument" are searched through the portal's
+  JSON-RPC endpoint and each document's first PDF is fetched from the portal's
+  download link.
 
 Most kommuner run Sitevision and list their documents as one flat file list.
 `"preset": "sitevision"` fills in the link pattern, number (the file's node id)
@@ -70,7 +74,7 @@ DEFAULT_STATE = "collector/data/municipal-state.json"
 DEFAULT_MANIFEST = "sources/municipal-manifest.json"
 DEFAULT_RATE = 1.0
 MANIFEST_VERSION = 1
-STRATEGIES = ("html_index", "domino_view", "html_pages", "json_list", "mediaflow")
+STRATEGIES = ("html_index", "domino_view", "html_pages", "json_list", "mediaflow", "ciceron")
 
 # Defaults merged under a kommun entry that names a preset; the entry's own keys win.
 PRESETS = {
@@ -987,6 +991,61 @@ def _mediaflow_download(fetcher, kommun, url):
     raise ValueError(f"no original PDF for {url}")
 
 
+
+# Ciceron portals: "Styrande dokument" is the information type the portal's search calls 512.
+CICERON_DOCTYPE = 512
+CICERON_PAGE = 100
+CICERON_SEARCH = "lagar"
+
+
+def _ciceron_rpc(fetcher, kommun, endpoint, method, params, session):
+    """(result, session id) of one JSON-RPC call; the portal hands out the session on the first call."""
+    payload = {"jsonrpc": "2.0", "method": f"CiceronsokServer:{method}", "params": params}
+    if session:
+        payload["session_id"] = session
+    data = json.loads(_text(fetcher.post_json(kommun, endpoint, payload)))
+    if not isinstance(data, dict) or data.get("error"):
+        raise ValueError(f"{method}: {(data or {}).get('error')}")
+    return data.get("result"), data.get("session_id") or session
+
+
+def ciceron_entries(fetcher, kommun, portal):
+    """(entries, problems) of a Ciceron portal's styrande dokument, numbered by document id.
+
+    Search registers a result list under the session, ReadItems pages through it, and
+    ReadObjectDetails names each kept document's files. Titles are filtered before the
+    details are read, so only the kept documents cost a request each.
+    """
+    endpoint = urllib.parse.urljoin(portal, "json")
+    _, session = _ciceron_rpc(fetcher, kommun, endpoint, "Test", {}, None)
+    result, session = _ciceron_rpc(fetcher, kommun, endpoint, "Search", {
+        "search_id": CICERON_SEARCH, "doctype": CICERON_DOCTYPE, "text": "", "param": "{}"}, session)
+    hits = int(json.loads(result["result"]).get("hits") or 0)
+    items = []
+    for offset in range(0, hits, CICERON_PAGE):
+        result, session = _ciceron_rpc(fetcher, kommun, endpoint, "ReadItems", {
+            "search_id": CICERON_SEARCH, "offset": offset, "limit": CICERON_PAGE}, session)
+        items += result.get("results") or []
+    sha = hashlib.sha256(json.dumps(items, sort_keys=True).encode("utf-8")).hexdigest()
+    entries, problems = [], []
+    for item in items:
+        title = _title(kommun, str(item.get("title") or ""))
+        if not title or not binds_residents(kommun, title):
+            continue
+        result, session = _ciceron_rpc(fetcher, kommun, endpoint, "ReadObjectDetails", {
+            "search_id": CICERON_SEARCH, "id": str(item.get("id"))}, session)
+        details = json.loads(result.get("value") or "{}")
+        files = [f for f in details.get("files") or [] if str(f.get("filename", "")).lower().endswith(".pdf")]
+        number = str(details.get("dok_id") or "")
+        if not files or not re.fullmatch(r"[0-9]+", number):
+            problems.append(title)
+            continue
+        query = urllib.parse.urlencode({"filename": files[0]["filename_b64"], "id": files[0]["id"]})
+        url = _uri(urllib.parse.urljoin(portal, "download/document?" + query))
+        entries.append(Entry(kommun.code, number, title, url, portal, sha))
+    return entries, problems
+
+
 # html_pages lists its rule pages the way html_index lists documents.
 PARSERS = {
     "html_index": parse_html_index,
@@ -1424,6 +1483,9 @@ def list_entries(fetcher, kommun):
                 raw, share = mediaflow_files(fetcher, settings, url)
                 found, bad = parse_mediaflow(settings, raw, url, share)
                 final = url
+            elif settings.strategy == "ciceron":
+                found, bad = ciceron_entries(fetcher, settings, url)
+                raw, final = b"", url
             else:
                 raw, _, final = fetcher.get(settings, url)
                 found, bad = PARSERS[settings.strategy](settings, raw, final)
@@ -1462,7 +1524,7 @@ def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
             break
         doc_id = corpus_id(kommun.code, entry.number)
         path = writer.path_for({"id": doc_id, "type": TYPE}, args.corpus)
-        done = doc_id in state["done"] or (kommun.strategy in ("html_index", "json_list", "mediaflow") and known.get(doc_id) == entry.url)
+        done = doc_id in state["done"] or (kommun.strategy in ("html_index", "json_list", "mediaflow", "ciceron") and known.get(doc_id) == entry.url)
         if not args.refresh and done and path.exists():
             summary.skipped += 1
             continue
