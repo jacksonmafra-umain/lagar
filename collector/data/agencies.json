@@ -24,7 +24,7 @@
     "statistiska-centralbyrans-forfattningssamling-scb-fs": {
       "series": "SCB-FS",
       "agency": "Statistiska centralbyrån",
-      "status": "partial",
+      "status": "collected",
       "note": "Full text from SCB's page per regulation, listed in its table of regulations on reporting duties (uppgiftslämnande) in force. The monthly consumer price index notices and the regulations on official statistics (published only as PDF) are not collected."
     },
     "aklagarmyndighetens-forfattningssamling-afs": {
@@ -83,7 +83,9 @@
     },
     "totalforsvarets-plikt-och-provningsverks-forfattningssamling-tppvfs": {
       "series": "TPPVFS",
-      "agency": "Totalförsvarets plikt- och prövningsverk"
+      "agency": "Totalförsvarets plikt- och prövningsverk",
+      "status": "collected",
+      "note": "Base regulations in force from Pliktverket's page, with the predecessor TRMFS regulations under their own prefix; text from the PDFs."
     },
     "havs-och-vattenmyndighetens-forfattningssamling-hvmfs": {
       "series": "HVMFS",
@@ -234,7 +236,9 @@
     },
     "spelinspektionens-forfattningssamling-sifs": {
       "series": "SIFS",
-      "agency": "Spelinspektionen"
+      "agency": "Spelinspektionen",
+      "status": "collected",
+      "note": "Regulations in force from Spelinspektionen's list (a PDF) and the page per regulation; the former Lotteriinspektionen's LIFS are stored under that prefix; text from the PDFs."
     },
     "statens-jordbruksverks-forfattningssamling-sjvfs": {
       "series": "SJVFS",
@@ -305,8 +309,8 @@
     "svensk-trafikforeskriftssamling-stfs": {
       "series": "STFS",
       "agency": "Transportstyrelsen (local traffic regulations)",
-      "status": "out_of_scope",
-      "note": "Local traffic regulations; out of scope for the county layer (COVERAGE.md)."
+      "status": "collected",
+      "note": "Regulations from Sametinget's document bank (the JSON its search page reads); text from the PDFs."
     },
     "naturvardsverkets-forfattningssamling-nfs": {
       "series": "NFS",
@@ -316,7 +320,8 @@
     },
     "sametingets-forfattningssamling-stfs": {
       "series": "STFS",
-      "agency": "Sametinget"
+      "agency": "Sametinget",
+      "status": "collected"
     },
     "skogsstyrelsens-forfattningssamling-sksfs": {
       "series": "SKSFS",
