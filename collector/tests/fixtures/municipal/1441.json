@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://lerum.se/kommun-och-politik/overklaga-beslut-insyn-och-rattssakerhet/kommunal-forfattningssamling": "1441-listing.html"
+  },
+  "count": 51,
+  "sample": {
+    "number": "18.7c14cb5919b68ebe0da5b208",
+    "title": "Avfallstaxa 2026",
+    "url": "https://lerum.se/download/18.7c14cb5919b68ebe0da5b208/1767098858370/AvfallstaxaTA%202026.pdf"
+  },
+  "excluded": [
+    "Antagna regler för kommunalt partistöd",
+    "Arbetsordning för kommunfullmäktige",
+    "Bestämmelser för näringslivsrådet i Lerums kommun"
+  ]
+}

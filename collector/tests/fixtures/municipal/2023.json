@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://malung-salen.se/kommun-och-politik/dokument/styrdokument": "2023-listing1.html",
+    "https://malung-salen.se/bygga-bo-och-miljo/miljo-och-halsa/miljoskydd/avfall-och-atervinning": "2023-listing2.html"
+  },
+  "count": 4,
+  "sample": {
+    "number": "18.2342be9e17e5ed578bb1a09b",
+    "title": "Lokala föreskrifter för miljö och människors hälsa",
+    "url": "https://malung-salen.se/download/18.2342be9e17e5ed578bb1a09b/1643979547365/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20milj%C3%B6%20och%20m%C3%A4nniskors%20h%C3%A4lsa.pdf"
+  },
+  "excluded": [
+    "Barn- och utbildningsnämndens nämndplan 2026",
+    "Kommunstyrelsens nämndplan 2026",
+    "Kultur- och fritidsnämndens nämndplan 2026"
+  ]
+}
