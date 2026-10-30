@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://nykvarn.se/kommun-och-politik/styrande-dokument/forfattningssamling": "0140-listing.html"
+  },
+  "count": 15,
+  "sample": {
+    "number": "18.237ec65c19ed477c6247ceab",
+    "title": "Allmänna ordningsföreskrifter",
+    "url": "https://nykvarn.se/download/18.237ec65c19ed477c6247ceab/1782811589403/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter,%20beslutad%202026-06-17.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige",
+    "Policy för hedersmedborgare",
+    "Reglemente för kommunstyrelsen"
+  ]
+}

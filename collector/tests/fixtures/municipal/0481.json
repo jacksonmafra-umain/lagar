@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.oxelosund.se/kommun-och-politik/planer-och-styrdokument": "0481-listing.html"
+  },
+  "count": 37,
+  "sample": {
+    "number": "18.40abfd3119b353ba0678f261",
+    "title": "Avgifter för kopiering av allmänna handlingar",
+    "url": "https://www.oxelosund.se/download/18.40abfd3119b353ba0678f261/1770280362956/Avgifter%20f%C3%B6r%20kopiering%20av%20allm%C3%A4nna%20handlingar%20mm%202026.pdf"
+  },
+  "excluded": [
+    "Övergripande plan med budget 2027-2029",
+    "Kommunstyrelsens plan med budget 2026",
+    "Kultur- och fritidsnämndens plan med budget 2026"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.upplands-bro.se/kommun-och-politik/handlingar-och-protokoll/forfattningssamling-och-overgripande-styrdokument.html": "0139-listing.html"
+  },
+  "count": 28,
+  "sample": {
+    "number": "18.7f22f69f181d7101be9b38",
+    "title": "ABVA (Allmänna bestämmelser för användande av Upplands-Bro kommuns allmänna vatten- och avloppsanläggning)",
+    "url": "https://www.upplands-bro.se/download/18.7f22f69f181d7101be9b38/1657197196764/ABVA%20(Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20Upplands-Bro%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning)"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige",
+    "Reglemente med gemensamma bestämmelser för styrelse och nämnder",
+    "Reglemente för bygg- och miljönämnden"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "listings": {
+    "https://www.botkyrka.se/kommun-och-politik/sa-arbetar-kommunen/styrdokument": "0127-listing.html",
+    "https://www.botkyrka.se/kommun-och-politik/sa-arbetar-kommunen/sa-arbetar-vi-med.../ett-hallbart-botkyrka/vart-arbete-for-en-hallbar-samhallsutveckling/ekologisk-hallbarhet/avfallsplan-och-renhallningsforeskrifter": "0127-listing-2.html",
+    "https://www.botkyrka.se/naringsliv-och-foretag/tillstand-regler-och-taxor/taxor/taxor-och-taxetabeller": "0127-listing-3.html",
+    "https://www.botkyrka.se/boende-och-narmiljo/vatten-och-avlopp/vattenmatare/va-taxa-och-avgifter": "0127-listing-4.html"
+  },
+  "count": 13,
+  "sample": {
+    "number": "18.64f428a2196867af55611dd",
+    "title": "Allmänna lokala ordningsföreskrifter för Botkyrka kommun",
+    "url": "https://www.botkyrka.se/download/18.64f428a2196867af55611dd/1746026145751/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Botkyrka%20kommun.PDF"
+  },
+  "excluded": [
+    "Avfallsplan",
+    "Författningssamlingen i sin helhet",
+    "Särtaxa Eldtomta och Kagghamra 2026"
+  ]
+}

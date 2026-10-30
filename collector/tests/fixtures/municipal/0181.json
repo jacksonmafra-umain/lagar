@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.sodertalje.se/kommun-och-politik/politisk-organisation/forfattningssamling/": "0181-listing.html"
+  },
+  "count": 10,
+  "sample": {
+    "number": "naturreservatet-moraans-dalgang-i-jarna-inom-sodertalje-kommun",
+    "title": "Föreskrifter för naturreservatet Moraåns dalgång i Järna",
+    "url": "https://www.sodertalje.se/contentassets/5ae0b96061f84816a220ad50b69999e5/naturreservatet-moraans-dalgang-i-jarna-inom-sodertalje-kommun.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige",
+    "Arbetsordning för medborgarförslag",
+    "Arvodesreglemente"
+  ]
+}

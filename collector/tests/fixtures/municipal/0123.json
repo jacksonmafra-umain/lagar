@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.jarfalla.se/kommunochpolitik/insynochrattssakerhet/styrdokumentochforeskrifter/lokalaforeskrifter.4.3913bc1813296639adf80004279.html": "0123-listing.html",
+    "https://www.jarfalla.se/byggaboochmiljo/avfallochatervinning/hanteraavfallochatervinning/reglerochvillkorforavfallochatervinning.4.dcc12c315f6c519c7cc288b.html": "0123-listing-2.html"
+  },
+  "count": 16,
+  "sample": {
+    "number": "18.3145e4e9197a1e4c8a729daa",
+    "title": "Allmänna lokala ordningsföreskrifter för Järfälla kommun",
+    "url": "https://www.jarfalla.se/download/18.3145e4e9197a1e4c8a729daa/1751022943163/lokala-ordningsforeskrifter-for-jarfalla-kommun.pdf"
+  },
+  "excluded": [
+    "Karta med geografiska områden där förbud mot bruk av lustgas och alkohol gäller.",
+    "Bakgrund",
+    "Måldokument"
+  ]
+}

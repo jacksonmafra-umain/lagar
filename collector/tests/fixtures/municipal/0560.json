@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.boxholm.se/kommun-och-politik/om-boxholm/forfattningssamling": "0560-listing.html"
+  },
+  "count": 16,
+  "sample": {
+    "number": "18.2004b681199fffdce8c54e1f",
+    "title": "Frister för rengöring (sotning) (pdf)",
+    "url": "https://www.boxholm.se/download/18.2004b681199fffdce8c54e1f/1761559855800/Frister%20f%C3%B6r%20reng%C3%B6ring_sotning_1.pdf"
+  },
+  "excluded": [
+    "Hjälpmedelspolicy (pdf)",
+    "Måltidspolicy (pdf)",
+    "Näringslivspolicy (pdf)"
+  ]
+}

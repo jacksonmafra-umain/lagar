@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://knivsta.se/politik-och-organisation/forfattningssamling": "0330-listing.html"
+  },
+  "count": 20,
+  "sample": {
+    "number": "18.6f85ea411864b741b175496",
+    "title": "Arkivföreskrifter för Knivsta kommun",
+    "url": "https://knivsta.se/download/18.6f85ea411864b741b175496/1676471090815/Arkivf%C3%B6reskrifter%20f%C3%B6r%20Knivsta%20kommun.pdf"
+  },
+  "excluded": [
+    "Avfallsplan 2023-2030",
+    "Reglemente för ersättningar och arvoden till förtroendevalda",
+    "Reglemente för intern kontroll"
+  ]
+}

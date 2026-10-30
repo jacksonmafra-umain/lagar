@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.katrineholm.se/kommun-och-politik/vision-ekonomi-och-styrning/styrande-dokument.html": "0483-listing.html"
+  },
+  "count": 36,
+  "sample": {
+    "number": "KFS 2.01",
+    "title": "Lokala föreskrifter för att skydda människors hälsa och miljön",
+    "url": "https://www.katrineholm.se/download/18.4755fb0619b828d3dbd91ebb/1767960523775/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n%20KF%202025-11-17,%20%C2%A7%20190.pdf"
+  },
+  "excluded": [
+    "Arkivreglemente",
+    "Bildningsnämndens delegationsordning",
+    "Bygg- och miljönämndens delegationsordning"
+  ]
+}

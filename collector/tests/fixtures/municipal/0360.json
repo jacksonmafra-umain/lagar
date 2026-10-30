@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.tierp.se/tierp.se/kommun-och-politik/styrdokument-planer-och-taxor/taxor-regler-och-avgifter.html": "0360-listing.html"
+  },
+  "count": 35,
+  "sample": {
+    "number": "18.3fc888d18f378294341b4",
+    "title": "Taxa för parkeringsavgift på parkeringen vid Trollsjön",
+    "url": "https://www.tierp.se/download/18.3fc888d18f378294341b4/1781606768137/Taxa%20f%C3%B6r%20parkeringsavgift%20p%C3%A5%20parkeringen%20vid%20Trollsj%C3%B6n.pdf"
+  },
+  "excluded": [
+    "Riktlinje för placering i förskola fritidshem och pedagogisk omsorg",
+    "Plan- och bygglovstaxa",
+    "Regel för reklam och marknadsföring i kommunala idrotts- och fritidsanläggningar i Tierps kommun"
+  ]
+}

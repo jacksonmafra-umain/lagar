@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.haninge.se/kommun-och-politik/politik-och-organisation/regler-och-styrande-dokument/forfattningssamling/": "0136-listing.html"
+  },
+  "count": 16,
+  "sample": {
+    "number": "abva",
+    "title": "Allmänna bestämmelser för vatten och avlopp",
+    "url": "https://www.haninge.se/49988c/globalassets/dokument/styrdokument/kommunal-forfattningssamling/kommunal-forfattningssamling/abva.pdf"
+  },
+  "excluded": [
+    "Reglementen för kommunstyrelsen och övriga nämnder i Haninge kommun",
+    "Södertörns överförmyndarnämnds reglemente",
+    "Arvodesreglemente 2026"
+  ]
+}

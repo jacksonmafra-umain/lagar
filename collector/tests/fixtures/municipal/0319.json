@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.alvkarleby.se/kommun-och-politik/planer-och-styrdokument/kommunala-forfattningar.html": "0319-listing.html"
+  },
+  "count": 22,
+  "sample": {
+    "number": "18.6024435d193ca1ddf991d99",
+    "title": "Föreskrifter om avfallshantering",
+    "url": "https://www.alvkarleby.se/download/18.6024435d193ca1ddf991d99/1736261982069/F%C3%B6reskrifter%20om%20avfallshantering.pdf"
+  },
+  "excluded": [
+    "Delegationsordning för kommunstyrelsen",
+    "Delegationsordning för Omsorgsnämnden (1)",
+    "Delegationsordning för Samhällsbyggnadsnämnden"
+  ]
+}
