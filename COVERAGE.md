@@ -179,6 +179,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   (1). Five PDFs are scans without a text layer (4 CSNFS, 1 LMFS). Repealed
   regulations listed on the LMFS and MTFS pages, and the predecessor series
   LMVFS and DIFS, are not collected.
+  Three more on 2026-10-30, also with text from their PDFs: KVFS (17 base
+  regulations, found through Kriminalvården's sitemap because its listing
+  needs JavaScript), LIVSFS (39 in force, from Livsmedelsverket's yearly
+  tables since 2005) and MYHFS (21 in force and 23 repealed, dated from the
+  list or from the regulation that repealed them). Repealed LIVSFS
+  regulations (no repeal date on the page), 23 MYHFS ones without a known
+  repeal date and the predecessor series SLVFS are not collected.
   [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Agency series published as a list of PDF links (configured in
@@ -342,6 +349,20 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     recorded as gaps in the manifest.
   - Simrishamn publishes its taxor as HTML text on its taxor page, which is not
     collected; only the allmänna lokala ordningsföreskrifter are a PDF.
+- Kommuner checked and not collected are listed with the reason in `AGENCIES.md`
+  (curated in the `kommuner` section of `collector/data/agencies.json`):
+  - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
+    included, with an HTTP 403 "Åtkomst nekad" bot-check page; not bypassed.
+  - Not collected yet in Stockholm, Uppsala, Östergötland, Jönköping, Kalmar
+    and Gotland counties, with the reason per kommun in `AGENCIES.md`:
+    Vallentuna (file-share folders answer 404), Lidingö (Evolution
+    DocumentWeb), Sigtuna (Netpublicator), Uppsala (no index; sitemap only),
+    Aneby and Jönköping (no collection page), Värnamo (document service down),
+    Torsås (titles outside the links), Mönsterås (site did not answer),
+    Västervik (file list not in the HTML) and Gotland (external document
+    service). Östhammar's robots.txt shuts named AI crawlers out of its rule
+    pages and Linköping links its rules to Google Drive; both wait for an owner
+    decision. Their issues stay open.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources

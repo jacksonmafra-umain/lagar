@@ -216,16 +216,25 @@ def build_report(index, curated, counts, targets, counties, municipalities, muni
         gaps[gap["municipality_code"]][gap["reason"]] += 1
     regions = {r["code"]: r["name"] for r in geo["regions"]}
     websites = (kommuner or {}).get("websites", {})
+    # Curated per-kommun status and note: why a kommun is not (fully) collected.
+    kommun_notes = curated.get("kommuner", {})
     configured, missing = [], {}
     for kommun in sorted(geo["kommuner"], key=lambda k: k["code"]):
         code = kommun["code"]
         config = municipalities["kommuner"].get(code)
         row = {"code": code, "kommun": kommun["name"], "url": websites.get(code), "issue": _issue(curated, "kommun:" + code)}
+        known = kommun_notes.get(code, {})
+        if config is None and known:
+            configured.append({**row, "collection": None, "status": known.get("status", "no_adapter"),
+                               "documents": 0, "note": known.get("note")})
+            continue
         if config is None:
             missing.setdefault(kommun["regionCode"], []).append(row)
             continue
         documents = counts["kommun"].get(code, 0)
         notes = [f"{n} documents not fetched: {reason}" for reason, n in sorted(gaps.get(code, {}).items())]
+        if known.get("note"):
+            notes.append(known["note"])
         configured.append({**row, "collection": config["collection"],
                            "status": "partial" if documents else "no_adapter", "documents": documents,
                            "note": "; ".join(notes) or None})
@@ -256,7 +265,7 @@ def build_report(index, curated, counts, targets, counties, municipalities, muni
         "index": {"source": index["source"], "fetched_at": index["fetched_at"], "pages": len(index["pages"])},
         "summary": {"series": len(agencies), "by_status": summary,
                     "shared": len(unique_shared), "kommuner": len(geo["kommuner"]),
-                    "kommuner_configured": len(configured),
+                    "kommuner_configured": sum(1 for k in configured if k["collection"]),
                     "courts": len(court_rows), "courts_collected": sum(1 for c in court_rows if c["documents"])},
         "agency_series": agencies,
         "shared_series": unique_shared,
@@ -345,8 +354,9 @@ def render_markdown(report):
         "",
         "## Municipal regulations (kommuner)",
         "",
-        f"{len(m['configured'])} of {summary['kommuner']} kommuner have a collector configuration "
-        "(`collector/data/municipalities.json`); the others are not collected: no configuration yet. "
+        f"{summary['kommuner_configured']} of {summary['kommuner']} kommuner have a collector configuration "
+        "(`collector/data/municipalities.json`); the table also lists kommuner checked and not collected, "
+        "with the reason. The others are not collected: no configuration yet. "
         "Each name links to the kommun's official website.",
         "",
         "| code | kommun | collection | status | documents | issue | note |",

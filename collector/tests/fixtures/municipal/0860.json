@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.hultsfred.se/etikett/styrdokument/": "0860-listing.html"
+  },
+  "count": 5,
+  "sample": {
+    "number": "abva-hultsfred",
+    "title": "ABVA, Hultsfred",
+    "url": "https://www.hultsfred.se/artikel/abva-hultsfred/"
+  },
+  "excluded": [
+    "Arkivreglemente",
+    "Biblioteksplan",
+    "Bolagsordning för AB Hultsfreds Bostäder"
+  ]
+}

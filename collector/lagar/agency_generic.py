@@ -756,9 +756,168 @@ class MtfsAdapter(PdfListAdapter):
     number_node = ("h3", None)
     skip_section = _REPEALED_SECTION
 
+class KvfsAdapter(SitemapAdapter):
+    """Kriminalvården: the listing is a server-side Blazor component, so the pages come from the sitemap.
+
+    A page's heading is a short name (`KVFS 2024:5 – FARK Frivård`); the full
+    title is the paragraph under it.
+    """
+
+    series = "KVFS"
+    issuer = "Kriminalvården"
+    base_url = "https://www.kriminalvarden.se"
+    listings = (base_url + "/sitemap_kriminalvarden.se.xml",)
+    path_prefix = "/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/"
+    main = ("div", "regulationPage")
+
+    def title(self, page, entry):
+        intro = page.find("div", "intro")
+        lead = intro.find("p") if intro is not None else None
+        if lead is None:
+            return super().title(page, entry)
+        return self.clean_title(lead.text(), entry.number).rstrip(".") or entry.title
+
+
+class LivsfsAdapter(PdfListAdapter):
+    """Livsmedelsverket: one table per year (number, status, subject); titles come from the PDFs.
+
+    The status cell names the regulation an amendment changes ("Ändrar LIVSFS
+    2021:8") and whether the regulation is in force ("Gällande", "Upphävd
+    genom LIVSFS 2024:2"). A repealed regulation has no repeal date on the
+    page, so only regulations in force are collected. Before 2005 the series
+    was SLVFS, which is not collected. The index page links the year pages
+    (not every year has one); they are read newest first, so the amendments
+    of a base regulation are known when its own year is read.
+    """
+
+    series = "LIVSFS"
+    issuer = "Livsmedelsverket"
+    base_url = "https://www.livsmedelsverket.se"
+    listings = (base_url + "/om-oss/lagstiftning1/foreskrifter-i-nummerordning/",)
+    _YEAR_PAGE = re.compile(r'href="(/om-oss/lagstiftning1/foreskrifter-i-nummerordning/'
+                            r'foreskrifter-i-nummerordning-(\d{4})/)"')
+    _AMENDS = re.compile(r"^(Ändrar|Ändring|Rättar)", re.IGNORECASE)
+    _REPEALED = re.compile(r"upphävd|inte gällande", re.IGNORECASE)
+
+    def __init__(self):
+        self._amended_by = {}
+
+    def more_pages(self, text, url):
+        if url != self.listings[0]:
+            return []
+        years = {int(year): absolute(url, path) for path, year in self._YEAR_PAGE.findall(text)}
+        return [years[year] for year in sorted(years, reverse=True) if year >= 2005]
+
+    def parse_listing(self, text, url):
+        if url == self.listings[0]:
+            self._amended_by = {}
+            return []
+        entries = {}
+        for row in parse_html(text).find_all("tr"):
+            cells = row.find_all("td")
+            if len(cells) < 2:
+                continue
+            link = next((a for a in cells[0].find_all("a") if _is_pdf_link(a.attrs.get("href", ""))), None)
+            number = self.number(link.text(), link.attrs.get("title", "")) if link is not None else None
+            if number is None or number in entries or _COMPANION.match(link.text()):
+                continue
+            status = cells[1].text()
+            base = not self._AMENDS.match(status) and not self._REPEALED.search(status)
+            pdf = absolute(url, link.attrs["href"])
+            # The status of an amendment names what it amends, for `amended_by`. A base gets its title from the
+            # PDF, unless the subject cell is a full title ("Livsmedelsverkets förteckning över ...").
+            subject = cells[2].text() if len(cells) > 2 else ""
+            title = subject if subject.startswith("Livsmedelsverkets ") else number
+            entries[number] = LinkEntry(number=number, title=title if base else status, url=pdf, base=base,
+                                        pdfs=[(number, pdf)])
+        if not entries:
+            raise ValueError(f"no {self.series} regulations found on {url}")
+        for entry in entries.values():
+            if not entry.base:  # "Ändrar LIVSFS 2005:20 Upphävd genom LIVSFS 2011:3": only the first names a base
+                for ref in self.references(self._REPEALED.split(entry.title)[0]):
+                    if ref != entry.number:
+                        self._amended_by.setdefault(ref, set()).add(entry.number)
+        for entry in entries.values():
+            entry.amended_by = sorted(self._amended_by.get(entry.number, ()), key=number_key)
+        return list(entries.values())
+
+
+class MyhfsAdapter(PdfListAdapter):
+    """Myndigheten för yrkeshögskolan: PDF lists of the regulations in force and the repealed ones.
+
+    Each item gives the title, `MYHFS-nummer 2026:5`, `I kraft: <date>` and,
+    for a repealed one, `Upphävd: <date>` or nothing. A regulation that repeals
+    another says so ("Genom föreskrifterna upphävs ... (MYHFS 2022:2)", or a
+    title "om upphävande av ... (2017:2)"), and its date in force is then the
+    repeal date. The lists are read in order, in force first, so the repealed
+    list can use the dates of both; a repealed regulation without a date is
+    left out.
+    """
+
+    series = "MYHFS"
+    issuer = "Myndigheten för yrkeshögskolan"
+    base_url = "https://www.myh.se"
+    listings = (base_url + "/lag-och-ratt/foreskrifter-och-allmanna-rad/gallande-foreskrifter-och-allmanna-rad",
+                base_url + "/lag-och-ratt/foreskrifter-och-allmanna-rad/upphavda-foreskrifter-och-allmanna-rad")
+    _NUMBER = re.compile(r"MYHFS-nummer:?\s*(\d{4}):(\d{1,3})", re.IGNORECASE)
+    _IN_FORCE = re.compile(r"I kraft:?\s*(\d{4}-\d{2}-\d{2})", re.IGNORECASE)
+    _REPEAL_DATE = re.compile(r"Upphävd:?\s*(\d{4}-\d{2}-\d{2})", re.IGNORECASE)
+    _REPEALS = re.compile(r"upphäv(?:s|ande|er)\b(.*)", re.IGNORECASE)
+    _BARE = re.compile(r"\((?:MYHFS\s*)?(\d{4}):(\d{1,3})\)")
+
+    def __init__(self):
+        self._repealed_on = {}
+
+    def repeals(self, text):
+        """Numbers of the regulations that `text` says are repealed."""
+        match = self._REPEALS.search(text)
+        if match is None:
+            return []
+        rest = match.group(1)
+        found = self.references(rest) + [f"{self.series} {y}:{int(n)}" for y, n in self._BARE.findall(rest)]
+        return list(dict.fromkeys(found))
+
+    def parse_listing(self, text, url):
+        if url == self.listings[0]:
+            self._repealed_on = {}
+        repealed_list = url != self.listings[0]
+        items = []
+        for link in parse_html(text).find_all("a"):
+            href = link.attrs.get("href", "")
+            facts = link.find("div", "link-text")
+            title_node = link.find("div", "v-list-item__title")
+            if not _is_pdf_link(href) or facts is None or title_node is None:
+                continue
+            lines = [p.text() for p in facts.find_all("p")] or [facts.text()]
+            match = next((m for m in map(self._NUMBER.search, lines) if m), None)
+            if match is None:
+                continue
+            number = f"{self.series} {match.group(1)}:{int(match.group(2))}"
+            in_force = next((m.group(1) for m in map(self._IN_FORCE.search, lines) if m), None)
+            repealed = next((m.group(1) for m in map(self._REPEAL_DATE.search, lines) if m), None)
+            title = self.clean_title(title_node.text(), number)
+            for ref in self.repeals(" ".join([title] + lines)):
+                if in_force and ref != number:
+                    self._repealed_on.setdefault(ref, in_force)
+            items.append((number, title, absolute(url, href), in_force, repealed))
+        if not items:
+            raise ValueError(f"no {self.series} regulations found on {url}")
+        entries = {}
+        for number, title, pdf, in_force, repealed in items:
+            if number in entries:
+                continue
+            if repealed_list:
+                repealed = repealed or self._repealed_on.get(number)
+            base = not is_amending(title) and (not repealed_list or repealed is not None)
+            entries[number] = LinkEntry(number=number, title=title, url=pdf, base=base, in_force=in_force,
+                                        repealed=repealed if repealed_list else None, pdfs=[(number, pdf)])
+        return self.link_amendments(list(entries.values()))
+
+
 SERIES = (MigrfsAdapter(), KamfsAdapter(), KfmfsAdapter(), KfsAdapter(), KrfsAdapter(), MemyfsAdapter(),
           ElsakfsAdapter(), McffsAdapter(), MdffsAdapter(), NfsAdapter(), KifsAdapter(), AgvfsAdapter(),
           KovfsAdapter(), HvmfsAdapter(), FkfsAdapter(), IaffsAdapter(), AffsAdapter(), BfnarAdapter(),
-          CsnfsAdapter(), ImyfsAdapter(), LmfsAdapter(), MtfsAdapter())
+          CsnfsAdapter(), ImyfsAdapter(), LmfsAdapter(), MtfsAdapter(),
+          KvfsAdapter(), LivsfsAdapter(), MyhfsAdapter())
 
 agency.ADAPTERS.update({a.series: a for a in SERIES})
