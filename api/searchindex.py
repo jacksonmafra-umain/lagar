@@ -20,7 +20,11 @@ SEARCH_VERSION = 2
 # Each group (manifest, document table and shards) must stay within its budget, in bytes,
 # uncompressed, for body text to be indexed; otherwise only its titles and numbers are.
 DEFAULT_BUDGET_BYTES = 40_000_000
-BUDGET_BYTES = {"case_law": 80_000_000}
+BUDGET_BYTES = {}
+# A layer's body text is indexed only up to the first line starting with this heading. A case-law
+# referat runs to tens of KB; the decision header before it (court, dates, case numbers, summary,
+# cited provisions, keywords) is what people search for, at a fifth of the index size.
+BODY_END = {"case_law": "## Referat"}
 
 # Same table as the app (app/shared/.../domain/Search.kt); keep the two in sync.
 ACCENTED = "åäöàáâãāăąçćčďđèéêëēėęěìíîïīįłñńňòóôõøōőŕřśšşťùúûūůűųýÿźżž"
@@ -64,6 +68,17 @@ def tokenize(text):
 def shard_key(term):
     """First two characters of a term; anything outside a-z and 0-9 becomes `_`."""
     return "".join(c if c in _KEY_CHARS else "_" for c in term[:2])
+
+
+def indexed_body(group, body):
+    """The part of `body` that group `group` indexes: all of it, or the text before its BODY_END heading."""
+    heading = BODY_END.get(group)
+    if heading is None:
+        return body
+    if body.startswith(heading + "\n"):
+        return ""
+    end = body.find("\n" + heading + "\n")
+    return body if end < 0 else body[:end]
 
 
 def _postings(docs, with_body):
@@ -110,7 +125,7 @@ def layer_of(meta):
 def build_group(group, docs, with_body):
     """Every file of one group as {relative path: text}. `docs` must be sorted by id."""
     prefix = f"search/{group}/"
-    postings = _postings(docs, with_body)
+    postings = _postings([(meta, indexed_body(group, body)) for meta, body in docs], with_body)
     shards = {}
     for term in sorted(postings):
         shards.setdefault(shard_key(term), {})[term] = _encode(postings[term])
