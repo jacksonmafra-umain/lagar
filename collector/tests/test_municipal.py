@@ -400,6 +400,121 @@ class GoteborgTest(unittest.TestCase):
             self.assertIn(f"Kommunens sida: <{GBG_DETAIL_URL}>", body)
 
 
+SV_BASE = "https://www.varmdo.se/kommunochpolitik/styrningmalochvisioner/forfattningssamling.4.3251048d16e2a7e78489c6e.html"
+SV_ENTRY = {
+    "name": "Värmdö",
+    "issuer": "Värmdö kommun",
+    "region_code": "01",
+    "collection": "Värmdö kommuns författningssamling",
+    "preset": "sitevision",
+    "resident_filter": True,
+    "hosts": ["www.varmdo.se"],
+    "listings": [SV_BASE],
+}
+
+
+def sitevision_config(tmp, **overrides):
+    path = Path(tmp) / "municipalities.json"
+    path.write_text(json.dumps({"kommuner": {"0120": {**SV_ENTRY, **overrides}}}), encoding="utf-8")
+    return str(path)
+
+
+def sitevision_client():
+    return FakeClient({
+        "https://www.varmdo.se/robots.txt": b"User-agent: *\nDisallow: /*.html.printable\n",
+        SV_BASE: (FIXTURES / "municipal-sitevision-listing.html").read_bytes(),
+        SV_BASE + "?lp-page=1": (FIXTURES / "municipal-sitevision-listing.html").read_bytes(),
+        SV_BASE + "?lp-page=2": (FIXTURES / "municipal-sitevision-page2.html").read_bytes(),
+    })
+
+
+class SitevisionPresetTest(unittest.TestCase):
+    def test_preset_follows_pages_and_keeps_rules_for_residents(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(sitevision_config(tmp))["0120"]
+            client = sitevision_client()
+            entries, problems = municipal.list_entries(municipal.Fetcher(client), kommun)
+        self.assertEqual(problems, [])
+        self.assertEqual(
+            [(municipal.corpus_id("0120", e.number), e.title) for e in entries],
+            [
+                ("0120-18-3a91f79168a7ed2a564f420",
+                 "Allmänna bestämmelser för användande av Värmdö kommuns allmänna vatten- och "
+                 "avloppsanläggning (ABVA)"),
+                ("0120-18-22e4ee451639ed6e2d8af1d4", "Avfallsföreskrifter"),
+                ("0120-18-eece1c7193dec9019b60b8", "Avfallstaxa"),
+                ("0120-18-22e4ee451639ed6e2d8af1d8", "Lokala ordningsföreskrifter för Värmdö kommun"),
+                ("0120-18-4cdf0adf19b2bcf6e2a1676", "Taxa för livsmedelskontroll"),
+            ],
+        )
+        self.assertFalse(any("printable" in url for url in client.calls))
+
+    def test_own_keys_override_the_preset(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(
+                sitevision_config(tmp, follow="", title_include=["avfall"], title_exclude=["plan"])
+            )["0120"]
+            entries, _ = municipal.list_entries(municipal.Fetcher(sitevision_client()), kommun)
+        self.assertEqual([e.title for e in entries], ["Avfallsföreskrifter", "Avfallstaxa"])
+
+    def test_files_in_embedded_module_state_are_listed_under_their_heading(self):
+        olofstrom = "https://olofstrom.se/kommun-och-politik/kommunfakta/styrande-dokument"
+        with tempfile.TemporaryDirectory() as tmp:
+            config = sitevision_config(
+                tmp, hosts=["olofstrom.se"], listings=[olofstrom], resident_filter=False,
+                sections=["Föreskrifter"],
+            )
+            kommun = municipal.load_config(config)["0120"]
+        raw = (FIXTURES / "municipal-sitevision-state.html").read_bytes()
+        entries, problems = municipal.parse_html_index(kommun, raw, olofstrom)
+        self.assertEqual(problems, [])
+        self.assertEqual(
+            [(e.number, e.title) for e in entries],
+            [
+                ("18.506734c51817fe18b912cee", "Föreskrift för avfallshantering"),
+                ("18.30eb2ed016f19a67e6c2ca27", "lokala-ordningsforeskrifter-for-torghandel"),
+            ],
+        )
+        kommun.embedded_json = False
+        self.assertEqual(municipal.parse_html_index(kommun, raw, olofstrom)[0], [])
+
+    def test_non_ascii_links_are_percent_encoded(self):
+        self.assertEqual(
+            municipal._uri("https://www.vetlanda.se/styrdokument?letter=Ö&x=%C3%A5"),
+            "https://www.vetlanda.se/styrdokument?letter=%C3%96&x=%C3%A5",
+        )
+        self.assertEqual(municipal._uri("https://a.se/b%20c.pdf"), "https://a.se/b%20c.pdf")
+
+    def test_resident_filter_matches_compound_taxa(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(sitevision_config(tmp))["0120"]
+        self.assertTrue(municipal.binds_residents(kommun, "Plan- och byggtaxa 2025"))
+        self.assertTrue(municipal.binds_residents(kommun, "Livsmedelstaxa"))
+        self.assertFalse(municipal.binds_residents(kommun, "Taxonomi för arkivet"))
+
+    def test_decomposed_titles_are_normalised_before_filtering(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(sitevision_config(tmp))["0120"]
+        decomposed = "A\u0308gardirektiv fo\u0308r bolaget.pdf"
+        self.assertEqual(municipal._title(kommun, decomposed), "Ägardirektiv för bolaget")
+        self.assertFalse(municipal.binds_residents(kommun, municipal._title(kommun, decomposed)))
+        self.assertTrue(municipal.binds_residents(kommun, municipal._title(kommun, "Avfallsfo\u0308reskrifter")))
+
+    def test_unknown_preset_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with self.assertRaises(municipal.ConfigError):
+                municipal.load_config(sitevision_config(tmp, preset="episerver"))
+
+    def test_dry_run_lists_without_fetching_documents(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            args = Args(tmp, kommun=["0120"], config=sitevision_config(tmp))
+            client, out = sitevision_client(), io.StringIO()
+            self.assertEqual(municipal.dry_run(client, args, out), 0)
+            self.assertFalse(Path(args.corpus).exists())
+        self.assertFalse(any("/download/" in url for url in client.calls))
+        self.assertIn("0120-18-22e4ee451639ed6e2d8af1d4\tAvfallsföreskrifter\t", out.getvalue())
+
+
 class MainTest(unittest.TestCase):
     def test_bad_code_is_rejected(self):
         with self.assertRaises(SystemExit):
@@ -409,7 +524,7 @@ class MainTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             args = Args(tmp)
             code = municipal.main(
-                ["municipal", "--kommun", "0114", "--config", args.config, "--state", args.state,
+                ["municipal", "--kommun", "0114", "--config", sitevision_config(tmp), "--state", args.state,
                  "--manifest", args.manifest, "--corpus", args.corpus],
                 client=FakeClient({}),
             )

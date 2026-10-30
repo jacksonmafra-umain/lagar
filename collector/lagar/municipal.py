@@ -11,6 +11,12 @@ maps each kommun code to its listing pages and to one of two parsing strategies:
   (`?ReadViewEntries`); each kept entry has a detail page with metadata, a short
   note and the PDF attachments.
 
+Most kommuner run Sitevision and list their documents as one flat file list.
+`"preset": "sitevision"` fills in the link pattern, number (the file's node id)
+and title cleanup for such an `html_index` page, and `"resident_filter": true`
+keeps only titles that name rules for residents (föreskrifter, taxor, avgifter
+and the like) while dropping internal governance documents by title.
+
 Only rules that bind residents are collected (local ordinances, fees and tariffs,
 waste rules and the like); internal governance documents (reglementen,
 bolagsordningar, delegationsordningar, instruktioner) are left out through the
@@ -29,6 +35,7 @@ import hashlib
 import json
 import re
 import sys
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -51,7 +58,42 @@ DEFAULT_MANIFEST = "sources/municipal-manifest.json"
 DEFAULT_RATE = 1.0
 MANIFEST_VERSION = 1
 STRATEGIES = ("html_index", "domino_view")
+
+# Defaults merged under a kommun entry that names a preset; the entry's own keys win.
+PRESETS = {
+    "sitevision": {
+        "strategy": "html_index",
+        "link_pattern": r"/download/18\.[0-9a-f]+/\d+/[^?#]+\.pdf$",
+        "number": [{"from": "href", "pattern": r"/download/(18\.[0-9a-f]+)/"}],
+        "title_strip": [
+            r",?\s*(\(?\s*)?(ö|o)ppnas i (ett )?nytt f(ö|o)nster\.?\)?\s*$",
+            r"\s*(\.pdf)?\s*,?\s*\(?pdf,?\s*[\d.,]+\s*[kMG]?B\)?\.?\s*$",
+            r"\.(pdf|docx?)\s*$",
+        ],
+        "follow": r"[?&]lp-page=\d+",  # the file list's own pagination
+        "embedded_json": True,
+    },
+}
+
+# Titles of rules that bind residents, and of internal documents that never do. A title is
+# kept when it matches an include pattern and no exclude pattern.
+RESIDENT_INCLUDE = (
+    r"f(ö|o)reskrift", r"taxa\b", r"\btaxor", r"avgift", r"avfall", r"renh(å|a)llning",
+    r"sotning", r"brandskydd", r"h(ä|a)lsoskydd", r"naturreservat", r"hamnordning",
+    r"torghandel", r"allm(ä|a)nna best(ä|a)mmelser", r"\bABVA\b", r"ordningsstadga",
+    r"lokala ordnings", r"maxtaxa",
+)
+RESIDENT_EXCLUDE = (
+    r"reglemente", r"arbetsordning", r"bolagsordning", r"delegation", r"instruktion",
+    r"(ä|a)gardirektiv", r"informationshanteringsplan", r"dokumenthanteringsplan", r"arkiv",
+    r"policy", r"riktlinje", r"strategi", r"handlingsplan", r"avfallsplan",
+    r"\bplan\b(?!-)",  # but "Plan- och byggtaxa" is a fee
+    r"program\b", r"budget", r"ans(ö|o)kan", r"blankett", r"revision", r"protokoll",
+    r"tj(ä|a)nsteskrivelse", r"arvode", r"intern ?kontroll", r"attest", r"remiss",
+    r"granskning", r"(ö|o)versyn", r"beslut om", r"f(ö|o)rslag", r"rapport", r"utredning",
+)
 ENCODING_ATTEMPTS = 3
+MAX_LISTING_PAGES = 100
 AGENT_TOKEN = USER_AGENT.split("/", 1)[0].lower()
 
 DOCUMENT_ERRORS = NETWORK_ERRORS + (UnicodeDecodeError, ValueError, KeyError, TypeError)
@@ -99,6 +141,10 @@ class Kommun:
     kind_column: str = ""
     title_column: str = ""
     number_column: str = ""
+    title_include: "list[str]" = field(default_factory=list)
+    title_exclude: "list[str]" = field(default_factory=list)
+    follow: str = ""
+    embedded_json: bool = False
 
 
 def _required(entry, key, code, kind=str):
@@ -113,6 +159,11 @@ def _kommun(code, entry):
         raise ConfigError(f"{code}: not an SCB kommun code")
     if not isinstance(entry, dict):
         raise ConfigError(f"{code}: expected an object")
+    if "preset" in entry:
+        if entry["preset"] not in PRESETS:
+            raise ConfigError(f"{code}: unknown preset {entry['preset']!r}")
+        entry = {**PRESETS[entry["preset"]], **entry}
+    resident = entry.get("resident_filter", False)
     region = _required(entry, "region_code", code)
     if not code.startswith(region):
         raise ConfigError(f"{code}: kommun is not in region {region}")
@@ -142,12 +193,17 @@ def _kommun(code, entry):
         kind_column=entry.get("kind_column", ""),
         title_column=entry.get("title_column", ""),
         number_column=entry.get("number_column", ""),
+        title_include=list(entry.get("title_include") or (RESIDENT_INCLUDE if resident else [])),
+        title_exclude=list(entry.get("title_exclude") or (RESIDENT_EXCLUDE if resident else [])),
+        follow=entry.get("follow", ""),
+        embedded_json=bool(entry.get("embedded_json", False)),
     )
     for url in listings:
         if urllib.parse.urlsplit(url).hostname not in hosts:
             raise ConfigError(f"{code}: listing {url} is not on a configured host")
     try:
-        for pattern in [kommun.link_pattern, *kommun.title_strip, *(r["pattern"] for r in kommun.number_rules)]:
+        patterns = [kommun.link_pattern, kommun.follow, *kommun.title_strip, *kommun.title_include, *kommun.title_exclude]
+        for pattern in [*patterns, *(r["pattern"] for r in kommun.number_rules)]:
             re.compile(pattern)
     except (re.error, KeyError, TypeError) as error:
         raise ConfigError(f"{code}: bad pattern: {error}") from None
@@ -340,6 +396,7 @@ class Fetcher:
         return self.robots(url).allows(url)
 
     def _fetch(self, url):
+        url = _uri(url)
         for attempt in range(ENCODING_ATTEMPTS):
             try:
                 return self.client.fetch_final(url)
@@ -398,15 +455,51 @@ def _uri(url):
 
 
 def _clean(text):
-    return " ".join((text or "").split())
+    """Whitespace collapsed and NFC: file names often spell ä as a plus a combining diaeresis."""
+    return unicodedata.normalize("NFC", " ".join((text or "").split()))
+
+
+_INITIAL_STATE = re.compile(r"registerInitialState\(\s*'[^']*'\s*,\s*")
+
+
+def _state_files(script):
+    """(href, title) of the files in Sitevision `AppRegistry.registerInitialState` JSON.
+
+    File-share and file-list modules render their list in the browser from this
+    state; the static HTML then carries no anchors for the files.
+    """
+    found = []
+    for match in _INITIAL_STATE.finditer(script):
+        try:
+            state, _ = json.JSONDecoder().raw_decode(script, match.end())
+        except ValueError:
+            continue
+        stack = [state]
+        while stack:
+            node = stack.pop()
+            if isinstance(node, list):
+                stack.extend(reversed(node))
+            elif isinstance(node, dict):
+                href = node.get("url") or node.get("uri")
+                title = node.get("title") or node.get("name")
+                if isinstance(href, str) and isinstance(title, str) and "/download/" in href:
+                    found.append((href, title))
+                else:
+                    stack.extend(reversed(list(node.values())))
+    return found
 
 
 class _Links(HTMLParser):
-    """Anchors with the heading they sit under (the latest heading at or above `level`)."""
+    """Anchors with the heading they sit under (the latest heading at or above `level`).
 
-    def __init__(self, level):
+    With `embedded_json`, files listed in Sitevision's embedded module state count as
+    anchors under the heading that precedes the script.
+    """
+
+    def __init__(self, level, embedded_json=False):
         super().__init__(convert_charrefs=True)
         self.level = level
+        self.embedded_json = embedded_json
         self.links = []  # (section, href, text)
         self.section = None
         self._heading = None  # [level, parts]
@@ -434,6 +527,8 @@ class _Links(HTMLParser):
 
     def handle_data(self, data):
         if self._skip:
+            if self.embedded_json and "registerInitialState" in data:
+                self.links += [(self.section, href, _clean(title)) for href, title in _state_files(data)]
             return
         if self._heading:
             self._heading[1].append(data)
@@ -454,32 +549,59 @@ def _number(kommun, href, text):
 
 
 def _title(kommun, text):
+    text = _clean(text)
     for pattern in kommun.title_strip:
         text = re.sub(pattern, "", text, flags=re.IGNORECASE)
     return _clean(text)
 
 
+def binds_residents(kommun, title):
+    """Whether the title passes the kommun's include and exclude title patterns."""
+    if kommun.title_include and not any(re.search(p, title, re.IGNORECASE) for p in kommun.title_include):
+        return False
+    return not any(re.search(p, title, re.IGNORECASE) for p in kommun.title_exclude)
+
+
 def parse_html_index(kommun, raw, listing_url):
     """(entries, problems) of a listing page; problems are links that match but carry no number."""
-    parser = _Links(kommun.section_level)
+    parser = _Links(kommun.section_level, kommun.embedded_json)
     parser.feed(_text(raw))
     parser.close()
     sha = hashlib.sha256(raw).hexdigest()
     sections = {s.casefold() for s in kommun.sections}
     entries, problems = [], []
+    # Icon links next to the titled link carry no text; they are not documents of their own.
+    titled = {_uri(urllib.parse.urljoin(listing_url, href.strip())) for _, href, text in parser.links if text}
     for section, href, text in parser.links:
         if sections and (section or "").casefold() not in sections:
             continue
         url = _uri(urllib.parse.urljoin(listing_url, href.strip()))
-        if not re.search(kommun.link_pattern, url, re.IGNORECASE):
+        if not re.search(kommun.link_pattern, url, re.IGNORECASE) or (not text and url in titled):
             continue
         number = _number(kommun, url, text)
         title = _title(kommun, text)
+        if title and not binds_residents(kommun, title):
+            continue
         if not number or not title:
             problems.append(url)
             continue
         entries.append(Entry(kommun.code, number, title, url, listing_url, sha))
     return entries, problems
+
+
+def more_pages(kommun, raw, listing_url):
+    """Further listing pages linked from this one (pagination), matched by `follow`."""
+    if not kommun.follow:
+        return []
+    parser = _Links(kommun.section_level)
+    parser.feed(_text(raw))
+    parser.close()
+    pages = []
+    for _, href, _ in parser.links:
+        url = _uri(urllib.parse.urldefrag(urllib.parse.urljoin(listing_url, href))[0])
+        if re.search(kommun.follow, url) and urllib.parse.urlsplit(url).hostname in kommun.hosts:
+            pages.append(url)
+    return list(dict.fromkeys(pages))
 
 
 def parse_domino_view(kommun, raw, listing_url):
@@ -501,7 +623,7 @@ def parse_domino_view(kommun, raw, listing_url):
         if columns.get(kommun.kind_column, "").casefold() not in kinds:
             continue
         number, title = columns.get(kommun.number_column), columns.get(kommun.title_column)
-        if not number or not title:
+        if not number or not title or not binds_residents(kommun, title):
             continue
         seen.add(unid)
         url = f"{database}/0/{unid}?OpenDocument"
@@ -809,7 +931,9 @@ def _write_report(path, summary):
 def list_entries(fetcher, kommun):
     """Entries of all the kommun's listings; raises ListingError when one cannot be read."""
     entries, problems = [], []
-    for url in kommun.listings:
+    queue, seen = list(kommun.listings), set(kommun.listings)
+    while queue and len(seen) <= MAX_LISTING_PAGES:
+        url = queue.pop(0)
         if not fetcher.allows(url):
             raise ListingError(f"robots.txt disallows the listing {url}")
         try:
@@ -821,6 +945,10 @@ def list_entries(fetcher, kommun):
             raise ListingError(f"listing {url}: {type(error).__name__}: {error}") from error
         entries += found
         problems += bad
+        for page in more_pages(kommun, raw, final):
+            if page not in seen and fetcher.allows(page):
+                seen.add(page)
+                queue.append(page)
     unique = {}
     for entry in entries:
         unique.setdefault(corpus_id(kommun.code, entry.number), entry)
@@ -871,12 +999,36 @@ def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
         save_manifest(args.manifest, manifest)
 
 
-def run(client, args):
-    config = load_config(args.config)
+def _codes(config, args):
     codes = list(config) if args.all else args.kommun
     unknown = [c for c in codes if c not in config]
     if unknown:
         raise ConfigError(f"not in {args.config}: {', '.join(unknown)}")
+    return codes
+
+
+def dry_run(client, args, out=sys.stdout):
+    """Print what each listing yields (id, title, URL) without fetching any document."""
+    config = load_config(args.config)
+    fetcher = Fetcher(client)
+    blocked = 0
+    for code in _codes(config, args):
+        try:
+            entries, problems = list_entries(fetcher, config[code])
+        except (Blocked, ListingError, ForbiddenHost) as error:
+            print(f"{code}\tBLOCKED\t{error}", file=out, flush=True)
+            blocked += 1
+            continue
+        for entry in entries:
+            print(f"{corpus_id(code, entry.number)}\t{entry.title}\t{entry.url}", file=out, flush=True)
+        for url in problems:
+            print(f"{code}\tNO NUMBER\t{url}", file=out, flush=True)
+    return 2 if blocked else 0
+
+
+def run(client, args):
+    config = load_config(args.config)
+    codes = _codes(config, args)
     summary = RunSummary()
     state = _load_state(args.state)
     manifest = load_manifest(args.manifest)
@@ -923,6 +1075,8 @@ def parse_args(argv):
     which.add_argument("--all", action="store_true", help="every kommun in the config")
     parser.add_argument("--limit", type=_non_negative, help="stop after N written documents per kommun")
     parser.add_argument("--refresh", action="store_true", help="refetch documents already collected")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="list what the listings yield without fetching documents or writing")
     parser.add_argument("--report", metavar="FILE", help="write a JSON run report")
     parser.add_argument("--rate", type=_rate, default=DEFAULT_RATE, metavar="SECONDS")
     parser.add_argument("--config", default=DEFAULT_CONFIG)
@@ -939,6 +1093,8 @@ def main(argv, client=None):
     if client is None:
         client = PoliteClient(USER_AGENT, min_interval=args.rate, opener=decoding_opener)
     try:
+        if args.dry_run:
+            return dry_run(client, args)
         summary = run(client, args)
     except (ConfigError, StateError) as error:
         print(f"error: {error}", file=sys.stderr, flush=True)
