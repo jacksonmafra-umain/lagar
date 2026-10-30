@@ -1134,5 +1134,11 @@
     "series:ÅFS": 222,
     "source:register-over-svensk-forfattningssamling-sfs": 537,
     "source:svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": 536
+  },
+  "kommuner": {
+    "1080": {
+      "status": "blocked",
+      "note": "www.karlskrona.se answers every request, robots.txt included, with an HTTP 403 \"Åtkomst nekad\" bot-check page (checked 2026-10-30); not bypassed."
+    }
   }
 }

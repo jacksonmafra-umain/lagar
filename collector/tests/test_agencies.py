@@ -45,6 +45,7 @@ CURATED = {
     "sources": {"sok-rattspraxis": {"name": "Rättspraxis", "layer": "case_law", "status": "collected"}},
     "courts": {"KGG": {"status": "no_number", "note": "no report number"}},
     "issues": {"series:KBVFS": 201, "kommun:0114": 301, "county:03": 401, "court:KGG": 501},
+    "kommuner": {"0380": {"status": "blocked", "note": "WAF page"}, "0180": {"note": "lokala ordningsföreskrifter are HTML"}},
 }
 GEO = {
     "regions": [{"code": "01", "name": "Stockholms län"}, {"code": "03", "name": "Uppsala län"}],
@@ -140,7 +141,7 @@ class ReportTests(unittest.TestCase):
 
     def test_municipalities_configured_and_missing_per_county(self):
         m = report()["municipalities"]
-        [stockholm] = m["configured"]
+        stockholm = next(k for k in m["configured"] if k["code"] == "0180")
         self.assertEqual((stockholm["documents"], stockholm["status"]), (5, "partial"))
         self.assertIn("robots.txt", stockholm["note"])
         self.assertEqual(stockholm["url"], "https://start.stockholm/")
@@ -149,9 +150,15 @@ class ReportTests(unittest.TestCase):
             {"region_code": "01", "county": "Stockholms län",
              "kommuner": [{"code": "0114", "kommun": "Upplands Väsby", "url": "https://www.upplandsvasby.se/",
                            "issue": issue}]},
-            {"region_code": "03", "county": "Uppsala län",
-             "kommuner": [{"code": "0380", "kommun": "Uppsala", "url": None, "issue": None}]},
         ])
+        self.assertIn("lokala ordningsföreskrifter are HTML", stockholm["note"])
+
+    def test_curated_kommun_without_config_is_listed_with_its_reason(self):
+        r = report()
+        uppsala = next(k for k in r["municipalities"]["configured"] if k["code"] == "0380")
+        self.assertEqual((uppsala["status"], uppsala["collection"], uppsala["documents"], uppsala["note"]),
+                         ("blocked", None, 0, "WAF page"))
+        self.assertEqual(r["summary"]["kommuner_configured"], 1)
 
     def test_courts_sources_unclassified_and_summary(self):
         r = report()
