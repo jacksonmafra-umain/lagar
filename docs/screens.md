@@ -145,6 +145,7 @@ Route: `Utforska`. Code: `ui/home/`. References: Stitch `home_legislativa_leis_f
 | Key-law groups ordered by the main focus: hierarchy order for Medborgare and Student, acts and ordinances first for Jurist | Done | #29 |
 | Explore feed with Recent and Favourites tabs, bookmark toggle and "Show more" | Done | |
 | Loads only the first listing page of each level it shows, not the whole catalog; search loads the catalog on its first query | Done | |
+| A level whose listing fails is left out under a "Some sections could not be loaded" notice with a retry (narrow and wide); the full-page error only when every level or the index fails | Done | #541 |
 | Feed card shows the in-force date and "Ändrad senast genom SFS …" | Done; each line is hidden while its field is `null` (the collector does not fill `in_force` yet). Saved items in the Favourites tab carry neither field | |
 | Case-law items in the feed | Blocked: no case-law data | #38 |
 | Popular tab | Blocked: the app is anonymous and collects no usage data | |

@@ -9,17 +9,22 @@ import app.lagar.data.NewestFirst
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.Scope
 import app.lagar.domain.count
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 
-/** The document lists of a scope home; [hasMoreRecent] when the scope holds more than [recent] shows. */
+/**
+ * The document lists of a scope home; [hasMoreRecent] when the scope holds more than [recent] shows. [unavailable]
+ * are the levels whose listing could not be read; the lists leave them out.
+ */
 internal data class HomeFeed(
     val fundamental: List<ListingItem>,
     val acts: List<ListingItem>,
     val ordinances: List<ListingItem>,
     val recent: List<ListingItem>,
     val hasMoreRecent: Boolean,
+    val unavailable: List<DisplayLayer> = emptyList(),
 )
 
 /**
@@ -27,6 +32,10 @@ internal data class HomeFeed(
  * parallel, and loads a later page only when the lists could still reach into it. Listings are sorted
  * newest first, so with 50-item pages and the limits below the first pages are enough; the result
  * equals what the whole catalog would give.
+ *
+ * A level whose listing fails is left out and reported in [HomeFeed.unavailable], so that one missing file (the web
+ * app deployed before the API it reads, say) does not empty the whole home. When every level fails, the first
+ * error is thrown.
  */
 internal suspend fun loadHomeFeed(
     repository: LagarRepository,
@@ -35,9 +44,25 @@ internal suspend fun loadHomeFeed(
     importantLimit: Int,
     recentLimit: Int,
 ): HomeFeed {
-    val levels = scope.layers.filter { index.count(it) > 0 }.map { LevelPages(it) }
-    coroutineScope { levels.map { async { it.loadNext(repository) } }.awaitAll() }
+    val all = scope.layers.filter { index.count(it) > 0 }.map { LevelPages(it) }
+    val errors = coroutineScope {
+        all.map { level -> async { runCatchingLevel { level.loadNext(repository) } } }.awaitAll()
+    }
+    if (all.isNotEmpty() && errors.all { it != null }) throw errors.first()!!
+    val failed = all.filterIndexed { i, _ -> errors[i] != null }.toMutableList()
+    val levels = (all - failed.toSet()).toMutableList()
     fun level(layer: DisplayLayer) = levels.firstOrNull { it.layer == layer }
+
+    // A later page that fails drops its level too: a level with half its pages would list the wrong newest items.
+    suspend fun guarded(level: LevelPages?, load: suspend LevelPages.() -> Unit) {
+        if (level != null && runCatchingLevel { level.load() } != null) {
+            levels -= level
+            failed += level
+        }
+    }
+    guarded(level(DisplayLayer.Fundamental)) { loadUntil(repository) { false } }
+    guarded(level(DisplayLayer.SfsAct)) { loadUntil(repository) { it.size >= importantLimit } }
+    guarded(level(DisplayLayer.SfsOrdinance)) { loadUntil(repository) { it.size >= importantLimit } }
 
     level(DisplayLayer.Fundamental)?.loadUntil(repository) { false }
     level(DisplayLayer.SfsAct)?.loadUntil(repository) { it.size >= importantLimit }
@@ -49,7 +74,7 @@ internal suspend fun loadHomeFeed(
         // Unloaded items sort after a level's last loaded one, so they can only enter the top if that one did.
         val short = levels.filter { level -> level.hasMore && level.items.lastOrNull().let { last -> last == null || recent.any { it === last } } }
         if (short.isEmpty()) break
-        short.forEach { it.loadNext(repository) }
+        short.forEach { guarded(it) { loadNext(repository) } }
     }
 
     fun of(layer: DisplayLayer) = level(layer)?.items.orEmpty().filter { it.displayLayer() == layer }
@@ -59,7 +84,18 @@ internal suspend fun loadHomeFeed(
         ordinances = of(DisplayLayer.SfsOrdinance).take(importantLimit),
         recent = recent,
         hasMoreRecent = levels.sumOf { it.total } > recentLimit,
+        unavailable = all.filter { it in failed }.map { it.layer },
     )
+}
+
+/** Runs [block] and returns the exception it threw, or null; cancellation is rethrown. */
+private suspend fun runCatchingLevel(block: suspend () -> Unit): Exception? = try {
+    block()
+    null
+} catch (e: CancellationException) {
+    throw e
+} catch (e: Exception) {
+    e
 }
 
 /** The pages of one level loaded so far, in API order. */
