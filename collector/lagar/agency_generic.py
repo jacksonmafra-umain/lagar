@@ -998,7 +998,14 @@ class HslffsAdapter(DetailPageAdapter):
     series = "HSLF-FS"
     issuer = "Socialstyrelsen"  # each entry names its own agency
     base_url = "https://kunskapsguiden.se"
-    listings = (base_url + "/gemensam-forfattningssamling/",)
+    # Socialstyrelsen's own index names the publication page of its regulations that kunskapsguiden
+    # links to the general regulations page or to a PDF address that redirects; it is read second.
+    SOS = "https://www.socialstyrelsen.se"
+    SOS_INDEX = SOS + "/kunskapsstod-och-regler/regler-och-riktlinjer/foreskrifter-och-allmanna-rad/"
+    listings = (base_url + "/gemensam-forfattningssamling/", SOS_INDEX)
+    # moved pages kunskapsguiden still links to
+    MOVED = {"https://www.tlv.se/om-oss/om-tlv/regelverk/foreskrifter.html":
+             "https://www.tlv.se/om-tlv/regelverk/foreskrifter.html"}
     multi_host = True
     heading_title = False  # agency pages differ; the title comes from the list, else the PDF
     skipped_hosts = ("lakemedelsverket.se",)
@@ -1008,7 +1015,12 @@ class HslffsAdapter(DetailPageAdapter):
         match = self._URL_NUMBER.search(urllib.parse.unquote(url))
         return f"{self.series} {match.group(1)}:{int(match.group(2))}" if match else None
 
+    def __init__(self):
+        self.pending = {}  # number -> Socialstyrelsen entry waiting for its publication page
+
     def parse_listing(self, text, url):
+        if url == self.SOS_INDEX:
+            return self.resolve(text, url)
         marker = re.search(r"SOS\.Components\.FilterList,\s*", text)
         if marker is None:
             raise ValueError(f"no {self.series} list on {url}")
@@ -1016,6 +1028,7 @@ class HslffsAdapter(DetailPageAdapter):
         entries = {}
         for item in props.get("filterItems") or []:
             link = (item.get("Url") or "").strip()
+            link = self.MOVED.get(link, link)
             host = urllib.parse.urlsplit(link).netloc.lower()
             if not link or host.removeprefix("www.") in self.skipped_hosts:
                 continue
@@ -1034,7 +1047,19 @@ class HslffsAdapter(DetailPageAdapter):
                                     base=not amending, issuer=issuer.replace(",", " och ") or None)
         if not entries:
             raise ValueError(f"no {self.series} regulations found on {url}")
-        return self.link_amendments(list(entries.values()))
+        entries = self.link_amendments(list(entries.values()))
+        self.pending = {e.number: e for e in entries
+                        if e.url.startswith(self.SOS) and "/publikationer/" not in e.url}
+        return [e for e in entries if e.number not in self.pending]
+
+    def resolve(self, text, url):
+        """The pending Socialstyrelsen entries, linked to their publication pages where the index names one."""
+        for name, link in re.findall(r'"name":"([^"]*)","url":"(/publikationer/[^"]*)"', text):
+            number = self.number(name[:20])
+            if number in self.pending:
+                self.pending[number].url = absolute(url, link)
+        entries, self.pending = list(self.pending.values()), {}
+        return entries
 
     def names_number(self, page, entry):
         return super().names_number(page, entry) or any(

@@ -410,6 +410,8 @@ class HslffsTest(unittest.TestCase):
                  "https://www.socialstyrelsen.se/regler/"),
             item("HSLF-FS 2021:1", "Socialstyrelsens föreskrifter", "Socialstyrelsen,E-hälsomyndigheten",
                  "https://www.socialstyrelsen.se/publikationer/hslf-fs-20211-socialstyrelsens-foreskrifter/"),
+            item("HSLF-FS 2016:55", "Socialstyrelsens föreskrifter om hem för vård eller boende", "Socialstyrelsen",
+                 cls.HSLF.SOS_INDEX),
         ]
         return "<script>ReactDOM.hydrate(React.createElement(SOS.Components.FilterList, " + json.dumps(
             {"filterItems": items}) + "), document.getElementById('react_1'));</script>"
@@ -423,6 +425,12 @@ class HslffsTest(unittest.TestCase):
             ("HSLF-FS 2021:1", True, "Socialstyrelsen och E-hälsomyndigheten")])
         self.assertEqual(entries[0].title, "HSLF-FS 2025:55")  # the title comes from the PDF
         self.assertEqual(entries[1].url, self.TLV)
+        # linked to Socialstyrelsen's general page: its own page comes from Socialstyrelsen's index
+        index = ('[{"name":"HSLF-FS 2025:33 Föreskrifter om ändring (HSLF-FS 2016:55)","url":"/publikationer/hslf-fs-202533/"},'
+                 '{"name":"HSLF-FS 2016:55 Socialstyrelsens föreskrifter","url":"/publikationer/hslf-fs-201655-hem/"}]')
+        resolved = self.HSLF.parse_listing(index, self.HSLF.SOS_INDEX)
+        self.assertEqual([(e.number, e.url) for e in resolved],
+                         [("HSLF-FS 2016:55", "https://www.socialstyrelsen.se/publikationer/hslf-fs-201655-hem/")])
 
     def test_page_listing_many_keeps_the_pdfs_naming_the_number(self):
         entry = agency.Entry(number="HSLF-FS 2015:17", title="x", url=self.TLV)
