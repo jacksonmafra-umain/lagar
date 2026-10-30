@@ -481,8 +481,8 @@
     "svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": {
       "name": "SFS on svenskforfattningssamling.se (authoritative PDFs)",
       "layer": "sfs",
-      "status": "partial",
-      "note": "SHA-256 manifest of the authoritative PDFs: a sample so far; PDF text is not extracted yet."
+      "status": "collected",
+      "note": "SHA-256 manifest of every authoritative PDF (2018 on); PDF text compared with the Riksdagen text in sources/sfs-pdf-verification.json."
     },
     "register-over-svensk-forfattningssamling-sfs": {
       "name": "SFS register (SFSR)",

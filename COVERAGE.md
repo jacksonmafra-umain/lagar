@@ -10,7 +10,7 @@ completeness: read this file next to those numbers.
 | layer | source | cut-off |
 | --- | --- | --- |
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
-| SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
+| SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-30 (full run, 2018 to 2026: 13,547 PDFs; incremental `sfspdf --rss` in the daily `Sync SFS`) |
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
 | SÖ treaties | Regeringen.se, `https://www.regeringen.se/sitemap.xml` and the pages under `/rattsliga-dokument/sveriges-internationella-overenskommelser/`, PDFs under `/contentassets/` | 2026-10-30 (full run, every year; weekly `Sync SÖ` since then) |
 | agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/`, and the listing pages of MIGRFS, KAMFS, KRFS, KFMFS, KFS and MEMYFS (`collector/lagar/agency_generic.py`) | 2026-10-29 (full run of AFS, FFFS and TSFS: 15, 121 and 622 base regulations); 2026-10-30 (MIGRFS, KAMFS, KRFS, KFMFS, KFS, MEMYFS: 121) |
@@ -48,10 +48,15 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   `reprinted_by` only list numbers; many of them point to acts not yet collected
   (the audit reports the count).
 - Authoritative PDFs from svenskforfattningssamling.se (acts published from
-  2018-04 on) are recorded in `sources/sfs-pdf-manifest.json` with their
-  SHA-256, but only a five-act sample of 2026 is in it so far; the full crawl
-  has not run. The PDF bytes are not stored, and the documents stay marked
-  `authoritative: false` until the corpus text is tied to a snapshot.
+  2018-04 on, the year indexes start in 2018) are all recorded in
+  `sources/sfs-pdf-manifest.json` with their SHA-256 (13,547 on 2026-10-30).
+  Older acts have no PDF there. The PDF bytes are not stored, and the
+  documents stay marked `authoritative: false`; Riksdagen remains the text
+  source. `collect.py sfsverify` extracts the PDF text and compares it with the
+  corpus text (`sources/sfs-pdf-verification.json`): 635 match, 513 have been
+  amended since publication, 104 are repealed, 8 are print-only stubs and 47
+  differ (table layouts, words split in the Riksdagen text). 12,240 PDFs are
+  amendment acts or other numbers with no document of their own in the corpus.
 - SÖ treaties: all 3515 SÖ numbers published on regeringen.se on
   2026-10-30 are in the corpus (`treaty`, `corpus/sfs/treaties/`). Text is
   extracted from the PDFs only for SÖ 2010 onward (298 treaties); 36 of them
