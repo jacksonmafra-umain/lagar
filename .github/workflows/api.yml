@@ -51,6 +51,6 @@ jobs:
       - name: Build the API from the full corpus
         run: python3 -I api/build.py --corpus corpus --out build/api/v1
 
-      # The API alone, so a pull request that would push the Pages site over its budget fails here first.
-      - name: Check the API size
+      # Reports the API size per folder, layer and search group in the step summary; there is no limit.
+      - name: Report the API size
         run: python3 -I api/size_report.py --api build/api/v1 --summary "$GITHUB_STEP_SUMMARY"
