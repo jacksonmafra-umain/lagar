@@ -255,6 +255,14 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   (hastighetsföreskrifter) and the older VVFS and BVFS series are not
   collected, and Transportstyrelsen's regulations republished there are
   already in TSFS.
+- SvKFS (Svenska kraftnät, 6 regulations: 4 in force, 2 repealed in 2022) and
+  TFS (Tullverket, 24 base regulations in force, including Inspektionen för
+  strategiska produkter's) as of 2026-10-30, in full text from the PDFs.
+  SvKFS comes from the JSON document list behind its regulations page. TFS
+  comes from Tullverket's document search, a POSTed form; repealed TFS
+  regulations carry no date there and are not stored, nor are notices
+  (tillkännagivanden). Older consolidated TFS versions are HTML pages and are
+  not kept.
 - TPPVFS (Pliktverket, TPPVFS 2024:1 and the predecessor's TRMFS 2017:1 and
   2017:4, stored under TRMFS), SIFS (Spelinspektionen, 9 SIFS and 6 of the
   former Lotteriinspektionen's LIFS) and STFS (Sametinget, 13) as of
