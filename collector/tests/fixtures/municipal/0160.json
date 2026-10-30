@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.taby.se/kommun-och-politik/politik-och-beslut/styrande-dokument": "0160-listing.html"
+  },
+  "count": 22,
+  "sample": {
+    "number": "18.6e9443de19c985b90eb18b16",
+    "title": "ABVA - Allmänna bestämmelser för användande av Täby kommuns allmänna vatten- och avloppsanläggning",
+    "url": "https://www.taby.se/download/18.6e9443de19c985b90eb18b16/1772532916267/38_abva-taby.pdf"
+  },
+  "excluded": [
+    "Rönninge by, Skavlöten, skötselplan",
+    "Reglemente för kommunstyrelsen",
+    "Reglemente Krisledningsnämnden (KLN)"
+  ]
+}
