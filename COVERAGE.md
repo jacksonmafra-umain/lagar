@@ -12,7 +12,7 @@ completeness: read this file next to those numbers.
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
 | SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
-| agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/` | 2026-10-29 (full run of AFS, FFFS and TSFS: 15, 121 and 622 base regulations) |
+| agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/`, and the listing pages of MIGRFS, KAMFS, KRFS, KFMFS, KFS and MEMYFS (`collector/lagar/agency_generic.py`) | 2026-10-29 (full run of AFS, FFFS and TSFS: 15, 121 and 622 base regulations); 2026-10-30 (MIGRFS, KAMFS, KRFS, KFMFS, KFS, MEMYFS: 121) |
 | EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list with latest consolidated versions; daily `Sync EU` since then) |
 | regional (county) | Länsstyrelserna, `https://www.lansstyrelsen.se`: the 21 landing pages in `collector/data/counties.json`, their year index and detail pages (Stockholm, Halland, Gävleborg), PDF links, file-share modules and year folders (the other 18) | 2026-10-29 (2025–2026, all 21 counties) |
 | case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (full run: publications up to 2026-10-28; daily sync from then on) |
@@ -103,8 +103,15 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   disallows its folder of original PDFs, which is never requested. Boverket
   (BFS, API key probably needed; not signed up for now), Skatteverket (SKVFS:
   an earlier robots.txt request was rejected by a WAF, on 2026-10-29 it
-  answered normally), Migrationsverket (MIGRFS) and the other series are not
-  collected yet (#115). [AGENCIES.md](AGENCIES.md) lists every series and
+  answered normally) and the other series are not collected yet (#115).
+  Six more series are collected as of 2026-10-30 through the generic link-list
+  adapter, every base regulation their agencies list: MIGRFS (21 in force),
+  KAMFS (74, in force and earlier ones), KRFS (12), KFMFS (6), KFS (4) and
+  MEMYFS (4). Each agency publishes the text only as PDF, so their bodies hold
+  the title, the amending regulations named on the listing and links to the
+  PDFs (SHA-256 in `sources/agency-pdf-manifest.json`); the text will follow
+  through the shared PDF text helper. Titles come from the listings; dates are
+  not on them, so `issued` and `in_force` are null. [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.

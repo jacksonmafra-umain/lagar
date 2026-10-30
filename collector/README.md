@@ -4,7 +4,7 @@ Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown
 records a SHA-256 manifest of the authoritative SFS PDFs, adds each statute's amendment
 register from SFSR, writes a metadata-only amendment history for git, collects the published case
 law of the Swedish courts, collects EU acts in Swedish from the Publications Office Cellar,
-collects agency regulations (pilot: AFS, FFFS, TSFS) and collects municipal regulations from
+collects agency regulations (AFS, FFFS, TSFS, MIGRFS and others) and collects municipal regulations from
 the kommuner's own författningssamlingar.
 Python standard library only.
 
@@ -354,7 +354,7 @@ register. There is no central database; lagrummet.se lists the series and links 
 registers. Regulations carry no copyright (9 § upphovsrättslagen).
 
 ```
-python3 -I collector/collect.py agency --series AFS|FFFS|TSFS [--series ...] [--year YYYY ...] \
+python3 -I collector/collect.py agency --series AFS|FFFS|TSFS|MIGRFS|... [--series ...] [--year YYYY ...] \
     [--number 'AFS 2023:1' ...] [--limit N] [--refresh] [--rate SECONDS] \
     [--state collector/data/agency-state.json] [--manifest sources/agency-pdf-manifest.json] \
     [--corpus corpus] [--report FILE]
@@ -364,6 +364,16 @@ Each series has a small adapter in `collector/lagar/agency.py` that lists the re
 (`listing_urls`, `parse_listing`) and parses one detail page (`parse_detail`); the shared run
 loop does robots.txt, rate limiting, state, PDF hashing and writing. Adding a series means
 adding an adapter and registering it in `ADAPTERS`.
+
+Series published as a plain page of links use the configurable adapters in
+`collector/lagar/agency_generic.py`: `PdfListAdapter` when the listing links straight to the
+PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS) and `DetailPageAdapter` when it links to one
+HTML page per regulation. A series there is a subclass that sets the listing URLs and, where
+needed, the list item element. The number comes from either end of the item's text, else from
+the PDF's file name; amending and repealing regulations are recognised by their titles ("om
+ändring i", "om upphävande av") and listed in the `amended_by` of the base regulation they
+name. For PDF entries the PDF is the detail document: `source` is its URL and it is hashed
+once.
 
 | series | listing | detail | text |
 | --- | --- | --- | --- |

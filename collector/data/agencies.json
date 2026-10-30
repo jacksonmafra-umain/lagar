@@ -37,7 +37,9 @@
     },
     "mediemyndighetens-forfattningssamling-memyfs": {
       "series": "MEMYFS",
-      "agency": "Mediemyndigheten"
+      "agency": "Mediemyndigheten",
+      "status": "collected_pdf",
+      "note": "Mediemyndigheten lists its regulations with a link to each PDF; the text is published only as PDF."
     },
     "sveriges-geologiska-undersoknings-forfattningssamling-sgu-fs": {
       "series": "SGU-FS",
@@ -87,7 +89,9 @@
     },
     "kronofogdemyndighetens-forfattningssamling-kfmfs": {
       "series": "KFMFS",
-      "agency": "Kronofogdemyndigheten"
+      "agency": "Kronofogdemyndigheten",
+      "status": "collected_pdf",
+      "note": "Kronofogden lists the regulations in force with a link to each PDF; the text is published only as PDF."
     },
     "statens-institutionsstyrelses-forfattningssamling-sisfs": {
       "series": "SiSFS",
@@ -101,8 +105,8 @@
     "migrationsverkets-forfattningssamling-migrfs": {
       "series": "MIGRFS",
       "agency": "Migrationsverket",
-      "status": "no_adapter",
-      "note": "robots.txt (checked 2026-10-29) allows the regulation pages. Proposed as a next series on #115."
+      "status": "collected_pdf",
+      "note": "Migrationsverket lists the regulations in force with a link to each PDF; the text is published only as PDF."
     },
     "arbetsformedlingens-forfattningssamling-affs": {
       "series": "AFFS",
@@ -124,7 +128,9 @@
     },
     "kammarkollegiets-forfattningssamling-kamfs": {
       "series": "KAMFS",
-      "agency": "Kammarkollegiet"
+      "agency": "Kammarkollegiet",
+      "status": "collected_pdf",
+      "note": "Kammarkollegiet lists its regulations (in force and earlier ones, including those it issues for other agencies) with a link to each PDF; the text is published only as PDF."
     },
     "kemikalieinspektionens-forfattningssamling-kifs": {
       "series": "KIFS",
@@ -132,7 +138,9 @@
     },
     "kommerskollegiums-forfattningssamling-kfs": {
       "series": "KFS",
-      "agency": "Kommerskollegium"
+      "agency": "Kommerskollegium",
+      "status": "collected_pdf",
+      "note": "Kommerskollegium lists the regulations in force with a link to each PDF; the text is published only as PDF."
     },
     "konkurrensverkets-forfattningssamling-kkvfs": {
       "series": "KKVFS",
@@ -188,7 +196,9 @@
     },
     "statens-kulturrads-forfattningssamling-krfs": {
       "series": "KRFS",
-      "agency": "Statens kulturråd"
+      "agency": "Statens kulturråd",
+      "status": "collected_pdf",
+      "note": "Kulturrådet lists its regulations with a link to each PDF; the text is published only as PDF."
     },
     "statens-skolverks-forfattningssamling-skolfs": {
       "series": "SKOLFS",
