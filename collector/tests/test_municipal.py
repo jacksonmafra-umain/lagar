@@ -712,6 +712,40 @@ class JsonListTest(unittest.TestCase):
              "https://static.example.se/avfallsforeskrifter.pdf")])
         self.assertEqual(problems, [])
 
+    def test_a_listing_with_its_own_settings(self):
+        page = "https://www.example.se/taxor/"
+        lst = "https://www.example.se/forfattningssamling/"
+        entry = {"name": "Exempla", "issuer": "Exempla kommun", "region_code": "19", "collection": "Exempla",
+                 "strategy": "html_index", "hosts": ["www.example.se", "static.example.se"],
+                 "link_pattern": "^https://static\\.example\\.se/.+\\.pdf$",
+                 "number": [{"from": "href", "pattern": "/([^/]+)\\.pdf$"}],
+                 "listings": [page, {"url": lst, "strategy": "json_list", "embedded": "next",
+                                     "items": "ordinancePages", "title_field": "Heading", "number_field": "Id",
+                                     "url_template": "{FileUrl}"}]}
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(self.config(tmp, entry))["1961"]
+            bad = {**entry, "listings": [page, {"url": lst, "strategy": "domino_view"}]}
+            with self.assertRaises(municipal.ConfigError):
+                municipal.load_config(self.config(tmp, bad))
+        self.assertEqual(kommun.listings, [page, lst])
+        self.assertEqual(kommun.strategy, "html_index")
+        self.assertEqual(kommun.listing_settings[lst].strategy, "json_list")
+        items = [{"Heading": "Avfallsföreskrifter", "FileUrl": "https://static.example.se/avfall.pdf", "Id": "a1"}]
+        flight = json.dumps('x:{"ordinancePages":' + json.dumps(items) + "}")
+        pages = {page: b'<h2>Taxor</h2><a href="https://static.example.se/va-taxa.pdf">VA-taxa</a>',
+                 lst: f"<script>self.__next_f.push([1,{flight}])</script>".encode()}
+
+        class Pages:
+            def fetch_final(self, url, headers=None):
+                if url not in pages:
+                    raise urllib.error.HTTPError(url, 404, "missing", {}, io.BytesIO(b""))
+                return pages[url], "text/html", url
+
+        entries, problems = municipal.list_entries(municipal.Fetcher(Pages()), kommun)
+        self.assertEqual(sorted((e.number, e.title) for e in entries),
+                         [("a1", "Avfallsföreskrifter"), ("va-taxa", "VA-taxa")])
+        self.assertEqual(problems, [])
+
     def test_json_list_needs_its_fields(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(municipal.ConfigError):

@@ -183,6 +183,8 @@ class Kommun:
     href_titles: bool = False
     json_embedded: str = ""
     json_number_pattern: str = ""
+    # url -> Kommun with that listing's own settings (a listing given as an object)
+    listing_settings: "dict" = field(default_factory=dict)
 
 
 def _required(entry, key, code, kind=str):
@@ -208,10 +210,16 @@ def _kommun(code, entry):
     strategy = _required(entry, "strategy", code)
     if strategy not in STRATEGIES:
         raise ConfigError(f"{code}: unknown strategy {strategy!r}")
-    listings = _required(entry, "listings", code, list)
-    for url in listings:
+    listings, overrides = [], {}
+    for listing in _required(entry, "listings", code, list):
+        if isinstance(listing, dict):  # a listing with its own settings: {"url": ..., "strategy": ...}
+            url = listing.get("url")
+            overrides[url] = {k: v for k, v in listing.items() if k != "url"}
+        else:
+            url = listing
         if not isinstance(url, str) or urllib.parse.urlsplit(url).scheme != "https":
             raise ConfigError(f"{code}: listing {url!r} is not an https URL")
+        listings.append(url)
     hosts = tuple(_required(entry, "hosts", code, list))
     kommun = Kommun(
         code=code,
@@ -276,6 +284,14 @@ def _kommun(code, entry):
         urllib.parse.urlsplit(kommun.page).scheme == "https" and urllib.parse.urlsplit(kommun.page).hostname in hosts
     ):
         raise ConfigError(f"{code}: mediaflow needs the https page that embeds the shares, on a configured host")
+    for url, settings in overrides.items():
+        if any(isinstance(item, dict) for item in settings.get("listings", [])):
+            raise ConfigError(f"{code}: a listing's settings cannot hold listings")
+        listing = _kommun(code, {**entry, **settings, "listings": [url]})
+        # documents are fetched with the entry's strategy, so only listings of PDF links may differ
+        if listing.strategy != strategy and not {listing.strategy, strategy} <= {"html_index", "json_list"}:
+            raise ConfigError(f"{code}: listing {url} cannot use {listing.strategy} under {strategy}")
+        kommun.listing_settings[url] = listing
     return kommun
 
 
@@ -1402,21 +1418,22 @@ def list_entries(fetcher, kommun):
         url = queue.pop(0)
         if not fetcher.allows(url):
             raise ListingError(f"robots.txt disallows the listing {url}")
+        settings = kommun.listing_settings.get(url, kommun)
         try:
-            if kommun.strategy == "mediaflow":
-                raw, share = mediaflow_files(fetcher, kommun, url)
-                found, bad = parse_mediaflow(kommun, raw, url, share)
+            if settings.strategy == "mediaflow":
+                raw, share = mediaflow_files(fetcher, settings, url)
+                found, bad = parse_mediaflow(settings, raw, url, share)
                 final = url
             else:
-                raw, _, final = fetcher.get(kommun, url)
-                found, bad = PARSERS[kommun.strategy](kommun, raw, final)
+                raw, _, final = fetcher.get(settings, url)
+                found, bad = PARSERS[settings.strategy](settings, raw, final)
         except Blocked:
             raise
         except (*DOCUMENT_ERRORS, ElementTree.ParseError) as error:
             raise ListingError(f"listing {url}: {type(error).__name__}: {error}") from error
         entries += found
         problems += bad
-        for page in more_pages(kommun, raw, final):
+        for page in more_pages(settings, raw, final):
             if page not in seen and fetcher.allows(page):
                 seen.add(page)
                 queue.append(page)

@@ -834,9 +834,14 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
    replace the built-in lists for a kommun.
 4. `--dry-run` prints each listed document (`id`, title, URL) without fetching documents or writing
    anything; use it to check a new entry.
-5. `hosts` lists every host the collector may contact for that kommun; `region_code` must be the
+5. A listing may be an object instead of a URL: `{"url": "...", "strategy": "json_list", ...}`. It
+   is read with the entry's settings overridden by its own keys, so one kommun can read a page of
+   PDF links and an embedded document list (Skövde's taxor page and its Next.js
+   författningssamling). Documents are still fetched with the entry's strategy, so only
+   `html_index` and `json_list` listings may be combined.
+6. `hosts` lists every host the collector may contact for that kommun; `region_code` must be the
    first two digits of the kommun code.
-6. Add a trimmed listing fixture as `collector/tests/fixtures/municipal/<code>-listing.html` (headings
+7. Add a trimmed listing fixture as `collector/tests/fixtures/municipal/<code>-listing.html` (headings
    and links are all the parser reads) and its expectations as `collector/tests/fixtures/municipal/<code>.json`
    (`listings`: every page read, followed pages included, to its fixture file, `count`, a `sample` entry with `number`, `title` and `url`,
    and `excluded` titles); `test_municipal_listings.py` checks every such pair against the config. Then
