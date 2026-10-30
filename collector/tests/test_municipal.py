@@ -323,6 +323,22 @@ class MalmoTest(unittest.TestCase):
             self.assertEqual(len(manifest["gaps"]), 2)
 
 
+class RawLinkTest(unittest.TestCase):
+    def test_spaces_and_letters_in_links_are_percent_encoded(self):
+        listing = (
+            '<h2>Reglerande styrdokument</h2><a href="/globalassets/start/kommunal-forfattningssamling/'
+            'kfs 2024 Avfallstaxa för Stockholm.pdf">Avfallstaxa KFS 2024:3</a>'
+        ).encode()
+        entries, problems = municipal.parse_html_index(kommun("0180"), listing, STHLM_URL)
+        self.assertEqual(problems, [])
+        self.assertEqual(
+            entries[0].url,
+            "https://start.stockholm/globalassets/start/kommunal-forfattningssamling/"
+            "kfs%202024%20Avfallstaxa%20f%C3%B6r%20Stockholm.pdf",
+        )
+        self.assertEqual(entries[0].number, "KFS 2024:3")
+
+
 class GoteborgTest(unittest.TestCase):
     def test_view_keeps_regulations_and_fees_once(self):
         entries, _ = municipal.parse_domino_view(kommun("1480"), GBG_VIEW, GBG_VIEW_URL)

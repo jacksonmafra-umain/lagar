@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://harnosand.se/kommun--styrning/forvaltning-och-organisation/kommunens-styrande-dokument.html": "2280-listing.html"
+  },
+  "count": 14,
+  "sample": {
+    "number": "18.580e43d7163221b2781b6d84",
+    "title": "Allmänna ordningsföreskrifter Härnösands kommun",
+    "url": "https://harnosand.se/download/18.580e43d7163221b2781b6d84/1602671300354/Allm%C3%A4nna%20ordningsf%C3%B6reskrifter%20H%C3%A4rn%C3%B6sands%20kommun.pdf"
+  },
+  "excluded": [
+    "Tillväxtstrategi Härnösand kortversion",
+    "Tillvaxtstrategi Mitt Harnosand 2024",
+    "ÖP2040 - Antagande - Plandokument"
+  ]
+}
