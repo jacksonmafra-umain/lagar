@@ -414,6 +414,31 @@ class ParseTest(unittest.TestCase):
         self.assertEqual([e.number for e in entries], ["TRMFS 2017:1", "TPPVFS 2024:1"])
         self.assertEqual(entries[0].title, "Föreskrifter om totalförsvarsplikt")
 
+    def test_sifs_list_and_pages(self):
+        spel = agency.SpelinspektionenAdapter()
+
+        class Client:
+            def get(self, url):
+                return b"%PDF-1.7"
+
+        with unittest.mock.patch.object(agency.pdftext, "extract",
+                                        return_value=unittest.mock.Mock(text="SIFS 2019:1\n")):
+            self.assertEqual(spel.fetch_listing(Client(), spel.listing_url), b"SIFS 2019:1\n")
+        entries = {e.number: e for e in spel.parse_listing(fixture("agency-sifs-list.txt"), spel.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base), ["LIFS 2018:4", "SIFS 2019:2", "SIFS 2026:1"])
+        self.assertFalse(entries["SIFS 2022:1"].base)  # repeals another regulation
+        self.assertEqual(entries["LIFS 2018:4"].amended_by, ["SIFS 2024:2"])
+        misprinted = entries["SIFS 2019:2"]  # printed as LIFS 2019:2
+        self.assertEqual(misprinted.title,
+                         "Spelinspektionens föreskrifter och allmänna råd om åtgärder mot penningtvätt och "
+                         "finansiering av terrorism")
+        self.assertEqual(misprinted.url, "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20192/")
+        self.assertTrue(entries["SIFS 2026:1"].url.endswith("/sifs-20261-spelinspektionens-foreskrifter-om-avgifter-for-tillsyn/"))
+        regulation = spel.parse_detail(fixture("agency-sifs-detail.html"), misprinted)
+        self.assertEqual(regulation.pdfs[0][1].rsplit("/", 1)[-1], "sifs-2019_2-spelinspektionens-foreskrifter.pdf")
+        with self.assertRaises(ValueError):
+            spel.parse_detail(fixture("agency-sifs-detail.html"), entries["SIFS 2026:1"])
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

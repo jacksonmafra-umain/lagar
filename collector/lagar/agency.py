@@ -1452,6 +1452,92 @@ class TrafikverketAdapter:
         )
 
 
+# --- Spelinspektionen (SIFS) --------------------------------------------------
+
+_SI_NUMBER = re.compile(r"(SIFS|LIFS) ?(\d{4}):(\d+)")
+_SI_FOOTER = re.compile(r"^(\d+\(\d+\)|Spelinspektionen|spelinspektionen\.se|Box 199\b.*|Telefon\b.*|Datum \S+)$")
+
+
+class SpelinspektionenAdapter:
+    """Spelinspektionen's regulations in force, from its list and one page per regulation.
+
+    The list (`spelinspektionens-foreskriftsforteckning.pdf`, read through its
+    text layer) gives every regulation in force with its kind, number and
+    title, including the former Lotteriinspektionen's LIFS, stored under that
+    prefix. Each regulation has a page `/lagar-regler/foreskrifter/<number>/`
+    linking its PDF.
+    """
+
+    series = "SIFS"
+    issuer = "Spelinspektionen"
+    base_url = "https://www.spelinspektionen.se"
+    listing_url = base_url + "/globalassets/dokument/foreskrifter-och-vagledning/spelinspektionens-foreskriftsforteckning.pdf"
+    detail = True
+    has_text = False
+    # Pages whose address is not the number alone.
+    pages = {"SIFS 2026:1": "sifs-20261-spelinspektionens-foreskrifter-om-avgifter-for-tillsyn"}
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def fetch_listing(self, client, url):
+        return pdftext.extract(client.get(url)).text.encode("utf-8")
+
+    def parse_listing(self, text, url):
+        lines = [_clean(line) for line in text.splitlines()]
+        entries, amending = [], {}
+        for i, line in enumerate(lines):
+            match = _SI_NUMBER.fullmatch(line)
+            if match is None:
+                continue
+            prefix = match.group(1)
+            if prefix == "LIFS" and int(match.group(2)) >= 2019:
+                prefix = "SIFS"  # Lotteriinspektionen's LIFS ended in 2018; the list misprints a few SIFS
+            number = f"{prefix} {match.group(2)}:{int(match.group(3))}"
+            kinds = set()
+            for before in reversed(lines[max(0, i - 3):i]):
+                if before in ("Grundförfattning", "Ändringsförfattning"):
+                    kinds.add(before)
+                elif before:
+                    break
+            title = []
+            for after in lines[i + 1:]:
+                if after.startswith(("Bemyndigande", "Omfattning", "Grundförfattning", "Ändringsförfattning")):
+                    break
+                if after and not _SI_FOOTER.match(after):
+                    title.append(after)
+            title = _clean(" ".join(title))
+            if re.search(r"\bupphäv", title, re.I):
+                kinds.discard("Grundförfattning")  # repeals other regulations
+            if "Grundförfattning" not in kinds:
+                changes = _AMENDING.search(title)
+                for ref in _SI_NUMBER.finditer(title[changes.start():] if changes else title):
+                    amending.setdefault(f"{ref.group(1)} {ref.group(2)}:{int(ref.group(3))}", set()).add(number)
+            slug = self.pages.get(number) or number.lower().replace(" ", "-").replace(":", "")
+            entries.append(Entry(number=number, title=title or number, base="Grundförfattning" in kinds,
+                                 url=f"{self.base_url}/lagar-regler/foreskrifter/{slug}/"))
+        for entry in entries:
+            entry.amended_by = sorted(amending.get(entry.number, ()), key=number_key)
+        if not any(e.base for e in entries):
+            raise ValueError("no regulations in Spelinspektionen's list")
+        return entries
+
+    def parse_detail(self, text, entry):
+        prefix, rest = entry.number.split(" ")
+        year, ordinal = rest.split(":")
+        own = re.compile(rf"{prefix}[ _-]?{year}[ _:-]?{ordinal}(?!\d)", re.I)
+        pdf = None
+        for link in parse_html(text).find_all("a"):
+            href = link.attrs.get("href") or ""
+            if ".pdf" in href.lower() and (own.search(link.text()) or own.search(urllib.parse.unquote(href))):
+                pdf = absolute(self.base_url, href)
+                break
+        if pdf is None:
+            raise ValueError(f"no PDF of {entry.number} on its page")
+        return Regulation(number=entry.number, title=entry.title, amended_by=list(entry.amended_by),
+                          version="Grundförfattning", pdfs=[(entry.number, pdf)])
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1687,7 +1773,8 @@ ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), Ak
                                    PrvAdapter(), PolisenAdapter(), ScbAdapter(),
                                    EnergimyndighetenAdapter(), RiksdagenAdapter(),
                                    RiksarkivetAdapter(), SkolverketAdapter(),
-                                   SjofartsverketAdapter(), TrafikverketAdapter())}
+                                   SjofartsverketAdapter(), TrafikverketAdapter(),
+                                   SpelinspektionenAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
