@@ -1,0 +1,15 @@
+{
+  "listings": {
+    "https://www.vimmerby.se/bygga-bo-och-miljo/livsmedel-och-halsa/lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon": "0884-listing.html",
+    "https://www.vimmerby.se/trafik-gator-och-infrastruktur/offentliga-platser-och-nyttjande-av-dem/parker-lekplatser-och-fontaner": "0884-listing-2.html"
+  },
+  "count": 4,
+  "sample": {
+    "number": "18.5fc07afd1885167231522bad",
+    "title": "Lokala föreskrifter för att skydda människors hälsa och miljön",
+    "url": "https://www.vimmerby.se/download/18.5fc07afd1885167231522bad/1683627106541/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n,%20Vimmerby%20kommun.pdf"
+  },
+  "excluded": [
+    "Riktlinjer och information om upplåtelse av offentlig plats"
+  ]
+}
