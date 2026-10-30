@@ -2468,6 +2468,18 @@
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
     },
+    "1281": {
+      "name": "Lund",
+      "issuer": "Lunds kommun",
+      "region_code": "12",
+      "collection": "Lunds kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["lund.se"],
+      "listings": ["https://lund.se/kommun-och-politik/sa-styrs-lunds-kommun/styrande-dokument"],
+      "section_level": 2,
+      "sections": ["Författningssamling"]
+    },
     "1282": {
       "name": "Landskrona",
       "issuer": "Landskrona stad",
@@ -2628,6 +2640,19 @@
       "resident_filter": true,
       "hosts": ["www.simrishamn.se"],
       "listings": ["https://www.simrishamn.se/politik-och-paverkan/kommunal-forfattningssamling"]
+    },
+    "1292": {
+      "name": "Ängelholm",
+      "issuer": "Ängelholms kommun",
+      "region_code": "12",
+      "collection": "Ängelholms kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.engelholm.se"],
+      "listings": [
+        "https://www.engelholm.se/kommun-och-politik/sa-har-styrs-angelholms-kommun/lokala-ordningsregler.html",
+        "https://www.engelholm.se/kommun-och-politik/sa-har-styrs-angelholms-kommun/styrdokument.html"
+      ]
     },
     "1293": {
       "name": "Hässleholm",
