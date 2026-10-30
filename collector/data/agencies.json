@@ -1214,7 +1214,7 @@
     },
     "1262": {
       "status": "no_adapter",
-      "note": "Lomma's pages \"Regler och styrande dokument\", \"Ordningsregler\" and \"Avgifter och taxor\" list no documents in the static HTML or in Sitevision's embedded state; the list is loaded by the browser. Needs an adapter (checked 2026-10-30)."
+      "note": "Lomma publishes its författningssamling in a Netpublicator reader embedded in the \"Regler och styrande dokument\" page; the static HTML lists no documents. Needs a Netpublicator adapter (checked 2026-10-30)."
     },
     "1267": {
       "status": "no_adapter",
@@ -1227,10 +1227,6 @@
     "1278": {
       "status": "no_adapter",
       "note": "No page listing Båstad's författningssamling or lokala föreskrifter was found; its rules are spread over topic pages (checked 2026-10-30)."
-    },
-    "1283": {
-      "status": "no_adapter",
-      "note": "Helsingborg's \"Regler och styrande dokument – författningssamling\" page (WordPress, Municipio) renders its document list in the browser; needs an adapter (checked 2026-10-30)."
     },
     "1401": {
       "status": "no_adapter",

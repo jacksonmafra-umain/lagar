@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://styrning.helsingborg.se/sa-styrs-helsingborg/kommunens-regelverk/foreskrifter-och-stadgar/": "1283-listing.html",
+    "https://styrning.helsingborg.se/sa-styrs-helsingborg/kommunens-regelverk/kommunala-avgifter/": "1283-listing-2.html"
+  },
+  "count": 10,
+  "sample": {
+    "number": "abva2019-webb",
+    "title": "Allmänna bestämmelser för brukande av Familjen Helsingborgs allmänna vatten- och avloppsanläggningar (ABVA)",
+    "url": "https://media.helsingborg.se/uploads/networks/4/sites/141/2021/01/abva2019-webb.pdf"
+  },
+  "excluded": [
+    "Mobilitetsnorm",
+    "Regler för flaggning",
+    "Regional avfallsplan 2025-2032"
+  ]
+}

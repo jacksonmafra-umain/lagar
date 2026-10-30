@@ -2700,6 +2700,22 @@
       "number": [{"from": "href", "pattern": "/uploads/(?:\\d{4}/\\d{2}/)?([^/]+)\\.pdf$"}],
       "title_strip": ["\\s*\\(pdf(,\\s*[\\d.,]+\\s*[kMG]?B)?\\)\\s*$"]
     },
+    "1283": {
+      "name": "Helsingborg",
+      "issuer": "Helsingborgs stad",
+      "region_code": "12",
+      "collection": "Helsingborgs stads författningssamling",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["styrning.helsingborg.se", "media.helsingborg.se"],
+      "listings": [
+        "https://styrning.helsingborg.se/sa-styrs-helsingborg/kommunens-regelverk/foreskrifter-och-stadgar/",
+        "https://styrning.helsingborg.se/sa-styrs-helsingborg/kommunens-regelverk/kommunala-avgifter/"
+      ],
+      "link_pattern": "^https://media\\.helsingborg\\.se/uploads/.*\\.pdf$",
+      "number": [{"from": "href", "pattern": "/uploads/(?:[^/]+/)*([^/]+)\\.pdf$"}],
+      "title_strip": ["\\s*\\(pdf,[^)]*\\).*$"]
+    },
     "1284": {
       "name": "Höganäs",
       "issuer": "Höganäs kommun",
