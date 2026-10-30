@@ -1170,14 +1170,6 @@
       "status": "blocked",
       "note": "www.karlskrona.se answers every request, robots.txt included, with an HTTP 403 \"Åtkomst nekad\" bot-check page (checked 2026-10-30); not bypassed."
     },
-    "1233": {
-      "status": "no_adapter",
-      "note": "Vellinge publishes its lokala ordningsföreskrifter and hälsoskyddsföreskrifter as HTML text on topic pages under /kommun-och-politik/kommunfakta/styrande-dokument/, and the styrande-dokument page lists no documents in its static HTML; only an attachment PDF is linked. Needs an HTML-page strategy (checked 2026-10-30)."
-    },
-    "1262": {
-      "status": "no_adapter",
-      "note": "Lomma publishes its författningssamling in a Netpublicator reader embedded in the \"Regler och styrande dokument\" page; the static HTML lists no documents. Needs a Netpublicator adapter (checked 2026-10-30)."
-    },
     "1275": {
       "status": "robots",
       "note": "Perstorp's \"Kommunal författningssamling\" page keeps its document list in a minimised layout that opens only through ?sv.state=normal, which robots.txt disallows (Disallow: /*?sv.state=*); the site has no sitemap. Not bypassed (checked 2026-10-31)."
@@ -1191,10 +1183,6 @@
     "1780": {
       "status": "robots",
       "note": "karlstad.se lists SharePoint document ids; the files are served only through time-limited links on karlstadskommunonline.sharepoint.com, whose robots.txt disallows everything (checked 2026-10-30)."
-    },
-    "2180": {
-      "status": "no_adapter",
-      "note": "gavle.se publishes its documents through MediaFlow; no adapter yet."
     }
   }
 }

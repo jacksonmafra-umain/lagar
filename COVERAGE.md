@@ -388,12 +388,14 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Perstorp: its "Kommunal författningssamling" page keeps the document list in
     a minimised layout that opens only through `?sv.state=normal`, which
     robots.txt disallows, and the site has no sitemap. Not bypassed; a gap.
+  - Lomma publishes its författningssamling in a Netpublicator reader; its channels
+    E (lokala föreskrifter) and F (taxor) are read through Netpublicator's public
+    API (`json_list` with `follow_items`). Vellinge publishes its lokala
+    ordningsföreskrifter and hälsoskyddsföreskrifter as web pages, collected as
+    page text (`html_pages` over its gzipped sitemap).
   - Östra Göinge and Höör publish their rules only in Ciceron meeting portals
     (`sok-og.unikom.se`, `sok-hr.unikom.se`); their "Styrande dokument" are read
     through the portal's JSON-RPC search (`ciceron`).
-  - Not collected in Skåne, with the reason per kommun in `AGENCIES.md`: Perstorp
-    (document list rendered in the browser) and Båstad (no collection page). Their
-    issues stay open.
   - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
     the PDFs are never fetched; the documents point at the listing page and are
     recorded as gaps in the manifest.

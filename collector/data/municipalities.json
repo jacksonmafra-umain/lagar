@@ -2747,6 +2747,19 @@
         "principer"
       ]
     },
+    "1233": {
+      "name": "Vellinge",
+      "issuer": "Vellinge kommun",
+      "region_code": "12",
+      "collection": "Vellinge kommuns styrande dokument",
+      "strategy": "html_pages",
+      "hosts": ["vellinge.se"],
+      "listings": ["https://vellinge.se/sitemap.xml"],
+      "link_pattern": "^https://vellinge\\.se/kommun-och-politik/kommunfakta/styrande-dokument/[^/]+$",
+      "number": [{"from": "href", "pattern": "/styrande-dokument/([^/]+)$"}],
+      "page_titles": true,
+      "follow": "/sitemap\\d+\\.xml\\.gz$"
+    },
     "1256": {
       "name": "Östra Göinge",
       "issuer": "Östra Göinge kommun",
@@ -2789,6 +2802,28 @@
       "resident_filter": true,
       "hosts": ["www.kavlinge.se"],
       "listings": ["https://www.kavlinge.se/kommun-och-politik/vision-mal-och-styrning/styrdokument"]
+    },
+    "1262": {
+      "name": "Lomma",
+      "issuer": "Lomma kommun",
+      "region_code": "12",
+      "collection": "Lomma kommuns författningssamling",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "hosts": ["docs.netpublicator.com"],
+      "listings": [
+        "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-ea733f778a6b8298162&isr=false",
+        "https://docs.netpublicator.com/api/public/r01696490/read?hash=98c1c1e3eef446-5754b7a90a558298093-9696e1a6ffd28298165&isr=false"
+      ],
+      "items": "items",
+      "title_field": "text",
+      "number_field": "id",
+      "url_template": "document/{id}?hash={_hash}",
+      "follow_items": {
+        "field": "type",
+        "value": "channel",
+        "url_template": "read?hash={_hash}-{id}&isr=false"
+      }
     },
     "1263": {
       "name": "Svedala",
@@ -6068,6 +6103,20 @@
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
+    "2180": {
+      "name": "Gävle",
+      "issuer": "Gävle kommun",
+      "region_code": "21",
+      "collection": "Gävle kommuns styrande dokument: föreskrifter samt taxor och avgifter",
+      "strategy": "mediaflow",
+      "hosts": ["www.gavle.se", "shareapi.mediaflow.com", "files.mediaflow.com"],
+      "listings": [
+        "https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=3KATTCX4I1",
+        "https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=XOATPC2411"
+      ],
+      "page": "https://www.gavle.se/kommun-och-politik/forvaltning-och-organisation/styrande-dokument/",
+      "resident_filter": true
     },
     "2181": {
       "name": "Sandviken",
