@@ -64,7 +64,11 @@ PRESETS = {
         "strategy": "html_index",
         "link_pattern": r"/download/18\.[0-9a-f]+/\d+/[^?#]+\.pdf$",
         "number": [{"from": "href", "pattern": r"/download/(18\.[0-9a-f]+)/"}],
-        "title_strip": [r"\s*(\.pdf)?\s*,?\s*\(?pdf,?\s*[\d.,]+\s*[kMG]?B\)?\.?\s*$", r"\.(pdf|docx?)\s*$"],
+        "title_strip": [
+            r",?\s*(\(?\s*)?(ö|o)ppnas i (ett )?nytt f(ö|o)nster\.?\)?\s*$",
+            r"\s*(\.pdf)?\s*,?\s*\(?pdf,?\s*[\d.,]+\s*[kMG]?B\)?\.?\s*$",
+            r"\.(pdf|docx?)\s*$",
+        ],
         "follow": r"[?&]lp-page=\d+",  # the file list's own pagination
         "embedded_json": True,
     },
@@ -556,11 +560,13 @@ def parse_html_index(kommun, raw, listing_url):
     sha = hashlib.sha256(raw).hexdigest()
     sections = {s.casefold() for s in kommun.sections}
     entries, problems = [], []
+    # Icon links next to the titled link carry no text; they are not documents of their own.
+    titled = {urllib.parse.urljoin(listing_url, href) for _, href, text in parser.links if text}
     for section, href, text in parser.links:
         if sections and (section or "").casefold() not in sections:
             continue
         url = urllib.parse.urljoin(listing_url, href)
-        if not re.search(kommun.link_pattern, url, re.IGNORECASE):
+        if not re.search(kommun.link_pattern, url, re.IGNORECASE) or (not text and url in titled):
             continue
         number = _number(kommun, url, text)
         title = _title(kommun, text)
