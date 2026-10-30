@@ -25,7 +25,7 @@ from . import agency, htmlmd
 from .agency import Entry, Regulation, _clean, absolute, number_key, parse_html, to_html
 
 _AMENDING = re.compile(
-    r"\b(om )?(ändring|ändringar|upphävande)\b( av| i| om)?|ändringsförfattning|ändringsföreskrift",
+    r"\b(om )?(ändring|ändringar|upphävande)\b( av| i| om)?|\bom upphörande av\b|ändringsförfattning|ändringsföreskrift",
     re.IGNORECASE)
 # PDFs on a regulation page that are not the regulation: impact assessments, memos, errata.
 _NOT_REGULATION = re.compile(r"konsekvens|\bPM\b|\bpm-|remiss|vägledning|rättelse|engelsk|english|skriv ut",
@@ -246,6 +246,13 @@ class _LinkAdapter:
         """True when a listing that only named the number hid an amending or repealing regulation."""
         return entry.title == entry.number and is_amending(regulation.title)
 
+    def regulation(self, entry):
+        """The Regulation of an entry whose listing links straight to its PDF."""
+        pdfs = list(getattr(entry, "pdfs", ()) or [(entry.number, entry.url)])
+        return Regulation(number=entry.number, title=entry.title, in_force=entry.in_force,
+                          repealed=entry.repealed, amended_by=list(entry.amended_by),
+                          version="Grundförfattning", pdfs=pdfs)
+
     def link_amendments(self, entries):
         """Fill each base entry's `amended_by` from the amending titles that name it."""
         bases = {e.number: e for e in entries if e.base}
@@ -326,12 +333,6 @@ class PdfListAdapter(_LinkAdapter):
         if not entries:
             raise ValueError(f"no {self.series} regulations found on {url}")
         return self.link_amendments(list(entries.values()))
-
-    def regulation(self, entry):
-        pdfs = list(getattr(entry, "pdfs", ()) or [(entry.number, entry.url)])
-        return Regulation(number=entry.number, title=entry.title, in_force=entry.in_force,
-                          repealed=entry.repealed, amended_by=list(entry.amended_by),
-                          version="Grundförfattning", pdfs=pdfs)
 
 
 class DetailPageAdapter(_LinkAdapter):
@@ -983,11 +984,79 @@ class FfsAdapter(PdfListAdapter):
             raise ValueError(f"no {self.series} regulations found on {url}")
         return list(entries.values())
 
+
+class HslffsAdapter(DetailPageAdapter):
+    """HSLF-FS, the series shared by the health and social-care agencies, from kunskapsguiden.se.
+
+    Kunskapsguiden's list is rendered from JSON in the page: designation, heading,
+    issuing agency and a link to the regulation on that agency's site (a page with
+    its PDFs, a page listing many regulations, or the PDF itself). robots.txt is read
+    per host. Läkemedelsverket's pages need JavaScript and its robots.txt disallows
+    PDFs, so its regulations are left out and recorded as a gap.
+    """
+
+    series = "HSLF-FS"
+    issuer = "Socialstyrelsen"  # each entry names its own agency
+    base_url = "https://kunskapsguiden.se"
+    listings = (base_url + "/gemensam-forfattningssamling/",)
+    multi_host = True
+    heading_title = False  # agency pages differ; the title comes from the list, else the PDF
+    skipped_hosts = ("lakemedelsverket.se",)
+    _URL_NUMBER = re.compile(r"hs(?:lf|fl)[-_]fs[-_](\d{4})[-_]?(\d{1,3})(?!\d)", re.IGNORECASE)
+
+    def url_number(self, url):
+        match = self._URL_NUMBER.search(urllib.parse.unquote(url))
+        return f"{self.series} {match.group(1)}:{int(match.group(2))}" if match else None
+
+    def parse_listing(self, text, url):
+        marker = re.search(r"SOS\.Components\.FilterList,\s*", text)
+        if marker is None:
+            raise ValueError(f"no {self.series} list on {url}")
+        props, _ = json.JSONDecoder().raw_decode(text, marker.end())
+        entries = {}
+        for item in props.get("filterItems") or []:
+            link = (item.get("Url") or "").strip()
+            host = urllib.parse.urlsplit(link).netloc.lower()
+            if not link or host.removeprefix("www.") in self.skipped_hosts:
+                continue
+            heading = _clean(item.get("Heading") or "")
+            amending = is_amending(heading)
+            # An amendment's designation is often the regulation it amends; its own number is in the URL.
+            number = self.url_number(link)
+            if number is None:
+                if amending:  # its own number is unknown
+                    continue
+                number = self.number(item.get("Designation") or "")
+            if number is None or (number in entries and (entries[number].base or amending)):
+                continue
+            issuer = re.split(r",\s*(?=[A-ZÅÄÖ]{2,}$)", _clean(item.get("Authority") or ""))[0]
+            entries[number] = Entry(number=number, title=self.clean_title(heading, number), url=link,
+                                    base=not amending, issuer=issuer.replace(",", " och ") or None)
+        if not entries:
+            raise ValueError(f"no {self.series} regulations found on {url}")
+        return self.link_amendments(list(entries.values()))
+
+    def names_number(self, page, entry):
+        return super().names_number(page, entry) or any(
+            self.url_number(a.attrs.get("href", "")) == entry.number for a in page.find_all("a"))
+
+    def parse_detail(self, text, entry):
+        """Keep the PDFs that name the number when the page lists several regulations (TLV)."""
+        regulation = super().parse_detail(text, entry)
+        own = [(label, url) for label, url in regulation.pdfs
+               if entry.number in self.references(label) or self.url_number(url) == entry.number]
+        if own:
+            regulation.pdfs = own
+        elif len(regulation.pdfs) > 2:
+            raise ValueError(f"no PDF on {entry.url} names {entry.number}")
+        return regulation
+
+
 SERIES = (MigrfsAdapter(), KamfsAdapter(), KfmfsAdapter(), KfsAdapter(), KrfsAdapter(), MemyfsAdapter(),
           ElsakfsAdapter(), McffsAdapter(), MdffsAdapter(), NfsAdapter(), KifsAdapter(), AgvfsAdapter(),
           KovfsAdapter(), HvmfsAdapter(), FkfsAdapter(), IaffsAdapter(), AffsAdapter(), BfnarAdapter(),
           CsnfsAdapter(), ImyfsAdapter(), LmfsAdapter(), MtfsAdapter(),
           KvfsAdapter(), LivsfsAdapter(), MyhfsAdapter(), DvfsAdapter(), EifsAdapter(), KbvfsAdapter(),
-          FfsAdapter())
+          FfsAdapter(), HslffsAdapter())
 
 agency.ADAPTERS.update({a.series: a for a in SERIES})
