@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.essunga.se/kommun--politik/kommunfakta/styrande-dokument.html": "1445-listing.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "18.4d092e01759507d7512674",
+    "title": "Allmänna lokala ordningsföreskrifter för Essunga kommun med bilaga (karta) fastställd 130527 - SE",
+    "url": "https://www.essunga.se/download/18.4d092e01759507d7512674/1604589311826/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Essunga%20kommun%20med%20bilaga%20(karta)%20fastst%C3%A4lld%20130527%20-%20SE.pdf"
+  },
+  "excluded": [
+    "Verksamhetsplan med budget 2022-2024",
+    "Verksamhetsplan med budget 2023-2025",
+    "Verksamhetsplan med budget 2024-2026"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "listings": {
+    "https://www.mark.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/ordningsforeskrifter": "1463-listing1.html",
+    "https://www.mark.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/styrdokument-for-bygga-bo-miljo-och-trafik": "1463-listing2.html",
+    "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/taxor-och-avgifter-inom-miljobalkens-omrade-": "1463-listing3.html",
+    "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/taxa-for-sprangamnesprekursorer": "1463-listing4.html",
+    "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/taxa-for-tillsyn-enligt-stralskyddslagen": "1463-listing5.html",
+    "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/taxa-for-offentlig-kontroll-enligt-foder-och-animaliska-biprodukter": "1463-listing6.html",
+    "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/avgifter-for-livsmedelsverksamhet": "1463-listing7.html",
+    "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/avgifter-for-alkohol-folkol-och-tobak": "1463-listing8.html",
+    "https://www.mark.se/bygga-bo-miljo-och-trafik/avfall-och-atervinning/avgifter-och-abonnemang-for-renhallning": "1463-listing9.html",
+    "https://www.mark.se/bygga-bo-miljo-och-trafik/bygga-nytt-andra-och-riva/bygglov/taxor-och-avgifter-for-bygglov-och-anmalningsarenden": "1463-listing10.html",
+    "https://www.mark.se/bygga-bo-miljo-och-trafik/vatten-och-avlopp/kommunalt-vatten-och-avlopp/avgifter-och-regler-for-kommunalt-vatten-och-avlopp": "1463-listing11.html",
+    "https://www.mark.se/bygga-bo-miljo-och-trafik/trafik-och-gator/parkering/avgifter-for-parkering": "1463-listing12.html",
+    "https://www.mark.se/bygga-bo-miljo-och-trafik/torghandel-och-offentlig-plats": "1463-listing13.html",
+    "https://www.mark.se/stod-och-omsorg/aldreomsorg/avgifter-for-aldreomsorg": "1463-listing14.html",
+    "https://www.mark.se/uppleva-och-gora/kultur/kulturskolan/regler-och-avgifter-for-kulturskolan": "1463-listing15.html",
+    "https://www.mark.se/uppleva-och-gora/bad-idrott-och-friluftsliv/taxor-och-avgifter-for-idrottsanlaggningar": "1463-listing16.html",
+    "https://www.mark.se/forskola-skola-och-utbildning/forskola/avgift-for-forskola-och-fritidshem": "1463-listing17.html"
+  },
+  "count": 25,
+  "sample": {
+    "number": "18.761edf0b18e65a0b1b4c2c",
+    "title": "Allmänna lokala ordningsföreskrifter för Marks kommun",
+    "url": "https://www.mark.se/download/18.761edf0b18e65a0b1b4c2c/1711295761694/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Marks%20kommun.pdf"
+  },
+  "excluded": []
+}

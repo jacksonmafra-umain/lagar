@@ -106,6 +106,222 @@
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
     },
+    "1442": {
+      "name": "Vårgårda",
+      "issuer": "Vårgårda kommun",
+      "region_code": "14",
+      "collection": "Vårgårda kommuns styrande dokument och taxor",
+      "strategy": "html_index",
+      "hosts": ["www.vargarda.se", "vargarda.se"],
+      "listings": [
+        "https://www.vargarda.se/kommun-och-demokrati/kommunens-styrande-dokument.html",
+        "https://www.vargarda.se/kommun-och-demokrati/taxor-och-avgifter-i-vargarda.html"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Föreskrifter",
+        "Taxor och avgifter - Arbete och näringsliv",
+        "Taxor och avgifter - Bo, bygga och miljö",
+        "Taxor och avgifter - Skola och utbildning",
+        "Taxor och avgifter - Sociala tjänster, vård och omsorg",
+        "Taxor och avgifter - Fritid, natur och kultur",
+        "Taxor och avgifter - Kommun och demokrati"
+      ],
+      "link_pattern": "^https://(?:www\\.)?vargarda\\.se/download/18\\.[0-9a-f]+/\\d+/(?!.*(?:Grafisk|[Ff]older|Info%20till))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
+    "1444": {
+      "name": "Grästorp",
+      "issuer": "Grästorps kommun",
+      "region_code": "14",
+      "collection": "Grästorps kommuns styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.grastorp.se", "grastorp.se"],
+      "listings": [
+        "https://www.grastorp.se/kommun-och-politik/kommunens-organisation/styrning-och-ledning/styrande-dokument.html"
+      ],
+      "section_level": 2,
+      "sections": ["Barn, unga och omsorg", "Bygga, bo och miljö", "Taxor och avgifter"],
+      "link_pattern": "^https://(?:www\\.)?grastorp\\.se/download/18\\.[0-9a-f]+/\\d+/(?!.*(?:Handlingsplan|[Rr]iktlinj|[Pp]olicy|[Pp]rogram|riktlinje|Tillsynsplan|Trafikf))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*(?:pdf|docx),\\s*[\\d.,]+\\s*[kM]B(?:,\\s*öppnas i nytt fönster)?\\.?\\s*$"]
+    },
+    "1445": {
+      "name": "Essunga",
+      "issuer": "Essunga kommun",
+      "region_code": "14",
+      "collection": "Essunga kommuns styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.essunga.se", "essunga.se"],
+      "listings": ["https://www.essunga.se/kommun--politik/kommunfakta/styrande-dokument.html"],
+      "section_level": 2,
+      "sections": [
+        "Allmänna lokala föreskrifter",
+        "Bestämmelser, tillämpningsregler och regler",
+        "Taxor och avgifter"
+      ],
+      "link_pattern": "^https://(?:www\\.)?essunga\\.se/download/18\\.[0-9a-f]+/\\d+/(?!.*(?:Bidragsniv|ers%C3%A4ttning%20till|Regler,%20bidrag|personallunch|Priser%20p%C3%A5%20mat))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["(?:\\.docx)?(?:\\.pdf)?\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$", "\\.pdf\\s*$"]
+    },
+    "1446": {
+      "name": "Karlsborg",
+      "issuer": "Karlsborgs kommun",
+      "region_code": "14",
+      "collection": "Karlsborgs kommuns politiskt beslutade styrdokument",
+      "strategy": "html_index",
+      "hosts": ["www.karlsborg.se", "karlsborg.se"],
+      "listings": [
+        "https://www.karlsborg.se/kommun--politik/avgifter-och-taxor/",
+        "https://www.karlsborg.se/kommun--politik/styrdokument/"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://(?:www\\.)?karlsborg\\.se/globalassets/documents/politiskt-beslutade-styrdokument/(?:bygga-bo-och-miljo|kultur-och-fritid|administration|vard-stod-och-omsorg---overgripande-socialforvaltningen)/(?!.*(?:riktlinje|riklinje|policy|plan|program|strategi|reglemente|regler-foreningsbidrag|styrdokument))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/([^/]+)\\.pdf$"}
+      ],
+      "title_strip": []
+    },
+    "1447": {
+      "name": "Gullspång",
+      "issuer": "Gullspångs kommun",
+      "region_code": "14",
+      "collection": "Gullspångs kommuns kommunala författningssamling",
+      "strategy": "html_index",
+      "hosts": ["gullspang.se", "www.gullspang.se"],
+      "listings": [
+        "https://gullspang.se/kommun-och-politik/kommunfakta-och-styrdokument/styrande-dokument-taxor-och-avgifter"
+      ],
+      "section_level": 2,
+      "sections": ["Kommunal författningssamling", "Miljö och bygg"],
+      "link_pattern": "^https://(?:www\\.)?gullspang\\.se/download/18\\.[0-9a-f]+/\\d+/(?!.*(?:[Rr]eglemente|[Rr]egelmente|[Dd]elegationsordning|[Aa]rbetsordning|Attest|%C3%84gardirektiv|Skolskjuts|Arvode))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": []
+    },
+    "1452": {
+      "name": "Tranemo",
+      "issuer": "Tranemo kommun",
+      "region_code": "14",
+      "collection": "Tranemo kommuns styrande dokument/författningssamling",
+      "strategy": "html_index",
+      "hosts": ["tranemo.se", "www.tranemo.se"],
+      "listings": [
+        "https://tranemo.se/kommun--politik/styrande-dokument-forfattningssamling/lokala-ordningsforeskrifter",
+        "https://tranemo.se/kommun--politik/styrande-dokument-forfattningssamling/styrdokument-for-bygga-bo-miljo-och-trafik",
+        "https://tranemo.se/kommun--politik/kommunfakta/taxor-och-avgifter",
+        "https://tranemo.se/bygga-bo-miljo--gata/avfall-och-atervinning/abonnemang-och-avgifter-2026"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://(?:www\\.)?tranemo\\.se/download/18\\.[0-9a-f]+/\\d+/(?=[^?#]*(?:Lokala|Renh|renh|halsoskydd|f%C3%B6reskrifter|Taxebilaga|abonnemang))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
+    "1460": {
+      "name": "Bengtsfors",
+      "issuer": "Bengtsfors kommun",
+      "region_code": "14",
+      "collection": "Bengtsfors kommuns styrande dokument och planer",
+      "strategy": "html_index",
+      "hosts": ["www.bengtsfors.se", "bengtsfors.se", "evoldocs.bengtsfors.se"],
+      "listings": [
+        "https://www.bengtsfors.se/kommun-och-politik/sa-styrs-kommunen/styrande-dokument-och-planer"
+      ],
+      "section_level": 2,
+      "sections": ["Lokala föreskrifter"],
+      "link_pattern": "^https://evoldocs\\.bengtsfors\\.se/api/download/[0-9a-f-]{36}/[0-9a-f-]{36}\\?api-version=1\\.0$",
+      "number": [
+        {"from": "href", "pattern": "/api/download/([0-9a-f-]{36})/"}
+      ],
+      "title_strip": []
+    },
+    "1461": {
+      "name": "Mellerud",
+      "issuer": "Melleruds kommun",
+      "region_code": "14",
+      "collection": "Melleruds kommuns taxor",
+      "strategy": "html_index",
+      "hosts": ["mellerud.se", "www.mellerud.se"],
+      "listings": [
+        "https://mellerud.se/kommun-och-politik/taxor/byggnadsnamnden/",
+        "https://mellerud.se/kommun-och-politik/taxor/kommunstyrelsen/",
+        "https://mellerud.se/kommun-och-politik/taxor/samhallsbyggnadsforvaltningen/",
+        "https://mellerud.se/kommun-och-politik/taxor/socialnamnden/",
+        "https://mellerud.se/kommun-och-politik/taxor/kultur-och-utbildningsnamnden/"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://(?:www\\.)?mellerud\\.se/media/[a-z0-9]+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/media/([a-z0-9]+)/"}
+      ],
+      "title_strip": []
+    },
+    "1462": {
+      "name": "Lilla Edet",
+      "issuer": "Lilla Edets kommun",
+      "region_code": "14",
+      "collection": "Lilla Edets kommuns lokala föreskrifter och taxor",
+      "strategy": "html_index",
+      "hosts": ["lillaedet.se", "www.lillaedet.se"],
+      "listings": [
+        "https://lillaedet.se/kommun-och-politik/planer-och-styrdokument/lokala-foreskrifter",
+        "https://lillaedet.se/kommun-och-politik/ekonomi-och-budget/avgifter-och-taxor"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://(?:www\\.)?lillaedet\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["(?:\\.pdf)?\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$", "\\.pdf\\s*$"]
+    },
+    "1463": {
+      "name": "Mark",
+      "issuer": "Marks kommun",
+      "region_code": "14",
+      "collection": "Marks kommuns regler, styrande dokument och taxor",
+      "strategy": "html_index",
+      "hosts": ["www.mark.se", "mark.se"],
+      "listings": [
+        "https://www.mark.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/ordningsforeskrifter",
+        "https://www.mark.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/styrdokument-for-bygga-bo-miljo-och-trafik",
+        "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/taxor-och-avgifter-inom-miljobalkens-omrade-",
+        "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/taxa-for-sprangamnesprekursorer",
+        "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/taxa-for-tillsyn-enligt-stralskyddslagen",
+        "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/taxa-for-offentlig-kontroll-enligt-foder-och-animaliska-biprodukter",
+        "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/avgifter-for-livsmedelsverksamhet",
+        "https://www.mark.se/jobb-och-foretagande/tillstand-regler-och-tillsyn/avgifter-taxor-for-tillstand-regler-och-tillsyn/avgifter-for-alkohol-folkol-och-tobak",
+        "https://www.mark.se/bygga-bo-miljo-och-trafik/avfall-och-atervinning/avgifter-och-abonnemang-for-renhallning",
+        "https://www.mark.se/bygga-bo-miljo-och-trafik/bygga-nytt-andra-och-riva/bygglov/taxor-och-avgifter-for-bygglov-och-anmalningsarenden",
+        "https://www.mark.se/bygga-bo-miljo-och-trafik/vatten-och-avlopp/kommunalt-vatten-och-avlopp/avgifter-och-regler-for-kommunalt-vatten-och-avlopp",
+        "https://www.mark.se/bygga-bo-miljo-och-trafik/trafik-och-gator/parkering/avgifter-for-parkering",
+        "https://www.mark.se/bygga-bo-miljo-och-trafik/torghandel-och-offentlig-plats",
+        "https://www.mark.se/stod-och-omsorg/aldreomsorg/avgifter-for-aldreomsorg",
+        "https://www.mark.se/uppleva-och-gora/kultur/kulturskolan/regler-och-avgifter-for-kulturskolan",
+        "https://www.mark.se/uppleva-och-gora/bad-idrott-och-friluftsliv/taxor-och-avgifter-for-idrottsanlaggningar",
+        "https://www.mark.se/forskola-skola-och-utbildning/forskola/avgift-for-forskola-och-fritidshem"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://(?:www\\.)?mark\\.se/download/18\\.[0-9a-f]+/\\d+/(?=[^?#]*(?:[Tt]axa|[Aa]vgift|ordningsf%C3%B6reskrifter|[Ff]%C3%B6reskrifter|Avfallsf|Allm%C3%A4nna|Allma%CC%88nna))(?![^?#]*(?:Kartbilder|Riktlinje|Naturv|Strategi|Ans%C3%B6kan|Ansokan|Anso%CC%88kan|Kompost|blankett|inkomstredovisning))[^?#]+\\.(?:pdf|PDF)$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
     "1466": {
       "name": "Herrljunga",
       "issuer": "Herrljunga kommun",

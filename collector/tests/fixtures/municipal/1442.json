@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.vargarda.se/kommun-och-demokrati/kommunens-styrande-dokument.html": "1442-listing1.html",
+    "https://www.vargarda.se/kommun-och-demokrati/taxor-och-avgifter-i-vargarda.html": "1442-listing2.html"
+  },
+  "count": 20,
+  "sample": {
+    "number": "18.5d8782c5187124ebe7456db",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.vargarda.se/download/18.5d8782c5187124ebe7456db/1685619789797/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20V%C3%A5rg%C3%A5rda%20kommun.pdf"
+  },
+  "excluded": [
+    "Kommunikationspolicy",
+    "Policy för upphandling",
+    "Policy för intraprenad i Vårgårda kommun"
+  ]
+}
