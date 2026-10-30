@@ -16255,6 +16255,69 @@
       "url": "https://munkedal.se/download/18.76dc7ad6190095a3dc5d830/1718267027414/Torghandelsf%C3%B6reskrifter.pdf"
     },
     {
+      "bytes": 380950,
+      "content_type": "application/pdf",
+      "id": "1435-18-7664b4813898b7df985c8f5",
+      "municipality_code": "1435",
+      "retrieved_at": "2026-10-30T20:48:56Z",
+      "sha256": "379141ca91b728e42d8104ac2d795e8f1a7da3709fa46c70d099ff7587d3d464",
+      "url": "https://www.tanum.se/download/18.7664b4813898b7df985c8f5/1682578226019/ABVA_100401.pdf"
+    },
+    {
+      "bytes": 3675,
+      "content_type": "text/markdown",
+      "id": "1435-4-7664b4813898b7df9844a18",
+      "municipality_code": "1435",
+      "retrieved_at": "2026-10-30T20:32:49Z",
+      "sha256": "1c6abb40d9317c11a14df7d4c2b7735be7dfd93c1bccf792ac16178da678a4f3",
+      "url": "https://www.tanum.se/byggabomiljoinfrastruktur/torgochallmannaplatser/torghandel/torghandelsstadga.4.7664b4813898b7df9844a18.html"
+    },
+    {
+      "bytes": 9519,
+      "content_type": "text/markdown",
+      "id": "1435-4-7664b4813898b7df9844a33",
+      "municipality_code": "1435",
+      "retrieved_at": "2026-10-30T20:32:44Z",
+      "sha256": "cd8befdbbfd682a779c09b58f053196abe436f22738901abf5cd1906fd11fc5a",
+      "url": "https://www.tanum.se/kommunpolitik/ordningsforeskrifter.4.7664b4813898b7df9844a33.html"
+    },
+    {
+      "bytes": 2917,
+      "content_type": "text/markdown",
+      "id": "1435-4-7664b4813898b7df98451c0",
+      "municipality_code": "1435",
+      "retrieved_at": "2026-10-30T20:32:47Z",
+      "sha256": "7f2a5c2cc1e75bef10adf2f211b66dea97a2cbf4cfef25176ccadc7645b7b2e9",
+      "url": "https://www.tanum.se/byggabomiljoinfrastruktur/trafikochgator/gator/transportdispens/gangbanerenhallning.4.7664b4813898b7df98451c0.html"
+    },
+    {
+      "bytes": 9140,
+      "content_type": "text/markdown",
+      "id": "1435-4-7664b4813898b7df9845386",
+      "municipality_code": "1435",
+      "retrieved_at": "2026-10-30T20:32:48Z",
+      "sha256": "ae751427bc570e34f0c6bc06c2c5ad2c9cae5c47fbcd2312081eb8286901b5a2",
+      "url": "https://www.tanum.se/byggabomiljoinfrastruktur/kemikalierochmiljoskydd/lokalaforeskrifterforattskyddamanniskorshalsaochmiljon.4.7664b4813898b7df9845386.html"
+    },
+    {
+      "bytes": 855,
+      "content_type": "text/markdown",
+      "id": "1435-4-7664b4813898b7df98459fb",
+      "municipality_code": "1435",
+      "retrieved_at": "2026-10-30T20:32:45Z",
+      "sha256": "0d63f5d89371e3196e5b7debe398d733832a0ff29e7bc410c21ca2a6a7e47e14",
+      "url": "https://www.tanum.se/byggabomiljoinfrastruktur/avfallochatervinning/renhallningsordning.4.7664b4813898b7df98459fb.html"
+    },
+    {
+      "bytes": 1092,
+      "content_type": "text/markdown",
+      "id": "1435-4-76b9123414599205f78115d3",
+      "municipality_code": "1435",
+      "retrieved_at": "2026-10-30T20:32:46Z",
+      "sha256": "ef7005216332fa217d78351afddd6fc6b9968e7aa3dcdeda69566ddc951e9499",
+      "url": "https://www.tanum.se/omsorgstod/tryggochsaker/raddningstjansten/eldautomhus/foreskriftvideldningsforbud.4.76b9123414599205f78115d3.html"
+    },
+    {
       "bytes": 2206923,
       "content_type": "application/pdf",
       "id": "1438-2qrfapkv",
