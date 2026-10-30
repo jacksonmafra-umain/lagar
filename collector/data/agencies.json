@@ -1198,6 +1198,13 @@
       "status": "blocked",
       "note": "www.karlskrona.se answers every request, robots.txt included, with an HTTP 403 \"Åtkomst nekad\" bot-check page (checked 2026-10-30); not bypassed."
     },
+    "1401": {
+      "status": "no_adapter",
+      "note": "Härryda publishes no författningssamling or list of local rules: the avgifter och taxor page links to topic pages, where some taxor are HTML text and a few are single PDFs (plan- och bygglovstaxa, miljö- och hälsoskyddstaxa); no sitemap (checked 2026-10-30)."
+    },
+    "1435": {
+      "note": "Tanum's rules are web pages in its A–Z list and are collected as page text; the ABVA (a direct PDF link in the list) is not collected by the page strategy, and the avfallsföreskrifter page refers to Rambo AB's site (rambo.se) for the full text."
+    },
     "1496": {
       "status": "no_adapter",
       "note": "skovde.se lists its regulations only as JSON embedded in the page script (OrdinanceCategory, FileUrl); the collector has no strategy for that list yet."

@@ -348,6 +348,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Boden's taxor pages and Örnsköldsvik's, Sandviken's and Tidaholm's topic
     pages hold rules that the configured listings do not cover; Kiruna covers
     its föreskrifter and bygglovstaxa only.
+  - Tanum publishes its rules as web pages in an A–Z list; they are collected as
+    page text (`html_pages`). The ABVA, a direct PDF link in the same list, is not
+    collected by that strategy, and the avfallsföreskrifter page refers to Rambo
+    AB's site for the full text.
 - Kommuner checked and not collected are listed with the reason in `AGENCIES.md`
   (curated in the `kommuner` section of `collector/data/agencies.json`):
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
@@ -361,7 +365,8 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Västervik (file list not in the HTML) and Gotland (external document
     service). Östhammar's robots.txt shuts named AI crawlers out of its rule
     pages and Linköping links its rules to Google Drive; both wait for an owner
-    decision. Their issues stay open.
+    decision. Härryda has no författningssamling or list of its rules: its
+    taxor are spread over topic pages, some as HTML text. Their issues stay open.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources
