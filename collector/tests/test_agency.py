@@ -344,6 +344,26 @@ class ParseTest(unittest.TestCase):
         self.assertEqual((current.in_force, current.repealed), ("2026-10-05", None))
         self.assertEqual(current.url, "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202026-1.pdf")
 
+    def test_skolfs_api(self):
+        skolfs = agency.SkolverketAdapter()
+        text = fixture("agency-skolfs-statute.json")
+        self.assertEqual(skolfs.more_pages(text, skolfs.listing_url), [])  # fewer hits than a page
+        entries = {e.number: e for e in skolfs.parse_listing(text, skolfs.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base), ["SKOLFS 2011:153", "SKOLFS 2026:67"])
+        self.assertFalse(entries["SKOLFS 2012:98"].base)  # expired, no repeal date
+        self.assertEqual(entries["SKOLFS 2011:153"].amended_by, ["SKOLFS 2026:69"])
+        self.assertEqual(entries["SKOLFS 2012:98"].amended_by, ["SKOLFS 2026:70"])
+        regulation = skolfs.parse_detail(fixture("agency-skolfs-2026-67.json"), entries["SKOLFS 2026:67"])
+        self.assertEqual((regulation.issued, regulation.published, regulation.in_force),
+                         ("2026-06-10", "2026-06-23", "2026-08-15"))
+        self.assertEqual(regulation.pdfs, [("SKOLFS 2026:67",
+                                            "https://skolfs.skolverket.se/api/document/GRUNDFORFATTNING/2026:67/pdf")])
+        self.assertTrue(regulation.summary.startswith("Föreskrifterna ska tillämpas"))
+        consolidated = agency.Entry("SKOLFS 2011:153", "x", entries["SKOLFS 2011:153"].url)
+        with self.assertRaises(ValueError):
+            skolfs.parse_detail(fixture("agency-skolfs-2026-67.json"), consolidated)
+        self.assertIn("SKOLFS 2011:153", skolfs.consolidated)
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

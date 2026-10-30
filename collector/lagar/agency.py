@@ -1242,6 +1242,87 @@ class RiksarkivetAdapter:
                           amended_by=list(entry.amended_by), version="Grundförfattning", pdfs=list(entry.pdfs))
 
 
+# --- Skolverket (SKOLFS) ------------------------------------------------------
+
+_SKOLFS_PAGE = 1000
+
+
+class SkolverketAdapter:
+    """Skolverket's SKOLFS register, read through the API behind its search app.
+
+    `api/statute` pages through every SKOLFS document with its number, the base
+    regulation it belongs to, its kind (GRUNDFORFATTNING, ANDRINGSFORFATTNING,
+    SENASTE_LYDELSE: the latest consolidated text) and validity. Base
+    regulations in force are stored; `api/document/<number>/ascending` gives
+    their dates. Expired ones are not stored: the register gives no repeal date.
+    """
+
+    series = "SKOLFS"
+    issuer = "Statens skolverk"
+    base_url = "https://skolfs.skolverket.se"
+    listing_url = base_url + f"/api/statute?sort=YEAR_DESC&size={_SKOLFS_PAGE}&start=0"
+    detail = True
+    has_text = False
+
+    def __init__(self):
+        self.consolidated = set()
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def more_pages(self, text, url):
+        hits = sum(len(g.get("searchHits") or []) for g in json.loads(text).get("searchGroups") or [])
+        start = int(urllib.parse.parse_qs(urllib.parse.urlsplit(url).query).get("start", ["0"])[0])
+        return [self.listing_url.replace("start=0", f"start={start + _SKOLFS_PAGE}")] if hits >= _SKOLFS_PAGE else []
+
+    def _pdf(self, kind, number):
+        return f"{self.base_url}/api/document/{kind}/{number}/pdf"
+
+    def parse_listing(self, text, url):
+        hits = [h for g in json.loads(text).get("searchGroups") or [] for h in g.get("searchHits") or []]
+        entries, amending = [], {}
+        for hit in hits:
+            number, base = hit.get("skolfsNumber") or "", hit.get("baseSkolfsNumber") or ""
+            if not re.fullmatch(r"\d{4}:\d+", number):
+                continue
+            kind = hit.get("documentType")
+            if kind == "SENASTE_LYDELSE":
+                self.consolidated.add(f"SKOLFS {number}")
+                continue
+            if kind == "ANDRINGSFORFATTNING" and base and base != number:
+                amending.setdefault(f"SKOLFS {base}", set()).add(f"SKOLFS {number}")
+            entries.append(Entry(
+                number=f"SKOLFS {number}",
+                title=_clean(hit.get("statuteTitle")),
+                url=f"{self.base_url}/api/document/{number}/ascending",
+                base=kind == "GRUNDFORFATTNING" and hit.get("validity") == "VALID",
+            ))
+        for entry in entries:
+            entry.amended_by = sorted(amending.get(entry.number, ()), key=number_key)
+        return entries
+
+    def parse_detail(self, text, entry):
+        data = json.loads(text)
+        if f"SKOLFS {data.get('skolfsNumber')}" != entry.number:
+            raise ValueError(f"document shows SKOLFS {data.get('skolfsNumber')}, expected {entry.number}")
+        number = entry.number.removeprefix("SKOLFS ")
+        pdfs = [(entry.number, self._pdf("GRUNDFORFATTNING", number))]
+        if entry.number in self.consolidated:
+            pdfs.append((f"{entry.number} (senaste lydelse)", self._pdf("SENASTE_LYDELSE", number)))
+        notes = [_clean(c) for c in data.get("externalComment") or [] if _clean(c)]
+        return Regulation(
+            number=entry.number,
+            title=_clean(data.get("statuteTitle")) or entry.title,
+            issued=_date(data.get("decisionDate")),
+            published=_date(data.get("promulgationDate")),
+            in_force=_date(data.get("effectiveDate")),
+            amended_by=list(entry.amended_by),
+            version="Grundförfattning",
+            summary="\n\n".join(notes),
+            pdfs=pdfs,
+        )
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1461,7 +1542,7 @@ def load_series(path=SERIES_CONFIG):
 ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
                                    PrvAdapter(), PolisenAdapter(), ScbAdapter(),
                                    EnergimyndighetenAdapter(), RiksdagenAdapter(),
-                                   RiksarkivetAdapter())}
+                                   RiksarkivetAdapter(), SkolverketAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
