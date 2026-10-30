@@ -298,7 +298,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
 - Since 2026-10-30 the PDF-only series above (RGKFS, RIFS, SGU-FS, SiSFS,
   TVFS, UFS, VALFS, VRFS, SKSFS, SSMFS, UHRFS, PFS, ÅFS, PRVFS, PMFS and
   RPSFS, STEMFS, RA-FS, SJÖFS, TRVFS) carry the regulation text read from
-  the PDF's text layer. SKOLFS still holds metadata and PDF links only.
+  the PDF's text layer. SKOLFS carries the text of each regulation as issued
+  (not the consolidated version). SKOLFS 2011:22 keeps metadata and PDF links
+  only: Skolverket now serves its latest consolidated version as a Word file
+  instead of a PDF, and the collector rejects it.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - Public services have no collector yet; what the Tjänster tab should hold is
@@ -351,13 +354,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
     page without headings, so their configs keep only listed file names; a new
     document with another name is not picked up until the config is updated.
-  - Not collected yet because their sites need a strategy the collector lacks:
-    one HTML page per document, with the text or the PDF only on that page (Vara,
-    Götene, Skara, Falköping, Arvika, Hudiksvall, Härjedalen, Älvsbyn), an
-    embedded JSON list (Skövde), SharePoint (Karlstad), MediaFlow (Gävle),
-    Evolution DocumentWeb (Hallstahammar) and a WordPress file-download plugin
-    (Övertorneå). Nora and Ljusnarsberg have no page listing their resident
-    rules; they are spread over topic pages. Their issues stay open.
+  - Not collected yet: Gävle (MediaFlow shares, whose download links need a
+    token and expire after minutes; an adapter is planned) and Leksand
+    (Netpublicator; an adapter is planned). Karlstad serves its files only
+    through time-limited SharePoint links on a host whose robots.txt disallows
+    everything, so it is not collected.
+  - Skövde: only the taxor och avgifter page is collected; the lokala
+    föreskrifter are listed as JSON in the Next.js page's script data. Nora
+    publishes only three taxor as PDFs (bygglov, VA, avfall); no ordnings-,
+    avfalls- or hälsoskyddsföreskrifter were found on its site. Arvika's taxor
+    page and Älvsbyn's föreskrifter (no index page) are not covered.
   - Boden's taxor pages and Örnsköldsvik's, Sandviken's and Tidaholm's topic
     pages hold rules that the configured listings do not cover; Kiruna covers
     its föreskrifter and bygglovstaxa only.
@@ -368,9 +374,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     section A (allmänna föreskrifter) is collected. Lund links two of its avgifter
     as HTML pages, which are not collected. Ängelholm covers its lokala
     ordningsregler page only.
+  - Helsingborg publishes its författningssamling on styrning.helsingborg.se
+    (PDFs on media.helsingborg.se); its föreskrifter page and the two avgifter
+    PDFs are collected. Its avfallstaxa lives on NSR's site and its environment
+    fees on a separate site for companies; neither is collected.
   - Not collected in Skåne, with the reason per kommun in `AGENCIES.md`: Vellinge
-    (rules as HTML text), Östra Göinge, Lomma, Höör, Perstorp and Helsingborg
-    (document lists rendered in the browser) and Båstad (no collection page).
+    (rules as HTML text), Östra Göinge, Lomma, Höör and Perstorp (document lists
+    rendered in the browser) and Båstad (no collection page).
     Their issues stay open.
   - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
     the PDFs are never fetched; the documents point at the listing page and are
@@ -390,15 +400,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   (curated in the `kommuner` section of `collector/data/agencies.json`):
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
     included, with an HTTP 403 "Åtkomst nekad" bot-check page; not bypassed.
-  - Not collected yet in Stockholm, Uppsala, Östergötland, Jönköping, Kalmar
-    and Gotland counties, with the reason per kommun in `AGENCIES.md`:
-    Vallentuna (file-share folders answer 404), Lidingö (Evolution
-    DocumentWeb), Sigtuna (Netpublicator), Uppsala (no index; sitemap only),
-    Aneby and Jönköping (no collection page), Värnamo (document service down),
-    Torsås (titles outside the links), Mönsterås (site did not answer),
-    Västervik (file list not in the HTML) and Gotland (external document
-    service). Linköping links its rules to Google Drive and waits for an owner
-    decision. Their issues stay open.
+  - Not collected yet, with the reason per kommun in `AGENCIES.md`: Värnamo
+    (its DocumentWeb host did not answer), Mönsterås (site did not answer) and
+    Linköping (rules on Google Drive; waits for an owner decision). Their issues
+    stay open.
+  - Collected through platform adapters: Lidingö and Västervik (Evolution
+    DocumentWeb API), Sigtuna (Netpublicator), Gotland (its document service),
+    Vallentuna (gzipped sitemap of the file-share module), Uppsala (sitemap and
+    the rule pages' own titles), Torsås (titles from table rows) and Aneby and
+    Jönköping (curated topic pages; Jönköping's avfall rules are on
+    juneavfall.se and not collected).
     Östhammar's robots.txt shuts named AI crawlers out of its rule pages but
     allows this collector's agent; the owner approved collecting it.
 - Public services have no collector yet and no known target.

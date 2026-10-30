@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://ess-app.rattvik.se/api/folders/69f123d1-73ba-4056-950e-41f9e5b691f8": "2031-listing1.json",
+    "https://ess-app.rattvik.se/api/folders/dfe70b07-15e4-4cd6-aae6-7019f31eaa3e": "2031-listing2.json"
+  },
+  "count": 26,
+  "sample": {
+    "number": "4fc26a33-97d6-4cd3-9504-bd16aebe3ec9",
+    "title": "Avfallstaxa 2026",
+    "url": "https://ess-app.rattvik.se/api/download/4fc26a33-97d6-4cd3-9504-bd16aebe3ec9/69f123d1-73ba-4056-950e-41f9e5b691f8"
+  },
+  "excluded": []
+}

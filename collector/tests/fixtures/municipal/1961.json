@@ -1,0 +1,12 @@
+{
+  "listings": {
+    "https://dokument.hallstahammar.se/api/folders/64fda324-26d0-44a3-b3ef-74e1facd7d7f": "1961-listing.json"
+  },
+  "count": 32,
+  "sample": {
+    "number": "e3b7381f-2f47-4d71-8aeb-71d9f01cd446",
+    "title": "(ABVA) Allmänna bestämmelser för användande av Hallstahammars kommuns allmänna vatten- och avloppsanläggning",
+    "url": "https://dokument.hallstahammar.se/api/download/e3b7381f-2f47-4d71-8aeb-71d9f01cd446/64fda324-26d0-44a3-b3ef-74e1facd7d7f"
+  },
+  "excluded": []
+}

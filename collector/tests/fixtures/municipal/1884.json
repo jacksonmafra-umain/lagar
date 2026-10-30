@@ -1,0 +1,14 @@
+{
+  "listings": {
+    "https://www.nora.se/bygga-bo-och-miljo/bygglov/avgifter-inom-bygglov/": "1884-listing1.html",
+    "https://www.nora.se/bygga-bo-och-miljo/vatten-och-avlopp/avgifter-och-regler-abonnemang/taxor-och-avgifter-for-vatten-och-slamtomning/": "1884-listing2.html",
+    "https://www.nora.se/bygga-bo-och-miljo/avfall-och-atervinning/abonnemang/avfallstaxa/": "1884-listing3.html"
+  },
+  "count": 3,
+  "sample": {
+    "number": "Taxor20fC3B6r20bygglov20strandskydd20med20tidsuppskattning",
+    "title": "Taxor för bygglov, nybyggnadskarta, utstakning med mera",
+    "url": "https://www.nora.se/wp-content/uploads/2026/04/Taxor20fC3B6r20bygglov20strandskydd20med20tidsuppskattning.pdf"
+  },
+  "excluded": []
+}
