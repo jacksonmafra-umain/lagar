@@ -186,6 +186,19 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   list or from the regulation that repealed them). Repealed LIVSFS
   regulations (no repeal date on the page), 23 MYHFS ones without a known
   repeal date and the predecessor series SLVFS are not collected.
+  Five more on 2026-10-30, also with titles, dates and text from their PDFs:
+  DVFS (154 base regulations, one page each in domstol.se's sitemap because
+  the register needs JavaScript), FFS (68 in force, from the lists that
+  Försvarsmakten's four "Gällande FFS" pages load from the site's content API;
+  8 old prints are scans without a text layer), EIFS (34, from Ei's el,
+  naturgas and fjärrvärme tables), KBVFS (4) and HSLF-FS (119 of about 155
+  base regulations listed on kunskapsguiden.se, read from each agency's site
+  with its own robots.txt: Socialstyrelsen 62, Folkhälsomyndigheten 37, TLV 7,
+  Rättsmedicinalverket 7, IVO 5 and one joint regulation). HSLF-FS gaps:
+  Läkemedelsverket's regulations are not collected (its pages need JavaScript
+  and its robots.txt disallows PDFs); about 30 more fail on dead or moved links,
+  MFOF's redirects and TLV regulations no longer on TLV's page. Predecessor
+  series on kunskapsguiden's list (SOSFS, FoHMFS and others) are not collected.
   [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Agency series published as a list of PDF links (configured in

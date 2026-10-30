@@ -608,6 +608,56 @@
     "as_of": "2026-10-30"
   },
   {
+    "layer": "agency",
+    "type": null,
+    "series": "DVFS",
+    "label": "DVFS (DV)",
+    "target": 154,
+    "kind": "counted",
+    "source": "domstol.se sitemap, DVFS base regulation pages",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "EIFS",
+    "label": "EIFS (Ei)",
+    "target": 34,
+    "kind": "counted",
+    "source": "https://ei.se/om-oss/lagar-och-regler/foreskrifter (el, naturgas, fjärrvärme tables)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KBVFS",
+    "label": "KBVFS (KBV)",
+    "target": 4,
+    "kind": "counted",
+    "source": "https://www.kustbevakningen.se/om-oss/kustbevakningens-forfattningssamling/ (in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "FFS",
+    "label": "FFS (FM)",
+    "target": 68,
+    "kind": "counted",
+    "source": "Försvarsmakten's four Gällande FFS lists (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "HSLF-FS",
+    "label": "HSLF-FS",
+    "target": 155,
+    "kind": "counted",
+    "source": "https://kunskapsguiden.se/gemensam-forfattningssamling/ (base regulations, Läkemedelsverket excluded)",
+    "as_of": "2026-10-30"
+  },
+  {
     "layer": "case_law",
     "type": null,
     "label": "Case law",
