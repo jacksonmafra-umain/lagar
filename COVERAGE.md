@@ -302,6 +302,14 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   (not the consolidated version). Skolverket serves the latest consolidated
   version of SKOLFS 2011:22 as a Word file instead of a PDF; it is noted in the
   manifest and not linked.
+- SOSFS (Socialstyrelsen, 51), FoHMFS (Folkhälsomyndigheten, 12) and TLVFS
+  (TLV, 4), the series used before HSLF-FS, as of 2026-10-31, from the
+  regulations kunskapsguiden.se still lists under those designations, in full
+  text from the PDFs. A SOSFS regulation is collected when Socialstyrelsen's
+  index of regulations in force names its publication page; four SOSFS PDFs are
+  scans without a text layer. Dead links (FoHMFS, SOSFS) and TLVFS regulations
+  TLV's page no longer names are not collected. LVFS (Läkemedelsverket) is not
+  collected (#673), and FHIFS has only repealing regulations on the list.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - SJVFS (Statens jordbruksverk) is a gap: its regulations are PDFs on
