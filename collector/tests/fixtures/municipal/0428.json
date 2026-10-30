@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://vingaker.se/kommun--politik/kommunens-organisation/planer-och-styrdokument": "0428-listing.html"
+  },
+  "count": 33,
+  "sample": {
+    "number": "18.12354f29193678fefd0890",
+    "title": "Lokala ordningsföreskrifter för torghandel",
+    "url": "https://vingaker.se/download/18.12354f29193678fefd0890/1732624984754/Flik-10.1-Lokala-foreskrifter-for-torghandel-i-Vingakers-kommun.pdf"
+  },
+  "excluded": [
+    "Nämndplan kommunstyrelsen",
+    "Nämndplan Barn- och utbildningsnämnden",
+    "Nämndplan Socialnämnden"
+  ]
+}

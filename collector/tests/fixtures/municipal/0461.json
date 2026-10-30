@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.gnesta.se/kommunverksamhet/styrningochekonomi/styrdokument/lokalaforeskrifter.4.34b79a7b16653c9fa8492eb1.html": "0461-listing.html",
+    "https://www.gnesta.se/kommunverksamhet/styrningochekonomi/styrdokument/taxorochavgifter.4.34b79a7b16653c9fa8492ea9.html": "0461-listing-2.html"
+  },
+  "count": 19,
+  "sample": {
+    "number": "18.59de2ff319afcee25c74edb9",
+    "title": "Avfallsföreskrifter för Gnesta kommun",
+    "url": "https://www.gnesta.se/download/18.59de2ff319afcee25c74edb9/1768557155109/Avfallsf%C3%B6reskrifter%20f%C3%B6r%20Gnesta%20kommun.pdf"
+  },
+  "excluded": []
+}
