@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.kramfors.se/kommun--demokrati/styrning-och-ledning/styrande-dokument/lokala-foreskrifter.html": "2282-listing1.html",
+    "https://www.kramfors.se/kommun--demokrati/styrning-och-ledning/styrande-dokument/avgifter-och-taxor.html": "2282-listing2.html"
+  },
+  "count": 27,
+  "sample": {
+    "number": "18.5324defa18bf5c2bda52b73c",
+    "title": "Alllmänna-bestämmelser-för-användande-av-Kramfors-kommuns-allmänna-vatten--och-avloppsanlägging-AVBA",
+    "url": "https://www.kramfors.se/download/18.5324defa18bf5c2bda52b73c/1701418751959/Alllm%C3%A4nna-best%C3%A4mmelser-f%C3%B6r-anv%C3%A4ndande-av-Kramfors-kommuns-allm%C3%A4nna-vatten--och-avloppsanl%C3%A4gging-AVBA.pdf"
+  },
+  "excluded": []
+}
