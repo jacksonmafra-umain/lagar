@@ -306,6 +306,8 @@
     <string name="note_save">Spara anteckning</string>
     <string name="note_delete">Radera anteckning</string>
     <string name="reader_inspector">Om författningen</string>
+    <string name="reader_inspector_open">Visa uppgifterna om författningen</string>
+    <string name="reader_inspector_close">Stäng uppgifterna om författningen</string>
     <string name="type_agency_regulation">Myndighetsföreskrift</string>
     <string name="type_case_report">Referat</string>
     <string name="type_case_notice">Notis</string>
