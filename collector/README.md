@@ -320,7 +320,11 @@ robots.txt once and honours it for every URL, and fetches at most one page a sec
 Each page gives the title, the place and date of signature (`issued`), the SÖ number,
 the ministry, a note on the government's decision and the entry into force
 (`in_force`, when the note states it) and the PDF links. Pages without an SÖ number,
-such as declarations of intent published in the same section, are skipped.
+such as declarations of intent published in the same section, are skipped. Some
+treaties are published again on a second page (often in a bulk folder such as
+`1994/01/` or `2012/12/`, with extra PDFs), and a few old pages carry a number another
+page already uses; the page whose URL sorts first keeps the number and the others are
+recorded in the state file as duplicates.
 
 Documents are `treaty` in layer `sfs`, under `corpus/sfs/treaties/`, with ids such as
 `so-2023-3`. The text is only published as PDF: for SÖ years from `--text-from-year`

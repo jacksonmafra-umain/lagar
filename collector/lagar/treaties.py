@@ -276,6 +276,7 @@ class RunSummary:
     unchanged: "list[str]" = field(default_factory=list)
     skipped: int = 0
     excluded: "list[str]" = field(default_factory=list)
+    duplicates: "list[str]" = field(default_factory=list)
     failed: "list[str]" = field(default_factory=list)
     text_gaps: "list[str]" = field(default_factory=list)
     blocked: bool = False
@@ -396,7 +397,12 @@ def _extract(client, robots, page, args, manifest, summary):
 
 
 def _store(client, robots, url, args, manifest, owners, summary):
-    """Fetch one page; returns (SÖ number or None, "written" | "unchanged" | "excluded" | "out_of_range")."""
+    """Fetch one page; returns (SÖ number or None, "written" | "unchanged" | "excluded" | "duplicate" | "out_of_range").
+
+    regeringen.se republishes some treaties on a second page (often with extra PDFs) and a few old
+    pages carry a number already used by another page. The page that sorts first keeps the number;
+    the others are recorded as duplicates.
+    """
     page = parse_page(_get(client, robots, url).decode("utf-8"), url)
     if page.number is None:
         return None, "excluded"
@@ -404,7 +410,7 @@ def _store(client, robots, url, args, manifest, owners, summary):
         return page.number, "out_of_range"
     other = owners.get(page.number)
     if other and other != url:
-        raise ValueError(f"{page.number} is already stored from {other}")
+        return page.number, "duplicate"
     owners[page.number] = url
     texts = _extract(client, robots, page, args, manifest, summary)
     meta = build_meta(page, page_sha256(page), _now())
@@ -424,6 +430,7 @@ def _write_report(path, summary):
         "unchanged": summary.unchanged,
         "skipped": summary.skipped,
         "excluded": len(summary.excluded),
+        "duplicates": summary.duplicates,
         "failed": summary.failed,
         "text_gaps": summary.text_gaps,
         "blocked": summary.blocked,
@@ -485,6 +492,10 @@ def run(client, args):
                 summary.excluded.append(url)
                 state["done"][url] = "excluded: no SÖ number"
                 continue
+            if status == "duplicate":
+                summary.duplicates.append(url)
+                state["done"][url] = f"duplicate: {number} from {owners[number]}"
+                continue
             if status == "out_of_range":
                 continue
             (summary.written if status == "written" else summary.unchanged).append(number)
@@ -514,7 +525,8 @@ def main(argv, client=None):
         return 1
     print(
         f"done: {len(summary.written)} written, {len(summary.unchanged)} unchanged, "
-        f"{summary.skipped} skipped, {len(summary.excluded)} excluded, {len(summary.failed)} failed, "
+        f"{summary.skipped} skipped, {len(summary.excluded)} excluded, {len(summary.duplicates)} duplicates, "
+        f"{len(summary.failed)} failed, "
         f"{len(summary.text_gaps)} without text" + (", BLOCKED" if summary.blocked else ""),
         flush=True,
     )

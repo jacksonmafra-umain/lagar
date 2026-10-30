@@ -118,6 +118,17 @@ class RunTest(unittest.TestCase):
             self.assertEqual(sorted(treaties.run(client(), self.args("--refresh")).unchanged),
                              ["SÖ 1975:76", "SÖ 2023:3"])
 
+    def test_a_second_page_with_the_same_number_is_a_duplicate(self):
+        copy = SECTION + "2012/12/so-20233/"
+        fake = client(**{treaties.SITEMAP_URL: sitemap(PAGE_URL, copy), copy: PAGE})
+        with mock.patch.object(treaties.pdftext, "extract", return_value=extracted()):
+            summary = treaties.run(fake, self.args())
+        self.assertEqual((summary.written, summary.duplicates, summary.failed), (["SÖ 2023:3"], [PAGE_URL], []))
+        meta, _ = self.load("SÖ 2023:3")
+        self.assertEqual(meta["source"], copy)
+        self.assertEqual(json.loads(self.state.read_text())["done"][PAGE_URL],
+                         f"duplicate: SÖ 2023:3 from {copy}")
+
     def test_scanned_pdf_is_a_text_gap(self):
         with mock.patch.object(treaties.pdftext, "extract", return_value=extracted("", pdftext.NO_TEXT_LAYER)):
             summary = treaties.run(client(), self.args("--url", PAGE_URL))
@@ -140,14 +151,6 @@ class RunTest(unittest.TestCase):
             summary = treaties.run(fake, self.args("--changed-since", "2025-01-01"))
         self.assertEqual(summary.written, ["SÖ 2023:3"])
         self.assertNotIn(OLD_URL, fake.urls)
-
-    def test_same_number_on_two_pages_fails(self):
-        other = SECTION + "2024/01/so-20233-kopia/"
-        fake = client(**{treaties.SITEMAP_URL: sitemap(PAGE_URL, other), other: PAGE})
-        with mock.patch.object(treaties.pdftext, "extract", return_value=extracted()):
-            summary = treaties.run(fake, self.args())
-        self.assertEqual(summary.written, ["SÖ 2023:3"])
-        self.assertEqual(len(summary.failed), 1)
 
     def test_robots_disallow_blocks(self):
         fake = client(**{treaties.ROBOTS_URL: b"User-agent: *\nDisallow: /rattsliga-dokument/\n"})
