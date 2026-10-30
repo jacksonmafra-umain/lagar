@@ -7,7 +7,7 @@
   "properties": {
     "id": {"type": "string", "pattern": "^[a-z0-9_]+-[0-9a-z-]+$"},
     "title": {"type": "string"},
-    "type": {"type": "string", "enum": ["fundamental_law", "act", "ordinance", "other_statute", "agency_regulation", "case_report", "case_notice", "eu_regulation", "eu_directive", "eu_decision", "eu_judgment", "county_regulation", "municipal_regulation"]},
+    "type": {"type": "string", "enum": ["fundamental_law", "act", "ordinance", "other_statute", "treaty", "agency_regulation", "case_report", "case_notice", "eu_regulation", "eu_directive", "eu_decision", "eu_judgment", "county_regulation", "municipal_regulation"]},
     "layer": {"type": "string", "enum": ["fundamental", "sfs", "agency", "case_law", "eu", "region", "municipality", "service"]},
     "number": {"type": "string"},
     "issued": {"type": ["string", "null"], "format": "date"},
@@ -129,6 +129,25 @@
           "reprinted_by": {"maxItems": 0},
           "celex": {"type": "string", "pattern": "^6\\d{4}(CJ|TJ)\\d{4}$"},
           "court": {"enum": ["CJ", "TJ"]},
+          "region_code": {"type": "null"},
+          "municipality_code": {"type": "null"}
+        }
+      }
+    },
+    {
+      "$comment": "Treaties published in Sveriges internationella överenskommelser: the SÖ number, such as SÖ 2023:3; treaties are not amended in place.",
+      "if": {"required": ["type"], "properties": {"type": {"const": "treaty"}}},
+      "then": {
+        "properties": {
+          "id": {"pattern": "^so-\\d{4}-\\d+$"},
+          "number": {"pattern": "^SÖ \\d{4}:\\d+$"},
+          "amended_by": {"maxItems": 0},
+          "amended_through": {"type": "null"},
+          "reprinted_by": {"maxItems": 0},
+          "issuer": {"type": "null"},
+          "court": {"type": "null"},
+          "ecli": {"type": "null"},
+          "celex": {"type": "null"},
           "region_code": {"type": "null"},
           "municipality_code": {"type": "null"}
         }

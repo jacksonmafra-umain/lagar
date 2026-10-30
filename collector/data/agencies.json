@@ -523,8 +523,8 @@
     "sveriges-internationella-overenskommelser-so": {
       "name": "Sveriges internationella överenskommelser (SÖ)",
       "layer": "sfs",
-      "status": "no_adapter",
-      "note": "Treaties are not collected."
+      "status": "collected",
+      "note": "Every SÖ page on regeringen.se; text extracted from the PDFs for SÖ 2010 onward, metadata and PDF link for older treaties."
     },
     "transportstyrelsen": {
       "name": "Transportstyrelsen (other publications)",
@@ -1115,7 +1115,6 @@
     "series:VRFS": 221,
     "series:ÅFS": 222,
     "source:register-over-svensk-forfattningssamling-sfs": 537,
-    "source:svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": 536,
-    "source:sveriges-internationella-overenskommelser-so": 539
+    "source:svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": 536
   }
 }

@@ -19,6 +19,7 @@ _DIRS = {
     "act": (("sfs", "acts"), "sfs-"),
     "ordinance": (("sfs", "ordinances"), "sfs-"),
     "other_statute": (("sfs", "other"), "sfs-"),
+    "treaty": (("sfs", "treaties"), ""),
     "agency_regulation": (("agency", "regulations"), ""),
     "case_report": (("case-law", "reports"), ""),
     "case_notice": (("case-law", "notices"), ""),

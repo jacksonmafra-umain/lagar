@@ -17,6 +17,7 @@ TYPES = {
     "act": "sfs",
     "ordinance": "sfs",
     "other_statute": "sfs",
+    "treaty": "sfs",
     "agency_regulation": "agency",
     "case_report": "case_law",
     "case_notice": "case_law",
