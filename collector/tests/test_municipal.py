@@ -515,6 +515,97 @@ class SitevisionPresetTest(unittest.TestCase):
         self.assertIn("0120-18-22e4ee451639ed6e2d8af1d4\tAvfallsföreskrifter\t", out.getvalue())
 
 
+PAGES_BASE = "https://www.oskarshamn.se/mer-om-kommunen/forfattningssamling/"
+PAGES_ENTRY = {
+    "name": "Oskarshamn",
+    "issuer": "Oskarshamns kommun",
+    "region_code": "08",
+    "collection": "Författningssamling och styrande dokument",
+    "strategy": "html_pages",
+    "resident_filter": True,
+    "hosts": ["www.oskarshamn.se"],
+    "listings": [PAGES_BASE],
+    "sections": ["Kommunala taxor och avgifter", "Andra taxor och avgifter"],
+    "link_pattern": "^https://www\\.oskarshamn\\.se/mer-om-kommunen/forfattningssamling/[^#?]+/$",
+    "number": [{"from": "href", "pattern": "/([^/]+)/$"}],
+    "document_pattern": "\\.pdf$",
+}
+PAGES_PDF = (
+    "https://www.oskarshamn.se/download/18.4f1e2/1700000000000/Lokala%20ordningsf%C3%B6reskrifter.pdf"
+)
+
+
+def pages_client():
+    rule = (FIXTURES / "municipal-pages-rule.html").read_bytes()
+    return FakeClient({
+        PAGES_BASE: (FIXTURES / "municipal-pages-listing.html").read_bytes(),
+        PAGES_BASE + "taxor-och-avgifter/avgifter-ekonomi/": rule,
+        PAGES_BASE + "taxor-och-avgifter/va-taxa/": b"<html><main><h1>VA-taxa</h1><p>Se taxan.</p></main></html>",
+        PAGES_BASE + "lokala-ordningsforeskrifter/": (FIXTURES / "municipal-pages-pdf.html").read_bytes(),
+        PAGES_PDF: PDF,
+    })
+
+
+class HtmlPagesTest(unittest.TestCase):
+    def config(self, tmp, **overrides):
+        path = Path(tmp) / "municipalities.json"
+        path.write_text(json.dumps({"kommuner": {"0882": {**PAGES_ENTRY, **overrides}}}), encoding="utf-8")
+        return str(path)
+
+    def test_listing_keeps_rule_pages_in_resident_sections(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(self.config(tmp))["0882"]
+        raw = (FIXTURES / "municipal-pages-listing.html").read_bytes()
+        entries, problems = municipal.parse_html_index(kommun, raw, PAGES_BASE)
+        self.assertEqual(problems, [])
+        self.assertEqual([(e.number, e.title) for e in entries], [
+            ("avgifter-ekonomi", "Avgifter Ekonomi"),
+            ("va-taxa", "VA-taxa"),
+            ("lokala-ordningsforeskrifter", "Lokala ordningsföreskrifter"),
+        ])
+
+    def test_page_text_and_linked_documents(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(self.config(tmp, content_id="content"))["0882"]
+        page = municipal.parse_page(kommun, (FIXTURES / "municipal-pages-pdf.html").read_bytes(),
+                                    PAGES_BASE + "lokala-ordningsforeskrifter/")
+        self.assertEqual(page.attachments, [(PAGES_PDF, "Lokala ordningsföreskrifter (pdf)")])
+        self.assertIn("antog de lokala ordningsföreskrifterna", page.note)
+        rule = municipal.parse_page(kommun, (FIXTURES / "municipal-pages-rule.html").read_bytes(), PAGES_BASE)
+        self.assertTrue(rule.note.startswith("### Avgifter Ekonomi"))
+        self.assertIn("- Aviseringsavgift – 60 kronor", rule.note)
+        for noise in ("Start", "Skriv ut", "Senast granskad", "572 80"):
+            self.assertNotIn(noise, rule.note)
+
+    def test_run_writes_page_text_or_pdf_and_skips_empty_pages(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            args = Args(tmp, kommun=["0882"], config=self.config(tmp))
+            summary = municipal.run(pages_client(), args)
+            self.assertEqual(summary.written, ["0882-avgifter-ekonomi", "0882-lokala-ordningsforeskrifter"])
+            self.assertEqual(summary.failed, ["0882-va-taxa"])
+            folder = Path(args.corpus) / "municipality" / "regulations"
+            meta, body = frontmatter.load((folder / "0882-avgifter-ekonomi.md").read_text(encoding="utf-8"))
+            self.assertEqual(schema.validate(meta), [])
+            self.assertEqual(meta["source"], PAGES_BASE + "taxor-och-avgifter/avgifter-ekonomi/")
+            self.assertIn("## Text", body)
+            self.assertNotIn("## Dokument", body)
+            text = body.split("Texten är hämtad från kommunens webbsida.\n\n", 1)[1].rstrip("\n")
+            self.assertEqual(meta["source_sha256"], hashlib.sha256(text.encode()).hexdigest())
+            meta, body = frontmatter.load((folder / "0882-lokala-ordningsforeskrifter.md").read_text(encoding="utf-8"))
+            self.assertEqual(meta["source"], PAGES_PDF)
+            self.assertIn("## Uppgifter från kommunen", body)
+            self.assertIn(f"(<{PAGES_PDF}>)", body)
+            manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+            kinds = {d["id"]: d["content_type"] for d in manifest["documents"]}
+            self.assertEqual(kinds, {"0882-avgifter-ekonomi": "text/markdown",
+                                     "0882-lokala-ordningsforeskrifter": "application/pdf"})
+
+    def test_html_pages_needs_link_pattern_and_number(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with self.assertRaises(municipal.ConfigError):
+                municipal.load_config(self.config(tmp, number=[]))
+
+
 class MainTest(unittest.TestCase):
     def test_bad_code_is_rejected(self):
         with self.assertRaises(SystemExit):
