@@ -11,7 +11,7 @@ completeness: read this file next to those numbers.
 | --- | --- | --- |
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
 | SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-30 (full run, 2018 to 2026: 13,547 PDFs; incremental `sfspdf --rss` in the daily `Sync SFS`) |
-| SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
+| SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-30 (every statute in the corpus: 11,200 register pages; the daily `Sync SFS` refreshes the statutes it writes) |
 | SÖ treaties | Regeringen.se, `https://www.regeringen.se/sitemap.xml` and the pages under `/rattsliga-dokument/sveriges-internationella-overenskommelser/`, PDFs under `/contentassets/` | 2026-10-30 (full run, every year; weekly `Sync SÖ` since then) |
 | agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/`, and the listing pages of MIGRFS, KAMFS, KRFS, KFMFS, KFS and MEMYFS (`collector/lagar/agency_generic.py`) | 2026-10-29 (full run of AFS, FFFS and TSFS: 15, 121 and 622 base regulations); 2026-10-30 (MIGRFS, KAMFS, KRFS, KFMFS, KFS, MEMYFS: 121) |
 | EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list with latest consolidated versions; daily `Sync EU` since then) |
@@ -32,11 +32,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
 
 ## Known gaps
 
-- `in_force` and `amendments` come from the SFS register (SFSR) and are filled
-  only for the pilot statutes (Regeringsformen, Brottsbalken, Miljöbalken). All
-  other statutes have `in_force: null` and no `amendments`: Riksdagen gives no
-  entry-into-force date and dates in prose are not parsed. The register itself
-  has no `Ikraft` for Regeringsformen and for most amendments before about 1982.
+- `in_force` and `amendments` come from the SFS register (SFSR), read for
+  every statute in the corpus (11,200 register pages on 2026-10-30). The
+  register has no page for 177 numbers, which keep `in_force: null` and no
+  `amendments`: the 170 N-series numbers (N2016 to N2026) and 2010:1460,
+  2010:1461, 2012:455, 2015:902, 2016:407, 2017:197 and 2019:1204. The
+  register itself has no `Ikraft` for Regeringsformen and for most amendments
+  before about 1982.
 - Some older acts are available only in print. They are kept as stubs with a
   "Text available only in print" note and are flagged `print_only` by the audit.
 - N-series numbering (numbers with an `N` prefix) is stored as published, with
