@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/": "0882-listing.html"
+  },
+  "count": 35,
+  "sample": {
+    "number": "avgifter-nova--utbildning-fu-och-affarsutveckling",
+    "title": "Avgifter Nova – Utbildning, F&U och Affärsutveckling",
+    "url": "https://www.oskarshamn.se/mer-om-kommunen/politik-och-forvaltning/forfattningssamling-och-styrande-dokument/taxor-och-avgifter/avgifter-nova--utbildning-fu-och-affarsutveckling/"
+  },
+  "excluded": [
+    "Riktlinjer för arvodesväxling till pension för förtroendevalda",
+    "Delegationsordning för kommunstyrelsen",
+    "Arbetsmiljöpolicy"
+  ]
+}
