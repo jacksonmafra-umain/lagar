@@ -1,0 +1,19 @@
+{
+  "listings": {
+    "https://www.sunne.se/kommun/kommun-och-politik/kommunfakta/forfattningssamling/byggaboochmiljo/": "1766-listing1.html",
+    "https://www.sunne.se/kommun/kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/": "1766-listing2.html",
+    "https://www.sunne.se/kommun/kommun-och-politik/kommunfakta/forfattningssamling/samhallsskyddochsakerhet/": "1766-listing3.html",
+    "https://www.sunne.se/kommun/kommun-och-politik/kommunfakta/forfattningssamling/utbildningochbarnomsorg/": "1766-listing4.html"
+  },
+  "count": 24,
+  "sample": {
+    "number": "lokala-ordningsforeskrifter-for-sunne-kommun-kf-2022-06-27-ny-mall",
+    "title": "Lokala ordningsföreskrifter",
+    "url": "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/bygga-bo-och-miljo/lokala-ordningsforeskrifter-for-sunne-kommun-kf-2022-06-27-ny-mall.pdf"
+  },
+  "excluded": [
+    "Policy och riktlinjer för Sunne kommuns mark",
+    "Riktlinjer för markanvisningar och exploateringsavtal",
+    "Hastighetsplan för Sunne tätort"
+  ]
+}

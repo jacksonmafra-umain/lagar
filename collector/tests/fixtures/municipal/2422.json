@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.sorsele.se/kommun-och-politik/taxor-och-avgifter/": "2422-listing1.html",
+    "https://www.sorsele.se/kommun-och-politik/policys-och-riktlinjer/": "2422-listing2.html"
+  },
+  "count": 30,
+  "sample": {
+    "number": "mhvfdmqb",
+    "title": "Alkohollagen - Taxa för prövning och tillsyn enligt alkohollagen (2010:1622) från och med 2026-01-01",
+    "url": "https://www.sorsele.se/media/mhvfdmqb/taxa-foer-proevning-och-tillsyn-enligt-alkohollagen-fraan-och-med-2026-01-01-antagen-kf-251110-119.pdf"
+  },
+  "excluded": []
+}
