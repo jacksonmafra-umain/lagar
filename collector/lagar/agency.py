@@ -202,6 +202,7 @@ class Entry:
     repealed: "str | None" = None
     amended_by: "list[str]" = field(default_factory=list)
     pdfs: "list[tuple[str, str]]" = field(default_factory=list)  # listed series: (label, url)
+    issuer: "str | None" = None  # when the agency differs per regulation (HSLF-FS)
 
 
 @dataclass
@@ -2024,7 +2025,7 @@ def build_meta(adapter, entry, regulation, raw_sha256, fetched_at):
         "source": entry.url,
         "source_sha256": raw_sha256,
         "fetched_at": fetched_at,
-        "issuer": adapter.issuer,
+        "issuer": entry.issuer or adapter.issuer,
     }
 
 
@@ -2036,7 +2037,7 @@ def _link(label, url):
 def to_markdown(adapter, meta, regulation):
     facts = [
         ("Författningssamling", adapter.series),
-        ("Utgivare", adapter.issuer),
+        ("Utgivare", meta["issuer"]),
         ("Beslutad", regulation.issued),
         ("Utkom från tryck", regulation.published),
         ("Ikraftträdande", regulation.in_force),
@@ -2157,6 +2158,28 @@ class _Robots:
     def crawl_delay(self):
         delay = self.parser.crawl_delay(USER_AGENT) if self.parser is not None else None
         return float(delay) if delay else 0.0
+
+
+class _HostRobots:
+    """robots.txt per host, for a series whose regulations sit on several agencies' sites."""
+
+    def __init__(self, client, base_url):
+        self.client = client
+        self.hosts = {_origin(base_url): _Robots(client, base_url)}
+
+    def allows(self, url):
+        origin = _origin(url)
+        if origin not in self.hosts:
+            self.hosts[origin] = _Robots(self.client, origin)
+        return self.hosts[origin].allows(url)
+
+    def crawl_delay(self):
+        return max(robots.crawl_delay() for robots in self.hosts.values())
+
+
+def _origin(url):
+    parts = urllib.parse.urlsplit(url)
+    return f"{parts.scheme}://{parts.netloc}"
 
 
 def _get_listing(client, robots, url, adapter=None):
@@ -2292,7 +2315,9 @@ def _add_pdf_text(client, robots, regulation, label, url, body, prefer_title=Fal
 
 
 def _collect_one(client, robots, adapter, entry, args, manifest, summary):
-    if adapter.detail:
+    # A detail series whose listing links straight to a regulation's PDF takes the PDF as the document.
+    detail = adapter.detail and not urllib.parse.urlsplit(entry.url).path.lower().endswith(".pdf")
+    if detail:
         if not robots.allows(entry.url):
             raise ValueError(f"robots.txt disallows {entry.url}")
         raw = client.get(entry.url)
@@ -2311,7 +2336,7 @@ def _collect_one(client, robots, adapter, entry, args, manifest, summary):
         if getattr(adapter, "amending_title", None) and adapter.amending_title(entry, regulation):
             manifest.pop(regulation.number, None)
             raise NotBase(f"{entry.number} is an amending regulation ({regulation.title})")
-    if not adapter.detail:
+    if not detail:
         # The source is the regulation's own PDF; its hash is in the manifest.
         files = {f["url"]: f for f in manifest.get(regulation.number, {}).get("files", [])}
         sha256 = (files.get(entry.url) or {}).get("sha256")
@@ -2320,7 +2345,7 @@ def _collect_one(client, robots, adapter, entry, args, manifest, summary):
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     meta = build_meta(adapter, entry, regulation, sha256, fetched_at)
     other = _stored_source(meta["id"], args.corpus)
-    if adapter.detail and other is not None and other != meta["source"]:
+    if detail and other is not None and other != meta["source"]:
         raise ValueError(f"{meta['number']} is already stored from {other}")
     body = to_markdown(adapter, meta, regulation)
     if _unchanged(meta, body, args.corpus):
@@ -2348,7 +2373,7 @@ def run(client, args):
     try:
         for series in args.series:
             adapter = ADAPTERS[series]
-            robots = _Robots(client, adapter.base_url)
+            robots = (_HostRobots if getattr(adapter, "multi_host", False) else _Robots)(client, adapter.base_url)
             if hasattr(client, "min_interval"):
                 client.min_interval = max(args.rate, robots.crawl_delay())
             written = 0
