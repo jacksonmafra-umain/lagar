@@ -763,7 +763,17 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      element (or the element whose id is `content_id`) converted with `htmlmd`, without print,
      feedback and "senast granskad" lines; `source` is the page URL and `source_sha256` hashes the
      converted text, so markup changes alone do not count as a new version. A page with less than
-     40 characters of text outside its headings is a failure (an empty page, not a rule).
+     40 characters of text outside its headings is a failure (an empty page, not a rule). The text
+     starts at the content's first `<h1>`, so menus and breadcrumbs placed before it inside `<main>`
+     are left out. A listing link that answers with a PDF is taken as the document itself.
+   - `page_titles` (`html_pages`): links without a usable title are kept, and each rule's title is
+     its page's `<h1>`; the title filter is applied to that title after the page is read (a page
+     that fails it is skipped). Needed when the listing is a sitemap.
+   - Sitemap listings: a listing that is an XML sitemap (`<urlset>`) yields its URLs as untitled
+     links; a sitemap index (`<sitemapindex>`) yields nothing itself and its child sitemaps are
+     read when they match `follow`.
+   - `row_titles` (`html_index`, `html_pages`): for links inside a table row, the title is the text
+     of the row's other cells (Torsås's links all read "Ladda ner").
    - `json_list`: the listing is a JSON document list from the platform's own API, such as an
      Evolution DocumentWeb folder (`/api/folders/<folder id>`) or a WordPress File Download
      category (`/wp-admin/admin-ajax.php?action=wpfd&task=files.display&id=<category>`). `items`
