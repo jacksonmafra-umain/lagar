@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.danderyd.se/kommun-och-politik/fakta-danderyds-kommun/styrdokument/": "0162-listing.html"
+  },
+  "count": 22,
+  "sample": {
+    "number": "avfallstaxa-for-danderyds-kommun",
+    "title": "Avfallstaxa för Danderyds kommun",
+    "url": "https://www.danderyd.se/globalassets/globala-filer/kommun-och-politik/forfattningssamling_ny/avgifter-och-taxor/avfallstaxa-for-danderyds-kommun.pdf"
+  },
+  "excluded": [
+    "Skötselplan för naturreservat vid Rinkebyskogen",
+    "Skötselplan för utvidgat naturreservat vid Rinkebyskogen",
+    "Måldokument för avfallsplan 2021-2032"
+  ]
+}

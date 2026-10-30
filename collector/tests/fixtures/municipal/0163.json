@@ -1,0 +1,19 @@
+{
+  "listings": {
+    "https://www.sollentuna.se/kommun--politik/kommunfakta/forfattningssamling/sfsl/": "0163-listing.html",
+    "https://www.sollentuna.se/kommun--politik/kommunfakta/forfattningssamling/sfsm/": "0163-listing-2.html",
+    "https://www.sollentuna.se/kommun--politik/kommunfakta/forfattningssamling/sfst/": "0163-listing-3.html",
+    "https://www.sollentuna.se/kommun--politik/kommunfakta/forfattningssamling/ovregl/": "0163-listing-4.html"
+  },
+  "count": 31,
+  "sample": {
+    "number": "allmanna-lokala-ordningsforeskrifter-for-sollentuna-kommun",
+    "title": "Allmänna lokala ordningsföreskrifter för Sollentuna kommun",
+    "url": "https://www.sollentuna.se/globalassets/kommun-och-politik/sa-styrs-sollentuna/sollentuna-forfattningssamling-sfs/lokala-ordningsforeskrifter/allmanna-lokala-ordningsforeskrifter-for-sollentuna-kommun.pdf"
+  },
+  "excluded": [
+    "Avfallsplan 2021-2032",
+    "Bilagor Avfallsplan-2021-2032",
+    "Måldokument för avfallsplan 2021-2032"
+  ]
+}
