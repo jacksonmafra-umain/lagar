@@ -4736,6 +4736,1308 @@
       ]
     },
     {
+      "number": "RA-FS 1981:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKRFS%201981-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1981:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKRFS%201981-01.pdf",
+          "bytes": 136121,
+          "sha256": "9a3700baaedb6b4492a38a4aa35d60bf8e0346f3852c247be0bb89301e22bad8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:27Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1981:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKRFS%201981-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1981:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKRFS%201981-02.pdf",
+          "bytes": 136121,
+          "sha256": "9a3700baaedb6b4492a38a4aa35d60bf8e0346f3852c247be0bb89301e22bad8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:26Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1982:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKRFS%201982-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1982:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKRFS%201982-01.pdf",
+          "bytes": 470581,
+          "sha256": "d25b9e897e6d32beb31cd08ce81c57a29bdc435a62c03a06edfefa38b7749fa8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:25Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1986:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201986-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1986:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201986-02.pdf",
+          "bytes": 2100263,
+          "sha256": "cb33a327ebf1c74230325450cfdd1d36110f95dcec3cfd5d87c167ea45fd3dff",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:25Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1986:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201986-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1986:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201986-03.pdf",
+          "bytes": 396101,
+          "sha256": "b6a08745e7288f9d1be000ee737a2d42f433d6aa53883b742d8072fab62eeb79",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:23Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1987:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201987-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1987:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201987-02.pdf",
+          "bytes": 863011,
+          "sha256": "65b475375a01cf420400ceef8a56ddbdcf7722bc589f2232f22afbd268f0ae02",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:22Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1987:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201987-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1987:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201987-03.pdf",
+          "bytes": 75146,
+          "sha256": "2903f9b9a860de29972e24acd53bb4cd3624978ae51335573ad6443d81504cd8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:21Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1988:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201988-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1988:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201988-01.pdf",
+          "bytes": 1838058,
+          "sha256": "d2fb9870a9de6547900a88bf87d4f71484a433626a40e85d7ee9ac0d76d13af6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:20Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1988:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201988-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1988:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201988-02.pdf",
+          "bytes": 345872,
+          "sha256": "230d006c8f3ad6b70b548f84d7f953107427d54b00299207f472274b38e28a00",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:19Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1988:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201988-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1988:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201988-03.pdf",
+          "bytes": 280558,
+          "sha256": "b9210a8773c7f89615d5c3b7ecbb94dc7d168bdb8bf36a44c35a1f66931e4762",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:18Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1989:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201989-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1989:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201989-01.pdf",
+          "bytes": 206179,
+          "sha256": "4582b66b8683134da6f1431bc35590db6febbdb3254f81f128d5c92d693d4484",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:17Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1990:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201990-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1990:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201990-01.pdf",
+          "bytes": 721815,
+          "sha256": "ac7d4f9d7083103d20ec47be77ce8c28140d2e8729b628195aa5b91fa448dcaf",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:16Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20RA-FS%201991-1.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20RA-FS%201991-1.pdf",
+          "bytes": 433615,
+          "sha256": "26527e07696e9f76f220ce02bc2f469dc72f93af73e414cd9fc20e79714585fd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:15Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-02.pdf",
+          "bytes": 160055,
+          "sha256": "fa32ba2d4386aac4d114441c8784b2286c775a74e076f7b89142b77652da2389",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:14Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-03.pdf",
+          "bytes": 218654,
+          "sha256": "496daaeb481a546dcb2d3c878ceeff8b0856013a439d770deaa9d26ff5bbb8bb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:13Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:4",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-04.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:4",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-04.pdf",
+          "bytes": 207542,
+          "sha256": "f0a62154711f2d562f8b0d395036a32a606c716ac2cc1dd5b1e8872173173af7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:12Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:5",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-05.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:5",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-05.pdf",
+          "bytes": 66991,
+          "sha256": "38bb23ece964e11327e30f1ec2346e6959fc889524a2334a00d8d2b0644d6d84",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:10Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:6",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-06.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:6",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-06.pdf",
+          "bytes": 124644,
+          "sha256": "e771f69348dc57b96e81c5d3a5e54e0bf34133f6b569e8341caf6c2e52147f24",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:09Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:7",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-07.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:7",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-07.pdf",
+          "bytes": 288196,
+          "sha256": "3b0cf413657e05364f4ced84d0ddef2ddb1bfd8186d6db3584ace2cf1b30a3b8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:09Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:9",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-09.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:9",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-09.pdf",
+          "bytes": 25453,
+          "sha256": "cb05e24a01051619308278b1768486c62013eb95030bae826f4990ca9a472421",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:07Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:10",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-10.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:10",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-10.pdf",
+          "bytes": 50456,
+          "sha256": "bc0138069f9fce87618a3124a338cc031993688018a7b9579dea983d8b79bbd8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:06Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:11",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-11.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:11",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-11.pdf",
+          "bytes": 40176,
+          "sha256": "5de00d27e0680cf2d21b82daab077a130d24e79904548c5347aeb3d438b91694",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:05Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:12",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-12.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:12",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-12.pdf",
+          "bytes": 100020,
+          "sha256": "5fcb8a93e59d49b00936c63302cf88fbbf835a3fa157575ac5104f62243f07d7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:04Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:13",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-13.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:13",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-13.pdf",
+          "bytes": 282873,
+          "sha256": "7ae1ebaac9295d3e709d586ff6451f24389a6286e8031338f50d6f6109f8cf09",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:04Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:14",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-14.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:14",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-14.pdf",
+          "bytes": 423127,
+          "sha256": "4a5eb59241b4233a5a405caf8bb4e4971800c031121c15e8426372fdeb0c3a6c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:03Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:15",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-15.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:15",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-15.pdf",
+          "bytes": 840026,
+          "sha256": "ba8508a5d9863f0d11da6aa9f55fa40b3285ff6884f9a5c9516dcd980514109f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:02Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:16",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-16.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:16",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-16.pdf",
+          "bytes": 320040,
+          "sha256": "1452cdb59e18b7e895a75ca4ec6a4e00330b4e375bbf463e2186f81619587a01",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:01Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1991:17",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-17.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1991:17",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201991-17.pdf",
+          "bytes": 335484,
+          "sha256": "50028ee6aa30027530081bc39cd3ec167d4889f3a9d86c586999fb5dd9bebafb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:27:00Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-02.pdf",
+          "bytes": 52896,
+          "sha256": "e7010e634dd4651a963925ee3bbc10aa4b8da5c38299102253f3298aace90207",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:58Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-03.pdf",
+          "bytes": 352876,
+          "sha256": "a975df8f05836a74e7db9865004e3131f511c8508002aad555732f4fa031ada7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:58Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:4",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-04.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:4",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-04.pdf",
+          "bytes": 183155,
+          "sha256": "ed1b56ad9a2138db119a7265f5e408def259998255f902b076f2b0ce65728585",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:56Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:5",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-05.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:5",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-05.pdf",
+          "bytes": 242962,
+          "sha256": "20712dcc5e6be926aa13dd812311b57854c553214fd30aa0da8f7821c54faaed",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:55Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:6",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-06.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:6",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-06.pdf",
+          "bytes": 223768,
+          "sha256": "305e996fd9ee8f037ffae1ac9650e5beadbb4e24c7c170b1d1068b613a685053",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:54Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:7",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-07.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:7",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-07.pdf",
+          "bytes": 297572,
+          "sha256": "047b84cc943f40b9854e271efe0a7c6d13dd1a709c87678afe658a9e1105b4ce",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:54Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:8",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-08.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:8",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-08.pdf",
+          "bytes": 176730,
+          "sha256": "af03dddc32c496e18b3bf10cc7be789d99c7e02c03c250b4b0c8e2ce819c92bd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:52Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:9",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-09.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:9",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-09.pdf",
+          "bytes": 278813,
+          "sha256": "5f874b806df343a008e45463b416c82a35e11d68ed36636138aca3df3ee00328",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:52Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:10",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-10.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:10",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-10.pdf",
+          "bytes": 223044,
+          "sha256": "8435e8cc0a7b10c8288437a0aab53e0ae5408c8bd96dbd9cd74ea2891f6a447c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:50Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:11",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-11.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:11",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-11.pdf",
+          "bytes": 315200,
+          "sha256": "6eaa099e389eabd4b8902f723497572e5391280d9b734de49eec07686ae24b70",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:50Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:12",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-12.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:12",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-12.pdf",
+          "bytes": 217573,
+          "sha256": "c894f944941d4b1355521e1aabad31ceccd799c116eebd5b14088e592b3f944b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:48Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1992:13",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-13.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1992:13",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201992-13.pdf",
+          "bytes": 309450,
+          "sha256": "d8aa800e0d275bc9e189bc34b464e833006037eb7f839c1ac433b07f5b8c2398",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:48Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1993:4",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201993-04.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1993:4",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201993-04.pdf",
+          "bytes": 136329,
+          "sha256": "f2dd5e9c31ffbfb8b1473b89ecef661ee1e56e499d6c64636718f68a4b843527",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:46Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1994:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1994:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-01.pdf",
+          "bytes": 275245,
+          "sha256": "838b55333fc9e3dfc1f15af31d689c0dbd4887a1fcaa28e76d553544d432713e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:45Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1994:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1994:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-02.pdf",
+          "bytes": 496980,
+          "sha256": "09f747fe740d56107862ccd7512035f50d684c152d1be9eaf706bfbe30206763",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:45Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1994:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1994:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-03.pdf",
+          "bytes": 130187,
+          "sha256": "2cd1cb0158731f0c4e8460d91d9bc13a452c23cfd9f90f1b12d4b36968f6d532",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:43Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1994:5",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-05.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1994:5",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-05.pdf",
+          "bytes": 117330,
+          "sha256": "4b15a33b78466f652eb867856690a0860ada53a9ed007bdf2452cd763ed51f0e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:42Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1994:6",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-06.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1994:6",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-06.pdf",
+          "bytes": 588286,
+          "sha256": "757ffc8cf5bf1334ba811185465adfa4743e964c9c4770e08d0d8b982f7bb1f8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:42Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1994:7",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-07.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1994:7",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-07.pdf",
+          "bytes": 471713,
+          "sha256": "b22edb1729376e19cd3af650df9a54f39d6ccd4791f93ea40156955e0778c32d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:41Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1994:8",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-08.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1994:8",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201994-08.pdf",
+          "bytes": 1264293,
+          "sha256": "cf8f691c36b41c54d29b20346c3cef981ff46eb8ea02c04f52b066e9ff2c611f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:40Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1995:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201995-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1995:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201995-01.pdf",
+          "bytes": 127547,
+          "sha256": "12316e8f7b7149fa7f0d0e37d10520d9c2cc66ead5b66248e77468c0816f4f6b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:38Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1995:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201995-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1995:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201995-02.pdf",
+          "bytes": 1122264,
+          "sha256": "45864d1a41c9b0ac55c085e26b88db4c95b6b4bf80cf952361c32b7ef0de11d8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:38Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1995:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201995-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1995:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201995-03.pdf",
+          "bytes": 422389,
+          "sha256": "bfda60a9617ebb7ec50bef074d6bc2989762502f81658d10e427583685f15b41",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:37Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1995:4",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201995-04.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1995:4",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201995-04.pdf",
+          "bytes": 823466,
+          "sha256": "7b3aac11736039aef8aed884f04ced1934b1e9dfe6cd82c4bd5ff68aadfe8702",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:36Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1995:5",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201995-05.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1995:5",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201995-05.pdf",
+          "bytes": 261378,
+          "sha256": "0fc56b26e3978bc7bf7facb92d24ac0d170df6c9d85482cf70c37996527caa3f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:34Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1996:4",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201996-04.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1996:4",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201996-04.pdf",
+          "bytes": 235838,
+          "sha256": "9a1524cba56a857d0e92884a0ab38d808676706f739b72a4ab693339904c73fe",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:33Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1997:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201997-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1997:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201997-01.pdf",
+          "bytes": 20506,
+          "sha256": "bf0af36b0a43a68f5662df395d49ac718da23ff32400acbab950dc7055675419",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:32Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1997:5",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201997-05.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1997:5",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201997-05.pdf",
+          "bytes": 184011,
+          "sha256": "c36515b860379eaaa02ffd8b4c5c90d4b750af26797971853ddb6dc597b6e1ff",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:31Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1997:9",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201997-09.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1997:9",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201997-09.pdf",
+          "bytes": 195465,
+          "sha256": "c0592fdbe79826d136e7826fb0ac64bc29f01914f57fddc5a479aa3bee54f5cc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:30Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1998:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201998-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1998:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201998-01.pdf",
+          "bytes": 201485,
+          "sha256": "e3343d0a862577fa9bb5e4bd7ced5c419e4bb7c3e6cbd0acb99da8ae87d66336",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:29Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 1999:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201999-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 1999:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%201999-01.pdf",
+          "bytes": 129761,
+          "sha256": "32affe181ea6543a97a1b8ae68a7b016287183054014bdf73a79b930b697d02b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:28Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2000:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202000-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2000:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202000-01.pdf",
+          "bytes": 66721,
+          "sha256": "652b464934a8a40be3702da73a56e42fe448a03f0dffa343fbd92b9289fc67a2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:27Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2001:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202001-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2001:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202001-02.pdf",
+          "bytes": 21007,
+          "sha256": "ebe1defccf1181fd020eeb2b2c4c8400cec8567e351240ce72126a58847a52db",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:26Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2002:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202002-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2002:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202002-03.pdf",
+          "bytes": 1037560,
+          "sha256": "ccc2b28e6e346e8542d1989410b0f0f8199b6552cc06f1a143a684657b7f9499",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:26Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2002:4",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202002-04.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2002:4",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202002-04.pdf",
+          "bytes": 316312,
+          "sha256": "ce22d582195b2801d12186d43e86d6e975b5087c89e01325f352bf58c67a8ced",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:25Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2003:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202003-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2003:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202003-01.pdf",
+          "bytes": 264456,
+          "sha256": "fc6513e292c1e63a423072e2fda377748a6a616683c6cc752fffb47100c0e464",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:23Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2003:4",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202003-04.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2003:4",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202003-04.pdf",
+          "bytes": 23830,
+          "sha256": "75063b244f9664fcb6d1a49190ef69d563fa57e3c24cac8f2b2d5710af46f0a1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:22Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2004:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202004-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2004:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202004-01.pdf",
+          "bytes": 51861,
+          "sha256": "8bf53afafe3512650ea0c170509f58e30135bf7f0bb0f0a9b3950881a264fd55",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:22Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2004:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202004-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2004:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202004-02.pdf",
+          "bytes": 87029,
+          "sha256": "c5ea1e445276c0bd38619fa6e7856639aa74d7f444a9b6105ed4ec585254e659",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:20Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2004:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202004-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2004:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202004-03.pdf",
+          "bytes": 189030,
+          "sha256": "3589a1a222fe89f3e81617fa7e85aff9ac4b2d34536695f43891dd84ee81f92e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:19Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2005:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202005-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2005:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202005-02.pdf",
+          "bytes": 490386,
+          "sha256": "fae039955fd7309b95c0d55fb0cae5924cbe9a10ed9b4ddbd87600398f1ec0a7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:19Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2005:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202005-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2005:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202005-03.pdf",
+          "bytes": 207407,
+          "sha256": "5dd41b91a419959773f5c06864421df8bde5b187d9b845d488e8d9334e03b6f3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:17Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2006:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202006-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2006:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202006-01.pdf",
+          "bytes": 43114,
+          "sha256": "57a6be480ac08f1980c4592c899435158246d7acf99d56295f880aed2f37b140",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:16Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2006:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202006-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2006:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202006-02.pdf",
+          "bytes": 43121,
+          "sha256": "603251e320f301520500c1c6484e9b97f584a2be783bd41bb774add0c8fa054e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:15Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2006:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202006-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2006:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202006-03.pdf",
+          "bytes": 38508,
+          "sha256": "8a3e862ef8c9aa22f703fe74caf49194f97625544bc05d2c4505c49536f477cd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:14Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2006:4",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202006-04.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2006:4",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202006-04.pdf",
+          "bytes": 134409,
+          "sha256": "14176151348dbf149cfb935ff706a602becbc39bdc450cefef7717b72d70e718",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:13Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2006:5",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202006-05.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2006:5",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202006-05.pdf",
+          "bytes": 49497,
+          "sha256": "161ecfb7be76557d3de6ae58d2dca6e93dbc7b03848b8f574b5b70d6de022597",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:12Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2007:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202007-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2007:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202007-01.pdf",
+          "bytes": 41408,
+          "sha256": "e9a99a6407c9f00828d19edaa00e8e3bfe437c0b8c2d7ee323b991ff715658c7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:11Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2008:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202008-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2008:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202008-02.pdf",
+          "bytes": 69429,
+          "sha256": "721911f96c95f52ac1728c198939365ce4ed4267fdafa0507c2d7a794914a6fb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:10Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2009:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20RA-FS%202009-1.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2009:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20RA-FS%202009-1.pdf",
+          "bytes": 690905,
+          "sha256": "33d82aa4eb515d6f3ae2be8fc6c06b053a8d748f990fbffa471e0a60093612e2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:10Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2009:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202009-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2009:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202009-02.pdf",
+          "bytes": 278483,
+          "sha256": "eb2c506679ce49b62dc313c0a859ed503693c2548d32b47449533386bfc91227",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:08Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2013:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202013-01.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2013:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202013-01.pdf",
+          "bytes": 66741,
+          "sha256": "c9ee839fab42e8bff5c763f57de868ce990ccb4da20bf2dcb343eea239341f29",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:07Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2013:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202013-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2013:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202013-02.pdf",
+          "bytes": 74897,
+          "sha256": "1347f5fb2ab66ae2ac3b4513ae26831b092d91a27c166f083e25cdc588e3afb5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:06Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2013:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202013-03.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2013:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202013-03.pdf",
+          "bytes": 114293,
+          "sha256": "90071a066a849d136be4bd43b5076875a91c51d3a6b78a422ca73b83f66bfc30",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:05Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2013:4",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20RA-FS%202013-4.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2013:4",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20RA-FS%202013-4.pdf",
+          "bytes": 842788,
+          "sha256": "300d0f69a26a7e307c48d17318781740c0e264e11a69917520244f7fc0291e12",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:04Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2015:2",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202015-02.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2015:2",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202015-02.pdf",
+          "bytes": 74143,
+          "sha256": "979c98c57c9fbd99fb74eaf9f4dc4dba6c098774b5223ad400a7861a8b0394a3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:03Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2018:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202018-3.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2018:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202018-3.pdf",
+          "bytes": 78292,
+          "sha256": "9f80453cd0a37a7f83e50819d3f0ee83ef8b098d10d17366f0dde6567150c15a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:02Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2018:10",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRAFS%202018-10.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2018:10",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRAFS%202018-10.pdf",
+          "bytes": 73147,
+          "sha256": "d89f179502577ff1dabff7e5aeb4abbca012057104235ffcea8c0d6a46d73335",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:01Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2019:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20RA-FS%202019-1.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2019:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20RA-FS%202019-1.pdf",
+          "bytes": 786826,
+          "sha256": "3485a778a05962bb50309a97204430c7b7b7aefcd3c08047c144f7e1f5a2618b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:26:01Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2021:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202021-1.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2021:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202021-1.pdf",
+          "bytes": 321083,
+          "sha256": "1350eb1ed213941a2d1da6377ad68fdf0abd0e11a2a7ff9a0b0911f72b9acabd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:25:59Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2021:3",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202021-3.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2021:3",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202021-3.pdf",
+          "bytes": 761020,
+          "sha256": "f4d40511cc27d88abac7d2dfd4b9a3553739568423eda555c2792eea41cc28c5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:25:59Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2021:6",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20VERSION%20RA-FS%202021-6.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2021:6",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20VERSION%20RA-FS%202021-6.pdf",
+          "bytes": 684140,
+          "sha256": "76f15c8e85bf3fa6253dbc25c02e0140cef128e9ae214750f2c1caaa18ed204a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:25:58Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2021:7",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202021-7.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2021:7",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202021-7.pdf",
+          "bytes": 234387,
+          "sha256": "e7b92b20b67a2973efdc4fed8e90faf12aa23d9593f1612dc940739173a3ed00",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:25:56Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2024:8",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202024-8.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2024:8",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202024-8.pdf",
+          "bytes": 239214,
+          "sha256": "91aa54026c5544998bec600e65a272931f0bdf40f51691210ff7e84444b77369",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:25:55Z"
+        }
+      ]
+    },
+    {
+      "number": "RA-FS 2026:1",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202026-1.pdf",
+      "files": [
+        {
+          "label": "RA-FS 2026:1",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202026-1.pdf",
+          "bytes": 161701,
+          "sha256": "6939fc8151fcbf7423d9fd7d1d4fa45799396b0627ba570fe0a66ab8f349f8e3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:25:54Z"
+        }
+      ]
+    },
+    {
       "number": "RGKFS 2006:1",
       "detail_url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2011_1.pdf",
       "files": [
@@ -9548,6 +10850,916 @@
           "sha256": "d838a4474beb93118a0631abca8647a4cf2658f20df56a352a07d16b3a9b6e2c",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T00:37:39Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2001:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=8f7c83c6aad34c9ab622f1cd9f56b5eb&res=186d2e8d7864418782df5d14ee0517c7&lr=False&fn=1414_STEMFS2001_2.pdf&elp=portal&elt=t&eloid=8f7c83c6aad34c9ab622f1cd9f56b5eb",
+      "files": [
+        {
+          "label": "STEMFS 2001:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=8f7c83c6aad34c9ab622f1cd9f56b5eb&res=186d2e8d7864418782df5d14ee0517c7&lr=False&fn=1414_STEMFS2001_2.pdf&elp=portal&elt=t&eloid=8f7c83c6aad34c9ab622f1cd9f56b5eb",
+          "bytes": 13254,
+          "sha256": "a185d6ed5bf910c5b7d842e1caf82844e903913f74a6880572b40c381369bb5e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:22:33Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2005:12",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=6e0b26174e594881bd3a38b728a6a5cf&res=12e50977620a4cb785fbe1df2a95dabd&lr=False&fn=1761_STEMFS2005_12.pdf&elp=portal&elt=t&eloid=6e0b26174e594881bd3a38b728a6a5cf",
+      "files": [
+        {
+          "label": "STEMFS 2005:12",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=6e0b26174e594881bd3a38b728a6a5cf&res=12e50977620a4cb785fbe1df2a95dabd&lr=False&fn=1761_STEMFS2005_12.pdf&elp=portal&elt=t&eloid=6e0b26174e594881bd3a38b728a6a5cf",
+          "bytes": 56436,
+          "sha256": "35f8a7b7f945856bc290b1163c8f558f7827bd9510baefd310c041dc20786d8f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:22:23Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2010:5",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=27552dcb20a64fdc9664058f3bcdaaf5&res=406fb4c9509f4ae0834100a20686fbec&lr=False&fn=STEMFS%202010_5-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=27552dcb20a64fdc9664058f3bcdaaf5",
+      "files": [
+        {
+          "label": "STEMFS 2010:5",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=27552dcb20a64fdc9664058f3bcdaaf5&res=406fb4c9509f4ae0834100a20686fbec&lr=False&fn=STEMFS%202010_5-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=27552dcb20a64fdc9664058f3bcdaaf5",
+          "bytes": 166712,
+          "sha256": "d4ff30b003385c46d85035cb4d9fb6a1c580d1c14a07161eeb400d1409aa45e8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:24:49Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2011:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=aa1b0e02d3214d8abbe7995b00abedb5&res=82bbe373c92e4cd9b0505ec28bfe5e9b&lr=False&fn=STEMFS%202011_2-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=aa1b0e02d3214d8abbe7995b00abedb5",
+      "files": [
+        {
+          "label": "STEMFS 2011:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=aa1b0e02d3214d8abbe7995b00abedb5&res=82bbe373c92e4cd9b0505ec28bfe5e9b&lr=False&fn=STEMFS%202011_2-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=aa1b0e02d3214d8abbe7995b00abedb5",
+          "bytes": 985499,
+          "sha256": "ff023454c421efaad0860a6c30835e83bae15de20f9a0df71d1fc83d6da7ca2c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:24:39Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2011:4",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=f51b14e6438f499facd9b3b9d2e4b649&res=112a553113dd4e2cad9ae9026f7ba8ac&lr=False&fn=STEMFS%202011_4webb.pdf&elp=portal&elt=t&eloid=f51b14e6438f499facd9b3b9d2e4b649",
+      "files": [
+        {
+          "label": "STEMFS 2011:4",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=f51b14e6438f499facd9b3b9d2e4b649&res=112a553113dd4e2cad9ae9026f7ba8ac&lr=False&fn=STEMFS%202011_4webb.pdf&elp=portal&elt=t&eloid=f51b14e6438f499facd9b3b9d2e4b649",
+          "bytes": 1758542,
+          "sha256": "11430ae715f0ed36f9d64e5bb227fb5bc1d7c4581bb2483e98e7cae12f74b244",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:21:54Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2012:5",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d92d550aafe049949a8b79993f0a48eb&res=db2e9015d844474886d596d15075e1b8&lr=False&fn=STEMFS%202012_5webb.pdf&elp=portal&elt=t&eloid=d92d550aafe049949a8b79993f0a48eb",
+      "files": [
+        {
+          "label": "STEMFS 2012:5",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d92d550aafe049949a8b79993f0a48eb&res=db2e9015d844474886d596d15075e1b8&lr=False&fn=STEMFS%202012_5webb.pdf&elp=portal&elt=t&eloid=d92d550aafe049949a8b79993f0a48eb",
+          "bytes": 53332,
+          "sha256": "6b9f76f7155f01a43aa9c08a709af96c0187e48389b7b693674772c11d520e5f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:21:43Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2012:7",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=9b531b771cdd4c399ac94c4a9a09859c&res=3ce8ffe8545246f3aec0b2c74c7a7237&lr=False&fn=STEMFS%202012_7webb.pdf&elp=portal&elt=t&eloid=9b531b771cdd4c399ac94c4a9a09859c",
+      "files": [
+        {
+          "label": "STEMFS 2012:7",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=9b531b771cdd4c399ac94c4a9a09859c&res=3ce8ffe8545246f3aec0b2c74c7a7237&lr=False&fn=STEMFS%202012_7webb.pdf&elp=portal&elt=t&eloid=9b531b771cdd4c399ac94c4a9a09859c",
+          "bytes": 151762,
+          "sha256": "d287d69b3f4f52ff7c30286cecb60ab7b0e127c30b6421c1f9b1f65324ffc1fd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:21:33Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2013:1",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=e2ee97832c504f24b2d817eb1573aeed&res=13a1fe86404848598ccfb6eae6dda53b&lr=False&fn=STEMFS%202013_1webb.pdf&elp=portal&elt=t&eloid=e2ee97832c504f24b2d817eb1573aeed",
+      "files": [
+        {
+          "label": "STEMFS 2013:1",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=e2ee97832c504f24b2d817eb1573aeed&res=13a1fe86404848598ccfb6eae6dda53b&lr=False&fn=STEMFS%202013_1webb.pdf&elp=portal&elt=t&eloid=e2ee97832c504f24b2d817eb1573aeed",
+          "bytes": 562052,
+          "sha256": "008c4895fcd2376fd4a322bb4d0eb4ac03bd96003eb191d5ef328b2dc9d3a133",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:21:23Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2013:4",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=58ecfe30fdde44048ce85c0a40de4b5d&res=e4db73926f21411197bf337b891bd1df&lr=False&fn=STEMFS%202013_4webb.pdf&elp=portal&elt=t&eloid=58ecfe30fdde44048ce85c0a40de4b5d",
+      "files": [
+        {
+          "label": "STEMFS 2013:4",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=58ecfe30fdde44048ce85c0a40de4b5d&res=e4db73926f21411197bf337b891bd1df&lr=False&fn=STEMFS%202013_4webb.pdf&elp=portal&elt=t&eloid=58ecfe30fdde44048ce85c0a40de4b5d",
+          "bytes": 63654,
+          "sha256": "a1b8174858e4500791ab06b125d379d9786fc9904ced75ee4f01f13adf5d6bcc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:21:14Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2014:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=30e48cffe8294e9f9fb452ccc5821046&res=2deb4d03b0bb4de0b7633b69903bf68f&lr=False&fn=STEMFS%202014_2webb.pdf&elp=portal&elt=t&eloid=30e48cffe8294e9f9fb452ccc5821046",
+      "files": [
+        {
+          "label": "STEMFS 2014:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=30e48cffe8294e9f9fb452ccc5821046&res=2deb4d03b0bb4de0b7633b69903bf68f&lr=False&fn=STEMFS%202014_2webb.pdf&elp=portal&elt=t&eloid=30e48cffe8294e9f9fb452ccc5821046",
+          "bytes": 66563,
+          "sha256": "ac73a989584e1fa1ec58523bc01e32eaf841fe0c2eac42ce5e67d6b5ad1795a6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:20:43Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2014:3",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b063a616d2644a20849a45868a44c579&res=a032c1f4d16340c8a655e3713d3a3d9e&lr=False&fn=STEMFS%202014_3webb.pdf&elp=portal&elt=t&eloid=b063a616d2644a20849a45868a44c579",
+      "files": [
+        {
+          "label": "STEMFS 2014:3",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b063a616d2644a20849a45868a44c579&res=a032c1f4d16340c8a655e3713d3a3d9e&lr=False&fn=STEMFS%202014_3webb.pdf&elp=portal&elt=t&eloid=b063a616d2644a20849a45868a44c579",
+          "bytes": 91981,
+          "sha256": "d41aa762b6d3c98d3ac978280ff39eddd9555048aaeba2bdbdeba8aeab091c16",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:21:05Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2015:1",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=5fa7828bb131411f891bf98860ea1c8c&res=19ca3e593d13443b9b81e7d9ba471eaa&lr=False&fn=STEMFS%202015_1webb.pdf&elp=portal&elt=t&eloid=5fa7828bb131411f891bf98860ea1c8c",
+      "files": [
+        {
+          "label": "STEMFS 2015:1",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=5fa7828bb131411f891bf98860ea1c8c&res=19ca3e593d13443b9b81e7d9ba471eaa&lr=False&fn=STEMFS%202015_1webb.pdf&elp=portal&elt=t&eloid=5fa7828bb131411f891bf98860ea1c8c",
+          "bytes": 53191,
+          "sha256": "2791fb0f3bae3da2ef6faaaec442303bae43a179b53d45e7a4a66c5953104e36",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:20:35Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2015:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b54220cc2f924344906d15972c111c7e&res=35c72cc6427f4074bfff2e06ca766095&lr=False&fn=STEMFS%202015_2-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=b54220cc2f924344906d15972c111c7e",
+      "files": [
+        {
+          "label": "STEMFS 2015:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b54220cc2f924344906d15972c111c7e&res=35c72cc6427f4074bfff2e06ca766095&lr=False&fn=STEMFS%202015_2-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=b54220cc2f924344906d15972c111c7e",
+          "bytes": 61839,
+          "sha256": "52d2a48aaf5236df0b917f59ad6980e9487c6f3591edaec8d6c2bbca8a14d61c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:24:18Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2016:1",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=f8e9d8bee7e04ffd920b5c7f79a058bc&res=de1030df4f1d4190877d4e10bc37100e&lr=False&fn=STEMFS%202016_1webb.pdf&elp=portal&elt=t&eloid=f8e9d8bee7e04ffd920b5c7f79a058bc",
+      "files": [
+        {
+          "label": "STEMFS 2016:1",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=f8e9d8bee7e04ffd920b5c7f79a058bc&res=de1030df4f1d4190877d4e10bc37100e&lr=False&fn=STEMFS%202016_1webb.pdf&elp=portal&elt=t&eloid=f8e9d8bee7e04ffd920b5c7f79a058bc",
+          "bytes": 108242,
+          "sha256": "c24dc963ca3eb35f78bf9bb454d3c807d5f891a1aa1830a7ffd4448bd1d8a05f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:19:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2016:3",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=20a121a739034394adf1cf5a582ce3b0&res=6432d8b8232849f3817a6a5f9e1c3aab&lr=False&fn=STEMFS%202016_3webb.pdf&elp=portal&elt=t&eloid=20a121a739034394adf1cf5a582ce3b0",
+      "files": [
+        {
+          "label": "STEMFS 2016:3",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=20a121a739034394adf1cf5a582ce3b0&res=6432d8b8232849f3817a6a5f9e1c3aab&lr=False&fn=STEMFS%202016_3webb.pdf&elp=portal&elt=t&eloid=20a121a739034394adf1cf5a582ce3b0",
+          "bytes": 66217,
+          "sha256": "f1d645df2183a76870cdcc8bb06fc8f488d60160dee09363e69fa2ddeb77190e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:20:13Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2016:4",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=3d8123a62ba042a0a228e9330dc38733&res=81b286f22a7a4a52aa34d4240d919cb6&lr=False&fn=STEMFS%202016_4-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=3d8123a62ba042a0a228e9330dc38733",
+      "files": [
+        {
+          "label": "STEMFS 2016:4",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=3d8123a62ba042a0a228e9330dc38733&res=81b286f22a7a4a52aa34d4240d919cb6&lr=False&fn=STEMFS%202016_4-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=3d8123a62ba042a0a228e9330dc38733",
+          "bytes": 44936,
+          "sha256": "ac18758e67f3c1cb2b25c502c3fb95f8e905ad5246d7b51691867f24ca8efa34",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:24:08Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2016:5",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=8a8729666ac94a86875e2a1b09f07b70&res=1ea5ebbc35e948a3b2995028c40c3c71&lr=False&fn=STEMFS%202016_5-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=8a8729666ac94a86875e2a1b09f07b70",
+      "files": [
+        {
+          "label": "STEMFS 2016:5",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=8a8729666ac94a86875e2a1b09f07b70&res=1ea5ebbc35e948a3b2995028c40c3c71&lr=False&fn=STEMFS%202016_5-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=8a8729666ac94a86875e2a1b09f07b70",
+          "bytes": 6885029,
+          "sha256": "62fdf4a1f701701a58443ba1f5cfa9c342834dd37fd3f1e5b60a988cf58f1f15",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:24:00Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2017:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=fd03d165598b4d16b195d236ff9b3b40&res=996fab2309dc4b279832e20b43d1be5d&lr=False&fn=STEMFS%202017_2webb.pdf&elp=portal&elt=t&eloid=fd03d165598b4d16b195d236ff9b3b40",
+      "files": [
+        {
+          "label": "STEMFS 2017:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=fd03d165598b4d16b195d236ff9b3b40&res=996fab2309dc4b279832e20b43d1be5d&lr=False&fn=STEMFS%202017_2webb.pdf&elp=portal&elt=t&eloid=fd03d165598b4d16b195d236ff9b3b40",
+          "bytes": 70487,
+          "sha256": "60f826b0616956c0f9dea48bc4ca105c221737503aae1dbe1e5312491b3cb948",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:19:33Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2017:3",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=f4b2f1e5ea7649dfb92d2cee015f9eca&res=53b6ff35fc7e4b9f9af80323488f425a&lr=False&fn=STEMFS%202017_3webb.pdf&elp=portal&elt=t&eloid=f4b2f1e5ea7649dfb92d2cee015f9eca",
+      "files": [
+        {
+          "label": "STEMFS 2017:3",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=f4b2f1e5ea7649dfb92d2cee015f9eca&res=53b6ff35fc7e4b9f9af80323488f425a&lr=False&fn=STEMFS%202017_3webb.pdf&elp=portal&elt=t&eloid=f4b2f1e5ea7649dfb92d2cee015f9eca",
+          "bytes": 116631,
+          "sha256": "43bb07990aa077026a24c18e855a448d14ae764e5f6bafe6d24367ba3ad0bb75",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:19:23Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2018:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=dad0cdbbe811417c8e59760e446bdc4d&res=0f9f2d0b8e8e466cafb21a60be9106fa&lr=False&fn=STEMFS%202018_2webb.pdf&elp=portal&elt=t&eloid=dad0cdbbe811417c8e59760e446bdc4d",
+      "files": [
+        {
+          "label": "STEMFS 2018:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=dad0cdbbe811417c8e59760e446bdc4d&res=0f9f2d0b8e8e466cafb21a60be9106fa&lr=False&fn=STEMFS%202018_2webb.pdf&elp=portal&elt=t&eloid=dad0cdbbe811417c8e59760e446bdc4d",
+          "bytes": 89194,
+          "sha256": "38ca40e49cbe6a8282828fd0d053e9d808b7d9cf70f449ef1f7af25d0637f6bc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:18:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2018:3",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=bdd7c0438ef14c759bc63271a92b7119&res=fb37f522c03b4488a740570ec16335cc&lr=False&fn=STEMFS%202018_3webb.pdf&elp=portal&elt=t&eloid=bdd7c0438ef14c759bc63271a92b7119",
+      "files": [
+        {
+          "label": "STEMFS 2018:3",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=bdd7c0438ef14c759bc63271a92b7119&res=fb37f522c03b4488a740570ec16335cc&lr=False&fn=STEMFS%202018_3webb.pdf&elp=portal&elt=t&eloid=bdd7c0438ef14c759bc63271a92b7119",
+          "bytes": 34916,
+          "sha256": "8456bd7e7ff9bf080a2bb6f003fe3ec57fba5e1ef0835e3e90ed6709affffa4d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:19:13Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2018:4",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=8732914e5b2b4b158abe97e2a38907b4&res=02b381da77164ec693af17e19d3e95ed&lr=False&fn=STEMFS%20%202018_4webb.pdf&elp=portal&elt=t&eloid=8732914e5b2b4b158abe97e2a38907b4",
+      "files": [
+        {
+          "label": "STEMFS 2018:4",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=8732914e5b2b4b158abe97e2a38907b4&res=02b381da77164ec693af17e19d3e95ed&lr=False&fn=STEMFS%20%202018_4webb.pdf&elp=portal&elt=t&eloid=8732914e5b2b4b158abe97e2a38907b4",
+          "bytes": 47732,
+          "sha256": "3f0cb63b90bb776ed37ef31669da3309634082604424953ee8d4200c93f9fe3f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:19:03Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=7a610f03e8304be1b5f4247e0c84b9c7&res=b0adbe69ae0949fea095e6a079455b91&lr=False&fn=STEMFS_2020_2webb_3002.pdf&elp=portal&elt=t&eloid=7a610f03e8304be1b5f4247e0c84b9c7",
+      "files": [
+        {
+          "label": "STEMFS 2020:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=7a610f03e8304be1b5f4247e0c84b9c7&res=b0adbe69ae0949fea095e6a079455b91&lr=False&fn=STEMFS_2020_2webb_3002.pdf&elp=portal&elt=t&eloid=7a610f03e8304be1b5f4247e0c84b9c7",
+          "bytes": 108246,
+          "sha256": "97d50ce537da5c92c2ade188f18b1dfdeb22eb1566e3a8a39999a31f94c2063c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:17:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:3",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=8e944e7208de49adb0500183b2249dae&res=6d7981bcd8334c0c9d3010b6991fee92&lr=False&fn=STEMFS_2020_3webb%203001.pdf&elp=portal&elt=t&eloid=8e944e7208de49adb0500183b2249dae",
+      "files": [
+        {
+          "label": "STEMFS 2020:3",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=8e944e7208de49adb0500183b2249dae&res=6d7981bcd8334c0c9d3010b6991fee92&lr=False&fn=STEMFS_2020_3webb%203001.pdf&elp=portal&elt=t&eloid=8e944e7208de49adb0500183b2249dae",
+          "bytes": 1658436,
+          "sha256": "c50da84a8860e20be91cca21a36fe5cc485f992f77bbb600416d099d0c8bab91",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:17:03Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:4",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=0a555c409c0a4ae79e1ee6c6d214b51b&res=1f928ebcad74415b814b354300caf77d&lr=False&fn=STEMFS_2020_4webb%203000.pdf&elp=portal&elt=t&eloid=0a555c409c0a4ae79e1ee6c6d214b51b",
+      "files": [
+        {
+          "label": "STEMFS 2020:4",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=0a555c409c0a4ae79e1ee6c6d214b51b&res=1f928ebcad74415b814b354300caf77d&lr=False&fn=STEMFS_2020_4webb%203000.pdf&elp=portal&elt=t&eloid=0a555c409c0a4ae79e1ee6c6d214b51b",
+          "bytes": 334318,
+          "sha256": "71c023c3a53bfb5bd91247d6ae645e9b04843daa761a25e6851ef2c775ba6f16",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:17:34Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:5",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=6c25176c701345f5ab34e197babb5648&res=7062e892efe5489a9efafb79068a02b2&lr=False&fn=STEMFS_2020_5webb%202999.pdf&elp=portal&elt=t&eloid=6c25176c701345f5ab34e197babb5648",
+      "files": [
+        {
+          "label": "STEMFS 2020:5",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=6c25176c701345f5ab34e197babb5648&res=7062e892efe5489a9efafb79068a02b2&lr=False&fn=STEMFS_2020_5webb%202999.pdf&elp=portal&elt=t&eloid=6c25176c701345f5ab34e197babb5648",
+          "bytes": 3970302,
+          "sha256": "4a480b4778e680b4d52a8a4557a5c1ac882860348e22cef5fb54a30706ea2f2f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:18:24Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:6",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=9fd2f35a995145f29403457cab9e8334&res=c7ff3965039c4986be82686e66b30dbc&lr=False&fn=STEMFS_2020_6webb_2998.pdf&elp=portal&elt=t&eloid=9fd2f35a995145f29403457cab9e8334",
+      "files": [
+        {
+          "label": "STEMFS 2020:6",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=9fd2f35a995145f29403457cab9e8334&res=c7ff3965039c4986be82686e66b30dbc&lr=False&fn=STEMFS_2020_6webb_2998.pdf&elp=portal&elt=t&eloid=9fd2f35a995145f29403457cab9e8334",
+          "bytes": 140133,
+          "sha256": "d1d4fc1e632bcdc5669693fa03add31d246a05a355f7159e4d41f95545f7b909",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:17:43Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:7",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=1deba40da0e9415f8c436d2e1569c9bb&res=58ef1dbd49174e65b583632461d960f2&lr=False&fn=STEMFS_2020_7webb%202997.pdf&elp=portal&elt=t&eloid=1deba40da0e9415f8c436d2e1569c9bb",
+      "files": [
+        {
+          "label": "STEMFS 2020:7",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=1deba40da0e9415f8c436d2e1569c9bb&res=58ef1dbd49174e65b583632461d960f2&lr=False&fn=STEMFS_2020_7webb%202997.pdf&elp=portal&elt=t&eloid=1deba40da0e9415f8c436d2e1569c9bb",
+          "bytes": 4709149,
+          "sha256": "14a19d5c5199e20488dcb4cfac7d198a83bd0a38eef45f60d8e879a63dfc98fd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:17:24Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:8",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=c25258744ffa4d7b8ed1b99349fa33b2&res=0ea6acb5f8414c2cb7d4062289736461&lr=False&fn=STEMFS_2020_8webb_2996.pdf&elp=portal&elt=t&eloid=c25258744ffa4d7b8ed1b99349fa33b2",
+      "files": [
+        {
+          "label": "STEMFS 2020:8",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=c25258744ffa4d7b8ed1b99349fa33b2&res=0ea6acb5f8414c2cb7d4062289736461&lr=False&fn=STEMFS_2020_8webb_2996.pdf&elp=portal&elt=t&eloid=c25258744ffa4d7b8ed1b99349fa33b2",
+          "bytes": 226601,
+          "sha256": "8725c0a736951b542f793d98261da12f5e7f0990b0776646935b8762718fbf88",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:17:13Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:11",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d51a6b09ba504f0581d991c5a749571c&res=65aa35c81590428cb1504a6e26da2c4f&lr=False&fn=STEMFS_2020_11webb_2994.pdf&elp=portal&elt=t&eloid=d51a6b09ba504f0581d991c5a749571c",
+      "files": [
+        {
+          "label": "STEMFS 2020:11",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d51a6b09ba504f0581d991c5a749571c&res=65aa35c81590428cb1504a6e26da2c4f&lr=False&fn=STEMFS_2020_11webb_2994.pdf&elp=portal&elt=t&eloid=d51a6b09ba504f0581d991c5a749571c",
+          "bytes": 332833,
+          "sha256": "66de55c8e68265720a6a56725e8e6c97038aef664192aadfe35f4c8dd4fd082c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:18:13Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:12",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=55bbe3d10e74451ea35f552268aa0c21&res=254456f4b9bb4608b5c4cb225ae7fd87&lr=False&fn=STEMFS_2020_12webb_2993.pdf&elp=portal&elt=t&eloid=55bbe3d10e74451ea35f552268aa0c21",
+      "files": [
+        {
+          "label": "STEMFS 2020:12",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=55bbe3d10e74451ea35f552268aa0c21&res=254456f4b9bb4608b5c4cb225ae7fd87&lr=False&fn=STEMFS_2020_12webb_2993.pdf&elp=portal&elt=t&eloid=55bbe3d10e74451ea35f552268aa0c21",
+          "bytes": 328662,
+          "sha256": "ee7f2fa5d0b87a0b878a74599e67b67fc2e2d87b13f16b391d893bbf29486deb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:16:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:13",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=451d66233ef445908cf4584855206a8d&res=88fd484645c74ce8b58f019c4cde061b&lr=False&fn=STEMFS_2020_13webb_2992.pdf&elp=portal&elt=t&eloid=451d66233ef445908cf4584855206a8d",
+      "files": [
+        {
+          "label": "STEMFS 2020:13",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=451d66233ef445908cf4584855206a8d&res=88fd484645c74ce8b58f019c4cde061b&lr=False&fn=STEMFS_2020_13webb_2992.pdf&elp=portal&elt=t&eloid=451d66233ef445908cf4584855206a8d",
+          "bytes": 1574486,
+          "sha256": "5019cffc26acf124f808a25223d934efea8369994debaf1e786d19fc8c35de7c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:18:03Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:14",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=a3e835157ca74557badefaaf2c073577&res=3adc3cff00b145ccb0ba1816249ba12c&lr=False&fn=STEMFS_2020_14webb%202991.pdf&elp=portal&elt=t&eloid=a3e835157ca74557badefaaf2c073577",
+      "files": [
+        {
+          "label": "STEMFS 2020:14",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=a3e835157ca74557badefaaf2c073577&res=3adc3cff00b145ccb0ba1816249ba12c&lr=False&fn=STEMFS_2020_14webb%202991.pdf&elp=portal&elt=t&eloid=a3e835157ca74557badefaaf2c073577",
+          "bytes": 320026,
+          "sha256": "ce3744a86d1946d9dc4b789042bb22dd61ed35ba021b155b26eb384aebe5d5d8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:18:33Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2020:15",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=01b9f5ecfd584f4a9dd42c088c23cfe9&res=e239244193584b038571fbcc2f526651&lr=False&fn=STEMFS_2020_15webb_2990.pdf&elp=portal&elt=t&eloid=01b9f5ecfd584f4a9dd42c088c23cfe9",
+      "files": [
+        {
+          "label": "STEMFS 2020:15",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=01b9f5ecfd584f4a9dd42c088c23cfe9&res=e239244193584b038571fbcc2f526651&lr=False&fn=STEMFS_2020_15webb_2990.pdf&elp=portal&elt=t&eloid=01b9f5ecfd584f4a9dd42c088c23cfe9",
+          "bytes": 206602,
+          "sha256": "d39da13626c38d50f02734e091ecf1599d4ee37c6e3fd112043807731b1c0f5f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:18:43Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2021:1",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=5eb13ddb375347be87134561e8040959&res=b487f80dfed14dcb807cfa2ace264f4f&lr=False&fn=STEMFS%202021_1_webb.pdf&elp=portal&elt=t&eloid=5eb13ddb375347be87134561e8040959",
+      "files": [
+        {
+          "label": "STEMFS 2021:1",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=5eb13ddb375347be87134561e8040959&res=b487f80dfed14dcb807cfa2ace264f4f&lr=False&fn=STEMFS%202021_1_webb.pdf&elp=portal&elt=t&eloid=5eb13ddb375347be87134561e8040959",
+          "bytes": 307084,
+          "sha256": "f87c7fa2d749e6d70f92b222e765552dd5d7d132e4e0e9655c552041a2dc9d03",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:16:13Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2021:3",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=4429022018d9456486992de94c10bbe0&res=bf0b7c50ae2948ac892fdb89ae9c2562&lr=False&fn=STEMFS%202021_3webb.pdf&elp=portal&elt=t&eloid=4429022018d9456486992de94c10bbe0",
+      "files": [
+        {
+          "label": "STEMFS 2021:3",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=4429022018d9456486992de94c10bbe0&res=bf0b7c50ae2948ac892fdb89ae9c2562&lr=False&fn=STEMFS%202021_3webb.pdf&elp=portal&elt=t&eloid=4429022018d9456486992de94c10bbe0",
+          "bytes": 226322,
+          "sha256": "3c07a909ba110bdec720e108161b6372d2d3e0aa1fcea310377a2ccfe5646ca9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:15:23Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2021:6",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=72371ca5bdca4bd59d80444ba1fbcab5&res=3e8275863e884fb5ac54af8d2e96b260&lr=False&fn=STEMFS%202021_6_webb.pdf&elp=portal&elt=t&eloid=72371ca5bdca4bd59d80444ba1fbcab5",
+      "files": [
+        {
+          "label": "STEMFS 2021:6",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=72371ca5bdca4bd59d80444ba1fbcab5&res=3e8275863e884fb5ac54af8d2e96b260&lr=False&fn=STEMFS%202021_6_webb.pdf&elp=portal&elt=t&eloid=72371ca5bdca4bd59d80444ba1fbcab5",
+          "bytes": 217329,
+          "sha256": "0408f3be2c2becc21e76f4d5730bf2db1e534c6c1089f6dd47ae40b1cf495840",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:16:33Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2021:7",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d34fd4c19ed54bb3b91c7d93bd30111a&res=16b9308ab51349fab47a4a0a0b3017f7&lr=False&fn=STEMFS%202021_7webb.pdf&elp=portal&elt=t&eloid=d34fd4c19ed54bb3b91c7d93bd30111a",
+      "files": [
+        {
+          "label": "STEMFS 2021:7",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d34fd4c19ed54bb3b91c7d93bd30111a&res=16b9308ab51349fab47a4a0a0b3017f7&lr=False&fn=STEMFS%202021_7webb.pdf&elp=portal&elt=t&eloid=d34fd4c19ed54bb3b91c7d93bd30111a",
+          "bytes": 2021595,
+          "sha256": "d30ae8b1d1e832095cc0f8f044686aa2bd8300e2750cb1e2edcf995834e2e9b6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:15:13Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2021:8",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=90f99815a8ab427fb240ece6dcd93e4d&res=2f5bd1b9778547a198eff5bbd1a2dc9c&lr=False&fn=STEMFS%202021_8_webb.pdf&elp=portal&elt=t&eloid=90f99815a8ab427fb240ece6dcd93e4d",
+      "files": [
+        {
+          "label": "STEMFS 2021:8",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=90f99815a8ab427fb240ece6dcd93e4d&res=2f5bd1b9778547a198eff5bbd1a2dc9c&lr=False&fn=STEMFS%202021_8_webb.pdf&elp=portal&elt=t&eloid=90f99815a8ab427fb240ece6dcd93e4d",
+          "bytes": 269436,
+          "sha256": "77dd2d570163c7e16776fa1d5df824f05aed88a7e084e91d7399006d96a575a4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:15:33Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2021:9",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=6894b67e6eaf4ca2b886072607d5ffff&res=1941f2dab0fb4529b707f322f63b9fa0&lr=False&fn=STEMFS%202021_9_webb.pdf&elp=portal&elt=t&eloid=6894b67e6eaf4ca2b886072607d5ffff",
+      "files": [
+        {
+          "label": "STEMFS 2021:9",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=6894b67e6eaf4ca2b886072607d5ffff&res=1941f2dab0fb4529b707f322f63b9fa0&lr=False&fn=STEMFS%202021_9_webb.pdf&elp=portal&elt=t&eloid=6894b67e6eaf4ca2b886072607d5ffff",
+          "bytes": 156763,
+          "sha256": "f315ae20d9f15cdc6645ba09e69568016a18c706dd59480155c968ab37af5aed",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:16:23Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2021:10",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=81330178cffb4872952454cd313043e1&res=1786291e958e47f7a09dcd7eb6e7dccf&lr=False&fn=STEMFS%202021_10_webb.pdf&elp=portal&elt=t&eloid=81330178cffb4872952454cd313043e1",
+      "files": [
+        {
+          "label": "STEMFS 2021:10",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=81330178cffb4872952454cd313043e1&res=1786291e958e47f7a09dcd7eb6e7dccf&lr=False&fn=STEMFS%202021_10_webb.pdf&elp=portal&elt=t&eloid=81330178cffb4872952454cd313043e1",
+          "bytes": 228396,
+          "sha256": "598fe7624e635c076e1d21b0fb4a4a6f1068d05bd9f7b1ca7712e77a9c625a3f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:15:43Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2021:11",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b1ae33bb2f074246bc8672659076684d&res=d280216aae724dc7a35838240dd1eb1f&lr=False&fn=STEMFS%202021_11_webb.pdf&elp=portal&elt=t&eloid=b1ae33bb2f074246bc8672659076684d",
+      "files": [
+        {
+          "label": "STEMFS 2021:11",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b1ae33bb2f074246bc8672659076684d&res=d280216aae724dc7a35838240dd1eb1f&lr=False&fn=STEMFS%202021_11_webb.pdf&elp=portal&elt=t&eloid=b1ae33bb2f074246bc8672659076684d",
+          "bytes": 2481845,
+          "sha256": "498ee9a662636b1e24dd2de4b3dc4551def10c81e62e57812c2714829b1458bb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:16:44Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2021:12",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=4f74752e6dda42be8268db45bbc2913e&res=b214591834a0469caa1d82a60e6c07e4&lr=False&fn=STEMFS%202021_12_webb.pdf&elp=portal&elt=t&eloid=4f74752e6dda42be8268db45bbc2913e",
+      "files": [
+        {
+          "label": "STEMFS 2021:12",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=4f74752e6dda42be8268db45bbc2913e&res=b214591834a0469caa1d82a60e6c07e4&lr=False&fn=STEMFS%202021_12_webb.pdf&elp=portal&elt=t&eloid=4f74752e6dda42be8268db45bbc2913e",
+          "bytes": 964031,
+          "sha256": "680b2ae0407c2a6a6b8aa1bec2272c350f62e0437bb20dab21794edc04392335",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:15:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2022:4",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=32f8d64f32d34bac918d90e8d54ca7d9&res=1449c283f7b0415ab113235c2a1947ad&lr=False&fn=STEMFS%202022_4%20WEBB.pdf&elp=portal&elt=t&eloid=32f8d64f32d34bac918d90e8d54ca7d9",
+      "files": [
+        {
+          "label": "STEMFS 2022:4",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=32f8d64f32d34bac918d90e8d54ca7d9&res=1449c283f7b0415ab113235c2a1947ad&lr=False&fn=STEMFS%202022_4%20WEBB.pdf&elp=portal&elt=t&eloid=32f8d64f32d34bac918d90e8d54ca7d9",
+          "bytes": 1097046,
+          "sha256": "f9ca5c6d6383532c976ea863a8e1184e2510c1559c116623a1f68de1fa595b75",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:15:03Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2023:1",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=98748690df294745832529ae6acfa29c&res=c029ca4194c14727a8bd895d0b74ea1c&lr=False&fn=STEMFS%202023_1webb.pdf&elp=portal&elt=t&eloid=98748690df294745832529ae6acfa29c",
+      "files": [
+        {
+          "label": "STEMFS 2023:1",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=98748690df294745832529ae6acfa29c&res=c029ca4194c14727a8bd895d0b74ea1c&lr=False&fn=STEMFS%202023_1webb.pdf&elp=portal&elt=t&eloid=98748690df294745832529ae6acfa29c",
+          "bytes": 199410,
+          "sha256": "b56f3a8c0fd39c186453ad4fd8d37d9efc040bb5aec5df7faa68adc43d888106",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:14:33Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2023:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d683e12a663442139b4363ae4430518f&res=11b9a7eaf0954e6a8380eb2fa5dc9507&lr=False&fn=STEMFS%202023_2%20FINAL%20WEB%20TA.pdf&elp=portal&elt=t&eloid=d683e12a663442139b4363ae4430518f",
+      "files": [
+        {
+          "label": "STEMFS 2023:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d683e12a663442139b4363ae4430518f&res=11b9a7eaf0954e6a8380eb2fa5dc9507&lr=False&fn=STEMFS%202023_2%20FINAL%20WEB%20TA.pdf&elp=portal&elt=t&eloid=d683e12a663442139b4363ae4430518f",
+          "bytes": 208279,
+          "sha256": "7b2c12e26d84ef19d751b82347da1cc6e4a0ef2c70a4a17440b11e5702a20af5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:14:43Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2023:4",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=a75c1436ef5541b3a9d00b6b97c03d37&res=7bd29e8ad3b74d84a1bdae64ecc2f795&lr=False&fn=STEMFS%202023_4_webb.pdf&elp=portal&elt=t&eloid=a75c1436ef5541b3a9d00b6b97c03d37",
+      "files": [
+        {
+          "label": "STEMFS 2023:4",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=a75c1436ef5541b3a9d00b6b97c03d37&res=7bd29e8ad3b74d84a1bdae64ecc2f795&lr=False&fn=STEMFS%202023_4_webb.pdf&elp=portal&elt=t&eloid=a75c1436ef5541b3a9d00b6b97c03d37",
+          "bytes": 414046,
+          "sha256": "ba38d66ba4a57a4208c00db682f02d13f2c99b1982be20bf8b7547ecdf3cf207",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:14:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2024:1",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=78fd473cd02f43639c90d47c6b5fba35&res=dfcabc85e5f7434e9fd7f37fe874fcdf&lr=False&fn=STEMFS_2024_1_webb.pdf&elp=portal&elt=t&eloid=78fd473cd02f43639c90d47c6b5fba35",
+      "files": [
+        {
+          "label": "STEMFS 2024:1",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=78fd473cd02f43639c90d47c6b5fba35&res=dfcabc85e5f7434e9fd7f37fe874fcdf&lr=False&fn=STEMFS_2024_1_webb.pdf&elp=portal&elt=t&eloid=78fd473cd02f43639c90d47c6b5fba35",
+          "bytes": 220998,
+          "sha256": "ee42326c52c293de045852e1834787e84d33efd48b7021ab75939d819a2f54cb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:13:03Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2024:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=7f3ef31d81764f09b23c8aa38791b752&res=56583e9e1e454282a57da18f459fe0fb&lr=False&fn=STEMFS%202024_2webb.pdf&elp=portal&elt=t&eloid=7f3ef31d81764f09b23c8aa38791b752",
+      "files": [
+        {
+          "label": "STEMFS 2024:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=7f3ef31d81764f09b23c8aa38791b752&res=56583e9e1e454282a57da18f459fe0fb&lr=False&fn=STEMFS%202024_2webb.pdf&elp=portal&elt=t&eloid=7f3ef31d81764f09b23c8aa38791b752",
+          "bytes": 201804,
+          "sha256": "1baaf26729639aa2d9a9c293f6c3baeb109993e93b33a5396f560fe8e68dfa32",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:13:43Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2024:5",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=2862e5b468a5491d901e53878bdbea52&res=3d7ea8aac684496fb5a586e5cd0f6ff2&lr=False&fn=STEMFS%202024_5webb.pdf&elp=portal&elt=t&eloid=2862e5b468a5491d901e53878bdbea52",
+      "files": [
+        {
+          "label": "STEMFS 2024:5",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=2862e5b468a5491d901e53878bdbea52&res=3d7ea8aac684496fb5a586e5cd0f6ff2&lr=False&fn=STEMFS%202024_5webb.pdf&elp=portal&elt=t&eloid=2862e5b468a5491d901e53878bdbea52",
+          "bytes": 863810,
+          "sha256": "609b8ffafc60ee83d736f857de475cab0d0ea10297e6cd3c92ca012028133831",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:14:03Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2024:6",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b19007e0abf74f0aad1f4cc63b2acad0&res=3794bb88d01c4bcf9e45ac0377510a0b&lr=False&fn=STEMFS%202024_6webb.pdf&elp=portal&elt=t&eloid=b19007e0abf74f0aad1f4cc63b2acad0",
+      "files": [
+        {
+          "label": "STEMFS 2024:6",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b19007e0abf74f0aad1f4cc63b2acad0&res=3794bb88d01c4bcf9e45ac0377510a0b&lr=False&fn=STEMFS%202024_6webb.pdf&elp=portal&elt=t&eloid=b19007e0abf74f0aad1f4cc63b2acad0",
+          "bytes": 2825414,
+          "sha256": "114b703dd4f36003f5dda32c62c839f258339fea94111f646ad2db4e91a2fac6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:13:34Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2024:7",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=bd4f9dc083e34a87a59693148e652e24&res=fc87edc9e536494c8fd74733142ca343&lr=False&fn=STEMFS%202024_7webb.pdf&elp=portal&elt=t&eloid=bd4f9dc083e34a87a59693148e652e24",
+      "files": [
+        {
+          "label": "STEMFS 2024:7",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=bd4f9dc083e34a87a59693148e652e24&res=fc87edc9e536494c8fd74733142ca343&lr=False&fn=STEMFS%202024_7webb.pdf&elp=portal&elt=t&eloid=bd4f9dc083e34a87a59693148e652e24",
+          "bytes": 484905,
+          "sha256": "c313d2d85b844d975f46c1c203aa9b252f3ede62b32b53df1dada352bd12f425",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:13:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2024:8",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=79693f2f773d445d9de6ade6d086d091&res=524985bcae6749658d72004c1a94dc2b&lr=False&fn=STEMFS%202024_8webb.pdf&elp=portal&elt=t&eloid=79693f2f773d445d9de6ade6d086d091",
+      "files": [
+        {
+          "label": "STEMFS 2024:8",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=79693f2f773d445d9de6ade6d086d091&res=524985bcae6749658d72004c1a94dc2b&lr=False&fn=STEMFS%202024_8webb.pdf&elp=portal&elt=t&eloid=79693f2f773d445d9de6ade6d086d091",
+          "bytes": 205120,
+          "sha256": "8a5d056895c3c53aabaa6a93bb1a9a7ac4c2ad6d1c91e4178568ad9e50df1fb0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:14:23Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2024:9",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=ce35277f51cd4048a281b97c567d71df&res=45fb22ab39554ca685b91721de0bca1d&lr=False&fn=STEMFS%202024_9webb.pdf&elp=portal&elt=t&eloid=ce35277f51cd4048a281b97c567d71df",
+      "files": [
+        {
+          "label": "STEMFS 2024:9",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=ce35277f51cd4048a281b97c567d71df&res=45fb22ab39554ca685b91721de0bca1d&lr=False&fn=STEMFS%202024_9webb.pdf&elp=portal&elt=t&eloid=ce35277f51cd4048a281b97c567d71df",
+          "bytes": 312327,
+          "sha256": "8006f644cf69818b27f0348e1d52e7e6c16faf3b9c8745bb5d7d06801bfab91c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:14:13Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2024:10",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=71406f413efd42018e3e68349a19ada4&res=15aa007f32904efa8a6b6bc021162448&lr=False&fn=STEMFS%202024_10webb.pdf&elp=portal&elt=t&eloid=71406f413efd42018e3e68349a19ada4",
+      "files": [
+        {
+          "label": "STEMFS 2024:10",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=71406f413efd42018e3e68349a19ada4&res=15aa007f32904efa8a6b6bc021162448&lr=False&fn=STEMFS%202024_10webb.pdf&elp=portal&elt=t&eloid=71406f413efd42018e3e68349a19ada4",
+          "bytes": 305425,
+          "sha256": "6024b29c44f9d846aa4dc177e63497778d5aab56c84bd99f90fd913be66b3139",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:13:13Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2024:11",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=212423e247564c9e931aded2c49bc2b0&res=7b875cdf17a44e5b9c436b008c8ca9f1&lr=False&fn=STEMFS%202024_11webb.pdf&elp=portal&elt=t&eloid=212423e247564c9e931aded2c49bc2b0",
+      "files": [
+        {
+          "label": "STEMFS 2024:11",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=212423e247564c9e931aded2c49bc2b0&res=7b875cdf17a44e5b9c436b008c8ca9f1&lr=False&fn=STEMFS%202024_11webb.pdf&elp=portal&elt=t&eloid=212423e247564c9e931aded2c49bc2b0",
+          "bytes": 10074145,
+          "sha256": "98c123485d4371251cb0180334138889a5d260335b73097caee2e52c01f1a223",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:13:24Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2025:1",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d59a9e34c6ee4098aad48c76ec5fa818&res=c676148f7e1f4e39904c4a856318ccc8&lr=False&fn=STEMFS%202025_1webb.pdf&elp=portal&elt=t&eloid=d59a9e34c6ee4098aad48c76ec5fa818",
+      "files": [
+        {
+          "label": "STEMFS 2025:1",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d59a9e34c6ee4098aad48c76ec5fa818&res=c676148f7e1f4e39904c4a856318ccc8&lr=False&fn=STEMFS%202025_1webb.pdf&elp=portal&elt=t&eloid=d59a9e34c6ee4098aad48c76ec5fa818",
+          "bytes": 699907,
+          "sha256": "fb57245abb9ed6c303f0c5a2ac38cf0c0ce6ff0040b90a88e4c6b8f917cdb33d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:12:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2025:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=789501152c744a4bbcdf024654637452&res=038a71ec6c25414494e1bf975c5af002&lr=False&fn=STEMFS%202025_2_HBK_webb.pdf&elp=portal&elt=t&eloid=789501152c744a4bbcdf024654637452",
+      "files": [
+        {
+          "label": "STEMFS 2025:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=789501152c744a4bbcdf024654637452&res=038a71ec6c25414494e1bf975c5af002&lr=False&fn=STEMFS%202025_2_HBK_webb.pdf&elp=portal&elt=t&eloid=789501152c744a4bbcdf024654637452",
+          "bytes": 1483402,
+          "sha256": "090ffca789d1e89fbbb596ee456369f24d31b1ba96fc74d9720ccc1238a23612",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:11:43Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2025:3",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b0a1b098d2b04ffc9062bec17c894c70&res=bca99e96625044999c8ccca1af93c54c&lr=False&fn=STEMFS%202025_3_Reduktionsplikten_webb.pdf&elp=portal&elt=t&eloid=b0a1b098d2b04ffc9062bec17c894c70",
+      "files": [
+        {
+          "label": "STEMFS 2025:3",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b0a1b098d2b04ffc9062bec17c894c70&res=bca99e96625044999c8ccca1af93c54c&lr=False&fn=STEMFS%202025_3_Reduktionsplikten_webb.pdf&elp=portal&elt=t&eloid=b0a1b098d2b04ffc9062bec17c894c70",
+          "bytes": 307748,
+          "sha256": "1b9435e3fc321a8a09212e240db73b32c34c64cf51f831e5123620980ca59533",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:12:23Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2025:4",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=934a6e30e11d42fe9bfb0d127159f65e&res=87a0ac4c050e4d00ac984f6fab399cbc&lr=False&fn=STEMFS%202025_4webb.pdf&elp=portal&elt=t&eloid=934a6e30e11d42fe9bfb0d127159f65e",
+      "files": [
+        {
+          "label": "STEMFS 2025:4",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=934a6e30e11d42fe9bfb0d127159f65e&res=87a0ac4c050e4d00ac984f6fab399cbc&lr=False&fn=STEMFS%202025_4webb.pdf&elp=portal&elt=t&eloid=934a6e30e11d42fe9bfb0d127159f65e",
+          "bytes": 183847,
+          "sha256": "ac7f77eabae3bfc6a9cc3bce05f7405c6abf18087d3940cde75fac2fda246c3b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:12:03Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2025:5",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=dccef42815d649dead40913c933cb979&res=98c80441be4a401c83ce4df00a7ee3e4&lr=False&fn=STEMFS%202025_5%20Drivmedelslagen_webb.pdf&elp=portal&elt=t&eloid=dccef42815d649dead40913c933cb979",
+      "files": [
+        {
+          "label": "STEMFS 2025:5",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=dccef42815d649dead40913c933cb979&res=98c80441be4a401c83ce4df00a7ee3e4&lr=False&fn=STEMFS%202025_5%20Drivmedelslagen_webb.pdf&elp=portal&elt=t&eloid=dccef42815d649dead40913c933cb979",
+          "bytes": 475021,
+          "sha256": "6ec02994e7394c5fc72516b9cd8e91567cd0cc829926c2b0ee770546bd8742e5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:11:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2025:6",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=4d8af7b79c1d43b08200aeb540064815&res=03bc97a54dfd408f9950acbe1590e228&lr=False&fn=STEMFS%202025_6%20Biogas%20och%20r%C3%B6trester_webb.pdf&elp=portal&elt=t&eloid=4d8af7b79c1d43b08200aeb540064815",
+      "files": [
+        {
+          "label": "STEMFS 2025:6",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=4d8af7b79c1d43b08200aeb540064815&res=03bc97a54dfd408f9950acbe1590e228&lr=False&fn=STEMFS%202025_6%20Biogas%20och%20r%C3%B6trester_webb.pdf&elp=portal&elt=t&eloid=4d8af7b79c1d43b08200aeb540064815",
+          "bytes": 364334,
+          "sha256": "78b6a3988f4db599836a26eb73a7a5e3b6348414881018d1ba0da79f0745c194",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:23:19Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2025:7",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b73011aaa2bb490ca284e18268bd02cf&res=5f1ba7a9ac6547f9b2b36ba924b7f93e&lr=False&fn=STEMFS%202025_7%20Industrins%20energianv%C3%A4ndning_webb.pdf&elp=portal&elt=t&eloid=b73011aaa2bb490ca284e18268bd02cf",
+      "files": [
+        {
+          "label": "STEMFS 2025:7",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b73011aaa2bb490ca284e18268bd02cf&res=5f1ba7a9ac6547f9b2b36ba924b7f93e&lr=False&fn=STEMFS%202025_7%20Industrins%20energianv%C3%A4ndning_webb.pdf&elp=portal&elt=t&eloid=b73011aaa2bb490ca284e18268bd02cf",
+          "bytes": 812467,
+          "sha256": "5bad7df2396a8518fa96d98b0ed86325249868ea913052801b8877df1b997f97",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:23:39Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2025:8",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=36b97be6edbd43f281951666d3f373e9&res=5ca76f30971d4953801bc8908030d100&lr=False&fn=STEMFS%202025_8%20Ursprungsgarantier%20f%C3%B6r%20energi_webb.pdf&elp=portal&elt=t&eloid=36b97be6edbd43f281951666d3f373e9",
+      "files": [
+        {
+          "label": "STEMFS 2025:8",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=36b97be6edbd43f281951666d3f373e9&res=5ca76f30971d4953801bc8908030d100&lr=False&fn=STEMFS%202025_8%20Ursprungsgarantier%20f%C3%B6r%20energi_webb.pdf&elp=portal&elt=t&eloid=36b97be6edbd43f281951666d3f373e9",
+          "bytes": 294379,
+          "sha256": "fd32b621d345f596f0728329a0003628c0de68a643e9c36aa0b1621ef0b65fef",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:23:29Z"
+        }
+      ]
+    },
+    {
+      "number": "STEMFS 2026:2",
+      "detail_url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=67831a80c33b42c3b18434924bd88da4&res=0a5e4c7c0a414f8ab008983eb19cd44a&lr=False&fn=STEMFS%202026_2webb.pdf&elp=portal&elt=t&eloid=67831a80c33b42c3b18434924bd88da4",
+      "files": [
+        {
+          "label": "STEMFS 2026:2",
+          "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=67831a80c33b42c3b18434924bd88da4&res=0a5e4c7c0a414f8ab008983eb19cd44a&lr=False&fn=STEMFS%202026_2webb.pdf&elp=portal&elt=t&eloid=67831a80c33b42c3b18434924bd88da4",
+          "bytes": 165800,
+          "sha256": "7064cfce54fb4c5d931bd7590842ac3df6171e9bee161f2486517847a94af9f7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:11:33Z"
         }
       ]
     },
@@ -21182,6 +23394,252 @@
           "sha256": "e7f3053ae241851a1e4802eea49dc2c6d2bb632cc18fbcac31a32a56bbcb6e3f",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-29T23:57:12Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2013:3",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2013/uhrfs-2013-3.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2013:3",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2013/uhrfs-2013-3.pdf",
+          "bytes": 154617,
+          "sha256": "ca63626276faf1ad9db1e69e8fbde465055259fd680046d762ec0aa461a44173",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:49Z"
+        },
+        {
+          "label": "UHRFS 2013:3 (konsoliderad version)",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/konsoliderad-version-uhrfs-2013-3.pdf",
+          "bytes": 146541,
+          "sha256": "8c99186da93b34190100cf67fc2317f2f64d251c974cafb4e000579c0b39fd79",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:50Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2013:6",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2013/uhrfs-2013-6.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2013:6",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2013/uhrfs-2013-6.pdf",
+          "bytes": 180980,
+          "sha256": "2625ef89de715c7325678811d45351e594a390ccd6ae339a1e7e7db03c7c7bb0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:47Z"
+        },
+        {
+          "label": "UHRFS 2013:6 (konsoliderad version)",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/konsoliderad-version-uhrfs-2013-6-om-oversattning-till-engelska-av-svenska-examina-tom-uhrfs-2026-1.pdf",
+          "bytes": 280435,
+          "sha256": "f612af1ae3252d9c6db2b8cd0223c3ca60e2a2372ea616d9b873284a306889b5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:48Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2013:7",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2013/uhrfs-2013-7.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2013:7",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2013/uhrfs-2013-7.pdf",
+          "bytes": 167034,
+          "sha256": "43d2075721faceb6b2be430ded7226c4e18b7172110f8209c1fccafbf1a37d14",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:45Z"
+        },
+        {
+          "label": "UHRFS 2013:7 (konsoliderad version)",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/konsoliderad-version-uhrfs-2013-7-om-oversattning-till-engelska-av-svenska-examina-vid-forsvarshogskolan-tom-uhrfs-2026-2.pdf",
+          "bytes": 250766,
+          "sha256": "1b6a96a3fb8705c8a124b726a18ae2e52c70b2fd0bbdf4f0b75bc3ee50034e52",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:46Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2013:8",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2013/uhrfs-2013-8.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2013:8",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2013/uhrfs-2013-8.pdf",
+          "bytes": 171506,
+          "sha256": "02bebe5be55b36c12a7e246a853a3e9bbb7e669366ea98d98cdf2b66ca34cc27",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:43Z"
+        },
+        {
+          "label": "UHRFS 2013:8 (konsoliderad version)",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/konsoliderad-version-uhrfs-2013-8-om-oversattning-till-engelska-av-svenska-examina-vid-sveriges-lantbruksuniversitet-tom-uhrfs-2026-3.pdf",
+          "bytes": 262495,
+          "sha256": "2748074e518d012f7fbbe6c48523e11cafad864bcf52e06094fdfbd2e1df014a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:44Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2013:11",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2013/uhrfs-2013-11.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2013:11",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2013/uhrfs-2013-11.pdf",
+          "bytes": 154929,
+          "sha256": "1635f34059b40e1f048f12b1314e468438bf8eb1df8dcd5294a873119bc621cd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:42Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2015:3",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2015/uhrfs-2015-03.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2015:3",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2015/uhrfs-2015-03.pdf",
+          "bytes": 82409,
+          "sha256": "6c1333e3d6e5d89e3ca1911e872f65d4ccc80a3cca25f56e3edb16a18023da46",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:40Z"
+        },
+        {
+          "label": "UHRFS 2015:3 (konsoliderad version)",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/konsoliderad-version-uhrfs-2015-3-foreskrifter-om-hogskoleprovet-till-och-med-uhrfs-2023-3.pdf",
+          "bytes": 181639,
+          "sha256": "305565bc4598351fa3d71071435c48342dd8d5845b3bec11c79d506987660c00",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:41Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2021:5",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2021/uhrfs-2021-5.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2021:5",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2021/uhrfs-2021-5.pdf",
+          "bytes": 82884,
+          "sha256": "8901bd8101cf4d1a4bbe23c31ecf337608a385d518a387246a50492f164fb380",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:39Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2022:2",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2022/uhrfs-2022-2.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2022:2",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2022/uhrfs-2022-2.pdf",
+          "bytes": 316815,
+          "sha256": "855c29502026c500c9feab21ee0f1e2aaa3ff33fe66f90cfb444856c6b7233cb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:37Z"
+        },
+        {
+          "label": "UHRFS 2022:2 (konsoliderad version)",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/konsoliderad-version-uhrfs-2022-2-med-andringar-till-och-med-uhrfs-2025-1.pdf",
+          "bytes": 269071,
+          "sha256": "2e7af0f51c76757ba6a8c0b49370402a890fea47c696049958de6f6ccc7d2e2a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:38Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2023:4",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2023/uhrfs-2023-4.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2023:4",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2023/uhrfs-2023-4.pdf",
+          "bytes": 107528,
+          "sha256": "2af76998fd949f1559584cf2d90bd4e89815dc1b89a47d6011bc38ee4b0abda6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:36Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2024:2",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2024/uhrfs-2024-2.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2024:2",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2024/uhrfs-2024-2.pdf",
+          "bytes": 625247,
+          "sha256": "d3eb53d5b3ab31dc330a0611fceaa69132fe98191178e74c60d551e4f3c2e184",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:34Z"
+        },
+        {
+          "label": "UHRFS 2024:2 (konsoliderad version)",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/konsoliderad-version-uhrfs-2024-2-yrkeskunskaper-for-sarskild-behorighet-till-utbildning-som-leder-till-yrkeslararexamen-tom-uhrfs-2026-4.pdf",
+          "bytes": 612426,
+          "sha256": "7196a6b7fc30bdea92928d8e40e16840db265bb2c3b9b19a535b0bef0ad11991",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:35Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2024:5",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2024/uhrfs-2024-5-foreskrifter-om-sarskild-behorighet.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2024:5",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2024/uhrfs-2024-5-foreskrifter-om-sarskild-behorighet.pdf",
+          "bytes": 453413,
+          "sha256": "5479e2ddb0fb709e56b5cb9d1ff637d0690ab227116f7c837ea8fca1e23f1950",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:32Z"
+        },
+        {
+          "label": "UHRFS 2024:5 (konsoliderad version)",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/konsoliderad-version-uhrfs-2024-5-om-sarskild-behorighet-till-och-med-uhrfs-2025-3-inkl-rattelse.pdf",
+          "bytes": 613386,
+          "sha256": "5c4e8533d6d4fca6dc7804801bd2058c7a34f53fe89acedeb5381efd6c8b298d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:33Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2024:6",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2024/uhrfs-2024-6-foreskrifter-och-allmanna-rad-om-godtagbar-standard.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2024:6",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2024/uhrfs-2024-6-foreskrifter-och-allmanna-rad-om-godtagbar-standard.pdf",
+          "bytes": 105803,
+          "sha256": "3fc953ffbcccf8e0f5b8f5503083de65a264753741b64b4b7a05a94cf5b26c8e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:31Z"
+        }
+      ]
+    },
+    {
+      "number": "UHRFS 2024:7",
+      "detail_url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2024/uhrfs-2024-7-foreskrifter-om-grundlaggande-behorighet-och-urval.pdf",
+      "files": [
+        {
+          "label": "UHRFS 2024:7",
+          "url": "https://www.uhr.se/globalassets/_uhr.se/publikationer/lagar-och-regler2/uhrfs/2024/uhrfs-2024-7-foreskrifter-om-grundlaggande-behorighet-och-urval.pdf",
+          "bytes": 3345051,
+          "sha256": "92cfde43b5ba0681d59104cdf15ffddb188138beb64806ffb0ebf2e4f1b1c7fe",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:09:31Z"
         }
       ]
     },

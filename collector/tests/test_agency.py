@@ -300,6 +300,50 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             scb.parse_detail(fixture("agency-scb-fs-detail.html"), entries[3])
 
+    def test_stemfs_archive(self):
+        stem = agency.EnergimyndighetenAdapter()
+        text = fixture("agency-stemfs-listing.html")
+        self.assertEqual(stem.more_pages(text, stem.listing_url), [stem.listing_url + "&page=2"])
+        entries = stem.parse_listing(text, stem.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries],
+                         [("STEMFS 2026:1", False), ("STEMFS 2025:4", True), ("STEMFS 2025:1", True)])
+        self.assertEqual(entries[1].title,
+                         "Statens energimyndighets föreskrifter om tillsynsavgifter för tillhandahållande och "
+                         "användning av hållbara flygbränslen")
+        self.assertNotIn("\u00ad", entries[2].title)
+        self.assertIn("fn=STEMFS%202025_1webb.pdf", entries[2].url)
+        self.assertIn("Upph%C3%A4vande", entries[0].url)
+
+    def test_rfs_open_data(self):
+        rfs = agency.RiksdagenAdapter()
+        entries = {e.number: e for e in rfs.parse_listing(fixture("agency-rfs-list.json"), rfs.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base), ["RFS 2019:1"])
+        self.assertFalse(entries["RFS 2018:6"].base)  # repeals another regulation
+        self.assertFalse(entries["RFS 2015:5"].base)  # repealed, no repeal date in the data
+        self.assertFalse(entries["RFS 2026:6"].base)
+        base = entries["RFS 2019:1"]
+        self.assertEqual(base.amended_by, ["RFS 2026:6"])
+        self.assertTrue(base.url.endswith("/dokument/H7D41f325.html"))  # the consolidated text
+        regulation = rfs.parse_detail(fixture("agency-rfs-2019-1.html"), base)
+        self.assertEqual((regulation.issued, regulation.amended_through), ("2019-03-28", "RFS 2026:6"))
+        self.assertEqual(regulation.version, "Konsoliderad version")
+        self.assertTrue(regulation.text.startswith("1 kap. Föreskriftens innehåll"))
+        self.assertNotIn("Fulltextversion", regulation.text)
+        with self.assertRaises(ValueError):
+            rfs.parse_detail(fixture("agency-rfs-2019-1.html"), entries["RFS 2018:6"])
+
+    def test_rafs_register(self):
+        ra = agency.RiksarkivetAdapter()
+        entries = {e.number: e for e in ra.parse_listing(fixture("agency-rafs-sok.json"), ra.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base), ["RA-FS 2013:3", "RA-FS 2026:1"])
+        self.assertFalse(entries["RA-FS 2015:2"].base)  # repealed by a regulation not in the fixture: no date
+        repealed = entries["RA-FS 2013:3"]
+        self.assertEqual(repealed.repealed, entries["RA-FS 2022:3"].in_force)
+        self.assertEqual(repealed.amended_by, ["RA-FS 2018:9", "RA-FS 2022:3"])  # amended, then repealed
+        current = entries["RA-FS 2026:1"]
+        self.assertEqual((current.in_force, current.repealed), ("2026-10-05", None))
+        self.assertEqual(current.url, "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202026-1.pdf")
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

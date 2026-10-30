@@ -1,0 +1,57 @@
+{
+ "dokumentlista": {
+  "@traffar": "5",
+  "dokument": [
+   {
+    "id": "hed46a376",
+    "dok_id": "HED46a376",
+    "rm": "2026",
+    "beteckning": "6",
+    "titel": "Riksdagsstyrelsens föreskrift om ändring i riksdagsstyrelsens föreskrift (RFS 2019:1) om säkerhet och säkerhetsskydd i riksdagen, Riksdagsförvaltningen och partikanslierna",
+    "subtyp": "Ändring",
+    "status": "Gällande",
+    "datum": "2026-09-01"
+   },
+   {
+    "id": "h7d41g18",
+    "dok_id": "H7D41g18",
+    "rm": "2019",
+    "beteckning": "1",
+    "titel": "Riksdagsstyrelsens föreskrift om säkerhet och säkerhetsskydd i riksdagen, Riksdagsförvaltningen och partikanslierna",
+    "subtyp": "Grund",
+    "status": "Gällande",
+    "datum": "2019-04-01"
+   },
+   {
+    "id": "h7d41f325",
+    "dok_id": "H7D41f325",
+    "rm": "2019",
+    "beteckning": "1",
+    "titel": "Riksdagsstyrelsens föreskrift om säkerhet och säkerhetsskydd i riksdagen, Riksdagsförvaltningen och partikanslierna",
+    "subtyp": "Fulltext",
+    "status": "",
+    "datum": "2019-03-28"
+   },
+   {
+    "id": "h6d46g40",
+    "dok_id": "H6D46g40",
+    "rm": "2018",
+    "beteckning": "6",
+    "titel": "Riksdagsstyrelsens föreskrift om upphävande av föreskrift (RFS 2004:5) om betalkort för anställda och uppdragstagare inom riksdagsförvaltningen",
+    "subtyp": "Grund",
+    "status": "Gällande",
+    "datum": "2019-01-01"
+   },
+   {
+    "id": "h3d45g174",
+    "dok_id": "H3D45g174",
+    "rm": "2015",
+    "beteckning": "5",
+    "titel": "Riksdagsstyrelsens föreskrift om betalkort för talmannen och de vice talmännen",
+    "subtyp": "Grund",
+    "status": "Upphävd",
+    "datum": "2015-07-01"
+   }
+  ]
+ }
+}

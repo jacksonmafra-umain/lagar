@@ -416,6 +416,14 @@ PDFs already in the manifest are not downloaded again unless `--refresh`. The do
 | AFS (Arbetsmiljöverket) | `https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/`, "Gällande grundföreskrifter" plus the amending regulations in force | `.../foreskrifter/afs-20231/` | HTML, the latest consolidated version |
 | FFFS (Finansinspektionen) | `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/` (all regulations in force, newest first) | `.../sok-fffs/<year>/<yearnumber>/` | PDF only |
 | TSFS (Transportstyrelsen) | `.../ts-foreskrifter-i-nummerordning/<year>/` (in force and repealed) | `.../<year>/details?RuleNumber=<year>:<n>&ruleprefix=TSFS` | PDF only |
+| ÅFS (Åklagarmyndigheten) | `https://www.aklagare.se/om-oss/dokument/forfattningssamling` (cards with dates and tags) | none | PDF only |
+| STAFS (Swedac) | `https://regelverk.swedac.se/foreskrifter.json` (in force and repealed) | `.../<slug>.md` (consolidated where there is one) | Markdown |
+| PRVFS (PRV) | division A1, base regulations in force | none | PDF only |
+| PMFS, RPSFS (Polismyndigheten) | `https://polisen.se/lagar-och-regler/polismyndighetens-forfattningssamling/<page>/` | none | PDF only |
+| SCB-FS (SCB) | table of regulations on reporting duties | `/link/<id>.aspx` | HTML |
+| STEMFS (Energimyndigheten) | document archive, category Föreskrifter, 40 a page (crawl delay 10 s) | none | PDF only |
+| RFS (Riksdagsförvaltningen) | `https://data.riksdagen.se/dokumentlista/?doktyp=rfs&utformat=json` | `https://data.riksdagen.se/dokument/<dok_id>.html` | HTML (Fulltext) |
+| RA-FS (Riksarkivet) | `https://foreskrifter.riksarkivet.se/api/rafs/sok` (JSON, in force and repealed) | none | PDF only |
 
 - Only base regulations (grundförfattningar) are stored, in `corpus/agency/regulations/`.
   Amending regulations are counted as `excluded` and appear in the base regulation's
