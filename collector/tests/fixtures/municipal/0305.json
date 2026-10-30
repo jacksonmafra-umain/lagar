@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.habo.se/kommun-och-politik/kommunala-policys-planer-program-och-strategier/lokala-foreskrifter.html": "0305-listing.html",
+    "https://www.habo.se/kommun-och-politik/kommunala-policys-planer-program-och-strategier/taxor-och-avgifter.html": "0305-listing-2.html"
+  },
+  "count": 27,
+  "sample": {
+    "number": "18.17eac3cd19dd2802e43134a",
+    "title": "Håbo kommuns lokala ordningsstadga / ordningsföreskrifter",
+    "url": "https://www.habo.se/download/18.17eac3cd19dd2802e43134a/1777361050401/Allm%C3%A4nna%20lokala%20ordninfsf%C3%B6reskrifter%20f%C3%B6r%20H%C3%A5bo%20kommun,%20antagen%202026-04-15%20%C2%A7%2092.pdf"
+  },
+  "excluded": []
+}

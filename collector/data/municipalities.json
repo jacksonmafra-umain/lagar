@@ -588,6 +588,256 @@
       "number": [{"from": "href", "pattern": "/styrdokument/(?:[^/]+/)*([^/]+?)(?:\\.pdf)?$"}],
       "title_strip": ["\\s+PDF-dokument.*$", "\\s*\\.pdf\\s*$"]
     },
+    "0183": {
+      "name": "Sundbyberg",
+      "issuer": "Sundbybergs stad",
+      "region_code": "01",
+      "collection": "Styrande dokument",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.sundbyberg.se"],
+      "listings": [
+        "https://www.sundbyberg.se/kommun-och-politik/kommunfakta/styrande-dokument",
+        "https://www.sundbyberg.se/kommun-och-politik/kommunfakta/lokala-ordningsregler-i-sundbyberg"
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "\\btaxa",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b",
+        "program\\b",
+        "budget",
+        "revision",
+        "protokoll",
+        "arvode",
+        "f(ö|o)rbundsordning",
+        "ersättning",
+        "bakgrundsdokument",
+        "kriterier"
+      ]
+    },
+    "0184": {
+      "name": "Solna",
+      "issuer": "Solna stad",
+      "region_code": "01",
+      "collection": "Kommunala föreskrifter och styrdokument",
+      "preset": "sitevision",
+      "hosts": ["www.solna.se"],
+      "listings": [
+        "https://www.solna.se/om-solna-stad/styrning-och-organisation/kommunala-foreskrifter-och-styrdokument"
+      ],
+      "section_level": 2,
+      "sections": ["Föreskrifter Visa Dölj"]
+    },
+    "0187": {
+      "name": "Vaxholm",
+      "issuer": "Vaxholms stad",
+      "region_code": "01",
+      "collection": "Författningssamling och styrande dokument",
+      "preset": "sitevision",
+      "hosts": ["www.vaxholm.se"],
+      "listings": [
+        "https://www.vaxholm.se/kommun--politik/forfattningssamling-och--styrande-dokument/lokala-ordningsregler"
+      ]
+    },
+    "0188": {
+      "name": "Norrtälje",
+      "issuer": "Norrtälje kommun",
+      "region_code": "01",
+      "collection": "Författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.norrtalje.se"],
+      "listings": [
+        "https://www.norrtalje.se/info/kommun-och-politik/organisation-och-styrning/forfattningssamling/ordningsforeskrifter/"
+      ],
+      "link_pattern": "^https://www\\.norrtalje\\.se/globalassets/.*/dokument-foreskrifter/[^/?#]+\\.pdf$",
+      "number": [{"from": "href", "pattern": "/dokument-foreskrifter/([^/?#]+)\\.pdf$"}],
+      "title_strip": ["\\s*\\(pdf\\)\\s*$", "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"],
+      "title_exclude": ["arkivreglemente"]
+    },
+    "0192": {
+      "name": "Nynäshamn",
+      "issuer": "Nynäshamns kommun",
+      "region_code": "01",
+      "collection": "Författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["nynashamn.se"],
+      "listings": [
+        "https://nynashamn.se/service/organisation--styrning/ekonomi-och-styrning/forfattningssamling"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "pensionsförpliktelser",
+        "^Medgivande"
+      ]
+    },
+    "0305": {
+      "name": "Håbo",
+      "issuer": "Håbo kommun",
+      "region_code": "03",
+      "collection": "Kommunala policys, planer, program och strategier",
+      "preset": "sitevision",
+      "hosts": ["www.habo.se"],
+      "listings": [
+        "https://www.habo.se/kommun-och-politik/kommunala-policys-planer-program-och-strategier/lokala-foreskrifter.html",
+        "https://www.habo.se/kommun-och-politik/kommunala-policys-planer-program-och-strategier/taxor-och-avgifter.html"
+      ]
+    },
+    "0319": {
+      "name": "Älvkarleby",
+      "issuer": "Älvkarleby kommun",
+      "region_code": "03",
+      "collection": "Kommunala författningar",
+      "preset": "sitevision",
+      "hosts": ["www.alvkarleby.se"],
+      "listings": [
+        "https://www.alvkarleby.se/kommun-och-politik/planer-och-styrdokument/kommunala-forfattningar.html"
+      ],
+      "section_level": 2,
+      "sections": ["Lokala föreskrifter", "Taxor och avgifter"]
+    },
+    "0330": {
+      "name": "Knivsta",
+      "issuer": "Knivsta kommun",
+      "region_code": "03",
+      "collection": "Författningssamling",
+      "preset": "sitevision",
+      "hosts": ["knivsta.se"],
+      "listings": ["https://knivsta.se/politik-och-organisation/forfattningssamling"],
+      "section_level": 3,
+      "sections": ["Föreskrifter", "Taxor och avgifter"],
+      "title_exclude": ["^Avfallsplan", "^Prislista"]
+    },
+    "0331": {
+      "name": "Heby",
+      "issuer": "Heby kommun",
+      "region_code": "03",
+      "collection": "Styrande dokument",
+      "preset": "sitevision",
+      "hosts": ["www.heby.se"],
+      "listings": [
+        "https://www.heby.se/organisation-plats-och-politik/sammantraden-handlingar-och-styrande-dokument/styrande-dokument"
+      ],
+      "section_level": 2,
+      "sections": ["Taxor och avgifter", "Föreskrifter och stadgar"],
+      "title_exclude": ["Bilaga Mål och budget"],
+      "title_strip": [
+        "\\s*Länk till annan webbplats\\.?\\s*$",
+        "\\s*,?\\s*(\\(?\\s*)?(ö|o)ppnas i (ett )?nytt f(ö|o)nster\\.?\\)?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\.(pdf|docx?)\\s*$",
+        "\\.\\s*$"
+      ]
+    },
+    "0360": {
+      "name": "Tierp",
+      "issuer": "Tierps kommun",
+      "region_code": "03",
+      "collection": "Styrdokument, planer och taxor",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.tierp.se"],
+      "listings": [
+        "https://www.tierp.se/tierp.se/kommun-och-politik/styrdokument-planer-och-taxor/taxor-regler-och-avgifter.html"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "folkomröstning"
+      ]
+    },
     "1280": {
       "name": "Malmö",
       "issuer": "Malmö stad",

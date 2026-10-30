@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.solna.se/om-solna-stad/styrning-och-organisation/kommunala-foreskrifter-och-styrdokument": "0184-listing.html"
+  },
+  "count": 5,
+  "sample": {
+    "number": "18.d0f0f45191975c9554e9203",
+    "title": "Lokala ordningsföreskrifter",
+    "url": "https://www.solna.se/download/18.d0f0f45191975c9554e9203/1748600431083/Solna%20stads%20lokala%20ordningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": [
+    "Anhörigpolicy",
+    "Borgenspolicy",
+    "Energipolicy"
+  ]
+}

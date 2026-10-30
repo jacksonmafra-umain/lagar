@@ -1,0 +1,14 @@
+{
+  "listings": {
+    "https://www.norrtalje.se/info/kommun-och-politik/organisation-och-styrning/forfattningssamling/ordningsforeskrifter/": "0188-listing.html"
+  },
+  "count": 2,
+  "sample": {
+    "number": "lokala-ordningsforeskrifter-med-bilagor",
+    "title": "Lokala ordningsföreskrifter för Norrtälje kommun",
+    "url": "https://www.norrtalje.se/globalassets/dokument/dokument-kommun--politik/dokument-organisation-och-styrning/dokument-forfattningssamling/dokument-foreskrifter/lokala-ordningsforeskrifter-med-bilagor.pdf"
+  },
+  "excluded": [
+    "Tillämpningsföreskrifter för arkivreglementet i Norrtälje kommun"
+  ]
+}

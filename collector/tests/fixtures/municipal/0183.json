@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.sundbyberg.se/kommun-och-politik/kommunfakta/styrande-dokument": "0183-listing.html",
+    "https://www.sundbyberg.se/kommun-och-politik/kommunfakta/lokala-ordningsregler-i-sundbyberg": "0183-listing-2.html"
+  },
+  "count": 16,
+  "sample": {
+    "number": "18.418d62cd190a641494725075",
+    "title": "Avgifter vid tillståndsprövning för fristående förskolor",
+    "url": "https://www.sundbyberg.se/download/18.418d62cd190a641494725075/1722328970357/Avgifter%20f%C3%B6r%20tillst%C3%A5ndspr%C3%B6vning%20f%C3%B6r%20frist%C3%A5ende%20f%C3%B6rskolor%20-%20tillg%C3%A4nglighetsanpassad.pdf"
+  },
+  "excluded": [
+    "Reglemente för förskolenämnden",
+    "Riktlinjer för barnomsorg",
+    "Riktlinjer för barnomsorg på obekväm tid"
+  ]
+}
