@@ -41,6 +41,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Install poppler-utils
+        run: sudo apt-get update -q && sudo apt-get install -y -q --no-install-recommends poppler-utils
+
       - name: Collector tests
         run: python3 -I -m unittest discover -s collector/tests -t collector
 
