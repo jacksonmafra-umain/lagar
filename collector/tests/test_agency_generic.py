@@ -1,4 +1,5 @@
 import contextlib
+import html
 import io
 import json
 import tempfile
@@ -10,6 +11,10 @@ from tests.test_agency import FakeClient, fixture
 
 MIGRFS = agency.ADAPTERS["MIGRFS"]
 KAMFS = agency.ADAPTERS["KAMFS"]
+MDFFS = agency.ADAPTERS["MDFFS"]
+NFS = agency.ADAPTERS["NFS"]
+KIFS = agency.ADAPTERS["KIFS"]
+ELSAK = agency.ADAPTERS["ELSÄK-FS"]
 MIGRFS_PDF = "https://www.migrationsverket.se/download/18.{}/MIGRFS_{}.pdf"
 MIGRFS_14 = MIGRFS_PDF.format("58abfa671a11163de737ef/1792410229158", "2026_14")
 MIGRFS_8 = MIGRFS_PDF.format("7e7ff7f619e5ace55a73704/1781244264058", "2026_8")
@@ -82,6 +87,145 @@ class PdfListTest(unittest.TestCase):
             MIGRFS.parse_detail(b"<html>", entry)
         regulation = MIGRFS.parse_detail(b"%PDF-1.7", entry)
         self.assertEqual((regulation.number, regulation.pdfs), (entry.number, entry.pdfs))
+
+
+class DetailPageTest(unittest.TestCase):
+    def test_slug_numbers_and_quoted_queries(self):
+        self.assertEqual(NFS.slug_number("https://www.naturvardsverket.se/x/2026/nfs-20269/"), "NFS 2026:9")
+        self.assertEqual(NFS.slug_number("https://www.naturvardsverket.se/x/2026/nfs-20267-upphavande-av-y/"),
+                         "NFS 2026:7")
+        self.assertIsNone(NFS.slug_number("https://www.naturvardsverket.se/x/2026/"))
+        entries = ELSAK.parse_listing(
+            '<main><a href="/lag-och-ratt/foreskrifter/foreskrift?id=ELSÄK-FS 2022:3&lang=sv">ELSÄK-FS 2022:3</a></main>',
+            ELSAK.listing_url)
+        self.assertEqual(entries[0].url, "https://elsakerhetsverket.se/lag-och-ratt/foreskrifter/"
+                                         "foreskrift?id=ELS%C3%84K-FS%202022:3&lang=sv")
+
+    def test_listing_links_to_pages(self):
+        listing = """<main>
+          <a href="/om-oss/forfattningssamling/a-mdffs-20251/grundforfattning-mdffs-20251">Grundförfattning (MDFFS 2025:1)</a>
+          <a href="/om-oss/forfattningssamling/a-mdffs-20251/andringsforfattning-mdffs-20263">Ändringsförfattning (MDFFS 2026:3)</a>
+          <a href="/download/1/mdffs-2025-1.pdf">MDFFS 2025:1 (pdf)</a>
+        </main>"""
+        entries = MDFFS.parse_listing(listing, MDFFS.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("MDFFS 2025:1", True), ("MDFFS 2026:3", False)])
+        self.assertTrue(entries[0].url.endswith("/grundforfattning-mdffs-20251"))
+
+    def test_detail_with_html_text(self):
+        entry = agency.Entry(number="MDFFS 2025:1", title="Grundförfattning", url=MDFFS.listing_url + "/x")
+        regulation = MDFFS.parse_detail(fixture("agency-mdffs-detail.html"), entry)
+        self.assertTrue(regulation.title.startswith("Föreskrifter om krav på leverantörers ansökan"))
+        self.assertNotIn("MDFFS 2025:1", regulation.title)
+        self.assertEqual(regulation.issued, "2025-04-15")
+        self.assertIn("### Föreskriftens innehåll", regulation.text)
+        self.assertIn("1 § Denna föreskrift", regulation.text)
+        self.assertNotIn("Start", regulation.text)
+
+    def test_detail_pdfs_title_prefix_and_amending(self):
+        page = """<main><h1>KIFS 2017:7 om kemiska produkter</h1>
+          <a href="/download/1/KIFS-2017-7-konsoliderad.pdf">KIFS 2017:7 konsoliderad (PDF 582 kB) pdf, 582 kB.</a>
+          <a href="/download/2/KIFS-2026-3.pdf">KIFS 2026:3 pdf, 98.2 kB.</a>
+          <a href="/download/3/pm-konsekvensutredning-KIFS-2026-3.pdf">PM om konsekvensutredning pdf, 9 kB.</a>
+        </main>"""
+        entry = agency.Entry(number="KIFS 2017:7", title="Gå till", url=KIFS.listing_url + "/kifs-20177")
+        regulation = KIFS.parse_detail(page, entry)
+        self.assertEqual(regulation.title, "Kemikalieinspektionens föreskrifter om kemiska produkter")
+        self.assertEqual([label for label, _ in regulation.pdfs], ["KIFS 2017:7 konsoliderad", "KIFS 2026:3"])
+        with self.assertRaises(ValueError):
+            KIFS.parse_detail(page.replace("2017:7", "2017:9"), entry)
+        nfs = agency.Entry(number="NFS 2014:29", title="NFS 2014:29", url="https://www.naturvardsverket.se/x/")
+        with self.assertRaises(agency.NotBase):
+            NFS.parse_detail("<main>ÄndringNaturvårdsverkets förteckning (NFS 2014:29)<h1>Förteckning</h1></main>", nfs)
+
+    def test_sitemap_listing(self):
+        sitemap = """<urlset>
+          <url><loc>https://www.naturvardsverket.se/lagar-och-regler/foreskrifter-och-allmanna-rad/2026/nfs-20269/</loc></url>
+          <url><loc>https://www.naturvardsverket.se/lagar-och-regler/foreskrifter-och-allmanna-rad/2014/nfs-201429/</loc></url>
+          <url><loc>https://www.naturvardsverket.se/lagar-och-regler/foreskrifter-och-allmanna-rad/2014/nfs-201429/bilaga/</loc></url>
+          <url><loc>https://www.naturvardsverket.se/amnesomraden/nfs-20101/</loc></url>
+        </urlset>"""
+        entries = NFS.parse_listing(sitemap, NFS.listing_url)
+        self.assertEqual([e.number for e in entries], ["NFS 2026:9", "NFS 2014:29"])
+        page = """<main>GrundföreskriftFöreskrifter om förpackningar (Upphävd: 2023-12-31)<h1>Föreskrifter om förpackningar</h1>
+          <a href="/4ac54c/globalassets/nfs/2020/nfs-2020-8.pdf">Ladda ner (719,75 KB)</a></main>"""
+        regulation = NFS.parse_detail(page, agency.Entry(number="NFS 2020:8", title="NFS 2020:8", url="u"))
+        self.assertEqual((regulation.title, regulation.repealed), ("Föreskrifter om förpackningar", "2023-12-31"))
+        with self.assertRaises(ValueError):
+            NFS.parse_detail(page, agency.Entry(number="NFS 2020:9", title="NFS 2020:9", url="u"))
+        self.assertEqual(agency_generic.issued_date("beslutade den 1 januari 2027."), "2027-01-01")
+
+
+def _props(data):
+    return html.escape(json.dumps(data, ensure_ascii=False), quote=True)
+
+
+class FkfsTest(unittest.TestCase):
+    FKFS = agency.ADAPTERS["FKFS"]
+
+    def test_register_and_document(self):
+        register = {"incrementBy": "10", "viewUrl": "/foreskrifter/dokument", "documents": [
+            {"nummer": "2026:9", "titel": "Försäkringskassans föreskrifter om krav", "id": "18.a",
+             "isChangeDocument": False, "upphavdDatum": None, "forfattningssamling": "FKFS"},
+            {"nummer": "2025:3", "titel": "Förordning om upphävande av Försäkringskassans föreskrifter (FKFS 2014:3)",
+             "id": "18.b", "isChangeDocument": False, "upphavdDatum": None, "forfattningssamling": "FKFS"},
+            {"nummer": "2004:1", "titel": "Riksförsäkringsverkets föreskrifter", "id": "18.c",
+             "isChangeDocument": False, "upphavdDatum": None, "forfattningssamling": "RFFS"},
+        ]}
+        entries = self.FKFS.parse_listing(f'<div data-props="{_props(register)}"></div>', self.FKFS.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("FKFS 2026:9", True), ("FKFS 2025:3", False)])
+        self.assertEqual(entries[0].url, "https://lagrummet.forsakringskassan.se/foreskrifter/dokument?id=18.a")
+
+        def meta(**values):
+            return {k: {"value": v} for k, v in values.items()}
+
+        document = {
+            "baseDocument": {"url": "/download/18.a/1/GFKFS2609.pdf", "headline": "x", "metadata": meta(
+                titel="Försäkringskassans föreskrifter om krav", dokument_nr="2026:9", beslutsdatum="2026-10-05",
+                ikrafttradande="2026-11-02", tryckdatum="2026-10-08", upphavd_datum="")},
+            "currentDocument": {"url": "/download/18.k/1/KFKFS2609.pdf"},
+            "changeDocuments": [{"url": "/download/18.d/1/AFKFS2701.pdf", "metadata": meta(
+                dokument_nr="2027:1", forfattningssamling="FKFS", ikrafttradande="2027-02-01")}],
+        }
+        regulation = self.FKFS.parse_detail(f'<div data-props="{_props(document)}"></div>', entries[0])
+        self.assertEqual((regulation.issued, regulation.in_force, regulation.published, regulation.repealed),
+                         ("2026-10-05", "2026-11-02", "2026-10-08", None))
+        self.assertEqual(regulation.amended_by, ["FKFS 2027:1"])
+        self.assertEqual([label for label, _ in regulation.pdfs],
+                         ["FKFS 2026:9", "FKFS 2026:9 (konsoliderad version)", "FKFS 2027:1"])
+        with self.assertRaises(ValueError):
+            self.FKFS.parse_detail(f'<div data-props="{_props(document)}"></div>', entries[1])
+
+
+class AffsTest(unittest.TestCase):
+    AFFS = agency.ADAPTERS["AFFS"]
+
+    def test_state_listing_and_html_text(self):
+        state = {"returnObject": {"list": [
+            {"displayName": "AFFS 2025:1", "URI": "/om-oss/x/gallande-forfattningar/affs-20251",
+             "description": "Hur en sökande ska vara anmäld, föreskrifter"},
+            {"displayName": "AFFS 2025: 2", "URI": "/om-oss/x/gallande-forfattningar/affs-2025-2",
+             "description": "Om ändring i föreskrifterna om statsbidrag, föreskrifter"},
+            {"displayName": "AMSFS 1996:7", "URI": "/om-oss/x/amsfs-19967", "description": "Äldre"},
+        ]}}
+        listing = (f"<script>AppRegistry.registerInitialState('12.3',{json.dumps(state, ensure_ascii=False)});"
+                   "</script>")
+        entries = self.AFFS.parse_listing(listing, self.AFFS.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("AFFS 2025:1", True), ("AFFS 2025:2", False)])
+        page = """<main>
+          <div class="sv-text-portlet"><div id="Rubrik"></div><div class="sv-text-portlet-content"><h1>AFFS 2025:1</h1></div></div>
+          <div class="sv-text-portlet"><div id="Beskrivning"></div><div class="sv-text-portlet-content">
+            <p class="ingress">Arbetsförmedlingens föreskrifter om anmälan, föreskrifter</p></div></div>
+          <div class="sv-text-portlet"><div id="Fakta"></div><div class="sv-text-portlet-content"><p>
+            <strong>Beslutade:</strong> Den 20 maj 2025<br><strong>Utkom från trycket:</strong> Den 3 juni 2025</p></div></div>
+          <div class="sv-text-portlet"><div id="Innehall"></div><div class="sv-text-portlet-content">
+            <h2>Inledande bestämmelse</h2><p><strong>1 </strong><strong>§</strong> Dessa föreskrifter gäller.</p></div></div>
+          <a href="/download/1/AFFS-2025-1.pdf">AFFS 2025:1, ursprunglig lydelse pdf, 75 kB.</a>
+        </main>"""
+        regulation = self.AFFS.parse_detail(page, entries[0])
+        self.assertEqual(regulation.title, "Arbetsförmedlingens föreskrifter om anmälan")
+        self.assertEqual((regulation.issued, regulation.published), ("2025-05-20", "2025-06-03"))
+        self.assertEqual(regulation.text, "### Inledande bestämmelse\n\n**1 §** Dessa föreskrifter gäller.")
+        self.assertEqual(regulation.pdfs[0][0], "AFFS 2025:1, ursprunglig lydelse")
 
 
 class RunTest(unittest.TestCase):
