@@ -492,6 +492,14 @@ class SitevisionPresetTest(unittest.TestCase):
         self.assertTrue(municipal.binds_residents(kommun, "Livsmedelstaxa"))
         self.assertFalse(municipal.binds_residents(kommun, "Taxonomi för arkivet"))
 
+    def test_decomposed_titles_are_normalised_before_filtering(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(sitevision_config(tmp))["0120"]
+        decomposed = "A\u0308gardirektiv fo\u0308r bolaget.pdf"
+        self.assertEqual(municipal._title(kommun, decomposed), "Ägardirektiv för bolaget")
+        self.assertFalse(municipal.binds_residents(kommun, municipal._title(kommun, decomposed)))
+        self.assertTrue(municipal.binds_residents(kommun, municipal._title(kommun, "Avfallsfo\u0308reskrifter")))
+
     def test_unknown_preset_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(municipal.ConfigError):
