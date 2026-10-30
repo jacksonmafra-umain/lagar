@@ -349,6 +349,18 @@ class RawLinkTest(unittest.TestCase):
         )
         self.assertEqual(entries[0].number, "KFS 2024:3")
 
+    def test_reference_without_semicolon_stays_literal(self):
+        parser = municipal._PageLinks()
+        parser.feed(
+            '<a href="/rest-api/graph-service/preview?documentId=01B&currentPageId=4.6b&amp;name=Taxa.pdf">'
+            "Taxa</a><a href='/x?a=1&#38;b=2'>X</a>"
+        )
+        parser.close()
+        self.assertEqual([href for href, _ in parser.links], [
+            "/rest-api/graph-service/preview?documentId=01B&currentPageId=4.6b&name=Taxa.pdf",
+            "/x?a=1&b=2",
+        ])
+
 
 class GoteborgTest(unittest.TestCase):
     def test_view_keeps_regulations_and_fees_once(self):
