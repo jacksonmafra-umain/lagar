@@ -630,6 +630,27 @@ class RunTest(unittest.TestCase):
         self.assertEqual(self.main(FakeClient(pages), "--series", "FFFS"), 0)
         self.assertEqual(self.read_report()["failed"], ["FFFS 2015:1"])
 
+    def test_later_non_pdf_file_is_noted_not_linked(self):
+        pages = {
+            FFFS.listing_url: fixture("agency-fffs-listing.html").encode(),
+            FFFS_DETAIL: fixture("agency-fffs-detail.html").encode(),
+            FFFS_PDFS[0]: b"%PDF-1.7",
+            FFFS_PDFS[1]: b"\xd0\xcf\x11\xe0 word",
+        }
+        self.assertEqual(self.main(FakeClient(pages), "--series", "FFFS"), 0)
+        self.assertEqual(self.read_report()["written"], ["FFFS 2015:1"])
+        files = json.loads(self.manifest.read_text(encoding="utf-8"))["entries"][0]["files"]
+        self.assertEqual([(f["sha256"] is None, f.get("note")) for f in files],
+                         [(False, None), (True, "not a PDF; not kept")])
+        body = (self.corpus / "agency" / "regulations" / "fffs-2015-1.md").read_text(encoding="utf-8")
+        self.assertNotIn(FFFS_PDFS[1], body)
+        # A later run that reuses the manifest entry still leaves the file out.
+        self.state.unlink()
+        self.assertEqual(self.main(FakeClient(pages), "--series", "FFFS"), 0)
+        self.assertEqual(self.read_report()["pdfs"], 0)
+        body = (self.corpus / "agency" / "regulations" / "fffs-2015-1.md").read_text(encoding="utf-8")
+        self.assertNotIn(FFFS_PDFS[1], body)
+
     def test_tsfs_reads_only_the_requested_year(self):
         pages = {TSFS_2025: fixture("agency-tsfs-listing.html").encode()}
         client = FakeClient(pages)
