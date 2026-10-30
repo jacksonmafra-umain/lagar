@@ -1,11 +1,12 @@
 name: Sync agencies log
 
 # Weekly refresh of the sources the agencies log is built from: lagrummet.se's
-# rättskällor index (every agency series and legal source, with its official
-# link) and the court list of the rättspraxis API. AGENCIES.md, its JSON report
-# and the landing page catalog are regenerated; changes land as one pull request
-# on the data/agencies-sync branch, and a run with no changes opens nothing.
-# The daily and weekly corpus syncs regenerate the same files offline.
+# rättskällor index (every agency series and legal source, with its official link) and
+# the court list of the rättspraxis API. AGENCIES.md, its JSON report and the landing
+# page catalog are regenerated; changes land as one pull request on the
+# data/agencies-sync branch. The job merges that pull request into main once its
+# collector tests and the corpus audit pass; a run with no changes opens nothing. The
+# daily and weekly corpus syncs regenerate the same files offline.
 
 on:
   schedule:
@@ -80,3 +81,31 @@ jobs:
               --assignee "$OWNER" \
               --body "Automated weekly refresh of the agencies log: lagrummet.se's rättskällor index and the rättspraxis court list. The run summary lists entries the curated list does not know yet; classify them in collector/data/agencies.json."
           fi
+
+      - name: Merge the pull request into main
+        run: |
+          # Land the sync on main once this job's collector tests and the corpus audit have
+          # passed. A sync pull request left open by an earlier run is merged the same way.
+          pr=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then
+            echo "No open sync pull request; nothing to merge."
+            exit 0
+          fi
+          # The start step may have merged main into an older sync branch without pushing it.
+          git fetch -q origin "$BRANCH"
+          if [ "$(git branch --show-current)" = "$BRANCH" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
+            git push --force-with-lease="$BRANCH:$(git rev-parse FETCH_HEAD)" origin "HEAD:$BRANCH"
+          fi
+          python3 -I collector/audit.py
+          head=$(git ls-remote origin "refs/heads/$BRANCH" | cut -f1)
+          # GitHub may need a moment to compute mergeability of a pull request it just got.
+          for attempt in 1 2 3 4 5 6; do
+            if gh pr merge "$pr" --merge --match-head-commit "$head"; then
+              git push origin --delete "$BRANCH" || true
+              echo "Merged #$pr into main." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "::error::could not merge #$pr into main; it stays open for the next run"
+          exit 1
