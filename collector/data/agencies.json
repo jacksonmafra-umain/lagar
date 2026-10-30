@@ -32,8 +32,8 @@
     "aklagarmyndighetens-forfattningssamling-afs": {
       "series": "ÅFS",
       "agency": "Åklagarmyndigheten",
-      "status": "collected_pdf",
-      "note": "Base regulations in force from the cards on Åklagarmyndigheten's ÅFS page, with decision and publication dates; repealed regulations and notices are not stored, and the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations in force from the cards on Åklagarmyndigheten's ÅFS page, with decision and publication dates; repealed regulations and notices are not stored, and; text from the PDFs."
     },
     "myndigheten-for-yrkeshogskolans-forfattningssamling-myhfs": {
       "series": "MYHFS",
@@ -52,8 +52,8 @@
     "sveriges-geologiska-undersoknings-forfattningssamling-sgu-fs": {
       "series": "SGU-FS",
       "agency": "Sveriges geologiska undersökning",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Sveriges geologiska undersökning's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Sveriges geologiska undersökning's regulation page; text from the PDFs."
     },
     "kustbevakningens-forfattningssamling-kbvfs": {
       "series": "KBVFS",
@@ -62,8 +62,8 @@
     "statens-energimyndighets-forfattningssamling-stemfs": {
       "series": "STEMFS",
       "agency": "Statens energimyndighet",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Statens energimyndighet's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Statens energimyndighet's regulation page; text from the PDFs."
     },
     "styrelsens-for-ackreditering-och-teknisk-kontroll-swedac-forfattningssamling-stafs": {
       "series": "STAFS",
@@ -74,8 +74,8 @@
     "riksarkivets-forfattningssamling-ra-fs": {
       "series": "RA-FS",
       "agency": "Riksarkivet",
-      "status": "collected_pdf",
-      "note": "Base regulations in force and repealed, from the JSON API behind foreskrifter.riksarkivet.se; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations in force and repealed, from the JSON API behind foreskrifter.riksarkivet.se; text from the PDFs."
     },
     "konsumentverkets-forfattningssamling-kovfs": {
       "series": "KOVFS",
@@ -104,8 +104,8 @@
     "tillvaxtverkets-forfattningssamling-tvfs": {
       "series": "TVFS",
       "agency": "Tillväxtverket",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Tillväxtverket's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Tillväxtverket's regulation page; text from the PDFs."
     },
     "skatteverkets-forfattningssamling-skvfs": {
       "series": "SKVFS",
@@ -122,8 +122,8 @@
     "statens-institutionsstyrelses-forfattningssamling-sisfs": {
       "series": "SiSFS",
       "agency": "Statens institutionsstyrelse",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Statens institutionsstyrelse's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Statens institutionsstyrelse's regulation page; text from the PDFs."
     },
     "bokforingsnamndens-allmanna-rad-bfnar": {
       "series": "BFNAR",
@@ -210,13 +210,13 @@
     "patent-och-registreringsverkets-forfattningssamling-prvfs": {
       "series": "PRVFS",
       "agency": "Patent- och registreringsverket",
-      "status": "collected_pdf",
-      "note": "Base regulations in force from PRV's division A1, with links to amending regulations; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations in force from PRV's division A1, with links to amending regulations; text from the PDFs."
     },
     "polismyndighetens-forfattningssamling-pmfs": {
       "series": "PMFS",
       "agency": "Polismyndigheten",
-      "status": "collected_pdf",
+      "status": "collected",
       "note": "Regulations in force from Polismyndigheten's paginated list, with entry into force, amendments and consolidated versions; it also holds Rikspolisstyrelsen's RPSFS regulations still in force, stored with their RPSFS numbers. The text is published only as PDF."
     },
     "post-och-telestyrelsens-forfattningssamling-ptsfs": {
@@ -228,8 +228,8 @@
     "revisorsinspektionens-forfattningssamling-rifs": {
       "series": "RIFS",
       "agency": "Revisorsinspektionen",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Revisorsinspektionen's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Revisorsinspektionen's regulation page; text from the PDFs."
     },
     "riksdagsforvaltningens-forfattningssamling-rfs": {
       "series": "RFS",
@@ -240,7 +240,7 @@
     "sjofartsverkets-forfattningssamling-sjofs": {
       "series": "SJÖFS",
       "agency": "Sjöfartsverket",
-      "status": "collected_pdf",
+      "status": "collected",
       "note": "Base regulations in force from Sjöfartsverket's systematic list (one page per subject), with amendments and PDF links."
     },
     "spelinspektionens-forfattningssamling-sifs": {
@@ -268,8 +268,8 @@
     "stralsakerhetsmyndighetens-forfattningssamling-ssmfs": {
       "series": "SSMFS",
       "agency": "Strålsäkerhetsmyndigheten",
-      "status": "collected_pdf",
-      "note": "Base regulations in force from Strålsäkerhetsmyndigheten's regulation page, each with its own page linking the original and consolidated PDFs and the amendments; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations in force from Strålsäkerhetsmyndigheten's regulation page, each with its own page linking the original and consolidated PDFs and the amendments; text from the PDFs."
     },
     "svenska-kraftnats-forfattningssamling-svkfs": {
       "series": "SvKFS",
@@ -278,8 +278,8 @@
     "trafikverkets-forfattningssamling-trvfs": {
       "series": "TRVFS",
       "agency": "Trafikverket",
-      "status": "collected_pdf",
-      "note": "Regulations from Trafikverket's search form, year by year, without the road-specific speed regulations; the text is published only as PDF."
+      "status": "collected",
+      "note": "Regulations from Trafikverket's search form, year by year, without the road-specific speed regulations; text from the PDFs."
     },
     "transportstyrelsens-forfattningssamling-tsfs": {
       "series": "TSFS",
@@ -290,14 +290,14 @@
     "universitets-och-hogskoleradets-forfattningssamling-uhrfs": {
       "series": "UHRFS",
       "agency": "Universitets- och högskolerådet",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Universitets- och högskolerådet's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Universitets- och högskolerådet's regulation page; text from the PDFs."
     },
     "vetenskapsradets-forfattningssamling-vrfs": {
       "series": "VRFS",
       "agency": "Vetenskapsrådet",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Vetenskapsrådet's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Vetenskapsrådet's regulation page; text from the PDFs."
     },
     "forsakringskassans-forfattningssamling-fkfs": {
       "series": "FKFS",
@@ -335,20 +335,20 @@
     "skogsstyrelsens-forfattningssamling-sksfs": {
       "series": "SKSFS",
       "agency": "Skogsstyrelsen",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Skogsstyrelsen's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Skogsstyrelsen's regulation page; text from the PDFs."
     },
     "riksgaldskontorets-forfattningssamling-rgkfs": {
       "series": "RGKFS",
       "agency": "Riksgäldskontoret",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Riksgäldskontoret's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Riksgäldskontoret's regulation page; text from the PDFs."
     },
     "upphandlingmyndighetens-forfattningssamling-ufs": {
       "series": "UFS",
       "agency": "Upphandlingsmyndigheten",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Upphandlingsmyndigheten's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Upphandlingsmyndigheten's regulation page; text from the PDFs."
     },
     "forsvarets-forfattningssamling-ffs": {
       "series": "FFS",
@@ -363,8 +363,8 @@
     "valmyndighetens-forfattningssamling-valfs": {
       "series": "VALFS",
       "agency": "Valmyndigheten",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Valmyndigheten's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Valmyndigheten's regulation page; text from the PDFs."
     },
     "kriminalvardens-forfattningssamling-kvfs": {
       "series": "KVFS",
@@ -383,8 +383,8 @@
     "pensionsmyndighetens-forfattningssamling-pfs": {
       "series": "PFS",
       "agency": "Pensionsmyndigheten",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Pensionsmyndigheten's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Pensionsmyndigheten's regulation page; text from the PDFs."
     }
   },
   "shared": {
