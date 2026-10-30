@@ -401,6 +401,19 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             trv.parse_detail(fixture("agency-trvfs-2025-2.html"), entries[0])
 
+    def test_listed_aliases_and_curated_numbers(self):
+        listing = (
+            '<a href="/download/1/trmfs-2017_1.pdf">Föreskrifter om totalförsvarsplikt (TRMFS 2017:1) pdf, 281 kB.</a>'
+            '<a href="/download/2/TPPV%20F%C3%B6reskrifter%20om%20f%C3%B6rm%C3%A5ner_slutlig.pdf">'
+            'Föreskrifter och allmänna råd om förmåner pdf, 300 kB.</a>'
+            '<a href="/download/3/other.pdf">Föreskrifter utan nummer</a>')
+        adapter = agency.ListedAdapter("TPPVFS", "Pliktverket", ["https://www.example.se/foreskrifter"],
+                                       aliases=["TRMFS"],
+                                       numbers={"TPPV Föreskrifter om förmåner_slutlig.pdf": "TPPVFS 2024:1"})
+        entries = adapter.parse_listing(listing, adapter.listing_url)
+        self.assertEqual([e.number for e in entries], ["TRMFS 2017:1", "TPPVFS 2024:1"])
+        self.assertEqual(entries[0].title, "Föreskrifter om totalförsvarsplikt")
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

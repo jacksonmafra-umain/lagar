@@ -1478,7 +1478,7 @@ class ListedAdapter:
     has_text = False
 
     def __init__(self, series, issuer, listing_urls, prefix=None, exclude=None, separator=None, base_href=None,
-                 detail_pages=False, documents=None):
+                 detail_pages=False, documents=None, aliases=(), numbers=None):
         self.series = series
         self.issuer = issuer
         self.urls = list(listing_urls)
@@ -1498,16 +1498,27 @@ class ListedAdapter:
         # The listing links to one page per base regulation, which links to its PDFs.
         self.detail = detail_pages
         self.documents = re.compile(documents, re.I) if documents else _DOCUMENT_HREF
+        # Predecessor series the agency still lists, stored under their own prefix (TRMFS on Pliktverket's page).
+        self.aliases = re.compile(rf"(?<![A-Za-zÅÄÖåäö])({'|'.join(map(re.escape, aliases))})\s?(\d{{4}}):(\d+)(?!\d)"
+                                  ) if aliases else None
+        # Numbers read by hand from PDFs whose link and file name carry none: {file name: number}.
+        self.numbers = dict(numbers or {})
 
     def listing_urls(self, args):
         return list(self.urls)
 
     def _numbers(self, text):
-        return [(m.start(), f"{self.series} {m.group(1)}:{int(m.group(2))}") for m in self.number.finditer(text)]
+        found = [(m.start(), f"{self.series} {m.group(1)}:{int(m.group(2))}") for m in self.number.finditer(text)]
+        if self.aliases is not None:
+            found += [(m.start(), f"{m.group(1)} {m.group(2)}:{int(m.group(3))}") for m in self.aliases.finditer(text)]
+        return sorted(found)
 
     def _file_number(self, href):
         name = urllib.parse.unquote_plus(urllib.parse.urlsplit(href).path).lower()
         name = name.rsplit("/", 1)[-1] or name
+        for known, number in self.numbers.items():
+            if known.lower() == name:
+                return number
         match = self.file_number.search(name) or self.file_number.search(urllib.parse.unquote_plus(href).lower())
         if match is None:
             return None
@@ -1522,6 +1533,9 @@ class ListedAdapter:
         for _, found in self._numbers(title)[:1]:
             if found == number:
                 title = self.number.sub("", title, count=1)
+        if self.aliases is not None:
+            title = self.aliases.sub(lambda m: "" if f"{m.group(1)} {m.group(2)}:{int(m.group(3))}" == number
+                                     else m.group(0), title).replace("()", "").replace("( )", "")
         title = _clean(re.sub(r"\s+([,.])", r"\1", title)).strip(" -–,:")
         return title or number
 
@@ -1664,7 +1678,8 @@ def load_series(path=SERIES_CONFIG):
         return {}
     return {code: ListedAdapter(code, item["issuer"], item["listing_urls"], item.get("prefix"),
                                 item.get("exclude"), item.get("separator"), item.get("base_href"),
-                                item.get("detail_pages", False), item.get("documents"))
+                                item.get("detail_pages", False), item.get("documents"), item.get("aliases", ()),
+                                item.get("numbers"))
             for code, item in data["series"].items() if item.get("listing_urls")}
 
 
