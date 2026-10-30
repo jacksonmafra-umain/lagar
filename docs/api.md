@@ -372,7 +372,7 @@ Group object:
 | `id` | string | no | group id; today always the layer id, and the group's files are under `search/<id>/` |
 | `layers` | array of string | no | layers whose documents the group holds; today one, `[<id>]`. Clients pick groups by this list, not by `id` |
 | `doc_count` | integer | no | rows in the group's `docs.json` |
-| `fields` | array of string | no | indexed fields: `title`, `number`, and `body` when the group fits its budget (Size budget below) |
+| `fields` | array of string | no | indexed fields: `title`, `number`, and `body` when the group fits its budget (Size budget below); for `case_law`, `body` is the decision header only (Size budget below) |
 | `bytes` | integer | no | size of the group's files (manifest, `docs.json` and shards), uncompressed |
 | `budget` | integer | no | the group's budget in bytes |
 
@@ -458,9 +458,17 @@ matches.
 Each group gets body text only when the whole group (manifest, `docs.json`
 and shards, uncompressed) fits its budget; otherwise that group falls back to
 titles and numbers and its `fields` say so, while other groups keep their
-bodies. Budgets live in `api/searchindex.py`: `case_law` 80 MB, every other
-layer 40 MB. The frontmatter has no summary field yet, so titles and numbers
-are the only metadata indexed.
+bodies. Budgets live in `api/searchindex.py`: 40 MB per layer. The
+frontmatter has no summary field yet, so titles and numbers are the only
+metadata indexed.
+
+Case-law bodies are indexed only up to their `## Referat` heading
+(`BODY_END` in `api/searchindex.py`): the decision header with court, date,
+case numbers, summary (`## Sammanfattning`), cited provisions (`## Lagrum`),
+keywords (`## Nyckelord`), references and preparatory works. The referat text
+itself is not indexed; it was about 80 % of the whole search index (47 MB of
+the 57.6 MB `case_law` group on 2026-10-30). Notices without a referat
+heading are indexed whole.
 
 Measured on the full corpus (27 901 documents, built 2026-10-29):
 

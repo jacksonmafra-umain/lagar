@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://gallivare.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument": "2523-listing1.html",
+    "https://gallivare.se/kommun-och-politik/kommunfakta/ekonomi-och-budget/avgifter-och-taxor": "2523-listing2.html"
+  },
+  "count": 60,
+  "sample": {
+    "number": "18.5dae8706191786e54364abda",
+    "title": "Föreskrift ABVA",
+    "url": "https://gallivare.se/download/18.5dae8706191786e54364abda/1724658607162/F%C3%B6reskrift%20ABVA.pdf"
+  },
+  "excluded": []
+}

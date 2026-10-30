@@ -1,0 +1,18 @@
+{
+  "listings": {
+    "https://www.svalov.se/kommun--politik/forfattningssamling/bestammelser-som-riktar-sig-till-dig-som-medborgare": "1214-listing.html",
+    "https://www.svalov.se/kommun--politik/forfattningssamling/taxor-och-avgifter": "1214-listing-2.html",
+    "https://www.svalov.se/kommun--politik/forfattningssamling": "1214-listing-3.html"
+  },
+  "count": 27,
+  "sample": {
+    "number": "18.20fcfed19a333e712ef6b7",
+    "title": "Föreskrifter för gångbanerenhållning, med karta",
+    "url": "https://www.svalov.se/download/18.20fcfed19a333e712ef6b7/1761815279122/%C3%85l%C3%A4ggande%20om%20g%C3%A5ngbanerenh%C3%A5llning%20+%20karta.pdf"
+  },
+  "excluded": [
+    "Avfallsplan",
+    "Parkeringsriktlinjer för Svalövs kommun",
+    "Riktlinjer för serveringstillstånd/alkoholservering i Svalövs kommun"
+  ]
+}

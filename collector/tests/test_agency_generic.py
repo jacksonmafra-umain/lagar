@@ -88,6 +88,70 @@ class PdfListTest(unittest.TestCase):
         self.assertEqual((regulation.number, regulation.title, regulation.pdfs), (entry.number, entry.title, entry.pdfs))
 
 
+class SectionedListTest(unittest.TestCase):
+    def test_table_rows_with_consolidated_column(self):
+        bfnar = agency.ADAPTERS["BFNAR"]
+        listing = """<table><tr><td>Allmänna råd</td><td>Grundtext</td><th>Konsoliderad version</th></tr>
+          <tr><td>BFNAR 2026:2</td><td><a href="/u/bfnar-2026-2.pdf">Ändringar i Bokföringsnämndens allmänna råd
+            (BFNAR 2006:11) om gränsvärden</a></td><th></th></tr>
+          <tr><td>BFNAR 2006:11</td><td><a href="/u/bfnar06-11-grund.pdf">Gränsvärden</a></td>
+            <th><a href="/u/bfnar06-11-kons3.pdf">konsoliderad version</a></th></tr></table>"""
+        entries = bfnar.parse_listing(listing, bfnar.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("BFNAR 2026:2", False), ("BFNAR 2006:11", True)])
+        base = entries[1]
+        self.assertEqual((base.title, base.amended_by), ("Gränsvärden", ["BFNAR 2026:2"]))
+        self.assertEqual(base.url, "https://www.bfn.se/u/bfnar06-11-grund.pdf")
+        self.assertEqual([label for label, _ in base.pdfs], ["BFNAR 2006:11", "BFNAR 2006:11 (konsoliderad version)"])
+
+    def test_items_under_consolidated_and_printed_headings(self):
+        csnfs = agency.ADAPTERS["CSNFS"]
+        listing = """<main><h3>Studiehjälp</h3>
+          <h3><a href="#">Fulltext - studiehjälp</a></h3>
+          <ul><li><a href="/download/1/2001-6-2023-4.pdf">2001:6 Centrala studiestödsnämndens föreskrifter och
+            allmänna råd om studiehjälp Pdf, 417 kB.</a> · 417 kB</li></ul>
+          <h3><a href="#">Tryckt version - studiehjälp</a></h3>
+          <ul><li><a href="/download/2/2001:6%20CSN.pdf">2001:6 Centrala studiestödsnämndens föreskrifter och
+            allmänna råd om studiehjälp Pdf, 112 kB.</a> · 112 kB</li>
+          <li><a href="/download/3/2001:6%20R%C3%A4ttelseblad.pdf">2001:6 Rättelseblad Pdf, 466 kB.</a></li>
+          <li><a href="/download/4/2023:4%20%C3%84ndring.pdf">2023:4 Ändring Pdf, 176 kB.</a></li></ul></main>"""
+        entries = csnfs.parse_listing(listing, csnfs.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("CSNFS 2001:6", True), ("CSNFS 2023:4", False)])
+        base = entries[0]
+        self.assertEqual(base.title, "Centrala studiestödsnämndens föreskrifter och allmänna råd om studiehjälp")
+        self.assertEqual(base.url, "https://www.csn.se/download/2/2001:6%20CSN.pdf")  # as issued, not consolidated
+        self.assertEqual(base.pdfs, [("CSNFS 2001:6 (konsoliderad version)", "https://www.csn.se/download/1/2001-6-2023-4.pdf"),
+                                     ("CSNFS 2001:6", "https://www.csn.se/download/2/2001:6%20CSN.pdf")])
+
+    def test_heading_groups_skip_repealed_and_link_bare_references(self):
+        lmfs = agency.ADAPTERS["LMFS"]
+        listing = """<main><h2>Gällande föreskrifter</h2>
+          <h3>LMFS 2026:3</h3><p>Lantmäteriets föreskrifter om ändringar i Lantmäteriets föreskrifter (2022:4) om
+            avgifter.</p><p><a href="/f/andringsforeskrift-lmfs-2026-3.pdf">LMFS 2026:3 (pdf, nytt fönster)</a></p>
+          <h3>LMFS 2022:4</h3><p>Lantmäteriets föreskrifter om avgifter.</p>
+            <p><a href="/f/lmfs-2022-4.pdf">LMFS 2022:4 (pdf, nytt fönster)</a></p>
+          <h2>Upphävda föreskrifter</h2>
+          <h3>LMFS 2015:1</h3><p>Lantmäteriets föreskrifter om avgifter.</p>
+            <p><a href="/f/lmfs_151.pdf">LMFS 2015:1 (pdf, nytt fönster)</a></p></main>"""
+        entries = lmfs.parse_listing(listing, lmfs.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("LMFS 2026:3", False), ("LMFS 2022:4", True)])
+        self.assertEqual(entries[1].title, "Lantmäteriets föreskrifter om avgifter")
+        self.assertEqual(entries[1].amended_by, ["LMFS 2026:3"])
+
+    def test_link_groups_take_the_title_after_the_link(self):
+        imyfs = agency.ADAPTERS["IMYFS"]
+        listing = """<main><h2>Föreskrifter</h2>
+          <p><a href="/link/1.aspx">IMYFS 2024:1 (pdf, 3 MB)</a>Föreskrifter om behandling av personuppgifter.</p>
+          <p><a href="/link/2.aspx">Vägledning – föreskrifter (IMYFS 2024:1) (pdf, 441 kB)</a></p>
+          <h3>Upphävande av tidigare gällande föreskrifter</h3>
+          <p><a href="/link/3.aspx">IMYFS 2023:1 (pdf, 26 kB)</a>Föreskrifter om upphävande av Datainspektionens
+            föreskrifter (DIFS 1989:1)</p>
+          <p><a href="/link/4.aspx">DIFS 2018:1 (pdf, 63 kB)</a>Föreskrifter om upphävande.</p></main>"""
+        entries = imyfs.parse_listing(listing, imyfs.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [("IMYFS 2024:1", True), ("IMYFS 2023:1", False)])
+        self.assertEqual(entries[0].title, "Föreskrifter om behandling av personuppgifter")
+        self.assertEqual(entries[0].pdfs, [("IMYFS 2024:1", "https://www.imy.se/link/1.aspx")])
+
+
 class DetailPageTest(unittest.TestCase):
     def test_slug_numbers_and_quoted_queries(self):
         self.assertEqual(NFS.slug_number("https://www.naturvardsverket.se/x/2026/nfs-20269/"), "NFS 2026:9")
@@ -264,3 +328,83 @@ class RunTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class KvfsLivsfsMyhfsTest(unittest.TestCase):
+    KVFS = agency.ADAPTERS["KVFS"]
+    LIVSFS = agency.ADAPTERS["LIVSFS"]
+    MYHFS = agency.ADAPTERS["MYHFS"]
+
+    def test_kvfs_sitemap_and_page_title(self):
+        prefix = "https://www.kriminalvarden.se" + self.KVFS.path_prefix
+        sitemap = f"""<urlset><url><loc>{prefix}fangelse/kvfs-20111--fark-fangelse/</loc></url>
+          <url><loc>{prefix}frivard/kvfs-20245--fark-frivard/</loc></url>
+          <url><loc>https://www.kriminalvarden.se/om-oss/kvfs-20101/</loc></url></urlset>"""
+        entries = self.KVFS.parse_listing(sitemap, self.KVFS.listing_url)
+        self.assertEqual([e.number for e in entries], ["KVFS 2024:5", "KVFS 2011:1"])
+        page = """<div class="regulationPage col-12"><div class="intro"><h1>KVFS 2011:1 – FARK Fängelse</h1>
+          <p>KVFS 2011:1 - Kriminalvårdens föreskrifter och allmänna råd om fängelse.</p></div>
+          <a href="/globalassets/dokument/foreskrifter/kvfs-2011-1.pdf">Ladda ner</a></div>"""
+        regulation = self.KVFS.parse_detail(page, entries[1])
+        self.assertEqual(regulation.title, "Kriminalvårdens föreskrifter och allmänna råd om fängelse")
+        self.assertEqual([url.rsplit("/", 1)[-1] for _, url in regulation.pdfs], ["kvfs-2011-1.pdf"])
+        amending = page.replace("2011:1", "2024:5").replace("om fängelse", "om ändring i föreskrifterna (KVFS 2011:4)")
+        with self.assertRaises(agency.NotBase):
+            self.KVFS.parse_detail(amending, entries[0])
+
+    def test_livsfs_year_tables_link_amendments_across_years(self):
+        def row(number, status, file, subject="Ämne"):
+            return (f'<tr><td><p><a title="{number}" href="/x/{file}.pdf">{number}</a></p></td>'
+                    f"<td><p>{status}</p></td><td><p>{subject}</p></td></tr>")
+
+        newer = ("<table><thead><tr><th>LIVSFS</th></tr></thead><tbody>"
+                 + row("LIVSFS 2024:3", "Ändrar LIVSFS 2006:12<br />Gällande", "livsfs-2024-3")
+                 + row("LIVSFS 2024:2", "Upphäver LIVSFS 2012:6<br />Gällande", "livsfs-2024-2")
+                 + row("LIVSFS 2022:4 rättelse", "Rättar LIVSFS 2022:4", "livsfs-2022-4-rattelseblad")
+                 + "</tbody></table>")
+        older = ("<table><tbody>"
+                 + row("LIVSFS 2006:12", "Gällande", "livsfs-2006-12",
+                       "Livsmedelsverkets förteckning över gällande föreskrifter")
+                 + row("LIVSFS 2006:11", "Upphävd genom LIVSFS 2024:2", "livsfs-2006-11")
+                 + row("LIVSFS 2006:2", "Ändrar LIVSFS 2005:20<br />Upphävd genom LIVSFS 2006:12", "livsfs-2006-2")
+                 + "</tbody></table>")
+        index_url = self.LIVSFS.listing_url
+        index = "".join(f'<a href="/om-oss/lagstiftning1/foreskrifter-i-nummerordning/foreskrifter-i-nummerordning-{y}/">'
+                        f"{y}</a>" for y in (2004, 2006, 2024, 2017))
+        self.assertEqual(self.LIVSFS.parse_listing(index, index_url), [])
+        pages = self.LIVSFS.more_pages(index, index_url)
+        self.assertEqual([p.rstrip("/")[-4:] for p in pages], ["2024", "2017", "2006"])
+        self.assertEqual(self.LIVSFS.more_pages(index, pages[0]), [])
+        entries = self.LIVSFS.parse_listing(newer, pages[0])
+        self.assertEqual([(e.number, e.base) for e in entries], [("LIVSFS 2024:3", False), ("LIVSFS 2024:2", True)])
+        self.assertEqual(entries[1].title, "LIVSFS 2024:2")  # the title comes from the PDF
+        entries = self.LIVSFS.parse_listing(older, pages[-1])
+        self.assertEqual([(e.number, e.base, e.amended_by) for e in entries],
+                         [("LIVSFS 2006:12", True, ["LIVSFS 2024:3"]), ("LIVSFS 2006:11", False, []),
+                          ("LIVSFS 2006:2", False, [])])
+        self.assertEqual(entries[0].url, "https://www.livsmedelsverket.se/x/livsfs-2006-12.pdf")
+        self.assertEqual(entries[0].title, "Livsmedelsverkets förteckning över gällande föreskrifter")
+
+    def test_myhfs_repeal_dates_from_both_lists(self):
+        def item(number, title, *facts):
+            lines = "".join(f"<p>{f}</p>" for f in (f"MYHFS-nummer: {number}",) + facts)
+            return (f'<a href="https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-{number.replace(":", "-")}.pdf">'
+                    f'<div class="v-list-item__title">{title} <span>(pdf, 195 kB)</span></div>'
+                    f'<div class="link-text">{lines}</div></a>')
+
+        in_force = (item("2026:5", "Föreskrifter om ämnen", "I kraft: 2026-07-01",
+                         "Genom föreskrifterna upphävs Myndigheten för yrkeshögskolans föreskrifter (MYHFS 2022:2).")
+                    + item("2026:3", "Föreskrifter om upphävande av föreskrifterna (2017:2) om el",
+                           "I kraft: 2026-03-01"))
+        repealed = (item("2022:2", "Föreskrifter om kurser", "Genom dessa föreskrifter upphävs MYHFS 2018:2.")
+                    + item("2022:1", "Föreskrifter om vårdadministratör", "Upphävd: 2026-03-01")
+                    + item("2018:2", "Föreskrifter om behörighet")
+                    + item("2017:2", "Föreskrifter om elinstallation", "I kraft: 2017-07-01"))
+        entries = self.MYHFS.parse_listing(in_force, self.MYHFS.listings[0])
+        self.assertEqual([(e.number, e.base, e.in_force, e.repealed) for e in entries],
+                         [("MYHFS 2026:5", True, "2026-07-01", None), ("MYHFS 2026:3", False, "2026-03-01", None)])
+        self.assertEqual(entries[0].title, "Föreskrifter om ämnen")
+        entries = self.MYHFS.parse_listing(repealed, self.MYHFS.listings[1])
+        self.assertEqual([(e.number, e.base, e.repealed) for e in entries],
+                         [("MYHFS 2022:2", True, "2026-07-01"), ("MYHFS 2022:1", True, "2026-03-01"),
+                          ("MYHFS 2018:2", False, None), ("MYHFS 2017:2", True, "2026-03-01")])

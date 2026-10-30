@@ -15,7 +15,9 @@
     },
     "centrala-studiestodsnamndens-forfattningssamling-csnfs": {
       "series": "CSNFS",
-      "agency": "Centrala studiestödsnämnden"
+      "agency": "Centrala studiestödsnämnden",
+      "status": "collected",
+      "note": "CSN lists its regulations by subject, each with the consolidated text (Fulltext) and the printed regulation and amendments (Tryckt version), with a link to each PDF; the text is read from the PDF (consolidated version where published). The annual regleringstal notices numbered in CSNFS are included; four old PDFs are scans without a text layer."
     },
     "energimarknadsinspektionens-forfattningssamling-eifs": {
       "series": "EIFS",
@@ -24,22 +26,26 @@
     "statistiska-centralbyrans-forfattningssamling-scb-fs": {
       "series": "SCB-FS",
       "agency": "Statistiska centralbyrån",
-      "status": "partial",
+      "status": "collected",
       "note": "Full text from SCB's page per regulation, listed in its table of regulations on reporting duties (uppgiftslämnande) in force. The monthly consumer price index notices and the regulations on official statistics (published only as PDF) are not collected."
     },
     "aklagarmyndighetens-forfattningssamling-afs": {
       "series": "ÅFS",
       "agency": "Åklagarmyndigheten",
-      "status": "collected_pdf",
-      "note": "Base regulations in force from the cards on Åklagarmyndigheten's ÅFS page, with decision and publication dates; repealed regulations and notices are not stored, and the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations in force from the cards on Åklagarmyndigheten's ÅFS page, with decision and publication dates; repealed regulations and notices are not stored, and; text from the PDFs."
     },
     "myndigheten-for-yrkeshogskolans-forfattningssamling-myhfs": {
       "series": "MYHFS",
-      "agency": "Myndigheten för yrkeshögskolan"
+      "agency": "Myndigheten för yrkeshögskolan",
+      "status": "collected",
+      "note": "Myndigheten för yrkeshögskolan lists the regulations in force and the repealed ones with a link to each PDF, the date in force and, for some repealed ones, the repeal date; the text is read from the PDF. A repeal date missing from the list is taken from the date in force of the regulation that repeals it; repealed regulations without a known date are not collected."
     },
     "livsmedelsverkets-forfattningssamling-livsfs": {
       "series": "LIVSFS",
-      "agency": "Livsmedelsverket"
+      "agency": "Livsmedelsverket",
+      "status": "collected",
+      "note": "Livsmedelsverket lists LIVSFS in one table per year from 2005 (number, status, subject) with a link to each PDF; titles and text are read from the PDFs. Repealed regulations have no repeal date on the page and are not collected, nor is the predecessor series SLVFS (before 2005)."
     },
     "mediemyndighetens-forfattningssamling-memyfs": {
       "series": "MEMYFS",
@@ -50,8 +56,8 @@
     "sveriges-geologiska-undersoknings-forfattningssamling-sgu-fs": {
       "series": "SGU-FS",
       "agency": "Sveriges geologiska undersökning",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Sveriges geologiska undersökning's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Sveriges geologiska undersökning's regulation page; text from the PDFs."
     },
     "kustbevakningens-forfattningssamling-kbvfs": {
       "series": "KBVFS",
@@ -60,8 +66,8 @@
     "statens-energimyndighets-forfattningssamling-stemfs": {
       "series": "STEMFS",
       "agency": "Statens energimyndighet",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Statens energimyndighet's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Statens energimyndighet's regulation page; text from the PDFs."
     },
     "styrelsens-for-ackreditering-och-teknisk-kontroll-swedac-forfattningssamling-stafs": {
       "series": "STAFS",
@@ -72,8 +78,8 @@
     "riksarkivets-forfattningssamling-ra-fs": {
       "series": "RA-FS",
       "agency": "Riksarkivet",
-      "status": "collected_pdf",
-      "note": "Base regulations in force and repealed, from the JSON API behind foreskrifter.riksarkivet.se; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations in force and repealed, from the JSON API behind foreskrifter.riksarkivet.se; text from the PDFs."
     },
     "konsumentverkets-forfattningssamling-kovfs": {
       "series": "KOVFS",
@@ -83,7 +89,9 @@
     },
     "totalforsvarets-plikt-och-provningsverks-forfattningssamling-tppvfs": {
       "series": "TPPVFS",
-      "agency": "Totalförsvarets plikt- och prövningsverk"
+      "agency": "Totalförsvarets plikt- och prövningsverk",
+      "status": "collected",
+      "note": "Base regulations in force from Pliktverket's page, with the predecessor TRMFS regulations under their own prefix; text from the PDFs."
     },
     "havs-och-vattenmyndighetens-forfattningssamling-hvmfs": {
       "series": "HVMFS",
@@ -100,8 +108,8 @@
     "tillvaxtverkets-forfattningssamling-tvfs": {
       "series": "TVFS",
       "agency": "Tillväxtverket",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Tillväxtverket's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Tillväxtverket's regulation page; text from the PDFs."
     },
     "skatteverkets-forfattningssamling-skvfs": {
       "series": "SKVFS",
@@ -118,13 +126,14 @@
     "statens-institutionsstyrelses-forfattningssamling-sisfs": {
       "series": "SiSFS",
       "agency": "Statens institutionsstyrelse",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Statens institutionsstyrelse's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Statens institutionsstyrelse's regulation page; text from the PDFs."
     },
     "bokforingsnamndens-allmanna-rad-bfnar": {
       "series": "BFNAR",
       "agency": "Bokföringsnämnden",
-      "note": "General advice (allmänna råd), not binding regulations."
+      "status": "collected",
+      "note": "General advice (allmänna råd), not binding regulations. BFN lists the general advice in force in a table with the original and, where there is one, the consolidated PDF; the title and text are read from the PDF (consolidated version where published)."
     },
     "migrationsverkets-forfattningssamling-migrfs": {
       "series": "MIGRFS",
@@ -150,7 +159,9 @@
     },
     "integritetsskyddsmyndighetens-forfattningssamling-imyfs": {
       "series": "IMYFS",
-      "agency": "Integritetsskyddsmyndigheten"
+      "agency": "Integritetsskyddsmyndigheten",
+      "status": "collected",
+      "note": "IMY lists its regulations with a link to each PDF; the text is read from the PDF. Repealing regulations and the predecessor series DIFS on the same page are not collected."
     },
     "kammarkollegiets-forfattningssamling-kamfs": {
       "series": "KAMFS",
@@ -178,7 +189,9 @@
     },
     "lantmateriets-forfattningssamling-lmfs": {
       "series": "LMFS",
-      "agency": "Lantmäteriet"
+      "agency": "Lantmäteriet",
+      "status": "collected",
+      "note": "Lantmäteriet lists the regulations in force, each with its title and a link to the PDF; the text is read from the PDF. Repealed regulations and the predecessor series LMVFS are not collected; one PDF (LMFS 2015:5) is a scan without a text layer."
     },
     "myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs": {
       "series": "MDFFS",
@@ -194,18 +207,20 @@
     },
     "myndigheten-for-tillvaxtpolitiska-utvarderingar-och-analysers-forfattningssamling-mtfs": {
       "series": "MTFS",
-      "agency": "Myndigheten för tillväxtpolitiska utvärderingar och analyser"
+      "agency": "Myndigheten för tillväxtpolitiska utvärderingar och analyser",
+      "status": "collected",
+      "note": "Tillväxtanalys lists the regulations in force with a link to each PDF; the text is read from the PDF. Repealed regulations listed on the same page are not collected."
     },
     "patent-och-registreringsverkets-forfattningssamling-prvfs": {
       "series": "PRVFS",
       "agency": "Patent- och registreringsverket",
-      "status": "collected_pdf",
-      "note": "Base regulations in force from PRV's division A1, with links to amending regulations; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations in force from PRV's division A1, with links to amending regulations; text from the PDFs."
     },
     "polismyndighetens-forfattningssamling-pmfs": {
       "series": "PMFS",
       "agency": "Polismyndigheten",
-      "status": "collected_pdf",
+      "status": "collected",
       "note": "Regulations in force from Polismyndigheten's paginated list, with entry into force, amendments and consolidated versions; it also holds Rikspolisstyrelsen's RPSFS regulations still in force, stored with their RPSFS numbers. The text is published only as PDF."
     },
     "post-och-telestyrelsens-forfattningssamling-ptsfs": {
@@ -217,8 +232,8 @@
     "revisorsinspektionens-forfattningssamling-rifs": {
       "series": "RIFS",
       "agency": "Revisorsinspektionen",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Revisorsinspektionen's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Revisorsinspektionen's regulation page; text from the PDFs."
     },
     "riksdagsforvaltningens-forfattningssamling-rfs": {
       "series": "RFS",
@@ -229,12 +244,14 @@
     "sjofartsverkets-forfattningssamling-sjofs": {
       "series": "SJÖFS",
       "agency": "Sjöfartsverket",
-      "status": "collected_pdf",
+      "status": "collected",
       "note": "Base regulations in force from Sjöfartsverket's systematic list (one page per subject), with amendments and PDF links."
     },
     "spelinspektionens-forfattningssamling-sifs": {
       "series": "SIFS",
-      "agency": "Spelinspektionen"
+      "agency": "Spelinspektionen",
+      "status": "collected",
+      "note": "Regulations in force from Spelinspektionen's list (a PDF) and the page per regulation; the former Lotteriinspektionen's LIFS are stored under that prefix; text from the PDFs."
     },
     "statens-jordbruksverks-forfattningssamling-sjvfs": {
       "series": "SJVFS",
@@ -255,18 +272,20 @@
     "stralsakerhetsmyndighetens-forfattningssamling-ssmfs": {
       "series": "SSMFS",
       "agency": "Strålsäkerhetsmyndigheten",
-      "status": "collected_pdf",
-      "note": "Base regulations in force from Strålsäkerhetsmyndigheten's regulation page, each with its own page linking the original and consolidated PDFs and the amendments; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations in force from Strålsäkerhetsmyndigheten's regulation page, each with its own page linking the original and consolidated PDFs and the amendments; text from the PDFs."
     },
     "svenska-kraftnats-forfattningssamling-svkfs": {
       "series": "SvKFS",
-      "agency": "Affärsverket svenska kraftnät"
+      "agency": "Affärsverket svenska kraftnät",
+      "status": "collected",
+      "note": "Regulations from the JSON document list behind Svenska kraftnät's regulations page, in force and repealed (archived, with the date from the description); text from the PDFs."
     },
     "trafikverkets-forfattningssamling-trvfs": {
       "series": "TRVFS",
       "agency": "Trafikverket",
-      "status": "collected_pdf",
-      "note": "Regulations from Trafikverket's search form, year by year, without the road-specific speed regulations; the text is published only as PDF."
+      "status": "collected",
+      "note": "Regulations from Trafikverket's search form, year by year, without the road-specific speed regulations; text from the PDFs."
     },
     "transportstyrelsens-forfattningssamling-tsfs": {
       "series": "TSFS",
@@ -277,14 +296,14 @@
     "universitets-och-hogskoleradets-forfattningssamling-uhrfs": {
       "series": "UHRFS",
       "agency": "Universitets- och högskolerådet",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Universitets- och högskolerådet's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Universitets- och högskolerådet's regulation page; text from the PDFs."
     },
     "vetenskapsradets-forfattningssamling-vrfs": {
       "series": "VRFS",
       "agency": "Vetenskapsrådet",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Vetenskapsrådet's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Vetenskapsrådet's regulation page; text from the PDFs."
     },
     "forsakringskassans-forfattningssamling-fkfs": {
       "series": "FKFS",
@@ -305,8 +324,8 @@
     "svensk-trafikforeskriftssamling-stfs": {
       "series": "STFS",
       "agency": "Transportstyrelsen (local traffic regulations)",
-      "status": "out_of_scope",
-      "note": "Local traffic regulations; out of scope for the county layer (COVERAGE.md)."
+      "status": "collected",
+      "note": "Regulations from Sametinget's document bank (the JSON its search page reads); text from the PDFs."
     },
     "naturvardsverkets-forfattningssamling-nfs": {
       "series": "NFS",
@@ -316,25 +335,26 @@
     },
     "sametingets-forfattningssamling-stfs": {
       "series": "STFS",
-      "agency": "Sametinget"
+      "agency": "Sametinget",
+      "status": "collected"
     },
     "skogsstyrelsens-forfattningssamling-sksfs": {
       "series": "SKSFS",
       "agency": "Skogsstyrelsen",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Skogsstyrelsen's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Skogsstyrelsen's regulation page; text from the PDFs."
     },
     "riksgaldskontorets-forfattningssamling-rgkfs": {
       "series": "RGKFS",
       "agency": "Riksgäldskontoret",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Riksgäldskontoret's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Riksgäldskontoret's regulation page; text from the PDFs."
     },
     "upphandlingmyndighetens-forfattningssamling-ufs": {
       "series": "UFS",
       "agency": "Upphandlingsmyndigheten",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Upphandlingsmyndigheten's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Upphandlingsmyndigheten's regulation page; text from the PDFs."
     },
     "forsvarets-forfattningssamling-ffs": {
       "series": "FFS",
@@ -349,16 +369,20 @@
     "valmyndighetens-forfattningssamling-valfs": {
       "series": "VALFS",
       "agency": "Valmyndigheten",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Valmyndigheten's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Valmyndigheten's regulation page; text from the PDFs."
     },
     "kriminalvardens-forfattningssamling-kvfs": {
       "series": "KVFS",
-      "agency": "Kriminalvården"
+      "agency": "Kriminalvården",
+      "status": "collected",
+      "note": "Kriminalvården's KVFS listing needs JavaScript (a server-side Blazor component), so the regulation pages are taken from the site's sitemap; each page gives the full title and links to the PDF, and the text is read from the PDF. Amending and repealing regulations are not stored as documents."
     },
     "tullverkets-forfattningssamling-tfs": {
       "series": "TFS",
-      "agency": "Tullverket"
+      "agency": "Tullverket",
+      "status": "collected",
+      "note": "Base regulations in force from Tullverket's document search (a POSTed form listing every TFS document); repealed ones carry no date and are not stored; text from the PDFs."
     },
     "elsakerhetsverkets-forfattningssamling-elsak-fs": {
       "series": "ELSÄK-FS",
@@ -369,8 +393,8 @@
     "pensionsmyndighetens-forfattningssamling-pfs": {
       "series": "PFS",
       "agency": "Pensionsmyndigheten",
-      "status": "collected_pdf",
-      "note": "Base regulations, amendments and consolidated versions from the links on Pensionsmyndigheten's regulation page; the text is published only as PDF."
+      "status": "collected",
+      "note": "Base regulations, amendments and consolidated versions from the links on Pensionsmyndigheten's regulation page; text from the PDFs."
     }
   },
   "shared": {
@@ -1116,5 +1140,107 @@
     "series:ÅFS": 222,
     "source:register-over-svensk-forfattningssamling-sfs": 537,
     "source:svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": 536
+  },
+  "kommuner": {
+    "0115": {
+      "status": "no_adapter",
+      "note": "Vallentuna's författningssamling is a Sitevision file-share module with folders; the folder pages answer 404 to a plain request, so the files cannot be listed without the browser client (checked 2026-10-30)."
+    },
+    "0186": {
+      "status": "no_adapter",
+      "note": "Lidingö publishes its collection in Evolution DocumentWeb, a JavaScript application with no static document list; needs an adapter for its API."
+    },
+    "0191": {
+      "status": "no_adapter",
+      "note": "Sigtuna's collection is a Netpublicator reader embedded in the page; needs a Netpublicator adapter."
+    },
+    "0380": {
+      "status": "no_adapter",
+      "note": "Uppsala has no index page: each rule is its own page under /kommun-och-politik/publikationer/styrdokument/ with the PDF under /contentassets/, findable only through the sitemap; needs a sitemap-driven listing."
+    },
+    "0382": {
+      "status": "robots",
+      "note": "Östhammar's robots.txt disallows /dokument/, where every rule page lives, for named AI crawlers (GPTBot, ClaudeBot, CCBot and others); the collector's own agent is not named, but the rule is read as unwelcome automated use and the pages are not fetched pending an owner decision."
+    },
+    "0580": {
+      "status": "no_adapter",
+      "note": "Linköping links its rules to Google Drive share pages instead of files on its own site; not collected pending an owner decision on that host."
+    },
+    "0604": {
+      "status": "no_adapter",
+      "note": "Aneby has no collection page: the lokala ordningsföreskrifter are an HTML page and the hälsoskydd rules one PDF on the miljö page; the avfallsföreskrifter adopted 2026-02-23 were not found."
+    },
+    "0680": {
+      "status": "no_adapter",
+      "note": "Jönköping publishes its rules as PDFs scattered over topic pages with no index; the sitemap answers 401."
+    },
+    "0683": {
+      "status": "no_adapter",
+      "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30."
+    },
+    "0834": {
+      "status": "no_adapter",
+      "note": "Torsås lists its rules in accordion tables where every link reads 'Ladda ner' and the title is in another table cell; needs a row-aware listing."
+    },
+    "0861": {
+      "status": "no_adapter",
+      "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30; retry later."
+    },
+    "0883": {
+      "status": "no_adapter",
+      "note": "Västervik's file list (/globalassets/forfattningssamlingen/) is not in the static HTML and its folder URL answers HTTP 500."
+    },
+    "0980": {
+      "status": "no_adapter",
+      "note": "Region Gotland's document lists point at dokument.gotland.se/IntegrationService.svc/doc/content/<id>, not at files on the website; needs an adapter for that document service."
+    },
+    "1080": {
+      "status": "blocked",
+      "note": "www.karlskrona.se answers every request, robots.txt included, with an HTTP 403 \"Åtkomst nekad\" bot-check page (checked 2026-10-30); not bypassed."
+    },
+    "1496": {
+      "status": "no_adapter",
+      "note": "skovde.se lists its regulations only as JSON embedded in the page script (OrdinanceCategory, FileUrl); the collector has no strategy for that list yet."
+    },
+    "1780": {
+      "status": "no_adapter",
+      "note": "karlstad.se serves its documents from a SharePoint-backed list whose download links are built in the browser; no adapter yet."
+    },
+    "1864": {
+      "status": "no_adapter",
+      "note": "ljusnarsberg.se lists only internal documents on its styrande dokument page; föreskrifter and taxor are spread over topic pages."
+    },
+    "1884": {
+      "status": "no_adapter",
+      "note": "nora.se has no page listing its rules for residents; föreskrifter and taxor are spread over topic pages."
+    },
+    "1961": {
+      "status": "no_adapter",
+      "note": "hallstahammar.se publishes its documents through Evolution DocumentWeb (a JavaScript app over a JSON API); no adapter yet."
+    },
+    "2021": {
+      "status": "no_adapter",
+      "note": "vansbro.se links its documents through Ciceron with a per-visit session id in every link; no adapter yet."
+    },
+    "2029": {
+      "status": "no_adapter",
+      "note": "leksand.se publishes its författningssamling in a Netpublicator reader (JavaScript, noindex); no adapter yet."
+    },
+    "2031": {
+      "status": "no_adapter",
+      "note": "rattvik.se publishes its taxor and föreskrifter through DocumentWeb (ess-app.rattvik.se, a JavaScript app over a JSON API); no adapter yet."
+    },
+    "2081": {
+      "status": "no_adapter",
+      "note": "borlange.se uses the Sitevision file-share module with folders loaded in the browser; the PDFs are not in the served page, only in the sitemap."
+    },
+    "2180": {
+      "status": "no_adapter",
+      "note": "gavle.se publishes its documents through MediaFlow; no adapter yet."
+    },
+    "2518": {
+      "status": "no_adapter",
+      "note": "overtornea.se lists its föreskrifter and taxor through the WordPress File Download plugin, loaded from an admin-ajax JSON endpoint; no adapter yet."
+    }
   }
 }

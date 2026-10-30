@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://flen.se/kommun--politik/forfattningssamling": "0482-listing.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "18.6e32810819b2bd1887095bac",
+    "title": "Föreskrifter om avfallshantering i Flens kommun",
+    "url": "https://flen.se/download/18.6e32810819b2bd1887095bac/1767343848375/F%C3%B6reskrifter%20om%20avfallshantering%20i%20Flens%20kommun.pdf"
+  },
+  "excluded": [
+    "Bolagsordning för Flens Bostads AB",
+    "Bolagsordning för Flens Kommunfastigheter AB",
+    "Bolagsordning för Flen Vatten och Avfall AB"
+  ]
+}

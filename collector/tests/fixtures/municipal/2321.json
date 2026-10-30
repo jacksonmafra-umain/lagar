@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://are.se/kommun-och-politik/ekonomi-kvalitet-och-styrande-dokument/taxor-och-avgifter": "2321-listing1.html",
+    "https://are.se/kommun-och-politik/ekonomi-kvalitet-och-styrande-dokument/kommunal-forfattningssamling": "2321-listing2.html"
+  },
+  "count": 30,
+  "sample": {
+    "number": "18.61451f6119b2bf16300428b7",
+    "title": "Avfallstaxa2026",
+    "url": "https://are.se/download/18.61451f6119b2bf16300428b7/1768903090270/Avfallstaxa2026.pdf"
+  },
+  "excluded": []
+}

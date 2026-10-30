@@ -13,8 +13,8 @@
         "1920:859",
         "1921:21"
       ],
-      "total": 32184,
-      "unknown": 32163
+      "total": 32973,
+      "unknown": 32949
     },
     "amended_through": {
       "sample": [
@@ -29,8 +29,8 @@
         "1944:649",
         "1946:851"
       ],
-      "total": 5731,
-      "unknown": 5694
+      "total": 5767,
+      "unknown": 5730
     },
     "reprinted_by": {
       "sample": [
@@ -49,13 +49,48 @@
       "unknown": 426
     }
   },
-  "documents": 29295,
+  "documents": 43967,
   "duplicate_ids": [],
   "fsck": null,
-  "generated_at": "2026-10-29T13:56:15Z",
+  "generated_at": "2026-10-30T14:13:02Z",
   "path_mismatches": [],
   "schema_errors": [],
   "text_quality": [
+    {
+      "flag": "replacement_character",
+      "id": "03fs-2016-7",
+      "path": "region/county-regulations/03fs-2016-7.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "04fs-2016-3",
+      "path": "region/county-regulations/04fs-2016-3.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "hvmfs-2019-25",
+      "path": "agency/regulations/hvmfs-2019-25.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "nfs-2011-7",
+      "path": "agency/regulations/nfs-2011-7.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "nfs-2013-11",
+      "path": "agency/regulations/nfs-2013-11.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "nfs-2013-13",
+      "path": "agency/regulations/nfs-2013-13.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "nfs-2016-3",
+      "path": "agency/regulations/nfs-2016-3.md"
+    },
     {
       "flag": "replacement_character",
       "id": "nja-2014-87",
@@ -3625,6 +3660,741 @@
       "flag": "short_body",
       "id": "sfs-n2026-7",
       "path": "sfs/ordinances/n2026-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1921-28",
+      "path": "sfs/treaties/so-1921-28.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1937-19",
+      "path": "sfs/treaties/so-1937-19.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1939-14",
+      "path": "sfs/treaties/so-1939-14.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1947-26",
+      "path": "sfs/treaties/so-1947-26.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1953-14",
+      "path": "sfs/treaties/so-1953-14.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1953-15",
+      "path": "sfs/treaties/so-1953-15.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1955-36",
+      "path": "sfs/treaties/so-1955-36.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1957-53",
+      "path": "sfs/treaties/so-1957-53.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1958-60",
+      "path": "sfs/treaties/so-1958-60.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1959-65",
+      "path": "sfs/treaties/so-1959-65.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1963-40",
+      "path": "sfs/treaties/so-1963-40.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1966-31",
+      "path": "sfs/treaties/so-1966-31.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1967-33",
+      "path": "sfs/treaties/so-1967-33.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1967-39",
+      "path": "sfs/treaties/so-1967-39.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1967-40",
+      "path": "sfs/treaties/so-1967-40.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1968-22",
+      "path": "sfs/treaties/so-1968-22.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1971-17",
+      "path": "sfs/treaties/so-1971-17.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1972-1",
+      "path": "sfs/treaties/so-1972-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1973-48",
+      "path": "sfs/treaties/so-1973-48.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1974-10",
+      "path": "sfs/treaties/so-1974-10.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1978-13",
+      "path": "sfs/treaties/so-1978-13.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1978-14",
+      "path": "sfs/treaties/so-1978-14.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1983-55",
+      "path": "sfs/treaties/so-1983-55.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1992-15",
+      "path": "sfs/treaties/so-1992-15.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1992-69",
+      "path": "sfs/treaties/so-1992-69.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1992-74",
+      "path": "sfs/treaties/so-1992-74.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1993-21",
+      "path": "sfs/treaties/so-1993-21.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1994-19",
+      "path": "sfs/treaties/so-1994-19.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1994-40",
+      "path": "sfs/treaties/so-1994-40.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1994-47",
+      "path": "sfs/treaties/so-1994-47.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-12",
+      "path": "sfs/treaties/so-1995-12.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-22",
+      "path": "sfs/treaties/so-1995-22.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-27",
+      "path": "sfs/treaties/so-1995-27.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-31",
+      "path": "sfs/treaties/so-1995-31.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-32",
+      "path": "sfs/treaties/so-1995-32.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-33",
+      "path": "sfs/treaties/so-1995-33.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-34",
+      "path": "sfs/treaties/so-1995-34.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-64",
+      "path": "sfs/treaties/so-1995-64.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-66",
+      "path": "sfs/treaties/so-1995-66.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-69",
+      "path": "sfs/treaties/so-1995-69.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-71",
+      "path": "sfs/treaties/so-1995-71.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1995-74",
+      "path": "sfs/treaties/so-1995-74.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1996-35",
+      "path": "sfs/treaties/so-1996-35.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1996-37",
+      "path": "sfs/treaties/so-1996-37.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1996-38",
+      "path": "sfs/treaties/so-1996-38.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1996-39",
+      "path": "sfs/treaties/so-1996-39.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1996-56",
+      "path": "sfs/treaties/so-1996-56.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1996-7",
+      "path": "sfs/treaties/so-1996-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1996-8",
+      "path": "sfs/treaties/so-1996-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1997-19",
+      "path": "sfs/treaties/so-1997-19.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1997-44",
+      "path": "sfs/treaties/so-1997-44.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1997-46",
+      "path": "sfs/treaties/so-1997-46.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1997-48",
+      "path": "sfs/treaties/so-1997-48.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1998-25",
+      "path": "sfs/treaties/so-1998-25.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1998-27",
+      "path": "sfs/treaties/so-1998-27.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1998-4",
+      "path": "sfs/treaties/so-1998-4.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1998-51",
+      "path": "sfs/treaties/so-1998-51.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1998-61",
+      "path": "sfs/treaties/so-1998-61.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-2",
+      "path": "sfs/treaties/so-1999-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-28",
+      "path": "sfs/treaties/so-1999-28.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-3",
+      "path": "sfs/treaties/so-1999-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-5",
+      "path": "sfs/treaties/so-1999-5.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-6",
+      "path": "sfs/treaties/so-1999-6.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-7",
+      "path": "sfs/treaties/so-1999-7.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-72",
+      "path": "sfs/treaties/so-1999-72.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-73",
+      "path": "sfs/treaties/so-1999-73.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-74",
+      "path": "sfs/treaties/so-1999-74.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-76",
+      "path": "sfs/treaties/so-1999-76.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-1999-8",
+      "path": "sfs/treaties/so-1999-8.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2000-5",
+      "path": "sfs/treaties/so-2000-5.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2000-70",
+      "path": "sfs/treaties/so-2000-70.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2001-16",
+      "path": "sfs/treaties/so-2001-16.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2001-4",
+      "path": "sfs/treaties/so-2001-4.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2001-42",
+      "path": "sfs/treaties/so-2001-42.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2001-50",
+      "path": "sfs/treaties/so-2001-50.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2002-13",
+      "path": "sfs/treaties/so-2002-13.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2002-20",
+      "path": "sfs/treaties/so-2002-20.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2002-26",
+      "path": "sfs/treaties/so-2002-26.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2002-3",
+      "path": "sfs/treaties/so-2002-3.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2002-39",
+      "path": "sfs/treaties/so-2002-39.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2003-15",
+      "path": "sfs/treaties/so-2003-15.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2003-34",
+      "path": "sfs/treaties/so-2003-34.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2003-55",
+      "path": "sfs/treaties/so-2003-55.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2004-14",
+      "path": "sfs/treaties/so-2004-14.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2005-29",
+      "path": "sfs/treaties/so-2005-29.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2005-31",
+      "path": "sfs/treaties/so-2005-31.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2005-33",
+      "path": "sfs/treaties/so-2005-33.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2006-16",
+      "path": "sfs/treaties/so-2006-16.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2007-25",
+      "path": "sfs/treaties/so-2007-25.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2007-67",
+      "path": "sfs/treaties/so-2007-67.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2008-10",
+      "path": "sfs/treaties/so-2008-10.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2009-1",
+      "path": "sfs/treaties/so-2009-1.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2009-20",
+      "path": "sfs/treaties/so-2009-20.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2009-39",
+      "path": "sfs/treaties/so-2009-39.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2010-17",
+      "path": "sfs/treaties/so-2010-17.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2010-21",
+      "path": "sfs/treaties/so-2010-21.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2010-6",
+      "path": "sfs/treaties/so-2010-6.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2011-13",
+      "path": "sfs/treaties/so-2011-13.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2011-14",
+      "path": "sfs/treaties/so-2011-14.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2011-2",
+      "path": "sfs/treaties/so-2011-2.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2011-5",
+      "path": "sfs/treaties/so-2011-5.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2011-6",
+      "path": "sfs/treaties/so-2011-6.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2011-8",
+      "path": "sfs/treaties/so-2011-8.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2011-9",
+      "path": "sfs/treaties/so-2011-9.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2012-4",
+      "path": "sfs/treaties/so-2012-4.md"
+    },
+    {
+      "flag": "short_body",
+      "id": "so-2013-20",
+      "path": "sfs/treaties/so-2013-20.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2016-12",
+      "path": "sfs/treaties/so-2016-12.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2016-15",
+      "path": "sfs/treaties/so-2016-15.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2016-16",
+      "path": "sfs/treaties/so-2016-16.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2016-19",
+      "path": "sfs/treaties/so-2016-19.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2016-20",
+      "path": "sfs/treaties/so-2016-20.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2017-11",
+      "path": "sfs/treaties/so-2017-11.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2017-13",
+      "path": "sfs/treaties/so-2017-13.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2017-3",
+      "path": "sfs/treaties/so-2017-3.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2017-4",
+      "path": "sfs/treaties/so-2017-4.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2017-5",
+      "path": "sfs/treaties/so-2017-5.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2017-7",
+      "path": "sfs/treaties/so-2017-7.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2018-10",
+      "path": "sfs/treaties/so-2018-10.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2018-3",
+      "path": "sfs/treaties/so-2018-3.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2018-4",
+      "path": "sfs/treaties/so-2018-4.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2018-5",
+      "path": "sfs/treaties/so-2018-5.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2018-7",
+      "path": "sfs/treaties/so-2018-7.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2018-8",
+      "path": "sfs/treaties/so-2018-8.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2019-10",
+      "path": "sfs/treaties/so-2019-10.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2019-3",
+      "path": "sfs/treaties/so-2019-3.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2019-4",
+      "path": "sfs/treaties/so-2019-4.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2019-5",
+      "path": "sfs/treaties/so-2019-5.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2019-6",
+      "path": "sfs/treaties/so-2019-6.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2020-1",
+      "path": "sfs/treaties/so-2020-1.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2020-13",
+      "path": "sfs/treaties/so-2020-13.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2020-3",
+      "path": "sfs/treaties/so-2020-3.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2020-6",
+      "path": "sfs/treaties/so-2020-6.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2020-7",
+      "path": "sfs/treaties/so-2020-7.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2020-9",
+      "path": "sfs/treaties/so-2020-9.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2021-1",
+      "path": "sfs/treaties/so-2021-1.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2022-1",
+      "path": "sfs/treaties/so-2022-1.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2022-2",
+      "path": "sfs/treaties/so-2022-2.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2023-1",
+      "path": "sfs/treaties/so-2023-1.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2023-4",
+      "path": "sfs/treaties/so-2023-4.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2023-5",
+      "path": "sfs/treaties/so-2023-5.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2024-10",
+      "path": "sfs/treaties/so-2024-10.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2024-4",
+      "path": "sfs/treaties/so-2024-4.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2024-5",
+      "path": "sfs/treaties/so-2024-5.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2024-6",
+      "path": "sfs/treaties/so-2024-6.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2024-7",
+      "path": "sfs/treaties/so-2024-7.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2025-1",
+      "path": "sfs/treaties/so-2025-1.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "so-2025-2",
+      "path": "sfs/treaties/so-2025-2.md"
     }
   ]
 }
