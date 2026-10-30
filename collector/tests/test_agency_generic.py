@@ -328,3 +328,83 @@ class RunTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class KvfsLivsfsMyhfsTest(unittest.TestCase):
+    KVFS = agency.ADAPTERS["KVFS"]
+    LIVSFS = agency.ADAPTERS["LIVSFS"]
+    MYHFS = agency.ADAPTERS["MYHFS"]
+
+    def test_kvfs_sitemap_and_page_title(self):
+        prefix = "https://www.kriminalvarden.se" + self.KVFS.path_prefix
+        sitemap = f"""<urlset><url><loc>{prefix}fangelse/kvfs-20111--fark-fangelse/</loc></url>
+          <url><loc>{prefix}frivard/kvfs-20245--fark-frivard/</loc></url>
+          <url><loc>https://www.kriminalvarden.se/om-oss/kvfs-20101/</loc></url></urlset>"""
+        entries = self.KVFS.parse_listing(sitemap, self.KVFS.listing_url)
+        self.assertEqual([e.number for e in entries], ["KVFS 2024:5", "KVFS 2011:1"])
+        page = """<div class="regulationPage col-12"><div class="intro"><h1>KVFS 2011:1 – FARK Fängelse</h1>
+          <p>KVFS 2011:1 - Kriminalvårdens föreskrifter och allmänna råd om fängelse.</p></div>
+          <a href="/globalassets/dokument/foreskrifter/kvfs-2011-1.pdf">Ladda ner</a></div>"""
+        regulation = self.KVFS.parse_detail(page, entries[1])
+        self.assertEqual(regulation.title, "Kriminalvårdens föreskrifter och allmänna råd om fängelse")
+        self.assertEqual([url.rsplit("/", 1)[-1] for _, url in regulation.pdfs], ["kvfs-2011-1.pdf"])
+        amending = page.replace("2011:1", "2024:5").replace("om fängelse", "om ändring i föreskrifterna (KVFS 2011:4)")
+        with self.assertRaises(agency.NotBase):
+            self.KVFS.parse_detail(amending, entries[0])
+
+    def test_livsfs_year_tables_link_amendments_across_years(self):
+        def row(number, status, file, subject="Ämne"):
+            return (f'<tr><td><p><a title="{number}" href="/x/{file}.pdf">{number}</a></p></td>'
+                    f"<td><p>{status}</p></td><td><p>{subject}</p></td></tr>")
+
+        newer = ("<table><thead><tr><th>LIVSFS</th></tr></thead><tbody>"
+                 + row("LIVSFS 2024:3", "Ändrar LIVSFS 2006:12<br />Gällande", "livsfs-2024-3")
+                 + row("LIVSFS 2024:2", "Upphäver LIVSFS 2012:6<br />Gällande", "livsfs-2024-2")
+                 + row("LIVSFS 2022:4 rättelse", "Rättar LIVSFS 2022:4", "livsfs-2022-4-rattelseblad")
+                 + "</tbody></table>")
+        older = ("<table><tbody>"
+                 + row("LIVSFS 2006:12", "Gällande", "livsfs-2006-12",
+                       "Livsmedelsverkets förteckning över gällande föreskrifter")
+                 + row("LIVSFS 2006:11", "Upphävd genom LIVSFS 2024:2", "livsfs-2006-11")
+                 + row("LIVSFS 2006:2", "Ändrar LIVSFS 2005:20<br />Upphävd genom LIVSFS 2006:12", "livsfs-2006-2")
+                 + "</tbody></table>")
+        index_url = self.LIVSFS.listing_url
+        index = "".join(f'<a href="/om-oss/lagstiftning1/foreskrifter-i-nummerordning/foreskrifter-i-nummerordning-{y}/">'
+                        f"{y}</a>" for y in (2004, 2006, 2024, 2017))
+        self.assertEqual(self.LIVSFS.parse_listing(index, index_url), [])
+        pages = self.LIVSFS.more_pages(index, index_url)
+        self.assertEqual([p.rstrip("/")[-4:] for p in pages], ["2024", "2017", "2006"])
+        self.assertEqual(self.LIVSFS.more_pages(index, pages[0]), [])
+        entries = self.LIVSFS.parse_listing(newer, pages[0])
+        self.assertEqual([(e.number, e.base) for e in entries], [("LIVSFS 2024:3", False), ("LIVSFS 2024:2", True)])
+        self.assertEqual(entries[1].title, "LIVSFS 2024:2")  # the title comes from the PDF
+        entries = self.LIVSFS.parse_listing(older, pages[-1])
+        self.assertEqual([(e.number, e.base, e.amended_by) for e in entries],
+                         [("LIVSFS 2006:12", True, ["LIVSFS 2024:3"]), ("LIVSFS 2006:11", False, []),
+                          ("LIVSFS 2006:2", False, [])])
+        self.assertEqual(entries[0].url, "https://www.livsmedelsverket.se/x/livsfs-2006-12.pdf")
+        self.assertEqual(entries[0].title, "Livsmedelsverkets förteckning över gällande föreskrifter")
+
+    def test_myhfs_repeal_dates_from_both_lists(self):
+        def item(number, title, *facts):
+            lines = "".join(f"<p>{f}</p>" for f in (f"MYHFS-nummer: {number}",) + facts)
+            return (f'<a href="https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-{number.replace(":", "-")}.pdf">'
+                    f'<div class="v-list-item__title">{title} <span>(pdf, 195 kB)</span></div>'
+                    f'<div class="link-text">{lines}</div></a>')
+
+        in_force = (item("2026:5", "Föreskrifter om ämnen", "I kraft: 2026-07-01",
+                         "Genom föreskrifterna upphävs Myndigheten för yrkeshögskolans föreskrifter (MYHFS 2022:2).")
+                    + item("2026:3", "Föreskrifter om upphävande av föreskrifterna (2017:2) om el",
+                           "I kraft: 2026-03-01"))
+        repealed = (item("2022:2", "Föreskrifter om kurser", "Genom dessa föreskrifter upphävs MYHFS 2018:2.")
+                    + item("2022:1", "Föreskrifter om vårdadministratör", "Upphävd: 2026-03-01")
+                    + item("2018:2", "Föreskrifter om behörighet")
+                    + item("2017:2", "Föreskrifter om elinstallation", "I kraft: 2017-07-01"))
+        entries = self.MYHFS.parse_listing(in_force, self.MYHFS.listings[0])
+        self.assertEqual([(e.number, e.base, e.in_force, e.repealed) for e in entries],
+                         [("MYHFS 2026:5", True, "2026-07-01", None), ("MYHFS 2026:3", False, "2026-03-01", None)])
+        self.assertEqual(entries[0].title, "Föreskrifter om ämnen")
+        entries = self.MYHFS.parse_listing(repealed, self.MYHFS.listings[1])
+        self.assertEqual([(e.number, e.base, e.repealed) for e in entries],
+                         [("MYHFS 2022:2", True, "2026-07-01"), ("MYHFS 2022:1", True, "2026-03-01"),
+                          ("MYHFS 2018:2", False, None), ("MYHFS 2017:2", True, "2026-03-01")])

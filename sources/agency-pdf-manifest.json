@@ -10404,6 +10404,244 @@
       ]
     },
     {
+      "number": "KVFS 2009:2",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/ovriga/kvfs-20092--fark-ovriga/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2009_2---kriminalvardens-foreskrifter-och-allmanna-rad-om-skjutvapen-for-kriminalvardstjansteman-i-utlandstjanst.pdf",
+          "bytes": 54544,
+          "sha256": "f38498d3e0f8105f9b2168d8c7b425c1ab4ab7e9f67e7c9c87797b1d490e8f94",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:14:26Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2011:1",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/fangelse/kvfs-20111--fark-fangelse/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-20111---kriminalvardens-foreskrifter-och-allmanna-rad-for-fangelse.pdf",
+          "bytes": 761079,
+          "sha256": "6521b84d0122b00e59e9108eb358a32da572db4b1b1e7c79b781d8316ec01591",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:14:24Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2011:2",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/hakte/kvfs-20112--fark-hakte/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2011_2---kriminalvardens-foreskrifter-och-allmanna-rad-for-hakte.pdf",
+          "bytes": 408434,
+          "sha256": "a8f4970d15ea1a8d0bbca4615ae49202d712d558cf0673315d9e5f4a5a24a113",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:14:22Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2011:4",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/frivard/kvfs-20114-/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2011_4---kriminalvardens-foreskrifter-och-allmanna-rad-om-personutredning-och-yttrande-i-brottmal.pdf.pdf",
+          "bytes": 142396,
+          "sha256": "f2710649a201245ef7cd4c61fd8c27a91f4ed2a0ff115b74a5b7773ea2142673",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:14:18Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2011:5",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/frivard/kvfs-20115--fark-frivard/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-20115---kriminalvardens-foreskrifter-och-allmanna-rad-om-verkstallighet-av-frivardspafoljder---konsoliderad.pdf",
+          "bytes": 169991,
+          "sha256": "2a4733c5ec8ba946d42e393eb6c2b1123f30820f1f30cbced8b758ff4833a234",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:14:16Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2011:6",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/frivard/kvfs-20116--fark-frivard/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2011_6---kriminalvardens-foreskrifter-och-allmanna-rad-om-intensivovervakning-med-elektronisk-kontroll.pdf",
+          "bytes": 416000,
+          "sha256": "fd28fa61d8a4fd7a2f202426ccdf7df0f39c0830507256eb0bf1491970be60b9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:14:14Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2012:6",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/transport/kvfs-20126--fark-transport/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2012_6---kriminalvardens-foreskrifter-och-allmanna-rad-om-transportverksamheten.pdf",
+          "bytes": 236671,
+          "sha256": "35b345cd968db35b88b75acbb7853cbc589b017e3d9271d3f5c79ae85c5f02ca",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:14:01Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2016:3",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/hakte/kvfs-20163--fark-hakte/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2016_3-hakte-andringsforeskrift.pdf",
+          "bytes": 152557,
+          "sha256": "fc2c05df56df2fff6261873541eb046723800de51c85dddc416e4e2ddbb5d9d1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:13:48Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2019:1",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/fangelse/kvfs-20191--fark-strafftid/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2019_1-fark-strafftid-trycklovad-till-tryck.pdf",
+          "bytes": 403215,
+          "sha256": "bea9a20134b82fe041e552f402fbe7eb181e093c3d610206d66fd0c2268a7f65",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:13:35Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2019:11",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/ovriga/kvfs-201911--fark-ovriga/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-201911---oc-trycklov.pdf",
+          "bytes": 310926,
+          "sha256": "8c4f7571b352379baa0201ae7dc3554a1a020c901f7fcd393e05ef0fe5c6c3ce",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:13:24Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2020:2",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/transport/kvfs-20202--fark-transport/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2020_2-fark-transport.pdf",
+          "bytes": 319587,
+          "sha256": "6b5af0512259605008a39d2c4d492926a844e9c9e176b36ce0cb6ed103d7a4b0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:13:20Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2020:3",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/frivard/kvfs-20203--fark-frivard/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2020_3-fark-uo.pdf",
+          "bytes": 652073,
+          "sha256": "1cbbc319b822f2db1c6dc086dd026a4dab87276596a62226979fdc1af0515e43",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:13:18Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2025:2",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/ovriga/kvfs-20252---fark-statsbidrag/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2025_2-kriminalvardens-foreskrifter-och-allmanna-rad-kvfs-2025.2-om-statsbidrag-till-organisationer-inom-kriminalvardens-omrade.pdf",
+          "bytes": 129303,
+          "sha256": "1a66ebea3d4f1f7c20d26cd2761a148bbf2e237003aa87cf99228fca8c94006f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:12:43Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2025:5",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/frivard/kvfs-20255--fark-eov/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2025_5---fark-eov.pdf",
+          "bytes": 130456,
+          "sha256": "f9bf0ddd8a548ce4c8be7040e91a81d16bfd276fcd6bd76b4c480483c8367e4f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:12:38Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2026:10",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/fangelse/kvfs-202610--fark-tvu/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2026_10---kriminalvardens-foreskrifter-och-allmanna-rad-om-tillfallig-verkstallighet-av-svenska-fangelsestraff-utomlands.pdf",
+          "bytes": 174270,
+          "sha256": "08d9fdbf94fb2311e60f6b813527595c32054798e6359c1ee2e44df6239ed7a9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:12:24Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2026:13",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/fangelse/kvfs-202613--fark-tvu/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2026_13.pdf",
+          "bytes": 108725,
+          "sha256": "320f025c67adc65137868a000dc848fef0c15cbfd39c56f570022679817bcc78",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:12:20Z"
+        }
+      ]
+    },
+    {
+      "number": "KVFS 2026:15",
+      "detail_url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/foreskrifter-och-allmanna-rad/kriminalvardens-forfattningssamling/fangelse/kvfs-202615--fark-sakerhetsforvaring/",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.kriminalvarden.se/globalassets/dokument/foreskrifter/kvfs-2026_15-.pdf",
+          "bytes": 190716,
+          "sha256": "9ba658e405bd84f1b611c9cd88a97b3747e1261fab5007fcd2fa23fec33d1b31",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:12:17Z"
+        }
+      ]
+    },
+    {
       "number": "LIFS 2018:2",
       "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20182/",
       "files": [
@@ -10484,6 +10722,552 @@
           "sha256": "a57ee02945f566368e6c292a0ad5da09d65fd404f2520d14843f7f06e7cc9208",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T14:21:28Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2005:1",
+      "detail_url": "https://www.livsmedelsverket.se/4aacb5/globalassets/om-oss/lagstiftning/nummerordning---upphord-lagstiftning/2005/livsfs-2005-1-forteckning.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2005:1",
+          "url": "https://www.livsmedelsverket.se/4aacb5/globalassets/om-oss/lagstiftning/nummerordning---upphord-lagstiftning/2005/livsfs-2005-1-forteckning.pdf",
+          "bytes": 120777,
+          "sha256": "bc4ee5f6b32be8f043f7392fa0c89344a61496d1ca4f9f57baee407eab93908d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:23:02Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2005:7",
+      "detail_url": "https://www.livsmedelsverket.se/4aacb6/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2005-7.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2005:7",
+          "url": "https://www.livsmedelsverket.se/4aacb6/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2005-7.pdf",
+          "bytes": 12415,
+          "sha256": "5982e5ca39a9b6ddfd631795a054f1a1548317c2b6fa568e57e30124feea184d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:23:01Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2005:9",
+      "detail_url": "https://www.livsmedelsverket.se/4aabbc/globalassets/om-oss/lagstiftning/livsmedelsinfo-till-konsum---markning/livsfs-2005-9-grund.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2005:9",
+          "url": "https://www.livsmedelsverket.se/4aabbc/globalassets/om-oss/lagstiftning/livsmedelsinfo-till-konsum---markning/livsfs-2005-9-grund.pdf",
+          "bytes": 131038,
+          "sha256": "fc21c05830aa47d94609c5cb6d99a1cf571bb402554d7ebca24dc7a52e2dda27",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:23:01Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2005:11",
+      "detail_url": "https://www.livsmedelsverket.se/4aaccc/globalassets/om-oss/lagstiftning/alkoholhaltiga-drycker/livsfs-2005-11.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2005:11",
+          "url": "https://www.livsmedelsverket.se/4aaccc/globalassets/om-oss/lagstiftning/alkoholhaltiga-drycker/livsfs-2005-11.pdf",
+          "bytes": 23863,
+          "sha256": "a8534ad8207ec50e0274c9fe0c2cdbe49e81119f7dff8a90737b1cc1d4f3d643",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:58Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2005:20",
+      "detail_url": "https://www.livsmedelsverket.se/49f2b3/globalassets/om-oss/lagstiftning/livsmedelshygien/livsfs-2005-20.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2005:20",
+          "url": "https://www.livsmedelsverket.se/49f2b3/globalassets/om-oss/lagstiftning/livsmedelshygien/livsfs-2005-20.pdf",
+          "bytes": 93021,
+          "sha256": "ba418cfbfd13cb50c12fab5231836bc8e4ece4b02c45dc1f11dbd0a81d59bc56",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:57Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2005:21",
+      "detail_url": "https://www.livsmedelsverket.se/4aacc3/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2005-21.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2005:21",
+          "url": "https://www.livsmedelsverket.se/4aacc3/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2005-21.pdf",
+          "bytes": 40076,
+          "sha256": "28760689f483573bad5331e8397b724bc96537546ce565404099982ced823ee2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:56Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2005:22",
+      "detail_url": "https://www.livsmedelsverket.se/4aacc2/globalassets/om-oss/lagstiftning/export---import---handel-eu/livsfs-2005-22.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2005:22",
+          "url": "https://www.livsmedelsverket.se/4aacc2/globalassets/om-oss/lagstiftning/export---import---handel-eu/livsfs-2005-22.pdf",
+          "bytes": 38332,
+          "sha256": "2f08481577a3b2676ab139f33deb126e7a57344da9322645eb78e43258fd6675",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:55Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2006:1",
+      "detail_url": "https://www.livsmedelsverket.se/4aac87/globalassets/om-oss/lagstiftning/nummerordning---upphord-lagstiftning/2006/livsfs-2006-1-forteckning.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2006:1",
+          "url": "https://www.livsmedelsverket.se/4aac87/globalassets/om-oss/lagstiftning/nummerordning---upphord-lagstiftning/2006/livsfs-2006-1-forteckning.pdf",
+          "bytes": 129415,
+          "sha256": "dd6d560e2bae77eadee995490f98932d3ff04f9fd46084fea4b32ac0cd9f50d0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:53Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2006:12",
+      "detail_url": "https://www.livsmedelsverket.se/4aac7f/globalassets/om-oss/lagstiftning/livsmedelshygien/livsfs-2006-12.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2006:12",
+          "url": "https://www.livsmedelsverket.se/4aac7f/globalassets/om-oss/lagstiftning/livsmedelshygien/livsfs-2006-12.pdf",
+          "bytes": 44744,
+          "sha256": "dfc6cf235cd62c4ff27c97ea23d9837d3d229b76b4cacc0a454be6278e38010d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:52Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2007:1",
+      "detail_url": "https://www.livsmedelsverket.se/4aac73/globalassets/om-oss/lagstiftning/nummerordning---upphord-lagstiftning/2007/livsfs-2007-1-forteckning.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2007:1",
+          "url": "https://www.livsmedelsverket.se/4aac73/globalassets/om-oss/lagstiftning/nummerordning---upphord-lagstiftning/2007/livsfs-2007-1-forteckning.pdf",
+          "bytes": 78055,
+          "sha256": "45e432db53b406d3b80318af257b1b066c82339a16413da7444bff0f451f6156",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:50Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2007:13",
+      "detail_url": "https://www.livsmedelsverket.se/4aac6b/globalassets/om-oss/lagstiftning/galler-flera-foreskrifter/livsfs-2007-13-gallande-forfattningar.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2007:13",
+          "url": "https://www.livsmedelsverket.se/4aac6b/globalassets/om-oss/lagstiftning/galler-flera-foreskrifter/livsfs-2007-13-gallande-forfattningar.pdf",
+          "bytes": 81181,
+          "sha256": "88fc65a73924f68c70941cf0b01f90f719011c9646c056442d139bb99e96bfec",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:47Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2008:1",
+      "detail_url": "https://www.livsmedelsverket.se/4aac67/globalassets/om-oss/lagstiftning/galler-flera-foreskrifter/livsfs-2008-1-tryckv.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2008:1",
+          "url": "https://www.livsmedelsverket.se/4aac67/globalassets/om-oss/lagstiftning/galler-flera-foreskrifter/livsfs-2008-1-tryckv.pdf",
+          "bytes": 193958,
+          "sha256": "911e62fbde71ca32bd97fa0996665d3c37dbe4f6a596f8a726ac7f88dc2a9b19",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:45Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2009:13",
+      "detail_url": "https://www.livsmedelsverket.se/4aaba0/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2009-13.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2009:13",
+          "url": "https://www.livsmedelsverket.se/4aaba0/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2009-13.pdf",
+          "bytes": 19774,
+          "sha256": "5eca02ac4711920581b6927f3c2c39256224519147ee1a2df746cac252223ed9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:42Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2010:10",
+      "detail_url": "https://www.livsmedelsverket.se/4aab9e/globalassets/om-oss/lagstiftning/avgifter/livsfs-2010-10-ej-kons.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2010:10",
+          "url": "https://www.livsmedelsverket.se/4aab9e/globalassets/om-oss/lagstiftning/avgifter/livsfs-2010-10-ej-kons.pdf",
+          "bytes": 10126,
+          "sha256": "30aaef509f992c24f5b483462f690815192a8370424bf88aa0aa7a13ebf93490",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:40Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2011:12",
+      "detail_url": "https://www.livsmedelsverket.se/4aab9b/globalassets/om-oss/lagstiftning/tillsatser---e-nummer---aromer---enzymer/livsfs-2011-12-ej-kons.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2011:12",
+          "url": "https://www.livsmedelsverket.se/4aab9b/globalassets/om-oss/lagstiftning/tillsatser---e-nummer---aromer---enzymer/livsfs-2011-12-ej-kons.pdf",
+          "bytes": 44621,
+          "sha256": "fcebb4b50a5abf3950fa424e7c82a8a38a2be0b086a3e5ace3abc8bea0a4b806",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:38Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2012:3",
+      "detail_url": "https://www.livsmedelsverket.se/4aac40/globalassets/om-oss/lagstiftning/frammande-amnen---oonskade/livsfs-2012-3.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2012:3",
+          "url": "https://www.livsmedelsverket.se/4aac40/globalassets/om-oss/lagstiftning/frammande-amnen---oonskade/livsfs-2012-3.pdf",
+          "bytes": 33555,
+          "sha256": "6992aea38a97274919a9753a8bb7fb53fb9cc4ffacc6c2e4ed3c4165d507ff55",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:36Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2014:1",
+      "detail_url": "https://www.livsmedelsverket.se/49096c/globalassets/om-oss/lagstiftning/overgripande-lagstiftning/livsfs-2014-1-tryckv-140203.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2014:1",
+          "url": "https://www.livsmedelsverket.se/49096c/globalassets/om-oss/lagstiftning/overgripande-lagstiftning/livsfs-2014-1-tryckv-140203.pdf",
+          "bytes": 334858,
+          "sha256": "70a38da24416fd23ae9812bc0c9bb8ead24d2f8dd48ddf44c347326b5dca897d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:31Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2014:4",
+      "detail_url": "https://www.livsmedelsverket.se/48d6a4/globalassets/om-oss/lagstiftning/livsmedelsinfo-till-konsum---markning/livsfs-2014-4.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2014:4",
+          "url": "https://www.livsmedelsverket.se/48d6a4/globalassets/om-oss/lagstiftning/livsmedelsinfo-till-konsum---markning/livsfs-2014-4.pdf",
+          "bytes": 95109,
+          "sha256": "bdafb7c38c0339a9bbfe949d01beb108462349310b0d2b95f861141dc56603c6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:31Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2014:22",
+      "detail_url": "https://www.livsmedelsverket.se/4aabb7/globalassets/om-oss/lagstiftning/frammande-amnen---oonskade/livsfs-2014-22.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2014:22",
+          "url": "https://www.livsmedelsverket.se/4aabb7/globalassets/om-oss/lagstiftning/frammande-amnen---oonskade/livsfs-2014-22.pdf",
+          "bytes": 16144,
+          "sha256": "cb2eab0460e9b9d7f27a26a9f316b9afd16b15313926a98496a3de2a632ce028",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:32Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2014:25",
+      "detail_url": "https://www.livsmedelsverket.se/4aabb3/globalassets/om-oss/lagstiftning/tillsatser---e-nummer---aromer---enzymer/livsfs-2014-25-tryckfil.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2014:25",
+          "url": "https://www.livsmedelsverket.se/4aabb3/globalassets/om-oss/lagstiftning/tillsatser---e-nummer---aromer---enzymer/livsfs-2014-25-tryckfil.pdf",
+          "bytes": 14363,
+          "sha256": "fb88c24c0f75e48e5a476d9805e8483a5e20201ffd5ef8bb5e48cd93f4f3cee3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:33Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2016:13",
+      "detail_url": "https://www.livsmedelsverket.se/4aa77c/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2016-13_web_slutversionen.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2016:13",
+          "url": "https://www.livsmedelsverket.se/4aa77c/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2016-13_web_slutversionen.pdf",
+          "bytes": 63387,
+          "sha256": "03f8a09240fe0b8440ded3e642ac6c0d383259c01d8fc56eb758409b2504060f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:28Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2021:8",
+      "detail_url": "https://www.livsmedelsverket.se/49f122/globalassets/om-oss/lagstiftning/avgifter/livsfs-2021-8_tillg.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2021:8",
+          "url": "https://www.livsmedelsverket.se/49f122/globalassets/om-oss/lagstiftning/avgifter/livsfs-2021-8_tillg.pdf",
+          "bytes": 289254,
+          "sha256": "5bb13479b06a2c88a00b1b6ea94317b7360b1a6ff4b58d26ddb61fd720180be0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:16Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2021:9",
+      "detail_url": "https://www.livsmedelsverket.se/49f7aa/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2021-9_tillg.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2021:9",
+          "url": "https://www.livsmedelsverket.se/49f7aa/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2021-9_tillg.pdf",
+          "bytes": 149414,
+          "sha256": "c5ca962a7402be0e93bdc102eb8ca5f2b392dbf695ab62a8fcaaba468cf5c06b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:17Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2021:12",
+      "detail_url": "https://www.livsmedelsverket.se/4ade49/globalassets/om-oss/lagstiftning/ekologiska-livsmedel/livsfs-2021-12_web_t.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2021:12",
+          "url": "https://www.livsmedelsverket.se/4ade49/globalassets/om-oss/lagstiftning/ekologiska-livsmedel/livsfs-2021-12_web_t.pdf",
+          "bytes": 223963,
+          "sha256": "6802f466a32869ec86d7bc3e49af4b9342a2e0de63e3341e4addfd07b311f78e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:19Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2022:4",
+      "detail_url": "https://www.livsmedelsverket.se/4a54a4/globalassets/om-oss/lagstiftning/berikn---kosttillsk---livsm-spec-gr-fsmp/livsfs-2022-4_tillg.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2022:4",
+          "url": "https://www.livsmedelsverket.se/4a54a4/globalassets/om-oss/lagstiftning/berikn---kosttillsk---livsm-spec-gr-fsmp/livsfs-2022-4_tillg.pdf",
+          "bytes": 169482,
+          "sha256": "69530f43e412c40a1d2d5a1d0eb8baf89d824a160050bb0aa9d6f992e47a1a0e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:12Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2022:8",
+      "detail_url": "https://www.livsmedelsverket.se/4ad7b7/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2022-8_web_t.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2022:8",
+          "url": "https://www.livsmedelsverket.se/4ad7b7/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2022-8_web_t.pdf",
+          "bytes": 166589,
+          "sha256": "4211c7f2d4f78b91777f11ca67865230042b2cfae3f1dfac63a3134e327ef6eb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:14Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2022:12",
+      "detail_url": "https://www.livsmedelsverket.se/4af3b1/globalassets/om-oss/lagstiftning/dricksvatten---naturl-mineralv---kallv/livsfs-2022-12_web_t.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2022:12",
+          "url": "https://www.livsmedelsverket.se/4af3b1/globalassets/om-oss/lagstiftning/dricksvatten---naturl-mineralv---kallv/livsfs-2022-12_web_t.pdf",
+          "bytes": 650778,
+          "sha256": "8333264d2383806b8defc69cb317cb20ed733b691d32b2a222dbfea9ed0c512a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:15Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2023:2",
+      "detail_url": "https://www.livsmedelsverket.se/49b4bc/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2023-2_web_tillg.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2023:2",
+          "url": "https://www.livsmedelsverket.se/49b4bc/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2023-2_web_tillg.pdf",
+          "bytes": 226362,
+          "sha256": "6fbc95fd96074c22c544102a47df995d249d64068dd95e7fabf0831ffabdb62a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:07Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2023:3",
+      "detail_url": "https://www.livsmedelsverket.se/49b5cc/globalassets/om-oss/lagstiftning/berikn---kosttillsk---livsm-spec-gr-fsmp/livsfs-2023-3_web_t.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2023:3",
+          "url": "https://www.livsmedelsverket.se/49b5cc/globalassets/om-oss/lagstiftning/berikn---kosttillsk---livsm-spec-gr-fsmp/livsfs-2023-3_web_t.pdf",
+          "bytes": 165529,
+          "sha256": "52beaf4aea50f128e2bc587d58ac67b47a9a551c6754cef0582973978fe61710",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:07Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2023:5",
+      "detail_url": "https://www.livsmedelsverket.se/4aa8ca/globalassets/om-oss/lagstiftning/forpackn---matrl-i-kontakt-m-livsm/livsfs-2023-5_tillg2.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2023:5",
+          "url": "https://www.livsmedelsverket.se/4aa8ca/globalassets/om-oss/lagstiftning/forpackn---matrl-i-kontakt-m-livsm/livsfs-2023-5_tillg2.pdf",
+          "bytes": 426031,
+          "sha256": "0393a5ec5d9d56c4a56842808da1554a65267f115d0430b01df31ac0e5bc451b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:09Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2024:2",
+      "detail_url": "https://www.livsmedelsverket.se/4930e9/globalassets/om-oss/lagstiftning/snus-tuggtobak/livsfs-2024-2_web-t.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2024:2",
+          "url": "https://www.livsmedelsverket.se/4930e9/globalassets/om-oss/lagstiftning/snus-tuggtobak/livsfs-2024-2_web-t.pdf",
+          "bytes": 305491,
+          "sha256": "49d0c618fa10e89f91c46605ab15c42e2bd29625ca571419632607470b436330",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:01Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2024:4",
+      "detail_url": "https://www.livsmedelsverket.se/4a8177/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2024-4_web.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2024:4",
+          "url": "https://www.livsmedelsverket.se/4a8177/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2024-4_web.pdf",
+          "bytes": 154921,
+          "sha256": "8aa29f253371dec0baef83c2b0ad7682c9248e2837b00c0ea970ff98e5bb36a0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:02Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2024:6",
+      "detail_url": "https://www.livsmedelsverket.se/4a924d/globalassets/om-oss/lagstiftning/livsmedelshygien/livsfs-2024-6_web.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2024:6",
+          "url": "https://www.livsmedelsverket.se/4a924d/globalassets/om-oss/lagstiftning/livsmedelshygien/livsfs-2024-6_web.pdf",
+          "bytes": 196021,
+          "sha256": "a6344e69d1a07ef84e7b4b925d0f7b690c0a8d973646d288c617e302f42c54d9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:03Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2024:8",
+      "detail_url": "https://www.livsmedelsverket.se/4aa4dd/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2024-8_web.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2024:8",
+          "url": "https://www.livsmedelsverket.se/4aa4dd/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2024-8_web.pdf",
+          "bytes": 617766,
+          "sha256": "7a4646c8361a2bec57b50168f346042c8864aae595d0398cbf288d92d1d31f6d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:22:05Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2025:3",
+      "detail_url": "https://www.livsmedelsverket.se/4ae690/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-3-tillg.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2025:3",
+          "url": "https://www.livsmedelsverket.se/4ae690/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-3-tillg.pdf",
+          "bytes": 222670,
+          "sha256": "dc7e7ffcaff9b59bed112acfa959bfe9eef999e960280b68340236f98474eb5c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:21:55Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2025:4",
+      "detail_url": "https://www.livsmedelsverket.se/4ae67a/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-4-tillg.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2025:4",
+          "url": "https://www.livsmedelsverket.se/4ae67a/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-4-tillg.pdf",
+          "bytes": 258956,
+          "sha256": "3a1c6d92dc5afe0f04d330dee8ab4b3fc3028e11988484ce6ca261336130de5c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:21:56Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2025:5",
+      "detail_url": "https://www.livsmedelsverket.se/4ae6a3/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-5-tillg.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2025:5",
+          "url": "https://www.livsmedelsverket.se/4ae6a3/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-5-tillg.pdf",
+          "bytes": 199847,
+          "sha256": "389d48b02dcd77ea0f97705446adfb751a9112b8dcd5065885f3b8c31dde6906",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:21:57Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2025:6",
+      "detail_url": "https://www.livsmedelsverket.se/4af339/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-6-tillg.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2025:6",
+          "url": "https://www.livsmedelsverket.se/4af339/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-6-tillg.pdf",
+          "bytes": 277606,
+          "sha256": "7c2c0e72cf911ed9a921bb551d2b0115b43959d3efc31bfd7c3c6f80c7544946",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:21:58Z"
+        }
+      ]
+    },
+    {
+      "number": "LIVSFS 2026:2",
+      "detail_url": "https://www.livsmedelsverket.se/49e8c8/globalassets/om-oss/lagstiftning/alkoholhaltiga-drycker/livsfs-2026-2-tillg.pdf",
+      "files": [
+        {
+          "label": "LIVSFS 2026:2",
+          "url": "https://www.livsmedelsverket.se/49e8c8/globalassets/om-oss/lagstiftning/alkoholhaltiga-drycker/livsfs-2026-2-tillg.pdf",
+          "bytes": 176881,
+          "sha256": "eed4feb5d9965c117491319374698302e060316eace981c49e4756ecfdf2527e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:21:53Z"
         }
       ]
     },
@@ -11276,6 +12060,622 @@
           "sha256": "3b8d62bf21149fe2ea02f592586e89cee2cfc6423320c89c610015bb5cfe7741",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T14:29:23Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2009:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2009-1.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2009:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2009-1.pdf",
+          "bytes": 1567745,
+          "sha256": "56548a9425b07924accebec85152c0aa96cfb28e229340960b7424c580cde742",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:36Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2009:2",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2009-2.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2009:2",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2009-2.pdf",
+          "bytes": 1565729,
+          "sha256": "a0cb5d6829d8a3e7bcf4034bbe6c74d2231f5cfada83d7e839f2cba468abfaba",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:20:00Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2009:3",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2009-3.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2009:3",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2009-3.pdf",
+          "bytes": 1611632,
+          "sha256": "f92978072f6ef156c30ef94ca765f8f97b3a2031e0867b6b605264fe1327bafe",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:59Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2010:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2010-1.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2010:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2010-1.pdf",
+          "bytes": 1565955,
+          "sha256": "61c647c837bd1e146941fe751bf04fabfceb6df26c526a1179d8389564a51227",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:58Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2010:2",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2010-2.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2010:2",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2010-2.pdf",
+          "bytes": 1607636,
+          "sha256": "df9940179278be83fd6b2108f4eee3b37798ae4f9d6e2fda3cab217798b3c7bc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:57Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2011:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2011-1.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2011:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2011-1.pdf",
+          "bytes": 1687830,
+          "sha256": "1efee3526bf04885b1f1ae1e5a4158035562fdafc319c6e27c77f53df6e5ad7c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:56Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2012:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2012-1.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2012:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2012-1.pdf",
+          "bytes": 97368,
+          "sha256": "95b1642f20e5286fa2ee4a6a91fbb186c3835a5cccd4155329219d4e8628729d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:55Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2012:2",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2012-2.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2012:2",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2012-2.pdf",
+          "bytes": 144965,
+          "sha256": "4663bf6120e22502cd915e3af896adb47fa4f999af0a7f8842ba4564c0e49299",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:54Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2012:3",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2012-3.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2012:3",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2012-3.pdf",
+          "bytes": 1569217,
+          "sha256": "902f0e111baa186736c91efcfaff37a58076f7afdc21fcee51c79811b1935640",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:53Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2013:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2013-1.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2013:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2013-1.pdf",
+          "bytes": 103409,
+          "sha256": "ccaaf02bcccc6d2c4e792f3682cc0bdf454194e1720f2cc4b94a851b90835059",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:52Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2013:3",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2013-3.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2013:3",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2013-3.pdf",
+          "bytes": 78987,
+          "sha256": "37aa3a64f3c49204870fc7197ff1868e8d3ce6bc862279604e42143dc1cb6cc4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:51Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2013:4",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2013-4.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2013:4",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2013-4.pdf",
+          "bytes": 35418,
+          "sha256": "915bf693de564599f11318d21c784897331b4e6bb0091ca9b11218fec5124906",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:50Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2014:5",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2014-5.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2014:5",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2014-5.pdf",
+          "bytes": 49012,
+          "sha256": "6ca2d76aadb108d92d3b33e33dfa90ce829775b2ff10d2305613236f4bbc7ded",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:35Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2015:2",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2015-2.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2015:2",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2015-2.pdf",
+          "bytes": 52119,
+          "sha256": "3a925309de2b03334c71953a08c9759b138d81798af119fd8556d57396e5be8b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:34Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2015:3",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2015-3.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2015:3",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2015-3.pdf",
+          "bytes": 67610,
+          "sha256": "18253eb6e2e5b7018ca0e3ce96daf8ec858919a3515587947c2054a6ecdbd40d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:49Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2016:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-1.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2016:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-1.pdf",
+          "bytes": 51360,
+          "sha256": "7aea86571d67f2ed9cda9be66059bf3265fda31ef3065b9bdb242337dac3fc6b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:48Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2016:2",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-2.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2016:2",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-2.pdf",
+          "bytes": 51619,
+          "sha256": "5efed22e23c0ebea79593e0316e61f3c4555fc717d42e1e80cd2f9d831bbfbb9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:47Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2016:3",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-3.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2016:3",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-3.pdf",
+          "bytes": 49458,
+          "sha256": "fb5f31b82a664881cc5f643fcecb8def6339239151167db9e121deb57d7348e1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:46Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2016:8",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-8.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2016:8",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-8.pdf",
+          "bytes": 58235,
+          "sha256": "2b9353fff6eb6c12790f7ecf6b312f165ea1da11e06437a41bde1eae26f7ba6a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:45Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2016:9",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-9.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2016:9",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-9.pdf",
+          "bytes": 52360,
+          "sha256": "cf5a9ba47f7142fb32553e3b0cf581c4e2a17a20cf4115dc792c7d365e86d599",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:33Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2016:10",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-10.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2016:10",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-10.pdf",
+          "bytes": 77361,
+          "sha256": "a70965d173adf8e837d6d5ab76d1302dbade68f845d3fec4e08b5c6e123b00b6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:32Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2016:14",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-14.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2016:14",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2016-14.pdf",
+          "bytes": 48309,
+          "sha256": "91ee0021687030105366bc8aef862188609badd94c8012967c9d5468263323d0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:44Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2017:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2017-1.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2017:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2017-1.pdf",
+          "bytes": 64733,
+          "sha256": "1293fe1e64d0fbe62164c23405dc6b0a777e3fa4b5a96489300205f5dd5ead9d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:42Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2017:2",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2017-2.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2017:2",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2017-2.pdf",
+          "bytes": 66386,
+          "sha256": "bd9ac7d3f9b68961172653423aa371e7ca1bebc20fed5379d52ac35af5f71ba8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:43Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2017:3",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2017-3.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2017:3",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2017-3.pdf",
+          "bytes": 48881,
+          "sha256": "e91f94d29d7c8546fb8ce76bb619c1b018a10eb8d3c2335865c9b54e290149b4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:41Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2017:5",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2017-5.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2017:5",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2017-5.pdf",
+          "bytes": 51373,
+          "sha256": "7b4da18560e6cf62c254995b37c4869dc2bd75782c218eebcd446d3b16930d9b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:31Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2019:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2019-1.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2019:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2019-1.pdf",
+          "bytes": 139244,
+          "sha256": "d2ff779c5b594479e56e7114b50fd6ace19d7c13d83db6e3c15abd2c4b4c7e0f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:30Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2019:4",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2019-4.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2019:4",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2019-4.pdf",
+          "bytes": 57583,
+          "sha256": "2f2f411f99194330c9a8e21db32c7c119d3da9e74742024c4d723abc335ae0e1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:29Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2020:3",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2020-3.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2020:3",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2020-3.pdf",
+          "bytes": 108999,
+          "sha256": "102e8d9176ade165f918d83379e8e392fbcad1da71bccd96b30779dc9c801b69",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:28Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2020:5",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2020-5.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2020:5",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2020-5.pdf",
+          "bytes": 166041,
+          "sha256": "9b5790c009b70fe621f566d79bf68f6f4b62bd49ad4ee836f162d0d133502346",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:27Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2021:4",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2021-4.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2021:4",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2021-4.pdf",
+          "bytes": 218297,
+          "sha256": "739b72280ba55e664dd6b0d5e20691ed610889564d2211fa0ba2abb1765d9cf1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:26Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2022:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2022-1.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2022:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2022-1.pdf",
+          "bytes": 237623,
+          "sha256": "f4d6e6ff24036303ec6b22f3ece7dbe4a9d6ba7a7beb65f67b2649f373477153",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:40Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2022:2",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2022-2.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2022:2",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2022-2.pdf",
+          "bytes": 176320,
+          "sha256": "7c67c7ce2786351728327ef1bd53a887b8fa71e811fe540ae61a18c17b9012d0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:39Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2022:3",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2022-3.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2022:3",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2022-3.pdf",
+          "bytes": 350348,
+          "sha256": "53c38ee78f213edace3455bc108dcda66d192bc2549725255afa158f827ab14e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:25Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2022:4",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2022-4.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2022:4",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2022-4.pdf",
+          "bytes": 277310,
+          "sha256": "ab6082f5fa7a792da28bef7be45e90233f10fde5da5c9929ecdc977ab7031ae2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:24Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2022:5",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2022-5.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2022:5",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2022-5.pdf",
+          "bytes": 135437,
+          "sha256": "c8f45c1eddab1acce2a1d84e0fcefd950f4c2acaa475aa890f70021139055ebd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:38Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2023:2",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2023-2.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2023:2",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2023-2.pdf",
+          "bytes": 260767,
+          "sha256": "40625b313ed69eabdc8b71dc2380b7bffe0a5562d2e49ececd8167c4b84f4073",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:23Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2023:3",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2023-3-myndigheten-for-yrkeshogskolans-foreskrifter-och-allmanna-rad-om-ansokan-om-statsbidrag-eller-sarskilda-medel-for-kostnader-for-sarskilt-pedagogiskt-stod-for-studerande-med-funktionsnedsattning-inom-yrkeshogskolan.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2023:3",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2023-3-myndigheten-for-yrkeshogskolans-foreskrifter-och-allmanna-rad-om-ansokan-om-statsbidrag-eller-sarskilda-medel-for-kostnader-for-sarskilt-pedagogiskt-stod-for-studerande-med-funktionsnedsattning-inom-yrkeshogskolan.pdf",
+          "bytes": 166133,
+          "sha256": "8df539868986bc170e7f7b5f105163d4667bbe5ab13a8713f2e8d13a829661db",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:22Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2023:4",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myndigheten-for-yrkeshogskolans-foreskrifter-och-allmanna-rad-om-lamnande-av-uppgifter-om-studerande-och-studieresultat-for-utbildningar-inom-yrkeshogskolan.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2023:4",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myndigheten-for-yrkeshogskolans-foreskrifter-och-allmanna-rad-om-lamnande-av-uppgifter-om-studerande-och-studieresultat-for-utbildningar-inom-yrkeshogskolan.pdf",
+          "bytes": 241879,
+          "sha256": "0393e2ef8188954835c7a6e72ccb7032d28c0a606e884e2c678dfc9af1d1eaa6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:21Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2023:5",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myndigheten-for-yrkeshogskolans-foreskrifter-om-sarskilda-forkunskapskrav-for-specialiserande-yrkeshogskoleutbildningar-for-underskoterskor.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2023:5",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myndigheten-for-yrkeshogskolans-foreskrifter-om-sarskilda-forkunskapskrav-for-specialiserande-yrkeshogskoleutbildningar-for-underskoterskor.pdf",
+          "bytes": 167449,
+          "sha256": "0c75914034e2efa25b6582abcbd2ebea2d42fbf1a3d5381dfaeb14a8120f46c4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:20Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2024:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myndigheten-for-yrkeshogskolans-foreskrifter-om-utbildningar-inom-yrkeshogskolan-med-inriktning-instrument-och-steriltekniker.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2024:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myndigheten-for-yrkeshogskolans-foreskrifter-om-utbildningar-inom-yrkeshogskolan-med-inriktning-instrument-och-steriltekniker.pdf",
+          "bytes": 278693,
+          "sha256": "e2bfdf445df3940ab078ab281664bc838e064003473d9bf8813a2e73c25c9a61",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:19Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2025:1",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-1-2025-tillg.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2025:1",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-1-2025-tillg.pdf",
+          "bytes": 268810,
+          "sha256": "b83d72453d2446b69691ce23fdd510a882bccb05b5283296fb253f4843747657",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:18Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2026:4",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2026-4.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2026:4",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-2026-4.pdf",
+          "bytes": 268700,
+          "sha256": "e943318f0b6a9050d5e6eb0ef36d62c2757aa9d2231ba8fcab49d3a43543f0a7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:17Z"
+        }
+      ]
+    },
+    {
+      "number": "MYHFS 2026:5",
+      "detail_url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-5-2026-tillg.pdf",
+      "files": [
+        {
+          "label": "MYHFS 2026:5",
+          "url": "https://assets.myh.se/docs/lag-ratt/myhfs/myhfs-5-2026-tillg.pdf",
+          "bytes": 195269,
+          "sha256": "82ef61940f9b81eaeb9cda0a1e89044cae4456486e744eed7039f2d6d3f1b615",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:19:16Z"
         }
       ]
     },
@@ -40512,6 +41912,482 @@
           "sha256": "fc20199e54aabb0db28c0072fe7560c3aaa1ac171581e34676a28608df530e34",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-29T23:57:23Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2001:1",
+      "detail_url": "https://www.svk.se/4afc61/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2001-1-utrustning-for-forbrukningsfrankoppling.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2001:1",
+          "url": "https://www.svk.se/4afc61/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2001-1-utrustning-for-forbrukningsfrankoppling.pdf",
+          "bytes": 2081196,
+          "sha256": "3d9e670748469d2e96e7557917e559d0ecf77e1b0a352e18c0ad9376e654c516",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:11Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2012:1",
+      "detail_url": "https://www.svk.se/4afc82/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs1-2012-webb.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2012:1",
+          "url": "https://www.svk.se/4afc82/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs1-2012-webb.pdf",
+          "bytes": 110593,
+          "sha256": "42f9a9bebb16130bb2d8460f88e954a7b5932534eb16628d59a2fb1f459dcc37",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:10Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2014:1",
+      "detail_url": "https://www.svk.se/4ab62b/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/896603-svkfs-1-2014-web.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2014:1",
+          "url": "https://www.svk.se/4ab62b/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/896603-svkfs-1-2014-web.pdf",
+          "bytes": 127883,
+          "sha256": "8346d551ad7284eaa4e9722a53b3cab4f85945e1ef650d9f8ffa2b6126ffffce",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:09Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2021:1",
+      "detail_url": "https://www.svk.se/4afcaf/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2021_1_forbrukningsfrankoppling.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2021:1",
+          "url": "https://www.svk.se/4afcaf/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2021_1_forbrukningsfrankoppling.pdf",
+          "bytes": 797155,
+          "sha256": "413e21f31f703fb346f3fc07f429d4e58de3b3e8b9d50cd69f108893fc0ad8dd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:12Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2022:1",
+      "detail_url": "https://www.svk.se/4ab607/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2022-1-affarsverket-svenska-kraftnats-foreskrifter-om-sakerhetsskydd.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2022:1",
+          "url": "https://www.svk.se/4ab607/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2022-1-affarsverket-svenska-kraftnats-foreskrifter-om-sakerhetsskydd.pdf",
+          "bytes": 136432,
+          "sha256": "b4678e74d41cfd4760b29f2cdad613476f156eaff4c9655b814269567aad1f27",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:13Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2023:1",
+      "detail_url": "https://www.svk.se/49677e/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs_2023_1.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2023:1",
+          "url": "https://www.svk.se/49677e/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs_2023_1.pdf",
+          "bytes": 268586,
+          "sha256": "a4d83530ff482913ba77614a4b605c173eaad4c96f359be8a83b2ba10efc1100",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:14Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2005:2",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1976/1385466413269/2005002.pdf",
+      "files": [
+        {
+          "label": "TFS 2005:2",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1976/1385466413269/2005002.pdf",
+          "bytes": 206122,
+          "sha256": "8b02e52c561d83bf2a728c266e4faef79d7832f05bde22fb9498d4fd95a20e66",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:59Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2005:17",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d19a6/1385476532123/2005017.pdf",
+      "files": [
+        {
+          "label": "TFS 2005:17",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d19a6/1385476532123/2005017.pdf",
+          "bytes": 196652,
+          "sha256": "59edffda8e1464ed033aa8d00f79d978c80d9c3edd10747c54fad22ce0f9dd79",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:54:58Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2005:20",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1c00/1386070759168/2005020.pdf",
+      "files": [
+        {
+          "label": "TFS 2005:20",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1c00/1386070759168/2005020.pdf",
+          "bytes": 195469,
+          "sha256": "de33f26124f1cd738f9b36d64196a577911be344e33fa44c8ab7abfd6638b404",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:54:59Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2006:10",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d3034/1393331668401/2006010.pdf",
+      "files": [
+        {
+          "label": "TFS 2006:10",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d3034/1393331668401/2006010.pdf",
+          "bytes": 198335,
+          "sha256": "28d281a9b29d055286896e6d6bcba1947cc6e9d39290819fc41ea3cc84830842",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:00Z"
+        },
+        {
+          "label": "TFS 2006:10 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.5c62b5b71540cfd1824382e/1462041231755/2006010s.pdf",
+          "bytes": 369646,
+          "sha256": "4cefb6fd69a9f6c02e821f87ff930a5dc7bbf1569be4e94faceadc77748c402e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:01Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2007:4",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1c0b/1386141474838/2007004.pdf",
+      "files": [
+        {
+          "label": "TFS 2007:4",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1c0b/1386141474838/2007004.pdf",
+          "bytes": 202046,
+          "sha256": "4701c8eb0707a0e86467acee9a9047c81bfc5e3047348e635b0fd30216911ad5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:02Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2012:3",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d26f0/1391436968005/2012003.pdf",
+      "files": [
+        {
+          "label": "TFS 2012:3",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d26f0/1391436968005/2012003.pdf",
+          "bytes": 347707,
+          "sha256": "ad87cd2958265380a2cce5c3a19a1ffbc178f755c5f3a791c1ca6090b9b9d8cf",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:03Z"
+        },
+        {
+          "label": "TFS 2012:3 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.44a6a1ff14dad48234f630b/1706091378615/2012003s.pdf",
+          "bytes": 333496,
+          "sha256": "754711d4e52e1e9898d7c698ab27838cc5a85f6b827574fc57579b85e76615f6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:04Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2012:7",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d323a/1393594685707/2012007.pdf",
+      "files": [
+        {
+          "label": "TFS 2012:7",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d323a/1393594685707/2012007.pdf",
+          "bytes": 256736,
+          "sha256": "43bde1c9f03b7803581ac40ce541af15689bbed3b53099b77fab80b412ac912c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:05Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2012:8",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d323b/1393594686152/2012008.pdf",
+      "files": [
+        {
+          "label": "TFS 2012:8",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d323b/1393594686152/2012008.pdf",
+          "bytes": 256758,
+          "sha256": "04270c53013720f0af796a3f0614fef28e51558f9ed1bca18c3a2dc0dbce5cd4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:06Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2014:5",
+      "detail_url": "https://www.tullverket.se/download/18.16f3ec5a144fd16b2f422d/1396014653918/2014005.pdf",
+      "files": [
+        {
+          "label": "TFS 2014:5",
+          "url": "https://www.tullverket.se/download/18.16f3ec5a144fd16b2f422d/1396014653918/2014005.pdf",
+          "bytes": 213231,
+          "sha256": "40e516d57d334f2c5f6b5f0d1985551b02299bc9f40f477d1dfd7510d3467aa5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:07Z"
+        },
+        {
+          "label": "TFS 2014:5 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.260f1bcf17c73e3460e2ba4/1640098505448/2016021s.pdf",
+          "bytes": 278265,
+          "sha256": "e7132dc0ddbe04c98e6efc30e2ca0a4eb2d1b6ccadd7fd70851ed44f99403527",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:08Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2015:1",
+      "detail_url": "https://www.tullverket.se/download/18.26b0417114a365251a92b2df/1423644688908/2015001.pdf",
+      "files": [
+        {
+          "label": "TFS 2015:1",
+          "url": "https://www.tullverket.se/download/18.26b0417114a365251a92b2df/1423644688908/2015001.pdf",
+          "bytes": 164390,
+          "sha256": "923f65620500b6570c586ced3b156fbbb4534d9d33ea4816f7103f332cde8f7b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:09Z"
+        },
+        {
+          "label": "TFS 2015:1 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.72334712192df55a6c0471/1730974135874/2015001s.pdf",
+          "bytes": 256053,
+          "sha256": "2e562de60098063ec180c7dd55abe478cec177dbc9e78d6a9a3263d6eb98d1b7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:10Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2015:5",
+      "detail_url": "https://www.tullverket.se/download/18.409269eb14cbee1c5271a3/1429781114705/2015005.pdf",
+      "files": [
+        {
+          "label": "TFS 2015:5",
+          "url": "https://www.tullverket.se/download/18.409269eb14cbee1c5271a3/1429781114705/2015005.pdf",
+          "bytes": 168852,
+          "sha256": "06c301b12cf24a2ec805273df2f5b1de2ba4cc5d84460a8fbd0e27506e8a874c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:11Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2016:2",
+      "detail_url": "https://www.tullverket.se/download/18.5c62b5b71540cfd1824f9f/1460965111301/2016002.pdf",
+      "files": [
+        {
+          "label": "TFS 2016:2",
+          "url": "https://www.tullverket.se/download/18.5c62b5b71540cfd1824f9f/1460965111301/2016002.pdf",
+          "bytes": 878002,
+          "sha256": "4fe04eb439a480ace451fcd42b387a0185a3617fbb8bed46c43343b16d1458ef",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:12Z"
+        },
+        {
+          "label": "TFS 2016:2 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.792224361590183a4d34375/1772091766243/2016002s.pdf",
+          "bytes": 628103,
+          "sha256": "92f3134e72a385c162556d0ea5499c44e73e832aff95240d2884918af05b3b10",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:13Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2016:23",
+      "detail_url": "https://www.tullverket.se/download/18.792224361590183a4d3fde/1482827589742/2016023.pdf",
+      "files": [
+        {
+          "label": "TFS 2016:23",
+          "url": "https://www.tullverket.se/download/18.792224361590183a4d3fde/1482827589742/2016023.pdf",
+          "bytes": 301058,
+          "sha256": "15758639953ddfcd113d52bf552dc4334c29d4aee61592aca6fdc8c461b7cc85",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:14Z"
+        },
+        {
+          "label": "TFS 2016:23 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.285c35fd161749ca47c3f6/1780315557706/2016023s.pdf",
+          "bytes": 321745,
+          "sha256": "f7ed7b40d4b1eff276c427f0c6993e099d037baed8961f7c736d268df93f4949",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:15Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2018:1",
+      "detail_url": "https://www.tullverket.se/download/18.1595a16515ebddfed512b07/1516091012474/2018001.pdf",
+      "files": [
+        {
+          "label": "TFS 2018:1",
+          "url": "https://www.tullverket.se/download/18.1595a16515ebddfed512b07/1516091012474/2018001.pdf",
+          "bytes": 380766,
+          "sha256": "25dbc888d7951d623d09a82d3e11a881c4b43e2b8450a21f2220c631ce662ff0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:16Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2018:2",
+      "detail_url": "https://www.tullverket.se/download/18.1595a16515ebddfed512b15/1516091791470/2018002.pdf",
+      "files": [
+        {
+          "label": "TFS 2018:2",
+          "url": "https://www.tullverket.se/download/18.1595a16515ebddfed512b15/1516091791470/2018002.pdf",
+          "bytes": 387771,
+          "sha256": "8419d2a6f49066587cd86ebc56d55e3da8aeb48aa0c43e0a6a11475ae31fb7c6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:17Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2018:3",
+      "detail_url": "https://www.tullverket.se/download/18.1595a16515ebddfed512edf/1517992042686/2018003.pdf",
+      "files": [
+        {
+          "label": "TFS 2018:3",
+          "url": "https://www.tullverket.se/download/18.1595a16515ebddfed512edf/1517992042686/2018003.pdf",
+          "bytes": 325418,
+          "sha256": "3a3665833eb36888ec362df6594ecaecadd2e63362f7e1a61c12257215d89244",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:18Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2019:4",
+      "detail_url": "https://www.tullverket.se/download/18.4e880ce616b21693f7841b/1561961675791/2019004.pdf",
+      "files": [
+        {
+          "label": "TFS 2019:4",
+          "url": "https://www.tullverket.se/download/18.4e880ce616b21693f7841b/1561961675791/2019004.pdf",
+          "bytes": 310799,
+          "sha256": "f11c31747d7d61ca10d62fc6b4f2fb165770a35da1825f9310eadd3b28fdd7c7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:19Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2019:6",
+      "detail_url": "https://www.tullverket.se/download/18.38f986a116db52aec8c598/1573573036037/2019006.pdf",
+      "files": [
+        {
+          "label": "TFS 2019:6",
+          "url": "https://www.tullverket.se/download/18.38f986a116db52aec8c598/1573573036037/2019006.pdf",
+          "bytes": 1051045,
+          "sha256": "49d64563a15088608e2de540c08b02aa7e3a1ed4069f498bf712f74b6f6333be",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:20Z"
+        },
+        {
+          "label": "TFS 2019:6 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.1595e959179a7cfd5c7238/1649925566533/2019006s.pdf",
+          "bytes": 603099,
+          "sha256": "c6f1829799aa255f75d5584ddd8ac0aeb0ca84ff42808b14b0c13e4cc7c0e830",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:21Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2020:1",
+      "detail_url": "https://www.tullverket.se/download/18.153f8c8c16ffad23c2211/1580809287519/2020001.pdf",
+      "files": [
+        {
+          "label": "TFS 2020:1",
+          "url": "https://www.tullverket.se/download/18.153f8c8c16ffad23c2211/1580809287519/2020001.pdf",
+          "bytes": 467913,
+          "sha256": "859d2dec2ad04afe888d59196adaaa8876ca18f39a0d242481a649621c42ddf8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:22Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2020:4",
+      "detail_url": "https://www.tullverket.se/download/18.2f6f125175457f1fe41b0/1603712080571/2020004.pdf",
+      "files": [
+        {
+          "label": "TFS 2020:4",
+          "url": "https://www.tullverket.se/download/18.2f6f125175457f1fe41b0/1603712080571/2020004.pdf",
+          "bytes": 111036,
+          "sha256": "7b3a885a90d7718c8c2f25c857884955970810cd9942d7e46d8948f16109e51e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:23Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2021:2",
+      "detail_url": "https://www.tullverket.se/download/18.1595e959179a7cfd5c714c/1622445093923/2021002.pdf",
+      "files": [
+        {
+          "label": "TFS 2021:2",
+          "url": "https://www.tullverket.se/download/18.1595e959179a7cfd5c714c/1622445093923/2021002.pdf",
+          "bytes": 239133,
+          "sha256": "730b820c6f4265e0f830679c74cf10a82e9d93443c08f2cbca51ac2bf38feb49",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:24Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2023:4",
+      "detail_url": "https://www.tullverket.se/download/18.586d06b518b6116f98567d/1699534100891/2023004.pdf",
+      "files": [
+        {
+          "label": "TFS 2023:4",
+          "url": "https://www.tullverket.se/download/18.586d06b518b6116f98567d/1699534100891/2023004.pdf",
+          "bytes": 130883,
+          "sha256": "3053f6924939f69327ee2992153f0cc04f02b6480c2ef44e72be87e161393093",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:25Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2024:7",
+      "detail_url": "https://www.tullverket.se/download/18.38153617191ffd26d65256a4/1728645688311/2024007.pdf",
+      "files": [
+        {
+          "label": "TFS 2024:7",
+          "url": "https://www.tullverket.se/download/18.38153617191ffd26d65256a4/1728645688311/2024007.pdf",
+          "bytes": 150427,
+          "sha256": "7d7ff0a474f6fd65a556bae19f9da76bf74844e50be9c56fb6064ff4206dad40",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:26Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2025:3",
+      "detail_url": "https://www.tullverket.se/download/18.6967fe101964058a61b6368f/1751523274145/2025003.pdf",
+      "files": [
+        {
+          "label": "TFS 2025:3",
+          "url": "https://www.tullverket.se/download/18.6967fe101964058a61b6368f/1751523274145/2025003.pdf",
+          "bytes": 141370,
+          "sha256": "b9b75c0dc38a53e03d31bb84e91eea8f2a2c0ea460a270d9da5a2bb92be2a2e3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:27Z"
         }
       ]
     },
