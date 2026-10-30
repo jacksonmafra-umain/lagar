@@ -59,9 +59,10 @@ with retry.
 
 ## Deployment
 
-`.github/workflows/pages.yml` builds the API from `corpus/` and the web app on every push to `main` that
-touches them, and publishes both to GitHub Pages: the app at `https://jacksonmafra-umain.github.io/lagar/`
-and the API under `/lagar/api/v1/`.
+`.github/workflows/pages.yml` builds the API from `corpus/` and the web app and publishes both to GitHub
+Pages (the app at `https://jacksonmafra-umain.github.io/lagar/`, the API under `/lagar/api/v1/`), but only
+when dispatched by hand: the API is built and served per machine (`scripts/serve_local.py`), and the copy last
+published there stays live and frozen for app builds already installed, which read it as `PUBLISHED_API`.
 
 ## Web base path
 
