@@ -28,6 +28,7 @@ tillståndstiden.
 - i en anmälan om verksamhet,
 - i en ansökan.
 2 § Kravet gäller även *andra*.
+3§ Utan mellanslag.
 
 MIGRFS 2026:14
 
@@ -64,12 +65,30 @@ class TextTest(unittest.TestCase):
         self.assertIn("**1 §** Den som avser studera ska ha medel för sitt uppehälle under tillståndstiden.", text)
         self.assertIn("\n\n- i en anmälan om verksamhet,\n\n- i en ansökan.", text)
         self.assertIn("\\*andra\\*", text)
+        self.assertIn("**3§** Utan mellanslag.", text)
         self.assertNotIn("\n\nMIGRFS 2026:14\n\n", text)
         self.assertNotIn("ISSN", text)
 
     def test_title_from_the_masthead(self):
         self.assertEqual(agency_text.title(MASTHEAD), "Migrationsverkets föreskrifter om försörjningskravet för studier")
         self.assertIsNone(agency_text.title("Ingen början här."))
+
+    def test_general_advice_decided_in_the_title_line(self):
+        text = ("BOKFÖRINGSNÄMNDENS\nALLMÄNNA RÅD\nISSN 1404-5761\n\n"
+                "Bokföringsnämndens allmänna råd om årsbokslut; beslutat den 27 oktober 2017.\n"
+                "Bokföringsnämnden lämnar följande allmänna råd om årsbokslut.\n")
+        self.assertEqual(agency_text.title(text), "Bokföringsnämndens allmänna råd om årsbokslut")
+        self.assertEqual(agency_text.dates(text)[0], "2017-10-27")
+        self.assertTrue(agency_text.to_markdown(text, "BFNAR 2017:3").startswith("Bokföringsnämndens allmänna råd"))
+
+    def test_consolidated_print_without_decision_date(self):
+        text = ("BOKFÖRINGSNÄMNDENS\nALLMÄNNA RÅD\nISSN 1404-5761\n\nBFNAR 2012:4\nKonsoliderad version\n"
+                "Bokföringsnämndens allmänna råd\nom byte mellan K-regelverk;\n"
+                "Konsoliderad version – senast ändrad genom BFNAR 2016:11.\n\n1. I detta allmänna råd regleras.\n")
+        self.assertEqual(agency_text.title(text), "Bokföringsnämndens allmänna råd om byte mellan K-regelverk")
+        markdown = agency_text.to_markdown(text, "BFNAR 2012:4")
+        self.assertTrue(markdown.startswith("Bokföringsnämndens allmänna råd om byte mellan K-regelverk;"))
+        self.assertNotIn("ISSN", markdown)
 
     def test_unreadable_pdf_is_a_gap(self):
         read = agency_text.read(b"%PDF-1.7 not really", "MIGRFS 2026:14")

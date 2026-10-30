@@ -4,7 +4,7 @@ The printed regulation starts with a masthead (series name, ISSN, publisher),
 the title, the number and the publication date, then "beslutade den ...". The
 text kept is what follows the masthead; the dates are read from it:
 
-- `issued`: "beslutade den 20 oktober 2026";
+- `issued`: "beslutade den 20 oktober 2026" (general advice: "...; beslutat den 27 oktober 2017");
 - `published`: "Utkom från trycket den 23 juni 2026" or "Publicerad den 2026-10-20";
 - `in_force`: "träder i kraft den 1 januari 2027", or the publication date for
   "träder i kraft samma dag som de publicerades" (and similar).
@@ -19,14 +19,15 @@ _MONTHS = {name: i for i, name in enumerate(
     ("januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober",
      "november", "december"), 1)}
 _SWEDISH_DATE = r"(\d{1,2})\s+(" + "|".join(_MONTHS) + r")\s+(\d{4})"
-_ISSUED = re.compile(r"\bbeslutade?\s+den\s+" + _SWEDISH_DATE, re.IGNORECASE)
+_ISSUED = re.compile(r"\bbeslut(?:ade?|at)\s+den\s+" + _SWEDISH_DATE, re.IGNORECASE)
 _PUBLISHED = re.compile(r"\b(?:utkom\s+från\s+trycket|publicerad)\s+den\s+(?:"
                         + _SWEDISH_DATE + r"|(\d{4}-\d{2}-\d{2}))", re.IGNORECASE)
 _IN_FORCE = re.compile(r"\bträder\s+i\s+kraft\s+(?:den\s+" + _SWEDISH_DATE
                        + r"|(?:samma\s+dag|dagen)\s+(?:som|då)\s+(?:de|den|föreskrifterna?)\s+(?:publicera|utk))",
                        re.IGNORECASE)
-_START = re.compile(r"^beslutade?\s+den\b", re.IGNORECASE)
-_SECTION = re.compile(r"^(\d+\s?[a-z]?\s§)\s")
+# "beslutade den" opening its line, or "; beslutat den" ending the title line of general advice.
+_START = re.compile(r"^beslut(?:ade?|at)\s+den\b|[;,]\s*beslut(?:ade?|at)\s+den\b", re.IGNORECASE)
+_SECTION = re.compile(r"^(\d+\s?[a-z]?\s?§)\s")  # "1 §", "2 a §", also printed "1§"
 _TITLE = re.compile(r"\b(föreskrift(er)?|allmänna råd|förordning)\b", re.IGNORECASE)
 
 
@@ -68,7 +69,7 @@ def _escape(paragraph):
 
 
 # Where the title ends: publication lines, the series code (`MIGRFS`, `KAMFS 2026:4`) or a number or date.
-_TITLE_END = re.compile(r"^(?i:publicerad|utkom|issn|ansvarig|beslutade?)\b|^[A-ZÅÄÖ-]{2,}(\s+\d{4}:\d+)?$|^\d{4}[:-]")
+_TITLE_END = re.compile(r"^(?i:publicerad|utkom|issn|ansvarig|beslut(?:ade?|at)|konsoliderad)\b|^[A-ZÅÄÖ-]{2,}(\s+\d{4}:\d+)?$|^\d{4}[:-]")
 
 
 def _lines(text):
@@ -77,7 +78,17 @@ def _lines(text):
 
 def _start(lines):
     """Index of the "beslutade den" line that ends the masthead, or None."""
-    return next((i for i, line in enumerate(lines) if _START.match(line)), None)
+    return next((i for i, line in enumerate(lines) if _START.search(line)), None)
+
+
+def _is_title_line(line):
+    """A line naming the kind of regulation; not the series name or an upper-case masthead line."""
+    return bool(_TITLE.search(line)) and "författningssamling" not in line.lower() and not line.isupper()
+
+
+def _first_title(lines):
+    """Index of the first title line, where a consolidated print without "beslutade den" starts."""
+    return next((i for i, line in enumerate(lines) if _is_title_line(line)), None)
 
 
 def to_markdown(text, number, series_name=None):
@@ -87,7 +98,9 @@ def to_markdown(text, number, series_name=None):
     stays a list item.
     """
     lines = _lines(text)
-    start = _start(lines) or 0
+    start = _start(lines)
+    if start is None:
+        start = _first_title(lines) or 0
     body = "\n".join(lines[start:])
     # A dash list item starts its own paragraph (pdftext joins it to the line before).
     paragraphs = pdftext.paragraphs(re.sub(r"\n(?=[-–•] )", "\n\n", body))
@@ -107,17 +120,24 @@ def title(text):
     """The regulation's title from the masthead: the lines naming its kind before "beslutade den"."""
     lines = _lines(text)
     end = _start(lines)
-    if end is None:
-        return None
-    for i, line in enumerate(lines[:end]):
-        if not _TITLE.search(line) or "författningssamling" in line.lower():
+    if end is None:  # a consolidated print: the title opens the text
+        first = _first_title(lines)
+        if first is None:
+            return None
+        title_lines, end = [first], len(lines) - 1
+    else:
+        title_lines = range(end + 1)
+    for i in title_lines:
+        line = lines[i]
+        if not _is_title_line(line):
             continue
         parts = [line]
-        for following in lines[i + 1:end]:
-            if not following or _TITLE_END.search(following):
+        for following in lines[i + 1:end + 1]:
+            if parts[-1].endswith(";") or not following or _TITLE_END.search(following):
                 break
             parts.append(following)
-        title = " ".join(parts).strip().rstrip(";")
+        title = re.split(r"[;,]?\s*\bbeslut(?:ade?|at)\s+den\b", " ".join(parts), flags=re.IGNORECASE)[0]
+        title = title.strip().rstrip(";")
         return title if len(title) < 400 else None
     return None
 

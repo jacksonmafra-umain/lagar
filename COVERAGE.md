@@ -172,6 +172,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   and `in_force` where the listing had none. 484 of the 494 regulations of
   those 15 series have text; 10 PDFs are scans without a text layer (9 NFS, 1
   KOVFS) and are recorded as such in their bodies.
+  Five more series follow the same way on 2026-10-30, with titles, dates and
+  text read from their PDFs: CSNFS (63, the consolidated version where CSN
+  publishes one, including the annual regleringstal notices), BFNAR (17
+  general advice in force), LMFS (14 in force), MTFS (3 in force) and IMYFS
+  (1). Five PDFs are scans without a text layer (4 CSNFS, 1 LMFS). Repealed
+  regulations listed on the LMFS and MTFS pages, and the predecessor series
+  LMVFS and DIFS, are not collected.
   [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Agency series published as a list of PDF links (configured in
