@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://skolfs.skolverket.se/api/document/2025:7/ascending"
 source_sha256: "aacac22298f3ad21dbae3a0afa2f875c74a28157df3d69edb9a2594f7b9bf1ca"
-fetched_at: "2026-10-30T01:34:32Z"
+fetched_at: "2026-10-30T21:20:45Z"
 issuer: "Statens skolverk"
 ---
 # Skolverkets föreskrifter om riksrekryterande spetsutbildning i högstadiet i grundskolan
@@ -38,4 +38,28 @@ I stället för vad som anges i 2 § första stycket ska ansökan om att få ano
 
 ## Författningstext
 
-Statens skolverk publicerar texten endast som pdf; se Dokument ovan. Den tryckta författningssamlingen är den officiella versionen.
+Texten är hämtad ur pdf:en SKOLFS 2025:7. Den tryckta författningssamlingen är den officiella versionen.
+
+beslutade den 16 januari 2025.
+
+Skolverket föreskriver följande med stöd av 24 § förordningen (2024:675) om riksrekryterande spetsutbildning i högstadiet i grundskolan och statsbidrag för sådan utbildning.
+
+Tillämpningsområde
+
+**1 §** Dessa föreskrifter innehåller bestämmelser om ansökan om tillstånd att få anordna riksrekryterande spetsutbildning i grundskolan enligt förordningen (2024:675) om riksrekryterande spetsutbildning i högstadiet i grundskolan och statsbidrag för sådan utbildning.
+
+Ansökan
+
+**2 §** Ansökan om tillstånd att anordna riksrekryterande spetsutbildning i grundskolan ska vara Skolverket tillhanda senast den 31 oktober året innan utbildningen planeras att starta.
+
+Ansökan ska göras genom en av Skolverket tillhandahållen blankett som finns på Skolverkets webbplats.
+
+1\. Dessa föreskrifter träder i kraft den 1 mars 2025.
+
+2\. I stället för vad som anges i 2 § första stycket ska ansökan om att få anordna riksrekryterande spetsutbildning i grundskolan som planeras starta höstterminen 2025 vara Skolverkets tillhanda senast den 31 mars 2025.
+
+På Skolverkets vägnar
+
+JOAKIM MALMSTRÖM
+
+Eva Edlund
