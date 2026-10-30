@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://tranas.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/": "0687-listing.html"
+  },
+  "count": 11,
+  "sample": {
+    "number": "Bestammelser_VA-taxa-2026-2",
+    "title": "VA taxa 2026 2",
+    "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Bestammelser_VA-taxa-2026-2.pdf"
+  },
+  "excluded": [
+    "POL 15840 v.1.0 Finanspolicy",
+    "POL 04679 v.1.0 Inkopspolicy",
+    "Policy Kostpolicy i Tranås kommun 2"
+  ]
+}
