@@ -204,7 +204,9 @@
     },
     "stralsakerhetsmyndighetens-forfattningssamling-ssmfs": {
       "series": "SSMFS",
-      "agency": "Strålsäkerhetsmyndigheten"
+      "agency": "Strålsäkerhetsmyndigheten",
+      "status": "collected_pdf",
+      "note": "Base regulations in force from Strålsäkerhetsmyndigheten's regulation page, each with its own page linking the original and consolidated PDFs and the amendments; the text is published only as PDF."
     },
     "svenska-kraftnats-forfattningssamling-svkfs": {
       "series": "SvKFS",
@@ -258,7 +260,9 @@
     },
     "skogsstyrelsens-forfattningssamling-sksfs": {
       "series": "SKSFS",
-      "agency": "Skogsstyrelsen"
+      "agency": "Skogsstyrelsen",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Skogsstyrelsen's regulation page; the text is published only as PDF."
     },
     "riksgaldskontorets-forfattningssamling-rgkfs": {
       "series": "RGKFS",
