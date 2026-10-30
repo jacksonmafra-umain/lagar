@@ -27,6 +27,12 @@ MIN_TEXT_PAGES = 0.5
 # Share of letters and digits among the visible characters below which the text
 # layer is unreadable (fonts without a Unicode map).
 MIN_ALNUM_SHARE = 0.5
+# Fonts with a shifted encoding read as accented Latin letters with "=" for each
+# space ("i®åëëíóêÉäëÉå=g®ãíä~åÇë=ä®å" for "Länsstyrelsen Jämtlands län"): the
+# text is unreadable when both shares reach these values. Swedish text, Sami
+# names and other languages in a parallel text stay well below either.
+MIN_FOREIGN_LATIN_SHARE = 0.1
+MIN_EQUALS_SHARE = 0.02
 # A line shorter than this share of the text width ends its paragraph when the
 # next line starts with a capital letter or a digit.
 SHORT_LINE = 0.75
@@ -39,6 +45,7 @@ _HYPHENATED = re.compile(r"(\w)-$")
 _RULE = re.compile(r"^[_\-–—=*. ]{3,}$")
 # Section, chapter and list markers that open a paragraph of their own.
 _BREAK_BEFORE = re.compile(r"^(?:\d+\s?[a-z]?\s?§|\d+\s?kap\.|\d{1,2}[.)]\s|[a-z]\)\s|Bilaga\b|Övergångsbestämmelser\b|På .{0,40}vägnar\b)")
+_SWEDISH_LETTERS = frozenset("åäöéüÅÄÖÉÜ")
 _SPACES = re.compile(r"[ \t ]+")
 # "miljö- och hälsoskydd": a hyphen before these words is not a line-break hyphen.
 _CONJUNCTIONS = frozenset({"och", "eller", "samt", "respektive", "resp", "till", "som"})
@@ -98,7 +105,7 @@ def classify(raw):
     gap = None
     if text_pages < count * MIN_TEXT_PAGES:
         gap = NO_TEXT_LAYER
-    elif _alnum(raw) < visible * MIN_ALNUM_SHARE:
+    elif _alnum(raw) < visible * MIN_ALNUM_SHARE or _shifted_encoding(raw, visible):
         gap = UNREADABLE_TEXT
     return PdfText(text=raw.replace("\f", "\n\n"), pages=count, text_pages=text_pages, gap=gap)
 
@@ -154,6 +161,16 @@ def _text_width(lines):
     if not lengths:
         return 0
     return lengths[min(len(lengths) - 1, int(len(lengths) * 0.9))]
+
+
+def _shifted_encoding(raw, visible):
+    letters = _alnum(raw)
+    foreign = sum(1 for c in raw if "\u00c0" <= c <= "\u024f" and c not in _SWEDISH_LETTERS)
+    return (
+        letters > 0
+        and foreign >= letters * MIN_FOREIGN_LATIN_SHARE
+        and raw.count("=") >= visible * MIN_EQUALS_SHARE
+    )
 
 
 def _alnum(text):
