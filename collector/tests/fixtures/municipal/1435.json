@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.tanum.se/kommunpolitik/planerochstyrdokument/tanumsforfattningssamling.4.7664b4813898b7df98451bf.html": "1435-listing.html"
+  },
+  "count": 7,
+  "sample": {
+    "number": "4.7664b4813898b7df9845386",
+    "title": "Hälsoskyddsföreskrifter",
+    "url": "https://www.tanum.se/byggabomiljoinfrastruktur/kemikalierochmiljoskydd/lokalaforeskrifterforattskyddamanniskorshalsaochmiljon.4.7664b4813898b7df9845386.html"
+  },
+  "excluded": [
+    "Personalpolicy",
+    "Brandskyddspolicy",
+    "Avfall och återvinning",
+    "Snörenhållning"
+  ]
+}

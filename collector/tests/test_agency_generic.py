@@ -385,6 +385,89 @@ class DvfsEifsKbvfsFfsTest(unittest.TestCase):
         self.assertEqual(entries[2].title, "FFS 2017:5")  # the title comes from the PDF
 
 
+class HslffsTest(unittest.TestCase):
+    HSLF = agency.ADAPTERS["HSLF-FS"]
+    FOHM = "https://www.folkhalsomyndigheten.se/publikationsarkiv/f/folkhalsomyndighetens-foreskrifter-hslf-fs-2025-55/"
+    TLV = "https://www.tlv.se/om-tlv/regelverk/foreskrifter.html"
+    IVO = "https://ivo.se/globalassets/foreskrifter/hslf-fs-2023-7.pdf"
+
+    @classmethod
+    def listing(cls):
+        def item(designation, heading, authority, url):
+            return {"Designation": designation, "Heading": heading, "Authority": authority, "Url": url}
+
+        items = [
+            item("HSLF-FS 2025:55", "HSLF-FS 2025:55", "Folkhälsomyndigheten", cls.FOHM),
+            item("HSLF-FS 2015:17", "Föreskrifter om ändring i föreskrifterna (HSLF-FS 2015:17) om prissättning",
+                 "Tandvårds- och läkemedelsförmånsverket, TLV", cls.TLV),
+            item("HSLF-FS 2015:17", "Tandvårds- och läkemedelsförmånsverkets föreskrifter om prissättning",
+                 "Tandvårds- och läkemedelsförmånsverket, TLV", cls.TLV),
+            item("HSLF-FS 2023:7", "Inspektionen för vård och omsorgs föreskrifter om anmälan",
+                 "Inspektionen för vård och omsorg, IVO", cls.IVO),
+            item("HSLF-FS 2026:26", "Läkemedelsverkets föreskrifter om tillverkning", "Läkemedelsverket",
+                 "https://www.lakemedelsverket.se/sv/lagar-och-regler/foreskrifter/2026-26"),
+            item("SOSFS 2015:10", "Basal hygien i vård och omsorg (SOSFS 2015:10)", "Socialstyrelsen",
+                 "https://www.socialstyrelsen.se/regler/"),
+            item("HSLF-FS 2021:1", "Socialstyrelsens föreskrifter", "Socialstyrelsen,E-hälsomyndigheten",
+                 "https://www.socialstyrelsen.se/publikationer/hslf-fs-20211-socialstyrelsens-foreskrifter/"),
+            item("HSLF-FS 2016:55", "Socialstyrelsens föreskrifter om hem för vård eller boende", "Socialstyrelsen",
+                 cls.HSLF.SOS_INDEX),
+        ]
+        return "<script>ReactDOM.hydrate(React.createElement(SOS.Components.FilterList, " + json.dumps(
+            {"filterItems": items}) + "), document.getElementById('react_1'));</script>"
+
+    def test_listing_from_the_page_json(self):
+        entries = self.HSLF.parse_listing(self.listing(), self.HSLF.listing_url)
+        self.assertEqual([(e.number, e.base, e.issuer) for e in entries], [
+            ("HSLF-FS 2025:55", True, "Folkhälsomyndigheten"),
+            ("HSLF-FS 2015:17", True, "Tandvårds- och läkemedelsförmånsverket"),
+            ("HSLF-FS 2023:7", True, "Inspektionen för vård och omsorg"),
+            ("HSLF-FS 2021:1", True, "Socialstyrelsen och E-hälsomyndigheten")])
+        self.assertEqual(entries[0].title, "HSLF-FS 2025:55")  # the title comes from the PDF
+        self.assertEqual(entries[1].url, self.TLV)
+        # linked to Socialstyrelsen's general page: its own page comes from Socialstyrelsen's index
+        index = ('[{"name":"HSLF-FS 2025:33 Föreskrifter om ändring (HSLF-FS 2016:55)","url":"/publikationer/hslf-fs-202533/"},'
+                 '{"name":"HSLF-FS 2016:55 Socialstyrelsens föreskrifter","url":"/publikationer/hslf-fs-201655-hem/"}]')
+        resolved = self.HSLF.parse_listing(index, self.HSLF.SOS_INDEX)
+        self.assertEqual([(e.number, e.url) for e in resolved],
+                         [("HSLF-FS 2016:55", "https://www.socialstyrelsen.se/publikationer/hslf-fs-201655-hem/")])
+
+    def test_page_listing_many_keeps_the_pdfs_naming_the_number(self):
+        entry = agency.Entry(number="HSLF-FS 2015:17", title="x", url=self.TLV)
+        page = """<main><h1>TLV:s föreskrifter</h1>
+          <a href="/download/1/HSLF-FS_2015_16.pdf">HSLF-FS 2015:16 pdf, 2 MB.</a>
+          <a href="/download/2/HSLF-FS_2015_17.pdf">HSLF-FS 2015:17 pdf, 2 MB.</a>
+          <a href="/download/3/hslf_2015_17_konsoliderad.pdf">HSLF-FS 2015:17 pdf, 394 kB.</a>
+          <a href="/download/4/HSLF-FS_2014_1.pdf">HSLF-FS 2014:1 pdf, 1 MB.</a></main>"""
+        regulation = self.HSLF.parse_detail(page, entry)
+        self.assertEqual([url.rsplit("/", 1)[-1] for _, url in regulation.pdfs],
+                         ["HSLF-FS_2015_17.pdf", "hslf_2015_17_konsoliderad.pdf"])
+
+    def test_run_reads_robots_per_host_and_takes_a_listed_pdf_as_the_document(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = Path(tmp.name)
+        fohm_pdf = "https://www.folkhalsomyndigheten.se/contentassets/1/hslf-fs-2025-55.pdf"
+        client = FakeClient({
+            self.HSLF.listing_url: self.listing().encode(),
+            self.FOHM: f'<main><p>HSLF-FS 2025:55</p><a href="{fohm_pdf}">Ladda ner</a></main>'.encode(),
+            fohm_pdf: b"%PDF-1.7 fohm",
+            self.IVO: b"%PDF-1.7 ivo",
+        }, robots={"https://www.tlv.se": b"User-agent: *\nDisallow: /om-tlv/\n"})
+        argv = ["--series", "HSLF-FS", "--no-pdf-text", "--corpus", str(root / "corpus"),
+                "--state", str(root / "state.json"), "--manifest", str(root / "manifest.json"),
+                "--report", str(root / "report.json")]
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            agency.main(argv, client=client)
+        self.assertIn("https://www.tlv.se/robots.txt", client.calls)
+        self.assertNotIn(self.TLV, client.calls)  # disallowed on its own host
+        meta, _ = frontmatter.load((root / "corpus/agency/regulations/hslf-fs-2023-7.md").read_text("utf-8"))
+        self.assertEqual((meta["source"], meta["issuer"]), (self.IVO, "Inspektionen för vård och omsorg"))
+        meta, body = frontmatter.load((root / "corpus/agency/regulations/hslf-fs-2025-55.md").read_text("utf-8"))
+        self.assertEqual((meta["source"], meta["issuer"]), (self.FOHM, "Folkhälsomyndigheten"))
+        self.assertIn("Utgivare: Folkhälsomyndigheten", body)
+
+
 if __name__ == "__main__":
     unittest.main()
 

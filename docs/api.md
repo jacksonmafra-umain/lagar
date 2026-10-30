@@ -461,8 +461,8 @@ versions (version 1 as one group over every layer), so an app built after
 version 2 works against either API. An app build that reads only version 1
 sees an unknown `search_version`, ignores the index and falls back to listing
 search (titles and numbers from the listings), as it does when the API has no
-index. The web app is deployed with the API in one Pages build, so it always
-matches.
+index. The web app is built and served with the API (`scripts/serve_local.py`,
+or one Pages build), so it always matches.
 
 ### Size budget
 
@@ -500,52 +500,26 @@ for `case_law`. A Nationell search reads the five national groups' document
 tables (about 8 MB, mostly case law) once per session, then a few shards per
 query.
 
-## Site size budget
+## Size report
 
-GitHub Pages publishes at most 1 GB per site. `api/size_report.py` measures
-the built site and fails CI above the budget:
+The API is built and served per machine (`scripts/serve_local.py`), so it has
+no size cap (owner decision on #594). The `Pages` workflow publishes only on
+manual dispatch; the copy last published there stays live and frozen for app
+builds already installed.
 
-- `api.yml` (pull requests and `main`) checks the API alone;
-  `pages.yml` checks the whole site (API and web app) before uploading it.
-- Budget 900 MB, warning above 800 MB (MB = 1 000 000 bytes); change them
-  with `--budget-mb` and `--warn-mb` or the defaults in the script.
+`api/size_report.py` reports the size of a build and never fails:
+
+- `api.yml` (pull requests and `main`) reports the API alone; `pages.yml`
+  reports the whole site (API and web app) when it runs.
 - The report, in the workflow's step summary, lists the total, the size per
   top-level folder, per layer (its listings, its `docs/` files and its search
-  group) and per search group with its fields and budget.
+  group) and per search group with its fields and search budget.
 
 Run it locally after a build:
 `python3 -I api/size_report.py --api build/api/v1`.
 
-Measured on the full corpus (27 901 documents, built 2026-10-29, API only;
-the web app adds about 15 MB):
-
-| | before (search v1) | after (search v2) |
-| --- | --- | --- |
-| whole API | 676.0 MB | 660.5 MB |
-| `docs/` | 552.9 MB | 552.9 MB |
-| `search/` | 94.0 MB | 78.5 MB |
-| listings (all layer folders) | 29.1 MB | 29.1 MB |
-
-By layer (listings, documents and search group): case law 481.7 MB, SFS
-163.2 MB, EU 14.3 MB, the rest under 1 MB each.
-
-Document bodies are 96 % of `docs/` (528 MB of 553 MB), and the JSON is
-already compact (no indentation, no spaces after separators, UTF-8 without
-`\u` escapes); the null-valued meta keys would save under 5 MB and the
-contract keeps them. The rest of the API is too small to matter.
-
-### Approach and headroom
-
-The API stays on GitHub Pages. With search split by layer, a layer that
-outgrows its search budget loses only its own body search, and the CI budget
-stops a build long before Pages refuses it. At today's size there are about
-240 MB of headroom below the 900 MB budget. When the budget gets close (the
-full agency, county and municipal runs and amendment history are the expected
-growth), the next steps, in order:
-
-1. Lower the search budget of the largest group (case law first), which frees
-   up to about 50 MB.
-2. Serve case-law bodies from smaller per-year chunks or drop them from
-   `docs/<id>.json` (a breaking change: needs a new `api_version`).
-3. Move `docs/` to object storage or a CDN (Cloudflare R2, S3) and keep the
-   listings, search and web app on Pages.
+Measured on the full corpus on 2026-10-30 (48 007 documents): 853.7 MB in
+all, of which `docs/` is 748.3 MB in 51 290 files and the rest (listings and
+search) 105.4 MB in 8 846 files. Document bodies are nearly all of `docs/`,
+and the JSON is already compact (no indentation, no spaces after separators,
+UTF-8 without `\u` escapes).
