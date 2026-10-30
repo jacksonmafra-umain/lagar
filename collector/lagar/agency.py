@@ -68,7 +68,8 @@ class ListingError(Exception):
 
 
 def _clean(value):
-    return _SPACE.sub(" ", (value or "").replace(" ", " ")).strip()
+    value = (value or "").replace("\u00a0", " ").replace("\u00ad", "").replace("\u200b", "")
+    return _SPACE.sub(" ", value).strip()
 
 
 def _date(text):
@@ -636,9 +637,9 @@ _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/"
 _AMENDING = re.compile(r"\b(?:om|till) (?:ändring|ändringar|upphävande)\b|\bändring (?:i|av)\b", re.I)
 _REPRINT = re.compile(r"\bomtryck", re.I)
 _CONSOLIDATED = re.compile(r"\bkonsoliderad|\bsenaste lydelse", re.I)
-_SIZE = re.compile(r"[\s,(]*\b(?:pdf|PDF)\b[\s,)]*(?:[\d.,]+\s*(?:kB|KB|kb|MB|Mb|mb|B)\b)?\.?\s*\)?\s*$")
+_SIZE = re.compile(r"[\s,(.]*\b(?:pdf|PDF)\b[\s,)-]*(?:[\d.,]+\s*(?:kB|KB|kb|MB|Mb|mb|B)\b)?\.?\s*\)?\s*$")
 _DEFAULT_EXCLUDE = (r"tillämpningsstöd|förarbete|hemställan|beslutspromemoria|förteckning|register|"
-                    r"remiss|konsekvensutredning|vägledning")
+                    r"remiss|konsekvensutredning|vägledning|rättelseblad|\bbilag")
 
 
 class ListedAdapter:
@@ -653,10 +654,10 @@ class ListedAdapter:
     again.
     """
 
-    detail = False
     has_text = False
 
-    def __init__(self, series, issuer, listing_urls, prefix=None, exclude=None, gaps=()):
+    def __init__(self, series, issuer, listing_urls, prefix=None, exclude=None, separator=None, base_href=None,
+                 detail_pages=False, documents=None):
         self.series = series
         self.issuer = issuer
         self.urls = list(listing_urls)
@@ -664,12 +665,18 @@ class ListedAdapter:
         self.base_url = f"{parts.scheme}://{parts.netloc}"
         self.listing_url = self.urls[0]
         prefix = prefix or re.escape(series)
-        self.number = re.compile(rf"(?<![A-Za-zÅÄÖåäö])(?:{prefix})\s?(\d{{4}})\s?:\s?(\d+)(?!\d)")
+        separator = separator or ":"
+        self.number = re.compile(rf"(?<![A-Za-zÅÄÖåäö])(?:{prefix})\s?(\d{{4}})\s?(?:{separator})\s?(\d+)(?!\d)")
         slug = "[^a-z0-9]?".join(re.escape(p) for p in re.split(r"[^a-z0-9]+", series.lower()) if p)
         self.file_number = re.compile(
             rf"(?<![a-z]){slug}[^a-z0-9]*(?:(\d{{4}})[^0-9]{{1,3}}(\d{{1,3}})(?!\d)|(\d{{1,3}})[^0-9]{{1,3}}(\d{{4}})(?!\d))")
         self.exclude = re.compile(exclude or _DEFAULT_EXCLUDE, re.I)
-        self.gaps = list(gaps)
+        # A site that files every amendment under its base regulation's folder:
+        # the year and ordinal of the base regulation in the link.
+        self.base_href = re.compile(base_href, re.I) if base_href else None
+        # The listing links to one page per base regulation, which links to its PDFs.
+        self.detail = detail_pages
+        self.documents = re.compile(documents, re.I) if documents else _DOCUMENT_HREF
 
     def listing_urls(self, args):
         return list(self.urls)
@@ -706,8 +713,22 @@ class ListedAdapter:
         if _CONSOLIDATED.search(label):
             return ("consolidated", None, numbers[0][1]) if numbers else (None, None, None)
         amending = _AMENDING.search(label)
-        if _REPRINT.search(label) and numbers:
-            return "reprint", numbers[-1][1] if len(numbers) > 1 else own, numbers[0][1]
+        folder = self.base_href.search(href) if self.base_href else None
+        if folder and numbers:
+            base = f"{self.series} {folder.group(1)}:{int(folder.group(2))}"
+            if numbers[0][1] != base:
+                reprint = _REPRINT.search(label) or _REPRINT.search(href)
+                return ("reprint" if reprint else "amending"), numbers[0][1], base
+        reprint = _REPRINT.search(label)
+        if reprint and numbers:
+            # "XFS 2015:1 omtryckt genom ... XFS 2021:1" or "XFS 2021:1 ... (XFS 2015:1) Omtryck"
+            before = [n for at, n in numbers if at < reprint.start()]
+            after = [n for at, n in numbers if at > reprint.start()]
+            if before and after:
+                return "reprint", after[-1], before[0]
+            if len(before) > 1:
+                return "reprint", before[0], before[1]
+            return "reprint", own if own != numbers[0][1] else None, numbers[0][1]
         if amending:
             before = [n for at, n in numbers if at < amending.start()]
             after = [n for at, n in numbers if at > amending.start()]
@@ -726,8 +747,36 @@ class ListedAdapter:
         return ("base", own, None) if own else (None, None, None)
 
     def parse_listing(self, text, url):
+        if not self.detail:
+            return self.read_links(parse_html(text), url)
+        entries = {}
+        for link in parse_html(text).find_all("a"):
+            href = link.attrs.get("href") or ""
+            numbers = self._numbers(link.text())
+            if not href or href.startswith(("#", "mailto:")) or len(numbers) != 1:
+                continue
+            number = numbers[0][1]
+            if number not in entries and not self.exclude.search(link.text()):
+                entries[number] = Entry(number=number, title=self.title(link.text(), number), url=absolute(url, href))
+        if not entries:
+            raise ValueError(f"no {self.series} regulations found")
+        return list(entries.values())
+
+    def parse_detail(self, text, entry):
         root = parse_html(text)
-        entries, amending = {}, set()
+        found = {e.number: e for e in self.read_links(root, entry.url)}.get(entry.number)
+        if found is None:
+            raise ValueError(f"{entry.number} has no PDF on its page")
+        if not found.base:
+            raise NotBase(f"{entry.number} is an amending regulation")
+        heading = (root.find("main") or root).find("h1")
+        title = self.title(heading.text(), entry.number) if heading is not None else ""
+        found.title = title if title and title != entry.number else found.title
+        return self.regulation(found)
+
+    def read_links(self, root, url):
+        """Entries for the document links on one page: base regulations first, then amending ones."""
+        entries, amending, own_folder = {}, set(), set()
 
         def entry(number, title=None):
             if number not in entries:
@@ -738,13 +787,15 @@ class ListedAdapter:
 
         for link in root.find_all("a"):
             href = link.attrs.get("href") or ""
-            if not href or href.startswith(("#", "mailto:")) or not _DOCUMENT_HREF.search(href):
+            if not href or href.startswith(("#", "mailto:")) or not self.documents.search(href):
                 continue
             label = link.text()
             kind, own, target = self.classify(label, href)
             if kind is None:
                 continue
             pdf = absolute(url, href)
+            if kind == "base" and self.base_href and self.base_href.search(href):
+                own_folder.add(own)  # filed in its own folder: a base regulation even if it also amends one
             if kind == "base":
                 base = entry(own, self.title(label, own))
                 if not base.url:
@@ -765,14 +816,15 @@ class ListedAdapter:
                         entry(target).amended_by.append(own)
         result = []
         for number, item in entries.items():
-            if number in amending:
+            if number in amending and number not in own_folder:
                 continue
+            item.pdfs = list(dict(reversed(item.pdfs)).items())[::-1]  # one PDF per label, the first
             if not item.pdfs:
                 continue
             item.url = item.url or item.pdfs[0][1]
             item.amended_by = sorted(set(item.amended_by), key=number_key)
             result.append(item)
-        for number in sorted(amending, key=number_key):
+        for number in sorted(amending - own_folder, key=number_key):
             result.append(Entry(number=number, title=number, url=url, base=False))
         if not any(e.base for e in result):
             raise ValueError(f"no {self.series} regulations found")
@@ -790,7 +842,8 @@ def load_series(path=SERIES_CONFIG):
     except FileNotFoundError:
         return {}
     return {code: ListedAdapter(code, item["issuer"], item["listing_urls"], item.get("prefix"),
-                                item.get("exclude"), item.get("gaps", ()))
+                                item.get("exclude"), item.get("separator"), item.get("base_href"),
+                                item.get("detail_pages", False), item.get("documents"))
             for code, item in data["series"].items() if item.get("listing_urls")}
 
 

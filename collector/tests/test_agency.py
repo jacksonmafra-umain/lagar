@@ -180,6 +180,33 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(bare.title, "XFS 2022:1")
         self.assertEqual(len(bare.pdfs), 1)  # the guidance PDF is not part of the regulation
 
+    def test_listed_folders_and_spaced_numbers(self):
+        yfs = agency.ListedAdapter("YFS", "Yverket", ["https://www.example.se/forfattningar/"], separator="[: ]",
+                                   base_href=r"grund/yfs-(\d{4})-(\d+)/")
+        entries = yfs.parse_listing(fixture("agency-listed-folders.html"), yfs.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [
+            ("YFS 2011:2", True), ("YFS 2021:1", True), ("YFS 2014:3", False), ("YFS 2016:1", False)])
+        stod, fees = entries[:2]
+        self.assertEqual(stod.title, "Föreskrifter om stöd")
+        # A regulation filed under another base's folder that also has its own folder is a base regulation.
+        self.assertEqual(stod.amended_by, ["YFS 2014:3", "YFS 2016:1", "YFS 2021:1"])
+        self.assertEqual([label for label, _ in stod.pdfs], ["YFS 2011:2", "YFS 2011:2 (omtryck genom YFS 2014:3)"])
+        self.assertEqual(len(fees.pdfs), 1)  # one PDF per label; the corrigendum is skipped
+
+    def test_listed_detail_pages(self):
+        zfs = agency.ListedAdapter("ZFS", "Zverket", ["https://www.example.se/regler/"], detail_pages=True,
+                                   documents="/contentassets/")
+        listing = '<a href="/publ/zfs-20181/">ZFS 2018:1</a><a href="/publ/zfs-20197/">ZFS 2019:7</a>'
+        entries = zfs.parse_listing(listing, zfs.listing_url)
+        self.assertEqual([e.url for e in entries], ["https://www.example.se/publ/zfs-20181/",
+                                                    "https://www.example.se/publ/zfs-20197/"])
+        regulation = zfs.parse_detail(fixture("agency-listed-detail.html"), entries[0])
+        self.assertEqual(regulation.title, "Zverkets föreskrifter om grundläggande bestämmelser")
+        self.assertEqual(regulation.amended_by, ["ZFS 2019:7"])
+        self.assertEqual([label for label, _ in regulation.pdfs], ["ZFS 2018:1", "ZFS 2018:1 (konsoliderad version)"])
+        with self.assertRaises(agency.NotBase):
+            zfs.parse_detail(fixture("agency-listed-detail.html"), entries[1])
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():
