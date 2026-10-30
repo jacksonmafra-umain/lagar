@@ -2984,6 +2984,16 @@
         "https://karlskoga.se/kommun--politik/politik-och-demokrati/kommunal-forfattningssamling.html"
       ]
     },
+    "1885": {
+      "name": "Lindesberg",
+      "issuer": "Lindesbergs kommun",
+      "region_code": "18",
+      "collection": "Lindesbergs kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.lindesberg.se", "lindesberg.se"],
+      "listings": ["https://www.lindesberg.se/kommun-och-politik/kommunfakta/regler-och-styrdokument-"]
+    },
     "1904": {
       "name": "Skinnskatteberg",
       "issuer": "Skinnskattebergs kommun",
@@ -3002,6 +3012,32 @@
         {"from": "href", "pattern": "/app/uploads/(\\d{4}/\\d{2}/[^/?#]+?)\\.pdf"}
       ],
       "title_strip": ["\\s*\\(pdf(,\\s*[\\d.,]+\\s*[kKM]B)?\\)\\s*$", "^Taxor och avgifter\\s*\\|\\s*"]
+    },
+    "1907": {
+      "name": "Surahammar",
+      "issuer": "Surahammars kommun",
+      "region_code": "19",
+      "collection": "Surahammars kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["surahammar.se", "www.surahammar.se"],
+      "listings": [
+        "https://surahammar.se/kommun-styrdokument-ekonomi-och-politik/forfattningssamling-och-styrande-dokument/foreskrifter.html",
+        "https://surahammar.se/kommun-styrdokument-ekonomi-och-politik/forfattningssamling-och-styrande-dokument/taxor-och-avgifter.html"
+      ]
+    },
+    "1960": {
+      "name": "Kungsör",
+      "issuer": "Kungsörs kommun",
+      "region_code": "19",
+      "collection": "Kungsörs kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["kungsor.se", "www.kungsor.se"],
+      "listings": [
+        "https://kungsor.se/kommun-och-politik/styrande-dokument/allmanhet-och-naringsliv.html",
+        "https://kungsor.se/kommun-och-politik/styrande-dokument/taxor-och-avgifter.html"
+      ]
     },
     "1962": {
       "name": "Norberg",
@@ -3070,6 +3106,18 @@
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kKM]B\\.?\\s*$"]
     },
+    "1983": {
+      "name": "Köping",
+      "issuer": "Köpings kommun",
+      "region_code": "19",
+      "collection": "Köpings kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["koping.se", "www.koping.se"],
+      "listings": [
+        "https://koping.se/kommun--politik/kvalitet-utveckling-policyer-och-riktlinjer/forfattningssamling.html"
+      ]
+    },
     "1984": {
       "name": "Arboga",
       "issuer": "Arboga kommun",
@@ -3128,6 +3176,16 @@
       ],
       "title_strip": ["\\s*\\.pdf\\s*$"]
     },
+    "2034": {
+      "name": "Orsa",
+      "issuer": "Orsa kommun",
+      "region_code": "20",
+      "collection": "Orsa kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["orsa.se", "www.orsa.se"],
+      "listings": ["https://orsa.se/kommun-och-politik/styrande-dokument-och-regler.html"]
+    },
     "2039": {
       "name": "Älvdalen",
       "issuer": "Älvdalens kommun",
@@ -3155,6 +3213,16 @@
         "\\s*\\.pdf\\s*$"
       ]
     },
+    "2062": {
+      "name": "Mora",
+      "issuer": "Mora kommun",
+      "region_code": "20",
+      "collection": "Mora kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["morakommun.se", "www.morakommun.se"],
+      "listings": ["https://morakommun.se/kommun-och-politik/styrande-dokument-och-regler.html"]
+    },
     "2161": {
       "name": "Ljusdal",
       "issuer": "Ljusdals kommun",
@@ -3173,6 +3241,16 @@
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
+    "2181": {
+      "name": "Sandviken",
+      "issuer": "Sandvikens kommun",
+      "region_code": "21",
+      "collection": "Sandvikens kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["sandviken.se", "www.sandviken.se"],
+      "listings": ["https://sandviken.se/kommunochpolitik/lokalaforeskrifterochstyrdokument.14615.html"]
     },
     "2182": {
       "name": "Söderhamn",
@@ -3305,6 +3383,39 @@
         "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"
       ]
     },
+    "2282": {
+      "name": "Kramfors",
+      "issuer": "Kramfors kommun",
+      "region_code": "22",
+      "collection": "Kramfors kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.kramfors.se", "kramfors.se"],
+      "listings": [
+        "https://www.kramfors.se/kommun--demokrati/styrning-och-ledning/styrande-dokument/lokala-foreskrifter.html",
+        "https://www.kramfors.se/kommun--demokrati/styrning-och-ledning/styrande-dokument/avgifter-och-taxor.html"
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "best(ä|a)mmelser.{0,80}(vatten|avlopp)"
+      ]
+    },
     "2283": {
       "name": "Sollefteå",
       "issuer": "Sollefteå kommun",
@@ -3327,6 +3438,38 @@
         "[\\s,-]*KF\\s*\\d{4}-\\d{2}-\\d{2}.*$"
       ]
     },
+    "2284": {
+      "name": "Örnsköldsvik",
+      "issuer": "Örnsköldsviks kommun",
+      "region_code": "22",
+      "collection": "Örnsköldsviks kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.ornskoldsvik.se", "ornskoldsvik.se"],
+      "listings": [
+        "https://www.ornskoldsvik.se/om-kommunen/politiska-beslut-och-handlingar/lokala-foreskrifter/lokala-foreskrifter"
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "sn(ö|o)skoter"
+      ]
+    },
     "2303": {
       "name": "Ragunda",
       "issuer": "Ragunda kommun",
@@ -3342,6 +3485,39 @@
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$", "^\\u200b"]
+    },
+    "2305": {
+      "name": "Bräcke",
+      "issuer": "Bräcke kommun",
+      "region_code": "23",
+      "collection": "Bräcke kommuns författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.bracke.se", "bracke.se"],
+      "listings": [
+        "https://www.bracke.se/kommun--och-demokrati/ekonomi-mal-och-styrdokument/styrande-dokument"
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "taxe(best|tabell)|taxebest",
+        "best(ä|a)mm(else)?r.{0,20}(vatten|avlopp)"
+      ]
     },
     "2309": {
       "name": "Krokom",
