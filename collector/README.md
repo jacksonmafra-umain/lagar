@@ -482,6 +482,14 @@ the PDF's file name; amending and repealing regulations are recognised by their 
 name. For PDF entries (`detail = False`) the PDF is the document: `source` is its URL and
 `source_sha256` its hash.
 
+Adapters whose site publishes no HTML text (`has_text = False`) get their text from a PDF:
+the consolidated version when one is linked, else the regulation's own PDF, read with
+`collector/lagar/pdftext.py` from the same download that hashes it and turned into Markdown by
+`collector/lagar/agency_text.py` (masthead dropped, section signs in bold). The masthead also
+gives the title when the listing only names the number, and the decision, publication and
+entry-into-force dates when the listing has none. A scanned PDF is noted in the body. The run
+stops when `pdftotext` (poppler-utils) is missing; `--no-pdf-text` skips the step.
+
 | series | listing | detail | text |
 | --- | --- | --- | --- |
 | AFS (Arbetsmiljöverket) | `https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/`, "Gällande grundföreskrifter" plus the amending regulations in force | `.../foreskrifter/afs-20231/` | HTML, the latest consolidated version |
