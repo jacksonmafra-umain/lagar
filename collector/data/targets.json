@@ -132,9 +132,9 @@
     "type": null,
     "series": "SCB-FS",
     "label": "SCB-FS (SCB)",
-    "target": 48,
+    "target": 51,
     "kind": "counted",
-    "source": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/?currentpageId=98388&type=UL (base regulations on reporting duties)",
+    "source": "SCB's tables of regulations on reporting duties and on official statistics (base regulations in force)",
     "as_of": "2026-10-30"
   },
   {
@@ -505,6 +505,56 @@
     "target": 3,
     "kind": "counted",
     "source": "https://www.tillvaxtanalys.se/statistik/tillvaxtanalysforeskrifter.125740.html (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TPPVFS",
+    "label": "TPPVFS (Pliktverket)",
+    "target": 1,
+    "kind": "counted",
+    "source": "https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TRMFS",
+    "label": "TRMFS (Pliktverket)",
+    "target": 2,
+    "kind": "counted",
+    "source": "https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter (predecessor regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SIFS",
+    "label": "SIFS (Spelinspektionen)",
+    "target": 9,
+    "kind": "counted",
+    "source": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/spelinspektionens-foreskriftsforteckning.pdf (SIFS base regulations in force with a page)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "LIFS",
+    "label": "LIFS (Spelinspektionen)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/spelinspektionens-foreskriftsforteckning.pdf (Lotteriinspektionen regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "STFS",
+    "label": "STFS (Sametinget)",
+    "target": 13,
+    "kind": "counted",
+    "source": "https://sametinget.se/dokumentbank?cat=72 (base regulations)",
     "as_of": "2026-10-30"
   },
   {

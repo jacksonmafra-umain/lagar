@@ -10404,6 +10404,90 @@
       ]
     },
     {
+      "number": "LIFS 2018:2",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20182/",
+      "files": [
+        {
+          "label": "LIFS 2018:2",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/lifs-2018-2-foreskrifter-och-allmanna-rad-om-spelansvar.pdf",
+          "bytes": 198354,
+          "sha256": "3aa13ac3cd324428225f71dd60630da3b46a96c3c30798c5ff6dc6ea001ff6fe",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:16Z"
+        }
+      ]
+    },
+    {
+      "number": "LIFS 2018:4",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20184/",
+      "files": [
+        {
+          "label": "LIFS 2018:4",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/konsoliderade-versioner/konsoliderad-version-av-lifs-2018_4-inkl-andring-enl.-sifs-2024_2.pdf",
+          "bytes": 199470,
+          "sha256": "a6fa12be7f6e0d03b94bc3db45b8f94e00a77b44261b26042c3d468e2b756e31",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:19Z"
+        }
+      ]
+    },
+    {
+      "number": "LIFS 2018:5",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20185/",
+      "files": [
+        {
+          "label": "LIFS 2018:5",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/lifs-2018_5-foreskrifter-och-allmanna-rad-om-kommersiellt-onlinespel-och-vadhallning.pdf",
+          "bytes": 27630,
+          "sha256": "1ec288d0dece955250fcb046d2341e85009f0168388447140630d4eb46ee2d67",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:21Z"
+        }
+      ]
+    },
+    {
+      "number": "LIFS 2018:6",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20186/",
+      "files": [
+        {
+          "label": "LIFS 2018:6",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/lifs-2018_6-foreskrifter-och-allmanna-rad-om-landbaserat-kommersiellt-spel.pdf",
+          "bytes": 25863,
+          "sha256": "1074357b181a2ae53dd5d07e3167473a169fa4ebbba8971ec3dd1b120572281c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:23Z"
+        }
+      ]
+    },
+    {
+      "number": "LIFS 2018:7",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20187/",
+      "files": [
+        {
+          "label": "LIFS 2018:7",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/lifs-2018_7-foreskrifter-och-allmanna-rad-om-spel-pa-fartyg-i-internationell-trafik.pdf",
+          "bytes": 22661,
+          "sha256": "25280fbf035b68d5c20f278d453fa6be5b40848d8bb128a9ffc300abdb763ccc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:25Z"
+        }
+      ]
+    },
+    {
+      "number": "LIFS 2018:10",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-201810/",
+      "files": [
+        {
+          "label": "LIFS 2018:10",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/lifs-2018_10-lotteriinspektionens-foreskrifter-och-allmanna-rad-om-tekniska-krav-pa-vardeautomater-och-automatiserat-kasinospel-samt-ackreditering-av-organ-for-den-som-ska-kontrollera-prova-och-certifiera-vardeau.pdf",
+          "bytes": 294415,
+          "sha256": "a57ee02945f566368e6c292a0ad5da09d65fd404f2520d14843f7f06e7cc9208",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:28Z"
+        }
+      ]
+    },
+    {
       "number": "LMFS 2009:1",
       "detail_url": "https://www.lantmateriet.se/globalassets/om-lantmateriet/rattsinformation/foreskrifter/lmfs_091.pdf",
       "files": [
@@ -18738,6 +18822,20 @@
       ]
     },
     {
+      "number": "SCB-FS 2016:17",
+      "detail_url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/scbs-foreskrifter-for-offentliggorande-m.m.-av-officiell-statistik/scb-fs-201617/",
+      "files": [
+        {
+          "label": "SCB-FS 2016:17",
+          "url": "https://www.scb.se/contentassets/62d36ba3d75048c4a58bd54e97d35fc0/scb-fs-2016-17.pdf",
+          "bytes": 533415,
+          "sha256": "5f50fc295a0c4d59c414135e8356bf0f0ab440328497e0acc5e32eab94b711b2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:36:11Z"
+        }
+      ]
+    },
+    {
       "number": "SCB-FS 2017:5",
       "detail_url": "https://www.scb.se/link/ba726bd39d0742faa3451fb6895fbb2c.aspx",
       "files": [
@@ -18832,6 +18930,20 @@
           "sha256": "174731ce9cf8eb56527cc237d5b7265b07f0a78cdab50730dccf16cb4689737b",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T01:04:39Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:26",
+      "detail_url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/scbs-foreskrifter-for-offentliggorande-m.m.-av-officiell-statistik/scb-fs-202126/",
+      "files": [
+        {
+          "label": "SCB-FS 2021:26",
+          "url": "https://www.scb.se/contentassets/b24fc7cfd5894550bb332cc6376d2434/87363-scb-fs-2021-26-foreskrift-2021_20-sid.pdf",
+          "bytes": 834318,
+          "sha256": "4921ce03d5c415dfaf9df97e714c90fca64e3c0fcb42a15d6e7ac2fcc16bd479",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:36:14Z"
         }
       ]
     },
@@ -18986,6 +19098,20 @@
           "sha256": "0b92df4ff7ebba4a281c5aa33bce119e3479bb857aa8f2f260d9d77768bfcf24",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T01:04:59Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2023:6",
+      "detail_url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/scbs-foreskrifter-for-offentliggorande-m.m.-av-officiell-statistik/scb-fs-202306/",
+      "files": [
+        {
+          "label": "SCB-FS 2023:6",
+          "url": "https://www.scb.se/contentassets/fe60728f49404b59a3c06db5c3f5e845/89331-foreskrift-scb-fs_2023-06_4_sid_k1.pdf",
+          "bytes": 181611,
+          "sha256": "84974991e2cf99fd2903f10093ad3cb623a107989d79e578ec9c9dc43c83d3a6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:36:09Z"
         }
       ]
     },
@@ -19464,6 +19590,132 @@
           "sha256": "f56df2757091ed638c9d47973c23a67bc53caa68da0167ab68da582c6498e64e",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-29T23:56:49Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2019:1",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20191/",
+      "files": [
+        {
+          "label": "SIFS 2019:1",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2019-1-spelinspektionens-foreskrifter-och-allmanna-rad-om-bingo-for-allmannyttiga-andamal2.pdf",
+          "bytes": 208379,
+          "sha256": "00491411bc5d4e28e83ee4f096a3d8c1602616aa246dd7ae12fd61980ed66428",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:30Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2019:2",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20192/",
+      "files": [
+        {
+          "label": "SIFS 2019:2",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/konsoliderade-versioner/konsoliderad-version-av-sifs-2019_2-inkl.-andring-enl.-sifs-2026_2.pdf",
+          "bytes": 194091,
+          "sha256": "9a78b71d210d7f60f2b92db86a2e95e3667ea3818d0d335d47bef7278b697ae6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:32Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2020:2",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20202/",
+      "files": [
+        {
+          "label": "SIFS 2020:2",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/konsoliderade-versioner/konsoliderad-version-av-sifs-2020_2-inkl-andring-enl.-2024_3-1.pdf",
+          "bytes": 163818,
+          "sha256": "dff2afe1006017b5b22f4c476ffca34b5515f08237a732d0f3a800e8f29a3efc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:35Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2022:2",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20222/",
+      "files": [
+        {
+          "label": "SIFS 2022:2",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2022_2-spelinspektionens-foreskrifter-om-undantag-fran-kravet-pa-registrering-1.pdf",
+          "bytes": 148359,
+          "sha256": "b6c44940f45979f112b45347b07772e6e9223e1408deace1e7b1d5f632f27db5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:37Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2022:3",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20223/",
+      "files": [
+        {
+          "label": "SIFS 2022:3",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2022_3-spelinspektionens-foreskrifter-och-allmanna-rad-om-tekniska-krav-samt-ackreditering-av-organ-for-den-som-ska-kontrollera-prova-och-certifiera-spelverksamhet.pdf",
+          "bytes": 368137,
+          "sha256": "bc8833569959d28bd767b39b6c87c65da876801239226baf01a54a44cb06cea0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:39Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2024:1",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20241/",
+      "files": [
+        {
+          "label": "SIFS 2024:1",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2024_1-spelinspektionens-foreskrifter-och-allmanna-rad-om-dragningar-utanfor-spelsystem.pdf",
+          "bytes": 169974,
+          "sha256": "b2832b2cfea53c9eb00089718cc1b129e6c20a82ea68746415eebc872eae33e5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:41Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2025:1",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20251/",
+      "files": [
+        {
+          "label": "SIFS 2025:1",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2025_1-foreskrifter-och-allmanna-rad-om-spel-pa-vardeautomater.pdf",
+          "bytes": 228134,
+          "sha256": "aa03980b1f2992367b558675c332cd31169581c5edf5addef2982e65a46fc0ba",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:43Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2026:1",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20261-spelinspektionens-foreskrifter-om-avgifter-for-tillsyn/",
+      "files": [
+        {
+          "label": "SIFS 2026:1",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2026_1-spelinspektionens-foreskrifter-om-avgifter-for-tillsyn.pdf",
+          "bytes": 135988,
+          "sha256": "bc548138fd959d7ae91418dd59697a5c9b351e26d3146ee47ac9a05e28d4cffc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:45Z"
+        }
+      ]
+    },
+    {
+      "number": "SIFS 2026:3",
+      "detail_url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20263/",
+      "files": [
+        {
+          "label": "SIFS 2026:3",
+          "url": "https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/gallande-foreskrifter/sifs-2026_3-spelinspektionens-foreskrifter-om-det-nationella-sjalvavstangningsregistret.pdf",
+          "bytes": 162255,
+          "sha256": "3a286406e3a52ae904d047a05ec872560f1108a9486d888e80002a8baf1c0fae",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:21:47Z"
         }
       ]
     },
@@ -39654,6 +39906,196 @@
       ]
     },
     {
+      "number": "STFS 2007:1",
+      "detail_url": "https://sametinget.se/4539?file_id=STFS+2007_1_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:1",
+          "url": "https://sametinget.se/4539?file_id=STFS+2007_1_ny2.pdf",
+          "bytes": 265350,
+          "sha256": "175aaf4bc3e8f6759dac2ea661965b4ac65d1caf0fc92daba0509e0a61d57603",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:58Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:2",
+      "detail_url": "https://sametinget.se/4538?file_id=STFS+2007_2_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:2",
+          "url": "https://sametinget.se/4538?file_id=STFS+2007_2_ny2.pdf",
+          "bytes": 117468,
+          "sha256": "3ff30e376de357a1b6f4a9a9d446db9c954bf9ee60ec45f19bbbe19bad0efcdd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:57Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:3",
+      "detail_url": "https://sametinget.se/4537?file_id=STFS+2007_3_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:3",
+          "url": "https://sametinget.se/4537?file_id=STFS+2007_3_ny2.pdf",
+          "bytes": 118029,
+          "sha256": "2f223f84f8b5bf7f69528af8e0be76bbb631721cfc19052eac8146b91d3821c3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:55Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:4",
+      "detail_url": "https://sametinget.se/4339?file_id=STFS+2007_4_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:4",
+          "url": "https://sametinget.se/4339?file_id=STFS+2007_4_ny2.pdf",
+          "bytes": 158939,
+          "sha256": "2e62b5ff24580661f1d89a621dd89cf93d1049b401b6ba74bae5bcea12e78049",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:47Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:5",
+      "detail_url": "https://sametinget.se/4489?file_id=STFS+2007_5_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:5",
+          "url": "https://sametinget.se/4489?file_id=STFS+2007_5_ny2.pdf",
+          "bytes": 174271,
+          "sha256": "b7afb940e6d31e3cf0093f5f2ce0b4e5735c63e65843e8bdfde7fb3c4050cbd5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:52Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:6",
+      "detail_url": "https://sametinget.se/4535?file_id=STFS+2007_6_ny2.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:6",
+          "url": "https://sametinget.se/4535?file_id=STFS+2007_6_ny2.pdf",
+          "bytes": 148118,
+          "sha256": "a8ffa01daf5d66f14912067c4b080291e26f35e9e2a8e8089c2701d515209e46",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:53Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:7",
+      "detail_url": "https://sametinget.se/4331?file_id=STFS+2007_7_ny.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:7",
+          "url": "https://sametinget.se/4331?file_id=STFS+2007_7_ny.pdf",
+          "bytes": 1034461,
+          "sha256": "f3b8c0485d9561051c84cfd450edc2ced22fe994ebf3df6fc21702aeeb647ecb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:46Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2007:9",
+      "detail_url": "https://sametinget.se/4417?file_id=STFS+2007_9_rovdjursersattning_ny.pdf",
+      "files": [
+        {
+          "label": "STFS 2007:9",
+          "url": "https://sametinget.se/4417?file_id=STFS+2007_9_rovdjursersattning_ny.pdf",
+          "bytes": 174117,
+          "sha256": "ed2818338f254d1a4437fea80892ecb50a9d026b3f52132b28499061186ea651",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:49Z"
+        },
+        {
+          "label": "STFS 2007:9 (konsoliderad version)",
+          "url": "https://sametinget.se/6341?file_id=1",
+          "bytes": 280048,
+          "sha256": "124fcaf1ceae95608055ac9ef60fb9f3f2de13f9fb050eb168cc153cc55f2f7d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:50Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2008:1",
+      "detail_url": "https://sametinget.se/4377?file_id=F%C3%B6reskrifter+om+statsbidrag+vid+vissa+studier+i+samiska+STFS+2008-1_3+sidor_ny.pdf",
+      "files": [
+        {
+          "label": "STFS 2008:1",
+          "url": "https://sametinget.se/4377?file_id=F%C3%B6reskrifter+om+statsbidrag+vid+vissa+studier+i+samiska+STFS+2008-1_3+sidor_ny.pdf",
+          "bytes": 250059,
+          "sha256": "78a50a6cb1b6aae101f127647d7bfebb4ece62ba048ef1a43a82ae811619d2d5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:48Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2016:1",
+      "detail_url": "https://sametinget.se/3689?file_id=STFS+2016-1.pdf",
+      "files": [
+        {
+          "label": "STFS 2016:1",
+          "url": "https://sametinget.se/3689?file_id=STFS+2016-1.pdf",
+          "bytes": 249845,
+          "sha256": "79b7c4aeea2aaaa3d70249db31eb4e23f7b8e0115cf3ebf7f0121938b4b6fe68",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:44Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2017:1",
+      "detail_url": "https://sametinget.se/3566?file_id=STFS+2017_1+om+statsbidrag+vid+vissa+studier+i+samiska.pdf",
+      "files": [
+        {
+          "label": "STFS 2017:1",
+          "url": "https://sametinget.se/3566?file_id=STFS+2017_1+om+statsbidrag+vid+vissa+studier+i+samiska.pdf",
+          "bytes": 279996,
+          "sha256": "be2d853ab8fd18540c682911e22b5f166563adf192ef47b5f005d16cd58111c3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:43Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2018:1",
+      "detail_url": "https://sametinget.se/3480?file_id=STFS+2018_1+F%C3%B6reskrifter+om+partist%C3%B6d.pdf",
+      "files": [
+        {
+          "label": "STFS 2018:1",
+          "url": "https://sametinget.se/3480?file_id=STFS+2018_1+F%C3%B6reskrifter+om+partist%C3%B6d.pdf",
+          "bytes": 188025,
+          "sha256": "953ace6fc2664eb77791ff1a3b4376d0a34306df86c059a5fc134cdf0ea365c9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:42Z"
+        }
+      ]
+    },
+    {
+      "number": "STFS 2024:1",
+      "detail_url": "https://sametinget.se/6371?file_id=1",
+      "files": [
+        {
+          "label": "STFS 2024:1",
+          "url": "https://sametinget.se/6371?file_id=1",
+          "bytes": 229465,
+          "sha256": "9d7184aa875f00a739291ee9e18e2b8a2270c69edce991c813e98b31ca7fd734",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:27:41Z"
+        }
+      ]
+    },
+    {
       "number": "SiSFS 2012:1",
       "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs2012-1-statens-institutionsstyrelses-foreskrifter-om-vissa-vardavgifter-vid-sarskilda-ungdomshem.pdf",
       "files": [
@@ -40546,6 +40988,48 @@
           "sha256": "b9b75c0dc38a53e03d31bb84e91eea8f2a2c0ea460a270d9da5a2bb92be2a2e3",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T14:55:27Z"
+        }
+      ]
+    },
+    {
+      "number": "TPPVFS 2024:1",
+      "detail_url": "https://www.pliktverket.se/download/18.3447a8a918c8afb6c075718/1704199706713/TPPV%20F%C3%B6reskrifter%20om%20f%C3%B6rm%C3%A5ner_slutlig.pdf",
+      "files": [
+        {
+          "label": "TPPVFS 2024:1",
+          "url": "https://www.pliktverket.se/download/18.3447a8a918c8afb6c075718/1704199706713/TPPV%20F%C3%B6reskrifter%20om%20f%C3%B6rm%C3%A5ner_slutlig.pdf",
+          "bytes": 245179,
+          "sha256": "18be7f9143337c3aa3d7ad6c045837c27ee41dcf3952f6b93ffe52be292c20d9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:13:56Z"
+        }
+      ]
+    },
+    {
+      "number": "TRMFS 2017:1",
+      "detail_url": "https://www.pliktverket.se/download/18.42d9d0f61768423b5862296/1612187907484/trmfs-2017_1.pdf",
+      "files": [
+        {
+          "label": "TRMFS 2017:1",
+          "url": "https://www.pliktverket.se/download/18.42d9d0f61768423b5862296/1612187907484/trmfs-2017_1.pdf",
+          "bytes": 288145,
+          "sha256": "e9e619882921867448fce1f45df943f5a0d7190eb406f0dc71ee179934c244ba",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:13:55Z"
+        }
+      ]
+    },
+    {
+      "number": "TRMFS 2017:4",
+      "detail_url": "https://www.pliktverket.se/download/18.42d9d0f61768423b5862299/1612187907566/trmfs-2017_4.pdf",
+      "files": [
+        {
+          "label": "TRMFS 2017:4",
+          "url": "https://www.pliktverket.se/download/18.42d9d0f61768423b5862299/1612187907566/trmfs-2017_4.pdf",
+          "bytes": 158373,
+          "sha256": "7b65918797b4acb7bd049478baf8fe620d1e0614532ccb8bf78b5c93f3f611c6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:13:56Z"
         }
       ]
     },

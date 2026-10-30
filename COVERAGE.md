@@ -227,9 +227,8 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
 - SCB-FS (Statistiska centralbyrån, 48 base regulations on reporting duties in
   force) as of 2026-10-30, in full text from SCB's page per regulation. SCB's
   table also lists amending and repealing regulations (44, in `amended_by`).
-  Not collected: the monthly consumer price index notices (KPI, about 110) and
-  the regulations on official statistics, published only as PDF on a separate
-  page; the series is partial.
+  The regulations on official statistics are collected from their own page
+  (see below).
 - UHRFS (Universitets- och högskolerådet, 13 base regulations in force with
   their consolidated PDFs), STEMFS (Energimyndigheten's document archive,
   read at the 10 s crawl delay its robots.txt asks for) and RFS
@@ -264,6 +263,18 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   regulations carry no date there and are not stored, nor are notices
   (tillkännagivanden). Older consolidated TFS versions are HTML pages and are
   not kept.
+- TPPVFS (Pliktverket, TPPVFS 2024:1 and the predecessor's TRMFS 2017:1 and
+  2017:4, stored under TRMFS), SIFS (Spelinspektionen, 9 SIFS and 6 of the
+  former Lotteriinspektionen's LIFS) and STFS (Sametinget, 13) as of
+  2026-10-30, in full text from the PDFs' text layer. Pliktverket's TPPVFS
+  2024:1 PDF carries no number in its link; the number was read from the PDF.
+  Spelinspektionen's list of regulations in force is itself a PDF; three
+  regulations on it (LIFS 2018:3, LIFS 2018:8, SIFS 2019:3) have no page on
+  the site and are not collected. Sametinget's document bank is read through
+  the JSON its search page uses.
+- SCB-FS now also holds SCB's three regulations on official statistics (SCB-FS
+  2016:17, 2021:26, 2023:6). The monthly consumer price index notices (KPI)
+  are notices of index values, not rules, and are not collected.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - Public services have no collector yet; what the Tjänster tab should hold is
