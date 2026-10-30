@@ -1275,10 +1275,6 @@
       "status": "no_adapter",
       "note": "borlange.se uses the Sitevision file-share module with folders loaded in the browser; the PDFs are not in the served page, only in the sitemap."
     },
-    "2180": {
-      "status": "no_adapter",
-      "note": "gavle.se publishes its documents through MediaFlow; no adapter yet."
-    },
     "2518": {
       "status": "no_adapter",
       "note": "overtornea.se lists its föreskrifter and taxor through the WordPress File Download plugin, loaded from an admin-ajax JSON endpoint; no adapter yet."
