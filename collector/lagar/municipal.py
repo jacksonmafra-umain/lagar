@@ -169,6 +169,7 @@ class Kommun:
     title_exclude: "list[str]" = field(default_factory=list)
     follow: str = ""
     row_titles: bool = False
+    next_fields: "dict[str, str]" = field(default_factory=dict)
     page_titles: bool = False
     embedded_json: bool = False
     document_pattern: str = ""
@@ -243,6 +244,7 @@ def _kommun(code, entry):
         title_exclude=list(entry.get("title_exclude") or (RESIDENT_EXCLUDE if resident else [])),
         follow=entry.get("follow", ""),
         row_titles=bool(entry.get("row_titles", False)),
+        next_fields=dict(entry.get("embedded_next") or {}),
         page_titles=bool(entry.get("page_titles", False)),
         embedded_json=bool(entry.get("embedded_json", False)),
         document_pattern=entry.get("document_pattern", ""),
@@ -274,6 +276,8 @@ def _kommun(code, entry):
         kommun.kinds and kommun.kind_column and kommun.title_column and kommun.number_column
     ):
         raise ConfigError(f"{code}: domino_view needs kinds and the kind, title and number columns")
+    if kommun.next_fields and not (kommun.next_fields.get("url") and kommun.next_fields.get("title")):
+        raise ConfigError(f"{code}: embedded_next needs the url and title keys")
     if strategy == "json_list" and not (kommun.json_title and kommun.json_number and kommun.json_url):
         raise ConfigError(f"{code}: json_list needs title_field, number_field and url_template")
     if kommun.json_embedded not in ("", "next"):
@@ -565,6 +569,30 @@ def _clean(text):
 _INITIAL_STATE = re.compile(r"registerInitialState\(\s*'[^']*'\s*,\s*")
 
 
+_NEXT_PUSH = re.compile(r'self\.__next_f\.push\(\[\d+,("(?:[^"\\]|\\.)*")\]\)')
+
+
+def _next_files(scripts, fields):
+    """(href, title) of the objects in a Next.js page's flight data that name a file.
+
+    Next.js app router pages pass their props to the browser as JSON text in
+    `self.__next_f.push([1, "..."])` scripts; a document list then exists only there.
+    `fields` names the object keys holding the link and the title (`url`, `title`).
+    """
+    data = "".join(json.loads(m.group(1)) for script in scripts for m in _NEXT_PUSH.finditer(script))
+    url_key, title_key = fields.get("url", ""), fields.get("title", "")
+    found = []
+    for match in re.finditer(r"\{" + re.escape(json.dumps(title_key)) + ":", data):
+        try:
+            item, _ = json.JSONDecoder().raw_decode(data, match.start())
+        except ValueError:
+            continue
+        href, title = item.get(url_key), item.get(title_key)
+        if isinstance(href, str) and isinstance(title, str):
+            found.append((href, title))
+    return found
+
+
 def _state_files(script):
     """(href, title) of the files in Sitevision `AppRegistry.registerInitialState` JSON.
 
@@ -599,10 +627,12 @@ class _Links(HTMLParser):
     anchors under the heading that precedes the script.
     """
 
-    def __init__(self, level, embedded_json=False, row_titles=False):
+    def __init__(self, level, embedded_json=False, row_titles=False, next_fields=None):
         super().__init__(convert_charrefs=True)
         self.level = level
         self.embedded_json = embedded_json
+        self.next_fields = next_fields or {}
+        self._next = []  # Next.js flight data scripts (next_fields)
         self.row_titles = row_titles
         self._row = None  # [text parts, anchors] of the table row being read (row_titles)
         self.links = []  # (section, href, text)
@@ -643,6 +673,8 @@ class _Links(HTMLParser):
         if self._skip:
             if self.embedded_json and "registerInitialState" in data:
                 self.links += [(self.section, href, _clean(title)) for href, title in _state_files(data)]
+            if self.next_fields and "self.__next_f.push" in data:
+                self._next.append(data)
             return
         if self._heading:
             self._heading[1].append(data)
@@ -722,10 +754,11 @@ def _listing_links(kommun, raw):
     locs = _sitemap_locs(raw)
     if locs is not None:
         return [] if _is_sitemap_index(raw) else [(None, loc, "") for loc in locs]
-    parser = _Links(kommun.section_level, kommun.embedded_json, kommun.row_titles)
+    parser = _Links(kommun.section_level, kommun.embedded_json, kommun.row_titles, kommun.next_fields)
     parser.feed(_text(raw))
     parser.close()
-    return parser.links
+    # A flight data object can span several scripts, so the list is read once the page is done.
+    return parser.links + [(None, href, _clean(title)) for href, title in _next_files(parser._next, kommun.next_fields)]
 
 
 def parse_html_index(kommun, raw, listing_url):

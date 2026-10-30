@@ -989,6 +989,38 @@ class MediaflowTest(unittest.TestCase):
                 municipal.load_config(self.config(tmp, {**MF_ENTRY, "page": "https://elsewhere.se/x"}))
 
 
+class NextDataTest(unittest.TestCase):
+    def test_files_in_next_flight_data_are_links(self):
+        entry = {"name": "Skövde", "issuer": "Skövde kommun", "region_code": "14", "collection": "KFS",
+                 "strategy": "html_index", "resident_filter": True, "hosts": ["www.skovde.se", "static.skovde.se"],
+                 "listings": ["https://www.skovde.se/forfattningssamling"],
+                 "embedded_next": {"url": "FileUrl", "title": "Name"},
+                 "link_pattern": "^https://static\\.skovde\\.se/kfs/[^?#]+\\.pdf$",
+                 "number": [{"from": "href", "pattern": "/kfs/([^/?#]+)\\.pdf$"}]}
+        flight = json.dumps({"ordinancePages": [
+            {"Name": "Avfallsf\u00f6reskrifter", "OrdinanceCategory": "Lokala f\u00f6reskrifter",
+             "FileUrl": "https://static.skovde.se/kfs/avfallsforeskrifter.pdf"},
+            {"Name": "Policy f\u00f6r m\u00f6ten", "FileUrl": "https://static.skovde.se/kfs/policy.pdf"},
+        ]})
+        half = len(flight) // 2
+        page = "".join(
+            f"<script>self.__next_f.push([1,{json.dumps(part)}])</script>" for part in (flight[:half], flight[half:])
+        ).encode()
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "municipalities.json"
+            path.write_text(json.dumps({"kommuner": {"1496": entry}}), encoding="utf-8")
+            kommun = municipal.load_config(str(path))["1496"]
+            with self.assertRaises(municipal.ConfigError):
+                path.write_text(json.dumps({"kommuner": {"1496": {**entry, "embedded_next": {"url": "FileUrl"}}}}),
+                                encoding="utf-8")
+                municipal.load_config(str(path))
+        entries, problems = municipal.parse_html_index(kommun, page, entry["listings"][0])
+        self.assertEqual(problems, [])
+        self.assertEqual([(e.number, e.title, e.url) for e in entries], [
+            ("avfallsforeskrifter", "Avfallsföreskrifter", "https://static.skovde.se/kfs/avfallsforeskrifter.pdf"),
+        ])
+
+
 class MainTest(unittest.TestCase):
     def test_bad_code_is_rejected(self):
         with self.assertRaises(SystemExit):

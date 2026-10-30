@@ -770,6 +770,10 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      files in the browser from `AppRegistry.registerInitialState(...)` JSON, so the static HTML has
      no anchors for them. With this flag, every object in that JSON with a `url` (or `uri`) under
      `/download/` and a `title` (or `name`) counts as a link under the heading before the script.
+   - `embedded_next` (`html_index`): Next.js app router pages (Skövde) pass their document list to
+     the browser as JSON text in `self.__next_f.push([1, "..."])` scripts, with no anchors. With
+     `{"url": "FileUrl", "title": "Name"}`, every object in that data with those keys counts as a
+     link (no section), read once the whole page is parsed since an object can span scripts.
    - `follow` (regex, `html_index`): links on a listing whose absolute URL matches are read as
      further listing pages (pagination), up to 100 pages, skipping those robots.txt disallows. The
      Sitevision preset follows its file list's `?lp-page=N` links.
