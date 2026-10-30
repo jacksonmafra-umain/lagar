@@ -472,6 +472,37 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(entries[0].url, scb.statistics_url + "/scb-fs-202306/")
         self.assertEqual(entries[2].title, "Statistiska centralbyråns föreskrifter om kvalitet för den officiella statistiken")
 
+    def test_svkfs_document_list(self):
+        svk = agency.ADAPTERS["SvKFS"]
+        entries = {e.number: e for e in svk.parse_listing(fixture("agency-svkfs-documents.json"), svk.listing_url)}
+        self.assertEqual(len(entries), 6)
+        self.assertEqual(entries["SvKFS 2012:1"].repealed, "2022-12-18")  # archived, "Ersattess den 18 december 2022"
+        self.assertIsNone(entries["SvKFS 2021:1"].repealed)
+        self.assertEqual(entries["SvKFS 2012:1"].title,
+                         "Utrustning och förberedelse för samt genomförande av förbrukningsfrånkoppling")
+        self.assertTrue(entries["SvKFS 2023:1"].url.endswith(".pdf"))
+
+    def test_tfs_search(self):
+        tfs = agency.ADAPTERS["TFS"]
+
+        class Poster:
+            def post(self, url, form):
+                self.sent = (url, form)
+                return b"ok"
+
+        poster = Poster()
+        tfs.fetch_listing(poster, tfs.listing_url)
+        self.assertEqual((poster.sent[0], poster.sent[1]["allt"]), (tfs.listing_url, "allt"))
+        entries = {e.number: e for e in tfs.parse_listing(fixture("agency-tfs-search.html"), tfs.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base), ["TFS 2016:2"])
+        self.assertFalse(entries["TFS 2017:1"].base)  # "Upphävd genom TFS 2024:7"
+        self.assertFalse(entries["TFS 2016:14"].base)  # "Upphävande (TFS 2016:14) av ..."
+        self.assertFalse(entries["TFS 2019:1"].base)  # om upphävande
+        base = entries["TFS 2016:2"]
+        self.assertEqual(base.title, "Tullverkets föreskrifter och allmänna råd om en tullordning")
+        self.assertIn("TFS 2019:2", base.amended_by)
+        self.assertEqual([label for label, _ in base.pdfs], ["TFS 2016:2", "TFS 2016:2 (sammanställd version)"])
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():
