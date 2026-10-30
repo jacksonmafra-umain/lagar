@@ -5438,6 +5438,678 @@
       ]
     },
     {
+      "number": "SCB-FS 2009:21",
+      "detail_url": "https://www.scb.se/link/211af8520e5f4f4f9609bd3c73d8ec1b.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2009:21",
+          "url": "https://www.scb.se/contentassets/bea2a4c68c5d4a00a2292bd2dfb8a478/scb-fs-2009-21.pdf",
+          "bytes": 17241,
+          "sha256": "7cbd1f6d16eb317b0a06b6c338b01e2099b31dca2e48b051b437ab408c47ac92",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:19Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2010:6",
+      "detail_url": "https://www.scb.se/link/8d63adc8297a4d9dacf651d6a8de93d2.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2010:6",
+          "url": "https://www.scb.se/contentassets/8622346a13294155bb6eafa9b7abf41e/scb-fs-2010-6.pdf",
+          "bytes": 19446,
+          "sha256": "0b828135b59218c373f7f4fc9a7f07dcd7b25efb0520e322a1400a667523b76b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:23Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2016:7",
+      "detail_url": "https://www.scb.se/link/dcff7b5a99ba4402b011acae4a2c9fc2.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2016:7",
+          "url": "https://www.scb.se/contentassets/00ebd8be86f540299d4c6291536ee24c/scb-fs-2016-7.pdf",
+          "bytes": 24679,
+          "sha256": "6332ccb8839e908504b91125e9544be6c242e7a46ce3eebcd9ebe74ce1076e15",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:06:01Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2017:5",
+      "detail_url": "https://www.scb.se/link/ba726bd39d0742faa3451fb6895fbb2c.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2017:5",
+          "url": "https://www.scb.se/contentassets/81ea93f0b6b447e7ab2a1bf959baf153/scb-fs-2017-5.pdf",
+          "bytes": 186395,
+          "sha256": "df74b55ee5f52cdc42c02c07a3d6d1a5559ad516824429678e07aa3c4249cee5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:06:00Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2019:13",
+      "detail_url": "https://www.scb.se/link/36495b07384a4fd5a982031f1c30cfaa.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2019:13",
+          "url": "https://www.scb.se/contentassets/13dde7079bd14f1386d498a39b1e98ab/82630-scb-fs-2019-13-bo0201-tryck.pdf",
+          "bytes": 661122,
+          "sha256": "1dcf5070bb24f6d24c18ec9cc5fe7d594fb7ce3600dea3b085fc0eec478a4854",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:28Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2019:15",
+      "detail_url": "https://www.scb.se/link/3e03796f38d04b50a7cfa6d4cfe162e9.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2019:15",
+          "url": "https://www.scb.se/contentassets/e6f4d7e3365d470884daceac3f4fc80c/statistiska-centralbyrans-foreskrifter-om-skyldighet-for-fastighetsagare-att-lamna-uppgifter-till-statistik-om-avgifter-och-hyror-for-nybyggda-lagenheter/",
+          "bytes": 471554,
+          "sha256": "91040d43f31292d43dbd632dafe54ce5850c13b62cc9338e6de9702a98c0eef9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:30Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2019:24",
+      "detail_url": "https://www.scb.se/link/014fd3c9b53d4da0ae0d67d34a1a8558.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2019:24",
+          "url": "https://www.scb.se/contentassets/4b909f40ac7743579b81950a1f786cda/84511-foreksrift-scb-fs-2019-24.pdf",
+          "bytes": 431279,
+          "sha256": "ab6c82906333ea8288073c5e4a3ddf44167779e5ee1fffc436f4344ec3407d76",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:33Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:3",
+      "detail_url": "https://www.scb.se/link/854d321a89e04d1e8f7c1f828c2a4def.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:3",
+          "url": "https://www.scb.se/contentassets/e4b6cc8dbfea4b63bfbaa4327075a227/86468-scb-fs-2021-3-foreskrift-2021.pdf",
+          "bytes": 523733,
+          "sha256": "3e3ec2657df974750b16ea34736c08ac3c39103e805f9bafef032e28ca94e8da",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:35Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:15",
+      "detail_url": "https://www.scb.se/link/ff66b226e6a245e39a47996dc8d3e9c6.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:15",
+          "url": "https://www.scb.se/contentassets/ab0928bf1c1248778f0472acada3be47/86901-scb-fs-2021-15-bygglovsstatistik-a2021_0338.pdf",
+          "bytes": 691066,
+          "sha256": "73e77308dfdd3432134a735bef7fe374bc62e6267f90afa6ae81607fc6bdde5f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:37Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:19",
+      "detail_url": "https://www.scb.se/link/73f1e03bc78c4acc94201fd93b881e8a.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:19",
+          "url": "https://www.scb.se/contentassets/3b2d1b76dcca404ebf3b57a4038027bd/87082-foreskrift-scb-fs-2021-19.pdf",
+          "bytes": 270135,
+          "sha256": "174731ce9cf8eb56527cc237d5b7265b07f0a78cdab50730dccf16cb4689737b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:39Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:28",
+      "detail_url": "https://www.scb.se/link/c756fffa448742bcac06c3b0c9208c63.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:28",
+          "url": "https://www.scb.se/contentassets/3f800130bb994e2b9a9424dbe13e7912/87582-scb-fs-2021-28-mineralgodsel.pdf",
+          "bytes": 291806,
+          "sha256": "23b40c8521636845b204dd5d89e156c150a30bc9b080035dfb223eebfc8ff35c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:41Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:33",
+      "detail_url": "https://www.scb.se/link/c618bd9a4883447d9e2afe4d32500d16.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:33",
+          "url": "https://www.scb.se/contentassets/2887705fd73c40db9d2cbee471b2ce84/87799-foreskrift-scb-fs-2021-33.pdf",
+          "bytes": 402075,
+          "sha256": "95a59405b35cbf19b137c0d9fd32d7f5b44a13badcf00bc686a7aca8b885a54d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:43Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:34",
+      "detail_url": "https://www.scb.se/link/6cb1156c536a4cb1a4771e221fad8c22.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:34",
+          "url": "https://www.scb.se/contentassets/0c5308317aae41ba887b2258405ebb36/87800-foreskrift-scb-fs-2021-34.pdf",
+          "bytes": 224863,
+          "sha256": "9f749ff19c95214c235a995412a23fe667e2dda810d5b2dd822003b0d1ddf0bd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:45Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:35",
+      "detail_url": "https://www.scb.se/link/6349e017446743f9a17cedfe6cf65a1d.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:35",
+          "url": "https://www.scb.se/contentassets/5a9aa029759b41688a13dbf357ce5d87/87801-foreskrift-scb-fs-2021-35.pdf",
+          "bytes": 298431,
+          "sha256": "f2bbe4f6d8cf1636ec4a38384d6e613577458320eeaa5335863a0eedb47b7e63",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:47Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2021:39",
+      "detail_url": "https://www.scb.se/link/f2f8d2fd85c047c28594da5f1d52ef20.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2021:39",
+          "url": "https://www.scb.se/contentassets/7d31f09ad9af40eaaf5d95248e442eec/87875-scb-fs-2021-39-pr0301-ppi.pdf",
+          "bytes": 466505,
+          "sha256": "349ce1257f26f4da7390aef783669a04ebc718b286ab9c4a4f2fe8fc638366bd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:49Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:6",
+      "detail_url": "https://www.scb.se/link/e5b63d4e736149e59f98d93d3e150beb.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:6",
+          "url": "https://www.scb.se/contentassets/30835a6be9f142a8af757031daeb8f2f/88164-mi-slp-foreskrift-2022.pdf",
+          "bytes": 1076421,
+          "sha256": "9be3503603328105ed5a3380130cac869e3d47d14ee5cb77ae596d72cde88520",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:26Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:9",
+      "detail_url": "https://www.scb.se/link/f6ec455034d04e4a89c504cd01bcca9c.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:9",
+          "url": "https://www.scb.se/contentassets/b917ae6bf6b54010aec8c51c161aaf25/88214-foreskrift-scb-fs-2022-9.pdf",
+          "bytes": 1472235,
+          "sha256": "71710e8b6acc475a7f12bd43b6f123ab6fbfd87dd077bbcfdd31064460e9daeb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:52Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:11",
+      "detail_url": "https://www.scb.se/link/70a8c9c34182422dac0e46b9c30ff601.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:11",
+          "url": "https://www.scb.se/contentassets/3ca4e916625b4392bf2a2f8ba71e43d4/88216-foreskrift-scb-fs-2022-11.pdf",
+          "bytes": 210338,
+          "sha256": "5283826f8254322cd8290bba7fe9c8276ddf605f9e1bb918de69728329c8960d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:53Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:16",
+      "detail_url": "https://www.scb.se/link/fa73daba43724e828f008fb5c02c1782.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:16",
+          "url": "https://www.scb.se/contentassets/3d12a7944aa4405e8d315258356cbbd2/88439-foreskrift-scb-fs-2022-16.pdf",
+          "bytes": 1972510,
+          "sha256": "58dad6e041279921b3a1550adeefeeefec620e88d00c28f98dbb0b9d9deb87f5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:56Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:18",
+      "detail_url": "https://www.scb.se/link/6e0c248ef05a4d0faacb0bc18a2e8dee.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:18",
+          "url": "https://www.scb.se/contentassets/8b5df97319664a4bbf36a83056c5157c/88463-foreskrift-scb-fs-2022-18.pdf",
+          "bytes": 732568,
+          "sha256": "d5b4ccd51bed78d3abbcde78eb832366cbc5c83acb0867635f5229814a969ba2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:58Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2022:20",
+      "detail_url": "https://www.scb.se/link/c15cf5db21714b92af86066fe51e7dc2.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2022:20",
+          "url": "https://www.scb.se/contentassets/e04d88fe01424b5a84f048d587afab17/88585-foreskrift-scb-fs-2022-20.pdf",
+          "bytes": 550675,
+          "sha256": "0b92df4ff7ebba4a281c5aa33bce119e3479bb857aa8f2f260d9d77768bfcf24",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:04:59Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2023:20",
+      "detail_url": "https://www.scb.se/link/f5fd67c499eb419da32f5bfd3390c0eb.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2023:20",
+          "url": "https://www.scb.se/contentassets/548731d4162b4b11acdc91c07c214255/90047-foreskrift-scb-fs-2023-20.pdf",
+          "bytes": 143953,
+          "sha256": "4b393aae990bdba041b6ad11845ecddbc5a328ea7191bd9520cacac6bc3d6c51",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:01Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2023:23",
+      "detail_url": "https://www.scb.se/link/a618f35ac2c4458fba89c742efc47877.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2023:23",
+          "url": "https://www.scb.se/contentassets/f546e7d3562943f1b1380c452f526e96/90094-foreskrift-scb-fs-2023-23_ny.pdf",
+          "bytes": 314250,
+          "sha256": "4bf911e5c9fbcf0f97c5bfa501df32760089f7e4ceb9707847c25266723dd254",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:03Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2024:9",
+      "detail_url": "https://www.scb.se/link/b3922f8d82e94abfa784d206603be41e.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2024:9",
+          "url": "https://www.scb.se/contentassets/5172d56767314e1c8320c808a82654e0/90588-foreskrift-scb-fs-2024_9_4-sid.pdf",
+          "bytes": 373471,
+          "sha256": "22e37abd380b574746990e0b05c01775e1d7689c95de64aae5ebae1e64414df5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:06Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2024:12",
+      "detail_url": "https://www.scb.se/link/1571910ff2034d58b8c55768a283f5fc.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2024:12",
+          "url": "https://www.scb.se/contentassets/e98eea570faa48ceb602225a3d1825b3/90600-foreskrift-scb-fs-2024_12_1-sid.pdf",
+          "bytes": 186902,
+          "sha256": "e17e00ac81654f3ee8ee1d5dbdad498cd599aa488be90de4275226cd08d3bb33",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:07Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:2",
+      "detail_url": "https://www.scb.se/link/678d9e261bc94d08be836b33c3122633.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:2",
+          "url": "https://www.scb.se/contentassets/00ccf8bf72684d8d8261845c9cd04eb1/foreskrift_scb-fs_2025_2.pdf",
+          "bytes": 708524,
+          "sha256": "1de23562e09d0ebec6b67101dac7b28e3685847a8e88af217a86d5f37758d1f2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:10Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:5",
+      "detail_url": "https://www.scb.se/link/65b7866a525b452f87e7c0145c88215a.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:5",
+          "url": "https://www.scb.se/contentassets/91dc009363d84e7bbaad127fba96ee4c/scb-fs-2025-5-handel-med-lander-utanfor-eu-1-sid.pdf",
+          "bytes": 101679,
+          "sha256": "0cf6515031b915d578336223a3b51765c1c15936d40c382a7b2a40db68538e04",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:11Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:8",
+      "detail_url": "https://www.scb.se/link/5a7efd01c6824f34a8c3c91a30c9e670.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:8",
+          "url": "https://www.scb.se/contentassets/8f0d84d51a4e46d78f66c9aebb2f0c9b/91561-scb-fs-2025-8-byggkostnadsindex-m-bilaga-4-sid_korrad.pdf",
+          "bytes": 370010,
+          "sha256": "6604bbbcbfd0a9d038938012564552e5cdd3fc42985cffbacafeb9a32739a686",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:14Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:9",
+      "detail_url": "https://www.scb.se/link/a0c2e6f2f89f4d24a1de66f016dfea3c.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:9",
+          "url": "https://www.scb.se/contentassets/9e834555b39143a1bed9bf1250a5168d/91603-scb-fs-2025-9-lediga-jobb-och-rekryteringsbehov.pdf",
+          "bytes": 228819,
+          "sha256": "b48a8d651f8450950d46b5d4e935dae9e901ceb6e0c125d6796e0773a22361e5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:15Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:10",
+      "detail_url": "https://www.scb.se/link/3239e654e09a482f883d2134932c1392.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:10",
+          "url": "https://www.scb.se/contentassets/8486d4cfa7284f71bb7496bce4e3092d/91633-foreskrift-scb-fs-2025_10_1-sid.pdf",
+          "bytes": 117579,
+          "sha256": "0022358c1865f849bb7319b07f1c7039af9e5e296300b1cd81b21f4935846a17",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:17Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:14",
+      "detail_url": "https://www.scb.se/link/1bd6a75216514702a131d8d3f131157e.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:14",
+          "url": "https://www.scb.se/contentassets/abef2226310549f38bb62088a3a0031c/91860-foreskrift-scb-fs-2025_14_4-sid.pdf",
+          "bytes": 245219,
+          "sha256": "0418eda57ca7baf648340c8af9daab0e66ff9821a821ed1d1b6144c46c440bd3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:20Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:18",
+      "detail_url": "https://www.scb.se/link/11da5ce8516a422d895f0b7acc38e098.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:18",
+          "url": "https://www.scb.se/contentassets/9af14b4ab25b4221b5b306a8f3077a91/91953_foreskrift_scb-fs_2025-18_72sid_pdfkorr.pdf",
+          "bytes": 1723902,
+          "sha256": "038d3f784ade98a649614e7d46b42a86c5e1b8a5b5788f4efdc739cbaa610f58",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:22Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:19",
+      "detail_url": "https://www.scb.se/link/6fbbfab3f8204737a976405d349f92d2.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:19",
+          "url": "https://www.scb.se/contentassets/fc434ac2550548bcbab57886c357c81c/92030-scb-fs-2025-19-mkost_pdfkorr.pdf",
+          "bytes": 3678078,
+          "sha256": "91895b7535ce28864e6ec17d95387aadc069b6b9f9ed70508db60552434ca651",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:25Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2025:22",
+      "detail_url": "https://www.scb.se/link/02df5b22618d439d8d550c2e9fd8f76d.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2025:22",
+          "url": "https://www.scb.se/contentassets/b3b3f28579ff44acb1f8fe8bbd48a1aa/92063-foreskrift-scb-fs-2025-22_56-sid_pdfkorr.pdf",
+          "bytes": 1047625,
+          "sha256": "3b3f3975be0cb1a1c8b875059d609fa209922ea5678883214ccf3d74926d4e84",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:27Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:1",
+      "detail_url": "https://www.scb.se/link/f28d5555d0fc49dbb0e387b4183d8ad2.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:1",
+          "url": "https://www.scb.se/contentassets/4d368412e74540fbbe6b5467c135a0bc/foreskrift-scb-fs-2026-1_24sid_icke-vinstdrivande-organisationer-out.pdf",
+          "bytes": 344909,
+          "sha256": "8e3afd7046f7bbe85b96aad29ad15feab8d4dcf7933523258ccf2a6ffb22ef83",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:34Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:2",
+      "detail_url": "https://www.scb.se/link/7c179ccc116943d4bd7d1410880d2727.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:2",
+          "url": "https://www.scb.se/contentassets/f0b5048f8b514be1ad91d2c5c2ae6d16/92266-foreskrift-scb-fs-2026-02_32s_trycks-23jan-out.pdf",
+          "bytes": 438969,
+          "sha256": "f16a2ddaf17988f9c771734b2be6ebeb3b39455446326ec6dae950d840eb9a6e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:29Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:3",
+      "detail_url": "https://www.scb.se/link/082c053c55bc4849ab07528cca758b24.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:3",
+          "url": "https://www.scb.se/contentassets/d70803ec529140baa5fe9b7fd97ef1e3/92267-foreskrift-scb-fs-2026-03_28s_trycks-23jan-out.pdf",
+          "bytes": 406721,
+          "sha256": "5facd0d2bfc6eb1ba3750ab3de3b39240b443757f10f53472c6719a11d175ee1",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:31Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:4",
+      "detail_url": "https://www.scb.se/link/095f91a00de94e679b9d1b8df17a9fb5.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:4",
+          "url": "https://www.scb.se/contentassets/0ff1bca6426a465496159f53cba584de/92268-foreskrift-scb-fs-2026-04_56s-trycks-23jan-out.pdf",
+          "bytes": 504770,
+          "sha256": "a9de6109b32082ed7214baec6c73a6f8a2ba8df3da1ea9f6fb6132b66348045a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:33Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:5",
+      "detail_url": "https://www.scb.se/link/7ee7b01706634048a35ea3d303ecf7ef.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:5",
+          "url": "https://www.scb.se/contentassets/d6f928fe58b94ce0a84a7a5eecb74016/92296-foreskrift_scb-fs_2026-05_16s_trycks_3_feb.pdf",
+          "bytes": 585800,
+          "sha256": "e1dd6cc67ffe29665e6c11f2248b30bbcb29f5d3a69fafb45843d08f634c252c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:37Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:6",
+      "detail_url": "https://www.scb.se/link/0cbb06d0a84e414e8963b747dd2eefcc.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:6",
+          "url": "https://www.scb.se/contentassets/299914f0e6484a0e8c914e94cf3ee0f8/92298-foreskrift_scb-fs_2026-06_16s_trycks_4_feb.pdf",
+          "bytes": 303880,
+          "sha256": "228fb7e6d560f0b248f6b2e89861cd8e9d3111fd6a3cecf50eca5c397366351a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:39Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:7",
+      "detail_url": "https://www.scb.se/link/db63515ab8a3459da646b4e950f2686a.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:7",
+          "url": "https://www.scb.se/contentassets/00801a3bd20c476fa23b6b92349403a2/92298-foreskrift_scb-fs-2026-07_4s_trycks_3_feb.pdf",
+          "bytes": 157571,
+          "sha256": "f6f7c6e102b1fc65fb5f84b429d2db2e617de0457410755f76a2a5ecffb9929c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:41Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:8",
+      "detail_url": "https://www.scb.se/link/732feeaad4644d36b159872eb88a68fe.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:8",
+          "url": "https://www.scb.se/contentassets/d51491c3765044dcbae395e6d28256d4/scb-fs-2026-8-industrins-vattenanvandning.pdf",
+          "bytes": 560198,
+          "sha256": "445e54deb41df8a59015120e1b284419e82258d05bcf1d401ea9e688f2e3f98f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:43Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:9",
+      "detail_url": "https://www.scb.se/link/0a7db3ac5acd450ca0b56019bb692d7b.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:9",
+          "url": "https://www.scb.se/contentassets/d0f5da01327f430db057794ff2c14b27/92405-foreskrift-scb-fs-2026-9_8s_pdfkorr2.pdf",
+          "bytes": 304007,
+          "sha256": "5c0dbbe022a343b38a024ecb102fe65940ed9dfcfb9fee5d7e08bdc57cae2184",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:45Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:10",
+      "detail_url": "https://www.scb.se/link/b544d427a02941348b3fdca934ca16ad.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:10",
+          "url": "https://www.scb.se/contentassets/888992b310e148f38bba020b854adbba/92406-foreskrift-scb-fs-2026-10_16s_pdfkorr.pdf",
+          "bytes": 1461016,
+          "sha256": "e862af098de6c702f7687bae0a217641006fa78e220187fd7fe429b3bfdd5cb9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:48Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:12",
+      "detail_url": "https://www.scb.se/link/9cb5016e2893449fa24eee75b6c01d22.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:12",
+          "url": "https://www.scb.se/contentassets/8951fc187bb8465db9ed80c66b3df85e/92563-scb-fs-2026-12-fek.pdf",
+          "bytes": 556423,
+          "sha256": "12fec95701bee7bd1f40b3354a71002f845e1d338a1be94b69e0592a863372d5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:50Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:14",
+      "detail_url": "https://www.scb.se/link/b7b0bb6c1cb04df0bd23a632f84daa02.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:14",
+          "url": "https://www.scb.se/contentassets/26725b2ca3cc41cb96b56b377dc17767/92641-foreskrift-14-12s-omtryck_pdfkorr2.pdf",
+          "bytes": 5407501,
+          "sha256": "d46ff1bab01cbd513fd15db46affb817cc5c48f43a35ac0d57d225d83c34aaa4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:54Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:16",
+      "detail_url": "https://www.scb.se/link/e54d70f85fee4011a787b5e6cdae8ad6.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:16",
+          "url": "https://www.scb.se/contentassets/6a53289e5d5d4f58afeae4f50d09026c/92732_foreskrift_scb-fs-2026_16_4s_trycks_10_juni_pdfkorr.pdf",
+          "bytes": 274427,
+          "sha256": "092055f536563b4dd3b66dea238eb65388fc5e6d3df80210cee9f5b9e762aa6c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:56Z"
+        }
+      ]
+    },
+    {
+      "number": "SCB-FS 2026:18",
+      "detail_url": "https://www.scb.se/link/b682e9f854284dcdaeb97f3575bc7c3c.aspx",
+      "files": [
+        {
+          "label": "SCB-FS 2026:18",
+          "url": "https://www.scb.se/contentassets/c00592cc71914caba9e66a657463418b/92830-foreskrift-scb-fs-2026-18_4s_pdfkorr.pdf",
+          "bytes": 189346,
+          "sha256": "22c7922dab280d7a54a888209f21b692c76f4203e75d1fe93d1adb964c1ea4c5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T01:05:58Z"
+        }
+      ]
+    },
+    {
       "number": "SGU-FS 2015:1",
       "detail_url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2015-1.pdf",
       "files": [

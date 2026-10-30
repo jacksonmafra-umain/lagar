@@ -21,7 +21,9 @@
     },
     "statistiska-centralbyrans-forfattningssamling-scb-fs": {
       "series": "SCB-FS",
-      "agency": "Statistiska centralbyrån"
+      "agency": "Statistiska centralbyrån",
+      "status": "partial",
+      "note": "Full text from SCB's page per regulation, listed in its table of regulations on reporting duties (uppgiftslämnande) in force. The monthly consumer price index notices and the regulations on official statistics (published only as PDF) are not collected."
     },
     "aklagarmyndighetens-forfattningssamling-afs": {
       "series": "ÅFS",
