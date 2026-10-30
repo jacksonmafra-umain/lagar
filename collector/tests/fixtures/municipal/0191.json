@@ -1,0 +1,26 @@
+{
+  "listings": {
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730&isr=false": "0191-listing.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-7036f3a33d199977834&isr=false": "0191-listing-2.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-f8c30fc6144e9977840&isr=false": "0191-listing-3.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-104a0433763d9977985&isr=false": "0191-listing-4.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-4250d337edb09978027&isr=false": "0191-listing-5.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-6d32ce5433699977988&isr=false": "0191-listing-6.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-825a53ebf5099977991&isr=false": "0191-listing-7.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-4792a67b64239978021&isr=false": "0191-listing-8.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-6e9109eae1a79978024&isr=false": "0191-listing-9.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-4250d337edb09978027-ddc97c916c479978032&isr=false": "0191-listing-10.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-4250d337edb09978027-8d020a67e1879978044&isr=false": "0191-listing-11.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-4250d337edb09978027-b0c0709a6dfe9978047&isr=false": "0191-listing-12.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-4250d337edb09978027-1885203c108d9978041&isr=false": "0191-listing-13.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-4250d337edb09978027-0721f39fdcde9978030&isr=false": "0191-listing-14.json",
+    "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730-4250d337edb09978027-347c0bf039ac9978035&isr=false": "0191-listing-15.json"
+  },
+  "count": 34,
+  "sample": {
+    "number": "d42280276188a4cf4704-9a4e-425e-b94c-5841ecab6d77",
+    "title": "Avfallstaxa för Sigtuna kommun",
+    "url": "https://docs.netpublicator.com/api/public/r23934199/document/d42280276188a4cf4704-9a4e-425e-b94c-5841ecab6d77?hash=2a0ff1fb64f2217-d858afdd14d92612730-7036f3a33d199977834"
+  },
+  "excluded": []
+}

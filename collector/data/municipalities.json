@@ -51,6 +51,74 @@
         "fördelning"
       ]
     },
+    "0115": {
+      "name": "Vallentuna",
+      "issuer": "Vallentuna kommun",
+      "region_code": "01",
+      "collection": "Den kommunala författningssamlingen",
+      "strategy": "html_index",
+      "hosts": ["www.vallentuna.se"],
+      "listings": ["https://www.vallentuna.se/sitemapindex.xml"],
+      "href_titles": true,
+      "follow": "/sitemap\\d+\\.xml\\.gz$",
+      "link_pattern": "^https://www\\.vallentuna\\.se/download/18\\.[0-9a-f]+/\\d+/\\d{1,2}(\\.\\d{1,3})+(%20|\\+)[^/]+\\.pdf$",
+      "number": [{"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}],
+      "title_strip": ["^\\d{1,2}(\\.\\d{1,3})+\\s+"],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "gallring"
+      ]
+    },
     "0117": {
       "name": "Österåker",
       "issuer": "Österåkers kommun",
@@ -728,6 +796,23 @@
       "section_level": 2,
       "sections": ["Föreskrifter Visa Dölj"]
     },
+    "0186": {
+      "name": "Lidingö",
+      "issuer": "Lidingö stad",
+      "region_code": "01",
+      "collection": "Lidingö stads författningssamling",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "hosts": ["docweb.evolution.lidingo.se"],
+      "listings": [
+        "https://docweb.evolution.lidingo.se/api/folders/db351e4a-67c0-4c27-889a-1280378e072c",
+        "https://docweb.evolution.lidingo.se/api/folders/ae3b3c3e-1143-40c2-8c84-36e800ef4845"
+      ],
+      "items": "documents",
+      "title_field": "name",
+      "number_field": "id",
+      "url_template": "/api/download/{id}/{folderId}"
+    },
     "0187": {
       "name": "Vaxholm",
       "issuer": "Vaxholms stad",
@@ -753,6 +838,76 @@
       "number": [{"from": "href", "pattern": "/dokument-foreskrifter/([^/?#]+)\\.pdf$"}],
       "title_strip": ["\\s*\\(pdf\\)\\s*$", "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"],
       "title_exclude": ["arkivreglemente"]
+    },
+    "0191": {
+      "name": "Sigtuna",
+      "issuer": "Sigtuna kommun",
+      "region_code": "01",
+      "collection": "Sigtuna kommuns författningssamling",
+      "strategy": "json_list",
+      "hosts": ["docs.netpublicator.com"],
+      "listings": [
+        "https://docs.netpublicator.com/api/public/r23934199/read?hash=2a0ff1fb64f2217-d858afdd14d92612730&isr=false"
+      ],
+      "items": "items",
+      "title_field": "text",
+      "number_field": "id",
+      "url_template": "document/{id}?hash={_hash}",
+      "follow_items": {"field": "type", "value": "channel", "url_template": "read?hash={_hash}-{id}&isr=false"},
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "hemst(ä|a)llan"
+      ]
     },
     "0192": {
       "name": "Nynäshamn",
@@ -1690,6 +1845,32 @@
         "\\.pdf\\s*$"
       ]
     },
+    "0604": {
+      "name": "Aneby",
+      "issuer": "Aneby kommun",
+      "region_code": "06",
+      "collection": "Lokala föreskrifter och taxor",
+      "strategy": "html_pages",
+      "resident_filter": true,
+      "hosts": ["www.aneby.se"],
+      "listings": [
+        "https://www.aneby.se/sidor/boende-miljo-och-trafik/gata-och-trafik.html",
+        "https://www.aneby.se/sidor/boende-miljo-och-trafik/miljo-och-halsa/miljoskydd/taxor-och-avgifter.html",
+        "https://www.aneby.se/sidor/boende-miljo-och-trafik/miljo-och-halsa.html"
+      ],
+      "link_pattern": "^https://www\\.aneby\\.se/(sidor/boende-miljo-och-trafik/.*allmanna-lokala-ordningsforeskrifter\\.html|download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf)$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"},
+        {"from": "href", "pattern": "/([^/]+)\\.html$"}
+      ],
+      "title_strip": [
+        ",?\\s*(\\(?\\s*)?(ö|o)ppnas i (ett )?nytt f(ö|o)nster\\.?\\)?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\.(pdf|docx?)\\s*$",
+        "\\s*\\([\\d.,]+\\s*[kMG]?B\\)\\s*$"
+      ],
+      "document_pattern": "\\.pdf$"
+    },
     "0617": {
       "name": "Gnosjö",
       "issuer": "Gnosjö kommun",
@@ -1751,6 +1932,25 @@
       "hosts": ["www.vaggeryd.se"],
       "listings": [
         "https://www.vaggeryd.se/kommun-och-politik/mal-styrning-och-uppfoljning/planer-styrdokument-och-foreskrifter.html"
+      ]
+    },
+    "0680": {
+      "name": "Jönköping",
+      "issuer": "Jönköpings kommun",
+      "region_code": "06",
+      "collection": "Lokala föreskrifter och taxor",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.jonkoping.se"],
+      "listings": [
+        "https://www.jonkoping.se/kommun--politik/kommunens-organisation/forvaltningar/miljo--och-halsoskyddskontoret/taxor-och-avgifter-hos-miljo--och-halsoskyddskontoret",
+        "https://www.jonkoping.se/for-foretag/guide-for-tillstand-regler-och-tillsyn/anvanda-kommunal-mark-soka-tillstand/hyra-allman-platsmark---taxor-och-avgifter"
+      ],
+      "title_strip": [
+        ",?\\s*(\\(?\\s*)?(ö|o)ppnas i (ett )?nytt f(ö|o)nster\\.?\\)?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\.(pdf|docx?)\\s*$",
+        "\\s*L(ä|a)nk till annan webbplats\\.?\\s*$"
       ]
     },
     "0682": {
@@ -2195,6 +2395,21 @@
       "number": [{"from": "href", "pattern": "/([^/]+)/$"}],
       "document_pattern": "\\.pdf$"
     },
+    "0883": {
+      "name": "Västervik",
+      "issuer": "Västerviks kommun",
+      "region_code": "08",
+      "collection": "Regler och styrande dokument",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "hosts": ["document.vastervik.se"],
+      "listings": ["https://document.vastervik.se/api/folders/b40aa1a5-c8e4-4956-85b1-a1c8f6574300"],
+      "recursive": true,
+      "items": "documents",
+      "title_field": "name",
+      "number_field": "id",
+      "url_template": "/api/download/{id}/{folderId}"
+    },
     "0884": {
       "name": "Vimmerby",
       "issuer": "Vimmerby kommun",
@@ -2223,6 +2438,76 @@
       "link_pattern": "^https://www\\.borgholm\\.se/wp-content/uploads/.*\\.pdf$",
       "number": [{"from": "href", "pattern": "/uploads/\\d{4}/\\d{2}/([^/]+)\\.pdf$"}],
       "title_strip": ["\\s*\\(?pdf\\)?\\s*$"]
+    },
+    "0980": {
+      "name": "Gotland",
+      "issuer": "Region Gotland",
+      "region_code": "09",
+      "collection": "Författningssamling och styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["gotland.se", "dokument.gotland.se"],
+      "listings": [
+        "https://gotland.se/region-och-politik/sa-styrs-region-gotland/forfattningssamling-och-styrande-dokument/avgifter-och-taxor",
+        "https://gotland.se/region-och-politik/sa-styrs-region-gotland/forfattningssamling-och-styrande-dokument/avtal-bestammelser-foreskrifter-och-ordningar"
+      ],
+      "link_pattern": "^https://dokument\\.gotland\\.se(:443)?/IntegrationService\\.svc/doc/content/\\d+$",
+      "number": [{"from": "href", "pattern": "/doc/content/(\\d+)$"}],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "tandv(å|a)rd",
+        "engelska",
+        "laboratori"
+      ]
     },
     "1060": {
       "name": "Olofström",

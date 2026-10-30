@@ -1,0 +1,12 @@
+{
+  "listings": {
+    "https://document.vastervik.se/api/folders/b40aa1a5-c8e4-4956-85b1-a1c8f6574300": "0883-listing.json"
+  },
+  "count": 35,
+  "sample": {
+    "number": "a9993090-b22d-4d23-8c2a-fa745c2c5dd9",
+    "title": "Allmänna lokala ordningsföreskrifter för Västerviks kommun",
+    "url": "https://document.vastervik.se/api/download/a9993090-b22d-4d23-8c2a-fa745c2c5dd9/c5c4177a-4358-4687-839a-166d1e124aa9"
+  },
+  "excluded": []
+}
