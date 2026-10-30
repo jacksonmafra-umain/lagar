@@ -800,6 +800,14 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      `{linkdownload}`), resolved against the listing URL. `link_pattern`, when set, filters the
      built links; `resident_filter` and `title_include`/`title_exclude` filter the titles. An item
      with no number or a template field it lacks is reported as a problem.
+   - `mediaflow`: MediaFlow shares embedded on the kommun's page (Gävle). Each listing is a share's
+     token URL, `https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=<share id>`
+     (the share id is in the page's `MediaFlowShareLinks` box); the share's files are listed through
+     the API and numbered by their MediaFlow media number (`nr`). Download links are signed for five
+     minutes, so each document asks for a fresh one when it is fetched, the manifest records the
+     stable file URL (`.../1/file/<id>/downloads?share=<share id>`) and `page`, the kommun's page that
+     embeds the shares, is the document's `source`. `hosts` lists the kommun's host,
+     `shareapi.mediaflow.com` and `files.mediaflow.com`.
      With `"recursive": true`, the lists at `items` are collected from every nested folder object as
      well (DocumentWeb returns a whole folder tree in one answer); each item's section is the title
      field of the folder that holds it, so `sections` can keep only some folders. `follow_items`
