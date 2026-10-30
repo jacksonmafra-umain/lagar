@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29",
+  "generated": "2026-10-30",
   "statuses": [
     "collected",
     "collected_pdf",
@@ -45,6 +45,26 @@
         "agency": "Arbetsgivarverket"
       },
       {
+        "name": "BFNAR",
+        "status": "collected",
+        "documents": 17,
+        "url": "https://www.bfn.se/redovisningsregler/allmanna-rad/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/160",
+        "description": null,
+        "note": "General advice (allmänna råd), not binding regulations. BFN lists the general advice in force in a table with the original and, where there is one, the consolidated PDF; the title and text are read from the PDF (consolidated version where published).",
+        "agency": "Bokföringsnämnden"
+      },
+      {
+        "name": "CSNFS",
+        "status": "collected",
+        "documents": 63,
+        "url": "https://www.csn.se/om-csn/lag-och-ratt/forfattningssamling",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/162",
+        "description": null,
+        "note": "CSN lists its regulations by subject, each with the consolidated text (Fulltext) and the printed regulation and amendments (Tryckt version), with a link to each PDF; the text is read from the PDF (consolidated version where published). The annual regleringstal notices numbered in CSNFS are included; four old PDFs are scans without a text layer.",
+        "agency": "Centrala studiestödsnämnden"
+      },
+      {
         "name": "ELSÄK-FS",
         "status": "collected",
         "documents": 3,
@@ -83,6 +103,16 @@
         "description": null,
         "note": "IAF lists its regulations with a link to each PDF; the text is read from the PDF (consolidated version where published).",
         "agency": "Inspektionen för arbetslöshetsförsäkringen"
+      },
+      {
+        "name": "IMYFS",
+        "status": "collected",
+        "documents": 1,
+        "url": "https://www.imy.se/om-oss/beslut-publikationer-och-remisser/foreskrifter-och-allmanna-rad/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/172",
+        "description": null,
+        "note": "IMY lists its regulations with a link to each PDF; the text is read from the PDF. Repealing regulations and the predecessor series DIFS on the same page are not collected.",
+        "agency": "Integritetsskyddsmyndigheten"
       },
       {
         "name": "KAMFS",
@@ -145,6 +175,36 @@
         "agency": "Statens kulturråd"
       },
       {
+        "name": "KVFS",
+        "status": "collected",
+        "documents": 17,
+        "url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/kriminalvardens-foreskrifter/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/181",
+        "description": null,
+        "note": "Kriminalvården's KVFS listing needs JavaScript (a server-side Blazor component), so the regulation pages are taken from the site's sitemap; each page gives the full title and links to the PDF, and the text is read from the PDF. Amending and repealing regulations are not stored as documents.",
+        "agency": "Kriminalvården"
+      },
+      {
+        "name": "LIVSFS",
+        "status": "collected",
+        "documents": 39,
+        "url": "https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/182",
+        "description": null,
+        "note": "Livsmedelsverket lists LIVSFS in one table per year from 2005 (number, status, subject) with a link to each PDF; titles and text are read from the PDFs. Repealed regulations have no repeal date on the page and are not collected, nor is the predecessor series SLVFS (before 2005).",
+        "agency": "Livsmedelsverket"
+      },
+      {
+        "name": "LMFS",
+        "status": "collected",
+        "documents": 14,
+        "url": "https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/183",
+        "description": null,
+        "note": "Lantmäteriet lists the regulations in force, each with its title and a link to the PDF; the text is read from the PDF. Repealed regulations and the predecessor series LMVFS are not collected; one PDF (LMFS 2015:5) is a scan without a text layer.",
+        "agency": "Lantmäteriet"
+      },
+      {
         "name": "MCFFS",
         "status": "collected",
         "documents": 11,
@@ -185,6 +245,26 @@
         "agency": "Migrationsverket"
       },
       {
+        "name": "MTFS",
+        "status": "collected",
+        "documents": 3,
+        "url": "https://www.tillvaxtanalys.se/statistik/tillvaxtanalysforeskrifter.125740.html",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/188",
+        "description": null,
+        "note": "Tillväxtanalys lists the regulations in force with a link to each PDF; the text is read from the PDF. Repealed regulations listed on the same page are not collected.",
+        "agency": "Myndigheten för tillväxtpolitiska utvärderingar och analyser"
+      },
+      {
+        "name": "MYHFS",
+        "status": "collected",
+        "documents": 44,
+        "url": "https://www.myh.se/lag-och-ratt/foreskrifter-och-allmanna-rad",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/189",
+        "description": null,
+        "note": "Myndigheten för yrkeshögskolan lists the regulations in force and the repealed ones with a link to each PDF, the date in force and, for some repealed ones, the repeal date; the text is read from the PDF. A repeal date missing from the list is taken from the date in force of the regulation that repeals it; repealed regulations without a known date are not collected.",
+        "agency": "Myndigheten för yrkeshögskolan"
+      },
+      {
         "name": "NFS",
         "status": "collected",
         "documents": 164,
@@ -193,6 +273,46 @@
         "description": "Naturvårdsverket ansvarar för frågor som handlar om klimat och luft, mark, biologisk mångfald, förorenade områden, kretslopp och avfall, resurseffektivitet, miljöövervakning, jakt och vilt samt miljöforskning.",
         "note": "Naturvårdsverket's register needs JavaScript; the regulation pages are found in its sitemap, each with a link to the PDF. the text is read from the PDF (consolidated version where published). Two pages (NFS 2000:2, NFS 2001:20) do not name their number and are not collected.",
         "agency": "Naturvårdsverket"
+      },
+      {
+        "name": "PFS",
+        "status": "collected",
+        "documents": 81,
+        "url": "https://www.pensionsmyndigheten.se/om-pensionsmyndigheten/allmanna-handlingar/lagar-och-regler",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/191",
+        "description": "Här publiceras Pensionsmyndighetens gällande och upphävda föreskrifter om pension, andra förmåner och e-tjänster. De föreskrifter som beslutats av Premiepensionsmyndigheten och Försäkringskassan (inklusive Riksförsäkringsverket) gäller även efter Pensionsmyndighetens inrättande 2010.",
+        "note": "Base regulations, amendments and consolidated versions from the links on Pensionsmyndigheten's regulation page; text from the PDFs.",
+        "agency": "Pensionsmyndigheten"
+      },
+      {
+        "name": "PMFS",
+        "status": "collected",
+        "documents": 50,
+        "url": "https://polisen.se/Lagar-och-regler/Polismyndighetens-forfattningssamling/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/192",
+        "description": "Polismyndigheten föreskriver bland annat inom områdena vapen, bevakning, pass och nationellt identitetskort, trafikövervakning, utrustning i polisarbetet och delgivning.",
+        "note": "Regulations in force from Polismyndigheten's paginated list, with entry into force, amendments and consolidated versions; it also holds Rikspolisstyrelsen's RPSFS regulations still in force, stored with their RPSFS numbers. The text is published only as PDF.",
+        "agency": "Polismyndigheten"
+      },
+      {
+        "name": "PRVFS",
+        "status": "collected",
+        "documents": 17,
+        "url": "https://www.prv.se/sv/om-oss/var-verksamhet/styrdokument/prvs-forfattningssamling/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/193",
+        "description": null,
+        "note": "Base regulations in force from PRV's division A1, with links to amending regulations; text from the PDFs.",
+        "agency": "Patent- och registreringsverket"
+      },
+      {
+        "name": "RA-FS",
+        "status": "collected",
+        "documents": 93,
+        "url": "https://riksarkivet.se/arkivera-och-forvalta/foreskrifter-och-vagledningar",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/195",
+        "description": "Föreskrifter om till exempel gallring (att förstöra allmäna handlingar) hos alla myndigheter, krav på arkivlokaler, hur handlingar ska hanteras, förvaras, skyddas, kunna återsökas och bevaras samt överlämnas mellan myndigheter. I föreskrifterna finns även stöd för enskilda att behandla personuppgifter för arkivändamål av allmänt intresse.",
+        "note": "Base regulations in force and repealed, from the JSON API behind foreskrifter.riksarkivet.se; text from the PDFs.",
+        "agency": "Riksarkivet"
       },
       {
         "name": "RFS",
@@ -205,6 +325,86 @@
         "agency": "Riksdagsförvaltningen"
       },
       {
+        "name": "RGKFS",
+        "status": "collected",
+        "documents": 6,
+        "url": "https://www.riksgalden.se/press-och-publicerat/foreskrifter/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/197",
+        "description": "Riksgälden är statens centrala finansförvaltning och har även uppdrag som bidrar till att värna finansiell stabilitet.",
+        "note": "Base regulations, amendments and consolidated versions from the links on Riksgäldskontoret's regulation page; text from the PDFs.",
+        "agency": "Riksgäldskontoret"
+      },
+      {
+        "name": "RIFS",
+        "status": "collected",
+        "documents": 14,
+        "url": "https://www.revisorsinspektionen.se/regelverk/samtliga-foreskrifter/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/198",
+        "description": null,
+        "note": "Base regulations, amendments and consolidated versions from the links on Revisorsinspektionen's regulation page; text from the PDFs.",
+        "agency": "Revisorsinspektionen"
+      },
+      {
+        "name": "SCB-FS",
+        "status": "collected",
+        "documents": 51,
+        "url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/199",
+        "description": "Föreskrifter om uppgiftsskyldighet till statistik, kvalitet och tillgängliggörande av statistik.",
+        "note": "Full text from SCB's page per regulation, listed in its table of regulations on reporting duties (uppgiftslämnande) in force. The monthly consumer price index notices and the regulations on official statistics (published only as PDF) are not collected.",
+        "agency": "Statistiska centralbyrån"
+      },
+      {
+        "name": "SGU-FS",
+        "status": "collected",
+        "documents": 6,
+        "url": "https://www.sgu.se/om-sgu/verksamhet/foreskrifter/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/200",
+        "description": null,
+        "note": "Base regulations, amendments and consolidated versions from the links on Sveriges geologiska undersökning's regulation page; text from the PDFs.",
+        "agency": "Sveriges geologiska undersökning"
+      },
+      {
+        "name": "SIFS",
+        "status": "collected",
+        "documents": 9,
+        "url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/201",
+        "description": null,
+        "note": "Regulations in force from Spelinspektionen's list (a PDF) and the page per regulation; the former Lotteriinspektionen's LIFS are stored under that prefix; text from the PDFs.",
+        "agency": "Spelinspektionen"
+      },
+      {
+        "name": "SJÖFS",
+        "status": "collected",
+        "documents": 44,
+        "url": "https://www.sjofartsverket.se/sv/om-oss/lagrum/systematisk-forteckning-n/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/203",
+        "description": "Föreskrifter om bland annat säkerheten på fartyg, sjömanssociala frågor, föroreningar från fartyg, sjötrafik, sjöfartsskydd och hamnskydd.",
+        "note": "Base regulations in force from Sjöfartsverket's systematic list (one page per subject), with amendments and PDF links.",
+        "agency": "Sjöfartsverket"
+      },
+      {
+        "name": "SKSFS",
+        "status": "collected",
+        "documents": 18,
+        "url": "https://www.skogsstyrelsen.se/lag-och-tillsyn/forfattningar/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/205",
+        "description": null,
+        "note": "Base regulations, amendments and consolidated versions from the links on Skogsstyrelsen's regulation page; text from the PDFs.",
+        "agency": "Skogsstyrelsen"
+      },
+      {
+        "name": "SSMFS",
+        "status": "collected",
+        "documents": 41,
+        "url": "https://www.stralsakerhetsmyndigheten.se/regler/foreskrifter/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/207",
+        "description": null,
+        "note": "Base regulations in force from Strålsäkerhetsmyndigheten's regulation page, each with its own page linking the original and consolidated PDFs and the amendments; text from the PDFs.",
+        "agency": "Strålsäkerhetsmyndigheten"
+      },
+      {
         "name": "STAFS",
         "status": "collected",
         "documents": 187,
@@ -213,6 +413,146 @@
         "description": "Swedac föreskriver om krav på mätningar och mättekniska metoder, krav på kontroll av mätdon, krav på och kontroll av färdigförpackade varor och kontroll av mängduppgifter för färdigförpackade varor, krav i fråga om kundvågar i detaljhandel, kontroll av elmätare och registrering av namnstämplar avsedda för ädelmetallarbeten. Swedac föreskriver vidare om krav på ackrediterade och anmälda/utsedda organ, införande om OECD:s principer om god laboratoriesed (GLP) samt avgifter inom flera områden.",
         "note": "Full text from Swedac's regulation register (regelverk.swedac.se): a JSON index of every STAFS regulation, in force and repealed, and a Markdown file per regulation, the consolidated version where there is one.",
         "agency": "Styrelsen för ackreditering och teknisk kontroll (Swedac)"
+      },
+      {
+        "name": "STEMFS",
+        "status": "collected",
+        "documents": 65,
+        "url": "https://energimyndigheten.a-w2m.se/System/TemplateNavigate.aspx?p=Arkitektkopia&l=t&view=672&cat=%2FF%C3%B6reskrifter",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/209",
+        "description": "Föreskrifter om bland annat försörjningsberedskap och säkerhetsskydd för olika energislag, klimat och hållbarhet på energiområdet, elcertifikat med mera.",
+        "note": "Base regulations, amendments and consolidated versions from the links on Statens energimyndighet's regulation page; text from the PDFs.",
+        "agency": "Statens energimyndighet"
+      },
+      {
+        "name": "STFS",
+        "status": "collected",
+        "documents": 13,
+        "url": "https://sametinget.se/dokumentbank?cat=72",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/210",
+        "description": null,
+        "note": null,
+        "agency": "Sametinget"
+      },
+      {
+        "name": "STFS",
+        "status": "collected",
+        "documents": 13,
+        "url": "https://rdt.transportstyrelsen.se/rdt/defaultstfs.aspx",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/210",
+        "description": "Trafikföreskrifter som i huvudsak meddelas av kommuner, länsstyrelser, polismyndigheter, Trafikverket och myndigheter som har hand om väg- eller gatuhållningen. Av förordningen (2007:231) om elektroniskt kungörande av vissa trafikföreskrifter framgår vilka slags trafikföreskrifter som ska publiceras i STFS.",
+        "note": "Regulations from Sametinget's document bank (the JSON its search page reads); text from the PDFs.",
+        "agency": "Transportstyrelsen (local traffic regulations)"
+      },
+      {
+        "name": "SiSFS",
+        "status": "collected",
+        "documents": 30,
+        "url": "https://www.stat-inst.se/om-sis/lagar-forordningar-forfattningar/sis-forfattningssamling/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/211",
+        "description": "Statens institutionsstyrelse, SiS, är en myndighet som ansvarar för individuellt anpassad tvångsvård och behandling av ungdomar med allvarliga psykosociala problem och vuxna med missbruksproblem, och har föreskrifter inom de områdena.",
+        "note": "Base regulations, amendments and consolidated versions from the links on Statens institutionsstyrelse's regulation page; text from the PDFs.",
+        "agency": "Statens institutionsstyrelse"
+      },
+      {
+        "name": "SvKFS",
+        "status": "collected",
+        "documents": 6,
+        "url": "https://www.svk.se/om-kraftsystemet/legalt-ramverk/svenska-kraftnats-foreskrifter/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/212",
+        "description": null,
+        "note": "Regulations from the JSON document list behind Svenska kraftnät's regulations page, in force and repealed (archived, with the date from the description); text from the PDFs.",
+        "agency": "Affärsverket svenska kraftnät"
+      },
+      {
+        "name": "TFS",
+        "status": "collected",
+        "documents": 24,
+        "url": "https://www.tullverket.se/omoss/dethargortullverket/verksamhetochorganisation/lagarochforeskrifter/tullverketsforfattningssamlingtfs",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/213",
+        "description": null,
+        "note": "Base regulations in force from Tullverket's document search (a POSTed form listing every TFS document); repealed ones carry no date and are not stored; text from the PDFs.",
+        "agency": "Tullverket"
+      },
+      {
+        "name": "TPPVFS",
+        "status": "collected",
+        "documents": 1,
+        "url": "https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/215",
+        "description": "Innehåller bland annat föreskrifter om totalförsvarsplikt och förmåner till totalförsvarspliktiga.",
+        "note": "Base regulations in force from Pliktverket's page, with the predecessor TRMFS regulations under their own prefix; text from the PDFs.",
+        "agency": "Totalförsvarets plikt- och prövningsverk"
+      },
+      {
+        "name": "TRVFS",
+        "status": "collected",
+        "documents": 42,
+        "url": "https://www.trafikverket.se/om-oss/var-verksamhet-vision-och-uppdrag/trafikverkets-forfattningssamling/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/216",
+        "description": null,
+        "note": "Regulations from Trafikverket's search form, year by year, without the road-specific speed regulations; text from the PDFs.",
+        "agency": "Trafikverket"
+      },
+      {
+        "name": "TVFS",
+        "status": "collected",
+        "documents": 10,
+        "url": "https://tillvaxtverket.se/tillvaxtverket/omtillvaxtverket/varverksamhet/foreskrifter.595.html",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/217",
+        "description": null,
+        "note": "Base regulations, amendments and consolidated versions from the links on Tillväxtverket's regulation page; text from the PDFs.",
+        "agency": "Tillväxtverket"
+      },
+      {
+        "name": "UFS",
+        "status": "collected",
+        "documents": 5,
+        "url": "https://www.upphandlingsmyndigheten.se/rapporter-och-statistik/upphandlingsmyndighetens-forfattningssamling/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/218",
+        "description": "Innehåller föreskrifter om upphandlingsstatistik.",
+        "note": "Base regulations, amendments and consolidated versions from the links on Upphandlingsmyndigheten's regulation page; text from the PDFs.",
+        "agency": "Upphandlingsmyndigheten"
+      },
+      {
+        "name": "UHRFS",
+        "status": "collected",
+        "documents": 13,
+        "url": "https://www.uhr.se/publikationer/lagar-och-regler-for-hogre-utbildning/Universitets--och-hogskoleradets-forfattningssamling/",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/219",
+        "description": null,
+        "note": "Base regulations, amendments and consolidated versions from the links on Universitets- och högskolerådet's regulation page; text from the PDFs.",
+        "agency": "Universitets- och högskolerådet"
+      },
+      {
+        "name": "VALFS",
+        "status": "collected",
+        "documents": 17,
+        "url": "https://www.val.se/det-svenska-valsystemet/grunderna-i-det-svenska-valsystemet/lagar-och-regler",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/220",
+        "description": "Föreskrifter av praktiskt slag om avgifter för och utformning av vissa valrelaterade produkter som inte är reglerade i annan ordning.",
+        "note": "Base regulations, amendments and consolidated versions from the links on Valmyndigheten's regulation page; text from the PDFs.",
+        "agency": "Valmyndigheten"
+      },
+      {
+        "name": "VRFS",
+        "status": "collected",
+        "documents": 3,
+        "url": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/221",
+        "description": "Författningssamlingen innehåller Vetenskapsrådets föreskrifter om godkännande för forskningshuvudmän att ta emot gästforskare samt myndighetens föreskrifter om genomförande av elektorsförsamlingars val av ledamöter till forskningsråd och ämnesråd. Den innehåller även Etikprövningsmyndighetens föreskrifter och allmänna råd för etikprövning av forskning som avser människor m.m.",
+        "note": "Base regulations, amendments and consolidated versions from the links on Vetenskapsrådet's regulation page; text from the PDFs.",
+        "agency": "Vetenskapsrådet"
+      },
+      {
+        "name": "ÅFS",
+        "status": "collected",
+        "documents": 23,
+        "url": "https://www.aklagare.se/om-oss/dokument/forfattningssamling",
+        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/222",
+        "description": null,
+        "note": "Base regulations in force from the cards on Åklagarmyndigheten's ÅFS page, with decision and publication dates; repealed regulations and notices are not stored, and; text from the PDFs.",
+        "agency": "Åklagarmyndigheten"
       },
       {
         "name": "FFFS",
@@ -225,86 +565,6 @@
         "agency": "Finansinspektionen"
       },
       {
-        "name": "PFS",
-        "status": "collected_pdf",
-        "documents": 81,
-        "url": "https://www.pensionsmyndigheten.se/om-pensionsmyndigheten/allmanna-handlingar/lagar-och-regler",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/191",
-        "description": "Här publiceras Pensionsmyndighetens gällande och upphävda föreskrifter om pension, andra förmåner och e-tjänster. De föreskrifter som beslutats av Premiepensionsmyndigheten och Försäkringskassan (inklusive Riksförsäkringsverket) gäller även efter Pensionsmyndighetens inrättande 2010.",
-        "note": "Base regulations, amendments and consolidated versions from the links on Pensionsmyndigheten's regulation page; the text is published only as PDF.",
-        "agency": "Pensionsmyndigheten"
-      },
-      {
-        "name": "PMFS",
-        "status": "collected_pdf",
-        "documents": 50,
-        "url": "https://polisen.se/Lagar-och-regler/Polismyndighetens-forfattningssamling/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/192",
-        "description": "Polismyndigheten föreskriver bland annat inom områdena vapen, bevakning, pass och nationellt identitetskort, trafikövervakning, utrustning i polisarbetet och delgivning.",
-        "note": "Regulations in force from Polismyndigheten's paginated list, with entry into force, amendments and consolidated versions; it also holds Rikspolisstyrelsen's RPSFS regulations still in force, stored with their RPSFS numbers. The text is published only as PDF.",
-        "agency": "Polismyndigheten"
-      },
-      {
-        "name": "PRVFS",
-        "status": "collected_pdf",
-        "documents": 17,
-        "url": "https://www.prv.se/sv/om-oss/var-verksamhet/styrdokument/prvs-forfattningssamling/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/193",
-        "description": null,
-        "note": "Base regulations in force from PRV's division A1, with links to amending regulations; the text is published only as PDF.",
-        "agency": "Patent- och registreringsverket"
-      },
-      {
-        "name": "RA-FS",
-        "status": "collected_pdf",
-        "documents": 93,
-        "url": "https://riksarkivet.se/arkivera-och-forvalta/foreskrifter-och-vagledningar",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/195",
-        "description": "Föreskrifter om till exempel gallring (att förstöra allmäna handlingar) hos alla myndigheter, krav på arkivlokaler, hur handlingar ska hanteras, förvaras, skyddas, kunna återsökas och bevaras samt överlämnas mellan myndigheter. I föreskrifterna finns även stöd för enskilda att behandla personuppgifter för arkivändamål av allmänt intresse.",
-        "note": "Base regulations in force and repealed, from the JSON API behind foreskrifter.riksarkivet.se; the text is published only as PDF.",
-        "agency": "Riksarkivet"
-      },
-      {
-        "name": "RGKFS",
-        "status": "collected_pdf",
-        "documents": 6,
-        "url": "https://www.riksgalden.se/press-och-publicerat/foreskrifter/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/197",
-        "description": "Riksgälden är statens centrala finansförvaltning och har även uppdrag som bidrar till att värna finansiell stabilitet.",
-        "note": "Base regulations, amendments and consolidated versions from the links on Riksgäldskontoret's regulation page; the text is published only as PDF.",
-        "agency": "Riksgäldskontoret"
-      },
-      {
-        "name": "RIFS",
-        "status": "collected_pdf",
-        "documents": 14,
-        "url": "https://www.revisorsinspektionen.se/regelverk/samtliga-foreskrifter/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/198",
-        "description": null,
-        "note": "Base regulations, amendments and consolidated versions from the links on Revisorsinspektionen's regulation page; the text is published only as PDF.",
-        "agency": "Revisorsinspektionen"
-      },
-      {
-        "name": "SGU-FS",
-        "status": "collected_pdf",
-        "documents": 6,
-        "url": "https://www.sgu.se/om-sgu/verksamhet/foreskrifter/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/200",
-        "description": null,
-        "note": "Base regulations, amendments and consolidated versions from the links on Sveriges geologiska undersökning's regulation page; the text is published only as PDF.",
-        "agency": "Sveriges geologiska undersökning"
-      },
-      {
-        "name": "SJÖFS",
-        "status": "collected_pdf",
-        "documents": 44,
-        "url": "https://www.sjofartsverket.se/sv/om-oss/lagrum/systematisk-forteckning-n/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/203",
-        "description": "Föreskrifter om bland annat säkerheten på fartyg, sjömanssociala frågor, föroreningar från fartyg, sjötrafik, sjöfartsskydd och hamnskydd.",
-        "note": "Base regulations in force from Sjöfartsverket's systematic list (one page per subject), with amendments and PDF links.",
-        "agency": "Sjöfartsverket"
-      },
-      {
         "name": "SKOLFS",
         "status": "collected_pdf",
         "documents": 965,
@@ -315,56 +575,6 @@
         "agency": "Statens skolverk"
       },
       {
-        "name": "SKSFS",
-        "status": "collected_pdf",
-        "documents": 18,
-        "url": "https://www.skogsstyrelsen.se/lag-och-tillsyn/forfattningar/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/205",
-        "description": null,
-        "note": "Base regulations, amendments and consolidated versions from the links on Skogsstyrelsen's regulation page; the text is published only as PDF.",
-        "agency": "Skogsstyrelsen"
-      },
-      {
-        "name": "SSMFS",
-        "status": "collected_pdf",
-        "documents": 41,
-        "url": "https://www.stralsakerhetsmyndigheten.se/regler/foreskrifter/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/207",
-        "description": null,
-        "note": "Base regulations in force from Strålsäkerhetsmyndigheten's regulation page, each with its own page linking the original and consolidated PDFs and the amendments; the text is published only as PDF.",
-        "agency": "Strålsäkerhetsmyndigheten"
-      },
-      {
-        "name": "STEMFS",
-        "status": "collected_pdf",
-        "documents": 65,
-        "url": "https://energimyndigheten.a-w2m.se/System/TemplateNavigate.aspx?p=Arkitektkopia&l=t&view=672&cat=%2FF%C3%B6reskrifter",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/209",
-        "description": "Föreskrifter om bland annat försörjningsberedskap och säkerhetsskydd för olika energislag, klimat och hållbarhet på energiområdet, elcertifikat med mera.",
-        "note": "Base regulations, amendments and consolidated versions from the links on Statens energimyndighet's regulation page; the text is published only as PDF.",
-        "agency": "Statens energimyndighet"
-      },
-      {
-        "name": "SiSFS",
-        "status": "collected_pdf",
-        "documents": 30,
-        "url": "https://www.stat-inst.se/om-sis/lagar-forordningar-forfattningar/sis-forfattningssamling/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/211",
-        "description": "Statens institutionsstyrelse, SiS, är en myndighet som ansvarar för individuellt anpassad tvångsvård och behandling av ungdomar med allvarliga psykosociala problem och vuxna med missbruksproblem, och har föreskrifter inom de områdena.",
-        "note": "Base regulations, amendments and consolidated versions from the links on Statens institutionsstyrelse's regulation page; the text is published only as PDF.",
-        "agency": "Statens institutionsstyrelse"
-      },
-      {
-        "name": "TRVFS",
-        "status": "collected_pdf",
-        "documents": 42,
-        "url": "https://www.trafikverket.se/om-oss/var-verksamhet-vision-och-uppdrag/trafikverkets-forfattningssamling/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/216",
-        "description": null,
-        "note": "Regulations from Trafikverket's search form, year by year, without the road-specific speed regulations; the text is published only as PDF.",
-        "agency": "Trafikverket"
-      },
-      {
         "name": "TSFS",
         "status": "collected_pdf",
         "documents": 622,
@@ -373,76 +583,6 @@
         "description": "Föreskrifter om järnväg, spårväg och tunnelbana, luftfart, sjöfart och vägtrafik.",
         "note": "Year listings and detail pages give metadata; the text is published only as PDF. Predecessor series on the same index (LFS, JvSFS and others) are not collected.",
         "agency": "Transportstyrelsen"
-      },
-      {
-        "name": "TVFS",
-        "status": "collected_pdf",
-        "documents": 10,
-        "url": "https://tillvaxtverket.se/tillvaxtverket/omtillvaxtverket/varverksamhet/foreskrifter.595.html",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/217",
-        "description": null,
-        "note": "Base regulations, amendments and consolidated versions from the links on Tillväxtverket's regulation page; the text is published only as PDF.",
-        "agency": "Tillväxtverket"
-      },
-      {
-        "name": "UFS",
-        "status": "collected_pdf",
-        "documents": 5,
-        "url": "https://www.upphandlingsmyndigheten.se/rapporter-och-statistik/upphandlingsmyndighetens-forfattningssamling/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/218",
-        "description": "Innehåller föreskrifter om upphandlingsstatistik.",
-        "note": "Base regulations, amendments and consolidated versions from the links on Upphandlingsmyndigheten's regulation page; the text is published only as PDF.",
-        "agency": "Upphandlingsmyndigheten"
-      },
-      {
-        "name": "UHRFS",
-        "status": "collected_pdf",
-        "documents": 13,
-        "url": "https://www.uhr.se/publikationer/lagar-och-regler-for-hogre-utbildning/Universitets--och-hogskoleradets-forfattningssamling/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/219",
-        "description": null,
-        "note": "Base regulations, amendments and consolidated versions from the links on Universitets- och högskolerådet's regulation page; the text is published only as PDF.",
-        "agency": "Universitets- och högskolerådet"
-      },
-      {
-        "name": "VALFS",
-        "status": "collected_pdf",
-        "documents": 17,
-        "url": "https://www.val.se/det-svenska-valsystemet/grunderna-i-det-svenska-valsystemet/lagar-och-regler",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/220",
-        "description": "Föreskrifter av praktiskt slag om avgifter för och utformning av vissa valrelaterade produkter som inte är reglerade i annan ordning.",
-        "note": "Base regulations, amendments and consolidated versions from the links on Valmyndigheten's regulation page; the text is published only as PDF.",
-        "agency": "Valmyndigheten"
-      },
-      {
-        "name": "VRFS",
-        "status": "collected_pdf",
-        "documents": 3,
-        "url": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/221",
-        "description": "Författningssamlingen innehåller Vetenskapsrådets föreskrifter om godkännande för forskningshuvudmän att ta emot gästforskare samt myndighetens föreskrifter om genomförande av elektorsförsamlingars val av ledamöter till forskningsråd och ämnesråd. Den innehåller även Etikprövningsmyndighetens föreskrifter och allmänna råd för etikprövning av forskning som avser människor m.m.",
-        "note": "Base regulations, amendments and consolidated versions from the links on Vetenskapsrådet's regulation page; the text is published only as PDF.",
-        "agency": "Vetenskapsrådet"
-      },
-      {
-        "name": "ÅFS",
-        "status": "collected_pdf",
-        "documents": 23,
-        "url": "https://www.aklagare.se/om-oss/dokument/forfattningssamling",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/222",
-        "description": null,
-        "note": "Base regulations in force from the cards on Åklagarmyndigheten's ÅFS page, with decision and publication dates; repealed regulations and notices are not stored, and the text is published only as PDF.",
-        "agency": "Åklagarmyndigheten"
-      },
-      {
-        "name": "SCB-FS",
-        "status": "partial",
-        "documents": 48,
-        "url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/199",
-        "description": "Föreskrifter om uppgiftsskyldighet till statistik, kvalitet och tillgängliggörande av statistik.",
-        "note": "Full text from SCB's page per regulation, listed in its table of regulations on reporting duties (uppgiftslämnande) in force. The monthly consumer price index notices and the regulations on official statistics (published only as PDF) are not collected.",
-        "agency": "Statistiska centralbyrån"
       },
       {
         "name": "BOLFS",
@@ -495,26 +635,6 @@
         "agency": "Boverket"
       },
       {
-        "name": "BFNAR",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.bfn.se/redovisningsregler/allmanna-rad/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/160",
-        "description": null,
-        "note": "General advice (allmänna råd), not binding regulations.",
-        "agency": "Bokföringsnämnden"
-      },
-      {
-        "name": "CSNFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.csn.se/om-csn/lag-och-ratt/forfattningssamling",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/162",
-        "description": null,
-        "note": null,
-        "agency": "Centrala studiestödsnämnden"
-      },
-      {
         "name": "DVFS",
         "status": "no_adapter",
         "documents": 0,
@@ -555,16 +675,6 @@
         "agency": "Socialstyrelsen and other health and social-care agencies"
       },
       {
-        "name": "IMYFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.imy.se/om-oss/beslut-publikationer-och-remisser/foreskrifter-och-allmanna-rad/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/172",
-        "description": null,
-        "note": null,
-        "agency": "Integritetsskyddsmyndigheten"
-      },
-      {
         "name": "KBVFS",
         "status": "no_adapter",
         "documents": 0,
@@ -575,66 +685,6 @@
         "agency": "Kustbevakningen"
       },
       {
-        "name": "KVFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/kriminalvardens-foreskrifter/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/181",
-        "description": null,
-        "note": null,
-        "agency": "Kriminalvården"
-      },
-      {
-        "name": "LIVSFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/182",
-        "description": null,
-        "note": null,
-        "agency": "Livsmedelsverket"
-      },
-      {
-        "name": "LMFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/183",
-        "description": null,
-        "note": null,
-        "agency": "Lantmäteriet"
-      },
-      {
-        "name": "MTFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.tillvaxtanalys.se/statistik/tillvaxtanalysforeskrifter.125740.html",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/188",
-        "description": null,
-        "note": null,
-        "agency": "Myndigheten för tillväxtpolitiska utvärderingar och analyser"
-      },
-      {
-        "name": "MYHFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.myh.se/lag-och-ratt/foreskrifter-och-allmanna-rad",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/189",
-        "description": null,
-        "note": null,
-        "agency": "Myndigheten för yrkeshögskolan"
-      },
-      {
-        "name": "SIFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.spelinspektionen.se/lagar-regler/foreskrifter/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/201",
-        "description": null,
-        "note": null,
-        "agency": "Spelinspektionen"
-      },
-      {
         "name": "SJVFS",
         "status": "no_adapter",
         "documents": 0,
@@ -643,56 +693,6 @@
         "description": null,
         "note": null,
         "agency": "Statens jordbruksverk"
-      },
-      {
-        "name": "STFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://sametinget.se/dokumentbank?cat=72",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/210",
-        "description": null,
-        "note": null,
-        "agency": "Sametinget"
-      },
-      {
-        "name": "SvKFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.svk.se/om-kraftsystemet/legalt-ramverk/svenska-kraftnats-foreskrifter/",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/212",
-        "description": null,
-        "note": null,
-        "agency": "Affärsverket svenska kraftnät"
-      },
-      {
-        "name": "TFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.tullverket.se/omoss/dethargortullverket/verksamhetochorganisation/lagarochforeskrifter/tullverketsforfattningssamlingtfs",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/213",
-        "description": null,
-        "note": null,
-        "agency": "Tullverket"
-      },
-      {
-        "name": "TPPVFS",
-        "status": "no_adapter",
-        "documents": 0,
-        "url": "https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/215",
-        "description": "Innehåller bland annat föreskrifter om totalförsvarsplikt och förmåner till totalförsvarspliktiga.",
-        "note": null,
-        "agency": "Totalförsvarets plikt- och prövningsverk"
-      },
-      {
-        "name": "STFS",
-        "status": "out_of_scope",
-        "documents": 0,
-        "url": "https://rdt.transportstyrelsen.se/rdt/defaultstfs.aspx",
-        "issue": "https://github.com/jacksonmafra-umain/lagar/issues/210",
-        "description": "Trafikföreskrifter som i huvudsak meddelas av kommuner, länsstyrelser, polismyndigheter, Trafikverket och myndigheter som har hand om väg- eller gatuhållningen. Av förordningen (2007:231) om elektroniskt kungörande av vissa trafikföreskrifter framgår vilka slags trafikföreskrifter som ska publiceras i STFS.",
-        "note": "Local traffic regulations; out of scope for the county layer (COVERAGE.md).",
-        "agency": "Transportstyrelsen (local traffic regulations)"
       }
     ],
     "shared": [
@@ -718,7 +718,7 @@
       },
       {
         "name": "Etikprövningsmyndigheten",
-        "status": "collected_pdf",
+        "status": "collected",
         "documents": null,
         "url": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/221",
@@ -748,7 +748,7 @@
       },
       {
         "name": "Inspektionen för strategiska produkter",
-        "status": "no_adapter",
+        "status": "collected",
         "documents": null,
         "url": "https://www.tullverket.se/omoss/dethargortullverket/verksamhetochorganisation/lagarochforeskrifter/tullverketsforfattningssamlingtfs",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/213",
@@ -788,7 +788,7 @@
       },
       {
         "name": "Medlingsinstitutet",
-        "status": "partial",
+        "status": "collected",
         "documents": null,
         "url": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/199",
@@ -858,7 +858,7 @@
       },
       {
         "name": "Rådet för Europeiska socialfonden i Sverige",
-        "status": "collected_pdf",
+        "status": "collected",
         "documents": null,
         "url": "https://www.esf.se/uppfoljning-revision-och-regelverk/styrande-dokument/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/217",
@@ -908,7 +908,7 @@
       },
       {
         "name": "Säkerhetspolisen",
-        "status": "collected_pdf",
+        "status": "collected",
         "documents": null,
         "url": "https://polisen.se/Lagar-och-regler/Polismyndighetens-forfattningssamling/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/192",
@@ -941,14 +941,14 @@
       {
         "name": "Stockholms län",
         "status": "partial",
-        "documents": 80,
+        "documents": 258,
         "url": "https://www.lansstyrelsen.se/stockholm/om-oss/om-lansstyrelsen-stockholm/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/223",
         "description": "Stockholms läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "01",
         "series": "01FS",
-        "years": "2025–2026"
+        "years": "2020–2026"
       },
       {
         "name": "Uppsala län",
@@ -1061,14 +1061,14 @@
       {
         "name": "Hallands län",
         "status": "partial",
-        "documents": 15,
+        "documents": 54,
         "url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/233",
         "description": "Hallands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "13",
         "series": "13FS",
-        "years": "2025–2026"
+        "years": "2021–2026"
       },
       {
         "name": "Västra Götalands län",
@@ -1085,110 +1085,110 @@
       {
         "name": "Värmlands län",
         "status": "partial",
-        "documents": 14,
+        "documents": 270,
         "url": "https://www.lansstyrelsen.se/varmland/om-oss/om-lansstyrelsen-varmland/forfattningar.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/235",
         "description": "Värmlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "17",
         "series": "17FS",
-        "years": "2025–2026"
+        "years": "1980–2026"
       },
       {
         "name": "Örebro län",
         "status": "partial",
-        "documents": 23,
+        "documents": 1800,
         "url": "https://www.lansstyrelsen.se/orebro/om-oss/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/236",
         "description": "Örebro läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "18",
         "series": "18FS",
-        "years": "2025–2026"
+        "years": "1978–2026"
       },
       {
         "name": "Västmanlands län",
         "status": "partial",
-        "documents": 11,
+        "documents": 164,
         "url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/237",
         "description": "Västmanlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "19",
         "series": "19FS",
-        "years": "2025–2026"
+        "years": "2012–2026"
       },
       {
         "name": "Dalarnas län",
         "status": "partial",
-        "documents": 34,
+        "documents": 571,
         "url": "https://www.lansstyrelsen.se/dalarna/om-oss/om-lansstyrelsen-i-dalarnas-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/238",
         "description": "Dalarnas läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "20",
         "series": "20FS",
-        "years": "2025–2026"
+        "years": "1996–2026"
       },
       {
         "name": "Gävleborgs län",
         "status": "partial",
-        "documents": 15,
+        "documents": 111,
         "url": "https://www.lansstyrelsen.se/gavleborg/om-oss/om-lansstyrelsen-i-gavleborgs-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/239",
         "description": "Gävleborgs läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "21",
         "series": "21FS",
-        "years": "2025–2026"
+        "years": "2019–2026"
       },
       {
         "name": "Västernorrlands län",
         "status": "partial",
-        "documents": 14,
+        "documents": 548,
         "url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/240",
         "description": "Västernorrlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "22",
         "series": "22FS",
-        "years": "2025–2026"
+        "years": "1946–2026"
       },
       {
         "name": "Jämtlands län",
         "status": "partial",
-        "documents": 28,
+        "documents": 1648,
         "url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/241",
         "description": "Jämtlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "23",
         "series": "23FS",
-        "years": "2025–2026"
+        "years": "2001–2026"
       },
       {
         "name": "Västerbottens län",
         "status": "partial",
-        "documents": 45,
+        "documents": 161,
         "url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/242",
         "description": "Västerbottens läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "24",
         "series": "24FS",
-        "years": "2025–2026"
+        "years": "2021–2026"
       },
       {
         "name": "Norrbottens län",
         "status": "partial",
-        "documents": 58,
+        "documents": 736,
         "url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/243",
         "description": "Norrbottens läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
         "note": null,
         "code": "25",
         "series": "25FS",
-        "years": "2025–2026"
+        "years": "2001–2026"
       }
     ],
     "kommuner": [
@@ -1210,7 +1210,7 @@
         "url": "https://www.vallentuna.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/245",
         "description": null,
-        "note": null,
+        "note": "Vallentuna's författningssamling is a Sitevision file-share module with folders; the folder pages answer 404 to a plain request, so the files cannot be listed without the browser client (checked 2026-10-30).",
         "code": "0115",
         "county": "Stockholms län"
       },
@@ -1260,8 +1260,8 @@
       },
       {
         "name": "Huddinge",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 36,
         "url": "https://www.huddinge.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/250",
         "description": null,
@@ -1430,7 +1430,7 @@
         "url": "https://www.lidingo.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/265",
         "description": null,
-        "note": null,
+        "note": "Lidingö publishes its collection in Evolution DocumentWeb, a JavaScript application with no static document list; needs an adapter for its API.",
         "code": "0186",
         "county": "Stockholms län"
       },
@@ -1463,7 +1463,7 @@
         "url": "https://www.sigtuna.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/268",
         "description": null,
-        "note": null,
+        "note": "Sigtuna's collection is a Netpublicator reader embedded in the page; needs a Netpublicator adapter.",
         "code": "0191",
         "county": "Stockholms län"
       },
@@ -1535,12 +1535,12 @@
       },
       {
         "name": "Uppsala",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 23,
         "url": "https://www.uppsala.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/276",
         "description": null,
-        "note": null,
+        "note": "Uppsala has no index page: each rule is its own page under /kommun-och-politik/publikationer/styrdokument/ with the PDF under /contentassets/, findable only through the sitemap; needs a sitemap-driven listing.",
         "code": "0380",
         "county": "Uppsala län"
       },
@@ -1557,8 +1557,8 @@
       },
       {
         "name": "Östhammar",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 22,
         "url": "https://www.osthammar.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/278",
         "description": null,
@@ -1612,8 +1612,8 @@
       },
       {
         "name": "Flen",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 29,
         "url": "https://flen.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/283",
         "description": null,
@@ -1634,8 +1634,8 @@
       },
       {
         "name": "Eskilstuna",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 20,
         "url": "https://www.eskilstuna.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/285",
         "description": null,
@@ -1645,8 +1645,8 @@
       },
       {
         "name": "Strängnäs",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 31,
         "url": "https://www.strangnas.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/286",
         "description": null,
@@ -1689,8 +1689,8 @@
       },
       {
         "name": "Kinda",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 14,
         "url": "https://www.kinda.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/290",
         "description": null,
@@ -1722,8 +1722,8 @@
       },
       {
         "name": "Finspång",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 22,
         "url": "https://www.finspang.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/293",
         "description": null,
@@ -1749,7 +1749,7 @@
         "url": "https://www.linkoping.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/295",
         "description": null,
-        "note": null,
+        "note": "Linköping links its rules to Google Drive share pages instead of files on its own site; not collected pending an owner decision on that host.",
         "code": "0580",
         "county": "Östergötlands län"
       },
@@ -1815,7 +1815,7 @@
         "url": "https://www.aneby.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/301",
         "description": null,
-        "note": null,
+        "note": "Aneby has no collection page: the lokala ordningsföreskrifter are an HTML page and the hälsoskydd rules one PDF on the miljö page; the avfallsföreskrifter adopted 2026-02-23 were not found.",
         "code": "0604",
         "county": "Jönköpings län"
       },
@@ -1881,7 +1881,7 @@
         "url": "https://www.jonkoping.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/307",
         "description": null,
-        "note": null,
+        "note": "Jönköping publishes its rules as PDFs scattered over topic pages with no index; the sitemap answers 401.",
         "code": "0680",
         "county": "Jönköpings län"
       },
@@ -1903,7 +1903,7 @@
         "url": "https://kommun.varnamo.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/309",
         "description": null,
-        "note": null,
+        "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30.",
         "code": "0683",
         "county": "Jönköpings län"
       },
@@ -2052,12 +2052,12 @@
       },
       {
         "name": "Torsås",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 4,
         "url": "https://www.torsas.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/323",
         "description": null,
-        "note": null,
+        "note": "Torsås lists its rules in accordion tables where every link reads 'Ladda ner' and the title is in another table cell; needs a row-aware listing.",
         "code": "0834",
         "county": "Kalmar län"
       },
@@ -2074,8 +2074,8 @@
       },
       {
         "name": "Hultsfred",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 5,
         "url": "https://www.hultsfred.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/325",
         "description": null,
@@ -2090,7 +2090,7 @@
         "url": "https://www.monsteras.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/326",
         "description": null,
-        "note": null,
+        "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30; retry later.",
         "code": "0861",
         "county": "Kalmar län"
       },
@@ -2118,8 +2118,8 @@
       },
       {
         "name": "Nybro",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 23,
         "url": "https://www.nybro.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/329",
         "description": null,
@@ -2129,8 +2129,8 @@
       },
       {
         "name": "Oskarshamn",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 35,
         "url": "https://www.oskarshamn.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/330",
         "description": null,
@@ -2145,14 +2145,14 @@
         "url": "https://www.vastervik.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/331",
         "description": null,
-        "note": null,
+        "note": "Västervik's file list (/globalassets/forfattningssamlingen/) is not in the static HTML and its folder URL answers HTTP 500.",
         "code": "0883",
         "county": "Kalmar län"
       },
       {
         "name": "Vimmerby",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 4,
         "url": "https://www.vimmerby.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/332",
         "description": null,
@@ -2162,8 +2162,8 @@
       },
       {
         "name": "Borgholm",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 8,
         "url": "https://www.borgholm.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/333",
         "description": null,
@@ -2178,14 +2178,14 @@
         "url": "https://www.gotland.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/334",
         "description": null,
-        "note": null,
+        "note": "Region Gotland's document lists point at dokument.gotland.se/IntegrationService.svc/doc/content/<id>, not at files on the website; needs an adapter for that document service.",
         "code": "0980",
         "county": "Gotlands län"
       },
       {
         "name": "Olofström",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 5,
         "url": "https://www.olofstrom.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/335",
         "description": null,
@@ -2195,19 +2195,19 @@
       },
       {
         "name": "Karlskrona",
-        "status": "no_adapter",
+        "status": "blocked",
         "documents": 0,
         "url": "https://www.karlskrona.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/336",
         "description": null,
-        "note": null,
+        "note": "www.karlskrona.se answers every request, robots.txt included, with an HTTP 403 \"Åtkomst nekad\" bot-check page (checked 2026-10-30); not bypassed.",
         "code": "1080",
         "county": "Blekinge län"
       },
       {
         "name": "Ronneby",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 6,
         "url": "https://www.ronneby.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/337",
         "description": null,
@@ -2217,8 +2217,8 @@
       },
       {
         "name": "Karlshamn",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 58,
         "url": "https://www.karlshamn.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/338",
         "description": null,
@@ -2228,8 +2228,8 @@
       },
       {
         "name": "Sölvesborg",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 29,
         "url": "https://www.solvesborg.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/339",
         "description": null,
@@ -2239,8 +2239,8 @@
       },
       {
         "name": "Svalöv",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 27,
         "url": "https://www.svalov.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/340",
         "description": null,
@@ -2250,19 +2250,19 @@
       },
       {
         "name": "Staffanstorp",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 27,
         "url": "https://www.staffanstorp.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/341",
         "description": null,
-        "note": null,
+        "note": "27 documents not fetched: robots.txt disallows the document URL",
         "code": "1230",
         "county": "Skåne län"
       },
       {
         "name": "Burlöv",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 34,
         "url": "https://burlov.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/342",
         "description": null,
@@ -2294,8 +2294,8 @@
       },
       {
         "name": "Örkelljunga",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 10,
         "url": "https://www.orkelljunga.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/345",
         "description": null,
@@ -2305,8 +2305,8 @@
       },
       {
         "name": "Bjuv",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 9,
         "url": "https://www.bjuv.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/346",
         "description": null,
@@ -2316,8 +2316,8 @@
       },
       {
         "name": "Kävlinge",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 23,
         "url": "https://www.kavlinge.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/347",
         "description": null,
@@ -2360,8 +2360,8 @@
       },
       {
         "name": "Sjöbo",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 6,
         "url": "https://www.sjobo.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/351",
         "description": null,
@@ -2371,8 +2371,8 @@
       },
       {
         "name": "Hörby",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 6,
         "url": "https://www.horby.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/352",
         "description": null,
@@ -2393,8 +2393,8 @@
       },
       {
         "name": "Tomelilla",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 25,
         "url": "https://www.tomelilla.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/354",
         "description": null,
@@ -2404,8 +2404,8 @@
       },
       {
         "name": "Bromölla",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 38,
         "url": "https://www.bromolla.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/355",
         "description": null,
@@ -2415,8 +2415,8 @@
       },
       {
         "name": "Osby",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 5,
         "url": "https://www.osby.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/356",
         "description": null,
@@ -2437,8 +2437,8 @@
       },
       {
         "name": "Klippan",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 16,
         "url": "https://www.klippan.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/358",
         "description": null,
@@ -2448,8 +2448,8 @@
       },
       {
         "name": "Åstorp",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 26,
         "url": "https://www.astorp.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/359",
         "description": null,
@@ -2492,8 +2492,8 @@
       },
       {
         "name": "Landskrona",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 29,
         "url": "https://www.landskrona.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/363",
         "description": null,
@@ -2514,8 +2514,8 @@
       },
       {
         "name": "Höganäs",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 40,
         "url": "https://www.hoganas.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/365",
         "description": null,
@@ -2525,8 +2525,8 @@
       },
       {
         "name": "Eslöv",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 32,
         "url": "https://www.eslov.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/366",
         "description": null,
@@ -2569,8 +2569,8 @@
       },
       {
         "name": "Simrishamn",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 1,
         "url": "https://www.simrishamn.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/370",
         "description": null,
@@ -2602,8 +2602,8 @@
       },
       {
         "name": "Hylte",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 19,
         "url": "https://www.hylte.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/373",
         "description": null,
@@ -2613,8 +2613,8 @@
       },
       {
         "name": "Halmstad",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 8,
         "url": "https://www.halmstad.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/374",
         "description": null,
@@ -2624,8 +2624,8 @@
       },
       {
         "name": "Laholm",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 49,
         "url": "https://www.laholm.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/375",
         "description": null,
@@ -2635,8 +2635,8 @@
       },
       {
         "name": "Falkenberg",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 38,
         "url": "https://kommun.falkenberg.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/376",
         "description": null,
@@ -2646,8 +2646,8 @@
       },
       {
         "name": "Varberg",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 29,
         "url": "https://www.varberg.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/377",
         "description": null,
@@ -2657,8 +2657,8 @@
       },
       {
         "name": "Kungsbacka",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 34,
         "url": "https://www.kungsbacka.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/378",
         "description": null,
@@ -2673,7 +2673,7 @@
         "url": "https://www.harryda.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/379",
         "description": null,
-        "note": null,
+        "note": "Härryda publishes no författningssamling or list of local rules: the avgifter och taxor page links to topic pages, where some taxor are HTML text and a few are single PDFs (plan- och bygglovstaxa, miljö- och hälsoskyddstaxa); no sitemap (checked 2026-10-30).",
         "code": "1401",
         "county": "Västra Götalands län"
       },
@@ -2690,8 +2690,8 @@
       },
       {
         "name": "Öckerö",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 24,
         "url": "https://www.ockero.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/381",
         "description": null,
@@ -2701,8 +2701,8 @@
       },
       {
         "name": "Stenungsund",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 42,
         "url": "https://www.stenungsund.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/382",
         "description": null,
@@ -2712,8 +2712,8 @@
       },
       {
         "name": "Tjörn",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 15,
         "url": "https://tjorn.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/383",
         "description": null,
@@ -2734,8 +2734,8 @@
       },
       {
         "name": "Sotenäs",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 19,
         "url": "https://www.sotenas.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/385",
         "description": null,
@@ -2745,8 +2745,8 @@
       },
       {
         "name": "Munkedal",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 3,
         "url": "https://www.munkedal.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/386",
         "description": null,
@@ -2756,19 +2756,19 @@
       },
       {
         "name": "Tanum",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 7,
         "url": "https://www.tanum.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/387",
         "description": null,
-        "note": null,
+        "note": "Tanum's rules are web pages in its A–Z list and are collected as page text; the avfallsföreskrifter page refers to Rambo AB's site (rambo.se) for the full text.",
         "code": "1435",
         "county": "Västra Götalands län"
       },
       {
         "name": "Dals-Ed",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 5,
         "url": "https://www.dalsed.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/388",
         "description": null,
@@ -2778,8 +2778,8 @@
       },
       {
         "name": "Färgelanda",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 26,
         "url": "https://www.fargelanda.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/389",
         "description": null,
@@ -2999,7 +2999,7 @@
       {
         "name": "Göteborg",
         "status": "partial",
-        "documents": 5,
+        "documents": 43,
         "url": "https://www.goteborg.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/409",
         "description": null,
@@ -3168,7 +3168,7 @@
         "url": "https://www.skovde.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/424",
         "description": null,
-        "note": null,
+        "note": "skovde.se lists its regulations only as JSON embedded in the page script (OrdinanceCategory, FileUrl); the collector has no strategy for that list yet.",
         "code": "1496",
         "county": "Västra Götalands län"
       },
@@ -3322,7 +3322,7 @@
         "url": "https://karlstad.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/438",
         "description": null,
-        "note": null,
+        "note": "karlstad.se serves its documents from a SharePoint-backed list whose download links are built in the browser; no adapter yet.",
         "code": "1780",
         "county": "Värmlands län"
       },
@@ -3443,7 +3443,7 @@
         "url": "https://www.ljusnarsberg.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/449",
         "description": null,
-        "note": null,
+        "note": "ljusnarsberg.se lists only internal documents on its styrande dokument page; föreskrifter and taxor are spread over topic pages.",
         "code": "1864",
         "county": "Örebro län"
       },
@@ -3498,14 +3498,14 @@
         "url": "https://www.nora.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/454",
         "description": null,
-        "note": null,
+        "note": "nora.se has no page listing its rules for residents; föreskrifter and taxor are spread over topic pages.",
         "code": "1884",
         "county": "Örebro län"
       },
       {
         "name": "Lindesberg",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 8,
         "url": "https://www.lindesberg.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/455",
         "description": null,
@@ -3526,8 +3526,8 @@
       },
       {
         "name": "Surahammar",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 34,
         "url": "https://www.surahammar.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/457",
         "description": null,
@@ -3537,8 +3537,8 @@
       },
       {
         "name": "Kungsör",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 39,
         "url": "https://www.kungsor.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/458",
         "description": null,
@@ -3553,7 +3553,7 @@
         "url": "https://www.hallstahammar.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/459",
         "description": null,
-        "note": null,
+        "note": "hallstahammar.se publishes its documents through Evolution DocumentWeb (a JavaScript app over a JSON API); no adapter yet.",
         "code": "1961",
         "county": "Västmanlands län"
       },
@@ -3603,8 +3603,8 @@
       },
       {
         "name": "Köping",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 7,
         "url": "https://www.koping.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/464",
         "description": null,
@@ -3630,7 +3630,7 @@
         "url": "https://www.vansbro.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/466",
         "description": null,
-        "note": null,
+        "note": "vansbro.se links its documents through Ciceron with a per-visit session id in every link; no adapter yet.",
         "code": "2021",
         "county": "Dalarnas län"
       },
@@ -3663,7 +3663,7 @@
         "url": "https://www.leksand.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/469",
         "description": null,
-        "note": null,
+        "note": "leksand.se publishes its författningssamling in a Netpublicator reader (JavaScript, noindex); no adapter yet.",
         "code": "2029",
         "county": "Dalarnas län"
       },
@@ -3674,14 +3674,14 @@
         "url": "https://www.rattvik.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/470",
         "description": null,
-        "note": null,
+        "note": "rattvik.se publishes its taxor and föreskrifter through DocumentWeb (ess-app.rattvik.se, a JavaScript app over a JSON API); no adapter yet.",
         "code": "2031",
         "county": "Dalarnas län"
       },
       {
         "name": "Orsa",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 22,
         "url": "https://www.orsa.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/471",
         "description": null,
@@ -3702,8 +3702,8 @@
       },
       {
         "name": "Smedjebacken",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 35,
         "url": "https://www.smedjebacken.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/473",
         "description": null,
@@ -3713,8 +3713,8 @@
       },
       {
         "name": "Mora",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 28,
         "url": "https://morakommun.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/474",
         "description": null,
@@ -3724,8 +3724,8 @@
       },
       {
         "name": "Falun",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 15,
         "url": "https://www.falun.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/475",
         "description": null,
@@ -3740,7 +3740,7 @@
         "url": "https://www.borlange.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/476",
         "description": null,
-        "note": null,
+        "note": "borlange.se uses the Sitevision file-share module with folders loaded in the browser; the PDFs are not in the served page, only in the sitemap.",
         "code": "2081",
         "county": "Dalarnas län"
       },
@@ -3757,8 +3757,8 @@
       },
       {
         "name": "Hedemora",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 29,
         "url": "https://www.hedemora.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/478",
         "description": null,
@@ -3768,8 +3768,8 @@
       },
       {
         "name": "Avesta",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 4,
         "url": "https://www.avesta.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/479",
         "description": null,
@@ -3779,8 +3779,8 @@
       },
       {
         "name": "Ludvika",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 19,
         "url": "https://www.ludvika.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/480",
         "description": null,
@@ -3790,8 +3790,8 @@
       },
       {
         "name": "Ockelbo",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 4,
         "url": "https://ockelbo.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/481",
         "description": null,
@@ -3801,8 +3801,8 @@
       },
       {
         "name": "Hofors",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 4,
         "url": "https://www.hofors.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/482",
         "description": null,
@@ -3812,8 +3812,8 @@
       },
       {
         "name": "Ovanåker",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 6,
         "url": "https://www.ovanaker.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/483",
         "description": null,
@@ -3823,8 +3823,8 @@
       },
       {
         "name": "Nordanstig",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 8,
         "url": "https://www.nordanstig.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/484",
         "description": null,
@@ -3850,14 +3850,14 @@
         "url": "https://www.gavle.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/486",
         "description": null,
-        "note": null,
+        "note": "gavle.se publishes its documents through MediaFlow; no adapter yet.",
         "code": "2180",
         "county": "Gävleborgs län"
       },
       {
         "name": "Sandviken",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 8,
         "url": "https://sandviken.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/487",
         "description": null,
@@ -3944,8 +3944,8 @@
       },
       {
         "name": "Kramfors",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 27,
         "url": "https://www.kramfors.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/495",
         "description": null,
@@ -3966,8 +3966,8 @@
       },
       {
         "name": "Örnsköldsvik",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 9,
         "url": "https://www.ornskoldsvik.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/497",
         "description": null,
@@ -3988,8 +3988,8 @@
       },
       {
         "name": "Bräcke",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 19,
         "url": "https://www.bracke.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/499",
         "description": null,
@@ -4021,8 +4021,8 @@
       },
       {
         "name": "Åre",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 30,
         "url": "https://www.are.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/502",
         "description": null,
@@ -4230,8 +4230,8 @@
       },
       {
         "name": "Arvidsjaur",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 12,
         "url": "https://www.arvidsjaur.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/521",
         "description": null,
@@ -4290,7 +4290,7 @@
         "url": "https://www.overtornea.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/526",
         "description": null,
-        "note": null,
+        "note": "overtornea.se lists its föreskrifter and taxor through the WordPress File Download plugin, loaded from an admin-ajax JSON endpoint; no adapter yet.",
         "code": "2518",
         "county": "Norrbottens län"
       },
@@ -4307,8 +4307,8 @@
       },
       {
         "name": "Gällivare",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 60,
         "url": "https://gallivare.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/528",
         "description": null,
@@ -4351,8 +4351,8 @@
       },
       {
         "name": "Boden",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 10,
         "url": "https://www.boden.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/532",
         "description": null,
@@ -4373,8 +4373,8 @@
       },
       {
         "name": "Kiruna",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 7,
         "url": "https://kiruna.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/534",
         "description": null,
