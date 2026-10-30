@@ -671,7 +671,7 @@ def parse_html_index(kommun, raw, listing_url):
         number = _number(kommun, url, text)
         title = _title(kommun, text)
         if kommun.page_titles and not title:
-            title = ""  # judged and named from the rule page itself
+            title = number or ""  # a placeholder: the rule page names it and is judged by that name
         elif not title or not binds_residents(kommun, title):
             continue  # an image or icon link carries no title to judge or store
         if not number:
