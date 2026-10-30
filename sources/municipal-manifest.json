@@ -23482,6 +23482,276 @@
       "url": "https://www.tidaholm.se/download/18.62781dad19ed4661eae7ae2/1781733291445/Sotningsfrister%20Samh%C3%A4llsskydd%20mellersta%20Skaraborg.pdf"
     },
     {
+      "bytes": 6402250,
+      "content_type": "application/pdf",
+      "id": "1499-allmanna-bestammelser-for-anvandande-av-kommunens-allmanna-vatten-och-avloppsanlaggning",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:09Z",
+      "sha256": "f01cd153198ddd74e52c836981f6e61cc9585906eacdf3892bc896e0e3e890ae",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ad6/1587130532934/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20kommunens%20allm%C3%A4nna%20vatten%20och%20avloppsanl%C3%A4ggning.pdf"
+    },
+    {
+      "bytes": 24057105,
+      "content_type": "application/pdf",
+      "id": "1499-allmanna-lokala-ordningsforeskrifter-for-falkopings-kommun",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:13Z",
+      "sha256": "8d7095eba4e120214b3061ecc9e2661b091dc9299819c8441689f9d906381f9b",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ad7/1698133042419/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Falk%C3%B6pings%20kommun.pdf"
+    },
+    {
+      "bytes": 183331,
+      "content_type": "application/pdf",
+      "id": "1499-avgift-for-forskola-och-fritidshem-maxtaxa-for-ar-2026",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:19Z",
+      "sha256": "b575673b2e9c1d1f1cc27aa4391ad256c7c2251c492614f81b89eb674ebf9dd6",
+      "url": "https://www.falkoping.se/download/18.7bdef21a19ac5f61f0122ef/1787572835109/Avgift%20f%C3%B6r%20f%C3%B6rskola%20och%20fritidshem%20-%20maxtaxa%20f%C3%B6r%20%C3%A5r%202026.pdf"
+    },
+    {
+      "bytes": 92926,
+      "content_type": "application/pdf",
+      "id": "1499-avgift-for-kommunala-praktikplatser",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:21Z",
+      "sha256": "82672211f3a4e003a46130468eae655508f864f1ce95dcfd7ec0ea1125a52dd0",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404abb/1587130210624/Avgift%20f%C3%B6r%20kommunala%20praktikplatser.pdf"
+    },
+    {
+      "bytes": 29661,
+      "content_type": "application/pdf",
+      "id": "1499-avgift-for-provisorisk-dodsboforvaltning-och-gravsattning",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:23Z",
+      "sha256": "78059d658893c3b68c190302e69f283e6e1d7217eae7c8a69f2ad5d72f5dcc9c",
+      "url": "https://www.falkoping.se/download/18.745da7ca1880f3ed78f53bc/1688539197654/Avgift%20f%C3%B6r%20provisorisk%20d%C3%B6dsbof%C3%B6rvaltning.pdf"
+    },
+    {
+      "bytes": 520548,
+      "content_type": "application/pdf",
+      "id": "1499-avgifter-och-ersattningar-for-personer-med-insatser-enligt-socialtjanstlag-halso-och-sjukvardslag-och-lagen-om-stod-och-service-till-vissa-funktionshindrade",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:15Z",
+      "sha256": "f9b88832a38161729ae939ae8278890fa53d047f77de61aaae8846b9acae8cd5",
+      "url": "https://www.falkoping.se/download/18.776f65f5193732fee2e2dba/1751357448059/Avgifter%20och%20ers%C3%A4ttningar%20f%C3%B6r%20personer%20med%20insatser%20enligt%20socialtj%C3%A4nstlag,%20h%C3%A4lso-%20och%20sjukv%C3%A5rdslag%20och%20lagen%20om%20st%C3%B6d%20och%20service%20till%20vissa%20funktionshindrade.pdf"
+    },
+    {
+      "bytes": 208660,
+      "content_type": "application/pdf",
+      "id": "1499-avgifter-tillhorande-anvisningar-for-gravning-i-allman-platsmark-och-kommunal-mark",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:17Z",
+      "sha256": "9a1532bb97a412c2cd08fbaf72c6086470b0dc6f440bb797b215ddff891c7211",
+      "url": "https://www.falkoping.se/download/18.7b2a2321741104b9d66c55/1602139535488/Avgifter%20tillh%C3%B6rande%20Anvisningar%20f%C3%B6r%20gr%C3%A4vning%20i%20allm%C3%A4n%20platsmark%20och%20kommunal%20mark.pdf"
+    },
+    {
+      "bytes": 2240,
+      "content_type": "text/markdown",
+      "id": "1499-bestammelser-och-taxa-for-provning-och-tillsyn-av-alkohollagen-lag-om-tobak-och-liknande-produkter-lag-om-tobaksfria-nikotinprodukter-och-lag-om-handel-med-vissa-receptfria-lakemedel",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:24Z",
+      "sha256": "93599ec80272d4fe56146d4fdebb9d9a7a09585b313f740b67f71949e59906e1",
+      "url": "https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/bestammelser-och-taxa-for-provning-och-tillsyn-av-alkohollagen-lag-om-tobak-och-liknande-produkter-lag-om-tobaksfria-nikotinprodukter-och-lag-om-handel-med-vissa-receptfria-lakemedel"
+    },
+    {
+      "bytes": 203201,
+      "content_type": "application/pdf",
+      "id": "1499-foreskrifter-for-naturreservatet-bestorp",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:26Z",
+      "sha256": "b7a9e12f7815693be565b32ebc7bebee54264033e99951fe96170bd324d7bc1d",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ae0/1587130551911/F%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20Bestorp%20i%20Falk%C3%B6pings%20kommun.pdf"
+    },
+    {
+      "bytes": 24645,
+      "content_type": "application/pdf",
+      "id": "1499-lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:28Z",
+      "sha256": "9c7ac621ee954e957e3f069ed5aad55a2a7682d90174d5e66eb0f134de1c97a2",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ae1/1587130551923/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6.pdf"
+    },
+    {
+      "bytes": 258182,
+      "content_type": "application/pdf",
+      "id": "1499-lokala-ordningsforeskrifter-for-torghandel",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:30Z",
+      "sha256": "dd35517a350a87b1b82bf6e7e563eb5957c93d475d2b254f2e0cdef16389a8a3",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ae2/1587130551926/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandeln%20i%20Falk%C3%B6pings%20kommun.pdf"
+    },
+    {
+      "bytes": 657139,
+      "content_type": "application/pdf",
+      "id": "1499-plan-och-bygglovstaxa",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:32Z",
+      "sha256": "8a0c30dfe5ab0b14a7a8286f67a50fcf058306ef353f7093f54a0dd7e87342d7",
+      "url": "https://www.falkoping.se/download/18.776f65f5193732fee2e2ded/1766476623824/Plan-%20och%20bygglovstaxa.pdf"
+    },
+    {
+      "bytes": 247720,
+      "content_type": "application/pdf",
+      "id": "1499-sanktionsavgifter-for-brister-som-uppdagas-vid-kontroll-av-arbetsplatser-dar-arbete-eller-aktiviteter-pagar-inom-trafikerade-ytor",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:34Z",
+      "sha256": "09f6260727039d15c5145763cad7570da4e185fa5d189ce9b08cf5c914c38c58",
+      "url": "https://www.falkoping.se/download/18.7b2a2321741104b9d66c56/1602139581878/Sanktionsavgifter%20f%C3%B6r%20brister%20som%20uppdagas%20vid%20kontroll%20av%20arbetsplatser%20d%C3%A4r%20arbete%20eller%20aktiviteter%20p%C3%A5g%C3%A5r%20inom%20trafikerade%20ytor.pdf"
+    },
+    {
+      "bytes": 512998,
+      "content_type": "application/pdf",
+      "id": "1499-sotningsfrister-for-falkopings-kommun",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:36Z",
+      "sha256": "53737bd3ff0ea7233385bbe669b8677d41546ec01a4ce31c308e508fe7e761a6",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ab9/1611065813318/Sotningsfrister%20f%C3%B6r%20Falk%C3%B6pings%20kommun.pdf"
+    },
+    {
+      "bytes": 221307,
+      "content_type": "application/pdf",
+      "id": "1499-sotningstaxa",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:38Z",
+      "sha256": "deaec136acfcacb21ad70ea278160b9ce7ad15f4b928a7fec6b031bbcb90dfed",
+      "url": "https://www.falkoping.se/download/18.776f65f5193732fee2e4222/1772456062561/Sotningstaxa.pdf"
+    },
+    {
+      "bytes": 441451,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-allmanna-vatten-och-avloppsanlaggningar",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:40Z",
+      "sha256": "4967a1564bd51dc25f82f6aa6cf464eeacc85863ddb82dd2ff6479ef5c2de6cd",
+      "url": "https://www.falkoping.se/download/18.582b050219c0f3580a68b40/1771498432788/Taxa%20f%C3%B6r%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggningar%20g%C3%A4ller%20fr%C3%A5n%20och%20med%201%20juli%202026.pdf"
+    },
+    {
+      "bytes": 121648,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-anslutning-av-vatten-och-spillvatten-utanfor-verksamhetsomrade",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:42Z",
+      "sha256": "6dbbd8ffec621ca0284f415568883db4d8100a2d9c1bf1b2b9d51d525663d390",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ac5/1734678302105/Taxa%20f%C3%B6r%20anslutning%20av%20vatten%20och%20spillvatten%20utanf%C3%B6r%20verksamhetsomr%C3%A5de.pdf"
+    },
+    {
+      "bytes": 198534,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-avskrifter-och-kopior-med-mera-av-allmanna-handlingar",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:44Z",
+      "sha256": "8b1cb58b32b1a6ade6ab84e6bc0b2edd811c5ac24c3e12270906a89b2603ec5a",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ac6/1587130296734/Taxa%20f%C3%B6r%20avskrifter%20och%20kopior%20med%20mera%20av%20allm%C3%A4nna%20handlingar.pdf"
+    },
+    {
+      "bytes": 31336,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-distanstentamen-inom-vuxenutbildningen",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:46Z",
+      "sha256": "48bd9f5c4e34728a44aaf2805eb65b45e6e41eeec4117d9668db1f21af94223e",
+      "url": "https://www.falkoping.se/download/18.5b7f4af4172139070c676af/1709190733937/Taxa%20f%C3%B6r%20distanstentamen%20inom%20vuxenutbildningen.pdf"
+    },
+    {
+      "bytes": 174832,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-felparkeringsavgift",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:48Z",
+      "sha256": "b34448876f45b39cb40f502ec40a99b340168a68b15aa0cce747c7bc724e3b72",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ac8/1734679142800/Taxa%20f%C3%B6r%20felparkeringsavgift%20inom%20Falk%C3%B6pings%20kommun.pdf"
+    },
+    {
+      "bytes": 32016,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-hunddagiset-tassen",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:50Z",
+      "sha256": "9105a3e980877f821bce148a82cb0667e6158a3a39ceb483a948729f9d4ea543",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404aca/1703771785537/Taxa%20f%C3%B6r%20hunddagiset%20Tassen.pdf"
+    },
+    {
+      "bytes": 265826,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-mottagning-av-massor-till-sluttackning-av-deponier",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:52Z",
+      "sha256": "17b64333c12346bc59eac33c2e042ce4f103fccc6f0b0659f4698d47c6f7f425",
+      "url": "https://www.falkoping.se/download/18.538abe0919e0227e509470/1778584082855/Taxa%20f%C3%B6r%20mottagning%20av%20massor%20till%20slutt%C3%A4ckning%20av%20deponier.pdf"
+    },
+    {
+      "bytes": 177098,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-raddningstjanstens-tillstandsprovning-enligt-lagen-om-brandfarliga-och-explosiva-varor",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:54Z",
+      "sha256": "6db8e005dee7117128d7f996fd0c652f9913cc98c88c44fa958ab3b709d781ce",
+      "url": "https://www.falkoping.se/download/18.126386df18adc128daf82b9/1767010971755/Taxa%20f%C3%B6r%20r%C3%A4ddningstj%C3%A4nstens%20tillst%C3%A5ndspr%C3%B6vning%20enligt%20lagen%20om%20brandfarliga%20och%20explosiva%20varor.pdf"
+    },
+    {
+      "bytes": 178147,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-raddningstjanstens-tillsyn-enligt-lagen-om-skydd-mot-olyckor-och-lagen-om-brandfaliga-och-expolsiva-varor",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:56Z",
+      "sha256": "4a6857af9c9a84b1435d843dd540b11eb28a3dd66e9cdaa4787325f3b3e3ad24",
+      "url": "https://www.falkoping.se/download/18.126386df18adc128daf82b6/1767011211531/Taxa%20f%C3%B6r%20r%C3%A4ddningstj%C3%A4nstens%20tillsyn%20enligt%20lagen%20om%20skydd%20mot%20olyckor%20och%20lagen%20om%20brandfaliga%20och%20expolsiva%20varor.pdf"
+    },
+    {
+      "bytes": 320787,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-sarskild-provning-inom-skolvasendet",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:44:58Z",
+      "sha256": "d4fe83f2b006bcc83d302e453a6b9cd93d096e3a0b994d24b4bd474bef6c62b8",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ace/1634801141016/Taxa%20f%C3%B6r%20s%C3%A4rskild%20pr%C3%B6vning%20inom%20skolv%C3%A4sendet.pdf"
+    },
+    {
+      "bytes": 25437,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-upplatelse-av-allman-plats",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:45:00Z",
+      "sha256": "cbf0583e32f4e13f0b426994b5ea127615cb22e03985f5a3d3394ee4d07bd39d",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ad1/1587130415697/Taxa%20f%C3%B6r%20uppl%C3%A5telse%20av%20allm%C3%A4n%20plats%20i%20Falk%C3%B6pings%20kommun.pdf"
+    },
+    {
+      "bytes": 21337,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-for-uthyrning-av-lokaler-pa-larcenter",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:45:02Z",
+      "sha256": "f769c4aef4223ded3d4243972f97464a275ef265accee30781aa8a9dff8268da",
+      "url": "https://www.falkoping.se/download/18.5f7d535517115b399404ad3/1587130454000/Taxa%20f%C3%B6r%20uthyrning%20av%20lokaler%20p%C3%A5%20L%C3%A4rCenter.pdf"
+    },
+    {
+      "bytes": 260857,
+      "content_type": "application/pdf",
+      "id": "1499-taxa-och-regler-for-brandskyddskontroll",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:45:04Z",
+      "sha256": "a289fabf7323ead320e7ff7831a35bbf51f1c44d59da17916b652cdebb017676",
+      "url": "https://www.falkoping.se/download/18.1adde54a17861a73b1e131a/1772456269298/Taxa%20och%20regler%20f%C3%B6r%20brandskyddskontroll%20f%C3%B6r%20Falk%C3%B6pings%20kommun.pdf"
+    },
+    {
+      "bytes": 195999,
+      "content_type": "application/pdf",
+      "id": "1499-taxor-och-avgifter-for-barn-och-utbildningsnamndens-verksamheter",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:45:06Z",
+      "sha256": "e6027c0a177e82bd421d5019eb9142d861c7a728c7f20c81c9495a68ffe5c97d",
+      "url": "https://www.falkoping.se/download/18.7bdef21a19ac5f61f0122b8/1766136502504/Taxor%20och%20avgifter%20f%C3%B6r%20Barn-och%20utbildningsn%C3%A4mndens%20verksamheter.pdf"
+    },
+    {
+      "bytes": 451545,
+      "content_type": "application/pdf",
+      "id": "1499-taxor-och-avgifter-for-kultur-och-fritidsnamndens-verksamheter",
+      "municipality_code": "1499",
+      "retrieved_at": "2026-10-30T20:45:08Z",
+      "sha256": "c7f05bbeb1ecb8f4013601dda4ce91a2f840b951ead81e8bfdd326dc9529f4f7",
+      "url": "https://www.falkoping.se/download/18.126386df18adc128daf82ad/1777896580671/Taxor%20och%20avgifter%20f%C3%B6r%20kultur-%20och%20fritidsn%C3%A4mndens%20verksamheter.pdf"
+    },
+    {
       "bytes": 328752,
       "content_type": "application/pdf",
       "id": "1715-18-1880b41f1969f8911b61790",
@@ -31123,6 +31393,15 @@
       "url": "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Taxor-och-avgifter/Avgifter-for-gravtillstand-och-TA-planer.html"
     },
     {
+      "bytes": 205971,
+      "content_type": "application/pdf",
+      "id": "2184-foreskrifter-om-hantering-av-avfall-under-kommunalt-ansvar",
+      "municipality_code": "2184",
+      "retrieved_at": "2026-10-30T20:42:30Z",
+      "sha256": "947720220dd662d9cb09ee982e94ed7f2f849a36383e6db289fa2cb853b42cb3",
+      "url": "https://hudiksvall.se/rest-api/graph-service/preview?documentId=01BIVRHKE4PKEZ5VBEW5B27RX3A7H24AEQ&currentPageId=4.6b6641cb18a179b6780c43c3&name=F%C3%B6reskrifter%20om%20hantering%20av%20avfall%20under%20kommunalt%20ansvar.pdf&fileType=pdf"
+    },
+    {
       "bytes": 8678,
       "content_type": "text/markdown",
       "id": "2184-lokal-ordningsstadga",
@@ -31130,6 +31409,15 @@
       "retrieved_at": "2026-10-30T20:32:19Z",
       "sha256": "628696dadf977709a1b68ec1ea4edffdc26e5f510be8a07b45b074185f9c18ae",
       "url": "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Foreskrifter/Lokal-ordningsstadga.html"
+    },
+    {
+      "bytes": 562928,
+      "content_type": "application/pdf",
+      "id": "2184-lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon",
+      "municipality_code": "2184",
+      "retrieved_at": "2026-10-30T20:42:32Z",
+      "sha256": "bc08f177896941001de59fbaabe4ab0b27b43ec507fb814d07c17ac6a6285f3b",
+      "url": "https://hudiksvall.se/rest-api/graph-service/preview?documentId=01BIVRHKH2BI36QNE4KBAK2LKHZ3GZL5YC&currentPageId=4.5039e29815b61c258fdd4c7&name=Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n.pdf&fileType=pdf"
     },
     {
       "bytes": 5978,
@@ -31168,6 +31456,15 @@
       "url": "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Taxor-och-avgifter/Taxa-for-upplatelse-av-offentlig-plats-och-kommunal-mark.html"
     },
     {
+      "bytes": 237956,
+      "content_type": "application/pdf",
+      "id": "2184-taxa-for-vatten-och-avlopp",
+      "municipality_code": "2184",
+      "retrieved_at": "2026-10-30T20:42:33Z",
+      "sha256": "721535256672890f600d29b501f219ad4f4a68cde550cb369d2bd2e81f4b9742",
+      "url": "https://hudiksvall.se/rest-api/graph-service/preview?documentId=01BIVRHKHCR7EECNU26JAZGHEH2YM3JIMN&currentPageId=4.7d94bc1917448464f8b8405e&name=VA-taxa%202026.pdf&fileType=pdf"
+    },
+    {
       "bytes": 1422,
       "content_type": "text/markdown",
       "id": "2184-taxor-for-hyra-av-fritidsgardarna",
@@ -31204,6 +31501,24 @@
       "url": "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Taxor-och-avgifter/Taxor-for-hyra-av-skollokaler.html"
     },
     {
+      "bytes": 274333,
+      "content_type": "application/pdf",
+      "id": "2184-taxor-for-kartor-och-mattjanster",
+      "municipality_code": "2184",
+      "retrieved_at": "2026-10-30T20:42:35Z",
+      "sha256": "c408515957a5ece5211807a62525dbae6706a8fcf2139cce94197049cedcc737",
+      "url": "https://hudiksvall.se/rest-api/graph-service/preview?documentId=01BIVRHKBL3ZVT5XXMRZHJFG3VRA6BMLHB&currentPageId=4.5527bbab1683334065fa9a7a&name=Taxa%20f%C3%B6r%20kart%20och%20m%C3%A4tningsverksamheten%202026.pdf&fileType=pdf"
+    },
+    {
+      "bytes": 645563,
+      "content_type": "application/pdf",
+      "id": "2184-taxor-for-kommunalt-avfall-och-slamtomning",
+      "municipality_code": "2184",
+      "retrieved_at": "2026-10-30T20:42:37Z",
+      "sha256": "6966dbe3d795b02461943e8af93d985f94e5b3e55248fdc20919e32065a91b19",
+      "url": "https://hudiksvall.se/rest-api/graph-service/preview?documentId=01BIVRHKECU7YV2QJ6RFD3G6QY2LBNUVAG&currentPageId=4.7d94bc1917448464f8b78a52&name=Taxa%20f%C3%B6r%20kommunal%20avfall%20och%20slamt%C3%B6mning%20maj%202026.pdf&fileType=pdf"
+    },
+    {
       "bytes": 838,
       "content_type": "text/markdown",
       "id": "2184-taxor-for-mulle-meck",
@@ -31211,6 +31526,15 @@
       "retrieved_at": "2026-10-30T20:32:41Z",
       "sha256": "9b9b130a913615c11aaf841d09cc29f9056aebf6b54b6d93913dd1599d881ab4",
       "url": "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Taxor-och-avgifter/Taxor-for-Mulle-Meck.html"
+    },
+    {
+      "bytes": 292192,
+      "content_type": "application/pdf",
+      "id": "2184-taxor-for-provning-och-tillsyn-inom-livsmedelskontrollen-och-miljobalkens-omrade",
+      "municipality_code": "2184",
+      "retrieved_at": "2026-10-30T20:42:42Z",
+      "sha256": "9fad030191eefc34323fcefedb17f2a6b5008449a501ea6c499b5438ed13247d",
+      "url": "https://hudiksvall.se/rest-api/graph-service/preview?documentId=01BIVRHKAT3YKTDLD3FJCL6AW2NPSVIVTA&currentPageId=4.7965c49116156f9d28f654d2&name=Taxa%20f%C3%B6r%20offentlig%20kontroll%20inom%20livsmedels-%20och%20foderomr%C3%A5dena.pdf&fileType=pdf"
     },
     {
       "bytes": 7513,
@@ -31247,6 +31571,15 @@
       "retrieved_at": "2026-10-30T20:32:47Z",
       "sha256": "25592373a55893d8d2dc365324995e03b5ce9a688e3c2f8450815e6815adf319",
       "url": "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Taxor-och-avgifter/Taxor-och-avgifter-for-sarskilt-boende-for-aldre.html"
+    },
+    {
+      "bytes": 229108,
+      "content_type": "application/pdf",
+      "id": "2184-taxor-plan-och-bygglov",
+      "municipality_code": "2184",
+      "retrieved_at": "2026-10-30T20:42:43Z",
+      "sha256": "3ab1950c0ee48f9235fb220a3d0a7d59a8138ad59af964ebe5a87f6d63a7b54d",
+      "url": "https://hudiksvall.se/rest-api/graph-service/preview?documentId=01BIVRHKHWRMZUQSCXGFAZORBZTLOQXC64&currentPageId=4.810ac4d1876f02af8664b5&name=Handl%C3%A4ggningstid%20och%20bygglovsagift%202026.pdf&fileType=pdf"
     },
     {
       "bytes": 167054,
