@@ -458,6 +458,56 @@
     "as_of": "2026-10-30"
   },
   {
+    "layer": "agency",
+    "type": null,
+    "series": "BFNAR",
+    "label": "BFNAR (BFN)",
+    "target": 17,
+    "kind": "counted",
+    "source": "https://www.bfn.se/redovisningsregler/allmanna-rad/ (base general advice in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "CSNFS",
+    "label": "CSNFS (CSN)",
+    "target": 63,
+    "kind": "counted",
+    "source": "https://www.csn.se/om-csn/lag-och-ratt/forfattningssamling (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "IMYFS",
+    "label": "IMYFS (IMY)",
+    "target": 1,
+    "kind": "counted",
+    "source": "https://www.imy.se/om-oss/beslut-publikationer-och-remisser/foreskrifter-och-allmanna-rad/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "LMFS",
+    "label": "LMFS (LM)",
+    "target": 14,
+    "kind": "counted",
+    "source": "https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "MTFS",
+    "label": "MTFS (TVA)",
+    "target": 3,
+    "kind": "counted",
+    "source": "https://www.tillvaxtanalys.se/statistik/tillvaxtanalysforeskrifter.125740.html (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
     "layer": "case_law",
     "type": null,
     "label": "Case law",
