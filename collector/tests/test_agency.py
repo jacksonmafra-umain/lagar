@@ -462,6 +462,16 @@ class ParseTest(unittest.TestCase):
         self.assertTrue(entries["STFS 2024:1"].url.endswith("/6371?file_id=1"))  # the newest of two listings
         self.assertNotIn("STFS 2007:9", {n for n, e in entries.items() if e.base})  # only its consolidated version here
 
+    def test_scb_fs_official_statistics(self):
+        scb = agency.ScbAdapter()
+        self.assertEqual(scb.listing_urls(None), [scb.listing_url, scb.statistics_url])
+        entries = scb.parse_listing(fixture("agency-scb-fs-statistics.html"), scb.statistics_url)
+        self.assertEqual([(e.number, e.base) for e in entries],
+                         [("SCB-FS 2023:6", True), ("SCB-FS 2023:17", False), ("SCB-FS 2016:17", True)])
+        self.assertEqual(entries[0].amended_by, ["SCB-FS 2023:17"])
+        self.assertEqual(entries[0].url, scb.statistics_url + "/scb-fs-202306/")
+        self.assertEqual(entries[2].title, "Statistiska centralbyråns föreskrifter om kvalitet för den officiella statistiken")
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

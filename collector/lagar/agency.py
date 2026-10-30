@@ -988,13 +988,37 @@ class ScbAdapter:
     issuer = "Statistiska centralbyrån"
     base_url = "https://www.scb.se"
     listing_url = base_url + "/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/?currentpageId=98388&type=UL"
+    # The regulations on official statistics: base regulations named in the text, amendments linked.
+    statistics_url = (base_url + "/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/"
+                      "scbs-foreskrifter-for-offentliggorande-m.m.-av-officiell-statistik")
     detail = True
     has_text = True
 
     def listing_urls(self, args):
-        return [self.listing_url]
+        return [self.listing_url, self.statistics_url]
+
+    def _statistics(self, text):
+        root = parse_html(text)
+        flat = (root.find("main") or root).text()
+        entries, amending = {}, {}
+        for match in re.finditer(r"SCB-FS (\d{4}):0*(\d+) (.*?)(?=;|SCB-FS \d{4}:\d+ |Bilaga|Dela sidan|$)", flat):
+            number = f"SCB-FS {match.group(1)}:{int(match.group(2))}"
+            title = _clean(match.group(3))
+            if number in entries:
+                continue
+            changes = _AMENDING.search(title)
+            if changes:
+                for ref in _SCB_REF.finditer(title[changes.start():]):
+                    amending.setdefault(f"SCB-FS {ref.group(1)}:{int(ref.group(2))}", set()).add(number)
+            slug = f"scb-fs-{match.group(1)}{int(match.group(2)):02d}"
+            entries[number] = Entry(number, title, f"{self.statistics_url}/{slug}/", base=not changes)
+        for entry in entries.values():
+            entry.amended_by = sorted(amending.get(entry.number, ()), key=number_key)
+        return list(entries.values())
 
     def parse_listing(self, text, url):
+        if url == self.statistics_url:
+            return self._statistics(text)
         rows, amending = [], {}
         for row in parse_html(text).find_all("tr"):
             cells = [c for c in row.children if isinstance(c, Node) and c.tag in ("td", "th")]
