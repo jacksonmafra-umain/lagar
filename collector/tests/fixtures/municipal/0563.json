@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.valdemarsvik.se/kommun/kommun-politik/kommunal-forfattningssamling/": "0563-listing.html"
+  },
+  "count": 21,
+  "sample": {
+    "number": "2019/04/felparkeringsavgifter-1",
+    "title": "Felparkeringsavgifter",
+    "url": "https://www.valdemarsvik.se/wp-content/uploads/2019/04/felparkeringsavgifter-1.pdf"
+  },
+  "excluded": [
+    "Arbetsordning kommunfullmäktige",
+    "Avfallsplan 2022-2025",
+    "Biblioteksplan 2025-2028"
+  ]
+}

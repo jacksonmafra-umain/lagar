@@ -1,0 +1,14 @@
+{
+  "listings": {
+    "https://www.gnosjo.se/kommun-och-politik/handlingar-och-arkiv/foreskrifter": "0617-listing.html"
+  },
+  "count": 4,
+  "sample": {
+    "number": "18.3ab40392190125a00f4512d",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.gnosjo.se/download/18.3ab40392190125a00f4512d/1719924161573/Lokala%20ordningsf%C3%B6reskrifter%20inkl%20bilagor,%20antagen%202024-06-27.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för alkoholservering till allmänheten och slutna sällskap"
+  ]
+}

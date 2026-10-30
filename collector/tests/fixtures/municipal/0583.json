@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.motala.se/kommun-och-politik/planer-och-styrdokument/styrdokument/kommunal-forfattningssamling/": "0583-listing.html"
+  },
+  "count": 32,
+  "sample": {
+    "number": "Avfallstaxa-Motala-kommun-fran-2026",
+    "title": "Avfallstaxa",
+    "url": "https://www.motala.se/media/uploads/Avfallstaxa-Motala-kommun-fran-2026.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige",
+    "Arkivreglemente",
+    "Attestreglemente"
+  ]
+}

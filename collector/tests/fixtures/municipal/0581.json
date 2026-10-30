@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://norrkoping.se/kommun-och-politik/beslut-dokument-taxor-och-avgifter/allmanna-foreskrifter": "0581-listing.html",
+    "https://norrkoping.se/kommun-och-politik/beslut-dokument-taxor-och-avgifter/taxor-och-avgifter": "0581-listing-2.html"
+  },
+  "count": 18,
+  "sample": {
+    "number": "18.19a5819318e5a4c8ee2a918",
+    "title": "Allmänna föreskrifter för avfallshanteringen i Norrköpings kommun",
+    "url": "https://norrkoping.se/download/18.19a5819318e5a4c8ee2a918/1713449329175/Allm%C3%A4nna%20f%C3%B6reskrifter%20f%C3%B6r%20avfallshanteringen%20i%20Norrk%C3%B6pings%20kommun%20KS%202023-0530.pdf"
+  },
+  "excluded": [
+    "Riktlinje för markupplåtelse på allmän platsmark",
+    "Allmänna handlingar – Beskrivning av kommunstyrelsens allmänna handlingar",
+    "Markupplåtelse på allmän platsmark"
+  ]
+}

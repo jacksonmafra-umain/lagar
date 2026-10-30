@@ -1162,6 +1162,143 @@
         "\\.pdf\\s*$"
       ]
     },
+    "0561": {
+      "name": "Åtvidaberg",
+      "issuer": "Åtvidabergs kommun",
+      "region_code": "05",
+      "collection": "Regler och styrande dokument",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.atvidaberg.se"],
+      "listings": ["https://www.atvidaberg.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument"],
+      "section_level": 2,
+      "sections": ["Föreskrifter och regler", "Taxor och avgifter"]
+    },
+    "0563": {
+      "name": "Valdemarsvik",
+      "issuer": "Valdemarsviks kommun",
+      "region_code": "05",
+      "collection": "Författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.valdemarsvik.se"],
+      "listings": ["https://www.valdemarsvik.se/kommun/kommun-politik/kommunal-forfattningssamling/"],
+      "section_level": 4,
+      "sections": ["Avgifter och taxor", "Lokala föreskrifter"],
+      "link_pattern": "^https://www\\.valdemarsvik\\.se/wp-content/uploads/.*\\.pdf$",
+      "number": [{"from": "href", "pattern": "/wp-content/uploads/(\\d{4}/\\d{2}/[^/]+?)\\.pdf$"}]
+    },
+    "0581": {
+      "name": "Norrköping",
+      "issuer": "Norrköpings kommun",
+      "region_code": "05",
+      "collection": "Allmänna föreskrifter och taxor",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["norrkoping.se"],
+      "listings": [
+        "https://norrkoping.se/kommun-och-politik/beslut-dokument-taxor-och-avgifter/allmanna-foreskrifter",
+        "https://norrkoping.se/kommun-och-politik/beslut-dokument-taxor-och-avgifter/taxor-och-avgifter"
+      ]
+    },
+    "0582": {
+      "name": "Söderköping",
+      "issuer": "Söderköpings kommun",
+      "region_code": "05",
+      "collection": "Styrande dokument",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["www.soderkoping.se"],
+      "listings": ["https://www.soderkoping.se/kommun-politik/styrande-dokument/"],
+      "link_pattern": "^https://www\\.soderkoping\\.se/globalassets/.*\\.pdf$",
+      "number": [{"from": "href", "pattern": "/globalassets/documents/(?:[^/]+/)*([^/]+?)\\.pdf$"}]
+    },
+    "0583": {
+      "name": "Motala",
+      "issuer": "Motala kommun",
+      "region_code": "05",
+      "collection": "Kommunal författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.motala.se"],
+      "listings": [
+        "https://www.motala.se/kommun-och-politik/planer-och-styrdokument/styrdokument/kommunal-forfattningssamling/"
+      ],
+      "section_level": 2,
+      "sections": ["Taxor och avgifter", "Föreskrifter och bestämmelser"],
+      "link_pattern": "^https://www\\.motala\\.se/media/uploads/.*\\.pdf$",
+      "number": [{"from": "href", "pattern": "/media/uploads/(.+?)\\.pdf$"}],
+      "title_strip": ["\\s*\\(PDF,[^)]*\\)\\s*$"]
+    },
+    "0584": {
+      "name": "Vadstena",
+      "issuer": "Vadstena kommun",
+      "region_code": "05",
+      "collection": "Styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.vadstena.se"],
+      "listings": [
+        "https://www.vadstena.se/kommun-demokrati/politik-och-beslut/sa-styrs-vadstena/styrande-dokument/lokala-foreskrifter/",
+        "https://www.vadstena.se/kommun-demokrati/politik-och-beslut/sa-styrs-vadstena/styrande-dokument/taxor-och-avgifter/"
+      ],
+      "link_pattern": "^https://www\\.vadstena\\.se/wp-content/uploads/.*\\.pdf$",
+      "number": [{"from": "href", "pattern": "/wp-content/uploads/(\\d{4}/\\d{2}/[^/]+?)\\.pdf$"}],
+      "title_strip": ["\\s*\\(pdf,[^)]*\\).*$"],
+      "title_exclude": ["riktlinje", "tomtpris", "broschyr", "sammanställning"]
+    },
+    "0586": {
+      "name": "Mjölby",
+      "issuer": "Mjölby kommun",
+      "region_code": "05",
+      "collection": "Regler och styrande dokument",
+      "preset": "sitevision",
+      "hosts": ["www.mjolby.se"],
+      "listings": ["https://www.mjolby.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument"],
+      "section_level": 2,
+      "sections": ["Föreskrifter"],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\s*\\(pdf\\)\\s*$",
+        "\\.pdf\\s*$"
+      ]
+    },
+    "0617": {
+      "name": "Gnosjö",
+      "issuer": "Gnosjö kommun",
+      "region_code": "06",
+      "collection": "Föreskrifter",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.gnosjo.se"],
+      "listings": ["https://www.gnosjo.se/kommun-och-politik/handlingar-och-arkiv/foreskrifter"]
+    },
+    "0642": {
+      "name": "Mullsjö",
+      "issuer": "Mullsjö kommun",
+      "region_code": "06",
+      "collection": "Styrande dokument",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.mullsjo.se"],
+      "listings": ["https://www.mullsjo.se/kommun-och-politik/styrande-dokument"],
+      "section_level": 2,
+      "sections": ["Lokala föreskrifter"],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\s*\\(pdf\\)\\s*$",
+        "\\.pdf\\s*$"
+      ]
+    },
+    "0643": {
+      "name": "Habo",
+      "issuer": "Habo kommun",
+      "region_code": "06",
+      "collection": "Kommunala föreskrifter",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["habokommun.se"],
+      "listings": ["https://habokommun.se/kommun-och-politik/kommunala-foreskrifter"]
+    },
     "1280": {
       "name": "Malmö",
       "issuer": "Malmö stad",

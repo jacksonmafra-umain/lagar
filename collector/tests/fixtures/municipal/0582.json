@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.soderkoping.se/kommun-politik/styrande-dokument/": "0582-listing.html"
+  },
+  "count": 9,
+  "sample": {
+    "number": "ramunderberget-naturreservat-2001-11-28-skotselplan",
+    "title": "Skötselplan för naturreservatet Ramunderberget",
+    "url": "https://www.soderkoping.se/globalassets/documents/06-kommun-och-politik/06-styrande-dokument/ramunderberget-naturreservat-2001-11-28-skotselplan.pdf"
+  },
+  "excluded": [
+    "Delegationsordning för kommunstyrelsen",
+    "Delegationsordning för barn- och utbildningsnämnden",
+    "Delegationsordning för samhällsbyggnadsnämnden"
+  ]
+}
