@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://docweb.evolution.lidingo.se/api/folders/db351e4a-67c0-4c27-889a-1280378e072c": "0186-listing.json",
+    "https://docweb.evolution.lidingo.se/api/folders/ae3b3c3e-1143-40c2-8c84-36e800ef4845": "0186-listing-2.json"
+  },
+  "count": 18,
+  "sample": {
+    "number": "35d5b411-9755-434a-9f4e-173b4a18ab6e",
+    "title": "Författning F27 Allmänna bestämmelser för brukande av den allmänna vatten- och avloppsanläggningen",
+    "url": "https://docweb.evolution.lidingo.se/api/download/35d5b411-9755-434a-9f4e-173b4a18ab6e/db351e4a-67c0-4c27-889a-1280378e072c"
+  },
+  "excluded": []
+}

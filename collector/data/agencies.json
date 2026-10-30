@@ -1152,53 +1152,17 @@
     "source:svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": 536
   },
   "kommuner": {
-    "0115": {
-      "status": "no_adapter",
-      "note": "Vallentuna's författningssamling is a Sitevision file-share module with folders; the folder pages answer 404 to a plain request, so the files cannot be listed without the browser client (checked 2026-10-30)."
-    },
-    "0186": {
-      "status": "no_adapter",
-      "note": "Lidingö publishes its collection in Evolution DocumentWeb, a JavaScript application with no static document list; needs an adapter for its API."
-    },
-    "0191": {
-      "status": "no_adapter",
-      "note": "Sigtuna's collection is a Netpublicator reader embedded in the page; needs a Netpublicator adapter."
-    },
-    "0380": {
-      "status": "no_adapter",
-      "note": "Uppsala has no index page: each rule is its own page under /kommun-och-politik/publikationer/styrdokument/ with the PDF under /contentassets/, findable only through the sitemap; needs a sitemap-driven listing."
-    },
     "0580": {
       "status": "no_adapter",
       "note": "Linköping links its rules to Google Drive share pages instead of files on its own site; not collected pending an owner decision on that host."
-    },
-    "0604": {
-      "status": "no_adapter",
-      "note": "Aneby has no collection page: the lokala ordningsföreskrifter are an HTML page and the hälsoskydd rules one PDF on the miljö page; the avfallsföreskrifter adopted 2026-02-23 were not found."
-    },
-    "0680": {
-      "status": "no_adapter",
-      "note": "Jönköping publishes its rules as PDFs scattered over topic pages with no index; the sitemap answers 401."
     },
     "0683": {
       "status": "no_adapter",
       "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30."
     },
-    "0834": {
-      "status": "no_adapter",
-      "note": "Torsås lists its rules in accordion tables where every link reads 'Ladda ner' and the title is in another table cell; needs a row-aware listing."
-    },
     "0861": {
       "status": "no_adapter",
       "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30; retry later."
-    },
-    "0883": {
-      "status": "no_adapter",
-      "note": "Västervik's file list (/globalassets/forfattningssamlingen/) is not in the static HTML and its folder URL answers HTTP 500."
-    },
-    "0980": {
-      "status": "no_adapter",
-      "note": "Region Gotland's document lists point at dokument.gotland.se/IntegrationService.svc/doc/content/<id>, not at files on the website; needs an adapter for that document service."
     },
     "1080": {
       "status": "blocked",

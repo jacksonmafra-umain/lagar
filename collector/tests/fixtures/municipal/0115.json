@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.vallentuna.se/sitemapindex.xml": "0115-listing.xml",
+    "https://www.vallentuna.se/sitemap1.xml.gz": "0115-listing-2.xml"
+  },
+  "count": 29,
+  "sample": {
+    "number": "18.63572f8619eeecafce0842c",
+    "title": "Lokala ordningsföreskrifter",
+    "url": "https://www.vallentuna.se/download/18.63572f8619eeecafce0842c/1782478413844/1.8.2.1%20Lokala%20ordningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": []
+}
