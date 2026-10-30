@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.lycksele.se/kommun/kommun-och-politik/avgifter-och-taxor/bygga-bo-och-miljo/": "2481-listing1.html",
+    "https://www.lycksele.se/kommun/kommun-och-politik/avgifter-och-taxor/kultur-och-fritid/": "2481-listing2.html",
+    "https://www.lycksele.se/kommun/kommun-och-politik/avgifter-och-taxor/naringsliv-och-arbete/": "2481-listing3.html",
+    "https://www.lycksele.se/lavab/om-oss/dokument/taxor/": "2481-listing4.html",
+    "https://www.lycksele.se/lavab/om-oss/dokument/abva/": "2481-listing5.html",
+    "https://www.lycksele.se/lavab/avfall-och-atervinning2/renhallningsordning/": "2481-listing6.html"
+  },
+  "count": 19,
+  "sample": {
+    "number": "mn-2025-780taxa-myndighetsnamnd-2026",
+    "title": "Taxa för Myndighetsnämnden 2026",
+    "url": "https://www.lycksele.se/globalassets/dokument/avgifter-och-taxor/mn-2025-780taxa-myndighetsnamnd-2026.pdf"
+  },
+  "excluded": []
+}

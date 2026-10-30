@@ -21,7 +21,9 @@
     },
     "statistiska-centralbyrans-forfattningssamling-scb-fs": {
       "series": "SCB-FS",
-      "agency": "Statistiska centralbyrån"
+      "agency": "Statistiska centralbyrån",
+      "status": "partial",
+      "note": "Full text from SCB's page per regulation, listed in its table of regulations on reporting duties (uppgiftslämnande) in force. The monthly consumer price index notices and the regulations on official statistics (published only as PDF) are not collected."
     },
     "aklagarmyndighetens-forfattningssamling-afs": {
       "series": "ÅFS",
@@ -53,15 +55,21 @@
     },
     "statens-energimyndighets-forfattningssamling-stemfs": {
       "series": "STEMFS",
-      "agency": "Statens energimyndighet"
+      "agency": "Statens energimyndighet",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Statens energimyndighet's regulation page; the text is published only as PDF."
     },
     "styrelsens-for-ackreditering-och-teknisk-kontroll-swedac-forfattningssamling-stafs": {
       "series": "STAFS",
-      "agency": "Styrelsen för ackreditering och teknisk kontroll (Swedac)"
+      "agency": "Styrelsen för ackreditering och teknisk kontroll (Swedac)",
+      "status": "collected",
+      "note": "Full text from Swedac's regulation register (regelverk.swedac.se): a JSON index of every STAFS regulation, in force and repealed, and a Markdown file per regulation, the consolidated version where there is one."
     },
     "riksarkivets-forfattningssamling-ra-fs": {
       "series": "RA-FS",
-      "agency": "Riksarkivet"
+      "agency": "Riksarkivet",
+      "status": "collected_pdf",
+      "note": "Base regulations in force and repealed, from the JSON API behind foreskrifter.riksarkivet.se; the text is published only as PDF."
     },
     "konsumentverkets-forfattningssamling-kovfs": {
       "series": "KOVFS",
@@ -88,8 +96,8 @@
     "skatteverkets-forfattningssamling-skvfs": {
       "series": "SKVFS",
       "agency": "Skatteverket",
-      "status": "no_adapter",
-      "note": "An earlier robots.txt request was rejected by a WAF; on 2026-10-29 robots.txt answered normally and allows the regulation pages. Proposed as a next series on #115."
+      "status": "blocked",
+      "note": "www4.skatteverket.se answers robots.txt and the SKVFS listing with a WAF 'Request Rejected' page (rechecked 2026-10-30); not collected."
     },
     "kronofogdemyndighetens-forfattningssamling-kfmfs": {
       "series": "KFMFS",
@@ -164,15 +172,21 @@
     },
     "patent-och-registreringsverkets-forfattningssamling-prvfs": {
       "series": "PRVFS",
-      "agency": "Patent- och registreringsverket"
+      "agency": "Patent- och registreringsverket",
+      "status": "collected_pdf",
+      "note": "Base regulations in force from PRV's division A1, with links to amending regulations; the text is published only as PDF."
     },
     "polismyndighetens-forfattningssamling-pmfs": {
       "series": "PMFS",
-      "agency": "Polismyndigheten"
+      "agency": "Polismyndigheten",
+      "status": "collected_pdf",
+      "note": "Regulations in force from Polismyndigheten's paginated list, with entry into force, amendments and consolidated versions; it also holds Rikspolisstyrelsen's RPSFS regulations still in force, stored with their RPSFS numbers. The text is published only as PDF."
     },
     "post-och-telestyrelsens-forfattningssamling-ptsfs": {
       "series": "PTSFS",
-      "agency": "Post- och telestyrelsen"
+      "agency": "Post- och telestyrelsen",
+      "status": "blocked",
+      "note": "pts.se answers the regulation library with a Radware 'Verifying your browser' bot challenge (2026-10-30); not collected."
     },
     "revisorsinspektionens-forfattningssamling-rifs": {
       "series": "RIFS",
@@ -182,7 +196,9 @@
     },
     "riksdagsforvaltningens-forfattningssamling-rfs": {
       "series": "RFS",
-      "agency": "Riksdagsförvaltningen"
+      "agency": "Riksdagsförvaltningen",
+      "status": "collected",
+      "note": "Full text from Riksdagen's open data (doktyp rfs): base regulations in force, with the consolidated Fulltext document where there is one; repealed ones carry no repeal date and are not stored."
     },
     "sjofartsverkets-forfattningssamling-sjofs": {
       "series": "SJÖFS",
@@ -226,7 +242,9 @@
     },
     "universitets-och-hogskoleradets-forfattningssamling-uhrfs": {
       "series": "UHRFS",
-      "agency": "Universitets- och högskolerådet"
+      "agency": "Universitets- och högskolerådet",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Universitets- och högskolerådet's regulation page; the text is published only as PDF."
     },
     "vetenskapsradets-forfattningssamling-vrfs": {
       "series": "VRFS",
@@ -308,7 +326,9 @@
     },
     "pensionsmyndighetens-forfattningssamling-pfs": {
       "series": "PFS",
-      "agency": "Pensionsmyndigheten"
+      "agency": "Pensionsmyndigheten",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Pensionsmyndigheten's regulation page; the text is published only as PDF."
     }
   },
   "shared": {

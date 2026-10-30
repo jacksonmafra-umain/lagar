@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.storfors.se/kommunochpolitik/lagarochregler.4.7f1aedeb14e64fcd26ce55b5.html": "1760-listing.html"
+  },
+  "count": 8,
+  "sample": {
+    "number": "17 FS 2007:89",
+    "title": "lokala ordningsföreskrifterna 2007",
+    "url": "https://www.storfors.se/download/18.7f1aedeb14e64fcd26ce5610/1548835981522/17%20FS%202007_89%20Lokala%20ordningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": [
+    "Lokala ordningsföreskrifter",
+    "Lokala hälsoskyddsföreskrifter för Storfors kommun",
+    "Avfallsföreskrifter"
+  ]
+}

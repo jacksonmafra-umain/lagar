@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/byggabomiljo/miljo.4.714dad16d46439ef9401b.html": "2262-listing1.html",
+    "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/byggabomiljo/foreskrifterinomavfallochatervinning.4.48ff27ec16df76a85d01ae81.html": "2262-listing2.html",
+    "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/byggabomiljo/taxorochavgifter.4.714dad16d46439ef94030.html": "2262-listing3.html",
+    "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/vagarochtrafik.4.714dad16d46439ef93fef.html": "2262-listing4.html",
+    "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/kulturochfritid.4.714dad16d46439ef93fda.html": "2262-listing5.html",
+    "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/omsorgochstod.4.714dad16d46439ef93fb0.html": "2262-listing6.html"
+  },
+  "count": 38,
+  "sample": {
+    "number": "18.48ff27ec16df76a85d01aeeb",
+    "title": "Föreskrifter och skötselplan för Fågelsångens naturreservat",
+    "url": "https://www.timra.se/download/18.48ff27ec16df76a85d01aeeb/1573739071993/F%C3%B6reskrifter%20och%20sk%C3%B6tselplan%20f%C3%B6r%20F%C3%A5gels%C3%A5ngens%20naturreservat.pdf"
+  },
+  "excluded": []
+}

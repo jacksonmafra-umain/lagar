@@ -1,0 +1,14 @@
+{
+  "listings": {
+    "https://www.filipstad.se/toppmeny/kommunochpolitik/omkommunen/kommunalaforeskrifter.2179.html": "1782-listing1.html",
+    "https://www.filipstad.se/toppmeny/bogataochmiljo/avfallochrenhallning/taxorforeskrifterochstyrdokumentforrenhallningifilipstadskommun.4722.html": "1782-listing2.html",
+    "https://www.filipstad.se/toppmeny/bogataochmiljo/vattenochavlopp/taxorforeskrifterochstyrdokumentforvattenochavloppifilipstadskommun.4724.html": "1782-listing3.html"
+  },
+  "count": 8,
+  "sample": {
+    "number": "18.167fb7f712709ae7e4e80008151",
+    "title": "Renhållningsordningen",
+    "url": "https://www.filipstad.se/download/18.167fb7f712709ae7e4e80008151/1380273864691/Renh%C3%A5llningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": []
+}

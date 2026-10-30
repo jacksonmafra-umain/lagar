@@ -135,8 +135,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   TSFS have no decision date on their pages. Arbetsmiljöverket's robots.txt
   disallows its folder of original PDFs, which is never requested. Boverket
   (BFS, API key probably needed; not signed up for now), Skatteverket (SKVFS:
-  an earlier robots.txt request was rejected by a WAF, on 2026-10-29 it
-  answered normally), Migrationsverket (MIGRFS) and the other series are not
+  on 2026-10-30 `www4.skatteverket.se` answered both robots.txt and the SKVFS
+  listing with a WAF "Request Rejected" page, so the series is a gap, #206;
+  PTSFS: pts.se serves a Radware bot challenge, #194),
+  Migrationsverket (MIGRFS) and the other series are not
   collected yet (#115). [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Agency series published as a list of PDF links (configured in
@@ -165,6 +167,44 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   numbered in ÅFS that change Riksåklagarens older regulations (`föreskrifter
   (1999:178)`) are not stored. Document ids map `å` to `aa` (`aafs-2023-7`) so
   they do not collide with Arbetsmiljöverket's AFS.
+- STAFS (Swedac, 187 base regulations: 37 in force and 150 repealed) as of
+  2026-10-30, in full text: Swedac's register `regelverk.swedac.se` publishes
+  `foreskrifter.json` (every regulation with dates, the regulation it amends
+  and its repeal) and a Markdown file per regulation, the consolidated version
+  where there is one. Repealed regulations are stored with `repealed` set; 15
+  repealed ones whose repeal date the index does not give are not stored. The
+  PDF folder on `www.swedac.se` is disallowed by robots.txt and is not used.
+- PFS (Pensionsmyndigheten, 81 base regulations) and PRVFS (Patent- och
+  registreringsverket, 17 base regulations in force, from its division A1) as
+  of 2026-10-30, with links to the PDFs. Pensionsmyndigheten's page also lists
+  regulations of the predecessor series (FKFS, RFFS, PPMFS) still in force;
+  only PFS numbers are collected.
+- PMFS (Polismyndigheten, 50 regulations in force) and RPSFS (29 regulations of
+  the former Rikspolisstyrelsen still in force) as of 2026-10-30, from the four
+  pages of Polismyndigheten's list, with entry into force, amendments and the
+  consolidated (sammanställd) PDFs. Repealed regulations are only listed
+  separately and are not collected.
+- SCB-FS (Statistiska centralbyrån, 48 base regulations on reporting duties in
+  force) as of 2026-10-30, in full text from SCB's page per regulation. SCB's
+  table also lists amending and repealing regulations (44, in `amended_by`).
+  Not collected: the monthly consumer price index notices (KPI, about 110) and
+  the regulations on official statistics, published only as PDF on a separate
+  page; the series is partial.
+- UHRFS (Universitets- och högskolerådet, 13 base regulations in force with
+  their consolidated PDFs), STEMFS (Energimyndigheten's document archive,
+  read at the 10 s crawl delay its robots.txt asks for) and RFS
+  (Riksdagsförvaltningen, from Riksdagen's open data `doktyp=rfs`, in full
+  text: the consolidated "Fulltext" document where there is one) as of
+  2026-10-30. RFS: only base regulations in force are stored; the open data
+  marks repealed ones (`Upphävd`) without a repeal date.
+- RA-FS (Riksarkivet, general regulations) as of 2026-10-30, from the JSON API
+  behind its register `foreskrifter.riksarkivet.se` (`api/rafs/sok`): base
+  regulations in force and repealed ones, whose `repealed` date is the entry
+  into force of the regulation that repealed them; a repealed regulation whose
+  repealing regulation is not in the register is not stored. Riksarkivet's
+  agency-specific regulations (RA-MS) are not collected.
+- PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
+  regulation library with a Radware bot-verification page (#194).
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630
@@ -209,6 +249,12 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Göteborg prints no KFS-style number. The detail pages carry a
     `noindex,nofollow` robots meta tag (a search-engine indexing hint);
     robots.txt allows the paths.
+  - Malå, Storuman and Åsele publish part of their taxor and hälsoskydd rules only as
+    HTML pages, which the PDF listings do not cover; Lycksele's lokala
+    ordningsföreskrifter PDF was not found. Nordmaling, Norsjö, Malå, Storuman,
+    Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
+    page without headings, so their configs keep only listed file names; a new
+    document with another name is not picked up until the config is updated.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources

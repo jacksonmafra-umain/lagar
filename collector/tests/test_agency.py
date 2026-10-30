@@ -207,6 +207,45 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(agency.NotBase):
             zfs.parse_detail(fixture("agency-listed-detail.html"), entries[1])
 
+    def test_stafs_index_and_markdown(self):
+        stafs = agency.SwedacAdapter()
+        entries = {e.number: e for e in stafs.parse_listing(fixture("agency-stafs-index.json"), stafs.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base),
+                         ["STAFS 2022:7", "STAFS 2024:13", "STAFS 2025:1"])
+        self.assertFalse(entries["STAFS 2026:4"].base)  # amends 2022:7
+        self.assertFalse(entries["STAFS 2019:3"].base)  # repeals other regulations
+        self.assertFalse(entries["STAFS 2015:16"].base)  # repealed, no date known
+        self.assertNotIn("Rättelse STAFS 2026:3", entries)
+        consolidated = entries["STAFS 2022:7"]
+        self.assertTrue(consolidated.url.endswith("/stafs-2022-7-konsol.md"))
+        self.assertEqual(consolidated.amended_by, ["STAFS 2026:4"])
+        self.assertEqual((entries["STAFS 2024:13"].in_force, entries["STAFS 2024:13"].repealed),
+                         ("2025-01-01", "2026-01-01"))
+        regulation = stafs.parse_detail("---\nid: STAFS 2022:7\n---\n# STAFS 2022:7 x\n\n## 1 kap.\n\ntext", consolidated)
+        self.assertEqual((regulation.version, regulation.amended_through), ("Konsoliderad version", "STAFS 2026:4"))
+        self.assertEqual([label for label, _ in regulation.pdfs], ["STAFS 2022:7", "STAFS 2022:7 (konsoliderad version)"])
+        self.assertEqual(regulation.text, "### 1 kap.\n\ntext")
+        regulation = stafs.parse_detail(fixture("agency-stafs-2025-1.md"), entries["STAFS 2025:1"])
+        self.assertEqual((regulation.issued, regulation.published, regulation.in_force),
+                         ("2025-02-04", "2025-02-06", "2025-04-01"))
+        self.assertTrue(regulation.text.startswith("### Tillämpningsområde\n\n**1 §** Dessa föreskrifter"))
+        self.assertIn("[STAFS 2016:1](https://regelverk.swedac.se/foreskrifter/swedac/stafs-2016-1.html)", regulation.text)
+        self.assertIn("[^1]: EUT L 42", regulation.text)
+        with self.assertRaises(ValueError):
+            stafs.parse_detail("---\nid: STAFS 2020:1\n---\n", entries["STAFS 2025:1"])
+
+    def test_prvfs_division_a1(self):
+        prv = agency.PrvAdapter()
+        entries = prv.parse_listing(fixture("agency-prvfs-a1.html"), prv.listing_url)
+        self.assertEqual([e.number for e in entries], ["PRVFS 2026:1", "PRVFS 2011:1", "PRVFS 1977:2"])
+        first, repealing, old = entries
+        self.assertTrue(first.title.startswith("Patent- och registreringsverkets (PRV) föreskrifter om skydd"))
+        self.assertNotIn("Bemyndigande", first.title)
+        self.assertEqual(first.amended_by, ["PRVFS 2026:2"])  # an unlabelled link, numbered by its file name
+        self.assertTrue(first.url.endswith("/26prvfs-1_o2.pdf"))
+        self.assertIn("(PRVFS 1986:1, V:3)", repealing.title)  # a reference in the title, not an amendment
+        self.assertEqual(repealing.amended_by, [])
+        self.assertEqual(old.amended_by, ["PRVFS 1986:2"])
     def test_afs_a_listing(self):
         adapter = agency.AklagareAdapter()
         entries = adapter.parse_listing(fixture("agency-afs-a-listing.html"), adapter.listing_url)
@@ -220,6 +259,90 @@ class ParseTest(unittest.TestCase):
         self.assertEqual((regulation.issued, regulation.published), ("2023-12-18", "2023-12-19"))
         self.assertEqual(regulation.pdfs, [("ÅFS 2023:7", base.url)])
         self.assertEqual(agency.corpus_id(base.number), "aafs-2023-7")
+
+    def test_pmfs_listing_and_pages(self):
+        polisen = agency.PolisenAdapter()
+        text = fixture("agency-pmfs-listing.html")
+        self.assertEqual(polisen.more_pages(text, polisen.listing_url),
+                         [polisen.listing_url + "2/", polisen.listing_url + "3/"])
+        entries = polisen.parse_listing(text, polisen.listing_url)
+        self.assertEqual([e.number for e in entries], ["PMFS 2026:25", "PMFS 2023:7"])
+        self.assertEqual(entries[0].in_force, "2026-11-01")
+        self.assertTrue(entries[0].title.startswith("Polismyndighetens föreskrifter och allmänna råd om"))
+        self.assertEqual(entries[1].amended_by, ["PMFS 2024:10"])
+        self.assertEqual([label for label, _ in entries[1].pdfs], ["PMFS 2023:7", "PMFS 2023:7 (sammanställd version)"])
+
+    def test_paginated_listing_reads_every_page(self):
+        polisen = agency.PolisenAdapter()
+        first = fixture("agency-pmfs-listing.html")
+        pages = {polisen.listing_url: first.encode(), polisen.listing_url + "2/": first.encode(),
+                 polisen.listing_url + "3/": first.encode()}
+        client = FakeClient(pages)
+        args = agency.parse_args(["--series", "PMFS"])
+        entries = list(agency._entries(client, agency._Robots(client, polisen.base_url), polisen, args))
+        self.assertEqual(len(entries), 6)
+        self.assertEqual(client.calls.count(polisen.listing_url + "2/"), 1)
+
+    def test_scb_fs_table_and_detail(self):
+        scb = agency.ScbAdapter()
+        entries = scb.parse_listing(fixture("agency-scb-fs-listing.html"), scb.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [
+            ("SCB-FS 2004:9", False), ("SCB-FS 2018:20", False), ("SCB-FS 2019:15", True), ("SCB-FS 2020:16", False)])
+        base = entries[2]
+        self.assertEqual(base.amended_by, ["SCB-FS 2020:16"])
+        self.assertTrue(base.url.startswith("https://www.scb.se/link/"))
+        regulation = scb.parse_detail(fixture("agency-scb-fs-detail.html"), base)
+        self.assertEqual(regulation.published, "2019-04-04")
+        self.assertFalse(regulation.title.endswith(";"))
+        self.assertTrue(regulation.text.startswith("Statistiska centralbyrån (SCB) föreskriver"))
+        self.assertIn("1 § Ägare till nybyggda hus", regulation.text)
+        self.assertEqual(len(regulation.pdfs), 1)
+        with self.assertRaises(ValueError):
+            scb.parse_detail(fixture("agency-scb-fs-detail.html"), entries[3])
+
+    def test_stemfs_archive(self):
+        stem = agency.EnergimyndighetenAdapter()
+        text = fixture("agency-stemfs-listing.html")
+        self.assertEqual(stem.more_pages(text, stem.listing_url), [stem.listing_url + "&page=2"])
+        entries = stem.parse_listing(text, stem.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries],
+                         [("STEMFS 2026:1", False), ("STEMFS 2025:4", True), ("STEMFS 2025:1", True)])
+        self.assertEqual(entries[1].title,
+                         "Statens energimyndighets föreskrifter om tillsynsavgifter för tillhandahållande och "
+                         "användning av hållbara flygbränslen")
+        self.assertNotIn("\u00ad", entries[2].title)
+        self.assertIn("fn=STEMFS%202025_1webb.pdf", entries[2].url)
+        self.assertIn("Upph%C3%A4vande", entries[0].url)
+
+    def test_rfs_open_data(self):
+        rfs = agency.RiksdagenAdapter()
+        entries = {e.number: e for e in rfs.parse_listing(fixture("agency-rfs-list.json"), rfs.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base), ["RFS 2019:1"])
+        self.assertFalse(entries["RFS 2018:6"].base)  # repeals another regulation
+        self.assertFalse(entries["RFS 2015:5"].base)  # repealed, no repeal date in the data
+        self.assertFalse(entries["RFS 2026:6"].base)
+        base = entries["RFS 2019:1"]
+        self.assertEqual(base.amended_by, ["RFS 2026:6"])
+        self.assertTrue(base.url.endswith("/dokument/H7D41f325.html"))  # the consolidated text
+        regulation = rfs.parse_detail(fixture("agency-rfs-2019-1.html"), base)
+        self.assertEqual((regulation.issued, regulation.amended_through), ("2019-03-28", "RFS 2026:6"))
+        self.assertEqual(regulation.version, "Konsoliderad version")
+        self.assertTrue(regulation.text.startswith("1 kap. Föreskriftens innehåll"))
+        self.assertNotIn("Fulltextversion", regulation.text)
+        with self.assertRaises(ValueError):
+            rfs.parse_detail(fixture("agency-rfs-2019-1.html"), entries["RFS 2018:6"])
+
+    def test_rafs_register(self):
+        ra = agency.RiksarkivetAdapter()
+        entries = {e.number: e for e in ra.parse_listing(fixture("agency-rafs-sok.json"), ra.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base), ["RA-FS 2013:3", "RA-FS 2026:1"])
+        self.assertFalse(entries["RA-FS 2015:2"].base)  # repealed by a regulation not in the fixture: no date
+        repealed = entries["RA-FS 2013:3"]
+        self.assertEqual(repealed.repealed, entries["RA-FS 2022:3"].in_force)
+        self.assertEqual(repealed.amended_by, ["RA-FS 2018:9", "RA-FS 2022:3"])  # amended, then repealed
+        current = entries["RA-FS 2026:1"]
+        self.assertEqual((current.in_force, current.repealed), ("2026-10-05", None))
+        self.assertEqual(current.url, "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202026-1.pdf")
 
     def test_listed_series_config(self):
         series = agency.load_series()
