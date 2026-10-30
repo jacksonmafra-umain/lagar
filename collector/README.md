@@ -47,8 +47,11 @@ When the corpus changed, the workflow:
 - merges that pull request into `main` (`gh pr merge --merge`) once the collector tests and the
   corpus audit have passed, and deletes the branch.
 
-Every sync workflow ends with the same merge step. A merge that fails, for example on a conflict
-with `main`, leaves the pull request open, and the next run tries again.
+Every sync workflow ends with the same merge step, `.github/scripts/merge-sync-pr.sh`. Syncs run
+side by side and regenerate the same reports, so before each merge attempt the branch takes in
+`main` again: conflicts on the reports are resolved by regenerating them, then the corpus audit
+runs on the merged tree. A conflict on any other file, or a merge that keeps failing, leaves the
+pull request open for a person, and the next run tries again.
 
 The marker only moves inside that commit, so a failed run, a rejected push or an abandoned pull
 request never skips documents: the next run collects them again. A run that finds nothing new
