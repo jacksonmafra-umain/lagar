@@ -53,6 +53,7 @@ import app.lagar.resources.type_case_notice
 import app.lagar.resources.type_case_report
 import app.lagar.resources.type_county_regulation
 import app.lagar.resources.type_eu_decision
+import app.lagar.resources.type_eu_judgment
 import app.lagar.resources.type_eu_directive
 import app.lagar.resources.type_eu_regulation
 import app.lagar.resources.type_fundamental_law
@@ -138,6 +139,7 @@ internal fun typeNameRes(type: String): StringResource = when (type) {
     "eu_regulation" -> Res.string.type_eu_regulation
     "eu_directive" -> Res.string.type_eu_directive
     "eu_decision" -> Res.string.type_eu_decision
+    "eu_judgment" -> Res.string.type_eu_judgment
     "county_regulation" -> Res.string.type_county_regulation
     "municipal_regulation" -> Res.string.type_municipal_regulation
     else -> Res.string.type_other_statute

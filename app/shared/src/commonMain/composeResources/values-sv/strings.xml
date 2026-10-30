@@ -310,6 +310,7 @@
     <string name="type_eu_regulation">EU-förordning</string>
     <string name="type_eu_directive">EU-direktiv</string>
     <string name="type_eu_decision">EU-beslut</string>
+    <string name="type_eu_judgment">EU-dom</string>
     <string name="type_county_regulation">Länsföreskrift</string>
     <string name="type_municipal_regulation">Kommunal föreskrift</string>
     <string name="search_sort_label">Sortera efter</string>
