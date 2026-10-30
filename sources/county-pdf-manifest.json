@@ -81257,6 +81257,273 @@
       "published": null
     },
     {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2021/forfattningar/2021-01-22-13-fs-20211.html",
+      "files": [],
+      "number": "13FS 2021:1",
+      "published": "2021-01-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2021/forfattningar/2021-03-17-13-fs-20212.html",
+      "files": [],
+      "number": "13FS 2021:2",
+      "published": "2021-02-26"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2021/forfattningar/2021-03-19-13-fs-20213.html",
+      "files": [],
+      "number": "13FS 2021:3",
+      "published": "2021-03-19"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2021/forfattningar/2021-09-02-13-fs-20214.html",
+      "files": [],
+      "number": "13FS 2021:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2021/forfattningar/2021-05-14-13-fs-20215.html",
+      "files": [],
+      "number": "13FS 2021:5",
+      "published": "2021-05-14"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2021/forfattningar/2021-05-27-13-fs-20216.html",
+      "files": [],
+      "number": "13FS 2021:6",
+      "published": "2021-05-27"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2021/forfattningar/2021-08-31-13-fs-20218.html",
+      "files": [],
+      "number": "13FS 2021:8",
+      "published": "2021-08-30"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2021/forfattningar/2021-10-26-13-fs-20219.html",
+      "files": [],
+      "number": "13FS 2021:9",
+      "published": "2021-10-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2022/forfattningar/2022-02-17-13-fs-20221.html",
+      "files": [],
+      "number": "13FS 2022:1",
+      "published": "2022-02-07"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2022/forfattningar/2022-02-25-13fs-20222.html",
+      "files": [
+        {
+          "bytes": 114361,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:07:27Z",
+          "sha256": "a368b8a8274bfe407ecdfa165792e183e4f39c9cd1db65c9291118ad833d8137",
+          "url": "https://www.lansstyrelsen.se/download/18.2ddec05a17ee36dc53e13f80/1645104182597/13FS%202022_02.pdf"
+        }
+      ],
+      "number": "13FS 2022:2",
+      "published": "2022-02-25"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2022/forfattningar/2022-03-17-13fs-20223.html",
+      "files": [],
+      "number": "13FS 2022:3",
+      "published": "2022-03-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2022/forfattningar/2022-04-27-13fs-20224.html",
+      "files": [
+        {
+          "bytes": 296400,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:07:30Z",
+          "sha256": "be1df420f8d7ba15189913af1e5311b79aecaffdc671b80331b8b5ef8508af4b",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.3e6dfa9118002b868803339c/1650957935754/13FS%202022_4.pdf"
+        }
+      ],
+      "number": "13FS 2022:4",
+      "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2022/forfattningar/2022-05-06-13-fs-20225.html",
+      "files": [],
+      "number": "13FS 2022:5",
+      "published": "2022-05-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2022/forfattningar/2022-06-21-13-fs-20226.html",
+      "files": [],
+      "number": "13FS 2022:6",
+      "published": "2022-06-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2022/forfattningar/2022-10-07-13-fs-20227.html",
+      "files": [],
+      "number": "13FS 2022:7",
+      "published": "2022-10-07"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2022/forfattningar/2022-11-11-13fs-20228.html",
+      "files": [],
+      "number": "13FS 2022:8",
+      "published": "2022-11-11"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2022/forfattningar/2022-12-02-13fs-20229.html",
+      "files": [],
+      "number": "13FS 2022:9",
+      "published": "2022-12-02"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2022/forfattningar/2022-12-21-13fs-202210.html",
+      "files": [],
+      "number": "13FS 2022:10",
+      "published": "2022-12-21"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2023/forfattningar-2023/2023-05-05-13-fs-20231.html",
+      "files": [],
+      "number": "13FS 2023:1",
+      "published": "2023-05-03"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2023/forfattningar-2023/2023-06-01-13-fs-20232.html",
+      "files": [],
+      "number": "13FS 2023:2",
+      "published": "2023-05-31"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2023/forfattningar-2023/2023-06-28-13-fs-20233.html",
+      "files": [],
+      "number": "13FS 2023:3",
+      "published": "2023-06-26"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2023/forfattningar-2023/2023-09-22-13-fs-20234.html",
+      "files": [
+        {
+          "bytes": 20389,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:07:42Z",
+          "sha256": "3635ae7566501dc70ec9f3598af8c91a41ce2acb99ca2f28e699f38fe93fed19",
+          "url": "https://www.lansstyrelsen.se/download/18.2a78e72318d2a59aabd17d25/1706272176161/13_FS_2023_4.pdf"
+        }
+      ],
+      "number": "13FS 2023:4",
+      "published": "2023-09-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2023/forfattningar-2023/2023-12-08-13-fs-20235.html",
+      "files": [],
+      "number": "13FS 2023:5",
+      "published": "2023-12-08"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2023/forfattningar-2023/2023-12-22-13-fs-20236.html",
+      "files": [],
+      "number": "13FS 2023:6",
+      "published": "2023-12-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-03-22-13-fs-20241.html",
+      "files": [],
+      "number": "13FS 2024:1",
+      "published": "2024-03-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-06-14-13-fs-20242.html",
+      "files": [],
+      "number": "13FS 2024:2",
+      "published": "2024-06-14"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-06-14-13-fs-20243.html",
+      "files": [],
+      "number": "13FS 2024:3",
+      "published": "2024-06-14"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-08-30-13-fs-20244.html",
+      "files": [],
+      "number": "13FS 2024:4",
+      "published": "2024-08-23"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-10-10-13-fs-20245.html",
+      "files": [],
+      "number": "13FS 2024:5",
+      "published": "2024-09-27"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-10-18-13-fs-20246.html",
+      "files": [
+        {
+          "bytes": 116507,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T15:07:53Z",
+          "sha256": "278c6efd4e5a3c9569e9cbd68d9abfba65723bb93e6b5bb32b500d893c0d8e90",
+          "url": "https://www.lansstyrelsen.se/download/18.75dc539919618cb34bb2494d/1744695780707/13FS%202024_06.pdf"
+        }
+      ],
+      "number": "13FS 2024:6",
+      "published": "2024-10-18"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-11-01-13-fs-20247.html",
+      "files": [],
+      "number": "13FS 2024:7",
+      "published": "2024-10-31"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-11-22-13-fs-20248.html",
+      "files": [],
+      "number": "13FS 2024:8",
+      "published": "2024-11-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-11-22-13-fs-20249.html",
+      "files": [],
+      "number": "13FS 2024:9",
+      "published": "2024-11-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-11-22-13-fs-202410.html",
+      "files": [],
+      "number": "13FS 2024:10",
+      "published": "2024-11-22"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-11-22-13-fs-202411.html",
+      "files": [],
+      "number": "13FS 2024:11",
+      "published": "2024-11-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-11-29-13-fs-202412.html",
+      "files": [],
+      "number": "13FS 2024:12",
+      "published": "2024-11-29"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-12-06-13-fs-202413.html",
+      "files": [],
+      "number": "13FS 2024:13",
+      "published": "2024-12-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-12-06-13fs-202414.html",
+      "files": [],
+      "number": "13FS 2024:14",
+      "published": "2024-12-06"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2024/forfattningar-2024/2024-12-13-13-fs-202415.html",
+      "files": [],
+      "number": "13FS 2024:15",
+      "published": "2024-12-13"
+    },
+    {
       "detail_url": "https://www.lansstyrelsen.se/halland/om-oss/om-lansstyrelsen-i-hallands-lan/lanets-forfattningssamling/forfattningar-2025/forfattningar-2025/2025-02-07-13-fs-20251.html",
       "files": [],
       "number": "13FS 2025:1",
