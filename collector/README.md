@@ -449,7 +449,8 @@ There is no API or open data set; the texts are free of copyright (9 § upphovsr
 
 ```
 python3 -I collector/collect.py county --county CODE [--from-year YYYY] [--to-year YYYY] \
-    [--newest-first] [--limit N] [--no-pdf] [--landing-url URL] [--rate SECONDS] \
+    [--newest-first] [--limit N] [--no-pdf] [--no-text] [--refresh-pdf] [--landing-url URL] \
+    [--rate SECONDS] \
     [--config collector/data/counties.json] [--state collector/data/county-state.json] \
     [--manifest sources/county-pdf-manifest.json] [--corpus corpus] [--report FILE]
 ```
@@ -489,21 +490,29 @@ python3 -I collector/collect.py county --county CODE [--from-year YYYY] [--to-ye
   - `files`: `title` is the link text without the number, `.pdf` and an "UPPHÄVD" mark (plus the
     county's `title_strip` patterns); when nothing is left, the paragraph following a plain link is
     used (Dalarna), or else the number itself. `issued` is the decision date of that paragraph when
-    there is one, otherwise null; `in_force` is null. `source` is the PDF and `source_sha256` its
+    there is one, otherwise the "beslutade den ..." date of the PDF text; `in_force` comes from the
+    PDF text like for `pages`. `source` is the PDF and `source_sha256` its
     SHA-256 (with `--no-pdf`, a hash of the link URLs and texts). Files sharing a number (a
     regulation and its map) form one document.
 - Body: a facts block (number, publication and decision dates, entry into force, issuer; for
   `files` also the landing page), the text of the detail page converted to Markdown (lists and
   nested lists kept; links keep their text), then `## Tryckt version` with links to the printed
-  PDF. Regulations published only as PDF (all of the `files` layout) get a one-line note instead of
-  text; a regulation the county marks "UPPHÄVD" gets a note saying so. The PDFs are never parsed.
+  PDF. Regulations published only as PDF (all of the `files` layout, and detail pages without
+  text) get the PDF's text instead, read with `lagar/pdftext.py` and reflowed into paragraphs;
+  with several readable files (a regulation and its appendix) each gets a heading. A PDF without
+  a readable text layer (scanned) is a gap: the body says the text is only in the PDF and nothing
+  is guessed. A regulation the county marks "UPPHÄVD" gets a note saying so. `pdftotext`
+  (poppler-utils) must be installed unless `--no-text` (or `--no-pdf`) is given.
 - PDFs: on detail pages, a paragraph made only of PDF links is the regulation's own printed
   version; PDF links in running text point at other regulations and are not followed. Each own PDF
   is downloaded once (where `robots.txt` allows) to record its size and SHA-256 in the committed
   manifest `sources/county-pdf-manifest.json` (entries `number`, `detail_url` (the landing page for
-  `files`), `published`, `files[]` with `url`, `bytes`, `sha256`, `content_type`, `retrieved_at`);
-  the bytes are not kept. `--no-pdf` records the links with null hashes; a later run without it
-  fills them.
+  `files`), `published`, `files[]` with `url`, `bytes`, `sha256`, `content_type`, `retrieved_at`
+  and, for files whose text was read, `text`: `extracted`, a gap reason such as `no text layer
+  (scanned PDF)`, or `unreadable PDF`); the bytes are not kept. `--no-pdf` records the links with
+  null hashes; a later run without it fills them. A PDF whose hash and `text` are in the manifest
+  is not downloaded again while its corpus file exists, so the body is left as it is; `--refresh-pdf`
+  downloads and reads every PDF again.
 - As for case law, a text containing a personal identity number is recorded as failed.
 - State (git-ignored) is `{"done": {number: source_sha256}, "failed": {number: error}, "blocked":
   null|msg}`; a regulation is skipped without a request when it is done and its file exists. A
