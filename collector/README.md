@@ -574,8 +574,12 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
    - `"preset": "sitevision"`: most kommuner run Sitevision and publish the collection as one flat
      file list (`/download/18.<node id>/<timestamp>/<name>.pdf`). The preset fills in
      `strategy` (`html_index`), `link_pattern`, `number` (the file's node id, which stays the same
-     when the file is replaced), `title_strip` (the ".pdf" and "Pdf, 290 kB." suffixes) and
-     `follow`. The entry's own keys win over the preset's.
+     when the file is replaced), `title_strip` (the ".pdf" and "Pdf, 290 kB." suffixes), `follow`
+     and `embedded_json`. The entry's own keys win over the preset's.
+   - `embedded_json` (`html_index`): Sitevision file-share and file-list modules often render their
+     files in the browser from `AppRegistry.registerInitialState(...)` JSON, so the static HTML has
+     no anchors for them. With this flag, every object in that JSON with a `url` (or `uri`) under
+     `/download/` and a `title` (or `name`) counts as a link under the heading before the script.
    - `follow` (regex, `html_index`): links on a listing whose absolute URL matches are read as
      further listing pages (pagination), up to 100 pages, skipping those robots.txt disallows. The
      Sitevision preset follows its file list's `?lp-page=N` links.
