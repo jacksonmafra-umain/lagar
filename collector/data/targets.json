@@ -658,6 +658,36 @@
     "as_of": "2026-10-30"
   },
   {
+    "layer": "agency",
+    "type": null,
+    "series": "SOSFS",
+    "label": "SOSFS (Socialstyrelsen)",
+    "target": 51,
+    "kind": "counted",
+    "source": "https://kunskapsguiden.se/gemensam-forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "FoHMFS",
+    "label": "FoHMFS (FoHM)",
+    "target": 12,
+    "kind": "counted",
+    "source": "https://kunskapsguiden.se/gemensam-forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TLVFS",
+    "label": "TLVFS (TLV)",
+    "target": 4,
+    "kind": "counted",
+    "source": "https://kunskapsguiden.se/gemensam-forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-31"
+  },
+  {
     "layer": "case_law",
     "type": null,
     "label": "Case law",
