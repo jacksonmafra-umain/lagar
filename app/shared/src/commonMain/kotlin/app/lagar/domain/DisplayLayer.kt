@@ -37,7 +37,7 @@ enum class DisplayLayer(val apiLayer: String, val apiType: String?, val key: Lay
             "ordinance" -> SfsOrdinance
             "agency_regulation" -> Agency
             "case_report", "case_notice" -> CaseLaw
-            "eu_regulation", "eu_directive", "eu_decision" -> Eu
+            "eu_regulation", "eu_directive", "eu_decision", "eu_judgment" -> Eu
             "county_regulation" -> Region
             "municipal_regulation" -> Municipality
             else -> null

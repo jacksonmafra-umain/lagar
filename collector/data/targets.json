@@ -176,6 +176,15 @@
     "as_of": "2026-10-29"
   },
   {
+    "layer": "eu",
+    "type": "eu_judgment",
+    "label": "EU judgments",
+    "target": 611,
+    "kind": "counted",
+    "source": "Cellar SPARQL: Court of Justice (CJ) and General Court (TJ) judgments with cdm:case-law_interpretes_resource_legal pointing to an act in collector/data/eu-acts.json",
+    "as_of": "2026-10-30"
+  },
+  {
     "layer": "region",
     "type": null,
     "label": "Regional regulations",

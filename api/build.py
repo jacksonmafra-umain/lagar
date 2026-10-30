@@ -72,6 +72,8 @@ _CASE_DATE_RE = re.compile(r"(\S+) (\d{4})-\d{2}-\d{2} mål nr (\d+)-\d{2}")
 _EU_YEAR_FIRST_RE = re.compile(r"\([^)]+\) (\d{4})/(\d+)")
 _EU_NR_RE = re.compile(r"\([^)]+\) nr (\d+)/(\d{2}|\d{4})")
 _EU_SLASH_RE = re.compile(r"(\d{2}|\d{4})/(\d+)/\D.*")
+# EU judgments: C-293/12, T-12/19, 26/62. Two-digit years from 50 are 19xx.
+_EU_CASE_RE = re.compile(r"(?:([CT])-)?(\d+)/(\d{2})")
 _YEAR_RE = re.compile(r"(?<!\d)((?:1[6-9]|20)\d{2})(?!\d)\D*(\d*)")
 
 
@@ -115,6 +117,11 @@ def _number_key(number, type_="act"):
         key = _eu_key(number)
         if key:
             return (*key, True, number)
+    elif type_ == "eu_judgment":
+        m = _EU_CASE_RE.fullmatch(number)
+        if m:
+            year = int(m.group(3))
+            return (year + (1900 if year >= 50 else 2000), int(m.group(2)), True, m.group(1) or "C")
     elif type_ == "municipal_regulation":
         m = _YEAR_RE.search(number)
         return (int(m.group(1)), int(m.group(2) or 0), True, number) if m else (0, 0, True, number)

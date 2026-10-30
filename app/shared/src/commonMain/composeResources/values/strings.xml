@@ -311,6 +311,7 @@
     <string name="type_eu_regulation">EU regulation</string>
     <string name="type_eu_directive">EU directive</string>
     <string name="type_eu_decision">EU decision</string>
+    <string name="type_eu_judgment">EU judgment</string>
     <string name="type_county_regulation">County regulation</string>
     <string name="type_municipal_regulation">Municipal regulation</string>
     <string name="search_sort_label">Sort by</string>

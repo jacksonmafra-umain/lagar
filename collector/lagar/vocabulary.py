@@ -23,6 +23,7 @@ TYPES = {
     "eu_regulation": "eu",
     "eu_directive": "eu",
     "eu_decision": "eu",
+    "eu_judgment": "eu",
     "county_regulation": "region",
     "municipal_regulation": "municipality",
 }
