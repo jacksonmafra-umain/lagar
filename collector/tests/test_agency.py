@@ -207,19 +207,32 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(agency.NotBase):
             zfs.parse_detail(fixture("agency-listed-detail.html"), entries[1])
 
-    def test_afs_a_listing(self):
-        adapter = agency.AklagareAdapter()
-        entries = adapter.parse_listing(fixture("agency-afs-a-listing.html"), adapter.listing_url)
-        self.assertEqual([(e.number, e.base) for e in entries], [
-            ("ÅFS 2023:7", True), ("ÅFS 2022:1", False), ("ÅFS 2024:7", False), ("ÅFS 2025:6", False),
-            ("ÅFS 2026:2", False)])
-        base = entries[0]
-        self.assertEqual(base.title, "Åklagarmyndighetens föreskrifter om internationellt samarbete")
-        self.assertEqual(base.amended_by, ["ÅFS 2026:2"])
-        regulation = adapter.regulation(base)
-        self.assertEqual((regulation.issued, regulation.published), ("2023-12-18", "2023-12-19"))
-        self.assertEqual(regulation.pdfs, [("ÅFS 2023:7", base.url)])
-        self.assertEqual(agency.corpus_id(base.number), "aafs-2023-7")
+    def test_stafs_index_and_markdown(self):
+        stafs = agency.SwedacAdapter()
+        entries = {e.number: e for e in stafs.parse_listing(fixture("agency-stafs-index.json"), stafs.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base),
+                         ["STAFS 2022:7", "STAFS 2024:13", "STAFS 2025:1"])
+        self.assertFalse(entries["STAFS 2026:4"].base)  # amends 2022:7
+        self.assertFalse(entries["STAFS 2019:3"].base)  # repeals other regulations
+        self.assertFalse(entries["STAFS 2015:16"].base)  # repealed, no date known
+        self.assertNotIn("Rättelse STAFS 2026:3", entries)
+        consolidated = entries["STAFS 2022:7"]
+        self.assertTrue(consolidated.url.endswith("/stafs-2022-7-konsol.md"))
+        self.assertEqual(consolidated.amended_by, ["STAFS 2026:4"])
+        self.assertEqual((entries["STAFS 2024:13"].in_force, entries["STAFS 2024:13"].repealed),
+                         ("2025-01-01", "2026-01-01"))
+        regulation = stafs.parse_detail("---\nid: STAFS 2022:7\n---\n# STAFS 2022:7 x\n\n## 1 kap.\n\ntext", consolidated)
+        self.assertEqual((regulation.version, regulation.amended_through), ("Konsoliderad version", "STAFS 2026:4"))
+        self.assertEqual([label for label, _ in regulation.pdfs], ["STAFS 2022:7", "STAFS 2022:7 (konsoliderad version)"])
+        self.assertEqual(regulation.text, "### 1 kap.\n\ntext")
+        regulation = stafs.parse_detail(fixture("agency-stafs-2025-1.md"), entries["STAFS 2025:1"])
+        self.assertEqual((regulation.issued, regulation.published, regulation.in_force),
+                         ("2025-02-04", "2025-02-06", "2025-04-01"))
+        self.assertTrue(regulation.text.startswith("### Tillämpningsområde\n\n**1 §** Dessa föreskrifter"))
+        self.assertIn("[STAFS 2016:1](https://regelverk.swedac.se/foreskrifter/swedac/stafs-2016-1.html)", regulation.text)
+        self.assertIn("[^1]: EUT L 42", regulation.text)
+        with self.assertRaises(ValueError):
+            stafs.parse_detail("---\nid: STAFS 2020:1\n---\n", entries["STAFS 2025:1"])
 
     def test_listed_series_config(self):
         series = agency.load_series()

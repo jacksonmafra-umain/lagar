@@ -635,6 +635,124 @@ class TsfsAdapter:
         return regulation
 
 
+# --- Swedac (STAFS) ---------------------------------------------------------
+
+_MD_HEADING = re.compile(r"^(#{1,5}) ", re.M)
+_MD_ROOT_LINK = re.compile(r"\]\((/[^)\s]*)\)")
+_STAFS_REF = re.compile(r"STAFS \d{4}:\d+")
+
+
+class SwedacAdapter:
+    """Swedac's regulation register: a JSON index and one Markdown file per regulation.
+
+    `foreskrifter.json` lists every STAFS regulation, in force and repealed,
+    with its dates, the regulation it amends (`andrar`) or repeals, and links
+    to the PDF and to a Markdown version of the text (the consolidated version
+    when there is one). The Markdown file is the source of the stored text.
+    """
+
+    series = "STAFS"
+    issuer = "Styrelsen för ackreditering och teknisk kontroll"
+    base_url = "https://regelverk.swedac.se"
+    listing_url = base_url + "/foreskrifter.json"
+    detail = True
+    has_text = True
+
+    def __init__(self):
+        self.items, self.originals = {}, {}
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def parse_listing(self, text, url):
+        # A regulation with a consolidated version is listed twice: as issued and consolidated.
+        items, originals = {}, {}
+        for item in json.loads(text):
+            if not isinstance(item, dict) or not _STAFS_REF.fullmatch(item.get("id") or ""):
+                continue
+            if item["id"] in items and not item.get("konsoliderad_tom"):
+                originals[item["id"]] = item
+                continue
+            if item["id"] in items:
+                originals[item["id"]] = items[item["id"]]
+            items[item["id"]] = item
+        self.originals = originals
+        items = list(items.values())
+        amending = {}
+        for item in items:
+            targets = item.get("andrar") or []
+            for target in [targets] if isinstance(targets, str) else targets:
+                amending.setdefault(target, set()).add(item["id"])
+        by_id = {item["id"]: item for item in items}
+        entries = []
+        for item in items:
+            title = _clean(item.get("titel"))
+            base = not item.get("andrar") and not _AMENDING.search(title)
+            repealed = item.get("upphavd")
+            if repealed is True:  # repealed, date not given: the repealing regulation's entry into force
+                repealed = (by_id.get(item.get("upphavd_genom") or "") or {}).get("ikraft")
+                # Without any date the regulation would read as in force; it is not stored.
+                base = base and bool(repealed)
+            if base:
+                self.items[item["id"]] = item
+            entries.append(Entry(
+                number=item["id"],
+                title=title,
+                url=item.get("md_url") or item.get("html_url") or url,
+                base=base and bool(item.get("md_url") or item.get("pdf_url")),
+                in_force=_date(item.get("ikraft")),
+                repealed=_date(repealed) if isinstance(repealed, str) else None,
+                amended_by=sorted(amending.get(item["id"], ()), key=number_key),
+            ))
+        if not any(e.base for e in entries):
+            raise ValueError("no regulations in Swedac's index")
+        return entries
+
+    def parse_detail(self, text, entry):
+        item = self.items.get(entry.number, {})
+        meta, body = _markdown_document(text)
+        if meta.get("id") and meta["id"] != entry.number:
+            raise ValueError(f"Markdown file shows {meta['id']!r}, expected {entry.number}")
+        through = item.get("konsoliderad_tom")
+        pdfs = [(entry.number, (self.originals.get(entry.number) or {}).get("pdf_url"))]
+        if through:
+            pdfs.append((f"{entry.number} (konsoliderad version)", item.get("pdf_url")))
+        else:
+            pdfs = [(entry.number, item.get("pdf_url"))]
+        return Regulation(
+            number=entry.number,
+            title=entry.title,
+            issued=_date(item.get("beslutad")),
+            published=_date(item.get("publicerad")),
+            in_force=entry.in_force,
+            repealed=entry.repealed,
+            amended_by=list(entry.amended_by),
+            amended_through=through,
+            version="Konsoliderad version" if through else "Grundförfattning",
+            text=body,
+            pdfs=[(label, url) for label, url in pdfs if url],
+        )
+
+
+def _markdown_document(text):
+    """(frontmatter dict, body) of a Swedac Markdown file; the body loses its H1
+    and its headings move one level down, under the document's own sections."""
+    meta = {}
+    if text.startswith("---\n"):
+        head, _, text = text[4:].partition("\n---\n")
+        for line in head.splitlines():
+            key, sep, value = line.partition(":")
+            if sep:
+                meta[key.strip()] = value.strip()
+    lines = text.strip().splitlines()
+    if lines and lines[0].startswith("# "):
+        lines = lines[1:]
+    body = "\n".join(lines).strip()
+    body = _MD_HEADING.sub(lambda m: "#" + m.group(1) + " ", body)
+    body = _MD_ROOT_LINK.sub(lambda m: f"]({SwedacAdapter.base_url}{m.group(1)})", body)
+    return meta, body
+
+
 # --- Åklagarmyndigheten (ÅFS) ----------------------------------------------
 
 _MONTHS = {name: i for i, name in enumerate((
@@ -942,7 +1060,7 @@ def load_series(path=SERIES_CONFIG):
             for code, item in data["series"].items() if item.get("listing_urls")}
 
 
-ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter())}
+ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
