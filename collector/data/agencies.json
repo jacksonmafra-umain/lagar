@@ -172,7 +172,9 @@
     },
     "polismyndighetens-forfattningssamling-pmfs": {
       "series": "PMFS",
-      "agency": "Polismyndigheten"
+      "agency": "Polismyndigheten",
+      "status": "collected_pdf",
+      "note": "Regulations in force from Polismyndigheten's paginated list, with entry into force, amendments and consolidated versions; it also holds Rikspolisstyrelsen's RPSFS regulations still in force, stored with their RPSFS numbers. The text is published only as PDF."
     },
     "post-och-telestyrelsens-forfattningssamling-ptsfs": {
       "series": "PTSFS",
