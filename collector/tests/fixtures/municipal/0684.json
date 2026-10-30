@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.savsjo.se/kommun-och-politik/styrande-dokument/policy-riktlinjer-och-planer.html": "0684-listing.html",
+    "https://www.savsjo.se/kommun-och-politik/styrande-dokument/taxor-och-avgifter.html": "0684-listing-2.html"
+  },
+  "count": 2,
+  "sample": {
+    "number": "18.2fd7fce3166a4c2f44e5265",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.savsjo.se/download/18.2fd7fce3166a4c2f44e5265/1540982990284/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för serveringstillstånd",
+    "Riktlinjer för exploateringsavtal",
+    "Riktlinjer för markanvisningsavtal"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://tingsryd.se/kommun-och-politik/regelverk/": "0763-listing.html",
+    "https://tingsryd.se/kommun-och-politik/avgifter-och-taxor/miljo-och-bygg/": "0763-listing-2.html"
+  },
+  "count": 10,
+  "sample": {
+    "number": "lokalahalsoskyddsforeskrifter",
+    "title": "Lokala hälsoskyddsföreskrifter",
+    "url": "https://tingsryd.se/wp-content/uploads/2025/03/lokalahalsoskyddsforeskrifter.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige i Tingsryds kommun",
+    "Reglemente för kommunstyrelse och nämnder",
+    "Reglemente för revisorerna i Tingsryds kommun"
+  ]
+}

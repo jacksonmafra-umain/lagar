@@ -1299,6 +1299,161 @@
       "hosts": ["habokommun.se"],
       "listings": ["https://habokommun.se/kommun-och-politik/kommunala-foreskrifter"]
     },
+    "0662": {
+      "name": "Gislaved",
+      "issuer": "Gislaveds kommun",
+      "region_code": "06",
+      "collection": "Regler och styrande dokument",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.gislaved.se"],
+      "listings": [
+        "https://www.gislaved.se/kommun-och-politik/politik-och-demokrati/regler-och-styrande-dokument/foreskrifter",
+        "https://www.gislaved.se/kommun-och-politik/politik-och-demokrati/regler-och-styrande-dokument/kommunens-samlade-taxor"
+      ]
+    },
+    "0665": {
+      "name": "Vaggeryd",
+      "issuer": "Vaggeryds kommun",
+      "region_code": "06",
+      "collection": "Planer, styrdokument och föreskrifter",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.vaggeryd.se"],
+      "listings": [
+        "https://www.vaggeryd.se/kommun-och-politik/mal-styrning-och-uppfoljning/planer-styrdokument-och-foreskrifter.html"
+      ]
+    },
+    "0682": {
+      "name": "Nässjö",
+      "issuer": "Nässjö kommun",
+      "region_code": "06",
+      "collection": "Författningssamling",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["nassjo.se"],
+      "listings": [
+        "https://nassjo.se/kommun-och-politik/kommunens-handlingar/forfattningssamling/ovriga-styrdokument/taxor-och-avgifter.html",
+        "https://nassjo.se/kommun-och-politik/kommunens-handlingar/forfattningssamling/ovriga-styrdokument/renhallning-och-va.html",
+        "https://nassjo.se/kommun-och-politik/kommunens-handlingar/forfattningssamling/ovriga-styrdokument/samhallsplanering.html",
+        "https://nassjo.se/kommun-och-politik/kommunens-handlingar/forfattningssamling/ovriga-styrdokument/miljo.html",
+        "https://nassjo.se/kommun-och-politik/kommunens-handlingar/forfattningssamling/ovriga-styrdokument/trafik-och-transporter.html"
+      ]
+    },
+    "0684": {
+      "name": "Sävsjö",
+      "issuer": "Sävsjö kommun",
+      "region_code": "06",
+      "collection": "Styrande dokument",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.savsjo.se"],
+      "listings": [
+        "https://www.savsjo.se/kommun-och-politik/styrande-dokument/policy-riktlinjer-och-planer.html",
+        "https://www.savsjo.se/kommun-och-politik/styrande-dokument/taxor-och-avgifter.html"
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\s*\\(pdf\\)\\s*$",
+        "\\.pdf\\s*$"
+      ]
+    },
+    "0685": {
+      "name": "Vetlanda",
+      "issuer": "Vetlanda kommun",
+      "region_code": "06",
+      "collection": "Styrdokument (alphabetical index)",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["vetlanda.se"],
+      "listings": ["https://vetlanda.se/kommun-och-politik/beslut-och-styrning/styrdokument"],
+      "follow": "[?&](lp-page=\\d+|letter=[A-Z])$"
+    },
+    "0686": {
+      "name": "Eksjö",
+      "issuer": "Eksjö kommun",
+      "region_code": "06",
+      "collection": "Lokala föreskrifter",
+      "preset": "sitevision",
+      "hosts": ["eksjo.se"],
+      "listings": ["https://eksjo.se/kommun-och-politik/regler-och-styrdokument/lokala-foreskrifter"]
+    },
+    "0687": {
+      "name": "Tranås",
+      "issuer": "Tranås kommun",
+      "region_code": "06",
+      "collection": "Regler och styrande dokument",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["tranas.se"],
+      "listings": ["https://tranas.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/"],
+      "link_pattern": "^https://tranas\\.se/wp-content/dokument/[^/]+/regler-och-styrande-dokument/.*\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/regler-och-styrande-dokument/([^/]+?)\\.pdf$", "format": "{0}"}
+      ],
+      "title_strip": ["^Bestammelser[_ ]\\s*"]
+    },
+    "0760": {
+      "name": "Uppvidinge",
+      "issuer": "Uppvidinge kommun",
+      "region_code": "07",
+      "collection": "Kommunala föreskrifter",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.uppvidinge.se"],
+      "listings": [
+        "https://www.uppvidinge.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/kommunala-foreskrifter.html",
+        "https://www.uppvidinge.se/bo-bygga-och-miljo/trafik-resor-och-gator/torg-parker-och-allmanna-platser/tillstand-och-regler.html"
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\s*\\(pdf\\)\\s*$",
+        "\\.pdf\\s*$"
+      ]
+    },
+    "0761": {
+      "name": "Lessebo",
+      "issuer": "Lessebo kommun",
+      "region_code": "07",
+      "collection": "Regler och styrande dokument",
+      "preset": "sitevision",
+      "resident_filter": true,
+      "hosts": ["www.lessebo.se"],
+      "listings": ["https://www.lessebo.se/kommun-och-politik/regler-och-styrande-dokument.html"],
+      "section_level": 2,
+      "sections": [
+        "Hälsoskydd",
+        "Ordningsföreskrifter",
+        "Renhållning",
+        "Vatten och avlopp",
+        "Vattenskyddsområde",
+        "Fordonstvätt"
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*(\\.pdf)?\\s*,?\\s*\\(?pdf,?\\s*[\\d.,]+\\s*[kMG]?B\\)?\\.?\\s*$",
+        "\\s*\\(pdf\\)\\s*$",
+        "\\.pdf\\s*$"
+      ]
+    },
+    "0763": {
+      "name": "Tingsryd",
+      "issuer": "Tingsryds kommun",
+      "region_code": "07",
+      "collection": "Regelverk",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["tingsryd.se"],
+      "listings": [
+        "https://tingsryd.se/kommun-och-politik/regelverk/",
+        "https://tingsryd.se/kommun-och-politik/avgifter-och-taxor/miljo-och-bygg/"
+      ],
+      "link_pattern": "^https://tingsryd\\.se/wp-content/uploads/\\d{4}/\\d{2}/[^/]+\\.pdf$",
+      "number": [{"from": "href", "pattern": "/uploads/\\d{4}/\\d{2}/([^/]+?)\\.pdf$", "format": "{0}"}],
+      "title_strip": ["\\s*\\((pdf|docx?),[^)]*\\)\\s*$"]
+    },
     "1280": {
       "name": "Malmö",
       "issuer": "Malmö stad",

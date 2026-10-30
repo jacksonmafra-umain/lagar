@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.vaggeryd.se/kommun-och-politik/mal-styrning-och-uppfoljning/planer-styrdokument-och-foreskrifter.html": "0665-listing.html"
+  },
+  "count": 12,
+  "sample": {
+    "number": "18.6c90eb0c19bfd11fac71c3f",
+    "title": "Avfallstaxa 2026",
+    "url": "https://www.vaggeryd.se/download/18.6c90eb0c19bfd11fac71c3f/1769513748646/Avfallstaxa%202026%20Vaggeryds%20kommun.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige KF 2024-09-30 §100",
+    "Arbetsordning för Parlamentariska utredningsgruppen till KF 2021-02-01",
+    "Arvodesreglemente 2023-2026 antaget av KF 2022-05-30, revidering antaget av KF 2022-10-31"
+  ]
+}
