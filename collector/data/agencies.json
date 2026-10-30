@@ -1158,10 +1158,6 @@
       "status": "no_adapter",
       "note": "Uppsala has no index page: each rule is its own page under /kommun-och-politik/publikationer/styrdokument/ with the PDF under /contentassets/, findable only through the sitemap; needs a sitemap-driven listing."
     },
-    "0382": {
-      "status": "robots",
-      "note": "Östhammar's robots.txt disallows /dokument/, where every rule page lives, for named AI crawlers (GPTBot, ClaudeBot, CCBot and others); the collector's own agent is not named, but the rule is read as unwelcome automated use and the pages are not fetched pending an owner decision."
-    },
     "0580": {
       "status": "no_adapter",
       "note": "Linköping links its rules to Google Drive share pages instead of files on its own site; not collected pending an owner decision on that host."
