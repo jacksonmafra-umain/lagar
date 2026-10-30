@@ -429,7 +429,7 @@ every amendment under its base regulation's folder, with the base's year and ord
 label, then its file name: a base regulation, an amending or repealing regulation (`om ändring
 i ... (XFS 2015:2)`, kept only in the base regulation's `amended_by`), or a consolidated version
 or reprint (linked from the base regulation). Every run rebuilds the series from the listing;
-PDFs already in the manifest are not downloaded again unless `--refresh`. The document's
+PDFs already in the manifest are not downloaded again unless `--refresh`. An adapter can also name further listing pages (`more_pages`) or fetch its listing itself (`fetch_listing`, e.g. a POSTed search form through `PoliteClient.post`). The document's
 `source` is the regulation's own PDF and `source_sha256` its hash.
 
 | series | listing | detail | text |
@@ -445,6 +445,9 @@ PDFs already in the manifest are not downloaded again unless `--refresh`. The do
 | STEMFS (Energimyndigheten) | document archive, category Föreskrifter, 40 a page (crawl delay 10 s) | none | PDF only |
 | RFS (Riksdagsförvaltningen) | `https://data.riksdagen.se/dokumentlista/?doktyp=rfs&utformat=json` | `https://data.riksdagen.se/dokument/<dok_id>.html` | HTML (Fulltext) |
 | RA-FS (Riksarkivet) | `https://foreskrifter.riksarkivet.se/api/rafs/sok` (JSON, in force and repealed) | none | PDF only |
+| SKOLFS (Skolverket) | `https://skolfs.skolverket.se/api/statute` (JSON, paged) | `.../api/document/<number>/ascending` (JSON) | PDF only |
+| SJÖFS (Sjöfartsverket) | `.../lagrum/systematisk-forteckning-n/<subject>/` (21 subject pages) | none | PDF only |
+| TRVFS (Trafikverket) | `https://trvfs.ea.trafikverket.se/TRVFS/Home/SearchInDocCollection` (POST per year) | `.../Home/DocumentHistory/<year>-<n>` | PDF only |
 
 - Only base regulations (grundförfattningar) are stored, in `corpus/agency/regulations/`.
   Amending regulations are counted as `excluded` and appear in the base regulation's

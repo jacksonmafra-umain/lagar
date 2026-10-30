@@ -344,6 +344,63 @@ class ParseTest(unittest.TestCase):
         self.assertEqual((current.in_force, current.repealed), ("2026-10-05", None))
         self.assertEqual(current.url, "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202026-1.pdf")
 
+    def test_skolfs_api(self):
+        skolfs = agency.SkolverketAdapter()
+        text = fixture("agency-skolfs-statute.json")
+        self.assertEqual(skolfs.more_pages(text, skolfs.listing_url), [])  # fewer hits than a page
+        entries = {e.number: e for e in skolfs.parse_listing(text, skolfs.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base), ["SKOLFS 2011:153", "SKOLFS 2026:67"])
+        self.assertFalse(entries["SKOLFS 2012:98"].base)  # expired, no repeal date
+        self.assertEqual(entries["SKOLFS 2011:153"].amended_by, ["SKOLFS 2026:69"])
+        self.assertEqual(entries["SKOLFS 2012:98"].amended_by, ["SKOLFS 2026:70"])
+        regulation = skolfs.parse_detail(fixture("agency-skolfs-2026-67.json"), entries["SKOLFS 2026:67"])
+        self.assertEqual((regulation.issued, regulation.published, regulation.in_force),
+                         ("2026-06-10", "2026-06-23", "2026-08-15"))
+        self.assertEqual(regulation.pdfs, [("SKOLFS 2026:67",
+                                            "https://skolfs.skolverket.se/api/document/GRUNDFORFATTNING/2026:67/pdf")])
+        self.assertTrue(regulation.summary.startswith("Föreskrifterna ska tillämpas"))
+        consolidated = agency.Entry("SKOLFS 2011:153", "x", entries["SKOLFS 2011:153"].url)
+        with self.assertRaises(ValueError):
+            skolfs.parse_detail(fixture("agency-skolfs-2026-67.json"), consolidated)
+        self.assertIn("SKOLFS 2011:153", skolfs.consolidated)
+
+    def test_sjofs_subject_pages(self):
+        sjofs = agency.SjofartsverketAdapter()
+        index = '<a href="/sv/om-oss/lagrum/systematisk-forteckning-n/fartyg/">a</a>' * 2
+        self.assertEqual(sjofs.more_pages(index, sjofs.listing_url), [sjofs.listing_url + "fartyg/"])
+        self.assertEqual(sjofs.more_pages(index, sjofs.listing_url + "fartyg/"), [])
+        page = sjofs.listing_url + "fartyg/"
+        entries = sjofs.parse_listing(fixture("agency-sjofs-subject.html"), page)
+        # 1952:A9 has no plain ordinal and 1968:A19 is repealed: neither is stored.
+        self.assertEqual([e.number for e in entries], ["SJÖFS 1984:14", "SJÖFS 1999:27"])
+        self.assertEqual(entries[0].amended_by, ["SJÖFS 1999:12"])
+        self.assertEqual(entries[1].title, "Säkerheten på fiskefartyg som har en längd av 24 meter eller mer")
+        self.assertIn("SJÖFS 2026:13", entries[1].amended_by)
+        self.assertEqual(sjofs.parse_listing(fixture("agency-sjofs-subject.html"), page), [])  # read once
+
+    def test_trvfs_search_form(self):
+        trv = agency.TrafikverketAdapter()
+        args = agency.parse_args(["--series", "TRVFS", "--year", "2025"])
+        self.assertEqual(trv.listing_urls(args), [trv.search_url + "?Ar=2025"])
+
+        class Poster:
+            def post(self, url, form):
+                self.sent = (url, form)
+                return b"ok"
+
+        poster = Poster()
+        self.assertEqual(trv.fetch_listing(poster, trv.search_url + "?Ar=2025"), b"ok")
+        self.assertEqual(poster.sent[0], trv.search_url)
+        self.assertEqual((poster.sent[1]["Ar"], poster.sent[1]["Hastforeskrift"]), ("2025", "false"))
+        entries = trv.parse_listing(fixture("agency-trvfs-2025.html"), trv.search_url + "?Ar=2025")
+        self.assertEqual([e.number for e in entries], ["TRVFS 2025:1", "TRVFS 2025:2"])  # not the TSFS ones
+        regulation = trv.parse_detail(fixture("agency-trvfs-2025-2.html"), entries[1])
+        self.assertEqual(regulation.title, "Trafikverkets föreskrifter om statsbidrag till enskild väghållning")
+        self.assertEqual(regulation.in_force, "2026-01-01")
+        self.assertEqual(regulation.pdfs, [("TRVFS 2025:2", "https://trvfs.ea.trafikverket.se/TRVFS/pdf/2025nr002.pdf")])
+        with self.assertRaises(ValueError):
+            trv.parse_detail(fixture("agency-trvfs-2025-2.html"), entries[0])
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

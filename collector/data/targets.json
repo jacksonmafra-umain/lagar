@@ -160,6 +160,26 @@
   {
     "layer": "agency",
     "type": null,
+    "series": "SJÖFS",
+    "label": "SJÖFS (Sjöfartsverket)",
+    "target": 44,
+    "kind": "counted",
+    "source": "https://www.sjofartsverket.se/sv/om-oss/lagrum/systematisk-forteckning-n/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SKOLFS",
+    "label": "SKOLFS (Skolverket)",
+    "target": 965,
+    "kind": "counted",
+    "source": "https://skolfs.skolverket.se/api/statute (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
     "series": "SKSFS",
     "label": "SKSFS (Skogsstyrelsen)",
     "target": 18,
@@ -195,6 +215,16 @@
     "target": 65,
     "kind": "counted",
     "source": "https://energimyndigheten.a-w2m.se/System/TemplateNavigate.aspx?p=Arkitektkopia&l=t&view=672&cat=%2FF%C3%B6reskrifter (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TRVFS",
+    "label": "TRVFS (Trafikverket)",
+    "target": 42,
+    "kind": "counted",
+    "source": "https://trvfs.ea.trafikverket.se/TRVFS/Home/SearchInDocCollection (regulations in force, without speed regulations)",
     "as_of": "2026-10-30"
   },
   {

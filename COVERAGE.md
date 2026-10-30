@@ -186,6 +186,19 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   into force of the regulation that repealed them; a repealed regulation whose
   repealing regulation is not in the register is not stored. Riksarkivet's
   agency-specific regulations (RA-MS) are not collected.
+- SKOLFS (Skolverket, 965 base regulations in force), SJÖFS (Sjöfartsverket,
+  44 base regulations in force from its systematic list) and TRVFS
+  (Trafikverket, 42 regulations) as of 2026-10-30. SKOLFS comes from the API
+  behind Skolverket's search app (`skolfs.skolverket.se/api`), with decision,
+  publication and entry-into-force dates and the latest consolidated PDF;
+  expired regulations are not stored (no repeal date). SJÖFS: regulations
+  numbered before plain ordinals (`1952:A9`) and rows marked repealed are not
+  stored; many of Sjöfartsverket's former regulations now live in TSFS.
+  TRVFS: Trafikverket's search form (a POST per year, without speed
+  regulations and repealed ones); its road-specific speed regulations
+  (hastighetsföreskrifter) and the older VVFS and BVFS series are not
+  collected, and Transportstyrelsen's regulations republished there are
+  already in TSFS.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - Public services have no collector yet; what the Tjänster tab should hold is
