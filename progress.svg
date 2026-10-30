@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1964" viewBox="0 0 720 1964" role="img" aria-label="Corpus progress per series">
-<rect width="720" height="1964" fill="#f8f9fc"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="2504" viewBox="0 0 720 2504" role="img" aria-label="Corpus progress per series">
+<rect width="720" height="2504" fill="#f8f9fc"/>
 <g font-family="Inter, system-ui, sans-serif" font-size="13">
 <text x="16" y="26" font-size="16" font-weight="600" fill="#191c1e">Corpus progress per series</text>
 <text x="16" y="59" fill="#0b3d91">Fundamental laws</text>
@@ -57,7 +57,7 @@
 <text x="16" y="527" fill="#007270">SCB-FS (SCB)</text>
 <rect x="240" y="516" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="516" width="260" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="527" text-anchor="end" fill="#007270">48 / 48 (100.0%)</text>
+<text x="704" y="527" text-anchor="end" fill="#007270">51 / 51 (100.0%)</text>
 <text x="16" y="563" fill="#007270">SGU-FS (SGU)</text>
 <rect x="240" y="552" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="552" width="260" height="16" rx="8" fill="#0f7c7a"/>
@@ -186,30 +186,90 @@
 <rect x="240" y="1668" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="1668" width="260" height="16" rx="8" fill="#0f7c7a"/>
 <text x="704" y="1679" text-anchor="end" fill="#007270">3 / 3 (100.0%)</text>
-<text x="16" y="1715" fill="#7a2e4d">Case law</text>
-<rect x="240" y="1704" width="260" height="16" rx="8" fill="#7a2e4d" fill-opacity="0.18"/>
-<rect x="240" y="1704" width="257" height="16" rx="8" fill="#7a2e4d"/>
-<text x="704" y="1715" text-anchor="end" fill="#7a2e4d">16466 / 16640 (99.0%)</text>
-<text x="16" y="1751" fill="#005b99">SÖ treaties</text>
-<rect x="240" y="1740" width="260" height="16" rx="8" fill="#005b99" fill-opacity="0.18"/>
-<rect x="240" y="1740" width="260" height="16" rx="8" fill="#005b99"/>
-<text x="704" y="1751" text-anchor="end" fill="#005b99">3515 / 3515 (100.0%)</text>
-<text x="16" y="1787" fill="#5b3fa6">EU law (curated list)</text>
-<rect x="240" y="1776" width="260" height="16" rx="8" fill="#5b3fa6" fill-opacity="0.18"/>
-<rect x="240" y="1776" width="260" height="16" rx="8" fill="#5b3fa6"/>
-<text x="704" y="1787" text-anchor="end" fill="#5b3fa6">70 / 70 (100.0%)</text>
-<text x="16" y="1823" fill="#5b3fa6">EU judgments</text>
-<rect x="240" y="1812" width="260" height="16" rx="8" fill="#5b3fa6" fill-opacity="0.18"/>
-<rect x="240" y="1812" width="257" height="16" rx="8" fill="#5b3fa6"/>
-<text x="704" y="1823" text-anchor="end" fill="#5b3fa6">605 / 611 (99.0%)</text>
-<text x="16" y="1859" fill="#28772d">Regional regulations</text>
-<rect x="240" y="1848" width="260" height="16" rx="8" fill="#2e7d32" fill-opacity="0.18"/>
-<text x="704" y="1859" text-anchor="end" fill="#28772d">5665 / unknown (-)</text>
-<text x="16" y="1895" fill="#8b2e1f">Municipal regulations</text>
-<rect x="240" y="1884" width="260" height="16" rx="8" fill="#8b2e1f" fill-opacity="0.18"/>
-<text x="704" y="1895" text-anchor="end" fill="#8b2e1f">3112 / unknown (-)</text>
-<text x="16" y="1931" fill="#8c6300">Public services</text>
-<rect x="240" y="1920" width="260" height="16" rx="8" fill="#e0a100" fill-opacity="0.18"/>
-<text x="704" y="1931" text-anchor="end" fill="#8c6300">0 / unknown (-)</text>
+<text x="16" y="1715" fill="#007270">BFNAR (BFN)</text>
+<rect x="240" y="1704" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="1704" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="1715" text-anchor="end" fill="#007270">17 / 17 (100.0%)</text>
+<text x="16" y="1751" fill="#007270">CSNFS (CSN)</text>
+<rect x="240" y="1740" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="1740" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="1751" text-anchor="end" fill="#007270">63 / 63 (100.0%)</text>
+<text x="16" y="1787" fill="#007270">IMYFS (IMY)</text>
+<rect x="240" y="1776" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="1776" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="1787" text-anchor="end" fill="#007270">1 / 1 (100.0%)</text>
+<text x="16" y="1823" fill="#007270">LMFS (LM)</text>
+<rect x="240" y="1812" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="1812" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="1823" text-anchor="end" fill="#007270">14 / 14 (100.0%)</text>
+<text x="16" y="1859" fill="#007270">MTFS (TVA)</text>
+<rect x="240" y="1848" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="1848" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="1859" text-anchor="end" fill="#007270">3 / 3 (100.0%)</text>
+<text x="16" y="1895" fill="#007270">KVFS (KV)</text>
+<rect x="240" y="1884" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="1884" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="1895" text-anchor="end" fill="#007270">17 / 17 (100.0%)</text>
+<text x="16" y="1931" fill="#007270">LIVSFS (SLV)</text>
+<rect x="240" y="1920" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="1920" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="1931" text-anchor="end" fill="#007270">39 / 39 (100.0%)</text>
+<text x="16" y="1967" fill="#007270">MYHFS (MYH)</text>
+<rect x="240" y="1956" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="1956" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="1967" text-anchor="end" fill="#007270">44 / 44 (100.0%)</text>
+<text x="16" y="2003" fill="#007270">TPPVFS (Pliktverket)</text>
+<rect x="240" y="1992" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="1992" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2003" text-anchor="end" fill="#007270">1 / 1 (100.0%)</text>
+<text x="16" y="2039" fill="#007270">TRMFS (Pliktverket)</text>
+<rect x="240" y="2028" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="2028" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2039" text-anchor="end" fill="#007270">2 / 2 (100.0%)</text>
+<text x="16" y="2075" fill="#007270">SIFS (Spelinspektionen)</text>
+<rect x="240" y="2064" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="2064" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2075" text-anchor="end" fill="#007270">9 / 9 (100.0%)</text>
+<text x="16" y="2111" fill="#007270">LIFS (Spelinspektionen)</text>
+<rect x="240" y="2100" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="2100" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2111" text-anchor="end" fill="#007270">6 / 6 (100.0%)</text>
+<text x="16" y="2147" fill="#007270">STFS (Sametinget)</text>
+<rect x="240" y="2136" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="2136" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2147" text-anchor="end" fill="#007270">13 / 13 (100.0%)</text>
+<text x="16" y="2183" fill="#007270">SvKFS (Svenska kraftnät)</text>
+<rect x="240" y="2172" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="2172" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2183" text-anchor="end" fill="#007270">6 / 6 (100.0%)</text>
+<text x="16" y="2219" fill="#007270">TFS (Tullverket)</text>
+<rect x="240" y="2208" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="2208" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2219" text-anchor="end" fill="#007270">24 / 24 (100.0%)</text>
+<text x="16" y="2255" fill="#7a2e4d">Case law</text>
+<rect x="240" y="2244" width="260" height="16" rx="8" fill="#7a2e4d" fill-opacity="0.18"/>
+<rect x="240" y="2244" width="257" height="16" rx="8" fill="#7a2e4d"/>
+<text x="704" y="2255" text-anchor="end" fill="#7a2e4d">16475 / 16640 (99.0%)</text>
+<text x="16" y="2291" fill="#005b99">SÖ treaties</text>
+<rect x="240" y="2280" width="260" height="16" rx="8" fill="#005b99" fill-opacity="0.18"/>
+<rect x="240" y="2280" width="260" height="16" rx="8" fill="#005b99"/>
+<text x="704" y="2291" text-anchor="end" fill="#005b99">3515 / 3515 (100.0%)</text>
+<text x="16" y="2327" fill="#5b3fa6">EU law (curated list)</text>
+<rect x="240" y="2316" width="260" height="16" rx="8" fill="#5b3fa6" fill-opacity="0.18"/>
+<rect x="240" y="2316" width="260" height="16" rx="8" fill="#5b3fa6"/>
+<text x="704" y="2327" text-anchor="end" fill="#5b3fa6">70 / 70 (100.0%)</text>
+<text x="16" y="2363" fill="#5b3fa6">EU judgments</text>
+<rect x="240" y="2352" width="260" height="16" rx="8" fill="#5b3fa6" fill-opacity="0.18"/>
+<rect x="240" y="2352" width="257" height="16" rx="8" fill="#5b3fa6"/>
+<text x="704" y="2363" text-anchor="end" fill="#5b3fa6">605 / 611 (99.0%)</text>
+<text x="16" y="2399" fill="#28772d">Regional regulations</text>
+<rect x="240" y="2388" width="260" height="16" rx="8" fill="#2e7d32" fill-opacity="0.18"/>
+<text x="704" y="2399" text-anchor="end" fill="#28772d">11649 / unknown (-)</text>
+<text x="16" y="2435" fill="#8b2e1f">Municipal regulations</text>
+<rect x="240" y="2424" width="260" height="16" rx="8" fill="#8b2e1f" fill-opacity="0.18"/>
+<text x="704" y="2435" text-anchor="end" fill="#8b2e1f">4476 / unknown (-)</text>
+<text x="16" y="2471" fill="#8c6300">Public services</text>
+<rect x="240" y="2460" width="260" height="16" rx="8" fill="#e0a100" fill-opacity="0.18"/>
+<text x="704" y="2471" text-anchor="end" fill="#8c6300">0 / unknown (-)</text>
 </g>
 </svg>
