@@ -19,7 +19,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | RGKFS (Riksgälden) | 6 | 6 | counted | 100.0% |
 | agency | RIFS (Revisorsinspektionen) | 14 | 14 | counted | 100.0% |
 | agency | RPSFS (Polisen) | 29 | 29 | counted | 100.0% |
-| agency | SCB-FS (SCB) | 48 | 48 | counted | 100.0% |
+| agency | SCB-FS (SCB) | 51 | 51 | counted | 100.0% |
 | agency | SGU-FS (SGU) | 6 | 6 | counted | 100.0% |
 | agency | SiSFS (SiS) | 30 | 30 | counted | 100.0% |
 | agency | SJÖFS (Sjöfartsverket) | 44 | 44 | counted | 100.0% |
@@ -52,12 +52,27 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | ELSÄK-FS (Elsäkerhetsverket) | 3 | 3 | counted | 100.0% |
 | agency | KIFS (KemI) | 3 | 3 | counted | 100.0% |
 | agency | IAFFS (IAF) | 3 | 3 | counted | 100.0% |
+| agency | BFNAR (BFN) | 17 | 17 | counted | 100.0% |
+| agency | CSNFS (CSN) | 63 | 63 | counted | 100.0% |
+| agency | IMYFS (IMY) | 1 | 1 | counted | 100.0% |
+| agency | LMFS (LM) | 14 | 14 | counted | 100.0% |
+| agency | MTFS (TVA) | 3 | 3 | counted | 100.0% |
+| agency | KVFS (KV) | 17 | 17 | counted | 100.0% |
+| agency | LIVSFS (SLV) | 39 | 39 | counted | 100.0% |
+| agency | MYHFS (MYH) | 44 | 44 | counted | 100.0% |
+| agency | TPPVFS (Pliktverket) | 1 | 1 | counted | 100.0% |
+| agency | TRMFS (Pliktverket) | 2 | 2 | counted | 100.0% |
+| agency | SIFS (Spelinspektionen) | 9 | 9 | counted | 100.0% |
+| agency | LIFS (Spelinspektionen) | 6 | 6 | counted | 100.0% |
+| agency | STFS (Sametinget) | 13 | 13 | counted | 100.0% |
+| agency | SvKFS (Svenska kraftnät) | 6 | 6 | counted | 100.0% |
+| agency | TFS (Tullverket) | 24 | 24 | counted | 100.0% |
 | case_law | Case law | 16466 | 16640 | counted | 99.0% |
 | sfs | SÖ treaties | 3515 | 3515 | counted | 100.0% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
 | eu | EU judgments | 605 | 611 | counted | 99.0% |
-| region | Regional regulations | 5665 | unknown | unknown | - |
-| municipality | Municipal regulations | 3112 | unknown | unknown | - |
+| region | Regional regulations | 11649 | unknown | unknown | - |
+| municipality | Municipal regulations | 4640 | unknown | unknown | - |
 | service | Public services | 0 | unknown | unknown | - |
 
 Progress is capped at the target; a series without a known target has no percentage.
@@ -78,7 +93,7 @@ Targets:
 - RGKFS (Riksgälden): counted, https://www.riksgalden.se/press-och-publicerat/foreskrifter/ (base regulations listed), as of 2026-10-30
 - RIFS (Revisorsinspektionen): counted, https://www.revisorsinspektionen.se/regelverk/samtliga-foreskrifter/ (base regulations listed), as of 2026-10-30
 - RPSFS (Polisen): counted, https://polisen.se/lagar-och-regler/polismyndighetens-forfattningssamling/ (RPSFS regulations still in force), as of 2026-10-30
-- SCB-FS (SCB): counted, https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/?currentpageId=98388&type=UL (base regulations on reporting duties), as of 2026-10-30
+- SCB-FS (SCB): counted, SCB's tables of regulations on reporting duties and on official statistics (base regulations in force), as of 2026-10-30
 - SGU-FS (SGU): counted, https://www.sgu.se/om-sgu/verksamhet/foreskrifter/ (base regulations listed), as of 2026-10-30
 - SiSFS (SiS): counted, https://www.stat-inst.se/om-sis/lagar-forordningar-forfattningar/sis-forfattningssamling/ (base regulations listed), as of 2026-10-30
 - SJÖFS (Sjöfartsverket): counted, https://www.sjofartsverket.se/sv/om-oss/lagrum/systematisk-forteckning-n/ (base regulations in force), as of 2026-10-30
@@ -111,6 +126,21 @@ Targets:
 - ELSÄK-FS (Elsäkerhetsverket): counted, https://elsakerhetsverket.se/lag-och-ratt/foreskrifter (base regulations in force), as of 2026-10-30
 - KIFS (KemI): counted, https://www.kemi.se/lagar-och-regler/lagstiftningar-inom-kemikalieomradet/kemikalieinspektionens-foreskrifter-kifs (base regulations in force), as of 2026-10-30
 - IAFFS (IAF): counted, https://www.iaf.se/Lag-ratt/Foreskrifter/ (base regulations in force), as of 2026-10-30
+- BFNAR (BFN): counted, https://www.bfn.se/redovisningsregler/allmanna-rad/ (base general advice in force), as of 2026-10-30
+- CSNFS (CSN): counted, https://www.csn.se/om-csn/lag-och-ratt/forfattningssamling (base regulations listed), as of 2026-10-30
+- IMYFS (IMY): counted, https://www.imy.se/om-oss/beslut-publikationer-och-remisser/foreskrifter-och-allmanna-rad/ (base regulations in force), as of 2026-10-30
+- LMFS (LM): counted, https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/ (base regulations in force), as of 2026-10-30
+- MTFS (TVA): counted, https://www.tillvaxtanalys.se/statistik/tillvaxtanalysforeskrifter.125740.html (base regulations in force), as of 2026-10-30
+- KVFS (KV): counted, https://www.kriminalvarden.se/sitemap_kriminalvarden.se.xml (base regulations in the KVFS pages), as of 2026-10-30
+- LIVSFS (SLV): counted, https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/ (base regulations in force, 2005 on), as of 2026-10-30
+- MYHFS (MYH): counted, https://www.myh.se/lag-och-ratt/foreskrifter-och-allmanna-rad (21 in force, 23 repealed with a known date), as of 2026-10-30
+- TPPVFS (Pliktverket): counted, https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter (base regulations listed), as of 2026-10-30
+- TRMFS (Pliktverket): counted, https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter (predecessor regulations in force), as of 2026-10-30
+- SIFS (Spelinspektionen): counted, https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/spelinspektionens-foreskriftsforteckning.pdf (SIFS base regulations in force with a page), as of 2026-10-30
+- LIFS (Spelinspektionen): counted, https://www.spelinspektionen.se/globalassets/dokument/foreskrifter-och-vagledning/spelinspektionens-foreskriftsforteckning.pdf (Lotteriinspektionen regulations in force), as of 2026-10-30
+- STFS (Sametinget): counted, https://sametinget.se/dokumentbank?cat=72 (base regulations), as of 2026-10-30
+- SvKFS (Svenska kraftnät): counted, https://www.svk.se/services/documents/v1/get?categories=28 (regulations, in force and repealed), as of 2026-10-30
+- TFS (Tullverket): counted, Tullverket's search of steering documents, all TFS documents (base regulations in force), as of 2026-10-30
 - Case law: counted, https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar?publiceringsformer=referat,notis, as of 2026-10-29
 - SÖ treaties: counted, regeringen.se sitemap: distinct SÖ numbers on pages under /rattsliga-dokument/sveriges-internationella-overenskommelser/, as of 2026-10-30
 - EU law (curated list): curated, collector/data/eu-acts.json, as of 2026-10-29
@@ -118,10 +148,10 @@ Targets:
 
 ## Integrity
 
-Audit of 43967 documents (2026-10-30T14:13:02Z):
+Audit of 51741 documents (2026-10-30T21:44:50Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
-- text-quality flags: 868
-- cross-references not in the corpus: 39105 of 39166 (informational, the corpus is partial)
+- text-quality flags: 873
+- cross-references not in the corpus: 39297 of 39358 (informational, the corpus is partial)
