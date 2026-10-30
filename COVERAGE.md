@@ -363,8 +363,10 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     (Netpublicator; an adapter is planned). Karlstad serves its files only
     through time-limited SharePoint links on a host whose robots.txt disallows
     everything, so it is not collected.
-  - Skövde: only the taxor och avgifter page is collected; the lokala
-    föreskrifter are listed as JSON in the Next.js page's script data. Nora
+  - Skövde: the taxor och avgifter page and the five lokala föreskrifter
+    (ordnings-, avfalls-, hälsoskydds- and torghandelsföreskrifter and ABVA),
+    which its författningssamling lists only as JSON in the Next.js page's
+    script data (read with `embedded: "next"`), are collected. Nora
     publishes only three taxor as PDFs (bygglov, VA, avfall); no ordnings-,
     avfalls- or hälsoskyddsföreskrifter were found on its site. Arvika's taxor
     page and Älvsbyn's föreskrifter (no index page) are not covered.
