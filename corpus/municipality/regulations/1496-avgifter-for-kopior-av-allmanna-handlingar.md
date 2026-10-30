@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter/avgifter-for-kopior-av-allmanna-handlingar.pdf"
 source_sha256: "5e1a94ab41d0eef1d0addf810c3686118f2d79d46caf3f4ad6dc932920bff590"
-fetched_at: "2026-10-30T21:59:18Z"
+fetched_at: "2026-10-30T23:08:05Z"
 issuer: "Skövde kommun"
 region_code: "14"
 municipality_code: "1496"
@@ -24,7 +24,7 @@ municipality_code: "1496"
 # Avgifter för kopior av allmänna handlingar
 
 Kommun: Skövde (1496)  
-Författningssamling: Skövde kommuns taxor och avgifter  
+Författningssamling: Skövde kommuns författningssamling: lokala föreskrifter, taxor och avgifter  
 Nummer: avgifter-for-kopior-av-allmanna-handlingar
 
 Förteckning: <https://www.skovde.se/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter>
