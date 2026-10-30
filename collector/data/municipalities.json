@@ -2829,6 +2829,94 @@
       ],
       "title_strip": ["\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,\\s*öppnas i nytt fönster)?\\.?\\s*$"]
     },
+    "1470": {
+      "name": "Vara",
+      "issuer": "Vara kommun",
+      "region_code": "14",
+      "collection": "Föreskrifter och taxor",
+      "strategy": "html_pages",
+      "resident_filter": true,
+      "hosts": ["vara.se", "www.vara.se"],
+      "listings": [
+        "https://vara.se/kommunochpolitik/varorganisationochverksamhet/planerochstyrandedokument/foreskrifter.1616.html",
+        "https://vara.se/kommunochpolitik/varorganisationochverksamhet/planerochstyrandedokument/avgifterochtaxor.1249.html"
+      ],
+      "link_pattern": "^https://(www\\.)?vara\\.se/kommunochpolitik/varorganisationochverksamhet/planerochstyrandedokument/(foreskrifter|avgifterochtaxor)/[^/?#]+\\.\\d+\\.html$",
+      "number": [
+        {"from": "href", "pattern": "\\.(\\d+)\\.html$"}
+      ]
+    },
+    "1471": {
+      "name": "Götene",
+      "issuer": "Götene kommun",
+      "region_code": "14",
+      "collection": "Kommunens författningar",
+      "strategy": "html_pages",
+      "hosts": ["www.gotene.se", "gotene.se"],
+      "listings": [
+        "https://www.gotene.se/kommunochpolitik/kommunalabestammelserochtillstand/kommunensforfattningar.586.html"
+      ],
+      "link_pattern": "^https://www\\.gotene\\.se/kommunochpolitik/kommunalabestammelserochtillstand/kommunensforfattningar/dokument/[^/?#]+/[^/?#]+\\.\\d+\\.html$",
+      "number": [
+        {"from": "href", "pattern": "\\.(\\d+)\\.html$"}
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "^avfallstaxa$",
+        "^va-taxa$",
+        "^fj(ä|a)rrv(ä|a)rmetaxa$"
+      ]
+    },
     "1472": {
       "name": "Tibro",
       "issuer": "Tibro kommun",
@@ -3215,6 +3303,76 @@
         "utredning"
       ]
     },
+    "1495": {
+      "name": "Skara",
+      "issuer": "Skara kommun",
+      "region_code": "14",
+      "collection": "Föreskrifter, taxor och avgifter",
+      "strategy": "html_pages",
+      "hosts": ["www.skara.se", "skara.se"],
+      "listings": [
+        "https://www.skara.se/kommunochpolitik/styrandedokument/taxorochavgifter.html",
+        "https://www.skara.se/kommunochpolitik/styrandedokument/foreskrifter.html"
+      ],
+      "link_pattern": "^https://www\\.skara\\.se/kommunochpolitik/styrandedokument/(taxorochavgifter|foreskrifter)/[^/?#]+\\.\\d+\\.html$",
+      "number": [
+        {"from": "href", "pattern": "\\.(\\d+)\\.html$"}
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "fastighetsf(ö|o)rs(ä|a)ljning"
+      ]
+    },
     "1497": {
       "name": "Hjo",
       "issuer": "Hjo kommun",
@@ -3528,6 +3686,76 @@
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],
       "title_strip": ["\\s*(pdf|docx),\\s*[\\d.,]+\\s*[kM]B[^.]*\\.?\\s*(öppnas i nytt fönster\\.?)?\\s*$"]
+    },
+    "1784": {
+      "name": "Arvika",
+      "issuer": "Arvika kommun",
+      "region_code": "17",
+      "collection": "Författningssamling",
+      "strategy": "html_pages",
+      "hosts": ["www.arvika.se", "arvika.se"],
+      "listings": [
+        "https://www.arvika.se/kommunochpolitik/planerochstyrandedokument/forfattningssamling/bestammelser.2448.html"
+      ],
+      "link_pattern": "^https://www\\.arvika\\.se/kommunochpolitik/planerochstyrandedokument/forfattningssamling/bestammelser/[^/?#]+\\.\\d+\\.html$",
+      "number": [
+        {"from": "href", "pattern": "\\.(\\d+)\\.html$"}
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "skydda m(ä|a)nniskors",
+        "stadga\\b"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning"
+      ]
     },
     "1785": {
       "name": "Säffle",
@@ -4111,6 +4339,76 @@
         "\\s*\\.pdf\\s*$"
       ]
     },
+    "2082": {
+      "name": "Säter",
+      "issuer": "Säters kommun",
+      "region_code": "20",
+      "collection": "Regler och föreskrifter, taxor och avgifter",
+      "strategy": "html_pages",
+      "hosts": ["sater.se", "www.sater.se"],
+      "listings": [
+        "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/regler-och-foreskrifter/",
+        "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/"
+      ],
+      "link_pattern": "^https://sater\\.se/kommun-demokrati/planer-taxor-och-styrdokument/(regler-och-foreskrifter|taxor-och-avgifter)/[^/?#]+/$",
+      "number": [
+        {"from": "href", "pattern": "/(?:regler-och-foreskrifter|taxor-och-avgifter)/([^/?#]+)/$"}
+      ],
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa"
+      ],
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning",
+        "^r(å|a)d och rekommendationer"
+      ]
+    },
     "2083": {
       "name": "Hedemora",
       "issuer": "Hedemora kommun",
@@ -4312,6 +4610,24 @@
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"]
+    },
+    "2184": {
+      "name": "Hudiksvall",
+      "issuer": "Hudiksvalls kommun",
+      "region_code": "21",
+      "collection": "Författningssamling - Styrdokument",
+      "strategy": "html_pages",
+      "resident_filter": true,
+      "hosts": ["hudiksvall.se", "www.hudiksvall.se"],
+      "listings": [
+        "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Foreskrifter.html",
+        "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Taxor-och-avgifter.html"
+      ],
+      "link_pattern": "^https://hudiksvall\\.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/(Foreskrifter|Taxor-och-avgifter)/[^/?#]+\\.html$",
+      "number": [
+        {"from": "href", "pattern": "/(?:Foreskrifter|Taxor-och-avgifter)/([^/?#]+)\\.html$"}
+      ],
+      "document_pattern": "/rest-api/graph-service/preview\\?(?![^#]*Bilaga)[^#]*fileType=pdf"
     },
     "2260": {
       "name": "Ånge",
@@ -4683,6 +4999,20 @@
         "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
         "\\s*\\.?Pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"
       ]
+    },
+    "2361": {
+      "name": "Härjedalen",
+      "issuer": "Härjedalens kommun",
+      "region_code": "23",
+      "collection": "Styrdokument och regler",
+      "strategy": "html_pages",
+      "hosts": ["www.herjedalen.se", "herjedalen.se"],
+      "listings": ["https://www.herjedalen.se/kommun-och-politik/styrdokument-och-regler.html"],
+      "link_pattern": "^https://www\\.herjedalen\\.se/kommun-och-politik/styrdokument-och-regler/(avgifter-och-taxor/[^/?#]+|att-vistas-i-harjedalens-kommun/(allmanna-bestammelser-for-anvandande[^/?#]*|avfallsforeskrifter|forbud-mot-korning[^/?#]*|alaggande-om-gangbanerenhallning[^/?#]*|lokala-halsoskyddsforeskrifter|allmanna-lokala-ordningsforeskrifter[^/?#]*|lokala-ordningsforeskrifter-for-torghandel[^/?#]*))\\.html(#[^?]*)?$",
+      "number": [
+        {"from": "href", "pattern": "/([^/?#]+)\\.html(?:#.*)?$"}
+      ],
+      "title_strip": ["\\s*\\(?\\s*(ö|o)ppnas i (ett )?nytt f(ö|o)nster\\.?\\)?\\s*$"]
     },
     "2380": {
       "name": "Östersund",
@@ -5151,6 +5481,20 @@
         "rapport",
         "utredning"
       ]
+    },
+    "2560": {
+      "name": "Älvsbyn",
+      "issuer": "Älvsbyns kommun",
+      "region_code": "25",
+      "collection": "Taxor (styrdokumentdatabas)",
+      "strategy": "html_pages",
+      "hosts": ["www.alvsbyn.se", "alvsbyn.se", "www3.alvsbyn.se"],
+      "listings": ["https://www.alvsbyn.se/bygga-bo-och-miljo/taxor/"],
+      "link_pattern": "^http://www3\\.alvsbyn\\.se/styrdoc/Styrdok\\.nsf/Formnytt\\.xsp\\?documentId=[0-9A-F]{32}&action=openDocument$",
+      "number": [
+        {"from": "href", "pattern": "documentId=([0-9A-F]{32})"}
+      ],
+      "document_pattern": "/OpenAttachment/[^?#]+\\.pdf$"
     },
     "2580": {
       "name": "Luleå",
