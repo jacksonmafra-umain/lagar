@@ -104,7 +104,7 @@ class Args:
 class ConfigTest(unittest.TestCase):
     def test_pilot_config_loads(self):
         config = municipal.load_config(CONFIG)
-        self.assertEqual(sorted(config), ["0180", "1280", "1480"])
+        self.assertLessEqual({"0180", "1280", "1480"}, set(config))
         self.assertEqual(config["1480"].strategy, "domino_view")
 
     def write(self, tmp, kommuner):

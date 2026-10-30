@@ -173,6 +173,7 @@
     <string name="home_favourites_empty_text">Tap the bookmark on a document to keep it here.</string>
     <string name="home_scope_chip">Scope: %1$s. Change scope.</string>
     <string name="home_location_label">Location</string>
+    <string name="home_partial_error">Some sections could not be loaded.</string>
     <string name="home_choose_location">Choose a location</string>
     <string name="home_scope_region_title">Region: %1$s</string>
     <string name="home_scope_kommun_title">Municipality: %1$s</string>

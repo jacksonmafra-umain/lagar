@@ -354,7 +354,7 @@ register. There is no central database; lagrummet.se lists the series and links 
 registers. Regulations carry no copyright (9 § upphovsrättslagen).
 
 ```
-python3 -I collector/collect.py agency --series AFS|FFFS|TSFS [--series ...] [--year YYYY ...] \
+python3 -I collector/collect.py agency --series AFS|FFFS|TSFS|<listed series> [--series ...] [--year YYYY ...] \
     [--number 'AFS 2023:1' ...] [--limit N] [--refresh] [--rate SECONDS] \
     [--state collector/data/agency-state.json] [--manifest sources/agency-pdf-manifest.json] \
     [--corpus corpus] [--report FILE]
@@ -364,6 +364,20 @@ Each series has a small adapter in `collector/lagar/agency.py` that lists the re
 (`listing_urls`, `parse_listing`) and parses one detail page (`parse_detail`); the shared run
 loop does robots.txt, rate limiting, state, PDF hashing and writing. Adding a series means
 adding an adapter and registering it in `ADAPTERS`.
+
+Series whose regulation page is just a list of links to the PDFs need no code: add them to
+`collector/data/agency-series.json` (`issuer`, `listing_urls`, and `prefix` when the number is
+written in more than one way, e.g. `SGU[- ]?FS`; `exclude` overrides the default filter that
+skips guidance, preparatory work and register PDFs; `separator` when the number is written
+`SKSFS 2011 7`; `documents` when PDF links do not end in `.pdf`; `base_href` when the site files
+every amendment under its base regulation's folder, with the base's year and ordinal as groups;
+`detail_pages: true` when the listing links to one page per regulation that holds its PDF links).
+`ListedAdapter` classifies each link by its
+label, then its file name: a base regulation, an amending or repealing regulation (`om ändring
+i ... (XFS 2015:2)`, kept only in the base regulation's `amended_by`), or a consolidated version
+or reprint (linked from the base regulation). Every run rebuilds the series from the listing;
+PDFs already in the manifest are not downloaded again unless `--refresh`. The document's
+`source` is the regulation's own PDF and `source_sha256` its hash.
 
 | series | listing | detail | text |
 | --- | --- | --- | --- |
@@ -420,6 +434,15 @@ needs a subscription key from `api-portal.boverket.se` (owner decision). Skattev
 `www4.skatteverket.se` rejected the robots.txt request (WAF), so access must be confirmed first.
 Arbetsmiljöverket's regulation API is in a closed evaluation and needs a key; the public HTML
 pages are used instead.
+
+The weekly `Sync agency regulations` workflow (`.github/workflows/sync-agency.yml`) runs the
+collector for every series in `ADAPTERS`, so a new adapter or a new entry in
+`collector/data/agency-series.json` joins the sync without editing the workflow. Series read by
+year (TSFS) are limited to the current and previous year. Changes land as one pull request on
+`data/agency-sync` with the regenerated progress files and agencies log; the run summary lists
+written, unchanged, excluded, failed and blocked per series. Run it by hand with
+`gh workflow run sync-agency.yml [-f series='AFS SKSFS']`.
+
 ## County regulations
 
 The `county` command collects one county's regulations (länets författningssamling, series
@@ -594,8 +617,11 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
    anything; use it to check a new entry.
 5. `hosts` lists every host the collector may contact for that kommun; `region_code` must be the
    first two digits of the kommun code.
-6. Add a trimmed listing (and detail page) fixture and a test, then run a small sample with
-   `--kommun <code> --limit 5` and the audit.
+6. Add a trimmed listing fixture as `collector/tests/fixtures/municipal/<code>-listing.html` (headings
+   and links are all the parser reads) and its expectations as `collector/tests/fixtures/municipal/<code>.json`
+   (`listings`: every page read, followed pages included, to its fixture file, `count`, a `sample` entry with `number`, `title` and `url`,
+   and `excluded` titles); `test_municipal_listings.py` checks every such pair against the config. Then
+   run a small sample with `--kommun <code> --limit 5` and the audit.
 
 ## Agencies and sources log
 

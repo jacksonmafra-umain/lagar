@@ -1,8 +1,10 @@
 import contextlib
+import hashlib
 import io
 import json
 import tempfile
 import unittest
+import unittest.mock
 import urllib.error
 from pathlib import Path
 
@@ -20,6 +22,9 @@ FFFS_PDFS = (
     "https://www.fi.se/contentassets/56c6ee74bd65465fa3a5bd141fff0f17/fs1501k-20250623.pdf",
 )
 TSFS_2025 = TSFS.year_url(2025)
+XFS = agency.ListedAdapter("XFS", "Exempelverket", ["https://www.example.se/forfattningar/"])
+XFS_2013_1 = "https://www.example.se/download/18.1/1/XFS+2013_1.pdf"
+XFS_2013_1_CONSOLIDATED = "https://www.example.se/globalassets/xfs/konsoliderad-xfs-2013-1.pdf"
 AV_ROBOTS = (
     "User-agent: *\n"
     "Disallow: /globalassets/filer/publikationer/foreskrifter/ursprungs/\n"
@@ -156,6 +161,59 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             TSFS.parse_detail(fixture("agency-tsfs-detail.html"), agency.Entry("TSFS 2019:4", "x", "u"))
 
+    def test_listed_listing(self):
+        entries = XFS.parse_listing(fixture("agency-listed-listing.html"), XFS.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [
+            ("XFS 2013:1", True), ("XFS 2016:2", True), ("XFS 2015:1", True), ("XFS 2022:1", True),
+            ("XFS 2014:1", False), ("XFS 2020:2", False), ("XFS 2021:1", False)])
+        first, fees, reprinted, bare = entries[:4]
+        self.assertEqual(first.title, "Exempelverkets föreskrifter om prov")
+        self.assertEqual(first.url, XFS_2013_1)
+        self.assertEqual(first.amended_by, ["XFS 2014:1"])
+        self.assertEqual(first.pdfs, [("XFS 2013:1", XFS_2013_1),
+                                      ("XFS 2013:1 (konsoliderad version)", XFS_2013_1_CONSOLIDATED)])
+        # The amending regulation's own number comes from its file name.
+        self.assertEqual((fees.title, fees.amended_by), ("Exempelverkets föreskrifter om avgifter", ["XFS 2020:2"]))
+        # A base regulation known only through its reprint.
+        self.assertEqual(reprinted.amended_by, ["XFS 2021:1"])
+        self.assertEqual(reprinted.pdfs[0][0], "XFS 2015:1 (omtryck genom XFS 2021:1)")
+        self.assertEqual(bare.title, "XFS 2022:1")
+        self.assertEqual(len(bare.pdfs), 1)  # the guidance PDF is not part of the regulation
+
+    def test_listed_folders_and_spaced_numbers(self):
+        yfs = agency.ListedAdapter("YFS", "Yverket", ["https://www.example.se/forfattningar/"], separator="[: ]",
+                                   base_href=r"grund/yfs-(\d{4})-(\d+)/")
+        entries = yfs.parse_listing(fixture("agency-listed-folders.html"), yfs.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [
+            ("YFS 2011:2", True), ("YFS 2021:1", True), ("YFS 2014:3", False), ("YFS 2016:1", False)])
+        stod, fees = entries[:2]
+        self.assertEqual(stod.title, "Föreskrifter om stöd")
+        # A regulation filed under another base's folder that also has its own folder is a base regulation.
+        self.assertEqual(stod.amended_by, ["YFS 2014:3", "YFS 2016:1", "YFS 2021:1"])
+        self.assertEqual([label for label, _ in stod.pdfs], ["YFS 2011:2", "YFS 2011:2 (omtryck genom YFS 2014:3)"])
+        self.assertEqual(len(fees.pdfs), 1)  # one PDF per label; the corrigendum is skipped
+
+    def test_listed_detail_pages(self):
+        zfs = agency.ListedAdapter("ZFS", "Zverket", ["https://www.example.se/regler/"], detail_pages=True,
+                                   documents="/contentassets/")
+        listing = '<a href="/publ/zfs-20181/">ZFS 2018:1</a><a href="/publ/zfs-20197/">ZFS 2019:7</a>'
+        entries = zfs.parse_listing(listing, zfs.listing_url)
+        self.assertEqual([e.url for e in entries], ["https://www.example.se/publ/zfs-20181/",
+                                                    "https://www.example.se/publ/zfs-20197/"])
+        regulation = zfs.parse_detail(fixture("agency-listed-detail.html"), entries[0])
+        self.assertEqual(regulation.title, "Zverkets föreskrifter om grundläggande bestämmelser")
+        self.assertEqual(regulation.amended_by, ["ZFS 2019:7"])
+        self.assertEqual([label for label, _ in regulation.pdfs], ["ZFS 2018:1", "ZFS 2018:1 (konsoliderad version)"])
+        with self.assertRaises(agency.NotBase):
+            zfs.parse_detail(fixture("agency-listed-detail.html"), entries[1])
+
+    def test_listed_series_config(self):
+        series = agency.load_series()
+        for code, adapter in series.items():
+            self.assertEqual(agency.ADAPTERS[code].listing_urls(None), adapter.listing_urls(None))
+            self.assertTrue(adapter.listing_url.startswith("https://"), code)
+        self.assertEqual(agency.load_series(Path("/nonexistent.json")), {})
+
     def test_ids_and_numbers(self):
         self.assertEqual(agency.corpus_id("AFS 2023:1"), "afs-2023-1")
         self.assertEqual(agency.corpus_id("HSLF-FS 2016:40"), "hslf-fs-2016-40")
@@ -285,11 +343,47 @@ class RunTest(unittest.TestCase):
         self.assertEqual(sorted(report["failed"]), ["TSFS 2025:1", "TSFS 2025:2"])  # no detail fixtures
         self.assertNotIn(TSFS.index_url, client.calls)
 
+    def test_listed_run_hashes_pdfs_and_rebuilds(self):
+        pages = {XFS.listing_url: fixture("agency-listed-listing.html").encode()}
+        for entry in XFS.parse_listing(fixture("agency-listed-listing.html"), XFS.listing_url):
+            for _, url in entry.pdfs:
+                pages[url] = b"%PDF-1.7 " + url.encode()
+        client = FakeClient(pages)
+        with unittest.mock.patch.dict(agency.ADAPTERS, {"XFS": XFS}):
+            self.assertEqual(self.main(client, "--series", "XFS"), 0)
+            report = self.read_report()
+            self.assertEqual(report["written"], ["XFS 2013:1", "XFS 2016:2", "XFS 2015:1", "XFS 2022:1"])
+            self.assertEqual((report["excluded"], report["pdfs"]), (3, 5))
+            path = self.corpus / "agency" / "regulations" / "xfs-2013-1.md"
+            meta, body = frontmatter.load(path.read_text(encoding="utf-8"))
+            self.assertEqual(schema.validate(meta), [])
+            self.assertEqual(meta["source"], XFS_2013_1)
+            self.assertEqual(meta["source_sha256"], hashlib.sha256(pages[XFS_2013_1]).hexdigest())
+            self.assertEqual(meta["amended_by"], ["XFS 2014:1"])
+            self.assertIn("(konsoliderad version)", body)
+            # Every run rebuilds from the listing; PDFs in the manifest are not fetched again.
+            self.assertEqual(self.main(client, "--series", "XFS"), 0)
+            self.assertEqual((self.read_report()["unchanged"], self.read_report()["pdfs"]), (4, 0))
+            self.assertEqual(client.calls.count(XFS_2013_1), 1)
+
+    def test_listed_pdf_disallowed_by_robots_fails(self):
+        pages = {XFS.listing_url: fixture("agency-listed-listing.html").encode()}
+        client = FakeClient(pages, robots={XFS.base_url: b"User-agent: *\nDisallow: /download/\n"})
+        with unittest.mock.patch.dict(agency.ADAPTERS, {"XFS": XFS}):
+            self.assertEqual(self.main(client, "--series", "XFS", "--number", "XFS 2013:1"), 0)
+        self.assertEqual(self.read_report()["failed"], ["XFS 2013:1"])
+        self.assertNotIn(XFS_2013_1, client.calls)
+
     def test_rate_below_one_second_is_refused(self):
         with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
             agency.parse_args(["--series", "AFS", "--rate", "0.5"])
         with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
             agency.parse_args(["--series", "XYZ"])
+
+    def test_series_and_numbers_ignore_case(self):
+        with unittest.mock.patch.dict(agency.ADAPTERS, {"XiFS": XFS}):
+            args = agency.parse_args(["--series", "xifs", "--number", "XIFS 2013:1"])
+        self.assertEqual((args.series, args.number), (["XiFS"], ["XiFS 2013:1"]))
 
 
 if __name__ == "__main__":

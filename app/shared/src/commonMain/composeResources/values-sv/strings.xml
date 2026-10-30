@@ -173,6 +173,7 @@
     <string name="home_favourites_empty_text">Tryck på bokmärket på ett dokument för att spara det här.</string>
     <string name="home_scope_chip">Omfattning: %1$s. Byt omfattning.</string>
     <string name="home_location_label">Plats</string>
+    <string name="home_partial_error">Vissa delar kunde inte laddas.</string>
     <string name="home_choose_location">Välj plats</string>
     <string name="home_scope_region_title">Region: %1$s</string>
     <string name="home_scope_kommun_title">Kommun: %1$s</string>

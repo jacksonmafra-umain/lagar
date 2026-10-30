@@ -74,11 +74,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   Rulings the courts publish in full (`DOM_ELLER_BESLUT`, about 760),
   leave-to-appeal and preliminary-ruling notices and all attachments (PDF) are
   left out by design (19 such items appeared in the referat/notis listing). 231
-  publications are recorded as failed instead of written: 213 have no report
+  publications were recorded as failed instead of written: 213 had no report
   reference in the schema's form (mostly older kammarrätt and Marknadsdomstolen
   referat with only a case number), 9 repeat a reference already stored from
   another publication (joined cases published twice, e.g. NJA 2017:88, MÖD
-  2025:53), and 9 contain what looks like a personal identity number. SFS
+  2025:53), and 9 contain what looks like a personal identity number. The
+  kammarrätt referat the courts list without a report reference (76 on
+  2026-10-30: KGG 8, KJO 23, KST 42, KSU 3, decided 2000 to 2007) are collected
+  since then under the court's abbreviation, decision date and case number,
+  such as `KRNJ 2007-01-09 mål nr 1097-06`; a per-court scan that day found no
+  other referat or notis without a reference. SFS
   references (`lagrumLista`) stay plain text in the body; the app's reader links
   the citation forms to the SFS documents the API publishes.
 - Agency regulations: three of about 100 series (lagrummet.se lists them) are
@@ -106,6 +111,26 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   answered normally), Migrationsverket (MIGRFS) and the other series are not
   collected yet (#115). [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
+- Agency series published as a list of PDF links (configured in
+  `collector/data/agency-series.json`, read by `ListedAdapter`): RGKFS (6 base
+  regulations), RIFS (14), SGU-FS (6), SiSFS (30), TVFS (10), UFS (5), VALFS
+  (17) and VRFS (3), as of 2026-10-30: every base regulation linked from the
+  agency's regulation page. Amending and repealing regulations are listed in
+  `amended_by`; consolidated versions and reprints are linked from the base
+  regulation. The text is only in the PDFs (hashed in
+  `sources/agency-pdf-manifest.json`, not extracted yet), so the bodies hold
+  the number, the title from the link text, the issuer and the PDF links; RIFS,
+  UFS and some TVFS links carry only the number, so those documents are titled
+  with it. A base regulation whose own PDF is not linked with its number (RGKFS
+  2006:1, TVFS 2015:1) is known through its reprint. Older series of the same
+  agencies (Revisorsnämnden's RNFS on the RIFS page) are not collected.
+- SKSFS (18 base regulations) and SSMFS (41) as of 2026-10-30, the same way.
+  Skogsstyrelsen writes numbers as `SKSFS 2011 7` and files every amendment in
+  its base regulation's folder; a regulation that replaced another (SKSFS
+  2021:1, filed under 1998:2 and in its own folder) is stored as a base
+  regulation and also listed in the older one's `amended_by`. SSMFS has one
+  page per base regulation in force with the original and consolidated PDFs and
+  the amendments.
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630

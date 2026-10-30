@@ -73,6 +73,7 @@ fun HomeRoute(
         onOpenLocality = onOpenLocality,
         onSelectScope = onSelectScope,
         onToggleBookmark = viewModel::toggleBookmark,
+        onRetry = viewModel::retry,
     )
 }
 
@@ -89,6 +90,7 @@ fun HomeScreen(
     onOpenLocality: (layer: DisplayLayer, code: String, name: String) -> Unit,
     onSelectScope: (Scope) -> Unit,
     onToggleBookmark: (ListingItem) -> Unit,
+    onRetry: () -> Unit = {},
 ) {
     val wide = LocalWideLayout.current
     LoadStateHost(state) { data, shell ->
@@ -104,6 +106,7 @@ fun HomeScreen(
                 onChooseLocation = onChooseLocation,
                 onSelectScope = onSelectScope,
                 onOpenLocality = onOpenLocality,
+                onRetry = onRetry,
             )
             return@LoadStateHost
         }
@@ -122,6 +125,9 @@ fun HomeScreen(
                         LocationCard(data.scope, data.localityName, onChooseLocation, Modifier.padding(horizontal = spacing.marginMobile))
                     }
                 }
+            }
+            if (data.unavailable.isNotEmpty()) {
+                item { PartialLoadNotice(onRetry, Modifier.padding(horizontal = spacing.marginMobile)) }
             }
             if (data.scope == Scope.Nationell) {
                 item { ImportantLaws(data, focus, onOpenDocument, Modifier.padding(horizontal = spacing.marginMobile)) }

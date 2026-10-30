@@ -1,5 +1,6 @@
 package app.lagar.ui.home
 
+import app.lagar.data.ApiException
 import app.lagar.data.ApiIndex
 import app.lagar.data.ApiLayer
 import app.lagar.data.ApiSeries
@@ -124,6 +125,28 @@ class HomeViewModelTest {
         assertEquals(emptyList(), data.layers)
         assertEquals(null, data.localityHome)
         assertEquals(listOf("municipality/index"), localities.requests)
+    }
+
+    /** A national catalog whose ordinance listing is missing, as when the web app is deployed before the API. */
+    private object MissingOrdinances : LagarRepository {
+        override suspend fun index(): ApiIndex = ApiIndex(1, "2026-10-29T10:00:00Z", listOf(ApiLayer("sfs", 2, listOf(ApiSeries("act", 1), ApiSeries("ordinance", 1)))))
+
+        override suspend fun listing(layer: String, type: String?, page: Int): ListingPage {
+            if (type == "ordinance") throw ApiException("not found", 404)
+            return ListingPage(layer, type, 1, 1, 1, listOf(ListingItem("sfs-2026-1", "Lag", "2026:1", "act", "2026-01-01", null)))
+        }
+
+        override suspend fun document(id: String): DocumentResponse = error("unused")
+    }
+
+    @Test
+    fun aMissingListingStillShowsTheRestOfTheNationalHome() {
+        val settings = MapSettings()
+        val preferences = UserPreferences(settings).apply { completeOnboarding(Scope.Nationell, Locality(null, null)) }
+        val vm = HomeViewModel(MissingOrdinances, preferences, BookmarkStore(settings), geo, Localities())
+        val data = assertIs<LoadState.Loaded<HomeData>>(vm.state.value).value
+        assertEquals(listOf("sfs-2026-1"), data.acts.map { it.id })
+        assertEquals(listOf(DisplayLayer.SfsOrdinance), data.unavailable)
     }
 
     @Test
