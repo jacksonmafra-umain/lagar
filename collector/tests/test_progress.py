@@ -35,6 +35,15 @@ class ProgressTests(unittest.TestCase):
         [row] = progress.build_rows(targets, counts)
         self.assertEqual((row["collected"], row["percent"]), (5, 50.0))
 
+    def test_a_type_with_its_own_row_is_left_out_of_the_layer_row(self):
+        counts = {"eu_regulation": 3, "eu_directive": 2, "eu_judgment": 40}
+        targets = [{"layer": "eu", "type": None, "label": "EU", "target": 10, "kind": "curated",
+                    "source": "s", "as_of": "2026-10-29"},
+                   {"layer": "eu", "type": "eu_judgment", "label": "EU judgments", "target": 50,
+                    "kind": "counted", "source": "s", "as_of": "2026-10-30"}]
+        acts, judgments = progress.build_rows(targets, counts)
+        self.assertEqual((acts["collected"], judgments["collected"]), (5, 40))
+
     def test_design_colors_parsed(self):
         self.assertEqual(self.colors["sfs-act"], {"base": "#005b99", "text": "#005b99", "dark": "#9ecaff"})
         self.assertEqual(self.colors["case-law"]["base"], "#7a2e4d")

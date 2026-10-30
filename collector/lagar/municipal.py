@@ -395,7 +395,7 @@ class Fetcher:
         return self.robots(url).allows(url)
 
     def _fetch(self, url):
-        url = ascii_url(url)
+        url = _uri(url)
         for attempt in range(ENCODING_ATTEMPTS):
             try:
                 return self.client.fetch_final(url)
@@ -410,13 +410,6 @@ class Fetcher:
         raw, content_type, final = self._fetch(url)
         check_host(kommun, final)
         return raw, content_type, final
-
-
-def ascii_url(url):
-    """The URL with non-ASCII characters percent-encoded (UTF-8); existing escapes are kept."""
-    if url.isascii():
-        return url
-    return urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~")
 
 
 def check_host(kommun, url):
@@ -453,6 +446,11 @@ def slug(text):
 
 def corpus_id(kommun_code, number):
     return f"{kommun_code}-{slug(number)}"
+
+
+def _uri(url):
+    """Percent-encode what some listings leave raw in their links (spaces, å, ä, ö)."""
+    return urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~")
 
 
 def _clean(text):
@@ -570,11 +568,11 @@ def parse_html_index(kommun, raw, listing_url):
     sections = {s.casefold() for s in kommun.sections}
     entries, problems = [], []
     # Icon links next to the titled link carry no text; they are not documents of their own.
-    titled = {ascii_url(urllib.parse.urljoin(listing_url, href)) for _, href, text in parser.links if text}
+    titled = {_uri(urllib.parse.urljoin(listing_url, href.strip())) for _, href, text in parser.links if text}
     for section, href, text in parser.links:
         if sections and (section or "").casefold() not in sections:
             continue
-        url = ascii_url(urllib.parse.urljoin(listing_url, href))
+        url = _uri(urllib.parse.urljoin(listing_url, href.strip()))
         if not re.search(kommun.link_pattern, url, re.IGNORECASE) or (not text and url in titled):
             continue
         number = _number(kommun, url, text)
@@ -597,7 +595,7 @@ def more_pages(kommun, raw, listing_url):
     parser.close()
     pages = []
     for _, href, _ in parser.links:
-        url = ascii_url(urllib.parse.urldefrag(urllib.parse.urljoin(listing_url, href))[0])
+        url = _uri(urllib.parse.urldefrag(urllib.parse.urljoin(listing_url, href))[0])
         if re.search(kommun.follow, url) and urllib.parse.urlsplit(url).hostname in kommun.hosts:
             pages.append(url)
     return list(dict.fromkeys(pages))

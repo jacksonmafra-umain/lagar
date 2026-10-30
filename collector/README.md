@@ -4,7 +4,7 @@ Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown
 records a SHA-256 manifest of the authoritative SFS PDFs, adds each statute's amendment
 register from SFSR, writes a metadata-only amendment history for git, collects the published case
 law of the Swedish courts, collects EU acts in Swedish from the Publications Office Cellar,
-collects agency regulations (pilot: AFS, FFFS, TSFS) and collects municipal regulations from
+collects agency regulations (AFS, FFFS, TSFS, MIGRFS and others) and collects municipal regulations from
 the kommuner's own författningssamlingar.
 Python standard library only.
 
@@ -102,6 +102,27 @@ python3 -I collector/collect.py sfspdf --rss [--report FILE]
 The site has no robots.txt (HTTP 404); one is honoured if it appears. The PDFs are signed by
 the publisher, but the signature is not verified or recorded. `Last-Modified` and `ETag` change
 nightly, so they are not used. A full crawl of 2018 to today is about 30,000 requests.
+
+## PDF text
+
+`lagar/pdftext.py` is the one place that reads text out of an official PDF; every collector that
+needs it calls `pdftext.extract(data)`. It runs poppler's `pdftotext` on a temporary copy of the
+bytes, so the collector itself stays stdlib-only. Install poppler-utils (`sudo apt-get install
+poppler-utils`, `brew install poppler`); the collector and sync workflows install it on the runner.
+
+- `extract` returns `PdfText(text, pages, text_pages, gap)`. Pages are split by form feeds; a page
+  with fewer than 40 letters and digits has no text layer.
+- When less than half of the pages carry text, `gap` is `"no text layer (scanned PDF)"`; when
+  less than half of the visible characters are letters or digits (fonts without a Unicode map),
+  `gap` is `"text layer is not readable ..."`. Callers record the gap and keep the PDF link and
+  SHA-256; they never guess or OCR the text.
+- `paragraphs(text)` reflows the text into paragraphs: a new one starts after a blank line, before
+  `N §`, `N kap.`, `1.` or `a)`, and after a short line followed by a capital or digit; other lines
+  are joined, line-break hyphens removed (not before "och", "eller" and similar), lines holding
+  only a page number or a rule dropped.
+- A missing tool, a timeout or a file `pdftotext` cannot open raises `pdftext.PdfTextError`.
+- Tests that run the tool skip when it is not installed, unless `LAGAR_REQUIRE_PDFTOTEXT=1`
+  (set in CI).
 
 ## Amendment register (SFSR)
 
@@ -273,6 +294,73 @@ protection, digital, consumer, labour, environment, private international law). 
 in-force sweep is not implemented yet. Reuse is free with acknowledgement of the source
 (Commission Decision 2011/833/EU).
 
+## EU case law (Cellar)
+
+```sh
+python3 -I collector/collect.py eu-case-law --list collector/data/eu-acts.json \
+    [--refresh] [--changed-since DATE[TIME]] [--limit N] [--cache DIR] [--report FILE]
+python3 -I collector/collect.py eu-case-law --celex 62014CJ0362[,62012CJ0293 ...] [options]
+```
+
+The collection is bounded to judgments of the Court of Justice (CELEX type `CJ`) and the
+General Court (`TJ`) that Cellar records as interpreting an act of the curated list
+(`cdm:case-law_interpretes_resource_legal`). One SPARQL query lists them with their newest
+Cellar modification; per judgment one query reads the metadata (date, ECLI, language of the
+case, joined cases, interpreted acts, Swedish title and manifestations) and content
+negotiation on `/resource/celex/<CELEX>` with `Accept-Language: swe` returns the Swedish
+XHTML or HTML, converted with the EU act converter. The same host rules apply as for EU acts:
+only publications.europa.eu and op.europa.eu, robots.txt checked, at least 1 s between
+requests, eur-lex.europa.eu refused even as a redirect target.
+
+Documents are `eu_judgment` in layer `eu`, under `corpus/eu/judgments/`, with the case
+number as `number` (`C-362/14`, `T-12/19`, `26/62` before 1989), `court` `CJ` or `TJ`, the
+judgment's `ecli` and `celex`. The body starts with the case numbers (joined cases
+included), the ECLI and the interpreted acts. Only the language of the case is authentic,
+so `authoritative` is true only for cases conducted in Swedish. A judgment without a Swedish
+XHTML or HTML expression is a gap in the manifest `sources/eu-case-law-manifest.json` (size
+and SHA-256 of every source); nothing is translated. Orders (`CO`), Advocate General
+opinions (`CC`) and judgments that interpret no curated act are not collected.
+
+The daily `Sync EU` workflow runs `eu-case-law --list collector/data/eu-acts.json
+--changed-since <marker>` after the acts, with its own marker
+`collector/data/eu-case-law-sync.json`, so new judgments and Cellar corrections arrive in
+the same pull request as the acts.
+
+## Treaties (SÖ)
+
+```sh
+python3 -I collector/collect.py so [--from-year YYYY] [--to-year YYYY] [--text-from-year 2010] \
+    [--changed-since YYYY-MM-DD] [--url URL ...] [--refresh] [--limit N] [--report FILE]
+```
+
+Sveriges internationella överenskommelser (SÖ) publishes every international
+agreement binding Sweden. Regeringen.se has one page per agreement under
+`/rattsliga-dokument/sveriges-internationella-overenskommelser/`; the collector finds
+them in the site's sitemap (one request, with each page's last modification), reads
+robots.txt once and honours it for every URL, and fetches at most one page a second.
+Each page gives the title, the place and date of signature (`issued`), the SÖ number,
+the ministry, a note on the government's decision and the entry into force
+(`in_force`, when the note states it) and the PDF links. Pages without an SÖ number,
+such as declarations of intent published in the same section, are skipped. Some
+treaties are published again on a second page (often in a bulk folder such as
+`1994/01/` or `2012/12/`, with extra PDFs), and a few old pages carry a number another
+page already uses; the page whose URL sorts first keeps the number and the others are
+recorded in the state file as duplicates.
+
+Documents are `treaty` in layer `sfs`, under `corpus/sfs/treaties/`, with ids such as
+`so-2023-3`. The text is only published as PDF: for SÖ years from `--text-from-year`
+(default 2010) the PDFs are downloaded and their text extracted with
+`collector/lagar/pdftext.py`; size, SHA-256, page count and the extraction result go
+into `sources/so-pdf-manifest.json`, and the bytes are not kept. Older treaties, and
+scanned PDFs, keep the page metadata and the PDF link only. Many treaties are printed
+in Swedish and one or more other languages side by side; the extracted text keeps
+every language, as printed. `authoritative` stays false: the text is not tied to a
+verified snapshot of the print.
+
+The weekly `Sync SÖ` workflow (`.github/workflows/sync-so.yml`) runs
+`collect.py so --changed-since <15 days ago>`, so new treaties and updated pages land
+in one pull request on `data/so-sync`.
+
 ## Case law
 
 The `case-law` command (alias `caselaw`) collects the anonymised summaries that the courts
@@ -376,14 +464,40 @@ every amendment under its base regulation's folder, with the base's year and ord
 label, then its file name: a base regulation, an amending or repealing regulation (`om ändring
 i ... (XFS 2015:2)`, kept only in the base regulation's `amended_by`), or a consolidated version
 or reprint (linked from the base regulation). Every run rebuilds the series from the listing;
-PDFs already in the manifest are not downloaded again unless `--refresh`. The document's
+PDFs already in the manifest are not downloaded again unless `--refresh`. An adapter can also name further listing pages (`more_pages`) or fetch its listing itself (`fetch_listing`, e.g. a POSTed search form through `PoliteClient.post`). The document's
 `source` is the regulation's own PDF and `source_sha256` its hash.
+
+Series published as a plain page of links use the configurable adapters in
+`collector/lagar/agency_generic.py`: `PdfListAdapter` when the listing links straight to the
+PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS) and `DetailPageAdapter` when it links to one
+HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS); `SitemapAdapter`
+finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS).
+A detail page's HTML text is kept when the series sets `text_nodes` (MDFFS). AFFS reads the
+list from the Sitevision page state and FKFS the JSON register of Försäkringskassan's
+lagrummet; both have their own small adapters in the same module.
+A series there is a subclass that sets the listing URLs and, where
+needed, the list item element. The number comes from either end of the item's text, else from
+the PDF's file name; amending and repealing regulations are recognised by their titles ("om
+ändring i", "om upphävande av") and listed in the `amended_by` of the base regulation they
+name. For PDF entries (`detail = False`) the PDF is the document: `source` is its URL and
+`source_sha256` its hash.
 
 | series | listing | detail | text |
 | --- | --- | --- | --- |
 | AFS (Arbetsmiljöverket) | `https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/`, "Gällande grundföreskrifter" plus the amending regulations in force | `.../foreskrifter/afs-20231/` | HTML, the latest consolidated version |
 | FFFS (Finansinspektionen) | `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/` (all regulations in force, newest first) | `.../sok-fffs/<year>/<yearnumber>/` | PDF only |
 | TSFS (Transportstyrelsen) | `.../ts-foreskrifter-i-nummerordning/<year>/` (in force and repealed) | `.../<year>/details?RuleNumber=<year>:<n>&ruleprefix=TSFS` | PDF only |
+| ÅFS (Åklagarmyndigheten) | `https://www.aklagare.se/om-oss/dokument/forfattningssamling` (cards with dates and tags) | none | PDF only |
+| STAFS (Swedac) | `https://regelverk.swedac.se/foreskrifter.json` (in force and repealed) | `.../<slug>.md` (consolidated where there is one) | Markdown |
+| PRVFS (PRV) | division A1, base regulations in force | none | PDF only |
+| PMFS, RPSFS (Polismyndigheten) | `https://polisen.se/lagar-och-regler/polismyndighetens-forfattningssamling/<page>/` | none | PDF only |
+| SCB-FS (SCB) | table of regulations on reporting duties | `/link/<id>.aspx` | HTML |
+| STEMFS (Energimyndigheten) | document archive, category Föreskrifter, 40 a page (crawl delay 10 s) | none | PDF only |
+| RFS (Riksdagsförvaltningen) | `https://data.riksdagen.se/dokumentlista/?doktyp=rfs&utformat=json` | `https://data.riksdagen.se/dokument/<dok_id>.html` | HTML (Fulltext) |
+| RA-FS (Riksarkivet) | `https://foreskrifter.riksarkivet.se/api/rafs/sok` (JSON, in force and repealed) | none | PDF only |
+| SKOLFS (Skolverket) | `https://skolfs.skolverket.se/api/statute` (JSON, paged) | `.../api/document/<number>/ascending` (JSON) | PDF only |
+| SJÖFS (Sjöfartsverket) | `.../lagrum/systematisk-forteckning-n/<subject>/` (21 subject pages) | none | PDF only |
+| TRVFS (Trafikverket) | `https://trvfs.ea.trafikverket.se/TRVFS/Home/SearchInDocCollection` (POST per year) | `.../Home/DocumentHistory/<year>-<n>` | PDF only |
 
 - Only base regulations (grundförfattningar) are stored, in `corpus/agency/regulations/`.
   Amending regulations are counted as `excluded` and appear in the base regulation's
@@ -451,7 +565,8 @@ There is no API or open data set; the texts are free of copyright (9 § upphovsr
 
 ```
 python3 -I collector/collect.py county --county CODE [--from-year YYYY] [--to-year YYYY] \
-    [--newest-first] [--limit N] [--no-pdf] [--landing-url URL] [--rate SECONDS] \
+    [--newest-first] [--limit N] [--no-pdf] [--no-text] [--refresh-pdf] [--landing-url URL] \
+    [--rate SECONDS] \
     [--config collector/data/counties.json] [--state collector/data/county-state.json] \
     [--manifest sources/county-pdf-manifest.json] [--corpus corpus] [--report FILE]
 ```
@@ -474,8 +589,11 @@ python3 -I collector/collect.py county --county CODE [--from-year YYYY] [--to-ye
     The number comes from the link text or else the file name, with the county's
     `number_patterns` (regular expressions with groups `year`, `n` and optionally `code`; the
     default reads `04FS 2026-1`, `22 FS 2026-1`, `18FS2025 1`, `FS 2026-01`). A number in another
-    county's series is skipped. Links without a number (registers, maps, misnumbered files) are not
-    collected and are listed in the report as `unnumbered` when they belong to a requested year.
+    county's series is skipped. A link without a number in its text or file name is downloaded and
+    gets the first number of the county's series printed in the top of its PDF text (a link already
+    in the manifest keeps its number without a download). Links that still have no number
+    (registers, information sheets, scanned files) are not collected and are listed in the report
+    as `unnumbered` when they belong to a requested year (every one when no year is given).
 - Each URL is checked against `robots.txt` before it is requested; a disallowed URL or an HTTP 403
   stops the run (exit code 2). `--rate` must be at least 1 second (the default).
 - Mapping (`county_regulation`, `layer: region`, `corpus/region/county-regulations/`): `number` is the
@@ -488,24 +606,33 @@ python3 -I collector/collect.py county --county CODE [--from-year YYYY] [--to-ye
     ..."). `in_force` is set only when the text names exactly one date in "träder i kraft den ...".
     `source` is the detail page and `source_sha256` hashes its heading, ingress and text fragments
     (the full page carries a per-request script nonce, so it is not hashed whole).
-  - `files`: `title` is the link text without the number, `.pdf` and an "UPPHÄVD" mark (plus the
-    county's `title_strip` patterns); when nothing is left, the paragraph following a plain link is
-    used (Dalarna), or else the number itself. `issued` is the decision date of that paragraph when
-    there is one, otherwise null; `in_force` is null. `source` is the PDF and `source_sha256` its
-    SHA-256 (with `--no-pdf`, a hash of the link URLs and texts). Files sharing a number (a
-    regulation and its map) form one document.
+  - `files`: `title` is the title printed in the PDF (an early paragraph ending in `;` that names a
+    regulation or decision) when its text was read; otherwise the link text without the number,
+    `.pdf` and an "UPPHÄVD" mark (plus the county's `title_strip` patterns); when nothing is left,
+    the paragraph following a plain link is used (Dalarna), or else the number itself. `issued` is
+    the decision date of that paragraph when there is one, otherwise the "beslutade den ..." date of
+    the PDF text; `in_force` comes from the PDF text like for `pages`. `source` is the PDF and
+    `source_sha256` its SHA-256 (with `--no-pdf`, a hash of the link URLs and texts). Files sharing
+    a number (a regulation and its map) form one document.
 - Body: a facts block (number, publication and decision dates, entry into force, issuer; for
   `files` also the landing page), the text of the detail page converted to Markdown (lists and
   nested lists kept; links keep their text), then `## Tryckt version` with links to the printed
-  PDF. Regulations published only as PDF (all of the `files` layout) get a one-line note instead of
-  text; a regulation the county marks "UPPHÄVD" gets a note saying so. The PDFs are never parsed.
+  PDF. Regulations published only as PDF (all of the `files` layout, and detail pages without
+  text) get the PDF's text instead, read with `lagar/pdftext.py` and reflowed into paragraphs;
+  with several readable files (a regulation and its appendix) each gets a heading. A PDF without
+  a readable text layer (scanned) is a gap: the body says the text is only in the PDF and nothing
+  is guessed. A regulation the county marks "UPPHÄVD" gets a note saying so. `pdftotext`
+  (poppler-utils) must be installed unless `--no-text` (or `--no-pdf`) is given.
 - PDFs: on detail pages, a paragraph made only of PDF links is the regulation's own printed
   version; PDF links in running text point at other regulations and are not followed. Each own PDF
   is downloaded once (where `robots.txt` allows) to record its size and SHA-256 in the committed
   manifest `sources/county-pdf-manifest.json` (entries `number`, `detail_url` (the landing page for
-  `files`), `published`, `files[]` with `url`, `bytes`, `sha256`, `content_type`, `retrieved_at`);
-  the bytes are not kept. `--no-pdf` records the links with null hashes; a later run without it
-  fills them.
+  `files`), `published`, `files[]` with `url`, `bytes`, `sha256`, `content_type`, `retrieved_at`
+  and, for files whose text was read, `text`: `extracted`, a gap reason such as `no text layer
+  (scanned PDF)`, or `unreadable PDF`); the bytes are not kept. `--no-pdf` records the links with
+  null hashes; a later run without it fills them. A PDF whose hash and `text` are in the manifest
+  is not downloaded again while its corpus file exists, so the body is left as it is; `--refresh-pdf`
+  downloads and reads every PDF again.
 - As for case law, a text containing a personal identity number is recorded as failed.
 - State (git-ignored) is `{"done": {number: source_sha256}, "failed": {number: error}, "blocked":
   null|msg}`; a regulation is skipped without a request when it is done and its file exists. A

@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.ostersund.se/kommun-och-politik/lokala-foreskrifter.html": "2380-listing1.html",
+    "https://www.ostersund.se/kommun-och-politik/ekonomi/avgifter-och-taxor.html": "2380-listing2.html"
+  },
+  "count": 32,
+  "sample": {
+    "number": "18.7ea73fc815271422765bc9f0",
+    "title": "Lokala föreskrifter för att skydda människors hälsa och miljön",
+    "url": "https://www.ostersund.se/download/18.7ea73fc815271422765bc9f0/1775831304591/lokala-foreskrifter_skydda-manniskors-halsa-och-miljon.pdf"
+  },
+  "excluded": []
+}

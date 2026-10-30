@@ -1,0 +1,18 @@
+{
+  "listings": {
+    "https://degerfors.se/kommun-och-politik/kommunfakta/allmanna-lokala-foreskrifter.html": "1862-listing1.html",
+    "https://degerfors.se/bo-bygga-trafik-och-miljo/vatten-och-avlopp/avgifter-och-taxor.html": "1862-listing2.html",
+    "https://degerfors.se/bo-bygga-trafik-och-miljo/avfall-och-atervinning/avgifter-regler-och-abonnemang": "1862-listing3.html",
+    "https://degerfors.se/bo-bygga-trafik-och-miljo/gata-park-och-trafik/torghandel": "1862-listing4.html",
+    "https://degerfors.se/bo-bygga-trafik-och-miljo/bygga-nytt-riva-eller-andra.html": "1862-listing5.html"
+  },
+  "count": 13,
+  "sample": {
+    "number": "18.1a35c068190a71e0b0c26f9d",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://degerfors.se/download/18.1a35c068190a71e0b0c26f9d/1724068876255/Antagna%20Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": [
+    "Se våra bygglovstaxor"
+  ]
+}

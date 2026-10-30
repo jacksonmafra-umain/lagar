@@ -323,6 +323,22 @@ class MalmoTest(unittest.TestCase):
             self.assertEqual(len(manifest["gaps"]), 2)
 
 
+class RawLinkTest(unittest.TestCase):
+    def test_spaces_and_letters_in_links_are_percent_encoded(self):
+        listing = (
+            '<h2>Reglerande styrdokument</h2><a href="/globalassets/start/kommunal-forfattningssamling/'
+            'kfs 2024 Avfallstaxa för Stockholm.pdf">Avfallstaxa KFS 2024:3</a>'
+        ).encode()
+        entries, problems = municipal.parse_html_index(kommun("0180"), listing, STHLM_URL)
+        self.assertEqual(problems, [])
+        self.assertEqual(
+            entries[0].url,
+            "https://start.stockholm/globalassets/start/kommunal-forfattningssamling/"
+            "kfs%202024%20Avfallstaxa%20f%C3%B6r%20Stockholm.pdf",
+        )
+        self.assertEqual(entries[0].number, "KFS 2024:3")
+
+
 class GoteborgTest(unittest.TestCase):
     def test_view_keeps_regulations_and_fees_once(self):
         entries, _ = municipal.parse_domino_view(kommun("1480"), GBG_VIEW, GBG_VIEW_URL)
@@ -453,10 +469,10 @@ class SitevisionPresetTest(unittest.TestCase):
 
     def test_non_ascii_links_are_percent_encoded(self):
         self.assertEqual(
-            municipal.ascii_url("https://www.vetlanda.se/styrdokument?letter=Ö&x=%C3%A5"),
+            municipal._uri("https://www.vetlanda.se/styrdokument?letter=Ö&x=%C3%A5"),
             "https://www.vetlanda.se/styrdokument?letter=%C3%96&x=%C3%A5",
         )
-        self.assertEqual(municipal.ascii_url("https://a.se/b%20c.pdf"), "https://a.se/b%20c.pdf")
+        self.assertEqual(municipal._uri("https://a.se/b%20c.pdf"), "https://a.se/b%20c.pdf")
 
     def test_resident_filter_matches_compound_taxa(self):
         with tempfile.TemporaryDirectory() as tmp:

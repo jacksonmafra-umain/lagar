@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.grums.se/kommunpolitik/forfattningssamling.3189.html": "1764-listing.html"
+  },
+  "count": 15,
+  "sample": {
+    "number": "18.542301d218418c937a71a5b2",
+    "title": "Lokala föreskrifter om avfallshantering för Grums kommun",
+    "url": "https://www.grums.se/download/18.542301d218418c937a71a5b2/1669131024568/Lokala%20f%C3%B6reskrifter%20om%20avfallshantering%20f%C3%B6r%20Grums%20kommun%20KF221110%20%C2%A789%20g%C3%A4ller%20from%20230101.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige",
+    "Arkivreglemente för Grums kommun",
+    "Instruktion för kommundirektör"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.vasteras.se/kommun-och-politik/forfattningssamling.html": "1980-listing.html"
+  },
+  "count": 21,
+  "sample": {
+    "number": "18.4651ec33169110b990c2d41",
+    "title": "Avgifter för bad, idrott, båtplatser, skollokaler med mera",
+    "url": "https://www.vasteras.se/download/18.4651ec33169110b990c2d41/1554823954861/Avgifter%20och%20priser%202019.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige",
+    "Arbetsordning för byggnadsnämndens arbetsutskott",
+    "Arbetsordning för individ- och familjenämndens arbetsutskott"
+  ]
+}

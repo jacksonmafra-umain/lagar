@@ -1,0 +1,15 @@
+{
+  "listings": {
+    "https://bollnas.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/bollnas-kommuns-forfattningssamling": "2183-listing1.html",
+    "https://bollnas.se/kommun-och-politik/kommunfakta/ekonomi-och-budget/avgifter-och-taxor": "2183-listing2.html"
+  },
+  "count": 7,
+  "sample": {
+    "number": "18.825d63f17dc1e8befb5f389",
+    "title": "Allmänna bestämmelser för användande av Bollnäs och Ovanåkers kommuns allmänna vatten- och avloppsanläggning",
+    "url": "https://bollnas.se/download/18.825d63f17dc1e8befb5f389/1642170310075/ABVA%202014%20Bolln%C3%A4s%20Ovan%C3%A5ker.pdf"
+  },
+  "excluded": [
+    "Informationsblad om taxor inom socialtjänsten 2026 138kB (pdf, 138kB)"
+  ]
+}
