@@ -72,6 +72,7 @@ class TextTest(unittest.TestCase):
     def test_title_from_the_masthead(self):
         self.assertEqual(agency_text.title(MASTHEAD), "Migrationsverkets föreskrifter om försörjningskravet för studier")
         self.assertIsNone(agency_text.title("Ingen början här."))
+        self.assertIsNone(agency_text.title("i metall skall förstöras enligt de föreskrifter som utfärdas"))
 
     def test_general_advice_decided_in_the_title_line(self):
         text = ("BOKFÖRINGSNÄMNDENS\nALLMÄNNA RÅD\nISSN 1404-5761\n\n"
