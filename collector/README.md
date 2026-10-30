@@ -434,6 +434,15 @@ needs a subscription key from `api-portal.boverket.se` (owner decision). Skattev
 `www4.skatteverket.se` rejected the robots.txt request (WAF), so access must be confirmed first.
 Arbetsmiljöverket's regulation API is in a closed evaluation and needs a key; the public HTML
 pages are used instead.
+
+The weekly `Sync agency regulations` workflow (`.github/workflows/sync-agency.yml`) runs the
+collector for every series in `ADAPTERS`, so a new adapter or a new entry in
+`collector/data/agency-series.json` joins the sync without editing the workflow. Series read by
+year (TSFS) are limited to the current and previous year. Changes land as one pull request on
+`data/agency-sync` with the regenerated progress files and agencies log; the run summary lists
+written, unchanged, excluded, failed and blocked per series. Run it by hand with
+`gh workflow run sync-agency.yml [-f series='AFS SKSFS']`.
+
 ## County regulations
 
 The `county` command collects one county's regulations (länets författningssamling, series
