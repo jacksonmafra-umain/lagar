@@ -904,6 +904,141 @@ class AklagareAdapter:
                           version="Grundförfattning", pdfs=list(entry.pdfs))
 
 
+# --- Polismyndigheten (PMFS) -------------------------------------------------
+
+_PMFS_REF = re.compile(r"(PMFS|RPSFS) (\d{4}):0*(\d+)")
+
+
+class PolisenAdapter:
+    """Polismyndigheten's författningssamling: a paginated list of regulations in force.
+
+    Each item has the title, the number (PMFS, or RPSFS for Rikspolisstyrelsen's
+    regulations still in force), the FAP number, and sections "Grundföreskrift",
+    "Ändringsföreskrift" and "Sammanställd version" with PDF links and dates.
+    """
+
+    series = "PMFS"
+    issuer = "Polismyndigheten"
+    base_url = "https://polisen.se"
+    listing_url = base_url + "/lagar-och-regler/polismyndighetens-forfattningssamling/"
+    detail = False
+    has_text = False
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def more_pages(self, text, url):
+        pages = {int(n) for n in re.findall(r'href="/lagar-och-regler/polismyndighetens-forfattningssamling/(\d+)/"', text)}
+        return [f"{self.listing_url}{n}/" for n in sorted(pages) if n > 1]
+
+    def parse_listing(self, text, url):
+        entries = []
+        for block in parse_html(text).find_all("div", "c-regulation"):
+            heading = block.find("h3")
+            labels = [d.text() for d in block.find_all("div", "c-regulation__label")]
+            number = next((_PMFS_REF.fullmatch(t) for t in labels if _PMFS_REF.fullmatch(t)), None)
+            if heading is None or number is None:
+                continue
+            number = f"{number.group(1)} {number.group(2)}:{int(number.group(3))}"
+            section, pdfs, amended_by, in_force = None, [], [], None
+            for node in block.iter():
+                if node.tag == "h4":
+                    section = node.text()
+                elif node.tag == "a" and node.attrs.get("href"):
+                    href = absolute(url, node.attrs["href"])
+                    ref = _PMFS_REF.search(node.text())
+                    if section == "Grundföreskrift":
+                        pdfs.insert(0, (number, href))
+                    elif section == "Ändringsföreskrift" and ref:
+                        amended_by.append(f"{ref.group(1)} {ref.group(2)}:{int(ref.group(3))}")
+                    elif section == "Sammanställd version":
+                        pdfs.append((f"{number} (sammanställd version)", href))
+                elif node.tag == "time" and section == "Grundföreskrift" and in_force is None:
+                    in_force = _date(node.attrs.get("datetime"))
+            if not pdfs:
+                continue
+            entries.append(Entry(number=number, title=heading.text(), url=pdfs[0][1], in_force=in_force,
+                                 amended_by=sorted(set(amended_by), key=number_key), pdfs=pdfs))
+        if not entries:
+            raise ValueError("no regulations on the PMFS page")
+        return entries
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, in_force=entry.in_force,
+                          amended_by=list(entry.amended_by), version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
+# --- Statistiska centralbyrån (SCB-FS) ----------------------------------------
+
+_SCB_REF = re.compile(r"SCB-FS:? (\d{4}):0*(\d+)")
+
+
+class ScbAdapter:
+    """SCB's table of regulations on reporting duties, and one HTML page per regulation.
+
+    Each table row gives the number, the title linking to the regulation's
+    page, the area and the kind (Ändringsföreskrift, Upphävandeföreskrift).
+    The page holds the text (`div.xhtmlText`), the publication date and the PDF.
+    """
+
+    series = "SCB-FS"
+    issuer = "Statistiska centralbyrån"
+    base_url = "https://www.scb.se"
+    listing_url = base_url + "/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/?currentpageId=98388&type=UL"
+    detail = True
+    has_text = True
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def parse_listing(self, text, url):
+        rows, amending = [], {}
+        for row in parse_html(text).find_all("tr"):
+            cells = [c for c in row.children if isinstance(c, Node) and c.tag in ("td", "th")]
+            match = _SCB_REF.fullmatch(cells[0].text()) if cells else None
+            link = row.find("a")
+            if match is None or link is None:
+                continue
+            number = f"SCB-FS {match.group(1)}:{int(match.group(2))}"
+            title = link.text().rstrip(";").strip()
+            changes = _AMENDING.search(title) or "föreskrifter som upphör att gälla" in title
+            if changes or any(c.text() in ("Ändringsföreskrift", "Upphävandeföreskrift") for c in cells[1:]):
+                for ref in _SCB_REF.finditer(title):
+                    amending.setdefault(f"SCB-FS {ref.group(1)}:{int(ref.group(2))}", set()).add(number)
+                rows.append(Entry(number, title, absolute(url, link.attrs.get("href", "")), base=False))
+                continue
+            rows.append(Entry(number, title, absolute(url, link.attrs.get("href", ""))))
+        for entry in rows:
+            entry.amended_by = sorted(amending.get(entry.number, ()), key=number_key)
+        if not any(e.base for e in rows):
+            raise ValueError("no regulations in SCB's table")
+        return rows
+
+    def parse_detail(self, text, entry):
+        root = parse_html(text)
+        label = next((b for b in root.find_all("b") if _SCB_REF.fullmatch(b.text())), None)
+        if label is None:
+            raise ValueError("no number on the detail page")
+        found = _SCB_REF.fullmatch(label.text())
+        _check_number(f"SCB-FS {found.group(1)}:{int(found.group(2))}", entry)
+        heading = root.find("h1")
+        body = root.find("div", "xhtmlText")
+        pdfs = []
+        for box in root.find_all("div", "box-highlight"):
+            for link in box.find_all("a"):
+                pdfs.append((entry.number, absolute(self.base_url, link.attrs.get("href", ""))))
+        published = next((p.text() for p in root.find_all("p") if p.text().startswith("Publicerad")), "")
+        return Regulation(
+            number=entry.number,
+            title=heading.text().rstrip(";").strip() if heading is not None else entry.title,
+            published=_date(published),
+            amended_by=list(entry.amended_by),
+            version="Grundförfattning",
+            text=htmlmd.to_markdown(to_html(body)) if body is not None else "",
+            pdfs=pdfs[:1],
+        )
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1121,7 +1256,7 @@ def load_series(path=SERIES_CONFIG):
 
 
 ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
-                                   PrvAdapter())}
+                                   PrvAdapter(), PolisenAdapter(), ScbAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
@@ -1290,11 +1425,17 @@ def _entries(client, robots, adapter, args):
     urls = adapter.listing_urls(args)
     if urls is None:  # TSFS without --year: every year of the index
         urls = [adapter.year_url(y) for y in adapter.parse_index(_get_listing(client, robots, adapter.index_url))]
-    for url in urls:
+    urls, seen = list(urls), set(urls)
+    for url in urls:  # grows while a paginated listing names further pages
+        text = _get_listing(client, robots, url)
         try:
-            entries = adapter.parse_listing(_get_listing(client, robots, url), url)
+            entries = adapter.parse_listing(text, url)
         except ValueError as error:
             raise ListingError(f"{url}: {error}") from error
+        for page in getattr(adapter, "more_pages", lambda text, url: ())(text, url):
+            if page not in seen:
+                seen.add(page)
+                urls.append(page)
         yield from entries
 
 

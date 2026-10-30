@@ -60,6 +60,16 @@
   {
     "layer": "agency",
     "type": null,
+    "series": "PMFS",
+    "label": "PMFS (Polisen)",
+    "target": 50,
+    "kind": "counted",
+    "source": "https://polisen.se/lagar-och-regler/polismyndighetens-forfattningssamling/ (PMFS regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
     "series": "PRVFS",
     "label": "PRVFS (PRV)",
     "target": 17,
@@ -85,6 +95,26 @@
     "target": 14,
     "kind": "counted",
     "source": "https://www.revisorsinspektionen.se/regelverk/samtliga-foreskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "RPSFS",
+    "label": "RPSFS (Polisen)",
+    "target": 29,
+    "kind": "counted",
+    "source": "https://polisen.se/lagar-och-regler/polismyndighetens-forfattningssamling/ (RPSFS regulations still in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SCB-FS",
+    "label": "SCB-FS (SCB)",
+    "target": 48,
+    "kind": "counted",
+    "source": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/?currentpageId=98388&type=UL (base regulations on reporting duties)",
     "as_of": "2026-10-30"
   },
   {
