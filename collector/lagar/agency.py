@@ -904,6 +904,70 @@ class AklagareAdapter:
                           version="Grundförfattning", pdfs=list(entry.pdfs))
 
 
+# --- Polismyndigheten (PMFS) -------------------------------------------------
+
+_PMFS_REF = re.compile(r"(PMFS|RPSFS) (\d{4}):0*(\d+)")
+
+
+class PolisenAdapter:
+    """Polismyndigheten's författningssamling: a paginated list of regulations in force.
+
+    Each item has the title, the number (PMFS, or RPSFS for Rikspolisstyrelsen's
+    regulations still in force), the FAP number, and sections "Grundföreskrift",
+    "Ändringsföreskrift" and "Sammanställd version" with PDF links and dates.
+    """
+
+    series = "PMFS"
+    issuer = "Polismyndigheten"
+    base_url = "https://polisen.se"
+    listing_url = base_url + "/lagar-och-regler/polismyndighetens-forfattningssamling/"
+    detail = False
+    has_text = False
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def more_pages(self, text, url):
+        pages = {int(n) for n in re.findall(r'href="/lagar-och-regler/polismyndighetens-forfattningssamling/(\d+)/"', text)}
+        return [f"{self.listing_url}{n}/" for n in sorted(pages) if n > 1]
+
+    def parse_listing(self, text, url):
+        entries = []
+        for block in parse_html(text).find_all("div", "c-regulation"):
+            heading = block.find("h3")
+            labels = [d.text() for d in block.find_all("div", "c-regulation__label")]
+            number = next((_PMFS_REF.fullmatch(t) for t in labels if _PMFS_REF.fullmatch(t)), None)
+            if heading is None or number is None:
+                continue
+            number = f"{number.group(1)} {number.group(2)}:{int(number.group(3))}"
+            section, pdfs, amended_by, in_force = None, [], [], None
+            for node in block.iter():
+                if node.tag == "h4":
+                    section = node.text()
+                elif node.tag == "a" and node.attrs.get("href"):
+                    href = absolute(url, node.attrs["href"])
+                    ref = _PMFS_REF.search(node.text())
+                    if section == "Grundföreskrift":
+                        pdfs.insert(0, (number, href))
+                    elif section == "Ändringsföreskrift" and ref:
+                        amended_by.append(f"{ref.group(1)} {ref.group(2)}:{int(ref.group(3))}")
+                    elif section == "Sammanställd version":
+                        pdfs.append((f"{number} (sammanställd version)", href))
+                elif node.tag == "time" and section == "Grundföreskrift" and in_force is None:
+                    in_force = _date(node.attrs.get("datetime"))
+            if not pdfs:
+                continue
+            entries.append(Entry(number=number, title=heading.text(), url=pdfs[0][1], in_force=in_force,
+                                 amended_by=sorted(set(amended_by), key=number_key), pdfs=pdfs))
+        if not entries:
+            raise ValueError("no regulations on the PMFS page")
+        return entries
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, in_force=entry.in_force,
+                          amended_by=list(entry.amended_by), version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1121,7 +1185,7 @@ def load_series(path=SERIES_CONFIG):
 
 
 ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
-                                   PrvAdapter())}
+                                   PrvAdapter(), PolisenAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
@@ -1290,11 +1354,17 @@ def _entries(client, robots, adapter, args):
     urls = adapter.listing_urls(args)
     if urls is None:  # TSFS without --year: every year of the index
         urls = [adapter.year_url(y) for y in adapter.parse_index(_get_listing(client, robots, adapter.index_url))]
-    for url in urls:
+    urls, seen = list(urls), set(urls)
+    for url in urls:  # grows while a paginated listing names further pages
+        text = _get_listing(client, robots, url)
         try:
-            entries = adapter.parse_listing(_get_listing(client, robots, url), url)
+            entries = adapter.parse_listing(text, url)
         except ValueError as error:
             raise ListingError(f"{url}: {error}") from error
+        for page in getattr(adapter, "more_pages", lambda text, url: ())(text, url):
+            if page not in seen:
+                seen.add(page)
+                urls.append(page)
         yield from entries
 
 
