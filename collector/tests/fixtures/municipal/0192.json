@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://nynashamn.se/service/organisation--styrning/ekonomi-och-styrning/forfattningssamling": "0192-listing.html"
+  },
+  "count": 39,
+  "sample": {
+    "number": "18.74aa99c17471d6226f1029f",
+    "title": "Avgift för begravning av sällskapsdjur 489.1",
+    "url": "https://nynashamn.se/download/18.74aa99c17471d6226f1029f/1600629618109/Avgift%20f%C3%B6r%20begravning%20av%20s%C3%A4llskapsdjur%20489.1.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för hållbart byggande för Nynäshamns kommun",
+    "Riktlinjer för hållbart byggande, checklista - interna projekt, bilaga 1",
+    "Riktlinjer för hållbart byggande, checklista - externa projekt, bilaga 2"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.heby.se/organisation-plats-och-politik/sammantraden-handlingar-och-styrande-dokument/styrande-dokument": "0331-listing.html"
+  },
+  "count": 23,
+  "sample": {
+    "number": "18.5da53a011936a33b2f74082",
+    "title": "Kopierings och utskriftstaxa",
+    "url": "https://www.heby.se/download/18.5da53a011936a33b2f74082/1779782108949/Kopierings-%20och%20utskriftstaxa.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige",
+    "Kommunstyrelsens reglemente",
+    "Utbildningsnämndens reglemente"
+  ]
+}
