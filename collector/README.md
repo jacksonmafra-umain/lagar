@@ -679,13 +679,20 @@ python3 -I collector/collect.py municipal --kommun 0120 --dry-run
   uncompressed meta-blocks (start.stockholm's robots.txt) are decoded; a compressed one is
   retried twice and then counted as a failure.
 - State (git-ignored) is `{"done": {id: source sha256}, "failed": {id or url: error},
-  "gaps": {id: reason}, "blocked": {code: reason}}`. A document is skipped when it is done and its
-  file exists, unless `--refresh`; a refreshed document whose frontmatter (apart from `fetched_at`)
+  "gaps": {id: reason}, "blocked": {code: reason}}`. A document is skipped when it is done (or, for
+  `html_index`, already in the manifest at the same URL) and its file exists, unless `--refresh`; a refreshed document whose frontmatter (apart from `fetched_at`)
   and body are unchanged is left untouched.
 - `--limit` stops after N written documents per kommun. `--report` writes `{"written": [...],
   "unchanged": [...], "skipped": n, "gaps": [...], "failed": [...], "blocked": {code: reason}}`.
 - An HTTP 403, an unreadable robots.txt or listing, or a redirect off the configured hosts blocks
   that kommun (exit code 2); the other kommuner still run.
+- The weekly `Sync municipal regulations` workflow (`.github/workflows/sync-municipal.yml`) runs
+  `municipal --kommun <code>` for every kommun in the config, one at a time so that one kommun's
+  failure does not stop the others, and opens one pull request on `data/municipal-sync` with the
+  corpus, the manifest and the regenerated reports. The state is not committed; the manifest keeps
+  the weekly run from downloading PDFs it already has. Run it by hand with
+  `gh workflow run sync-municipal.yml [-f kommun="0114 0115"]`. A kommun added to the config joins
+  the next run.
 
 ### Adding a kommun
 
