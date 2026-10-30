@@ -124,6 +124,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   with it. A base regulation whose own PDF is not linked with its number (RGKFS
   2006:1, TVFS 2015:1) is known through its reprint. Older series of the same
   agencies (Revisorsnämnden's RNFS on the RIFS page) are not collected.
+- SKSFS (18 base regulations) and SSMFS (41) as of 2026-10-30, the same way.
+  Skogsstyrelsen writes numbers as `SKSFS 2011 7` and files every amendment in
+  its base regulation's folder; a regulation that replaced another (SKSFS
+  2021:1, filed under 1998:2 and in its own folder) is stored as a base
+  regulation and also listed in the older one's `amended_by`. SSMFS has one
+  page per base regulation in force with the original and consolidated PDFs and
+  the amendments.
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630

@@ -90,6 +90,26 @@
   {
     "layer": "agency",
     "type": null,
+    "series": "SKSFS",
+    "label": "SKSFS (Skogsstyrelsen)",
+    "target": 18,
+    "kind": "counted",
+    "source": "https://www.skogsstyrelsen.se/lag-och-tillsyn/forfattningar/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SSMFS",
+    "label": "SSMFS (SSM)",
+    "target": 41,
+    "kind": "counted",
+    "source": "https://www.stralsakerhetsmyndigheten.se/regler/foreskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
     "series": "TVFS",
     "label": "TVFS (Tillväxtverket)",
     "target": 10,

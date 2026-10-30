@@ -368,7 +368,11 @@ adding an adapter and registering it in `ADAPTERS`.
 Series whose regulation page is just a list of links to the PDFs need no code: add them to
 `collector/data/agency-series.json` (`issuer`, `listing_urls`, and `prefix` when the number is
 written in more than one way, e.g. `SGU[- ]?FS`; `exclude` overrides the default filter that
-skips guidance, preparatory work and register PDFs). `ListedAdapter` classifies each link by its
+skips guidance, preparatory work and register PDFs; `separator` when the number is written
+`SKSFS 2011 7`; `documents` when PDF links do not end in `.pdf`; `base_href` when the site files
+every amendment under its base regulation's folder, with the base's year and ordinal as groups;
+`detail_pages: true` when the listing links to one page per regulation that holds its PDF links).
+`ListedAdapter` classifies each link by its
 label, then its file name: a base regulation, an amending or repealing regulation (`om ändring
 i ... (XFS 2015:2)`, kept only in the base regulation's `amended_by`), or a consolidated version
 or reprint (linked from the base regulation). Every run rebuilds the series from the listing;
