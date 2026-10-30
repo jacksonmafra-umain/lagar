@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.kristianstad.se/kommunochpolitik/kommunfakta/reglerochstyrandedokument.3114.html": "1290-listing.html"
+  },
+  "count": 27,
+  "sample": {
+    "number": "18.2389b8971a0421c599f8d029",
+    "title": "Tillämpningsföreskrifter förskola 2024",
+    "url": "https://www.kristianstad.se/download/18.2389b8971a0421c599f8d029/1788862695863/Till%C3%A4mpningsf%C3%B6reskrifter%20f%C3%B6rskola%202024.pdf"
+  },
+  "excluded": [
+    "Reglemente föreningsråd för social inkludering",
+    "Informationshanteringsplan för arbete och välfärdsförvaltningen 2026",
+    "Arkivbeskrivning för arbete och välfärdsförvaltningen 2024"
+  ]
+}
