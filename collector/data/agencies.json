@@ -1160,11 +1160,11 @@
     },
     "0683": {
       "status": "no_adapter",
-      "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30."
+      "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30; retried on 2026-10-31, still no answer (robots.txt times out)."
     },
     "0861": {
       "status": "no_adapter",
-      "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30; retry later."
+      "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30 and again on 2026-10-31 (no TCP connection on port 443); retry later."
     },
     "1080": {
       "status": "blocked",
