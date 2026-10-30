@@ -827,8 +827,16 @@ def list_entries(fetcher, kommun):
     return list(unique.values()), problems
 
 
+def _known(manifest):
+    """Document URL per id already in the manifest (fetched or recorded as a gap)."""
+    known = {e["id"]: e.get("url") for e in manifest["documents"]}
+    known.update({g["id"]: g.get("url") for g in manifest["gaps"]})
+    return known
+
+
 def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
     entries, problems = list_entries(fetcher, kommun)
+    known = _known(manifest)
     for url in problems:
         summary.failed.append(url)
         state["failed"][url] = "listing link without a number or title"
@@ -838,7 +846,8 @@ def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
             break
         doc_id = corpus_id(kommun.code, entry.number)
         path = writer.path_for({"id": doc_id, "type": TYPE}, args.corpus)
-        if not args.refresh and doc_id in state["done"] and path.exists():
+        done = doc_id in state["done"] or (kommun.strategy == "html_index" and known.get(doc_id) == entry.url)
+        if not args.refresh and done and path.exists():
             summary.skipped += 1
             continue
         try:

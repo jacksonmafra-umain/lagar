@@ -1,0 +1,15 @@
+{
+  "listings": {
+    "https://fagersta.se/organisation--styrning/styrning-och-uppfoljning/foreskrifter": "1982-listing1.html",
+    "https://fagersta.se/organisation--styrning/styrning-och-uppfoljning/taxor-och-avgifter": "1982-listing2.html"
+  },
+  "count": 23,
+  "sample": {
+    "number": "18.7f0158e4176840aa3311b7d9",
+    "title": "Allmänna bestämmelser för vatten- och avloppsanläggning",
+    "url": "https://fagersta.se/download/18.7f0158e4176840aa3311b7d9/1608705961430/Vatten-%20och%20avloppsanlaggning-090101.pdf"
+  },
+  "excluded": [
+    "Utlämnande av allmän handling"
+  ]
+}
