@@ -506,6 +506,16 @@ and on a page that lists many regulations (TLV) only the PDFs naming the number 
 Läkemedelsverket's regulations are not collected: its pages need JavaScript and its robots.txt
 disallows PDFs. Predecessor series on the same list (SOSFS, FoHMFS and others) are not collected.
 
+Predecessor series still listed where the current series is read get adapters of their own that
+read the same page for their own numbers: LMVFS (LMFS page), FIFS (HVMFS list, issuer
+Fiskeriverket), MSBFS (MCF's regler page), RFFS (Försäkringskassan's register, issuer
+Riksförsäkringsverket) and SLVFS (Livsmedelsverket's year tables before 2002; it reads every year,
+because later LIVSFS rows amend SLVFS regulations or replace them, "Ersätter SLVFS 2001:4", and a
+replaced regulation is not in force). LIVSFS itself is read from 2002, its first year. LFS, JvSFS
+and VVFS come from the TSFS index's year pages before 2009; like TSFS, repealed base regulations
+are kept with the repeal date from their badge, and an LFS regulation from 2005-2008 names
+Luftfartsstyrelsen as its issuer.
+
 Adapters whose site publishes no HTML text (`has_text = False`) get their text from a PDF:
 the consolidated version when one is linked, else the regulation's own PDF, read with
 `collector/lagar/pdftext.py` from the same download that hashes it and turned into Markdown by
