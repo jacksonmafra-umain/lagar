@@ -93,10 +93,11 @@ def corpus_id(number):
 
 
 def absolute(base, href):
-    """An absolute URL for `href`, with spaces and other unsafe path characters quoted."""
+    """An absolute URL for `href`, with spaces and other unsafe path and query characters quoted."""
     parts = urllib.parse.urlsplit(urllib.parse.urljoin(base, html.unescape(href.strip())))
     path = urllib.parse.quote(urllib.parse.unquote(parts.path), safe="/:@!$&'()*+,;=-._~")
-    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, path, parts.query, ""))
+    query = urllib.parse.quote(parts.query, safe="/:@!$&'()*+,;=-._~?%")  # keeps existing escapes
+    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, path, query, ""))
 
 
 # --- a small DOM -----------------------------------------------------------
@@ -2096,3 +2097,6 @@ def main(argv, client=None):
         print("blocked: see state file", file=sys.stderr)
         return 2
     return 0
+
+
+from . import agency_generic  # noqa: E402,F401  (registers the generic series)
