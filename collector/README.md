@@ -575,7 +575,7 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
    first two digits of the kommun code.
 5. Add a trimmed listing fixture as `collector/tests/fixtures/municipal/<code>-listing.html` (headings
    and links are all the parser reads) and its expectations as `collector/tests/fixtures/municipal/<code>.json`
-   (`listings`: listing URL to fixture file, `count`, a `sample` entry with `number`, `title` and `url`,
+   (`listings`: every page read, followed pages included, to its fixture file, `count`, a `sample` entry with `number`, `title` and `url`,
    and `excluded` titles); `test_municipal_listings.py` checks every such pair against the config. Then
    run a small sample with `--kommun <code> --limit 5` and the audit.
 
