@@ -2140,8 +2140,12 @@ def _text_pdf(regulation, entry):
     return own or (regulation.pdfs[0] if regulation.pdfs else None)
 
 
-def _add_pdf_text(client, robots, regulation, label, url, body):
-    """Fill the text, and dates and title the listing lacked, from the PDF's text layer."""
+def _add_pdf_text(client, robots, regulation, label, url, body, prefer_title=False):
+    """Fill the text, and dates and title the listing lacked, from the PDF's text layer.
+
+    With `prefer_title` the PDF's title replaces a listing title that is only a
+    short name ("Årsbokslut").
+    """
     if body is None:
         if not robots.allows(url):
             return
@@ -2157,7 +2161,7 @@ def _add_pdf_text(client, robots, regulation, label, url, body):
         regulation.issued = regulation.issued or read.issued
         regulation.published = regulation.published or read.published
         regulation.in_force = regulation.in_force or read.in_force
-    if read.title and (regulation.title == regulation.number or not regulation.title):
+    if read.title and (prefer_title or regulation.title == regulation.number or not regulation.title):
         regulation.title = read.title
 
 
@@ -2176,7 +2180,11 @@ def _collect_one(client, robots, adapter, entry, args, manifest, summary):
     keep = {text_pdf[1]: None} if text_pdf else None
     summary.pdfs += _snapshot_pdfs(client, robots, regulation, entry, manifest, args.refresh, keep)
     if text_pdf:
-        _add_pdf_text(client, robots, regulation, *text_pdf, keep[text_pdf[1]])
+        _add_pdf_text(client, robots, regulation, *text_pdf, keep[text_pdf[1]],
+                      prefer_title=getattr(adapter, "pdf_title", False))
+        if getattr(adapter, "amending_title", None) and adapter.amending_title(entry, regulation):
+            manifest.pop(regulation.number, None)
+            raise NotBase(f"{entry.number} is an amending regulation ({regulation.title})")
     if not adapter.detail:
         # The source is the regulation's own PDF; its hash is in the manifest.
         files = {f["url"]: f for f in manifest.get(regulation.number, {}).get("files", [])}
