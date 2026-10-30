@@ -85,6 +85,14 @@ class PoliteClientTest(unittest.TestCase):
         self.assertEqual(request.get_header("Accept"), "text/html")
         self.assertEqual(request.get_header("User-agent"), "lagar-test/1.0 (+https://example.org)")
 
+    def test_post_sends_the_form_url_encoded(self):
+        client, opener, _ = make([b"ok"])
+        self.assertEqual(client.post("http://x/search", {"Ar": "2025", "Titel": "väg"}), b"ok")
+        request = opener.requests[0]
+        self.assertEqual(request.get_method(), "POST")
+        self.assertEqual(request.data, b"Ar=2025&Titel=v%C3%A4g")
+        self.assertEqual(request.get_header("User-agent"), "lagar-test/1.0 (+https://example.org)")
+
     def test_fetch_final_returns_the_redirected_url(self):
         class Redirected(FakeResponse):
             def geturl(self):

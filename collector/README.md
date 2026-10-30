@@ -4,7 +4,7 @@ Collects Swedish statutes (SFS) from Riksdagen open data into `corpus/` Markdown
 records a SHA-256 manifest of the authoritative SFS PDFs, adds each statute's amendment
 register from SFSR, writes a metadata-only amendment history for git, collects the published case
 law of the Swedish courts, collects EU acts in Swedish from the Publications Office Cellar,
-collects agency regulations (pilot: AFS, FFFS, TSFS) and collects municipal regulations from
+collects agency regulations (AFS, FFFS, TSFS, MIGRFS and others) and collects municipal regulations from
 the kommuner's own författningssamlingar.
 Python standard library only.
 
@@ -464,8 +464,23 @@ every amendment under its base regulation's folder, with the base's year and ord
 label, then its file name: a base regulation, an amending or repealing regulation (`om ändring
 i ... (XFS 2015:2)`, kept only in the base regulation's `amended_by`), or a consolidated version
 or reprint (linked from the base regulation). Every run rebuilds the series from the listing;
-PDFs already in the manifest are not downloaded again unless `--refresh`. The document's
+PDFs already in the manifest are not downloaded again unless `--refresh`. An adapter can also name further listing pages (`more_pages`) or fetch its listing itself (`fetch_listing`, e.g. a POSTed search form through `PoliteClient.post`). The document's
 `source` is the regulation's own PDF and `source_sha256` its hash.
+
+Series published as a plain page of links use the configurable adapters in
+`collector/lagar/agency_generic.py`: `PdfListAdapter` when the listing links straight to the
+PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS) and `DetailPageAdapter` when it links to one
+HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS); `SitemapAdapter`
+finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS).
+A detail page's HTML text is kept when the series sets `text_nodes` (MDFFS). AFFS reads the
+list from the Sitevision page state and FKFS the JSON register of Försäkringskassan's
+lagrummet; both have their own small adapters in the same module.
+A series there is a subclass that sets the listing URLs and, where
+needed, the list item element. The number comes from either end of the item's text, else from
+the PDF's file name; amending and repealing regulations are recognised by their titles ("om
+ändring i", "om upphävande av") and listed in the `amended_by` of the base regulation they
+name. For PDF entries (`detail = False`) the PDF is the document: `source` is its URL and
+`source_sha256` its hash.
 
 | series | listing | detail | text |
 | --- | --- | --- | --- |
@@ -480,6 +495,9 @@ PDFs already in the manifest are not downloaded again unless `--refresh`. The do
 | STEMFS (Energimyndigheten) | document archive, category Föreskrifter, 40 a page (crawl delay 10 s) | none | PDF only |
 | RFS (Riksdagsförvaltningen) | `https://data.riksdagen.se/dokumentlista/?doktyp=rfs&utformat=json` | `https://data.riksdagen.se/dokument/<dok_id>.html` | HTML (Fulltext) |
 | RA-FS (Riksarkivet) | `https://foreskrifter.riksarkivet.se/api/rafs/sok` (JSON, in force and repealed) | none | PDF only |
+| SKOLFS (Skolverket) | `https://skolfs.skolverket.se/api/statute` (JSON, paged) | `.../api/document/<number>/ascending` (JSON) | PDF only |
+| SJÖFS (Sjöfartsverket) | `.../lagrum/systematisk-forteckning-n/<subject>/` (21 subject pages) | none | PDF only |
+| TRVFS (Trafikverket) | `https://trvfs.ea.trafikverket.se/TRVFS/Home/SearchInDocCollection` (POST per year) | `.../Home/DocumentHistory/<year>-<n>` | PDF only |
 
 - Only base regulations (grundförfattningar) are stored, in `corpus/agency/regulations/`.
   Amending regulations are counted as `excluded` and appear in the base regulation's

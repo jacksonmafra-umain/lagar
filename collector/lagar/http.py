@@ -2,6 +2,7 @@
 
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 RETRY_STATUSES = frozenset({429, 500, 502, 503, 504})
@@ -69,16 +70,22 @@ class PoliteClient:
         """Return (body, content_type); content_type is lower-case, without parameters."""
         return self.fetch_final(url, headers)[:2]
 
-    def fetch_final(self, url, headers=None):
+    def post(self, url, form, headers=None):
+        """POST `form` (a dict, sent URL-encoded) and return the body; for search forms."""
+        data = urllib.parse.urlencode(form).encode()
+        return self.fetch_final(url, headers, data=data)[0]
+
+    def fetch_final(self, url, headers=None, data=None):
         """Return (body, content_type, final_url): the URL answered after any redirects.
 
-        `headers` are sent in addition to the User-Agent (for example Accept).
+        `headers` are sent in addition to the User-Agent (for example Accept);
+        `data`, when given, is sent as the body of a POST request.
         """
         attempt = 0
         while True:
             self._space()
             request = urllib.request.Request(
-                url, headers={**(headers or {}), "User-Agent": self.user_agent}
+                url, data=data, headers={**(headers or {}), "User-Agent": self.user_agent}
             )
             try:
                 with self._opener(request, timeout=TIMEOUT_SECONDS) as response:

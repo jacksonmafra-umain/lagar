@@ -9,7 +9,9 @@
     },
     "bolagsverkets-forfattningssamling-bolfs": {
       "series": "BOLFS",
-      "agency": "Bolagsverket"
+      "agency": "Bolagsverket",
+      "status": "blocked",
+      "note": "bolagsverket.se answers the collector with a bot check (an image code to type); not bypassed."
     },
     "centrala-studiestodsnamndens-forfattningssamling-csnfs": {
       "series": "CSNFS",
@@ -41,7 +43,9 @@
     },
     "mediemyndighetens-forfattningssamling-memyfs": {
       "series": "MEMYFS",
-      "agency": "Mediemyndigheten"
+      "agency": "Mediemyndigheten",
+      "status": "collected_pdf",
+      "note": "Mediemyndigheten lists its regulations with a link to each PDF; the text is published only as PDF."
     },
     "sveriges-geologiska-undersoknings-forfattningssamling-sgu-fs": {
       "series": "SGU-FS",
@@ -73,7 +77,9 @@
     },
     "konsumentverkets-forfattningssamling-kovfs": {
       "series": "KOVFS",
-      "agency": "Konsumentverket"
+      "agency": "Konsumentverket",
+      "status": "collected_pdf",
+      "note": "Konsumentverket's publication shop has a page per regulation with the PDF editions; the text is published only as PDF."
     },
     "totalforsvarets-plikt-och-provningsverks-forfattningssamling-tppvfs": {
       "series": "TPPVFS",
@@ -81,11 +87,15 @@
     },
     "havs-och-vattenmyndighetens-forfattningssamling-hvmfs": {
       "series": "HVMFS",
-      "agency": "Havs- och vattenmyndigheten"
+      "agency": "Havs- och vattenmyndigheten",
+      "status": "collected_pdf",
+      "note": "Havs- och vattenmyndigheten lists the regulations in force with a page per regulation and its PDF editions; the text is published only as PDF. Regulations of predecessor series (FIFS, NFS) on the same list are not collected here."
     },
     "arbetsgivarverkets-forfattningssamling-agvfs": {
       "series": "AGVFS",
-      "agency": "Arbetsgivarverket"
+      "agency": "Arbetsgivarverket",
+      "status": "collected_pdf",
+      "note": "Arbetsgivarverket lists the series with a page per regulation and a link to its PDF; the text is published only as PDF."
     },
     "tillvaxtverkets-forfattningssamling-tvfs": {
       "series": "TVFS",
@@ -101,7 +111,9 @@
     },
     "kronofogdemyndighetens-forfattningssamling-kfmfs": {
       "series": "KFMFS",
-      "agency": "Kronofogdemyndigheten"
+      "agency": "Kronofogdemyndigheten",
+      "status": "collected_pdf",
+      "note": "Kronofogden lists the regulations in force with a link to each PDF; the text is published only as PDF."
     },
     "statens-institutionsstyrelses-forfattningssamling-sisfs": {
       "series": "SiSFS",
@@ -117,12 +129,14 @@
     "migrationsverkets-forfattningssamling-migrfs": {
       "series": "MIGRFS",
       "agency": "Migrationsverket",
-      "status": "no_adapter",
-      "note": "robots.txt (checked 2026-10-29) allows the regulation pages. Proposed as a next series on #115."
+      "status": "collected_pdf",
+      "note": "Migrationsverket lists the regulations in force with a link to each PDF; the text is published only as PDF."
     },
     "arbetsformedlingens-forfattningssamling-affs": {
       "series": "AFFS",
-      "agency": "Arbetsförmedlingen"
+      "agency": "Arbetsförmedlingen",
+      "status": "collected",
+      "note": "Arbetsförmedlingen publishes each regulation's full text as HTML; the list is embedded in the page as JSON."
     },
     "finansinspektionens-forfattningssamling-fffs": {
       "series": "FFFS",
@@ -140,19 +154,27 @@
     },
     "kammarkollegiets-forfattningssamling-kamfs": {
       "series": "KAMFS",
-      "agency": "Kammarkollegiet"
+      "agency": "Kammarkollegiet",
+      "status": "collected_pdf",
+      "note": "Kammarkollegiet lists its regulations (in force and earlier ones, including those it issues for other agencies) with a link to each PDF; the text is published only as PDF."
     },
     "kemikalieinspektionens-forfattningssamling-kifs": {
       "series": "KIFS",
-      "agency": "Kemikalieinspektionen"
+      "agency": "Kemikalieinspektionen",
+      "status": "collected_pdf",
+      "note": "Kemikalieinspektionen has a page per base regulation with the consolidated, base and amending PDFs; the text is published only as PDF."
     },
     "kommerskollegiums-forfattningssamling-kfs": {
       "series": "KFS",
-      "agency": "Kommerskollegium"
+      "agency": "Kommerskollegium",
+      "status": "collected_pdf",
+      "note": "Kommerskollegium lists the regulations in force with a link to each PDF; the text is published only as PDF."
     },
     "konkurrensverkets-forfattningssamling-kkvfs": {
       "series": "KKVFS",
-      "agency": "Konkurrensverket"
+      "agency": "Konkurrensverket",
+      "status": "blocked",
+      "note": "konkurrensverket.se answers the collector's request for the listing page with 403 Forbidden; not bypassed."
     },
     "lantmateriets-forfattningssamling-lmfs": {
       "series": "LMFS",
@@ -160,11 +182,15 @@
     },
     "myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs": {
       "series": "MDFFS",
-      "agency": "Myndigheten för digital förvaltning"
+      "agency": "Myndigheten för digital förvaltning",
+      "status": "collected",
+      "note": "Digg publishes each regulation's full text as HTML on its own page."
     },
     "myndigheten-for-civilt-forsvars-forfattningssamling-mcffs": {
       "series": "MCFFS",
-      "agency": "Myndigheten för civilt försvar"
+      "agency": "Myndigheten för civilt försvar",
+      "status": "collected_pdf",
+      "note": "MCF lists the MCFFS regulations in force with a page per regulation and a link to its PDF; the text is published only as PDF. Regulations in force from the predecessor series (MSBFS and older) are listed on the same page but not collected."
     },
     "myndigheten-for-tillvaxtpolitiska-utvarderingar-och-analysers-forfattningssamling-mtfs": {
       "series": "MTFS",
@@ -202,7 +228,9 @@
     },
     "sjofartsverkets-forfattningssamling-sjofs": {
       "series": "SJÖFS",
-      "agency": "Sjöfartsverket"
+      "agency": "Sjöfartsverket",
+      "status": "collected_pdf",
+      "note": "Base regulations in force from Sjöfartsverket's systematic list (one page per subject), with amendments and PDF links."
     },
     "spelinspektionens-forfattningssamling-sifs": {
       "series": "SIFS",
@@ -214,11 +242,15 @@
     },
     "statens-kulturrads-forfattningssamling-krfs": {
       "series": "KRFS",
-      "agency": "Statens kulturråd"
+      "agency": "Statens kulturråd",
+      "status": "collected_pdf",
+      "note": "Kulturrådet lists its regulations with a link to each PDF; the text is published only as PDF."
     },
     "statens-skolverks-forfattningssamling-skolfs": {
       "series": "SKOLFS",
-      "agency": "Statens skolverk"
+      "agency": "Statens skolverk",
+      "status": "collected_pdf",
+      "note": "Base regulations in force from the API behind Skolverket's SKOLFS search app, with dates and links to the issued and latest consolidated PDFs; expired regulations are not stored (no repeal date)."
     },
     "stralsakerhetsmyndighetens-forfattningssamling-ssmfs": {
       "series": "SSMFS",
@@ -232,7 +264,9 @@
     },
     "trafikverkets-forfattningssamling-trvfs": {
       "series": "TRVFS",
-      "agency": "Trafikverket"
+      "agency": "Trafikverket",
+      "status": "collected_pdf",
+      "note": "Regulations from Trafikverket's search form, year by year, without the road-specific speed regulations; the text is published only as PDF."
     },
     "transportstyrelsens-forfattningssamling-tsfs": {
       "series": "TSFS",
@@ -254,11 +288,15 @@
     },
     "forsakringskassans-forfattningssamling-fkfs": {
       "series": "FKFS",
-      "agency": "Försäkringskassan"
+      "agency": "Försäkringskassan",
+      "status": "collected_pdf",
+      "note": "Försäkringskassan's lagrummet holds the register and each document's data (dates, consolidated and amending PDFs) as JSON in the page; the text is published only as PDF. Predecessor series RFFS, listed in the same register, is not collected."
     },
     "inspektionen-for-arbetsloshetsforsakringens-forfattningssamling-iaffs": {
       "series": "IAFFS",
-      "agency": "Inspektionen för arbetslöshetsförsäkringen"
+      "agency": "Inspektionen för arbetslöshetsförsäkringen",
+      "status": "collected_pdf",
+      "note": "IAF lists its regulations with a link to each PDF; the text is published only as PDF."
     },
     "gemensamma-forfattningssamlingen-avseende-halso-och-sjukvard-socialtjanst-lakemedel-folkhalsa-m-m-hslf-fs": {
       "series": "HSLF-FS",
@@ -272,7 +310,9 @@
     },
     "naturvardsverkets-forfattningssamling-nfs": {
       "series": "NFS",
-      "agency": "Naturvårdsverket"
+      "agency": "Naturvårdsverket",
+      "status": "collected_pdf",
+      "note": "Naturvårdsverket's register needs JavaScript; the regulation pages are found in its sitemap, each with a link to the PDF. The text is published only as PDF. Two pages (NFS 2000:2, NFS 2001:20) do not name their number and are not collected."
     },
     "sametingets-forfattningssamling-stfs": {
       "series": "STFS",
@@ -322,7 +362,9 @@
     },
     "elsakerhetsverkets-forfattningssamling-elsak-fs": {
       "series": "ELSÄK-FS",
-      "agency": "Elsäkerhetsverket"
+      "agency": "Elsäkerhetsverket",
+      "status": "collected_pdf",
+      "note": "Elsäkerhetsverket has a page per regulation in force with a link to its PDF; the text is published only as PDF."
     },
     "pensionsmyndighetens-forfattningssamling-pfs": {
       "series": "PFS",
