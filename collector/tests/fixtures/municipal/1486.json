@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.stromstad.se/kommunochpolitik/styrning/lokalaforeskrifterordningsregler.4.5aa64a115bcf4cecc2afa0.html": "1486-listing1.html",
+    "https://www.stromstad.se/kommunochpolitik/ekonomi/allaarvodentaxorochavgifter.4.2af6fd8a14aa9f76aee2286c.html": "1486-listing2.html"
+  },
+  "count": 28,
+  "sample": {
+    "number": "18.685b4cb418c8af0b8105a8a7",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://www.stromstad.se/download/18.685b4cb418c8af0b8105a8a7/1704785961409/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": []
+}

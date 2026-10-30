@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://kalmar.se/kommun-och-politik/styrande-dokument-och-forfattningssamling/forfattningssamlingen.html": "0880-listing.html"
+  },
+  "count": 39,
+  "sample": {
+    "number": "18.1c8e963b193dedcadf149a51",
+    "title": "Avgifter för kopior av allmänna handlingar",
+    "url": "https://kalmar.se/download/18.1c8e963b193dedcadf149a51/1737021708145/Avgifter%20f%C3%B6r%20kopior%20av%20allm%C3%A4nna%20handlingar.pdf"
+  },
+  "excluded": [
+    "Regler för bidrag för enskilda vägar och privata utfartsvägar inom Kalmar kommun",
+    "Regler för Kalmar kommuns tomtkö",
+    "Regler för bidrag till förtroendevalda vid utbildning i kommunala frågor"
+  ]
+}

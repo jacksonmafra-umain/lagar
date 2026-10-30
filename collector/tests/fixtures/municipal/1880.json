@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.orebro.se/kommun--politik/dokument-statistik--undersokningar/dokument--undersokningar/bygga-bo--trafik---dokument.html": "1880-listing1.html",
+    "https://www.orebro.se/kommun--politik/dokument-statistik--undersokningar/dokument--undersokningar/miljo--klimat---dokument.html": "1880-listing2.html",
+    "https://www.orebro.se/kommun--politik/dokument-statistik--undersokningar/dokument--undersokningar/omsorg--stod---dokument.html": "1880-listing3.html",
+    "https://www.orebro.se/kommun--politik/dokument-statistik--undersokningar/dokument--undersokningar/foretag--naringsliv---dokument.html": "1880-listing4.html",
+    "https://www.orebro.se/kommun--politik/dokument-statistik--undersokningar/dokument--undersokningar/kommun--politik---dokument.html": "1880-listing5.html"
+  },
+  "count": 33,
+  "sample": {
+    "number": "18.1d8f9a39155628f738416774",
+    "title": "Allmänna bestämmelser för användande av Örebro kommuns allmänna vatten- och avloppsanläggning",
+    "url": "https://www.orebro.se/download/18.1d8f9a39155628f738416774/1467966303934/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20%C3%96rebro%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning.pdf"
+  },
+  "excluded": []
+}

@@ -401,6 +401,77 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             trv.parse_detail(fixture("agency-trvfs-2025-2.html"), entries[0])
 
+    def test_listed_aliases_and_curated_numbers(self):
+        listing = (
+            '<a href="/download/1/trmfs-2017_1.pdf">Föreskrifter om totalförsvarsplikt (TRMFS 2017:1) pdf, 281 kB.</a>'
+            '<a href="/download/2/TPPV%20F%C3%B6reskrifter%20om%20f%C3%B6rm%C3%A5ner_slutlig.pdf">'
+            'Föreskrifter och allmänna råd om förmåner pdf, 300 kB.</a>'
+            '<a href="/download/3/other.pdf">Föreskrifter utan nummer</a>')
+        adapter = agency.ListedAdapter("TPPVFS", "Pliktverket", ["https://www.example.se/foreskrifter"],
+                                       aliases=["TRMFS"],
+                                       numbers={"TPPV Föreskrifter om förmåner_slutlig.pdf": "TPPVFS 2024:1"})
+        entries = adapter.parse_listing(listing, adapter.listing_url)
+        self.assertEqual([e.number for e in entries], ["TRMFS 2017:1", "TPPVFS 2024:1"])
+        self.assertEqual(entries[0].title, "Föreskrifter om totalförsvarsplikt")
+
+    def test_sifs_list_and_pages(self):
+        spel = agency.SpelinspektionenAdapter()
+
+        class Client:
+            def get(self, url):
+                return b"%PDF-1.7"
+
+        with unittest.mock.patch.object(agency.pdftext, "extract",
+                                        return_value=unittest.mock.Mock(text="SIFS 2019:1\n")):
+            self.assertEqual(spel.fetch_listing(Client(), spel.listing_url), b"SIFS 2019:1\n")
+        entries = {e.number: e for e in spel.parse_listing(fixture("agency-sifs-list.txt"), spel.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base), ["LIFS 2018:4", "SIFS 2019:2", "SIFS 2026:1"])
+        self.assertFalse(entries["SIFS 2022:1"].base)  # repeals another regulation
+        self.assertEqual(entries["LIFS 2018:4"].amended_by, ["SIFS 2024:2"])
+        misprinted = entries["SIFS 2019:2"]  # printed as LIFS 2019:2
+        self.assertEqual(misprinted.title,
+                         "Spelinspektionens föreskrifter och allmänna råd om åtgärder mot penningtvätt och "
+                         "finansiering av terrorism")
+        self.assertEqual(misprinted.url, "https://www.spelinspektionen.se/lagar-regler/foreskrifter/sifs-20192/")
+        self.assertTrue(entries["SIFS 2026:1"].url.endswith("/sifs-20261-spelinspektionens-foreskrifter-om-avgifter-for-tillsyn/"))
+        regulation = spel.parse_detail(fixture("agency-sifs-detail.html"), misprinted)
+        self.assertEqual(regulation.pdfs[0][1].rsplit("/", 1)[-1], "sifs-2019_2-spelinspektionens-foreskrifter.pdf")
+        with self.assertRaises(ValueError):
+            spel.parse_detail(fixture("agency-sifs-detail.html"), entries["SIFS 2026:1"])
+
+    def test_stfs_document_bank(self):
+        stfs = agency.SametingetAdapter()
+        first = fixture("agency-stfs-page1.json").encode()
+
+        class Client:
+            calls = []
+
+            def get(self, url):
+                self.calls.append(url)
+                return first if "idx=" not in url else json.dumps({"html": ""}).encode()
+
+        client = Client()
+        text = stfs.fetch_listing(client, stfs.listing_url).decode()
+        self.assertEqual([u.rsplit("idx=", 1)[-1] for u in client.calls[1:]], ["2", "3", "4"])
+        entries = {e.number: e for e in stfs.parse_listing(text, stfs.listing_url)}
+        self.assertEqual(sorted(n for n, e in entries.items() if e.base),
+                         ["STFS 2016:1", "STFS 2017:1", "STFS 2018:1", "STFS 2024:1"])
+        self.assertFalse(entries["STFS 2025:1"].base)  # "Föreskrifter om ändring i ..."
+        self.assertFalse(entries["STFS 2019:1"].base)  # "Ändring Katastrofskadeskydd"
+        self.assertEqual(entries["STFS 2016:1"].amended_by, ["STFS 2019:1"])
+        self.assertTrue(entries["STFS 2024:1"].url.endswith("/6371?file_id=1"))  # the newest of two listings
+        self.assertNotIn("STFS 2007:9", {n for n, e in entries.items() if e.base})  # only its consolidated version here
+
+    def test_scb_fs_official_statistics(self):
+        scb = agency.ScbAdapter()
+        self.assertEqual(scb.listing_urls(None), [scb.listing_url, scb.statistics_url])
+        entries = scb.parse_listing(fixture("agency-scb-fs-statistics.html"), scb.statistics_url)
+        self.assertEqual([(e.number, e.base) for e in entries],
+                         [("SCB-FS 2023:6", True), ("SCB-FS 2023:17", False), ("SCB-FS 2016:17", True)])
+        self.assertEqual(entries[0].amended_by, ["SCB-FS 2023:17"])
+        self.assertEqual(entries[0].url, scb.statistics_url + "/scb-fs-202306/")
+        self.assertEqual(entries[2].title, "Statistiska centralbyråns föreskrifter om kvalitet för den officiella statistiken")
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

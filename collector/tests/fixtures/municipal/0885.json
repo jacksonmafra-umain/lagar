@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.borgholm.se/styrdokument/": "0885-listing.html"
+  },
+  "count": 8,
+  "sample": {
+    "number": "ABVA-i-Borgholms-kommun-antagen-av-kommunfullmaktige-2011-11-21-157",
+    "title": "Allmänna bestämmelser VA",
+    "url": "https://www.borgholm.se/wp-content/uploads/2023/03/ABVA-i-Borgholms-kommun-antagen-av-kommunfullmaktige-2011-11-21-157.pdf"
+  },
+  "excluded": [
+    "Kommunstyrelsens delegationsordning",
+    "Delegationsordning miljö-och byggnadsnämnden",
+    "Utbildningsnämndens delegationsordning"
+  ]
+}
