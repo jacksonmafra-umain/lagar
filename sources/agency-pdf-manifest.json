@@ -38486,6 +38486,482 @@
       ]
     },
     {
+      "number": "SvKFS 2001:1",
+      "detail_url": "https://www.svk.se/4afc61/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2001-1-utrustning-for-forbrukningsfrankoppling.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2001:1",
+          "url": "https://www.svk.se/4afc61/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2001-1-utrustning-for-forbrukningsfrankoppling.pdf",
+          "bytes": 2081196,
+          "sha256": "3d9e670748469d2e96e7557917e559d0ecf77e1b0a352e18c0ad9376e654c516",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:11Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2012:1",
+      "detail_url": "https://www.svk.se/4afc82/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs1-2012-webb.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2012:1",
+          "url": "https://www.svk.se/4afc82/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs1-2012-webb.pdf",
+          "bytes": 110593,
+          "sha256": "42f9a9bebb16130bb2d8460f88e954a7b5932534eb16628d59a2fb1f459dcc37",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:10Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2014:1",
+      "detail_url": "https://www.svk.se/4ab62b/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/896603-svkfs-1-2014-web.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2014:1",
+          "url": "https://www.svk.se/4ab62b/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/896603-svkfs-1-2014-web.pdf",
+          "bytes": 127883,
+          "sha256": "8346d551ad7284eaa4e9722a53b3cab4f85945e1ef650d9f8ffa2b6126ffffce",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:09Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2021:1",
+      "detail_url": "https://www.svk.se/4afcaf/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2021_1_forbrukningsfrankoppling.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2021:1",
+          "url": "https://www.svk.se/4afcaf/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2021_1_forbrukningsfrankoppling.pdf",
+          "bytes": 797155,
+          "sha256": "413e21f31f703fb346f3fc07f429d4e58de3b3e8b9d50cd69f108893fc0ad8dd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:12Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2022:1",
+      "detail_url": "https://www.svk.se/4ab607/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2022-1-affarsverket-svenska-kraftnats-foreskrifter-om-sakerhetsskydd.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2022:1",
+          "url": "https://www.svk.se/4ab607/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs-2022-1-affarsverket-svenska-kraftnats-foreskrifter-om-sakerhetsskydd.pdf",
+          "bytes": 136432,
+          "sha256": "b4678e74d41cfd4760b29f2cdad613476f156eaff4c9655b814269567aad1f27",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:13Z"
+        }
+      ]
+    },
+    {
+      "number": "SvKFS 2023:1",
+      "detail_url": "https://www.svk.se/49677e/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs_2023_1.pdf",
+      "files": [
+        {
+          "label": "SvKFS 2023:1",
+          "url": "https://www.svk.se/49677e/siteassets/1.om-kraftsystemet/legalt-ramverk/foreskrifter/svkfs_2023_1.pdf",
+          "bytes": 268586,
+          "sha256": "a4d83530ff482913ba77614a4b605c173eaad4c96f359be8a83b2ba10efc1100",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:50:14Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2005:2",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1976/1385466413269/2005002.pdf",
+      "files": [
+        {
+          "label": "TFS 2005:2",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1976/1385466413269/2005002.pdf",
+          "bytes": 206122,
+          "sha256": "8b02e52c561d83bf2a728c266e4faef79d7832f05bde22fb9498d4fd95a20e66",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:59Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2005:17",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d19a6/1385476532123/2005017.pdf",
+      "files": [
+        {
+          "label": "TFS 2005:17",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d19a6/1385476532123/2005017.pdf",
+          "bytes": 196652,
+          "sha256": "59edffda8e1464ed033aa8d00f79d978c80d9c3edd10747c54fad22ce0f9dd79",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:54:58Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2005:20",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1c00/1386070759168/2005020.pdf",
+      "files": [
+        {
+          "label": "TFS 2005:20",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1c00/1386070759168/2005020.pdf",
+          "bytes": 195469,
+          "sha256": "de33f26124f1cd738f9b36d64196a577911be344e33fa44c8ab7abfd6638b404",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:54:59Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2006:10",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d3034/1393331668401/2006010.pdf",
+      "files": [
+        {
+          "label": "TFS 2006:10",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d3034/1393331668401/2006010.pdf",
+          "bytes": 198335,
+          "sha256": "28d281a9b29d055286896e6d6bcba1947cc6e9d39290819fc41ea3cc84830842",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:00Z"
+        },
+        {
+          "label": "TFS 2006:10 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.5c62b5b71540cfd1824382e/1462041231755/2006010s.pdf",
+          "bytes": 369646,
+          "sha256": "4cefb6fd69a9f6c02e821f87ff930a5dc7bbf1569be4e94faceadc77748c402e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:01Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2007:4",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1c0b/1386141474838/2007004.pdf",
+      "files": [
+        {
+          "label": "TFS 2007:4",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d1c0b/1386141474838/2007004.pdf",
+          "bytes": 202046,
+          "sha256": "4701c8eb0707a0e86467acee9a9047c81bfc5e3047348e635b0fd30216911ad5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:02Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2012:3",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d26f0/1391436968005/2012003.pdf",
+      "files": [
+        {
+          "label": "TFS 2012:3",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d26f0/1391436968005/2012003.pdf",
+          "bytes": 347707,
+          "sha256": "ad87cd2958265380a2cce5c3a19a1ffbc178f755c5f3a791c1ca6090b9b9d8cf",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:03Z"
+        },
+        {
+          "label": "TFS 2012:3 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.44a6a1ff14dad48234f630b/1706091378615/2012003s.pdf",
+          "bytes": 333496,
+          "sha256": "754711d4e52e1e9898d7c698ab27838cc5a85f6b827574fc57579b85e76615f6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:04Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2012:7",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d323a/1393594685707/2012007.pdf",
+      "files": [
+        {
+          "label": "TFS 2012:7",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d323a/1393594685707/2012007.pdf",
+          "bytes": 256736,
+          "sha256": "43bde1c9f03b7803581ac40ce541af15689bbed3b53099b77fab80b412ac912c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:05Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2012:8",
+      "detail_url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d323b/1393594686152/2012008.pdf",
+      "files": [
+        {
+          "label": "TFS 2012:8",
+          "url": "https://www.tullverket.se/download/18.e0158eb140f9d5442d323b/1393594686152/2012008.pdf",
+          "bytes": 256758,
+          "sha256": "04270c53013720f0af796a3f0614fef28e51558f9ed1bca18c3a2dc0dbce5cd4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:06Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2014:5",
+      "detail_url": "https://www.tullverket.se/download/18.16f3ec5a144fd16b2f422d/1396014653918/2014005.pdf",
+      "files": [
+        {
+          "label": "TFS 2014:5",
+          "url": "https://www.tullverket.se/download/18.16f3ec5a144fd16b2f422d/1396014653918/2014005.pdf",
+          "bytes": 213231,
+          "sha256": "40e516d57d334f2c5f6b5f0d1985551b02299bc9f40f477d1dfd7510d3467aa5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:07Z"
+        },
+        {
+          "label": "TFS 2014:5 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.260f1bcf17c73e3460e2ba4/1640098505448/2016021s.pdf",
+          "bytes": 278265,
+          "sha256": "e7132dc0ddbe04c98e6efc30e2ca0a4eb2d1b6ccadd7fd70851ed44f99403527",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:08Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2015:1",
+      "detail_url": "https://www.tullverket.se/download/18.26b0417114a365251a92b2df/1423644688908/2015001.pdf",
+      "files": [
+        {
+          "label": "TFS 2015:1",
+          "url": "https://www.tullverket.se/download/18.26b0417114a365251a92b2df/1423644688908/2015001.pdf",
+          "bytes": 164390,
+          "sha256": "923f65620500b6570c586ced3b156fbbb4534d9d33ea4816f7103f332cde8f7b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:09Z"
+        },
+        {
+          "label": "TFS 2015:1 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.72334712192df55a6c0471/1730974135874/2015001s.pdf",
+          "bytes": 256053,
+          "sha256": "2e562de60098063ec180c7dd55abe478cec177dbc9e78d6a9a3263d6eb98d1b7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:10Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2015:5",
+      "detail_url": "https://www.tullverket.se/download/18.409269eb14cbee1c5271a3/1429781114705/2015005.pdf",
+      "files": [
+        {
+          "label": "TFS 2015:5",
+          "url": "https://www.tullverket.se/download/18.409269eb14cbee1c5271a3/1429781114705/2015005.pdf",
+          "bytes": 168852,
+          "sha256": "06c301b12cf24a2ec805273df2f5b1de2ba4cc5d84460a8fbd0e27506e8a874c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:11Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2016:2",
+      "detail_url": "https://www.tullverket.se/download/18.5c62b5b71540cfd1824f9f/1460965111301/2016002.pdf",
+      "files": [
+        {
+          "label": "TFS 2016:2",
+          "url": "https://www.tullverket.se/download/18.5c62b5b71540cfd1824f9f/1460965111301/2016002.pdf",
+          "bytes": 878002,
+          "sha256": "4fe04eb439a480ace451fcd42b387a0185a3617fbb8bed46c43343b16d1458ef",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:12Z"
+        },
+        {
+          "label": "TFS 2016:2 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.792224361590183a4d34375/1772091766243/2016002s.pdf",
+          "bytes": 628103,
+          "sha256": "92f3134e72a385c162556d0ea5499c44e73e832aff95240d2884918af05b3b10",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:13Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2016:23",
+      "detail_url": "https://www.tullverket.se/download/18.792224361590183a4d3fde/1482827589742/2016023.pdf",
+      "files": [
+        {
+          "label": "TFS 2016:23",
+          "url": "https://www.tullverket.se/download/18.792224361590183a4d3fde/1482827589742/2016023.pdf",
+          "bytes": 301058,
+          "sha256": "15758639953ddfcd113d52bf552dc4334c29d4aee61592aca6fdc8c461b7cc85",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:14Z"
+        },
+        {
+          "label": "TFS 2016:23 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.285c35fd161749ca47c3f6/1780315557706/2016023s.pdf",
+          "bytes": 321745,
+          "sha256": "f7ed7b40d4b1eff276c427f0c6993e099d037baed8961f7c736d268df93f4949",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:15Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2018:1",
+      "detail_url": "https://www.tullverket.se/download/18.1595a16515ebddfed512b07/1516091012474/2018001.pdf",
+      "files": [
+        {
+          "label": "TFS 2018:1",
+          "url": "https://www.tullverket.se/download/18.1595a16515ebddfed512b07/1516091012474/2018001.pdf",
+          "bytes": 380766,
+          "sha256": "25dbc888d7951d623d09a82d3e11a881c4b43e2b8450a21f2220c631ce662ff0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:16Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2018:2",
+      "detail_url": "https://www.tullverket.se/download/18.1595a16515ebddfed512b15/1516091791470/2018002.pdf",
+      "files": [
+        {
+          "label": "TFS 2018:2",
+          "url": "https://www.tullverket.se/download/18.1595a16515ebddfed512b15/1516091791470/2018002.pdf",
+          "bytes": 387771,
+          "sha256": "8419d2a6f49066587cd86ebc56d55e3da8aeb48aa0c43e0a6a11475ae31fb7c6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:17Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2018:3",
+      "detail_url": "https://www.tullverket.se/download/18.1595a16515ebddfed512edf/1517992042686/2018003.pdf",
+      "files": [
+        {
+          "label": "TFS 2018:3",
+          "url": "https://www.tullverket.se/download/18.1595a16515ebddfed512edf/1517992042686/2018003.pdf",
+          "bytes": 325418,
+          "sha256": "3a3665833eb36888ec362df6594ecaecadd2e63362f7e1a61c12257215d89244",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:18Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2019:4",
+      "detail_url": "https://www.tullverket.se/download/18.4e880ce616b21693f7841b/1561961675791/2019004.pdf",
+      "files": [
+        {
+          "label": "TFS 2019:4",
+          "url": "https://www.tullverket.se/download/18.4e880ce616b21693f7841b/1561961675791/2019004.pdf",
+          "bytes": 310799,
+          "sha256": "f11c31747d7d61ca10d62fc6b4f2fb165770a35da1825f9310eadd3b28fdd7c7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:19Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2019:6",
+      "detail_url": "https://www.tullverket.se/download/18.38f986a116db52aec8c598/1573573036037/2019006.pdf",
+      "files": [
+        {
+          "label": "TFS 2019:6",
+          "url": "https://www.tullverket.se/download/18.38f986a116db52aec8c598/1573573036037/2019006.pdf",
+          "bytes": 1051045,
+          "sha256": "49d64563a15088608e2de540c08b02aa7e3a1ed4069f498bf712f74b6f6333be",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:20Z"
+        },
+        {
+          "label": "TFS 2019:6 (sammanställd version)",
+          "url": "https://www.tullverket.se/download/18.1595e959179a7cfd5c7238/1649925566533/2019006s.pdf",
+          "bytes": 603099,
+          "sha256": "c6f1829799aa255f75d5584ddd8ac0aeb0ca84ff42808b14b0c13e4cc7c0e830",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:21Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2020:1",
+      "detail_url": "https://www.tullverket.se/download/18.153f8c8c16ffad23c2211/1580809287519/2020001.pdf",
+      "files": [
+        {
+          "label": "TFS 2020:1",
+          "url": "https://www.tullverket.se/download/18.153f8c8c16ffad23c2211/1580809287519/2020001.pdf",
+          "bytes": 467913,
+          "sha256": "859d2dec2ad04afe888d59196adaaa8876ca18f39a0d242481a649621c42ddf8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:22Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2020:4",
+      "detail_url": "https://www.tullverket.se/download/18.2f6f125175457f1fe41b0/1603712080571/2020004.pdf",
+      "files": [
+        {
+          "label": "TFS 2020:4",
+          "url": "https://www.tullverket.se/download/18.2f6f125175457f1fe41b0/1603712080571/2020004.pdf",
+          "bytes": 111036,
+          "sha256": "7b3a885a90d7718c8c2f25c857884955970810cd9942d7e46d8948f16109e51e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:23Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2021:2",
+      "detail_url": "https://www.tullverket.se/download/18.1595e959179a7cfd5c714c/1622445093923/2021002.pdf",
+      "files": [
+        {
+          "label": "TFS 2021:2",
+          "url": "https://www.tullverket.se/download/18.1595e959179a7cfd5c714c/1622445093923/2021002.pdf",
+          "bytes": 239133,
+          "sha256": "730b820c6f4265e0f830679c74cf10a82e9d93443c08f2cbca51ac2bf38feb49",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:24Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2023:4",
+      "detail_url": "https://www.tullverket.se/download/18.586d06b518b6116f98567d/1699534100891/2023004.pdf",
+      "files": [
+        {
+          "label": "TFS 2023:4",
+          "url": "https://www.tullverket.se/download/18.586d06b518b6116f98567d/1699534100891/2023004.pdf",
+          "bytes": 130883,
+          "sha256": "3053f6924939f69327ee2992153f0cc04f02b6480c2ef44e72be87e161393093",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:25Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2024:7",
+      "detail_url": "https://www.tullverket.se/download/18.38153617191ffd26d65256a4/1728645688311/2024007.pdf",
+      "files": [
+        {
+          "label": "TFS 2024:7",
+          "url": "https://www.tullverket.se/download/18.38153617191ffd26d65256a4/1728645688311/2024007.pdf",
+          "bytes": 150427,
+          "sha256": "7d7ff0a474f6fd65a556bae19f9da76bf74844e50be9c56fb6064ff4206dad40",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:26Z"
+        }
+      ]
+    },
+    {
+      "number": "TFS 2025:3",
+      "detail_url": "https://www.tullverket.se/download/18.6967fe101964058a61b6368f/1751523274145/2025003.pdf",
+      "files": [
+        {
+          "label": "TFS 2025:3",
+          "url": "https://www.tullverket.se/download/18.6967fe101964058a61b6368f/1751523274145/2025003.pdf",
+          "bytes": 141370,
+          "sha256": "b9b75c0dc38a53e03d31bb84e91eea8f2a2c0ea460a270d9da5a2bb92be2a2e3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T14:55:27Z"
+        }
+      ]
+    },
+    {
       "number": "TRVFS 2010:3",
       "detail_url": "https://trvfs.ea.trafikverket.se/TRVFS/Home/DocumentHistory/2010-3",
       "files": [
