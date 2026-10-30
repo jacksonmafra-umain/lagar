@@ -351,13 +351,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
     page without headings, so their configs keep only listed file names; a new
     document with another name is not picked up until the config is updated.
-  - Not collected yet because their sites need a strategy the collector lacks:
-    one HTML page per document, with the text or the PDF only on that page (Vara,
-    Götene, Skara, Falköping, Arvika, Hudiksvall, Härjedalen, Älvsbyn), an
-    embedded JSON list (Skövde), SharePoint (Karlstad), MediaFlow (Gävle),
-    Evolution DocumentWeb (Hallstahammar) and a WordPress file-download plugin
-    (Övertorneå). Nora and Ljusnarsberg have no page listing their resident
-    rules; they are spread over topic pages. Their issues stay open.
+  - Not collected yet: Gävle (MediaFlow shares, whose download links need a
+    token and expire after minutes; an adapter is planned) and Leksand
+    (Netpublicator; an adapter is planned). Karlstad serves its files only
+    through time-limited SharePoint links on a host whose robots.txt disallows
+    everything, so it is not collected.
+  - Skövde: only the taxor och avgifter page is collected; the lokala
+    föreskrifter are listed as JSON in the Next.js page's script data. Nora
+    publishes only three taxor as PDFs (bygglov, VA, avfall); no ordnings-,
+    avfalls- or hälsoskyddsföreskrifter were found on its site. Arvika's taxor
+    page and Älvsbyn's föreskrifter (no index page) are not covered.
   - Boden's taxor pages and Örnsköldsvik's, Sandviken's and Tidaholm's topic
     pages hold rules that the configured listings do not cover; Kiruna covers
     its föreskrifter and bygglovstaxa only.
@@ -368,9 +371,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     section A (allmänna föreskrifter) is collected. Lund links two of its avgifter
     as HTML pages, which are not collected. Ängelholm covers its lokala
     ordningsregler page only.
+  - Helsingborg publishes its författningssamling on styrning.helsingborg.se
+    (PDFs on media.helsingborg.se); its föreskrifter page and the two avgifter
+    PDFs are collected. Its avfallstaxa lives on NSR's site and its environment
+    fees on a separate site for companies; neither is collected.
   - Not collected in Skåne, with the reason per kommun in `AGENCIES.md`: Vellinge
-    (rules as HTML text), Östra Göinge, Lomma, Höör, Perstorp and Helsingborg
-    (document lists rendered in the browser) and Båstad (no collection page).
+    (rules as HTML text), Östra Göinge, Lomma, Höör and Perstorp (document lists
+    rendered in the browser) and Båstad (no collection page).
     Their issues stay open.
   - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
     the PDFs are never fetched; the documents point at the listing page and are
