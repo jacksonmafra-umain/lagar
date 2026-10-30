@@ -556,7 +556,8 @@ stops when `pdftotext` (poppler-utils) is missing; `--no-pdf-text` skips the ste
   their bodies say so and link the official PDFs. PDF text is not extracted.
 - PDFs listed on a detail page are downloaded once to record `url`, `bytes`, `sha256`,
   `content_type` and `retrieved_at` in the committed manifest `sources/agency-pdf-manifest.json`
-  (keyed by regulation number). A response that is not a PDF fails the regulation. The bytes are
+  (keyed by regulation number). A main file that is not a PDF fails the regulation; a later one
+  (a consolidated version served as Word) is noted in the manifest and not linked. The bytes are
   never stored. AFS PDFs are not requested: the text comes from HTML, and Arbetsmiljöverket's
   robots.txt disallows the folder with the original PDFs
   (`/globalassets/filer/publikationer/foreskrifter/ursprungs/`).
