@@ -93,7 +93,6 @@ API ids use underscores (`case_law`, `act`, `ordinance`).
 | `api_version` | integer | no | currently `1` |
 | `built_at` | string (UTC timestamp) | no | |
 | `layers` | array of layer | no | all eight layers, in the order above |
-| `docs_encoding` | string | no | how documents are served: `json` (`docs/<id>.json`) or `gzip` (`docs/<id>.json.gz`); see `GET docs/<id>.json`. Added in v1 without a version bump; a client that does not find it reads `json` |
 
 Layer object:
 
@@ -251,16 +250,6 @@ exists only for the codes in the index; a code that is not listed has no
 documents, so clients show their empty state without requesting it.
 
 ## `GET docs/<id>.json`
-
-With `docs_encoding: "gzip"` in `index.json`, the document is served as
-`docs/<id>.json.gz` instead: the same JSON, gzip-compressed (RFC 1952). The
-file is served as is (`Content-Type: application/gzip`, no
-`Content-Encoding`), so the client decompresses it. Documents are about 30 %
-of their plain size this way; the rest of the API (listings, search) stays
-plain JSON. While apps that predate the flag are still installed, plain
-`docs/<id>.json` copies may also be published for some layers; clients that
-read the flag must not depend on them. `api/build.py --docs-encoding gzip
-[--plain-docs LAYER,...]` builds this layout; the default is `json`.
 
 | field | type | null | notes |
 | --- | --- | --- | --- |

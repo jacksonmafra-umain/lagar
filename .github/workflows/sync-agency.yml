@@ -2,9 +2,10 @@ name: Sync agency regulations
 
 # Weekly check of every agency regulation series with an adapter in
 # collector/lagar/agency.py (AFS, FFFS, TSFS and the series listed in
-# collector/data/agency-series.json). A new series joins the sync as soon as
-# it is registered there. Changes land as one pull request on the
-# data/agency-sync branch; a run with no changes opens nothing.
+# collector/data/agency-series.json). A new series joins the sync as soon as it is
+# registered there. Changes land as one pull request on the data/agency-sync branch.
+# The job merges that pull request into main once its collector tests and the corpus
+# audit pass; a run with no changes opens nothing.
 #
 # The collector state is not committed, so every run reads the listings and
 # detail pages again; PDFs already in the committed manifest are not
@@ -172,3 +173,31 @@ jobs:
               --assignee "$OWNER" \
               --body "Automated weekly sync of the agency regulation series with an adapter. Each run adds one commit that lists the regulations it wrote; the workflow run summaries list failures and blocks per series."
           fi
+
+      - name: Merge the pull request into main
+        run: |
+          # Land the sync on main once this job's collector tests and the corpus audit have
+          # passed. A sync pull request left open by an earlier run is merged the same way.
+          pr=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then
+            echo "No open sync pull request; nothing to merge."
+            exit 0
+          fi
+          # The start step may have merged main into an older sync branch without pushing it.
+          git fetch -q origin "$BRANCH"
+          if [ "$(git branch --show-current)" = "$BRANCH" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
+            git push --force-with-lease="$BRANCH:$(git rev-parse FETCH_HEAD)" origin "HEAD:$BRANCH"
+          fi
+          python3 -I collector/audit.py
+          head=$(git ls-remote origin "refs/heads/$BRANCH" | cut -f1)
+          # GitHub may need a moment to compute mergeability of a pull request it just got.
+          for attempt in 1 2 3 4 5 6; do
+            if gh pr merge "$pr" --merge --match-head-commit "$head"; then
+              git push origin --delete "$BRANCH" || true
+              echo "Merged #$pr into main." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "::error::could not merge #$pr into main; it stays open for the next run"
+          exit 1

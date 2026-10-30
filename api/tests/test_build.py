@@ -1,4 +1,3 @@
-import gzip
 import json
 import subprocess
 import sys
@@ -17,9 +16,9 @@ from lagar import frontmatter, schema  # noqa: E402
 NEW_FIELDS = ("issuer", "court", "ecli", "celex", "region_code", "municipality_code")
 
 
-def run_build(out, corpus=CORPUS, built_at=BUILT_AT, *extra):
+def run_build(out, corpus=CORPUS, built_at=BUILT_AT):
     return subprocess.run(
-        [sys.executable, "-I", str(BUILD), "--corpus", str(corpus), "--out", str(out), "--built-at", built_at, *extra],
+        [sys.executable, "-I", str(BUILD), "--corpus", str(corpus), "--out", str(out), "--built-at", built_at],
         capture_output=True, text=True,
     )
 
@@ -46,7 +45,6 @@ class BuildTest(unittest.TestCase):
         index = read(self.out, "index.json")
         self.assertEqual(index["api_version"], 1)
         self.assertEqual(index["built_at"], BUILT_AT)
-        self.assertEqual(index["docs_encoding"], "json")
         self.assertEqual(
             [layer["id"] for layer in index["layers"]],
             ["fundamental", "sfs", "agency", "case_law", "eu", "region", "municipality", "service"],
@@ -492,33 +490,3 @@ class SchemaErrorsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-
-class GzipDocsTest(unittest.TestCase):
-    def test_gzip_documents_with_plain_copies_per_layer(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            plain, packed = Path(tmp) / "plain", Path(tmp) / "packed"
-            self.assertEqual(run_build(plain).returncode, 0)
-            result = run_build(packed, CORPUS, BUILT_AT, "--docs-encoding", "gzip", "--plain-docs", "fundamental")
-            self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertEqual(read(packed, "index.json")["docs_encoding"], "gzip")
-            docs = sorted(p.name for p in (packed / "docs").iterdir())
-            self.assertEqual(docs, ["sfs-1974-152.json", "sfs-1974-152.json.gz", "sfs-1999-100.json.gz",
-                                    "sfs-2010-800.json.gz"])
-            for name in docs:
-                if name.endswith(".gz"):
-                    raw = gzip.decompress((packed / "docs" / name).read_bytes())
-                    self.assertEqual(raw, (plain / "docs" / name[:-3]).read_bytes())
-            self.assertEqual((packed / "docs/sfs-1974-152.json").read_bytes(),
-                             (plain / "docs/sfs-1974-152.json").read_bytes())
-            again = Path(tmp) / "again"
-            run_build(again, CORPUS, BUILT_AT, "--docs-encoding", "gzip")
-            self.assertEqual((again / "docs/sfs-2010-800.json.gz").read_bytes(),
-                             (packed / "docs/sfs-2010-800.json.gz").read_bytes())
-            self.assertFalse((again / "docs/sfs-1974-152.json").exists())
-
-    def test_unknown_plain_layer_fails(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            result = run_build(Path(tmp) / "out", CORPUS, BUILT_AT, "--docs-encoding", "gzip", "--plain-docs", "sfss")
-            self.assertEqual(result.returncode, 1)
-            self.assertIn("sfss", result.stderr)

@@ -359,6 +359,11 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     (rules as HTML text), Östra Göinge, Lomma, Höör, Perstorp and Helsingborg
     (document lists rendered in the browser) and Båstad (no collection page).
     Their issues stay open.
+  - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
+    the PDFs are never fetched; the documents point at the listing page and are
+    recorded as gaps in the manifest.
+  - Simrishamn publishes its taxor as HTML text on its taxor page, which is not
+    collected; only the allmänna lokala ordningsföreskrifter are a PDF.
   - Tanum publishes its rules as web pages in an A–Z list; they are collected as
     page text (`html_pages`), the ABVA as its PDF. The avfallsföreskrifter page
     refers to Rambo AB's site for the full text.

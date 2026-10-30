@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://kommun.falkenberg.se/om-kommunen/ekonomi-kvalitet-och-styrning/styrande-dokument-forfattningssamling/kommunala-foreskrifter": "1382-listing.html",
+    "https://kommun.falkenberg.se/om-kommunen/ekonomi-kvalitet-och-styrning/styrande-dokument-forfattningssamling/avgifter-och-taxor": "1382-listing-2.html"
+  },
+  "count": 38,
+  "sample": {
+    "number": "2e285a40-b750-4c46-a9a7-27c50af6f47f",
+    "title": "Lokala hälsoskyddsföreskrifter",
+    "url": "https://kommun.falkenberg.se/media/evolution/1c8ac2ec-71a9-4070-b3c5-1e98ba13cfbe/2e285a40-b750-4c46-a9a7-27c50af6f47f.pdf"
+  },
+  "excluded": [
+    "Taxa för plan och byggverksamheten",
+    "Tomtprisuttag vid försäljning av bostadstomter samt regler för kö",
+    "Avgift vid ansökan om godkännande av att starta eller utöka fristående förskola"
+  ]
+}

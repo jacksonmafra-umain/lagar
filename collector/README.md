@@ -43,15 +43,20 @@ When the corpus changed, the workflow:
 - refreshes the audit and progress reports;
 - moves the marker to the newest `systemdatum` seen, or to `retry_from` when a document failed
   with a network error;
-- adds one `data(sfs):` commit to `data/sfs-sync`, opening a pull request if none is open.
+- adds one `data(sfs):` commit to `data/sfs-sync`, opening a pull request if none is open;
+- merges that pull request into `main` (`gh pr merge --merge`) once the collector tests and the
+  corpus audit have passed, and deletes the branch.
+
+Every sync workflow ends with the same merge step. A merge that fails, for example on a conflict
+with `main`, leaves the pull request open, and the next run tries again.
 
 The marker only moves inside that commit, so a failed run, a rejected push or an abandoned pull
 request never skips documents: the next run collects them again. A run that finds nothing new
 commits nothing. Failures are listed in the run summary and in the commit body.
 
 Two GitHub constraints apply. The workflow needs "Allow GitHub Actions to create and approve pull
-requests" enabled in the repository settings. Pull requests opened with the default token do not
-trigger other workflows.
+requests" enabled in the repository settings. Pull requests opened or merged with the default token
+do not trigger other workflows.
 
 ## Listing cap
 

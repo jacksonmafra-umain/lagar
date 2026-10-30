@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.ockero.se/kommun-och-politik/forfattningssamling-och-styrande-dokument": "1407-listing.html"
+  },
+  "count": 24,
+  "sample": {
+    "number": "18.14729c511a01f4c69f0ec",
+    "title": "Avgift för förlorat busskort",
+    "url": "https://www.ockero.se/download/18.14729c511a01f4c69f0ec/1787232421507/Avgift%20f%C3%B6r%20f%C3%B6rlorat%20busskort.pdf"
+  },
+  "excluded": [
+    "Arbetsordning Besöks- och närigslivsrådet (BNR)",
+    "Arbetsordning Råd för folkhälsa och social hållbarhet",
+    "Arbetsordning senior- och funktionshinderrådet"
+  ]
+}

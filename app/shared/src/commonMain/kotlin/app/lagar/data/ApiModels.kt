@@ -8,12 +8,7 @@ data class ApiIndex(
     @SerialName("api_version") val apiVersion: Int,
     @SerialName("built_at") val builtAt: String,
     val layers: List<ApiLayer>,
-    /** How documents are served: `json` (`docs/<id>.json`) or `gzip` (`docs/<id>.json.gz`); older APIs leave it out. */
-    @SerialName("docs_encoding") val docsEncoding: String = DOCS_JSON,
 )
-
-const val DOCS_JSON = "json"
-const val DOCS_GZIP = "gzip"
 
 @Serializable
 data class ApiLayer(val id: String, val count: Int, val series: List<ApiSeries>)
