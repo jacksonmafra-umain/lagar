@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.molndal.se/kommun-och-politik/planer-styrdokument/bestammelser-for-allmanheten": "1481-listing1.html",
+    "https://www.molndal.se/kommun-och-politik/planer-styrdokument/avgifter-och-taxor": "1481-listing2.html"
+  },
+  "count": 23,
+  "sample": {
+    "number": "18.7dca557719a7d85cddd4abd",
+    "title": "Lokala ordningsföreskrifter (innehåller ordningsregler som gäller i Mölndals stad)",
+    "url": "https://www.molndal.se/download/18.7dca557719a7d85cddd4abd/1763451109792/lokala-ordningsforeskrifter.pdf"
+  },
+  "excluded": []
+}
