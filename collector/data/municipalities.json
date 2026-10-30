@@ -1187,6 +1187,67 @@
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
     },
+    "1440": {
+      "name": "Ale",
+      "issuer": "Ale kommun",
+      "region_code": "14",
+      "collection": "Ale kommuns författningssamling",
+      "strategy": "html_index",
+      "hosts": ["ale.se", "www.ale.se"],
+      "listings": [
+        "https://ale.se/om-kommunen/forfattningssamling/avgifter-och-taxor.html",
+        "https://ale.se/om-kommunen/forfattningssamling.html"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Administration",
+        "Bygga och bo",
+        "Kultur och fritid",
+        "Näringsliv",
+        "Omsorg och stöd",
+        "Utbildning",
+        "Bestämmelser",
+        "Övrigt"
+      ],
+      "link_pattern": "^https://(?:www\\.)?ale\\.se/download/18\\.[0-9a-f]+/\\d+/(?!.*(?:Arvodes|partist|barnr%C3%A4tt|webbplats|Stadgar|Instruktion|Lekplatser|broschyr|handbok|enskilda))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$",
+        "\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"
+      ]
+    },
+    "1441": {
+      "name": "Lerum",
+      "issuer": "Lerums kommun",
+      "region_code": "14",
+      "collection": "Lerums kommuns kommunala författningssamling",
+      "strategy": "html_index",
+      "hosts": ["lerum.se", "www.lerum.se"],
+      "listings": [
+        "https://lerum.se/kommun-och-politik/overklaga-beslut-insyn-och-rattssakerhet/kommunal-forfattningssamling"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Avfall och återvinning",
+        "Borgerlig vigsel- och begravningsförrättare",
+        "Bygga",
+        "Ekonomi och näringsliv",
+        "Klimat och natur",
+        "Livsmedel, hälsa och miljö",
+        "Offentliga platser",
+        "Stöd och omsorg",
+        "Trafik och gator",
+        "Utbildning och barnomsorg",
+        "Vatten och avlopp"
+      ],
+      "link_pattern": "^https://(?:www\\.)?lerum\\.se/download/18\\.[0-9a-f]+/\\d+/(?!.*(?:[Rr]iktlinje|[Pp]olicy|[Pp]rogram|[Ss]trategi|plan%20|plan\\.pdf|[Pp]lan%20|Energiplan|Klimatanpassningsplan|Biblioteksplan|Folkh|Regional|V%C3%A4gledande|Villkor|Attest|Policy))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$"]
+    },
     "1480": {
       "name": "Göteborg",
       "issuer": "Göteborgs Stad",
@@ -1674,6 +1735,126 @@
         {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
       ],
       "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kKM]B\\.?\\s*$"]
+    },
+    "1981": {
+      "name": "Sala",
+      "issuer": "Sala kommun",
+      "region_code": "19",
+      "collection": "Sala kommuns kommunala författningssamling (styrdokument)",
+      "strategy": "html_index",
+      "hosts": ["www.sala.se", "sala.se"],
+      "listings": ["https://www.sala.se/?id=13251&page=info"],
+      "section_level": 2,
+      "sections": ["Styrande dokument"],
+      "link_pattern": "^https://(www\\.)?sala\\.se/resources/files/_Nystruktur/Styrdokument/(08(%20| )Taxor(%20| )och(%20| )avgifter/|03(%20| )Best(ä|%C3%A4)mmelser(%20| )och(%20| )lokala(%20| )f(ö|%C3%B6)reskrifter/(?!Best(ä|%C3%A4)mmelser(%20| )om(%20| )ers|Parkeringsnorm))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/Styrdokument/[^/]+/([^/]+?)\\.pdf"}
+      ],
+      "title_strip": ["\\s*\\(pdf\\)\\s*$"]
+    },
+    "1982": {
+      "name": "Fagersta",
+      "issuer": "Fagersta kommun",
+      "region_code": "19",
+      "collection": "Fagersta kommuns föreskrifter och taxor",
+      "strategy": "html_index",
+      "hosts": ["fagersta.se", "www.fagersta.se"],
+      "listings": [
+        "https://fagersta.se/organisation--styrning/styrning-och-uppfoljning/foreskrifter",
+        "https://fagersta.se/organisation--styrning/styrning-och-uppfoljning/taxor-och-avgifter"
+      ],
+      "section_level": 1,
+      "sections": ["Föreskrifter", "Taxor och avgifter"],
+      "link_pattern": "^https://(www\\.)?fagersta\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kKM]B\\.?\\s*$"]
+    },
+    "1984": {
+      "name": "Arboga",
+      "issuer": "Arboga kommun",
+      "region_code": "19",
+      "collection": "Arboga kommuns avgifter, taxor och styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["arboga.se", "www.arboga.se"],
+      "listings": [
+        "https://arboga.se/kommun-och-politik/ekonomi-och-budget/avgifter-och-taxor.html",
+        "https://arboga.se/kommun-och-politik/mal-utveckling-och-styrande-dokument/styrande-dokument.html"
+      ],
+      "section_level": 1,
+      "sections": ["Avgifter och taxor", "Styrande dokument"],
+      "link_pattern": "^https://(www\\.)?arboga\\.se/download/18\\.[0-9a-f]+/\\d+/(taxa%20|torghandelstaxa|felparkeringsavgifter|justerad%202026%20taxa|lokala%20ordningsf)",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kKM]B\\.?\\s*$", "\\.pdf\\s*$"]
+    },
+    "2023": {
+      "name": "Malung-Sälen",
+      "issuer": "Malung-Sälens kommun",
+      "region_code": "20",
+      "collection": "Malung-Sälens kommuns styrdokument",
+      "strategy": "html_index",
+      "hosts": ["malung-salen.se", "www.malung-salen.se"],
+      "listings": [
+        "https://malung-salen.se/kommun-och-politik/dokument/styrdokument",
+        "https://malung-salen.se/bygga-bo-och-miljo/miljo-och-halsa/miljoskydd/avfall-och-atervinning"
+      ],
+      "section_level": 2,
+      "sections": ["Föreskrifter", "Avfalls­föreskrift och kretsloppsplan"],
+      "link_pattern": "^https://malung\\-salen\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
+    },
+    "2026": {
+      "name": "Gagnef",
+      "issuer": "Gagnefs kommun",
+      "region_code": "20",
+      "collection": "Gagnefs kommuns kommunala styrdokument (föreskrifter)",
+      "strategy": "html_index",
+      "hosts": ["www.gagnef.se", "gagnef.se"],
+      "listings": ["https://www.gagnef.se/kommun-och-politik/kommunala-styrdokument/"],
+      "section_level": 2,
+      "sections": ["Föreskrifter"],
+      "link_pattern": "^https://(www\\.)?gagnef\\.se/wp-content/uploads/\\d{4}/\\d{2}/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/wp-content/uploads/(\\d{4}/\\d{2}/[^/?#]+?)\\.pdf"}
+      ],
+      "title_strip": ["\\s*\\.pdf\\s*$"]
+    },
+    "2039": {
+      "name": "Älvdalen",
+      "issuer": "Älvdalens kommun",
+      "region_code": "20",
+      "collection": "Älvdalens kommuns styrande dokument och regler",
+      "strategy": "html_index",
+      "hosts": ["www.alvdalen.se", "alvdalen.se"],
+      "listings": [
+        "https://www.alvdalen.se/kommun-och-politik/politik-och-demokrati/styrande-dokument-och-regler.html"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Allmänna lokala ordningsföreskrifter",
+        "Miljö och samhällsskydd",
+        "Avfall och återvinning",
+        "Vatten och avlopp"
+      ],
+      "link_pattern": "^https://www\\.alvdalen\\.se/download/18\\.[0-9a-f]+/\\d+/(?![^?#]*Kretslopp)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*,?\\s*öppnas i nytt fönster\\.?\\s*$",
+        "\\s*\\(?\\s*(?:pdf|docx?)\\s*,?\\s*[\\d.,]+\\s*[kMG]?B\\.?\\s*\\)?\\.?\\s*$",
+        "\\s*\\.pdf\\s*$"
+      ]
     },
     "2161": {
       "name": "Ljusdal",
@@ -2184,6 +2365,24 @@
       ],
       "title_strip": ["\\s+$"]
     },
+    "2480": {
+      "name": "Umeå",
+      "issuer": "Umeå kommun",
+      "region_code": "24",
+      "collection": "Umeå kommun, lokala föreskrifter",
+      "strategy": "html_index",
+      "hosts": ["www.umea.se", "umea.se"],
+      "listings": [
+        "https://www.umea.se/kommunochpolitik/kommunfakta/reglerochstyrandedokument/lokalaforeskrifter.4.5bc0956b1719ab0ae7f356.html"
+      ],
+      "section_level": 2,
+      "sections": ["Lokala föreskrifter i sin helhet"],
+      "link_pattern": "^https://www\\.umea\\.se/download/18\\.[0-9a-f]+/\\d+/(?!Regler%20f%C3%B6r%20bidrag)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\.pdf\\s*,\\s*[\\d.,]+\\s*[kM]B.*$", "\\s*pdf\\s*,\\s*[\\d.,]+\\s*[kM]B.*$"]
+    },
     "2481": {
       "name": "Lycksele",
       "issuer": "Lycksele kommun",
@@ -2246,6 +2445,25 @@
         {"from": "href", "pattern": "/wp-content/uploads/se/\\d{4}/\\d{2}/([^/?#]+)\\.pdf$"}
       ],
       "title_strip": ["\\.pdf\\s*$"]
+    },
+    "2510": {
+      "name": "Jokkmokk",
+      "issuer": "Jokkmokks kommun",
+      "region_code": "25",
+      "collection": "Jokkmokks kommuns kommunala författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.jokkmokk.se", "jokkmokk.se"],
+      "listings": [
+        "https://www.jokkmokk.se/kommun-och-politik/kommunal-foerfattningssamling/styrdokument-och-foereskrifter/",
+        "https://www.jokkmokk.se/kommun-och-politik/kommunal-foerfattningssamling/taxor-och-avgifter/"
+      ],
+      "section_level": 1,
+      "sections": [],
+      "link_pattern": "^https://www\\.jokkmokk\\.se/media/[a-z0-9]+/(?!riktlinjer|riktvardeslista|forslag-till-kommunfullmaktige)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/media/([a-z0-9]+)/"}
+      ],
+      "title_strip": []
     }
   }
 }

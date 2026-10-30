@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://ale.se/om-kommunen/forfattningssamling/avgifter-och-taxor.html": "1440-listing1.html",
+    "https://ale.se/om-kommunen/forfattningssamling.html": "1440-listing2.html"
+  },
+  "count": 49,
+  "sample": {
+    "number": "18.2d628a5318a2603b043543e1",
+    "title": "Avgift borgerlig vigsel",
+    "url": "https://ale.se/download/18.2d628a5318a2603b043543e1/1694445548271/Avgift%20borgerlig%20vigsel.pdf"
+  },
+  "excluded": [
+    "Taxa för prövning och tillsyn enligt alkohollagen lag om tobak och liknande produkter och lag om tobaksfria nikotinprodukter",
+    "Styrdokument för helägda bolag i Ale kommun",
+    "Arkivreglemente"
+  ]
+}
