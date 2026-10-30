@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.bjuv.se/kommun-och-politik/sa-fungerar-kommunen/kommunala-styrdokument.html": "1260-listing.html"
+  },
+  "count": 9,
+  "sample": {
+    "number": "18.427fbbd4189e3b9b4bcba4",
+    "title": "Lokala föreskrifter för miljöfarlig verksamhet och hälsoskydd för Bjuvs kommun",
+    "url": "https://www.bjuv.se/download/18.427fbbd4189e3b9b4bcba4/1691749554957/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20milj%C3%B6farlig%20verksamhet%20och%20h%C3%A4lsoskydd%20f%C3%B6r%20Bjuvs%20kommun,%20antagna%20PDF.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för styrande dokument i Bjuvs kommun",
+    "Arbetsordning för kommunfullmäktige",
+    "Reglemente för kommunstyrelsens och nämndernas gemensamma bestämmelser och arbetsformer"
+  ]
+}

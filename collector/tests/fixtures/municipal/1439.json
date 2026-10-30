@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://fargelanda.se/kommun-och-politik/styrande-dokument-och-planer/kommunal-forfattningssamling/": "1439-listing.html"
+  },
+  "count": 26,
+  "sample": {
+    "number": "3viguzzr",
+    "title": "Allmänna lokala ordningsföreskrifter för Färgelanda kommun 2022",
+    "url": "https://fargelanda.se/media/3viguzzr/allmanna-lokala-ordningsforeskrifter-for-fargelanda-kommun-2022.pdf"
+  },
+  "excluded": [
+    "Bolagsordning Färgelanda Vatten AB",
+    "Bolagsordning Valbohem",
+    "Bolagsordning Visit Dalsland AB"
+  ]
+}

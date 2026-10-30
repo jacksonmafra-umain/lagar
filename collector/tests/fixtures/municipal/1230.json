@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://staffanstorp.se/kommun-och-politik/demokrati-och-paverkan/forfattningssamling/": "1230-listing.html"
+  },
+  "count": 27,
+  "sample": {
+    "number": "lokala-halsoskyddsforeskrifter",
+    "title": "Lokala hälsoskyddsföreskrifter",
+    "url": "https://staffanstorp.se/app/uploads/2023/03/lokala-halsoskyddsforeskrifter.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige",
+    "Gemensamma reglementesbestämmelser för kommunstyrelsen och övriga nämnder",
+    "Reglemente för kommunstyrelsen"
+  ]
+}
