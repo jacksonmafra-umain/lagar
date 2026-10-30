@@ -1,0 +1,14 @@
+{
+  "listings": {
+    "https://www.mullsjo.se/kommun-och-politik/styrande-dokument": "0642-listing.html"
+  },
+  "count": 5,
+  "sample": {
+    "number": "18.5d8b716919bdd3894bbd1613",
+    "title": "Föreskrifter för avfallshantering Jönköping, Habo och Mullsjö kommuner",
+    "url": "https://www.mullsjo.se/download/18.5d8b716919bdd3894bbd1613/1769440719908/F%C3%B6reskrifter%20f%C3%B6r%20avfallshantering%20J%C3%B6nk%C3%B6ping%20%20Habo%20och%20Mullsj%C3%B6%20kommuner.pdf"
+  },
+  "excluded": [
+    "Avfallsplan 2023-2026 Jönköping, Habo och Mullsjö kommuner"
+  ]
+}

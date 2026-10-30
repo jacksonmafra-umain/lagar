@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.atvidaberg.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument": "0561-listing.html"
+  },
+  "count": 8,
+  "sample": {
+    "number": "18.1e1d4b22163fd87235de089",
+    "title": "ABVA, allmänna bestämmelser för användande av Åtvidabergs kommuns allmänna vatten- och avloppsanläggning samt information till fastighetsägare",
+    "url": "https://www.atvidaberg.se/download/18.1e1d4b22163fd87235de089/1529487739153/abva-allmanna-bestammelser-for-anvandande-av-atvidabergs-kommuns-allmanna-vatten-och-avloppsanlaggning-samt-information-till-fastighetsagare.pdf"
+  },
+  "excluded": [
+    "Kommunfullmäktiges arbetsordning",
+    "Reglemente för Åtvidabergs kommun",
+    "Informationssäkerhetspolicy IT"
+  ]
+}

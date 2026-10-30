@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.vadstena.se/kommun-demokrati/politik-och-beslut/sa-styrs-vadstena/styrande-dokument/lokala-foreskrifter/": "0584-listing.html",
+    "https://www.vadstena.se/kommun-demokrati/politik-och-beslut/sa-styrs-vadstena/styrande-dokument/taxor-och-avgifter/": "0584-listing-2.html"
+  },
+  "count": 20,
+  "sample": {
+    "number": "2021/05/andrade-lokala-ordningsforeskrifter-for-vadstena-kommun-d0713f8c-e760-48a2-84fe-b3fa1ab27902",
+    "title": "Lokala ordningsföreskrifter för Vadstena kommun",
+    "url": "https://www.vadstena.se/wp-content/uploads/2021/05/andrade-lokala-ordningsforeskrifter-for-vadstena-kommun-d0713f8c-e760-48a2-84fe-b3fa1ab27902.pdf"
+  },
+  "excluded": [
+    "Riktlinjer för uthyrning av lokaler inom kultur- och utbildningsförvaltningens verksamhetsområde",
+    "Tomtpriser småhus Borghamn Rogslösa",
+    "Broschyr avgifter 2026"
+  ]
+}
