@@ -473,8 +473,11 @@ python3 -I collector/collect.py county --county CODE [--from-year YYYY] [--to-ye
     The number comes from the link text or else the file name, with the county's
     `number_patterns` (regular expressions with groups `year`, `n` and optionally `code`; the
     default reads `04FS 2026-1`, `22 FS 2026-1`, `18FS2025 1`, `FS 2026-01`). A number in another
-    county's series is skipped. Links without a number (registers, maps, misnumbered files) are not
-    collected and are listed in the report as `unnumbered` when they belong to a requested year.
+    county's series is skipped. A link without a number in its text or file name is downloaded and
+    gets the first number of the county's series printed in the top of its PDF text (a link already
+    in the manifest keeps its number without a download). Links that still have no number
+    (registers, information sheets, scanned files) are not collected and are listed in the report
+    as `unnumbered` when they belong to a requested year (every one when no year is given).
 - Each URL is checked against `robots.txt` before it is requested; a disallowed URL or an HTTP 403
   stops the run (exit code 2). `--rate` must be at least 1 second (the default).
 - Mapping (`county_regulation`, `layer: region`, `corpus/region/county-regulations/`): `number` is the
