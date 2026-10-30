@@ -1,9 +1,11 @@
 """Generate the static JSON API (docs/api.md) from the corpus.
 
 Usage: python3 -I api/build.py --corpus corpus --out build/api/v1 [--built-at <UTC>]
+       [--docs-encoding json|gzip] [--plain-docs LAYER[,LAYER...]]
 """
 
 import argparse
+import gzip
 import json
 import os
 import re
@@ -21,6 +23,9 @@ from lagar import frontmatter, schema  # noqa: E402
 from lagar.vocabulary import LAYERS, TYPES  # noqa: E402
 
 API_VERSION = 1
+# How documents are served (docs/api.md, "docs_encoding"): `json` as docs/<id>.json, `gzip` as docs/<id>.json.gz.
+DOCS_ENCODING = "json"
+DOCS_ENCODINGS = ("json", "gzip")
 PAGE_SIZE = 50
 BUILT_AT_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 # Fields added after the first release go at the end, so earlier keys keep their position.
@@ -174,6 +179,15 @@ def _write(out, rel, data, written):
     written.append(rel)
 
 
+def _write_gzip(out, rel, data, written):
+    """`rel` as gzip-compressed JSON; level 9 and no timestamp, so the bytes depend only on the data."""
+    path = out / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n"
+    path.write_bytes(gzip.compress(text.encode("utf-8"), compresslevel=9, mtime=0))
+    written.append(rel)
+
+
 def _pages(out, rel_dir, layer, type_, items, written, extra=None):
     items = _sorted(items)
     count = max(1, -(-len(items) // PAGE_SIZE))
@@ -234,7 +248,10 @@ def doc_meta(meta):
     return {key: meta.get(key) for key in META_FIELDS}
 
 
-def build(docs, out, built_at):
+def build(docs, out, built_at, docs_encoding=DOCS_ENCODING, plain_docs=()):
+    """Write the API. With gzip documents, the layers in `plain_docs` also keep their plain docs/<id>.json."""
+    if docs_encoding not in DOCS_ENCODINGS:
+        raise BuildError(f"unknown docs encoding: {docs_encoding!r}")
     out = Path(out)
     written = []
     # The locality codes are optional in the frontmatter; the rest are required.
@@ -257,13 +274,18 @@ def build(docs, out, built_at):
             _by_code(out, layer, LOCALITY_LAYERS[layer], in_layer, written)
         layers.append({"id": layer, "count": len(in_layer), "series": series})
     for meta, body in sorted(docs, key=lambda d: d[0]["id"]):
-        _write(out, f"docs/{meta['id']}.json", {"meta": doc_meta(meta), "body": body}, written)
+        doc = {"meta": doc_meta(meta), "body": body}
+        if docs_encoding == "gzip":
+            _write_gzip(out, f"docs/{meta['id']}.json.gz", doc, written)
+        if docs_encoding == "json" or meta["layer"] in plain_docs:
+            _write(out, f"docs/{meta['id']}.json", doc, written)
     for rel, text in searchindex.build_index(docs, built_at).items():
         path = out / rel
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding="utf-8", newline="")
         written.append(rel)
-    _write(out, "index.json", {"api_version": API_VERSION, "built_at": built_at, "layers": layers}, written)
+    _write(out, "index.json", {"api_version": API_VERSION, "built_at": built_at, "layers": layers,
+                               "docs_encoding": docs_encoding}, written)
     return len(layers), len(written)
 
 
@@ -306,11 +328,19 @@ def main(argv):
     parser.add_argument("--corpus", required=True)
     parser.add_argument("--out", required=True)
     parser.add_argument("--built-at", default=None)
+    parser.add_argument("--docs-encoding", choices=DOCS_ENCODINGS, default=DOCS_ENCODING,
+                        help=f"how documents are served (default {DOCS_ENCODING})")
+    parser.add_argument("--plain-docs", default="",
+                        help="with --docs-encoding gzip: comma-separated layers that also keep plain .json documents")
     args = parser.parse_args(argv)
+    plain_docs = tuple(layer for layer in args.plain_docs.split(",") if layer)
     built_at = args.built_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     corpus, out = Path(args.corpus), Path(args.out)
     try:
         _check_built_at(built_at)
+        unknown = sorted(set(plain_docs) - set(LAYERS))
+        if unknown:
+            raise BuildError(f"--plain-docs names unknown layers: {', '.join(unknown)}")
         if not corpus.is_dir():
             raise BuildError(f"corpus directory not found: {corpus}")
         if out.is_symlink() or (out.exists() and not out.is_dir()):
@@ -322,7 +352,7 @@ def main(argv):
             if any(out.iterdir()) and not (out / "index.json").is_file():
                 raise BuildError(f"refusing to clear {out}: it is not empty and has no index.json (not a previous build)")
             shutil.rmtree(out)
-        layers, files = build(docs, out, built_at)
+        layers, files = build(docs, out, built_at, args.docs_encoding, plain_docs)
     except (BuildError, OSError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
