@@ -122,6 +122,9 @@ _YEAR_FOLDER = re.compile(r"\s*((?:19|20)\d{2})\s*")
 _ANY_YEAR = re.compile(r"(?<![0-9])((?:19|20)\d{2})(?![0-9])")
 _REPEALED_MARK = re.compile(r"^\s*UPPHÄVD\b[\s:_-]*", re.I)
 _SPACE = re.compile(r"\s+")
+_FOOTNOTE = re.compile(r"(?<=[^\W\d_])\d{1,2}(?=\s*;\s*$)")
+_ENDS_LOWER = re.compile(r"(?:^|\s)[a-zåäö.]+$")
+_TITLE_WORD = re.compile(r"föreskrift|beslut|kungörelse|ändring|upphävande", re.I)
 # A number glued into a file name, "06FS1977239" or "06_FS_2014_20", dropped from titles.
 _FS_TOKEN = re.compile(r"(?<![0-9])[0-9]{2}[\s_]*FS[\s_]*(?:19|20)[0-9]{2}[0-9_: -]*", re.I)
 _SV_DATE = re.compile(r"(\d{1,2}) (" + "|".join(MONTHS) + r") (\d{4})", re.I)
@@ -529,6 +532,29 @@ def text_blocks(files, texts):
     return blocks
 
 
+def title_in_text(paragraphs):
+    """The title printed in a PDF: an early paragraph ending in `;` that names a regulation.
+
+    A title broken over a short line (`... m.m. i` / `Aneby kommun;`) is joined
+    back; a footnote mark before the `;` is dropped.
+    """
+    head = paragraphs[:12]
+    for i, paragraph in enumerate(head):
+        text = _FOOTNOTE.sub("", paragraph).strip()
+        if not text.endswith(";"):
+            continue
+        title = text[:-1].strip()
+        j = i
+        while j > 0 and not _TITLE_WORD.search(title) and _ENDS_LOWER.search(head[j - 1]) and not _NUMBER.search(
+            head[j - 1]
+        ) and "författningssamling" not in head[j - 1]:
+            title = head[j - 1] + " " + title
+            j -= 1
+        if 10 <= len(title) <= 400 and _TITLE_WORD.search(title):
+            return title
+    return None
+
+
 def pdf_facts(texts):
     """(decided, published, in force) read from the PDFs' text."""
     text = "\n".join(" ".join(p) for p in texts.values() if p)
@@ -917,6 +943,9 @@ def _store_files(client, robots, item, args, manifest):
         return _stored_meta(probe, args.corpus), False
     decided, published, in_force = pdf_facts(texts)
     item.decided = item.decided or decided
+    printed = next((title_in_text(p) for p in texts.values() if p), None)
+    if printed:
+        item.title = printed
     if published:
         stored["published"] = published
     first = stored["files"][0]

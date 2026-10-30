@@ -519,6 +519,21 @@ class CountyTextTests(unittest.TestCase):
 
     run_main = CountyRunTests.run_main
 
+    def test_title_is_read_from_the_pdf_text(self):
+        head = ["Jönköpings läns författningssamling", "Länsstyrelsen", "06 FS 1977:239",
+                "Länsstyrelsens i Jönköpings län föreskrifter om naturreservatet Björkenäs m.m. i",
+                "Aneby kommun1;", "Utkom från trycket den 12 januari 1978"]
+        self.assertEqual(county.title_in_text(head),
+                         "Länsstyrelsens i Jönköpings län föreskrifter om naturreservatet Björkenäs m.m. i Aneby kommun")
+        self.assertEqual(county.title_in_text(["Länsstyrelsen i Jönköpings län",
+                                               "Beslut om utvidgat strandskydd i Gislaveds kommun;"]),
+                         "Beslut om utvidgat strandskydd i Gislaveds kommun")
+        self.assertIsNone(county.title_in_text(["1 § Det är förbjudet att elda; se 2 §"]))
+        with fake_extract():
+            self.run_files(FilesClient(), "24", "--from-year", "2026")
+        meta, _ = self.body("24FS 2026:1")
+        self.assertEqual(meta["title"], "Länsstyrelsen i Västerbottens läns föreskrifter om eldningsförbud")
+
     def test_unnumbered_link_takes_the_number_printed_in_the_pdf(self):
         text = PDF_TEXT.replace("24FS 2026:1", "22FS 2025:1")
         with fake_extract(text):
