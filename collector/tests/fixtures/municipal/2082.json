@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/regler-och-foreskrifter/": "2082-listing1.html",
+    "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/": "2082-listing2.html"
+  },
+  "count": 17,
+  "sample": {
+    "number": "foreskrifter-om-avfallshantering",
+    "title": "Föreskrifter om avfallshantering",
+    "url": "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/regler-och-foreskrifter/foreskrifter-om-avfallshantering/"
+  },
+  "excluded": []
+}

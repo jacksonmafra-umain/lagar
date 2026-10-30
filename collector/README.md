@@ -43,15 +43,20 @@ When the corpus changed, the workflow:
 - refreshes the audit and progress reports;
 - moves the marker to the newest `systemdatum` seen, or to `retry_from` when a document failed
   with a network error;
-- adds one `data(sfs):` commit to `data/sfs-sync`, opening a pull request if none is open.
+- adds one `data(sfs):` commit to `data/sfs-sync`, opening a pull request if none is open;
+- merges that pull request into `main` (`gh pr merge --merge`) once the collector tests and the
+  corpus audit have passed, and deletes the branch.
+
+Every sync workflow ends with the same merge step. A merge that fails, for example on a conflict
+with `main`, leaves the pull request open, and the next run tries again.
 
 The marker only moves inside that commit, so a failed run, a rejected push or an abandoned pull
 request never skips documents: the next run collects them again. A run that finds nothing new
 commits nothing. Failures are listed in the run summary and in the commit body.
 
 Two GitHub constraints apply. The workflow needs "Allow GitHub Actions to create and approve pull
-requests" enabled in the repository settings. Pull requests opened with the default token do not
-trigger other workflows.
+requests" enabled in the repository settings. Pull requests opened or merged with the default token
+do not trigger other workflows.
 
 ## Listing cap
 
@@ -493,6 +498,13 @@ left out. A table row that links through `data-href` instead of a link is read t
 (`/api/episerver/v3.0/content/<page>?expand=PDFFilesArea`), which only gives file names; the
 title, and whether a regulation is an amendment, come from the PDF. When the listing only named
 the number and the PDF title shows an amendment, the regulation is excluded.
+HSLF-FS, the series the health and social-care agencies share, comes from the JSON behind
+kunskapsguiden.se's list (designation, heading, agency, link). Its regulations sit on each
+agency's own site, so the adapter sets `multi_host = True` and the run reads robots.txt per host;
+the agency becomes the document's `issuer`. A link straight to a PDF makes the PDF the document,
+and on a page that lists many regulations (TLV) only the PDFs naming the number are kept.
+Läkemedelsverket's regulations are not collected: its pages need JavaScript and its robots.txt
+disallows PDFs. Predecessor series on the same list (SOSFS, FoHMFS and others) are not collected.
 
 Adapters whose site publishes no HTML text (`has_text = False`) get their text from a PDF:
 the consolidated version when one is linked, else the regulation's own PDF, read with
@@ -788,6 +800,17 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      `{linkdownload}`), resolved against the listing URL. `link_pattern`, when set, filters the
      built links; `resident_filter` and `title_include`/`title_exclude` filter the titles. An item
      with no number or a template field it lacks is reported as a problem.
+     With `"recursive": true`, the lists at `items` are collected from every nested folder object as
+     well (DocumentWeb returns a whole folder tree in one answer); each item's section is the title
+     field of the folder that holds it, so `sections` can keep only some folders. `follow_items`
+     (`{"field": "type", "value": "channel", "url_template": "read?hash={_hash}-{id}&isr=false"}`)
+     reads the items that match as further listings (a Netpublicator channel); in every template the
+     listing URL's query parameters are available as `_name` (`{_hash}`). JSON titles are
+     HTML-unescaped.
+   - `href_titles` (`html_index`, `html_pages`): a link without text takes its title from the URL's
+     file name (Vallentuna's sitemap lists `2.4.3 Avfallstaxa.pdf`). Sitemaps may be gzipped files
+     (`sitemap1.xml.gz`).
+   - Links of the form `javascript:void(window.open('/download/...'))` are read as the URL they open.
 3. Choose `sections` or `kinds` so that only rules for residents are collected. Where the list mixes
    rules and internal documents with no headings to tell them apart, `"resident_filter": true`
    keeps a title only when it names a rule for residents (föreskrifter, taxor, avgifter, avfall,

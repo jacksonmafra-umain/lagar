@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.horby.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/": "1266-listing.html"
+  },
+  "count": 6,
+  "sample": {
+    "number": "allmacc88nna-bestacc88mmelser-anvacc88ndande-vatten-och-avloppsanlacc88ggning",
+    "title": "ABVA - allmänna bestämmelser användande vatten och avloppsanläggning",
+    "url": "https://www.horby.se/wp-content/uploads/allmacc88nna-bestacc88mmelser-anvacc88ndande-vatten-och-avloppsanlacc88ggning.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för Hörby kommunfullmäktige",
+    "Arkivreglemente",
+    "Arkivreglemente, bilaga"
+  ]
+}

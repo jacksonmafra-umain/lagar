@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.trelleborg.se/kommun-politik/fakta-om-kommunen/ordningsregler/": "1287-listing.html"
+  },
+  "count": 7,
+  "sample": {
+    "number": "allmanna-lokala-ordningsforeskrifter-beslutade-i-juni-2023",
+    "title": "Lokala ordningsföreskrifter Trelleborgs kommun",
+    "url": "https://www.trelleborg.se/app/uploads/2020/06/allmanna-lokala-ordningsforeskrifter-beslutade-i-juni-2023.pdf"
+  },
+  "excluded": [
+    "Bilaga: Kartor över Skåre, Smygehamn och Trelleborg",
+    "Kretsloppsplan 2021-2027",
+    "Kretsloppsplan 2021-2027 bilaga"
+  ]
+}

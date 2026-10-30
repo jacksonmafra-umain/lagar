@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://overtornea.se/wp-admin/admin-ajax.php?juwpfisadmin=false&action=wpfd&task=files.display&view=files&id=41&rootcat=41": "2518-listing1.json",
+    "https://overtornea.se/wp-admin/admin-ajax.php?juwpfisadmin=false&action=wpfd&task=files.display&view=files&id=190&rootcat=190": "2518-listing2.json"
+  },
+  "count": 17,
+  "sample": {
+    "number": "11293",
+    "title": "Info om ABVA 2012",
+    "url": "https://overtornea.se/laddaner/41/foreskrifter/11293/info-om-abva-2012.pdf"
+  },
+  "excluded": []
+}

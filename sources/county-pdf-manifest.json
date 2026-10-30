@@ -18553,17 +18553,9 @@
       "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
       "files": [
         {
-          "bytes": 123542,
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:52:39Z",
-          "sha256": "1d2e46ba90498cef276acf9664be87a02bdd9b1659ab793c33947cd8e8aafdde",
-          "text": "extracted",
-          "url": "https://www.lansstyrelsen.se/download/18.5754b1b8194d34147316bf7/1738829880150/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndrad%20ordningsf%C3%B6reskrift%20inom%20Br%C3%A5tbergets%20naturreservat,%20Kinda%20kommun%202025.2.pdf"
-        },
-        {
           "bytes": 111829,
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:52:40Z",
+          "retrieved_at": "2026-10-30T21:41:52Z",
           "sha256": "1e01b9383967e7caa3fee9e473987604516c23f7a9bb848297fee5c4a4ba7d1c",
           "text": "extracted",
           "url": "https://www.lansstyrelsen.se/download/18.5d22726519618d6580ab1992/1745583968034/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndrad%20ordningsf%C3%B6reskrift%20inom%20Br%C3%A5tbergets%20naturreservat,%20Kinda%20kommun%202025.2.pdf"
@@ -18576,17 +18568,9 @@
       "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
       "files": [
         {
-          "bytes": 124116,
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:52:41Z",
-          "sha256": "831c727b37b1e78a98defc8e71e85736848b80511a94fdee5e055ced0aaccfe3",
-          "text": "extracted",
-          "url": "https://www.lansstyrelsen.se/download/18.5754b1b8194d34147316bf8/1738829880172/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndrad%20ordningsf%C3%B6reskrift%20inom%20Storsko-gens%20naturreservat,%20%C3%85tvidabergs%20kommun%202025.3.pdf"
-        },
-        {
           "bytes": 113414,
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:52:42Z",
+          "retrieved_at": "2026-10-30T21:41:53Z",
           "sha256": "4cde73660b853ce14d01c6ff68d19d9ba39c81741b99db527ae11c73732f2121",
           "text": "extracted",
           "url": "https://www.lansstyrelsen.se/download/18.5d22726519618d6580ab1991/1745583968011/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndrad%20ordningsf%C3%B6reskrift%20inom%20Storsko-gens%20naturreservat,%20%C3%85tvidabergs%20kommun%202025.3.pdf"

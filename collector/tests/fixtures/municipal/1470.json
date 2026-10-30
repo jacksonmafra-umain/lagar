@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://vara.se/kommunochpolitik/varorganisationochverksamhet/planerochstyrandedokument/foreskrifter.1616.html": "1470-listing1.html",
+    "https://vara.se/kommunochpolitik/varorganisationochverksamhet/planerochstyrandedokument/avgifterochtaxor.1249.html": "1470-listing2.html"
+  },
+  "count": 25,
+  "sample": {
+    "number": "1954",
+    "title": "Allmänna lokala ordningsföreskrifter för Vara kommun",
+    "url": "https://vara.se/kommunochpolitik/varorganisationochverksamhet/planerochstyrandedokument/foreskrifter/allmannalokalaordningsforeskrifterforvarakommun.1954.html"
+  },
+  "excluded": []
+}

@@ -778,6 +778,86 @@ class ListingOptionsTest(unittest.TestCase):
             self.assertNotIn("Uppgifter från kommunen", body)
 
 
+DOCWEB_TREE = {
+    "id": "root", "name": "Regler och styrande dokument", "documents": [],
+    "folders": [
+        {"id": "f1", "name": "Taxor och avgifter", "folders": [], "documents": [
+            {"id": "d1", "folderId": "f1", "name": "Avfallstaxa 2026"},
+            {"id": "d2", "folderId": "f1", "name": "Delegationsordning för taxor"}]},
+        {"id": "f2", "name": "Policyer", "folders": [
+            {"id": "f3", "name": "Föreskrifter", "folders": [], "documents": [
+                {"id": "d3", "folderId": "f3", "name": "Lokala ordningsföreskrifter"}]}],
+         "documents": [{"id": "d4", "folderId": "f2", "name": "Taxa för internt bruk"}]},
+    ],
+}
+NETPUB = "https://docs.netpublicator.com/api/public/r1/read?hash=a-root&isr=false"
+NETPUB_ROOT = {"history": [], "items": [
+    {"id": "c1", "text": "Avgifter och taxor", "type": "channel"},
+    {"id": "d1", "text": "Lokala ordningsf&#246;reskrifter", "type": "document"}]}
+NETPUB_CHILD = {"history": [], "items": [{"id": "d2", "text": "Avfallstaxa", "type": "document"}]}
+
+
+class PlatformOptionsTest(unittest.TestCase):
+    def test_javascript_hrefs_and_file_name_titles(self):
+        entry = {"name": "Aneby", "issuer": "Aneby kommun", "region_code": "06", "collection": "Taxor",
+                 "preset": "sitevision", "href_titles": True, "hosts": ["www.aneby.se"],
+                 "listings": ["https://www.aneby.se/taxor.html"]}
+        listing = (b"<html><body><a href=\"javascript:void(window.open('/download/18.5a2/1700/Taxa%20milj%C3%B6.pdf',"
+                   b"'_blank'))\">Taxa milj\xc3\xb6balken (213 kB)</a>"
+                   b"<a href='/download/18.6b3/1701/Avfallstaxa_2026.pdf'><img src='x.png'></a></body></html>")
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = _config(tmp, "0604", entry)
+        entries, problems = municipal.parse_html_index(kommun, listing, entry["listings"][0])
+        self.assertEqual(problems, [])
+        self.assertEqual([(e.url, e.title) for e in entries], [
+            ("https://www.aneby.se/download/18.5a2/1700/Taxa%20milj%C3%B6.pdf", "Taxa miljöbalken (213 kB)"),
+            ("https://www.aneby.se/download/18.6b3/1701/Avfallstaxa_2026.pdf", "Avfallstaxa 2026"),
+        ])
+
+    def test_gzipped_sitemaps_are_read(self):
+        urlset = (FIXTURES / "municipal-sitemap.xml").read_bytes()
+        self.assertEqual(len(municipal._sitemap_locs(gzip.compress(urlset))), 3)
+        self.assertIsNone(municipal._sitemap_locs(b"\x1f\x8bnot gzip"))
+
+    def json_kommun(self, tmp, **extra):
+        entry = {"name": "Västervik", "issuer": "Västerviks kommun", "region_code": "08", "collection": "Regler",
+                 "strategy": "json_list", "resident_filter": True, "hosts": ["document.vastervik.se"],
+                 "listings": ["https://document.vastervik.se/api/folders/root"], "items": "documents",
+                 "title_field": "name", "number_field": "id", "url_template": "/api/download/{id}/{folderId}",
+                 **extra}
+        return _config(tmp, "0883", entry)
+
+    def test_recursive_json_folders_with_sections(self):
+        raw = json.dumps(DOCWEB_TREE).encode()
+        with tempfile.TemporaryDirectory() as tmp:
+            every = self.json_kommun(tmp, recursive=True)
+            some = self.json_kommun(tmp, recursive=True, sections=["Taxor och avgifter", "Föreskrifter"])
+        url = "https://document.vastervik.se/api/folders/root"
+        self.assertEqual([e.number for e in municipal.parse_json_list(every, raw, url)[0]], ["d1", "d4", "d3"])
+        entries, _ = municipal.parse_json_list(some, raw, url)
+        self.assertEqual([(e.number, e.url) for e in entries], [
+            ("d1", "https://document.vastervik.se/api/download/d1/f1"),
+            ("d3", "https://document.vastervik.se/api/download/d3/f3"),
+        ])
+
+    def test_json_channels_are_followed_with_the_listing_query(self):
+        entry = {"name": "Sigtuna", "issuer": "Sigtuna kommun", "region_code": "01", "collection": "KFS",
+                 "strategy": "json_list", "resident_filter": True, "hosts": ["docs.netpublicator.com"],
+                 "listings": [NETPUB], "items": "items", "title_field": "text", "number_field": "id",
+                 "url_template": "document/{id}?hash={_hash}",
+                 "follow_items": {"field": "type", "value": "channel", "url_template": "read?hash={_hash}-{id}&isr=false"}}
+        child = "https://docs.netpublicator.com/api/public/r1/read?hash=a-root-c1&isr=false"
+        client = FakeClient({NETPUB: json.dumps(NETPUB_ROOT).encode(), child: json.dumps(NETPUB_CHILD).encode()})
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = _config(tmp, "0191", entry)
+            entries, problems = municipal.list_entries(municipal.Fetcher(client), kommun)
+        self.assertEqual(problems, [])
+        self.assertEqual([(e.number, e.title, e.url) for e in entries], [
+            ("d1", "Lokala ordningsföreskrifter", "https://docs.netpublicator.com/api/public/r1/document/d1?hash=a-root"),
+            ("d2", "Avfallstaxa", "https://docs.netpublicator.com/api/public/r1/document/d2?hash=a-root-c1"),
+        ])
+
+
 class MainTest(unittest.TestCase):
     def test_bad_code_is_rejected(self):
         with self.assertRaises(SystemExit):

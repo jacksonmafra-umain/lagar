@@ -1,16 +1,10 @@
 name: Pages
 
-# Publishes the static API (/lagar/api/v1/) and the web app (/lagar/) to GitHub Pages
-# whenever main changes the corpus, the generator or the app.
+# Publishes the static API (/lagar/api/v1/) and the web app (/lagar/) to GitHub Pages, on manual
+# dispatch only. The API is built and served per machine (scripts/serve_local.py); the copy last
+# published here stays live, frozen, for app builds already installed.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - corpus/**
-      - api/**
-      - app/**
-      - .github/workflows/pages.yml
   workflow_dispatch:
 
 permissions:
@@ -51,8 +45,8 @@ jobs:
       - name: Assemble the site
         run: cp -R app/webApp/build/dist/wasmJs/productionExecutable/. site/
 
-      # GitHub Pages publishes at most 1 GB; fails above the budget in api/size_report.py.
-      - name: Check the site size
+      # Reports the size in the step summary; GitHub Pages itself refuses sites above 1 GB.
+      - name: Report the site size
         run: python3 -I api/size_report.py --api site/api/v1 --site site --summary "$GITHUB_STEP_SUMMARY"
 
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0

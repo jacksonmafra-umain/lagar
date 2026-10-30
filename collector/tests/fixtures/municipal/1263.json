@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.svedala.se/paverka/kommun/kommunfakta/regler-och-styrande-dokument/forfattningssamling/1.-bestammelser-riktlinjer/": "1263-listing.html",
+    "https://www.svedala.se/paverka/kommun/kommunfakta/regler-och-styrande-dokument/forfattningssamling/2.-taxor-och-avgifter/": "1263-listing-2.html"
+  },
+  "count": 12,
+  "sample": {
+    "number": "ffs1-32-sotningsfrister-ta-galler-fran-2021-05-01",
+    "title": "Sotningsfrister",
+    "url": "https://www.svedala.se/contentassets/7a4ac1f9eb004de9bd7e629558177f5a/ffs1-32-sotningsfrister-ta-galler-fran-2021-05-01.pdf"
+  },
+  "excluded": [
+    "Investeringsriktlinjer",
+    "Kamerabevakning, riktlinjer",
+    "Konstpolicy"
+  ]
+}
