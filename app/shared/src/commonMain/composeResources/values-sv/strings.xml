@@ -173,6 +173,7 @@
     <string name="home_favourites_empty_text">Tryck på bokmärket på ett dokument för att spara det här.</string>
     <string name="home_scope_chip">Omfattning: %1$s. Byt omfattning.</string>
     <string name="home_location_label">Plats</string>
+    <string name="home_partial_error">Vissa delar kunde inte laddas.</string>
     <string name="home_choose_location">Välj plats</string>
     <string name="home_scope_region_title">Region: %1$s</string>
     <string name="home_scope_kommun_title">Kommun: %1$s</string>
@@ -310,6 +311,7 @@
     <string name="type_eu_regulation">EU-förordning</string>
     <string name="type_eu_directive">EU-direktiv</string>
     <string name="type_eu_decision">EU-beslut</string>
+    <string name="type_eu_judgment">EU-dom</string>
     <string name="type_county_regulation">Länsföreskrift</string>
     <string name="type_municipal_regulation">Kommunal föreskrift</string>
     <string name="search_sort_label">Sortera efter</string>

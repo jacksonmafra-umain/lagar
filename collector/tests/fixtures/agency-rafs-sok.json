@@ -1,0 +1,124 @@
+{
+ "traffLista": [
+  {
+   "id": "RA-FS 1186",
+   "idNummer": 1186,
+   "rubrik": "Riksarkivets föreskrifter om gallring av handlingar och uppgifter inom informationsutbyten mellan myndigheter",
+   "nummer": "2026:1",
+   "grundforfattning": "2026:1",
+   "ikrafttradandedatum": "2026-10-05",
+   "bemyndigande": "12 § första stycket arkivförordningen (1991:446)",
+   "efterfoljareString": "",
+   "statusText": "Giltig",
+   "huvuddokument": [
+    {
+     "typString": "Författning",
+     "typId": 2,
+     "path": "rafs/RA-FS 2026-1.pdf",
+     "publicerad": true,
+     "beskrivning": "",
+     "namn": "RA-FS 2026-1.pdf"
+    }
+   ],
+   "ovrigaDokument": [
+    {
+     "typString": "Övrigt dokument",
+     "typId": 3,
+     "path": "rafs/PM om informationsutbyten.pdf",
+     "publicerad": true,
+     "beskrivning": "",
+     "namn": "PM om informationsutbyten.pdf"
+    }
+   ]
+  },
+  {
+   "id": "RA-FS 133",
+   "idNummer": 133,
+   "rubrik": "Riksarkivets föreskrifter och allmänna råd om gallring och utlån av räkenskapsinformation m.m.",
+   "nummer": "2015:2",
+   "grundforfattning": "2015:2",
+   "ikrafttradandedatum": "2015-07-01",
+   "bemyndigande": "12 § första stycket och 16 § arkivförordningen (1991:446) samt 2 § förordningen (1994:1495) om överlämnande av allmänna handlingar till andra organ än myndigheter för förvaring",
+   "efterfoljareString": "upphävda genom: RA-FS 2018:10",
+   "statusText": "Upphävd",
+   "huvuddokument": [
+    {
+     "typString": "Författning",
+     "typId": 2,
+     "path": "rafs/RA-FS 2015-02.pdf",
+     "publicerad": true,
+     "beskrivning": "",
+     "namn": "RA-FS 2015-02.pdf"
+    }
+   ],
+   "ovrigaDokument": []
+  },
+  {
+   "id": "RA-FS 169",
+   "idNummer": 169,
+   "rubrik": "Riksarkivets föreskrifter om upphävande av Riksarkivets föreskrifter och allmänna råd (RA-FS 2013:3) om arkiv hos kommittéer under regeringen",
+   "nummer": "2022:3",
+   "grundforfattning": "2013:3",
+   "ikrafttradandedatum": "2022-12-31",
+   "bemyndigande": "11 § och 12 § första stycket arkivförordningen (1991:446)",
+   "efterfoljareString": "",
+   "statusText": "Giltig",
+   "huvuddokument": [
+    {
+     "typString": "Författning",
+     "typId": 2,
+     "path": "rafs/RA-FS 2022-3.pdf",
+     "publicerad": true,
+     "beskrivning": "",
+     "namn": "RA-FS 2022-3.pdf"
+    }
+   ],
+   "ovrigaDokument": []
+  },
+  {
+   "id": "RA-FS 149",
+   "idNummer": 149,
+   "rubrik": "Föreskrifter om ändring av Riksarkivets föreskrifter (RA-FS 2013:3) och allmänna råd om arkiv hos kommittéer under regeringen",
+   "nummer": "2018:9",
+   "grundforfattning": "2013:3",
+   "ikrafttradandedatum": "2019-01-01",
+   "bemyndigande": "11 § arkivförordningen (1991:446)",
+   "efterfoljareString": "upphävda genom: RA-FS 2022:3",
+   "statusText": "Upphävd",
+   "huvuddokument": [
+    {
+     "typString": "Författning",
+     "typId": 2,
+     "path": "rafs/RA-FS 2018-9.pdf",
+     "publicerad": true,
+     "beskrivning": "",
+     "namn": "RA-FS 2018-9.pdf"
+    }
+   ],
+   "ovrigaDokument": []
+  },
+  {
+   "id": "RA-FS 124",
+   "idNummer": 124,
+   "rubrik": "Riksarkivets föreskrifter och allmänna råd om arkiv hos kommittéer under regeringen",
+   "nummer": "2013:3",
+   "grundforfattning": "2013:3",
+   "ikrafttradandedatum": "2013-05-01",
+   "bemyndigande": "11 och 12§§ arkivförordningen (1991:446)",
+   "efterfoljareString": "ändrade genom: RA-FS 2018:9, upphävda genom: RA-FS 2022:3",
+   "statusText": "Upphävd",
+   "huvuddokument": [
+    {
+     "typString": "Författning",
+     "typId": 2,
+     "path": "rafs/RA-FS 2013-03.pdf",
+     "publicerad": true,
+     "beskrivning": "",
+     "namn": "RA-FS 2013-03.pdf"
+    }
+   ],
+   "ovrigaDokument": []
+  }
+ ],
+ "antalTraffar": 5
+}

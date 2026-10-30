@@ -273,6 +273,38 @@ protection, digital, consumer, labour, environment, private international law). 
 in-force sweep is not implemented yet. Reuse is free with acknowledgement of the source
 (Commission Decision 2011/833/EU).
 
+## EU case law (Cellar)
+
+```sh
+python3 -I collector/collect.py eu-case-law --list collector/data/eu-acts.json \
+    [--refresh] [--changed-since DATE[TIME]] [--limit N] [--cache DIR] [--report FILE]
+python3 -I collector/collect.py eu-case-law --celex 62014CJ0362[,62012CJ0293 ...] [options]
+```
+
+The collection is bounded to judgments of the Court of Justice (CELEX type `CJ`) and the
+General Court (`TJ`) that Cellar records as interpreting an act of the curated list
+(`cdm:case-law_interpretes_resource_legal`). One SPARQL query lists them with their newest
+Cellar modification; per judgment one query reads the metadata (date, ECLI, language of the
+case, joined cases, interpreted acts, Swedish title and manifestations) and content
+negotiation on `/resource/celex/<CELEX>` with `Accept-Language: swe` returns the Swedish
+XHTML or HTML, converted with the EU act converter. The same host rules apply as for EU acts:
+only publications.europa.eu and op.europa.eu, robots.txt checked, at least 1 s between
+requests, eur-lex.europa.eu refused even as a redirect target.
+
+Documents are `eu_judgment` in layer `eu`, under `corpus/eu/judgments/`, with the case
+number as `number` (`C-362/14`, `T-12/19`, `26/62` before 1989), `court` `CJ` or `TJ`, the
+judgment's `ecli` and `celex`. The body starts with the case numbers (joined cases
+included), the ECLI and the interpreted acts. Only the language of the case is authentic,
+so `authoritative` is true only for cases conducted in Swedish. A judgment without a Swedish
+XHTML or HTML expression is a gap in the manifest `sources/eu-case-law-manifest.json` (size
+and SHA-256 of every source); nothing is translated. Orders (`CO`), Advocate General
+opinions (`CC`) and judgments that interpret no curated act are not collected.
+
+The daily `Sync EU` workflow runs `eu-case-law --list collector/data/eu-acts.json
+--changed-since <marker>` after the acts, with its own marker
+`collector/data/eu-case-law-sync.json`, so new judgments and Cellar corrections arrive in
+the same pull request as the acts.
+
 ## Case law
 
 The `case-law` command (alias `caselaw`) collects the anonymised summaries that the courts
@@ -354,7 +386,7 @@ register. There is no central database; lagrummet.se lists the series and links 
 registers. Regulations carry no copyright (9 § upphovsrättslagen).
 
 ```
-python3 -I collector/collect.py agency --series AFS|FFFS|TSFS|MIGRFS|... [--series ...] [--year YYYY ...] \
+python3 -I collector/collect.py agency --series AFS|FFFS|TSFS|<listed series> [--series ...] [--year YYYY ...] \
     [--number 'AFS 2023:1' ...] [--limit N] [--refresh] [--rate SECONDS] \
     [--state collector/data/agency-state.json] [--manifest sources/agency-pdf-manifest.json] \
     [--corpus corpus] [--report FILE]
@@ -365,6 +397,20 @@ Each series has a small adapter in `collector/lagar/agency.py` that lists the re
 loop does robots.txt, rate limiting, state, PDF hashing and writing. Adding a series means
 adding an adapter and registering it in `ADAPTERS`.
 
+Series whose regulation page is just a list of links to the PDFs need no code: add them to
+`collector/data/agency-series.json` (`issuer`, `listing_urls`, and `prefix` when the number is
+written in more than one way, e.g. `SGU[- ]?FS`; `exclude` overrides the default filter that
+skips guidance, preparatory work and register PDFs; `separator` when the number is written
+`SKSFS 2011 7`; `documents` when PDF links do not end in `.pdf`; `base_href` when the site files
+every amendment under its base regulation's folder, with the base's year and ordinal as groups;
+`detail_pages: true` when the listing links to one page per regulation that holds its PDF links).
+`ListedAdapter` classifies each link by its
+label, then its file name: a base regulation, an amending or repealing regulation (`om ändring
+i ... (XFS 2015:2)`, kept only in the base regulation's `amended_by`), or a consolidated version
+or reprint (linked from the base regulation). Every run rebuilds the series from the listing;
+PDFs already in the manifest are not downloaded again unless `--refresh`. The document's
+`source` is the regulation's own PDF and `source_sha256` its hash.
+
 Series published as a plain page of links use the configurable adapters in
 `collector/lagar/agency_generic.py`: `PdfListAdapter` when the listing links straight to the
 PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS) and `DetailPageAdapter` when it links to one
@@ -372,18 +418,27 @@ HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS); `
 finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS).
 A detail page's HTML text is kept when the series sets `text_nodes` (MDFFS). AFFS reads the
 list from the Sitevision page state and FKFS the JSON register of Försäkringskassan's
-lagrummet; both have their own small adapters in the same module. A series there is a subclass that sets the listing URLs and, where
+lagrummet; both have their own small adapters in the same module.
+A series there is a subclass that sets the listing URLs and, where
 needed, the list item element. The number comes from either end of the item's text, else from
 the PDF's file name; amending and repealing regulations are recognised by their titles ("om
 ändring i", "om upphävande av") and listed in the `amended_by` of the base regulation they
-name. For PDF entries the PDF is the detail document: `source` is its URL and it is hashed
-once.
+name. For PDF entries (`detail = False`) the PDF is the document: `source` is its URL and
+`source_sha256` its hash.
 
 | series | listing | detail | text |
 | --- | --- | --- | --- |
 | AFS (Arbetsmiljöverket) | `https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/`, "Gällande grundföreskrifter" plus the amending regulations in force | `.../foreskrifter/afs-20231/` | HTML, the latest consolidated version |
 | FFFS (Finansinspektionen) | `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/` (all regulations in force, newest first) | `.../sok-fffs/<year>/<yearnumber>/` | PDF only |
 | TSFS (Transportstyrelsen) | `.../ts-foreskrifter-i-nummerordning/<year>/` (in force and repealed) | `.../<year>/details?RuleNumber=<year>:<n>&ruleprefix=TSFS` | PDF only |
+| ÅFS (Åklagarmyndigheten) | `https://www.aklagare.se/om-oss/dokument/forfattningssamling` (cards with dates and tags) | none | PDF only |
+| STAFS (Swedac) | `https://regelverk.swedac.se/foreskrifter.json` (in force and repealed) | `.../<slug>.md` (consolidated where there is one) | Markdown |
+| PRVFS (PRV) | division A1, base regulations in force | none | PDF only |
+| PMFS, RPSFS (Polismyndigheten) | `https://polisen.se/lagar-och-regler/polismyndighetens-forfattningssamling/<page>/` | none | PDF only |
+| SCB-FS (SCB) | table of regulations on reporting duties | `/link/<id>.aspx` | HTML |
+| STEMFS (Energimyndigheten) | document archive, category Föreskrifter, 40 a page (crawl delay 10 s) | none | PDF only |
+| RFS (Riksdagsförvaltningen) | `https://data.riksdagen.se/dokumentlista/?doktyp=rfs&utformat=json` | `https://data.riksdagen.se/dokument/<dok_id>.html` | HTML (Fulltext) |
+| RA-FS (Riksarkivet) | `https://foreskrifter.riksarkivet.se/api/rafs/sok` (JSON, in force and repealed) | none | PDF only |
 
 - Only base regulations (grundförfattningar) are stored, in `corpus/agency/regulations/`.
   Amending regulations are counted as `excluded` and appear in the base regulation's
@@ -434,6 +489,15 @@ needs a subscription key from `api-portal.boverket.se` (owner decision). Skattev
 `www4.skatteverket.se` rejected the robots.txt request (WAF), so access must be confirmed first.
 Arbetsmiljöverket's regulation API is in a closed evaluation and needs a key; the public HTML
 pages are used instead.
+
+The weekly `Sync agency regulations` workflow (`.github/workflows/sync-agency.yml`) runs the
+collector for every series in `ADAPTERS`, so a new adapter or a new entry in
+`collector/data/agency-series.json` joins the sync without editing the workflow. Series read by
+year (TSFS) are limited to the current and previous year. Changes land as one pull request on
+`data/agency-sync` with the regenerated progress files and agencies log; the run summary lists
+written, unchanged, excluded, failed and blocked per series. Run it by hand with
+`gh workflow run sync-agency.yml [-f series='AFS SKSFS']`.
+
 ## County regulations
 
 The `county` command collects one county's regulations (länets författningssamling, series
@@ -587,8 +651,11 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
 3. Choose `sections` or `kinds` so that only rules for residents are collected.
 4. `hosts` lists every host the collector may contact for that kommun; `region_code` must be the
    first two digits of the kommun code.
-5. Add a trimmed listing (and detail page) fixture and a test, then run a small sample with
-   `--kommun <code> --limit 5` and the audit.
+5. Add a trimmed listing fixture as `collector/tests/fixtures/municipal/<code>-listing.html` (headings
+   and links are all the parser reads) and its expectations as `collector/tests/fixtures/municipal/<code>.json`
+   (`listings`: every page read, followed pages included, to its fixture file, `count`, a `sample` entry with `number`, `title` and `url`,
+   and `excluded` titles); `test_municipal_listings.py` checks every such pair against the config. Then
+   run a small sample with `--kommun <code> --limit 5` and the audit.
 
 ## Agencies and sources log
 

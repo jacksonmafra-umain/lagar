@@ -35,6 +35,7 @@ import app.lagar.designsystem.glass
 import app.lagar.resources.Res
 import app.lagar.resources.ic_arrow_back
 import app.lagar.resources.navigate_back
+import app.lagar.ui.shell.LocalDetailPane
 import app.lagar.ui.shell.LocalWideLayout
 import app.lagar.ui.shell.ShellDimens
 import dev.chrisbanes.haze.HazeState
@@ -53,7 +54,8 @@ internal fun rememberBackTopBarHeight(): MutableState<Dp> {
 
 /**
  * Glass top bar of the pushed screens: a back button followed by the caller's [title] content. On desktop the bar
- * spans the window but its content lines up with the wide top bar's content width.
+ * spans the window but its content lines up with the wide top bar's content width. In a detail pane
+ * ([LocalDetailPane]) the bar shows only the title.
  */
 @Composable
 internal fun BackTopBar(
@@ -67,12 +69,13 @@ internal fun BackTopBar(
     val colors = LagarTheme.colors
     val spacing = LagarTheme.spacing
     val wide = LocalWideLayout.current
+    val pane = LocalDetailPane.current
     Box(
         modifier = modifier
             .onSizeChanged { with(density) { onHeightChange(it.height.toDp()) } }
             .fillMaxWidth()
             .glass(GlassTier.Bar, hazeState)
-            .windowInsetsPadding(WindowInsets.statusBars),
+            .then(if (pane) Modifier else Modifier.windowInsetsPadding(WindowInsets.statusBars)),
         contentAlignment = Alignment.Center,
     ) {
         Row(
@@ -85,16 +88,18 @@ internal fun BackTopBar(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(spacing.sm),
         ) {
-            val backDescription = stringResource(Res.string.navigate_back)
-            Box(
-                modifier = Modifier
-                    .size(ShellDimens.TouchTarget)
-                    .clip(CircleShape)
-                    .clickable(role = Role.Button, onClick = onBack)
-                    .semantics { contentDescription = backDescription },
-                contentAlignment = Alignment.Center,
-            ) {
-                Icon(painterResource(Res.drawable.ic_arrow_back), contentDescription = null, tint = colors.onSurfaceVariant)
+            if (!pane) {
+                val backDescription = stringResource(Res.string.navigate_back)
+                Box(
+                    modifier = Modifier
+                        .size(ShellDimens.TouchTarget)
+                        .clip(CircleShape)
+                        .clickable(role = Role.Button, onClick = onBack)
+                        .semantics { contentDescription = backDescription },
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(painterResource(Res.drawable.ic_arrow_back), contentDescription = null, tint = colors.onSurfaceVariant)
+                }
             }
             title()
         }

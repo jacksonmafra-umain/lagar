@@ -96,6 +96,7 @@ def is_amending(title):
 
 
 class _LinkAdapter:
+    detail = True
     series = ""
     issuer = ""
     base_url = ""
@@ -202,7 +203,7 @@ def _is_pdf_link(href):
 class PdfListAdapter(_LinkAdapter):
     """The listing links straight to the regulation PDFs."""
 
-    raw_detail = True
+    detail = False  # the PDF is the document; the run loop hashes it
     number_node: "tuple[str, str | None] | None" = None  # (tag, class) in the item holding the number
     title_node: "tuple[str, str | None] | None" = None  # (tag, class) in the item holding the title
 
@@ -236,9 +237,7 @@ class PdfListAdapter(_LinkAdapter):
             raise ValueError(f"no {self.series} regulations found on {url}")
         return self.link_amendments(list(entries.values()))
 
-    def parse_detail(self, raw, entry):
-        if not raw.startswith(b"%PDF-"):
-            raise ValueError(f"not a PDF: {entry.url}")
+    def regulation(self, entry):
         pdfs = list(getattr(entry, "pdfs", ()) or [(entry.number, entry.url)])
         return Regulation(number=entry.number, title=entry.title, in_force=entry.in_force,
                           repealed=entry.repealed, amended_by=list(entry.amended_by),
@@ -552,7 +551,7 @@ class FkfsAdapter:
     issuer = "Försäkringskassan"
     base_url = "https://lagrummet.forsakringskassan.se"
     listing_url = base_url + "/foreskrifter"
-    raw_detail = False
+    detail = True
     has_text = False
 
     def listing_urls(self, args):

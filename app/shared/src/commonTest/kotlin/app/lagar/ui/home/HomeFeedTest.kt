@@ -1,5 +1,6 @@
 package app.lagar.ui.home
 
+import app.lagar.data.ApiException
 import app.lagar.data.ApiIndex
 import app.lagar.data.ApiLayer
 import app.lagar.data.ApiSeries
@@ -8,10 +9,12 @@ import app.lagar.data.DocumentResponse
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
 import app.lagar.data.ListingPage
+import app.lagar.domain.DisplayLayer
 import app.lagar.domain.Scope
 import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
@@ -31,8 +34,12 @@ class HomeFeedTest {
             return ApiIndex(1, "t", layers)
         }
 
+        /** Listings whose requests fail, as during a deploy that has not reached the API yet. */
+        val failing = mutableSetOf<Pair<String, String?>>()
+
         override suspend fun listing(layer: String, type: String?, page: Int): ListingPage {
             requests += Triple(layer, type, page)
+            if ((layer to type) in failing) throw ApiException("unavailable", 404)
             val all = listings.getValue(layer to type)
             val pageCount = maxOf(1, (all.size + pageSize - 1) / pageSize)
             return ListingPage(layer, type, page, pageCount, all.size, all.drop((page - 1) * pageSize).take(pageSize))
@@ -103,5 +110,24 @@ class HomeFeedTest {
         val repo = FakeRepository(corpus(acts = 6, ordinances = 0) + (("eu" to null) to emptyList()), pageSize = 50)
         feed(repo)
         assertEquals(setOf("fundamental", "act"), repo.requests.map { it.second ?: it.first }.toSet())
+    }
+
+    @Test
+    fun aFailingLevelIsLeftOutAndReported() = runTest {
+        val repo = FakeRepository(corpus(acts = 6, ordinances = 4), pageSize = 3).apply { failing += "sfs" to "ordinance" }
+        val feed = feed(repo)
+        assertEquals(listOf(DisplayLayer.SfsOrdinance), feed.unavailable)
+        assertEquals(emptyList(), feed.ordinances)
+        assertEquals(5, feed.acts.size)
+        assertEquals(4, feed.fundamental.size)
+        assertTrue(feed.recent.none { it.type == "ordinance" })
+    }
+
+    @Test
+    fun everyLevelFailingFailsTheFeed() = runTest {
+        val repo = FakeRepository(corpus(acts = 6, ordinances = 4), pageSize = 3).apply {
+            failing += listOf("fundamental" to null, "sfs" to "act", "sfs" to "ordinance")
+        }
+        assertFailsWith<ApiException> { feed(repo) }
     }
 }

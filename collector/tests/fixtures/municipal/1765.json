@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.arjang.se/kommunalservice/startsida/kommunochpolitik/foreskrifterreglerochavgifter.2682.html": "1765-listing.html"
+  },
+  "count": 21,
+  "sample": {
+    "number": "18.6613d0a517c11a2aa1111a32",
+    "title": "Lokala föreskrifter för att skydda människors hälsa och miljö",
+    "url": "https://www.arjang.se/download/18.6613d0a517c11a2aa1111a32/1632831104540/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6.pdf"
+  },
+  "excluded": [
+    "KS_2023_99 - Delegationsordning för kommunstyrelsen reviderad KS 2025-03-06 § 28",
+    "Delegationsordning Bygg- och miljönämnden",
+    "Tillägg till delegationsordning Bygg- och miljönämnden antagen av BOM 2026-02-04 § 10"
+  ]
+}

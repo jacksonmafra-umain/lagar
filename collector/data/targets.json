@@ -50,6 +50,216 @@
   {
     "layer": "agency",
     "type": null,
+    "series": "PFS",
+    "label": "PFS (Pensionsmyndigheten)",
+    "target": 81,
+    "kind": "counted",
+    "source": "https://www.pensionsmyndigheten.se/om-pensionsmyndigheten/allmanna-handlingar/lagar-och-regler (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "PMFS",
+    "label": "PMFS (Polisen)",
+    "target": 50,
+    "kind": "counted",
+    "source": "https://polisen.se/lagar-och-regler/polismyndighetens-forfattningssamling/ (PMFS regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "PRVFS",
+    "label": "PRVFS (PRV)",
+    "target": 17,
+    "kind": "counted",
+    "source": "https://www.prv.se/sv/om-oss/var-verksamhet/styrdokument/prvs-forfattningssamling/avdelning-a1---gallande-grundforfattningar/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "RA-FS",
+    "label": "RA-FS (Riksarkivet)",
+    "target": 93,
+    "kind": "counted",
+    "source": "https://foreskrifter.riksarkivet.se/api/rafs/sok (base regulations, in force and repealed with a known repeal date)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "RFS",
+    "label": "RFS (Riksdagen)",
+    "target": 22,
+    "kind": "counted",
+    "source": "https://data.riksdagen.se/dokumentlista/?doktyp=rfs (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "RGKFS",
+    "label": "RGKFS (Riksgälden)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.riksgalden.se/press-och-publicerat/foreskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "RIFS",
+    "label": "RIFS (Revisorsinspektionen)",
+    "target": 14,
+    "kind": "counted",
+    "source": "https://www.revisorsinspektionen.se/regelverk/samtliga-foreskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "RPSFS",
+    "label": "RPSFS (Polisen)",
+    "target": 29,
+    "kind": "counted",
+    "source": "https://polisen.se/lagar-och-regler/polismyndighetens-forfattningssamling/ (RPSFS regulations still in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SCB-FS",
+    "label": "SCB-FS (SCB)",
+    "target": 48,
+    "kind": "counted",
+    "source": "https://www.scb.se/om-scb/scbs-verksamhet/regelverk-och-policyer/foreskrifter/?currentpageId=98388&type=UL (base regulations on reporting duties)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SGU-FS",
+    "label": "SGU-FS (SGU)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.sgu.se/om-sgu/verksamhet/foreskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SiSFS",
+    "label": "SiSFS (SiS)",
+    "target": 30,
+    "kind": "counted",
+    "source": "https://www.stat-inst.se/om-sis/lagar-forordningar-forfattningar/sis-forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SKSFS",
+    "label": "SKSFS (Skogsstyrelsen)",
+    "target": 18,
+    "kind": "counted",
+    "source": "https://www.skogsstyrelsen.se/lag-och-tillsyn/forfattningar/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SSMFS",
+    "label": "SSMFS (SSM)",
+    "target": 41,
+    "kind": "counted",
+    "source": "https://www.stralsakerhetsmyndigheten.se/regler/foreskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "STAFS",
+    "label": "STAFS (Swedac)",
+    "target": 187,
+    "kind": "counted",
+    "source": "https://regelverk.swedac.se/foreskrifter.json (base regulations, in force and repealed with a repeal date)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "STEMFS",
+    "label": "STEMFS (Energimyndigheten)",
+    "target": 65,
+    "kind": "counted",
+    "source": "https://energimyndigheten.a-w2m.se/System/TemplateNavigate.aspx?p=Arkitektkopia&l=t&view=672&cat=%2FF%C3%B6reskrifter (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TVFS",
+    "label": "TVFS (Tillväxtverket)",
+    "target": 10,
+    "kind": "counted",
+    "source": "https://tillvaxtverket.se/tillvaxtverket/omtillvaxtverket/varverksamhet/foreskrifter.595.html (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "UFS",
+    "label": "UFS (Upphandlingsmyndigheten)",
+    "target": 5,
+    "kind": "counted",
+    "source": "https://www.upphandlingsmyndigheten.se/om-oss/upphandlingsmyndighetens-forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "UHRFS",
+    "label": "UHRFS (UHR)",
+    "target": 13,
+    "kind": "counted",
+    "source": "https://www.uhr.se/publikationer/lagar-och-regler-for-hogre-utbildning/Universitets--och-hogskoleradets-forfattningssamling/grundforeskrifter-med-andringsforeskrifter/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "VALFS",
+    "label": "VALFS (Valmyndigheten)",
+    "target": 17,
+    "kind": "counted",
+    "source": "https://www.val.se/det-svenska-valsystemet/grunderna-i-det-svenska-valsystemet/lagar-och-regler (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "VRFS",
+    "label": "VRFS (Vetenskapsrådet)",
+    "target": 3,
+    "kind": "counted",
+    "source": "https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "ÅFS",
+    "label": "ÅFS (Åklagarmyndigheten)",
+    "target": 23,
+    "kind": "counted",
+    "source": "https://www.aklagare.se/om-oss/dokument/forfattningssamling (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
     "series": "MIGRFS",
     "label": "MIGRFS (Migrationsverket)",
     "target": 21,
@@ -234,6 +444,15 @@
     "kind": "curated",
     "source": "collector/data/eu-acts.json",
     "as_of": "2026-10-29"
+  },
+  {
+    "layer": "eu",
+    "type": "eu_judgment",
+    "label": "EU judgments",
+    "target": 611,
+    "kind": "counted",
+    "source": "Cellar SPARQL: Court of Justice (CJ) and General Court (TJ) judgments with cdm:case-law_interpretes_resource_legal pointing to an act in collector/data/eu-acts.json",
+    "as_of": "2026-10-30"
   },
   {
     "layer": "region",

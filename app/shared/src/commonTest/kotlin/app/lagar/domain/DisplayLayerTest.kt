@@ -53,6 +53,7 @@ class DisplayLayerTest {
         assertEquals(DisplayLayer.Eu, DisplayLayer.forType("eu_regulation"))
         assertEquals(DisplayLayer.Eu, DisplayLayer.forType("eu_directive"))
         assertEquals(DisplayLayer.Eu, DisplayLayer.forType("eu_decision"))
+        assertEquals(DisplayLayer.Eu, DisplayLayer.forType("eu_judgment"))
         assertEquals(DisplayLayer.Agency, DisplayLayer.forType("agency_regulation"))
         assertEquals(DisplayLayer.Region, DisplayLayer.forType("county_regulation"))
         assertEquals(DisplayLayer.Municipality, DisplayLayer.forType("municipal_regulation"))
@@ -105,6 +106,7 @@ class DisplayLayerTest {
             "eu_regulation" to "eu",
             "eu_directive" to "eu",
             "eu_decision" to "eu",
+            "eu_judgment" to "eu",
             "county_regulation" to "region",
             "municipal_regulation" to "municipality",
         )

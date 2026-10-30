@@ -17,6 +17,12 @@ internal object ShellDimens {
     val TextGap = 2.dp
     val PillPaddingVertical = 6.dp
 
+    /** Window width from which the navigation rail replaces the bottom bar (Material's medium width class). */
+    val MediumBreakpoint = 600.dp
+
+    /** Width of the navigation rail on medium windows. */
+    val RailWidth = 88.dp
+
     /** Window width from which the desktop layout is used. */
     val WideBreakpoint = 1024.dp
 
@@ -36,4 +42,13 @@ internal object ShellDimens {
     /** Window width from which the reader shows the metadata inspector beside the text, as a third pane. */
     val ReaderInspectorBreakpoint = 1280.dp
     val LogoSize = 40.dp
+
+    /** Width of the list pane of a list-detail layout (Hierarki), after DESIGN.md's left pane. */
+    val ListPaneWidth = 360.dp
+
+    /** Width of the results column when a search result is open beside it on desktop. */
+    val SearchListPaneWidth = 440.dp
+
+    /** Content width from which a list and its detail show side by side. */
+    val ListDetailMinWidth = 840.dp
 }

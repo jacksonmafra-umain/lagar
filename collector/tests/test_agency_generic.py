@@ -81,12 +81,11 @@ class PdfListTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             MIGRFS.parse_listing("<main><a href='/x.pdf'>Om oss</a></main>", MIGRFS.listing_url)
 
-    def test_detail_must_be_a_pdf(self):
+    def test_regulation_from_the_listing(self):
         entry = MIGRFS.parse_listing(fixture("agency-migrfs-listing.html"), MIGRFS.listing_url)[0]
-        with self.assertRaises(ValueError):
-            MIGRFS.parse_detail(b"<html>", entry)
-        regulation = MIGRFS.parse_detail(b"%PDF-1.7", entry)
-        self.assertEqual((regulation.number, regulation.pdfs), (entry.number, entry.pdfs))
+        self.assertFalse(MIGRFS.detail)
+        regulation = MIGRFS.regulation(entry)
+        self.assertEqual((regulation.number, regulation.title, regulation.pdfs), (entry.number, entry.title, entry.pdfs))
 
 
 class DetailPageTest(unittest.TestCase):
