@@ -1,0 +1,37 @@
+{
+  "series": {
+    "RGKFS": {
+      "issuer": "Riksgäldskontoret",
+      "listing_urls": ["https://www.riksgalden.se/press-och-publicerat/foreskrifter/"]
+    },
+    "RIFS": {
+      "issuer": "Revisorsinspektionen",
+      "listing_urls": ["https://www.revisorsinspektionen.se/regelverk/samtliga-foreskrifter/"]
+    },
+    "SGU-FS": {
+      "issuer": "Sveriges geologiska undersökning",
+      "listing_urls": ["https://www.sgu.se/om-sgu/verksamhet/foreskrifter/"],
+      "prefix": "SGU[- ]?FS"
+    },
+    "SiSFS": {
+      "issuer": "Statens institutionsstyrelse",
+      "listing_urls": ["https://www.stat-inst.se/om-sis/lagar-forordningar-forfattningar/sis-forfattningssamling/"]
+    },
+    "TVFS": {
+      "issuer": "Tillväxtverket",
+      "listing_urls": ["https://tillvaxtverket.se/tillvaxtverket/omtillvaxtverket/varverksamhet/foreskrifter.595.html"]
+    },
+    "UFS": {
+      "issuer": "Upphandlingsmyndigheten",
+      "listing_urls": ["https://www.upphandlingsmyndigheten.se/om-oss/upphandlingsmyndighetens-forfattningssamling/"]
+    },
+    "VALFS": {
+      "issuer": "Valmyndigheten",
+      "listing_urls": ["https://www.val.se/det-svenska-valsystemet/grunderna-i-det-svenska-valsystemet/lagar-och-regler"]
+    },
+    "VRFS": {
+      "issuer": "Vetenskapsrådet",
+      "listing_urls": ["https://www.vr.se/om-vetenskapsradet/styrande-dokument/vetenskapsradets-forfattningssamling.html"]
+    }
+  }
+}

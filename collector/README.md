@@ -354,7 +354,7 @@ register. There is no central database; lagrummet.se lists the series and links 
 registers. Regulations carry no copyright (9 § upphovsrättslagen).
 
 ```
-python3 -I collector/collect.py agency --series AFS|FFFS|TSFS [--series ...] [--year YYYY ...] \
+python3 -I collector/collect.py agency --series AFS|FFFS|TSFS|<listed series> [--series ...] [--year YYYY ...] \
     [--number 'AFS 2023:1' ...] [--limit N] [--refresh] [--rate SECONDS] \
     [--state collector/data/agency-state.json] [--manifest sources/agency-pdf-manifest.json] \
     [--corpus corpus] [--report FILE]
@@ -364,6 +364,16 @@ Each series has a small adapter in `collector/lagar/agency.py` that lists the re
 (`listing_urls`, `parse_listing`) and parses one detail page (`parse_detail`); the shared run
 loop does robots.txt, rate limiting, state, PDF hashing and writing. Adding a series means
 adding an adapter and registering it in `ADAPTERS`.
+
+Series whose regulation page is just a list of links to the PDFs need no code: add them to
+`collector/data/agency-series.json` (`issuer`, `listing_urls`, and `prefix` when the number is
+written in more than one way, e.g. `SGU[- ]?FS`; `exclude` overrides the default filter that
+skips guidance, preparatory work and register PDFs). `ListedAdapter` classifies each link by its
+label, then its file name: a base regulation, an amending or repealing regulation (`om ändring
+i ... (XFS 2015:2)`, kept only in the base regulation's `amended_by`), or a consolidated version
+or reprint (linked from the base regulation). Every run rebuilds the series from the listing;
+PDFs already in the manifest are not downloaded again unless `--refresh`. The document's
+`source` is the regulation's own PDF and `source_sha256` its hash.
 
 | series | listing | detail | text |
 | --- | --- | --- | --- |
