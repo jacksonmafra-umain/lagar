@@ -77,7 +77,7 @@ PRESETS = {
 # Titles of rules that bind residents, and of internal documents that never do. A title is
 # kept when it matches an include pattern and no exclude pattern.
 RESIDENT_INCLUDE = (
-    r"f(ö|o)reskrift", r"\btaxa", r"\btaxor", r"avgift", r"avfall", r"renh(å|a)llning",
+    r"f(ö|o)reskrift", r"taxa\b", r"\btaxor", r"avgift", r"avfall", r"renh(å|a)llning",
     r"sotning", r"brandskydd", r"h(ä|a)lsoskydd", r"naturreservat", r"hamnordning",
     r"torghandel", r"allm(ä|a)nna best(ä|a)mmelser", r"\bABVA\b", r"ordningsstadga",
     r"lokala ordnings", r"maxtaxa",
@@ -85,7 +85,8 @@ RESIDENT_INCLUDE = (
 RESIDENT_EXCLUDE = (
     r"reglemente", r"arbetsordning", r"bolagsordning", r"delegation", r"instruktion",
     r"(ä|a)gardirektiv", r"informationshanteringsplan", r"dokumenthanteringsplan", r"arkiv",
-    r"policy", r"riktlinje", r"strategi", r"handlingsplan", r"avfallsplan", r"\bplan\b",
+    r"policy", r"riktlinje", r"strategi", r"handlingsplan", r"avfallsplan",
+    r"\bplan\b(?!-)",  # but "Plan- och byggtaxa" is a fee
     r"program\b", r"budget", r"ans(ö|o)kan", r"blankett", r"revision", r"protokoll",
     r"tj(ä|a)nsteskrivelse", r"arvode", r"intern ?kontroll", r"attest", r"remiss",
     r"granskning", r"(ö|o)versyn", r"beslut om", r"f(ö|o)rslag", r"rapport", r"utredning",
@@ -394,6 +395,7 @@ class Fetcher:
         return self.robots(url).allows(url)
 
     def _fetch(self, url):
+        url = ascii_url(url)
         for attempt in range(ENCODING_ATTEMPTS):
             try:
                 return self.client.fetch_final(url)
@@ -408,6 +410,13 @@ class Fetcher:
         raw, content_type, final = self._fetch(url)
         check_host(kommun, final)
         return raw, content_type, final
+
+
+def ascii_url(url):
+    """The URL with non-ASCII characters percent-encoded (UTF-8); existing escapes are kept."""
+    if url.isascii():
+        return url
+    return urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~")
 
 
 def check_host(kommun, url):
@@ -561,11 +570,11 @@ def parse_html_index(kommun, raw, listing_url):
     sections = {s.casefold() for s in kommun.sections}
     entries, problems = [], []
     # Icon links next to the titled link carry no text; they are not documents of their own.
-    titled = {urllib.parse.urljoin(listing_url, href) for _, href, text in parser.links if text}
+    titled = {ascii_url(urllib.parse.urljoin(listing_url, href)) for _, href, text in parser.links if text}
     for section, href, text in parser.links:
         if sections and (section or "").casefold() not in sections:
             continue
-        url = urllib.parse.urljoin(listing_url, href)
+        url = ascii_url(urllib.parse.urljoin(listing_url, href))
         if not re.search(kommun.link_pattern, url, re.IGNORECASE) or (not text and url in titled):
             continue
         number = _number(kommun, url, text)
@@ -588,7 +597,7 @@ def more_pages(kommun, raw, listing_url):
     parser.close()
     pages = []
     for _, href, _ in parser.links:
-        url = urllib.parse.urldefrag(urllib.parse.urljoin(listing_url, href))[0]
+        url = ascii_url(urllib.parse.urldefrag(urllib.parse.urljoin(listing_url, href))[0])
         if re.search(kommun.follow, url) and urllib.parse.urlsplit(url).hostname in kommun.hosts:
             pages.append(url)
     return list(dict.fromkeys(pages))
