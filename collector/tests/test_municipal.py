@@ -451,6 +451,20 @@ class SitevisionPresetTest(unittest.TestCase):
         kommun.embedded_json = False
         self.assertEqual(municipal.parse_html_index(kommun, raw, olofstrom)[0], [])
 
+    def test_non_ascii_links_are_percent_encoded(self):
+        self.assertEqual(
+            municipal.ascii_url("https://www.vetlanda.se/styrdokument?letter=Ö&x=%C3%A5"),
+            "https://www.vetlanda.se/styrdokument?letter=%C3%96&x=%C3%A5",
+        )
+        self.assertEqual(municipal.ascii_url("https://a.se/b%20c.pdf"), "https://a.se/b%20c.pdf")
+
+    def test_resident_filter_matches_compound_taxa(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(sitevision_config(tmp))["0120"]
+        self.assertTrue(municipal.binds_residents(kommun, "Plan- och byggtaxa 2025"))
+        self.assertTrue(municipal.binds_residents(kommun, "Livsmedelstaxa"))
+        self.assertFalse(municipal.binds_residents(kommun, "Taxonomi för arkivet"))
+
     def test_unknown_preset_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(municipal.ConfigError):

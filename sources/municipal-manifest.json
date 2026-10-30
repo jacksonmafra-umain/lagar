@@ -586,6 +586,15 @@
       "url": "https://www.varmdo.se/download/18.6b47da3419ed42d0f03314/1782390809360/Avfallstaxa%20f%C3%B6r%20n%C3%A4rsortering.pdf"
     },
     {
+      "bytes": 476050,
+      "content_type": "application/pdf",
+      "id": "0120-18-787c0ce019b2c05262e37c",
+      "municipality_code": "0120",
+      "retrieved_at": "2026-10-30T08:30:35Z",
+      "sha256": "5ec1e25f973fe21187e3108805ab2eab3dc8411e9dd61b08fc3d6cc447c785f6",
+      "url": "https://www.varmdo.se/download/18.787c0ce019b2c05262e37c/1767881179515/Karttaxa.PDF"
+    },
+    {
       "bytes": 438044,
       "content_type": "application/pdf",
       "id": "0120-18-eece1c7193dec9019b60b8",
@@ -593,6 +602,24 @@
       "retrieved_at": "2026-10-30T00:45:19Z",
       "sha256": "db172b2c71fa53178085e1fdde7b24c994df04d1489b53d18febfe0cf787c873",
       "url": "https://www.varmdo.se/download/18.eece1c7193dec9019b60b8/1766139550385/Avfallstaxa.pdf"
+    },
+    {
+      "bytes": 302120,
+      "content_type": "application/pdf",
+      "id": "0120-18-eece1c7193dec9019b60ba",
+      "municipality_code": "0120",
+      "retrieved_at": "2026-10-30T08:30:36Z",
+      "sha256": "f6c139d45e31dc93af969af6d940806caa7d4f303f84576a31327c2780ab3b9b",
+      "url": "https://www.varmdo.se/download/18.eece1c7193dec9019b60ba/1769003133208/Plantaxa.pdf"
+    },
+    {
+      "bytes": 409028,
+      "content_type": "application/pdf",
+      "id": "0120-18-eece1c7193dec9019b60bb",
+      "municipality_code": "0120",
+      "retrieved_at": "2026-10-30T08:30:37Z",
+      "sha256": "381669f507938343ac5b5e41128ea80a004890efbb07bbe23e3c6927737639e3",
+      "url": "https://www.varmdo.se/download/18.eece1c7193dec9019b60bb/1767874889090/Slamtaxa.pdf"
     },
     {
       "bytes": 670524,
@@ -611,6 +638,24 @@
       "retrieved_at": "2026-10-30T00:45:32Z",
       "sha256": "3abb04657b460aaaba59ecd437b5f6022eb9b31df35e9b1eb433571f2931c721",
       "url": "https://www.varmdo.se/download/18.eece1c7193dec9019b60bf/1735295339392/Taxa%20Offentlig%20plats.pdf"
+    },
+    {
+      "bytes": 216892,
+      "content_type": "application/pdf",
+      "id": "0120-18-eece1c7193dec9019b60c0",
+      "municipality_code": "0120",
+      "retrieved_at": "2026-10-30T08:30:38Z",
+      "sha256": "d6b01bdf14a5fe7f556a9ea38d7504465641edbb63588bb8b406050fef48460a",
+      "url": "https://www.varmdo.se/download/18.eece1c7193dec9019b60c0/1735295339416/Trafik-%20och%20fordonstaxa.pdf"
+    },
+    {
+      "bytes": 409591,
+      "content_type": "application/pdf",
+      "id": "0120-18-eece1c7193dec9019b60c1",
+      "municipality_code": "0120",
+      "retrieved_at": "2026-10-30T08:30:39Z",
+      "sha256": "0f1de9d5877bbeedb4286d4986df6b9b90ae360accec80cf8f209b3654af0627",
+      "url": "https://www.varmdo.se/download/18.eece1c7193dec9019b60c1/1769444122825/Vatten-%20och%20avloppstaxa.pdf"
     },
     {
       "bytes": 310715,
