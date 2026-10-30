@@ -118,8 +118,9 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   TSFS have no decision date on their pages. Arbetsmiljöverket's robots.txt
   disallows its folder of original PDFs, which is never requested. Boverket
   (BFS, API key probably needed; not signed up for now), Skatteverket (SKVFS:
-  an earlier robots.txt request was rejected by a WAF, on 2026-10-29 it
-  answered normally), Migrationsverket (MIGRFS) and the other series are not
+  on 2026-10-30 `www4.skatteverket.se` answered both robots.txt and the SKVFS
+  listing with a WAF "Request Rejected" page, so the series is a gap, #206),
+  Migrationsverket (MIGRFS) and the other series are not
   collected yet (#115). [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Agency series published as a list of PDF links (configured in
@@ -148,6 +149,18 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   numbered in ÅFS that change Riksåklagarens older regulations (`föreskrifter
   (1999:178)`) are not stored. Document ids map `å` to `aa` (`aafs-2023-7`) so
   they do not collide with Arbetsmiljöverket's AFS.
+- STAFS (Swedac, 187 base regulations: 37 in force and 150 repealed) as of
+  2026-10-30, in full text: Swedac's register `regelverk.swedac.se` publishes
+  `foreskrifter.json` (every regulation with dates, the regulation it amends
+  and its repeal) and a Markdown file per regulation, the consolidated version
+  where there is one. Repealed regulations are stored with `repealed` set; 15
+  repealed ones whose repeal date the index does not give are not stored. The
+  PDF folder on `www.swedac.se` is disallowed by robots.txt and is not used.
+- PFS (Pensionsmyndigheten, 81 base regulations) and PRVFS (Patent- och
+  registreringsverket, 17 base regulations in force, from its division A1) as
+  of 2026-10-30, with links to the PDFs. Pensionsmyndigheten's page also lists
+  regulations of the predecessor series (FKFS, RFFS, PPMFS) still in force;
+  only PFS numbers are collected.
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630
