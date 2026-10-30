@@ -50,7 +50,7 @@ and fundamental laws and without the `eu-` prefix for EU acts
 | types | `number` | references |
 | --- | --- | --- |
 | SFS and fundamental laws | free text; normally `1999:175` or `N2026:1`, old prints keep Riksdagen's numbering | `^N?\d{4}:\d+$` |
-| `agency_regulation` | series, year and ordinal: `AFS 2023:1`, `FFFS 2014:1`, `HSLF-FS 2016:40` | same form as `number` |
+| `agency_regulation` | series, year and ordinal: `AFS 2023:1`, `FFFS 2014:1`, `HSLF-FS 2016:40`, `SiSFS 2025:1` | same form as `number` |
 | `county_regulation` | county series: `01FS 2024:3` (`<region_code>FS`) | same form as `number` |
 | `case_report`, `case_notice` | report reference: `NJA 2019 s. 2`, `HFD 2020 ref. 5`, `HFD 2020 not. 3`, `NJA 2004 N 23`, `MIG 2026:10`, `AD 2020 nr 45`; a kammarrätt referat published without one (KGG, KJO, KST, KSU) is cited by the court's abbreviation, decision date and case number: `KRNJ 2007-01-09 mål nr 1097-06` (series `KRNG`, `KRNJ`, `KRNS`, `KRSU`) | none: `amended_by` and `reprinted_by` are `[]`, `amended_through` is `null` |
 | `eu_regulation`, `eu_directive`, `eu_decision` | Swedish citation form: `(EU) 2016/679`, `(EG) nr 1907/2006`, `95/46/EG` | CELEX numbers (`32016R0679`); `reprinted_by` is `[]` |

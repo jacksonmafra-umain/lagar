@@ -111,6 +111,19 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   answered normally), Migrationsverket (MIGRFS) and the other series are not
   collected yet (#115). [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
+- Agency series published as a list of PDF links (configured in
+  `collector/data/agency-series.json`, read by `ListedAdapter`): RGKFS (6 base
+  regulations), RIFS (14), SGU-FS (6), SiSFS (30), TVFS (10), UFS (5), VALFS
+  (17) and VRFS (3), as of 2026-10-30: every base regulation linked from the
+  agency's regulation page. Amending and repealing regulations are listed in
+  `amended_by`; consolidated versions and reprints are linked from the base
+  regulation. The text is only in the PDFs (hashed in
+  `sources/agency-pdf-manifest.json`, not extracted yet), so the bodies hold
+  the number, the title from the link text, the issuer and the PDF links; RIFS,
+  UFS and some TVFS links carry only the number, so those documents are titled
+  with it. A base regulation whose own PDF is not linked with its number (RGKFS
+  2006:1, TVFS 2015:1) is known through its reprint. Older series of the same
+  agencies (Revisorsnämnden's RNFS on the RIFS page) are not collected.
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630

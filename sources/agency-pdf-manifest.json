@@ -2608,6 +2608,806 @@
       ]
     },
     {
+      "number": "RGKFS 2006:1",
+      "detail_url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2011_1.pdf",
+      "files": [
+        {
+          "label": "RGKFS 2006:1 (omtryck genom RGKFS 2011:1)",
+          "url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2011_1.pdf",
+          "bytes": 1660217,
+          "sha256": "7dd979993abd763f7299a35f7b81f75b09430ada51deee59094c6fecc0803292",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:10Z"
+        }
+      ]
+    },
+    {
+      "number": "RGKFS 2008:1",
+      "detail_url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2008_1_foreskrifter-till-forordning-om-statliga-garantier-till-banker-mfl.pdf",
+      "files": [
+        {
+          "label": "RGKFS 2008:1",
+          "url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2008_1_foreskrifter-till-forordning-om-statliga-garantier-till-banker-mfl.pdf",
+          "bytes": 85969,
+          "sha256": "e893525afc24d8a696c649190498fab122af7dc84a74ee17f7219856ebc7bc0f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:10Z"
+        }
+      ]
+    },
+    {
+      "number": "RGKFS 2011:2",
+      "detail_url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2011_2.pdf",
+      "files": [
+        {
+          "label": "RGKFS 2011:2",
+          "url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2011_2.pdf",
+          "bytes": 274281,
+          "sha256": "41eaf35ab41676856466e3a58ccac4e42d940c82435297ba4cb2d63688592ed9",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:14Z"
+        }
+      ]
+    },
+    {
+      "number": "RGKFS 2015:2",
+      "detail_url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2015_2.pdf",
+      "files": [
+        {
+          "label": "RGKFS 2015:2",
+          "url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2015_2.pdf",
+          "bytes": 49920,
+          "sha256": "6edd670f5aff053810377d4fe2d5173012d2b1eaea3ed2434562314f15ea4512",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:16Z"
+        }
+      ]
+    },
+    {
+      "number": "RGKFS 2016:2",
+      "detail_url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2016_2_foreskrifter-om-insattningsgaranti.pdf",
+      "files": [
+        {
+          "label": "RGKFS 2016:2",
+          "url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs_2016_2_foreskrifter-om-insattningsgaranti.pdf",
+          "bytes": 33954,
+          "sha256": "c82274cc775030832e0aef3e2f725721718caab507154d4111145fd690df8223",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:12Z"
+        }
+      ]
+    },
+    {
+      "number": "RGKFS 2020:1",
+      "detail_url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs-2020-1-riksgaldskontorets-foreskrifter-om-finansiering-av-karntekniska-restprodukter2.pdf",
+      "files": [
+        {
+          "label": "RGKFS 2020:1",
+          "url": "https://www.riksgalden.se/globalassets/dokument_sve/press-och-publicerat/foreskrifter/rgkfs-2020-1-riksgaldskontorets-foreskrifter-om-finansiering-av-karntekniska-restprodukter2.pdf",
+          "bytes": 66732,
+          "sha256": "a810078ea8e9f0f2eb1341e622cc8646ebee9df66d3a643b77d03ab64f50344b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:18Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2018:1",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2018-1.pdf",
+      "files": [
+        {
+          "label": "RIFS 2018:1",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2018-1.pdf",
+          "bytes": 171166,
+          "sha256": "e043a89a29dc4d0283d833cad2934abee17da31ace521d950b3f49951595e826",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:22Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2018:2",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2018-2.pdf",
+      "files": [
+        {
+          "label": "RIFS 2018:2",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2018-2.pdf",
+          "bytes": 202320,
+          "sha256": "4a46ddbd361d97b57ee2dfb243d1ed7dd1af95d1fde11277b7b4ff56a640f7e7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:23Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2018:3",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2018-3.pdf",
+      "files": [
+        {
+          "label": "RIFS 2018:3",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2018-3.pdf",
+          "bytes": 162454,
+          "sha256": "ea3f7c0d0dbd404fe6a9331fa72dfd0337eecd5ec46f8dad57e50a4629dd0c34",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:24Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2018:4",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2018-4.pdf",
+      "files": [
+        {
+          "label": "RIFS 2018:4",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2018-4.pdf",
+          "bytes": 137091,
+          "sha256": "0fdcf01735d0342a1502f6a13686e0581d585cfd6942436f446c3fc4de8a3913",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:25Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2019:1",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2019-1.pdf",
+      "files": [
+        {
+          "label": "RIFS 2019:1",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2019-1.pdf",
+          "bytes": 41951,
+          "sha256": "c22c7b3d7aab07f702e00704b44a0bd69aa4b035336223417ef0ff3870d99119",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:25Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2019:2",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2019-2.pdf",
+      "files": [
+        {
+          "label": "RIFS 2019:2",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2019-2.pdf",
+          "bytes": 40077,
+          "sha256": "c31d7013b10a67153c50ac04eb5876a83bc74caab1982d0225f04662d25e4105",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:26Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2020:1",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2020-1.pdf",
+      "files": [
+        {
+          "label": "RIFS 2020:1",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2020-1.pdf",
+          "bytes": 50407,
+          "sha256": "2613ab4a312c425704f7dff9a597ae85632ce3115b0d5f0e354b6af5190c5416",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:27Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2020:2",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2020-2.pdf",
+      "files": [
+        {
+          "label": "RIFS 2020:2",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2020-2.pdf",
+          "bytes": 50464,
+          "sha256": "259d6f6f968d0956db476a0f5dc66239d7f425e0c4e220bd654a51273f30e581",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:28Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2021:1",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2021-1.pdf",
+      "files": [
+        {
+          "label": "RIFS 2021:1",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2021-1.pdf",
+          "bytes": 144477,
+          "sha256": "d50c4ae8a1bd7601f765551a1150484ea41cc9b0e89b6539a62e75317a2ee17f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:30Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2021:2",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2021-2.pdf",
+      "files": [
+        {
+          "label": "RIFS 2021:2",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2021-2.pdf",
+          "bytes": 74964,
+          "sha256": "f71232bf183fecce4bc43b346d0ba9856db5ea30dc5b99db8fcdedcfdea83c44",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:30Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2024:1",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2024-1.pdf",
+      "files": [
+        {
+          "label": "RIFS 2024:1",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2024-1.pdf",
+          "bytes": 113173,
+          "sha256": "9317638b510936d1da99c68fe2be5ad38223eb52af41f5678b0cf1b6231a4872",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:32Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2024:2",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2024-2.pdf",
+      "files": [
+        {
+          "label": "RIFS 2024:2",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2024-2.pdf",
+          "bytes": 135002,
+          "sha256": "eb13426f3cd98ddb80cba8ffc2266e5a9acdd2d70f4099093544c1bb0b5b77cb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:32Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2025:1",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2025-1.pdf",
+      "files": [
+        {
+          "label": "RIFS 2025:1",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2025-1.pdf",
+          "bytes": 102979,
+          "sha256": "6f2a6656cf2163d1f741363055ff666778da0326c00dfc7223e911603dac4e12",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:34Z"
+        }
+      ]
+    },
+    {
+      "number": "RIFS 2025:2",
+      "detail_url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2025-2.pdf",
+      "files": [
+        {
+          "label": "RIFS 2025:2",
+          "url": "https://www.revisorsinspektionen.se/globalassets/webbplatsen/regelverk/rifs-samtliga-2018-/rifs-2025-2.pdf",
+          "bytes": 103578,
+          "sha256": "03d2626129feeabeef995df20d241c5c446d5f854982847f60dda1a03c9332dd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:35Z"
+        }
+      ]
+    },
+    {
+      "number": "SGU-FS 2015:1",
+      "detail_url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2015-1.pdf",
+      "files": [
+        {
+          "label": "SGU-FS 2015:1",
+          "url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2015-1.pdf",
+          "bytes": 139655,
+          "sha256": "bc54fcf4f95a2088aac8900c4923632ba966b2d82877eac661b95b169c934891",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:38Z"
+        },
+        {
+          "label": "SGU-FS 2015:1 (konsoliderad version)",
+          "url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/konsoliderad-version-av-sgu-fs-2015-1-med-andringar-till-sgu-fs-2024-3.pdf",
+          "bytes": 230759,
+          "sha256": "96cd42e709cb03a52f22b4eba3366cc01a440f208903527db49d7c57ff4a1a78",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:40Z"
+        }
+      ]
+    },
+    {
+      "number": "SGU-FS 2017:1",
+      "detail_url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2017-1.pdf",
+      "files": [
+        {
+          "label": "SGU-FS 2017:1",
+          "url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2017-1.pdf",
+          "bytes": 267156,
+          "sha256": "40a94519c95d697505ade1dd630b0ae2a6371dc0b741d30151ac3ccea40a0efd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:42Z"
+        }
+      ]
+    },
+    {
+      "number": "SGU-FS 2020:1",
+      "detail_url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2020-1.pdf",
+      "files": [
+        {
+          "label": "SGU-FS 2020:1",
+          "url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2020-1.pdf",
+          "bytes": 344649,
+          "sha256": "e9e91581b2aa316287f3eacb16627ec377fc2923d111d0e423213da06cdac0f3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:41Z"
+        }
+      ]
+    },
+    {
+      "number": "SGU-FS 2023:1",
+      "detail_url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2023-1.pdf",
+      "files": [
+        {
+          "label": "SGU-FS 2023:1",
+          "url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2023-1.pdf",
+          "bytes": 603525,
+          "sha256": "779b4bf4420be285fe118623633c4d4ddee42aef7682983341b76d81247f7a16",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:44Z"
+        },
+        {
+          "label": "SGU-FS 2023:1 (konsoliderad version)",
+          "url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/konsoliderad-version-av-sgu-fs-2023-1-med-andringar-till-sgu-fs-2024-1.pdf",
+          "bytes": 643128,
+          "sha256": "d0ea9b062737cc4500c319eb91a992cbd8901b0abdd5bb7c82af79eef58b9503",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:47Z"
+        }
+      ]
+    },
+    {
+      "number": "SGU-FS 2023:2",
+      "detail_url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2023-2.pdf",
+      "files": [
+        {
+          "label": "SGU-FS 2023:2",
+          "url": "https://www.sgu.se/globalassets/om-sgu/verksamhet/foreskrifter/sgu-foreskrifter-2023-2.pdf",
+          "bytes": 295028,
+          "sha256": "321357cd0ab6a19c7dc1e3984667b8412e478fa37c11aa1ec1b299c53963dc76",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:48Z"
+        }
+      ]
+    },
+    {
+      "number": "SGU-FS 2024:2",
+      "detail_url": "https://resource.sgu.se/dokument/publikation/foreskrift/foreskrift202402dokument/sgu-fs-2024-2.pdf",
+      "files": [
+        {
+          "label": "SGU-FS 2024:2",
+          "url": "https://resource.sgu.se/dokument/publikation/foreskrift/foreskrift202402dokument/sgu-fs-2024-2.pdf",
+          "bytes": 457585,
+          "sha256": "f56df2757091ed638c9d47973c23a67bc53caa68da0167ab68da582c6498e64e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:49Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2012:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs2012-1-statens-institutionsstyrelses-foreskrifter-om-vissa-vardavgifter-vid-sarskilda-ungdomshem.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2012:1",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs2012-1-statens-institutionsstyrelses-foreskrifter-om-vissa-vardavgifter-vid-sarskilda-ungdomshem.pdf",
+          "bytes": 134447,
+          "sha256": "adc70016c5971d4653d92009848899c3683658f945986465c2b52bb2c0779edd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:50Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2012:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2012-2-statens-institutionsstyrelses-foreskrifter-om-vissa-vardavgifter-vid-lvm-hem.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2012:2",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2012-2-statens-institutionsstyrelses-foreskrifter-om-vissa-vardavgifter-vid-lvm-hem.pdf",
+          "bytes": 137728,
+          "sha256": "27b156ec4321300e067c90093a8f5a121712a0b0eb81c77fe828d2cf6e9a19be",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:51Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2012:3",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2012-3-sis-foreskrifter-om-vardavgifter-for-ungdomar-som-vardas-med-stod-av-3paragrafen-lvu.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2012:3",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2012-3-sis-foreskrifter-om-vardavgifter-for-ungdomar-som-vardas-med-stod-av-3paragrafen-lvu.pdf",
+          "bytes": 463782,
+          "sha256": "3fa115a4a8dc1917487809341c4cb1faa8186995f3a486e7328d990e5d9c0e73",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:49Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2012:4",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2012-4-sis-foreskrifter-om-vardavgifter-for-missbrukare-som-vardas-med-stod-av-lvm.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2012:4",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2012-4-sis-foreskrifter-om-vardavgifter-for-missbrukare-som-vardas-med-stod-av-lvm.pdf",
+          "bytes": 453164,
+          "sha256": "935ccedb17af7ec79ae5f98169ea68a768daa281be24de013f11c38c9c74d49d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:48Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2013:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2013-1-sis-foreskrifter-om-vardavgifter-for-ungdomar-som-vardas-med-stod-av-3paragrafen-lvu.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2013:1",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2013-1-sis-foreskrifter-om-vardavgifter-for-ungdomar-som-vardas-med-stod-av-3paragrafen-lvu.pdf",
+          "bytes": 118779,
+          "sha256": "57af24af94814aeab5684072f4e6f25bd73370ab9b05cf1a35d3fd16e0914bf3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:46Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2013:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2013-2-sis-foreskrifter-om-vardavgifter-for-missbrukare-som-vardas-med-stod-av-lvm.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2013:2",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2013-2-sis-foreskrifter-om-vardavgifter-for-missbrukare-som-vardas-med-stod-av-lvm.pdf",
+          "bytes": 117794,
+          "sha256": "3bb92fbda8f4d6976a67b3802672c5ea4f4fe9cded4b0d18a1030cfb362e9794",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:47Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2014:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2014-1-sis-foreskrifter-om-vardavgifter-for-ungdomar-som-vardas-med-stod-av-3paragrafen-lvu.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2014:1",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2014-1-sis-foreskrifter-om-vardavgifter-for-ungdomar-som-vardas-med-stod-av-3paragrafen-lvu.pdf",
+          "bytes": 85014,
+          "sha256": "99a2a5f83b695de699bb7c3e4a3751648e8475d01e0021fe5bfcc032639d6901",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:44Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2014:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2014-2-sis-foreskrifter-om-vardavgifter-for-missbrukare-som-vardas-med-stod-av-lvm.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2014:2",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2014-2-sis-foreskrifter-om-vardavgifter-for-missbrukare-som-vardas-med-stod-av-lvm.pdf",
+          "bytes": 82199,
+          "sha256": "f7f72d82ff23d2e96abfaea2307f70949f9d4421fc3369dba35fa8d0339318e6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:45Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2015:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2015-1-sis-foreskrifter-om-vardavgifter-for-ungdomar-som-vardas-med-stod-av-3paragrafen-lvu.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2015:1",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2015-1-sis-foreskrifter-om-vardavgifter-for-ungdomar-som-vardas-med-stod-av-3paragrafen-lvu.pdf",
+          "bytes": 84350,
+          "sha256": "b00ee5431847030cf8c5a26170c8087274a3000ee880595842de17f0d31e94bc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:42Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2015:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2015-2-sis-foreskrifter-om-vardavgifter-for-missbrukare-som-vardas-vid-lvmhem-med-stod-av-lvm.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2015:2",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2015-2-sis-foreskrifter-om-vardavgifter-for-missbrukare-som-vardas-vid-lvmhem-med-stod-av-lvm.pdf",
+          "bytes": 82253,
+          "sha256": "af89840063a405609312260094aa5f559e829149a685c4fe535c5c687f402d0a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:43Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2016:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2016-1-sis-foreskrifter-om-vardavgifter-for-ungdomar-som-vistas-vid-sarskilda-ungdomshem-med-stod-av-3paragrafen-lvu.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2016:1",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2016-1-sis-foreskrifter-om-vardavgifter-for-ungdomar-som-vistas-vid-sarskilda-ungdomshem-med-stod-av-3paragrafen-lvu.pdf",
+          "bytes": 142643,
+          "sha256": "63e461b063eee5745fd628fa0865756e8de8fd8cc84dc955eebee2ae5a96de43",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:40Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2016:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2016-2-sis-foreskrifter-om-vardavgifter-for-personer-med-missbruk-som-vardas-vid-lvmhem-med-stod-av-lvm.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2016:2",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sisfs-2016-2-sis-foreskrifter-om-vardavgifter-for-personer-med-missbruk-som-vardas-vid-lvmhem-med-stod-av-lvm.pdf",
+          "bytes": 134576,
+          "sha256": "eeaf5afdf0a94fab571c8e951834c5a834e9db08d006a12439a11477ebaf5157",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:41Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2017:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2017-1_lvu-2018.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2017:1",
+          "url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2017-1_lvu-2018.pdf",
+          "bytes": 120433,
+          "sha256": "38a59c4132abd93446090529099c1b05558ff980798e58d4b99784d2e44ae1d6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:38Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2017:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2017-2_lvm-2018.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2017:2",
+          "url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2017-2_lvm-2018.pdf",
+          "bytes": 118690,
+          "sha256": "0186bc0e6905a2f7d9186c39afa48cdde68c59a639c82b52170953be23d14868",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:39Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2018:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2018-1_lvu-2019.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2018:1",
+          "url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2018-1_lvu-2019.pdf",
+          "bytes": 124585,
+          "sha256": "64e6a2a9fee37141f842de1d407adedd36c39820918a0ae79bbedf71df575764",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:36Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2018:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2018-2_lvm-2019.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2018:2",
+          "url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2018-2_lvm-2019.pdf",
+          "bytes": 122805,
+          "sha256": "53e19f524e6fd18559ea847f8aded83a22f1de1971600c45dc7b75ba54a53e83",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:36Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2019:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2019-1_lvu-2020.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2019:1",
+          "url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2019-1_lvu-2020.pdf",
+          "bytes": 124659,
+          "sha256": "14796109f2eefb70cc6f4a283dca9681260dae9a31133ab7206dc6462ed8ab2c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:34Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2019:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2019-2_lvm-2020.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2019:2",
+          "url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2019-2_lvm-2020.pdf",
+          "bytes": 122771,
+          "sha256": "2c08de10b439f72b645381647fa6c01bd70b9341358a1e77c8463dc41b548bc4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:35Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2020:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2020-1_lvu-2021.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2020:1",
+          "url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2020-1_lvu-2021.pdf",
+          "bytes": 124230,
+          "sha256": "9459c9676fb844be637273a767cd978e9d8f43ea1b0d10042585c375cf56a9d5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:32Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2020:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2020-2_lvm-2021.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2020:2",
+          "url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2020-2_lvm-2021.pdf",
+          "bytes": 121861,
+          "sha256": "ffa8672f213c802a55dc3b4557d1371f7987965866ea4daf2458093b29cbf622",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:33Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2021:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2020-1_lvu-2022.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2021:1",
+          "url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2020-1_lvu-2022.pdf",
+          "bytes": 144443,
+          "sha256": "4198798d51f0726fcda2a8722cc0362b252db20dd77750626ad7aa6725b56d05",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:30Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2021:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2020-2_lvm-2022.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2021:2",
+          "url": "https://www.stat-inst.se/globalassets/avgifter/sis_foreskrift_sisfs-2020-2_lvm-2022.pdf",
+          "bytes": 122112,
+          "sha256": "d839476f41eb5601d844a3474ef9d437b74567daadb3e1488ef3e8600b6beef4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:31Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2022:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/vardavgifter-lvu-2023.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2022:1",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/vardavgifter-lvu-2023.pdf",
+          "bytes": 229621,
+          "sha256": "d82b2bb09036de00b078dde8aa8dac8178ae8fc1df35b9a798ce3f6b3460398c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:28Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2022:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/vardavgifter-lvm-2023.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2022:2",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/vardavgifter-lvm-2023.pdf",
+          "bytes": 228040,
+          "sha256": "597dc001dc9cb72ddf698becd971fc96ab50161f1ca77a314530652ea3181c01",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:29Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2023:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2023-1_lvu-2024.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2023:1",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2023-1_lvu-2024.pdf",
+          "bytes": 209361,
+          "sha256": "2cb372fbf1edb6c25dee712d710992c1f9bb951f23faa984ba1812508eec742f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:26Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2023:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2023-2_lvm-2024.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2023:2",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2023-2_lvm-2024.pdf",
+          "bytes": 211090,
+          "sha256": "791db75a3f088a403e09d9c55b18adbbd59e92b89448e43808945a092e368085",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:27Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2024:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2024-1_lvu-2025.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2024:1",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2024-1_lvu-2025.pdf",
+          "bytes": 208957,
+          "sha256": "1a23d8e16e659804c81fd53c2d4ffbc0a48731201b77774ff9c81427b980aaeb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:24Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2024:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2024-2-lvm-2025.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2024:2",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2024-2-lvm-2025.pdf",
+          "bytes": 211090,
+          "sha256": "cd9a60af60001c81806ae629a7ec4e61baa0a67ee7473652ec8dfd642bda5502",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:25Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2025:1",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2025-1_lvu.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2025:1",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2025-1_lvu.pdf",
+          "bytes": 211148,
+          "sha256": "103299fa700ef1d61b1a7ec9eb09a36605ef1d482e683f08fb179c9f8dcff2a0",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:22Z"
+        }
+      ]
+    },
+    {
+      "number": "SiSFS 2025:2",
+      "detail_url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2025-2_lvm.pdf",
+      "files": [
+        {
+          "label": "SiSFS 2025:2",
+          "url": "https://www.stat-inst.se/globalassets/forfattningar/sis_foreskrift_sisfs-2025-2_lvm.pdf",
+          "bytes": 211236,
+          "sha256": "fc20199e54aabb0db28c0072fe7560c3aaa1ac171581e34676a28608df530e34",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:23Z"
+        }
+      ]
+    },
+    {
       "number": "TSFS 2009:1",
       "detail_url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/ts-foreskrifter-i-nummerordning/2009/details?RuleNumber=2009:1&ruleprefix=TSFS",
       "files": [
@@ -13592,6 +14392,512 @@
           "sha256": "81edae6de103a3377e1f8f3f35095c3f60fd980782a77b1c169b3852bed99e18",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-29T12:51:24Z"
+        }
+      ]
+    },
+    {
+      "number": "TVFS 2009:1",
+      "detail_url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537a55/1675411148559/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20(TVFS%202009:1)%20om%20kontaktpunkten%20f%C3%B6r%20tj%C3%A4nster%20p%C3%A5%20den%20inre%20marknaden.pdf",
+      "files": [
+        {
+          "label": "TVFS 2009:1 (omtryck genom TVFS 2019:2)",
+          "url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537a55/1675411148559/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20(TVFS%202009:1)%20om%20kontaktpunkten%20f%C3%B6r%20tj%C3%A4nster%20p%C3%A5%20den%20inre%20marknaden.pdf",
+          "bytes": 137012,
+          "sha256": "1b5ca862f8a90fefff7e8abe249cccbc7b9e18843fb6bbbcdd26cf14dc461aa7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:00Z"
+        },
+        {
+          "label": "TVFS 2009:1 (omtryck genom TVFS 2019:2)",
+          "url": "https://tillvaxtverket.se/download/18.3c5778e419300021cb968293/1731412766331/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20(TVFS%202009_1)%20om%20kontaktpunkten%20f%C3%B6r%20tj%C3%A4nster%20p%C3%A5%20den%20inre%20marknaden.pdf",
+          "bytes": 246716,
+          "sha256": "28d7aab6c185b5fbba477e9cf4752aad90476b19eff317ea30ca2ff66f9830c8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:00Z"
+        }
+      ]
+    },
+    {
+      "number": "TVFS 2009:2",
+      "detail_url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537a4a/1675411045840/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20(TVFS%202009:2)%20om%20regionalt%20transportbidrag.pdf",
+      "files": [
+        {
+          "label": "TVFS 2009:2 (omtryck genom TVFS 2016:2)",
+          "url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537a4a/1675411045840/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20(TVFS%202009:2)%20om%20regionalt%20transportbidrag.pdf",
+          "bytes": 62714,
+          "sha256": "ecf58b7bed9a7e200e411e50f4854be5c8e1dbde4b3e4fa341b215745eef116d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:58Z"
+        }
+      ]
+    },
+    {
+      "number": "TVFS 2013:1",
+      "detail_url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537a3b/1675411002188/Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20st%C3%B6d%20fr%C3%A5n%20Europeiska%20regionala%20utvecklingsfonden%20(ERUF)%20inom%20ramen%20f%C3%B6r%20regionala%20strukturfondsprogram%20f%C3%B6r%20regional%20konkurrenskraft%20och%20syssels%C3%A4ttning.pdf",
+      "files": [
+        {
+          "label": "TVFS 2013:1",
+          "url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537a3b/1675411002188/Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20och%20allm%C3%A4nna%20r%C3%A5d%20om%20st%C3%B6d%20fr%C3%A5n%20Europeiska%20regionala%20utvecklingsfonden%20(ERUF)%20inom%20ramen%20f%C3%B6r%20regionala%20strukturfondsprogram%20f%C3%B6r%20regional%20konkurrenskraft%20och%20syssels%C3%A4ttning.pdf",
+          "bytes": 112834,
+          "sha256": "5b1b000527bff121d0ea4979bc749fc805a80faecc54567390269c05756c683a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:56Z"
+        }
+      ]
+    },
+    {
+      "number": "TVFS 2014:1",
+      "detail_url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb5379bc/1675410892863/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20(TVFS%202014:1)%20om%20statsbidrag%20till%20kooperativ%20utveckling.pdf",
+      "files": [
+        {
+          "label": "TVFS 2014:1 (omtryck genom TVFS 2016:3)",
+          "url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb5379bc/1675410892863/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20(TVFS%202014:1)%20om%20statsbidrag%20till%20kooperativ%20utveckling.pdf",
+          "bytes": 162579,
+          "sha256": "109c2fa0b25f2931f25d4534f2d6b0d1737ac5503e51c5c66e3cdf8ca481b778",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:57Z"
+        }
+      ]
+    },
+    {
+      "number": "TVFS 2015:1",
+      "detail_url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537931/1675410834777/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20(TVFS%202015:1)%20om%20st%C3%B6d%20fr%C3%A5n%20de%20regionala%20strukturfondsprogrammen%20inom%20m%C3%A5let%20Investering%20f%C3%B6r%20tillv%C3%A4xt%20och%20syssels%C3%A4ttning.pdf",
+      "files": [
+        {
+          "label": "TVFS 2015:1 (omtryck genom TVFS 2019:1)",
+          "url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537931/1675410834777/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20(TVFS%202015:1)%20om%20st%C3%B6d%20fr%C3%A5n%20de%20regionala%20strukturfondsprogrammen%20inom%20m%C3%A5let%20Investering%20f%C3%B6r%20tillv%C3%A4xt%20och%20syssels%C3%A4ttning.pdf",
+          "bytes": 184991,
+          "sha256": "d900e9c8295b190226e06dee4ac01e05a6a4bc0bf6dbdab4a3b210ee8e0b9c3a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:54Z"
+        },
+        {
+          "label": "TVFS 2015:1 (omtryck genom TVFS 2019:1)",
+          "url": "https://tillvaxtverket.se/download/18.3c5778e419300021cb96820a/1731412575821/F%C3%B6reskrifter%20om%20%C3%A4ndring%20av%20Tillv%C3%A4xtverkets%20f%C3%B6reskrifter%20(TVFS%202015_1)%20om%20st%C3%B6d%20fr%C3%A5n%20de%20regionala%20strukturfondsprogrammen%20inom%20m%C3%A5let%20Investering%20f%C3%B6r%20tillv%C3%A4xt%20och%20syssels%C3%A4ttning.pdf",
+          "bytes": 255266,
+          "sha256": "e7f05783f93919736b71afbead43929331e5bca95f4aeb5fd3725514fa39e880",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:55Z"
+        }
+      ]
+    },
+    {
+      "number": "TVFS 2017:1",
+      "detail_url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537928/1675410800266/F%C3%B6reskrifter%20om%20skyldigheter%20f%C3%B6r%20f%C3%B6retag%20att%20l%C3%A4mna%20uppgifter%20till%20statistik%20om%20inkvartering.pdf",
+      "files": [
+        {
+          "label": "TVFS 2017:1",
+          "url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537928/1675410800266/F%C3%B6reskrifter%20om%20skyldigheter%20f%C3%B6r%20f%C3%B6retag%20att%20l%C3%A4mna%20uppgifter%20till%20statistik%20om%20inkvartering.pdf",
+          "bytes": 1725750,
+          "sha256": "0e9f74ab207c72f784f8e5a2e2ce522f215c4bcd5985713be089954a25497a78",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:05Z"
+        }
+      ]
+    },
+    {
+      "number": "TVFS 2021:1",
+      "detail_url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537925/1675410759250/F%C3%B6reskrifter%20om%20Tillv%C3%A4xtverkets%20handl%C3%A4ggning%20av%20ers%C3%A4ttning%20f%C3%B6r%20kostnader%20f%C3%B6r%20kompetensinsatser%20vid%20korttidsarbete.pdf",
+      "files": [
+        {
+          "label": "TVFS 2021:1",
+          "url": "https://tillvaxtverket.se/download/18.11d2c7de185c4e35fb537925/1675410759250/F%C3%B6reskrifter%20om%20Tillv%C3%A4xtverkets%20handl%C3%A4ggning%20av%20ers%C3%A4ttning%20f%C3%B6r%20kostnader%20f%C3%B6r%20kompetensinsatser%20vid%20korttidsarbete.pdf",
+          "bytes": 210856,
+          "sha256": "dff710558c0f3bb9cc32a0f822d9ae47c094706bb809a1846d334191431f446b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:53Z"
+        }
+      ]
+    },
+    {
+      "number": "TVFS 2025:1",
+      "detail_url": "https://tillvaxtverket.se/download/18.6cdcf293194646a4760f3f6/1736945660887/TVFS%202025-1.pdf",
+      "files": [
+        {
+          "label": "TVFS 2025:1",
+          "url": "https://tillvaxtverket.se/download/18.6cdcf293194646a4760f3f6/1736945660887/TVFS%202025-1.pdf",
+          "bytes": 121104,
+          "sha256": "ab2d3a9512bfdba814ae38f64177183071e6014e4c07bb4d1d5ba2ce3b7f1a86",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:01Z"
+        }
+      ]
+    },
+    {
+      "number": "TVFS 2025:2",
+      "detail_url": "https://tillvaxtverket.se/download/18.6cdcf293194646a4760f3f9/1736945680989/TVFS%202025-2.pdf",
+      "files": [
+        {
+          "label": "TVFS 2025:2",
+          "url": "https://tillvaxtverket.se/download/18.6cdcf293194646a4760f3f9/1736945680989/TVFS%202025-2.pdf",
+          "bytes": 181727,
+          "sha256": "0e9cedde84fee1431c6768cce8a36ac42d0048861eae96967028de97fab86aa2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:02Z"
+        }
+      ]
+    },
+    {
+      "number": "TVFS 2025:3",
+      "detail_url": "https://tillvaxtverket.se/download/18.64fd99c31946474708973d5f/1737539658692/TVFS%202025-3.pdf",
+      "files": [
+        {
+          "label": "TVFS 2025:3",
+          "url": "https://tillvaxtverket.se/download/18.64fd99c31946474708973d5f/1737539658692/TVFS%202025-3.pdf",
+          "bytes": 247096,
+          "sha256": "04e8c3456fbae6c14262fe8027900088abe3ad045975dec0b6e45b03c93cc3c7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:56:52Z"
+        }
+      ]
+    },
+    {
+      "number": "UFS 2020:1",
+      "detail_url": "https://www.upphandlingsmyndigheten.se/globalassets/dokument/ufs/ufs_2020_1.pdf",
+      "files": [
+        {
+          "label": "UFS 2020:1",
+          "url": "https://www.upphandlingsmyndigheten.se/globalassets/dokument/ufs/ufs_2020_1.pdf",
+          "bytes": 311720,
+          "sha256": "533914f521cda25895c457bc42a5724d9ca8f0acb7c55397a14559a761feae2f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:08Z"
+        }
+      ]
+    },
+    {
+      "number": "UFS 2020:2",
+      "detail_url": "https://www.upphandlingsmyndigheten.se/globalassets/dokument/ufs/ufs_2020_2.pdf",
+      "files": [
+        {
+          "label": "UFS 2020:2",
+          "url": "https://www.upphandlingsmyndigheten.se/globalassets/dokument/ufs/ufs_2020_2.pdf",
+          "bytes": 216298,
+          "sha256": "5f0f94bce27c3cccfae543c4dfbde13e13b225e9075d77679d433cc2d55374ab",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:09Z"
+        }
+      ]
+    },
+    {
+      "number": "UFS 2020:3",
+      "detail_url": "https://www.upphandlingsmyndigheten.se/globalassets/dokument/ufs/ufs_2020_3.pdf",
+      "files": [
+        {
+          "label": "UFS 2020:3",
+          "url": "https://www.upphandlingsmyndigheten.se/globalassets/dokument/ufs/ufs_2020_3.pdf",
+          "bytes": 181451,
+          "sha256": "db61fdd2c2e53ddf2eea2ae89ed8a63a10a17c9f7a27eca5f8fa86077fc8f6ba",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:10Z"
+        }
+      ]
+    },
+    {
+      "number": "UFS 2023:1",
+      "detail_url": "https://www.upphandlingsmyndigheten.se/globalassets/dokument/statistik/dokument-2023/foreskrifter/ufs_2023_1.pdf",
+      "files": [
+        {
+          "label": "UFS 2023:1",
+          "url": "https://www.upphandlingsmyndigheten.se/globalassets/dokument/statistik/dokument-2023/foreskrifter/ufs_2023_1.pdf",
+          "bytes": 409207,
+          "sha256": "4a132f56fb62db85a17c816e36bd25f6f5eba61b5bd1bb59aabe87db20fb02f8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:11Z"
+        }
+      ]
+    },
+    {
+      "number": "UFS 2023:2",
+      "detail_url": "https://www.upphandlingsmyndigheten.se/globalassets/dokument/statistik/dokument-2023/foreskrifter/ufs_2023_2-om-upphandlings-id.pdf",
+      "files": [
+        {
+          "label": "UFS 2023:2",
+          "url": "https://www.upphandlingsmyndigheten.se/globalassets/dokument/statistik/dokument-2023/foreskrifter/ufs_2023_2-om-upphandlings-id.pdf",
+          "bytes": 184022,
+          "sha256": "e7f3053ae241851a1e4802eea49dc2c6d2bb632cc18fbcac31a32a56bbcb6e3f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:12Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2006:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117a5c/1592223616198/valmyndighetens-forfattningssamling-valfs-2006-1.pdf",
+      "files": [
+        {
+          "label": "VALFS 2006:1",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117a5c/1592223616198/valmyndighetens-forfattningssamling-valfs-2006-1.pdf",
+          "bytes": 196946,
+          "sha256": "f8ba9a3288ba023e35cc654b308d5831e7bd20fbe2dc061b221a6d9c0b2b863f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:13Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2006:2",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117a5d/1592223616228/valmyndighetens-forfattningssamling-valfs-2006-2.pdf",
+      "files": [
+        {
+          "label": "VALFS 2006:2",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117a5d/1592223616228/valmyndighetens-forfattningssamling-valfs-2006-2.pdf",
+          "bytes": 35505,
+          "sha256": "526efc4e147559b031b4a2c9a3e577820a3cd4d1bd2320a2fa1406c269383aef",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:12Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2008:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d053311774e/1592223615685/valmyndighetens-forfattningssamling-valfs-2008-1.pdf",
+      "files": [
+        {
+          "label": "VALFS 2008:1",
+          "url": "https://www.val.se/download/18.162047b519a91d053311774e/1592223615685/valmyndighetens-forfattningssamling-valfs-2008-1.pdf",
+          "bytes": 630086,
+          "sha256": "8b424e09971c14e042369690ef3a038dbe63ddbb911d15be3dc9f5103f208ee6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:11Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2008:2",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117a63/1592223615732/valmyndighetens-forfattningssamling-valfs-2008-2.pdf",
+      "files": [
+        {
+          "label": "VALFS 2008:2",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117a63/1592223615732/valmyndighetens-forfattningssamling-valfs-2008-2.pdf",
+          "bytes": 291318,
+          "sha256": "01a50f2739bed75b79f3ca2ece8798a346d6f239ce524cfd42e3ad2e40165166",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:17Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2009:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117a64/1592223615764/valmyndighetens-forfattningssamling-valfs-2009-1.pdf",
+      "files": [
+        {
+          "label": "VALFS 2009:1",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117a64/1592223615764/valmyndighetens-forfattningssamling-valfs-2009-1.pdf",
+          "bytes": 114823,
+          "sha256": "d1962a53d2874cfaa0a4a476f079d99d316f52e4782cdfb0c0d137b28f9f8579",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:10Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2012:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117a65/1592223615790/valmyndighetens-forfattningssamling-valfs-2012-1.pdf",
+      "files": [
+        {
+          "label": "VALFS 2012:1",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117a65/1592223615790/valmyndighetens-forfattningssamling-valfs-2012-1.pdf",
+          "bytes": 682628,
+          "sha256": "2a0486d48a6a02cf229505a1bc0a0f9fa7fcf4516e05583cc86e70876e0fea24",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:16Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2013:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117a59/1592223615837/valmyndighetens-forfattningssamling-valfs-2013.pdf",
+      "files": [
+        {
+          "label": "VALFS 2013:1",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117a59/1592223615837/valmyndighetens-forfattningssamling-valfs-2013.pdf",
+          "bytes": 2811487,
+          "sha256": "6aaf78c1dd7b20a8286ee32ea5be0222434673803552e446fc37c7522cf7d463",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:09Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2018:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117a5a/1592223615957/valmyndighetens-forfattningssamling-valfs-2018-1.pdf",
+      "files": [
+        {
+          "label": "VALFS 2018:1",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117a5a/1592223615957/valmyndighetens-forfattningssamling-valfs-2018-1.pdf",
+          "bytes": 2428009,
+          "sha256": "7c66d114283b843fff3f47e4f8d56a484d9aefdb8497af464fc955ceb3e31e2b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:08Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2019:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117a5b/1592223616082/valmyndighetens-forfattningssamling-valfs-1-2019.pdf",
+      "files": [
+        {
+          "label": "VALFS 2019:1",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117a5b/1592223616082/valmyndighetens-forfattningssamling-valfs-1-2019.pdf",
+          "bytes": 2709889,
+          "sha256": "bdca0f03519733f04a4eac033b3e9fb46012e5db3c37e296ce75770f5d5a0796",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:07Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2020:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117ab6/1607584412656/Foreskrift-VALFS-2020-1.pdf",
+      "files": [
+        {
+          "label": "VALFS 2020:1",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117ab6/1607584412656/Foreskrift-VALFS-2020-1.pdf",
+          "bytes": 572200,
+          "sha256": "7905abb38661f70a6e21884209ab1caf6f0e83a48941e6245bce1d0cbb64d801",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:15Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2021:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117bc8/1647874129679/valmyndighetens-forfattningssamling-valfs-1-2021-220318.pdf",
+      "files": [
+        {
+          "label": "VALFS 2021:1",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117bc8/1647874129679/valmyndighetens-forfattningssamling-valfs-1-2021-220318.pdf",
+          "bytes": 2581590,
+          "sha256": "b665e5433ba5661ccfc3090ba23173f33d7f274d5bf57ec1c982985f679bbf03",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:06Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2022:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d0533117bc9/1647874212129/valmyndighetens-forfattningssamling-valfs-1-2022-220318.pdf",
+      "files": [
+        {
+          "label": "VALFS 2022:1",
+          "url": "https://www.val.se/download/18.162047b519a91d0533117bc9/1647874212129/valmyndighetens-forfattningssamling-valfs-1-2022-220318.pdf",
+          "bytes": 2546774,
+          "sha256": "1d4b18534c0a247991c0027e111e1a46415de3a1dc03672da2c8d841a7bc24ee",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:05Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2023:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d05331164f2/1703145278491/valmyndighetens-forfattningssamling-valfs-2023-1.pdf",
+      "files": [
+        {
+          "label": "VALFS 2023:1",
+          "url": "https://www.val.se/download/18.162047b519a91d05331164f2/1703145278491/valmyndighetens-forfattningssamling-valfs-2023-1.pdf",
+          "bytes": 3604958,
+          "sha256": "5484da60217ff639d02f4096cf40fdb0bb9c0990c52ea7ef2b288dba146389d5",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:04Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2024:1",
+      "detail_url": "https://www.val.se/download/18.162047b519a91d05331173ec/1762972803523/valmydighetens-forfattningssamling-valfs-2024-1.pdf",
+      "files": [
+        {
+          "label": "VALFS 2024:1",
+          "url": "https://www.val.se/download/18.162047b519a91d05331173ec/1762972803523/valmydighetens-forfattningssamling-valfs-2024-1.pdf",
+          "bytes": 267052,
+          "sha256": "d7c53efd3881ca52ce185f2f5fc034f0f09aa8168c83f69df8ec15f3bc8e823f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:14Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2025:1",
+      "detail_url": "https://www.val.se/download/18.5da308ac19aea82a60bae8/1766149494290/valmyndighetens-forfattningssamling-valfs-2025-1.pdf",
+      "files": [
+        {
+          "label": "VALFS 2025:1",
+          "url": "https://www.val.se/download/18.5da308ac19aea82a60bae8/1766149494290/valmyndighetens-forfattningssamling-valfs-2025-1.pdf",
+          "bytes": 201693,
+          "sha256": "a37e2c6ab37507f8eee9d63a20b4bcac52599e40c0aed898a7adb1077d01ca19",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:03Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2026:1",
+      "detail_url": "https://www.val.se/download/18.332cf48819bd61ac15127a2/1771574831454/valmyndighetens-forfattningssamling-valfs-2026-1.pdf",
+      "files": [
+        {
+          "label": "VALFS 2026:1",
+          "url": "https://www.val.se/download/18.332cf48819bd61ac15127a2/1771574831454/valmyndighetens-forfattningssamling-valfs-2026-1.pdf",
+          "bytes": 3114184,
+          "sha256": "53aa051e68ef42e9b959074ea69ee4f9410b65677ddf67df7c47c9d10b06f7a7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:02Z"
+        }
+      ]
+    },
+    {
+      "number": "VALFS 2026:2",
+      "detail_url": "https://www.val.se/download/18.3eba56b819e04244a689ad/1778654430020/valmyndighetens-forfattningssamling-valfs-2026-2.pdf",
+      "files": [
+        {
+          "label": "VALFS 2026:2",
+          "url": "https://www.val.se/download/18.3eba56b819e04244a689ad/1778654430020/valmyndighetens-forfattningssamling-valfs-2026-2.pdf",
+          "bytes": 1844741,
+          "sha256": "15ebab3574d5bba359a485b94ddd5e6848068e69f67d5a100e4fe4437059f262",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:57:58Z"
+        }
+      ]
+    },
+    {
+      "number": "VRFS 2013:1",
+      "detail_url": "https://www.vr.se/download/18.56d49a6016b104df37f1ec/1559659553343/VRFS+2013_1.pdf",
+      "files": [
+        {
+          "label": "VRFS 2013:1",
+          "url": "https://www.vr.se/download/18.56d49a6016b104df37f1ec/1559659553343/VRFS+2013_1.pdf",
+          "bytes": 107226,
+          "sha256": "4dcd6ea60b0d98a8aed3b53cbe324dae99f34dbefceb6fb509832f8495a6b5b2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:20Z"
+        }
+      ]
+    },
+    {
+      "number": "VRFS 2019:1",
+      "detail_url": "https://www.vr.se/download/18.ad27632166e0b1efab36c9/1547050026810/VRFS%202019%201.pdf",
+      "files": [
+        {
+          "label": "VRFS 2019:1",
+          "url": "https://www.vr.se/download/18.ad27632166e0b1efab36c9/1547050026810/VRFS%202019%201.pdf",
+          "bytes": 190996,
+          "sha256": "a71c8a0801cf1346a6f50c00e2980a6b45d3a02811ead36f59a08f51138e6e4b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:22Z"
+        }
+      ]
+    },
+    {
+      "number": "VRFS 2021:1",
+      "detail_url": "https://www.vr.se/download/18.7b65b60f17b8a8f26a84c0/1632215227029/287201%20Beslutsf%C3%B6rslag%20Vetenskapsr%C3%A5dets%20f%C3%B6reskrifter%20om%20genomf%C3%B6rande%20av%20elektorsf%C3%B6rsamlingars%20val%20av%20ledam%C3%B6ter%20till%20forskningsr%C3%A5d%20och%20%C3%A4mnesr%C3%A5d_korr_3.pdf",
+      "files": [
+        {
+          "label": "VRFS 2021:1",
+          "url": "https://www.vr.se/download/18.7b65b60f17b8a8f26a84c0/1632215227029/287201%20Beslutsf%C3%B6rslag%20Vetenskapsr%C3%A5dets%20f%C3%B6reskrifter%20om%20genomf%C3%B6rande%20av%20elektorsf%C3%B6rsamlingars%20val%20av%20ledam%C3%B6ter%20till%20forskningsr%C3%A5d%20och%20%C3%A4mnesr%C3%A5d_korr_3.pdf",
+          "bytes": 2542649,
+          "sha256": "d90b1f154de330f66291408837a82a376141c4b9e05b94d7b171f639ac677a0a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-29T23:58:22Z"
         }
       ]
     }

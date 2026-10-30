@@ -41,7 +41,9 @@
     },
     "sveriges-geologiska-undersoknings-forfattningssamling-sgu-fs": {
       "series": "SGU-FS",
-      "agency": "Sveriges geologiska undersökning"
+      "agency": "Sveriges geologiska undersökning",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Sveriges geologiska undersökning's regulation page; the text is published only as PDF."
     },
     "kustbevakningens-forfattningssamling-kbvfs": {
       "series": "KBVFS",
@@ -77,7 +79,9 @@
     },
     "tillvaxtverkets-forfattningssamling-tvfs": {
       "series": "TVFS",
-      "agency": "Tillväxtverket"
+      "agency": "Tillväxtverket",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Tillväxtverket's regulation page; the text is published only as PDF."
     },
     "skatteverkets-forfattningssamling-skvfs": {
       "series": "SKVFS",
@@ -91,7 +95,9 @@
     },
     "statens-institutionsstyrelses-forfattningssamling-sisfs": {
       "series": "SiSFS",
-      "agency": "Statens institutionsstyrelse"
+      "agency": "Statens institutionsstyrelse",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Statens institutionsstyrelse's regulation page; the text is published only as PDF."
     },
     "bokforingsnamndens-allmanna-rad-bfnar": {
       "series": "BFNAR",
@@ -168,7 +174,9 @@
     },
     "revisorsinspektionens-forfattningssamling-rifs": {
       "series": "RIFS",
-      "agency": "Revisorsinspektionen"
+      "agency": "Revisorsinspektionen",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Revisorsinspektionen's regulation page; the text is published only as PDF."
     },
     "riksdagsforvaltningens-forfattningssamling-rfs": {
       "series": "RFS",
@@ -218,7 +226,9 @@
     },
     "vetenskapsradets-forfattningssamling-vrfs": {
       "series": "VRFS",
-      "agency": "Vetenskapsrådet"
+      "agency": "Vetenskapsrådet",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Vetenskapsrådet's regulation page; the text is published only as PDF."
     },
     "forsakringskassans-forfattningssamling-fkfs": {
       "series": "FKFS",
@@ -252,11 +262,15 @@
     },
     "riksgaldskontorets-forfattningssamling-rgkfs": {
       "series": "RGKFS",
-      "agency": "Riksgäldskontoret"
+      "agency": "Riksgäldskontoret",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Riksgäldskontoret's regulation page; the text is published only as PDF."
     },
     "upphandlingmyndighetens-forfattningssamling-ufs": {
       "series": "UFS",
-      "agency": "Upphandlingsmyndigheten"
+      "agency": "Upphandlingsmyndigheten",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Upphandlingsmyndigheten's regulation page; the text is published only as PDF."
     },
     "forsvarets-forfattningssamling-ffs": {
       "series": "FFS",
@@ -270,7 +284,9 @@
     },
     "valmyndighetens-forfattningssamling-valfs": {
       "series": "VALFS",
-      "agency": "Valmyndigheten"
+      "agency": "Valmyndigheten",
+      "status": "collected_pdf",
+      "note": "Base regulations, amendments and consolidated versions from the links on Valmyndigheten's regulation page; the text is published only as PDF."
     },
     "kriminalvardens-forfattningssamling-kvfs": {
       "series": "KVFS",
