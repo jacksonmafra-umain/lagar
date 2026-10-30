@@ -3898,6 +3898,40 @@
         "https://kungsor.se/kommun-och-politik/styrande-dokument/taxor-och-avgifter.html"
       ]
     },
+    "1961": {
+      "name": "Hallstahammar",
+      "issuer": "Hallstahammars kommun",
+      "region_code": "19",
+      "collection": "Hallstahammars kommuns författningssamling: taxor och föreskrifter",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "title_field": "name",
+      "number_field": "id",
+      "hosts": ["dokument.hallstahammar.se"],
+      "listings": ["https://dokument.hallstahammar.se/api/folders/64fda324-26d0-44a3-b3ef-74e1facd7d7f"],
+      "items": "documents",
+      "url_template": "/api/download/{id}/{folderId}",
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "gr(ä|a)vbest(ä|a)mmelse"
+      ]
+    },
     "1962": {
       "name": "Norberg",
       "issuer": "Norbergs kommun",
@@ -4034,6 +4068,43 @@
         {"from": "href", "pattern": "/wp-content/uploads/(\\d{4}/\\d{2}/[^/?#]+?)\\.pdf"}
       ],
       "title_strip": ["\\s*\\.pdf\\s*$"]
+    },
+    "2031": {
+      "name": "Rättvik",
+      "issuer": "Rättviks kommun",
+      "region_code": "20",
+      "collection": "Rättviks kommuns styrande dokument: taxor och avgifter, förordningar och föreskrifter",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "title_field": "name",
+      "number_field": "id",
+      "hosts": ["ess-app.rattvik.se"],
+      "listings": [
+        "https://ess-app.rattvik.se/api/folders/69f123d1-73ba-4056-950e-41f9e5b691f8",
+        "https://ess-app.rattvik.se/api/folders/dfe70b07-15e4-4cd6-aae6-7019f31eaa3e"
+      ],
+      "items": "documents",
+      "url_template": "/api/download/{id}/{folderId}",
+      "title_include": [
+        "f(ö|o)reskrift",
+        "taxa\\b",
+        "\\btaxor",
+        "avgift",
+        "avfall",
+        "renh(å|a)llning",
+        "sotning",
+        "brandskydd",
+        "h(ä|a)lsoskydd",
+        "naturreservat",
+        "hamnordning",
+        "torghandel",
+        "allm(ä|a)nna best(ä|a)mmelser",
+        "\\bABVA\\b",
+        "ordningsstadga",
+        "lokala ordnings",
+        "maxtaxa",
+        "taxebilaga"
+      ]
     },
     "2034": {
       "name": "Orsa",
@@ -5103,6 +5174,57 @@
         {"from": "href", "pattern": "/([^/?#]+)\\.pdf$"}
       ],
       "title_strip": ["\\.pdf\\s*$"]
+    },
+    "2518": {
+      "name": "Övertorneå",
+      "issuer": "Övertorneå kommun",
+      "region_code": "25",
+      "collection": "Övertorneå kommuns författningssamling: föreskrifter och taxor",
+      "strategy": "json_list",
+      "resident_filter": true,
+      "title_field": "post_title",
+      "number_field": "ID",
+      "hosts": ["overtornea.se"],
+      "listings": [
+        "https://overtornea.se/wp-admin/admin-ajax.php?juwpfisadmin=false&action=wpfd&task=files.display&view=files&id=41&rootcat=41",
+        "https://overtornea.se/wp-admin/admin-ajax.php?juwpfisadmin=false&action=wpfd&task=files.display&view=files&id=190&rootcat=190"
+      ],
+      "items": "files",
+      "url_template": "{linkdownload}",
+      "title_exclude": [
+        "reglemente",
+        "arbetsordning",
+        "bolagsordning",
+        "delegation",
+        "instruktion",
+        "(ä|a)gardirektiv",
+        "informationshanteringsplan",
+        "dokumenthanteringsplan",
+        "arkiv",
+        "policy",
+        "riktlinje",
+        "strategi",
+        "handlingsplan",
+        "avfallsplan",
+        "\\bplan\\b(?!-| och bygg)",
+        "program\\b",
+        "budget",
+        "ans(ö|o)kan",
+        "blankett",
+        "revision",
+        "protokoll",
+        "tj(ä|a)nsteskrivelse",
+        "arvode",
+        "intern ?kontroll",
+        "attest",
+        "remiss",
+        "granskning",
+        "(ö|o)versyn",
+        "beslut om",
+        "f(ö|o)rslag",
+        "rapport",
+        "utredning"
+      ]
     },
     "2521": {
       "name": "Pajala",
