@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.hassleholm.se/kommun-och-politik/sa-styrs-hassleholms-kommun/regler-och-styrande-dokument": "1293-listing.html"
+  },
+  "count": 39,
+  "sample": {
+    "number": "18.28c96a201840e272ce56af9",
+    "title": "Föreskrifter om åläggande om gångbanerenhållning m m",
+    "url": "https://www.hassleholm.se/download/18.28c96a201840e272ce56af9/1667225848894/F%C3%B6reskrifter%20om%20%C3%A5l%C3%A4ggande%20om%20g%C3%A5ngbanerenh%C3%A5llning%20m%20%20m.pdf"
+  },
+  "excluded": [
+    "Kommunfullmäktiges arbetsordning",
+    "Kommunstyrelsens reglemente",
+    "Kommunstyrelsens delegeringsregler"
+  ]
+}

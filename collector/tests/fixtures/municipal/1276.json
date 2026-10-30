@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.klippan.se/kommun--politik/insyn--paverkan/forfattningssamling": "1276-listing.html"
+  },
+  "count": 16,
+  "sample": {
+    "number": "18.3d6fc13f18a265832ce1b540",
+    "title": "Taxor och avgifter samt uthyrningsregler vid fritidsanläggningar",
+    "url": "https://www.klippan.se/download/18.3d6fc13f18a265832ce1b540/1694683222381/Taxor%20och%20avgifter%20samt%20uthyrningsregler%20vid%20fritidsanl%C3%A4ggningar.pdf"
+  },
+  "excluded": [
+    "Avgift vid ansökan om etablering av förskola och pedagogisk omsorg",
+    "Bolagsordning för Norra Åsbos Renhållningsaktiebolag",
+    "Ägardirektiv för Norra Åsbos Renhållningsaktiebolag"
+  ]
+}

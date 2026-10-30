@@ -21,7 +21,9 @@
     },
     "energimarknadsinspektionens-forfattningssamling-eifs": {
       "series": "EIFS",
-      "agency": "Energimarknadsinspektionen"
+      "agency": "Energimarknadsinspektionen",
+      "status": "collected",
+      "note": "Ei lists its regulations in three tables (el, naturgas, fjärrvärme och fjärrkyla) with a page per regulation linking its PDF; the title and text are read from the PDF. STEMFS regulations Ei administers are not part of EIFS."
     },
     "statistiska-centralbyrans-forfattningssamling-scb-fs": {
       "series": "SCB-FS",
@@ -61,7 +63,9 @@
     },
     "kustbevakningens-forfattningssamling-kbvfs": {
       "series": "KBVFS",
-      "agency": "Kustbevakningen"
+      "agency": "Kustbevakningen",
+      "status": "collected",
+      "note": "Kustbevakningen lists the regulations in force in a table whose rows link to the PDFs; the text is read from the PDF."
     },
     "statens-energimyndighets-forfattningssamling-stemfs": {
       "series": "STEMFS",
@@ -155,7 +159,9 @@
     },
     "domstolsverkets-forfattningssamling-dvfs": {
       "series": "DVFS",
-      "agency": "Domstolsverket"
+      "agency": "Domstolsverket",
+      "status": "collected",
+      "note": "Domstolsverket's DVFS register needs JavaScript; each base regulation has a page in domstol.se's sitemap that links its PDF and amendments. The title and text are read from the PDF."
     },
     "integritetsskyddsmyndighetens-forfattningssamling-imyfs": {
       "series": "IMYFS",
@@ -319,7 +325,9 @@
     },
     "gemensamma-forfattningssamlingen-avseende-halso-och-sjukvard-socialtjanst-lakemedel-folkhalsa-m-m-hslf-fs": {
       "series": "HSLF-FS",
-      "agency": "Socialstyrelsen and other health and social-care agencies"
+      "agency": "Socialstyrelsen and other health and social-care agencies",
+      "status": "collected",
+      "note": "Listed on kunskapsguiden.se and read from each agency's site with that site's robots.txt. Läkemedelsverket's regulations are a gap: its pages need JavaScript and its robots.txt disallows PDFs. Some links on the list are dead or moved, and predecessor series on the list (SOSFS, FoHMFS and others) are not collected."
     },
     "svensk-trafikforeskriftssamling-stfs": {
       "series": "STFS",
@@ -358,7 +366,9 @@
     },
     "forsvarets-forfattningssamling-ffs": {
       "series": "FFS",
-      "agency": "Försvarsmakten"
+      "agency": "Försvarsmakten",
+      "status": "collected",
+      "note": "Försvarsmakten's four Gällande FFS pages load their lists of PDFs from the site's content API, which only gives file names; the title, text and whether a regulation is an amendment are read from the PDF. Some old prints are scans without a text layer."
     },
     "boverkets-forfattningssamling-bfs": {
       "series": "BFS",
@@ -1193,6 +1203,34 @@
     "1080": {
       "status": "blocked",
       "note": "www.karlskrona.se answers every request, robots.txt included, with an HTTP 403 \"Åtkomst nekad\" bot-check page (checked 2026-10-30); not bypassed."
+    },
+    "1233": {
+      "status": "no_adapter",
+      "note": "Vellinge publishes its lokala ordningsföreskrifter and hälsoskyddsföreskrifter as HTML text on topic pages under /kommun-och-politik/kommunfakta/styrande-dokument/, and the styrande-dokument page lists no documents in its static HTML; only an attachment PDF is linked. Needs an HTML-page strategy (checked 2026-10-30)."
+    },
+    "1256": {
+      "status": "no_adapter",
+      "note": "Östra Göinge's page \"Styrande dokument och kommunala författningar\" is a search filled in by the browser; the static HTML lists no documents (the KFS PDFs live under /wp-content/uploads/). Needs an adapter for its search (checked 2026-10-30)."
+    },
+    "1262": {
+      "status": "no_adapter",
+      "note": "Lomma's pages \"Regler och styrande dokument\", \"Ordningsregler\" and \"Avgifter och taxor\" list no documents in the static HTML or in Sitevision's embedded state; the list is loaded by the browser. Needs an adapter (checked 2026-10-30)."
+    },
+    "1267": {
+      "status": "no_adapter",
+      "note": "Höör's \"Styrande dokument\" page is a search and filter form filled in by the browser; the static HTML lists no documents. Needs an adapter for its search (checked 2026-10-30)."
+    },
+    "1275": {
+      "status": "no_adapter",
+      "note": "Perstorp's \"Kommunal författningssamling\" page lists no documents in its static HTML; the list is loaded by the browser. Needs an adapter (checked 2026-10-30)."
+    },
+    "1278": {
+      "status": "no_adapter",
+      "note": "No page listing Båstad's författningssamling or lokala föreskrifter was found; its rules are spread over topic pages (checked 2026-10-30)."
+    },
+    "1283": {
+      "status": "no_adapter",
+      "note": "Helsingborg's \"Regler och styrande dokument – författningssamling\" page (WordPress, Municipio) renders its document list in the browser; needs an adapter (checked 2026-10-30)."
     },
     "1401": {
       "status": "no_adapter",
