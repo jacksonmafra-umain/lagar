@@ -15301,6 +15301,15 @@
       "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc95/1683033170724/Hylte%20kommuns%20f%C3%B6reskrifter%20om%20reng%C3%B6ringsfrister.pdf"
     },
     {
+      "bytes": 380950,
+      "content_type": "application/pdf",
+      "id": "1435-18-7664b4813898b7df985c8f5",
+      "municipality_code": "1435",
+      "retrieved_at": "2026-10-30T20:48:56Z",
+      "sha256": "379141ca91b728e42d8104ac2d795e8f1a7da3709fa46c70d099ff7587d3d464",
+      "url": "https://www.tanum.se/download/18.7664b4813898b7df985c8f5/1682578226019/ABVA_100401.pdf"
+    },
+    {
       "bytes": 3675,
       "content_type": "text/markdown",
       "id": "1435-4-7664b4813898b7df9844a18",
