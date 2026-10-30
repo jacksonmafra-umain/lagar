@@ -119,7 +119,8 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   disallows its folder of original PDFs, which is never requested. Boverket
   (BFS, API key probably needed; not signed up for now), Skatteverket (SKVFS:
   on 2026-10-30 `www4.skatteverket.se` answered both robots.txt and the SKVFS
-  listing with a WAF "Request Rejected" page, so the series is a gap, #206),
+  listing with a WAF "Request Rejected" page, so the series is a gap, #206;
+  PTSFS: pts.se serves a Radware bot challenge, #194),
   Migrationsverket (MIGRFS) and the other series are not
   collected yet (#115). [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
@@ -172,6 +173,21 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   Not collected: the monthly consumer price index notices (KPI, about 110) and
   the regulations on official statistics, published only as PDF on a separate
   page; the series is partial.
+- UHRFS (Universitets- och högskolerådet, 13 base regulations in force with
+  their consolidated PDFs), STEMFS (Energimyndigheten's document archive,
+  read at the 10 s crawl delay its robots.txt asks for) and RFS
+  (Riksdagsförvaltningen, from Riksdagen's open data `doktyp=rfs`, in full
+  text: the consolidated "Fulltext" document where there is one) as of
+  2026-10-30. RFS: only base regulations in force are stored; the open data
+  marks repealed ones (`Upphävd`) without a repeal date.
+- RA-FS (Riksarkivet, general regulations) as of 2026-10-30, from the JSON API
+  behind its register `foreskrifter.riksarkivet.se` (`api/rafs/sok`): base
+  regulations in force and repealed ones, whose `repealed` date is the entry
+  into force of the regulation that repealed them; a repealed regulation whose
+  repealing regulation is not in the register is not stored. Riksarkivet's
+  agency-specific regulations (RA-MS) are not collected.
+- PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
+  regulation library with a Radware bot-verification page (#194).
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630
