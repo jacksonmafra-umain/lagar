@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.karlsborg.se/kommun--politik/avgifter-och-taxor/": "1446-listing1.html",
+    "https://www.karlsborg.se/kommun--politik/styrdokument/": "1446-listing2.html"
+  },
+  "count": 14,
+  "sample": {
+    "number": "laneregler-och-avgifter-for-bibliotek-mellansjo-karlsborgs-bibliotek",
+    "title": "Låneregler och avgifter för bibliotek Mellansjö",
+    "url": "https://www.karlsborg.se/globalassets/documents/politiskt-beslutade-styrdokument/kultur-och-fritid/laneregler-och-avgifter-for-bibliotek-mellansjo-karlsborgs-bibliotek.pdf"
+  },
+  "excluded": []
+}
