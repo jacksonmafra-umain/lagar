@@ -61,9 +61,12 @@ class FakeClient:
             **routes,
         }
         self.calls = []
+        self.posts = []
 
-    def fetch_final(self, url, headers=None):
+    def fetch_final(self, url, headers=None, data=None):
         self.calls.append(url)
+        if data is not None:
+            self.posts.append((url, json.loads(data)))
         value = self.routes.get(url)
         if value is None:
             raise http_error(url, 404)
@@ -684,6 +687,65 @@ class JsonListTest(unittest.TestCase):
             self.assertEqual(schema.validate(meta), [])
             self.assertEqual(meta["source"], DOCWEB + "/api/download/e3b7/64fda324")
 
+    def test_list_in_a_next_js_page(self):
+        entry = {**DOCWEB_ENTRY, "hosts": ["www.example.se", "static.example.se"],
+                 "listings": ["https://www.example.se/forfattningssamling/"], "embedded": "next",
+                 "items": "ordinancePages", "title_field": "Heading", "number_field": "Id",
+                 "number_pattern": "^([0-9a-f-]{36})", "url_template": "{FileUrl}"}
+        pages = [
+            {"Heading": "Avfallsföreskrifter", "FileUrl": "https://static.example.se/avfallsforeskrifter.pdf",
+             "Id": "0f1e2d3c-4b5a-6978-8091-a2b3c4d5e6f7_sv_Published"},
+            {"Heading": "Riktlinje för donationer", "FileUrl": "https://static.example.se/riktlinje.pdf",
+             "Id": "11111111-2222-3333-4444-555555555555_sv_Published"},
+        ]
+        flight = '3c:["$","main",null,{"children":[["$","$L3f",null,{"ordinancePages":' + json.dumps(pages) + "}]]}]"
+        half = len(flight) // 2  # the data arrives in several pushes
+        html = "".join(f"<script>self.__next_f.push([1,{json.dumps(part)}])</script>"
+                       for part in (flight[:half], flight[half:])).encode()
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(self.config(tmp, entry))["1961"]
+            with self.assertRaises(municipal.ConfigError):
+                municipal.load_config(self.config(tmp, {**entry, "embedded": "nuxt"}))
+        entries, problems = municipal.parse_json_list(kommun, html, entry["listings"][0])
+        self.assertEqual([(e.number, e.title, e.url) for e in entries], [
+            ("0f1e2d3c-4b5a-6978-8091-a2b3c4d5e6f7", "Avfallsföreskrifter",
+             "https://static.example.se/avfallsforeskrifter.pdf")])
+        self.assertEqual(problems, [])
+
+    def test_a_listing_with_its_own_settings(self):
+        page = "https://www.example.se/taxor/"
+        lst = "https://www.example.se/forfattningssamling/"
+        entry = {"name": "Exempla", "issuer": "Exempla kommun", "region_code": "19", "collection": "Exempla",
+                 "strategy": "html_index", "hosts": ["www.example.se", "static.example.se"],
+                 "link_pattern": "^https://static\\.example\\.se/.+\\.pdf$",
+                 "number": [{"from": "href", "pattern": "/([^/]+)\\.pdf$"}],
+                 "listings": [page, {"url": lst, "strategy": "json_list", "embedded": "next",
+                                     "items": "ordinancePages", "title_field": "Heading", "number_field": "Id",
+                                     "url_template": "{FileUrl}"}]}
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(self.config(tmp, entry))["1961"]
+            bad = {**entry, "listings": [page, {"url": lst, "strategy": "domino_view"}]}
+            with self.assertRaises(municipal.ConfigError):
+                municipal.load_config(self.config(tmp, bad))
+        self.assertEqual(kommun.listings, [page, lst])
+        self.assertEqual(kommun.strategy, "html_index")
+        self.assertEqual(kommun.listing_settings[lst].strategy, "json_list")
+        items = [{"Heading": "Avfallsföreskrifter", "FileUrl": "https://static.example.se/avfall.pdf", "Id": "a1"}]
+        flight = json.dumps('x:{"ordinancePages":' + json.dumps(items) + "}")
+        pages = {page: b'<h2>Taxor</h2><a href="https://static.example.se/va-taxa.pdf">VA-taxa</a>',
+                 lst: f"<script>self.__next_f.push([1,{flight}])</script>".encode()}
+
+        class Pages:
+            def fetch_final(self, url, headers=None):
+                if url not in pages:
+                    raise urllib.error.HTTPError(url, 404, "missing", {}, io.BytesIO(b""))
+                return pages[url], "text/html", url
+
+        entries, problems = municipal.list_entries(municipal.Fetcher(Pages()), kommun)
+        self.assertEqual(sorted((e.number, e.title) for e in entries),
+                         [("a1", "Avfallsföreskrifter"), ("va-taxa", "VA-taxa")])
+        self.assertEqual(problems, [])
+
     def test_json_list_needs_its_fields(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(municipal.ConfigError):
@@ -856,6 +918,75 @@ class PlatformOptionsTest(unittest.TestCase):
             ("d1", "Lokala ordningsföreskrifter", "https://docs.netpublicator.com/api/public/r1/document/d1?hash=a-root"),
             ("d2", "Avfallstaxa", "https://docs.netpublicator.com/api/public/r1/document/d2?hash=a-root-c1"),
         ])
+
+
+MF = "https://shareapi.mediaflow.com"
+MF_TOKEN = MF + "/1/oauth2/token?grant_type=refresh_token&refresh_token=3KATTCX4I1"
+MF_PAGE = "https://www.example.se/regler/foreskrifter.html"
+MF_ENTRY = {
+    "name": "Exempla", "issuer": "Exempla kommun", "region_code": "21",
+    "collection": "Exempla kommuns föreskrifter och taxor", "strategy": "mediaflow",
+    "hosts": ["www.example.se", "shareapi.mediaflow.com", "files.mediaflow.com"],
+    "listings": [MF_TOKEN], "page": MF_PAGE, "resident_filter": True,
+}
+MF_FILES = json.dumps([
+    {"id": 3143522, "nr": "17DFVQAWHJ", "type": "document", "name": "Lokala föreskrifter om VA"},
+    {"id": 3143523, "nr": "17DFVQAWHK", "type": "document", "name": "Policy för möten"},
+    {"id": 3143524, "nr": "", "type": "document", "name": "Avfallstaxa 2026"},
+]).encode()
+MF_SIGNED = "https://files.mediaflow.com/dn/17DFVQAWHJ/0?t=1&ch=abc"
+
+
+def mediaflow_client():
+    token = (b'{"access_token": "tok", "expires_in": 7200}', "application/json", MF_TOKEN)
+    downloads = json.dumps([
+        {"format": "custom", "filetype": "*", "downloadURL": "https://files.mediaflow.com/dn/x/custom"},
+        {"format": "original", "filetype": "pdf", "downloadURL": MF_SIGNED},
+    ]).encode()
+    return FakeClient({
+        MF_TOKEN: token,
+        MF + "/1/files?access_token=tok": (MF_FILES, "application/json", MF + "/1/files?access_token=tok"),
+        MF + "/1/file/3143522/downloads?access_token=tok": (downloads, "application/json", ""),
+        MF_SIGNED: PDF,
+    })
+
+
+class MediaflowTest(unittest.TestCase):
+    def config(self, tmp, entry=MF_ENTRY):
+        path = Path(tmp) / "municipalities.json"
+        path.write_text(json.dumps({"kommuner": {"2180": entry}}), encoding="utf-8")
+        return str(path)
+
+    def test_share_files_become_entries_numbered_by_media_number(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kommun = municipal.load_config(self.config(tmp))["2180"]
+        entries, problems = municipal.list_entries(municipal.Fetcher(mediaflow_client()), kommun)
+        self.assertEqual([(e.number, e.title, e.url, e.listing) for e in entries], [
+            ("17DFVQAWHJ", "Lokala föreskrifter om VA", MF + "/1/file/3143522/downloads?share=3KATTCX4I1", MF_PAGE),
+        ])
+        self.assertEqual(problems, ["Avfallstaxa 2026"])
+
+    def test_run_fetches_the_original_pdf_through_a_signed_link(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            client = mediaflow_client()
+            args = Args(tmp, kommun=["2180"], config=self.config(tmp))
+            summary = municipal.run(client, args)
+            self.assertEqual(summary.written, ["2180-17dfvqawhj"])
+            self.assertEqual(client.posts, [(MF + "/1/file/3143522/downloads?access_token=tok", {"ids": [3143522]})])
+            folder = Path(args.corpus) / "municipality" / "regulations"
+            meta, body = frontmatter.load((folder / "2180-17dfvqawhj.md").read_text(encoding="utf-8"))
+            self.assertEqual(schema.validate(meta), [])
+            self.assertEqual(meta["source"], MF_PAGE)
+            self.assertEqual(meta["source_sha256"], hashlib.sha256(PDF).hexdigest())
+            self.assertNotIn("files.mediaflow.com", body)
+            manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+            self.assertEqual([d["url"] for d in manifest["documents"]],
+                             [MF + "/1/file/3143522/downloads?share=3KATTCX4I1"])
+
+    def test_mediaflow_needs_the_page_on_a_configured_host(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with self.assertRaises(municipal.ConfigError):
+                municipal.load_config(self.config(tmp, {**MF_ENTRY, "page": "https://elsewhere.se/x"}))
 
 
 class MainTest(unittest.TestCase):

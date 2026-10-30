@@ -13,8 +13,8 @@
         "1920:859",
         "1921:21"
       ],
-      "total": 33165,
-      "unknown": 33141
+      "total": 33206,
+      "unknown": 33182
     },
     "amended_through": {
       "sample": [
@@ -49,10 +49,10 @@
       "unknown": 426
     }
   },
-  "documents": 51741,
+  "documents": 52838,
   "duplicate_ids": [],
   "fsck": null,
-  "generated_at": "2026-10-30T21:44:50Z",
+  "generated_at": "2026-10-30T22:52:31Z",
   "path_mismatches": [],
   "schema_errors": [],
   "text_quality": [
@@ -70,6 +70,26 @@
       "flag": "replacement_character",
       "id": "25fs-2015-8",
       "path": "region/county-regulations/25fs-2015-8.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "eifs-2022-12",
+      "path": "agency/regulations/eifs-2022-12.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "eifs-2024-3",
+      "path": "agency/regulations/eifs-2024-3.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "eifs-2025-1",
+      "path": "agency/regulations/eifs-2025-1.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "hslf-fs-2018-54",
+      "path": "agency/regulations/hslf-fs-2018-54.md"
     },
     {
       "flag": "replacement_character",
@@ -3680,6 +3700,36 @@
       "flag": "replacement_character",
       "id": "sgu-fs-2023-1",
       "path": "agency/regulations/sgu-fs-2023-1.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "skolfs-2011-12",
+      "path": "agency/regulations/skolfs-2011-12.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "skolfs-2011-14",
+      "path": "agency/regulations/skolfs-2011-14.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "skolfs-2011-142",
+      "path": "agency/regulations/skolfs-2011-142.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "skolfs-2011-144",
+      "path": "agency/regulations/skolfs-2011-144.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "skolfs-2011-19",
+      "path": "agency/regulations/skolfs-2011-19.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "skolfs-2011-57",
+      "path": "agency/regulations/skolfs-2011-57.md"
     },
     {
       "flag": "short_body",

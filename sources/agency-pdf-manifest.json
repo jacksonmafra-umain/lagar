@@ -29415,15 +29415,16 @@
           "bytes": 74896,
           "sha256": "dd11331f97b7b35a6a559cf5e9d1b5d30e2e289f71757a635e195bed13b0839a",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T02:18:41Z"
+          "retrieved_at": "2026-10-30T22:35:30Z"
         },
         {
           "label": "SKOLFS 2011:22 (senaste lydelse)",
           "url": "https://skolfs.skolverket.se/api/document/SENASTE_LYDELSE/2011:22/pdf",
-          "bytes": 210756,
-          "sha256": "312dc55525525fb62da2283acb3a935fe0c882c872d9ea216da912be13f7e806",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T02:18:42Z"
+          "bytes": null,
+          "sha256": null,
+          "content_type": "application/msword",
+          "retrieved_at": null,
+          "note": "not a PDF; not kept"
         }
       ]
     },

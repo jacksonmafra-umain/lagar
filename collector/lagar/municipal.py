@@ -16,7 +16,12 @@ maps each kommun code to its listing pages and to one of three parsing strategie
 - `json_list`: a JSON document list served by a document platform's own API
   (Evolution DocumentWeb folders, WordPress File Download categories); the
   config names the list, the title and number fields and a URL template that
-  builds each document's link from the item's fields.
+  builds each document's link from the item's fields. The list may also sit in
+  a Next.js page's streamed data (`embedded: "next"`).
+- `mediaflow`: MediaFlow shares embedded on the kommun's page. Each listing is a
+  share's token URL; the share's files are listed through its API, and each
+  PDF is fetched through a download link that is signed for a few minutes, so
+  the kommun's page (`page`) is the document's source.
 
 Most kommuner run Sitevision and list their documents as one flat file list.
 `"preset": "sitevision"` fills in the link pattern, number (the file's node id)
@@ -65,7 +70,7 @@ DEFAULT_STATE = "collector/data/municipal-state.json"
 DEFAULT_MANIFEST = "sources/municipal-manifest.json"
 DEFAULT_RATE = 1.0
 MANIFEST_VERSION = 1
-STRATEGIES = ("html_index", "domino_view", "html_pages", "json_list")
+STRATEGIES = ("html_index", "domino_view", "html_pages", "json_list", "mediaflow")
 
 # Defaults merged under a kommun entry that names a preset; the entry's own keys win.
 PRESETS = {
@@ -172,9 +177,14 @@ class Kommun:
     json_title: str = ""
     json_number: str = ""
     json_url: str = ""
+    page: str = ""
     json_recursive: bool = False
     json_follow: "dict" = field(default_factory=dict)
     href_titles: bool = False
+    json_embedded: str = ""
+    json_number_pattern: str = ""
+    # url -> Kommun with that listing's own settings (a listing given as an object)
+    listing_settings: "dict" = field(default_factory=dict)
 
 
 def _required(entry, key, code, kind=str):
@@ -200,10 +210,16 @@ def _kommun(code, entry):
     strategy = _required(entry, "strategy", code)
     if strategy not in STRATEGIES:
         raise ConfigError(f"{code}: unknown strategy {strategy!r}")
-    listings = _required(entry, "listings", code, list)
-    for url in listings:
+    listings, overrides = [], {}
+    for listing in _required(entry, "listings", code, list):
+        if isinstance(listing, dict):  # a listing with its own settings: {"url": ..., "strategy": ...}
+            url = listing.get("url")
+            overrides[url] = {k: v for k, v in listing.items() if k != "url"}
+        else:
+            url = listing
         if not isinstance(url, str) or urllib.parse.urlsplit(url).scheme != "https":
             raise ConfigError(f"{code}: listing {url!r} is not an https URL")
+        listings.append(url)
     hosts = tuple(_required(entry, "hosts", code, list))
     kommun = Kommun(
         code=code,
@@ -235,15 +251,19 @@ def _kommun(code, entry):
         json_title=entry.get("title_field", ""),
         json_number=entry.get("number_field", ""),
         json_url=entry.get("url_template", ""),
+        page=entry.get("page", ""),
         json_recursive=bool(entry.get("recursive", False)),
         json_follow=dict(entry.get("follow_items") or {}),
         href_titles=bool(entry.get("href_titles", False)),
+        json_embedded=entry.get("embedded", ""),
+        json_number_pattern=entry.get("number_pattern", ""),
     )
     for url in listings:
         if urllib.parse.urlsplit(url).hostname not in hosts:
             raise ConfigError(f"{code}: listing {url} is not on a configured host")
     try:
-        patterns = [kommun.link_pattern, kommun.follow, kommun.document_pattern, *kommun.title_strip, *kommun.title_include, *kommun.title_exclude]
+        patterns = [kommun.link_pattern, kommun.follow, kommun.document_pattern, kommun.json_number_pattern,
+                    *kommun.title_strip, *kommun.title_include, *kommun.title_exclude]
         for pattern in [*patterns, *(r["pattern"] for r in kommun.number_rules)]:
             re.compile(pattern)
     except (re.error, KeyError, TypeError) as error:
@@ -256,6 +276,22 @@ def _kommun(code, entry):
         raise ConfigError(f"{code}: domino_view needs kinds and the kind, title and number columns")
     if strategy == "json_list" and not (kommun.json_title and kommun.json_number and kommun.json_url):
         raise ConfigError(f"{code}: json_list needs title_field, number_field and url_template")
+    if kommun.json_embedded not in ("", "next"):
+        raise ConfigError(f"{code}: unknown embedded list {kommun.json_embedded!r}")
+    if kommun.json_embedded and not kommun.json_items:
+        raise ConfigError(f"{code}: an embedded list needs items (the key of the list)")
+    if strategy == "mediaflow" and not (
+        urllib.parse.urlsplit(kommun.page).scheme == "https" and urllib.parse.urlsplit(kommun.page).hostname in hosts
+    ):
+        raise ConfigError(f"{code}: mediaflow needs the https page that embeds the shares, on a configured host")
+    for url, settings in overrides.items():
+        if any(isinstance(item, dict) for item in settings.get("listings", [])):
+            raise ConfigError(f"{code}: a listing's settings cannot hold listings")
+        listing = _kommun(code, {**entry, **settings, "listings": [url]})
+        # documents are fetched with the entry's strategy, so only listings of PDF links may differ
+        if listing.strategy != strategy and not {listing.strategy, strategy} <= {"html_index", "json_list"}:
+            raise ConfigError(f"{code}: listing {url} cannot use {listing.strategy} under {strategy}")
+        kommun.listing_settings[url] = listing
     return kommun
 
 
@@ -454,6 +490,12 @@ class Fetcher:
         raw, content_type, final = self._fetch(url)
         check_host(kommun, final)
         return raw, content_type, final
+
+    def post_json(self, kommun, url, payload):
+        """Body of a JSON POST to an API within the kommun's hosts; the caller has checked robots.txt."""
+        check_host(kommun, url)
+        headers = {"Content-Type": "application/json", "Accept": "application/json"}
+        return self.client.fetch_final(_uri(url), headers, data=json.dumps(payload).encode())[0]
 
 
 def check_host(kommun, url):
@@ -823,12 +865,36 @@ def _follows(kommun, item):
     return bool(rule) and str(item.get(rule.get("field", ""))) == str(rule.get("value"))
 
 
+_NEXT_CHUNK = re.compile(r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)')
+
+
+def _next_list(page, key):
+    """The JSON value of `key` in a Next.js page's streamed data (`self.__next_f.push` strings)."""
+    data = "".join(json.loads(chunk) for chunk in _NEXT_CHUNK.findall(page))
+    marker = f'"{key}":'
+    start = data.find(marker)
+    if start < 0:
+        return None
+    return json.JSONDecoder().raw_decode(data, start + len(marker))[0]
+
+
+def _json_document(kommun, raw):
+    """The JSON document of a listing; with `embedded: "next"`, the list found in a Next.js page."""
+    if kommun.json_embedded == "next":
+        return {kommun.json_items: _next_list(_text(raw), kommun.json_items)}
+    return json.loads(_text(raw))
+
+
 def parse_json_list(kommun, raw, listing_url):
-    """Entries of a JSON document list; problems are items whose link or number is missing."""
+    """Entries of a JSON document list; problems are items whose link or number is missing.
+
+    With `embedded: "next"` the list is the value of `items` in the streamed data of a
+    Next.js page (Skövde), not a JSON document of its own.
+    """
     sha = hashlib.sha256(raw).hexdigest()
     sections = {s.casefold() for s in kommun.sections}
     entries, problems = [], []
-    for section, item in _json_items(kommun, json.loads(_text(raw))):
+    for section, item in _json_items(kommun, _json_document(kommun, raw)):
         if not isinstance(item, dict) or _follows(kommun, item):
             continue
         if sections and (section or "").casefold() not in sections:
@@ -846,11 +912,79 @@ def parse_json_list(kommun, raw, listing_url):
         if kommun.link_pattern and not re.search(kommun.link_pattern, url, re.IGNORECASE):
             continue
         number = _clean(str(item.get(kommun.json_number) or ""))
+        if number and kommun.json_number_pattern:
+            match = re.search(kommun.json_number_pattern, number)
+            number = match.group(1) if match else ""
         if not number:
             problems.append(url)
             continue
         entries.append(Entry(kommun.code, number, title, url, listing_url, sha))
     return entries, problems
+
+
+# --- MediaFlow shares ---------------------------------------------------------
+
+_MEDIAFLOW_FILE = re.compile(r"^(https://[^/]+)/1/file/(\d+)/downloads\?share=([A-Za-z0-9]+)$")
+
+
+def _mediaflow_token(fetcher, kommun, token_url):
+    if not fetcher.allows(token_url):
+        raise ListingError(f"robots.txt disallows {token_url}")
+    raw, _, _ = fetcher.get(kommun, token_url)
+    token = json.loads(_text(raw)).get("access_token")
+    if not isinstance(token, str) or not token:
+        raise ValueError(f"no access token from {token_url}")
+    return token
+
+
+def mediaflow_files(fetcher, kommun, token_url):
+    """(files JSON, share id) of the share whose token URL is a listing."""
+    query = urllib.parse.parse_qs(urllib.parse.urlsplit(token_url).query)
+    share = (query.get("refresh_token") or [""])[0]
+    if not re.fullmatch(r"[A-Za-z0-9]+", share):
+        raise ValueError(f"no share id in {token_url}")
+    token = _mediaflow_token(fetcher, kommun, token_url)
+    api = token_url.split("/1/", 1)[0]
+    raw, _, _ = fetcher.get(kommun, f"{api}/1/files?access_token={urllib.parse.quote(token)}")
+    return raw, share
+
+
+def parse_mediaflow(kommun, raw, token_url, share):
+    """Entries of a share's file list; the number is the file's MediaFlow media number."""
+    files = json.loads(_text(raw))
+    if not isinstance(files, list):
+        raise ValueError("the share's file list is not a list")
+    sha = hashlib.sha256(raw).hexdigest()
+    api = token_url.split("/1/", 1)[0]
+    entries, problems = [], []
+    for item in files:
+        if not isinstance(item, dict) or item.get("type") not in (None, "document"):
+            continue
+        title = _title(kommun, str(item.get("name") or ""))
+        if not title or not binds_residents(kommun, title):
+            continue
+        number, file_id = str(item.get("nr") or ""), item.get("id")
+        if not re.fullmatch(r"[A-Za-z0-9]+", number) or not isinstance(file_id, int):
+            problems.append(title)
+            continue
+        url = f"{api}/1/file/{file_id}/downloads?share={share}"
+        entries.append(Entry(kommun.code, number, title, url, kommun.page, sha))
+    return entries, problems
+
+
+def _mediaflow_download(fetcher, kommun, url):
+    """A freshly signed link to the original PDF of a share file (valid for minutes)."""
+    match = _MEDIAFLOW_FILE.match(url)
+    if not match:
+        raise ValueError(f"not a MediaFlow file URL: {url}")
+    api, file_id, share = match.groups()
+    token = _mediaflow_token(fetcher, kommun, f"{api}/1/oauth2/token?grant_type=refresh_token&refresh_token={share}")
+    raw = fetcher.post_json(kommun, f"{api}/1/file/{file_id}/downloads?access_token={urllib.parse.quote(token)}",
+                            {"ids": [int(file_id)]})
+    for item in json.loads(_text(raw)):
+        if item.get("format") == "original" and item.get("filetype") == "pdf" and item.get("downloadURL"):
+            return item["downloadURL"]
+    raise ValueError(f"no original PDF for {url}")
 
 
 # html_pages lists its rule pages the way html_index lists documents.
@@ -1167,18 +1301,28 @@ def collect_document(fetcher, kommun, entry, args, manifest):
             raise ValueError(f"no attachment on {entry.url}")
         documents = detail.attachments
         fallback = (final, hashlib.sha256(raw).hexdigest())
+    elif kommun.strategy == "mediaflow":
+        documents = [(kommun.page, f"{entry.title} (PDF i kommunens mediabank)")]
+        fallback = (kommun.page, entry.listing_sha256)
     else:
         documents = [(entry.url, entry.title)]
         fallback = (entry.listing, entry.listing_sha256)
     pdf_url = documents[0][0]
-    sha, record = _fetch_pdf(fetcher, kommun, pdf_url)
+    if kommun.strategy == "mediaflow":
+        # The signed link expires within minutes: the stable file URL and the page stand for it.
+        pdf_url = entry.url
+        sha, record = _fetch_pdf(fetcher, kommun, _mediaflow_download(fetcher, kommun, entry.url))
+        if sha is not None:
+            record = {**record, "url": entry.url}
+    else:
+        sha, record = _fetch_pdf(fetcher, kommun, pdf_url)
     doc_id = corpus_id(kommun.code, entry.number)
     now = _now()
     if sha is None:
         gap, (source, sha) = record, fallback
         _record_gap(manifest, {"id": doc_id, "municipality_code": kommun.code, "url": pdf_url, "reason": gap})
     else:
-        gap, source = None, record["url"]
+        gap, source = None, kommun.page if kommun.strategy == "mediaflow" else record["url"]
         _record_document(manifest, {"id": doc_id, "municipality_code": kommun.code, **record, "retrieved_at": now})
     meta = build_meta(kommun, entry, source, sha, now)
     body = build_body(kommun, entry, documents, detail, gap)
@@ -1274,16 +1418,22 @@ def list_entries(fetcher, kommun):
         url = queue.pop(0)
         if not fetcher.allows(url):
             raise ListingError(f"robots.txt disallows the listing {url}")
+        settings = kommun.listing_settings.get(url, kommun)
         try:
-            raw, _, final = fetcher.get(kommun, url)
-            found, bad = PARSERS[kommun.strategy](kommun, raw, final)
+            if settings.strategy == "mediaflow":
+                raw, share = mediaflow_files(fetcher, settings, url)
+                found, bad = parse_mediaflow(settings, raw, url, share)
+                final = url
+            else:
+                raw, _, final = fetcher.get(settings, url)
+                found, bad = PARSERS[settings.strategy](settings, raw, final)
         except Blocked:
             raise
         except (*DOCUMENT_ERRORS, ElementTree.ParseError) as error:
             raise ListingError(f"listing {url}: {type(error).__name__}: {error}") from error
         entries += found
         problems += bad
-        for page in more_pages(kommun, raw, final):
+        for page in more_pages(settings, raw, final):
             if page not in seen and fetcher.allows(page):
                 seen.add(page)
                 queue.append(page)
@@ -1312,7 +1462,7 @@ def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
             break
         doc_id = corpus_id(kommun.code, entry.number)
         path = writer.path_for({"id": doc_id, "type": TYPE}, args.corpus)
-        done = doc_id in state["done"] or (kommun.strategy in ("html_index", "json_list") and known.get(doc_id) == entry.url)
+        done = doc_id in state["done"] or (kommun.strategy in ("html_index", "json_list", "mediaflow") and known.get(doc_id) == entry.url)
         if not args.refresh and done and path.exists():
             summary.skipped += 1
             continue
