@@ -1247,25 +1247,13 @@
       "status": "robots",
       "note": "karlstad.se lists SharePoint document ids; the files are served only through time-limited links on karlstadskommunonline.sharepoint.com, whose robots.txt disallows everything (checked 2026-10-30)."
     },
-    "1961": {
-      "status": "no_adapter",
-      "note": "hallstahammar.se publishes its documents through Evolution DocumentWeb (a JavaScript app over a JSON API); no adapter yet."
-    },
     "2029": {
       "status": "no_adapter",
       "note": "leksand.se publishes its författningssamling in a Netpublicator reader (JavaScript, noindex); no adapter yet."
     },
-    "2031": {
-      "status": "no_adapter",
-      "note": "rattvik.se publishes its taxor and föreskrifter through DocumentWeb (ess-app.rattvik.se, a JavaScript app over a JSON API); no adapter yet."
-    },
     "2180": {
       "status": "no_adapter",
       "note": "gavle.se publishes its documents through MediaFlow; no adapter yet."
-    },
-    "2518": {
-      "status": "no_adapter",
-      "note": "overtornea.se lists its föreskrifter and taxor through the WordPress File Download plugin, loaded from an admin-ajax JSON endpoint; no adapter yet."
     }
   }
 }

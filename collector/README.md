@@ -800,6 +800,17 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      `{linkdownload}`), resolved against the listing URL. `link_pattern`, when set, filters the
      built links; `resident_filter` and `title_include`/`title_exclude` filter the titles. An item
      with no number or a template field it lacks is reported as a problem.
+     With `"recursive": true`, the lists at `items` are collected from every nested folder object as
+     well (DocumentWeb returns a whole folder tree in one answer); each item's section is the title
+     field of the folder that holds it, so `sections` can keep only some folders. `follow_items`
+     (`{"field": "type", "value": "channel", "url_template": "read?hash={_hash}-{id}&isr=false"}`)
+     reads the items that match as further listings (a Netpublicator channel); in every template the
+     listing URL's query parameters are available as `_name` (`{_hash}`). JSON titles are
+     HTML-unescaped.
+   - `href_titles` (`html_index`, `html_pages`): a link without text takes its title from the URL's
+     file name (Vallentuna's sitemap lists `2.4.3 Avfallstaxa.pdf`). Sitemaps may be gzipped files
+     (`sitemap1.xml.gz`).
+   - Links of the form `javascript:void(window.open('/download/...'))` are read as the URL they open.
 3. Choose `sections` or `kinds` so that only rules for residents are collected. Where the list mixes
    rules and internal documents with no headings to tell them apart, `"resident_filter": true`
    keeps a title only when it names a rule for residents (föreskrifter, taxor, avgifter, avfall,

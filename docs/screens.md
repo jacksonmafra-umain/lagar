@@ -14,7 +14,7 @@ The number after each gap is its GitHub issue.
 
 ## Layout check
 
-Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_local.py` (full local API), at 375x812 against the Stitch screens and `DESIGN.md`, and at 1440x900 against the wide-layout rows below. Stitch's Portuguese text, Brazilian data, BankID and profile elements are not counted, nor are gaps already listed with an issue. The desktop reference `lagar_multi_jurisdiction_design_system_portal` is not in `design/stitch/`, so the wide layouts were checked against this file and `DESIGN.md` only. Tablet (#35) was not checked.
+Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_local.py` (full local API), at 375x812 against the Stitch screens and `DESIGN.md`, and at 1440x900 against the wide-layout rows below. Stitch's Portuguese text, Brazilian data, BankID and profile elements are not counted, nor are gaps already listed with an issue. The desktop reference `lagar_multi_jurisdiction_design_system_portal` is not in `design/stitch/`, so the wide layouts were checked against this file and `DESIGN.md` only. The tablet reader drawer (#35) was checked on 2026-10-30 at 768x1024.
 
 | Screen | Result | Issues |
 | --- | --- | --- |
@@ -257,7 +257,7 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | Desktop (≥ 1024dp): table of contents as a 300dp pane left of the text instead of a sheet | Done | #35 |
 | Desktop (≥ 1280dp, `ShellDimens.ReaderInspectorBreakpoint`): facts, source link and amendments in an inspector pane right of the text; the text keeps the badge, number and title | Done | #35 |
 | Below 1024dp (phones, tablets): table of contents in a frosted glass bottom sheet | Done | #26 |
-| Tablet: metadata (facts, source, amendments) in a sliding Liquid Glass drawer instead of under the title | Missing: waits for the reading layout rework (#154), which reshapes the reader | #35 |
+| From 600dp up to the inspector breakpoint (tablets, narrow desktop windows, the search detail pane): metadata (facts, source, amendments) in a Liquid Glass drawer that slides in from the end edge, opened from the info button in the top bar and closed by its close button, the scrim or back; the text keeps the badge, number and title | Done | #35 |
 | Reading the text as of a past date, version comparator | Blocked: the API has no historical text; owner decision pending | #7 |
 
 ## Sparade
