@@ -34,8 +34,13 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
 
+      - name: Install poppler-utils
+        run: sudo apt-get update -q && sudo apt-get install -y -q --no-install-recommends poppler-utils
+
       - name: Lint
         run: pipx run ruff==0.17.3 check collector
 
       - name: Tests
+        env:
+          LAGAR_REQUIRE_PDFTOTEXT: "1"
         run: python3 -I -m unittest discover -s collector/tests -t collector
