@@ -1,0 +1,18 @@
+{
+  "listings": {
+    "https://www.eda.se/styrdokument/vatten-avlopp-och-avfall__1299": "1730-listing1.html",
+    "https://www.eda.se/styrdokument/trafik-gator-och-v%C3%A4gar__1289": "1730-listing2.html",
+    "https://www.eda.se/styrdokument/milj%C3%B6-h%C3%A4lsoskydd-och-livsmedel__1294": "1730-listing3.html",
+    "https://www.eda.se/styrdokument/planering-och-byggande__1296": "1730-listing4.html",
+    "https://www.eda.se/styrdokument/s%C3%A4kerhet-och-beredskap__1297": "1730-listing5.html",
+    "https://www.eda.se/styrdokument/v%C3%A5rd-och-st%C3%B6d__1300": "1730-listing6.html",
+    "https://www.eda.se/styrdokument/barnomsorg-och-skola__1286": "1730-listing7.html"
+  },
+  "count": 25,
+  "sample": {
+    "number": "Kommunala_foreskrifter_om_anvandningen_av_den_allmanna_VA-anlaggningen_KFVA_KF_2026-06-15",
+    "title": "Kommunala föreskrifter om användningen av den allmänna VA-anläggningen",
+    "url": "https://www.eda.se/Userfiles/Filarkiv/1299/Dokument/Kommunala_foreskrifter_om_anvandningen_av_den_allmanna_VA-anlaggningen_KFVA_KF_2026-06-15.pdf"
+  },
+  "excluded": []
+}

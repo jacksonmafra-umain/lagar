@@ -60,6 +60,54 @@
       "number_column": "txtSerialnumber",
       "kinds": ["Lokal föreskrift", "Taxor/avgifter"]
     },
+    "1715": {
+      "name": "Kil",
+      "issuer": "Kils kommun",
+      "region_code": "17",
+      "collection": "Kils kommuns författningssamling",
+      "strategy": "html_index",
+      "hosts": ["kil.se", "www.kil.se"],
+      "listings": [
+        "https://kil.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/forfattningssamling",
+        "https://kil.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/forfattningssamling/avfallsplan",
+        "https://kil.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/forfattningssamling/regler-for-anslutning-till-vatten-och-avlopp"
+      ],
+      "section_level": 3,
+      "sections": ["Lokala föreskrifter", "Taxor och avgifter", "Renhållningsordning", "Relaterad information"],
+      "link_pattern": "^https://kil\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B[^.]*\\.?\\s*(,?\\s*öppnas i nytt fönster\\.?)?\\s*$",
+        "^Här kan du läsa\\s+",
+        "\\s*\\(pdf\\)\\s*\\d+\\s*kB\\s*\\($"
+      ]
+    },
+    "1730": {
+      "name": "Eda",
+      "issuer": "Eda kommun",
+      "region_code": "17",
+      "collection": "Eda kommuns taxor, policys och styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.eda.se", "eda.se"],
+      "listings": [
+        "https://www.eda.se/styrdokument/vatten-avlopp-och-avfall__1299",
+        "https://www.eda.se/styrdokument/trafik-gator-och-v%C3%A4gar__1289",
+        "https://www.eda.se/styrdokument/milj%C3%B6-h%C3%A4lsoskydd-och-livsmedel__1294",
+        "https://www.eda.se/styrdokument/planering-och-byggande__1296",
+        "https://www.eda.se/styrdokument/s%C3%A4kerhet-och-beredskap__1297",
+        "https://www.eda.se/styrdokument/v%C3%A5rd-och-st%C3%B6d__1300",
+        "https://www.eda.se/styrdokument/barnomsorg-och-skola__1286"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.eda\\.se/Userfiles/Filarkiv/\\d+/(?:Taxor[^/]*/(?!Undantag_|Bidrag_till)[^/]+|Styrdokument/Avgifter/[^/]+|Dokument/(?:Allmanna_lokala|Bilagor_Allmanna|Lokala_|Kommunala_foreskrifter|Renhallningsforeskrifter|Sotningsfrister)[^/]*)\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/([^/]+)\\.pdf$"}
+      ],
+      "title_strip": ["\\.pdf\\s*$"]
+    },
     "2161": {
       "name": "Ljusdal",
       "issuer": "Ljusdals kommun",
@@ -140,6 +188,186 @@
       "title_strip": [
         "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
         "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"
+      ]
+    },
+    "2262": {
+      "name": "Timrå",
+      "issuer": "Timrå kommun",
+      "region_code": "22",
+      "collection": "Timrå kommuns kommunala föreskrifter",
+      "strategy": "html_index",
+      "hosts": ["www.timra.se", "timra.se"],
+      "listings": [
+        "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/byggabomiljo/miljo.4.714dad16d46439ef9401b.html",
+        "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/byggabomiljo/foreskrifterinomavfallochatervinning.4.48ff27ec16df76a85d01ae81.html",
+        "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/byggabomiljo/taxorochavgifter.4.714dad16d46439ef94030.html",
+        "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/vagarochtrafik.4.714dad16d46439ef93fef.html",
+        "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/kulturochfritid.4.714dad16d46439ef93fda.html",
+        "https://www.timra.se/kommunpolitik/kommunalaforeskrifter/omsorgochstod.4.714dad16d46439ef93fb0.html"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https?://www\\.timra\\.se/download/(?!18\\.(?:51e6b6b16fe915e2b6b74|6fa7b5c618a06217f7c320|fb0e6081929ca011ff6df|352d744118487e80c3c8c0|1b39dabd19a1302877ad9b|ceb3dd19e4c5973bdca4|1767cee719669c68f0328c|1767cee719669c68f0328d|ceb3dd19e4c5973bdaa9|1e19378518c8eb0097974a|ceb3dd19e4c5973bdca5|1e19378518c8eb0097974b|1767cee719669c68f0328e|1767cee719669c68f0328f)/)18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
+        "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"
+      ]
+    },
+    "2280": {
+      "name": "Härnösand",
+      "issuer": "Härnösands kommun",
+      "region_code": "22",
+      "collection": "Härnösands kommuns styrande dokument (föreskrifter)",
+      "strategy": "html_index",
+      "hosts": ["harnosand.se", "www.harnosand.se"],
+      "listings": [
+        "https://harnosand.se/kommun--styrning/forvaltning-och-organisation/kommunens-styrande-dokument.html"
+      ],
+      "section_level": 2,
+      "sections": ["Föreskrifter"],
+      "link_pattern": "^https://harnosand\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
+        "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"
+      ]
+    },
+    "2281": {
+      "name": "Sundsvall",
+      "issuer": "Sundsvalls kommun",
+      "region_code": "22",
+      "collection": "Sundsvalls kommuns kommunala författningssamling",
+      "strategy": "html_index",
+      "hosts": ["sundsvall.se", "www.sundsvall.se"],
+      "listings": [
+        "https://sundsvall.se/kommun/kommun-och-politik/kommunfakta/regler-och-forfattningssamlingar/kommunal-forfattningssamling"
+      ],
+      "section_level": 2,
+      "sections": ["Avgifter och taxor", "Lokala föreskrifter"],
+      "link_pattern": "^https://sundsvall\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
+        "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"
+      ]
+    },
+    "2283": {
+      "name": "Sollefteå",
+      "issuer": "Sollefteå kommun",
+      "region_code": "22",
+      "collection": "Sollefteå kommuns regler och styrande dokument (föreskrifter, taxor och avgifter)",
+      "strategy": "html_index",
+      "hosts": ["www.solleftea.se", "solleftea.se"],
+      "listings": [
+        "https://www.solleftea.se/Kommun--politik/kommunfakta/regler-och-styrande-dokument/allmanna-och-lokala-foreskrifter",
+        "https://www.solleftea.se/Kommun--politik/kommunfakta/regler-och-styrande-dokument/taxor-och-avgifter"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.solleftea\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
+        "[\\s,-]*KF\\s*\\d{4}-\\d{2}-\\d{2}.*$"
+      ]
+    },
+    "2303": {
+      "name": "Ragunda",
+      "issuer": "Ragunda kommun",
+      "region_code": "23",
+      "collection": "Ragunda kommuns föreskrifter",
+      "strategy": "html_index",
+      "hosts": ["www.ragunda.se", "ragunda.se"],
+      "listings": ["https://www.ragunda.se/kommunochpolitik/politikochmoten/kommunensforeskrifter.1033.html"],
+      "section_level": 2,
+      "sections": ["Allmänna bestämmelser/ Regler", "Avgifter"],
+      "link_pattern": "^https://www\\.ragunda\\.se/download/(?!18\\.(?:563bd69718b6acfb9e83a1b|1d2806cb1877920d953c613|1d2806cb1877920d953c61f|1d2806cb1877920d953c60e|1d2806cb1877920d953c661)/)18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B\\.?\\s*$", "^\\u200b"]
+    },
+    "2309": {
+      "name": "Krokom",
+      "issuer": "Krokoms kommun",
+      "region_code": "23",
+      "collection": "Krokoms kommuns författningssamling och styrdokument",
+      "strategy": "html_index",
+      "hosts": ["krokom.se", "www.krokom.se"],
+      "listings": [
+        "https://krokom.se/kommun-och-demokrati/sa-fungerar-kommunen/forfattningssamling-och-styrdokument.html"
+      ],
+      "section_level": 2,
+      "sections": ["Avgifter och taxor", "Lokala föreskrifter"],
+      "link_pattern": "^https://krokom\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"]
+    },
+    "2313": {
+      "name": "Strömsund",
+      "issuer": "Strömsunds kommun",
+      "region_code": "23",
+      "collection": "Strömsunds kommuns föreskrifter och taxor",
+      "strategy": "html_index",
+      "hosts": ["www.stromsund.se", "stromsund.se"],
+      "listings": ["https://www.stromsund.se/733.html", "https://www.stromsund.se/1472.html"],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.stromsund\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
+        "\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
+        "\\s*\\(\\d+_\\d+\\)\\s*$"
+      ]
+    },
+    "2326": {
+      "name": "Berg",
+      "issuer": "Bergs kommun",
+      "region_code": "23",
+      "collection": "Bergs kommuns författningssamling och styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["berg.se", "www.berg.se"],
+      "listings": [
+        "https://berg.se/kommun-och-politik/verksamhet-och-organisation/forfattningssamling-och-styrande-dokument",
+        "https://berg.se/kommun-och-politik/ekonomi-och-budget/avgifter-och-taxor"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Föreskrifter",
+        "Alkohol och tobak: Ansöknings- och tillsynsavgifter",
+        "Avfallstaxa",
+        "Foder och animaliska biprodukter",
+        "Taxor inom kommunstyrelsens verksamheter: Fritidsverksamhet, kopior, utskrifter och avskrift, bibliotek och kulturskola, tomter, transportdispenser, uthyrning",
+        "Livsmedelstaxa",
+        "Läkemedelstaxa",
+        "Miljötaxa",
+        "Taxa för Plan- och bygglagen (PBL)",
+        "Taxa för detaljplaner, planprogram, områdesbestämmelser och exploateringsavtal",
+        "Utbildningsnämnden",
+        "Avgifter för vatten och avlopp",
+        "Vård- och socialnämnden"
+      ],
+      "link_pattern": "^https://berg\\.se/download/(?!18\\.2dd308ab18c63b993c623a26/)18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$",
+        "\\s*\\.?Pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kM]B(?:,[^.]*)?\\.?\\s*$"
       ]
     },
     "2380": {
