@@ -33,7 +33,8 @@ import kotlinx.coroutines.launch
  *
  * Nationell fills [fundamental], [acts] and [ordinances]; Region and Kommun fill [inForce] (the locality's newest
  * regulations in force) and [localityTotal] (its document count). [recent] is the scope's or locality's newest
- * documents either way.
+ * documents either way. [unavailable] are the Nationell levels whose listing could not be read; the home shows the
+ * rest with a notice.
  */
 data class HomeData(
     val scope: Scope,
@@ -49,6 +50,7 @@ data class HomeData(
     val localityCode: String? = null,
     val localityTotal: Int = 0,
     val inForce: List<ListingItem> = emptyList(),
+    val unavailable: List<DisplayLayer> = emptyList(),
 )
 
 /**
@@ -87,7 +89,7 @@ class HomeViewModel(
         } catch (e: CancellationException) {
             throw e
         } catch (_: Exception) {
-            LoadState.Failed(retry = { attempt.value++ })
+            LoadState.Failed(retry = ::retry)
         }
     }
 
@@ -133,7 +135,13 @@ class HomeViewModel(
             hasMoreRecent = feed.hasMoreRecent,
             counts = counts,
             builtAt = builtAt,
+            unavailable = feed.unavailable,
         )
+    }
+
+    /** Loads the home again, as the retry of a full or partial failure. */
+    fun retry() {
+        attempt.value++
     }
 
     fun toggleBookmark(item: ListingItem) {

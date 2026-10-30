@@ -14,6 +14,16 @@ class WorkflowTest(unittest.TestCase):
         for secret in ("VERCEL_TOKEN", "VERCEL_ORG_ID", "VERCEL_PROJECT_ID"):
             self.assertIn(f"secrets.{secret} != ''", deploy)
 
+    def test_production_waits_for_the_pages_run_of_the_same_commit(self):
+        # the web app reads the API from Pages; deploying it first serves a new app against the old API
+        wait = WORKFLOW.index("name: Wait for the API deploy")
+        self.assertLess(wait, WORKFLOW.index("name: Deploy production"))
+        step = WORKFLOW[wait:WORKFLOW.index("name: Deploy production")]
+        self.assertIn("--workflow pages.yml", step)
+        self.assertIn("--commit", step)
+        self.assertIn("gh run watch", step)
+        self.assertIn("actions: read", WORKFLOW)
+
     def test_design_md_triggers_the_workflow(self):
         # landing/tests checks tokens.css against DESIGN.md
         self.assertEqual(WORKFLOW.count("      - DESIGN.md\n"), 2)

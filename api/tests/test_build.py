@@ -293,10 +293,10 @@ class NewLayersTest(unittest.TestCase):
     def test_series_per_layer(self):
         layers = {layer["id"]: layer for layer in read(self.out, "index.json")["layers"]}
         expected = {
-            "fundamental": [], "sfs": [], "service": [],
+            "fundamental": [], "sfs": ["treaty"], "service": [],
             "agency": ["agency_regulation"],
             "case_law": ["case_report", "case_notice"],
-            "eu": ["eu_regulation", "eu_directive", "eu_decision"],
+            "eu": ["eu_regulation", "eu_directive", "eu_decision", "eu_judgment"],
             "region": ["county_regulation"],
             "municipality": ["municipal_regulation"],
         }
@@ -395,7 +395,11 @@ class NewLayersTest(unittest.TestCase):
                 meta = dict(template)
                 prefix = "eu-3" if type_.startswith("eu_") else "x-"
                 meta.update(id=f"{prefix}2000r{n:04d}", number=number, issued=None)
-                if "celex" in meta:
+                if type_ == "treaty":
+                    meta["id"] = f"so-2000-{n}"
+                if type_ == "eu_judgment":
+                    meta["celex"] = f"62000CJ{n:04d}"
+                elif "celex" in meta:
                     meta["celex"] = f"32000R{n:04d}"
                 if type_ == "county_regulation":
                     meta["region_code"] = number[:2]
@@ -409,11 +413,15 @@ class NewLayersTest(unittest.TestCase):
     def test_number_sort_per_type(self):
         cases = {
             "agency_regulation": ["FFFS 2023:10", "AFS 2023:10", "AFS 2023:9", "AFS 2022:100"],
-            "case_report": ["HFD 2020 ref. 5", "NJA 2019 s. 100", "NJA 2019 s. 99", "MIG 2019:1"],
+            "case_report": ["HFD 2020 ref. 5", "NJA 2019 s. 100", "NJA 2019 s. 99", "MIG 2019:1",
+                            "KRNJ 2007-01-09 mål nr 1097-06", "KRNG 2002-06-14 mål nr 3745-01",
+                            "KRNS 2002-06-12 mål nr 787-01"],
             "case_notice": ["HFD 2020 not. 12", "HFD 2020 not. 3", "NJA 2004 N 23"],
             "eu_regulation": ["(EU) 2016/679", "(EU) nr 1303/2013", "(EG) nr 1907/2006", "(EEG) nr 1408/71"],
             "eu_directive": ["(EU) 2022/2555", "2004/18/EG", "95/46/EG"],
             "eu_decision": ["(Gusp) 2019/797", "(EU) 2019/10", "(EU) 2019/9"],
+            "treaty": ["SÖ 2024:10", "SÖ 2024:9", "SÖ 1975:76"],
+            "eu_judgment": ["T-12/19", "C-12/19", "C-9/19", "C-293/12", "26/62"],
             "county_regulation": ["01FS 2024:10", "01FS 2024:9", "01FS 2020:004"],
             "municipal_regulation": ["SKFS 2024:12", "SKFS 2024:3", "Kf 2019-03-11 \u00a7 45", "Reglemente"],
         }

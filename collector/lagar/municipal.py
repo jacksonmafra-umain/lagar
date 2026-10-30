@@ -392,6 +392,11 @@ def corpus_id(kommun_code, number):
     return f"{kommun_code}-{slug(number)}"
 
 
+def _uri(url):
+    """Percent-encode what some listings leave raw in their links (spaces, å, ä, ö)."""
+    return urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~")
+
+
 def _clean(text):
     return " ".join((text or "").split())
 
@@ -465,7 +470,7 @@ def parse_html_index(kommun, raw, listing_url):
     for section, href, text in parser.links:
         if sections and (section or "").casefold() not in sections:
             continue
-        url = urllib.parse.urljoin(listing_url, href)
+        url = _uri(urllib.parse.urljoin(listing_url, href.strip()))
         if not re.search(kommun.link_pattern, url, re.IGNORECASE):
             continue
         number = _number(kommun, url, text)

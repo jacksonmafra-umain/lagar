@@ -173,6 +173,7 @@
     <string name="home_favourites_empty_text">Tap the bookmark on a document to keep it here.</string>
     <string name="home_scope_chip">Scope: %1$s. Change scope.</string>
     <string name="home_location_label">Location</string>
+    <string name="home_partial_error">Some sections could not be loaded.</string>
     <string name="home_choose_location">Choose a location</string>
     <string name="home_scope_region_title">Region: %1$s</string>
     <string name="home_scope_kommun_title">Municipality: %1$s</string>
@@ -240,6 +241,7 @@
     <string name="advanced_status_all">All</string>
     <string name="advanced_status_repealed">Repealed</string>
     <string name="type_other_statute">Other statute</string>
+    <string name="type_treaty">International agreement</string>
     <string name="app_tagline">SFS • Norm hierarchy</string>
     <string name="tab_search_filter">Search &amp; filter</string>
     <string name="scope_institutions">Institutional</string>
@@ -310,6 +312,7 @@
     <string name="type_eu_regulation">EU regulation</string>
     <string name="type_eu_directive">EU directive</string>
     <string name="type_eu_decision">EU decision</string>
+    <string name="type_eu_judgment">EU judgment</string>
     <string name="type_county_regulation">County regulation</string>
     <string name="type_municipal_regulation">Municipal regulation</string>
     <string name="search_sort_label">Sort by</string>

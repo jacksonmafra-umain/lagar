@@ -65,11 +65,17 @@ _NUMBER_RE = re.compile(r"([A-Za-z]*)(\d{4}):\D*(\d*)(.*)")
 _SERIES_RE = re.compile(r"(\S+) (\d{4}):(\d+)")
 # Case law: NJA 2019 s. 2, HFD 2020 ref. 5, HFD 2020 not. 3, AD 2020 nr 45, MIG 2026:10.
 _CASE_RE = re.compile(r"(\S+) (\d{4})(:| s\. | ref\. | not\. | nr | N )(\d+)")
+# Kammarrätt referat without a report reference: KRNJ 2007-01-09 mål nr 1097-06.
+_CASE_DATE_RE = re.compile(r"(\S+) (\d{4})-\d{2}-\d{2} mål nr (\d+)-\d{2}")
 # EU acts: (EU) 2016/679 is year/number; with "nr", (EG) nr 1907/2006 is number/year;
 # 95/46/EG and 2004/18/EG are year/number/institution. Two-digit years are 19xx.
 _EU_YEAR_FIRST_RE = re.compile(r"\([^)]+\) (\d{4})/(\d+)")
 _EU_NR_RE = re.compile(r"\([^)]+\) nr (\d+)/(\d{2}|\d{4})")
 _EU_SLASH_RE = re.compile(r"(\d{2}|\d{4})/(\d+)/\D.*")
+# Treaties: SÖ 2023:3.
+_TREATY_RE = re.compile(r"SÖ (\d{4}):(\d+)")
+# EU judgments: C-293/12, T-12/19, 26/62. Two-digit years from 50 are 19xx.
+_EU_CASE_RE = re.compile(r"(?:([CT])-)?(\d+)/(\d{2})")
 _YEAR_RE = re.compile(r"(?<!\d)((?:1[6-9]|20)\d{2})(?!\d)\D*(\d*)")
 
 
@@ -106,10 +112,22 @@ def _number_key(number, type_="act"):
         m = _CASE_RE.fullmatch(number)
         if m:
             return (int(m.group(2)), int(m.group(4)), True, m.group(1) + m.group(3))
+        m = _CASE_DATE_RE.fullmatch(number)
+        if m:
+            return (int(m.group(2)), int(m.group(3)), True, m.group(1) + " mål nr")
     elif type_ in ("eu_regulation", "eu_directive", "eu_decision"):
         key = _eu_key(number)
         if key:
             return (*key, True, number)
+    elif type_ == "treaty":
+        m = _TREATY_RE.fullmatch(number)
+        if m:
+            return (int(m.group(1)), int(m.group(2)), True, "SÖ")
+    elif type_ == "eu_judgment":
+        m = _EU_CASE_RE.fullmatch(number)
+        if m:
+            year = int(m.group(3))
+            return (year + (1900 if year >= 50 else 2000), int(m.group(2)), True, m.group(1) or "C")
     elif type_ == "municipal_regulation":
         m = _YEAR_RE.search(number)
         return (int(m.group(1)), int(m.group(2) or 0), True, number) if m else (0, 0, True, number)

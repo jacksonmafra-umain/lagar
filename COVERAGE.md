@@ -10,10 +10,12 @@ completeness: read this file next to those numbers.
 | layer | source | cut-off |
 | --- | --- | --- |
 | fundamental, SFS | Riksdagen open data, `https://data.riksdagen.se/dokumentlista/?doktyp=sfs` and `https://data.riksdagen.se/dokument/<id>` | 2026-10-27 |
-| SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-28 (sample) |
+| SFS PDF manifest | `https://svenskforfattningssamling.se/regulations/<year>/index.html` and `/doc/<year><number>.html` | 2026-10-30 (full run, 2018 to 2026: 13,547 PDFs; incremental `sfspdf --rss` in the daily `Sync SFS`) |
 | SFS amendment register | `https://rkrattsbaser.gov.se/sfsr?bet=<number>` | 2026-10-28 (pilot: 1974:152, 1962:700, 1998:808) |
-| agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/` | 2026-10-29 (full run of AFS, FFFS and TSFS: 15, 121 and 622 base regulations) |
+| SÖ treaties | Regeringen.se, `https://www.regeringen.se/sitemap.xml` and the pages under `/rattsliga-dokument/sveriges-internationella-overenskommelser/`, PDFs under `/contentassets/` | 2026-10-30 (full run, every year; weekly `Sync SÖ` since then) |
+| agency regulations | Arbetsmiljöverket `https://www.av.se/.../publikationer/foreskrifter/`, Finansinspektionen `https://www.fi.se/sv/vara-register/fffs/forteckning-fffs/`, Transportstyrelsen `https://www.transportstyrelsen.se/.../ts-foreskrifter-i-nummerordning/<year>/`, and the listing pages of MIGRFS, KAMFS, KRFS, KFMFS, KFS and MEMYFS (`collector/lagar/agency_generic.py`) | 2026-10-29 (full run of AFS, FFFS and TSFS: 15, 121 and 622 base regulations); 2026-10-30 (MIGRFS, KAMFS, KRFS, KFMFS, KFS, MEMYFS: 121) |
 | EU law | Publications Office Cellar: SPARQL `https://publications.europa.eu/webapi/rdf/sparql` and `https://publications.europa.eu/resource/celex/<CELEX>` (Swedish) | 2026-10-29 (curated list with latest consolidated versions; daily `Sync EU` since then) |
+| EU case law | Publications Office Cellar, as for EU law; judgments listed by SPARQL (`cdm:case-law_interpretes_resource_legal`) | 2026-10-30 (judgments interpreting the curated acts; daily `Sync EU` since then) |
 | regional (county) | Länsstyrelserna, `https://www.lansstyrelsen.se`: the 21 landing pages in `collector/data/counties.json`, their year index and detail pages (Stockholm, Halland, Gävleborg), PDF links, file-share modules and year folders (the other 18) | 2026-10-29 (2025–2026, all 21 counties) |
 | case law | Sveriges Domstolar, `https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar` (referat and notiser) | 2026-10-29 (full run: publications up to 2026-10-28; daily sync from then on) |
 | municipal regulations | Stockholm `https://start.stockholm/om-stockholms-stad/politik-och-demokrati/styrdokument/kommunal-forfattningssamling/`, Göteborg Domino view `https://www4.goteborg.se/prod/Stadsledningskontoret/LIS/Verksamhetshandbok/Forfattn.nsf/vyHandBok`, Malmö `https://malmo.se/Om-Malmo-stad/Demokrati-och-politik/Sa-styrs-Malmo/Forfattningssamling/` (citizen rules and taxor pages) | 2026-10-29 (sample: five documents per kommun) |
@@ -46,10 +48,31 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   `reprinted_by` only list numbers; many of them point to acts not yet collected
   (the audit reports the count).
 - Authoritative PDFs from svenskforfattningssamling.se (acts published from
-  2018-04 on) are recorded in `sources/sfs-pdf-manifest.json` with their
-  SHA-256, but only a five-act sample of 2026 is in it so far; the full crawl
-  has not run. The PDF bytes are not stored, and the documents stay marked
-  `authoritative: false` until the corpus text is tied to a snapshot.
+  2018-04 on, the year indexes start in 2018) are all recorded in
+  `sources/sfs-pdf-manifest.json` with their SHA-256 (13,547 on 2026-10-30).
+  Older acts have no PDF there. The PDF bytes are not stored, and the
+  documents stay marked `authoritative: false`; Riksdagen remains the text
+  source. `collect.py sfsverify` extracts the PDF text and compares it with the
+  corpus text (`sources/sfs-pdf-verification.json`): 635 match, 513 have been
+  amended since publication, 104 are repealed, 8 are print-only stubs and 47
+  differ (table layouts, words split in the Riksdagen text). 12,240 PDFs are
+  amendment acts or other numbers with no document of their own in the corpus.
+- SÖ treaties: all 3515 SÖ numbers published on regeringen.se on
+  2026-10-30 are in the corpus (`treaty`, `corpus/sfs/treaties/`). Text is
+  extracted from the PDFs only for SÖ 2010 onward (298 treaties); 36 of them
+  have no usable text layer (35 scanned PDFs, one without a Unicode font map)
+  and, like every older treaty, keep the page metadata and the PDF link only.
+  The PDFs are recorded in `sources/so-pdf-manifest.json` with size and
+  SHA-256; the bytes are not kept. 214 pages repeat an SÖ number already used
+  by another page: mostly the same treaty published again (bulk folders such
+  as `1994/01/` and `2012/12/`, often with extra PDFs such as reservations or
+  succession notes), and a few 1920s pages whose number belongs to a
+  different treaty. The page whose URL sorts first keeps the number; the
+  extra PDFs and the misnumbered treaties are not in the corpus. 272 pages in
+  the section have no SÖ number (declarations of intent and similar) and are
+  skipped. `issued` is the date of signature; `in_force` is set only when the
+  page states the entry into force. Treaties are kept with
+  `authoritative: false`.
 - EU law covers only the curated list in `collector/data/eu-acts.json` (43
   acts, 70 documents: 40 Official Journal texts and 30 latest consolidated
   versions); its target is that list, not the roughly 47,000 acts in force.
@@ -68,17 +91,32 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   Official Journal texts keep it `null`. Rows of a table nested inside another
   table's cell stay on one line, and the `M1`, `M2` … labels of a consolidated
   text's amendment list are dropped with the other modification markers.
+- EU case law covers only the judgments of the Court of Justice and the
+  General Court that Cellar records as interpreting an act of the curated EU
+  list: 611 on 2026-10-30, of which 605 are in the corpus in Swedish
+  (`eu_judgment`, `corpus/eu/judgments/`). Six are gaps in
+  `sources/eu-case-law-manifest.json`: four have no Swedish XHTML or HTML
+  manifestation and two (C-45/12, C-244/13) answer content negotiation with
+  several Swedish documents (HTTP 300). Orders, Advocate General opinions,
+  judgments interpreting other acts and the Civil Service Tribunal are not
+  collected. The Swedish text is authentic only in cases conducted in Swedish,
+  so the others are stored with `authoritative: false`.
 - Case law: 16390 of the 16640 referat and notiser the API listed on
   2026-10-29 are in the corpus; the daily `Sync case law` workflow adds new and
   republished ones. Only the anonymised referat and notiser are collected.
   Rulings the courts publish in full (`DOM_ELLER_BESLUT`, about 760),
   leave-to-appeal and preliminary-ruling notices and all attachments (PDF) are
   left out by design (19 such items appeared in the referat/notis listing). 231
-  publications are recorded as failed instead of written: 213 have no report
+  publications were recorded as failed instead of written: 213 had no report
   reference in the schema's form (mostly older kammarrätt and Marknadsdomstolen
   referat with only a case number), 9 repeat a reference already stored from
   another publication (joined cases published twice, e.g. NJA 2017:88, MÖD
-  2025:53), and 9 contain what looks like a personal identity number. SFS
+  2025:53), and 9 contain what looks like a personal identity number. The
+  kammarrätt referat the courts list without a report reference (76 on
+  2026-10-30: KGG 8, KJO 23, KST 42, KSU 3, decided 2000 to 2007) are collected
+  since then under the court's abbreviation, decision date and case number,
+  such as `KRNJ 2007-01-09 mål nr 1097-06`; a per-court scan that day found no
+  other referat or notis without a reference. SFS
   references (`lagrumLista`) stay plain text in the body; the app's reader links
   the citation forms to the SFS documents the API publishes.
 - Agency regulations: three of about 100 series (lagrummet.se lists them) are
@@ -102,10 +140,108 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   TSFS have no decision date on their pages. Arbetsmiljöverket's robots.txt
   disallows its folder of original PDFs, which is never requested. Boverket
   (BFS, API key probably needed; not signed up for now), Skatteverket (SKVFS:
-  an earlier robots.txt request was rejected by a WAF, on 2026-10-29 it
-  answered normally), Migrationsverket (MIGRFS) and the other series are not
-  collected yet (#115). [AGENCIES.md](AGENCIES.md) lists every series and
+  on 2026-10-30 `www4.skatteverket.se` answered both robots.txt and the SKVFS
+  listing with a WAF "Request Rejected" page, so the series is a gap, #206;
+  PTSFS: pts.se serves a Radware bot challenge, #194),
+  and the other series are not collected yet (#115).
+  Six more series are collected as of 2026-10-30 through the generic link-list
+  adapter, every base regulation their agencies list: MIGRFS (21 in force),
+  KAMFS (74, in force and earlier ones), KRFS (12), KFMFS (6), KFS (4) and
+  MEMYFS (4). Each agency publishes the text only as PDF, so their bodies hold
+  the title, the amending regulations named on the listing and links to the
+  PDFs (SHA-256 in `sources/agency-pdf-manifest.json`); the text will follow
+  through the shared PDF text helper. Titles come from the listings; dates are
+  not on them, so `issued` and `in_force` are null.
+  Eleven more series follow on 2026-10-30: NFS (164 of the 166 base
+  regulation pages in Naturvårdsverket's sitemap, in force and repealed, with
+  `repealed` set where the page says so; NFS 2000:2 and NFS 2001:20 do not
+  name their number), FKFS (147 in force, with dates from Försäkringskassan's
+  register; three old ones are Word files, not hashed), KOVFS (22), HVMFS
+  (21), MCFFS (11), AFFS (9), MDFFS (6), AGVFS (5), ELSÄK-FS (3), KIFS (3) and
+  IAFFS (3). AFFS and MDFFS publish the full text as HTML and have it; the
+  others publish the text only as PDF. Predecessor series listed on the same
+  pages (RFFS, MSBFS, FIFS, AMSFS) are not collected. Bolagsverket (BOLFS)
+  answers with a bot check and Konkurrensverket (KKVFS) with 403 Forbidden;
+  neither is bypassed, both are gaps.
+  [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
+- Agency series published as a list of PDF links (configured in
+  `collector/data/agency-series.json`, read by `ListedAdapter`): RGKFS (6 base
+  regulations), RIFS (14), SGU-FS (6), SiSFS (30), TVFS (10), UFS (5), VALFS
+  (17) and VRFS (3), as of 2026-10-30: every base regulation linked from the
+  agency's regulation page. Amending and repealing regulations are listed in
+  `amended_by`; consolidated versions and reprints are linked from the base
+  regulation. The text is only in the PDFs (hashed in
+  `sources/agency-pdf-manifest.json`, not extracted yet), so the bodies hold
+  the number, the title from the link text, the issuer and the PDF links; RIFS,
+  UFS and some TVFS links carry only the number, so those documents are titled
+  with it. A base regulation whose own PDF is not linked with its number (RGKFS
+  2006:1, TVFS 2015:1) is known through its reprint. Older series of the same
+  agencies (Revisorsnämnden's RNFS on the RIFS page) are not collected.
+- SKSFS (18 base regulations) and SSMFS (41) as of 2026-10-30, the same way.
+  Skogsstyrelsen writes numbers as `SKSFS 2011 7` and files every amendment in
+  its base regulation's folder; a regulation that replaced another (SKSFS
+  2021:1, filed under 1998:2 and in its own folder) is stored as a base
+  regulation and also listed in the older one's `amended_by`. SSMFS has one
+  page per base regulation in force with the original and consolidated PDFs and
+  the amendments.
+- ÅFS (Åklagarmyndigheten, 23 base regulations in force) as of 2026-10-30,
+  from the cards on its ÅFS page, which give the decision and publication
+  dates. The 77 repealed regulations, the 41 notices and the regulations
+  numbered in ÅFS that change Riksåklagarens older regulations (`föreskrifter
+  (1999:178)`) are not stored. Document ids map `å` to `aa` (`aafs-2023-7`) so
+  they do not collide with Arbetsmiljöverket's AFS.
+- STAFS (Swedac, 187 base regulations: 37 in force and 150 repealed) as of
+  2026-10-30, in full text: Swedac's register `regelverk.swedac.se` publishes
+  `foreskrifter.json` (every regulation with dates, the regulation it amends
+  and its repeal) and a Markdown file per regulation, the consolidated version
+  where there is one. Repealed regulations are stored with `repealed` set; 15
+  repealed ones whose repeal date the index does not give are not stored. The
+  PDF folder on `www.swedac.se` is disallowed by robots.txt and is not used.
+- PFS (Pensionsmyndigheten, 81 base regulations) and PRVFS (Patent- och
+  registreringsverket, 17 base regulations in force, from its division A1) as
+  of 2026-10-30, with links to the PDFs. Pensionsmyndigheten's page also lists
+  regulations of the predecessor series (FKFS, RFFS, PPMFS) still in force;
+  only PFS numbers are collected.
+- PMFS (Polismyndigheten, 50 regulations in force) and RPSFS (29 regulations of
+  the former Rikspolisstyrelsen still in force) as of 2026-10-30, from the four
+  pages of Polismyndigheten's list, with entry into force, amendments and the
+  consolidated (sammanställd) PDFs. Repealed regulations are only listed
+  separately and are not collected.
+- SCB-FS (Statistiska centralbyrån, 48 base regulations on reporting duties in
+  force) as of 2026-10-30, in full text from SCB's page per regulation. SCB's
+  table also lists amending and repealing regulations (44, in `amended_by`).
+  Not collected: the monthly consumer price index notices (KPI, about 110) and
+  the regulations on official statistics, published only as PDF on a separate
+  page; the series is partial.
+- UHRFS (Universitets- och högskolerådet, 13 base regulations in force with
+  their consolidated PDFs), STEMFS (Energimyndigheten's document archive,
+  read at the 10 s crawl delay its robots.txt asks for) and RFS
+  (Riksdagsförvaltningen, from Riksdagen's open data `doktyp=rfs`, in full
+  text: the consolidated "Fulltext" document where there is one) as of
+  2026-10-30. RFS: only base regulations in force are stored; the open data
+  marks repealed ones (`Upphävd`) without a repeal date.
+- RA-FS (Riksarkivet, general regulations) as of 2026-10-30, from the JSON API
+  behind its register `foreskrifter.riksarkivet.se` (`api/rafs/sok`): base
+  regulations in force and repealed ones, whose `repealed` date is the entry
+  into force of the regulation that repealed them; a repealed regulation whose
+  repealing regulation is not in the register is not stored. Riksarkivet's
+  agency-specific regulations (RA-MS) are not collected.
+- SKOLFS (Skolverket, 965 base regulations in force), SJÖFS (Sjöfartsverket,
+  44 base regulations in force from its systematic list) and TRVFS
+  (Trafikverket, 42 regulations) as of 2026-10-30. SKOLFS comes from the API
+  behind Skolverket's search app (`skolfs.skolverket.se/api`), with decision,
+  publication and entry-into-force dates and the latest consolidated PDF;
+  expired regulations are not stored (no repeal date). SJÖFS: regulations
+  numbered before plain ordinals (`1952:A9`) and rows marked repealed are not
+  stored; many of Sjöfartsverket's former regulations now live in TSFS.
+  TRVFS: Trafikverket's search form (a POST per year, without speed
+  regulations and repealed ones); its road-specific speed regulations
+  (hastighetsföreskrifter) and the older VVFS and BVFS series are not
+  collected, and Transportstyrelsen's regulations republished there are
+  already in TSFS.
+- PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
+  regulation library with a Radware bot-verification page (#194).
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630
@@ -150,6 +286,12 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Göteborg prints no KFS-style number. The detail pages carry a
     `noindex,nofollow` robots meta tag (a search-engine indexing hint);
     robots.txt allows the paths.
+  - Malå, Storuman and Åsele publish part of their taxor and hälsoskydd rules only as
+    HTML pages, which the PDF listings do not cover; Lycksele's lokala
+    ordningsföreskrifter PDF was not found. Nordmaling, Norsjö, Malå, Storuman,
+    Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
+    page without headings, so their configs keep only listed file names; a new
+    document with another name is not picked up until the config is updated.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources

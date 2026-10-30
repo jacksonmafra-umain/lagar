@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://storuman.se/kommun/Kommun--politik/kommunal-forfattningssamling/": "2421-listing1.html",
+    "https://storuman.se/kommun/Kommun--politik/Taxor-och-avgifter/": "2421-listing2.html"
+  },
+  "count": 7,
+  "sample": {
+    "number": "lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon",
+    "title": "Lokala föreskrifter för att skydda människors hälsa och miljö",
+    "url": "https://storuman.se/contentassets/b2daa087ebc046e4b2634e4c4a81b64d/lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon.pdf"
+  },
+  "excluded": []
+}

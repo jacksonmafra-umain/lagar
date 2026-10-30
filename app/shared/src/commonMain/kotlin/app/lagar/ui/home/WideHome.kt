@@ -97,6 +97,7 @@ internal fun WideHome(
     onChooseLocation: () -> Unit,
     onSelectScope: (Scope) -> Unit,
     onOpenLocality: (layer: DisplayLayer, code: String, name: String) -> Unit,
+    onRetry: () -> Unit,
 ) {
     val spacing = LagarTheme.spacing
     val home = data.localityHome
@@ -118,6 +119,9 @@ internal fun WideHome(
                     WideSearch(data.scope, onOpenSearch, onOpenAdvancedSearch, onOpenDocument, onOpenLayer)
                 }
             }
+        }
+        if (data.unavailable.isNotEmpty()) {
+            item(key = "partial") { WideContent { PartialLoadNotice(onRetry) } }
         }
         item(key = "hierarchy") {
             WideContent {

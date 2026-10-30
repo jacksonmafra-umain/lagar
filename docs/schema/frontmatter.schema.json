@@ -7,7 +7,7 @@
   "properties": {
     "id": {"type": "string", "pattern": "^[a-z0-9_]+-[0-9a-z-]+$"},
     "title": {"type": "string"},
-    "type": {"type": "string", "enum": ["fundamental_law", "act", "ordinance", "other_statute", "agency_regulation", "case_report", "case_notice", "eu_regulation", "eu_directive", "eu_decision", "county_regulation", "municipal_regulation"]},
+    "type": {"type": "string", "enum": ["fundamental_law", "act", "ordinance", "other_statute", "treaty", "agency_regulation", "case_report", "case_notice", "eu_regulation", "eu_directive", "eu_decision", "eu_judgment", "county_regulation", "municipal_regulation"]},
     "layer": {"type": "string", "enum": ["fundamental", "sfs", "agency", "case_law", "eu", "region", "municipality", "service"]},
     "number": {"type": "string"},
     "issued": {"type": ["string", "null"], "format": "date"},
@@ -66,14 +66,14 @@
       }
     },
     {
-      "$comment": "Agency regulations: series-prefixed numbers such as AFS 2023:1, FFFS 2014:1 or HSLF-FS 2016:40.",
+      "$comment": "Agency regulations: series-prefixed numbers such as AFS 2023:1, FFFS 2014:1, HSLF-FS 2016:40 or SiSFS 2025:1 (mixed case as the agency writes it).",
       "if": {"required": ["type"], "properties": {"type": {"const": "agency_regulation"}}},
       "then": {
         "properties": {
-          "number": {"pattern": "^[A-ZÅÄÖ][A-ZÅÄÖ0-9]*(-[A-ZÅÄÖ0-9]+)* \\d{4}:\\d+$"},
-          "amended_by": {"items": {"pattern": "^[A-ZÅÄÖ][A-ZÅÄÖ0-9]*(-[A-ZÅÄÖ0-9]+)* \\d{4}:\\d+$"}},
-          "amended_through": {"pattern": "^[A-ZÅÄÖ][A-ZÅÄÖ0-9]*(-[A-ZÅÄÖ0-9]+)* \\d{4}:\\d+$"},
-          "reprinted_by": {"items": {"pattern": "^[A-ZÅÄÖ][A-ZÅÄÖ0-9]*(-[A-ZÅÄÖ0-9]+)* \\d{4}:\\d+$"}},
+          "number": {"pattern": "^[A-ZÅÄÖ][A-Za-zÅÄÖåäö0-9]*(-[A-Za-zÅÄÖåäö0-9]+)* \\d{4}:\\d+$"},
+          "amended_by": {"items": {"pattern": "^[A-ZÅÄÖ][A-Za-zÅÄÖåäö0-9]*(-[A-Za-zÅÄÖåäö0-9]+)* \\d{4}:\\d+$"}},
+          "amended_through": {"pattern": "^[A-ZÅÄÖ][A-Za-zÅÄÖåäö0-9]*(-[A-Za-zÅÄÖåäö0-9]+)* \\d{4}:\\d+$"},
+          "reprinted_by": {"items": {"pattern": "^[A-ZÅÄÖ][A-Za-zÅÄÖåäö0-9]*(-[A-Za-zÅÄÖåäö0-9]+)* \\d{4}:\\d+$"}},
           "court": {"type": "null"},
           "ecli": {"type": "null"},
           "celex": {"type": "null"},
@@ -83,12 +83,12 @@
       }
     },
     {
-      "$comment": "Case law: report references such as NJA 2019 s. 2, HFD 2020 ref. 5, MIG 2026:10 or AD 2020 nr 45; reports are never amended.",
+      "$comment": "Case law: report references such as NJA 2019 s. 2, HFD 2020 ref. 5, MIG 2026:10 or AD 2020 nr 45, or for kammarrätt referat without one KRNJ 2007-01-09 mål nr 1097-06; reports are never amended.",
       "if": {"required": ["type"], "properties": {"type": {"enum": ["case_report", "case_notice"]}}},
       "then": {
         "required": ["court"],
         "properties": {
-          "number": {"pattern": "^[A-ZÅÄÖ]{2,5} \\d{4}(:\\d+| (s\\.|ref\\.|not\\.|nr|N) \\d+)$"},
+          "number": {"pattern": "^[A-ZÅÄÖ]{2,5} \\d{4}(:\\d+| (s\\.|ref\\.|not\\.|nr|N) \\d+|-\\d{2}-\\d{2} mål nr \\d{1,6}-\\d{2})$"},
           "amended_by": {"maxItems": 0},
           "amended_through": {"type": "null"},
           "reprinted_by": {"maxItems": 0},
@@ -112,6 +112,42 @@
           "celex": {"type": "string"},
           "court": {"type": "null"},
           "ecli": {"type": "null"},
+          "region_code": {"type": "null"},
+          "municipality_code": {"type": "null"}
+        }
+      }
+    },
+    {
+      "$comment": "EU judgments: the case number, such as C-293/12, T-12/19 or 26/62 (Court of Justice cases before 1989); court is the CELEX type, CJ (Court of Justice) or TJ (General Court).",
+      "if": {"required": ["type"], "properties": {"type": {"const": "eu_judgment"}}},
+      "then": {
+        "required": ["celex", "court"],
+        "properties": {
+          "number": {"pattern": "^([CT]-)?\\d{1,4}/\\d{2}$"},
+          "amended_by": {"maxItems": 0},
+          "amended_through": {"type": "null"},
+          "reprinted_by": {"maxItems": 0},
+          "celex": {"type": "string", "pattern": "^6\\d{4}(CJ|TJ)\\d{4}$"},
+          "court": {"enum": ["CJ", "TJ"]},
+          "region_code": {"type": "null"},
+          "municipality_code": {"type": "null"}
+        }
+      }
+    },
+    {
+      "$comment": "Treaties published in Sveriges internationella överenskommelser: the SÖ number, such as SÖ 2023:3; treaties are not amended in place.",
+      "if": {"required": ["type"], "properties": {"type": {"const": "treaty"}}},
+      "then": {
+        "properties": {
+          "id": {"pattern": "^so-\\d{4}-\\d+$"},
+          "number": {"pattern": "^SÖ \\d{4}:\\d+$"},
+          "amended_by": {"maxItems": 0},
+          "amended_through": {"type": "null"},
+          "reprinted_by": {"maxItems": 0},
+          "issuer": {"type": "null"},
+          "court": {"type": "null"},
+          "ecli": {"type": "null"},
+          "celex": {"type": "null"},
           "region_code": {"type": "null"},
           "municipality_code": {"type": "null"}
         }
