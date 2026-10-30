@@ -813,6 +813,14 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      reads the items that match as further listings (a Netpublicator channel); in every template the
      listing URL's query parameters are available as `_name` (`{_hash}`). JSON titles are
      HTML-unescaped.
+   - `mediaflow`: MediaFlow shares embedded on the kommun's page (Gävle). Each listing is a share's
+     token URL, `https://shareapi.mediaflow.com/1/oauth2/token?grant_type=refresh_token&refresh_token=<share id>`
+     (the share id is in the page's `MediaFlowShareLinks` box); the share's files are listed through
+     the API and numbered by their MediaFlow media number (`nr`). Download links are signed for five
+     minutes, so each document asks for a fresh one when it is fetched, the manifest records the
+     stable file URL (`.../1/file/<id>/downloads?share=<share id>`) and `page`, the kommun's page that
+     embeds the shares, is the document's `source`. `hosts` lists the kommun's host,
+     `shareapi.mediaflow.com` and `files.mediaflow.com`.
    - `href_titles` (`html_index`, `html_pages`): a link without text takes its title from the URL's
      file name (Vallentuna's sitemap lists `2.4.3 Avfallstaxa.pdf`). Sitemaps may be gzipped files
      (`sitemap1.xml.gz`).
