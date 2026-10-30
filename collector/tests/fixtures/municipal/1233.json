@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://vellinge.se/sitemap.xml": "1233-listing.xml",
+    "https://vellinge.se/sitemap1.xml.gz": "1233-listing-2.xml.gz"
+  },
+  "count": 2,
+  "sample": {
+    "number": "lokala-halsoskyddsforeskrifter",
+    "title": "lokala-halsoskyddsforeskrifter",
+    "url": "https://vellinge.se/kommun-och-politik/kommunfakta/styrande-dokument/lokala-halsoskyddsforeskrifter"
+  },
+  "excluded": []
+}
