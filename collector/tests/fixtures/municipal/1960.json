@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://kungsor.se/kommun-och-politik/styrande-dokument/allmanhet-och-naringsliv.html": "1960-listing1.html",
+    "https://kungsor.se/kommun-och-politik/styrande-dokument/taxor-och-avgifter.html": "1960-listing2.html"
+  },
+  "count": 39,
+  "sample": {
+    "number": "18.380852ed19e4062c657868d",
+    "title": "Allmänna lokala ordningsföreskrifter",
+    "url": "https://kungsor.se/download/18.380852ed19e4062c657868d/1779200823262/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
+  },
+  "excluded": []
+}
