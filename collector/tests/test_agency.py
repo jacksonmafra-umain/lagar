@@ -234,6 +234,32 @@ class ParseTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             stafs.parse_detail("---\nid: STAFS 2020:1\n---\n", entries["STAFS 2025:1"])
 
+    def test_prvfs_division_a1(self):
+        prv = agency.PrvAdapter()
+        entries = prv.parse_listing(fixture("agency-prvfs-a1.html"), prv.listing_url)
+        self.assertEqual([e.number for e in entries], ["PRVFS 2026:1", "PRVFS 2011:1", "PRVFS 1977:2"])
+        first, repealing, old = entries
+        self.assertTrue(first.title.startswith("Patent- och registreringsverkets (PRV) föreskrifter om skydd"))
+        self.assertNotIn("Bemyndigande", first.title)
+        self.assertEqual(first.amended_by, ["PRVFS 2026:2"])  # an unlabelled link, numbered by its file name
+        self.assertTrue(first.url.endswith("/26prvfs-1_o2.pdf"))
+        self.assertIn("(PRVFS 1986:1, V:3)", repealing.title)  # a reference in the title, not an amendment
+        self.assertEqual(repealing.amended_by, [])
+        self.assertEqual(old.amended_by, ["PRVFS 1986:2"])
+    def test_afs_a_listing(self):
+        adapter = agency.AklagareAdapter()
+        entries = adapter.parse_listing(fixture("agency-afs-a-listing.html"), adapter.listing_url)
+        self.assertEqual([(e.number, e.base) for e in entries], [
+            ("ÅFS 2023:7", True), ("ÅFS 2022:1", False), ("ÅFS 2024:7", False), ("ÅFS 2025:6", False),
+            ("ÅFS 2026:2", False)])
+        base = entries[0]
+        self.assertEqual(base.title, "Åklagarmyndighetens föreskrifter om internationellt samarbete")
+        self.assertEqual(base.amended_by, ["ÅFS 2026:2"])
+        regulation = adapter.regulation(base)
+        self.assertEqual((regulation.issued, regulation.published), ("2023-12-18", "2023-12-19"))
+        self.assertEqual(regulation.pdfs, [("ÅFS 2023:7", base.url)])
+        self.assertEqual(agency.corpus_id(base.number), "aafs-2023-7")
+
     def test_listed_series_config(self):
         series = agency.load_series()
         for code, adapter in series.items():

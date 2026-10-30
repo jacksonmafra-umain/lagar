@@ -753,6 +753,66 @@ def _markdown_document(text):
     return meta, body
 
 
+# --- Patent- och registreringsverket (PRVFS) --------------------------------
+
+_PRV_NUMBER = re.compile(r"(?:PRVFS\s*)?(\d{4}):\s?(\d+)\b")
+_PRV_FILE = re.compile(r"(?<![0-9])(\d{2})-?prvfs[-_]?(\d+)", re.I)
+
+
+class PrvAdapter:
+    """PRV's division A1, the base regulations in force: one paragraph each.
+
+    A paragraph starts with a link to the PDF labelled `2026:1, O:2` (number
+    and PRV's subject code), then the title and the enabling provision; links
+    to amending regulations follow, labelled with their number or unlabelled.
+    """
+
+    series = "PRVFS"
+    issuer = "Patent- och registreringsverket"
+    base_url = "https://www.prv.se"
+    listing_url = base_url + "/sv/om-oss/var-verksamhet/styrdokument/prvs-forfattningssamling/avdelning-a1---gallande-grundforfattningar/"
+    detail = False
+    has_text = False
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def _file_number(self, href):
+        match = _PRV_FILE.search(urllib.parse.unquote(href))
+        if match is None:
+            return None
+        year = int(match.group(1))
+        return f"PRVFS {year + (1900 if year >= 70 else 2000)}:{int(match.group(2))}"
+
+    def parse_listing(self, text, url):
+        main = parse_html(text).find("main")
+        entries = []
+        for paragraph in (main.find_all("p") if main is not None else []):
+            links = [a for a in paragraph.find_all("a") if ".pdf" in (a.attrs.get("href") or "")]
+            first = _PRV_NUMBER.match(links[0].text()) if links else None
+            if first is None:
+                continue
+            number = f"PRVFS {first.group(1)}:{int(first.group(2))}"
+            title = paragraph.text().removeprefix(links[0].text()).partition("Bemyndigande")[0]
+            amended_by, pdfs = set(), [(number, absolute(url, links[0].attrs["href"]))]
+            for link in links[1:]:
+                if link.text() and link.text() in title:
+                    continue  # a regulation the title refers to, e.g. the one it repeals
+                ref = _PRV_NUMBER.match(link.text())
+                other = f"PRVFS {ref.group(1)}:{int(ref.group(2))}" if ref else self._file_number(link.attrs["href"])
+                if other and other != number:
+                    amended_by.add(other)
+            entries.append(Entry(number=number, title=_clean(title).rstrip(".") or number,
+                                 url=pdfs[0][1], amended_by=sorted(amended_by, key=number_key), pdfs=pdfs))
+        if not entries:
+            raise ValueError("no regulations in PRV's division A1")
+        return entries
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, amended_by=list(entry.amended_by),
+                          version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
 # --- Åklagarmyndigheten (ÅFS) ----------------------------------------------
 
 _MONTHS = {name: i for i, name in enumerate((
@@ -1060,7 +1120,8 @@ def load_series(path=SERIES_CONFIG):
             for code, item in data["series"].items() if item.get("listing_urls")}
 
 
-ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter())}
+ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
+                                   PrvAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
