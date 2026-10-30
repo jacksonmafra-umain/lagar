@@ -1236,32 +1236,16 @@
       "note": "Tanum's rules are web pages in its A–Z list and are collected as page text; the avfallsföreskrifter page refers to Rambo AB's site (rambo.se) for the full text."
     },
     "1496": {
-      "status": "no_adapter",
-      "note": "skovde.se lists its regulations only as JSON embedded in the page script (OrdinanceCategory, FileUrl); the collector has no strategy for that list yet."
+      "status": "partial",
+      "note": "Only the taxor och avgifter page is collected; the lokala föreskrifter are listed as JSON inside the Next.js page's script data (static.skovde.se), which the collector cannot read yet."
     },
     "1780": {
-      "status": "no_adapter",
-      "note": "karlstad.se serves its documents from a SharePoint-backed list whose download links are built in the browser; no adapter yet."
-    },
-    "1864": {
-      "status": "no_adapter",
-      "note": "ljusnarsberg.se lists only internal documents on its styrande dokument page; föreskrifter and taxor are spread over topic pages."
-    },
-    "1884": {
-      "status": "no_adapter",
-      "note": "nora.se has no page listing its rules for residents; föreskrifter and taxor are spread over topic pages."
-    },
-    "2021": {
-      "status": "no_adapter",
-      "note": "vansbro.se links its documents through Ciceron with a per-visit session id in every link; no adapter yet."
+      "status": "robots",
+      "note": "karlstad.se lists SharePoint document ids; the files are served only through time-limited links on karlstadskommunonline.sharepoint.com, whose robots.txt disallows everything (checked 2026-10-30)."
     },
     "2029": {
       "status": "no_adapter",
       "note": "leksand.se publishes its författningssamling in a Netpublicator reader (JavaScript, noindex); no adapter yet."
-    },
-    "2081": {
-      "status": "no_adapter",
-      "note": "borlange.se uses the Sitevision file-share module with folders loaded in the browser; the PDFs are not in the served page, only in the sitemap."
     },
     "2180": {
       "status": "no_adapter",

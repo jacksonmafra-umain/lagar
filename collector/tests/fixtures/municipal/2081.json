@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://www.borlange.se/appresource/4.38f9fe4d170346e58ae75f/12.7565929c19be70efec837e84/files?folderId=19.dfa374d19e90a69f6a24b": "2081-listing1.json",
+    "https://www.borlange.se/appresource/4.38f9fe4d170346e58ae75f/12.7565929c19be70efec837e84/files?folderId=19.dfa374d19e90a69f6a256": "2081-listing2.json"
+  },
+  "count": 32,
+  "sample": {
+    "number": "18.497890ef177b640173e3eed",
+    "title": "ABVA-Allmäna bestämmelser",
+    "url": "https://www.borlange.se/download/18.497890ef177b640173e3eed/1614174472663/ABVA-Allm%C3%A4na%20best%C3%A4mmelser.pdf"
+  },
+  "excluded": []
+}
