@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.morbylanga.se/bygga-bo-miljo/vatten-och-avlopp/taxor-och-avgifter/": "0840-listing.html",
+    "https://www.morbylanga.se/bygga-bo-miljo/vatten-och-avlopp/vattenskyddsomraden-och-skyddsforeskrifter-for-vattentakter/": "0840-listing-2.html"
+  },
+  "count": 4,
+  "sample": {
+    "number": "taxa-for-allmanna-vattentjanster-antagen-av-kommunfullmaktige-251117-153pub",
+    "title": "Taxa för allmänna vattentjänster 2026 (VA-taxa)",
+    "url": "https://www.morbylanga.se/wp-content/uploads/2026/01/taxa-for-allmanna-vattentjanster-antagen-av-kommunfullmaktige-251117-153pub.pdf"
+  },
+  "excluded": [
+    "Årsredovisning för vatten och avlopp 2022",
+    "Årsredovisning för vatten och avlopp 2023",
+    "Årsredovisning för vatten och avlopp 2024"
+  ]
+}
