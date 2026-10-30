@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://hammaro.se/kommun-och-politik/om-hammaro/regler-och-styrande-dokument": "1761-listing.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "18.617417b191793a32bea7",
+    "title": "Lokal föreskrift för åläggande om gångbanerenhållning",
+    "url": "https://hammaro.se/download/18.617417b191793a32bea7/1724322774599/Lokal%20f%C3%B6reskrift%20f%C3%B6r%20%C3%A5l%C3%A4ggande%20om%20g%C3%A5ngbanerenh%C3%A5llning%20.pdf"
+  },
+  "excluded": [
+    "Arbetsordning för kommunfullmäktige",
+    "Bolagsordning AB Hammaröbostäder",
+    "Bolagsordning Hammarö Energi AB"
+  ]
+}

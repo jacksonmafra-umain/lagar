@@ -60,6 +60,224 @@
       "number_column": "txtSerialnumber",
       "kinds": ["Lokal föreskrift", "Taxor/avgifter"]
     },
+    "1737": {
+      "name": "Torsby",
+      "issuer": "Torsby kommun",
+      "region_code": "17",
+      "collection": "Torsby kommuns ordningsregler, taxor och avgifter",
+      "strategy": "html_index",
+      "hosts": ["torsby.se", "www.torsby.se"],
+      "listings": [
+        "https://torsby.se/kommunpolitik/reglerochstyrandedokument/ordningsregler.4.7308326156ca7fa796c9c63.html",
+        "https://torsby.se/kommunpolitik/kommunfakta/ekonomi/avgifterochtaxoralla.4.7308326156ca7fa796c9bc6.html",
+        "https://torsby.se/byggabomiljo/bygganyttandraellerriva/avgifterforbygglovochanmalan.4.7308326156ca7fa796c4a61.html"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://torsby\\.se/download/18\\.[0-9a-f]+/\\d+/(?![^?#]*(?:Fettavskiljare|Information%20till))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*(pdf|docx),\\s*[\\d.,]+\\s*[kM]B[^.]*\\.?\\s*(öppnas i nytt fönster\\.?)?\\s*$"]
+    },
+    "1760": {
+      "name": "Storfors",
+      "issuer": "Storfors kommun",
+      "region_code": "17",
+      "collection": "Storfors kommuns lagar och regler",
+      "strategy": "html_index",
+      "hosts": ["www.storfors.se", "storfors.se"],
+      "listings": ["https://www.storfors.se/kommunochpolitik/lagarochregler.4.7f1aedeb14e64fcd26ce55b5.html"],
+      "section_level": 2,
+      "sections": [
+        "Lokala ordningsföreskrifter",
+        "Lokala hälsoskyddsföreskrifter",
+        "Vatten och avlopp",
+        "Avfall",
+        "Gator och gångbanor",
+        "Torghandel"
+      ],
+      "link_pattern": "^https://www\\.storfors\\.se/download/18\\.[0-9a-f]+/\\d+/(?!Avfallsplan|17FS2019|17%20FS%202019|17%20FS%202008_101)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "17(?:%20| )FS(?:%20| )(\\d{4})_(\\d+)", "format": "17 FS {0}:{1}"},
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*(pdf|docx),\\s*[\\d.,]+\\s*[kM]B[^.]*\\.?\\s*(öppnas i nytt fönster\\.?)?\\s*$"]
+    },
+    "1761": {
+      "name": "Hammarö",
+      "issuer": "Hammarö kommun",
+      "region_code": "17",
+      "collection": "Hammarö kommuns regler och styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["hammaro.se", "www.hammaro.se"],
+      "listings": ["https://hammaro.se/kommun-och-politik/om-hammaro/regler-och-styrande-dokument"],
+      "section_level": 4,
+      "sections": [
+        "Lokala ordningsföreskrifter",
+        "Lokala föreskrifter miljö- och hälsoskydd samt avfall",
+        "Allmänna handlingar",
+        "Barnomsorg och fritidshem",
+        "Byggtaxa enligt plan- och bygglagen",
+        "Kart- och mättjänster",
+        "Offentlig livsmedelskontroll",
+        "Renhållning och återvinning",
+        "Tillsyn enligt miljöbalken",
+        "Tillsyn av tobak, alkohol och receptfria läkemedel",
+        "Tillsyn och kontroll",
+        "Upplåtelse av offentlig plats",
+        "VA-taxa"
+      ],
+      "link_pattern": "^https://hammaro\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*(pdf|docx),\\s*[\\d.,]+\\s*[kM]B[^.]*\\.?\\s*(öppnas i nytt fönster\\.?)?\\s*$"]
+    },
+    "1762": {
+      "name": "Munkfors",
+      "issuer": "Munkfors kommun",
+      "region_code": "17",
+      "collection": "Munkfors kommun, styrdokument och taxor",
+      "strategy": "html_index",
+      "hosts": ["www.munkfors.se", "munkfors.se"],
+      "listings": [
+        "https://www.munkfors.se/kommun-och-politik/om-munkfors/styrdokument/",
+        "https://www.munkfors.se/boende-miljo-trafik/vatten-och-avlopp/taxa-for-vatten-och-avloppsanlaggning/",
+        "https://www.munkfors.se/naringsliv-och-arbete/tillstand-inom-naringslivsverksamhet/handel-och-evenemang/torghandel/",
+        "https://www.munkfors.se/naringsliv-och-arbete/tillstand-inom-naringslivsverksamhet/tobak/"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.munkfors\\.se/wp-content/uploads/\\d{4}/\\d{2}/(?=[^?#/]*(?:ordningsforeskrifter|halsoskyddsforeskrifter|va-taxa|Ordningsstadga|taxa-for-provning))[^?#/]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/([^/]+)\\.pdf$"}
+      ],
+      "title_strip": ["\\s*\\(pdf[^)]*\\)\\s*$"]
+    },
+    "1764": {
+      "name": "Grums",
+      "issuer": "Grums kommun",
+      "region_code": "17",
+      "collection": "Grums kommuns författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.grums.se", "grums.se"],
+      "listings": ["https://www.grums.se/kommunpolitik/forfattningssamling.3189.html"],
+      "section_level": 2,
+      "sections": ["Lokala föreskrifter", "Taxor", "Taxor och avgifter"],
+      "link_pattern": "^https://www\\.grums\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*(pdf|docx),\\s*[\\d.,]+\\s*[kM]B[^.]*\\.?\\s*(öppnas i nytt fönster\\.?)?\\s*$"]
+    },
+    "1765": {
+      "name": "Årjäng",
+      "issuer": "Årjängs kommun",
+      "region_code": "17",
+      "collection": "Årjängs kommuns föreskrifter, regler och avgifter",
+      "strategy": "html_index",
+      "hosts": ["www.arjang.se", "arjang.se"],
+      "listings": [
+        "https://www.arjang.se/kommunalservice/startsida/kommunochpolitik/foreskrifterreglerochavgifter.2682.html"
+      ],
+      "section_level": 2,
+      "sections": ["Lokala föreskrifter", "Taxor och avgifter"],
+      "link_pattern": "^https://www\\.arjang\\.se/download/18\\.[0-9a-f]+/\\d+/(?!Riktlinjer|Policy|Integrationspolitiskt|Avfallsplan|F%C3%B6reskrifter%20om%20arkiv)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\.?\\s*\\.[Pp][Dd][Ff]\\s+Pdf,.*$"]
+    },
+    "1766": {
+      "name": "Sunne",
+      "issuer": "Sunne kommun",
+      "region_code": "17",
+      "collection": "Sunne kommuns författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.sunne.se", "sunne.se"],
+      "listings": [
+        "https://www.sunne.se/kommun/kommun-och-politik/kommunfakta/forfattningssamling/byggaboochmiljo/",
+        "https://www.sunne.se/kommun/kommun-och-politik/kommunfakta/forfattningssamling/taxor-och-avgifter/",
+        "https://www.sunne.se/kommun/kommun-och-politik/kommunfakta/forfattningssamling/samhallsskyddochsakerhet/",
+        "https://www.sunne.se/kommun/kommun-och-politik/kommunfakta/forfattningssamling/utbildningochbarnomsorg/"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Lokala föreskrifter",
+        "Verksamhet under kommunstyrelsen",
+        "Verksamhet under Miljö- och bygglovsnämnden",
+        "Räddningstjänst",
+        "Barnomsorg"
+      ],
+      "link_pattern": "^https://www\\.sunne\\.se/globalassets/(?!(?:[^?#]*/)?(?:riktlinjer-for-skolskjuts|riktlinjer-for-fristaende|riktlinjer-for-tillsyn|handlingsprogram|riktlinjer-for-sotning))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/([^/]+)\\.pdf$"}
+      ],
+      "title_strip": ["\\s*\\(pdf[^)]*\\)\\s*$"]
+    },
+    "1781": {
+      "name": "Kristinehamn",
+      "issuer": "Kristinehamns kommun",
+      "region_code": "17",
+      "collection": "Kristinehamns kommun, lokala bestämmelser och taxor",
+      "strategy": "html_index",
+      "hosts": ["www.kristinehamn.se", "kristinehamn.se"],
+      "listings": [
+        "https://www.kristinehamn.se/kommun-och-politik/lokala-bestammelser-planer-och-policydokument/",
+        "https://www.kristinehamn.se/kommun-och-politik/ekonomi-och-budget/taxor-och-avgifter/"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.kristinehamn\\.se/(?:contentassets|globalassets)/(?:[^?#/]+/)*(?=(?:[^?#/]*(?:foreskrift|abva|anvisningar|torghandelsstadga|taxa|taxe|avgift|taxor))|bilaga_[1-4]\\.pdf)[^?#/]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/([^/]+)\\.pdf$"}
+      ],
+      "title_strip": ["\\s*\\(pdf[^)]*\\)\\s*$"]
+    },
+    "1782": {
+      "name": "Filipstad",
+      "issuer": "Filipstads kommun",
+      "region_code": "17",
+      "collection": "Filipstads kommunala föreskrifter, taxor och avgifter",
+      "strategy": "html_index",
+      "hosts": ["www.filipstad.se", "filipstad.se"],
+      "listings": [
+        "https://www.filipstad.se/toppmeny/kommunochpolitik/omkommunen/kommunalaforeskrifter.2179.html",
+        "https://www.filipstad.se/toppmeny/bogataochmiljo/avfallochrenhallning/taxorforeskrifterochstyrdokumentforrenhallningifilipstadskommun.4722.html",
+        "https://www.filipstad.se/toppmeny/bogataochmiljo/vattenochavlopp/taxorforeskrifterochstyrdokumentforvattenochavloppifilipstadskommun.4724.html"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.filipstad\\.se/download/18\\.[0-9a-f]+/\\d+/(?!Avfallsplan|Bilagor%20till|Vattentj%C3%A4nstplan|Strategisk)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*(pdf|docx),\\s*[\\d.,]+\\s*[kM]B[^.]*\\.?\\s*(öppnas i nytt fönster\\.?)?\\s*$",
+        "\\s+i sin helhet\\s*$",
+        "^Föreskriften\\s+(?=\\S)"
+      ]
+    },
+    "1783": {
+      "name": "Hagfors",
+      "issuer": "Hagfors kommun",
+      "region_code": "17",
+      "collection": "Hagfors kommun, taxor och renhållningsordning",
+      "strategy": "html_index",
+      "hosts": ["www.hagfors.se", "hagfors.se"],
+      "listings": [
+        "https://www.hagfors.se/kommun-och-politik/budget-skatt-och-ekonomi/skattesats-och-taxor",
+        "https://www.hagfors.se/bygga-bo-och-miljo/avfall-och-atervinning/avfallstaxan"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.hagfors\\.se/download/(?!18\\.42224fb19ed4385c2465b82/)18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*(pdf|docx),\\s*[\\d.,]+\\s*[kM]B[^.]*\\.?\\s*(öppnas i nytt fönster\\.?)?\\s*$"]
+    },
     "2161": {
       "name": "Ljusdal",
       "issuer": "Ljusdals kommun",
