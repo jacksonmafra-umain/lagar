@@ -93,10 +93,11 @@ def corpus_id(number):
 
 
 def absolute(base, href):
-    """An absolute URL for `href`, with spaces and other unsafe path characters quoted."""
+    """An absolute URL for `href`, with spaces and other unsafe path and query characters quoted."""
     parts = urllib.parse.urlsplit(urllib.parse.urljoin(base, html.unescape(href.strip())))
     path = urllib.parse.quote(urllib.parse.unquote(parts.path), safe="/:@!$&'()*+,;=-._~")
-    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, path, parts.query, ""))
+    query = urllib.parse.quote(parts.query, safe="/:@!$&'()*+,;=-._~?%")  # keeps existing escapes
+    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, path, query, ""))
 
 
 # --- a small DOM -----------------------------------------------------------
@@ -1039,6 +1040,416 @@ class ScbAdapter:
         )
 
 
+# --- Energimyndigheten (STEMFS) ---------------------------------------------
+
+_STEMFS_REF = re.compile(r"STEMFS (\d{4}):0*(\d+)")
+_STEM_ITEM = re.compile(r'<div id="[^"]*_itemListControl_\d+_([0-9a-f]{32})_titleDiv')
+_STEM_NEXT = re.compile(r'<a[^>]*class="next"[^>]*href="([^"]+)"|<a[^>]*href="([^"]+)"[^>]*class="next"')
+
+
+class EnergimyndighetenAdapter:
+    """Energimyndigheten's document archive, category Föreskrifter: 40 items a page.
+
+    An item has the number (or a title holding it), a description that is the
+    regulation's title, and a download link to the PDF. The site asks for a
+    crawl delay of 10 s, which the run honours.
+    """
+
+    series = "STEMFS"
+    issuer = "Statens energimyndighet"
+    base_url = "https://energimyndigheten.a-w2m.se"
+    listing_url = base_url + "/System/TemplateNavigate.aspx?p=Arkitektkopia&l=t&view=672&cat=%2FF%C3%B6reskrifter"
+    detail = False
+    has_text = False
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def more_pages(self, text, url):
+        match = _STEM_NEXT.search(text)
+        if match is None:
+            return []
+        parts = urllib.parse.urlsplit(absolute(url, match.group(1) or match.group(2)))
+        return [urllib.parse.urlunsplit((parts.scheme, parts.hostname, parts.path, parts.query, ""))]
+
+    def parse_listing(self, text, url):
+        starts = list(_STEM_ITEM.finditer(text))
+        items, amending = [], {}
+        for here, after in zip(starts, starts[1:] + [None]):
+            item = parse_html(text[here.start():after.start() if after else len(text)])
+            names = [_clean(n.text()) for n in item.find_all("div", "value") if _clean(n.text())]
+            title_link = item.find("a")
+            heading = _clean(title_link.text()) if title_link is not None else ""
+            match = _STEMFS_REF.search(heading) or next((_STEMFS_REF.search(n) for n in names if _STEMFS_REF.search(n)), None)
+            pdf = next((a for a in item.find_all("a") if "GetTemplateResource" in (a.attrs.get("href") or "")), None)
+            if match is None or pdf is None:
+                continue
+            number = f"STEMFS {match.group(1)}:{int(match.group(2))}"
+            title = names[0] if names and not names[0].startswith("Dela") else heading
+            title = re.sub(r"\s*\(STEMFS \d{4}:\d+\)", "", title).strip()
+            changes = _AMENDING.search(title)
+            if changes:
+                for ref in _STEMFS_REF.finditer(names[0][changes.start():] if names else ""):
+                    target = f"STEMFS {ref.group(1)}:{int(ref.group(2))}"
+                    if target != number:
+                        amending.setdefault(target, set()).add(number)
+            parts = urllib.parse.urlsplit(absolute(url, pdf.attrs["href"]))
+            query = urllib.parse.quote(urllib.parse.unquote(parts.query), safe="=&/:")  # a file name with spaces
+            href = urllib.parse.urlunsplit(parts._replace(query=query))
+            items.append(Entry(number=number, title=title or number, url=href, base=not changes,
+                               pdfs=[(number, href)]))
+        for entry in items:
+            entry.amended_by = sorted(amending.get(entry.number, ()), key=number_key)
+        if not items:
+            raise ValueError("no regulations in Energimyndigheten's archive")
+        return items
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, amended_by=list(entry.amended_by),
+                          version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
+# --- Riksdagsförvaltningen (RFS) ----------------------------------------------
+
+_RFS_REF = re.compile(r"RFS (\d{4}):0*(\d+)")
+_RFS_THROUGH = re.compile(r"Ändring införd:\s*\|?\s*t\.o\.m\. (RFS \d{4}:\d+)")
+_RFS_ISSUED = re.compile(r"Utfärdad:\s*\|?\s*(\d{1,2} \w+ \d{4})")
+
+
+class RiksdagenAdapter:
+    """Riksdagsförvaltningen's RFS from Riksdagen's open data (doktyp rfs).
+
+    The document list gives every RFS document with its kind (Grund, Ändring,
+    Omtryck, Fulltext: a consolidated text) and status (Gällande, Upphävd).
+    Base regulations in force are stored with the text of their consolidated
+    version where there is one, else of the regulation as issued. Repealed
+    regulations are not stored: the data gives no repeal date.
+    """
+
+    series = "RFS"
+    issuer = "Riksdagsförvaltningen"
+    base_url = "https://data.riksdagen.se"
+    listing_url = base_url + "/dokumentlista/?doktyp=rfs&utformat=json&sz=500&sort=datum&sortorder=desc"
+    detail = True
+    has_text = True
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def parse_listing(self, text, url):
+        documents = json.loads(text)["dokumentlista"].get("dokument") or []
+        fulltext, amending, entries = {}, {}, []
+        for doc in documents:
+            if doc.get("subtyp") == "Fulltext":
+                fulltext[(doc.get("rm"), doc.get("beteckning"))] = doc
+        for doc in documents:
+            number = f"RFS {doc.get('rm')}:{doc.get('beteckning')}"
+            if not re.fullmatch(r"RFS \d{4}:\d+", number) or doc.get("subtyp") not in ("Grund", "Ändring", "Omtryck"):
+                continue
+            title = _clean(doc.get("titel")).rstrip(";")
+            changes = _AMENDING.search(title)
+            if doc["subtyp"] != "Grund" or changes:
+                for ref in _RFS_REF.finditer(title[changes.start():] if changes else title):
+                    amending.setdefault(f"RFS {ref.group(1)}:{int(ref.group(2))}", set()).add(number)
+                entries.append(Entry(number, title, url, base=False))
+                continue
+            source = fulltext.get((doc.get("rm"), doc.get("beteckning"))) or doc
+            entries.append(Entry(number, title, f"{self.base_url}/dokument/{source['dok_id']}.html",
+                                 base=doc.get("status") == "Gällande"))
+        for entry in entries:
+            entry.amended_by = sorted(amending.get(entry.number, ()), key=number_key)
+        if not any(e.base for e in entries):
+            raise ValueError("no RFS regulations in the document list")
+        return entries
+
+    def parse_detail(self, text, entry):
+        body = htmlmd.to_markdown(text)
+        lines = body.splitlines()
+        # The header block (RFS nr, Rubrik, Utfärdad, Ändring införd) is kept in the facts.
+        start = max((i for i, line in enumerate(lines[:30]) if line.startswith(("Ändring införd", "Utfärdad"))),
+                    default=-1)
+        number = re.search(r"RFS nr:\s*\|?\s*(\d{4}:\d+)", body)
+        if number and f"RFS {number.group(1)}" != entry.number:
+            raise ValueError(f"document shows RFS {number.group(1)}, expected {entry.number}")
+        through = _RFS_THROUGH.search(body)
+        issued = _RFS_ISSUED.search(body)
+        return Regulation(
+            number=entry.number,
+            title=entry.title,
+            issued=_swedish_date(issued.group(1)) if issued else None,
+            amended_by=list(entry.amended_by),
+            amended_through=through.group(1) if through else None,
+            version="Konsoliderad version" if through else "Grundförfattning",
+            text="\n".join(lines[start + 1:]).strip() if start >= 0 else body,
+        )
+
+
+# --- Riksarkivet (RA-FS) ------------------------------------------------------
+
+_RAFS_REPEALED_BY = re.compile(r"upphävda genom: (RA-FS \d{4}:\d+)")
+
+
+class RiksarkivetAdapter:
+    """Riksarkivet's register of general regulations (RA-FS), read through its JSON API.
+
+    `api/rafs/sok` returns every regulation, in force (Giltig) and repealed
+    (Upphävd), with its number, the base regulation it belongs to, entry into
+    force, the regulations that amended or repealed it, and its PDF. A
+    repealed base regulation gets the repealing regulation's entry into force
+    as its `repealed` date; without one it is not stored.
+    """
+
+    series = "RA-FS"
+    issuer = "Riksarkivet"
+    base_url = "https://foreskrifter.riksarkivet.se"
+    listing_url = (base_url + "/api/rafs/sok?nummer=&rubrik=&fulltext=&sokBlandGiltiga=true"
+                   "&sokBlandUpphavda=true&rafsSort=1")
+    detail = False
+    has_text = False
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def _pdf(self, path):
+        return f"{self.base_url}/api/rafs/pdf/{urllib.parse.quote(path, safe='')}"
+
+    def parse_listing(self, text, url):
+        items = [i for i in json.loads(text).get("traffLista") or [] if re.fullmatch(r"\d{4}:\d+", i.get("nummer") or "")]
+        in_force = {f"RA-FS {i['nummer']}": _date(i.get("ikrafttradandedatum")) for i in items}
+        amended = {}
+        for item in items:
+            if item.get("grundforfattning") and item["grundforfattning"] != item["nummer"]:
+                amended.setdefault(f"RA-FS {item['grundforfattning']}", set()).add(f"RA-FS {item['nummer']}")
+        entries = []
+        for item in items:
+            number = f"RA-FS {item['nummer']}"
+            title = _clean(item.get("rubrik"))
+            base = item.get("grundforfattning") == item["nummer"] and not _AMENDING.search(title)
+            repealed = None
+            if item.get("statusText") == "Upphävd":
+                by = _RAFS_REPEALED_BY.search(item.get("efterfoljareString") or "")
+                repealed = in_force.get(by.group(1)) if by else None
+                base = base and bool(repealed)
+            pdfs = [(number, self._pdf(d["path"])) for d in item.get("huvuddokument") or [] if d.get("path")][:1]
+            entries.append(Entry(number=number, title=title, url=pdfs[0][1] if pdfs else url, base=base and bool(pdfs),
+                                 in_force=_date(item.get("ikrafttradandedatum")), repealed=repealed,
+                                 amended_by=sorted(amended.get(number, ()), key=number_key), pdfs=pdfs))
+        if not any(e.base for e in entries):
+            raise ValueError("no regulations in Riksarkivet's register")
+        return entries
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, in_force=entry.in_force, repealed=entry.repealed,
+                          amended_by=list(entry.amended_by), version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
+# --- Skolverket (SKOLFS) ------------------------------------------------------
+
+_SKOLFS_PAGE = 1000
+
+
+class SkolverketAdapter:
+    """Skolverket's SKOLFS register, read through the API behind its search app.
+
+    `api/statute` pages through every SKOLFS document with its number, the base
+    regulation it belongs to, its kind (GRUNDFORFATTNING, ANDRINGSFORFATTNING,
+    SENASTE_LYDELSE: the latest consolidated text) and validity. Base
+    regulations in force are stored; `api/document/<number>/ascending` gives
+    their dates. Expired ones are not stored: the register gives no repeal date.
+    """
+
+    series = "SKOLFS"
+    issuer = "Statens skolverk"
+    base_url = "https://skolfs.skolverket.se"
+    listing_url = base_url + f"/api/statute?sort=YEAR_DESC&size={_SKOLFS_PAGE}&start=0"
+    detail = True
+    has_text = False
+
+    def __init__(self):
+        self.consolidated = set()
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def more_pages(self, text, url):
+        hits = sum(len(g.get("searchHits") or []) for g in json.loads(text).get("searchGroups") or [])
+        start = int(urllib.parse.parse_qs(urllib.parse.urlsplit(url).query).get("start", ["0"])[0])
+        return [self.listing_url.replace("start=0", f"start={start + _SKOLFS_PAGE}")] if hits >= _SKOLFS_PAGE else []
+
+    def _pdf(self, kind, number):
+        return f"{self.base_url}/api/document/{kind}/{number}/pdf"
+
+    def parse_listing(self, text, url):
+        hits = [h for g in json.loads(text).get("searchGroups") or [] for h in g.get("searchHits") or []]
+        entries, amending = [], {}
+        for hit in hits:
+            number, base = hit.get("skolfsNumber") or "", hit.get("baseSkolfsNumber") or ""
+            if not re.fullmatch(r"\d{4}:\d+", number):
+                continue
+            kind = hit.get("documentType")
+            if kind == "SENASTE_LYDELSE":
+                self.consolidated.add(f"SKOLFS {number}")
+                continue
+            if kind == "ANDRINGSFORFATTNING" and base and base != number:
+                amending.setdefault(f"SKOLFS {base}", set()).add(f"SKOLFS {number}")
+            entries.append(Entry(
+                number=f"SKOLFS {number}",
+                title=_clean(hit.get("statuteTitle")),
+                url=f"{self.base_url}/api/document/{number}/ascending",
+                base=kind == "GRUNDFORFATTNING" and hit.get("validity") == "VALID",
+            ))
+        for entry in entries:
+            entry.amended_by = sorted(amending.get(entry.number, ()), key=number_key)
+        return entries
+
+    def parse_detail(self, text, entry):
+        data = json.loads(text)
+        if f"SKOLFS {data.get('skolfsNumber')}" != entry.number:
+            raise ValueError(f"document shows SKOLFS {data.get('skolfsNumber')}, expected {entry.number}")
+        number = entry.number.removeprefix("SKOLFS ")
+        pdfs = [(entry.number, self._pdf("GRUNDFORFATTNING", number))]
+        if entry.number in self.consolidated:
+            pdfs.append((f"{entry.number} (senaste lydelse)", self._pdf("SENASTE_LYDELSE", number)))
+        notes = [_clean(c) for c in data.get("externalComment") or [] if _clean(c)]
+        return Regulation(
+            number=entry.number,
+            title=_clean(data.get("statuteTitle")) or entry.title,
+            issued=_date(data.get("decisionDate")),
+            published=_date(data.get("promulgationDate")),
+            in_force=_date(data.get("effectiveDate")),
+            amended_by=list(entry.amended_by),
+            version="Grundförfattning",
+            summary="\n\n".join(notes),
+            pdfs=pdfs,
+        )
+
+
+# --- Sjöfartsverket (SJÖFS) ---------------------------------------------------
+
+_SJOFS_NUMBER = re.compile(r"(\d{4}):(\d+)")
+
+
+class SjofartsverketAdapter:
+    """Sjöfartsverket's systematic list of regulations in force, one page per subject.
+
+    The index links to the subject pages; each has a table whose rows give the
+    base regulation's number (linked to its PDF), the title and the amending
+    regulations. Regulations numbered before the series used plain ordinals
+    (`1952:A9`) and rows marked repealed are not stored. A regulation listed
+    under several subjects is read once.
+    """
+
+    series = "SJÖFS"
+    issuer = "Sjöfartsverket"
+    base_url = "https://www.sjofartsverket.se"
+    listing_url = base_url + "/sv/om-oss/lagrum/systematisk-forteckning-n/"
+    detail = False
+    has_text = False
+
+    def __init__(self):
+        self.seen = set()
+
+    def listing_urls(self, args):
+        return [self.listing_url]
+
+    def more_pages(self, text, url):
+        if url != self.listing_url:
+            return []
+        pages = re.findall(r'href="(/sv/om-oss/lagrum/systematisk-forteckning-n/[a-z0-9-]+/)"', text)
+        return [absolute(url, p) for p in dict.fromkeys(pages)]
+
+    def parse_listing(self, text, url):
+        entries = []
+        for row in parse_html(text).find_all("tr"):
+            cells = [c for c in row.children if isinstance(c, Node) and c.tag == "td"]
+            if len(cells) < 2:
+                continue
+            link = cells[0].find("a")
+            match = _SJOFS_NUMBER.fullmatch(link.text()) if link is not None else None
+            if match is None or "Upphävd" in cells[0].text():
+                continue
+            number = f"SJÖFS {match.group(1)}:{int(match.group(2))}"
+            if number in self.seen:
+                continue
+            self.seen.add(number)
+            title = cells[1].text().partition("Ändringsföreskrifter")[0]
+            amended_by = {f"SJÖFS {ref.group(1)}:{int(ref.group(2))}"
+                          for ref in (_SJOFS_NUMBER.fullmatch(a.text()) for a in cells[1].find_all("a")) if ref}
+            pdf = absolute(url, link.attrs.get("href", ""))
+            entries.append(Entry(number=number, title=_clean(title) or number, url=pdf,
+                                 amended_by=sorted(amended_by, key=number_key), pdfs=[(number, pdf)]))
+        return entries
+
+    def regulation(self, entry):
+        return Regulation(number=entry.number, title=entry.title, amended_by=list(entry.amended_by),
+                          version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
+# --- Trafikverket (TRVFS) -----------------------------------------------------
+
+_TRVFS_FIRST_YEAR = 2010  # Trafikverket was formed on 1 April 2010
+_TRVFS_ITEM = re.compile(r"(\d{4}):(\d+)\s+(Grundföreskrift|Ändringsföreskrift|Upphävandeföreskrift)?")
+
+
+class TrafikverketAdapter:
+    """Trafikverket's författningssamling app: a search form per year, one page per regulation.
+
+    The search (a POST form, without speed regulations and repealed ones)
+    lists the regulations of a year: number, kind, title and entry into
+    force. Transportstyrelsen's regulations republished there keep their TSFS
+    number and are not stored here. The page per regulation links the PDF.
+    Road-specific speed regulations (hastighetsföreskrifter) are not collected.
+    """
+
+    series = "TRVFS"
+    issuer = "Trafikverket"
+    base_url = "https://trvfs.ea.trafikverket.se"
+    search_url = base_url + "/TRVFS/Home/SearchInDocCollection"
+    listing_url = search_url
+    detail = True
+    has_text = False
+
+    def listing_urls(self, args):
+        years = sorted(args.year, reverse=True) if args and args.year else range(
+            datetime.now(timezone.utc).year, _TRVFS_FIRST_YEAR - 1, -1)
+        return [f"{self.search_url}?Ar={year}" for year in years]
+
+    def fetch_listing(self, client, url):
+        year = urllib.parse.parse_qs(urllib.parse.urlsplit(url).query)["Ar"][0]
+        form = {"Dokumentbeteckning": "", "Celexnummer": "", "Ikrafttradandefrom": "", "Ikrafttradandetom": "",
+                "Titel": "", "Hastforeskrift": "false", "Upphavda": "false", "Ar": year}
+        return client.post(self.search_url, form)
+
+    def parse_listing(self, text, url):
+        entries = []
+        for link in parse_html(text).find_all("a"):
+            href = link.attrs.get("href") or ""
+            match = _TRVFS_ITEM.fullmatch(link.text())
+            if "/DocumentHistory/" not in href or match is None:
+                continue  # TSFS and VVFS numbers carry a prefix and do not match
+            number = f"TRVFS {match.group(1)}:{int(match.group(2))}"
+            entries.append(Entry(number=number, title=number, url=absolute(url, href),
+                                 base=match.group(3) in (None, "Grundföreskrift")))
+        return entries
+
+    def parse_detail(self, text, entry):
+        root = parse_html(text)
+        flat = root.text()
+        number = re.search(r"Dokumentbeteckning\s+(\d{4}:\d+)", flat)
+        if number is None or f"TRVFS {number.group(1)}" != entry.number:
+            raise ValueError(f"page shows {number.group(1) if number else None}, expected {entry.number}")
+        title = re.search(r"Rubrik\s+(.*?)\s+(?:Bemyndigande|Ikraftträdande)", flat)
+        in_force = re.search(r"Ikraftträdande\s+(\d{4}-\d{2}-\d{2})", flat)
+        pdf = next((a for a in root.find_all("a") if (a.attrs.get("href") or "").lower().endswith(".pdf")), None)
+        return Regulation(
+            number=entry.number,
+            title=title.group(1).rstrip(";").strip() if title else entry.title,
+            in_force=in_force.group(1) if in_force else None,
+            version="Grundförfattning",
+            pdfs=[(entry.number, absolute(self.base_url, pdf.attrs["href"]))] if pdf is not None else [],
+        )
+
+
 # --- series listed as links to their PDFs ----------------------------------
 
 _DOCUMENT_HREF = re.compile(r"\.pdf(?:$|[?#/])|/download/|/GetTemplateResource/", re.I)
@@ -1047,7 +1458,7 @@ _REPRINT = re.compile(r"\bomtryck", re.I)
 _CONSOLIDATED = re.compile(r"\bkonsoliderad|\bsenaste lydelse", re.I)
 _SIZE = re.compile(r"[\s,(.]*\b(?:pdf|PDF)\b[\s,)-]*(?:[\d.,]+\s*(?:kB|KB|kb|MB|Mb|mb|B)\b)?\.?\s*\)?\s*$")
 _DEFAULT_EXCLUDE = (r"tillämpningsstöd|förarbete|hemställan|beslutspromemoria|förteckning|register|"
-                    r"remiss|konsekvensutredning|vägledning|rättelseblad|\bbilag")
+                    r"remiss|konsekvensutredning|vägledning|rättelse|\bbilag")
 
 
 class ListedAdapter:
@@ -1256,7 +1667,10 @@ def load_series(path=SERIES_CONFIG):
 
 
 ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
-                                   PrvAdapter(), PolisenAdapter(), ScbAdapter())}
+                                   PrvAdapter(), PolisenAdapter(), ScbAdapter(),
+                                   EnergimyndighetenAdapter(), RiksdagenAdapter(),
+                                   RiksarkivetAdapter(), SkolverketAdapter(),
+                                   SjofartsverketAdapter(), TrafikverketAdapter())}
 ADAPTERS.update({code: a for code, a in load_series().items() if code not in ADAPTERS})
 
 
@@ -1410,11 +1824,12 @@ class _Robots:
         return float(delay) if delay else 0.0
 
 
-def _get_listing(client, robots, url):
+def _get_listing(client, robots, url, adapter=None):
     if not robots.allows(url):
         raise Blocked(f"robots.txt disallows {url}")
+    fetch = getattr(adapter, "fetch_listing", None)  # e.g. a search form that is POSTed
     try:
-        return client.get(url).decode("utf-8")
+        return (fetch(client, url) if fetch else client.get(url)).decode("utf-8")
     except Blocked:
         raise
     except (*NETWORK_ERRORS, UnicodeDecodeError) as error:
@@ -1427,7 +1842,7 @@ def _entries(client, robots, adapter, args):
         urls = [adapter.year_url(y) for y in adapter.parse_index(_get_listing(client, robots, adapter.index_url))]
     urls, seen = list(urls), set(urls)
     for url in urls:  # grows while a paginated listing names further pages
-        text = _get_listing(client, robots, url)
+        text = _get_listing(client, robots, url, adapter)
         try:
             entries = adapter.parse_listing(text, url)
         except ValueError as error:
@@ -1682,3 +2097,6 @@ def main(argv, client=None):
         print("blocked: see state file", file=sys.stderr)
         return 2
     return 0
+
+
+from . import agency_generic  # noqa: E402,F401  (registers the generic series)

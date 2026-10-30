@@ -1,0 +1,56 @@
+{
+ "searchGroups": [
+  {
+   "searchHits": [
+    {
+     "skolfsNumber": "2026:70",
+     "baseSkolfsNumber": "2012:98",
+     "statuteTitle": "Beslut om upphävande av Skolverkets allmänna råd (SKOLFS 2012:98) om systematiskt kvalitetsarbete för skolväsendet",
+     "documentType": "ANDRINGSFORFATTNING",
+     "validity": "EXPIRED",
+     "relatedSkolfs": true
+    },
+    {
+     "skolfsNumber": "2026:69",
+     "baseSkolfsNumber": "2011:153",
+     "statuteTitle": "Föreskrifter om ändring i Skolverkets föreskrifter (SKOLFS 2011:153) om ansökan om särskild utbildning med\njudiska studier i grundskolan",
+     "documentType": "ANDRINGSFORFATTNING",
+     "validity": "VALID",
+     "relatedSkolfs": true
+    },
+    {
+     "skolfsNumber": "2026:67",
+     "baseSkolfsNumber": "2026:67",
+     "statuteTitle": "Skolverkets föreskrifter om kursplaner och studievägar för kommunal vuxenutbildning i svenska för invandrare",
+     "documentType": "GRUNDFORFATTNING",
+     "validity": "VALID",
+     "relatedSkolfs": false
+    },
+    {
+     "skolfsNumber": "2012:98",
+     "baseSkolfsNumber": "2012:98",
+     "statuteTitle": "Skolverkets allmänna råd om systematiskt kvalitetsarbete för skolväsendet",
+     "documentType": "GRUNDFORFATTNING",
+     "validity": "EXPIRED",
+     "relatedSkolfs": true
+    },
+    {
+     "skolfsNumber": "2011:153",
+     "baseSkolfsNumber": "2011:153",
+     "statuteTitle": "Skolverkets föreskrifter om ansökan om särskild utbildning med judiska studier i grundskolan",
+     "documentType": "SENASTE_LYDELSE",
+     "validity": "VALID",
+     "relatedSkolfs": true
+    },
+    {
+     "skolfsNumber": "2011:153",
+     "baseSkolfsNumber": "2011:153",
+     "statuteTitle": "Skolverkets föreskrifter om ansökan om särskild utbildning med judiska studier i grundskolan",
+     "documentType": "GRUNDFORFATTNING",
+     "validity": "VALID",
+     "relatedSkolfs": true
+    }
+   ]
+  }
+ ]
+}

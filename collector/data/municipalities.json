@@ -326,6 +326,213 @@
       ],
       "title_strip": ["\\s*(pdf|docx),\\s*[\\d.,]+\\s*[kM]B[^.]*\\.?\\s*(öppnas i nytt fönster\\.?)?\\s*$"]
     },
+    "1785": {
+      "name": "Säffle",
+      "issuer": "Säffle kommun",
+      "region_code": "17",
+      "collection": "Säffle kommuns författningssamling",
+      "strategy": "html_index",
+      "hosts": ["saffle.se", "www.saffle.se"],
+      "listings": [
+        "https://saffle.se/kommun-och-politik/moten-handlingar-protokoll/grundlaggande-styrdokument.html"
+      ],
+      "section_level": 3,
+      "sections": ["Författningssamling - Styrdokument"],
+      "link_pattern": "^https://saffle\\.se/download/18\\.[0-9a-f]+/\\d+/(?!Reglement|Reviderat%20reglement|Renh%C3%A5llningsordning%20med|Bolagsordning|Arbetsordning|[0-9.]*(?:%20)?F%C3%B6reskrifter%20f%C3%B6r%20arkiv)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*(pdf|docx),\\s*[\\d.,]+\\s*[kM]B[^.]*\\.?\\s*(öppnas i nytt fönster\\.?)?\\s*$"]
+    },
+    "1814": {
+      "name": "Lekeberg",
+      "issuer": "Lekebergs kommun",
+      "region_code": "18",
+      "collection": "Lekebergs kommun, planer och styrdokument (fildelning)",
+      "strategy": "html_index",
+      "hosts": ["lekeberg.se", "www.lekeberg.se"],
+      "listings": [
+        "https://lekeberg.se/kommunochpolitik/planerochstyrdokument.4.711bc06b14820d116bc1b58.html?folder=19.711bc06b14820d116bc4a14&sv.url=12.711bc06b14820d116bc4a46",
+        "https://lekeberg.se/kommunochpolitik/planerochstyrdokument.4.711bc06b14820d116bc1b58.html?folder=19.711bc06b14820d116bc4a32&sv.url=12.711bc06b14820d116bc4a46"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://lekeberg\\.se/download/18\\.[0-9a-f]+/\\d+/(?!Regler|Grafiska)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\.[Pp][Dd][Ff]\\s+Pdf,.*$", "\\s*pdf,\\s*[\\d.,]+\\s*[kM]B.*$"]
+    },
+    "1860": {
+      "name": "Laxå",
+      "issuer": "Laxå kommun",
+      "region_code": "18",
+      "collection": "Laxå kommuns kommunala författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.laxa.se", "laxa.se"],
+      "listings": [
+        "https://www.laxa.se/Kommun-och-politik/Demokrati-och-insyn/Kommunal-forfattningssamling.html"
+      ],
+      "section_level": 2,
+      "sections": ["Kommunal författningssamling"],
+      "link_pattern": "^https://www\\.laxa\\.se/download/18\\.[0-9a-f]+/\\d+/(?=[^?#]*(?:f%C3%B6reskrift|F%C3%B6reskrift|%C3%85l%C3%A4ggande))[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\.[Pp][Dd][Ff]\\s+Pdf,.*$"]
+    },
+    "1861": {
+      "name": "Hallsberg",
+      "issuer": "Hallsbergs kommun",
+      "region_code": "18",
+      "collection": "Hallsbergs kommunala författningssamling och styrdokument",
+      "strategy": "html_index",
+      "hosts": ["www.hallsberg.se", "hallsberg.se"],
+      "listings": [
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Lokal%20f%C3%B6reskrift&lp-page=1",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Lokal%20f%C3%B6reskrift&lp-page=2",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Lokal%20f%C3%B6reskrift&lp-page=3",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Taxa&lp-page=1",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Taxa&lp-page=2",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Taxa&lp-page=3",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Taxa&lp-page=4",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Kommunal%20f%C3%B6rfattningssamling&lp-page=1",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Kommunal%20f%C3%B6rfattningssamling&lp-page=2",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Kommunal%20f%C3%B6rfattningssamling&lp-page=3",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Kommunal%20f%C3%B6rfattningssamling&lp-page=4",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Kommunal%20f%C3%B6rfattningssamling&lp-page=5",
+        "https://www.hallsberg.se/organisation-och-styrning/ekonomi-och-styrning/kommunal-forfattningssamling-och-styrdokument.html?lp-file-gov-doc=Kommunal%20f%C3%B6rfattningssamling&lp-page=6"
+      ],
+      "section_level": 2,
+      "sections": [],
+      "link_pattern": "^https://www\\.hallsberg\\.se/download/18\\.[0-9a-f]+/\\d+/(?!Riktlinjer%20f%C3%B6r%20omsorg)[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\.[Pp][Dd][Ff]\\s+Pdf,.*$"]
+    },
+    "1862": {
+      "name": "Degerfors",
+      "issuer": "Degerfors kommun",
+      "region_code": "18",
+      "collection": "Degerfors kommuns allmänna lokala föreskrifter och taxor",
+      "strategy": "html_index",
+      "hosts": ["degerfors.se", "www.degerfors.se"],
+      "listings": [
+        "https://degerfors.se/kommun-och-politik/kommunfakta/allmanna-lokala-foreskrifter.html",
+        "https://degerfors.se/bo-bygga-trafik-och-miljo/vatten-och-avlopp/avgifter-och-taxor.html",
+        "https://degerfors.se/bo-bygga-trafik-och-miljo/avfall-och-atervinning/avgifter-regler-och-abonnemang",
+        "https://degerfors.se/bo-bygga-trafik-och-miljo/gata-park-och-trafik/torghandel",
+        "https://degerfors.se/bo-bygga-trafik-och-miljo/bygga-nytt-riva-eller-andra.html"
+      ],
+      "section_level": 2,
+      "sections": [
+        "Ordningsföreskrifter",
+        "Hälsoföreskrifter",
+        "Avfall och återvinning",
+        "Vatten och avlopp",
+        "Relaterad information"
+      ],
+      "link_pattern": "^https://(www\\.)?degerfors\\.se/download/18\\.[0-9a-f]+/\\d+/(antagna%20allm|bilaga%20a|kommunala%20lekplatser|lokala%20h%C3%A4lsoskydd|f%C3%B6reskrifter%20om%20avfall|bilaga%20[12]%20till%20f%C3%B6reskrifter|abva|ny\\+va-taxa|renh%C3%A5llningstaxa|allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrift%20torghandel|taxa%20f%C3%B6r%20uppl|taxa%20bygglov)[^?#]*\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\s*\\(?pdf\\)?,?\\s*(pdf,\\s*)?[\\d.,]+\\s*[kKM]B.*$",
+        "\\s*Pdf,\\s*[\\d.,]+\\s*[kKM]B.*$",
+        "\\s+pdf\\s*$"
+      ]
+    },
+    "1863": {
+      "name": "Hällefors",
+      "issuer": "Hällefors kommun",
+      "region_code": "18",
+      "collection": "Hällefors kommuns kommunala föreskrifter",
+      "strategy": "html_index",
+      "hosts": ["www.hellefors.se", "hellefors.se"],
+      "listings": [
+        "https://www.hellefors.se/kommunala_foreskrifter.html",
+        "https://www.hellefors.se/avgifter_for_vatten_och_avlopp.html"
+      ],
+      "section_level": 2,
+      "sections": ["Kommunala föreskrifter", "Avgifter och taxor", "Relaterad information"],
+      "link_pattern": "^https://(www\\.)?hellefors\\.se/download/18\\.[0-9a-f]+/\\d+/(allm%C3%A4nna%20best|f%C3%B6reskrifter%20om%20avfall|allm%C3%A4nna%20lokala|lokala%20f%C3%B6reskrifter|riktlinjer%20f%C3%B6r%20torghandel|h%C3%A4llefors%20kommun%20avgifter|avgiftsblad|taxa%20|va-taxa)[^?#]*\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": [
+        "\\.pdf\\s*Pdf,\\s*[\\d.,]+\\s*[kKM]B.*$",
+        "\\s*Pdf,\\s*[\\d.,]+\\s*[kKM]B.*$",
+        "\\.pdf\\s*$"
+      ]
+    },
+    "1882": {
+      "name": "Askersund",
+      "issuer": "Askersunds kommun",
+      "region_code": "18",
+      "collection": "Askersunds kommuns kommunala författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.askersund.se", "askersund.se"],
+      "listings": ["https://www.askersund.se/kommun--politik/kommunal-forfattningssamling"],
+      "section_level": 1,
+      "sections": ["Kommunal författningssamling"],
+      "link_pattern": "^https://(www\\.)?askersund\\.se/download/18\\.[0-9a-f]+/\\d+/(allm%C3%A4nna%20lokala%20ordning|taxa%20f|sotningsfrister|askersunds%20kommuns%20avfallstaxa|%C3%84ndringar%20i%20askersunds%20kommun%20avfallstaxa|va-taxa|avfallsf%C3%B6reskrifter|allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20va|lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda|riktlinjer%20-%20k%C3%B6regler%20och%20avgifter)",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": []
+    },
+    "1904": {
+      "name": "Skinnskatteberg",
+      "issuer": "Skinnskattebergs kommun",
+      "region_code": "19",
+      "collection": "Skinnskattebergs kommuns författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.skinnskatteberg.se", "skinnskatteberg.se"],
+      "listings": [
+        "https://www.skinnskatteberg.se/kommun-och-demokrati/forfattningssamling/taxor-och-avgifter/",
+        "https://www.skinnskatteberg.se/bygga-bo-och-miljo/bostader/avfall/taxor/"
+      ],
+      "section_level": 1,
+      "sections": ["Taxor och avgifter", "Taxor"],
+      "link_pattern": "^https://www\\.skinnskatteberg\\.se/app/uploads/\\d{4}/\\d{2}/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/app/uploads/(\\d{4}/\\d{2}/[^/?#]+?)\\.pdf"}
+      ],
+      "title_strip": ["\\s*\\(pdf(,\\s*[\\d.,]+\\s*[kKM]B)?\\)\\s*$", "^Taxor och avgifter\\s*\\|\\s*"]
+    },
+    "1962": {
+      "name": "Norberg",
+      "issuer": "Norbergs kommun",
+      "region_code": "19",
+      "collection": "Norbergs kommuns författningssamling",
+      "strategy": "html_index",
+      "hosts": ["norberg.se", "www.norberg.se"],
+      "listings": ["https://norberg.se/kommun--politik/styrning-och-uppfoljning/forfattningssamling.html"],
+      "section_level": 1,
+      "sections": ["Författningssamling"],
+      "link_pattern": "^https://(www\\.)?norberg\\.se/download/18\\.[0-9a-f]+/\\d+/(avfallsf|lokal%20ordning|lokala%20h|allm%C3%A4nna%20best|norbergs%20kommuns%20f%C3%B6reskrifter|taxa%20|taxor%20|avgifter%20enligt|f%C3%B6reskrift%20g%C3%A4llande%20taxor|sammanst%C3%A4llning%20taxor|regler%20f%C3%B6r%20anv%C3%A4ndning%20av%20offentlig|riktlinje%20f%C3%B6r%20avgifter|bilaga%20till%20riktlinjer%20f%C3%B6r%20avgifter)",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*(\\.pdf)?\\s*(Pdf,\\s*[\\d.,]+\\s*[kKM]B,.*|Öppnas i nytt fönster\\.?)\\s*$"]
+    },
+    "1980": {
+      "name": "Västerås",
+      "issuer": "Västerås stad",
+      "region_code": "19",
+      "collection": "Västerås stads författningssamling",
+      "strategy": "html_index",
+      "hosts": ["www.vasteras.se", "vasteras.se"],
+      "listings": ["https://www.vasteras.se/kommun-och-politik/forfattningssamling.html"],
+      "section_level": 2,
+      "sections": ["Avgifter och taxor", "Ordningsföreskrifter och andra föreskrifter"],
+      "link_pattern": "^https://(www\\.)?vasteras\\.se/download/18\\.[0-9a-f]+/\\d+/[^?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/download/(18\\.[0-9a-f]+)/"}
+      ],
+      "title_strip": ["\\s*pdf,\\s*[\\d.,]+\\s*[kKM]B\\.?\\s*$"]
+    },
     "2161": {
       "name": "Ljusdal",
       "issuer": "Ljusdals kommun",

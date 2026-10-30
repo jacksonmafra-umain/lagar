@@ -80,6 +80,26 @@
   {
     "layer": "agency",
     "type": null,
+    "series": "RA-FS",
+    "label": "RA-FS (Riksarkivet)",
+    "target": 93,
+    "kind": "counted",
+    "source": "https://foreskrifter.riksarkivet.se/api/rafs/sok (base regulations, in force and repealed with a known repeal date)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "RFS",
+    "label": "RFS (Riksdagen)",
+    "target": 22,
+    "kind": "counted",
+    "source": "https://data.riksdagen.se/dokumentlista/?doktyp=rfs (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
     "series": "RGKFS",
     "label": "RGKFS (Riksgälden)",
     "target": 6,
@@ -140,6 +160,26 @@
   {
     "layer": "agency",
     "type": null,
+    "series": "SJÖFS",
+    "label": "SJÖFS (Sjöfartsverket)",
+    "target": 44,
+    "kind": "counted",
+    "source": "https://www.sjofartsverket.se/sv/om-oss/lagrum/systematisk-forteckning-n/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SKOLFS",
+    "label": "SKOLFS (Skolverket)",
+    "target": 965,
+    "kind": "counted",
+    "source": "https://skolfs.skolverket.se/api/statute (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
     "series": "SKSFS",
     "label": "SKSFS (Skogsstyrelsen)",
     "target": 18,
@@ -170,6 +210,26 @@
   {
     "layer": "agency",
     "type": null,
+    "series": "STEMFS",
+    "label": "STEMFS (Energimyndigheten)",
+    "target": 65,
+    "kind": "counted",
+    "source": "https://energimyndigheten.a-w2m.se/System/TemplateNavigate.aspx?p=Arkitektkopia&l=t&view=672&cat=%2FF%C3%B6reskrifter (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "TRVFS",
+    "label": "TRVFS (Trafikverket)",
+    "target": 42,
+    "kind": "counted",
+    "source": "https://trvfs.ea.trafikverket.se/TRVFS/Home/SearchInDocCollection (regulations in force, without speed regulations)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
     "series": "TVFS",
     "label": "TVFS (Tillväxtverket)",
     "target": 10,
@@ -185,6 +245,16 @@
     "target": 5,
     "kind": "counted",
     "source": "https://www.upphandlingsmyndigheten.se/om-oss/upphandlingsmyndighetens-forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "UHRFS",
+    "label": "UHRFS (UHR)",
+    "target": 13,
+    "kind": "counted",
+    "source": "https://www.uhr.se/publikationer/lagar-och-regler-for-hogre-utbildning/Universitets--och-hogskoleradets-forfattningssamling/grundforeskrifter-med-andringsforeskrifter/ (base regulations listed)",
     "as_of": "2026-10-30"
   },
   {
@@ -215,6 +285,176 @@
     "target": 23,
     "kind": "counted",
     "source": "https://www.aklagare.se/om-oss/dokument/forfattningssamling (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "MIGRFS",
+    "label": "MIGRFS (Migrationsverket)",
+    "target": 21,
+    "kind": "counted",
+    "source": "https://www.migrationsverket.se/om-migrationsverket/styrning-och-uppfoljning/foreskrifter.html (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KAMFS",
+    "label": "KAMFS (Kammarkollegiet)",
+    "target": 74,
+    "kind": "counted",
+    "source": "https://www.kammarkollegiet.se/om-oss/kammarkollegiets-forfattningssamling-kamfs (base regulations listed, in force and earlier)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KRFS",
+    "label": "KRFS (Statens kulturråd)",
+    "target": 12,
+    "kind": "counted",
+    "source": "https://www.kulturradet.se/om-oss/forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KFMFS",
+    "label": "KFMFS (Kronofogdemyndigheten)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.kronofogden.se/om-kronofogden/dina-rattigheter-lagar-och-regler/foreskrifter-allmanna-rad-och-meddelanden (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KFS",
+    "label": "KFS (Kommerskollegium)",
+    "target": 4,
+    "kind": "counted",
+    "source": "https://www.kommerskollegium.se/uppdrag/forfattningssamling/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "MEMYFS",
+    "label": "MEMYFS (Mediemyndigheten)",
+    "target": 4,
+    "kind": "counted",
+    "source": "https://mediemyndigheten.se/om-oss/lagar-forordningar-och-foreskrifter/ (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "NFS",
+    "label": "NFS (Naturvårdsverket)",
+    "target": 166,
+    "kind": "counted",
+    "source": "https://www.naturvardsverket.se/sitemap.xml (base regulation pages under /lagar-och-regler/foreskrifter-och-allmanna-rad/, in force and repealed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "FKFS",
+    "label": "FKFS (Försäkringskassan)",
+    "target": 147,
+    "kind": "counted",
+    "source": "https://lagrummet.forsakringskassan.se/foreskrifter (FKFS base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KOVFS",
+    "label": "KOVFS (Konsumentverket)",
+    "target": 22,
+    "kind": "counted",
+    "source": "https://publikationer.konsumentverket.se/filtrera-fram-forfattningssamling (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "HVMFS",
+    "label": "HVMFS (HaV)",
+    "target": 21,
+    "kind": "counted",
+    "source": "https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/foreskrifter.html (HVMFS base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "MCFFS",
+    "label": "MCFFS (MCF)",
+    "target": 11,
+    "kind": "counted",
+    "source": "https://www.mcf.se/sv/regler/gallande-regler/ (MCFFS base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "AFFS",
+    "label": "AFFS (Arbetsförmedlingen)",
+    "target": 9,
+    "kind": "counted",
+    "source": "https://arbetsformedlingen.se/om-oss/var-verksamhet/styrning-och-resultat/forfattningssamling-AFFS (AFFS base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "MDFFS",
+    "label": "MDFFS (Digg)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.digg.se/om-oss/forfattningssamling (base regulations)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "AGVFS",
+    "label": "AGVFS (Arbetsgivarverket)",
+    "target": 5,
+    "kind": "counted",
+    "source": "https://www.arbetsgivarverket.se/avtal-och-skrifter?category=32 (base regulations listed)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "ELSÄK-FS",
+    "label": "ELSÄK-FS (Elsäkerhetsverket)",
+    "target": 3,
+    "kind": "counted",
+    "source": "https://elsakerhetsverket.se/lag-och-ratt/foreskrifter (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KIFS",
+    "label": "KIFS (KemI)",
+    "target": 3,
+    "kind": "counted",
+    "source": "https://www.kemi.se/lagar-och-regler/lagstiftningar-inom-kemikalieomradet/kemikalieinspektionens-foreskrifter-kifs (base regulations in force)",
+    "as_of": "2026-10-30"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "IAFFS",
+    "label": "IAFFS (IAF)",
+    "target": 3,
+    "kind": "counted",
+    "source": "https://www.iaf.se/Lag-ratt/Foreskrifter/ (base regulations in force)",
     "as_of": "2026-10-30"
   },
   {
