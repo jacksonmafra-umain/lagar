@@ -82,12 +82,16 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | LFS (Luftfart) | 65 | 65 | counted | 100.0% |
 | agency | JvSFS (Järnväg) | 20 | 20 | counted | 100.0% |
 | agency | VVFS (Vägverket) | 1 | 1 | counted | 100.0% |
+| agency | MSBFS (MSB) | 44 | 44 | counted | 100.0% |
+| agency | SRVFS (Räddningsverket) | 15 | 15 | counted | 100.0% |
+| agency | SÄIFS (SÄI) | 7 | 7 | counted | 100.0% |
+| agency | KBMFS (KBM) | 1 | 1 | counted | 100.0% |
 | case_law | Case law | 16475 | 16640 | counted | 99.0% |
 | sfs | SÖ treaties | 3515 | 3515 | counted | 100.0% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
 | eu | EU judgments | 605 | 611 | counted | 99.0% |
 | region | Regional regulations | 11649 | unknown | unknown | - |
-| municipality | Municipal regulations | 5547 | unknown | unknown | - |
+| municipality | Municipal regulations | 5572 | unknown | unknown | - |
 | service | Public services | 0 | unknown | unknown | - |
 
 Progress is capped at the target; a series without a known target has no percentage.
@@ -171,6 +175,10 @@ Targets:
 - LFS (Luftfart): counted, Transportstyrelsen's TSFS index, year pages before 2009 (base regulations, in force and repealed), as of 2026-10-31
 - JvSFS (Järnväg): counted, Transportstyrelsen's TSFS index, year pages before 2009 (base regulations, in force and repealed), as of 2026-10-31
 - VVFS (Vägverket): counted, Transportstyrelsen's TSFS index, year pages before 2009 (base regulations, in force and repealed), as of 2026-10-31
+- MSBFS (MSB): counted, https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed), as of 2026-10-31
+- SRVFS (Räddningsverket): counted, https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed), as of 2026-10-31
+- SÄIFS (SÄI): counted, https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed), as of 2026-10-31
+- KBMFS (KBM): counted, https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed), as of 2026-10-31
 - Case law: counted, https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar?publiceringsformer=referat,notis, as of 2026-10-29
 - SÖ treaties: counted, regeringen.se sitemap: distinct SÖ numbers on pages under /rattsliga-dokument/sveriges-internationella-overenskommelser/, as of 2026-10-30
 - EU law (curated list): curated, collector/data/eu-acts.json, as of 2026-10-29
@@ -178,7 +186,7 @@ Targets:
 
 ## Integrity
 
-Audit of 53497 documents (2026-10-31T05:32:58Z):
+Audit of 53522 documents (2026-10-31T10:59:14Z):
 
 - schema errors: 0
 - duplicate ids: 0

@@ -4,7 +4,7 @@ Which Swedish legal sources the corpus processes and which it does not, with the
 
 ## Summary
 
-68 agency regulation series, 24 agencies that publish in another agency's series, 284 of 290 kommuner configured, 20 of 23 courts with collected case law.
+68 agency regulation series, 24 agencies that publish in another agency's series, 285 of 290 kommuner configured, 20 of 23 courts with collected case law.
 
 | agency series | count |
 | --- | ---: |
@@ -43,7 +43,7 @@ Other layers in the corpus: 4 fundamental laws, 11428 SFS statutes, 16475 case-l
 | [KVFS](https://www.kriminalvarden.se/om-oss/styrning-och-uppfoljning/kriminalvardens-foreskrifter/) | Kriminalvården | collected | 17 | 17 | [#181](https://github.com/jacksonmafra-umain/lagar/issues/181) | Kriminalvården's KVFS listing needs JavaScript (a server-side Blazor component), so the regulation pages are taken from the site's sitemap; each page gives the full title and links to the PDF, and the text is read from the PDF. Amending and repealing regulations are not stored as documents. |
 | [LIVSFS](https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/) | Livsmedelsverket | collected | 43 | 43 | [#182](https://github.com/jacksonmafra-umain/lagar/issues/182) | Livsmedelsverket lists LIVSFS in one table per year from 2005 (number, status, subject) with a link to each PDF; titles and text are read from the PDFs. Repealed regulations have no repeal date on the page and are not collected; a regulation replaced by a later one ("Ersätter ...") is not in force. LIVSFS is read from 2002, its first year; the predecessor series SLVFS (1995-2001) is collected as its own series from the same tables. |
 | [LMFS](https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/) | Lantmäteriet | collected | 14 | 14 | [#183](https://github.com/jacksonmafra-umain/lagar/issues/183) | Lantmäteriet lists the regulations in force, each with its title and a link to the PDF; the text is read from the PDF. Repealed regulations are not collected; the predecessor series LMVFS (in force on the same page) is collected as its own series; one PDF (LMFS 2015:5) is a scan without a text layer. |
-| [MCFFS](https://www.mcf.se/sv/regler/om-regler/) | Myndigheten för civilt försvar | collected | 11 | 11 | [#184](https://github.com/jacksonmafra-umain/lagar/issues/184) | MCF lists the MCFFS regulations in force with a page per regulation and a link to its PDF; the text is read from the PDF (consolidated version where published). Regulations in force from the predecessor series (MSBFS and older) are listed on the same page but not collected. |
+| [MCFFS](https://www.mcf.se/sv/regler/om-regler/) | Myndigheten för civilt försvar | collected | 11 | 11 | [#184](https://github.com/jacksonmafra-umain/lagar/issues/184) | MCF lists the MCFFS regulations in force with a page per regulation and a link to its PDF; the text is read from the PDF (consolidated version where published). Regulations in force from the predecessor series on the same list (MSBFS, SRVFS, SÄIFS, KBMFS) are collected as series of their own. |
 | [MDFFS](https://www.digg.se/om-oss/forfattningssamling) | Myndigheten för digital förvaltning | collected | 6 | 6 | [#185](https://github.com/jacksonmafra-umain/lagar/issues/185) | Digg publishes each regulation's full text as HTML on its own page. |
 | [MEMYFS](https://mediemyndigheten.se/om-oss/lagar-forordningar-och-foreskrifter/) | Mediemyndigheten | collected | 4 | 4 | [#186](https://github.com/jacksonmafra-umain/lagar/issues/186) | Mediemyndigheten lists its regulations with a link to each PDF; the text is read from the PDF (consolidated version where published). |
 | [MIGRFS](https://www.migrationsverket.se/om-migrationsverket/styrning-och-uppfoljning/foreskrifter.html) | Migrationsverket | collected | 21 | 21 | [#187](https://github.com/jacksonmafra-umain/lagar/issues/187) | Migrationsverket lists the regulations in force with a link to each PDF; the text is read from the PDF (consolidated version where published). |
@@ -146,7 +146,7 @@ Their regulations are collected when the series they publish in is; the issue is
 
 ## Municipal regulations (kommuner)
 
-284 of 290 kommuner have a collector configuration (`collector/data/municipalities.json`); the table also lists kommuner checked and not collected, with the reason. The others are not collected: no configuration yet. Each name links to the kommun's official website.
+285 of 290 kommuner have a collector configuration (`collector/data/municipalities.json`); the table also lists kommuner checked and not collected, with the reason. The others are not collected: no configuration yet. Each name links to the kommun's official website.
 
 | code | kommun | collection | status | documents | issue | note |
 | --- | --- | --- | --- | ---: | --- | --- |
@@ -200,7 +200,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 0561 | [Åtvidaberg](https://www.atvidaberg.se/) | Regler och styrande dokument | partly collected | 8 | [#292](https://github.com/jacksonmafra-umain/lagar/issues/292) | - |
 | 0562 | [Finspång](https://www.finspang.se/) | Mål- och styrdokument (avgifter och taxor, avfallsföreskrifter) | partly collected | 22 | [#293](https://github.com/jacksonmafra-umain/lagar/issues/293) | - |
 | 0563 | [Valdemarsvik](https://www.valdemarsvik.se/) | Författningssamling | partly collected | 21 | [#294](https://github.com/jacksonmafra-umain/lagar/issues/294) | - |
-| 0580 | [Linköping](https://www.linkoping.se/) | - | not collected: no adapter yet | 0 | [#295](https://github.com/jacksonmafra-umain/lagar/issues/295) | Linköping links its rules to Google Drive share pages instead of files on its own site; not collected pending an owner decision on that host. |
+| 0580 | [Linköping](https://www.linkoping.se/) | Regler och styrande dokument | partly collected | 25 | [#295](https://github.com/jacksonmafra-umain/lagar/issues/295) | 25 documents not fetched: the document is a Google Drive share page; robots.txt disallows its download (drive.usercontent.google.com: Disallow: /; drive.google.com/uc falls under Disallow: /) |
 | 0581 | [Norrköping](https://www.norrkoping.se/) | Allmänna föreskrifter och taxor | partly collected | 18 | [#296](https://github.com/jacksonmafra-umain/lagar/issues/296) | - |
 | 0582 | [Söderköping](https://www.soderkoping.se/) | Styrande dokument | partly collected | 9 | [#297](https://github.com/jacksonmafra-umain/lagar/issues/297) | - |
 | 0583 | [Motala](https://www.motala.se/) | Kommunal författningssamling | partly collected | 32 | [#298](https://github.com/jacksonmafra-umain/lagar/issues/298) | - |
