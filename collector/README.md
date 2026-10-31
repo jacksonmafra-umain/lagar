@@ -122,8 +122,14 @@ poppler-utils`, `brew install poppler`); the collector and sync workflows instal
   with fewer than 40 letters and digits has no text layer.
 - When less than half of the pages carry text, `gap` is `"no text layer (scanned PDF)"`; when
   less than half of the visible characters are letters or digits (fonts without a Unicode map),
-  `gap` is `"text layer is not readable ..."`. Callers record the gap and keep the PDF link and
-  SHA-256; they never guess or OCR the text.
+  `gap` is `"text layer is not readable ..."`. The same gap covers letter-spaced text whose word
+  breaks are lost (glyphs drawn with wrong widths: at least a quarter of the words are single
+  letters). Callers record the gap and keep the PDF link and SHA-256; they never guess or OCR the
+  text.
+- One font encoding is decoded instead: Jämtland's older PDFs (23FS) draw every character with
+  its glyph number in Apple's standard order, so `pdftotext` returns `i®åëëíóêÉäëÉå` for
+  `Länsstyrelsen` and `=` for each space. That text is shifted back (`pdftext.unshift`), and kept
+  only when the decoded text passes the same checks.
 - `paragraphs(text)` reflows the text into paragraphs: a new one starts after a blank line, before
   `N §`, `N kap.`, `1.` or `a)`, and after a short line followed by a capital or digit; other lines
   are joined, line-break hyphens removed (not before "och", "eller" and similar), lines holding

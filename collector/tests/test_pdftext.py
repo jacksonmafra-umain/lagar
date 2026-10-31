@@ -74,9 +74,43 @@ class ClassifyTest(unittest.TestCase):
         result = pdftext.classify(garbled)
         self.assertEqual(result.gap, pdftext.UNREADABLE_TEXT)
 
-    def test_shifted_font_encoding_is_unreadable(self):
-        garbled = "i®åëëíóêÉäëÉå= g®ãíä~åÇë=ä®å= Ñ∏êÑ~ííåáåÖëë~ãäáåÖ= =\n" * 20
+    def test_shifted_font_encoding_is_decoded(self):
+        # 23FS 2001:2 as pdftotext reads it: Jämtland's fonts shift every character.
+        shifted = (
+            "===OP=cp=OMMNWO=\n======ríâçã=Ñê™å=íêóÅâÉí=\n===========i®åëëíóêÉäëÉå=\n"
+            "hìåÖ∏êÉäëÉ=\ns®ÖîÉêâÉí=Ü~ê=ÇÉå=OM=ÇÉÅÉãÄÉê=OMMM=ÄÉëäìí~í=çã=Ñ∏êä®åÖåáåÖ=~î=\n"
+            "SSO=_çå®ëÜ~ãå=Ó=eìë™=çÅÜ=î®Ö=SSP=íáää=c®îáâÉåI=ë~ãí=áåÇê~ÖåáåÖ=\n"
+            "jÉÇ=ëí∏Ç=~î=NM=â~é=N=¬=~åÇê~=ëíóÅâÉí=NN=çÅÜ=P=¬=íê~ÑáâÑ∏êçêÇåáåÖÉå=ENVVUWNOTSF=\n"
+        )
+        result = pdftext.classify(shifted * 4 + "\f")
+        self.assertTrue(result.usable)
+        self.assertIn("23 FS 2001:2", result.text)
+        self.assertIn("Utkom från trycket", result.text)
+        self.assertIn("Länsstyrelsen", result.text)
+        self.assertIn("662 Bonäshamn – Huså och väg 663 till Fäviken, samt", result.text)
+        self.assertIn("Med stöd av 10 kap 1 § andra stycket 11 och 3 § trafikförordningen (1998:1276)", result.text)
+        self.assertNotIn("=", result.text)
+
+    def test_unshift(self):
+        self.assertEqual(pdftext.unshift("i®åëëíóêÉäëÉå=g®ãíä~åÇë=ä®å"), "Länsstyrelsen Jämtlands län")
+        self.assertEqual(pdftext.unshift("iûkppqvobipbk=NM=â~éK=N=¬"), "LÄNSSTYRELSEN 10 kap. 1 §")
+
+    def test_shifted_text_that_does_not_decode_stays_a_gap(self):
+        # Shifted-looking text whose decoded form is still not text ("æø" -> "†°").
+        garbled = "æøæøæø=æø=" * 200
         self.assertEqual(pdftext.classify(garbled).gap, pdftext.UNREADABLE_TEXT)
+
+    def test_letter_spaced_text_is_unreadable(self):
+        # 07FS 2008:240: glyphs with wrong widths, word breaks lost.
+        spaced = (
+            "Läns s t y r e l s e niKr onobe r g sl änskung ör e l s eom upphävande "
+            "Lä ns s t y r e l s e nbe s l ut a rme ds t öda v7ka p.7§mi l j öba l ke n( "
+        ) * 4
+        self.assertEqual(pdftext.classify(spaced).gap, pdftext.LETTER_SPACED)
+
+    def test_short_words_are_readable(self):
+        text = "Det är i dag så att en ny väg får gå ut på ön om de vill. " * 10
+        self.assertTrue(pdftext.classify(text).usable)
 
     def test_other_languages_are_readable(self):
         sami = "Naturreservatet Bálggejávrre och Gáddejávrre i Kiruna kommun. " * 20
