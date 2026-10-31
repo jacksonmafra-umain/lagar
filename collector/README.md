@@ -857,6 +857,11 @@ Add an entry under `kommuner`, keyed by the four-digit SCB code:
      file name (Vallentuna's sitemap lists `2.4.3 Avfallstaxa.pdf`). Sitemaps may be gzipped files
      (`sitemap1.xml.gz`).
    - Links of the form `javascript:void(window.open('/download/...'))` are read as the URL they open.
+   - `document_gap` (a reason): the kommun's documents sit where they may not be fetched, such as a
+     third-party host whose robots.txt disallows the download (Linköping links Google Drive share
+     pages; `drive.usercontent.google.com` disallows everything). Each listed document is written
+     with its metadata and link but never requested, and recorded as a gap with that reason;
+     `source` is the listing page.
 3. Choose `sections` or `kinds` so that only rules for residents are collected. Where the list mixes
    rules and internal documents with no headings to tell them apart, `"resident_filter": true`
    keeps a title only when it names a rule for residents (föreskrifter, taxor, avgifter, avfall,
