@@ -10858,6 +10858,7 @@
       "municipality_code": "0604",
       "retrieved_at": "2026-10-30T22:10:58Z",
       "sha256": "9d0bf04b8d6446343b4f19dd35430ead3116deff5132576b64af73131966dc84",
+      "text": "pdf",
       "url": "https://www.aneby.se/download/18.10e76864165add3787c19789/1767876238453/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n.pdf"
     },
     {
@@ -10867,6 +10868,7 @@
       "municipality_code": "0604",
       "retrieved_at": "2026-10-30T22:10:56Z",
       "sha256": "7a6370a52a998242f1080a97f622080c27c0a10da71eec349d30bf3636bda806",
+      "text": "pdf",
       "url": "https://www.aneby.se/download/18.34c01ee218ccac22cae32d6/1704707917546/SBN%202023-476%20Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20av%20handel%20med%20receptfria%20l%C3%A4kemedel,%20tobak%20och%20tobaksfria%20nikotinprodukter%202024.pdf"
     },
     {
@@ -10876,6 +10878,7 @@
       "municipality_code": "0604",
       "retrieved_at": "2026-10-30T22:10:50Z",
       "sha256": "4997db1b6e8cb7d9b529dc0c7c5cfb1a48612b8ffb618d978d563625c0b45529",
+      "text": "pdf",
       "url": "https://www.aneby.se/download/18.5a24de3619dd37681484cc3c/1783066931152/SBN%202026-121%20Taxa%20f%C3%B6r%20tillsyn%20och%20pr%C3%B6vning%20enligt%20milj%C3%B6balken%20antagen%20och%20redigerad.pdf"
     },
     {
@@ -10885,6 +10888,7 @@
       "municipality_code": "0604",
       "retrieved_at": "2026-10-30T22:10:54Z",
       "sha256": "c519a008de81a3e5e3de274c59907f02de5fa89790a9804f5360b1a49976cff5",
+      "text": "pdf",
       "url": "https://www.aneby.se/download/18.60aae29b1853375de8310066/1673283979793/Taxa%20f%C3%B6r%20offentlig%20kontroll%20inom%20livsmedelslagstiftningen%202023.pdf"
     },
     {
@@ -10894,6 +10898,7 @@
       "municipality_code": "0604",
       "retrieved_at": "2026-10-30T22:10:53Z",
       "sha256": "2f00bc755baf9736c908db92c7741b4ee35c65a66caaf9edfde7084335fed461",
+      "text": "pdf",
       "url": "https://www.aneby.se/download/18.c10f4bd17014824b64adf2/1582795951177/Taxa%20enligt%20str%C3%A5lkyddslag%20och%20str%C3%A5lskyddsf%C3%B6rordning.pdf"
     },
     {
@@ -10912,6 +10917,7 @@
       "municipality_code": "0617",
       "retrieved_at": "2026-10-30T13:22:20Z",
       "sha256": "1498570d13897a7a5a50453fef2edcde07ef95833aeb14358adbe6119b40b3a7",
+      "text": "pdf",
       "url": "https://www.gnosjo.se/download/18.3ab40392190125a00f4512d/1719924161573/Lokala%20ordningsf%C3%B6reskrifter%20inkl%20bilagor,%20antagen%202024-06-27.pdf"
     },
     {
@@ -10921,6 +10927,7 @@
       "municipality_code": "0617",
       "retrieved_at": "2026-10-30T13:22:21Z",
       "sha256": "d01dd0e02c21d979626ff4ab74ca5c93e656cb1e5d1029edf5073872f7f4b003",
+      "text": "pdf",
       "url": "https://www.gnosjo.se/download/18.5575a3c18bd98254776f95/1702301475231/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20h%C3%A4lsoskydd.%20fastst%C3%A4lld%20av%20KF%202023-11-30.pdf"
     },
     {
@@ -10930,6 +10937,7 @@
       "municipality_code": "0617",
       "retrieved_at": "2026-10-30T13:22:22Z",
       "sha256": "a8c9e89c719f7a23ca33d66cee02622009bfebf2b329d6a52c5f9f6d155d722a",
+      "text": "pdf",
       "url": "https://www.gnosjo.se/download/18.62fbdffe185a6f6efc35b8e/1676305693654/ABVA%202020,%20reviderad%20version%20till%20hemsidan.pdf"
     },
     {
@@ -10939,6 +10947,7 @@
       "municipality_code": "0617",
       "retrieved_at": "2026-10-30T13:22:22Z",
       "sha256": "31d0272d2812ab79fb60f9fec21ebb24891bd4374c7edad1a5bae92f19803bce",
+      "text": "pdf",
       "url": "https://www.gnosjo.se/download/18.62fbdffe185a6f6efc35b90/1676305717388/F%C3%B6reskrifter%20f%C3%B6r%20avfallshantering.pdf"
     },
     {
@@ -10948,6 +10957,7 @@
       "municipality_code": "0642",
       "retrieved_at": "2026-10-30T13:22:26Z",
       "sha256": "32e279be794be46f1de98062183e69491029c95de1b98fe03817ad3da476906a",
+      "text": "pdf",
       "url": "https://www.mullsjo.se/download/18.198e869916d6c5b8acb1697/1570620595392/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa.pdf"
     },
     {
@@ -10957,6 +10967,7 @@
       "municipality_code": "0642",
       "retrieved_at": "2026-10-30T13:22:30Z",
       "sha256": "2bd47806a43373628defbc7cf70577be61f2b037679669023148c4d5a1db9f22",
+      "text": "pdf",
       "url": "https://www.mullsjo.se/download/18.198e869916d6c5b8acb169b/1570620654729/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20Mullsj%C3%B6%20kommuns%20vatten%20och%20avlopp.pdf"
     },
     {
@@ -10966,6 +10977,7 @@
       "municipality_code": "0642",
       "retrieved_at": "2026-10-30T13:22:29Z",
       "sha256": "291d6ebf6fb603a1af1807469159fb6adadd81ba55da29c3e8ae47fd87f7f024",
+      "text": "pdf",
       "url": "https://www.mullsjo.se/download/18.198e869916d6c5b8acb16cb/1570621399205/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandel%20i%20Mullsj%C3%B6%20kommun.pdf"
     },
     {
@@ -10975,6 +10987,7 @@
       "municipality_code": "0642",
       "retrieved_at": "2026-10-30T13:22:29Z",
       "sha256": "00d7c1930cb0b3299b22f5554aef13fb773021f5089f4b6cf7cb82149cbac3fa",
+      "text": "pdf",
       "url": "https://www.mullsjo.se/download/18.4a81db4819cbfac321e13c08/1772808009282/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Mullsj%C3%B6%20kommun.pdf"
     },
     {
@@ -10984,6 +10997,7 @@
       "municipality_code": "0642",
       "retrieved_at": "2026-10-30T13:22:26Z",
       "sha256": "df0455e75dade1e90545c372176152a6c72c29e471111c18cb7cb9a935affcb7",
+      "text": "pdf",
       "url": "https://www.mullsjo.se/download/18.5d8b716919bdd3894bbd1613/1769440719908/F%C3%B6reskrifter%20f%C3%B6r%20avfallshantering%20J%C3%B6nk%C3%B6ping%20%20Habo%20och%20Mullsj%C3%B6%20kommuner.pdf"
     },
     {
@@ -10993,6 +11007,7 @@
       "municipality_code": "0643",
       "retrieved_at": "2026-10-30T13:22:34Z",
       "sha256": "5fcd803e11e1ef53d90e17372767f0df2c258237f0a0aeecaa043cfd4a249c6c",
+      "text": "pdf",
       "url": "https://habokommun.se/download/18.41f137d419c9855960d6707/1772194277138/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6.pdf"
     },
     {
@@ -11002,6 +11017,7 @@
       "municipality_code": "0643",
       "retrieved_at": "2026-10-30T13:22:33Z",
       "sha256": "d4271f54e8cb6580dbb0a0f76da2769ef484cf3f3f3d5035b284ac38e75ca7bb",
+      "text": "pdf",
       "url": "https://habokommun.se/download/18.41f137d419c9855960d6708/1772194277148/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20brukande%20av%20Habo%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning%20(ABVA).pdf"
     },
     {
@@ -11011,6 +11027,7 @@
       "municipality_code": "0643",
       "retrieved_at": "2026-10-30T13:22:40Z",
       "sha256": "3c91153d5519d9274e1d6c826002a21bbabb47164e469b5f120b60a9aba4cb30",
+      "text": "pdf",
       "url": "https://habokommun.se/download/18.41f137d419c9855960d6709/1772194277155/Lokala%20ordningsf%C3%B6reskrifter.pdf"
     },
     {
@@ -11020,6 +11037,7 @@
       "municipality_code": "0643",
       "retrieved_at": "2026-10-30T13:22:37Z",
       "sha256": "16bb0b954a062485a41e191894094045610c4e9a4aed48ae5f583996941bfef9",
+      "text": "ocr",
       "url": "https://habokommun.se/download/18.41f137d419c9855960d670a/1772194277165/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6%20-%20Kartbilagor.pdf"
     },
     {
@@ -11029,6 +11047,7 @@
       "municipality_code": "0643",
       "retrieved_at": "2026-10-30T13:22:39Z",
       "sha256": "82f962876c8dfdd9e3596b5ba66df2ff568d292e94eaddd9068f6cf1a54f469b",
+      "text": "pdf",
       "url": "https://habokommun.se/download/18.41f137d419c9855960d670b/1772194277591/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6%20-%20Kart%C3%B6versikt.pdf"
     },
     {
@@ -11038,6 +11057,7 @@
       "municipality_code": "0643",
       "retrieved_at": "2026-10-30T13:22:41Z",
       "sha256": "072515f23c3d30d5aecf3e1945b0de069a9a683a096a26ec1dee0927e958f8bf",
+      "text": "pdf",
       "url": "https://habokommun.se/download/18.82a9cf319d24a0885d27ca3/1788772116932/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20tillf%C3%A4llig%20saluplats.pdf"
     },
     {
@@ -11047,6 +11067,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:36Z",
       "sha256": "e847d707e9d1a62d921936b8ea4d69c44517dc2a019f6b0ed52cf90350ba81f9",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a421/1766144680180/Samh%C3%A4llsutvecklingsn%C3%A4mndens%20taxor%202026%20antagna%20den%2023%20oktober%202025.pdf"
     },
     {
@@ -11056,6 +11077,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:38Z",
       "sha256": "aa34b01b8019fdec7fffa72d574e5abf44c6ae9ae78bfd3c9d098caf81dbb67b",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a4c2/1766146114187/Utbildningsn%C3%A4mndens%20taxor%202026%20antagna%20den%2023%20oktober%202025.pdf"
     },
     {
@@ -11065,6 +11087,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:44Z",
       "sha256": "d3858dea46b9b632d0cb4e96115df486314960bd77e2d9c42824743580939fa3",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a590/1766147593847/1.%20Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20inom%20alkohol,%20tobak,%20receptfria%20l%C3%A4kemedel%202026%20antagen%2023%20oktober%202025.pdf"
     },
     {
@@ -11074,6 +11097,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:45Z",
       "sha256": "2a86845d3bf06bbfbe14f9f471f87d9c6ba45d510c8b42a39af4c96806b696df",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a591/1766147593913/2.%20Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20inom%20milj%C3%B6skydd,%20h%C3%A4lsoskydd%20och%20str%C3%A5lskydd%202026%20antagen%2023%20oktober%202025.pdf"
     },
     {
@@ -11083,6 +11107,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:46Z",
       "sha256": "f7bbbaa6ed5f641a554e5d0537a697b2b0e78e9e6d2f26f71e7297e4511e1796",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a592/1766147593982/3.%20Taxa%20enligt%20livsmedelslagen%202026%20antagen%2023%20oktober%202025.pdf"
     },
     {
@@ -11092,6 +11117,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:47Z",
       "sha256": "4f9a54d52b04605c15fbe6a5f2f16b1375cf7c2728a836cafb268bb5ca139d44",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a593/1766147594042/4.%20Taxa%20f%C3%B6r%20bygglov%202026%20antagen%2023%20oktober%202025%20.pdf"
     },
     {
@@ -11101,6 +11127,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:48Z",
       "sha256": "f7890f7528cab0b6dc8c4797727f74aad4dfbfdf6f06d5647e876af86b670f16",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a5cb/1766147980082/Avfallstaxa%202026%20Gislaveds%20kommun,%20antagen%20den%2023%20oktober%202025.pdf"
     },
     {
@@ -11110,6 +11137,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:49Z",
       "sha256": "57bf5ec5205183b7216692aef5507a7bd52758acb16855ce548236bc5de54876",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a5e3/1766148085028/R%C3%A4ddningsn%C3%A4mndens%20taxor%202026,%20antagna%20den%2023%20oktober%202025.pdf"
     },
     {
@@ -11119,6 +11147,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:39Z",
       "sha256": "5aff7f29ff1b145de391b407af7d4881a4550d724a0c24602c7a5400e8f6c297",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a6d8/1766149405651/Marktaxa%20f%C3%B6rs%C3%A4ljning%20av%20sm%C3%A5hustomter%20samt%20flerbostadshustomter%202026,%20antagen%20den%2023%20oktober%202025.pdf"
     },
     {
@@ -11128,6 +11157,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:40Z",
       "sha256": "39033673888b037a18bddb03e5d545bc40894a921ee9c843035169cb67399876",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a6d9/1766149405713/Marktaxa%20f%C3%B6rs%C3%A4ljning%20av%20verksamhetstometer%20och%20arrenden%202026,%20antagen%2023%20oktober%202025.pdf"
     },
     {
@@ -11137,6 +11167,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:41Z",
       "sha256": "c7a2d54d448c8eb7840413e7c6765443049379f52d53d04e3b7b2d7b3de46cb8",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a6da/1766149405769/Taxa%20f%C3%B6r%20borgelig%20vigsel%202026,%20antagen%20den%2023%20oktober%202025.pdf"
     },
     {
@@ -11146,6 +11177,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:42Z",
       "sha256": "83772cfb85e0e307e0994089eb85d5efd968a993f6662c60cf4f99f9cbfab877",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1c2567f919b36084b3a6dc/1766149405886/Taxa%20f%C3%B6r%20utl%C3%A4mnande%20av%20allm%C3%A4nhandling%202026,%20antagen%2023%20oktober%202025.pdf"
     },
     {
@@ -11155,6 +11187,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:35Z",
       "sha256": "3c520a7cb4c20f62aba7f5072cbb57d1eb24313474eefcd1f8d665b0bb276e62",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.1fecea2f197795d4aef6322/1750851333147/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Gislaveds%20kommun,%20antagna%20den%2016%20juni%202025.pdf"
     },
     {
@@ -11164,6 +11197,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:34Z",
       "sha256": "9c11195e9c054d733994a8db0fc6c126f30233e5ab328239360d02bc5854e2fa",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.29509923188b7e6b396c5ab/1687425679074/Lokala%20h%C3%A4lsoskyddsf%C3%B6reskrifter,%20antagna%20den%2015%20juni%202023.pdf"
     },
     {
@@ -11173,6 +11207,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:51Z",
       "sha256": "58c2c8a197448f6a26e2212b3c7b15caf1c85d4df535265b161dffa40e89a71f",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.35b4897019d4888f09f341b/1775558967368/Taxa%20f%C3%B6r%20reng%C3%B6ring%20(sotning),%20g%C3%A4ller%20fr%C3%A5n%20och%20med%20den%201%20april%202026,%20antagen%20den%2030%20mars%202026.pdf"
     },
     {
@@ -11182,6 +11217,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:50Z",
       "sha256": "39dbee5c9d0780878731bf324f03e3cae81ebe183dcab64063b060514fa8dbea",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.35b4897019d4888f09f341c/1775558967409/Taxa%20f%C3%B6r%20brandskyddskontroll,%20g%C3%A4ller%20fr%C3%A5n%20och%20med%20den%201%20april%202026,%20antagen%20den%2030%20mars%202026.pdf"
     },
     {
@@ -11191,6 +11227,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:30Z",
       "sha256": "11051b389621c523bfaf305ea37f96279c092c955ea79f96cdf565f2b8cb622b",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.6c7bb61c1851412f92b21e54/1672837741568/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20Gislaveds%20kommuns%20VA,%20ABVA,%20antagna%20den%2020%20november%202008.pdf"
     },
     {
@@ -11200,6 +11237,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:31Z",
       "sha256": "93ce85e892d328ae16a75194b6871a92fb7185a231fa15abeda8eb0f802919fe",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.6c7bb61c1851412f92b21e56/1672837741649/F%C3%B6reskrifter%20inkl.%20bilagor,%20avfallshantering%20f%C3%B6r%20Gislaveds%20kommun,%20antagna%20den%2026%20april%202018.pdf"
     },
     {
@@ -11209,6 +11247,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:33Z",
       "sha256": "8b9e8300e346036fb7908e8543fe1a61bb3da590da383fba1cda990f803d6614",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.6c7bb61c1851412f92b21e57/1672837741688/Kartbilaga%20till%20Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Gislaveds%20kommun.pdf"
     },
     {
@@ -11218,6 +11257,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:33Z",
       "sha256": "bf38cf2f03bd3b058e89c68d77bf74d668560c5cb6b4d2ddddd3db9b9f35cf56",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.6c7bb61c1851412f92b21e59/1672837741833/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandel%20i%20Gislaveds%20kommun%20antagna%20den%2026%20mars%202015.pdf"
     },
     {
@@ -11227,6 +11267,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:37Z",
       "sha256": "4669858015d9963fc63d9d59bf1968fdfa5741ea469d7d88548dff067d643ea1",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.7df549019fddc528121c71a/1788935116951/Socialn%C3%A4mndens%20taxor%202026,%20antagna%20den%2023%20oktober%202025.pdf"
     },
     {
@@ -11236,6 +11277,7 @@
       "municipality_code": "0662",
       "retrieved_at": "2026-10-30T13:30:43Z",
       "sha256": "577b679f31e87e80c0bd78e10d02146e2921ccdba65b735893b2e2f0c5da193d",
+      "text": "pdf",
       "url": "https://www.gislaved.se/download/18.7df549019fddc5281283ae/1787053580354/Taxa%20f%C3%B6r%20uppl%C3%A5telse%20av%20offentlig%20plats%20i%20Gislaveds%20kommun,%20antagen%2023%20oktober%202025.pdf"
     },
     {
@@ -11245,6 +11287,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:31:01Z",
       "sha256": "e9cfa02bae22e0b2b109ce1729679cdf696cbdc7fd55c26cf273f45b3a290f66",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.21eade93153ec5ebc281e2cc/1600088978759/Skyddsf%C3%B6reskrift%20f%C3%B6r%20grundvattent%C3%A4kt%20i%20Skillingaryd.pdf"
     },
     {
@@ -11254,6 +11297,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:31:02Z",
       "sha256": "b2f94347bd05a0fc41adca9b7282c273f744fa5197ea77b7880f975316e56fbf",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.21eade93153ec5ebc281e2cd/1600088948724/Skyddsf%C3%B6reskrifter%20f%C3%B6r%20grundvattent%C3%A4kt%20i%20Vaggeryd.pdf"
     },
     {
@@ -11263,6 +11307,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:30:59Z",
       "sha256": "99ab8bb18f41b34d34364b1629fa425f120c22c642521500eead05d71099dfe3",
+      "text": "ocr",
       "url": "https://www.vaggeryd.se/download/18.21eade93153ec5ebc28222e/1460098673570/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20Vaggeryds%20kommuns%20vatten-%20och%20avloppsanl%C3%A4ggning.pdf"
     },
     {
@@ -11272,6 +11317,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:31:08Z",
       "sha256": "6f0fbee2b86386a094f9b9b026c06a70eb16de108d2bc0387c5fdea0c26ec421",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.62b3bf96198b641b2dc5b14d/1756362745363/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20och%20lokala%20torghandelsf%C3%B6reskrifter%20f%C3%B6r%20Vaggeryds%20kommun.pdf"
     },
     {
@@ -11281,6 +11327,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:30:56Z",
       "sha256": "b5d9eb064018ba0452218facc58989300a4dc64bafe6afc60270abad2067d3c5",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.6c90eb0c19bfd11fac71af3/1769513360556/Avgift%20f%C3%B6r%20kopior,%20utskrifter%20och%20avskrifter%20av%20allm%C3%A4nna%20handlingar%20m.m.pdf"
     },
     {
@@ -11290,6 +11337,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:30:57Z",
       "sha256": "7393f771820bb4bd893adf250f14dbe6460c8fabf88bd942d028ee01be0954f3",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.6c90eb0c19bfd11fac71af4/1769513360599/Marktaxa%202026.pdf"
     },
     {
@@ -11299,6 +11347,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:30:58Z",
       "sha256": "c698fbca614435b4cafa23c939cdc44517857325019d6d9eb648df1ba7741fb0",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.6c90eb0c19bfd11fac71af5/1769513360640/Plantaxa%202026.pdf"
     },
     {
@@ -11308,6 +11357,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:30:55Z",
       "sha256": "84063f13cdfa5076ff8112fd59873d17935fdcba961156236bd7b8adfb0af8c4",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.6c90eb0c19bfd11fac71c3f/1769513748646/Avfallstaxa%202026%20Vaggeryds%20kommun.pdf"
     },
     {
@@ -11317,6 +11367,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:31:05Z",
       "sha256": "933e4762aa54153069f66cfaaf2b6157857d7376671f7cb80e6b71791f24616e",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.7a469efe164e26b619bef309/1535378375487/Renh%C3%A5llningsordning%20%20-%20F%C3%B6reskrifter%20avfallshantering%20GGVV-kommunerna.pdf"
     },
     {
@@ -11326,6 +11377,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:31:04Z",
       "sha256": "3cbbddf360cf8182a2f883f1c1b406c80375a1e131fe6777f19b4c557feed1de",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.7a469efe164e26b619bef30c/1535378375617/Renh%C3%A5llningsordning%20-%20Bilaga%201%20f%C3%B6reskrifter%20om%20avfallshantering%20GGVV-kommunerna.pdf"
     },
     {
@@ -11335,6 +11387,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:31:04Z",
       "sha256": "abcab4d265492d25163bea4b10b08dcd6a1ba8b5397d9da157781ad6371d3036",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.7a469efe164e26b619bef30d/1535378375650/Renh%C3%A5llningsordning%20-%20Bilaga%202%20f%C3%B6reskrifter%20f%C3%B6r%20avfallshantering%20GGVV-kommunerna.pdf"
     },
     {
@@ -11344,6 +11397,7 @@
       "municipality_code": "0665",
       "retrieved_at": "2026-10-30T13:31:00Z",
       "sha256": "515f0be11538a184cb86ca5fb76ffcb3501dfd2d589b33bf34ac6097aff4a63a",
+      "text": "pdf",
       "url": "https://www.vaggeryd.se/download/18.80ee47b1533daf657e11f14/1457951007362/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n.pdf"
     },
     {
@@ -11353,6 +11407,7 @@
       "municipality_code": "0680",
       "retrieved_at": "2026-10-30T22:11:03Z",
       "sha256": "0b02c8acbe9b3ba111c743683926dcf03c7ab0a45dfb14baa31f43120bab013b",
+      "text": "pdf",
       "url": "https://www.jonkoping.se/download/18.3984124f19d9a4b05ec2436c/1776947626454/Taxa%20f%C3%B6r%20offentlig%20kontroll%20av%20livsmedel.pdf"
     },
     {
@@ -11362,6 +11417,7 @@
       "municipality_code": "0680",
       "retrieved_at": "2026-10-30T22:11:04Z",
       "sha256": "5631e3cf0eadaf0f1e5d4363135b176955d5e6df34f679fd6516267e65c0c4bf",
+      "text": "pdf",
       "url": "https://www.jonkoping.se/download/18.3984124f19d9a4b05ec2436d/1776947626476/Taxa%20f%C3%B6r%20tillsyn%20enligt%20lagen%20om%20skydd%20mot%20internationella%20hot%20mot%20m%C3%A4nniskors%20h%C3%A4lsa.pdf"
     },
     {
@@ -11371,6 +11427,7 @@
       "municipality_code": "0680",
       "retrieved_at": "2026-10-30T22:11:05Z",
       "sha256": "324bda000b2f26a9fcf62fdbe6478f0fd27874b2efd473c9b14ef6e30026671a",
+      "text": "pdf",
       "url": "https://www.jonkoping.se/download/18.3984124f19d9a4b05ec2436e/1776947626515/Taxa%20f%C3%B6r%20tillsyn%20enligt%20lagen%20om%20spr%C3%A4ng%C3%A4mnesprekursorer.pdf"
     },
     {
@@ -11380,6 +11437,7 @@
       "municipality_code": "0680",
       "retrieved_at": "2026-10-30T22:11:06Z",
       "sha256": "6acbc330979fc55b6b28cf7fd8a782498c75a265693c79807ddec668e1ec39c2",
+      "text": "pdf",
       "url": "https://www.jonkoping.se/download/18.3984124f19d9a4b05ec2436f/1776947626535/Taxa%20f%C3%B6r%20tillsyn%20enligt%20str%C3%A5lskyddslagen.pdf"
     },
     {
@@ -11389,6 +11447,7 @@
       "municipality_code": "0680",
       "retrieved_at": "2026-10-30T22:11:07Z",
       "sha256": "360df56648612e71bbb2a05477b090ccc6a728a8844b3a55eee0cbd78e78645b",
+      "text": "pdf",
       "url": "https://www.jonkoping.se/download/18.3984124f19d9a4b05ec24c8d/1776950239123/Taxa%20f%C3%B6r%20tillsyn%20och%20pr%C3%B6vning%20enligt%20milj%C3%B6balken_utan%20bilaga.pdf"
     },
     {
@@ -11398,6 +11457,7 @@
       "municipality_code": "0680",
       "retrieved_at": "2026-10-30T22:11:08Z",
       "sha256": "7b2851ce2f650ce466c28580b0434b5d22ef46b12eb5efa250d8c97ac67146e2",
+      "text": "pdf",
       "url": "https://www.jonkoping.se/download/18.74fef9ab15548f0b8001ec92/1465889758317/Allm%C3%A4nna+lokala+ordningsf%C3%B6reskrifter+f%C3%B6r+J%C3%B6nk%C3%B6pings+kommun.pdf"
     },
     {
@@ -11407,6 +11467,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:15Z",
       "sha256": "f9f16f261168efa3e0eda2e4882f20c59af69fb5b20b5bc603f893a847223e28",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.1416ad461869be21f644982/1767779480030/Avfallstaxa.pdf"
     },
     {
@@ -11416,6 +11477,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:18Z",
       "sha256": "29a1c9fce59fe199d829b709db04d853cab70e666db5199bd249b515b403fcea",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.36a2de4517e6c1cd4b070f9/1734707352066/Plan-%20och%20bygglovstaxa.pdf"
     },
     {
@@ -11425,6 +11487,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:26Z",
       "sha256": "421843a38af60d6477badb3638a7cf5a1bd2018ef338048f3c9225e19d6740c9",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.475318a016a916da59c4d9/1765977475078/Taxor%20f%C3%B6r%20barnomsorg%20och%20skolomsorg.pdf"
     },
     {
@@ -11434,6 +11497,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:17Z",
       "sha256": "c2cceaa65f990e5395886b17aad9d5611cb0be20d6f871eb44067956fa089d4c",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.475318a016a916da59c4e1/1557238398325/M%C3%A5ltidsavgifter%20f%C3%B6r%20personal.pdf"
     },
     {
@@ -11443,6 +11507,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:21Z",
       "sha256": "b1c7ecfc3680e8878954f6ef82943ef771291f23ea03fd69c76957dbf27ccee0",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.56f1dcf317014e64d058466/1673259267542/Taxa%20f%C3%B6r%20offentlig%20kontroll%20inom%20livsmedelsomr%C3%A5det%20N%C3%A4ssj%C3%B6%20kommun.pdf"
     },
     {
@@ -11452,6 +11517,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:23Z",
       "sha256": "0ddafde5dcc9cef1d806d7610525d2ac0e7190295a92e9e6874c5c79b39d77e3",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.5887ffce168e1d826e1aa5d/1673876923403/Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20inom%20milj%C3%B6-%20och%20h%C3%A4lsoskydd.pdf"
     },
     {
@@ -11461,6 +11527,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:19Z",
       "sha256": "5e1e6d51fdbde86cb55081c04f308cb7cfd5feead80af8bccff767896a6de5cd",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.5887ffce168e1d826e1aa61/1551969823363/Taxa%20f%C3%B6r%20digital%20inm%C3%A4tning%20p%C3%A5%20fastighetskarta%20av%20v%C3%A4rmepumpsanl%C3%A4ggningar.pdf"
     },
     {
@@ -11470,6 +11537,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:20Z",
       "sha256": "fdd5522cdc6bf4c5024355ab621ab9b28ced6bbe4c38e6c57b211d793f1b0575",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.5887ffce168e1d826e1aa62/1641821497352/Taxa%20f%C3%B6r%20flyttning%20av%20fordon.pdf"
     },
     {
@@ -11479,6 +11547,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:25Z",
       "sha256": "75b9f4d283788e43846931e65ceccb5c4dbc9f2eb58fc00e04b21e61a3ee93ed",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.5887ffce168e1d826e1aa66/1551969823825/Taxa%20kommunala%20musikskolan.pdf"
     },
     {
@@ -11488,6 +11557,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:32Z",
       "sha256": "164c7f38c82c014c90da16664ca451588f51d5137a73fdb367155359039650e2",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.5887ffce168e1d826e1aae0/1551969837672/Skyddsf%C3%B6reskrift%20f%C3%B6r%20vattent%C3%A4kt%20i%20Spexhultasj%C3%B6n,%20L%C3%A4nsstyrelsen.pdf"
     },
     {
@@ -11497,6 +11567,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:32Z",
       "sha256": "81d7f304891d6d224db3eecd1f3de979b6d1a3451552f8aa8be1a01dbcd18d62",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.5887ffce168e1d826e1aae1/1551969837759/Skyddsf%C3%B6reskrifter%20g%C3%A4llande%20vattenskyddsomr%C3%A5de%20f%C3%B6r%20Storesj%C3%B6n%20Bodafors%20vattent%C3%A4kt.pdf"
     },
     {
@@ -11506,6 +11577,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:31Z",
       "sha256": "e4c33ac08830a3aa8863345ffad6219d98fa4ed674b5e7c5566652525fe7b29b",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.5887ffce168e1d826e1aae2/1551969837955/Reservatsf%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20L%C3%B6vhult%20i%20N%C3%A4ssj%C3%B6%20kommun.pdf"
     },
     {
@@ -11515,6 +11587,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:28Z",
       "sha256": "693377fdd2beaaccad9a30c098460e92159b2bc0d4344bb0be33be61c4fc7b5c",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.5887ffce168e1d826e1aafb/1551969840508/G%C3%A5ngbanerenh%C3%A5llning.pdf"
     },
     {
@@ -11524,6 +11597,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:29Z",
       "sha256": "4b30a0f621b3cef3aa504b24bfd8dbf17a5871ae785295bff32d387712a6f141",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.61dbeb4317ddd5cd047eb55/1678710918025/Allm%C3%A4nna%20och%20lokala%20ordningsf%C3%B6reskrifter.pdf"
     },
     {
@@ -11533,6 +11607,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:16Z",
       "sha256": "6868a9c725eb2657e341fd57d470e9d4f1e8d1101a046e4b285f5e3f140def0a",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.61dbeb4317ddd5cd047eb5e/1706275111622/Avgift%20f%C3%B6r%20felparkering.pdf"
     },
     {
@@ -11542,6 +11617,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:27Z",
       "sha256": "5062e1e3c7e8fff46092c1471fffa69f2e88eb872458e052c0b42bcdd76c8f40",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.787635f91951936bc991860/1778683626201/F%C3%B6reskrifter%20om%20avfallshantering%20f%C3%B6r%20N%C3%A4ssj%C3%B6%20kommun.pdf"
     },
     {
@@ -11551,6 +11627,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:23Z",
       "sha256": "aa8b1cca47d24d037228703a2dffee71e3fea06e60273279e8e4c99a64e833ff",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.98c602d16a914c788a8820/1678206481633/Taxa%20f%C3%B6r%20sotning%20och%20reng%C3%B6ring.pdf"
     },
     {
@@ -11560,6 +11637,7 @@
       "municipality_code": "0682",
       "retrieved_at": "2026-10-30T13:31:24Z",
       "sha256": "c47126c93295eb70a73f228e0a1cef0bcbf2352e7bce1e9d4ab5f9a2e773d894",
+      "text": "pdf",
       "url": "https://nassjo.se/download/18.9c42d819dd7e8c11813ff/1777541150340/Taxa%20f%C3%B6r%20uthyrning%20av%20barn-%20och%20utbildningsf%C3%B6rvaltningens%20lokaler.pdf"
     },
     {
@@ -11569,6 +11647,7 @@
       "municipality_code": "0684",
       "retrieved_at": "2026-10-30T13:31:36Z",
       "sha256": "3b9c803c0ecd0886b335df9f8767136d7a374be8a9e266c0df51263369c9270f",
+      "text": "pdf",
       "url": "https://www.savsjo.se/download/18.2fd7fce3166a4c2f44e5265/1540982990284/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
     },
     {
@@ -11578,6 +11657,7 @@
       "municipality_code": "0684",
       "retrieved_at": "2026-10-30T13:31:37Z",
       "sha256": "005ad030bb3b29f1635d56ea37c10c5679d2f18c287af8da7116c1c57ae1cb8c",
+      "text": "pdf",
       "url": "https://www.savsjo.se/download/18.2fd7fce3166a4c2f44e5266/1540982991856/Lokala%20h%C3%A4lsoskyddsf%C3%B6reskrifter.pdf"
     },
     {
@@ -11587,6 +11667,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:32Z",
       "sha256": "fe2cfd6d7be7e8e7126994af3fc5a8ab7d7579ccc88eca235d08aa583553dcaf",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.29e222a719956264c27162eb/1759760794826/Allm%C3%A4nna%20handlingar,%20taxa.pdf"
     },
     {
@@ -11596,6 +11677,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:43Z",
       "sha256": "8da4c28a3376bfde125a0b534ed873be74c986fac3601022a9ae3a256d13fead",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.2f8cc89c18f86cc0b7e4b22/1716552286095/Skyddsf%C3%B6reskrifter%20f%C3%B6r%20sj%C3%B6n%20%C3%96rken.pdf"
     },
     {
@@ -11605,6 +11687,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:41Z",
       "sha256": "f59d537ef6145f0db5179eb7602a148f9dc3c65d85dc995e5896dd73576e563e",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.372e5ee419b440250562c2/1766389336782/Prislista%20avgifter%20inom%20%C3%A4ldre-%20och%20funktionshinderomsorgen.pdf"
     },
     {
@@ -11614,6 +11697,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:40Z",
       "sha256": "2c86a80fb39aa1787411efe9d748290b4d23d21c9dc66158482bfde42b4c10ee",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.521bf6bf19aa45d58ad391b/1763985762361/Prislista%20avgifter%20inom%20m%C3%A5ltidsservice.pdf"
     },
     {
@@ -11623,6 +11707,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:33Z",
       "sha256": "51bed2cfbf53239a3f46ab6c62d9be66c8174f2b8651a5aa1fcd367f24af3bc8",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.7150ddee18e85ff00c53582/1712152191741/Eldstad,%20taxa%20sotning%20av%20skorsten.pdf"
     },
     {
@@ -11632,6 +11717,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:34Z",
       "sha256": "505cf61a90821ca84e56673808b196cefd5f60163d7b96dce9cb1ad6ab7a4de9",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.7150ddee18e85ff00c535bc/1712153172463/Livsmedel,%20taxa%20f%C3%B6r%20kontroll.pdf"
     },
     {
@@ -11641,6 +11727,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:35Z",
       "sha256": "476746ecfc7450bfe8a39a7410e8c0d980829c7b68fe8fe93133fd6e139943ac",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.7150ddee18e85ff00c535bd/1751275682244/Livsmedel,%20Taxa%20serveringstillst%C3%A5nd%20och%20f%C3%B6rs%C3%A4ljning%20i%20detaljhandel.pdf"
     },
     {
@@ -11650,6 +11737,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:36Z",
       "sha256": "522b4aedfbf7fc924e075fedd23b7d4f141a2b434cfdb46b87cbf428d77f0e46",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.7150ddee18e85ff00c535c3/1712153288479/Milj%C3%B6balkens%20omr%C3%A5de,%20h%C3%B6glandstaxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn.pdf"
     },
     {
@@ -11659,6 +11747,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:39Z",
       "sha256": "8d09110a05d73d4180b77fad4729f95db4efac299e0a475b2e69a25114779870",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.7150ddee18e85ff00c535d8/1712153319804/Plan-%20och%20bygglovtaxa.pdf"
     },
     {
@@ -11668,6 +11757,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:38Z",
       "sha256": "80ea2331e0e24a43fc9a9b381f95498a3b324e72721bd4cb17771c709e768e03",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.7150ddee18e85ff00c53690/1712156015484/Ordningsf%C3%B6reskrifter%20torghandel.pdf"
     },
     {
@@ -11677,6 +11767,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:38Z",
       "sha256": "1e5eef764a2119ba0ab4c7e356665a928133a164f8f85d6ee3365f47799cf5bf",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.7150ddee18e85ff00c53691/1712156015507/Ordningsf%C3%B6reskrifter,%20lokala.pdf"
     },
     {
@@ -11686,6 +11777,7 @@
       "municipality_code": "0685",
       "retrieved_at": "2026-10-30T13:32:42Z",
       "sha256": "251edbf9bb25f9706fb0ae138c601302d3bb2600c035ffa277323eba34181c17",
+      "text": "pdf",
       "url": "https://vetlanda.se/download/18.7150ddee18e85ff00c536a0/1762520369544/Skydd%20f%C3%B6r%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6,%20lokala%20f%C3%B6reskrifter.pdf"
     },
     {
@@ -11695,6 +11787,7 @@
       "municipality_code": "0686",
       "retrieved_at": "2026-10-30T13:32:47Z",
       "sha256": "181db03c1cd8d8c3ccc7e6d49780d74a662626f203ef1fdca0400fa048891ad0",
+      "text": "pdf",
       "url": "https://eksjo.se/download/18.1c7bdf2d199e59b572e7b576/1770026139448/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa.pdf"
     },
     {
@@ -11704,6 +11797,7 @@
       "municipality_code": "0686",
       "retrieved_at": "2026-10-30T13:32:48Z",
       "sha256": "3d84d8d707eb19704e6728b734cdd882e9a96dee5529f8ea717f2bfc511478c6",
+      "text": "pdf",
       "url": "https://eksjo.se/download/18.52f320d9162c6473730b9c97/1525337638827/F%C3%B6reskrifter%20om%20kommunalt%20bidrag%20till%20enskild%20v%C3%A4gh%C3%A5llning.pdf"
     },
     {
@@ -11713,6 +11807,7 @@
       "municipality_code": "0686",
       "retrieved_at": "2026-10-30T13:32:49Z",
       "sha256": "7b660f45be8e9d9a642aa55c6b71057a22ae519700eb9666529252b2bfc21615",
+      "text": "pdf",
       "url": "https://eksjo.se/download/18.52f320d9162c6473730b9efa/1525338035802/F%C3%B6reskrifter%20om%20g%C3%A5ngbanerenh%C3%A5llning.pdf"
     },
     {
@@ -11722,6 +11817,7 @@
       "municipality_code": "0686",
       "retrieved_at": "2026-10-30T13:32:46Z",
       "sha256": "d3c35af974a8ab590cd705332429c47dd935ab942a2b2253e8ce565088c276da",
+      "text": "pdf",
       "url": "https://eksjo.se/download/18.d58e0d11882855c24894d7/1685350863685/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
     },
     {
@@ -11731,6 +11827,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:32:58Z",
       "sha256": "b736e406e231fcf38901857e3f2757a42dd9e1d840b4ca0e1b72116a7f45d7a1",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Bestammelser_Allmanna-bestammelser-for-anvandning-av-kommunens-allmanna-VA-2.pdf"
     },
     {
@@ -11740,6 +11837,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:32:53Z",
       "sha256": "98a331d8ad4614290290d111ee8c09b0f65e10180f886c4814a80837bc9be936",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Bestammelser_Avfallstaxa-2026-1.pdf"
     },
     {
@@ -11749,6 +11847,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:32:54Z",
       "sha256": "ba8be8c27fb5a5a19f8be621ecd6b4a7166ef2da2f49eaf23714c9e824548900",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Bestammelser-Avfallstaxa-2027.pdf"
     },
     {
@@ -11758,6 +11857,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:33:01Z",
       "sha256": "5e991914df0a106a5bfe3d903431762093dc831027ed349ba7328574d2c809f4",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Bestammelser-Bilagor-till-foreskrifter-om-avfallshantering-for-Tranas-kommun.pdf"
     },
     {
@@ -11767,6 +11867,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:33:00Z",
       "sha256": "d13db9a9bd62c5e88eac5a9628a1f92774e103a78b369a9cd98264babf88ffd4",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Bestammelser-Foreskrifter-om-avfallshantering-for-Tranas-kommun.pdf"
     },
     {
@@ -11776,6 +11877,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:32:52Z",
       "sha256": "2e416d41eb2605a1762f7274630f3718f286b044777555d0cdf0278944ddec28",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Bestammelser_VA-taxa-2026-2.pdf"
     },
     {
@@ -11785,6 +11887,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:33:02Z",
       "sha256": "69f5be17dfa36fa2d8565e276f37c275959aa4c420a77540dbb41c07a9185bb7",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Lokala-halsoskyddsforeskrifter-2007.pdf"
     },
     {
@@ -11794,6 +11897,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:33:00Z",
       "sha256": "ebf2d775628239f568809a2d0405fcb3d5f3dd5897cc4bb3eca4e5055d775a3e",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Lokala-ordningsforeskrifter-110404-1.pdf"
     },
     {
@@ -11803,6 +11907,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:32:55Z",
       "sha256": "bd7eef9f3bcb34f3035e6682a3d63bf56630f17a5d52a471b4fba8fa479c0f1c",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Taxa-for-provning-och-tillsyn-inom-miljo-och-halsoskydd-2026.pdf"
     },
     {
@@ -11812,6 +11917,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:32:56Z",
       "sha256": "95a1b952359699caae7aa8d24807b686096c08fb646a018ee1779faf78049231",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Taxa-for-tillsyn-over-avfallshantering-i-fritidsbatshamnar.pdf"
     },
     {
@@ -11821,6 +11927,7 @@
       "municipality_code": "0687",
       "retrieved_at": "2026-10-30T13:32:57Z",
       "sha256": "f75a77e824b2bb2a6f0c30fca02b2b1ab30a30e7964a6e158b97a881a67f3435",
+      "text": "pdf",
       "url": "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Taxa-inom-livsmedelsomradet-2025.pdf"
     },
     {
