@@ -344,6 +344,25 @@ class ParseTest(unittest.TestCase):
         self.assertEqual((current.in_force, current.repealed), ("2026-10-05", None))
         self.assertEqual(current.url, "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202026-1.pdf")
 
+    def test_rams_register(self):
+        def item(number, base, status, serie="RA-MS", after=""):
+            return {"nummer": number, "grundforfattning": base, "rubrik": f"Riksarkivets föreskrifter {number}",
+                    "serieText": serie, "statusText": status, "ikrafttradandedatum": "2020-01-01",
+                    "efterfoljareString": after, "huvuddokument": [{"path": f"rams/RA-MS {number.replace(':', '-')}.pdf"}]}
+
+        listing = json.dumps({"traffLista": [
+            item("2026:40", "2026:40", "Giltig"),
+            item("2014:3", "2014:3", "Upphävd", after="upphävda genom: RA-MS 2026:40"),
+            item("1002", "1002", "Upphävd", serie="Beslut om gallring"),
+            item("2010:1", "2010:1", "Giltig", serie="KrA-MS"),
+        ]})
+        ra = agency.RiksarkivetMsAdapter()
+        entries = {e.number: e for e in ra.parse_listing(listing, ra.listing_url)}
+        self.assertEqual(sorted(entries), ["RA-MS 2014:3", "RA-MS 2026:40"])
+        self.assertEqual(entries["RA-MS 2014:3"].repealed, "2020-01-01")
+        self.assertEqual(entries["RA-MS 2026:40"].url,
+                         "https://foreskrifter.riksarkivet.se/api/rams/pdf/rams%2FRA-MS%202026-40.pdf")
+
     def test_skolfs_api(self):
         skolfs = agency.SkolverketAdapter()
         text = fixture("agency-skolfs-statute.json")

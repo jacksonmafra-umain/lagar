@@ -1218,7 +1218,7 @@ class RiksdagenAdapter:
 
 # --- Riksarkivet (RA-FS) ------------------------------------------------------
 
-_RAFS_REPEALED_BY = re.compile(r"upphävda genom: (RA-FS \d{4}:\d+)")
+_RAFS_REPEALED_BY = re.compile(r"upphävda genom: (RA-[FM]S \d{4}:\d+)")
 
 
 class RiksarkivetAdapter:
@@ -1238,23 +1238,26 @@ class RiksarkivetAdapter:
                    "&sokBlandUpphavda=true&rafsSort=1")
     detail = False
     has_text = False
+    api = "rafs"
+    serie = None  # when set, only items of this `serieText`
 
     def listing_urls(self, args):
         return [self.listing_url]
 
     def _pdf(self, path):
-        return f"{self.base_url}/api/rafs/pdf/{urllib.parse.quote(path, safe='')}"
+        return f"{self.base_url}/api/{self.api}/pdf/{urllib.parse.quote(path, safe='')}"
 
     def parse_listing(self, text, url):
-        items = [i for i in json.loads(text).get("traffLista") or [] if re.fullmatch(r"\d{4}:\d+", i.get("nummer") or "")]
-        in_force = {f"RA-FS {i['nummer']}": _date(i.get("ikrafttradandedatum")) for i in items}
+        items = [i for i in json.loads(text).get("traffLista") or [] if re.fullmatch(r"\d{4}:\d+", i.get("nummer") or "")
+                 and (self.serie is None or i.get("serieText") == self.serie)]
+        in_force = {f"{self.series} {i['nummer']}": _date(i.get("ikrafttradandedatum")) for i in items}
         amended = {}
         for item in items:
             if item.get("grundforfattning") and item["grundforfattning"] != item["nummer"]:
-                amended.setdefault(f"RA-FS {item['grundforfattning']}", set()).add(f"RA-FS {item['nummer']}")
+                amended.setdefault(f"{self.series} {item['grundforfattning']}", set()).add(f"{self.series} {item['nummer']}")
         entries = []
         for item in items:
-            number = f"RA-FS {item['nummer']}"
+            number = f"{self.series} {item['nummer']}"
             title = _clean(item.get("rubrik"))
             base = item.get("grundforfattning") == item["nummer"] and not _AMENDING.search(title)
             repealed = None
@@ -1273,6 +1276,20 @@ class RiksarkivetAdapter:
     def regulation(self, entry):
         return Regulation(number=entry.number, title=entry.title, in_force=entry.in_force, repealed=entry.repealed,
                           amended_by=list(entry.amended_by), version="Grundförfattning", pdfs=list(entry.pdfs))
+
+
+class RiksarkivetMsAdapter(RiksarkivetAdapter):
+    """Riksarkivet's regulations for named agencies (RA-MS), from the same register's `api/rams/sok`.
+
+    Older gallring decisions without a year in their number, and the series
+    Serie A and KrA-MS in the same register, are not stored.
+    """
+
+    series = "RA-MS"
+    listing_url = (RiksarkivetAdapter.base_url + "/api/rams/sok?nummer=&rubrik=&fulltext=&sokBlandGiltiga=true"
+                   "&sokBlandUpphavda=true&ramsSort=1")
+    api = "rams"
+    serie = "RA-MS"
 
 
 # --- Skolverket (SKOLFS) ------------------------------------------------------
@@ -2000,7 +2017,7 @@ def load_series(path=SERIES_CONFIG):
 ADAPTERS = {a.series: a for a in (AfsAdapter(), FffsAdapter(), TsfsAdapter(), AklagareAdapter(), SwedacAdapter(),
                                    PrvAdapter(), PolisenAdapter(), ScbAdapter(),
                                    EnergimyndighetenAdapter(), RiksdagenAdapter(),
-                                   RiksarkivetAdapter(), SkolverketAdapter(),
+                                   RiksarkivetAdapter(), RiksarkivetMsAdapter(), SkolverketAdapter(),
                                    SjofartsverketAdapter(), TrafikverketAdapter(),
                                    SpelinspektionenAdapter(), SametingetAdapter(),
                                    SvenskaKraftnatAdapter(),
