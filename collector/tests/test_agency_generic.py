@@ -274,6 +274,9 @@ class AffsTest(unittest.TestCase):
                    "</script>")
         entries = self.AFFS.parse_listing(listing, self.AFFS.listing_url)
         self.assertEqual([(e.number, e.base) for e in entries], [("AFFS 2025:1", True), ("AFFS 2025:2", False)])
+        amsfs = agency.ADAPTERS["AMSFS"]  # the predecessor series, from the same state
+        self.assertEqual([(e.number, e.url) for e in amsfs.parse_listing(listing, amsfs.listing_url)],
+                         [("AMSFS 1996:7", "https://arbetsformedlingen.se/om-oss/x/amsfs-19967")])
         page = """<main>
           <div class="sv-text-portlet"><div id="Rubrik"></div><div class="sv-text-portlet-content"><h1>AFFS 2025:1</h1></div></div>
           <div class="sv-text-portlet"><div id="Beskrivning"></div><div class="sv-text-portlet-content">
