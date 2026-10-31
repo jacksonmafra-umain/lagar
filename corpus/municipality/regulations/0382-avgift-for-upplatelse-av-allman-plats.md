@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/revidering-avseende-avgift-for-upplatelse-av-allman-plats.-bilaga-5-kf-60-2024.pdf"
 source_sha256: "9becc8e871bebc941fa05c59c2230d532b51a866da76e5422c46b4240cf29d4d"
-fetched_at: "2026-10-31T00:22:41Z"
+fetched_at: "2026-10-31T16:01:08Z"
 issuer: "Östhammars kommun"
 region_code: "03"
 municipality_code: "0382"
@@ -93,6 +93,122 @@ Godkänn alla kakorStäng Godkänn nödvändiga kakorStäng
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Revidering avseende avgift för upplåtelse av allmän plats. Bilaga 5 KF §60 2024](<https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/revidering-avseende-avgift-for-upplatelse-av-allman-plats.-bilaga-5-kf-60-2024.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Bilaga 4 KF §60 2024
+
+Sidan 1 av 2
+
+Avgift för upplåtelse av offentlig plats
+
+Östhammars kommun
+
+Antaget av
+
+Antaget
+
+Ersätter tidigare version
+
+Dokumentansvarig
+
+Kommunfullmäktige
+
+2024-04-23 §60
+
+Avgift för upplåtelse av offentlig plats KF § 44/2022
+
+Markstrateg
+
+Bilaga 4 KF §60 2024
+
+Sidan 2 av 2
+
+1 § Om föreskrifterna
+
+Avgifter för användning av offentlig plats är framtagen med stöd av kommunens lokala ordningsföreskrifter, torghandelsföreskrifter och Avgiftslagen lag (1957:259), om rätten för kommunen att ta ut avgift för vissa upplåtelser av offentlig plats med mera.
+
+Dessa avgifter gäller fr.o.m. 2024-05-01.
+
+Avgifterna räknas upp årligen med index, basmånad januari 2024 (412,74). I de fall polisen upphäver ett tillstånd kommer avgift inte att återbetalas.
+
+2 § Tillstånd
+
+Avgifter som anges i detta dokument gäller endast tillsammans med giltiga tillstånd, vanligen polistillstånd, som krävs för att få använda offentlig plats.
+
+3 § Uteservering
+
+Följande avgifter gäller för uteserveringar i Östhammars kommun. Tabellen visar vad det kostar per kvadratmeter.
+
+Sommarsäsong är 1 maj – 31 augusti, debiteras oavsett antal månader av perioden som avses.
+
+Övrig säsong 1 september – 30 april, debiteras oavsett antal månader av perioden som avses. Ändamål
+
+Ort
+
+Avgift/ säsong
+
+Uteservering
+
+Öregrund
+
+350 kr/ kvm
+
+Uteservering
+
+Östhammar
+
+290 kr/ kvm
+
+Uteservering
+
+Alunda
+
+170 kr/ kvm
+
+Uteservering
+
+Gimo
+
+150 kr/ kvm
+
+Uteservering
+
+Österbybruk
+
+150 kr/ kvm
+
+Uteservering
+
+Övriga
+
+150 kr/ kvm
+
+Bryggdäck och pontonbryggor i hamnbassänger i Öregrund och Östhammar för t.ex. uteservering eller annan aktivitet hanteras i enlighet med samma principer som på land.
+
+4 § Evenemang
+
+För evenemang och festivaler med inträdesavgift där området inhägnas, eller på likartat sätt görs otillgängligt för allmänheten, utgår en avgift om 5 000 kr/ 24-timmarsperiod. En rimlighetsbedömning görs för varje ansökan som träffas av denna bestämmelse.
+
+5 § Byggetablering
+
+Följande avgifter gäller vid byggetablering.
+
+Grundavgift per upplåtelse
+
+6 § Övriga
+
+Julgransförsäljning, max 30 kvm/ plats
+
+Foodtrucks och handelsstånd, max 9 kvm
+
+1 500 kr
+
+1 500 kr
+
+1 100 kr/ dag

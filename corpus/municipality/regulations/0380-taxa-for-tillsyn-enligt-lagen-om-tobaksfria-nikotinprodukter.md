@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.uppsala.se/contentassets/c8ebfedef0e54cd39ba610a92cce6a7a/taxa-for-tillsyn-enligt-lagen-om-tobaksfria-nikotinprodukter-2026.pdf"
 source_sha256: "8b267fe3734ab1636b17429abe1830725ad00dd8c9c1649672a9454190a353e4"
-fetched_at: "2026-10-30T21:06:49Z"
+fetched_at: "2026-10-31T15:59:27Z"
 issuer: "Uppsala kommun"
 region_code: "03"
 municipality_code: "0380"
@@ -71,7 +71,47 @@ Vill ej kommentera
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Taxa för tillsyn enligt lagen om tobaksfria nikotinprodukter 2026](<https://www.uppsala.se/contentassets/c8ebfedef0e54cd39ba610a92cce6a7a/taxa-for-tillsyn-enligt-lagen-om-tobaksfria-nikotinprodukter-2026.pdf>)
 - [Taxa för tillsyn tobaksfria nikotin produkter 2025](<https://www.uppsala.se/contentassets/c8ebfedef0e54cd39ba610a92cce6a7a/taxa-for-tillsyn-enligt-lagen-om-tobaksfria-nikotinprodukter.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Taxa för tillsyn enligt lagen om tobaksfria nikotinprodukter
+
+Beslutad av kommunfullmäktige 3 november 2025, § 315
+
+Denna taxa gäller från och med 1 januari 2026.
+
+Taxa för tillsyn enligt lagen om tobaksfria nikotinprodukter
+
+Inledande bestämmelser
+
+1 § Denna taxa gäller avgift för Uppsala kommuns kostnader för tillsyn enligt lagen (2022:1257) om tobaksfria nikotinprodukter och de föreskrifter som har meddelats med stöd av lagen.
+
+2 § Avgift enligt denna taxa ska betalas till miljö- och hälsoskyddsnämnden.
+
+3 § Om det finns särskilda skäl med hänsyn till verksamhetens art och omfattning, behov av tillsyn, nedlagd tillsynstid eller andra omständigheter får miljö- och hälsoskyddsnämnden besluta att avgift enligt denna taxa sätts ned eller efterskänks i enskilda fall.
+
+4 § Avgiftsuttag sker i form av fast årlig avgift för tillsyn enligt 6 §. Avgiften beräknas enligt schablon för genomsnittligt nedlagd handläggningstid per tillsynsobjekt och ska täcka verksamhetens kostnader.
+
+Med handläggningstid avses den sammanlagda tid som varje tjänsteperson vid nämnden har använt för administration, planering av tillsyn, tillsynsbesök, samt rapportskrivning.
+
+5 § Beslut om avgift fattas av miljö- och hälsoskyddsnämnden.
+
+Avgifter
+
+Årlig tillsynsavgift
+
+6 § Årlig avgift för tillsyn av försäljning av tobaksfria nikotinprodukter
+
+1 500 kr*
+
+7 § Avgift för tillsyn av anmälningspliktig försäljning av tobaksfria nikotinprodukter ska betalas av verksamhetsutövaren inom den tid som anges på fakturan. Avgiften betalas för innevarande år.
+
+* Om försäljningsstället samtidigt säljer tobak tas ingen tillsynsavgift ut för tobaksfria nikotinprodukter. Avgiften ingår då i tillsynsavgiften för tobak.
+
+Rabatt ges på tillsynsavgiften för tobaksfria nikotinprodukter om försäljningsstället samtidigt säljer folköl, vissa receptfria läkemedel och/eller elektroniska cigaretter och påfyllningsbehållare. Avgiften blir då 1 000 kr per produkt som säljs.

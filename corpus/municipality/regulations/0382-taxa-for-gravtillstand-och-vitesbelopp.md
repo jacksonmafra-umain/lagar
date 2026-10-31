@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.osthammar.se/globalassets/dokument/styrdokument/beslut-fran-kf-2020-02-18_--6.pdf"
 source_sha256: "8c8b724018cf1c3c64618254fb5c2f0ea8aab3d3302795c9d95a46dc1a5c8b74"
-fetched_at: "2026-10-31T00:23:00Z"
+fetched_at: "2026-10-31T16:01:23Z"
 issuer: "Östhammars kommun"
 region_code: "03"
 municipality_code: "0382"
@@ -93,7 +93,47 @@ Godkänn alla kakorStäng Godkänn nödvändiga kakorStäng
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Beslut från KF 2020-02-18_ § 6](<https://www.osthammar.se/globalassets/dokument/styrdokument/beslut-fran-kf-2020-02-18_--6.pdf>)
 - [Bilaga 4, kf § 6_2020-02-18](<https://www.osthammar.se/globalassets/dokument/styrdokument/bilaga-4-kf--6_2020-02-18.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Utdrag ur SAMMANTRÄDESPROTOKOLL
+
+Sammanträdesdatum
+
+2020-02-18
+
+Sid
+
+Kommunfullmäktige
+
+Dnr KS-2019-732
+
+§ 6.
+
+Taxa för grävtillstånd samt vitesbelopp
+
+Beslut
+
+Kommunfullmäktige antar taxa för grävtillstånd inklusive vitesbelopp att gälla från 2020-03-01. (Bilaga 4)
+
+Ärendebeskrivning
+
+Antalet grävtillstånd har de senaste åren ökat succesivt. Under 2017 utfärdade vi 63 stycken och under 2018 var det 97 stycken och under 2019 drygt 60 stycken.
+
+Eftersom det idag inte tas ut någon avgift är efterlevnaden av sökta tillstånd bristfällig. Gatu- och trafiksamordnaren på tekniska förvaltningen har gjort en analys och kommit fram till att andra kommuner avgiftsbelägger ansökan om grävtillstånd.
+
+Därför föreslås att även Östhammars kommun tar ut en avgift för ansökan om grävning i kommunal mark.
+
+Beslutsunderlag  Taxa för grävtillstånd  Anvisning för grävning
+
+Beslutet skickas till  Tekniska förvaltningen  Webbredaktör för publicering på kommunens webbplats, styrande dokument
+
+Utdragsbestyrkande
+
+Justerarsignaturer
