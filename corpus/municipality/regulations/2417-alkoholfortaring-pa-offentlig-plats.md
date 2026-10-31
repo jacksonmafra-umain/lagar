@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://norsjo.se/wp-content/uploads/2023/06/alkoholfortaring-pa-offentlig-plats.pdf"
 source_sha256: "bb7440ec528122632f06c0eef64c041d89d061dbc563427a8007651d60b56701"
-fetched_at: "2026-10-30T00:41:33Z"
+fetched_at: "2026-10-31T22:11:11Z"
 issuer: "Norsjö kommun"
 region_code: "24"
 municipality_code: "2417"
@@ -34,3 +34,5 @@ Förteckning: <https://norsjo.se/kommun-politik/styrdokument/for-invanare-och-fo
 Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
 
 - [Bilaga till ordningsföreskrifter, alkoholförtäring på offentlig plats](<https://norsjo.se/wp-content/uploads/2023/06/alkoholfortaring-pa-offentlig-plats.pdf>)
+
+Pdf:en är inskannad och innehåller ingen text som kan läsas maskinellt.
