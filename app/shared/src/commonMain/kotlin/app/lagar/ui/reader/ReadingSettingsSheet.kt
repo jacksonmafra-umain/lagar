@@ -288,8 +288,8 @@ private fun StepButton(symbol: String, description: String, enabled: Boolean, on
 @Composable
 private fun PaperSwatch(paper: ReadingPaper, selected: Boolean, onClick: () -> Unit) {
     val app = LagarTheme.colors
-    val appDark = LagarTheme.isDark
-    val scheme = remember(paper, app, appDark) { paper.scheme(app, appDark) }
+    val appPaper = LocalAppPaper.current ?: AppPaper(app, LagarTheme.isDark)
+    val scheme = remember(paper, appPaper) { paper.scheme(appPaper.colors, appPaper.dark) }
     val name = when (paper) {
         ReadingPaper.App -> Res.string.reader_paper_app
         ReadingPaper.Light -> Res.string.reader_paper_light

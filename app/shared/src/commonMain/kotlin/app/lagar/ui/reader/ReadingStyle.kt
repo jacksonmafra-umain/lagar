@@ -31,6 +31,11 @@ internal fun ReadingWidth.lineChars(): Int = when (this) {
     ReadingWidth.Wide -> 90
 }
 
+/** The app's own color scheme and darkness, kept under [ReadingTheme] so the paper swatches can show them. */
+internal class AppPaper(val colors: ColorScheme, val dark: Boolean)
+
+internal val LocalAppPaper = staticCompositionLocalOf<AppPaper?> { null }
+
 /** The reading measure in characters, read by [readingColumn]. */
 internal val LocalReadingMeasure = staticCompositionLocalOf { ReadingWidth.Standard.lineChars() }
 
@@ -150,6 +155,10 @@ internal fun ReadingTheme(settings: ReadingSettings, content: @Composable () -> 
     val appType = LagarTheme.type
     val type = remember(appType, settings) { appType.forReading(settings) }
     LagarSubtheme(colors = colors, type = type, darkTheme = dark) {
-        CompositionLocalProvider(LocalReadingMeasure provides settings.width.lineChars(), content = content)
+        CompositionLocalProvider(
+            LocalReadingMeasure provides settings.width.lineChars(),
+            LocalAppPaper provides remember(appColors, appDark) { AppPaper(appColors, appDark) },
+            content = content,
+        )
     }
 }
