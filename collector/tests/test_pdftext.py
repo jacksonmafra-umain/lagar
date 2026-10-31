@@ -91,6 +91,17 @@ class ClassifyTest(unittest.TestCase):
         self.assertIn("Med stöd av 10 kap 1 § andra stycket 11 och 3 § trafikförordningen (1998:1276)", result.text)
         self.assertNotIn("=", result.text)
 
+    def test_shifted_lines_among_readable_text_are_decoded(self):
+        # 23FS 2002:112: the heading is in a shifted font, the body is not.
+        heading = "OP=cp=OMMOWNNO= ríâçã=Ñê™å=íêóÅâÉí=\ni®åëëíóêÉäëÉå= g®ãíä~åÇë=ä®å=\n= = = =\n"
+        result = pdftext.classify(heading + f"{LINE}\n" * 6 + "F=\n")
+        self.assertTrue(result.usable)
+        self.assertIn("23 FS 2002:112", result.text)
+        self.assertIn("Utkom från trycket", result.text)
+        self.assertIn("Länsstyrelsen  Jämtlands län", result.text)
+        self.assertIn(LINE, result.text)
+        self.assertIn("F=", result.text)
+
     def test_unshift(self):
         self.assertEqual(pdftext.unshift("i®åëëíóêÉäëÉå=g®ãíä~åÇë=ä®å"), "Länsstyrelsen Jämtlands län")
         self.assertEqual(pdftext.unshift("iûkppqvobipbk=NM=â~éK=N=¬"), "LÄNSSTYRELSEN 10 kap. 1 §")
