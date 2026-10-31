@@ -599,6 +599,19 @@ class CountyOcrTests(unittest.TestCase):
             self.run_files(FilesClient(), "24", "--from-year", "2026")
         self.assertEqual(self.body("24FS 2026:1")[0]["text_source"], "ocr")
 
+    def test_letter_spaced_text_is_read_by_ocr(self):
+        with fake_extract("L ä n s s t y r e l s e n", pdftext.LETTER_SPACED), fake_ocr():
+            self.run_files(FilesClient(), "24", "--from-year", "2026")
+        self.assertEqual(self.body("24FS 2026:1")[0]["text_source"], "ocr")
+
+    def test_extracted_or_decoded_text_is_never_replaced_by_ocr(self):
+        with fake_extract(), fake_ocr():
+            with mock.patch.object(county.ocr, "extract") as recognised:
+                self.run_files(FilesClient(), "24", "--from-year", "2026")
+        recognised.assert_not_called()
+        self.assertNotIn("text_source", self.body("24FS 2026:1")[0])
+        self.assertEqual(self.files(0)[0]["text"], county.TEXT_EXTRACTED)
+
     def test_gap_is_read_again_once_ocr_is_installed(self):
         with fake_extract("\f\f", pdftext.NO_TEXT_LAYER):
             self.run_files(FilesClient(), "24", "--from-year", "2026", "--no-ocr")

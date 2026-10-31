@@ -105,7 +105,8 @@ NO_TEXT = "Texten kan inte läsas ur den tryckta författningen (inskannad pdf u
 OCR_NOTE = ("Texten är maskinläst (OCR) ur den tryckta författningen och kan innehålla läsfel. "
             "Den tryckta författningen (pdf) är den officiella versionen.")
 # Manifest `text` values a run with OCR reads again.
-OCR_GAPS = frozenset({pdftext.NO_TEXT_LAYER, pdftext.UNREADABLE_TEXT})
+# Text decoded from a shifted font encoding counts as extracted and is never replaced by OCR.
+OCR_GAPS = frozenset({pdftext.NO_TEXT_LAYER, pdftext.UNREADABLE_TEXT, pdftext.LETTER_SPACED})
 
 _NUMBER = re.compile(r"(\d{2})\s*FS\s+(\d{4})\s*:\s*0*(\d+)", re.IGNORECASE)
 _YEAR_LINK = re.compile(r"""href="([^"]*/lanets-forfattningssamling/forfattningar-(\d{4})\.html)\"""")
