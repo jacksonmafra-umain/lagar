@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T17:51:35Z",
+ "generated_at": "2026-10-31T23:41:28Z",
  "documents": 54786,
  "layers": {
   "fundamental": {
@@ -208,15 +208,15 @@
     "county_regulation": {
      "documents": 11649,
      "sections": 14166,
-     "words": 10753481
+     "words": 10999529
     }
    },
    "issuers": 21,
    "text": {
     "web": 420,
-    "pdf": 10813,
-    "ocr": 0,
-    "none": 416
+    "pdf": 10768,
+    "ocr": 428,
+    "none": 33
    },
    "hosts": {
     "lansstyrelsen.se": 11649
@@ -227,16 +227,16 @@
    "types": {
     "municipal_regulation": {
      "documents": 5572,
-     "sections": 15576,
-     "words": 4382153
+     "sections": 44907,
+     "words": 12425695
     }
    },
    "issuers": 285,
    "text": {
     "web": 197,
-    "pdf": 1392,
-    "ocr": 61,
-    "none": 3922
+    "pdf": 4922,
+    "ocr": 284,
+    "none": 169
    },
    "hosts": {
     "docs.netpublicator.com": 104,
@@ -529,9 +529,9 @@
  },
  "text": {
   "web": 32453,
-  "pdf": 16888,
-  "ocr": 836,
-  "none": 4609
+  "pdf": 20373,
+  "ocr": 1487,
+  "none": 473
  },
  "issuers": {
   "agency": 77,
@@ -560,18 +560,18 @@
   "municipality": {
    "issuers": 280,
    "documents": 5469,
-   "issuers_with_scans": 40,
-   "scanned": 78,
-   "ocr": 61,
-   "still_without_text": 17
+   "issuers_with_scans": 144,
+   "scanned": 346,
+   "ocr": 284,
+   "still_without_text": 62
   },
   "region": {
    "issuers": 21,
    "documents": 11589,
    "issuers_with_scans": 15,
-   "scanned": 416,
-   "ocr": 0,
-   "still_without_text": 416
+   "scanned": 461,
+   "ocr": 428,
+   "still_without_text": 33
   },
   "sfs": {
    "issuers": 3,
@@ -657,16 +657,92 @@
    "ocr": 1,
    "scanned": 1
   },
+  "municipality: Ale kommun": {
+   "documents": 49,
+   "pdf": 39,
+   "ocr": 5,
+   "scanned": 10,
+   "none": 5
+  },
+  "municipality: Alingsås kommun": {
+   "documents": 36,
+   "pdf": 35,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Arjeplogs kommun": {
+   "documents": 47,
+   "pdf": 39,
+   "ocr": 7,
+   "scanned": 8,
+   "none": 1
+  },
+  "municipality: Askersunds kommun": {
+   "documents": 18,
+   "pdf": 12,
+   "ocr": 6,
+   "scanned": 6
+  },
+  "municipality: Avesta kommun": {
+   "documents": 4,
+   "pdf": 3,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Bergs kommun": {
+   "documents": 26,
+   "pdf": 24,
+   "none": 1,
+   "scanned": 2,
+   "ocr": 1
+  },
+  "municipality: Bodens kommun": {
+   "documents": 10,
+   "pdf": 4,
+   "none": 3,
+   "scanned": 6,
+   "ocr": 3
+  },
+  "municipality: Bollnäs kommun": {
+   "documents": 7,
+   "pdf": 6,
+   "ocr": 1,
+   "scanned": 1
+  },
   "municipality: Boxholms kommun": {
    "documents": 16,
    "pdf": 15,
    "ocr": 1,
    "scanned": 1
   },
+  "municipality: Bromölla kommun": {
+   "documents": 38,
+   "pdf": 37,
+   "none": 1,
+   "scanned": 1
+  },
+  "municipality: Dals-Eds kommun": {
+   "documents": 5,
+   "ocr": 1,
+   "scanned": 1,
+   "pdf": 4
+  },
   "municipality: Danderyds kommun": {
    "documents": 22,
    "pdf": 21,
    "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Dorotea kommun": {
+   "documents": 14,
+   "pdf": 13,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Eda kommun": {
+   "documents": 26,
+   "pdf": 24,
+   "none": 2,
    "scanned": 1
   },
   "municipality: Ekerö kommun": {
@@ -682,16 +758,97 @@
    "ocr": 1,
    "scanned": 1
   },
+  "municipality: Eslövs kommun": {
+   "documents": 32,
+   "pdf": 29,
+   "none": 3,
+   "scanned": 3
+  },
+  "municipality: Essunga kommun": {
+   "documents": 29,
+   "pdf": 25,
+   "ocr": 3,
+   "scanned": 4,
+   "none": 1
+  },
+  "municipality: Fagersta kommun": {
+   "documents": 23,
+   "pdf": 22,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Falköpings kommun": {
+   "documents": 30,
+   "ocr": 2,
+   "scanned": 2,
+   "pdf": 27,
+   "web": 1
+  },
+  "municipality: Falu kommun": {
+   "documents": 15,
+   "pdf": 14,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Forshaga kommun": {
+   "documents": 12,
+   "ocr": 3,
+   "scanned": 3,
+   "pdf": 9
+  },
+  "municipality: Gagnefs kommun": {
+   "documents": 4,
+   "pdf": 3,
+   "ocr": 1,
+   "scanned": 1
+  },
   "municipality: Gnesta kommun": {
    "documents": 19,
    "pdf": 17,
    "ocr": 2,
    "scanned": 2
   },
+  "municipality: Gullspångs kommun": {
+   "documents": 31,
+   "pdf": 30,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Gällivare kommun": {
+   "documents": 60,
+   "pdf": 57,
+   "ocr": 3,
+   "scanned": 3
+  },
+  "municipality: Göteborgs Stad": {
+   "documents": 43,
+   "pdf": 42,
+   "ocr": 1,
+   "scanned": 1
+  },
   "municipality: Habo kommun": {
    "documents": 6,
    "pdf": 5,
    "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Hallsbergs kommun": {
+   "documents": 31,
+   "pdf": 24,
+   "none": 5,
+   "scanned": 7,
+   "ocr": 2
+  },
+  "municipality: Hallstahammars kommun": {
+   "documents": 32,
+   "pdf": 26,
+   "ocr": 6,
+   "scanned": 6
+  },
+  "municipality: Halmstads kommun": {
+   "documents": 8,
+   "pdf": 7,
+   "none": 1,
    "scanned": 1
   },
   "municipality: Haninge kommun": {
@@ -700,9 +857,33 @@
    "ocr": 2,
    "scanned": 2
   },
+  "municipality: Haparanda stad": {
+   "documents": 18,
+   "pdf": 17,
+   "ocr": 1,
+   "scanned": 1
+  },
   "municipality: Heby kommun": {
    "documents": 23,
    "pdf": 22,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Hedemora kommun": {
+   "documents": 29,
+   "ocr": 2,
+   "scanned": 2,
+   "pdf": 27
+  },
+  "municipality: Helsingborgs stad": {
+   "documents": 10,
+   "pdf": 9,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Herrljunga kommun": {
+   "documents": 13,
+   "pdf": 12,
    "ocr": 1,
    "scanned": 1
   },
@@ -712,11 +893,35 @@
    "ocr": 1,
    "scanned": 1
   },
+  "municipality: Hällefors kommun": {
+   "documents": 9,
+   "pdf": 8,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Härnösands kommun": {
+   "documents": 14,
+   "pdf": 13,
+   "ocr": 1,
+   "scanned": 1
+  },
   "municipality: Håbo kommun": {
    "documents": 27,
    "pdf": 23,
    "ocr": 4,
    "scanned": 4
+  },
+  "municipality: Hörby kommun": {
+   "documents": 6,
+   "ocr": 1,
+   "scanned": 1,
+   "pdf": 5
+  },
+  "municipality: Jokkmokks kommun": {
+   "documents": 30,
+   "pdf": 24,
+   "ocr": 6,
+   "scanned": 6
   },
   "municipality: Järfälla kommun": {
    "documents": 16,
@@ -724,6 +929,12 @@
    "none": 3,
    "scanned": 8,
    "ocr": 5
+  },
+  "municipality: Kalix kommun": {
+   "documents": 25,
+   "pdf": 24,
+   "ocr": 1,
+   "scanned": 1
   },
   "municipality: Kalmar kommun": {
    "documents": 39,
@@ -743,6 +954,81 @@
    "ocr": 3,
    "scanned": 3
   },
+  "municipality: Klippans kommun": {
+   "documents": 16,
+   "pdf": 15,
+   "none": 1,
+   "scanned": 1
+  },
+  "municipality: Kramfors kommun": {
+   "documents": 27,
+   "pdf": 22,
+   "ocr": 5,
+   "scanned": 5
+  },
+  "municipality: Kristianstads kommun": {
+   "documents": 27,
+   "pdf": 25,
+   "ocr": 2,
+   "scanned": 2
+  },
+  "municipality: Kristinehamns kommun": {
+   "documents": 19,
+   "pdf": 15,
+   "none": 2,
+   "scanned": 4,
+   "ocr": 2
+  },
+  "municipality: Kungälvs kommun": {
+   "documents": 37,
+   "pdf": 34,
+   "ocr": 3,
+   "scanned": 3
+  },
+  "municipality: Kävlinge kommun": {
+   "documents": 23,
+   "pdf": 20,
+   "ocr": 3,
+   "scanned": 3
+  },
+  "municipality: Köpings kommun": {
+   "documents": 7,
+   "pdf": 6,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Laholms kommun": {
+   "documents": 49,
+   "pdf": 41,
+   "none": 5,
+   "scanned": 8,
+   "ocr": 3
+  },
+  "municipality: Landskrona stad": {
+   "documents": 29,
+   "pdf": 26,
+   "ocr": 3,
+   "scanned": 3
+  },
+  "municipality: Laxå kommun": {
+   "documents": 6,
+   "pdf": 5,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Leksands kommun": {
+   "documents": 20,
+   "pdf": 19,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Lerums kommun": {
+   "documents": 51,
+   "pdf": 42,
+   "ocr": 5,
+   "scanned": 9,
+   "none": 4
+  },
   "municipality: Lessebo kommun": {
    "documents": 9,
    "pdf": 6,
@@ -755,9 +1041,65 @@
    "none": 1,
    "scanned": 1
   },
+  "municipality: Lindesbergs kommun": {
+   "documents": 8,
+   "pdf": 7,
+   "ocr": 1,
+   "scanned": 1
+  },
   "municipality: Ljungby kommun": {
    "documents": 14,
    "pdf": 13,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Ljusdals kommun": {
+   "documents": 21,
+   "pdf": 20,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Ljusnarsbergs kommun": {
+   "documents": 9,
+   "pdf": 8,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Lomma kommun": {
+   "documents": 50,
+   "pdf": 48,
+   "ocr": 1,
+   "scanned": 1,
+   "none": 1
+  },
+  "municipality: Ludvika kommun": {
+   "documents": 19,
+   "ocr": 4,
+   "scanned": 4,
+   "pdf": 15
+  },
+  "municipality: Luleå kommun": {
+   "documents": 12,
+   "ocr": 2,
+   "scanned": 3,
+   "pdf": 9,
+   "none": 1
+  },
+  "municipality: Lysekils kommun": {
+   "documents": 15,
+   "pdf": 14,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Malung-Sälens kommun": {
+   "documents": 4,
+   "pdf": 3,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Mariestads kommun": {
+   "documents": 24,
+   "pdf": 23,
    "ocr": 1,
    "scanned": 1
   },
@@ -767,11 +1109,23 @@
    "scanned": 1,
    "pdf": 11
   },
+  "municipality: Marks kommun": {
+   "documents": 25,
+   "pdf": 24,
+   "ocr": 1,
+   "scanned": 1
+  },
   "municipality: Mjölby kommun": {
    "documents": 5,
    "none": 1,
    "scanned": 1,
    "pdf": 4
+  },
+  "municipality: Mora kommun": {
+   "documents": 28,
+   "pdf": 26,
+   "ocr": 2,
+   "scanned": 2
   },
   "municipality: Motala kommun": {
    "documents": 32,
@@ -779,11 +1133,42 @@
    "ocr": 1,
    "scanned": 1
   },
+  "municipality: Munkfors kommun": {
+   "documents": 5,
+   "ocr": 2,
+   "scanned": 2,
+   "pdf": 3
+  },
+  "municipality: Mölndals stad": {
+   "documents": 23,
+   "pdf": 20,
+   "ocr": 3,
+   "scanned": 3
+  },
   "municipality: Nacka kommun": {
    "documents": 19,
    "pdf": 18,
    "ocr": 1,
    "scanned": 1
+  },
+  "municipality: Norbergs kommun": {
+   "documents": 16,
+   "pdf": 13,
+   "ocr": 3,
+   "scanned": 3
+  },
+  "municipality: Nordanstigs kommun": {
+   "documents": 8,
+   "pdf": 7,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Norsjö kommun": {
+   "documents": 14,
+   "pdf": 12,
+   "none": 1,
+   "scanned": 2,
+   "ocr": 1
   },
   "municipality: Nykvarns kommun": {
    "documents": 15,
@@ -803,17 +1188,132 @@
    "ocr": 3,
    "scanned": 3
   },
+  "municipality: Osby kommun": {
+   "documents": 5,
+   "pdf": 4,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Ovanåkers kommun": {
+   "documents": 6,
+   "ocr": 3,
+   "scanned": 3,
+   "pdf": 3
+  },
+  "municipality: Piteå kommun": {
+   "documents": 57,
+   "pdf": 56,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Rättviks kommun": {
+   "documents": 26,
+   "pdf": 24,
+   "none": 1,
+   "scanned": 2,
+   "ocr": 1
+  },
+  "municipality: Sala kommun": {
+   "documents": 30,
+   "pdf": 29,
+   "ocr": 1,
+   "scanned": 1
+  },
   "municipality: Salems kommun": {
    "documents": 11,
    "pdf": 10,
    "ocr": 1,
    "scanned": 1
   },
+  "municipality: Sjöbo kommun": {
+   "documents": 6,
+   "pdf": 5,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Skövde kommun": {
+   "documents": 15,
+   "pdf": 11,
+   "ocr": 4,
+   "scanned": 4
+  },
+  "municipality: Smedjebacken kommun": {
+   "documents": 35,
+   "pdf": 33,
+   "ocr": 2,
+   "scanned": 2
+  },
+  "municipality: Sorsele kommun": {
+   "documents": 30,
+   "ocr": 4,
+   "scanned": 4,
+   "pdf": 26
+  },
+  "municipality: Sotenäs kommun": {
+   "documents": 19,
+   "pdf": 17,
+   "ocr": 2,
+   "scanned": 2
+  },
+  "municipality: Storfors kommun": {
+   "documents": 7,
+   "ocr": 6,
+   "scanned": 6,
+   "pdf": 1
+  },
   "municipality: Strängnäs kommun": {
    "documents": 31,
    "pdf": 29,
    "ocr": 2,
    "scanned": 2
+  },
+  "municipality: Strömstads kommun": {
+   "documents": 28,
+   "pdf": 24,
+   "ocr": 4,
+   "scanned": 4
+  },
+  "municipality: Strömsunds kommun": {
+   "documents": 9,
+   "none": 1,
+   "scanned": 1,
+   "pdf": 8
+  },
+  "municipality: Sundsvalls kommun": {
+   "documents": 18,
+   "pdf": 14,
+   "ocr": 4,
+   "scanned": 4
+  },
+  "municipality: Surahammars kommun": {
+   "documents": 34,
+   "pdf": 32,
+   "ocr": 2,
+   "scanned": 2
+  },
+  "municipality: Svalöv kommun": {
+   "documents": 27,
+   "pdf": 14,
+   "ocr": 13,
+   "scanned": 13
+  },
+  "municipality: Svenljunga kommun": {
+   "documents": 28,
+   "pdf": 26,
+   "ocr": 2,
+   "scanned": 2
+  },
+  "municipality: Säffle kommun": {
+   "documents": 20,
+   "pdf": 18,
+   "ocr": 2,
+   "scanned": 2
+  },
+  "municipality: Söderhamns kommun": {
+   "documents": 33,
+   "pdf": 29,
+   "ocr": 4,
+   "scanned": 4
   },
   "municipality: Söderköpings kommun": {
    "documents": 9,
@@ -827,11 +1327,35 @@
    "none": 1,
    "scanned": 1
   },
+  "municipality: Sölvesborg kommun": {
+   "documents": 29,
+   "pdf": 28,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Timrå kommun": {
+   "documents": 38,
+   "pdf": 34,
+   "ocr": 4,
+   "scanned": 4
+  },
   "municipality: Tingsryds kommun": {
    "documents": 10,
    "pdf": 7,
    "ocr": 3,
    "scanned": 3
+  },
+  "municipality: Tjörns kommun": {
+   "documents": 15,
+   "pdf": 14,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Tomelilla kommun": {
+   "documents": 25,
+   "pdf": 24,
+   "ocr": 1,
+   "scanned": 1
   },
   "municipality: Torsås kommun": {
    "documents": 4,
@@ -839,9 +1363,28 @@
    "scanned": 1,
    "pdf": 3
   },
+  "municipality: Trollhättans stad": {
+   "documents": 28,
+   "pdf": 18,
+   "ocr": 7,
+   "scanned": 10,
+   "none": 3
+  },
   "municipality: Tyresö kommun": {
    "documents": 9,
    "pdf": 8,
+   "none": 1,
+   "scanned": 1
+  },
+  "municipality: Töreboda kommun": {
+   "documents": 15,
+   "pdf": 14,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Ulricehamns kommun": {
+   "documents": 11,
+   "pdf": 10,
    "none": 1,
    "scanned": 1
   },
@@ -864,11 +1407,30 @@
    "pdf": 16,
    "none": 3
   },
+  "municipality: Varbergs kommun": {
+   "documents": 29,
+   "pdf": 27,
+   "ocr": 1,
+   "scanned": 2,
+   "none": 1
+  },
   "municipality: Vaxholms stad": {
    "documents": 4,
    "ocr": 1,
    "scanned": 1,
    "pdf": 3
+  },
+  "municipality: Vilhelmina kommun": {
+   "documents": 22,
+   "pdf": 21,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Vänersborgs kommun": {
+   "documents": 37,
+   "pdf": 36,
+   "ocr": 1,
+   "scanned": 1
   },
   "municipality: Värmdö kommun": {
    "documents": 25,
@@ -877,15 +1439,64 @@
    "scanned": 4,
    "none": 2
   },
+  "municipality: Västerås stad": {
+   "documents": 21,
+   "pdf": 19,
+   "ocr": 1,
+   "scanned": 2,
+   "none": 1
+  },
+  "municipality: Vårgårda kommun": {
+   "documents": 20,
+   "ocr": 4,
+   "scanned": 4,
+   "pdf": 16
+  },
   "municipality: Ydre kommun": {
    "documents": 12,
    "pdf": 10,
    "ocr": 2,
    "scanned": 2
   },
+  "municipality: Ystads kommun": {
+   "documents": 14,
+   "pdf": 13,
+   "ocr": 1,
+   "scanned": 1
+  },
   "municipality: Älmhults kommun": {
    "documents": 6,
    "pdf": 4,
+   "ocr": 2,
+   "scanned": 2
+  },
+  "municipality: Älvdalens kommun": {
+   "documents": 9,
+   "pdf": 8,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Ånge kommun": {
+   "documents": 9,
+   "pdf": 7,
+   "ocr": 2,
+   "scanned": 2
+  },
+  "municipality: Åre kommun": {
+   "documents": 30,
+   "pdf": 27,
+   "ocr": 3,
+   "scanned": 3
+  },
+  "municipality: Årjängs kommun": {
+   "documents": 21,
+   "pdf": 17,
+   "ocr": 4,
+   "scanned": 4
+  },
+  "municipality: Åstorps kommun": {
+   "documents": 26,
+   "pdf": 24,
    "ocr": 2,
    "scanned": 2
   },
@@ -895,6 +1506,24 @@
    "scanned": 1,
    "pdf": 13
   },
+  "municipality: Örebro kommun": {
+   "documents": 33,
+   "pdf": 31,
+   "ocr": 2,
+   "scanned": 2
+  },
+  "municipality: Örkelljunga kommun": {
+   "documents": 10,
+   "pdf": 9,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Örnsköldsviks kommun": {
+   "documents": 9,
+   "pdf": 8,
+   "none": 1,
+   "scanned": 1
+  },
   "municipality: Östhammars kommun": {
    "documents": 22,
    "pdf": 18,
@@ -902,95 +1531,115 @@
    "scanned": 3,
    "web": 1
   },
+  "municipality: Överkalix kommun": {
+   "documents": 15,
+   "pdf": 10,
+   "ocr": 5,
+   "scanned": 5
+  },
+  "municipality: Övertorneå kommun": {
+   "documents": 17,
+   "pdf": 16,
+   "ocr": 1,
+   "scanned": 1
+  },
   "region: Länsstyrelsen i Blekinge län": {
    "documents": 981,
-   "none": 108,
-   "scanned": 108,
-   "pdf": 873
+   "ocr": 112,
+   "scanned": 123,
+   "pdf": 858,
+   "none": 11
   },
   "region: Länsstyrelsen i Dalarnas län": {
    "documents": 571,
    "pdf": 548,
-   "none": 23,
-   "scanned": 23
+   "ocr": 22,
+   "scanned": 23,
+   "none": 1
   },
   "region: Länsstyrelsen i Gotlands län": {
    "documents": 91,
    "pdf": 90,
-   "none": 1,
+   "ocr": 1,
    "scanned": 1
   },
   "region: Länsstyrelsen i Jämtlands län": {
    "documents": 1648,
    "pdf": 1623,
-   "none": 25,
-   "scanned": 25
+   "ocr": 19,
+   "scanned": 25,
+   "none": 6
   },
   "region: Länsstyrelsen i Kalmar län": {
    "documents": 1412,
-   "pdf": 1354,
-   "none": 58,
-   "scanned": 58
+   "pdf": 1327,
+   "ocr": 81,
+   "scanned": 85,
+   "none": 4
   },
   "region: Länsstyrelsen i Kronobergs län": {
    "documents": 360,
-   "none": 81,
+   "ocr": 80,
    "scanned": 81,
+   "none": 1,
    "pdf": 279
   },
   "region: Länsstyrelsen i Norrbottens län": {
    "documents": 736,
-   "pdf": 735,
-   "none": 1,
-   "scanned": 1
+   "pdf": 734,
+   "ocr": 2,
+   "scanned": 2
   },
   "region: Länsstyrelsen i Södermanlands län": {
    "documents": 365,
-   "none": 43,
-   "scanned": 43,
-   "pdf": 322
+   "ocr": 44,
+   "scanned": 44,
+   "pdf": 321
   },
   "region: Länsstyrelsen i Uppsala län": {
    "documents": 388,
    "pdf": 380,
-   "none": 8,
+   "ocr": 8,
    "scanned": 8
   },
   "region: Länsstyrelsen i Västerbottens län": {
    "documents": 161,
    "pdf": 159,
-   "none": 2,
+   "ocr": 2,
    "scanned": 2
   },
   "region: Länsstyrelsen i Västernorrlands län": {
    "documents": 548,
    "pdf": 534,
-   "none": 14,
+   "ocr": 14,
    "scanned": 14
   },
   "region: Länsstyrelsen i Västmanlands län": {
    "documents": 164,
-   "pdf": 160,
-   "none": 4,
-   "scanned": 4
+   "pdf": 159,
+   "ocr": 5,
+   "scanned": 5
   },
   "region: Länsstyrelsen i Västra Götalands län": {
    "documents": 264,
    "pdf": 253,
-   "none": 11,
-   "scanned": 11
+   "ocr": 8,
+   "scanned": 11,
+   "none": 3
   },
   "region: Länsstyrelsen i Örebro län": {
    "documents": 1800,
    "pdf": 1781,
-   "none": 19,
-   "scanned": 19
+   "ocr": 18,
+   "scanned": 19,
+   "none": 1
   },
   "region: Länsstyrelsen i Östergötlands län": {
    "documents": 286,
    "pdf": 268,
-   "none": 18,
-   "scanned": 18
+   "ocr": 12,
+   "scanned": 18,
+   "none": 6
   },
   "sfs: Utrikesdepartementet": {
    "documents": 286,
@@ -1007,7 +1656,7 @@
    "duplicate_ids": 0,
    "path_mismatches": 0,
    "text_quality_flags": {
-    "replacement_character": 84,
+    "replacement_character": 97,
     "short_body": 548,
     "print_only": 259
    },

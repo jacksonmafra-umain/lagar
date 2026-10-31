@@ -107,7 +107,7 @@
       {
         "name": "FFS",
         "status": "collected",
-        "documents": 68,
+        "documents": 61,
         "url": "https://www.forsvarsmakten.se/om-forsvarsmakten/myndighetsinformation/dokument/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/167",
         "description": null,

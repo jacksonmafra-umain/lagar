@@ -49,13 +49,33 @@
       "unknown": 426
     }
   },
-  "documents": 54793,
+  "documents": 54786,
   "duplicate_ids": [],
   "fsck": null,
-  "generated_at": "2026-10-31T11:51:58Z",
+  "generated_at": "2026-10-31T23:41:09Z",
   "path_mismatches": [],
   "schema_errors": [],
   "text_quality": [
+    {
+      "flag": "replacement_character",
+      "id": "0115-18-63572f8619eeecafce08359",
+      "path": "municipality/regulations/0115-18-63572f8619eeecafce08359.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "0117-18-40523b741958b6adf741353a",
+      "path": "municipality/regulations/0117-18-40523b741958b6adf741353a.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "0117-18-40523b741958b6adf741353c",
+      "path": "municipality/regulations/0117-18-40523b741958b6adf741353c.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "0380-ordningsforeskrifter-for-uppsala-hamn",
+      "path": "municipality/regulations/0380-ordningsforeskrifter-for-uppsala-hamn.md"
+    },
     {
       "flag": "replacement_character",
       "id": "03fs-2016-7",
@@ -63,8 +83,83 @@
     },
     {
       "flag": "replacement_character",
+      "id": "0481-18-48e10f6619e6316cc2f29fc8",
+      "path": "municipality/regulations/0481-18-48e10f6619e6316cc2f29fc8.md"
+    },
+    {
+      "flag": "replacement_character",
       "id": "04fs-2016-3",
       "path": "region/county-regulations/04fs-2016-3.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "0581-18-41bf0be81975d5b20005af7",
+      "path": "municipality/regulations/0581-18-41bf0be81975d5b20005af7.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "1276-18-38ab488919afcbb434c2693",
+      "path": "municipality/regulations/1276-18-38ab488919afcbb434c2693.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "1384-18-7f46a58d17f98c034d86709",
+      "path": "municipality/regulations/1384-18-7f46a58d17f98c034d86709.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "1482-trafik-gata-hamn-park-lokala-regler-for-ordning-och-sakerhet-inom-marstrands-hamnomrade",
+      "path": "municipality/regulations/1482-trafik-gata-hamn-park-lokala-regler-for-ordning-och-sakerhet-inom-marstrands-hamnomrade.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "1492-18-f11e32b18b848c7859217a1",
+      "path": "municipality/regulations/1492-18-f11e32b18b848c7859217a1.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "1785-18-bc9b75619b2beb072a2ad29",
+      "path": "municipality/regulations/1785-18-bc9b75619b2beb072a2ad29.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "1981-lokala-ordningsforeskrifter-for-torghandeln-i-sala-kommun",
+      "path": "municipality/regulations/1981-lokala-ordningsforeskrifter-for-torghandeln-i-sala-kommun.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "1981-taxa-for-tillsyn-av-brandfarliga-och-explosiva-varor-lbe",
+      "path": "municipality/regulations/1981-taxa-for-tillsyn-av-brandfarliga-och-explosiva-varor-lbe.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "1981-taxa-for-upplatelse-av-gatu-och-saluplatser-samt-allman-mark-i-sala-kommun",
+      "path": "municipality/regulations/1981-taxa-for-upplatelse-av-gatu-och-saluplatser-samt-allman-mark-i-sala-kommun.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "2061-18-7c121e571863c06725a43b5",
+      "path": "municipality/regulations/2061-18-7c121e571863c06725a43b5.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "2062-18-1daea0341a04227dd703b5c5",
+      "path": "municipality/regulations/2062-18-1daea0341a04227dd703b5c5.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "2085-0b17284e-ccb1-4092-bdea-36bae830749b",
+      "path": "municipality/regulations/2085-0b17284e-ccb1-4092-bdea-36bae830749b.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "2262-18-1f50050019d459b995d5ad",
+      "path": "municipality/regulations/2262-18-1f50050019d459b995d5ad.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "2583-18-21e2e2e11919744a8e9dfb4",
+      "path": "municipality/regulations/2583-18-21e2e2e11919744a8e9dfb4.md"
     },
     {
       "flag": "replacement_character",
@@ -4222,11 +4317,6 @@
       "path": "sfs/treaties/so-2009-39.md"
     },
     {
-      "flag": "short_body",
-      "id": "so-2010-17",
-      "path": "sfs/treaties/so-2010-17.md"
-    },
-    {
       "flag": "replacement_character",
       "id": "so-2010-21",
       "path": "sfs/treaties/so-2010-21.md"
@@ -4252,11 +4342,6 @@
       "path": "sfs/treaties/so-2011-2.md"
     },
     {
-      "flag": "short_body",
-      "id": "so-2011-5",
-      "path": "sfs/treaties/so-2011-5.md"
-    },
-    {
       "flag": "replacement_character",
       "id": "so-2011-6",
       "path": "sfs/treaties/so-2011-6.md"
@@ -4275,11 +4360,6 @@
       "flag": "replacement_character",
       "id": "so-2012-4",
       "path": "sfs/treaties/so-2012-4.md"
-    },
-    {
-      "flag": "short_body",
-      "id": "so-2013-20",
-      "path": "sfs/treaties/so-2013-20.md"
     },
     {
       "flag": "replacement_character",

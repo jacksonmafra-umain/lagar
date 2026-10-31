@@ -16,7 +16,7 @@ apps for Android, iOS and the web.
 | --- | ---: | ---: | ---: |
 | Fundamental laws | 4 | 4 | 100.0% |
 | SFS (statutes and ordinances) (2 series) | 14943 | 15082 | 99.1% |
-| Agency regulations (80 series) | 5475 | 5513 | 99.3% |
+| Agency regulations (80 series) | 5468 | 5513 | 99.2% |
 | Case law | 16475 | 16640 | 99.0% |
 | EU law (2 series) | 675 | 681 | 99.1% |
 | County regulations | 11649 | unknown | - |

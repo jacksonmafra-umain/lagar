@@ -121,7 +121,7 @@
       "series": "FFS",
       "agency": "Försvarsmakten",
       "status": "collected",
-      "documents": 68,
+      "documents": 61,
       "target": 68,
       "note": "Försvarsmakten's four Gällande FFS pages load their lists of PDFs from the site's content API, which only gives file names; the title, text and whether a regulation is an amendment are read from the PDF. Some old prints are scans without a text layer.",
       "url": "https://www.forsvarsmakten.se/om-forsvarsmakten/myndighetsinformation/dokument/",
