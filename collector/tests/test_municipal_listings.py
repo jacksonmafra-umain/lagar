@@ -60,7 +60,8 @@ class ListingFixturesTest(unittest.TestCase):
                 self.assertEqual(problems, [])
                 self.assertEqual(len(unique), expected["count"])
                 for entry in unique.values():
-                    self.assertTrue(municipal.check_host(kommun, entry.url))
+                    if not kommun.document_gap:  # such documents are linked, never requested
+                        self.assertTrue(municipal.check_host(kommun, entry.url))
                     self.assertTrue(entry.title)
                 sample = expected["sample"]
                 self.assertIn(
