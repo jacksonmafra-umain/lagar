@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.kalix.se/globalassets/politik-och-styrning/omradesovergripande-dokument/taxor-och-avgifter/tomning-av-enskilda-avloppsbrunnar.pdf"
 source_sha256: "822d0818a3643d5e6884a7d2d0bde41d22a789a876b5315338a7a5f3b9820433"
-fetched_at: "2026-10-30T13:27:04Z"
+fetched_at: "2026-10-31T23:02:36Z"
 issuer: "Kalix kommun"
 region_code: "25"
 municipality_code: "2514"
@@ -31,6 +31,44 @@ Förteckning: <https://www.kalix.se/kommun/Forfattningssamling/Avgifter-och-taxo
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Tömning av enskilda avloppsbrunnar](<https://www.kalix.se/globalassets/politik-och-styrning/omradesovergripande-dokument/taxor-och-avgifter/tomning-av-enskilda-avloppsbrunnar.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+TAXA tömning av enskilda avloppsbrunnar
+
+Taxa för tömning av enskilda avloppsbrunnar vid permanentbostäder 2020
+
+Brunnsstorlek
+
+Kr/st
+
+0-4 m³
+
+4-6 m³
+
+6-8 m³
+
+Över 8 m³
+
+ Tömning sker en gång per år under perioden augusti - november  Fastighetsägaren är skyldig att hålla farbar väg  Behov av ytterligare tömningar beställs hos kommunens entreprenör, avgiften debiteras med timpris och behandlingsavgift av entreprenören Samtliga avgifter är inklusive moms.
+
+Adress:
+
+Kalix kommun
+
+952 81 Kalix
+
+Besöksadress:
+
+Nygatan 4
+
+Telefon: 0923-650 00
+
+Fax: 0923-150 92
+
+www.kalix.se kommun@kalix.se

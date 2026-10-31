@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://arjeplog.se/wp-content/uploads/se/2024/11/forbud-att-stanna-pa-stromvagen.pdf"
 source_sha256: "3a7f334eb921cd981ffa638a99bc4630d91ef39a095fd8a46c9e89f81ddb2048"
-fetched_at: "2026-10-30T00:49:35Z"
+fetched_at: "2026-10-31T22:52:11Z"
 issuer: "Arjeplogs kommun"
 region_code: "25"
 municipality_code: "2506"
@@ -31,6 +31,24 @@ Förteckning: <https://arjeplog.se/kommun-och-politik/regler-och-styrande-dokume
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Förbud att stanna på Strömvägen](<https://arjeplog.se/wp-content/uploads/se/2024/11/forbud-att-stanna-pa-stromvagen.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+2506 2011:01
+
+Arjeplogs kommun lokala trafikföreskrifter om förbud att stanna på Strömvägen;
+
+Beslutade den 27 oktober 2011
+
+Arjeplogs kommun föreskriver följande med stöd av 10 kap. 1 § andra stycket 16 och 3 § första stycket trafikförordningen (1998:1276) På Strömvägens södra och norra sida mellan korsningen med väg 609 och östra sidan av Verkströmsbron får fordon inte stannas.
+
+Dessa föreskrifter träder i kraft den 1 december 2011
+
+John Sundström
+
+Martin Stenlund
