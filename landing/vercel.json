@@ -2,18 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
   "redirects": [
-    { "source": "/app", "destination": "/app/", "permanent": true }
-  ],
-  "rewrites": [
-    {
-      "source": "/app/api/v1/:path*",
-      "destination": "https://jacksonmafra-umain.github.io/lagar/api/v1/:path*"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/app/(.*)\\.wasm",
-      "headers": [{ "key": "Content-Type", "value": "application/wasm" }]
-    }
+    { "source": "/app", "destination": "/", "permanent": false },
+    { "source": "/app/:path*", "destination": "/", "permanent": false }
   ]
 }
