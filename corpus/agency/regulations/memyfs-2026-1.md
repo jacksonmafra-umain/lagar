@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://mediemyndigheten.se/globalassets/om-mediemyndigheten/lagar-forordningar-och-foreskrifter/foreskrifter-om-anmalan-av-koncentrationer-pa-mediemarknaden-memyfs-2026-1.pdf"
 source_sha256: "39e9ce49333abd384f04941c252b96440cc3d28eb408c352378ce26caf7e7895"
-fetched_at: "2026-10-30T08:37:36Z"
+fetched_at: "2026-10-31T04:43:46Z"
 issuer: "Mediemyndigheten"
 ---
 # Föreskrifter om anmälan av koncentrationer på mediemarknaden
@@ -42,9 +42,9 @@ Mediemyndigheten föreskriver med stöd av 8 § förordningen (2025:1244) med ko
 
 Föreskrifternas innehåll
 
-**1 §** Dessa föreskrifter innehåller bestämmelser om anmälningsförfarandet och vilka uppgifter som ska lämnas i en anmälan av en koncentration på mediemarknaden enligt 5 § lagen (2025:1242) med kompletterande bestämmelser till EU:s mediefrihetsförordning.
+**1 §** Dessa föreskrifter innehåller bestämmelser om anmälningsförfarandet och vilka uppgifter som ska lämnas i en anmälan av en koncentration på mediemarknaden enligt 5 § lagen (2025:1242) med kompletterande bestäm­ melser till EU:s mediefrihetsförordning.
 
-**2 §** Ord och uttryck i dessa föreskrifter har samma betydelse som i Europaparlamentets och rådets förordning (EU) 2024/1083 av den 11 april 2024 om fastställande av en gemensam ram för medietjänster på den inre marknaden och om ändring av direktiv 2010/13/EU (europeisk mediefrihetsförordning), lagen (2025:1242) med kompletterande bestämmelser till EU:s mediefrihetsförordning och förordningen (2025:1244) med kompletterande bestämmelser till EU:s mediefrihetsförordning.
+**2 §** Ord och uttryck i dessa föreskrifter har samma betydelse som i Europa­ parlamentets och rådets förordning (EU) 2024/1083 av den 11 april 2024 om fastställande av en gemensam ram för medietjänster på den inre marknaden och om ändring av direktiv 2010/13/EU (europeisk mediefrihetsförordning), lagen (2025:1242) med kompletterande bestämmelser till EU:s mediefrihets­ förordning och förordningen (2025:1244) med kompletterande bestämmelser till EU:s mediefrihetsförordning.
 
 Anmälningsförfarandet
 
@@ -52,13 +52,13 @@ Anmälningsförfarandet
 
 Innehållet i en anmälan
 
-**4 §** I en anmälan av en koncentration på mediemarknaden ska uppgifter lämnas om
+**4 §** I en anmälan av en koncentration på mediemarknaden ska uppgifter läm­ nas om
 
 1\. anmälarens identitet,
 
-2\. det har gjorts en anmälan av en företagskoncentration till Konkurrensverket i enlighet med 4 kap. 6 eller 7 § konkurrenslagen (2008:579) eller ­Europeiska kommissionen i enlighet med artikel 4.1 i rådets förordning (EG) nr 139/2004 av den 20 januari 2004 om kontroll av företagskoncentrationer,
+2\. det har gjorts en anmälan av en företagskoncentration till Konkurrens­ verket i enlighet med 4 kap. 6 eller 7 § konkurrenslagen (2008:579) eller ­Europeiska kommissionen i enlighet med artikel 4.1 i rådets förordning (EG) nr 139/2004 av den 20 januari 2004 om kontroll av företagskoncentrationer,
 
-3\. de berörda företagen uppfyller omsättningskraven enligt 5 § första ­stycket lagen (2025:1242) med kompletterande bestämmelser till EU:s mediefrihetsförordning,
+3\. de berörda företagen uppfyller omsättningskraven enligt 5 § första ­stycket lagen (2025:1242) med kompletterande bestämmelser till EU:s medie­ frihetsförordning,
 
 4\. vilken typ av koncentration det är fråga om,
 
@@ -72,7 +72,7 @@ Innehållet i en anmälan
 
 9\. koncentrationens förväntade påverkan på mångfalden av medier och medieinnehåll samt det redaktionella oberoendet, och
 
-10\. i vilken mån den eller de enheter som deltar i koncentrationen på mediemarknaden, i avsaknad av koncentrationen, skulle vara ekonomiskt bärkraftiga.
+10\. i vilken mån den eller de enheter som deltar i koncentrationen på medie­ marknaden, i avsaknad av koncentrationen, skulle vara ekonomiskt bärkrafti­ ga.
 
 Koncentrationens förväntade påverkan
 
@@ -80,43 +80,41 @@ Koncentrationens förväntade påverkan
 
 1\. syftet med koncentrationen och dess förväntade effekter,
 
-2\. hur medieutbudet påverkas på respektive mediemarknad i antal medietjänster och i fråga om medieinnehåll,
+2\. hur medieutbudet påverkas på respektive mediemarknad i antal medie­ tjänster och i fråga om medieinnehåll,
 
 3\. om allmänhetens tillgång till medieinnehåll påverkas,
 
 4\. om antalet självständiga redaktioner påverkas och i sådant fall i vilken omfattning,
 
-5\. koncentrationens påverkan på den geografiska mångfalden och spridningen, såsom om den lokala eller regionala nyhetsbevakningen eller annat innehåll minskar till följd av koncentrationen,
+5\. koncentrationens påverkan på den geografiska mångfalden och sprid­ ningen, såsom om den lokala eller regionala nyhetsbevakningen eller annat innehåll minskar till följd av koncentrationen,
 
-6\. koncentrationens påverkan på innehåll som riktar sig till särskilda grupper, och
+6\. koncentrationens påverkan på innehåll som riktar sig till särskilda grup­ per, och
 
-7\. åtaganden eller åtgärder som parter som deltar i koncentrationen har vidtagit för att bevara eller utveckla mångfalden av medier och medieinnehåll. Uppgifterna ska lämnas med beaktande av onlinemiljön och parternas ­intressen i, kopplingar till eller verksamheter i andra medieföretag eller andra företag.
+7\. åtaganden eller åtgärder som parter som deltar i koncentrationen har vid­ tagit för att bevara eller utveckla mångfalden av medier och medieinnehåll. Uppgifterna ska lämnas med beaktande av onlinemiljön och parternas ­intressen i, kopplingar till eller verksamheter i andra medieföretag eller andra företag.
 
 **6 §** Av de uppgifter som ska lämnas till följd av 4 § 9 ska framgå
 
-1\. om det finns tydliga riktlinjer eller skyddsmekanismer för att skydda den redaktionella integriteten och oberoendet mot otillbörliga politiska intressen och affärsintressen eller ägarens intressen samt om dessa riktlinjer är tillgängliga för allmänheten,
+1\. om det finns tydliga riktlinjer eller skyddsmekanismer för att skydda den redaktionella integriteten och oberoendet mot otillbörliga politiska intressen och affärsintressen eller ägarens intressen samt om dessa riktlinjer är tillgäng­ liga för allmänheten,
 
 2\. om ägare eller ledning har ett direkt inflytande över det redaktionella innehållet och kan stoppa redaktionella beslut,
 
 3\. hur chefredaktör, ledningsgrupp och styrelse tillsätts, och
 
-4\. om några åtgärder har vidtagits för att garantera oberoendet i redaktionella beslut, och i sådant fall redogöra för dessa.
+4\. om några åtgärder har vidtagits för att garantera oberoendet i redaktionel­ la beslut, och i sådant fall redogöra för dessa.
 
 Parternas ekonomiska bärkraftighet
 
 **7 §** Av de uppgifter som ska lämnas till följd av 4 § 10 ska i en redogörelse framgå
 
-1\. i vilken mån den eller de enheter som deltar i koncentrationen skulle vara ekonomiskt bärkraftiga utan koncentrationen. Med ekonomiskt bärkraftig avses om enheterna på medellång sikt kan fortsätta att tillhandahålla och vidareutveckla kvalitativa medietjänster på marknaden försedda med tillräckliga ­resurser och anpassade till den tekniska utvecklingen, och
+1\. i vilken mån den eller de enheter som deltar i koncentrationen skulle vara ekonomiskt bärkraftiga utan koncentrationen. Med ekonomiskt bärkraftig av­ ses om enheterna på medellång sikt kan fortsätta att tillhandahålla och vidare­ utveckla kvalitativa medietjänster på marknaden försedda med tillräckliga ­resurser och anpassade till den tekniska utvecklingen, och
 
 2\. en beskrivning av marknads- och konkurrensutvecklingen på de aktuella mediemarknaderna för enheterna i koncentrationen och konkurrenterna på mediemarknaden.
 
-De två senaste årsredovisningarna för de enheter som ingår i koncentrationen ska bifogas.
+De två senaste årsredovisningarna för de enheter som ingår i koncentratio­ nen ska bifogas.
 
 Väsentliga ändringar i koncentrationens omfattning
 
-**8 §** Om det, efter det att en anmälan kommit in till Mediemyndigheten och före det att myndigheten har gjort sin bedömning, sker väsentliga ändringar i koncentrationens omfattning, åtaganden eller uppgifter om parterna enligt
-
-4–7 §§ ska detta genast anmälas till myndigheten.
+**8 §** Om det, efter det att en anmälan kommit in till Mediemyndigheten och före det att myndigheten har gjort sin bedömning, sker väsentliga ändringar i koncentrationens omfattning, åtaganden eller uppgifter om parterna enligt 4–7 §§ ska detta genast anmälas till myndigheten.
 
 Dessa föreskrifter träder i kraft den 1 april 2026.
 

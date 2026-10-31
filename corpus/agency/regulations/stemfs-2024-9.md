@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=ce35277f51cd4048a281b97c567d71df&res=45fb22ab39554ca685b91721de0bca1d&lr=False&fn=STEMFS%202024_9webb.pdf&elp=portal&elt=t&eloid=ce35277f51cd4048a281b97c567d71df"
 source_sha256: "8006f644cf69818b27f0348e1d52e7e6c16faf3b9c8745bb5d7d06801bfab91c"
-fetched_at: "2026-10-30T15:20:52Z"
+fetched_at: "2026-10-31T03:21:45Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om skyldighet att lämna uppgifter till statistik om elpriser och elavtal
@@ -602,7 +602,7 @@ Levererad volym och fakturerat belopp till hushåll
 
 Redovisa total levererad volym och fakturerat belopp till hushåll under helåret
 
-Uppgifterna ska redovisas per elområde och avse det som l­evererats och fakturerats till hushållskunder (slutförbrukare) helåret.
+Uppgifterna ska redovisas per elområde och avse det som ­levererats och fakturerats till hushållskunder (slutförbrukare) helåret.
 
 - Volymerna ska redovisas i MWh
 

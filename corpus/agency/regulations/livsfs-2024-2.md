@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4930e9/globalassets/om-oss/lagstiftning/snus-tuggtobak/livsfs-2024-2_web-t.pdf"
 source_sha256: "49d0c618fa10e89f91c46605ab15c42e2bd29625ca571419632607470b436330"
-fetched_at: "2026-10-30T15:14:41Z"
+fetched_at: "2026-10-31T05:04:36Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om snus, snusliknande produkter och tuggtobak
@@ -44,13 +44,15 @@ Med stöd av 5–7, 30 och 31 §§ livsmedelsförordningen (2006:813) föreskriv
 
 Tillämpningsområde
 
-**1 §** Dessa föreskrifter innehåller bestämmelser om snus, snusliknande produkter och tuggtobak som är avsedda att tillhandahållas konsumenter på den svenska marknaden. Bestämmelser om de produkter som omfattas av dessa föreskrifter finns även i lagen (2018:2088) om tobak och liknande produkter samt i lagen (2022:1257) om tobaksfria nikotinprodukter.
+**1 §** Dessa föreskrifter innehåller bestämmelser om snus, snusliknan­ de produkter och tuggtobak som är avsedda att tillhandahållas konsu­ menter på den svenska marknaden.
+
+Bestämmelser om de produkter som omfattas av dessa föreskrifter finns även i lagen (2018:2088) om tobak och liknande produkter samt i lagen (2022:1257) om tobaksfria nikotinprodukter.
 
 Ord och uttryck
 
 **2 §** I dessa föreskrifter betyder
 
-1\. uttrycket livsmedelstillsatser samma sak som i Europaparlamentets och rådets förordning (EG) nr 1333/2008 av den 16 december 2008 om livsmedelstillsatser,
+1\. uttrycket livsmedelstillsatser samma sak som i Europaparlamen­ tets och rådets förordning (EG) nr 1333/2008 av den 16 december 2008 om livsmedelstillsatser,
 
 2\. följande uttryck samma sak som i Europaparlamentets och rådets förordning (EG) nr 1334/2008 av den 16 december 2008 om aromer och vissa livsmedelsingredienser med aromgivande egenskaper för ­användning i och på livsmedel och om ändring av rådets förordning (EEG) 1601/91, förordningarna (EG) nr 2232/96 och (EG) nr 110/2008 samt direktiv 2000/13/EG:
 
@@ -60,11 +62,9 @@ Ord och uttryck
 
 - livsmedel med aromgivande egenskaper, och
 
-3\. uttrycket material och produkter avsedda att komma i kontakt med livsmedel sådana material och produkter som omfattas av EuropaSe Europaparlamentets och rådets direktiv (EU) 2015/1535 av den 9 september 2015 om ett informationsförfarande beträffande tekniska föreskrifter och beträffande föreskrifter för informationssamhällets tjänster.
+3\. uttrycket material och produkter avsedda att komma i kontakt med livsmedel sådana material och produkter som omfattas av Europa­ Se Europaparlamentets och rådets direktiv (EU) 2015/1535 av den 9 septem­ ber 2015 om ett informationsförfarande beträffande tekniska föreskrifter och beträffande föreskrifter för informationssamhällets tjänster.
 
-parlamentets och rådets förordning (EG) nr 1935/2004 av den 27 oktober 2004 om material och produkter avsedda att komma i kontakt med livsmedel och om upphävande av direktiven 80/590/EEG och
-
-89/109/EEG.
+parlamentets och rådets förordning (EG) nr 1935/2004 av den 27 okto­ ber 2004 om material och produkter avsedda att komma i kontakt med livsmedel och om upphävande av direktiven 80/590/EEG och 89/109/EEG.
 
 Ingredienser
 
@@ -72,9 +72,9 @@ Ingredienser
 
 Tillsatser
 
-**4 §** Endast de livsmedelstillsatser som anges i bilagan till dessa föreskrifter får ingå i snus och tuggtobak. Villkoren för användningen framgår av bilagan.
+**4 §** Endast de livsmedelstillsatser som anges i bilagan till dessa före­ skrifter får ingå i snus och tuggtobak. Villkoren för användningen framgår av bilagan.
 
-Livsmedelstillsatserna ska användas för sådana funktioner som ­anges i bilaga I till förordning (EG) nr 1333/2008, och ska följa de specifikationer som gäller för den aktuella livsmedelstillsatsen i enlighet med kommissionens förordning (EU) nr 231/2012 av den 9 mars 2012 om fastställande av specifikationer för de livsmedelstillsatser som förtecknas i bilagorna II och III till Europaparlamentets och rådets förordning (EG) nr 1333/2008.
+Livsmedelstillsatserna ska användas för sådana funktioner som ­anges i bilaga I till förordning (EG) nr 1333/2008, och ska följa de specifikationer som gäller för den aktuella livsmedelstillsatsen i enlig­ het med kommissionens förordning (EU) nr 231/2012 av den 9 mars 2012 om fastställande av specifikationer för de livsmedelstillsatser som förtecknas i bilagorna II och III till Europaparlamentets och rådets förordning (EG) nr 1333/2008.
 
 Aromer
 
@@ -82,11 +82,11 @@ Aromer
 
 Nya livsmedel
 
-**6 §** Livsmedel som omfattas av Europaparlamentets och rådets förordning (EG) nr 2015/2283 av den 25 november 2015 om nya livsmedel och om ändring av Europaparlamentets och rådets förordning (EU) nr 1169/2011 och upphävande av Europaparlamentets och rådets förordning (EG) nr 258/97 och kommissionens förordning (EG) nr 1852/2001 får ingå i snus och tuggtobak, om de är godkända i enlighet med den förordningen.
+**6 §** Livsmedel som omfattas av Europaparlamentets och rådets för­ ordning (EG) nr 2015/2283 av den 25 november 2015 om nya livs­ medel och om ändring av Europaparlamentets och rådets förordning (EU) nr 1169/2011 och upphävande av Europaparlamentets och rådets förordning (EG) nr 258/97 och kommissionens förordning (EG) nr 1852/2001 får ingå i snus och tuggtobak, om de är godkända i enlig­ het med den förordningen.
 
 Vatten
 
-**7 §** Det vatten som används vid framställning och beredning av snus, snusliknande produkter och tuggtobak ska uppfylla kraven i Livsmedelsverkets föreskrifter (LIVSFS 2022:12) om dricksvatten.
+**7 §** Det vatten som används vid framställning och beredning av snus, snusliknande produkter och tuggtobak ska uppfylla kraven i Livs­ medelsverkets föreskrifter (LIVSFS 2022:12) om dricksvatten.
 
 Främmande ämnen
 
@@ -98,11 +98,11 @@ Främmande ämnen
 
 - bens(a)pyren i mängder över 0,003 mg/kg torrvikt.
 
-Snus och tuggtobak får inte heller innehålla tobaksspecifika nitrosaminer NNN och NNK (summan) i mängder över 2 mg/kg torrvikt. Torrvikt ska bestämmas med en etablerad metod som visat sig kunna fastställa denna halt noggrant.
+Snus och tuggtobak får inte heller innehålla tobaksspecifika nitrosa­ miner NNN och NNK (summan) i mängder över 2 mg/kg torrvikt. Torrvikt ska bestämmas med en etablerad metod som visat sig kunna fastställa denna halt noggrant.
 
 Hygien
 
-**9 §** En verksamhetsutövare som bedriver tillverkning av snus, snusliknande produkter eller tuggtobak ska, när det är nödvändigt för att upprätthålla en tillfredsställande hygien, uppfylla kraven i bilaga II till Europaparlamentets och rådets förordning (EG) nr 852/2004 av den 29 april 2004 om livsmedelshygien enligt följande:
+**9 §** En verksamhetsutövare som bedriver tillverkning av snus, snus­ liknande produkter eller tuggtobak ska, när det är nödvändigt för att upprätthålla en tillfredsställande hygien, uppfylla kraven i bilaga II till Europaparlamentets och rådets förordning (EG) nr 852/2004 av den 29 april 2004 om livsmedelshygien enligt följande:
 
 1\. allmänna regler för lokaler i kapitel I,
 
@@ -124,11 +124,9 @@ Hygien
 
 Faroanalys och kritiska styrpunkter
 
-**10 §** En verksamhetsutövare som bedriver tillverkning av snus, snusliknande produkter eller tuggtobak ska, när det är nödvändigt för att uppfylla kraven i dessa föreskrifter,
+**10 §** En verksamhetsutövare som bedriver tillverkning av snus, snus­ liknande produkter eller tuggtobak ska, när det är nödvändigt för att uppfylla kraven i dessa föreskrifter,
 
-1\. inrätta, genomföra och upprätthålla ett eller flera permanenta förfaranden grundade på HACCP-principerna i enlighet med artikel
-
-5.2 i Europaparlamentets och rådets förordning (EG) nr 852/2004,
+1\. inrätta, genomföra och upprätthålla ett eller flera permanenta förfaranden grundade på HACCP-principerna i enlighet med artikel 5.2 i Europaparlamentets och rådets förordning (EG) nr 852/2004,
 
 2\. se till att all dokumentation som beskriver de förfaranden som utarbetats enligt punkt 1 är aktuell, och
 
@@ -136,47 +134,47 @@ Faroanalys och kritiska styrpunkter
 
 Material och produkter i kontakt med snus, snusliknande produkter och tuggtobak
 
-**11 §** Material och produkter som kommer i kontakt med snus, snusliknande produkter och tuggtobak ska uppfylla de krav på sammansättning och egenskaper som gäller för material och produkter avsedda att komma i kontakt med livsmedel.
+**11 §** Material och produkter som kommer i kontakt med snus, snusliknande produkter och tuggtobak ska uppfylla de krav på sam­ mansättning och egenskaper som gäller för material och produkter avsedda att komma i kontakt med livsmedel.
 
 Uppgifter på förpackningar
 
-**12 §** Förpackningar med snus, snusliknande produkter och tuggtobak som levereras direkt till konsument ska förses med följande uppgifter:
+**12 §** Förpackningar med snus, snusliknande produkter och tugg­ tobak som levereras direkt till konsument ska förses med följande upp­ gifter:
 
 1\. Nettokvantitet i gram.
 
 2\. Tillverkningsdag.
 
-3\. Förvaringsanvisning, om förvaringen har betydelse för hållbarheten.
+3\. Förvaringsanvisning, om förvaringen har betydelse för hållbar­ heten.
 
-4\. Namn på och adress till tillverkaren, förpackaren eller säljaren.
+4\. Namn på och adress till tillverkaren, förpackaren eller säljaren. Adressen får ersättas med uppgift om tillverkarens, förpackarens eller säljarens webbplats eller telefonnummer inom Sverige.
 
-Adressen får ersättas med uppgift om tillverkarens, förpackarens eller säljarens webbplats eller telefonnummer inom Sverige.
+**13 §** Förpackningar med snus eller tuggtobak som levereras direkt till konsument ska förses med varans beteckning: snus eller tugg­ tobak.
 
-**13 §** Förpackningar med snus eller tuggtobak som levereras direkt till konsument ska förses med varans beteckning: snus eller tuggtobak. Varumärke, märkesnamn eller fantasinamn får inte användas i stället för varans beteckning.
+Varumärke, märkesnamn eller fantasinamn får inte användas i stället för varans beteckning.
 
 **14 §** Förpackningar med snusliknande produkter utan nikotin, som levereras direkt till konsument, ska förses med en förteckning över alla ingredienser som ingår i produkten i fallande viktordning (innehållsdeklaration).
 
-**15 §** De uppgifter som förpackningar med snus, snusliknande produkter och tuggtobak ska förses med enligt 12–14 §§, ska anges på svenska. Annat språk får användas om språket endast obetydligt skiljer sig från svenska.
+**15 §** De uppgifter som förpackningar med snus, snusliknande pro­ dukter och tuggtobak ska förses med enligt 12–14 §§, ska anges på svenska. Annat språk får användas om språket endast obetydligt skiljer sig från svenska.
 
 Uppgifterna ska även vara väl synliga, klart läsbara, beständiga och lätta att förstå.
 
 Spårbarhet
 
-**16 §** Snus, snusliknande produkter och tuggtobak, samt de ingredienser som ingår i dessa produkter, ska kunna spåras på alla stadier i produktions-, bearbetnings- och distributionskedjan för snus, snusliknande produkter eller tuggtobak.
+**16 §** Snus, snusliknande produkter och tuggtobak, samt de ingre­ dienser som ingår i dessa produkter, ska kunna spåras på alla stadier i produktions-, bearbetnings- och distributionskedjan för snus, snusliknande produkter eller tuggtobak.
 
-Verksamhetsutövare som bedriver tillverkning av snus, snusliknande produkter eller tuggtobak ska ha system och förfaranden för att kunna ange dels från vilka aktörer de har erhållit ingredienser som är avsedda för eller som kan antas ingå i snus, snusliknande produkter eller tuggtobak, dels alla aktörer som har erhållit deras produkter, dock inte konsumenter.
+Verksamhetsutövare som bedriver tillverkning av snus, snusliknan­ de produkter eller tuggtobak ska ha system och förfaranden för att kun­ na ange dels från vilka aktörer de har erhållit ingredienser som är av­ sedda för eller som kan antas ingå i snus, snusliknande produkter eller tuggtobak, dels alla aktörer som har erhållit deras produkter, dock inte konsumenter.
 
 Registrering
 
-**17 §** En verksamhetsutövare som bedriver tillverkning av snus, snusliknande produkter eller tuggtobak ska skriftligen anmäla sina tillverkningsanläggningar för registrering till den myndighet som är behörig att registrera anläggningarna enligt 23 § livsmedelsförordningen (2006:813).
+**17 §** En verksamhetsutövare som bedriver tillverkning av snus, snus­ liknande produkter eller tuggtobak ska skriftligen anmäla sina tillverk­ ningsanläggningar för registrering till den myndighet som är behörig att registrera anläggningarna enligt 23 § livsmedelsförordningen (2006:813).
 
-**18 §** En anmälan för registrering av en tillverkningsanläggning ska innehålla följande uppgifter om verksamhetsutövaren och anläggningen.
+**18 §** En anmälan för registrering av en tillverkningsanläggning ska innehålla följande uppgifter om verksamhetsutövaren och anläggning­ en.
 
 1\. Namn och kontaktuppgifter.
 
-2\. Organisationsnummer, personnummer, samordningsnummer ­eller, om sådana uppgifter saknas för den som är etablerad i ett annat land inom Europeiska ekonomiska samarbetsområdet (EES), motsvarande identifieringsuppgifter.
+2\. Organisationsnummer, personnummer, samordningsnummer ­eller, om sådana uppgifter saknas för den som är etablerad i ett annat land inom Europeiska ekonomiska samarbetsområdet (EES), mot­ svarande identifieringsuppgifter.
 
-3\. Uppgift om lokal, utrymme eller plats där verksamheten ska bedrivas.
+3\. Uppgift om lokal, utrymme eller plats där verksamheten ska be­ drivas.
 
 4\. En beskrivning av verksamhetens art och omfattning.
 
@@ -184,21 +182,21 @@ Registrering
 
 Verksamhetsutövaren ska på begäran även lämna de kompletterande uppgifter som behövs för handläggningen av anmälan.
 
-**19 §** Verksamheten vid en anläggning som ska anmälas för registrering får påbörjas i och med att myndigheten registrerar anläggningen. Verksamheten får dock påbörjas två veckor efter att anmälan kommit in till myndigheten, även om myndigheten ännu inte har registrerat anläggningen.
+**19 §** Verksamheten vid en anläggning som ska anmälas för registre­ ring får påbörjas i och med att myndigheten registrerar anläggningen. Verksamheten får dock påbörjas två veckor efter att anmälan kommit in till myndigheten, även om myndigheten ännu inte har registrerat anläggningen.
 
 Uppgiftsskyldighet
 
-**20 §** Verksamhetsutövare som bedriver tillverkning av snus, snusliknande produkter eller tuggtobak ska se till att myndigheten har aktuell information om de registrerade anläggningarna, bland annat genom att underrätta myndigheten om betydande ändringar i verksamheten och om nedläggningar av befintliga anläggningar.
+**20 §** Verksamhetsutövare som bedriver tillverkning av snus, snuslik­ nande produkter eller tuggtobak ska se till att myndigheten har aktuell information om de registrerade anläggningarna, bland annat genom att underrätta myndigheten om betydande ändringar i verksamheten och om nedläggningar av befintliga anläggningar.
 
 1\. Dessa föreskrifter träder i kraft den 1 april 2024.
 
 2\. Genom föreskrifterna upphävs Livsmedelsverkets föreskrifter (LIVSFS 2012:6) om snus och tuggtobak.
 
-3\. För verksamhetsutövare som bedriver tillverkning av snusliknande produkter ska bestämmelserna om registrering i 17–19 §§ tillämpas från och med den 1 oktober 2024. Bestämmelsen i 19 § gäller dock inte för sådana verksamheter som påbörjats före den 1 oktober 2024.
+3\. För verksamhetsutövare som bedriver tillverkning av snusliknan­ de produkter ska bestämmelserna om registrering i 17–19 §§ tillämpas från och med den 1 oktober 2024. Bestämmelsen i 19 § gäller dock inte för sådana verksamheter som påbörjats före den 1 oktober 2024.
 
-4\. Förpackningar med snusliknande produkter som inte överensstämmer med bestämmelser i 12, 14 och 15 §§, får tillhandahållas konsumenter på den svenska marknaden till dess att lagren tar slut, under förutsättning att de har släppts ut på marknaden eller märkts före den 1 oktober 2024.
+4\. Förpackningar med snusliknande produkter som inte överens­ stämmer med bestämmelser i 12, 14 och 15 §§, får tillhandahållas kon­ sumenter på den svenska marknaden till dess att lagren tar slut, under förutsättning att de har släppts ut på marknaden eller märkts före den 1 oktober 2024.
 
-5\. Snus eller tuggtobak som innehåller titandioxid (E 171) får tillhandahållas konsumenter på den svenska marknaden till dess att lagren tar slut, under förutsättning att de har släppts ut på marknaden eller förpackats före den 1 oktober 2024.
+5\. Snus eller tuggtobak som innehåller titandioxid (E 171) får till­ handahållas konsumenter på den svenska marknaden till dess att lagren tar slut, under förutsättning att de har släppts ut på marknaden eller förpackats före den 1 oktober 2024.
 
 ANNICA SOHLSTRÖM
 
@@ -208,7 +206,7 @@ Bilaga LIVSFS 2024:2 (till LIVSFS 2024:2)
 
 Tillåtna livsmedelstillsatser enligt 4 §
 
-Villkor. Om ingen maximihalt anges nedan får livsmedelstillsatserna användas enligt quantum satis-principen, det vill säga ingen maximihalt är fastställd för användningen. Tillsatserna ska dock användas enligt god tillverkningssed, inte i större mängd än som behövs för att uppnå det önskade syftet, och på ett sådant sätt att konsumenterna inte vilseleds.
+Villkor. Om ingen maximihalt anges nedan får livsmedelstillsatserna användas enligt quantum satis-principen, det vill säga ingen maximi­ halt är fastställd för användningen. Tillsatserna ska dock användas en­ ligt god tillverkningssed, inte i större mängd än som behövs för att uppnå det önskade syftet, och på ett sådant sätt att konsumenterna inte vilseleds.
 
 E-nummer
 
@@ -744,7 +742,7 @@ Dinatrium-5’ribonukleotider
 
 10 g/kg, var för sig eller i kombination, uttryckt som gluta­m insyra
 
-500 mg/kg, var för sig eller i kombination, uttryckt som guanylsyra
+500 mg/kg, var för sig eller i kombina­ tion, uttryckt som guanylsyra
 
 LIVSFS 2023:2
 

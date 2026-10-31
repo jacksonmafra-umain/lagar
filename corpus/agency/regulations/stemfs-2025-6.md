@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=4d8af7b79c1d43b08200aeb540064815&res=03bc97a54dfd408f9950acbe1590e228&lr=False&fn=STEMFS%202025_6%20Biogas%20och%20r%C3%B6trester_webb.pdf&elp=portal&elt=t&eloid=4d8af7b79c1d43b08200aeb540064815"
 source_sha256: "78b6a3988f4db599836a26eb73a7a5e3b6348414881018d1ba0da79f0745c194"
-fetched_at: "2026-10-30T15:18:52Z"
+fetched_at: "2026-10-31T03:19:46Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om skyldighet att lämna uppgifter till statistik om skyldighet att lämna uppgifter till statistik om produktion och användning av biogas och rötrester
@@ -56,7 +56,7 @@ e) en eller flera förvätskningsanläggningar ska lämna in de uppgifter som fr
 
 f) importverksamhet eller exportverksamhet ska lämna in de uppgifter som framgår av bilaga 6
 
-Uppgifterna ska lämnas senast den 31 mars varje år eller vid den senare t­idpunkt som Statens energimyndighet bestämmer och avse förhållandena under det närmast föregående kalenderåret.
+Uppgifterna ska lämnas senast den 31 mars varje år eller vid den senare ­tidpunkt som Statens energimyndighet bestämmer och avse förhållandena under det närmast föregående kalenderåret.
 
 **3 §** Om det finns särskilda skäl får Statens energimyndighet medge avvikelser och undantag från bestämmelserna i dessa föreskrifter. Den som är skyldig att lämna uppgifter kan ansöka om undantag till Statens energimyndighet.
 
@@ -90,9 +90,7 @@ Produktion och användning av biogas och rötrester.
 
 Frågeformulär för biogasanläggningar
 
-Bilaga
-
-1\. Frågeformulär för biogasanläggningar
+Bilaga 1. Frågeformulär för biogasanläggningar
 
 Anläggningsuppgifter
 
@@ -360,21 +358,19 @@ Bilaga 3
 
 Bilaga 3 2025:6
 
-Blankettför förundersökning undersökning tillhörande statistikprodukt
+Blankett förundersökning undersökning tillhörande statistikprodukt
 
 EN0124
 
-Blankett tillhörande statistikprodukt
+Blankett för tillhörande statistikprodukt
 
 EN0124
 
-Produktionoch ochanvändning användning biogas rötrester.
+Produktion ochanvändning användning biogas rötrester.
 
-Produktion av av biogas och och rötrester.
+Produktion och av av biogas och och rötrester.
 
-Bilaga
-
-3\. Frågeformulär för uppgraderingsanläggningar
+Bilaga 3. Frågeformulär för uppgraderingsanläggningar
 
 Frågeformulär för uppgraderingsanläggningar
 
@@ -470,21 +466,19 @@ STEMFS
 
 Bilaga 4
 
-Blankettför förundersökning undersökning tillhörande statistikprodukt
+Blankett förundersökning undersökning tillhörande statistikprodukt
 
 EN0124
 
-Blankett tillhörande statistikprodukt
+Blankett för tillhörande statistikprodukt
 
 EN0124
 
-Produktionoch ochanvändning användning biogas rötrester.
+Produktion ochanvändning användning biogas rötrester.
 
-Produktion av av biogas och och rötrester.
+Produktion och av av biogas och och rötrester.
 
-Bilaga
-
-4\. Frågeformulär för injektionsstation
+Bilaga 4. Frågeformulär för injektionsstation
 
 Frågeformulär för injektionsstation
 
@@ -522,17 +516,17 @@ Bilaga 5
 
 Bilaga 5 2025:6
 
-Blankettför förundersökning undersökning tillhörande statistikprodukt
+Blankett förundersökning undersökning tillhörande statistikprodukt
 
 EN0124
 
-Blankett tillhörande statistikprodukt
+Blankett för tillhörande statistikprodukt
 
 EN0124
 
-Produktionoch ochanvändning användning biogas rötrester.
+Produktion ochanvändning användning av biogas och rötrester.
 
-Produktion av av biogas och och rötrester.
+Produktion och av biogas och rötrester.
 
 Bilaga 5. Frågeformulär för förvätskningsanläggningar
 
@@ -614,15 +608,15 @@ STEMFS
 
 Bilaga 6
 
-Blankettför förundersökning undersökning tillhörande statistikprodukt
+Blankett förundersökning undersökning tillhörande statistikprodukt
 
-Blankett tillhörande statistikprodukt
+Blankett för tillhörande statistikprodukt
 
 EN0124 EN0124
 
 Produktion
 
-Produktion ochav biogas användning biogas och rötrester. och användning och av rötrester.
+Produktion ochavanvändning av biogas och rötrester. och användning biogas och rötrester.
 
 Bilaga 6. Frågeformulär för införsel/import och utförsel/export
 

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://skolfs.skolverket.se/api/document/2008:9/ascending"
 source_sha256: "bc078fcdc97843b57758e86fe4b368c1fde16d0a422f93e6579532701a00bd44"
-fetched_at: "2026-10-30T22:09:19Z"
+fetched_at: "2026-10-31T04:28:33Z"
 issuer: "Statens skolverk"
 ---
 # Skolverkets föreskrifter om utbildning av utlandssvenska barn och ungdomar
@@ -47,7 +47,7 @@ Svensk utlandsskola
 
 Av ansökan ska framgå huvudmannens planering för utlandsskolan, förutsättningar på orten, och det allmänna svenska intresset av skolan.
 
-**2 §** Till ansökan ska en handling som verifierar huvudmannens rättskapacitet biläggas. För ideella föreningar ska stadgar och en handling som upptar föreningens styrelseledamöter biläggas. För ett svenskt aktiebolag ska ett registreringsbevis biläggas.
+**2 §** Till ansökan ska en handling som verifierar huvudmannens rättskapacitet biläggas. För ideella föreningar ska stadgar och en handling som upptar föreningens styrelseledamöter biläggas. För ett svenskt aktiebolag ska ett regi­ streringsbevis biläggas.
 
 **3 §** Till ansökan ska biläggas ett dokument som styrker att huvudmannen är registrerad enligt värdlandets lagstiftning.
 
@@ -91,7 +91,7 @@ Statsbidrag
 
 **7 §** Bidragsberättigade lokalkostnader utgör:
 
-- hyreskostnad för lokaler som är nödvändiga för undervisningen: klassrum, grupprum, bibliotek, slöjdlokaler, gymnastiksal, skolmatsal, samlingslokal enbart för skolans bruk, expeditionsutrymmen, personalutrymmen, elevvårdsutrymmen, kapprum, toaletter, städutrymmen och institutionslokaler,
+- hyreskostnad för lokaler som är nödvändiga för undervisningen: klassrum, grupprum, bibliotek, slöjdlokaler, gymnastiksal, skolmatsal, samlingslokal enbart för skolans bruk, expeditionsutrymmen, personal­ utrymmen, elevvårdsutrymmen, kapprum, toaletter, städutrymmen och institutionslokaler,
 
 - räntekostnad och avskrivning för investering i egen skolbyggnad i de delar som godkänts av staten. Om annat statligt bidrag utgått som täcker en del av godkänd investeringskostnad, lämnas ersättning med mellanskillnaden mellan det beloppet och den faktiska kostnaden,
 
@@ -137,7 +137,7 @@ Uppföljning och utvärdering
 
 Dessa föreskrifter träder i kraft två veckor efter den dag då föreskrifterna enligt uppgift på dem utkom från trycket.
 
-Genom föreskrifterna upphävs föreskriften (SKOLFS 1994:41) om statsbidrag till utlandsskolors lokalkostnader.
+Genom föreskrifterna upphävs föreskriften (SKOLFS 1994:41) om stats­ bidrag till utlandsskolors lokalkostnader.
 
 På Skolverkets vägnar
 

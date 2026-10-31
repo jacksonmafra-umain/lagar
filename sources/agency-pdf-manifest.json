@@ -8113,7 +8113,7 @@
           "bytes": 47853,
           "sha256": "4fb840de5d507add78dbbc2630e5cc4ffb7787d1cf83017ce211066bb7677b8b",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T20:52:41Z"
+          "retrieved_at": "2026-10-31T05:15:24Z"
         }
       ]
     },
@@ -17457,16 +17457,8 @@
     },
     {
       "number": "IAFFS 2017:5",
-      "detail_url": "https://www.iaf.se/globalassets/dokument/foreskrifter/iaffs-20175-konsoliderad-version.pdf",
+      "detail_url": "https://www.iaf.se/globalassets/dokument/foreskrifter/iaffs-2020-3.pdf",
       "files": [
-        {
-          "label": "IAFFS 2017:5",
-          "url": "https://www.iaf.se/globalassets/dokument/foreskrifter/iaffs-20175-konsoliderad-version.pdf",
-          "bytes": 143686,
-          "sha256": "be4d21afdaa95c8484fc80b3cd81e5ebbc2ed05a38767d919e80d54825f3218a",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T08:43:11Z"
-        },
         {
           "label": "IAFFS 2017:5",
           "url": "https://www.iaf.se/globalassets/dokument/foreskrifter/iaffs-2020-3.pdf",
@@ -17482,6 +17474,14 @@
           "sha256": "e4da49c6edb404c72e07e6f07d20d2505abd06f7134bbb2afdb9957b6b37ddbb",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T08:43:15Z"
+        },
+        {
+          "label": "IAFFS 2017:5",
+          "url": "https://www.iaf.se/globalassets/dokument/foreskrifter/iaffs-20175-konsoliderad-version.pdf",
+          "bytes": 143686,
+          "sha256": "be4d21afdaa95c8484fc80b3cd81e5ebbc2ed05a38767d919e80d54825f3218a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-30T08:43:11Z"
         }
       ]
     },
@@ -18840,6 +18840,20 @@
           "sha256": "48c84c0cddc0a32e29ad713f39cbcc2bdcbe99136b88be6ee4229ab929d4b82c",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T08:35:58Z"
+        }
+      ]
+    },
+    {
+      "number": "KBMFS 2003:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/kbmfs-20033/",
+      "files": [
+        {
+          "label": "KBMFS 2003:3 föreskrifter om förmåner till frivilliga",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/kbmfs-2003-3.pdf",
+          "bytes": 65017,
+          "sha256": "591718055b25a51aecffc65473ecc41b28db144f6bf8343f6f1ba0e8ad266bd7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:47:34Z"
         }
       ]
     },
@@ -22470,6 +22484,640 @@
           "sha256": "1b4ef8cf9261e0fd604dcb2df90b3b4e899d0148378320f180149b391557586c",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T08:35:22Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2009:4",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20094/",
+      "files": [
+        {
+          "label": "MSBFS 2009:4 föreskrifter om ackreditering av organ som ska utföra kontroll av tankar avsedda för transport av farligt gods på land",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2009-4.pdf",
+          "bytes": 261528,
+          "sha256": "fb9b74d93e928ece1162087c93a692faa1605e33aaa68d927b0e9a48e91d17d6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:15Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2009:5",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20095/",
+      "files": [
+        {
+          "label": "MSBFS 2009:5 föreskrifter om ackreditering av organ som ska utföra certifiering av förpackningar, IBC-behållare och storförpackningar för transport av farligt gods på land",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2009-5.pdf",
+          "bytes": 190523,
+          "sha256": "1757c4ada260c9ef1228626013284e606939ace00ea1f0f8af84f396a468b2c6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:12Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2009:7",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20097/",
+      "files": [
+        {
+          "label": "MSBFS 2009:7 föreskrifter och allmänna råd om ledningssystem för naturgas",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2009-7.pdf",
+          "bytes": 191542,
+          "sha256": "295d1b03cce3c5687a4e03de92298212426c341df99f48da592d3706a00b0539",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:11Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2010:4",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20104/",
+      "files": [
+        {
+          "label": "MSBFS 2010:4 föreskrifter om vilka varor som ska anses utgöra brandfarliga eller explosiva varor",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2010-4.pdf",
+          "bytes": 115260,
+          "sha256": "14ac8b975d24a9c474f2ed60788efda64235d3aab52c31c32bfc1add15c0be42",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:09Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2011:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20113/",
+      "files": [
+        {
+          "label": "MSBFS 2011:3 föreskrifter om transportabla tryckbärande anordningar",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2011-3.pdf",
+          "bytes": 206250,
+          "sha256": "4934bdd88c02e21c45dd89f792f5878e80e0422fb9120efdb3c601dc9e66dc22",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:06Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2011:5",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20115/",
+      "files": [
+        {
+          "label": "MSBFS 2011:5 föreskrifter om varning utomhus",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2011-5.pdf",
+          "bytes": 112673,
+          "sha256": "418b7064c771188accfca62b4b227bdff7419e932287394daa3960625dc33f7f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:04Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2013:1",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20131/",
+      "files": [
+        {
+          "label": "MSBFS 2013:1 föreskrifter om länsstyrelsens planer för hantering av översvämningsrisker (riskhanteringsplaner)",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2013-1.pdf",
+          "bytes": 106136,
+          "sha256": "686f534a8e41b0f05dbf0b2dd5825eb4eb86ecb55598c0486ced8d491e3cc362",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:00Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2013:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20133/",
+      "files": [
+        {
+          "label": "MSBFS 2013:3 föreskrifter om tillstånd till hantering av brandfarliga gaser och vätskor",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2013-3.pdf",
+          "bytes": 135975,
+          "sha256": "37305ebf13cb26eab5c86ec716764e4021529061dbe76e110d7e4a0503e5c04c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:57Z"
+        },
+        {
+          "label": "Handbok - Tillstånd till hantering av brandfarliga gaser och vätskor",
+          "url": "https://rib.msb.se/Filer/pdf/28281.pdf",
+          "bytes": 278506,
+          "sha256": "1bd93d407ff03813248daa9ab760ac25ba1697687203c527ea7e1a33f4406cef",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:59Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2014:2",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20142/",
+      "files": [
+        {
+          "label": "MSBFS 2014:2 allmänna råd om skyldigheter vid farlig verksamhet",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2014-2.pdf",
+          "bytes": 160741,
+          "sha256": "542953b5079f8530a2fb903287ae90463aeab0c5cdf14e51e2bc90ede67da639",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:55Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2014:6",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20146/",
+      "files": [
+        {
+          "label": "MSBFS 2014:6 föreskrifter och allmänna råd om rengöring (sotning) och brandskyddskontroll",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2014-6.pdf",
+          "bytes": 198115,
+          "sha256": "7c14942b784111b92cff67a730ddcb9cb474b277eb7846f6b24596c6e56da0b7",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:53Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2015:6",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20156/",
+      "files": [
+        {
+          "label": "MSBFS 2015:6 föreskrifter om tillhandahållande av pyrotekniska artiklar och ammunition",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2015-6.pdf",
+          "bytes": 243672,
+          "sha256": "2b40df0ef68e2f8910c64f32e5ea4beb9fff964ee7c721152898019ac1a5eea2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:51Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2015:8",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20158/",
+      "files": [
+        {
+          "label": "MSBFS 2015:8 föreskrifter om åtgärder för att förebygga och begränsa följderna av allvarliga kemikalieolyckor",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2015-8.pdf",
+          "bytes": 133963,
+          "sha256": "047d49aead829ebf991ef0396a78499a90dd05f5743548bc937f07674541b7f2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:49Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2015:9",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20159/",
+      "files": [
+        {
+          "label": "MSBFS 2015:9 föreskrifter om säkerhetsrådgivare för transport av farligt gods",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/bc656208-29e4-4c35-ab04-14f8ed38aeca.pdf",
+          "bytes": 153888,
+          "sha256": "5a9828536d0442edc1f9bfb1f43db813b9c0d393a9e4f95e824cbd3c21bdc002",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:47Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2016:5",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20165/",
+      "files": [
+        {
+          "label": "MSBFS 2016:5 föreskrifter om produktkrav på explosiva varor för civilt bruk och plastiska sprängämnen",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2016-5.pdf",
+          "bytes": 186527,
+          "sha256": "c211a1646efb424a82ae1445b716c1586e0ee71a0e5b0d99da74c65252948b70",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:45Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2017:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20173/",
+      "files": [
+        {
+          "label": "MSBFS 2017:3 föreskrifter om information vid nödsituationer där det finns risk för strålning",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2017-3.pdf",
+          "bytes": 131937,
+          "sha256": "532288018b47085897689fb4a17bae41b51aabcc56c72eb603164cb706dd0f35",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:40Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2018:1",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20181/",
+      "files": [
+        {
+          "label": "MSBFS 2018:1 föreskrifter om aerosolbehållare",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/fcf9a093-542e-4ee0-8b17-b5aa5d694c6b.pdf",
+          "bytes": 405873,
+          "sha256": "1830680e1316e627005a89755fb16bf3b1b4b2d767803ef104f1a60ca5d134c8",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:37Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2018:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20183/",
+      "files": [
+        {
+          "label": "MSBFS 2018:3 föreskrifter och allmänna råd om cisterner med anslutna rörledningar för brandfarliga vätskor",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2018-2.pdf",
+          "bytes": 269557,
+          "sha256": "79cc961b234ccfc6cfd43a88e7c0570b2abab8211d0cdc66a387eed72b6b5c78",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:35Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2018:4",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20184/",
+      "files": [
+        {
+          "label": "MSBFS 2018:4 föreskrifter om folkrättsliga rådgivare vid länsstyrelserna",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/msbfs-2018-4.pdf",
+          "bytes": 130899,
+          "sha256": "dbeb334bced019bd0d13674c02ec354d067282181a1cba61b177792974b7b40d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:33Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2018:13",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-201813/",
+      "files": [
+        {
+          "label": "MSBFS 2018:13 föreskrifter och allmänna råd om hantering av ammoniumnitratemulsioner, -suspensioner och -geler (ANE)",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs2018_13.pdf",
+          "bytes": 237449,
+          "sha256": "cb5ed101660214360619d100c71364a972e18bd2d7faae3ba9d5f9c0b2c6c960",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:28Z"
+        },
+        {
+          "label": "Handbok till MSBFS 2018:13 - hantering av ANE",
+          "url": "https://rib.msb.se/Filer/pdf/28818.pdf",
+          "bytes": 1514860,
+          "sha256": "3fa434d7b5457c8f85300d0ebfa844700ac797f5020a7112ffe641c5f9ed3b27",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:31Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2020:2",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20202/",
+      "files": [
+        {
+          "label": "MSBFS 2020:2 föreskrifter om vissa undantag för Försvarsmakten och gästande utländska militära förband vid hantering och transport av farliga ämnen",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs-2020-2.pdf",
+          "bytes": 16193,
+          "sha256": "ac09ab895af8744908ee638972e8062c97fe4c6c6ff8a2db2bd32cdca7fff27a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:26Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2020:6",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20206/",
+      "files": [
+        {
+          "label": "MSBFS 2020:6 föreskrifter om informationssäkerhet för statliga myndigheter",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs-2020-6-foreskrifter-om-informationssakerhet-for-statliga-myndigheter.pdf",
+          "bytes": 199682,
+          "sha256": "eccd6086d06cd7cec14c1cab45d3f1a4a09734e72963ab6903ecc4f3c28648ad",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:23Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2020:7",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20207/",
+      "files": [
+        {
+          "label": "MSBFS 2020:7 föreskrifter om säkerhetsåtgärder i informationssystem för statliga myndigheter",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs-2020-7-foreskrifter-om-sakerhetsatgarder-i-informationssystem-for-statliga-myndigheter.pdf",
+          "bytes": 340732,
+          "sha256": "e28739ab490acc982806635bd3a746eb068a63fb6e325be7a04ee828dc8cea1c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:21Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2020:8",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/foreskrifter-om-rapportering-av-it-incidenter-for-statliga-myndigheter-msbfs-20208/",
+      "files": [
+        {
+          "label": "MSBFS 2020:8 föreskrifter om rapportering av it-incidenter för statliga myndigheter",
+          "url": "https://www.mcf.se/contentassets/c4bd6f41d5db45919e979439784e9ec4/upphavd-msbfs-2020-8.pdf",
+          "bytes": 67342,
+          "sha256": "5c35a75f0f95141e2c75b6c01c13939138416f123c0a5d0074e4af31065db6fd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:19Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2021:1",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20211/",
+      "files": [
+        {
+          "label": "MSBFS 2021:1 föreskrifter och allmänna råd om innehåll och struktur i kommunens handlingsprogram för förebyggande verksamhet och räddningstjänst",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs-2021-01-foreskrifter-och-allmanna-rad-om-innehall-och-struktur-i-kommunens-handlingsprogram-for-forebyggande--verksa.pdf",
+          "bytes": 168015,
+          "sha256": "d49a04556b4d589b9cca7c9fd86a94eeb2f50d4618a78aa114d2dde3c85a2cd3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:18Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2021:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20213/",
+      "files": [
+        {
+          "label": "MSBFS 2021:3 föreskrifter om deltagare i verksamhet med explosiva varor",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs-2021-3-foreskrifter-om-deltagare-i-verksamhet-med-explosiva-varor.pdf",
+          "bytes": 160299,
+          "sha256": "19c0e7cdce758ee1d32e48e251c4b4d5ecafaca678fd2137f23ed1492f383d14",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:15Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2021:4",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20214/",
+      "files": [
+        {
+          "label": "MSBFS 2021:4 föreskrifter och allmänna råd om ledning av kommunal räddningstjänst",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs-2021-4-foreskrifter-och-allmanna-rad-om-ledning-av-kommunal-raddningstjanst.pdf",
+          "bytes": 241828,
+          "sha256": "08dbd01f705fa08f505c6dad0c723eda0161d3429f8465f2632ab18466e3da70",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:13Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2021:5",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20215/",
+      "files": [
+        {
+          "label": "MSBFS 2021:5 föreskrifter om undersökningsrapport efter kommunal räddningsinsats",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs-2021-foreskrifter-om-undersokningsrapport-efter-kommunal-raddningsinsats.pdf",
+          "bytes": 212625,
+          "sha256": "de8ed9a89694997a77c3424470e3b71cca22d559be0c0422dc206bb2b4aa01d2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:11Z"
+        },
+        {
+          "label": "Teknisk specifikation av undersökningsrapport",
+          "url": "https://www.mcf.se/contentassets/ec56976d4bd74f4ab69d082729a8a742/teknisk-specifikation-av-undersokningsrapport-enligt-lagen-om-skydd-mot-olyckor.pdf",
+          "bytes": 198275,
+          "sha256": "0372dc5b048b0e5bad7c1babf7b937e11fcd8716e2c100d7501fb28bd636114d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:12Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2021:8",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20218/",
+      "files": [
+        {
+          "label": "MSBFS 2021:8 föreskrifter och allmänna råd om hur kommunen ska planera och utföra sin tillsyn enligt lagen (2003:778) om skydd mot olyckor",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs-2021-8-foreskrifter-om-hur-kommunen-ska-planera-och-utfora-sin-tillsyn-enligt-lagen-om-skydd-mot-olyckor.pdf",
+          "bytes": 198982,
+          "sha256": "ebb305f57649243379f7ac4f490016a944822b7f5b95375fe1a34227bcac0811",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:09Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2022:1",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20221/",
+      "files": [
+        {
+          "label": "MSBFS 2022:1 föreskrifter och allmänna råd om behörighet att vara räddningschef eller räddningsledare i kommunal räddningstjänst",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs-2022-1-behorighet-att-vara-raddningschef-eller-raddningsledare.pdf",
+          "bytes": 444888,
+          "sha256": "6214f03b468d62764782ddd787b0b5640437677530b1f505bae99ae3ded20fb6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:06Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2022:2",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20222/",
+      "files": [
+        {
+          "label": "MSBFS 2022:2 föreskrifter om förmåner till instruktörer inom frivillig försvarsutbildning",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/forfattningar/msbfs-2022-2.pdf",
+          "bytes": 420591,
+          "sha256": "95d1ddec9af4fae9532ce643dbb975d843d37b1158ca15699a4e46ece8527029",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:03Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2023:2",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20232/",
+      "files": [
+        {
+          "label": "MSBFS 2023:2 hantering av brandfarliga vätskor",
+          "url": "https://www.mcf.se/contentassets/3235ab4305e849b6a8c2f4beb2d15d6f/msbfs-2023-2.pdf",
+          "bytes": 775752,
+          "sha256": "c3cfbca0a68dc60137e69fa8a670eb9e6699d75463adb828814a3177629bd60f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:45:00Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2024:5",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20245/",
+      "files": [
+        {
+          "label": "MSBFS 2024:5 föreskrifter om statliga myndigheters redovisning av risk- och sårbarhetsbedömningar",
+          "url": "https://www.mcf.se/contentassets/5b2258f8e66c444aaa6ae308e13ede22/msbfs-2024-5.pdf",
+          "bytes": 502357,
+          "sha256": "3c6ade06cb3e1be48d2e634da8c7b567414132aa2ee0efe3e211e09073fb1ead",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:58Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2024:7",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20247/",
+      "files": [
+        {
+          "label": "MSBFS 2024:7 föreskrifter om det nationella tillståndsregistret för explosiva varor (NATEV)",
+          "url": "https://www.mcf.se/contentassets/e773fe756208408ca55be5f698b65d17/msbfs-2024-7.pdf",
+          "bytes": 431408,
+          "sha256": "84a3f757af4c9d965495b5fce2734f5fe4d29d278c01176aef1ccf8a75048325",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:56Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2024:10",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-202410/",
+      "files": [
+        {
+          "label": "MSBFS 2024:10 föreskrifter om transport av farligt gods på väg och i terräng (ADR-S)",
+          "url": "https://www.mcf.se/contentassets/23dbbff228564dcd937fa1ab1e9f62b9/adr-s-2025-klar.pdf",
+          "bytes": 26975463,
+          "sha256": "08bf5c5b806c18bb91680e1d114852ad99113f656b3e2695813e75dc6367cfaf",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:49Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2024:11",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-202411/",
+      "files": [
+        {
+          "label": "MSBFS 2024:11 föreskrifter om transport av farligt gods på järnväg",
+          "url": "https://www.mcf.se/contentassets/77a1cd6cca7d478f97984499e5e8276c/rid-s-2025-klar.pdf",
+          "bytes": 26633301,
+          "sha256": "8b979dd65c5ac8b25d1a95b20fec4ec54430ef36517fe0626dbe1290b4df3df4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:43Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2024:14",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-202414/",
+      "files": [
+        {
+          "label": "MSBFS 2024:14 föreskrifter om ledighet och fritid under tjänstgöring för totalförsvarspliktiga som fullgör civilplikt i det civila försvaret",
+          "url": "https://www.mcf.se/contentassets/e46355dae538400bb92d8c32ee340199/msbfs-2024-14.pdf",
+          "bytes": 427468,
+          "sha256": "e7d2cc6dd1b69eac6875b142e5f89b2caa41e56d8b0529d5e750a76eaa01bade",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:41Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2025:1",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20251/",
+      "files": [
+        {
+          "label": "MSBFS 2025:1 föreskrifter och allmänna råd om planläggning för utrymning under höjd beredskap",
+          "url": "https://www.mcf.se/contentassets/fb126badeab34608872650faa5bfc73c/msbfs-2025-1.pdf",
+          "bytes": 604771,
+          "sha256": "4b0ac152ac74f51279e85d04a960488780a79d581796b5505dd2edb013a89fdc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:38Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2025:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20253/",
+      "files": [
+        {
+          "label": "MSBFS 2025:3 föreskrifter om civila myndigheters signalskyddsberedskap",
+          "url": "https://www.mcf.se/contentassets/d378ffa645df4c3e8897aaa736fce14d/msbfs-2025-3.pdf",
+          "bytes": 434188,
+          "sha256": "665955519bbd9199eaf9902eb1e8112c02b410c280ef55a536301137c5158d16",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:35Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2025:4",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20254/",
+      "files": [
+        {
+          "label": "MSBFS 2025:4 föreskrifter och allmänna råd om statliga myndigheters uppgifter inför och vid höjd beredskap",
+          "url": "https://www.mcf.se/contentassets/c9b7b373563f43eaa163d52494284ef2/msbfs-2025-4.pdf",
+          "bytes": 573043,
+          "sha256": "4b964426639c8b6065d4f03526b2b516110f2cb834af4ccd45852f65b9d7b3f2",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:32Z"
+        },
+        {
+          "label": "Promemoria med bakgrund och motiv till MSBFS 2025:4",
+          "url": "https://www.mcf.se/contentassets/7292f850ab3d4a719237e2ac6d99f02f/promemoria-med-bakgrund-och-motiv-till-msbfs-2025-4.pdf",
+          "bytes": 540691,
+          "sha256": "0552f9ad4d842d4a4a1718ed58b2c2c1182a96af0a58b2d71e60f87279f1b89a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:33Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2025:5",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20255/",
+      "files": [
+        {
+          "label": "MSBFS 2025:5 föreskrifter om anmälningsskyldighet vid användning av explosiva varor eller förvaring av explosiva varor i flyttbart förråd",
+          "url": "https://www.mcf.se/contentassets/3e4db5d448524e7aa4b16ea73cda420e/msbfs-2025-5.pdf",
+          "bytes": 430993,
+          "sha256": "2c4ac0abc2f37a0cc1933c2c1583814e1ef3931fdc47f35eecca454f9a082a57",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:29Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2025:6",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20256/",
+      "files": [
+        {
+          "label": "MSBFS 2025:6 föreskrifter om behörighetskrav för antagning till utbildning i skydd mot olyckor",
+          "url": "https://www.mcf.se/contentassets/4a5ffbcec157465b87ca8a9728605c3f/msbfs-2025-6.pdf",
+          "bytes": 157243,
+          "sha256": "f6abf1510a23de125d56f691f7f3352493f0eebc4387fcdd7324904b73200559",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:24Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2025:7",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20257/",
+      "files": [
+        {
+          "label": "MSBFS 2025:7, föreskrifter om krigsplacering av totalförsvarspliktiga som ska fullgöra civilplikt i det civila försvaret",
+          "url": "https://www.mcf.se/contentassets/99ae178cb4ae454e91a73b106008f94e/msbfs-2025-7.pdf",
+          "bytes": 235401,
+          "sha256": "1bbe8e69c049e9609fba107bdfe52fe6c36f4e5ad990d724d2cd2fd7a6be70af",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:27Z"
+        }
+      ]
+    },
+    {
+      "number": "MSBFS 2025:8",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/msbfs-20258/",
+      "files": [
+        {
+          "label": "MSBFS 2025:8 föreskrifter om utbildning av totalförsvarspliktiga som fullgör civilplikt i det civila försvaret",
+          "url": "https://www.mcf.se/contentassets/a44dd430f4b44683b2e458085e7a887f/msbfs-2025-8.pdf",
+          "bytes": 284456,
+          "sha256": "831cd1dd4b631090b069c61a9d303b1913d37caff892393cc2745b9e3cf806bf",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:44:22Z"
         }
       ]
     },
@@ -54819,6 +55467,210 @@
       ]
     },
     {
+      "number": "SRVFS 1993:6",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-19936/",
+      "files": [
+        {
+          "label": "SRVFS 1993:6 föreskrifter om provning, certifiering och kontroll av komponenter till skyddsrum",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-1993-6.pdf",
+          "bytes": 15035,
+          "sha256": "198f6578a8c3722e6125c5a558f55932d93d1a38f69e23e12bb28d1b5813c45b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:29Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 1995:1",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-19951/",
+      "files": [
+        {
+          "label": "SRVFS 1995:1 föreskrifter och allmänna råd om besiktning av samlingstält",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-1995-1.pdf",
+          "bytes": 12597,
+          "sha256": "af2e12a6866f48e3462999637ed4d88b7aaa49d8f4a2e3be5957dd65eba6e70b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:26Z"
+        },
+        {
+          "label": "SRVFS 1995:1 allmänna råd",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/ba1ea248-8f37-4b14-a0d4-91624e64c8e2.pdf",
+          "bytes": 267108,
+          "sha256": "bffa205d292510a96fb280388522ae9833ed82ccb35091ab5791906a7fdda9bd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:28Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 1995:4",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-19954/",
+      "files": [
+        {
+          "label": "SRVFS 1995:4 föreskrifter om fortsatt giltighet för vissa föreskrifter",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-1995-4.pdf",
+          "bytes": 10522,
+          "sha256": "3a75f9ae654100395c8b15981782c61f1f48ddddd478c2306b07ecf11c9f62ba",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:24Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 1998:6",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-19986/",
+      "files": [
+        {
+          "label": "SRVFS 1998:6 föreskrifter om utförande, utrustning och användning av skyddsrum",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-1998-6.pdf",
+          "bytes": 17794,
+          "sha256": "4541d40450b2c5c9d0c3b0994bdf0445e5635bc2a982ba49f03fcf1b154ab3f6",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:21Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 2003:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-20033/",
+      "files": [
+        {
+          "label": "SRVFS 2003:3 föreskrifter om fortsatt giltighet för vissa föreskrifter som beslutats av Sprängämnesinspektionen",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-2003-3.pdf",
+          "bytes": 197181,
+          "sha256": "c2c0559c0c0e0c865d5cb0c21c0c2e742bd476f54bb3020a22e7f226a67a56bf",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:54Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 2004:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-20043/",
+      "files": [
+        {
+          "label": "SRVFS 2004:3 allmänna råd och kommentarer om systematiskt brandskyddsarbete",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-2004-3.pdf",
+          "bytes": 250371,
+          "sha256": "2c3c086d53fe8cb92742f50c659e24d7b52107306a9a95582469c8b67727075f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:52Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 2004:7",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-20047/",
+      "files": [
+        {
+          "label": "SRVFS 2004:7 föreskrifter om explosionsfarlig miljö vid hantering av brandfarliga gaser och vätskor",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-2004-7.pdf",
+          "bytes": 135305,
+          "sha256": "7942a8b2b213baec535e1aa37b1f7eb0aaf2ceaad51efcbed14b3404c96dae99",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:50Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 2004:12",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-200412/",
+      "files": [
+        {
+          "label": "SRVFS 2004:12 allmänna råd och kommentarer om brandskydd vid campinganläggningar",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-2004-12.pdf",
+          "bytes": 199679,
+          "sha256": "938011c09cdb43b5324d13999b8e58eadb1d1d7a5183386196cc16d22ecd0375",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:48Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 2005:7",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-20057/",
+      "files": [
+        {
+          "label": "SRVFS 2005:7 föreskrifter om ersättning vid resa och uppehälle vid medverkan i räddningstjänst",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-2005-7.pdf",
+          "bytes": 143830,
+          "sha256": "6c08c9133001bb8c50df4d495566c7ca3680cf48595aed430774781441240398",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:45Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 2006:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-20063/",
+      "files": [
+        {
+          "label": "SRVFS 2006:3 allmänna råd och kommentarer om brandskydd i gästhamnar",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-2006-3.pdf",
+          "bytes": 213306,
+          "sha256": "b27abe25d76c1d141600022d1ac227ed99124e9da2680efc6dfd984abf4c16aa",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:43Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 2007:1",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-20071/",
+      "files": [
+        {
+          "label": "SRVFS 2007:1 allmänna råd och kommentarer om brandvarnare i bostäder",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-2007-1.pdf",
+          "bytes": 106931,
+          "sha256": "188794e78cfbef609416e3502cf98165b73d4d20e8da7a7cbd2ebc3638bc76b4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:40Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 2007:4",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-20074/",
+      "files": [
+        {
+          "label": "SRVFS 2007:4 allmänna råd och kommentarer om länsstyrelsens beredskap för sanering efter utsläpp av radioaktiva ämnen från en kärnteknisk anläggning",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-2007-4.pdf",
+          "bytes": 233560,
+          "sha256": "2b7dfe5421f068912336141cc7a4a6eed5eb8cc931f679d1e85132e9474bfd3b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:38Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 2007:5",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-20075/",
+      "files": [
+        {
+          "label": "SRVFS 2007:5 allmänna råd och kommentarer om utrustning för vattenlivräddning vid hamnar, kajer, badplatser och liknande vattennära anläggningar",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-2007-5.pdf",
+          "bytes": 180815,
+          "sha256": "bd3581735428d8aa719948fecd5f3eb7b7458c152a9bac85f1cc3828198a5864",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:36Z"
+        }
+      ]
+    },
+    {
+      "number": "SRVFS 2008:3",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/srvfs-20083/",
+      "files": [
+        {
+          "label": "SRVFS 2008:3 allmänna råd och kommentarer om brandskydd i hotell, pensionat, vandrarhem och liknande anläggningar",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/srvfs-2008-3.pdf",
+          "bytes": 233445,
+          "sha256": "f820c0cc37d4e7496dc4ed9610a149b9f5adc30b9a0073d2e758cd9f12cdd9ca",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:46:34Z"
+        }
+      ]
+    },
+    {
       "number": "SSMFS 2008:1",
       "detail_url": "https://www.stralsakerhetsmyndigheten.se/publikationer/foreskrifter/ssmfs-2008/ssmfs-20081/",
       "files": [
@@ -59493,6 +60345,104 @@
           "sha256": "a4d83530ff482913ba77614a4b605c173eaad4c96f359be8a83b2ba10efc1100",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T14:50:14Z"
+        }
+      ]
+    },
+    {
+      "number": "SÄIFS 1983:1",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/saifs-19831/",
+      "files": [
+        {
+          "label": "SÄI 1983:1 allmänna råd om dragskåpsutrustning för arbeten med perklorsyra (överklorsyra)",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/saifs-1983-1.pdf",
+          "bytes": 22593,
+          "sha256": "4758a0807f4424695e505927b50acb5745b3d5c0f8e67dbb3e3e5b9c490ae80f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:47:13Z"
+        }
+      ]
+    },
+    {
+      "number": "SÄIFS 1989:4",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/saifs-19894/",
+      "files": [
+        {
+          "label": "SÄIFS 1989:4 föreskrifter och allmänna råd om hantering av brandfarlig biograffilm",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/saifs-1989-4.pdf",
+          "bytes": 53808,
+          "sha256": "6058e82bc37ed134bc7d98a87d78e2c01a661e918a2f3131c7dda4fa3aa0fcbb",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:47:10Z"
+        }
+      ]
+    },
+    {
+      "number": "SÄIFS 1989:5",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/saifs-19895/",
+      "files": [
+        {
+          "label": "SÄIFS 1989:5 föreskrifter och allmänna råd om hantering av varor innehållande lågnitrerad nitrocellulosa",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/saifs-1989-5.pdf",
+          "bytes": 43675,
+          "sha256": "dca0c62c972cb6209f2521f24bafc17992dfb60528c481938e895368442d6296",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:47:09Z"
+        }
+      ]
+    },
+    {
+      "number": "SÄIFS 1995:6",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/saifs-19956/",
+      "files": [
+        {
+          "label": "SÄIFS 1995:6 föreskrifter och allmänna råd om hantering av ammoniumnitrat",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/saifs-1995-6.pdf",
+          "bytes": 47505,
+          "sha256": "7d3e2cb609d649ee80b1df18c2f0e990dcfd7bfaf5dd5ebdfa7ca423393a53dd",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:47:06Z"
+        }
+      ]
+    },
+    {
+      "number": "SÄIFS 1996:4",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/saifs-19964/",
+      "files": [
+        {
+          "label": "SÄIFS 1996:4 föreskrifter och allmänna råd om hantering av organiska peroxider",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/saifs-1996-4.pdf",
+          "bytes": 129096,
+          "sha256": "3e296af925843ce95b037ae1e59c1c2dae36c9aff877fdc6f30061c56656cd1d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:47:04Z"
+        }
+      ]
+    },
+    {
+      "number": "SÄIFS 1998:5",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/saifs-19985/",
+      "files": [
+        {
+          "label": "SÄIFS 1998:5 föreskrifter och allmänna råd om tankstationer för metangasdrivna fordon",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/saifs-1998-5.pdf",
+          "bytes": 38750,
+          "sha256": "072361e7ceffa362f0481a2386be5ed20fecd6cbf63536988118fb483068a7ff",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:47:02Z"
+        }
+      ]
+    },
+    {
+      "number": "SÄIFS 1999:2",
+      "detail_url": "https://www.mcf.se/sv/regler/gallande-regler/saifs-19992/",
+      "files": [
+        {
+          "label": "SÄIFS 1999:2 föreskrifter och allmänna råd om hantering av väteperoxid",
+          "url": "https://www.mcf.se/siteassets/dokument/regler/rs/saifs-1999-2.pdf",
+          "bytes": 83798,
+          "sha256": "acf72eca35ae2ec64363739ebd99b52530b5583a10765113d5777aa25eeeec4c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-10-31T04:47:19Z"
         }
       ]
     },

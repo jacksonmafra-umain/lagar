@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4aa8ca/globalassets/om-oss/lagstiftning/forpackn---matrl-i-kontakt-m-livsm/livsfs-2023-5_tillg2.pdf"
 source_sha256: "0393a5ec5d9d56c4a56842808da1554a65267f115d0430b01df31ac0e5bc451b"
-fetched_at: "2026-10-30T15:14:48Z"
+fetched_at: "2026-10-31T05:04:43Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om material och produkter avsedda att komma i kontakt med livsmedel
@@ -50,7 +50,7 @@ Med stöd av 5, 6, 30 och 31 §§ livsmedelsförordningen (2006:813) och 30 § f
 
 Tillämpningsområde
 
-**1 §** Dessa föreskrifter innehåller bestämmelser om krav på, och i­mport av, material och produkter avsedda att komma i kontakt med livsmedel, samt bestämmelser om registrering av vissa verksamheter som tillverkar, förädlar eller importerar material och produkter avsedda att komma i kontakt med livsmedel. Dessa föreskrifter kompletterar bland annat bestämmelserna i ­­Europaparlamentets och rådets förordning (EG) nr 1935/2004 av den 27 oktober 2004 om material och produkter avsedda att komma i kontakt med livsmedel och om upphävande av direktiven 80/590/EEG och 89/109/EEG samt de bestämmelser som beslutats med stöd av den förordningen.
+**1 §** Dessa föreskrifter innehåller bestämmelser om krav på, och ­import av, material och produkter avsedda att komma i kontakt med livsmedel, samt bestämmelser om registrering av vissa verksamheter som tillverkar, förädlar eller importerar material och produkter avsedda att komma i kontakt med livsmedel. Dessa föreskrifter kompletterar bland annat bestämmelserna i ­­Europaparlamentets och rådets förordning (EG) nr 1935/2004 av den 27 oktober 2004 om material och produkter avsedda att komma i kontakt med livsmedel och om upphävande av direktiven 80/590/EEG och 89/109/EEG samt de bestämmelser som beslutats med stöd av den förordningen.
 
 **2 §** Bestämmelser om
 
@@ -72,7 +72,9 @@ Se Europaparlamentets och rådets direktiv (EU) 2015/1535 av den 9 september 201
 
 Anmälan för registrering
 
-**1 §** Verksamhetsutövare som bedriver en verksamhet som inte är en livsmedelsanläggning och som tillverkar, förädlar eller från tredjeland importerar material och produkter avsedda att komma i kontakt med livsmedel ska skriftligen anmäla verksamheten så att den kan registreras. Första stycket gäller inte verksamheter som under ett räkenskapsår dels beräknas ha en omsättning avseende material och produkter avsedda att komma i kontakt med livsmedel som understiger 80 000 kronor, dels beräknas tillverka, förädla eller importera färre än 1 000 enheter av material och produkter avsedda att komma i kontakt med livsmedel. Första stycket gäller inte heller verksamheter inom Försvarsmakten, Fortifikationsverket, Försvarets materielverk och Försvarets radioanstalt som drivs av eller för respektive myndighet. Innehåll i en anmälan
+**1 §** Verksamhetsutövare som bedriver en verksamhet som inte är en livsmedelsanläggning och som tillverkar, förädlar eller från tredjeland importerar material och produkter avsedda att komma i kontakt med livsmedel ska skriftligen anmäla verksamheten så att den kan registreras. Första stycket gäller inte verksamheter som under ett räkenskapsår dels beräknas ha en omsättning avseende material och produkter avsedda att komma i kontakt med livsmedel som understiger 80 000 kronor, dels beräknas tillverka, förädla eller importera färre än 1 000 enheter av material och produkter avsedda att komma i kontakt med livsmedel. Första stycket gäller inte heller verksamheter inom Försvarsmakten, Fortifikationsverket, Försvarets materielverk och Försvarets radio­ anstalt som drivs av eller för respektive myndighet.
+
+Innehåll i en anmälan
 
 **2 §** En anmälan för registrering av en verksamhet ska innehålla följande uppgifter.
 
@@ -86,7 +88,7 @@ Anmälan för registrering
 
 5\. I förekommande fall uppgift om hur länge verksamheten kommer att bedrivas.
 
-En verksamhetsutövare ska på begäran även lämna de kompletterande uppgifter som myndigheten behöver för handläggningen av anmälan.
+En verksamhetsutövare ska på begäran även lämna de komplet­ terande uppgifter som myndigheten behöver för handläggningen av anmälan.
 
 Myndigheter som handlägger anmälan
 
@@ -144,7 +146,9 @@ Bestämmelserna i detta kapitel gäller inte syntetiska tarmar av regenererad ce
 
 Förteckning över tillåtna ämnen för tillverkning
 
-**3 §** Regenererad cellulosafilm som avses i 1 § andra stycket 1 och 2 får endast framställas av de ämnen eller grupper av ämnen som redovisas i bilaga 1 med där angivna begränsningar. Utöver vad som framgår av bilaga 1 får färgämnen (lösliga färgämnen och pigment) och bindemedel användas under förutsättning att någon överföring (migration) av dessa ämnen till livsmedel, bestämd med en validerad metod, inte kan påvisas.
+**3 §** Regenererad cellulosafilm som avses i 1 § andra stycket 1 och 2 får endast framställas av de ämnen eller grupper av ämnen som redo­ visas i bilaga 1 med där angivna begränsningar.
+
+Utöver vad som framgår av bilaga 1 får färgämnen (lösliga färg­ ämnen och pigment) och bindemedel användas under förutsättning att någon överföring (migration) av dessa ämnen till livsmedel, bestämd med en validerad metod, inte kan påvisas.
 
 **4 §** Vid framställning före lackeringen av den regenererade cellulosafilm som avses i 1 § andra stycket 3 får endast de ämnen eller grupper av ämnen som redovisas i avsnitt 1 i bilaga 1 användas med där angivna begränsningar.
 
@@ -154,7 +158,9 @@ Vid framställningen av den lack som ska användas till den regenererade cellulo
 
 Förklaring om överensstämmelse
 
-**6 §** Material och produkter avsedda att komma i kontakt med livsmedel som är tillverkade av regenererad cellulosafilm ska vid saluhållande i handelsled före detaljhandel åtföljas av en skriftlig förklaring om överensstämmelse som intygar att de uppfyller kraven i dessa föreskrifter. Första stycket gäller inte material och produkter avsedda att komma i kontakt med livsmedel som är tillverkade av regenererad cellulosafilm som uppenbarligen är avsedda att komma i kontakt med livsmedel. Om särskilda villkor gäller för användning, ska materialet eller produkten märkas med uppgift om detta.
+**6 §** Material och produkter avsedda att komma i kontakt med livsmedel som är tillverkade av regenererad cellulosafilm ska vid saluhållande i handelsled före detaljhandel åtföljas av en skriftlig förklaring om överensstämmelse som intygar att de uppfyller kraven i dessa föreskrifter. Första stycket gäller inte material och produkter avsedda att komma i kontakt med livsmedel som är tillverkade av regenererad cellulosafilm som uppenbarligen är avsedda att komma i kontakt med livs­ medel.
+
+Om särskilda villkor gäller för användning, ska materialet eller produkten märkas med uppgift om detta.
 
 5 kap. Särskilda krav för keramiska föremål
 
@@ -224,13 +230,11 @@ Tillgängliggörande av dokumentation
 
 Gränsvärden för nappar
 
-**1 §** Dinappar och sugnappar får inte, från de delar som är framställda av elastomer eller gummi, till en testlösning (konstgjord salivlösning) avge mer än
+**1 §** Dinappar och sugnappar får inte, från de delar som är framställda av elastomer eller gummi, till en testlösning (konstgjord saliv­ lösning) avge mer än
 
 - totalt 0,01 milligram N-nitrosaminer per kilogram material,
 
-- totalt 0,1 milligram N-nitroserbara ämnen per kilogram material. Med N-nitroserbara ämnen avses ämnen som kan överföras till
-
-N-nitrosaminer.
+- totalt 0,1 milligram N-nitroserbara ämnen per kilogram material. Med N-nitroserbara ämnen avses ämnen som kan överföras till N-nitrosaminer.
 
 Analytisk kontroll ska utföras enligt föreskrivna grundregler i punkt 1 i bilaga 3 med en validerad analysmetod som uppfyller de kriterier som fastställs i punkt 2 i bilaga 3.
 
@@ -268,9 +272,7 @@ Förteckning över tillåtna ämnen för tillverkning av regenererad cellulosafi
 
 1\. De ämnen som får användas för tillverkning av regenererad cellulosafilm ska vara av god teknisk kvalitet avseende renhet. För vissa ämnen finns av toxikologiska skäl särskilda begränsningar angivna.
 
-2\. Kolumnen ”Begränsningar” nedan innehåller haltbegränsningar.
-
-Procenttalen i förteckningen uttrycks i viktprocent (w/w) och är beräknade i förhållande till mängden vattenfri olackerad regenererad cellulosafilm.
+2\. Kolumnen ”Begränsningar” nedan innehåller haltbegränsningar. Procenttalen i förteckningen uttrycks i viktprocent (w/w) och är beräknade i förhållande till mängden vattenfri olackerad regenererad cellulosafilm.
 
 Avsnitt 1
 
@@ -432,7 +434,7 @@ Begränsningar
 
 - polyetylenaminer och polyetyleniminer < 0,75 mg/dm2 totalt av dessa ämnen i den olackerade filmen
 
-- kondensationsprodukt av icke modifie­ Innehåll av fri formaldehyd i den olackerade rad urea-formaldehyd, eller som kan filmen < 0,5 mg/dm2 modifieras med ett eller flera av följande ämnen: aminometyl-sulfonsyra, sulfanilsyra, butanol, diaminobutan, diaminodie­t yl­amin, di-aminodipropy­lamin, diamino­propan, dietylentriamin, etanol, guanidin, metanol, tetraetylen­pentamin, trietyl­entetramin, natrium­sulfit
+- kondensationsprodukt av icke modifie­ Innehåll av fri formaldehyd i den olackerade rad urea-formaldehyd, eller som kan filmen < 0,5 mg/dm2 modifieras med ett eller flera av följande ämnen: aminometyl-sulfonsyra, sulfanil­ syra, butanol, diaminobutan, diamino­ die­t yl­amin, di-aminodipropy­lamin, diamino­propan, dietylentriamin, etanol, guanidin, metanol, tetraetylen­pentamin, trietyl­entetramin, natrium­sulfit
 
 Grupp 4
 
@@ -706,9 +708,7 @@ Reagenser
 
 4-procentig (volymprocent) lösning av ättiksyra i vatten
 
-Tillsätt 40 ml isättika till vatten och späd till 1 000 ml.
-
-3.2
+Tillsätt 40 ml isättika till vatten och späd till 1 000 ml. 3.2
 
 Stamlösningar
 
@@ -744,7 +744,7 @@ Kvantifieringsgränsen för bly och kadmium måste vara lika med ­eller lägre 
 
 Utbyte
 
-Utbytet av bly och kadmium som tillsatts till den 4-procentiga ättiksyran som avses i punkt 3.1 måste ligga inom 80–120 % av den till­satta mängden.
+Utbytet av bly och kadmium som tillsatts till den 4-procentiga ättik­ syran som avses i punkt 3.1 måste ligga inom 80–120 % av den till­satta mängden.
 
 4.4
 
@@ -762,7 +762,9 @@ Förberedelse av provet
 
 Provet måste vara rent och fritt från fett och andra ämnen som kan tänkas påverka undersökningen.
 
-Tvätta provet i en lösning med flytande hushållsdiskmedel vid en temperatur av cirka 40°C. Skölj provet först i kranvatten och sedan i destillerat vatten eller vatten av motsvarande kvalitet. Låt vattnet rinna av och torka därefter för att undvika fläckar. Den yta som ska undersökas ska inte beröras efter rengöringen. 5.2
+Tvätta provet i en lösning med flytande hushållsdiskmedel vid en temperatur av cirka 40°C. Skölj provet först i kranvatten och sedan i destillerat vatten eller vatten av motsvarande kvalitet. Låt vattnet rinna av och torka därefter för att undvika fläckar. Den yta som ska under­ sökas ska inte beröras efter rengöringen.
+
+5.2
 
 Bestämning av bly eller kadmium
 
