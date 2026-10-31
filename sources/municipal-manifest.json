@@ -12563,6 +12563,7 @@
       "municipality_code": "0760",
       "retrieved_at": "2026-10-30T13:33:07Z",
       "sha256": "c95b0781a84120dcd6eef23d32bb026a338262cf9ee8c7d1204ea001a6b819c6",
+      "text": "pdf",
       "url": "https://www.uppvidinge.se/download/18.421f7e0816662b0123c54f71/1543402351451/Lokala%20ordningsf%C3%B6reskrifter%20i%20Uppvidinge%20kommun.pdf"
     },
     {
@@ -12572,6 +12573,7 @@
       "municipality_code": "0760",
       "retrieved_at": "2026-10-30T13:33:06Z",
       "sha256": "226f6a1e8828d5b47ca38c90433ca4e95dd41d2a4f21905e1e3c1b0563c3078c",
+      "text": "pdf",
       "url": "https://www.uppvidinge.se/download/18.42c2c9ca162f6e008c829ed3/1543402371838/Allm%C3%A4nna%20f%C3%B6reskrifter%20milj%C3%B6%20och%20h%C3%A4lsa.pdf"
     },
     {
@@ -12581,6 +12583,7 @@
       "municipality_code": "0761",
       "retrieved_at": "2026-10-30T13:33:18Z",
       "sha256": "1f63808c757c9ff8b51014bd4ea48ef5bdebeb1899af83f59c87d4727ce30ce3",
+      "text": "pdf",
       "url": "https://www.lessebo.se/download/18.31d7d1f419c4795085141186/1772031724568/KS_2025_168-Lokala%20f%C3%B6reskrifter%20om%20avfallshantering%20f%C3%B6r%20Lessebo%20kommun%20antagna%202026-02-23%20%C2%A7%2013.pdf"
     },
     {
@@ -12590,6 +12593,7 @@
       "municipality_code": "0761",
       "retrieved_at": "2026-10-30T13:33:13Z",
       "sha256": "2965d4a04827461911f076a5ac92d3735706dfac3801d75846fc627942446405",
+      "text": "pdf",
       "url": "https://www.lessebo.se/download/18.642b1a04195ffff91a1aa1f/1762104149406/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n%20antagna%202024-10-28%20%20%20107.pdf"
     },
     {
@@ -12599,6 +12603,7 @@
       "municipality_code": "0761",
       "retrieved_at": "2026-10-30T13:33:16Z",
       "sha256": "ec90314f66c2d4572b4bd217e1031445aa531e6fb74df421e87fe803261ab5f3",
+      "text": "pdf",
       "url": "https://www.lessebo.se/download/18.642b1a04195ffff91a1ab0c/1762104566495/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Lessebo_antagen%2023-11-20%20r%C3%A4ttelse%20av%20skrivfel.pdf"
     },
     {
@@ -12608,6 +12613,7 @@
       "municipality_code": "0761",
       "retrieved_at": "2026-10-30T13:33:22Z",
       "sha256": "be72d27e0dd9a94510a026ea7a6c3ad3561b3fbe5301e749e70fe3c844d3716b",
+      "text": "pdf",
       "url": "https://www.lessebo.se/download/18.642b1a04195ffff91a1ac34/1744204828076/skruv%20vattenskyddsomr%C3%A5de.pdf"
     },
     {
@@ -12617,6 +12623,7 @@
       "municipality_code": "0761",
       "retrieved_at": "2026-10-30T13:33:21Z",
       "sha256": "aa40db88fb03fe28a169733151ae9605a673d79011aeb5f3ebc5e8118d712e66",
+      "text": "ocr",
       "url": "https://www.lessebo.se/download/18.642b1a04195ffff91a1ac35/1744204828121/Vattenskyddsomr%C3%A5de%20Djupg%C3%B6l.pdf"
     },
     {
@@ -12626,6 +12633,7 @@
       "municipality_code": "0761",
       "retrieved_at": "2026-10-30T13:33:20Z",
       "sha256": "6178d5dc4d1017bb8df765d0d3871b000ff0c7cda565def0ab45b0b70bcdd5f7",
+      "text": "ocr",
       "url": "https://www.lessebo.se/download/18.642b1a04195ffff91a1ac36/1744204828143/Vattenskyddsomr%C3%A5de%20L%C3%A4en.pdf"
     },
     {
@@ -12635,6 +12643,7 @@
       "municipality_code": "0761",
       "retrieved_at": "2026-10-30T13:33:19Z",
       "sha256": "93d66e2e1a01774fc6b08ccfde3debe7e850e11c89f3fa70d631b9a8381027fb",
+      "text": "ocr",
       "url": "https://www.lessebo.se/download/18.642b1a04195ffff91a1ac37/1744204828163/Vattenskyddsomr%C3%A5de%20Rottnen-Hacksj%C3%B6n.pdf"
     },
     {
@@ -12644,6 +12653,7 @@
       "municipality_code": "0761",
       "retrieved_at": "2026-10-30T13:33:16Z",
       "sha256": "8d0ed945ec3269e58a09979dbc7457ebd654bf1af2f2a89fcc05de841ef62b64",
+      "text": "pdf",
       "url": "https://www.lessebo.se/download/18.7d08bf0e19a7bc000d42cfc4/1764225881667/SBN_2025_285-Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandel%20antagna%202025-11-24%20%C2%A7%20144.pdf"
     },
     {
@@ -12653,6 +12663,7 @@
       "municipality_code": "0761",
       "retrieved_at": "2026-10-30T13:33:18Z",
       "sha256": "cd8898799187e0fe0cd5e9dd5257f53d6a5c82f40d90506f048d1e0f7ce9ed42",
+      "text": "pdf",
       "url": "https://www.lessebo.se/download/18.913b05319a0f66aebf9039/1762105182383/KFVA%20-%20Kommunala%20f%C3%B6reskrifter%20f%C3%B6r%20anv%C3%A4ndande%20av%20Lessebo%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggningar.pdf"
     },
     {
@@ -12662,6 +12673,7 @@
       "municipality_code": "0763",
       "retrieved_at": "2026-10-30T13:33:35Z",
       "sha256": "e35325d72bd2c02cea23a8dbeb8d4c402a2037becfcdf1481536def66b43d81e",
+      "text": "pdf",
       "url": "https://tingsryd.se/wp-content/uploads/2025/03/1523020645taxaenligttobakslagenklar.pdf"
     },
     {
@@ -12671,6 +12683,7 @@
       "municipality_code": "0763",
       "retrieved_at": "2026-10-30T13:33:32Z",
       "sha256": "a2581388e2d824a5bbd6a73318d323f5785cdd0321749d8700a3f940615c24f4",
+      "text": "pdf",
       "url": "https://tingsryd.se/wp-content/uploads/2025/03/1523020701taxaforreceptfrialakemedelklarantag.pdf"
     },
     {
@@ -12680,6 +12693,7 @@
       "municipality_code": "0763",
       "retrieved_at": "2026-10-30T13:33:31Z",
       "sha256": "835cf44df38e70508997ca2fc7a9d9f10cf0486de8ce65af3202b8be853b9983",
+      "text": "pdf",
       "url": "https://tingsryd.se/wp-content/uploads/2025/03/1523020725taxaformiljobalkensomr2018antagen.pdf"
     },
     {
@@ -12689,6 +12703,7 @@
       "municipality_code": "0763",
       "retrieved_at": "2026-10-30T13:33:34Z",
       "sha256": "b70111df9d0f07faca47285aefc280c076ab37bc124202316558075a6fed42b5",
+      "text": "pdf",
       "url": "https://tingsryd.se/wp-content/uploads/2025/03/1523020845taxaecig2018klarantagen.pdf"
     },
     {
@@ -12698,6 +12713,7 @@
       "municipality_code": "0763",
       "retrieved_at": "2026-10-30T13:33:33Z",
       "sha256": "fab5dd8142ecbaf93852060f028c390e09f5e8616e23022c35f571cff5293e1e",
+      "text": "ocr",
       "url": "https://tingsryd.se/wp-content/uploads/2025/03/157241939920191029160339899.pdf"
     },
     {
@@ -12707,6 +12723,7 @@
       "municipality_code": "0763",
       "retrieved_at": "2026-10-30T13:33:29Z",
       "sha256": "f41164a7047e90a30ba91023e90d77ab2ac7acad94d9bf3c93c85db474d3e299",
+      "text": "ocr",
       "url": "https://tingsryd.se/wp-content/uploads/2025/03/1661342699torghandelsforeskriftertingsrydskommun.pdf"
     },
     {
@@ -12716,6 +12733,7 @@
       "municipality_code": "0763",
       "retrieved_at": "2026-10-30T13:33:29Z",
       "sha256": "53eef846e88bcd96b8b52a2f059be92d86e6cf206eae3ddf5bd941a4a3f36381",
+      "text": "pdf",
       "url": "https://tingsryd.se/wp-content/uploads/2025/03/allmannabestammelserforvattenochavlopp.pdf"
     },
     {
@@ -12725,6 +12743,7 @@
       "municipality_code": "0763",
       "retrieved_at": "2026-10-30T13:33:27Z",
       "sha256": "3205b43694b40f371f934271e10470a3b7825d9863e394f8bac8315c653790ff",
+      "text": "pdf",
       "url": "https://tingsryd.se/wp-content/uploads/2025/03/allmannalokalaordningsforeskrifter.pdf"
     },
     {
@@ -12734,6 +12753,7 @@
       "municipality_code": "0763",
       "retrieved_at": "2026-10-30T13:33:30Z",
       "sha256": "7c94b939103ead2b786c491e1511eb896e8fea324e63b410b6ae333ac372c936",
+      "text": "pdf",
       "url": "https://tingsryd.se/wp-content/uploads/2025/03/avfallsforeskrifter-for-tingsryds-kommun-1.pdf"
     },
     {
@@ -12743,6 +12763,7 @@
       "municipality_code": "0763",
       "retrieved_at": "2026-10-30T13:33:26Z",
       "sha256": "bf45c59aa53f75ea1fd5a5f21856c4f09fe3e98b3d6aa69540fab36b20416849",
+      "text": "ocr",
       "url": "https://tingsryd.se/wp-content/uploads/2025/03/lokalahalsoskyddsforeskrifter.pdf"
     },
     {
@@ -12752,6 +12773,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:09Z",
       "sha256": "84e52a7365ee17ee829e5d7c6816f988effa155586ef0708bc9791a512f65ff8",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2024/12/Alvesta-kommuns-allmanna-lokala-ordningsforeskrifter-galler-fran-2024-12-20.pdf"
     },
     {
@@ -12761,6 +12783,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:07Z",
       "sha256": "2397d9d118ad88ee4cb6ced6366b6db9a7a82584b593f2f4dce4eff630b415ce",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2026/03/Avfallsforeskrifter-for-Alvesta-kommun-reviderade-2026-02-24.pdf"
     },
     {
@@ -12770,6 +12793,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:12Z",
       "sha256": "ca0672869e220f6ae05a8a9d72cb8bf34d4e1a67d8f852e4810865e9a27c63c5",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2023/07/Avgifter-for-kopia-och-avskrift-av-allmanna-handlingar-KF-%C2%A7-10-2023-03-01-upprattad.pdf"
     },
     {
@@ -12779,6 +12803,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:14Z",
       "sha256": "dbbf19c4d2c1d7292539137d234e2b427e3d40bb1ec57d2fbef6cb7f9d881d62",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/11/Avgifter-och-priser-inom-kultur-och-fritidsforvaltningen-2026.pdf"
     },
     {
@@ -12788,6 +12813,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:16Z",
       "sha256": "da99671deaa7a1d541d822a13f58b1a580f9d12763f19963894b0e30aa823eed",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/01/Brukningsavgift-vatten-och-avlopp_tarifflista_2025.pdf"
     },
     {
@@ -12797,6 +12823,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:08Z",
       "sha256": "f1f0169ffced19bf2934cf30034861b3892f863399198a709147c53c4fb77bf4",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/11/KFVA_Kommunala-foreskrifter-for-anvandande-av-Alvesta-kommuns-allmanna-vatten-och-avloppsanlaggning.pdf"
     },
     {
@@ -12806,6 +12833,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:10Z",
       "sha256": "8f5c10368dd8f68b1e4099b9a4bea1e30a0ac7669b330eee77c101db23fc47a4",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2026/04/Lokala-halsoskyddsforeskrifter-for-Alvesta-kommun-inklusive-bilagor-galler-fran-2026-04-01.pdf"
     },
     {
@@ -12815,6 +12843,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:11Z",
       "sha256": "0b113a841925d95e41cdbf554b49c5c3d0acfa1c4d25762cbcd4f88c28ee4d59",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2024/11/Lokala-ordningsforeskrifter-for-torghandel-i-Alvesta-kommun.pdf"
     },
     {
@@ -12824,6 +12853,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:17Z",
       "sha256": "12283cd9cc54a802a13d5dd792feffdefc37db385fafdbe58b6a9d98748c7cac",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/12/Renhallningstaxa-2026.pdf"
     },
     {
@@ -12833,6 +12863,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:15Z",
       "sha256": "2efe9511341d2cac0ba0d01820e2dd69dc8f5adeb42afbda7b96707412d66d6a",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2026/02/Riktlinjer-for-egenavgifter-for-vuxna-vid-stod-och-hjalpinsatser-av-behandlingskaraktar-samt-andra-stod-och-hjalpinsatser.pdf"
     },
     {
@@ -12842,6 +12873,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:13Z",
       "sha256": "5dfb3ea41b5afbddd2644366ad8a82a876141055a1418cc85ead4dea601ec116",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2023/07/Samhallsbyggnadsnamndens-beslut-2020-05-05-%C2%A7-39-om-avgift-for-laddplatser-for-elbilar.pdf"
     },
     {
@@ -12851,6 +12883,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:22Z",
       "sha256": "f64c99679d04385652e52f3f99c8d5809554ca3de46cb402ceaddf5fa167de83",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2026/02/Taxa-for-provning-och-tillsyn-enligt-miljobalken.pdf"
     },
     {
@@ -12860,6 +12893,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:25Z",
       "sha256": "0421c8413d6fe873c619f16c6ae9f5bdbc1f7825185edfb30f8a54aff422fcbf",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/12/Taxa-for-tillstandsprovning-och-tillsyn-enligt-alkohollagen.pdf"
     },
     {
@@ -12869,6 +12903,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:26Z",
       "sha256": "21be0b5f83b072a9c6b1197854ad207e8f384d5b3e951ead81d8eb56adec7962",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/05/Taxa-for-tillsyn-enligt-lagen-om-sprangamnesprekursorer-2025.pdf"
     },
     {
@@ -12878,6 +12913,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:23Z",
       "sha256": "1a1c188c803e6478f2d836fd1e55e1fa279e8c8ad24f11d1942b4290a38ee17b",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/05/Taxa-for-tillsyn-over-avfallshantering-i-fritidsbatshamnar-2025.pdf"
     },
     {
@@ -12887,6 +12923,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:21Z",
       "sha256": "4e0558ec72297fdfdc1d55c1a4f134adf00a08d78c34fd58460d2fbd87ba62b1",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/05/Taxa-Livsmedel-2025.pdf"
     },
     {
@@ -12896,6 +12933,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:20Z",
       "sha256": "522028e9a3d92f86ca71db75b7c9cdddb571e2e017a2d32e4644eacb96116a38",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/05/Taxa-stralskydd-2025.pdf"
     },
     {
@@ -12905,6 +12943,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:24Z",
       "sha256": "07cd63d9f9995e33d2b0ddb859f301ed3566f689d5dd06f27e3c57a8271cb016",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/05/Taxa-tobak-mm-2025.pdf"
     },
     {
@@ -12914,6 +12953,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:27Z",
       "sha256": "171638c5ba271a1ec6a420cf8f3aafe6e31de0f03a4fc1b05dbeeb8b8bffee7d",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2026/02/Taxor-avgifter-och-priser-inom-omsorg-vard-och-stod-2026.pdf"
     },
     {
@@ -12923,6 +12963,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:18Z",
       "sha256": "50d1370e8356d19825018235f22163a2a2d7de85bccac24aa75fd01b70f230c5",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/12/Taxor-for-slamtomning-2026.pdf"
     },
     {
@@ -12932,6 +12973,7 @@
       "municipality_code": "0764",
       "retrieved_at": "2026-10-30T13:49:19Z",
       "sha256": "3d536e0479fd4784fe6776869de52fa514ae66866d043b1c683c3e53d1931b5b",
+      "text": "pdf",
       "url": "https://www.alvesta.se/wp-content/uploads/2025/12/VA-taxa_2026.pdf"
     },
     {
@@ -12941,6 +12983,7 @@
       "municipality_code": "0765",
       "retrieved_at": "2026-10-30T13:49:34Z",
       "sha256": "1c1d80e2576e9d1573a2981898fb746376b6db8a0b34f8869b39d0ec01f4de22",
+      "text": "pdf",
       "url": "https://www.almhult.se/download/18.24b1b9a318529f1c20862d13/1675431522311/Lokala%20Ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandeln.pdf"
     },
     {
@@ -12950,6 +12993,7 @@
       "municipality_code": "0765",
       "retrieved_at": "2026-10-30T13:49:33Z",
       "sha256": "b24ea5ca76adba1df7b7f789c251e98a7a8e534c32cc4fbf89faeb8e521dcb25",
+      "text": "pdf",
       "url": "https://www.almhult.se/download/18.2727e29417ee2988a5021454/1645024513767/Lokala%20Ordningsf%C3%B6reskrifter.pdf"
     },
     {
@@ -12959,6 +13003,7 @@
       "municipality_code": "0765",
       "retrieved_at": "2026-10-30T13:49:37Z",
       "sha256": "309a8a6731e48775059fc963c1d73777460a75f62099986b1e2ccc9eb1c57f76",
+      "text": "ocr",
       "url": "https://www.almhult.se/download/18.2727e29417ee2988a5021459/1645024513949/Vattenskyddsf%C3%B6reskrifter%20och%20Kartor%20Vattenskyddsomr%C3%A5den.pdf"
     },
     {
@@ -12968,6 +13013,7 @@
       "municipality_code": "0765",
       "retrieved_at": "2026-10-30T13:49:31Z",
       "sha256": "6453fca67752e674e1fa8f049e429f8aef8dd1a7f3a15e74e4c7cdc8e1fecc96",
+      "text": "ocr",
       "url": "https://www.almhult.se/download/18.2727e29417ee2988a502145a/1645024514348/Allm%C3%A4nna%20Best%C3%A4mmelser%20f%C3%B6r%20Vatten%20och%20Avlopp.pdf"
     },
     {
@@ -12977,6 +13023,7 @@
       "municipality_code": "0765",
       "retrieved_at": "2026-10-30T13:49:31Z",
       "sha256": "2a2cba7d532561f4ade0dd54c50de0b3e9bb6e77624590ba4cc1491de5865fcf",
+      "text": "pdf",
       "url": "https://www.almhult.se/download/18.2727e29417ee2988a502145b/1645024514597/Avfallsf%C3%B6reskrifter.pdf"
     },
     {
@@ -12986,6 +13033,7 @@
       "municipality_code": "0765",
       "retrieved_at": "2026-10-30T13:49:32Z",
       "sha256": "ecc42126d0e10a4b952bb3a1280892e7232c65d0cf646e23569431b6235d37a4",
+      "text": "pdf",
       "url": "https://www.almhult.se/download/18.2e03992c199c92193a16950d/1760341763945/Lokala%20h%C3%A4lsoskyddsf%C3%B6reskrifter.pdf"
     },
     {
@@ -12995,6 +13043,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:42Z",
       "sha256": "c3bdd5b68b23bcee0fc879c31b202d99de355f1c64b34775b73be2a3cf9ed791",
+      "text": "ocr",
       "url": "https://www.markaryd.se/download/18.19793bd1639e645b831249/1639587171992/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
     },
     {
@@ -13004,6 +13053,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:51Z",
       "sha256": "468c79e7af516adad2418d16f6bec8260066aee67f7716e42dca9eca5a609949",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.2dbcc4b819bc63a479f8f7c3/1769595939370/Bilaga%205%20Taxa%20f%C3%B6r%20brandskyddskontroll.pdf"
     },
     {
@@ -13013,6 +13063,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:52Z",
       "sha256": "8aee9f08d70a27798235b778d0bcfd23f64c8809aaa6c1ef5d14f319a3cb9c78",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.2dbcc4b819bc63a479f8f7cf/1769595968393/Bilaga%204%20Taxa%20f%C3%B6r%20reng%C3%B6ring.pdf"
     },
     {
@@ -13022,6 +13073,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:40Z",
       "sha256": "18c7485130be998d916d5f451c986130c50cde7a92c0dfb0b47f4a2462c070ff",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.3f6b11f5165860b26bf1fe13/1771835342647/Avfallsf%C3%B6reskrifter.pdf"
     },
     {
@@ -13031,6 +13083,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:44Z",
       "sha256": "80bfa3993dfb6b29eb5876f8a28ced90231441a12c540a8c57e95aa1b9cea899",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.4026b9e19b353b7ba8b585f/1782991316720/Taxor%20och%20avgifter%202026.pdf"
     },
     {
@@ -13040,6 +13093,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:51Z",
       "sha256": "6708356839ce70bcfa738229754fba9904c8a3f2c8d0a17a9817f36db46e7551",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.4026b9e19b353b7ba8b595f/1768813308346/Bilaga%201%20Avfallstaxa%20f%C3%B6r%20Markaryds%20kommun%202026.pdf"
     },
     {
@@ -13049,6 +13103,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:45Z",
       "sha256": "db4d322c2a4bdb9e9db5fe0dd540ee5f1b8b33430e6bb4514488aca6b85f7328",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.4026b9e19b353b7ba8b5961/1768813308473/Bilaga%202%20Dispenstaxor%202026.pdf"
     },
     {
@@ -13058,6 +13113,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:46Z",
       "sha256": "9f349798f882f4bb9fa2c9c7391d6537295399809f22b84f0042ec588afeebbd",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.4026b9e19b353b7ba8b597d/1768813308543/Taxebilaga%201%20-%20Plan%20och%20bygglovstaxa%20inklusive%20m%C3%A4t%20och%20kart%20f%C3%B6r%20Markaryds%20kommun.pdf"
     },
     {
@@ -13067,6 +13123,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:47Z",
       "sha256": "c50d82ae1dcd10c4a9edad3a9457c7f8819c51689e81a00c3947969643ed3e2f",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.4026b9e19b353b7ba8b597f/1768813308732/Taxebilaga%203%20-%20Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20av%20alkohol%20%20tobaksvaror%20%20folk%C3%B6l%20%20tobaksfria%20nikotinprodukter%20%20e-cigaretter%20oc.pdf"
     },
     {
@@ -13076,6 +13133,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:49Z",
       "sha256": "745fc8cd6d7874aa5864ca04c1790c694650f7b99a9948dbb3bdf6646367248c",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.4026b9e19b353b7ba8b5986/1768813308652/Taxebilaga%202%20-%20Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20enligt%20milj%C3%B6balken.pdf"
     },
     {
@@ -13085,6 +13143,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:48Z",
       "sha256": "ebe49b358c347fa239154918eb1a02cbaef91603de67b618cd8261ddad3b018b",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.4026b9e19b353b7ba8b599f/1768813308779/Taxebilaga%204%20-%20Taxa%20f%C3%B6r%20vattenprover%20och%20offentlig%20kontroll%20och%20annan%20offentlig%20verksamhet%20inom%20livsmedelsomr%C3%A5det.pdf"
     },
     {
@@ -13094,6 +13153,7 @@
       "municipality_code": "0767",
       "retrieved_at": "2026-10-30T13:49:40Z",
       "sha256": "b1daee83cee7ddae1ba1db1f992ec59163b12b6c9d35b0de15064fc47815b790",
+      "text": "pdf",
       "url": "https://www.markaryd.se/download/18.5201cea617ebfa94b16da771/1644408136075/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6.pdf"
     },
     {
@@ -13103,6 +13163,7 @@
       "municipality_code": "0780",
       "retrieved_at": "2026-10-30T13:50:00Z",
       "sha256": "96ef3e013f443009b5f55d7867fa94cfde420fe9b2bfce0834681546503eef4a",
+      "text": "pdf",
       "url": "https://www.vaxjo.se/download/18.22c1f2a162991f98c6e0c8c/1692621283957/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torgverksamhet.pdf"
     },
     {
@@ -13112,6 +13173,7 @@
       "municipality_code": "0780",
       "retrieved_at": "2026-10-30T13:49:56Z",
       "sha256": "014e78696ebbc7462d8c0f6ae897a77dfd52e80bc8c36a856e03c46dbb5071b4",
+      "text": "pdf",
       "url": "https://www.vaxjo.se/download/18.313cf36515d1bde9ee3225f3/1726840385997/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20V%C3%A4xj%C3%B6%20kommun.pdf"
     },
     {
@@ -13121,6 +13183,7 @@
       "municipality_code": "0780",
       "retrieved_at": "2026-10-30T13:49:57Z",
       "sha256": "5f1470cfe5a5cd0fbcae27ec00eb17084d588c8681f381799a634fbab53775c1",
+      "text": "pdf",
       "url": "https://www.vaxjo.se/download/18.313cf36515d1bde9ee3225f4/1692621221140/F%C3%B6reskrifter%20f%C3%B6r%20g%C3%A5ngbanerenh%C3%A5llning%20f%C3%B6r%20V%C3%A4xj%C3%B6%20kommun.pdf"
     },
     {
@@ -13130,6 +13193,7 @@
       "municipality_code": "0780",
       "retrieved_at": "2026-10-30T13:49:59Z",
       "sha256": "7074572e387530f69f981bea10f1c13a4ed4aa497983f79f098f324c8cce8c5f",
+      "text": "pdf",
       "url": "https://www.vaxjo.se/download/18.313cf36515d1bde9ee3225f5/1709720746727/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n.pdf"
     },
     {
@@ -13139,6 +13203,7 @@
       "municipality_code": "0780",
       "retrieved_at": "2026-10-30T13:49:58Z",
       "sha256": "b6eb82282dec34fc98d4b8b53617bfcbaf06d882569078ce1ba1dffce26807b8",
+      "text": "pdf",
       "url": "https://www.vaxjo.se/download/18.64e209ee19b355c2acb67483/1767350260898/Kommunala%20f%C3%B6reskrifter%20f%C3%B6r%20anv%C3%A4ndande%20av%20V%C3%A4xj%C3%B6%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning.pdf"
     },
     {
@@ -13148,6 +13213,7 @@
       "municipality_code": "0780",
       "retrieved_at": "2026-10-30T13:49:56Z",
       "sha256": "ed1d359c667572e65f68b97fce022f40eecb064a42168808982ffdc828a08cfe",
+      "text": "pdf",
       "url": "https://www.vaxjo.se/download/18.a359ee019c88fb761e39c03/1772434374359/Avfallsf%C3%B6reskrifter%20f%C3%B6r%20V%C3%A4xj%C3%B6%20kommun.pdf"
     },
     {
@@ -13157,6 +13223,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:17Z",
       "sha256": "f476d4785e0e45c5ea8651f42420de9c64ba43e571044e9c60bf9f4a7cb1f893",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.145b4da519c988ccc08bbf/1772102491973/KFVA%20-%20kommunala%20f%C3%B6reskrifter%20f%C3%B6r%20vatten-%20och%20avlopp%20i%20Ljungby%20kommun.pdf"
     },
     {
@@ -13166,6 +13233,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:08Z",
       "sha256": "917b704460c15e8d2cec50c5721b15097f4689105967df95ddb70c21a1e64a33",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.1ad580d9193dec03e2015ec/1767105482193/Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20enligt%20alkohollagen.pdf"
     },
     {
@@ -13175,6 +13243,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:13Z",
       "sha256": "05c5f452c21d41ab8170d33869ce47b05e7a5fc0f38e24c64b56f90c5079c027",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.1ad580d9193dec03e2015ed/1767105449145/Taxa%20f%C3%B6r%20Ljungby%20kommuns%20tillsyn%20%C3%B6ver%20handel%20med%20vissa%20receptfria%20l%C3%A4kemedel.pdf"
     },
     {
@@ -13184,6 +13253,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:16Z",
       "sha256": "ac9d69a8c7b14044ec5aec8ac3203cbc7c00d564bee38f43ee429d73f72fe1dc",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.1d2bf67419c985e5a3f2eb17/1773051067449/Taxa%20f%C3%B6r%20arrenden%20och%20nyttjander%C3%A4tter.pdf"
     },
     {
@@ -13193,6 +13263,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:04Z",
       "sha256": "ccb2b1300fa4b881181ddbed7067358fe0d3b3fb84b8fe597b1605be9cd9b287",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.363d724819367f30f043301/1767105140665/Taxa%20f%C3%B6r%20kontroll%20enligt%20lag%20om%20foder%20och%20animaliska%20biprodukter.pdf"
     },
     {
@@ -13202,6 +13273,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:14Z",
       "sha256": "206716493301405193f1827f661ab6bd1f03436addc213783187cd8a9840015e",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.363faeab19ed4665c4c96071/1785421076806/Taxa%20f%C3%B6r%20vatten%20och%20avlopp%202026.pdf"
     },
     {
@@ -13211,6 +13283,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:15Z",
       "sha256": "f5fb6220297c49fea7667389bfe5895b9e2ab944c9ec560d8f0da040dd930057",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.660677dc19301da04634372/1732776165908/Taxor%20f%C3%B6r%20renh%C3%A5llning%202024.pdf"
     },
     {
@@ -13220,6 +13293,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:12Z",
       "sha256": "2577cb38104b17bf574ddb01a6b8cb8edf57a47ac97ad7048513a2c5a1527f3c",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.660677dc19301da04634376/1767105374642/Taxa%20f%C3%B6r%20tillsyn%20enligt%20str%C3%A5lskyddslagen.pdf"
     },
     {
@@ -13229,6 +13303,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:11Z",
       "sha256": "6e359c63760a9847bbd1a2668d04fc5afbb80b741861fe5f0144ca46a4c2a62b",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.660677dc19301da04634377/1767105571745/Taxa%20f%C3%B6r%20tillsyn%20enligt%20milj%C3%B6balken.pdf"
     },
     {
@@ -13238,6 +13313,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:10Z",
       "sha256": "f961e76c55b040d47b005c240c34b6a0547c0c0a9f186baf7ffc3fd7a3397338",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.660677dc19301da04634378/1767105347844/Taxa%20f%C3%B6r%20tillsyn%20enligt%20lag%20om%20sprangamnesprekursorer.pdf"
     },
     {
@@ -13247,6 +13323,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:09Z",
       "sha256": "5eff66ee98b11ea49cdce8ab46d81f739e81baacdc926a6030bfaa8d4139c348",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.660677dc19301da04634379/1767105277328/Taxa%20f%C3%B6r%20tillsyn%20enligt%20alkohollagen%20g%C3%A4llande%20f%C3%B6rs%C3%A4ljning%20av%20folk%C3%B6l.pdf"
     },
     {
@@ -13256,6 +13333,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:07Z",
       "sha256": "8e38bde562663a7d35a573917a9968d04f7cf0c4456772536329d6f5fc6b289a",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.660677dc19301da0463437b/1767105081530/Taxa%20f%C3%B6r%20offentlig%20kontroll%20och%20annan%20offentlig%20verksamhet%20inom%20livsmedelsomr%C3%A5det.pdf"
     },
     {
@@ -13265,6 +13343,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:06Z",
       "sha256": "4c66141d2f6a42baeb5f99a1de2e0505797904f4618dbb90bb65f4f37122809a",
+      "text": "ocr",
       "url": "https://www.ljungby.se/download/18.660677dc19301da0463437c/1731073980021/Taxa%20f%C3%B6r%20nyttoparkeringstillst%C3%A5nd.pdf"
     },
     {
@@ -13274,6 +13353,7 @@
       "municipality_code": "0781",
       "retrieved_at": "2026-10-30T13:50:05Z",
       "sha256": "9a16d3864c49310a526b0514cd393e33ede7e021d9b73c0ea22bd0f1ea2c0ec1",
+      "text": "pdf",
       "url": "https://www.ljungby.se/download/18.660677dc19301da0463437d/1767105184304/Taxa%20f%C3%B6r%20ljungby%20kommuns%20tillsyn%20enligt%20lagen%20om%20tobak%20och%20liknande%20produkter.pdf"
     },
     {
