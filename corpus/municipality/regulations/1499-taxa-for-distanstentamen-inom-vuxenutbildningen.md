@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5b7f4af4172139070c676af/1709190733937/Taxa%20f%C3%B6r%20distanstentamen%20inom%20vuxenutbildningen.pdf"
 source_sha256: "48bd9f5c4e34728a44aaf2805eb65b45e6e41eeec4117d9668db1f21af94223e"
-fetched_at: "2026-10-30T21:12:55Z"
+fetched_at: "2026-10-31T20:08:20Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -82,6 +82,54 @@ Uppdaterades: 7 januari 2025
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Taxa för distanstentamen inom vuxenutbildningen (pdf) pdf, 30.6 kB.](<https://www.falkoping.se/download/18.5b7f4af4172139070c676af/1709190733937/Taxa%20f%C3%B6r%20distanstentamen%20inom%20vuxenutbildningen.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Taxa för distanstentamen inom vuxenutbildningen
+
+KOMMUNAL FÖRFATTNINGSSAMLING
+
+Typ av dokument
+
+Avgift
+
+Beslutsinstans
+
+Kommunfullmäktige
+
+Fastställd
+
+KF 2024-01-29, § 15
+
+Ersätter dokument
+
+KF 2020-06-29, § 92
+
+Diarienummer
+
+KS 2023/1308
+
+Giltighetstid
+
+Från och med 15 februari 2024 och tills vidare
+
+Dokumentet gäller för
+
+Kompetens- och arbetslivsnämnden
+
+Dokumentansvarig
+
+Förvaltningschef för Kompetens- och arbetslivsförvaltningen
+
+Tidpunkt för aktualitetsprövning
+
+En gång per mandatperiod.
+
+Taxa för distanstentamen inom vuxenutbildningen § 1 Den som deltar i en utbildning inom kompetens- och arbetslivsförvaltningens verksamheter kan utan kostnad göra prov och tentamen som hör till den aktuella utbildningen. § 2 Studerande på universitet och högskolor som är kommunmedlemmar i
+
+Falköpings kommun kan utan kostnad skriva distanstentamen på Lärcenter under ordinarie kontorstid. Distanstentamen för kommunmedlemmar utanför kontorstid kostar 500 kronor. § 3 Studerande på universitet och högskolor som inte är kommunmedlemmar i Falköpings kommun kan skriva distanstentamen på Lärcenter både under och utanför ordinarie kontorstid till en kostnad av 500 kr.

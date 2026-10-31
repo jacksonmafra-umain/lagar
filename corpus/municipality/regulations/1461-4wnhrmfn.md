@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://mellerud.se/media/4wnhrmfn/foretagstomter-taxa-2026.pdf"
 source_sha256: "2804f48f76b133bb80011ca41bf4b0805f55140f0932bb2c5b6e9a8bade640df"
-fetched_at: "2026-10-30T08:43:00Z"
+fetched_at: "2026-10-31T19:28:10Z"
 issuer: "Melleruds kommun"
 region_code: "14"
 municipality_code: "1461"
@@ -31,6 +31,18 @@ Förteckning: <https://mellerud.se/kommun-och-politik/taxor/samhallsbyggnadsforv
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Företagstomter taxa 2026](<https://mellerud.se/media/4wnhrmfn/foretagstomter-taxa-2026.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Företagstomter 2026
+
+Beslutad KF §80 2025
+
+Försäljning av mark för industri, hantverk och handel inom fastställd detaljplan görs av Samhällsbyggnadschef i samråd med KSAU.
+
+Försäljning av råmark görs av KSAU.

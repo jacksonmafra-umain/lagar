@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.745da7ca1880f3ed78f53bc/1688539197654/Avgift%20f%C3%B6r%20provisorisk%20d%C3%B6dsbof%C3%B6rvaltning.pdf"
 source_sha256: "78059d658893c3b68c190302e69f283e6e1d7217eae7c8a69f2ad5d72f5dcc9c"
-fetched_at: "2026-10-30T21:12:32Z"
+fetched_at: "2026-10-31T20:07:43Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -82,6 +82,58 @@ Uppdaterades: 20 augusti 2025
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Avgift för provisorisk dödsboförvaltning och gravsättning (pdf) pdf, 29 kB.](<https://www.falkoping.se/download/18.745da7ca1880f3ed78f53bc/1688539197654/Avgift%20f%C3%B6r%20provisorisk%20d%C3%B6dsbof%C3%B6rvaltning.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Avgift för provisorisk dödsboförvaltning och gravsättning
+
+KOMMUNAL FÖRFATTNINGSSAMLING
+
+Typ av dokument
+
+Avgift
+
+Beslutsinstans
+
+Kommunfullmäktige
+
+Fastställd
+
+2023-06-26
+
+Ersätter dokument
+
+Ersätter inte något dokument
+
+Diarienummer
+
+KS 2023/802
+
+Giltighetstid
+
+Tills vidare
+
+Dokumentet gäller för
+
+Kompetens- och arbetslivsnämnden
+
+Dokumentansvarig
+
+Kanslichefen
+
+Tidpunkt för aktualitetsprövning
+
+Vid inaktualitet
+
+Bakgrund
+
+Under vissa förutsättningar som anges i 18 kap. 2 § ärvdabalken (1958:637) ska socialnämnden tillfälligt förvalta dödsbo och enligt 5 kap. 2 § begravningslagen (1990:1144) ordna gravsättning för den som saknar någon som kan ordna det. För detta har socialnämnden rätt att ta ut en ersättning av dödsboet för sina kostnader för dödsboförvaltning och åtgärder enligt begravningslagen. I Falköpings kommun fullgörs dessa uppgifter av kompetens- och arbetslivsnämnden enligt dess reglemente. En kommun får enligt 8 kap 3c § kommunallagen inte ta ut högre avgifter än vad som motsvarar kostnaden för tjänsten som kommunen tillhandahåller. Ersättningen ska därför motsvara kommunens självkostnad.
+
+Avgift §1
+
+Kommunen tar ut ersättning av dödsbo för sina kostnader för provisorisk dödsboförvaltning respektive för gravsättning. För faktiskt nedlagd handläggningstid, tas en avgift ut med 0,8 procent av gällande prisbasbelopp. På avgiften tillkommer mervärdesskatt enligt gällande skattebestämmelser. Avgift tas ut för varje halvtimme nedlagd handläggningstid. Om den sammanlagda handläggningstiden understiger en halvtimme tas ingen timavgift ut. Därutöver tas ersättning ut för direkta utlägg som kommunen haft för att utföra sitt uppdrag.
