@@ -1,35 +1,24 @@
 package app.lagar.ui.reader
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.withLink
 import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.unit.dp
-import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
-import app.lagar.designsystem.glass
 import com.mikepenz.markdown.compose.extendedspans.ExtendedSpans
 import com.mikepenz.markdown.m3.Markdown
 import com.mikepenz.markdown.m3.markdownColor
@@ -42,16 +31,17 @@ import org.intellij.markdown.MarkdownElementTypes
 import org.intellij.markdown.ast.findChildOfType
 import org.intellij.markdown.ast.getTextInNode
 
-/** Longest line the reader allows, in characters; DESIGN.md asks for 60-75ch. */
-private const val MAX_LINE_CHARS = 70
-
 /** Average glyph width of the legal serif, as a fraction of the font size. */
 private const val AVERAGE_CHAR_EM = 0.5f
 
-/** Centers content and caps it at about [MAX_LINE_CHARS] characters of legal text; the cap scales with the font. */
+/**
+ * Centers content and caps it at the reading measure ([LocalReadingMeasure], 70 characters unless the reader's width
+ * setting changes it); the cap scales with the font.
+ */
 @Composable
 internal fun Modifier.readingColumn(): Modifier {
-    val max = with(LocalDensity.current) { (LagarTheme.type.bodyLegalMd.fontSize * (MAX_LINE_CHARS * AVERAGE_CHAR_EM)).toDp() }
+    val chars = LocalReadingMeasure.current
+    val max = with(LocalDensity.current) { (LagarTheme.type.bodyLegalMd.fontSize * (chars * AVERAGE_CHAR_EM)).toDp() }
     return fillMaxWidth().widthIn(max = max)
 }
 
@@ -131,28 +121,18 @@ internal fun LegalMarkdown(
     )
 }
 
-private val IndicatorWidth = 3.dp
-
 /**
- * One numbered statute (§): a 3dp bar in the layer's accent color on the left of a tier 1 glass card. [action]
- * (the section link) sits in the upper right corner, beside the text rather than over it.
+ * One numbered statute (§), set flat in the running text like a page of a book: no card, no side bar. [action]
+ * (the section menu) sits in the upper right corner, beside the text rather than over it.
  */
 @Composable
 internal fun StatuteContainer(
-    layer: LayerKey,
     modifier: Modifier = Modifier,
     action: (@Composable () -> Unit)? = null,
     content: @Composable () -> Unit,
 ) {
-    val layers = LagarTheme.layers
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .glass(GlassTier.Card, shape = MaterialTheme.shapes.medium)
-            .height(IntrinsicSize.Min),
-    ) {
-        Box(Modifier.width(IndicatorWidth).fillMaxHeight().background(layers.accent(layer)))
-        Box(Modifier.weight(1f).padding(start = LagarTheme.spacing.md, end = if (action == null) LagarTheme.spacing.md else 0.dp, top = LagarTheme.spacing.sm, bottom = LagarTheme.spacing.sm)) { content() }
+    Row(modifier = modifier.fillMaxWidth()) {
+        Box(Modifier.weight(1f).padding(vertical = LagarTheme.spacing.xs)) { content() }
         if (action != null) Box(Modifier.align(Alignment.Top)) { action() }
     }
 }

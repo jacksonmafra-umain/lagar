@@ -41,6 +41,30 @@ fun LagarTheme(darkTheme: Boolean, reduceTransparency: Boolean = false, content:
     }
 }
 
+/**
+ * Re-themes one subtree with its own [colors] and [type] inside [LagarTheme]; the reader uses it for the paper and the
+ * text settings of the person reading. [darkTheme] says whether [colors] is a dark scheme, for the layer and status
+ * colors that sit on it.
+ */
+@Composable
+fun LagarSubtheme(colors: ColorScheme, type: LagarTypography, darkTheme: Boolean, content: @Composable () -> Unit) {
+    val layers = remember(darkTheme) { LayerColors(darkTheme) }
+    val status = remember(darkTheme) { StatusColors(darkTheme) }
+    CompositionLocalProvider(
+        LocalDarkTheme provides darkTheme,
+        LocalLayerColors provides layers,
+        LocalStatusColors provides status,
+        LocalLagarTypography provides type,
+    ) {
+        MaterialTheme(
+            colorScheme = colors,
+            typography = remember(type) { type.toMaterial() },
+            shapes = MaterialTheme.shapes,
+            content = content,
+        )
+    }
+}
+
 object LagarTheme {
     val isDark: Boolean
         @Composable @ReadOnlyComposable

@@ -64,6 +64,7 @@ import app.lagar.resources.bookmark_add
 import app.lagar.resources.bookmark_remove
 import app.lagar.resources.ic_bookmark
 import app.lagar.resources.ic_bookmark_filled
+import app.lagar.resources.ic_format_size
 import app.lagar.resources.ic_info
 import app.lagar.resources.ic_share
 import app.lagar.resources.ic_toc
@@ -72,11 +73,14 @@ import app.lagar.resources.reader_inspector_open
 import app.lagar.resources.reader_link_copied
 import app.lagar.resources.reader_provision_removed
 import app.lagar.resources.reader_provision_saved
+import app.lagar.resources.reader_settings
 import app.lagar.resources.reader_share_failed
 import app.lagar.resources.reader_share_link
 import app.lagar.resources.reader_toc
 import app.lagar.settings.BookmarkStore
 import app.lagar.settings.NoteStore
+import app.lagar.settings.ReadingPreferences
+import app.lagar.settings.ReadingSettings
 import app.lagar.settings.SavedProvision
 import app.lagar.settings.toBookmark
 import app.lagar.ui.common.BackTopBar
@@ -106,11 +110,13 @@ fun ReaderRoute(
     viewModel: ReaderViewModel = koinViewModel(key = id) { parametersOf(id) },
     store: BookmarkStore = koinInject(),
     noteStore: NoteStore = koinInject(),
+    reading: ReadingPreferences = koinInject(),
 ) {
     val state by viewModel.state.collectAsState()
     val bookmarks by store.bookmarks.collectAsState()
     val provisions by store.provisions.collectAsState()
     val notes by noteStore.notes.collectAsState()
+    val readingSettings by reading.current.collectAsState()
     val savedAnchors = remember(provisions, id) { provisions.filter { it.document.id == id }.mapTo(HashSet()) { it.anchor } }
     val documentNotes = remember(notes, id) { notes.filter { it.document.id == id } }
     val provisionNotes = remember(documentNotes) { documentNotes.mapNotNull { note -> note.anchor?.let { it to note.text } }.toMap() }
@@ -142,6 +148,9 @@ fun ReaderRoute(
             store.toggleProvision(SavedProvision(meta.toBookmark(), anchor, label, excerpt))
         },
         onWriteNote = { meta, anchor, label, text -> noteStore.write(meta.toBookmark(), anchor, label, text) },
+        readingSettings = readingSettings,
+        onReadingChange = reading::update,
+        onReadingReset = reading::reset,
     )
 }
 
@@ -161,6 +170,36 @@ fun ReaderScreen(
     provisionNotes: Map<String, String> = emptyMap(),
     onToggleProvision: (meta: DocumentMeta, anchor: String, label: String, excerpt: String) -> Unit = { _, _, _, _ -> },
     onWriteNote: (meta: DocumentMeta, anchor: String?, label: String?, text: String) -> Unit = { _, _, _, _ -> },
+    readingSettings: ReadingSettings = ReadingSettings(),
+    onReadingChange: ((ReadingSettings) -> ReadingSettings) -> Unit = {},
+    onReadingReset: () -> Unit = {},
+) = ReadingTheme(readingSettings) {
+    ReaderLayout(
+        state, bookmarked, onToggleBookmark, onBack, anchor, amendmentLinks, onResolveAmendmentLinks, crossReferences, onOpenDocument,
+        savedAnchors, documentNote, provisionNotes, onToggleProvision, onWriteNote, readingSettings, onReadingChange, onReadingReset,
+    )
+}
+
+/** The reader on the paper and type of [ReadingTheme]; [ReaderScreen] documents the parameters. */
+@Composable
+private fun ReaderLayout(
+    state: LoadState<DocumentResponse>,
+    bookmarked: Boolean,
+    onToggleBookmark: (DocumentMeta) -> Unit,
+    onBack: () -> Unit,
+    anchor: String?,
+    amendmentLinks: Map<String, String>,
+    onResolveAmendmentLinks: (List<String>) -> Unit,
+    crossReferences: Map<String, LayerKey>,
+    onOpenDocument: (String) -> Unit,
+    savedAnchors: Set<String>,
+    documentNote: String?,
+    provisionNotes: Map<String, String>,
+    onToggleProvision: (meta: DocumentMeta, anchor: String, label: String, excerpt: String) -> Unit,
+    onWriteNote: (meta: DocumentMeta, anchor: String?, label: String?, text: String) -> Unit,
+    readingSettings: ReadingSettings,
+    onReadingChange: ((ReadingSettings) -> ReadingSettings) -> Unit,
+    onReadingReset: () -> Unit,
 ) = BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
     val spacing = LagarTheme.spacing
     val wide = LocalWideLayout.current
@@ -179,6 +218,7 @@ fun ReaderScreen(
     val copied = stringResource(Res.string.reader_link_copied)
     val failed = stringResource(Res.string.reader_share_failed)
     var showToc by rememberSaveable { mutableStateOf(false) }
+    var showReading by rememberSaveable { mutableStateOf(false) }
     var amendmentsOpen by rememberSaveable { mutableStateOf(false) }
     var drawerOpen by rememberSaveable { mutableStateOf(false) }
     // The note being edited: open with the anchor of its §, or no anchor for the document note.
@@ -337,7 +377,6 @@ fun ReaderScreen(
                                     // A § printed once per wording carries Riksdagen's marker, shown as a label.
                                     val statute = remember(block) { statuteValidity(block) }
                                     StatuteContainer(
-                                        layer = key,
                                         action = if (blockAnchor != null && label != null) {
                                             { sectionActions(blockAnchor, label, statute.text) }
                                         } else {
@@ -431,6 +470,9 @@ fun ReaderScreen(
                     onDismiss = { noteOpen = false },
                 )
             }
+            if (showReading) {
+                ReadingSettingsSheet(readingSettings, onChange = onReadingChange, onReset = onReadingReset, onDismiss = { showReading = false })
+            }
             if (showToc && !tocPane) {
                 TableOfContentsSheet(
                     outline = outline,
@@ -458,6 +500,7 @@ fun ReaderScreen(
             if (!outline.isEmpty && !tocPane) {
                 BarAction(painterResource(Res.drawable.ic_toc), stringResource(Res.string.reader_toc)) { showToc = true }
             }
+            BarAction(painterResource(Res.drawable.ic_format_size), stringResource(Res.string.reader_settings)) { showReading = true }
             if (drawer) {
                 BarAction(painterResource(Res.drawable.ic_info), stringResource(Res.string.reader_inspector_open)) { drawerOpen = true }
             }
