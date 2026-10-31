@@ -11,8 +11,9 @@ section are skipped.
 
 The treaty text is only published as PDF. For treaties from `--text-from-year`
 on, the PDFs are downloaded and their text extracted with the shared helper
-(`pdftext`); for older ones, and for scanned PDFs, the document holds the
-page's metadata and a link to the PDF. The SHA-256 and size of every
+(`pdftext`); a scan, or a PDF whose text layer cannot be read, is read by
+OCR (`ocr`, marked `text_source: ocr`). For older treaties, and PDFs OCR cannot
+read either, the document holds the page's metadata and a link to the PDF. The SHA-256 and size of every
 downloaded PDF go into `sources/so-pdf-manifest.json`; PDF bytes are never
 kept. robots.txt is read once and honoured for every URL.
 """
@@ -30,7 +31,7 @@ from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from . import frontmatter, pdftext
+from . import frontmatter, ocr, pdftext
 from .caselaw import NETWORK_ERRORS, StateError, _load_state, _save_state, personal_numbers
 from .http import Blocked, PoliteClient
 from .vocabulary import TYPES
@@ -187,7 +188,14 @@ def year_of(number):
 # --- documents -------------------------------------------------------------
 
 
-def build_meta(page, source_sha256, fetched_at):
+# `pdftext` gaps that OCR may fill.
+OCR_GAPS = frozenset({pdftext.NO_TEXT_LAYER, pdftext.UNREADABLE_TEXT, pdftext.LETTER_SPACED})
+TEXT_OCR = "ocr"
+OCR_NOTE = ("Texten är maskinläst (OCR) ur pdf:en och kan innehålla läsfel. "
+            "Pdf:en är den officiella versionen.")
+
+
+def build_meta(page, source_sha256, fetched_at, ocr_text=False):
     return {
         "id": corpus_id(page.number),
         "title": page.title,
@@ -208,13 +216,15 @@ def build_meta(page, source_sha256, fetched_at):
         "source": page.url,
         "source_sha256": source_sha256,
         "fetched_at": fetched_at,
+        **({"text_source": "ocr"} if ocr_text else {}),
     }
 
 
-def to_markdown(page, texts):
+def to_markdown(page, texts, ocr_urls=frozenset()):
     """Heading, signature, note, PDF links and, where extracted, the text of each PDF.
 
-    `texts` maps a PDF URL to its paragraphs, or to None when no text was extracted.
+    `texts` maps a PDF URL to its paragraphs, or to None when no text was extracted;
+    the text of a PDF in `ocr_urls` was read by OCR and opens with a note saying so.
     """
     lines = [f"Undertecknad: {page.place_date}"] if page.place_date else []
     lines.append(page.number)
@@ -228,6 +238,8 @@ def to_markdown(page, texts):
         if paragraphs:
             if len(page.pdfs) > 1:
                 blocks.append(f"## {label or 'PDF'}")
+            if url in ocr_urls:
+                blocks.append(OCR_NOTE)
             blocks.extend(p.replace("\n", " ") for p in paragraphs)
     return "\n\n".join(b for b in blocks if b) + "\n"
 
@@ -316,6 +328,8 @@ def parse_args(argv):
     parser.add_argument("--to-year", type=_year, help="only SÖ numbers up to this year")
     parser.add_argument("--text-from-year", type=_year, default=DEFAULT_TEXT_FROM_YEAR,
                         help=f"extract the PDF text from this SÖ year on (default {DEFAULT_TEXT_FROM_YEAR})")
+    parser.add_argument("--no-ocr", dest="ocr", action="store_false",
+                        help="do not read scanned PDFs by OCR (needs pdftoppm and tesseract with Swedish)")
     parser.add_argument("--url", action="append", metavar="URL", help="collect only these SÖ pages")
     parser.add_argument("--changed-since", type=_day, metavar="YYYY-MM-DD",
                         help="only pages whose sitemap lastmod is on or after this day (weekly sync)")
@@ -379,7 +393,16 @@ def _extract(client, robots, page, args, manifest, summary):
     for url, label in page.pdfs:
         data = _get(client, robots, url)
         result = pdftext.extract(data)
-        gap = result.gap
+        gap, status = result.gap, "extracted"
+        if gap in OCR_GAPS and args.ocr:
+            try:
+                recognised = ocr.extract(data)
+            except ocr.OcrError:
+                recognised = None
+            if recognised is not None and recognised.usable:
+                result, gap, status = recognised, None, TEXT_OCR
+            elif recognised is not None and recognised.gap == ocr.LOW_CONFIDENCE:
+                gap = ocr.LOW_CONFIDENCE
         if gap is None:
             paragraphs = pdftext.paragraphs(result.text)
             found = personal_numbers("\n".join(paragraphs))
@@ -391,7 +414,7 @@ def _extract(client, robots, page, args, manifest, summary):
             summary.text_gaps.append(page.number)
         entries.append({"url": url, "label": label, "bytes": len(data),
                         "sha256": hashlib.sha256(data).hexdigest(), "pages": result.pages,
-                        "text": "extracted" if gap is None else gap})
+                        "text": status if gap is None else gap})
     manifest[page.number] = {"number": page.number, "page": page.url, "pdfs": entries, "retrieved_at": _now()}
     return texts
 
@@ -413,8 +436,10 @@ def _store(client, robots, url, args, manifest, owners, summary):
         return page.number, "duplicate"
     owners[page.number] = url
     texts = _extract(client, robots, page, args, manifest, summary)
-    meta = build_meta(page, page_sha256(page), _now())
-    body = to_markdown(page, texts)
+    ocr_urls = {f["url"] for f in manifest.get(page.number, {}).get("pdfs", []) if f.get("text") == TEXT_OCR}
+    ocr_urls &= {url for url, paragraphs in texts.items() if paragraphs}
+    meta = build_meta(page, page_sha256(page), _now(), ocr_text=bool(ocr_urls))
+    body = to_markdown(page, texts, ocr_urls)
     stored, stored_body = _stored(meta, args.corpus)
     if stored is not None:
         if stored_body == body and {k: v for k, v in stored.items() if k != "fetched_at"} == {
@@ -442,6 +467,10 @@ def _write_report(path, summary):
 
 def run(client, args):
     summary = RunSummary()
+    if args.ocr and not ocr.available():
+        print("warning: OCR needs pdftoppm and tesseract with the Swedish model (tesseract-ocr-swe); "
+              "scanned PDFs stay gaps", file=sys.stderr, flush=True)
+        args.ocr = False
     state = _load_state(args.state)
     manifest = load_manifest(args.manifest)
     state["blocked"] = None
