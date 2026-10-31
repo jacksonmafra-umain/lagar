@@ -72,12 +72,12 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | KBVFS (KBV) | 4 | 4 | counted | 100.0% |
 | agency | FFS (FM) | 68 | 68 | counted | 100.0% |
 | agency | HSLF-FS | 119 | 155 | counted | 76.8% |
-| case_law | Case law | 16466 | 16640 | counted | 99.0% |
+| case_law | Case law | 16475 | 16640 | counted | 99.0% |
 | sfs | SÖ treaties | 3515 | 3515 | counted | 100.0% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
 | eu | EU judgments | 605 | 611 | counted | 99.0% |
 | region | Regional regulations | 11649 | unknown | unknown | - |
-| municipality | Municipal regulations | 5358 | unknown | unknown | - |
+| municipality | Municipal regulations | 5541 | unknown | unknown | - |
 | service | Public services | 0 | unknown | unknown | - |
 
 Progress is capped at the target; a series without a known target has no percentage.
@@ -158,7 +158,7 @@ Targets:
 
 ## Integrity
 
-Audit of 52838 documents (2026-10-30T22:52:31Z):
+Audit of 53030 documents (2026-10-31T00:11:19Z):
 
 - schema errors: 0
 - duplicate ids: 0
