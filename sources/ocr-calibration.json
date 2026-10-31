@@ -1,0 +1,502 @@
+{
+ "generated_at": "2026-10-31T17:37:02Z",
+ "method": "text-layer PDFs read again by OCR (pdftoppm 300 dpi, tesseract -l swe); words compared as multisets, characters with difflib",
+ "pdfs": 47,
+ "skipped": {
+  "not a short text-layer PDF": 12,
+  "download failed": 1
+ },
+ "word_recall": {
+  "mean": 0.9554,
+  "median": 0.9589,
+  "min": 0.9083
+ },
+ "word_precision": {
+  "mean": 0.9424,
+  "median": 0.9461,
+  "min": 0.7436
+ },
+ "character_similarity": {
+  "mean": 0.918,
+  "median": 0.9703,
+  "min": 0.6379
+ },
+ "by_source": {
+  "agency": {
+   "word_recall": {
+    "mean": 0.9433,
+    "median": 0.9434,
+    "min": 0.9083
+   },
+   "word_precision": {
+    "mean": 0.942,
+    "median": 0.9434,
+    "min": 0.8862
+   },
+   "character_similarity": {
+    "mean": 0.9715,
+    "median": 0.9756,
+    "min": 0.9321
+   }
+  },
+  "region": {
+   "word_recall": {
+    "mean": 0.9603,
+    "median": 0.9664,
+    "min": 0.9106
+   },
+   "word_precision": {
+    "mean": 0.9399,
+    "median": 0.9587,
+    "min": 0.7436
+   },
+   "character_similarity": {
+    "mean": 0.9506,
+    "median": 0.9624,
+    "min": 0.8525
+   }
+  },
+  "treaty": {
+   "word_recall": {
+    "mean": 0.9582,
+    "median": 0.9599,
+    "min": 0.9093
+   },
+   "word_precision": {
+    "mean": 0.9445,
+    "median": 0.9453,
+    "min": 0.88
+   },
+   "character_similarity": {
+    "mean": 0.8625,
+    "median": 0.9778,
+    "min": 0.6379
+   }
+  }
+ },
+ "results": [
+  {
+   "source": "agency",
+   "url": "https://foreskrifter.riksarkivet.se/api/rams/pdf/rams%2FRA-MS%202010-59.pdf",
+   "sha256": "000d74ff73844ac7e67d2e0b74d05271112f9c2795a5fbfa37c1c8ba2125ad5b",
+   "pages": 2,
+   "word_recall": 0.9284,
+   "word_precision": 0.9364,
+   "character_similarity": 0.9739
+  },
+  {
+   "source": "agency",
+   "url": "https://www.scb.se/contentassets/8486d4cfa7284f71bb7496bce4e3092d/91633-foreskrift-scb-fs-2025_10_1-sid.pdf",
+   "sha256": "0022358c1865f849bb7319b07f1c7039af9e5e296300b1cd81b21f4935846a17",
+   "pages": 1,
+   "word_recall": 0.963,
+   "word_precision": 0.9931,
+   "character_similarity": 0.9756
+  },
+  {
+   "source": "agency",
+   "url": "https://www.transportstyrelsen.se/TSFS/TSFS%202016_30.pdf",
+   "sha256": "003c655afb02f28b15eb40a9a0c19bb7e9457d433fd72ba510b664d3290f3c85",
+   "pages": 1,
+   "word_recall": 0.9434,
+   "word_precision": 0.9434,
+   "character_similarity": 0.9595
+  },
+  {
+   "source": "agency",
+   "url": "https://skolfs.skolverket.se/api/document/GRUNDFORFATTNING/2023:252/pdf",
+   "sha256": "004b03882c3f0d03909de24bfdebdb8782539a7c8488b176b7059da883517687",
+   "pages": 4,
+   "word_recall": 0.9616,
+   "word_precision": 0.9483,
+   "character_similarity": 0.9857
+  },
+  {
+   "source": "agency",
+   "url": "https://foreskrifter.riksarkivet.se/api/rams/pdf/rams%2FRA-MS%202019-50.pdf",
+   "sha256": "006722a1fc1701812b3a4ae56049fa7afc6cff4f74812857648d9e2e8fcba8d6",
+   "pages": 2,
+   "word_recall": 0.933,
+   "word_precision": 0.9286,
+   "character_similarity": 0.976
+  },
+  {
+   "source": "agency",
+   "url": "https://lagrummet.forsakringskassan.se/download/18.3d0ede8b171aacde18e224b7/1592479765082/pdf_G1998_26.pdf",
+   "sha256": "0086826d757fdb64688429f9faa39b2ea52b4301cdfe66e6b46d5cc3138658e5",
+   "pages": 1,
+   "word_recall": 0.9083,
+   "word_precision": 0.8862,
+   "character_similarity": 0.9934
+  },
+  {
+   "source": "agency",
+   "url": "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=e2ee97832c504f24b2d817eb1573aeed&res=13a1fe86404848598ccfb6eae6dda53b&lr=False&fn=STEMFS%202013_1webb.pdf&elp=portal&elt=t&eloid=e2ee97832c504f24b2d817eb1573aeed",
+   "sha256": "008c4895fcd2376fd4a322bb4d0eb4ac03bd96003eb191d5ef328b2dc9d3a133",
+   "pages": 2,
+   "word_recall": 0.9435,
+   "word_precision": 0.9461,
+   "character_similarity": 0.9929
+  },
+  {
+   "source": "agency",
+   "url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2022-11.pdf",
+   "sha256": "00934f8341343b8f96ea31099977a3e2d5d62f6389069af25665e9391eab7987",
+   "pages": 2,
+   "word_recall": 0.9543,
+   "word_precision": 0.9691,
+   "character_similarity": 0.9782
+  },
+  {
+   "source": "agency",
+   "url": "https://foreskrifter.riksarkivet.se/api/rams/pdf/rams%2FRA-MS%202000-48.pdf",
+   "sha256": "009b124ac5c6554f81037549071a815a60966c823897c46976b93f022fb25a8c",
+   "pages": 1,
+   "word_recall": 0.9655,
+   "word_precision": 0.9608,
+   "character_similarity": 0.9321
+  },
+  {
+   "source": "agency",
+   "url": "https://www.socialstyrelsen.se/contentassets/c815cbad89874f089d2acbf5ab6dfa2f/2008-10-13.pdf",
+   "sha256": "010d4f3f6f8a5524a1eacdfdd1da5fb3fb7d82dcebeadfc561716ce4cb9a6f34",
+   "pages": 4,
+   "word_recall": 0.9338,
+   "word_precision": 0.9136,
+   "character_similarity": 0.9673
+  },
+  {
+   "source": "agency",
+   "url": "https://foreskrifter.riksarkivet.se/api/rams/pdf/rams%2FRA-MS%202007-19.pdf",
+   "sha256": "01222cd8777279b94ab34a6694fa7357ca1e715712ec6bda49a644095c616dfb",
+   "pages": 1,
+   "word_recall": 0.9412,
+   "word_precision": 0.9362,
+   "character_similarity": 0.9524
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.710ed317161746d8052959f/1526069111038/23FS%202007-030%20Lokal%20trafikf%C3%B6reskrift%20om%20hastighetsbegr%C3%A4nsning%20p%C3%A5%20v%C3%A4g%20E%2045%20i%20H%C3%A4rjedalens%20kommun.pdf",
+   "sha256": "00010a1e496424f7c9654e2c0d1cac5c84bda9c846894718acb9990675d1e0a8",
+   "pages": 2,
+   "word_recall": 0.9744,
+   "word_precision": 0.9948,
+   "character_similarity": 0.9972
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.6b32b8ec162bd970d6bd21e/1526068869544/18FS%202004%2057.pdf",
+   "sha256": "00091a6fc6a80de27b0570f37a6cd49fa116f9f57ba5d94eb043016aab8649f4",
+   "pages": 1,
+   "word_recall": 0.9658,
+   "word_precision": 1.0,
+   "character_similarity": 0.9318
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.4e0415ee166afb593241dc0a/1542627687741/10FS%202009-39%20L%C3%A4nsstyrelsens%20i%20Blekinge%20l%C3%A4n%20f%C3%B6reskrift%20med%20lokal%20trafikf%C3%B6reskrift%20om%20hastighetsbegr%C3%A4nsning%20p%C3%A5%20v%C3%A4g%20122.pdf",
+   "sha256": "000a9fc6b22e213d68cd63c4429b72b094139f9433421bf5d66686730dd5faf1",
+   "pages": 1,
+   "word_recall": 0.9815,
+   "word_precision": 0.9636,
+   "character_similarity": 0.9381
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.518491c118529d7e6f7a30d9/1674826359811/2023-5-Naturreservat-Hornborgasj%C3%B6n-Falk%C3%B6ping-Skara.pdf",
+   "sha256": "000ae32319b35a1b59fb92fbb062266b0f8a5cd9e0dedba754fa62780c8d2e09",
+   "pages": 3,
+   "word_recall": 0.9729,
+   "word_precision": 0.8609,
+   "character_similarity": 0.9238
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.6ae610001636c9c68e543a56/1530262878118/grundvattentillg%C3%A5ng%20Kvillsfors%2006FS197712.pdf",
+   "sha256": "000b5a0fbc7ad9db5127c9ebaa9f4d5f7d84910636f21109e95b2aaafe02a310",
+   "pages": 3,
+   "word_recall": 0.9106,
+   "word_precision": 0.9327,
+   "character_similarity": 0.9702
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.5776ebef1633fba4a9746e6/1526478796876/Vattenskyddsomr%C3%A5de%20med%20f%C3%B6reskrifter%20f%C3%B6r%20S%C3%A4by%20vattent%C3%A4kt%20i%20Tran%C3%A5s%20kommun.pdf",
+   "sha256": "000d0d472c7ab24d960e1331218aca92f13c3f4b8c0cbb6f3181ee6f17cdec06",
+   "pages": 1,
+   "word_recall": 0.9238,
+   "word_precision": 0.9238,
+   "character_similarity": 0.9079
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.5776ebef1633fba4a97481a/1526479572130/R%C3%A4ttelse%20av%20gr%C3%A4ns%20f%C3%B6r%20naturreservatet%20Jordanstorp%20i%20J%C3%B6nk%C3%B6pings%20kommun.pdf",
+   "sha256": "001582081469f96b72a45028a4ec536af2481a78db2e5c0e1ed75fb80e85c32b",
+   "pages": 1,
+   "word_recall": 0.951,
+   "word_precision": 0.8818,
+   "character_similarity": 0.9158
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.6b32b8ec162bd970d6bd218/1526068868796/18FS%202004%2051.pdf",
+   "sha256": "001c6c5110841cad71d8b68224afae6930044b107e1cf7ab1fc58814d8ce7a3f",
+   "pages": 3,
+   "word_recall": 0.9631,
+   "word_precision": 0.9819,
+   "character_similarity": 0.9909
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.6b32b8ec162bd970d6bd005/1526068845308/18FS%201999%2078.pdf",
+   "sha256": "0029635fd385d20674e4f0833fefa77c1954b5014a94c9211a5c1eaba72b0760",
+   "pages": 1,
+   "word_recall": 0.9716,
+   "word_precision": 0.9856,
+   "character_similarity": 0.9986
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.6b32b8ec162bd970d6bd02e/1526068845540/18FS%202000%2040.pdf",
+   "sha256": "00354e5a6c4aa95c0683bc0bfba15f038e003361004bd9fa62684bf7d29b4a74",
+   "pages": 1,
+   "word_recall": 0.9744,
+   "word_precision": 0.9948,
+   "character_similarity": 0.9852
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.2e0f9f621636c84402727d94/1528352713537/15-34.pdf",
+   "sha256": "0035b132574daa5baf86274aeb774b2ad03f149314309771b45128188ca27146",
+   "pages": 1,
+   "word_recall": 0.9868,
+   "word_precision": 0.9615,
+   "character_similarity": 0.9703
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.2e0f9f621636c84402727db4/1528352792611/14-29.pdf",
+   "sha256": "0038ca42e56d60a58abd8830da6862b4d48996c965dfd5df150d971f423a3de7",
+   "pages": 4,
+   "word_recall": 0.9508,
+   "word_precision": 0.7436,
+   "character_similarity": 0.8525
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.186a2548185299da53ea569f/1675347281307/2023-7-Vattenskyddsomr%C3%A5de-R%C3%A5da-Lidk%C3%B6ping.pdf",
+   "sha256": "003cfe08583c55d47dc45617798cc2d84d69841bfb201bc0204cba253240c8f5",
+   "pages": 1,
+   "word_recall": 0.9576,
+   "word_precision": 0.9417,
+   "character_similarity": 0.9145
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.5e83a30f169d90292df18010/1556178901822/941%20T900%20fastst%C3%A4llelse%20av%20arbetsplan%20p%C3%A5%20v%C3%A4g%20545%20i%20Pite%C3%A5%20och%20%C3%84lvsbyns%20kommun.pdf",
+   "sha256": "0047f39f9761ab32cdfa873f31f8316385d70269e25085e51d5417bbc6224a4d",
+   "pages": 1,
+   "word_recall": 0.9444,
+   "word_precision": 0.9315,
+   "character_similarity": 0.965
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.2e0f9f621636c844027b71d/1527496291456/09FS-2017-1.pdf",
+   "sha256": "00501587f8fd2ba866ee9daf052c8abc85953f23a51d1697e9574bb7e2c3c1fd",
+   "pages": 2,
+   "word_recall": 0.9691,
+   "word_precision": 0.9559,
+   "character_similarity": 0.9597
+  },
+  {
+   "source": "region",
+   "url": "https://www.lansstyrelsen.se/download/18.6b32b8ec162bd970d6bd194/1526068867375/18FS%202003%2047.pdf",
+   "sha256": "0052d2ba45b548f23a5d269ed6d6b7b7aeb93869a0a500fe7f30bca4d345efae",
+   "pages": 2,
+   "word_recall": 0.9669,
+   "word_precision": 0.985,
+   "character_similarity": 0.988
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/22e4c3a06aac4760a2bb23d2b84afb6d/avtal-om-status-for-tredjestaters-delegationer-och-representanter-vid-nordatlantiska-fordragsorganisationen.pdf",
+   "sha256": "02ad62f4cf169cbec53e10570697f90e64e5b84cbfaf32ec6ede8c15267f1c1d",
+   "pages": 4,
+   "word_recall": 0.9552,
+   "word_precision": 0.9238,
+   "character_similarity": 0.764
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/704e784467b841b6979f6914aaff575d/so-2021-7.pdf",
+   "sha256": "05886b1540e46e271052aa5af885fc18927a9327ce3954703bbf8f5f263e71e9",
+   "pages": 4,
+   "word_recall": 0.9386,
+   "word_precision": 0.91,
+   "character_similarity": 0.655
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/2c841b7cde1a4679b6c1351d4d4cf457/avtal-med-danmark-om-omsesidigt-avstaende-fran-aterbetalning-av-utgifter-for-arbetsloshetsersattning-riga-den-21-april-2015.pdf",
+   "sha256": "090a4bb44644ba46aa40bca554820b07f2a9b86b4d51f4725d254c979196c36a",
+   "pages": 4,
+   "word_recall": 0.9587,
+   "word_precision": 0.9519,
+   "character_similarity": 0.9882
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/3cb93532f8d745e988ce7a6edc446e2a/so-2014-4_web.pdf",
+   "sha256": "0c1b464f7cbe8b7a71ec3b3712799704039a242398876c07200bd2fdd94054d8",
+   "pages": 2,
+   "word_recall": 0.9381,
+   "word_precision": 0.9286,
+   "character_similarity": 0.9847
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/ddbc31f753ba4af1bca7bdb874c2171f/so-201312/",
+   "sha256": "0ea75dfbb4f6da323cfa79ab711cd63595bd400301075b02ccff51c2d0164cea",
+   "pages": 2,
+   "word_recall": 0.9649,
+   "word_precision": 0.9821,
+   "character_similarity": 0.9764
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/4d6dab8f2bf545a8a996e64f934cb4fa/avtal-mellan-konungariket-sveriges-regering-och-folkrepubliken-kinas-regering-om-undantag-fran-viseringskrav-for-flygpersonal-so-20179.pdf",
+   "sha256": "1106724b4ffe506ea0b966b696d570fbe42f65f3f548adc2eeee32a9eb615ed3",
+   "pages": 3,
+   "word_recall": 0.9654,
+   "word_precision": 0.9439,
+   "character_similarity": 0.7295
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/49f8f98db16c4a889e99da5276614697/tillaggsavtal-till-overenskommelsen-mellan-sverige-och-danmark-so-20218-om-granstullsamarbete-betraffande-oresundsforbindelsen-so-2021-9.pdf",
+   "sha256": "12a87562937cea76855d158cbf35942fefdd66fb6020aeac234bcbeace0c655c",
+   "pages": 4,
+   "word_recall": 0.9093,
+   "word_precision": 0.88,
+   "character_similarity": 0.6453
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/64317c885bad4242a8de4c8258964205/protokoll-mellan-konungariket-sverige-och-schweiziska-edsforbundet-om-andring-i-avtalet-av-den-7-maj-1965-so-19668-for-undvikande-av-dubbelbeskattning-betraffande-skatter-a-inkomst-och-formogenhet-so-202011.pdf",
+   "sha256": "12cb2967f7d956e37b8b6a632c41286b9d9087aa19f1eec5f35c0246f598f3e2",
+   "pages": 4,
+   "word_recall": 0.9381,
+   "word_precision": 0.9062,
+   "character_similarity": 0.6379
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/e7eb50a2c8ce4bed90ebf2deb43b0643/overenskommelse-med-kiribati-om-upprattande-av-diplomatiska-forbindelser-so-201256/",
+   "sha256": "1768752be7d5cf897df2241ee5c7f4d7ab662dd861abc2db4f6966336786ad91",
+   "pages": 2,
+   "word_recall": 0.9737,
+   "word_precision": 0.9737,
+   "character_similarity": 0.9842
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/cdb96c06bf254925a5de6d6dbc47fba6/so-201533/",
+   "sha256": "1ab0f689e513958a6449e309e3165e31f3713ae3a60c02bb39019d1328915f51",
+   "pages": 2,
+   "word_recall": 0.9565,
+   "word_precision": 0.9565,
+   "character_similarity": 0.9801
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/2b299b5789c141d1a2d469d1993a018b/overenskommelse-med-nauru-om-upprattande-av-diplomatiska-forbindelser-so-201257/",
+   "sha256": "1e37a520dd50c246db543f89a0d7009bd8bcba7e2b9eb0f799b73425e9a7d761",
+   "pages": 2,
+   "word_recall": 0.9737,
+   "word_precision": 0.9737,
+   "character_similarity": 0.984
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/0d0ecbf6dc184632acb6fd278c29566f/avtal-med-rumanien-om-andring-av-avtal-om-samarbete-inom-energi--och-miljoomradet-den-16-december-2008-so-200959/",
+   "sha256": "2030ab8f7e59e5f4bf1cd7e1f9fea48d4488c1c87314831bca69a94292bdf999",
+   "pages": 2,
+   "word_recall": 0.9573,
+   "word_precision": 0.9333,
+   "character_similarity": 0.9968
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/3036e8696f174a01b649cf078c99daf8/samforstandsavtal-med-kina-om-samarbete-inom-kulturomradet-stockholm-den-17-augusti-2015.pdf",
+   "sha256": "22fafc168b06ca0f77318b9ba640cec2bcb821042ab1d206d62aa254dc5cc143",
+   "pages": 4,
+   "word_recall": 0.9589,
+   "word_precision": 0.9277,
+   "character_similarity": 0.7395
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/7cb062a7cd9b426db6adb2b1a1f2bb00/so-202017-avtal-mellan-konungariket-sverige-och-slovakiska-republiken-om-uppsagning-av-overenskommelsen-av-den-13-november-1990-so-199142-om-framjande-och-omsesidigt-skydd-av-investeringar/",
+   "sha256": "392e1149eba8692215f37c9b693deec7acbfe1ca508fbb45031f51d4cef32360",
+   "pages": 1,
+   "word_recall": 0.974,
+   "word_precision": 1.0,
+   "character_similarity": 0.9815
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/25a0ff9d53c449a2b0e63ceb8e55213d/atertagande-av-forklaring-och-avgivande-av-tillaggsforklaring-till-fn-konventionen-angaende-avtal-om-internationella-kop-av-varor-av-den-11-april-1980-so-198787-201253/",
+   "sha256": "3b49681fc1f82af3197114457c8f2c6f39042301d0ba87ff9cdcc2b6c5c42c03",
+   "pages": 2,
+   "word_recall": 0.9765,
+   "word_precision": 0.9595,
+   "character_similarity": 0.9989
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/e628391472d04451a539cb1bf21f2e83/avtal-med-ukraina-om-utvecklingssamarbete-kiev-den-11-mars-2015.pdf",
+   "sha256": "4545c9d7e27527e39d012d97adb2f5000d137b7b2abb5462cb95137b8039719f",
+   "pages": 4,
+   "word_recall": 0.9653,
+   "word_precision": 0.9408,
+   "character_similarity": 0.6674
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/9de3718c18c0443085cd87f1990713a0/nr-22-24-med-amerikas-forenta-stater-den-16-juli-1987-so-198744-om-principerna-for-omsesidigt-samarbete-inom-forsvarsupphandlingsomradet/",
+   "sha256": "57935db82b8cf1098859e23cfcbdb372a628dd02fda582e5e45b7c51b1af7cfd",
+   "pages": 2,
+   "word_recall": 0.9777,
+   "word_precision": 0.9704,
+   "character_similarity": 0.9998
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/163624f1917e4020895edcd34ad20b28/avtal-mellan-sveriges-regering-och-ungerns-regering-om-uppsagning-av-overenskommelsen-av-den-21-april-1987-so-198779-om-framjande-och-omsesidigt-skydd-av-investeringar-so-202113/",
+   "sha256": "63120c8435d1c012210067db0eae86565401f97dfbf095253dcff62e5b9bfdfc",
+   "pages": 1,
+   "word_recall": 0.961,
+   "word_precision": 0.961,
+   "character_similarity": 0.9793
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/5473334eecc84f6dac6f28ad992223d1/so-2016-6.pdf",
+   "sha256": "70a94e48928447c4455cbbffad0f7c4d9d897c4022a33e99c43df42a4507a2fd",
+   "pages": 4,
+   "word_recall": 0.9509,
+   "word_precision": 0.921,
+   "character_similarity": 0.7058
+  },
+  {
+   "source": "treaty",
+   "url": "https://www.regeringen.se/contentassets/556da11ad83a49e28baf0b64d7d67ecf/samforstandsavtal-med-kina-om-samarbete-inom-kulturomradet/",
+   "sha256": "7493b6b7b1e0e2077eb76e7391e48ce4b561d92b55a332c5b7cbd0a6d804a504",
+   "pages": 4,
+   "word_recall": 0.9697,
+   "word_precision": 0.9467,
+   "character_similarity": 0.852
+  }
+ ]
+}
