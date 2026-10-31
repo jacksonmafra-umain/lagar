@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from lagar import frontmatter, pdftext, schema, treaties
+from lagar import frontmatter, ocr, pdftext, schema, treaties
 from lagar.http import Blocked
 
 from tests.test_eu import FakeClient
@@ -131,12 +131,51 @@ class RunTest(unittest.TestCase):
 
     def test_scanned_pdf_is_a_text_gap(self):
         with mock.patch.object(treaties.pdftext, "extract", return_value=extracted("", pdftext.NO_TEXT_LAYER)):
-            summary = treaties.run(client(), self.args("--url", PAGE_URL))
+            summary = treaties.run(client(), self.args("--url", PAGE_URL, "--no-ocr"))
         self.assertEqual(summary.text_gaps, ["SÖ 2023:3"])
         entry = json.loads(self.manifest.read_text())["entries"][0]
         self.assertEqual(entry["pdfs"][0]["text"], pdftext.NO_TEXT_LAYER)
         _, body = self.load("SÖ 2023:3")
         self.assertIn(PDF_URL, body)
+
+    def run_with_ocr(self, gap, recognised):
+        with mock.patch.object(treaties.pdftext, "extract", return_value=extracted("", gap)), \
+                mock.patch.object(treaties.ocr, "available", return_value=True), \
+                mock.patch.object(treaties.ocr, "extract", return_value=recognised) as read:
+            summary = treaties.run(client(), self.args("--url", PAGE_URL))
+        return summary, read
+
+    def test_scanned_pdf_is_read_by_ocr(self):
+        summary, read = self.run_with_ocr(pdftext.NO_TEXT_LAYER, extracted())
+        read.assert_called_once_with(PDF)
+        self.assertEqual(summary.text_gaps, [])
+        meta, body = self.load("SÖ 2023:3")
+        self.assertEqual(schema.validate(meta), [])
+        self.assertEqual(meta["text_source"], "ocr")
+        self.assertIn(treaties.OCR_NOTE + "\n\nSveriges internationella överenskommelser", body)
+        self.assertIn("Parterna ska skydda", body)
+        entry = json.loads(self.manifest.read_text())["entries"][0]
+        self.assertEqual(entry["pdfs"][0]["text"], "ocr")
+
+    def test_unreadable_text_layer_is_read_by_ocr(self):
+        self.run_with_ocr(pdftext.UNREADABLE_TEXT, extracted())
+        self.assertEqual(self.load("SÖ 2023:3")[0]["text_source"], "ocr")
+
+    def test_low_confidence_ocr_stays_a_gap(self):
+        summary, _ = self.run_with_ocr(pdftext.NO_TEXT_LAYER, extracted(TEXT, ocr.LOW_CONFIDENCE))
+        self.assertEqual(summary.text_gaps, ["SÖ 2023:3"])
+        meta, body = self.load("SÖ 2023:3")
+        self.assertNotIn("text_source", meta)
+        self.assertNotIn("Parterna ska skydda", body)
+        self.assertEqual(json.loads(self.manifest.read_text())["entries"][0]["pdfs"][0]["text"], ocr.LOW_CONFIDENCE)
+
+    def test_text_layer_is_never_replaced_by_ocr(self):
+        with mock.patch.object(treaties.pdftext, "extract", return_value=extracted()), \
+                mock.patch.object(treaties.ocr, "available", return_value=True), \
+                mock.patch.object(treaties.ocr, "extract") as read:
+            treaties.run(client(), self.args("--url", PAGE_URL))
+        read.assert_not_called()
+        self.assertNotIn("text_source", self.load("SÖ 2023:3")[0])
 
     def test_year_range_and_text_year(self):
         with mock.patch.object(treaties.pdftext, "extract", return_value=extracted()) as extract:
