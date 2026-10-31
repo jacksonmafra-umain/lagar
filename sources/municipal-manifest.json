@@ -13363,6 +13363,7 @@
       "municipality_code": "0821",
       "retrieved_at": "2026-10-30T13:50:20Z",
       "sha256": "c34a709c45b6f9f83a1f8f6667f7b9e5c0c3e23ffde97fdf7a334ef61d7c0817",
+      "text": "pdf",
       "url": "https://hogsby.se/wp-content/uploads/Avgifter_foer_kopiering_vid_ut_94876.pdf"
     },
     {
@@ -13372,6 +13373,7 @@
       "municipality_code": "0821",
       "retrieved_at": "2026-10-30T13:50:24Z",
       "sha256": "f6b7fc093b4fcfd0afd25eeeda99a9c4d42018bfc08cdd300c19416563cb8674",
+      "text": "pdf",
       "url": "https://hogsby.se/wp-content/uploads/Avtallsfoereskrifter__250593.pdf"
     },
     {
@@ -13381,6 +13383,7 @@
       "municipality_code": "0821",
       "retrieved_at": "2026-10-30T13:50:23Z",
       "sha256": "bb54ad165aa58f4b3a7399c8435ea9ae30c39bf154c55ea0383e02cfafe3aa6c",
+      "text": "pdf",
       "url": "https://hogsby.se/wp-content/uploads/Foereskrifter_foer_torghandel__167315.pdf"
     },
     {
@@ -13390,6 +13393,7 @@
       "municipality_code": "0821",
       "retrieved_at": "2026-10-30T13:50:21Z",
       "sha256": "018153c634c21ca74ef88b037aaaaf0eaa89ec548bfb390425a4856a9344874c",
+      "text": "pdf",
       "url": "https://hogsby.se/wp-content/uploads/Lokala_haelsofoereskrifter_94933.pdf"
     },
     {
@@ -13399,6 +13403,7 @@
       "municipality_code": "0821",
       "retrieved_at": "2026-10-30T13:50:22Z",
       "sha256": "e1982dd28d0a90be618438b48d95835e7f3010b06dc41d89b1724eca9e0d8ef5",
+      "text": "pdf",
       "url": "https://hogsby.se/wp-content/uploads/Lokala_ordningsfoereskrifter_94879.pdf"
     },
     {
@@ -13408,6 +13413,7 @@
       "municipality_code": "0834",
       "retrieved_at": "2026-10-30T20:51:45Z",
       "sha256": "b215e8aa004a419004eb518f1574bcda15bbd50866c2e2c95bf68ea3aa62293b",
+      "text": "ocr",
       "url": "https://www.torsas.se/wp-content/uploads/abva-2009-1.pdf"
     },
     {
@@ -13417,6 +13423,7 @@
       "municipality_code": "0834",
       "retrieved_at": "2026-10-30T20:51:49Z",
       "sha256": "17dea252e72cbd65ede152c92087f344b4b96a847f7ef6c2bcea5df727f4b386",
+      "text": "pdf",
       "url": "https://www.torsas.se/wp-content/uploads/allmanna_lokala_ordningsforeskrifter_2010-1.pdf"
     },
     {
@@ -13426,6 +13433,7 @@
       "municipality_code": "0834",
       "retrieved_at": "2026-10-30T20:51:46Z",
       "sha256": "dedf714caaadc2d4ef01dba334ee703c0d79f20c90df04920b28020aee0c0c38",
+      "text": "pdf",
       "url": "https://www.torsas.se/wp-content/uploads/Lokala-halsoskyddsforeskrifter-Antagen-KF-251215.pdf"
     },
     {
@@ -13435,6 +13443,7 @@
       "municipality_code": "0834",
       "retrieved_at": "2026-10-30T20:51:47Z",
       "sha256": "20f2ea0e98260e2aed774b4bfd42d04871b9825bdcc3e7a1d5e7a9ba42abec29",
+      "text": "pdf",
       "url": "https://www.torsas.se/wp-content/uploads/lokala_ordningsforeskrifter_torghandel-1.pdf"
     },
     {
@@ -13444,6 +13453,7 @@
       "municipality_code": "0840",
       "retrieved_at": "2026-10-30T13:50:31Z",
       "sha256": "211387c7806d552c12f3749e58f504ae7cda9c6a7bc357713487ed9186b57a8e",
+      "text": "pdf",
       "url": "https://www.morbylanga.se/wp-content/uploads/2024/12/foreskrifter-for-strandskogen-rohalla-vattenskyddsomrade.pdf"
     },
     {
@@ -13453,6 +13463,7 @@
       "municipality_code": "0840",
       "retrieved_at": "2026-10-30T13:50:28Z",
       "sha256": "ce82a429fc1a60b3392889879b66a7d8135bf1836e9fe0499ccf59dd4cb41fbf",
+      "text": "pdf",
       "url": "https://www.morbylanga.se/wp-content/uploads/2026/01/taxa-for-allmanna-vattentjanster-antagen-av-kommunfullmaktige-251117-153pub.pdf"
     },
     {
@@ -13462,6 +13473,7 @@
       "municipality_code": "0840",
       "retrieved_at": "2026-10-30T13:50:30Z",
       "sha256": "1790fd8334ef554576cd44bd40577d8d062bc547a8c3f58f194e42427b53cbb8",
+      "text": "pdf",
       "url": "https://www.morbylanga.se/wp-content/uploads/2023/05/vattenskyddsomrade-gronhogen-sodramockleby-segerstad-triberga.pdf"
     },
     {
@@ -13471,6 +13483,7 @@
       "municipality_code": "0840",
       "retrieved_at": "2026-10-30T13:50:29Z",
       "sha256": "4763b3b8d439325b5116cc82ad4d49e69274874356db73256d0cb37f89168021",
+      "text": "pdf",
       "url": "https://www.morbylanga.se/wp-content/uploads/2023/05/vattenskyddsomrade-med-foreskrifter-for-gardby-1.pdf"
     },
     {
@@ -13480,6 +13493,7 @@
       "municipality_code": "0860",
       "retrieved_at": "2026-10-30T15:22:53Z",
       "sha256": "2ef480d12b656688432b209fa3d60ff536a0d2743102a96ae61bc871887b33ef",
+      "text": "pdf",
       "url": "https://www.hultsfred.se/files/2024/12/ABVA-Hultsfred-2021-06-21.pdf"
     },
     {
@@ -13489,6 +13503,7 @@
       "municipality_code": "0860",
       "retrieved_at": "2026-10-30T15:22:55Z",
       "sha256": "ad48ab0cecfcbe79b1d075feb471cf64ca4a780ce1c37e7295f7511b419c977f",
+      "text": "pdf",
       "url": "https://www.hultsfred.se/files/2017/06/Avgifter-for-kopior-vid-utlamnande-av-allman-handling.pdf"
     },
     {
@@ -13498,6 +13513,7 @@
       "municipality_code": "0860",
       "retrieved_at": "2026-10-30T15:22:57Z",
       "sha256": "00cc9e7e5e9fdcc149eb8c65940b61d36b214faf5f3ac39a0ee1c2871447cfdc",
+      "text": "pdf",
       "url": "https://www.hultsfred.se/files/2023/05/Lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon-KF-%C2%A7-86_2016.pdf"
     },
     {
@@ -13507,6 +13523,7 @@
       "municipality_code": "0860",
       "retrieved_at": "2026-10-30T15:23:00Z",
       "sha256": "3adb3b7b724febcaa4c66c4cc0be1c76f678f1a31f12f2b9ff8de157c83c9785",
+      "text": "pdf",
       "url": "https://www.hultsfred.se/files/2025/04/Lokala_-ordningsforeskrifter_Hultsfreds_kommun_20250519.pdf"
     },
     {
@@ -13516,6 +13533,7 @@
       "municipality_code": "0860",
       "retrieved_at": "2026-10-30T15:23:02Z",
       "sha256": "5a26cb7777a2c8076b1eca4015ad9cc3c141c68f5ff6b4ffd80c6df6fa332692",
+      "text": "pdf",
       "url": "https://www.hultsfred.se/files/2024/12/Foreskrifter-nyttjande-allman-platsmark.pdf"
     },
     {
@@ -13525,6 +13543,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:42Z",
       "sha256": "fe04314a5629683244f8ab5602890d3a72f192c9f379fea4fff6c3e21505e33e",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.111d400a1977e8b5ced4cd1/1751279274744/Delegationsbeslut%20och%20f%C3%B6reskrift%20g%C3%A4llande%20eldningsf%C3%B6rbud%20i%20Emmaboda%20kommun%202025.pdf"
     },
     {
@@ -13534,6 +13553,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:43Z",
       "sha256": "debd064d11e835422779ad607c92f1e450cedc7af1f9b6e09e74caf088b8c59b",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.27c3c27c19b286fa75e116e/1775036354991/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n.pdf"
     },
     {
@@ -13543,6 +13563,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:41Z",
       "sha256": "54d0442fc0f98a2d25c10cc340cfe6d1cb856f0035062f94e9a485653918f4b6",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.30712bb319a97c1a15a2a02/1764691253800/Taxor%20och%20avgifter%20bildningsn%C3%A4mnden%202026.pdf"
     },
     {
@@ -13552,6 +13573,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:45Z",
       "sha256": "9134ea2e2f439629e3d507ef49b0ab5416636ba4e4725569c888db92e858317c",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.38c977dc19a076161ab1224/1762184758366/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandel%20i%20Emmaboda%20-%202025-04-28.pdf"
     },
     {
@@ -13561,6 +13583,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:39Z",
       "sha256": "4d3af0b9d4a480b7f245a68e540db7b415cf8f4e57a3b7dbaf5755b728c2a061",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.3c018f6b19ba29b0577ce/1767975794500/Socialn%C3%A4mndens%20taxor%20och%20avgifter%202026.pdf"
     },
     {
@@ -13570,6 +13593,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:38Z",
       "sha256": "b6a8b6e5a8f2c9a6af4b5759d82078cd853846251354a4d5332117405c96560f",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.418e5cb5190bc1caf5ca5f7/1724145689969/Plan-%20och%20bygglovstaxa.pdf"
     },
     {
@@ -13579,6 +13603,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:44Z",
       "sha256": "e207a553480d54ccda4a5dcdbc251293a5bb2027655f305311ec3eab71b54c3b",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.706319d31766726e9003670/1608649112736/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Emmaboda%20kommun.pdf"
     },
     {
@@ -13588,6 +13613,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:37Z",
       "sha256": "366e493509161b2f65855c1016713ede3165094a508e35ebfa9b325e726837e4",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.76c77b5019e40cea8431775/1780415077949/Avgifter%20f%C3%B6r%20kommunens%20arbete%20enligt%20alkohollagen,%20lag%20om%20tobak%20och%20liknande%20produkter,%20lag%20om%20tobaksfria%20nikotinprodukter%20och%20lag%20om%20handel%20med%20vissa%20receptfria%20l%C3%A4kemedel%20f%C3%B6r%20%C3%A5r%202026.pdf"
     },
     {
@@ -13597,6 +13623,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:40Z",
       "sha256": "15be245d221aaa7efca0ed0209c937a5495e9955631a19ea8947d16ec5ca568c",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.76c77b5019e40cea8431de/1779285342003/Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20inom%20milj%C3%B6balkens%20m.fl.%20omr%C3%A5de.pdf"
     },
     {
@@ -13606,6 +13633,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:46Z",
       "sha256": "4e4889607de680643b7d9552e782a4668f0c1a3a3a5d3b327baea02222eec194",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.78042a59181ab0b1420bd0/1656630947173/ABVA%20-%20Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndandet%20av%20Emmaboda%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggningar.pdf"
     },
     {
@@ -13615,6 +13643,7 @@
       "municipality_code": "0862",
       "retrieved_at": "2026-10-30T13:50:36Z",
       "sha256": "e8f381c0970afebf37ba9f8b5f7207c23b65568845baaa5ec9b2ccf965476bd1",
+      "text": "pdf",
       "url": "https://www.emmaboda.se/download/18.7eec88d11670cbf3cdf39561/1544603636571/Allm%C3%A4n%20handling%20taxa.pdf"
     },
     {
@@ -13624,6 +13653,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:53Z",
       "sha256": "864a1e866c264184a279f499e379d5ed9679568e6e4907dfbf56f12b0222bf18",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.1c05c4b319e023ea9f217041/1778678241049/Hamntaxa%202026.PDF"
     },
     {
@@ -13633,6 +13663,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:11Z",
       "sha256": "ac26d6fab57f2fef4cd31cdc75298c6015a62bac4a764780fd2b567694b21700",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.1c8e963b193dedcadf149a3c/1737021707190/Taxor%20R%C3%A4ddningstj%C3%A4nst%20Sydost%20tillsyn%20skydd%20mot%20olyckor%20och%20tillst%C3%A5nd%20enligt%20lagen%20om%20brandfarliga%20och%20explosiva%20varor.pdf"
     },
     {
@@ -13642,6 +13673,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:04Z",
       "sha256": "b153743a4017004cf36b8f535e05cb6f8d7fab553da00b737e89d82140e70e37",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.1c8e963b193dedcadf149a41/1737021707439/Taxa%20f%C3%B6r%20parkering.pdf"
     },
     {
@@ -13651,6 +13683,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:02Z",
       "sha256": "28818215f3ba44b378ce2ce8afa4acc4838c1e5d5578f0e31a944b340e60e7c9",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.1c8e963b193dedcadf149a43/1737021707517/Taxa%20f%C3%B6r%20odlingslotter.pdf"
     },
     {
@@ -13660,6 +13693,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:01Z",
       "sha256": "25e74febe48b55b96908bb2b942cfaac65d43ce53aa16a4f08b0d9abb2be475b",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.1c8e963b193dedcadf149a44/1737021707542/Taxa%20f%C3%B6r%20b%C3%A5tplatser%20och%20uppst%C3%A4llningsplatser.pdf"
     },
     {
@@ -13669,6 +13703,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:56Z",
       "sha256": "fb7ec180ca1a8364d1f10745697582a87d38a2b742fc61ff20d757e0764bfd7f",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.1c8e963b193dedcadf149a49/1737021707829/Maxtaxa%20f%C3%B6r%20f%C3%B6rskola,%20fritidshem%20och%20pedagogisk%20omsorg.pdf"
     },
     {
@@ -13678,6 +13713,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:52Z",
       "sha256": "9dedf78cd5f4abb233ec27ad347b9f40241bbe6251f087094123c1a8b71276a3",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.1c8e963b193dedcadf149a4e/1737021708059/Felparkeringsavgiftens%20storlek.pdf"
     },
     {
@@ -13687,6 +13723,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:50Z",
       "sha256": "9edeefda4a937428610b9115c27afe3ff4d0425abfd629fa52d0e614a0a4c532",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.1c8e963b193dedcadf149a50/1737021708123/Avgifter%20f%C3%B6r%20privata%20bryggor.pdf"
     },
     {
@@ -13696,6 +13733,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:49Z",
       "sha256": "17fc5bb6fe4af00f1e7ab02a64659cf4c43bc1f2ea90f30aeab23a251f5b1887",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.1c8e963b193dedcadf149a51/1737021708145/Avgifter%20f%C3%B6r%20kopior%20av%20allm%C3%A4nna%20handlingar.pdf"
     },
     {
@@ -13705,6 +13743,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:27Z",
       "sha256": "a0790e1d5f2229d71d7c1c7194705a82aa4103fd103706ec5d7329a5670fd5ec",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.2d1483619ed4315bb556c71/1784184345474/Lokala%20ordningsf%C3%B6reskrifter%20Kalmar%20kommun.pdf"
     },
     {
@@ -13714,6 +13753,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:19Z",
       "sha256": "88a9a0d852c1cca4073a063ed497589e9ca0818b724762fa4c7e403ce5bcfebf",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.337d6d69195b250fc61232fe/1743490891783/F%C3%B6reskrifter%20f%C3%B6r%20markarbeten%20Kalmar%20kommun.pdf"
     },
     {
@@ -13723,6 +13763,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:09Z",
       "sha256": "d1b5659e1743f3268818e685150346583210e3e53563d25bab2bb58114948f0c",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.337d6d69195b250fc6123370/1743491832839/Taxor%20f%C3%B6r%20schakt-%20och%20%C3%A5terst%C3%A4llningsarbeten.pdf"
     },
     {
@@ -13732,6 +13773,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:00Z",
       "sha256": "bf499614566a1ceeaee140c90315b54e85bdd387e37ec362dafb957715bda170",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.337d6d69195b250fc61233b1/1743492498491/Taxa%20f%C3%B6r%20anm%C3%A4lan%20av%20gr%C3%A4vtillst%C3%A5nd.pdf"
     },
     {
@@ -13741,6 +13783,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:25Z",
       "sha256": "be91bb2418244b471fb4ab636f958b6cbd6b9109c5f16db5e965c4ad67136614",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.395aa1ce193decdc8c649662/1737024522495/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandeln.pdf"
     },
     {
@@ -13750,6 +13793,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:21Z",
       "sha256": "36f5cf70a3a5bac82306b85404ca10e211de5bdb48d7019d666a13b31fb66c64",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.395aa1ce193decdc8c649664/1737024522632/F%C3%B6reskrifter%20om%20renh%C3%A5llning%20p%C3%A5%20g%C3%A5ngbanor.pdf"
     },
     {
@@ -13759,6 +13803,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:18Z",
       "sha256": "d7fdb721d324f3433d50e3aa63df7728b06d41ea33814a43cff2d0643fa2216f",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.395aa1ce193decdc8c6498ff/1737029450471/Allm%C3%A4nna%20best%C3%A4mmelser%20idrottsanl%C3%A4ggningar.pdf"
     },
     {
@@ -13768,6 +13813,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:17Z",
       "sha256": "11b14b0512c0da7847ad489454f3a581c9216567355a99ec072d9b9a96f96661",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.395aa1ce193decdc8c649d0f/1737037163291/Regler%20f%C3%B6r%20nyttoparkeringstillst%C3%A5nd.pdf"
     },
     {
@@ -13777,6 +13823,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:16Z",
       "sha256": "e3a25bea27cc576096af7cde1db06e2afe549a89e8c7eb3353054ed040e3431a",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.395aa1ce193decdc8c649d11/1737037163370/Regelverk%20boendeparkering.pdf"
     },
     {
@@ -13786,6 +13833,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:16Z",
       "sha256": "c329c3e0bc94231533f6901006d80e42bb16389f7caf3b56209415ae445c1f1a",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.395aa1ce193decdc8c649d12/1737037163393/Parkerings%C3%B6vervakningsomr%C3%A5den%20i%20Kalmar%20kommun.pdf"
     },
     {
@@ -13795,6 +13843,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:14Z",
       "sha256": "354b6d3fb7e43bbd25b26fa8796fd1122ea094cc117780fea3a609b58bf8c113",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.395aa1ce193decdc8c649d13/1737037163776/Kalmar%20Vatten%20Allm%C3%A4nna%20best%C3%A4mmelser.PDF"
     },
     {
@@ -13804,6 +13853,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:13Z",
       "sha256": "9a83c88b87d60b2b80e1eafdc6ea35c58dd7ce7e6050ed4772b44950e9473f9a",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.395aa1ce193decdc8c649d14/1737037163875/ABVA%20till%C3%A4ggsbest%C3%A4mmelser.pdf"
     },
     {
@@ -13813,6 +13863,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:51Z",
       "sha256": "cc5efdc4b89c4b8ba45a9307c584c6f77d3149f971b430ba294b705376ccaeea",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.3d57a6be197ed9927c1382d/1752137607476/Avgifter%20och%20ers%C3%A4ttningar%20inom%20socialf%C3%B6rvaltningen%20-%20250701.pdf"
     },
     {
@@ -13822,6 +13873,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:24Z",
       "sha256": "1acb2f076e069b3748caf6beb2a5ece7c6ddf1033457373be11854bcfa7df5c8",
+      "text": "ocr",
       "url": "https://kalmar.se/download/18.4ba3509619afcba58fafb90/1765541201170/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n%20enligt%20milj%C3%B6balken%20f%C3%B6r%20Kalmar%20kommun.pdf"
     },
     {
@@ -13831,6 +13883,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:59Z",
       "sha256": "48f8bbaf5a76f0c53e8dda171da22d9a8a27dccd4b5ab4549f4140c96fab6bf2",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.56da6b9a19a7bbd838036c07/1764315935343/Taxa%20enligt%20lagen%20om%20%C3%A5tg%C3%A4rder%20mot%20f%C3%B6roreningar%20fr%C3%A5n%20fartyg.PDF"
     },
     {
@@ -13840,6 +13893,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:05Z",
       "sha256": "aac68869f088b327721f1c77e1f9489f378430633df49ffd940cd740971d38e1",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.56da6b9a19a7bbd838036c08/1764315935377/Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20inom%20milj%C3%B6balkens%20omr%C3%A5de.PDF"
     },
     {
@@ -13849,6 +13903,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:06Z",
       "sha256": "4809e33bbfe35f5a5fb1f9b1e09634539489b803e4efd512867869b02e05ede0",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.56da6b9a19a7bbd838036c09/1764315935425/Taxa%20f%C3%B6r%20tillsyn%20enligt%20str%C3%A5lskyddslagen.PDF"
     },
     {
@@ -13858,6 +13913,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:03Z",
       "sha256": "22bdddcfcf0b627a50fb152d71f49621203c9b3cdc0a400d343345603acb700c",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.56da6b9a19a7bbd838036c0a/1764315935456/Taxa%20f%C3%B6r%20offentlig%20kontroll%20inom%20livsmedelslagstiftningen.PDF"
     },
     {
@@ -13867,6 +13923,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:58Z",
       "sha256": "c282b1e3a784e12d12ee5cfc62d6572eb7bb85dea66eaaeb1e1517c9668bdfbe",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.56da6b9a19a7bbd838036c0c/1764315935588/Taxa%20enligt%20lagen%20om%20skydd%20mot%20internationella%20hot%20mot%20m%C3%A4nniskors%20h%C3%A4lsa.PDF"
     },
     {
@@ -13876,6 +13933,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:22Z",
       "sha256": "8d5cfcc940eada27bedde77823399ea68b24174f2618b3cce354a462493d9e7b",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.61c4e79d19bb778797b9eab/1768553195728/Hamnordning%20f%C3%B6r%20Kalmar%20kommun.pdf"
     },
     {
@@ -13885,6 +13943,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:08Z",
       "sha256": "deec6f739899659004964a05699661eb341d92fd54cb81ea35e98ae2ca64c6d8",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.6431d2ec19c985ed6a512868/1772635978797/Taxor%20f%C3%B6r%20plan-%20och%20bygglov%20samt%20m%C3%A4t-%20och%20karttaxa.pdf"
     },
     {
@@ -13894,6 +13953,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:10Z",
       "sha256": "301be795fa209235748f21b6d71317d826f227f42b9d0117bb71fddd44258c51",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.687f7fa219b2c03a0a419dec/1766403898216/Taxor%20och%20avgifter%20f%C3%B6r%20uppl%C3%A5telse%20av%20offentliga%20platser.pdf"
     },
     {
@@ -13903,6 +13963,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:07Z",
       "sha256": "d7097a506bd4ea6ece199dbca8d858d134daa4091dd6534dc0d159f058663aad",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.687f7fa219b2c03a0a419df7/1766403971688/Taxa%20f%C3%B6r%20trafikanordningsplaner.pdf"
     },
     {
@@ -13912,6 +13973,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:55Z",
       "sha256": "ab111aa7d381f7982f0cc10b250b308c04079cca446df8ecfa5538d9b62d8ef6",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.687f7fa219b2c03a0a49c245/1769067127611/Kultur-%20och%20fritidsn%C3%A4mndens%20taxor%20och%20avgifter.pdf"
     },
     {
@@ -13921,6 +13983,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:12Z",
       "sha256": "d48793458c0ac72788bf85bf534f5c86cf836ab5a98bf6163c874ebd8257c5be",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.687f7fa219b2c03a0a4c655c/1770019920654/VA-taxa%202026.pdf"
     },
     {
@@ -13930,6 +13993,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:21Z",
       "sha256": "43aad983080f09e90b35d0c717dba7183f6528b0e3a4d7b74de7b39db62aa302",
+      "text": "ocr",
       "url": "https://kalmar.se/download/18.72c7321c19b2bd189686b9f0/1767883621517/F%C3%B6reskrifter%20om%20avfallshantering.pdf"
     },
     {
@@ -13939,6 +14003,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:54Z",
       "sha256": "028f0c7a515f4839f6e895bb51b362439997f74a043174e3f525db6786cffb15",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.72c7321c19b2bd189686b9f1/1767883651669/Kretslopp%20Sydost%20Taxa%202026.pdf"
     },
     {
@@ -13948,6 +14013,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:50:57Z",
       "sha256": "d0373dd4782407bc3c0f1be34bd7d11c139e2283de428afb2372a25ad4025686",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.72c7321c19b2bd1896887da9/1768470245549/Omsorgsavgifter%202026.pdf"
     },
     {
@@ -13957,6 +14023,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:27Z",
       "sha256": "40add1eebaf4e6de23805e9ff600cf0c59624d20b4d97a77b0154804d0a40e50",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.746105541946947a96016234/1737636932013/Regler%20f%C3%B6r%20jakt%20p%C3%A5%20kommunal%20mark.pdf"
     },
     {
@@ -13966,6 +14033,7 @@
       "municipality_code": "0880",
       "retrieved_at": "2026-10-30T13:51:28Z",
       "sha256": "be148956c5ca181fe8b4d650ff10c50478b4f1caf826a55955199830ab131934",
+      "text": "pdf",
       "url": "https://kalmar.se/download/18.769d6b0c19e02303241104e4/1778496087320/Stens%C3%B6%20naturreservat,%20f%C3%B6reskrifter%20och%20sk%C3%B6tselplan%20.pdf"
     },
     {
@@ -13975,6 +14043,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:13Z",
       "sha256": "29d6a8a4f25204a6a2a35623a2ac1d23688670724bff322d75fa29bf57369c42",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/01/Avgift-for-foraldrautbildning-infor-adoption.pdf"
     },
     {
@@ -13984,6 +14053,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:06Z",
       "sha256": "d4c8542fc56db8b6efc5ccf1df8fec672096fabb1307b4fe89d4288c6d008945",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2026/01/Avgifter-inom-Omsorgsnamndens-ansvarsomrade-2026.pdf"
     },
     {
@@ -13993,6 +14063,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:07Z",
       "sha256": "b57a54a479891d6f282df1372dd409a8881a5a8e461319ed6fe574260cb52721",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Avgifter-och-taxor-Funktionsstod-2026.pdf"
     },
     {
@@ -14002,6 +14073,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T13:59:56Z",
       "sha256": "780328a62480a0e6465f9a92c4927949052e3df3b5a9ab0d0e09dd9b7366c484",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2026/08/Barnomsorgstaxa-fran-20260701_3.pdf"
     },
     {
@@ -14011,6 +14083,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:12Z",
       "sha256": "1ca04723fc4c04ffc18a111f62fdbed6897ad5f472f35f3f14155e1787167398",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/01/Egenavgift-for-uppehalle-vid-vard-i-HVB-eller-familjehem-till-foljd-av-missbruk.pdf"
     },
     {
@@ -14020,6 +14093,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:16Z",
       "sha256": "a37166a79e1f07870df4e4266471915a1c9d5993ade15cc3a486b36471c389ca",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon.pdf"
     },
     {
@@ -14029,6 +14103,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T13:59:54Z",
       "sha256": "d0d6e9a699097f1b12cc74bba30bf2dd59e126f1b0096f2d8de5db204d1f7a01",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Taxa-for-alkohollagen-lag-om-tobak-och-liknande-produkter-lagen-om-handel-med-vissa-receptfria-lakemedel-samt-spellagen.pdf"
     },
     {
@@ -14038,6 +14113,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T13:59:58Z",
       "sha256": "76da122110ba04c0ae83d8bc0e8cfa692867d83a6ae3668d10457b597ec1121b",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Taxa-for-allmanna-platser-i-Nybro-kommun-2026.pdf"
     },
     {
@@ -14047,6 +14123,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:05Z",
       "sha256": "c2fd84297d034eabd8caf6c89c2451a2f9fc10e6b513ed6b3e3e63da18df2929",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2024/11/Taxa-for-avgifter-inom-livsmedelslagstiftningen.pdf"
     },
     {
@@ -14056,6 +14133,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:02Z",
       "sha256": "20ec4bffee8aa378795774861898cfc80d141b6866ec13af8a4fd3dba9317d88",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/10/Taxa-for-forsaljning-av-villatomter-verksamhetsmark-och-upplatande-av-exploateringsfastigheter.pdf"
     },
     {
@@ -14065,6 +14143,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T13:59:57Z",
       "sha256": "e4cfc923e672d588c5c316ef63fc55de639f437dc1d44ff9b01062669d7abb9f",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Taxa-for-gravtillstand-och-trafikanordningsplaner-TA-plan-i-Nybro-kommun-2026.pdf"
     },
     {
@@ -14074,6 +14153,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:15Z",
       "sha256": "76cd9983ee6fca3182d9a84d2b85af52d0706fe26fcb00d9e16933d5898ab1f6",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Taxa-for-kommunala-sport-och-fritidsanlaggningar-i-Nybro-kommun-2026.pdf"
     },
     {
@@ -14083,6 +14163,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:01Z",
       "sha256": "ade9d06e503c9e7f474366540ebf3125b07d45b1d0ddf10d367cfc64ec14ad48",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2024/12/Taxa-for-kopior-och-avskrift-av-allmanna-handlingar-samt-ovrig-kopiering-och-utskrift.pdf"
     },
     {
@@ -14092,6 +14173,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T13:59:59Z",
       "sha256": "5abb13d5c36ebbc07b2344208971a50ed9adba5f31ff290db63a04a6ee678c8d",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Taxa-for-lagningar-av-belaggningar-med-mera.pdf"
     },
     {
@@ -14101,6 +14183,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:11Z",
       "sha256": "1d1a2980f5aad1be1f2e41fc501daaf20909fd71fb3a20126503d04d5d89cfb2",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Taxa-for-maltider-och-forbrukningsartiklar-for-barn-och-unga-inom-Funktionsstods-barnverksamhet-med-beslut-enlig-socialtjanstlagen-2026.pdf"
     },
     {
@@ -14110,6 +14193,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T13:59:55Z",
       "sha256": "a10c6f7ba6cbbf679ec95453cbcd0edbe42e288a56ec5bf118c16ccd8a5abfde",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Taxa-for-markupplatelser-i-Nybro-kommun.pdf"
     },
     {
@@ -14119,6 +14203,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:14Z",
       "sha256": "85b8bcae4a3bdd259f9735f48db0581be25cb667c0bbb9716c7167b541e429d7",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2024/01/Taxa-for-myndighetsutovning-LSO-LBE.pdf"
     },
     {
@@ -14128,6 +14213,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:08Z",
       "sha256": "f5dca9caa367c6d89266573e87a5b479cacdfe1014b1359b165cdfcff8227e00",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Taxa-for-provisorisk-dodsboforvaltning-2026.pdf"
     },
     {
@@ -14137,6 +14223,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:03Z",
       "sha256": "6658235c573cb1e0fef019fe598cf82a98df7316a0d5f6eda29149d5f5d43a2f",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2021/06/Taxa-for-provning-och-tillsyn-enligt-plan-och-bygglagen-med-mat-och-karttaxa-2021-06-23.pdf"
     },
     {
@@ -14146,6 +14233,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:04Z",
       "sha256": "cd8df4ef4b3315ef3b3e19d695caa216d97c73117f12246f3890ab5bbb2f375e",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/01/Taxa-for-provning-och-tillsyn-inom-miljobalkens-omrade.pdf"
     },
     {
@@ -14155,6 +14243,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:10Z",
       "sha256": "9a2cf8d9a2da3c92f11a255116454adb3b74d0d5fac80d5bab8bd53f549d6215",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/01/Taxa-for-serviceinsatser-vid-inkop.pdf"
     },
     {
@@ -14164,6 +14253,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:09Z",
       "sha256": "76fe0018ddb0c0106b436061bee48522b812f10fcf4c25bfcb37b7a247766ff1",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2025/12/Taxa-for-verksamhetsresor-2026.pdf"
     },
     {
@@ -14173,6 +14263,7 @@
       "municipality_code": "0881",
       "retrieved_at": "2026-10-30T14:00:00Z",
       "sha256": "a973a695eb281b92331977fa5f3d594054ae0277c6c992bb08595e5c48d9335c",
+      "text": "pdf",
       "url": "https://nybro.se/wp-content/uploads/2024/12/VA-taxa-for-Nybro-kommuns-allmanna-vatten-och-avloppsanlaggning-2025-1.pdf"
     },
     {
@@ -14497,6 +14588,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:27Z",
       "sha256": "8243507639fcc066eb6440892ec9b76658d2f507100996de72c53472b1727b6d",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/01648667-a689-42fb-8059-43dc895ebcc7/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14506,6 +14598,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:29Z",
       "sha256": "0b3046e0fef460eb30f70a6690b306d025a59073105ffa70c64c46b5e644db14",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/07eb21a7-9b3e-4bf0-a933-7dc487bd7a32/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14515,6 +14608,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:33Z",
       "sha256": "050f6a2919322488a0f07d609e69e7c52b1330883827e4631ff2a5ed3e2f4787",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/1bf93356-562b-4811-851e-4db90892d803/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14524,6 +14618,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:14Z",
       "sha256": "766e8108729a1283c3fd73a801cce82dc12fb2d4b0481350a2a689b96e5a72b9",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/1f49eeeb-15f1-467f-92b3-6c64617a8d57/c5c4177a-4358-4687-839a-166d1e124aa9"
     },
     {
@@ -14533,6 +14628,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:26Z",
       "sha256": "0ced7f1822bd6799ca7938da113eeceae5a33c59c97e49aff5fb3b99d63b7519",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/219e1a28-ac6b-42fc-aa08-8c563f9b611b/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14542,6 +14638,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:16Z",
       "sha256": "ab6cacc350bb0c0daacd4d5cd6016efbad4947b90000c771724db592a31a1ec6",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/22a30437-c66a-4798-83ef-9b2fbd0ade7a/c5c4177a-4358-4687-839a-166d1e124aa9"
     },
     {
@@ -14551,6 +14648,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:42Z",
       "sha256": "1d753af1da205019344e0a34c703ca5114b202567928ead86d3a121a5a80c0e6",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/25c4a811-db5e-4bb2-b236-b60b55cd999f/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14560,6 +14658,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:39Z",
       "sha256": "5d7d7ab9a3a94bce2537885d2021667f4f40e491235f20b2414f3ea54027f030",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/32d76a24-e341-4cf3-a203-29e0f0258678/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14569,6 +14668,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:17Z",
       "sha256": "fa1bdef631acc4eb6be27bc034efd2d376bb4311aebeab96cb7558d816f0ce15",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/3621bd18-93ad-41f5-b090-83b077e3ad2f/c5c4177a-4358-4687-839a-166d1e124aa9"
     },
     {
@@ -14578,6 +14678,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:23Z",
       "sha256": "ace9331680ae60e51a77d6f122f0166f615c7687f8f22e5a1b0141d7609c5ea3",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/37f0d5cf-6774-4b82-acee-ec848004f1a7/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14587,6 +14688,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:24Z",
       "sha256": "ff8306a209f6d0821e97f5b1af8cadb782c8ba5a4c98eace5fe23fa6a50d8f9b",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/3ab34489-f2c8-4c18-a29c-97a827287f9f/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14596,6 +14698,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:47Z",
       "sha256": "2469689f1805cc4ccfc136372c036529f3de4635c3d860cdb9e8250579b3ed41",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/3c33d44c-08ab-4711-b112-5c0484631ce1/dcf7899b-57f3-479c-8242-3ad93c24790c"
     },
     {
@@ -14605,6 +14708,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:44Z",
       "sha256": "9bbd90a8bff4ab56256b59d123927c437ec1de87e7d0ab6234dc1d7e8606a466",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/5b77ec05-dc98-4d62-8867-68df50973e2f/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14614,6 +14718,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:41Z",
       "sha256": "c58a3c1dad5ab4cae93d75177c69c91c86483915bf0eefd16b0ffea97ed901d0",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/687406d0-35c8-48e8-bd1f-c9673186a9d3/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14623,6 +14728,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:26Z",
       "sha256": "37fe0fbd9ec3818b527e2e0fa83832cff8edd92c3f7552a74e9b02c58b4213ec",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/6e9aaffe-fd3b-4c22-8431-296428025499/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14632,6 +14738,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:31Z",
       "sha256": "d6c3bfbb3b57aef942ccd33292d1ad39108d9a01bcbba6a5d0f9e0c01b20be50",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/77fdc594-d48d-4a0e-b4d9-fdd5a3b9690a/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14641,6 +14748,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:38Z",
       "sha256": "5ff4a9872d93b327a3bc3467fe1c4c2ae4583cc3504bb9ea886b117eee7383b5",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/784da23d-373e-483b-8ccd-a132c687db07/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14650,6 +14758,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:19Z",
       "sha256": "b8aaef615e9c7a0e1e09c9134f77758aad42e100d84840ceefea84d7e549de97",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/a0e9a6c5-9f5d-41af-a90b-688c47274402/05fa146d-4465-415a-847c-bbc2c4882d3c"
     },
     {
@@ -14659,6 +14768,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:13Z",
       "sha256": "f9a2cc32d9385c8146f682412c25e216fa5f1ef1346f03fffdc249d941f96a3c",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/a9993090-b22d-4d23-8c2a-fa745c2c5dd9/c5c4177a-4358-4687-839a-166d1e124aa9"
     },
     {
@@ -14668,6 +14778,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:35Z",
       "sha256": "e396ac90ce5c39b9f465df5f31c857ca8418597547bc5c3245f43fe819e2ca83",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/aaffde3c-d05d-4e01-96d0-8849ed4e80df/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14677,6 +14788,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:28Z",
       "sha256": "59746de159807c1661499ddf9993828bc1dd0f0bd9ca1637ab2221115419742d",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/b55dc6fb-59c1-47d9-91d7-d02458c6b932/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14686,6 +14798,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:32Z",
       "sha256": "2bbeb4fe03f44e482cd2dd8eb233853ba0c6f5721e76cf3c97d815e1fbf47a35",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/c2bde276-919d-4d74-b827-f03784ab8dfb/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14695,6 +14808,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:40Z",
       "sha256": "042aa7783893b05f54fe99dc377e6068508d9a0548f3995b6c914f0362942b38",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/c45038ba-57af-41ff-a010-6291dd603aa0/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14704,6 +14818,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:15Z",
       "sha256": "a581e4b8cbb9ff028f68c0569d7398b571c6d91d00dacb7d348a65a4d9daaaaa",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/d1ef6b60-19db-4e9a-96ee-7e13e099929a/c5c4177a-4358-4687-839a-166d1e124aa9"
     },
     {
@@ -14713,6 +14828,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:37Z",
       "sha256": "db89ea96e7c9813efce29186c95b9699d7ec8af1f9ba3f1ef9fbc58eb2a689e7",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/d6b5dc91-173e-458d-8da5-f788fa58292c/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14722,6 +14838,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:20Z",
       "sha256": "3f66319a5b57e02fe62a6406c4c106fc0f2df73df78dd9c39903222240704c78",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/db2f2bad-1489-49ad-9906-a1613af32c15/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14731,6 +14848,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:36Z",
       "sha256": "06e7c27d06f27de54429876476d98201e1d75a793ffe106017b4712ee1ae5fed",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/e05f4fbc-8096-49ef-bb9b-ebf1bc14129e/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14740,6 +14858,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:30Z",
       "sha256": "d773d28444a5cc82d9cad8d5f5407f7a9bcd4aaf3bb9f14fbb273952abcf775f",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/e3775cb9-09da-4ab2-a869-41ace800707d/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14749,6 +14868,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:45Z",
       "sha256": "d01400addbcc068c6b376ec96fb561459d3348f4bb603714381172457c10e31f",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/ed11ee19-1961-4837-9167-315860febd14/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14758,6 +14878,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:21Z",
       "sha256": "530a145a8d4adc9a8c06679ef8de9335956d4b141fd4fc0fce9672cd15852294",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/f1332bfb-069d-4e8d-8615-6ea24ec24c8a/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14767,6 +14888,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:46Z",
       "sha256": "b3f228cb9b88898d0e9a1ec53b5989a99285f6e1bfb6b2b58321fecc7dd67a2a",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/f1a732f4-dbdb-43c3-bc3c-39cf4fdbe2b6/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14776,6 +14898,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:22Z",
       "sha256": "0c749354448f3a105cdb892ec90ab541ac16d6a9d52e60658b32c05f1e19b6c7",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/f27169f6-6a0d-4c69-b6e0-518ed7f2fef6/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14785,6 +14908,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:18Z",
       "sha256": "d0951159926ee940fd6ce0cea55e122d87d4d63f47f77ef07aad8a129d3f7afc",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/f9f879a6-bb07-44b8-a35e-6735ca54fe5f/00a73c9a-4a4b-4e49-94f7-6f41ea1278af"
     },
     {
@@ -14794,6 +14918,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:34Z",
       "sha256": "669b4d71ea2dffdb22cb230ac9029387d921e502efd6c7dbb5aab516e31a04a4",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/fd704138-6107-4035-aaa4-f09baad689b2/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14803,6 +14928,7 @@
       "municipality_code": "0883",
       "retrieved_at": "2026-10-30T22:11:43Z",
       "sha256": "696f1fa1670849ec0cb45c57ec074a5325a8b101a224ffd5cb1a3142a3b0efc1",
+      "text": "pdf",
       "url": "https://document.vastervik.se/api/download/fdb81794-33fc-4d31-8bf2-995049323863/c62aafa3-ba0d-4bdc-9906-1662c6aa940f"
     },
     {
@@ -14812,6 +14938,7 @@
       "municipality_code": "0884",
       "retrieved_at": "2026-10-30T14:00:22Z",
       "sha256": "582c7d2a67264d5ad9b10a36a0586345a6108e79bc1a9bfc5ebd2de1d1451b88",
+      "text": "pdf",
       "url": "https://www.vimmerby.se/download/18.45ae51f619a6c2e6086fa1c/1763643529850/Taxor%20och%20avgifter%20markuppl%C3%A5telser%202026.pdf"
     },
     {
@@ -14821,6 +14948,7 @@
       "municipality_code": "0884",
       "retrieved_at": "2026-10-30T14:00:21Z",
       "sha256": "ec364bc4849709c62b43d050c4f1942ca95022cbc9ce53ca9f2ba6da89af3317",
+      "text": "pdf",
       "url": "https://www.vimmerby.se/download/18.5fc07afd1885167231522bad/1683627106541/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n,%20Vimmerby%20kommun.pdf"
     },
     {
@@ -14830,6 +14958,7 @@
       "municipality_code": "0884",
       "retrieved_at": "2026-10-30T14:00:25Z",
       "sha256": "1463de02f9a00f0d58a91968defa9b3b67e80a33dae53e0999d8fbabb7001fa7",
+      "text": "pdf",
       "url": "https://www.vimmerby.se/download/18.5fc07afd18851672315248e2/1676884135513/Lokala%20ordningsf%C3%B6reskrifter%20Vimmerby%20kommun.pdf"
     },
     {
@@ -14839,6 +14968,7 @@
       "municipality_code": "0884",
       "retrieved_at": "2026-10-30T14:00:21Z",
       "sha256": "8f408ae4dc2aec6d835e15416552558c20982798fe4f07b5654b15a0d5f7d867",
+      "text": "pdf",
       "url": "https://www.vimmerby.se/download/18.973c11419cf5ae49da1f74/1773755144950/Taxor%20och%20avgifter%20gatukontoret%202026_rev%20260309.pdf"
     },
     {
@@ -14848,6 +14978,7 @@
       "municipality_code": "0885",
       "retrieved_at": "2026-10-30T14:00:28Z",
       "sha256": "56fa21cb0afa059fcb1f2bf640d900488a44761481c8bed7a80df8723ec2fc3d",
+      "text": "pdf",
       "url": "https://www.borgholm.se/wp-content/uploads/2023/03/ABVA-i-Borgholms-kommun-antagen-av-kommunfullmaktige-2011-11-21-157.pdf"
     },
     {
@@ -14857,6 +14988,7 @@
       "municipality_code": "0885",
       "retrieved_at": "2026-10-30T14:00:30Z",
       "sha256": "570b9a7e17cd58f74dded6e4bb3b53bd4cb3bdfd2df50eb826ec787c5a15fdfb",
+      "text": "pdf",
       "url": "https://www.borgholm.se/wp-content/uploads/2023/03/ABVA-Rad-och-anvisningar-Bilaga-till-ABVA-i-Borgholms-kommun.pdf"
     },
     {
@@ -14866,6 +14998,7 @@
       "municipality_code": "0885",
       "retrieved_at": "2026-10-30T14:00:30Z",
       "sha256": "ce02332429631ad61e42e5c5c1997a47d8b3ce4d0855652c6b553d9837251029",
+      "text": "pdf",
       "url": "https://www.borgholm.se/wp-content/uploads/2023/03/Allmanna-lokala-ordningsforeskrifter-antagen-av-kommunfullmaktige-2019-11-18-221.pdf"
     },
     {
@@ -14875,6 +15008,7 @@
       "municipality_code": "0885",
       "retrieved_at": "2026-10-30T14:00:31Z",
       "sha256": "347e9b402bf1480eacc6aeaf5d75954c9aaf898da784300c5b37f9ad9d1992b5",
+      "text": "pdf",
       "url": "https://www.borgholm.se/wp-content/uploads/2025/06/Foreskrift-Eldningsforbud-i-Borgholms-kommun.pdf"
     },
     {
@@ -14884,6 +15018,7 @@
       "municipality_code": "0885",
       "retrieved_at": "2026-10-30T14:00:32Z",
       "sha256": "d6475f7f8c13a2780f4182a45cdb8dcaa4c9842614338c76708cf0e76fa02190",
+      "text": "pdf",
       "url": "https://www.borgholm.se/wp-content/uploads/2025/11/Foreskrifter-om-avfallshantering-for-Borgholms-kommun-Antaget-KF-2025-09-15-111-1.pdf"
     },
     {
@@ -14893,6 +15028,7 @@
       "municipality_code": "0885",
       "retrieved_at": "2026-10-30T14:00:35Z",
       "sha256": "7b2a1667a4ecf469a31fd1080148d56a2e665d1d2df29dff19c75e8a267103d1",
+      "text": "pdf",
       "url": "https://www.borgholm.se/wp-content/uploads/2024/04/Hamnordning-antagen-av-kommunfullmaktige-20240318-66.pdf"
     },
     {
@@ -14902,6 +15038,7 @@
       "municipality_code": "0885",
       "retrieved_at": "2026-10-30T14:00:35Z",
       "sha256": "3dd8ecd08a524c3fca6c895450ef460f3925185671187e4538a473a8aacc8ab7",
+      "text": "pdf",
       "url": "https://www.borgholm.se/wp-content/uploads/2025/03/Lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo-Antaget-av-kommunfullmaktige-2025-02-07-14.pdf"
     },
     {
@@ -14911,6 +15048,7 @@
       "municipality_code": "0885",
       "retrieved_at": "2026-10-30T14:00:36Z",
       "sha256": "faf81fdd00d38cc406ff5801e01106374a3f1c461f35c9831c82ca7aa12630e3",
+      "text": "pdf",
       "url": "https://www.borgholm.se/wp-content/uploads/2023/03/Lokala-ordningsforeskrifter-for-torghandel-pa-Borgholms-torg-och-Sjotorget-antagen-av-kommunfullmaktige-2018-05-21-111.pdf"
     },
     {
