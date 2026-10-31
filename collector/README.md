@@ -158,8 +158,9 @@ county and municipal sync workflows install them.
 - The county collector reads by OCR both scans and files whose text layer cannot be read
   (`--no-ocr` skips it). The manifest's `text` is `ocr` for a file read that way, or `no text
   found by OCR` / the low-confidence gap when OCR fails, so the file is not read again; a file
-  still recorded as `no text layer` or `text layer is not readable` is downloaded and read on the
-  next run with OCR.
+  still recorded as `no text layer` or `text layer is not readable` (including letter-spaced text)
+  is downloaded and read on the next run with OCR. Text decoded from a shifted font encoding
+  counts as extracted and is never replaced by OCR text.
 - Tests that run the tools skip when they are not installed, unless `LAGAR_REQUIRE_OCR=1` (set in
   CI).
 
