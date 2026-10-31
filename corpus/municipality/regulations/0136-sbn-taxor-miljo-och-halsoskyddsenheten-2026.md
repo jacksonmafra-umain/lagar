@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.haninge.se/49e42a/globalassets/dokument/sbn-taxor-miljo--och-halsoskyddsenheten-2026.pdf"
 source_sha256: "3b92193f8955cd2dda87a6e841e0f6698f100899f7c29a72b90a9a2ece2c8dec"
-fetched_at: "2026-10-30T00:47:42Z"
+fetched_at: "2026-10-31T15:15:53Z"
 issuer: "Haninge kommun"
 region_code: "01"
 municipality_code: "0136"
@@ -31,6 +31,4324 @@ Förteckning: <https://www.haninge.se/kommun-och-politik/politik-och-organisatio
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Taxor miljö- och hälsoskydd 2026](<https://www.haninge.se/49e42a/globalassets/dokument/sbn-taxor-miljo--och-halsoskyddsenheten-2026.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Datum
+
+Diarienummer
+
+2026-02-24
+
+SBN-2025-00282
+
+Taxor miljö- och hälsoskydd 2026
+
+Stadsbyggnadsnämnden
+
+Gäller fr.o.m. 1 juli 2026
+
+Fastställd av kommunfullmäktige: 2026-05-25 §93
+
+Godkänd av stadsbyggnadsnämnden: 2026-04-01 §22
+
+Postadress
+
+136 81 Haninge
+
+Besöksadress
+
+Kommunhuset
+
+Rudsjöterrassen 2
+
+Telefon
+
+08-606 70 00
+
+E-post haningekommun@haninge.se
+
+Webb www.haninge.se
+
+Sida
+
+Innehåll
+
+Taxa prövning och tillsyn enligt miljöbalken .................................................................. 3 Avgift för prövning ......................................................................................................... 4 Taxebilaga 1 ................................................................................................................. 7 Taxebilaga 2 ............................................................................................................... 14 Taxa enligt alkohollagen, lag om tobak och liknande produkter samt lag om tobakfria nikotinprodukter .......................................................................................................... 50 Taxa för offentlig kontroll inom animaliska biprodukter ............................................... 58 Taxa för tillsyn över avfallshantering i fritidsbåtshamnar ............................................ 59 Taxa enligt lagen om internationella hot mot människors hälsa ................................. 60 Taxa för offentlig kontroll inom livsmedelsområdet ..................................................... 61 Taxa för prövning och tillsyn enligt marknadskontrollförordningen ............................. 66 Taxa för kontroll enligt lagen om handel med vissa receptfria läkemedel ................... 68 Taxa för verksamhet enligt lagen om sprängämnesprekursorer ................................. 69 Taxa för tillsyn enligt strålskyddslagen ....................................................................... 70
+
+Sida
+
+Taxa prövning och tillsyn enligt miljöbalken
+
+Inledande bestämmelser
+
+1§
+
+Denna taxa gäller för Haninge kommuns verksamhet inom miljö- och hälsoskydd. Avgifter för prövning och tillsyn enligt miljöbalken eller bestämmelser meddelade med stöd av miljöbalken eller med anledning av EU:s förordningar inom miljöbalkens tillämpningsområde, bland annat vad gäller skydd av områden, miljöfarlig verksamhet, hälsoskydd, förorenade områden, vattenverksamhet, täkter, kemiska produkter och biotekniska organismer, samt avfall och producentansvar. Taxan gäller även avgifter för uppdragsverksamhet inom miljö- och hälsoskydd. Utöver vad som anges i denna taxa kan ersättning till verksamheten utgå bland annat enligt 26 kapitlet 22 § miljöbalken för undersökningskostnader med mera och enligt 25 kapitlet 2 § miljöbalken för rättegångskostnader.
+
+2§
+
+Avgift enligt denna taxa tas ut för
+
+a) handläggning och andra åtgärder med anledning av ansökningar om tillstånd, dispens eller undantag.
+
+b) handläggning och andra åtgärder med anledning av anmälan av verksamhet eller åtgärd.
+
+c) handläggning och andra åtgärder vid övrig tillsyn.
+
+d) uppdragsverksamhet.
+
+3§
+
+Avgift enligt denna taxa tas inte ut för
+
+a) klagomål där verksamhetsutövaren har visat att olägenhet inte föreligger, utan att verksamheten inom miljö- och hälsoskydd behövt vidta utredning i ärendet.
+
+b) överklaganden av nämndens eller överinstans beslut.
+
+c) upprättande av ansökan om utdömande av vite.
+
+4§
+
+Enligt 27 kapitlet 3 § miljöbalken är alla som är skyldiga att betala avgift enligt denna taxa eller enligt 26 kapitlet 22 § miljöbalken skyldiga att lämna de uppgifter som behövs för att avgiftens eller ersättningens storlek ska kunna bestämmas.
+
+5§
+
+Beslut om avgift eller nedsättning av avgift i enskilda fall fattas av stadsbyggnadsnämnden.
+
+Sida
+
+Avgift för prövning
+
+6§
+
+Avgift för prövning av ansökningar om tillstånd, dispens eller undantag tas ut enligt vad som anges i taxebilaga 1 med angivet belopp (fast avgift) eller med 1 500 kronor per timme för nedlagd tid i ärendet (timavgift) eller enligt de grunder i övrigt som anges i taxan. Avgiften för prövning ska betalas för varje avgiftsbelagt ärende som ansökan avser.
+
+Om faktisk handläggningstid överskrider den i taxebilaga 1 angivna handläggningstiden med mer än 1 timme ska avgift för den faktiska handläggningstiden betalas.
+
+7§
+
+Om det i beslut om tillstånd föreskrivs att en anordning inte får tas i bruk förrän den ha besiktigats och godkänts av miljö- och hälsoskyddsenheten ingår kostnaden för en sådan besiktning i den fasta avgiften. Kan anläggningen därvid inte godkännas, varför besiktning måste ske vid ytterligare tillfälle, tas avgift ut för miljö- och hälsoskyddsenhetens kostnader för den tillkommande handläggningstiden.
+
+Undantaget är handläggning av entreprenörsrapport avseende ärenden gällande prövning av ansökan eller anmälan om inrättande av avloppsanordning eller anslutning av vattentoalett enlig 13 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd samt kommunens lokala föreskrifter för att skydda människors hälsa och miljön, där sådan besiktning inte ingår i den fasta avgiften. För dessa tas avgift ut med timavgift för den faktiska handläggningstiden.
+
+8§
+
+Timavgift tas ut för varje påbörjad halvtimme handläggningstid. Med handläggningstid avses den sammanlagda tid som varje tjänsteman vid miljö- och hälsoskyddsenheten har använt för förberedelser inför, inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, resor, provtagning, kontroller, föredragning, beslut och handläggning i övrigt. Med förberedelse avses specifikt branschgemensamma förberedelser som aktualisering av förändringar inom branschen såsom teknikutveckling, gällande rätt, vägledning från andra myndigheter och planering av branschens tillsyn i övrigt. Förberedelse omfattar även att ta fram branschspecifika checklistor, mallar och riktat informationsmaterial.
+
+9§
+
+Avgift för prövning ska erläggas av sökanden.
+
+10 §
+
+Avgift för prövning ska erläggas även om ansökan avslås.
+
+11 §
+
+Avgift för prövning tas ut även om ansökan återkallas men då enligt timtaxa.
+
+12 §
+
+Avgift tas ut enligt timtaxa för ärenden som påbörjas men av någon anledning inte fullföljs, till exempel om begärda handlingar inte kommer in.
+
+Sida
+
+13 §
+
+I ärenden om ansökan om tillstånd till miljöfarlig verksamhet som prövas av miljö- och hälsoskyddsenheten är sökanden i förekommande fall också skyldiga att ersätta enhetens kostnader enligt 19 kapitlet 4 och 5 §§ miljöbalken för sakkunniga som har tillkallats av stadsbyggnadsnämnden och för kungörelser i ärenden om tillstånd, dispens eller undantag enligt 7 kapitlet miljöbalken eller förordningen (1998:1252) om områdesskydd enligt miljöbalken.
+
+14 §
+
+Utöver avgift för prövning, kan avgift för tillsyn komma att tas ut för den verksamhet eller åtgärd som prövningen avser enligt vad som anges i denna taxa.
+
+Avgifter med anledning av anmälan
+
+15 §
+
+Avgift för handläggning av anmälan av verksamhet eller åtgärd tas ut enligt vad som anges i taxebilaga 1 med angivet belopp (fast avgift) eller med 1 500 kronor för nedlagd handläggningstid i ärendet (timavgift) eller enligt de grunder i övrigt som anges i taxan. Avgift med anledning av anmälan ska betalas för varje avgiftsbelagt ärende som anmälan avser.
+
+Om faktisk handläggningstid överskrider den i taxebilaga 1 angivna handläggningstiden med mer än 1 timme ska avgift för den faktiska handläggningstiden betalas.
+
+16 §
+
+Vid bestämmandet av timavgiften tillämpas bestämmelserna i 8 §.
+
+17 §
+
+Avgift för handläggning av anmälan ska betalas av den som bedriver eller avser att bedriva verksamhet eller vidta åtgärden. I ärenden om anmälan av miljöfarlig verksamhet med beteckningen C i miljöprövningsförordning (2013:251) är denne i förekommande fall också skyldig att ersätta miljö- och hälsoskyddsenhetens kostnader för kungörelser i ärendet.
+
+18 §
+
+Avgift för anmälan tas ut även om ärendet återkallas men då enligt timtaxa.
+
+19 §
+
+Avgift tas ut enligt timtaxa för ärenden som påbörjas men som av någon anledning inte fullföljs, till exempel om begärda handlingar inte kommer in.
+
+20 §
+
+Utöver avgift med anledning av handläggning av anmälan, kan avgift för tillsyn i övrigt komma att tas ut för den verksamhet eller åtgärd anmälan avser enligt vad som anges i denna taxa.
+
+Avgift för tillsyn i övrigt
+
+21 §
+
+Sida
+
+Avgifter för tillsyn i övrigt tas ut enligt vad som framgår i taxebilagorna 1 och 2 med angivet belopp (fast årlig avgift) eller timavgift 1 500 kronor enligt de grunder som anges i övrigt i taxan. För verksamhet som tillståndsprövats ska avgiften bestämmas med utgångspunkt från vad som föreskrivs i tillståndsbeslut om tillåten produktionsvolym eller motsvarande.
+
+22 §
+
+Om en fabrik, anläggning eller annan inrättning omfattar flera verksamheter enligt taxebilaga 2 ska full avgift betalas för den verksamhet som medför den högsta avgiften med tillägg av 25 % av summa av de belopp som anges för de övriga verksamheterna.
+
+23 §
+
+Fast årlig avgift omfattar kalenderår och ska betalas i förskott. Avgiften ska betalas från och med det kalenderår som följer efter det att beslut om tillstånd till verksamheten har meddelats eller anmälan skett, eller i de fall tillstånd eller anmälan inte krävs, verksamheten har påbörjats eller att miljö- och hälsoskyddsenhetens tillsyn av verksamheten har initierats. För tillsyn som sker dessförinnan och som inte ingår i avgift för prövning eller handläggning av anmälan, tas timavgift ut. Fast årlig avgift ska betalas med helt avgiftsbelopp för varje påbörjat kalenderår som verksamheten bedrivs.
+
+I den fasta avgiften ingår •
+
+Handläggning av planerade inspektioner. Förberedelser inför, inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, resor, provtagning, kontroller, föredragning, beslut och handläggning i övrigt. Med förberedelser avses specifikt branschgemensamma förberedelser som aktualisering av förändringar inom branschen såsom teknikutveckling, gällande rätt, vägledning från andra myndigheter och planering av branschens tillsyn i övrigt. Förberedelse omfattar även att ta fram branschspecifika checklistor, mallar och riktat informationsmaterial.
+
+I den fasta avgiften ingår inte •
+
+Upprättande av föreläggande eller förbud.
+
+•
+
+Inspektioner och andra tillsynsinsatser som beror på att verksamhetsutövaren bryter mot tillstånd eller villkor, inte följer förelägganden eller förbud.
+
+•
+
+Ytterligare inspektioner och andra tillsynsinsatser om det vid den planerade tillsynen uppstår behov av ytterligare tillsynsåtgärder med anledning av brister i verksamheten.
+
+•
+
+Handläggning av klagomål.
+
+•
+
+Handläggning vid utökat tillsynsbehov till exempel med anledning av utredningsvillkor eller på grund av att verksamheten är en IED-anläggning.
+
+För sådan handläggning ska, förutom den fasta årsavgiften, avgift tas ut som timavgift om 1 500 kr genom att den faktiskt nedlagda handläggningstiden multipliceras med timavgiften. Föreligger behov av avhjälpande åtgärder sedan en verksamhet upphört, utgår full avgift för tillsyn som föranleds därav från och med året efter det att verksamheten upphört enligt vad som anges i taxebilagorna 1 och 2 om avgift för tillsyn över verksamheter som orsakar miljöskador.
+
+24 §
+
+Sida
+
+Vid bestämmande av timavgiften tillämpas bestämmelser i 8 §.
+
+25 §
+
+Avgift för tillsyn ska betalas av den som bedriver eller avser att bedriva verksamhet eller vidta åtgärd som föranleder avgiften. För tillsyn över verksamheter som orsakar miljöskador, ska tillsynsavgiften betalas av den som enligt 10 kapitlet miljöbalken är ansvarig för avhjälpande åtgärder eller kostnader.
+
+Avgifter för uppdragsverksamhet
+
+26 §
+
+Avgifter för uppdragsverksamhet tas ut med 1 500 kronor per timme.
+
+Nedsättning av avgift
+
+27 §
+
+Om det finns särskilda skäl med hänsyn till verksamhetens art, omfattning, tillsynsbehovet, nedlagd handläggningstid och övriga omständigheter, får avgift enligt denna taxa sättas ned eller efterskänkas.
+
+Avgiftens erläggande med mera
+
+28 §
+
+Betalning av avgift enligt denna taxa ska ske till Haninge kommun. Betalning ska ske inom tid som anges i beslutet om avgift eller i räkning.
+
+Verkställighetsfrågor med mera
+
+29 §
+
+Av 1 kapitlet 2 § och 9 kapitlet 4 § förordningen (1998:940) om avgifter för prövning och tillsyn enligt miljöbalken, framgår att ett myndighetsbeslut om avgift får verkställas enligt utsökningsbalken. Betalas inte avgift inom föreskriven tid tas skälig dröjsmålsränta ut från räkningens förfallodag enligt vad kommunen bestämmer.
+
+30 § Av 1 kapitlet 2 § och 9 kapitlet 5 § förordningen (1998:940) om avgifter för prövning och tillsyn enligt miljöbalken, framgår att en myndighet får förordna att dess beslut om avgift ska gälla omedelbart även om det överklagas.
+
+31 § Av 19 kapitlet 1 § miljöbalken framgår att nämndens beslut om avgift får överklagas hos länsstyrelsen.
+
+Taxebilaga 1
+
+Avgifter för prövning och anmälan samt viss tillsyn 2026.
+
+Sida
+
+Verksamhetsbeskrivning
+
+Tid (timmar)
+
+Avgift (kronor)
+
+SKYDD AV OMRÅDEN
+
+Prövning/anmälan
+
+Handläggningen av ansökan, anmälan eller dispens om en verksamhet eller åtgärd enligt föreskrifter för natur- och kulturreservat eller vattenskyddsområde.
+
+Tillsyn
+
+Timavgift
+
+Inom naturvården eller vattenskyddsområde.
+
+MILJÖFARLIG VERKSAMHET
+
+Timavgifter
+
+Prövning/anmälan
+
+Prövning av ansökan eller anmälan om inrättande av avloppsanordning eller anslutning av vattentoalett enligt 13 och 14 paragraferna förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd samt kommunens lokala föreskrifter för att skydda människors hälsa och miljö avseende:
+
+1. BDT-avlopp.
+
+2. WC- och BDT-avlopp.
+
+3. WC-avlopp till sluten tank (förutsätter godtagbart BDTavlopp).
+
+4. Gemensam avloppsanläggning för 11 till 25 personekvivalenter.
+
+5. Gemensam avloppsanläggning för 26 till 200 personekvivalenter.
+
+6. Ändring av befintligt godkänt avlopp enligt punkt 1 till 3 ovan.
+
+7. Ändring av befintligt godkänt avlopp enligt punkt 4 till 5 ovan.
+
+8. Nedsättning av avgift för prövning av ansökan enligt punkt
+
+1 – 3 ovan som inkommit via e-tjänst.
+
+Handläggning av entreprenörsrapport avseende ärenden gällande, prövning av ansökan eller anmälan om inrättande av avloppsanordning eller anslutning av vattentoalett enligt 13 och 14 paragraferna förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd samt kommunens lokala föreskrifter för att skydda människors hälsa och miljön
+
+Handläggning av anmälan eller ändring enligt 13 och 14 paragraferna
+
+Förordning (1998:899) om miljöfarlig verksamhet och hälsoskydd avseende annan anmälningspliktig avloppsanordning än den som avses i första stycket punkt 1 och 2 i 13 paragrafen Förordning (1998:899) om miljöfarlig verksamhet och hälsoskydd.
+
+Prövning av ansökan om tillstånd för värmepumpsanläggning inom område med vattenskyddsföreskrifter.
+
+8,5
+
+10 500
+
+12 750
+
+7 500
+
+15 000
+
+19 500
+
+Timavgift
+
+Timavgift
+
+1 500
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Sida
+
+Handläggning enligt 17 paragrafen förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd att inrätta värmepumpsanläggning för utvinning av värme ur mark, ytvatten eller grundvatten enligt vad kommunen föreskrivit avseende:
+
+1. Bergvärmepump utanför yttre skyddsområde för vattentäkt.
+
+2. Övriga anläggningar.
+
+Handläggning av anmälan om avhjälpandeåtgärd enligt 28 paragrafen förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd med anledning av en föroreningsskada i ett mark- eller vattenområde, grundvatten eller byggnad eller en anläggning enligt 10 kapitlet miljöbalken, om åtgärden kan medföra ökad risk för spridning eller exponering av föroreningarna och denna risk inte bedöms som ringa.
+
+Handläggning av anmälan avseende anmälningspliktig eller tillståndspliktig verksamhet enligt miljöprövningsförordningen (2013:251).
+
+1. Bedriva verksamhet eller vidta åtgärd som beskrivs i 2 till 32 kapitlet miljöbalken där det anges att anmälningsplikt gäller med uttrycket ”anmälningsplikt C”.
+
+2. Bedriva sådan verksamhet som avses i 1 om inrättningen eller verksamheten ändras och ändringen är av betydelse från störningssynpunkt, eller
+
+3. Ändring av en tillståndspliktig verksamhet är tillståndspliktig enligt 2 till 32 kapitlet, om ändringen inte medför att tillstånd krävs.
+
+Tillsyn i övrigt
+
+Tillsyn över miljöfarlig verksamhet enligt 2 till 32 kapitlet miljöbalken samt U-verksamheter med fast avgift.
+
+Tillsyn av B, C och U-verksamheter som inte är redovisade i taxebilaga 2.
+
+Tillsyn av befintliga enskilda avlopp och uppföljning av egenkontroll.
+
+4 500
+
+6 000
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Avgift enligt taxebilaga 2
+
+Timavgift
+
+Timavgift
+
+Tillsyn i övrigt av miljöfarlig verksamhet.
+
+Timavgift
+
+Tillsyn över att miljöbalkens hänsynsregler följs.
+
+Timavgift
+
+VERKSAMHETER SOM ORSAKAR MILJÖSKADOR
+
+Tillsyn av mark och vattenområden, byggnader och anläggningar enligt
+
+10 kapitlet miljöbalken, nuvarande lydelse samt lydelse före 1 augusti 2007.
+
+Handläggning enligt 10 kapitlet 11 till 13 paragraferna miljöbalken med anledning av underrättelse.
+
+VATTENVERKSAMHET
+
+Timavgift
+
+Prövning av ansökan om att inrätta grundvattentäkt enligt vad kommunen föreskrivit i lokala föreskrifter med stöd av 9 kapitlet 10 paragrafen miljöbalken
+
+Timavgift
+
+Timavgift
+
+Sida
+
+Handläggning av anmälan av vattentäkt enligt vad kommunen föreskrivit i lokala föreskrifter med stöd av 9 kapitlet 10 paragrafen miljöbalken.
+
+HÄLSKOSKYDD
+
+Timavgift
+
+Prövning
+
+Prövning av ansökan om att hålla vissa djur inom område med detaljplan eller områdesbestämmelser enligt 39 paragrafen förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd samt lokala föreskrifter för att skydda människors hälsa och miljön i
+
+Haninge.
+
+1. Nötkreatur, häst, get, får eller svin.
+
+2. Pälsdjur eller fjäderfä som inte är sällskapsdjur.
+
+3. Orm
+
+4 500
+
+7 500
+
+4 500
+
+4 500
+
+4 500
+
+7 500
+
+12 000
+
+15 000
+
+Anmälan
+
+Handläggning av anmälan om att anlägga gödselstad eller annan upplagsplats för djurspillning inom område med detaljplan enligt 37 paragrafen förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd.
+
+Handläggning av anmälan enligt 38 paragrafen förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd om att driva följande verksamheter:
+
+1. Verksamhet där allmänheten yrkesmässigt erbjuds hygienisk behandling som innebär risk för blodsmitta eller annan smitta genom användning av skalpeller, akupunkturnålar, piercingsverktyg eller andra liknande skärande eller stickande verktyg.
+
+2. Bassängbad som är upplåtna åt allmänheten eller som annars används av många människor, eller
+
+3. Förskola, öppen förskola, fritidshem, öppen fritidsverksamhet, förskoleklass, grundskola, gymnasieskola, särskola, specialskola, fristående skola, riksinternatskola eller resurscenter.
+
+Handläggning av anmälan enligt 38 a paragrafen förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd om att uppföra eller använda ett kyltorn .
+
+Timavgift
+
+Tillsyn
+
+Återkommande tillsyn av badanläggningar och strandbad som är upplåtna för allmänheten eller som annars utnyttjas av många människor. Provtagning utförd av tillsynsmyndigheten ingår inte.
+
+1. Bassängbad
+
+2. Floating, vedtunnor etcetera.
+
+3. Strandbad
+
+12 000
+
+Timavgift
+
+4 500
+
+Sida
+
+Återkommande tillsyn av följande byggnader, lokaler och anläggningar enligt 45 paragrafen förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd.
+
+1. Bostäder a. Bostadsföretag eller bostadsrättsföreningar med fler än
+
+1 000 lägenheter. b. Bostadsföretag eller bostadsrättsföreningar med fler än 400 men högst 1 000 lägenheter. c. Bostadsföretag eller bostadsrättsföreningar med högst 400 lägenheter
+
+2. Förskola
+
+3. Skola a. Gymnasieskola eller gymnasiesärskola b. Grundskola, grundsärskola, specialskola med fler än 100 elever. c. Grundskola, grundsärskola, specialskola med 100 eller färre elever.
+
+4. Familjedaghem och annan yrkesmässig barnomsorg a. med färre än 10 barn. b. med 10 eller fler barn.
+
+5. Övriga lokaler för undervisning till exempel öppen förskola, fritidshem, öppen fritidsverksamhet, Komvux, kurslokaler.
+
+6. Lokaler för vård eller annat omhändertagande.
+
+7. Samlingslokaler där många människor brukar samlas.
+
+8. Hotell, pensionat och liknande lokaler där allmänheten yrkesmässig erbjuds tillfällig bostad.
+
+9. Camping eller stuganläggning, om endast vatten och avlopp.
+
+10. Idrottsanläggningar, gym och liknande anläggningar som är upplåtna för allmänheten eller som annars utnyttjas av många människor.
+
+11. Lokaler där allmänheten yrkesmässigt erbjuds hygienisk behandling. a. Risk för blodsmitta och annan smitta, till exempel fotvård, tatuering, akupunktur, piercing. b. Risk för annan smitta, till exempel håltagning i öron, manikyr, pedikyr, barberare. c. Övriga verksamheter, till exempel frisör, massör.
+
+12. Lokaler för förvaring av djur.
+
+13. Kyltorn
+
+30 000
+
+15 000
+
+Timavgift
+
+9 000
+
+12 000
+
+12 000
+
+9 000
+
+Timavgift
+
+4 500
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Övrigt
+
+Övrig prövning, anmälan och tillsyn av hälsoskyddsobjekt.
+
+KEMISKA PRODUKTER
+
+Timavgift
+
+Sida
+
+Prövning
+
+Handläggning av tillstånd, anmälan och dispens enligt 2 kapitlet 39, 40 och 41 paragraferna i förordning (2014:425) om bekämpningsmedel.
+
+4 500
+
+Handläggning av tillstånd enligt 6 kapitlet 1 paragrafen NFS 2015:2 för att yrkesmässigt använda växtskyddsmedel utomhus inom vattenskyddsområde.
+
+Timavgift
+
+Handläggning av anmälan eller dispens enligt 18 och 17 b paragraferna förordning (2007:19) om PCB med mera.
+
+Timavgift
+
+Information
+
+Handläggning av information om att installera cistern enligt 3 kapitlet 1 och 2 paragrafen Naturvårdsverkets föreskrifter (NFS 2021:10) om skydd mot mark- eller vattenförorening vid hantering av brandfarliga vätskor och spilloljor.
+
+Information om cistern som tagits ur bruk, 7 kapitlet 1 paragrafen NFS 2021:10.
+
+4 500
+
+Timavgift
+
+Underrättelse
+
+Handläggning av underrättelse gällande installation eller konvertering av den som är eller avser att bli operatör av en stationär kyl-, luftkonditionerings- eller värmepumpsutrustning som innehåller 14 ton koldioxidekvivalenter eller mer enligt 14 paragrafen förordning (2016:1128) om fluorerade växthusgaser.
+
+Timavgift
+
+Tillsyn
+
+Återkommande tillsyn av följande anläggningar:
+
+1. Anläggning som det under någon del av ett kalenderår finns minst 14 ton koldioxidekvivalenter i en stationär anläggning, i en anläggning på ett fartyg eller i en mobil utrustning som omfattas av läckagekontroll enligt 11 paragrafen eller enligt artikel 5 i EU-förordningen om f-gaser. a. Handläggning av kontrollrapport enligt 15 paragrafen
+
+Förordning (SFS 2016:1128) som fluorerade växthusgaser. b. Tillkommande avgift för handläggning av ofullständig kontrollrapport enligt 15 paragrafen förordning (SFS
+
+2016:1128) om fluorerade växthusgaser. c. Tillsyn i övrigt av anläggningar innehållande minst 14 ton koldioxidekvivalenter.
+
+2. Tillsyn över hantering av brandfarliga vätskor eller spilloljor enligt NFS 2021:10.
+
+3 000
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Sida
+
+AVFALL OCH PRODUCENTANSVAR
+
+Prövning samt anmälan
+
+Prövning av ansökan att själv återvinna och bortskaffa avfall på fastigheten enligt lokal renhållningsordning, så kallad totalbefrielse. Prövning av ansökan/handläggning av anmälan enligt avfallsförordningen (2020:614) samt lokal renhållningsordning eller renhållningsföreskrift.
+
+1. Kompostering av matavfall.
+
+2. Slutbehandling av latrin i förbränningstoalett, komposteringseller förmultningsanläggning.
+
+3. Slutbehandling av slam i komposteringsanläggning.
+
+4. Övrigt bortskaffande av avfall.
+
+5. Uppehåll i hämtningen av slam.
+
+6. Uppehåll i hämtning av sopor och latrin (kommunalt avfall).
+
+7. Delad avfallsbehållare.
+
+8. Undantag från fastställda hämtningsintervall (som inte hör ihop med anmälan om kompostering enlig ovan).
+
+9 000
+
+1,5
+
+2 250
+
+1,5
+
+2 250
+
+Timavgift
+
+1 500
+
+2 250
+
+0,5
+
+0,5
+
+1,5
+
+Övrig tillsyn
+
+Tillsyn av transportörer som yrkesmässigt transporterar icke farligt avfall eller farligt avfall.
+
+Återkommande tillsyn över återvinningsstationer, miljögårdar och dylikt.
+
+Timavgift
+
+1 500
+
+Handläggning av dispens enligt 3 kapitlet 15 paragrafen avfallsförordningen (2020:614).
+
+Timavgift
+
+Tillsyn i övrigt av avfallshantering och producentansvar.
+
+Timavgift
+
+AVGIFTER FÖR UPDRAGSVERKSAMHET
+
+Avgifter tas ut för:
+
+1. Vattenprovtagning på uppdrag. Analys- och fraktkostnader tillkommer.
+
+2. Sammanställning och bearbetning av ärenden och uppgifter ur objektsregister eller ur diariet. Avser inte utlämnande av allmän handling.
+
+3. Övriga tjänster som ej utgör myndighetsutövning och som görs på uppdrag.
+
+MILJÖSANKTIONSAVGIFTER
+
+Avgift för handläggning av miljösanktionsavgift.
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+4 500
+
+Sida
+
+UNDERSÖKNINGSAVGIFT FÖR UNDERSÖKNING UTFÖRD AV ANNAN ÄN
+
+KOMMUNEN
+
+Avgift för undersökning tas med stöd av 26 kapitlet 22 paragrafen
+
+Faktisk kostnad miljöbalken ut även om någon annan, på uppdrag av kommunen, utför en undersökning. Avgiften motsvaras av den faktiska kostnaden som uppkommer med anledning av undersökningen.
+
+ÖVRIGT
+
+Tillsyn och prövning i övrigt enligt miljöbalken och/eller tillhörande förordningar och/eller föreskrifter eller EU-lagstiftning där det saknas en särskild angiven taxa.
+
+Timavgift
+
+Taxebilaga 2
+
+Avgifter för tillsyn miljöfarliga verksamhet 2026.
+
+Fast årlig avgift beräknas genom att antalet timmar multipliceras med gällande timtaxa. Avgifts- Nivå Verksamhetsbeskrivning kod
+
+JORDBRUK
+
+Tid
+
+Avgift (timmar) (kronor)
+
+Djurhållning
+
+1.20
+
+C
+
+Anläggning med stadigvarande djurhållning med mer än
+
+100 djurenheter, dock inte inhägnad.
+
+Med en djurenhet avses
+
+1. en mjölkko eller sinko, inklusive kalv upp till en månads ålder,
+
+2. sex kalvar från en månads upp till sex månaders ålder,
+
+3. tre övriga nöt, sex månader eller äldre,
+
+4. tre suggor eller betäckta gyltor, inklusive smågrisar upp till tolv veckors ålder,
+
+5. tio slaktsvin, obetäckta gyltor eller avelsgaltar, tolv veckor eller äldre,
+
+6. en häst, inklusive föl upp till sex månaders ålder,
+
+7. tio minkhonor för avel, inklusive valpar upp till åtta månaders ålder och avelshannar,
+
+8. etthundra kaniner,
+
+12 000
+
+Sida
+
+9. etthundra värphöns eller kycklingmödrar, sexton veckor eller äldre,
+
+10. tvåhundra unghöns upp till sexton veckors ålder,
+
+11. tvåhundra slaktkycklingar,
+
+12. etthundra kalkoner, gäss eller ankor, inklusive kycklingar och ungar upp till en veckas ålder,
+
+13. femton strutsfåglar av arterna struts, emu eller nandu, inklusive kycklingar upp till en veckas ålder,
+
+14. tio får eller getter, sex månader eller äldre,
+
+15. fyrtio lamm eller killingar upp till sex månaders ålder, eller
+
+16. i fråga om andra djurarter, det antal djur som har en årlig sammanlagd utsöndring motsvarande 100 kilogram kväve eller 13 kilogram fosfor i färska träck eller urin.
+
+Vid beräkningen av antalet djur enligt första stycket 16 ska det alternativ av kväve eller fosfor väljas som ger det lägsta antalet djur.
+
+Anmälningsplikten gäller inte
+
+1. renskötsel, eller
+
+2. om verksamheten är tillståndspliktig enligt 2 kapitlet 1 eller 2 paragraferna miljöprövningsförordningen.
+
+1.2001
+
+U
+
+Anläggning för djurhållning med mer än 30 djurenheter men högst 100 djurenheter. Med en djurenhet avses samma som under 1.20.
+
+1.2002
+
+U
+
+Anläggning för djurhållning med mer än 10 djurenheter men högst 30 djurenheter.
+
+Uppodling av annan mark än jordbruksmark för jordbruksproduktion
+
+1.30
+
+C
+
+Uppodling av annan mark än jordbruksmark för produktion av foder, livsmedel eller annan liknande jordbruksproduktion.
+
+Odling
+
+1.3001
+
+U
+
+1.3002
+
+U
+
+1.3003
+
+1.3004
+
+U
+
+U
+
+Växthus eller kemikalieintensiv odling med en odlingsyta som är större än 5 000 kvadratmeter.
+
+Växthus eller kemikalieintensiv odling med en odlingsyta som är större än 2 000 men högst 5 000 kvadratmeter.
+
+Anläggning för torkning av gödsel.
+
+Odling av jordbruksmark som en större än 100 hektar för produktion av foder, livsmedel eller annan liknande jordbruksproduktion.
+
+4 500
+
+3 000
+
+9 000
+
+9 000
+
+4 500
+
+4 500
+
+6 000
+
+Sida
+
+1.3005
+
+U
+
+Odling av jordbruksmark som är större än 10 hektar men högst 100 hektar för produktion av foder, livsmedel eller annan liknande jordbruksproduktion.
+
+FISKODLING OCH ÖVERVINTRING AV FISK
+
+5.20
+
+C
+
+3 000
+
+Fiskodling eller övervintring av fisk där mer än 1,5 ton
+
+9 000 foder förbrukas per kalenderår, om inte verksamheten är tillståndspliktig enligt 3 kapitlet 1 § miljöprövningsförordningen. 5.2001
+
+U
+
+Fiskodling eller övervintring av fisk där högst 1,5 ton
+
+6 000 foder förbrukas per kalenderår.
+
+UTVINNING, BRYTNING OCH BEARBETNING AV TORV, OLJA, GAS, KOL,
+
+MALM, MINERAL, BERG, NATURGRUS MED MERA
+
+Berg, naturgrus, torv och andra jordarter
+
+10.50
+
+C
+
+Anläggning för sortering eller krossning av berg, naturgrus eller andra jordarter
+
+1. inom område som omfattas av detaljplan eller områdesbestämmelser, eller
+
+2. utanför område som omfattas av detaljplan eller områdesbestämmelser, om verksamheten bedrivs på samma plats under en längre tid än trettio kalenderdagar under en tolvmånadersperiod.
+
+10.50-1 a. mer än 100 000 ton per år
+
+10.50-2 b. mer än 50 000 ton men högst 100 000 ton per år
+
+10.50-3 c. mer än 1 000 ton men högst 50 000 ton per år
+
+10.540-4 d. upp till 1 000 ton per år.
+
+LIVSMEDEL OCH FODER MED MERA
+
+21 000
+
+18 000
+
+12 000
+
+9 000
+
+52 500
+
+36 000
+
+30 000
+
+12 000
+
+6 000
+
+Slakterier
+
+15.10-i
+
+B
+
+15.10-i1
+
+15.10-i2
+
+15.20
+
+B
+
+15.30
+
+C
+
+15.3001
+
+U
+
+Slakteri med en produktion baserad på en slaktvikt av mer än 50 ton per dygn eller mer än 12 500 ton slaktvikt per kalenderår:
+
+1. mer än 50 000 ton slaktvikt per kalenderår.
+
+2. mer än 12 500 men högst 50 000 ton slaktvikt per kalenderår.
+
+Slakteri med en produktion baserad på mer än 7 500 ton men högst 12 500 ton slaktvikt per kalenderår.
+
+Slakteri med en produktion baserad på mer än 50 ton men högst 7 500 ton slaktvikt per kalenderår.
+
+Slakteri för en produktion baserad på högst 50 ton slaktvikt per kalenderår. Punkten gäller inte
+
+Sida
+
+restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+Livsmedel av animaliska råvaror
+
+15.40-i
+
+B
+
+15.45
+
+B
+
+15.50
+
+C
+
+15.5001
+
+U
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart animaliska råvaror med en produktion av mer än 75 ton per dygn eller mer än 18 750 ton per kalenderår.
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart animaliska råvaror med en produktion av mer än 2 000 ton men högst
+
+18 750 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten endast avser mjölkprodukter eller glass eller endast innebär paketering.
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart animaliska råvaror med en produktion av mer än 50 ton men högst 2 000 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten endast avser mjölkprodukter eller glass eller endast innebär paketering.
+
+45 000
+
+36 000
+
+18 000
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart animaliska råvaror med en produktion av högst 50 ton per kalenderår.
+
+Punkten gäller inte restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+6 000
+
+18 000
+
+12 000
+
+7 500
+
+36 000
+
+Rökeri
+
+15.80
+
+Rökeri för en produktion av mer än 50 ton men högst
+
+18 750 ton rökta produkter per kalenderår.
+
+15.80-1
+
+1. Mer än 500 ton men högst 18 50 ton rökta produkter per kalenderår.
+
+15.80-2
+
+2. Mer än 50 ton men högst 500 ton rökta produkter per kalenderår.
+
+15.8001 U
+
+Rökeri för en produktion av högst 50 ton rökta produkter per kalenderår. Punkten gäller inte restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+Livsmedel av vegetabiliska råvaror
+
+15.90-i
+
+C
+
+B
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart vegetabiliska råvaror med en produktion av
+
+1. mer än 75 000 ton produkter per kalenderår, eller
+
+Sida
+
+15.95
+
+B
+
+15.101
+
+C
+
+15.9002
+
+U
+
+2. mer än a. 600 ton per dygn, om anläggningen är i drift i högst 90 dygn i rad under ett kalenderår, eller b. 300 ton per dygn i övriga fall.
+
+Tillståndsplikten gäller inte om verksamheten endast innebär paketering.
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart vegetabiliska råvaror med en produktion av mer än 10 000 ton men högst 75 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten
+
+1. är tillståndspliktig enligt 5 kapitlet 8 § miljöprövningsförordningen eller
+
+2. endast avser kvarnprodukter, glass, råsprit, alkoholhaltig dryck, malt, maltdryck, läskedryck, jäst eller kafferostning eller endast innebär paketering.
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart vegetabiliska råvaror med en produktion av mer än 2 000 ton men högst 10 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten
+
+1. är tillståndspliktig enligt 5 kapitlet 8 § miljöprövningsförordningen eller
+
+2. endast avser kvarnprodukter, glass, råsprit, alkoholhaltig dryck, malt, maltdryck, läskedryck, jäst eller kafferostning eller endast innebär paketering.
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart vegetabiliska råvaror för en produktion av minst 100 ton men högst
+
+2 000 ton per kalenderår. Punkten gäller inte om verksamheten endast innebär paketering. Punkten gäller inte heller restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+24 000
+
+15 000
+
+9 000
+
+18 000
+
+12 000
+
+Kvarnprodukter
+
+15.125
+
+15.125-1
+
+15.125-2
+
+C
+
+Framställning av livsmedel med tillverkning av kvarnprodukter samt beredning och behandling av kvarnprodukter, med en produktion av mer än 1 000 ton men högst 75 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig 8 § eller endast innebär paketering.
+
+1. Mer än 50 000 ton per kalenderår.
+
+Sida
+
+2. Mer än 1 000 ton men högst 50 000 ton per kalenderår.
+
+15.12501 U
+
+Framställning av livsmedel med tillverkning av kvarnprodukter samt beredning och behandling av kvarnprodukter, med en produktion av högst 1 000 ton per kalenderår. Punkten gäller inte restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten
+
+15.12502 U
+
+Siloanläggning för torkning, rensning eller lagring av spannmål med en lagringskapacitet av mer än 10 000 ton.
+
+Livsmedel av kombinerade råvaror
+
+15.131-i
+
+B
+
+15.141
+
+B
+
+15.151
+
+C
+
+Anläggning för framställning av livsmedel med beredning och behandling av både animaliska och vegetabiliska råvaror, i kombinerade eller separata produkter, med en produktion av en slutprodukt vars innehåll av animaliskt ursprung uppgår till
+
+1. mer än 10 viktprocent och produktionen uppgår till mer än 75 ton per dygn eller mer än
+
+18 750 ton per kalenderår, eller
+
+2. högst 10 viktprocent och produktionen uppgår till en mängd a. per dygn som i antal ton överstiger animalievärdet, b. per kalenderår som i antal ton överstiger talet 250 multiplicerat med animalievärdet.
+
+Med animalievärdet avses talet 300 minskat med det tal som bestäms genom att multiplicera 22,5 med talet för det animaliska materialets viktprocent av slutprodukten.
+
+Tillståndsplikten gäller inte om verksamheten innebär endast paketering.
+
+Anläggning för framställning av livsmedel med beredning och behandling av både animaliska och vegetabiliska råvaror, i kombinerande eller separata produkter, med en produktion av mer än 5 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten
+
+1. är tillståndspliktig enligt 5 kapitlet 12 § miljöprövningsförordningen, eller
+
+2. endast avser glass eller endast innebär paketering.
+
+Anläggning för framställning av livsmedel med beredning och behandling av både animaliska och vegetabiliska råvaror, i kombinerade eller separata
+
+6 000
+
+4 500
+
+45 000
+
+37 500
+
+24 000
+
+Sida
+
+15.13101 U
+
+produkter, med en produktion av mer än 400 ton men högst 5 000 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten
+
+1. är tillståndspliktig enligt 5 kapitlet 12 § miljöprövningsförordningen, eller
+
+2. endast avser glass eller endast innebär paketering.
+
+Anläggning för framställning av livsmedel med beredning och behandling av bådeanimaliska och vegetabiliska råvaror, i kombinerade eller separata produkter, med en produktion av högst 400 ton per kalenderår.
+
+9 000
+
+Anläggning för framställning av mjölkprodukter med en produktion baserad på en invägning av mer än 200 ton per dygn som kalenderårsmedelvärde.
+
+Anläggning för framställning av mjölkprodukter med en produktion baserad på en invägning av mer än 500 ton per kalenderår men högst 200 ton per dygn som kalenderårsmedelvärde. Anmälningsplikten gäller inte om verksamheten endast avser glass.
+
+Anläggning för framställning av miljöprodukter med en produktion baserad på en invägning av högt 500 ton per kalenderår. Punkten gäller inte restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+24 000
+
+15 000
+
+6 000
+
+Anläggning för framställning eller raffinering av vegetabiliska eller animaliska oljor eller fetter eller produkter av sådana oljor eller fetter med en produktion av
+
+1. mer än 18 750 ton per kalenderår, om produktionen baseras på animaliska råvaror, eller
+
+2. mer än 75 000 ton per kalenderår, om produktionen baseras på enbart vegetabiliska råvaror.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 5 kapitlet 4, 5, 8, 9, 12, 13 eller 15 § miljöprövningsförordningen.
+
+Anläggning för framställning eller raffinering av vegetabiliska eller animaliska oljor eller fetter eller produkter av sådana oljor eller fetter med en produktion av
+
+52 500
+
+45 000
+
+Mjölk
+
+15.170-i
+
+B
+
+15.180
+
+C
+
+15.18001 U
+
+Oljor och fetter
+
+15.185-i
+
+B
+
+15.190
+
+B
+
+Sida
+
+15.200
+
+C
+
+15.20001 U
+
+1. mer än 5 000 ton men högst 18 750 ton per kalenderår, om produktionen baseras på animaliska råvaror, eller
+
+2. mer än 5 000 ton men högst 75 000 ton per kalenderår, om produktionen baseras på vegetabiliska råvaror.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 5 kapitlet 4, 5, 8, 9, 12, 13, 15 eller
+
+17 § miljöprövningsförordningen.
+
+Anläggning för framställning eller raffinering av vegetabiliska eller animaliska oljor eller fetter eller produkter av sådana oljor eller fetter med en produktion av mer än 100 ton men högst 5 000 ton kalenderår. Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt
+
+5 kapitlet 4, 5, 6, 8, 9, 10, 11, 12, 13, 14 § miljöprövningsförordningen, eller om verksamheten endast avser mjölkprodukter.
+
+Anläggning för framställning eller raffinering av vegetabiliska eller animaliska oljor eller fetter eller produkter av sådana oljor eller fetter för en produktion av högst 100 ton per kalenderår.
+
+Punkten gäller inte restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+18 000
+
+6 000
+
+30 000
+
+15 000
+
+6 000
+
+Glass
+
+15.210
+
+B
+
+15.220
+
+C
+
+15.22001 U
+
+Anläggning för tillverkning av glass med en produktion av
+
+1. mer än 15 000 ton men högst 18 750 ton per kalenderår om produktionen baseras på animaliska råvaror, eller
+
+2. mer än 15 000 ton men högst 18 750 ton per kalenderår om produktionen baseras på endast vegetabiliska råvaror.
+
+Tillståndsplikt gäller inte om verksamheten är tillståndspliktig enligt 5 kapitlet 4, 8, 9, 12 eller 15 § miljöprövningsförordningen.
+
+Anläggning för tillverkning av glass med en produktion av mer än 10 ton men högst 15 000 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 5 kapitlet 4, 8, 9, 12 eller 15 § miljöprövningsförordningen.
+
+Anläggning för tillverkning av glass för en produktion av högst 10 ton per kalenderår. Punkten gäller inte restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+Sida
+
+Råsprit och alkoholhaltiga drycker
+
+15.230
+
+B
+
+Anläggning för framställning av råsprit eller alkoholhaltig dryck genom jäsning eller destillation med en produktion av mer än 5 000 ton men högst 75 000 ton ren etanol per kalenderår.
+
+Tillståndsplikt gäller inte om verksamheten är tillståndspliktig enligt 5 kapitlet 8 § miljöprövningsförordningen.
+
+15.240
+
+C
+
+Anläggning för framställning av råsprit eller alkoholhaltig dryck genom jäsning eller destillation motsvarande en årlig produktion av mer än 10 ton men högst 5 000 ton ren etanol per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 8 5 kapitlet 8 § miljöprövningsförordningen.
+
+1. Mer än 500 ton men högst 5 000 ton ren etanol
+
+15.240-1 per kalenderår.
+
+2. Mer än 100 ton men högst 500 ton ren etanol
+
+15.240-2 per kalenderår.
+
+3. Mer än 10 ton men högst 100 ton ren etanol per
+
+15.240-3 kalenderår.
+
+15.24001 U
+
+Anläggning för framställning av råsprit eller av alkoholhaltiga drycker genom jäsning eller destillation, motsvarande högst 10 ton ren etanol per kalenderår.
+
+Punkten gäller inte restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+15.24002 U
+
+Anläggning för blandning eller tappning av destillerade alkoholhaltiga drycker eller för framställning, blandning eller tappning av vin, cider eller andra fruktviner.
+
+Punkten gäller inte restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+Malt, maltdrycker och läskedrycker
+
+15.250
+
+B
+
+15.260
+
+C
+
+Bryggeri eller annan anläggning för framställning av malt, maltdryck eller läskedryck med en produktion av mer än 10 000 ton men högst 75 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 5 kapitlet 8 § miljöprövningsförordningen.
+
+Bryggeri eller annan anläggning för framställning av malt, maltdryck eller läskedryck med en produktion av mer än 1 000 ton men högst 10 000 ton per kalenderår.
+
+36 000
+
+15 000
+
+12 000
+
+9 000
+
+3 000
+
+3 000
+
+30 000
+
+12 000
+
+Sida
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 5 kapitlet 8 § miljöprövningsförordningen.
+
+15.26001 U
+
+Bryggeri eller annan anläggning för framställning av malt, maltdryck eller läskedryck med en produktion av högst 1 000 ton per kalenderår.
+
+Punkten gäller inte restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+7 500
+
+Tillverkning av jäst med en produktion av mer än 100 ton men högst 75 000 ton per kalenderår eller för framställning av startkulturer av mikroorganismer för livsmedelsindustri eller jordbruk, om anläggningen har en sammanlagd reaktorvolym om minst tio kubikmeter.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 5 kapitlet 8 § miljöprövningsförordningen.
+
+Tillverkning av jäst med en produktion av högst 100 ton per kalenderår eller för framställning av startkulturer av mikroorganismer för livsmedelsindustri eller jordbruk, om anläggningen har en sammanlagd reaktorvyolym om högst tio kubikmeter.
+
+75 000
+
+12 000
+
+15 000
+
+9 000
+
+4 500
+
+12 000
+
+Jäst
+
+15.270
+
+B
+
+15.27001 U
+
+Kafferostning
+
+15.280
+
+Anläggning för rostning av mer än 100 ton men högst
+
+75 000 ton kaffe per kalenderår. Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 8 §.
+
+15.280-5
+
+1. Rostning av mer än 3 000 ton kaffe per kalenderår.
+
+15.280-6
+
+2. Rostning av mer än 100 ton men högst 3 000 ton kaffe per kalenderår.
+
+15.28001 U
+
+Anläggning för rostning av högst 100 ton kaffe per kalenderår.
+
+Punkten gäller inte restauranger, butiker, caféer och liknande med huvudsaklig servering eller försäljning till allmänheten.
+
+Paketering av livsmedel
+
+15.310
+
+C
+
+C
+
+Anläggning för yrkesmässig industriell förpackning av animaliska eller vegetabiliska produkter som inte sker i någon tillstånds- eller anmälningspliktig verksamhet enligt någon av 1 till 27 paragrafen kapitel 5 miljöprövningsförordningen.
+
+Sida
+
+Foder av animaliska råvaror
+
+15.330-i B
+
+Anläggning för framställning av foder med beredning och behandling av enbart animaliska råvaror med en produktion av mer än 75 ton foder per dygn eller mer än 18 750 ton foder per kalenderår. Tillståndsplikten gäller inte om verksamheten endast avser mjölk eller endast innebär paketering.
+
+15.340
+
+C
+
+Anläggning för framställning av foder med beredning och behandling av enbart animaliska råvaror med en produktion av mer än 500 ton men högst 18 750 ton foder per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten
+
+1. är tillståndspliktig enligt 5 kapitlet 29 § miljöprövningsförordningen, eller
+
+2. endast avser mjölk eller endast innebär paketering.
+
+15.34001 U
+
+Anläggning för framställning av foder med beredning och behandling av enbart animaliska råvaror med en produktion av högst 500 ton produkter per kalenderår.
+
+Punkten avser inte produktion av endast mjölk eller endast innebär paketering.
+
+Foder av vegetabiliska råvaror
+
+15.350-i B
+
+Anläggning för framställning av foder med beredning och behandling av enbart vegetabiliska råvaror med en produktion av
+
+1. mer än 75 000 ton per kalenderår, eller
+
+2. mer än a. 600 ton per dygn, om anläggningen är i drift i högst 90 dygn i rad under ett kalenderår, eller b. 300 ton per dygn i övriga fall
+
+Tillståndsplikten gäller inte om verksamheten endast innebär paketering.
+
+15.360
+
+C
+
+15.36001 U
+
+Anläggning för framställning av foder med beredning och behandling av enbart vegetabiliska råvaror med en produktion av mer än 5 000 ton men högst 75 000 ton produkter per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten
+
+1. är tillståndspliktig enligt 5 kapitlet 31 § miljöprövningsförordningen
+
+2. endast avser oljekakor från vegetabiliska oljor eller fetter eller endast innebär paketering.
+
+Anläggning för framställning av foder med beredning och behandling av enbart vegetabiliska råvaror med en
+
+45 000
+
+24 000
+
+3 000
+
+45 000
+
+24 000
+
+6 000
+
+Sida
+
+produktion av högst 5 000 ton per kalenderår. Punkten gäller inte om verksamheten endast innebär paketering.
+
+Foder av kombinerade råvaror
+
+15.370-i
+
+B
+
+Anläggning för framställning av foder med beredning och behandling av animaliska och vegetabiliska råvaror, i kombinerade eller separata produkter, med en produktion av en slutprodukt vars innehåll av animaliskt material uppgår till
+
+1. mer än 10 viktprocent och produktionen uppgår till mer än 75 ton per dygn eller mer än
+
+18 750 ton per kalenderår, eller
+
+2. högst 10 viktprocent och produktionen uppgår till en mängd a. per dygn som i antal ton överstiger animalievärdet, b. per kalenderår som i antal ton överstiger talet 250 multiplicerat med animalievärdet.
+
+Med animalievärdet avses talet 300 minskat med det tal som bestäms genom att multiplicera 22,5 med talet för det animaliska materialets viktprocent av slutprodukten.
+
+Tillståndsplikten gäller inte om verksamheten endast innebär paketering.
+
+45 000
+
+PÄLS, SKINN OCH LÄDER
+
+18.3001
+
+U
+
+Anläggning för garvning eller annan beredning av högst
+
+2 ton hudar eller skinn per kalenderår.
+
+Timavgift
+
+TRÄVAROR
+
+20.80
+
+C
+
+Anläggning för lagring av
+
+1. mer än 2 000 kubikmeter timmer fast mått under bark (m³ fub), om lagring sker på land utan vattenbegjutning,
+
+2. mer än 500 kubikmeter timmer fast mått under bark (m³ fub), om lagningen sker på land med vattenbegjutning och inte är tillståndspliktig enligt 8 §, eller
+
+3. mer än 500 kubikmeter timmer fast mått under bark (m³ fub) i vatten, om lagringen inte är tillståndspliktig enligt 8 kapitlet 8 § miljöprövningsförordningen.
+
+KEMISKA PRODUKTER
+
+12 000
+
+Sida
+
+Annan kemisk tillverkning
+
+24.44
+
+C
+
+Anläggning för att genom kemiska eller biologiska reaktioner yrkesmässigt tillverka organiska eller oorganiska ämnen, i försöks-, pilot- eller laboratorieskala eller annan icke industriell skala.
+
+37 500
+
+24.45
+
+B
+
+Anläggning för att genom endast fysikaliska processer i industriell skala tillverka
+
+1. gas- eller vätskeformiga kemiska produkter,
+
+2. läkemedelssubstanser, genom extraktion ur biologiskt material,
+
+3. sprängämnen,
+
+4. pyrotekniska artiklar, eller
+
+5. ammunition.
+
+Tillståndsplikten gäller inte
+
+1. tillverkning av mindre än 100 ton per kalenderår, om det i verksamheten inte används eller tillverkas någon kemisk produkt som
+
+a) enligt föreskrifter som har meddelats av
+
+Kemikalieinspektionen är klassificerad eller uppfyller kriterierna för att klassificeras med de riskfraser som ingår i faroklasserna ”mycket giftig”, ”giftig”, ”frätande”, ”cancerframkallande”, ”mutagen”, ”reproduktions-toxisk” eller ”miljöfarlig”, eller
+
+b) enligt Europaparlamentets och rådets förordning (EG) nr 1272/2008 av den 16 december 2008 om klassificering, märkning och förpackning av ämnen och blandningar, ändring och upphävande av direktiven
+
+67/548/EEG och 1999/45/EG samt ändring av förordning (EG) nr 1907/2006 uppfyller kriterierna för att klassificeras i faroklasserna ”akut toxicitet kategori 1”, ”akut toxicitet kategori 2”, ”akut toxicitet kategori 3”, ”specifik organtoxicitet enstaka exponering kategori 1”, ”specifik organtoxicitet upprepad exponering kategori
+
+1”, ”frätande på huden kategori 1A”, ”frätande på huden kategori 1B”, ”frätande på huden kategori 1C”, ”cancerogenitet kategori 1A”, ”cancerogenitet kategori 1B”, ”cancerogenitet kategori 2”, ”mutagenitet i könsceller kategori 1A”, ”mutagenitet i könsceller kategori 1B”, ”mutagenitet i
+
+45 000
+
+Sida
+
+24.46
+
+24.46-1
+
+24.46-2
+
+24.46-3
+
+C
+
+könsceller kategori 2”, ”reproduktionstoxicitet kategori 1A”, ”reproduktionstoxicitet kategori 1B”, ”reproduktionstoxicitet kategori 2”, ”farligt för vattenmiljön kategori akut 1”, ”farligt för vattenmiljön kategori kronisk 1”, ”farligt för vattenmiljön kategori kronisk 2”, ”farligt för vattenmiljön kategori kronisk 3”, ”farligt för vattenmiljön kategori kronisk 4” eller ”farligt för ozonskiktet”,
+
+2. tillverkning av färg eller lack, om tillverkningen uppgår till högst 1 000 ton per kalenderår,
+
+3. tillverkning av rengöringsmedel eller kroppsvårds-, kosmetik- eller hygienprodukter, om tillverkningen uppgår till högst 2 000 ton per kalenderår,
+
+4. tillverkning av gasformiga kemiska produkter genom destillation, eller
+
+5. om verksamheten är tillståndspliktig enligt 19 kapitlet miljöprövningsförordningen.
+
+Anläggning för att genom endast fysikaliska processer i industriell skala tillverka
+
+1. naturläkemedel genom extraktion ur biologiskt material,
+
+2. men än 10 ton färg eller lack per kalenderår, om verksamheten inte är tillståndspliktig enligt 45 §,
+
+3. mer än 10 ton rengöringsmedel eller kroppsvårds-, kosmetik- eller hygienprodukter per kalenderår, om verksamheten inte är tillståndspliktig enligt 12 kapitlet 45 § miljöprövningsförordningen,
+
+4. men är 5 000 ton gasformiga kemiska produkter per kalenderår, om tillverkningen sker genom destillation, eller
+
+5. andra kemiska produkter, om verksamheten inte är tillståndspliktig enligt 12 kapitlet 45 § miljöprövningsförordningen.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 19 kapitlet 3 §.
+
+1. Mer än 10 ton färg eller lack per kalenderår, eller mer än 5 000 ton gasformiga kemiska produkter per kalenderår genom destillation, eller tillverkning av andra kemiska produkter.
+
+2. Naturläkemedel genom extraktion ur biologiskt material.
+
+15 000
+
+15 000
+
+18 000
+
+Sida
+
+3. Mer än 1 000 ton men högst 2 000 ton rengöringsmedel eller kroppsvårds- kosmetikeller hygienprodukter per kalenderår.
+
+4. Mer än 10 ton men högst 1 000 ton rengöringsmedel eller kroppsvårds-, kosmetikeller hygienprodukter per kalenderår.
+
+24.46-4
+
+12 000
+
+24.4601
+
+U
+
+Anläggning för att genom endast fysikaliska processer i industriell skala tillverka högst 10 ton färg eller lack per kalenderår.
+
+9 000
+
+24.4602
+
+U
+
+Anläggning för att genom endast fysikaliska processer i industriell skala tillverka högst 10 ton rengöringsmedel eller kroppsvårds-, kosmetik- eller hygienprodukter per kalenderår.
+
+9 000
+
+24.4603
+
+U
+
+Anläggning för att genom endast fysikaliska processer i industriell skala tillverka högst 5 000 ton gasformiga kemiska produkter per kalenderår, om tillverkningen sker genom destillation.
+
+9 000
+
+GUMMI- OCH PLASTVAROR
+
+25.30
+
+C
+
+Anläggning för att genom ytterligare polymerisation tillverka produkter av plast, om
+
+1. produktionen baseras på mer än 1 ton plastråvara per kalenderår, och
+
+2. verksamheten inte är tillståndspliktig enligt 13 kapitlet 3 §.
+
+18 000
+
+25.3001
+
+U
+
+Anläggning för att genom ytterligare polymerisation tillverka produkter av plast, om produktionen baseras på högst 1 ton plastråvara per kalenderår.
+
+9 000
+
+25.50
+
+C
+
+Anläggning där produktionen baseras på mer än 1 ton plastråvara per kalenderår och inte omfattar ytterligare polymerisation, för
+
+1. tillverkning av produkter av plast förutom endast mekanisk montering eller mekanisk bearbetning, eller
+
+2. beläggning eller kalandrering med plast.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig eller anmälningspliktig enligt 19 kapitlet
+
+3 eller 4 § miljöprövningsförordningen.
+
+a) Mer än 200 ton plastråvara per kalenderår.
+
+18 000
+
+12 000
+
+25.50-1
+
+25.50-2
+
+Sida
+
+b) Mer än 20 ton men högst 200 ton plastråvara per kalender år.
+
+c) Mer än 1 ton men högst 20 ton plastråvara per kalenderår.
+
+d) Mer än 20 ton plastråvara per kalenderår för beläggning eller kalandrering med plast.
+
+e) Mer än 10 ton men högst 20 ton plastråvara per kalenderår för beläggning eller kalandrering med plast.
+
+f) Mer än 5 ton men högst 10 ton plastråvara per kalenderår för beläggning eller kalandrering med plast.
+
+g) Mer än 3 ton men högst 5 ton plastråvara per kalenderår för beläggning eller kalandrering med plast.
+
+h) Mer än 1 ton men högst 3 ton plastråvara per kalenderår för beläggning eller kalandrering med plast.
+
+25.50-3
+
+25.50-4
+
+25.50-5
+
+25.50-6
+
+25.50-7
+
+25.50-8
+
+6 000
+
+21 000
+
+15 000
+
+12 000
+
+9 000
+
+6 000
+
+18 000
+
+10 500
+
+21 000
+
+18 000
+
+ICKE-METALLISKA MINERALISKA PRODUKTER
+
+Cement, betong, kalk, krita och gips
+
+26.110
+
+C
+
+26.11001 U
+
+26.150
+
+C
+
+26.150-1
+
+26.150-2
+
+Anläggning för tillverkning av mer än 500 ton
+
+1. betong eller lättbetong per kalenderår, eller
+
+2. varor av betong, lättbetong eller cement per kalenderår.
+
+Anläggning för tillverkning av högst 500 ton
+
+1. betong eller lättbetong per kalenderår, eller
+
+2. varor av betong, lättbetong eller cement per kalenderår.
+
+Asfaltverk eller oljegrusverk som
+
+1. ställs upp inom område med detaljplan eller områdesbestämmelser, eller
+
+2. som ställs utanför område med detaljplan eller områdesbestämmelser i mer än 90 dagar under en tolvmånadersperiod.
+
+YTBEHANDLING AV METALL ELLER PLAST MED MERA
+
+Ytbehandling, avfettning och färgborttagning med mera
+
+28.25
+
+C
+
+Anläggning för kemisk eller elektrolytisk ytbehandling av metall eller plast. Anmälningsplikten gäller inte betning med betpasta eller om verksamheten är tillståndspliktig enligt 16 kapitlet 1 eller 2 § miljöprövningsförordningen.
+
+Sida
+
+28.25-1
+
+28.25-2
+
+1. om verksamheten ger upphov till mer än 1 kubikmeter avloppsvatten per kalenderår.
+
+2. om verksamheten ger upphov till högst 1 kubikmeter avloppsvatten per kalenderår.
+
+Blästra mer än 50 men högst 500 kvadratmeter yta per kalenderår.
+
+15 000
+
+12 000
+
+9 000
+
+9 000
+
+12 000
+
+12 000
+
+12 000
+
+9 000
+
+15 000
+
+9 000
+
+6 000
+
+15 000
+
+28.7101
+
+U
+
+28.90
+
+C
+
+Anläggning för att med kemiska eller termiska metoder yrkesmässigt ta bort lack eller färg. Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 16 kapitlet § 8 eller 19 kapitlet 2 till 3 paragraferna miljöprövningsförordningen.
+
+28.95
+
+28.95-1
+
+C
+
+Anläggning för
+
+1. vattenbaserad avfettning som ger upphov till mer än 10 kubikmeter avloppsvatten per kalenderår, om verksamheten inte är en fordonstvätt eller tillståndspliktig enligt 19 kapitlet 2, 3, 4 eller 6 § miljöprövningsförordningen,
+
+2. betong med mer än 50 kilogram betpasta per kalenderår, om verksamheten ger upphov till avloppsvatten,
+
+3. blästring av mer än 500 kvadratmeter yta per kalenderår,
+
+4. våttrumling mer än 1 ton metaller per kalenderår eller härdning av mer än 1 ton gods per kalenderår,
+
+5. termisk ytbehandling med en metallförbrukning av mer än 50 kilogram men högst 2 ton per kalenderår, eller
+
+6. metallbeläggning med vakuummetod med en metallförbrukning av mer än 500 kilogram per kalenderår.
+
+Anläggning för vattenbaserad avfettning som ger upphov till högst 10 kubikmeter avloppsvatten per kalenderår, om verksamheten inte är en fordonstvätt eller tillståndspliktig enligt 19 kapitlet 2, 3, 4 eller 6 § miljöprövningsförordningen.
+
+28.95-2
+
+28.95-3
+
+28.95-4
+
+28.95-5
+
+28.95-6
+
+28.9501
+
+U
+
+METALLBEARBETNING MED MERA
+
+34.20
+
+C
+
+Provbänk för motorer, turbiner eller reaktorer.
+
+Sida
+
+34.80
+
+C
+
+34.80-1
+
+34.80-2
+
+34.80-3
+
+34.8001
+
+U
+
+Anläggning där det förekommer maskinell metallbearbetning och där total tankvolym för skärvätskor, processoljor och hydrauloljor i metallbearbetningsmaskinerna är större än 1 kubikmeter, om verksamheten inte är tillstånds- eller anmälningspliktig enligt 18 kapitlet 1, 2, 3, 4, 5, 6, 7, 9 eller 10 § miljöprövnings- förordningen.
+
+Med total tankvolym avses det samma som i 18 kapitlet
+
+7 § andra stycket miljöprövningsförordningen.
+
+1. Total tankvolym för skärvätskor, processoljor och hydrauloljor i metallbearbetningsmaskinerna är större än 10 kubikmeter men högst 20 kubikmeter.
+
+2. Total tankvolym för skärvätskor, processoljor och hydrauloljor i metallbearbetningsmaskinerna är större än 5 kubikmeter men högst 10 kubikmeter.
+
+3. Total tankvolym för skärvätskor, processoljor och hydrauloljor i metallbearbetningsmaskinerna är större än 1 kubikmeter men högst 5 kubikmeter.
+
+Anläggning där det förekommer maskinell metallbearbetning och där total tankvolym för skärvätskor, processoljor och hydrauloljor i metallbearbetningsmaskinerna är högst 1 kubikmeter. Med total tankvolym avses det samma som i 18 kapitlet
+
+7 § andra stycket miljöprövningsförordningen.
+
+21 000
+
+18 000
+
+9 000
+
+Timavgift
+
+SKEPPSVARV
+
+35.20
+
+C
+
+Skeppsvarv
+
+35.2001 U
+
+Övriga varv
+
+FÖRBRUKNING AV ORGANISKA LÖSNINGSMEDEL
+
+39.30
+
+39.30-1
+
+C
+
+Anläggning där organiska lösningsmedel förbrukas per kalenderår med
+
+1. mer än 1 ton i ytrengöring, om lösningsmedlet innehåller någon kemisk produkt, som
+
+a) enligt föreskrifter som har meddelats av
+
+Kemikalieinspektionen har klassificerats med riskfraserna ”misstänks kunna ge cancer” (R40), kan ge cancer” (R45), ”kan ge ärftliga genetiska skador” (R46), ”kan ge cancer vid inandning” (R49), ”kan ge nedsatt fortplantningsförmåga” (R60) eller ”kan ge fosterskador” (R61), eller
+
+18 000
+
+Timavgift
+
+18 000
+
+Sida
+
+b) enligt Europaparlamentets och rådets förordning (EG) nr 1272/2008 av den 16 december 2008 om klassificering, märkning och förpackning av ämnen och blandningar, ändring och upphävande av direktiven
+
+67/548/EEG och 1999/45/EG samt ändring av förordning (EG) nr 1907/2006 uppfyller kriterierna för att klassificeras i faroklasserna ”cancerogenitet kategori 1A”, ”cancerogenitet kategori 1B”, ”cancerogenitet kategori 2”, ”mutagenitet i könsceller kategori 1A”, ”mutagenitet i könsceller kategori 1B”, ”reproduktionstoxicitet kategori 1A”, eller ”reproduktionstoxicitet kategori 1B”,
+
+2. mer än 2 ton i annan ytrengöring,
+
+3. mer än 500 kilogram i fordonslackering, eller
+
+4. mer än 1 kilogram i kemtvätt.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 19 kapitlet 2 eller 3 § miljöprövningsförordningen.
+
+39.30-2
+
+39.30-3
+
+39.30-4
+
+15 000
+
+15 000
+
+6 000
+
+39.35
+
+C
+
+Anläggning där organiska lösningsmedel förbrukas per kalenderår med mer än 500 kilogram i lackering av vägfordon till följd av reparation, underhåll eller dekoration som sker utanför tillverkningsanläggningar.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 19 kapitlet 2 eller 3 § miljöprövningsförordningen.
+
+18 000
+
+39.3501
+
+U
+
+Anläggning där organiska lösningsmedel förbrukas per kalenderår med högst 500 kilogram i lackering av vägfordon till följd av reparation, underhåll eller dekoration som sker utanför tillverkningsanläggningar.
+
+9 000
+
+39.50
+
+C
+
+Anläggning där det per kalenderår förbrukas
+
+1. mer än 1 ton halogenerade organiska lösningsmedel, eller
+
+2. mer än totalt 5 ton organiska lösningsmedel.
+
+Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt 19 kapitlet 2, 3 eller 4 § miljöprövningsförordningen.
+
+a) Mer än 1 ton halogenerade organiska lösningsmedel förbrukas per kalenderår.
+
+21 000
+
+21 000
+
+39.50-1
+
+39.50-2
+
+Sida
+
+39.50-3
+
+b) Mer än totalt 10 ton men högst totalt 25 ton organiska lösningsmedel förbrukas per kalenderår.
+
+c) Mer än totalt 5 ton men högst totalt 10 ton organiska lösningsmedel förbrukas per kalenderår.
+
+Anläggning där det per kalenderår förbrukas högst 1 ton halogenerade organiska lösningsmedel.
+
+18 000
+
+15 000
+
+39.5001
+
+U
+
+39.5002
+
+U
+
+Anläggning där det per kalenderår förbrukas mer än 2,5 ton men högst 5 ton organiska lösningsmedel.
+
+10 500
+
+39.5003
+
+U
+
+Anläggning där det per kalenderår förbrukas mer än
+
+500 kg men högst 2,5 ton organiska lösningsmedel.
+
+7 500
+
+39.5004
+
+U
+
+39.60
+
+B
+
+Anläggning där det per kalenderår förbrukas mer än
+
+100 kg men högst 500 kg organiska lösningsmedel.
+
+HANTERING AV BRÄNSLEN OCH KEMISKA PRODUKTER
+
+Anläggning för lagring eller annan hantering av
+
+1. gasformiga eller flytande petrokemiska produkter, oljor, petroleumprodukter eller brännbara gaser, om anläggningen har kapacitet för lagring av mer än 50 000 ton vid ett och samma tillfälle eller hantering av mer än 500 000 ton per kalenderår,
+
+2. andra kemiska produkter, om lagringen eller hanteringen omfattar mer än 5 000 ton vid ett och samma tillfälle eller mer än 50 000 ton per kalenderår och produkterna
+
+a) enligt föreskrifter som har meddelats av
+
+Kemikalieinspektionen har klassificerats med de riskfraser som ingår i faroklasserna "mycket giftig", "giftig", "frätande", "cancerframkallande", "mutagen", "reproduktionstoxisk" eller "miljöfarlig", eller
+
+b) enligt Europaparlamentets och rådets förordning (EG) nr 1272/2008 av den 16 december 2008 om klassificering, märkning och förpackning av ämnen och blandningar, ändring och upphävande av direktiven
+
+67/548/EEG och 1999/45/EG samt ändring av förordning (EG) nr 1907/2006 uppfyller kriterierna för att klassificeras i faroklasserna "akut toxicitet kategori 1", "akut toxicitet kategori 2", "akut toxicitet
+
+Timavgift
+
+45 000
+
+Sida
+
+kategori 3", "specifik organtoxicitet enstaka exponering kategori 1", "specifik organtoxicitet upprepad exponering kategori
+
+1", "frätande för huden kategori 1A", "frätande för huden kategori 1B", "frätande för huden kategori 1C", "cancerogenitet kategori 1A", "cancerogenitet kategori 1B", "cancerogenitet kategori 2", "mutagenitet i könsceller kategori 1A", "mutagenitet i könsceller kategori 1B", "mutagenitet i könsceller kategori 2", "reproduktionstoxicitet kategori 1A", "reproduktions-toxicitet kategori 1B", "reproduktionstoxicitet kategori 2", "farligt för vattenmiljön kategori akut 1", "farligt för vattenmiljön kategori kronisk 1", "farligt för vattenmiljön kategori kronisk 2", "farligt för vattenmiljön kategori kronisk 3", "farligt för vattenmiljön kategori kronisk 4" eller "farligt för ozonskiktet, eller
+
+3. andra kemiska produkter än som avses i 1 och
+
+2, om det i anläggningen lagras mer än 200 000 ton vid ett och samma tillfälle.
+
+39.70
+
+C
+
+Anläggning för lagring av
+
+1. gasformiga eller flytande petrokemiska produkter, oljor, petroleumprodukter eller brännbara gaser, om det i anläggningen lagras mer än 5 000 ton vid ett och samma tillfälle,
+
+2. andra kemiska produkter än som avses i 1, om anläggningen avser verksamhet för energiproduktion eller kemisk industri och har kapacitet för lagring av mer än 1 ton vid ett och samma tillfälle och
+
+a) någon produkt enligt föreskrifter som har meddelats av Kemikalieinspektionen har klassificerats med de riskfraser som ingår i faroklasserna "mycket giftig", "giftig", "frätande", "cancerframkallande", "mutagen", "reproduktionstoxisk" eller "miljöfarlig", eller
+
+b) någon produkt enligt förordning (EG) nr
+
+1272/2008 uppfyller kriterierna för att klassificeras i faroklasserna "akut toxicitet kategori 1", "akut toxicitet kategori 2", "akut toxicitet kategori 3", "specifik organtoxicitet
+
+30 000
+
+Sida
+
+enstaka exponering kategori 1", "specifik organtoxicitet upprepad exponering kategori
+
+1", "frätande för huden kategori 1A", "frätande för huden kategori 1B", "frätande för huden kategori 1C", "cancerogenitet kategori 1A", "cancerogenitet kategori 1B", "cancerogenitet kategori 2", "mutagenitet i könsceller kategori 1A", "mutagenitet i könsceller kategori 1B", "mutagenitet i könsceller kategori 2", "reproduktionstoxicitet kategori 1A", "reproduktionstoxicitet kategori 1B", "reproduktionstoxicitet kategori 2", "farligt för vattenmiljön kategori akut 1", "farligt för vattenmiljön kategori kronisk 1", "farligt för vattenmiljön kategori kronisk 2", "farligt för vattenmiljön kategori kronisk 3", "farligt för vattenmiljön kategori kronisk 4" eller "farligt för ozonskiktet", eller
+
+3. andra kemiska produkter än som avses i 1 och
+
+2, om det i anläggningen lagras mer än 50 000 ton vid ett och samma tillfälle.
+
+39.90
+
+C
+
+Anläggning för lagring av mer än 5 000 ton kol, torv eller bränsleflis eller annat träbränsle per kalenderår.
+
+12 000
+
+39.9001
+
+U
+
+Anläggning för lagring av mer än 1 000 ton men högst
+
+5 000 ton kol, torv eller bränsleflis eller annat träbränsle per kalenderår.
+
+6 000
+
+135 000
+
+105 000
+
+60 000
+
+45 000
+
+GAS- OCH VÄTSKEFORMIGA BRÄNSLEN, EL, VÄRME OCH KYLA
+
+Förbränning
+
+40.40-i
+
+A
+
+Anläggning för förbränning med en total installerad tillförd effekt av mer än 300 megawatt.
+
+40.50-i
+
+B
+
+Anläggning för förbränning med en total installerad tillförd effekt av minst 50 megawatt men högst 300 megawatt.
+
+1. Totalt installerad tillförd effekt av mer än 100 megawatt men högst 300 megawatt.
+
+2. Total installerad tillförd effekt av mer än 50 megawatt men högst 100 megawatt.
+
+Anläggning för förbränning med en total installerad tillförd effekt av mer än 20 megawatt men mindre än 50 megawatt.
+
+40.50-i1
+
+40.50-i2
+
+40.51
+
+B
+
+Sida
+
+40.60
+
+C
+
+40.60-1
+
+40.60-2
+
+40.60-3
+
+40.60-4
+
+40.6001
+
+Anläggning för förbränning med en total installerad tillförd effekt av
+
+1. mer än 500 kilowatt men högst 20 megawatt, om annat bränsle används än enbart fossil eldningsolja eller biogen eller fossil bränslegas, eller
+
+2. mer än 10 megawatt men högst 20 megawatt, om inget annat bränsle används än fossil eldningsolja eller biogen eller fossil bränslegas.
+
+Anmälningsplikten gäller inte om verksamheten är anmälningspliktig enligt 21 kapitlet 12 § miljöprövningsförordningen eller avser en stationär förbränningsmotor avsedd endast som reservaggregat vid elavbrott.
+
+a) Total installerad tillförd effekt av mer än 5 megawatt men högst 20 megawatt, om annat bränsle används än enbart fossil eldningsolja eller biogen eller fossil bränslegas.
+
+b) Total installerad tillförd effekt av mer än 1 megawatt men högst 5 megawatt, om annat bränsle används än enbart fossil eldningsolja eller biogen eller fossil bränslegas.
+
+c) Total installerad tillförd effekt av mer än 500 kilowatt men högst 1 megawatt, om annat bränsle används än enbart fossil eldningsolja eller biogen eller fossil bränslegas.
+
+d) Total installerad tillförd effekt av mer än 10 megawatt men högst 20 megawatt, om inget annat bränsle används än fossil eldningsolja eller biogen eller fossil bränslegas.
+
+18 000
+
+15 000
+
+9 000
+
+18 000
+
+U
+
+Yrkesmässig anläggning för förbränning med en total installerad tillförd effekt av
+
+1. högst 500 kilowatt, om annat bränsle används än enbart fossil eldningsolja eller biogen eller fossil bränslegas, eller
+
+2. högst 10 megawatt, om inget annat bränsle används än fossil eldningsolja eller biogen eller fossil bränslegas.
+
+6 000
+
+C
+
+Verksamhet med
+
+1. ett vindkraftverk som inklusive rotorblad är högre än 50 meter.
+
+6 000
+
+Vindkraft
+
+40.100
+
+Sida
+
+2. två eller fler vindkraftverk som står tillsammans (gruppstation), eller
+
+3. ett vindkraftverk som står tillsammans med ett annat vindkraftverk, om verksamheten påbörjas efter det att verksamheten med det andra vindkraftverket påbörjades
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 21 kapitlet 13 eller 14 § miljöprövningsförordningen. 40.10001 U
+
+Verksamhet med ett vindkraftverk som inklusive rotorblad är lägre än 50 meter.
+
+3 000
+
+19 500
+
+10 500
+
+FORDONSSERVICE OCH DRIVMEDELSHANTERING
+
+50.10
+
+C
+
+Anläggning för tvättning av
+
+1. fler än 5 000 personbilar per kalenderår,
+
+2. fler än 100 tåg eller flygplan per kalenderår,
+
+3. fler än 500 tågvagnar eller lok per kalenderår, eller
+
+4. fler än 1 000 andra motordrivna fordon per kalenderår.
+
+Anläggning för tvättning av 2 000 till 5 000 personbilar per år eller 400 till 1 000 lastbilar, bussar eller andra tyngre vägfordon per år.
+
+50.1001
+
+U
+
+50.1002
+
+U
+
+Övriga fordonstvättanläggningar.
+
+Timavgift
+
+50.1003
+
+U
+
+Däckverkstad med tvätt av däck.
+
+Timavgift
+
+50.20
+
+C
+
+Anläggning där det per kalenderår hanteras
+
+1. mer än 1 000 kubikmeter flytande motorbränsle, eller
+
+2. mer än 1 miljon normalkubikmeter gas avsedd som motorbränsle.
+
+Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt 20 kapitlet 1, 2 eller 3 § miljöprövningsförordningen.
+
+10 500
+
+50.2001
+
+U
+
+Anläggning där mindre än 1 000 kubikmeter flytande motorbränslen eller högst 1 000 000 normalkubikmeter gas avsett som motorbränsle hanteras per år.
+
+6 000
+
+50.2002
+
+50.2003
+
+U
+
+U
+
+Fordonsverkstad.
+
+Verkstad för reparationer av båtmotorer eller motordrivna maskiner. Gäller ej varv.
+
+Timavgift
+
+Timavgift
+
+Sida
+
+HAMNAR OCH FLYGPLATSER
+
+Hamnar
+
+63.10
+
+B
+
+63.10-1
+
+63.10-2
+
+63.10-3
+
+63.10-4
+
+63.10-5
+
+63.10-6
+
+Gäller för hamn där trafik medges för fartyg med en bruttodräktighet på mer än 1 350.
+
+Tillståndsplikten gäller inte
+
+1. hamn för Försvarsmakten, eller
+
+2. färjekaj med högst tio planerade fartygsanlöp per kalenderår.
+
+a) Hamn med mer än 5 000 anlöp per kalenderår
+
+b) Hamn med 2 000 till 5 000 anlöp per kalenderår
+
+c) Hamn med 300 till 2 000 anlöp per kalenderår
+
+d) Hamn med 50 till 300 anlöp per kalenderår
+
+e) Hamn med 10 till 50 anlöp per kalenderår
+
+f) Hamn med högst 10 anlöp per kalenderår
+
+180 000
+
+120 000
+
+60 000
+
+45 000
+
+30 000
+
+15 000
+
+63.2001
+
+U
+
+Fritidsbåtshamn, med fler än 600 fritidsbåtar eller liknande med tvättplats eller vinterförvaring.
+
+Timavgift
+
+63.2002
+
+U
+
+Fritidsbåtshamn med fler än 50 men högst 600 fritidsbåtar eller liknande med tvättplats eller vinterförvaring.
+
+Timavgift
+
+63.2003
+
+U
+
+Fritidsbåtshamn med fler än 50 fritidsbåtar eller liknande utan tvättplats och vinterförvaring.
+
+Timavgift
+
+63.2004
+
+U
+
+Fritidsbåtshamn med färre än 50 fritidsbåtar eller liknande med tvättplats eller vinterförvaring.
+
+Timavgift
+
+63.2005
+
+U
+
+Fritidsbåtshamn med färre än 50 fritidsbåtar eller liknande utan tvättplats eller vinterförvaring.
+
+Timavgift
+
+Annan infrastruktur
+
+U
+
+63.10001
+
+63.10002
+
+63.10003 U
+
+Vägar i drift upplåtna för allmän trafik
+
+1. Trafikverkets vägar (samtliga inom kommunen).
+
+2. Kommunala vägar (samtliga inom kommunen).
+
+Spåranläggning i drift för regional kollektivtrafik eller nationell person och/eller godstrafik med en sammanlagd spårlängd över 30 kilometer.
+
+30 000
+
+15 000
+
+21 000
+
+Sida
+
+LABORATORIER
+
+73.10
+
+C
+
+Kemiska eller biologiska laboratorier med en total golvyta som är större än 5 000 kvadratmeter.
+
+Anmälningsplikten gäller inte laboratorier som
+
+1. ingår i verksamhet som är tillstånds- eller anmälningspliktig enligt någon annan bestämmelse i denna förordning,
+
+2. är tillstånds- eller anmälningspliktiga enligt 13 kapitlet miljöbalken, eller
+
+3. ingår i utbildningslokaler som är anmälningspliktiga enligt 38 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd.
+
+21 000
+
+27 000
+
+TANKRENGÖRING
+
+74.10
+
+B
+
+Anläggning för rengöring av cisterner, tankar eller fat som i annan verksamhet än den egna används för förvaring eller transport av kemiska produkter och där någon kemisk produkt,
+
+1. enligt föreskrifter som har meddelats av
+
+Kemikalieinspektionen har klassificerats med de riskfraser som ingår i faroklasserna ”mycket giftig”, ”giftig”, ”frätande”, ”cancerframkallande”, ”mutagen”, ”reproduktionstoxisk” eller ”miljöfarlig”, eller
+
+2. enligt Europaparlamentets och rådets förordning (EG) nr 1272/2008 av den 16 december 2008 om klassificering, märkning och förpackning av ämnen och blandningar, ändring och upphävande av direktiven 67/548/EEG och 1999/45/EG samt ändring av förordning (EG) nr 1907/2006 uppfyller kriterierna för att klassificeras i faroklasserna ”akut toxicitet kategori 1”, ”akut toxicitet kategori 2”, ”akut toxicitet kategori 3”, ”specifik organtoxicitet enstaka exponering kategori 1”, ”specifik organtoxicitet upprepad exponering kategori 1”, ”frätande för huden kategori 1A”, ”frätande för huden kategori 1B”, ”frätande för huden kategori 1C”, ”cancerogenitet kategori 1A”, ”cancerogenitet kategori 1B”, ”cancerogenitet kategori 2”, ”mutagenitet i könsceller kategori
+
+1A”, ”mutagenitet i könsceller kategori 1B”, ”mutagenitet i könsceller kategori 2”,
+
+Sida
+
+”reproduktionstoxicitet kategori 1A”, ”reproduktionstoxicitet kategori 1B”, ”reproduktionstoxicitet kategori 2”, ”farligt för vattenmiljön kategori akut 1”, ”farligt för vattenmiljön kategori kronisk 1”, ”farligt för vattenmiljön kategori kronisk 2”, ”farligt för vattenmiljön kategori kronisk 3”, ”farligt för vattenmiljön kategori kronisk 4” eller ”farligt för ozonskiktet”.
+
+a) Rengöring av cisterner, tankar eller fat som i annan verksamhet än den egna används för förvaring eller transport av mer än 500 kubikmeter per kalenderår.
+
+b) Rengöring av cisterner, tankar eller fat som i annan verksamhet än den egna används för förvaring eller transport av högst 500 kubikmeter per kalenderår.
+
+HÄLSO- OCH SJUKVÅRD
+
+85.10
+
+C
+
+Sjukhus med fler än 200 vårdplatser.
+
+18 000
+
+85.1001
+
+U
+
+Sjukhus med högst än 200 vårdplatser.
+
+12 000
+
+U
+
+Tandvårdsverksamhet
+
+a) 10 behandlingsstolar eller fler, för tandläkare,
+
+b) 5 till 9 behandlingsstolar för tandläkare,
+
+c) 1 till 4 behandlingsstolar för tandläkare.
+
+Timavgift
+
+RENING AV AVLOPPSVATTEN
+
+90.10
+
+B
+
+90.10-1
+
+90.10-2
+
+90.16
+
+C
+
+Tillståndsplikt B och verksamhetskod 90.10 gäller för avloppsreningsanläggning som omfattas av lagen (2006:412) om allmänna vattentjänster och som tar emot avloppsvatten med en föroreningsmängd som motsvarar 2 000 personekvivalenter eller mer
+
+1. mottagande av en föroreningsmängd som motsvarar minst 20 000 personekvivalenter men högst 100 000 personekvivalenter.
+
+2. mottagande av en föroreningsmängd som motsvarar minst 2 000 personekvivalenter men mindre än 20 000 personekvivalenter.
+
+Anmälningsplikt C och verksamhetskod 90.16 gäller för avloppsreningsanläggning som tar emot avloppsvatten med en föroreningsmängd som motsvarar mer än 200 men mindre än 2 000 personekvivalenter.
+
+67 500
+
+45 000
+
+Sida
+
+90-16-1
+
+90-16-2
+
+1. mottagande av en föroreningsmängd som motsvarar minst 500 personekvivalenter men högst 1 999 personekvivalenter.
+
+2. mottagande av en föroreningsmängd som motsvarar mer än 200 personekvivalenter men högst 499 personekvivalenter.
+
+37 500
+
+22 500
+
+90.2001
+
+U
+
+Avloppsreningsanläggning som tar emot avloppsvatten med en föroreningsmängd som motsvarar mer än 100 men högst 200 personekvivalenter.
+
+12 000
+
+90.2002
+
+U
+
+Avloppsreningsanläggning som tar emot avloppsvatten med en föroreningsmängd som motsvarar mer än 25 men högst 100 personekvivalenter.
+
+9 000
+
+90.2004
+
+U
+
+Allmän ledningsnätsanläggning för spillvatten, inklusive pumpstationer, som inte omfattas av tillstånd eller anmälan av tillhörande avloppsreningsverk.
+
+24 000
+
+90.2005
+
+U
+
+Allmän ledningsnätsanläggning för dagvatten, inklusive reningsanläggningar.
+
+30 000
+
+90.2006
+
+U
+
+Annan ledningsnätsanläggning för dagvatten, inklusive reningsanläggningar.
+
+7 500
+
+90.2007
+
+U
+
+Dagvattenanläggning eller motsvarande anordning för att rena dagvatten.
+
+6 000
+
+Samförbränningsanläggning där icke-farligt avfall förbränns, om den tillförda mängden avfall är mer än
+
+100 000 ton per kalenderår.
+
+I den tillförda mängden inräknas inte rent träavfall eller avfall som anges i 17 § 1 till 3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+Avfallsförbränningsanläggning där icke-farligt avfall förbränns, om den tillförda mängden avfall är mer än
+
+100 000 ton per kalenderår.
+
+I den tillförda mängden inräknas inte rent träavfall eller avfall som anges i 17 § 1 till 3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+Samförbränningsanläggning där icke-farligt avfall förbränns, om den tillförda mängden avfall är
+
+150 000
+
+150 000
+
+105 000
+
+AVFALL
+
+Förbränning
+
+90.200-i
+
+A
+
+90.201-i
+
+A
+
+90.210-i
+
+B
+
+Sida
+
+1. mer än 3 ton per timme, eller
+
+2. mer än 18 000 ton men högst 100 000 ton per kalenderår.
+
+I den tillförda mängden inräknas inte rent träavfall eller avfall som anges i 17 § 1 till 3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+90.211-i
+
+B
+
+Avfallsförbränningsanläggning där icke-farligt avfall förbränns, om den tillförda mängden avfall är
+
+1. mer än 3 ton per timme, eller
+
+2. mer än 18 000 ton men högst 100 000 ton per kalenderår.
+
+I den tillförda mängden inräknas inte rent träavfall eller avfall som anges i 17 § 1 till 3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+105 000
+
+90.220
+
+B
+
+Samförbränningsanläggning där icke farligt avfall förbränns, om den tillförda mängden avfall är
+
+1. högst 3 ton per timme, eller
+
+2. mer än 50 ton men högst 18 000 ton per kalenderår.
+
+I den tillförda mängden inräknas inte rent träavfall eller avfall som anges i 17 § 1 till 3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+37 500
+
+90.221
+
+B
+
+Avfallsförbränningsanläggning där icke-farligt avfall förbränns, om den tillförda mängden avfall är
+
+1. högst 3 ton per timme, eller
+
+2. mer än 50 ton men högst 18 000 ton per kalenderår.
+
+I den tillförda mängden inräknas inte rent träavfall eller avfall som anges i 17 § 1 till 3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+37 500
+
+90.230
+
+C
+
+Samförbrännings- eller avfallsförbränningsanläggning där icke-farligt avfall förbränns yrkesmässigt, om den tillförda mängden är högst 50 ton per kalenderår.
+
+Anmälningsplikten gäller inte anläggning som endast förbränner rent träavfall eller avfall som anges i 17 § 1 till 3 och 5 i förordningen (2013:253) om förbränning av avfall
+
+Samförbrännings- eller avfallsförbränningsanläggning där icke-farligt avfall förbränns om den tillförda mängden är högst 50 ton per kalenderår. Punken gäller inte anläggning som endast förbränner rent träavfall eller
+
+15 000
+
+15 000
+
+90.23001 U
+
+Sida
+
+avfall som anges i 17 § 1 till 3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+Deponering
+
+90.271
+
+B
+
+90.271-1
+
+90.271-2
+
+Deponera icke-farliga muddermassor på land längs små sund, kanaler eller vattenvägar som massorna har muddrats från, om
+
+1. mängden massor är mer än 1 000 ton, eller
+
+2. föroreningsrisken inte endast är ringa.
+
+a) Där föroreningsrisken inte endast är ringa, eller i större mängd än 2 500 ton.
+
+b) Där föroreningsrisken inte endast är ringa, eller i större mängd är 1 000 ton men högst
+
+2 500 ton.
+
+21 000
+
+18 000
+
+90.281
+
+C
+
+Deponering av icke-farliga muddermassor på land längs små sund, kanaler eller vattenvägar som massorna har muddrats från, om
+
+1. mängden massor är högst 1 000 ton, och
+
+2. föroreningsrisken endast ringa.
+
+9 000
+
+90.300-i
+
+B
+
+Deponera icke-farligt avfall som inte är inert, om
+
+1. den tillförda mängden är mer än 2 500 ton men högst 100 000 ton avfall per kalenderår, eller
+
+2. mängden avfall som deponeras är mer än
+
+25 000 ton.
+
+Tillståndsplikten gäller inte om deponeringen är tillståndspliktig enligt 20 §, förordning 2016:1188.
+
+75 000
+
+90.310
+
+B
+
+Deponering av icke-farligt avfall. Tillståndsplikten gäller inte om deponeringen är tillstånds- eller anmälningspliktig enligt 29 kapitlet 18, 19, 20 eller 21 § miljöprövningsförordningen.
+
+60 000
+
+90.341
+
+C
+
+Sluttäckt deponi där sluttäckningen har godkänts enligt
+
+32 § förordningen (2001:512) om deponering av avfall, fram till dess åtgärder inte längre behöver vidtas enligt
+
+33 § samma förordning.
+
+18 000
+
+90.34101 U
+
+Sluttäckt deponi som inte omfattas av anmälningsplikt enligt 29 kapitlet 26 § miljöprövningsförordningen.
+
+12 000
+
+Biologisk behandling
+
+Sida
+
+90.161
+
+B
+
+Behandling av icke-farligt avfall genom biologisk behandling om avfallet inte är park- och trädgårdsavfall och
+
+1. den tillförda mängden avfall är mer än 500 ton men högst 18 750 ton per kalenderår, eller
+
+2. om behandlingen enbart sker genom anaerob biologisk nedbrytning och den tillförda mängden avfall är mer än 500 ton men högst 25
+
+000 ton per kalenderår
+
+Tillståndsplikten gäller inte om behandlingen
+
+1. är tillståndspliktig enligt 66 §, eller
+
+2. är tillstånds- eller anmälningspliktig enligt 21 kapitlet 2 eller 3 § miljöprövningsförordningen.
+
+24 000
+
+90.171
+
+C
+
+Behandling av icke-farligt avfall genom biologisk behandling, om
+
+1. avfallet inte är park- och trädgårdsavfall och den tillförda mängden är mer än 10 ton men högst
+
+500 ton per kalenderår, eller
+
+2. avfallet är park- och trädgårdsavfall och den tillförda mängden är mer än 50 ton men högst
+
+18 750 ton per kalenderår.
+
+Anmälningsplikten gäller inte om behandlingen är tillstånds- eller anmälningspliktig enligt 21 kapitlet 2 eller 3 § miljöprövningsförordningen.
+
+9 000
+
+90.17001 U
+
+Behandling av icke-farligt avfall genom biologisk behandling, om
+
+1. avfallet inte är park- och trädgårdsavfall och den tillförda mängden är högst 10 ton per kalenderår, eller
+
+2. avfallet är park- och trädgårdsavfall och den tillförda mängden är högst 50 ton per kalenderår.
+
+6 000
+
+27 000
+
+Återvinning för anläggningsändamål
+
+90.131
+
+B
+
+Återvinning av icke-farligt avfall för anläggningsändamål på ett sätt som kan förorena mark, vattenområde eller grundvatten, om föroreningsrisken inte endast är ringa.
+
+90.141
+
+C
+
+Återvinning av icke-farligt avfall för anläggningsändamål på ett sätt som kan förorena mark, vattenområde eller grundvatten, om föroreningsrisken är ringa.
+
+Sida
+
+90.141-1
+
+90.141-2
+
+90.141-3
+
+90.141-4
+
+1.
+
+2.
+
+3.
+
+4.
+
+Mer än 20 000 ton per år.
+
+Mer än 10 000 ton men högst 20 000 ton per år.
+
+Mer än 1 000 ton men högst 10 000 ton per år
+
+Högst 1 000 ton per år.
+
+18 000
+
+12 000
+
+9 000
+
+6 000
+
+18 000
+
+Uppgrävda massor
+
+90.370
+
+C
+
+Behandling av avfall som utgörs av uppgrävda förorenade massor från den plats där behandlingen sker, om behandlingen pågår under högst en tolvmånadersperiod och inte är tillståndspliktig enligt
+
+21, 22, 23, 24 eller 25 §, förordning 2016:1188.
+
+Konvertering av smittförande avfall
+
+90.382
+
+C
+
+Konvertering av smittförande avfall på ett sjukhus
+
+18 000
+
+C
+
+Avvattna icke-farligt avfall, om mängden avfall som behandlas är högst 2 000 ton.
+
+12 000
+
+60 000
+
+48 000
+
+24 000
+
+Avvattning
+
+90.375
+
+Mekanisk bearbetning och sortering
+
+90.100
+
+B
+
+90.100-1
+
+90.100-2
+
+90.110
+
+90.110-1
+
+C
+
+Återvinning av mer än 10 000 ton icke-farligt avfall per kalenderår genom mekanisk bearbetning.
+
+Tillståndsplikten gäller inte
+
+1. för att genom krossning, siktning eller motsvarande mekanisk bearbetning återvinna avfall för byggnads- eller anläggningsändamål, eller
+
+2. om återvinningen är tillståndspliktig enligt 29 kapitlet 65 § miljöprövningsförordningen.
+
+a) Den hanterade avfallsmängden är större än
+
+50 000 ton per kalenderår.
+
+b) Den hanterade avfallsmängden är större än
+
+10 000 ton men högst 50 000 ton per kalenderår.
+
+1. Yrkesmässigt återvinna icke-farligt avfall genom mekanisk bearbetning, om den tillförda mängden avfall är högst 10 000 ton per kalenderår, eller
+
+2. genom krossning, siktning eller motsvarande mekanisk bearbetning återvinna avfall för byggnads- eller anläggningsändamål.
+
+Sida
+
+a) Den hanterade avfallsmängden är större än
+
+5 000 ton men högst 10 000 ton avfall per kalenderår.
+
+b) Den hanterade avfallsmängden är högst 5
+
+000 ton avfall per kalenderår.
+
+c) Återvinna mer än 100 000 ton avfall genom krossning, siktning eller mekanisk bearbetning för byggnads- eller anläggningsändamål
+
+d) Återvinna mer än 50 000 men högst 100
+
+000 ton avfall genom krossning, siktning eller mekanisk bearbetning för byggnadseller anläggningsändamål
+
+e) Återvinna mer än 10 000 men högst 50 000 ton avfall genom krossning, siktning eller mekanisk bearbetning för byggnads- eller anläggningsändamål
+
+f) Återvinna högst 10 000 ton avfall genom krossning, siktning eller mekanisk bearbetning för byggnads- eller anläggningsändamål.
+
+90.110-2
+
+90.110-3
+
+90.110-4
+
+90.110-5
+
+90.110-6
+
+90.70
+
+B
+
+90.70-1
+
+90.70-2
+
+Sortering av icke-farligt avfall, om mängden avfall är mer än 10 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte för att sortera avfall för byggnads- eller anläggningsändamål.
+
+1. Den hanterade avfallsmängden är mer än 75
+
+000 ton per kalenderår.
+
+2. Den hanterade avfallsmängden är mer än 10
+
+000 ton men högst 75 000 ton per kalenderår.
+
+18 000
+
+36 000
+
+31 500
+
+27 000
+
+22 500
+
+60 000
+
+37 500
+
+90.80
+
+C
+
+Sortering av icke-farligt avfall, om mängden avfall är
+
+1. mer än 1 000 ton per kalenderår och avfallet ska användas för byggnads- eller anläggningsändamål, eller
+
+2. mer än 1 000 ton men högst 10 000 ton per kalenderår i andra fall
+
+18 000
+
+90.8001
+
+U
+
+Sortering av icke-farligt avfall, om mängden avfall är högst 1 000 ton per kalenderår.
+
+9 000
+
+C
+
+Yrkesmässigt sortera, demontera eller på annat sätt behandla avfall som utgörs av elektriska eller elektroniska produkter innan ytterligare behandling.
+
+15 000
+
+Elavfall
+
+90.90
+
+Sida
+
+Anmälningsplikten gäller inte behandling av komponenter eller utrustning som innehåller isolerolja.
+
+Uttjänta fordon
+
+90.119
+
+B
+
+90.119-1
+
+90.119-2
+
+90.120
+
+C
+
+Tömma, demontera eller på annat sätt yrkesmässigt återvinna sådana uttjänta motordrivna fordon som inte omfattas av bilskrotningsförordningen (2007:186).
+
+Tillståndsplikten gäller inte om återvinningen är anmälningspliktig enligt 46 § 2.
+
+1. Den hanterade avfallsmängden är större än 10
+
+000 ton per kalenderår.
+
+2. Den hanterade avfallsmängden är högst 10 000 ton per kalenderår.
+
+Tömma, demontera eller på annat sätt yrkesmässigt återvinna
+
+1. uttjänta bilar som omfattas av bilskrotningsförordningen (2007:186), eller
+
+2. andra uttjänta motordrivna fordon vars totalvikt inte överstiger 3 500 kilogram, om fordonen återvinns av en bilskrotare som är auktoriserad enligt bilskrotningsförordningen.
+
+52 500
+
+30 000
+
+24 000
+
+12 000
+
+Förberedelse för återanvändning
+
+90.29
+
+C
+
+Förbereda avfall för återanvändning
+
+Lagring av blandat bygg- och rivningsavfall, lättfraktion och stoft
+
+90.350
+
+B
+
+Gäller för att på en annan plats än där avfallet uppkom lagra icke-farligt avfall som består av blandat bygg- och rivningsavfall (avfallskod 17 09 04) eller lättfraktion och stoft (avfallskod 19 10 04), om mängden avfall vid något tillfälle är mer än totalt 1 000 ton.
+
+18 000
+
+90.351
+
+C
+
+Gäller för att på en annan plats än där avfallet uppkom lagra icke-farligt avfall som består av blandat bygg- och rivningsavfall (avfallskod 17 09 04) eller lättfraktion och stoft (avfallskod 19 10 04), om mängden avfall vid något tillfälle är mer än totalt 10 ton och verksamheten inte omfattas av tillståndsplikt enligt 56 a §. Förordning (2025:660)
+
+15 000
+
+30 000
+
+Lagring som en del av att samla in avfall
+
+90.30
+
+B
+
+Lagring av icke-farligt avfall som en del av att samla in det, om mängden avfall vid något tillfälle är
+
+Sida
+
+1. mer än 30 000 ton och avfallet ska användas för byggnads- eller anläggningsändamål, eller
+
+2. mer än 10 000 ton annat icke-farligt avfall i andra fall.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt verksamhetskod 90.350
+
+90.40
+
+C
+
+Lagring av icke-farligt avfall som en del av att samla in det, om mängden avfall vid något tillfälle är
+
+1. mer än 10 ton men högst 30 000 ton och avfallet ska användas för byggnads- eller anläggningsändamål, eller
+
+2. mer än 10 ton men högst 10 000 ton annat ickefarligt avfall i andra fall. Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt verksamhetskod
+
+90.350 eller verksamhetskod 90.351.
+
+18 000
+
+90.4001
+
+U
+
+Lagring av icke-farligt avfall som en del av att samla in det, om mängden avfall vid något tillfälle är högst 10 ton.
+
+4 500
+
+90.50
+
+B
+
+30 000
+
+90.60
+
+C
+
+Lagring av farligt avfall som en del av att samla in det, om mängden avfall vid något tillfälle är
+
+1. mer än 5 ton och utgörs av olja,
+
+2. mer än 30 ton och utgörs av blybatterier,
+
+3. mer än 50 ton och utgörs av elektriska eller elektorniska produkter,
+
+4. mer än 30 ton och utgörs av impregnerat trä,
+
+5. mer än 50 ton och utgörs av motordrivna fordon, eller
+
+6. mer än 1 ton i andra fall.
+
+Lagring av farligt avfall som en del av att samla in det, om mängden avfall vid något tillfälle är
+
+1. mer än 200 kilogram men högst 5 ton och utgörs av olja,
+
+2. mer än 1 500 kilogram men högst 30 ton och utgörs av blybatterier,
+
+3. mer än 1 ton men högst 50 ton och utgörs av elektriska eller elektroniska produkter,
+
+4. mer än 200 kilogram men högst 30 ton och utgörs av impregnerat trä
+
+5. högst 50 ton och utgörs av motordrivna fordon, eller
+
+6. mer än 200 kilogram men högst 1 ton i andra fall.
+
+7 500
+
+Sida
+
+90.6001
+
+U
+
+3 000
+
+Yrkesmässig behandling av farligt avfall, om den tillförda mängden avfall är högst 2 500 ton per kalenderår.
+
+Tillståndsplikten gäller inte om behandlingen är tillståndspliktig enligt någon annan bestämmelse i detta kapitel.
+
+90.420
+
+B
+
+Behandling av icke‐farligt avfall, om den tillförda mängden avfall är mer än 500 ton men högst 100 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte om behandlingen är tillståndspliktig enligt någon annan bestämmelse i detta kapitel.
+
+90.430
+
+C
+
+Yrkesmässig behandling av icke-farligt avfall, om den tillförda mängden avfall är högst 500 ton per kalenderår.
+
+Anmälningsplikten gäller inte om behandlingen är anmälnings- eller tillståndspliktig enligt någon annan bestämmelse i detta kapitel.
+
+SKJUTFÄLT, SKJUTBANOR OCH SPORTANLÄGGNINGAR
+
+45 000
+
+30 000
+
+15 000
+
+92.10
+
+B
+
+Skjutfält för skjutning med grovkalibriga vapen (kaliber större än 20 millimeter) eller för sprängningar av ammunition, minor eller andra sprängladdningar.
+
+30 000
+
+92.20
+
+C
+
+Skjutbana som är stadigvarande inrättad för skjutning utomhus med skarp ammunition till finkalibriga vapen (kaliber mindre än 20 millimeter) för mer än 5 000 skott per kalenderår.
+
+1. Mer än 100 000 skott per kalenderår.
+
+2. Mer än 20 000 skott men högst 100 000 skott per kalenderår.
+
+3. Mer än 5 000 skott men högst 20 000 skott per kalenderår.
+
+Lagring av farligt avfall som en del av att samla in det, om mängden avfall vid något tillfälle är
+
+1. högst 200 kilogram och utgörs av olja,
+
+2. högst 1 500 kilogram och utgörs av blybatterier,
+
+3. högst 1 ton och utgörs av elektriska eller elektroniska produkter,
+
+4. högst 200 kilogram och utgörs av impregnerat trä,
+
+5. högst 200 kilogram i andra fall.
+
+Andra verksamheter med återvinning eller bortskaffande
+
+90.450
+
+90.20-1
+
+90.20-2
+
+90.20-3
+
+B
+
+Timavgift
+
+Timavgift
+
+Timavgift
+
+Sida
+
+92.2001
+
+U
+
+Skjutbana som är stadigvarande inrättad för skjutning utomhus med skarp ammunition till finkalibriga vapen (kaliber mindre än 20 millimeter) för högst 5 000 skott per kalenderår.
+
+Timavgift
+
+92.30
+
+C
+
+Permanent tävlings-, tränings- eller testbana för motorfordon.
+
+9 000
+
+92.10001 U
+
+Golfbana med sammanlagt mer än 18 hål.
+
+7 500
+
+92.10002 U
+
+Golfbana med sammanlagt högst 18 hål.
+
+4 500
+
+92.10003 U
+
+Golfbana med sammanlagt högst 9 hål.
+
+3 000
+
+Taxa enligt alkohollagen, lag om tobak och liknande produkter samt lag om tobakfria nikotinprodukter
+
+Inledande bestämmelser
+
+1§
+
+Avgift enligt denna taxa tas ut för miljö- och hälsoskyddsenhetens kostnader för
+
+a) prövning, handläggning och tillsyn enligt alkohollagen eller bestämmelser meddelade med stöd av denna.
+
+b) prövning, handläggning och tillsyn enligt lag om tobak och liknande produkter eller bestämmelser meddelade med stöd av denna.
+
+c) prövning, handläggning och tillsyn enligt lag om tobaksfria nikotinprodukter eller bestämmelser meddelade med stöd av denna.
+
+Stadsbyggnadsnämnden ombesörjer den myndighetsutövning genom prövning, tillsyn och kontroll som ankommer i Haninge kommun enligt alkohollagen, lag om tobak och liknande produkter samt lag om tobaksfria nikotinprodukter.
+
+2§
+
+Avgift enligt denna taxa tas inte ut för
+
+a) tillsyn som föranleds av klagomål som är obefogat.
+
+b) handläggning av överklagande av kommunens eller överinstans beslut.
+
+c) upprättande av ansökan om utdömande av vite.
+
+3§
+
+Avgift enligt denna taxa ska betalas till Haninge kommun.
+
+Sida
+
+4§
+
+Avgiften ska betalas inom den tid som anges i beslut om avgift eller i räkning. Betalas inte avgiften inom angiven tid ska dröjsmålsränta enligt 6 § räntelagen betalas. Vid skriftlig påminnelse om betalning tas avgift ut.
+
+5§
+
+Om det finns särskilda skäl med hänsyn till verksamhetens art, omfattning, tillsynsbehov, nedlagd tillsynstid och andra omständigheter får avgift enligt denna taxa sättas ned eller efterskänkas.
+
+6§
+
+Stadsbyggnadsnämndens beslut enligt denna taxa kan överklagas till förvaltningsrätten.
+
+ALKOHOLLAGEN
+
+Avgifter för prövning i tillståndsfrågor samt anmälan
+
+7§
+
+Avgift för prövning av ansökan om tillstånd, anmälan, dispens eller undantag tas ut enligt vad som anges i taxebilaga 1 med angivet belopp (fast avgift) eller med 1 500 kronor per timme för nedlagd tid i ärendet (timavgift) eller enligt de grunder i övrigt som anges i taxan. Avgift ska betalas för varje avgiftsbelagt ärende som ansökan avser.
+
+Om faktisk handläggningstid överskrider den i taxebilaga 1 angivna handläggningstiden med mer än 1 timme ska avgift för den faktiska handläggningstiden betalas.
+
+8§
+
+Timavgift tas ut för varje påbörjad halvtimme handläggningstid. Med handläggningstid avses den sammanlagda tid som varje tjänsteman vid miljö- och hälsoskyddsenheten har använt för inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, resor, provtagning och kontroller, handläggning i övrigt samt föredragning och beslut. I handläggningstiden ska inte räknas in sådan restid som vid ett och samma tillfälle överstiger två timmar.
+
+9§
+
+Avgift för prövning ska erläggas av sökanden, eller i anmälningsärenden den som bedriver eller avser att bedriva verksamheten eller vidta åtgärden.
+
+10 §
+
+Avgift för prövning ska erläggas även om ansökan avslås.
+
+11 §
+
+Avgift för prövning tas ut även om ansökan återkallas men då enligt timtaxa.
+
+12 §
+
+Vid bestämmandet av timavgift tillämpas bestämmelserna i 8 §.
+
+Avgift för återkommande tillsyn
+
+Sida
+
+13 §
+
+Avgifter för återkommande tillsyn tas ut enligt vad som framgår i taxebilaga 1 med angivet belopp (fast årlig avgift) eller timavgift 1 500 kronor enligt de grunder som anges i övrigt i taxan. Avgiften för tillsyn av tillfälliga tillstånd är inberäknad i prövningsavgiften. Avgiften för återkommande tillsyn (tillsynsavgift) består av två delar. En fast del för den inre tillsynen samt en rörlig del för den yttre tillsynen.
+
+Den fasta tillsynsavgiften
+
+Den fasta tillsynsavgiften omfattar inre tillsyn, förebyggande tillsyn samt tillhörande administrativt arbete. I den inre tillsynen ingår kontroll av marknadsföring på sociala medier, genomgång av redovisade försäljningsvolymer med mera i restaurangrapporterna samt kontroll av att den privata och ekonomiska lämpligheten kvarstår. Den förebyggande tillsynen består bland annat av anordnande av krögarråd och utbildningsinsatser.
+
+Den rörliga tillsynsavgiften
+
+Den rörliga tillsynsavgiften omfattar den yttre tillsynen och baseras på verksamhetens omsättning av alkoholförsäljning. Till grund för uppgifterna om omsättning av alkohol-försäljningen ligger den restaurangrapport som restaurangerna årligen ska lämna in, eller uppskattad försäljningsvolym vid ny ansökan. I avgiften ingår förutom tiden för tillsyn på serveringsstället, planering, restid, efterarbete med rapportskrivning och kommunicering, samråd med experter och myndigheter samt utarbetande av beslutsunderlag för eventuella ingripanden.
+
+14 §
+
+Den årliga avgiften för återkommande tillsyn (tillsynsavgift) omfattar kalenderår och ska betalas i förskott. Avgiften ska betalas från och med det kalenderår som följer efter det att beslut om tillstånd till verksamheten har meddelats eller anmälan skett. För tillsyn som sker dessförinnan och som inte ingår i avgift för prövning eller handläggning av anmälan, tas timavgift ut.
+
+15 §
+
+Vid bestämmande av timavgift tillämpas bestämmelserna i 8 §.
+
+16 §
+
+Avgift för tillsyn ska betalas av den som bedriver eller avser att bedriva verksamhet eller vidta åtgärd som föranleder avgiften.
+
+FÖRSÄLJNING AV TOBAKSVAROR OCH LIKNANDE PRODUKTER, TOBAKFRIA
+
+NIKOTINPRODUKTER SAMT FOLKÖL
+
+Sida
+
+Avgifter för prövning
+
+17 §
+
+Avgift för anmälan, prövning av ansökan om tillstånd, dispens eller undantag tas ut enligt vad som anges i taxebilaga 2 med angivet belopp (fast avgift) eller med 1 500 kronor per timme för nedlagd tid i ärendet (timavgift) eller enligt de grunder i övrigt som anges i taxan. Avgift ska betalas för varje avgiftsbelagt ärende som ansökan avser.
+
+Om faktisk handläggningstid överskrider den i taxebilaga 2 angivna handläggningstiden med mer än 1 timme ska avgift för den faktiska handläggningstiden betalas.
+
+18 §
+
+Timavgift tas ut för varje påbörjad halvtimme handläggningstid. Med handläggningstid avses den sammanlagda tid som varje tjänsteman vid miljö- och hälsoskyddsenheten har använt för inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, resor, provtagning och kontroller, handläggning i övrigt samt föredragning och beslut. I handläggningstiden ska inte räknas in sådan restid som vid ett och samma tillfälle överstiger två timmar.
+
+19 §
+
+Avgift för prövning ska erläggas av sökanden, eller i anmälningsärenden den som bedriver eller avser att bedriva verksamheten eller vidta åtgärden.
+
+20 §
+
+Avgift för prövning ska erläggas även om ansökan avslås.
+
+21 §
+
+Avgift för prövning tas ut även om ansökan återkallas men då enligt timtaxa.
+
+Avgift för återkommande tillsyn
+
+26 §
+
+Avgifter för återkommande tillsyn tas ut enligt vad som framgår i taxebilaga 2 med angivet belopp (fast årlig avgift) eller timavgift 1 500 kronor enligt de grunder som anges i övrigt i taxan. Avgiften för tillsyn av tillfälliga tillstånd är inberäknad i prövningsavgiften.
+
+27 §
+
+I det fall en anläggning som säljer tobak även har stadigvarande tillstånd enligt alkohollagen ska den fasta årliga avgiften för tobak enligt bilaga två halveras då den inre tillsynen samordnas.
+
+28 §
+
+Den årliga avgiften för återkommande tillsyn (tillsynsavgift) omfattar kalenderår och ska betalas i förskott. Avgiften ska betalas från och med det kalenderår som följer efter det att beslut om tillstånd till verksamheten har meddelats eller anmälan skett. För tillsyn som sker dessförinnan och som inte ingår i avgift för prövning eller handläggning av anmälan, tas timavgift ut.
+
+29 §
+
+Vid bestämmande av timavgift tillämpas bestämmelserna i 8 §.
+
+Sida
+
+30 §
+
+Avgift för tillsyn ska betalas av den som bedriver eller avser att bedriva verksamhet eller vidta åtgärd som föranleder avgiften.
+
+Bilaga 1, avgifter för arbete enligt alkohollagen
+
+Avgifter i ansökningsärenden
+
+Prövning
+
+Tid (timmar)
+
+Avgift (kronor)
+
+15 000
+
+Tid (timmar)
+
+Avgift (kronor)
+
+Ansökan om stadigvarande tillstånd för allmänheten/slutet sällskap inklusive catering.
+
+15 000
+
+Ansökan om stadigvarande utökning av serveringstid eller serveringsyta.
+
+7 500
+
+Ansökan om stadigvarande tillstånd för gemensam serveringsyta.
+
+7 500
+
+Mindre ändring om stadigvarande utökning av befintligt tillstånd.
+
+3 000
+
+Tid (timmar)
+
+Avgift (kronor)
+
+Ansökan om tillfälligt tillstånd till allmänheten, (även tillstånd för provsmakning och gemensam serveringsyta), 1 till och med 3 dagar.
+
+4 500
+
+Ansökan om tillfälligt tillstånd till allmänheten, (även tillstånd för provsmakning och gemensam serveringsyta), 4 dagar och fler.
+
+6 000
+
+Ansökan om tillfälligt tillstånd för slutet sällskap. En ansökan omfattar maximalt fem tillfällen inom ett halvår.
+
+3 000
+
+Ansökan om tillfällig förändring i tillstånd (utökning av tider, ytor mm).
+
+3 000
+
+Ansökan omprövning efter prövotid.
+
+3 000
+
+Ansökan om Gårdsförsäljningstillstånd
+
+Stadigvarande tillstånd
+
+Tillfälliga tillstånd
+
+Avgifter i anmälningsärende
+
+Sida
+
+Tid (timmar)
+
+Avgift (kronor)
+
+Anmälan om förändrad bolags- eller styrelsesammansättning.
+
+Överlåtelse av aktier/bolagsandelar >50%.
+
+15 000
+
+Anmälan om förändrad bolags- eller styrelsesammansättning.
+
+Överlåtelse av aktier/bolagsandelar 25 - 50%.
+
+Anmälan om förändrad bolags- eller styrelsesammansättning.
+
+Överlåtelse av aktier/bolagsandelar <25%.
+
+6 000
+
+1,5
+
+2 250
+
+Anmälan om provsmakning av alkoholdrycker för allmänheten.
+
+-
+
+Anmälan om servering av alkoholdrycker till slutet sällskap vid catering. Avgiften tas ut vid första prövningstillfället per lokal.
+
+1,5
+
+2 250
+
+Anmälan om cateringlokal som redan godkänts.
+
+-
+
+Anmälan om serveringsansvarig personal, namnbyte och liknande mindre förändring.
+
+-
+
+Anmälan om upphörande av verksamhet (återtagande av serveringstillstånd).
+
+-
+
+Tid (timmar)
+
+Avgift (kronor)
+
+1,5
+
+2 250
+
+Tid (timmar)
+
+Avgift (kronor)
+
+4 500
+
+0 till 100 000
+
+4 500
+
+100 001 till 500 000
+
+7 500
+
+Stadigvarande tillstånd
+
+Avgifter för kunskapsprov
+
+Kunskapsprov
+
+Avgift för kunskapsprov, per provtillfälle och sökande.
+
+Tillsynsavgifter
+
+Fast del per tillståndshavande bolag.
+
+Gårdsförsäljningstillstånd samt serveringsställe med stadigvarande tillstånd för servering av alkohol till slutet sällskap eller allmänheten. Rörlig del baserat på omsättning (kr)
+
+Sida
+
+500 001 till 1 000 000
+
+10 500
+
+1 000 001 till 2 000 000
+
+13 500
+
+2 000 001 till 5 000 001
+
+16 500
+
+5 000 001 eller mer
+
+19 500
+
+Timavgift
+
+Extra tillsynsavgift
+
+Påminnelseavgifter
+
+Tid (timmar)
+
+Avgift (kronor)
+
+1:a påminnelse restaurangrapport
+
+1 500
+
+2:a påminnelse restaurangrapport
+
+Påminnelseavgifter
+
+Sida
+
+Bilaga 2, avgifter för arbete enligt lag om tobak och liknande produkter, lag om tobakria nikotinprodukter samt folköl
+
+Avgifter i ansöknings-/anmälningsärende
+
+Avgifter för handläggning av ansökan samt anmälan
+
+Tid (timmar)
+
+Avgift (kronor)
+
+Anmälan om förändrad bolags- eller styrelsesammansättning.
+
+Överlåtelse av aktier/bolagsandelar >50%.
+
+10 500
+
+Anmälan om förändrad bolags- eller styrelsesammansättning.
+
+Överlåtelse av aktier/bolagsandelar 25 - 50%.
+
+4 500
+
+Anmälan om förändrad bolags- eller styrelsesammansättning.
+
+Överlåtelse av aktier/bolagsandelar <25%.
+
+1,5
+
+2 250
+
+Ansökan som tillstånd för försäljning enligt tobakslagen.
+
+10 500
+
+Ansökan om tillfälligt försäljningstillstånd. En ansökan omfattar maximalt fem tillfällen inom ett halvår.
+
+1 500
+
+Tobak
+
+4 500
+
+Tobak och en av nedanstående kategorier a-c
+
+3,5
+
+5 250
+
+Tobak och flera av nedanstående kategorier a-c
+
+6 000
+
+Flera av nedanstående tre kategorier a-c
+
+3 000
+
+1,5
+
+1,5
+
+1,5
+
+2 250
+
+2 250
+
+2 250
+
+Tillsynsavgifter
+
+a) Folköl
+
+b) E-cigaretter och/eller påfyllningsbehållare
+
+c) Tobaksfria nikotinprodukter
+
+Sida
+
+Taxa för offentlig kontroll inom animaliska biprodukter
+
+Inledande bestämmelser
+
+1§
+
+Denna taxa gäller avgifter för Stadsbyggnadsnämndens miljö- och hälsoskyddsverksamhet offentliga kontroll av lagen om foder och animaliska biprodukter (2006:805), de föreskrifter som meddelats med stöd av denna lag samt de EU-bestämmelser som kompletteras av lagen.
+
+2§
+
+Avgift enligt denna taxa ska betalas av sådana företagare som befattar sig med animaliska biprodukter vilkas verksamheter är föremål för kontroll.
+
+3§
+
+Beslut om avgift eller om nedsättning av avgift i enskilda fall fattas av Stadsbyggnadsnämnden.
+
+Timavgift
+
+4§
+
+Vid tillämpningen av denna taxa är timavgiften 1 500 kronor.
+
+Timavgift tas ut för varje påbörjad halvtimme handläggningstid. Med handläggningstid avses den sammanlagda tid som varje tjänsteman vid miljö- och hälsoskyddsenheten har använt för förberedelser inför, inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, resor, provtagning, kontroller, föredragning, beslut och handläggning i övrigt. Med förberedelse avses specifikt branschgemensamma förberedelser som aktualisering av förändringar inom branschen såsom teknikutveckling, gällande rätt, vägledning från andra myndigheter och planering av branschens tillsyn i övrigt. Förberedelse omfattar även att ta fram branschspecifika checklistor, mallar och riktat informationsmaterial.
+
+Nedsättning av avgift
+
+5§
+
+Om det finns särskilda skäl får miljö- och hälsoskyddsenheten besluta att avgift enligt denna taxa ska sättas ned eller efterskänkas.
+
+Avgiftens erläggande
+
+6§
+
+Betalning av avgift enligt denna taxa ska ske till Haninge kommun. Betalning ska ske inom tid som anges i beslutet om avgift eller i faktura.
+
+Verkställighetsfrågor
+
+Sida
+
+8§
+
+Av 33 § lag om foder och animaliska biprodukter, framgår att miljö- och hälsoskyddsenheten får förordna att dess beslut ska gälla omedelbart även om det överklagas.
+
+9§
+
+Av 31 § lag om foder och animaliska biprodukter, framgår att beslut om avgift överklagas hos länsstyrelsen.
+
+Taxa för tillsyn över avfallshantering i fritidsbåtshamnar
+
+1§
+
+För prövning av frågor om att godkänna avfallshanteringsplaner när det gäller verksamhet på platser som ankommer på miljö- och hälsoskyddsenheten enligt 3 kap. 9 § lagen om förorening från fartyg, tar kommunen ut en avgift för nedlagd handläggningstid med 1 500 kr per timme.
+
+2§
+
+För tillsyn enligt 6 kap. 5 a § lagen om åtgärder mot förorening från fartyg tar miljö- och hälsoskyddsenheten ut avgift för nedlagd handläggningstid med 1 500 kr per timme.
+
+3§
+
+Timavgift tas ut för varje påbörjad halvtimme handläggningstid. Med handläggningstid avses den sammanlagda tid som varje tjänsteman vid miljö- och hälsoskyddsenheten har använt för förberedelser inför, inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, resor, provtagning, kontroller, föredragning, beslut och handläggning i övrigt. Med förberedelse avses specifikt branschgemensamma förberedelser som aktualisering av förändringar inom branschen såsom teknikutveckling, gällande rätt, vägledning från andra myndigheter och planering av branschens tillsyn i övrigt. Förberedelse omfattar även att ta fram branschspecifika checklistor, mallar och riktat informationsmaterial. Om den sammanlagda handläggningstiden understiger en halvtimme per år tas ingen timavgift ut för tillsyn. För godkännande av plan för mottagning och hantering av avfall tas avgift ut, även om handläggningen understiger en halvtimme.
+
+4§
+
+Avgift tas inte ut för handläggning av överklagande av miljö- och hälsoskyddsenheten eller en överinstans beslut.
+
+5§
+
+Avgiftsskyldig är den som bedriver en verksamhet inom miljö- och hälsoskyddsenhetens tillsynsansvar enligt lagen (1980:424) om åtgärder mot förorening från fartyg.
+
+6§
+
+Beslut om avgift enligt denna taxa fattas av Stadsbyggnadsnämnden. Betalning av avgift ska ske till Haninge kommun och ska fullgöras inom tid som anges i beslutet om avgift eller i särskild faktura.
+
+Sida
+
+7§
+
+Om det finns särskilda skäl med hänsyn till verksamhetens art, omfattning, tillsynsbehov, nedlagd handläggningstid och övriga omständigheter, får avgift enligt denna taxa i ett enskilt fall sättas ner eller efterskänkas.
+
+8§
+
+Bestämmelser om överklagande av Stadsbyggnadsnämndens beslut enligt denna taxa finns i 9 kap.
+
+2 § lagen om åtgärder mot förorening från fartyg.
+
+Taxa enligt lagen om internationella hot mot människors hälsa
+
+Inledande bestämmelser
+
+1§
+
+Meddelad med stöd av 25 § lag (2006:1570) och 8 § förordning (2007:156) om skydd mot internationella hot mot människors hälsa.
+
+Avgiftsskyldig
+
+2§
+
+Avgift enligt denna taxa erläggs för miljö- och hälsoskyddsenhetens verksamhet enligt lagen om skydd mot internationella hot mot människors hälsa. Avgiftsskyldig är den som äger fartyg som omfattas av undersökningsplikt eller åtgärder enligt lagen om skydd mot internationella hot mot människors hälsa.
+
+Timavgift
+
+3§
+
+Vid tillämpningen av denna taxa är timavgiften 1 500 kronor.
+
+Timavgift tas ut för varje påbörjad halvtimme handläggningstid. Med handläggningstid avses den sammanlagda tid som varje tjänsteman vid miljö- och hälsoskyddsenheten har använt för förberedelser inför, inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, resor, provtagning, kontroller, föredragning, beslut och handläggning i övrigt. Med förberedelse avses specifikt branschgemensamma förberedelser som aktualisering av förändringar inom branschen såsom teknikutveckling, gällande rätt, vägledning från andra myndigheter och planering av branschens tillsyn i övrigt. Förberedelse omfattar även att ta fram branschspecifika checklistor, mallar och riktat informationsmaterial.
+
+Sida
+
+4§
+
+Om undersökningen påvisar ett behov av saneringsåtgärder ska ägaren till fartyget ersätta miljöoch hälsoskyddsenhetens kostnader för dessa. Sida 2 av 2
+
+Nedsättning av avgift
+
+5§
+
+Om det finns särskilda skäl får Stadsbyggnadsnämnden med hänsyn till verksamhetens omfattning, tillsynsbehovet och övriga omständigheter sätta ned eller efterskänka avgiften.
+
+Avgiftens erläggande
+
+6§
+
+Beslut om avgift enligt denna taxa fattas av Stadsbyggnadsnämnden. Betalning av avgift ska ske till Haninge kommun och ska fullgöras inom tid som anges i beslut om avgift eller i särskild faktura.
+
+Överklaganden
+
+7§
+
+Av 32 § lagen om skydd mot internationella hot mot människors hälsa följer att beslut om avgift gäller omedelbart, om inte något annat anges i beslutet, samt att beslut om avgift överklagas hos allmän förvaltningsdomstol.
+
+Taxa för offentlig kontroll inom livsmedelsområdet
+
+Inledande bestämmelser
+
+1§
+
+Denna taxa gäller avgifter för Stadsbyggnadsnämndens miljö- och hälsoskyddsverksamhet kostnader för offentlig kontroll och annan offentlig verksamhet enligt: •
+
+Livsmedelslagen (2006:804).
+
+•
+
+Lagen (2009:1424) om kontroll av skyddade beteckningar på jordbruksprodukter och livsmedel.
+
+•
+
+Lagen (2013:363) om kontroll av ekologisk produktion samt de föreskrifter som har meddelats med stöd av denna lagstiftning.
+
+•
+
+Förordning (2021:176) om avgifter för offentlig kontroll av livsmedel och vissa jordbruksprodukter.
+
+•
+
+De EU-bestämmelser som lagstiftningen kompletterar.
+
+Sida
+
+Med livsmedel i denna taxa avses även det som enligt 3 § 2 stycket livsmedelslagen jämställs med livsmedel.
+
+Taxan omfattar tillsyn över material och produkter avsedda att komma i kontakt med livsmedel,
+
+3a § livsmedelslagen.
+
+Allmänna bestämmelser om avgift
+
+2§
+
+Avgift enligt denna taxa betalas av den aktör vars verksamhet är föremål för miljö- och hälsoskyddsverksamhetens offentliga kontroll och annan offentlig verksamhet som hänger samman med kontrollen enligt 1 §, om inte annat följer av denna taxa. Med aktör avses varje livsmedelsföretagare, annan verksamhetsutövare och aktör inom ekologisk produktion som åläggs ansvar och skyldigheter enligt regleringen i 1 §.
+
+3§
+
+Avgift enligt denna taxa tas inte ut för handläggning som föranleds av överklagat beslut enligt livsmedelslagstiftningen eller enligt lagen om kontroll av ekologisk produktion. Verksamheter som bedrivs inom ramen för utbildningskonceptet Ung Företagsamhet (UF) och som syftar till att ge elever praktisk erfarenhet av företagande undantas från avgiftsskyldighet enligt denna taxa. Detta gäller under förutsättning att verksamheten bedrivs som en del av skolundervisningen och inte har som primärt syfte att generera ekonomisk vinst samt inte utgör stadigvarande livsmedelsverksamhet.
+
+4§
+
+Beslut om avgift eller nedsättning av avgift i enskilda fall fattas Stadsbyggnadsnämnden efter handläggning. Sid 2 (5)
+
+Särskilda bestämmelser om avgifter
+
+5§
+
+För offentlig kontroll och annan offentlig verksamhet som utförs enligt de bestämmelser som avses i 1 § ska en avgift betalas för miljö- och hälsoskyddsenhetens nedlagda kontrolltid enligt 6 §. I 8 till 17 paragraferna finns särskilda bestämmelser om avgift för:
+
+1. Registrering av anläggningar och verksamheter (8 §)
+
+2. Uppföljande kontroll (9 §)
+
+3. Utredning av klagomål (10, 11 §§)
+
+4. Korrigerande åtgärder (12 §)
+
+5. Exportkontroll och utfärdande av exportintyg (13 §)
+
+Sida
+
+6. Importkontroll (14 §)
+
+7. Avgift för inköp under dold identitet (15 §) samt
+
+8. Övriga kostnader (16, 17 §§)
+
+Timavgift
+
+6§
+
+Vid tillämpningen av denna taxa är timavgiften 1 640 kronor. Timavgift tas ut för varje påbörjad halvtimme handläggningstid.
+
+Med kontrolltid avses den sammanlagda tid som varje tjänsteperson vid miljö- och hälsoskyddsenheten har använt för offentlig kontroll och annan offentlig verksamhet som hänger samman med kontrollen. I kontrolltiden ingår förberedelser, kontroll av verksamheten och efterarbete. Exempel på kontrolltid är förberedelser inför, inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, provtagning, beslut samt handläggning i övrigt. Med förberedelser avses specifikt branschgemensamma förberedelser som aktualisering av förändringar inom branschen såsom teknikutveckling, gällande rätt, vägledning från andra myndigheter och planering av branschens tillsyn i övrigt. Förberedelser omfattar även att ta fram branschspecifika checklistor, mallar, val av fokuslista och riktat informationsmaterial. Avgiftsuttag sker i förhållande till faktiskt nedlagd kontrolltid i varje ärende eller enligt de grunder som anges i taxan. Kontrolltiden multipliceras med timavgiften. Avgift för offentlig kontroll och annan offentlig verksamhet som hänger samman med kontrollen ska debiteras efter det att kontrollen har utförts, om inte annat följer av denna taxa.
+
+Avgift för planerad kontroll
+
+7§
+
+Miljö- och hälsoskyddsenheten ska fatta beslut om kontrollfrekvens utifrån verksamhetens risk och får besluta att ta ut avgifter för planerad kontroll. Kontrollen utförs med det kontrollintervall som fastställts. Sid 3 (5)
+
+Om en tillämpning av första stycket skulle medföra att kontrollfrekvens för en anläggning blir uppenbart oriktig i förhållande till det faktiska behovet ska anläggningen i stället tilldelas kontrollfrekvens på grundval av kommunens bedömning av anläggningens kontrollbehov.
+
+Avgift för registrering av verksamheter och anläggningar
+
+8§
+
+Den som anmäler en livsmedelsanläggning för registrering ska betala avgift för 1 timme kontrolltid enligt 6 §. Detsamma gäller för den som anmäler en anläggning eller verksamhet som ska registreras enligt regelverket för material i kontakt med livsmedel. Av 1 § 2 stycket i taxan framgår att anläggningar för det som enligt livsmedelslagen definieras som livsmedel omfattas av taxan.
+
+Sida
+
+Avgiftsskyldigheten gäller även den som anmäler registrering av en anläggning med anledning av att den övergått till en ny aktör.
+
+Avgift för uppföljande kontroll
+
+9§
+
+För offentlig kontroll som ursprungligen inte var planerad, och annan offentlig verksamhet som hänger samman med kontrollen, ska en avgift för miljö- och hälsoskyddsenhetens nedlagda kontrolltid enligt 6 § betalas. Detta om kontrollen blivit nödvändig efter det att bristande efterlevnad upptäckts under en offentlig kontroll och utförs för att bedöma omfattningen och konsekvenserna av denna bristande efterlevnad eller för att verifiera att korrigerande åtgärder har vidtagits.
+
+Avgift för utredning av klagomål
+
+10 §
+
+För utredning av klagomål ska en avgift för miljö- och hälsoskyddsenhetens nedlagda kontrolltid enligt 6 § betalas för offentlig kontroll och annan offentlig verksamhet som hänger samman med kontrollen i de fall där bristande efterlevnad hos aktören kan bekräftas.
+
+11 §
+
+För offentlig kontroll och annan offentlig verksamhet som utförs efter ett meddelande inom systemet för snabb varning (RASFF)1 om det efter det att aktören erhöll meddelandet blivit nödvändigt för miljö- och hälsoskyddsenheten att vidta åtgärder för att spåra eller återkalla de varor som omfattas av meddelandet, ska en avgift för nedlagd kontrolltid debiteras enligt 6 §. Avgiften ska betalas av den aktör som innehar eller har importerat, producerat, bearbetat, framställt eller distribuerat de varor som omfattas av meddelandet.
+
+Avgift för korrigerande åtgärder
+
+12 §
+
+För korrigerande åtgärder som blivit nödvändiga efter att bristande efterlevnad har konstaterats i syfte att åtgärda eller förebygga upprepning av den bristande efterlevnaden ska en avgift betalas motsvarande miljö-och hälsoskyddsenhetens faktiska utgifter som hänger samman med åtgärden.
+
+Avgift exportkontroll
+
+13 §
+
+För exportkontroll som föranleds av införselbestämmelser i tredje land ska en avgift för miljö- och hälsoskyddsenhetens nedlagda kontrolltid enligt 6 § betalas för offentlig kontroll och annan offentlig verksamhet som hänger samman med kontrollen samt för utfärdande av exportintyg och andra intyg.
+
+Avgiften ska betalas av den aktör som innehar den exportkontrollerade anläggningen.
+
+Artikel 50 Europaparlamentets och rådets förordning (EG) nr 178/2002.
+
+Sida
+
+Avgift importkontroll
+
+14 §
+
+För kontroll av varor som importeras från ett tredjeland ska en avgift enligt 6 § betalas av den aktör som ansvarar för sändningen, med ett belopp som motsvarar miljö- och hälsoskyddsenhetens kontrolltid för offentlig kontroll och annan offentlig verksamhet som hänger samman med kontrollen.
+
+För uppföljning av prover som har lett till anmärkning ska en avgift enligt 6 § betalas med ett belopp som motsvarar kommunens nedlagda kontrolltid samt kommunens övriga faktiska utgifter. Avgiften ska betalas av importören, dennes ombud eller den som annars ansvarar för livsmedlen.
+
+Avgift för inköp under dold identitet
+
+15 §
+
+För inköp under dold identitet som är nödvändiga för att kontrollera att ett livsmedel uppfyller kraven i livsmedelslagstiftningen ska en avgift motsvarande miljö- och hälsoskyddsenhetens faktiska utgifter för köpet betalas
+
+Om ett inköp under dold identitet utförs som ett led i en klagomålskontroll enligt 10 och 11 paragraferna, tas avgift enligt första stycket ut endast om bristande efterlevnad kan bekräftas.
+
+Övriga kostnader
+
+16 § Handläggning av sanktionsavgift debiteras en avgift om 4 500 kronor. I handläggnings-tiden ingår förberedelser, kontrolltid, utredning och efterarbete.
+
+Justering av avgift i enskilt fall
+
+17 §
+
+Om det finns särskilda skäl med hänsyn till en verksamhets art, omfattning, tillsynsbehov eller övriga omständigheter, får miljö- och hälsoskyddsenheten i ett enskilt ärende besluta att justera upp eller ned en avgift enligt denna taxa.
+
+Första stycket gäller dock inte en avgift enligt 9 §. En sådan avgift får endast ändras enligt de förutsättningar som anges i artikel 79 punkt 3 i förordning (EU) 2017/625.
+
+18 §
+
+Om den sammanlagda kontrolltiden understiger en halv timme under ett och samma kalenderår får miljö- och hälsoskyddsenheten besluta att ingen timavgift ska tas ut av aktören under det kalenderåret.
+
+Detsamma gäller andra avgifter enligt denna taxa än timavgift om beloppet i det enskilda fallet är så lågt att det inte är ekonomiskt motiverat att ta ut avgiften.
+
+Betalning av avgift
+
+Sida
+
+19 §
+
+Betalning av avgift enligt denna taxa ska ske till Haninge kommun. Betalning ska ske inom tid som anges i beslutet om avgift eller i faktura.
+
+Överklaganden
+
+20 §
+
+Stadsbyggnadsnämndens beslut om avgift överklagas till länsstyrelsen.
+
+Taxa för prövning och tillsyn enligt marknadskontrollförordningen
+
+Denna taxa är meddelad med stöd av 2 § lagen (2014:140) med bemyndigande att meddela vissa föreskrifter om marknadskontroll av varor och annan närliggande tillsyn.
+
+Inledande bestämmelse
+
+1§
+
+Avgift enligt denna taxa ska betalas för Stadsbyggnadsnämndens kostnader för marknadskontroll enligt Europaparlamentets och rådets förordning (EU) 2019/1020 av den 20 juni 2019 om marknadskontroll och överensstämmelse för produkter och om ändring av direktiv 2004/42/EG och förordningarna (EG) nr 765/2008 och (EU) nr 305/2011.
+
+Avgift
+
+2§
+
+Avgift ska betalas av den som på marknaden släpper ut eller tillhandahåller en produkt som omfattas av marknadskontroll enligt förordning (EU) 2019/1020 och omfattas av nämndens tillsyns- eller kontrollansvar.
+
+3§
+
+Sida
+
+Avgiften beräknas som timavgift genom att handläggningstiden multipliceras med timtaxan. Avgiften betalas i efterskott för varje påbörjad halvtimme handläggningstid. Detta innebär att den sammanlagda handläggningstiden avrundas till närmast högre halvtimme.
+
+Timavgiften om 1 500 kronor per timme för nämndens handläggning.
+
+4§
+
+Med handläggningstid avses den sammanlagda tid som varje tjänsteman i miljö- och hälsoskyddsenheten har använt för förberedelser inför inspektionen, inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, interna möten, revisioner, resor, provtagning, kontroller, föredragning, beslut och handläggning i övrigt. Med förberedelse avses specifikt branschgemensamma förberedelser som aktualisering av förändringar inom branschen såsom teknikutveckling, gällande rätt, vägledning från andra myndigheter och planering av branschens tillsyn i övrigt. Förberedelse omfattar även att ta fram branschspecifika checklistor, mallar och riktat informationsmaterial.
+
+5§
+
+Avgift enligt denna taxa tas inte ut för handläggning av överklagande, såsom vid rättidsprövning och överlämnande till överinstans samt yttranden i överklagade ärenden.
+
+6§
+
+Utöver timavgiften i 3 § ska nämnden ersättas för de faktiska kostnaderna för provtagning och analys av prover av kemiska produkter eller biotekniska organismer och varor till följd av marknadskontroll.
+
+7§
+
+Om det finns särskilda skäl med hänsyn till verksamhetens omfattning, tillsynsbehovet, nedlagd handläggningstid eller övriga omständigheter, får avgift enligt denna taxa sättas ned eller efterskänkas.
+
+Verkställighetsfrågor
+
+8§
+
+Betalning av avgift enligt denna taxa ska ske till Haninge kommun. Betalningen ska ske inom den tid som anges i beslutet om avgift eller i särskild faktura. Betalas inte avgiften inom föreskriven tid tas dröjsmålsränta ut från räkningens förfallodag i enlighet med 6 § i räntelagen (1975:635).
+
+9§
+
+Nämndens beslut om avgift får överklagas till allmän förvaltningsdomstol enligt 40 – 44 §§ förvaltningslagen (2017:900).
+
+Sida
+
+Taxa för kontroll enligt lagen om handel med vissa receptfria läkemedel Inledande bestämmelser
+
+1§
+
+Avgift enligt denna taxa erläggs för miljö- och hälsoskyddsenhetens kontroll enligt lagen om handel med vissa receptfria läkemedel. Avgiftsskyldig är den som bedriver detaljhandel, dvs. försäljning av vissa receptfria läkemedel till konsument.
+
+2§
+
+Beslut om avgift eller nedsättning av avgift i enskilda fall fattas av Stadsbyggnadsnämnden.
+
+3§
+
+Betalning av avgift enligt denna taxa ska ske till Haninge kommun. Betalning ska ske inom tid som anges i beslut om avgift eller i faktura.
+
+4§
+
+Avgift enligt denna taxa ska betalas för handläggning och andra åtgärder vid kontroll.
+
+5§
+
+Avgift enligt denna taxa tas inte ut för
+
+a) tillsyn som föranleds av klagomål som är obefogat.
+
+b) överklaganden av kommunens eller överinstans beslut.
+
+6§
+
+Stadsbyggnadsnämndens beslut om avgift kan överklagas hos länsstyrelsen.
+
+Årsavgift
+
+7§
+
+Avgift för återkommande planerad kontroll tas ut med en fast årlig avgift motsvarande 1,5 timmar per år. Kontrolltiden multipliceras med timavgiften som framgår av 9 §.
+
+8§
+
+Årsavgiften omfattar kalenderår och ska betalas i förskott. Årsavgiften ska betalas från och med det kalenderår som verksamheten anmäldes eller, om verksamheten har bedrivits utan anmälan, från och med det år miljö- och hälsoskyddsenheten fick kännedom om verksamheten. Årsavgiften ska därefter betalas med helt avgiftsbelopp för varje påbörjat kalenderår som verksamheten bedrivs.
+
+Sida
+
+Inspektioner och andra kontrollåtgärder som utförs med anledning av klagomål, som uppföljning av konstaterade brister eller som uppföljning av meddelade förelägganden eller förbud, ingår inte i årsavgiften. För sådana åtgärder tas extraavgift ut i form av timavgift enligt 8 §.
+
+Timavgift
+
+9§
+
+Vid tillämpningen av denna taxa är timavgiften 1 640 kronor.
+
+Utöver årsavgiften kan avgift tas ut för extra offentlig kontroll i form av timavgift. Timavgift tas ut för varje påbörjad halvtimme handläggningstid. Med handläggningstid avses den sammanlagda tid som varje tjänsteman vid miljö- och hälsoskyddsenheten har använt för inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, resor, provtagning och kontroller, handläggning i övrigt samt föredragning och beslut. I handläggningstiden ska inte räknas in sådan restid som vid ett och samma tillfälle överstiger två timmar.
+
+Nedsättning av avgift
+
+10 §
+
+Om det finns särskilda skäl med hänsyn till verksamhetens art, omfattning, tillsynsbehovet, nedlagd handläggningstid och övriga omständigheter får avgift enligt denna taxa sättas ned eller efterskänkas.
+
+Taxa för verksamhet enligt lagen om sprängämnesprekursorer
+
+Inledande bestämmelser
+
+1§
+
+Avgift enligt denna taxa erläggs för miljö- och hälsoskyddsenhetens verksamhet enligt lagen (2014:799) om sprängämnesprekursorer och Europaparlamentets och rådets förordning (EU) nr 98/2013 av den 15 januari 2013 om saluföring och användning av sprängämnesprekursorer.
+
+2§
+
+Avgift enligt denna taxa tas inte ut för handläggning av
+
+a) klagomål där verksamhetsutövaren har visat att det är obefogat, utan att stadsbyggnadsnämnden behövt vidta utredning i ärendet.
+
+b) överklaganden av stadsbyggnadsnämndens eller överinstans beslut.
+
+Sida
+
+Avgiftsskyldig
+
+3§
+
+Avgiftsskyldiga är ekonomiska aktörer enligt förordningen EU/98/2013 som tillhandahåller sprängämnesprekursorer till enskilda.
+
+Timavgift
+
+4§
+
+Vid tillämpningen av denna taxa är timavgiften 1 500 kronor.
+
+Timavgift tas ut för varje påbörjad halvtimme handläggningstid. Med handläggningstid avses den sammanlagda tid som varje tjänsteman vid miljö- och hälsoskyddsenheten har använt för förberedelser inför, inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, resor, provtagning, kontroller, föredragning, beslut och handläggning i övrigt. Med förberedelse avses specifikt branschgemensamma förberedelser som aktualisering av förändringar inom branschen såsom teknikutveckling, gällande rätt, vägledning från andra myndigheter och planering av branschens tillsyn i övrigt. Förberedelse omfattar även att ta fram branschspecifika checklistor, mallar och riktat informationsmaterial.
+
+Nedsättning av avgift
+
+5§
+
+Om det finns särskilda skäl får Stadsbyggnadsnämnden med hänsyn till verksamhetens omfattning, tillsynsbehovet och övriga omständigheter sätta ned eller efterskänka avgiften.
+
+Avgiftens erläggande
+
+6§
+
+Betalning av avgift enligt denna taxa ska ske till Haninge kommun. Betalning ska ske inom tid som anges i beslutet om avgift eller i faktura.
+
+Verkställighetsfrågor
+
+7§
+
+Av 17 § andra stycket lagen (2014:799) om sprängämnesprekursorer följer att kommunens beslut får överklagas hos länsstyrelsen.
+
+Taxa för tillsyn enligt strålskyddslagen
+
+Inledande bestämmelser
+
+1§
+
+Denna taxa gäller avgifter för miljö- och hälsoskyddsenhetens kostnader för prövning och tillsyn enligt strålskyddslagens bestämmelser med tillhörande förordning och föreskrifter.
+
+Sida
+
+2§
+
+Avgiftsskyldig är den som
+
+a) bedriver verksamhet där kosmetiskt solarium upplåts till allmänheten och som omfattas av Strålsäkerhetsmyndighetens föreskrifter om anmälningsplikt, eller
+
+b) är fastighetsägare till en bostad eller lokal som allmänheten har tillträde till och som omfattas av skyldigheten att optimera strålskyddet i fråga om radon.
+
+3§
+
+Avgift enligt denna taxa tas inte ut för handläggning av
+
+a) tillsyn som föranleds av klagomål som är obefogat,
+
+b) överklaganden av stadsbyggnadsnämnden eller överinstans beslut, eller
+
+c) upprättande av ansökan om utdömande av vite.
+
+4§
+
+Om det finns särskilda skäl med hänsyn till verksamhetens art, omfattning, tillsynsbehovet, nedlagd handläggningstid och övriga omständigheter, får avgift enligt denna taxa sättas ned eller efterskänkas.
+
+Beslut om avgift eller nedsättning av avgift i enskilda fall fattas av Stadsbyggnadsnämnden.
+
+5§
+
+Betalning av avgift enligt denna taxa ska ske till Haninge kommun. Betalning ska ske inom tid som anges i beslut om avgift eller i faktura.
+
+6§
+
+Bestämmelser om överklagande av miljö- och hälsoskyddsenhetens beslut enligt denna taxa finns i 10 kapitlet 2 § strålskyddslagen. Av 10 kapitlet 3 § strålskydds-lagen följer att beslut om avgift gäller omedelbart även om det överklagas, om inte något annat följer av beslutet.
+
+Timavgift
+
+7§
+
+Vid tillämpningen av denna taxa är timavgiften 1 500 kronor.
+
+Utöver fast avgift enligt 8 § kan avgift tas för tillsyn och prövning i form av timavgift. Timavgift tas ut för varje påbörjad halvtimme handläggningstid. Med handläggningstid avses den sammanlagda tid som varje tjänsteman vid miljö- och hälsoskyddsenheten har använt för förberedelser inför, inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, resor, provtagning, kontroller, föredragning, beslut och handläggning i övrigt. Med förberedelse avses specifikt branschgemensamma förberedelser som aktualisering av förändringar inom branschen såsom teknikutveckling, gällande rätt, vägledning från andra myndigheter och planering av branschens tillsyn i övrigt. Förberedelse omfattar även att ta fram branschspecifika checklistor, mallar och riktat informationsmaterial.
+
+Sida
+
+Avgift med anledning av anmälan
+
+8§
+
+För handläggning av anmälan av kosmetisk solarieverksamhet tas en fast avgift ut motsvarande sju (7) timmars handläggningstid.
+
+Om faktisk handläggningstid överskrider den angivna handläggningstiden med mer än en (1) timme ska avgift för den faktiska handläggningstiden betalas.
+
+Tiden multipliceras med timavgiften som framgår av 7 §.
+
+Avgift för återkommande kontroll
+
+9§
+
+Avgiftsuttag sker i förhållande till faktiskt nedlagd kontrolltid i varje ärende eller enligt de andra grunder som anges i taxan. Avgiften ska debiteras efter det att kontrollen har utförts, om inte annat följer av denna taxa.
+
+Tiden multipliceras med timavgiften som framgår av 7 §.
+
+10 §
+
+Utöver timavgiften har miljö- och hälsoskyddsenheten rätt att ta ut avgift motsvarande de faktiska kostnaderna för provtagning och analys till följd av tillsynen samt för kontrollköp vid kosmetiskt solarium enligt 8 kapitlet 5 § strålskyddslagen. Sida 3 av 3
+
+Verkställighet
+
+11 §
+
+Av 10 kapitlet 3 § strålskyddslagen framgår att beslut enligt den lagen ska gälla omedelbart om inte annat bestäms.
+
+12 §
+
+Av 10 kapitlet 2 § strålskyddslagen följer att beslut om avgift kan överklagas till förvaltningsrätten.
