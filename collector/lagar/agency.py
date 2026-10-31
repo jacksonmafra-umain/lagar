@@ -548,6 +548,9 @@ class TsfsAdapter:
     detail = True
     series = "TSFS"
     issuer = "Transportstyrelsen"
+    ref = _TSFS_REF  # the numbers of the series on a year listing
+    amending = _TSFS_AMENDING
+    issuers: "dict[str, str]" = {}  # title's first word -> issuer, where it differs from `issuer`
     base_url = "https://www.transportstyrelsen.se"
     index_url = base_url + "/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/ts-foreskrifter-i-nummerordning/"
     listing_url = index_url
@@ -574,9 +577,10 @@ class TsfsAdapter:
             cells = [c for c in item.children if isinstance(c, Node)]
             number = cells[0].text() if cells else ""
             link = item.find("a")
-            if not _TSFS_REF.fullmatch(number) or link is None:
+            if not self.ref.fullmatch(number) or link is None:
                 continue
             title = link.text().removesuffix(", " + number)
+            first_word = title.split(" ", 1)[0]
             status = item.find("span", "small")
             badge = item.find("span", "badge")
             repealed = None
@@ -586,9 +590,10 @@ class TsfsAdapter:
                 number=number,
                 title=title,
                 url=absolute(url, link.attrs.get("href", "")),
-                base=not _TSFS_AMENDING.match(title),
+                base=not self.amending.match(title),
                 in_force=_date(status.text()) if status is not None else None,
                 repealed=repealed,
+                issuer=self.issuers.get(first_word),
             ))
         return entries
 
@@ -2225,10 +2230,12 @@ def _snapshot_pdfs(client, robots, regulation, entry, manifest, refresh, keep=No
     (a {url: bytes or None} dict) for the text step.
     """
     previous = {f["url"]: f for f in manifest.get(regulation.number, {}).get("files", [])}
-    files, downloaded = [], 0
-    for label, url in regulation.pdfs:
+    files, downloaded, not_pdf = [], 0, set()
+    for index, (label, url) in enumerate(regulation.pdfs):
         if url in previous and not refresh:
             files.append(previous[url])
+            if previous[url].get("note") == "not a PDF; not kept":
+                not_pdf.add(url)
             continue
         if not robots.allows(url):
             files.append({"label": label, "url": url, "bytes": None, "sha256": None,
@@ -2237,7 +2244,14 @@ def _snapshot_pdfs(client, robots, regulation, entry, manifest, refresh, keep=No
             continue
         body, content_type = client.fetch(url)
         if not body.startswith(b"%PDF-"):
-            raise ValueError(f"not a PDF: {url}")
+            if index == 0:
+                raise ValueError(f"not a PDF: {url}")
+            # A later file (a consolidated version served as Word) is noted, not linked.
+            files.append({"label": label, "url": url, "bytes": None, "sha256": None,
+                          "content_type": content_type, "retrieved_at": None,
+                          "note": "not a PDF; not kept"})
+            not_pdf.add(url)
+            continue
         if keep is not None and url in keep:
             keep[url] = body
         files.append({
@@ -2249,6 +2263,7 @@ def _snapshot_pdfs(client, robots, regulation, entry, manifest, refresh, keep=No
             "retrieved_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         })
         downloaded += 1
+    regulation.pdfs = [pdf for pdf in regulation.pdfs if pdf[1] not in not_pdf]
     if files:
         manifest[regulation.number] = {"number": regulation.number, "detail_url": entry.url, "files": files}
     return downloaded

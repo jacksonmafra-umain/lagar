@@ -1,0 +1,13 @@
+{
+  "listings": {
+    "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Foreskrifter.html": "2184-listing1.html",
+    "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Taxor-och-avgifter.html": "2184-listing2.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "Foreskrifter-om-hantering-av-avfall-under-kommunalt-ansvar",
+    "title": "Föreskrifter om hantering av avfall under kommunalt ansvar",
+    "url": "https://hudiksvall.se/Sidor/Kommun-och-politik/Forfattningssamling---Styrdokument/Foreskrifter/Foreskrifter-om-hantering-av-avfall-under-kommunalt-ansvar.html"
+  },
+  "excluded": []
+}

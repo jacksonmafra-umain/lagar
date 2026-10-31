@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://gotland.se/region-och-politik/sa-styrs-region-gotland/forfattningssamling-och-styrande-dokument/avgifter-och-taxor": "0980-listing.html",
+    "https://gotland.se/region-och-politik/sa-styrs-region-gotland/forfattningssamling-och-styrande-dokument/avtal-bestammelser-foreskrifter-och-ordningar": "0980-listing-2.html"
+  },
+  "count": 29,
+  "sample": {
+    "number": "16018",
+    "title": "Avfallstaxa",
+    "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/16018"
+  },
+  "excluded": [
+    "Attest - Riktlinjer för attest med tillämpningsanvisningar",
+    "Handlingsplan för bostadsförsörjning 2026–2029",
+    "Riktlinjer för internhyra"
+  ]
+}

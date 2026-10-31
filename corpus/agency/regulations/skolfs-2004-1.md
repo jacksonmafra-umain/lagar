@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://skolfs.skolverket.se/api/document/2004:1/ascending"
 source_sha256: "b68a07b5e568fc902dfb8db395bbb4df0ae504a4748f93f8fdcff237d8957547"
-fetched_at: "2026-10-30T02:21:26Z"
+fetched_at: "2026-10-30T22:09:31Z"
 issuer: "Statens skolverk"
 ---
 # Förordning om skolindex för år 2004
@@ -34,4 +34,16 @@ Version: Grundförfattning
 
 ## Författningstext
 
-Statens skolverk publicerar texten endast som pdf; se Dokument ovan. Den tryckta författningssamlingen är den officiella versionen.
+Texten är hämtad ur pdf:en SKOLFS 2004:1. Den tryckta författningssamlingen är den officiella versionen.
+
+Förordning om skolindex för år 2004 utfärdad den 4 december 2003.
+
+Regeringen föreskriver att skolindex enligt förordningen (1993:167) om skolindex skall vara 1,0389 för år 2004.
+
+Denna förordning skall kungöras i Statens skolverks författningssamling (SKOLFS). Förordningen träder i kraft den 1 januari 2004.
+
+På regeringens vägnar
+
+THOMAS ÖSTROS
+
+Maria Palm (Utbildningsdepartementet)

@@ -1,0 +1,17 @@
+{
+  "listings": {
+    "https://www.jonkoping.se/kommun--politik/kommunens-organisation/forvaltningar/miljo--och-halsoskyddskontoret/taxor-och-avgifter-hos-miljo--och-halsoskyddskontoret": "0680-listing.html",
+    "https://www.jonkoping.se/for-foretag/guide-for-tillstand-regler-och-tillsyn/anvanda-kommunal-mark-soka-tillstand/hyra-allman-platsmark---taxor-och-avgifter": "0680-listing-2.html"
+  },
+  "count": 6,
+  "sample": {
+    "number": "18.3984124f19d9a4b05ec2436c",
+    "title": "Taxa för offentlig kontroll av livsmedel",
+    "url": "https://www.jonkoping.se/download/18.3984124f19d9a4b05ec2436c/1776947626454/Taxa%20f%C3%B6r%20offentlig%20kontroll%20av%20livsmedel.pdf"
+  },
+  "excluded": [
+    "pdf karta - Jordgubbsförsäljning på väster i Jönköping",
+    "pdf karta - jordgubbsförsäljning på Torpa i Jönköping",
+    "pdf karta - jordgubbsförsäljning på Öster i Jönköping"
+  ]
+}

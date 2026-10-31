@@ -1,0 +1,129 @@
+---
+id: "2361-allmanna-bestammelser-for-anvandande-av-harjedalens-kommuns-allmanna-vatten-och-avloppsanlaggning"
+title: "Allmänna bestämmelser VA"
+type: "municipal_regulation"
+layer: "municipality"
+number: "allmanna-bestammelser-for-anvandande-av-harjedalens-kommuns-allmanna-vatten--och-avloppsanlaggning"
+issued: null
+in_force: null
+repealed: null
+amended_by: []
+amended_through: null
+reprinted_by: []
+ministry: null
+eli: null
+language: "sv"
+authoritative: false
+source: "https://www.herjedalen.se/kommun-och-politik/styrdokument-och-regler/att-vistas-i-harjedalens-kommun/allmanna-bestammelser-for-anvandande-av-harjedalens-kommuns-allmanna-vatten--och-avloppsanlaggning.html"
+source_sha256: "063c70ad7f7460451985ae93309e14cac9362586f39f16c6831af8afbd8f3480"
+fetched_at: "2026-10-30T20:32:52Z"
+issuer: "Härjedalens kommun"
+region_code: "23"
+municipality_code: "2361"
+---
+# Allmänna bestämmelser VA
+
+Kommun: Härjedalen (2361)  
+Författningssamling: Styrdokument och regler  
+Nummer: allmanna-bestammelser-for-anvandande-av-harjedalens-kommuns-allmanna-vatten--och-avloppsanlaggning
+
+Kommunens sida: <https://www.herjedalen.se/kommun-och-politik/styrdokument-och-regler/att-vistas-i-harjedalens-kommun/allmanna-bestammelser-for-anvandande-av-harjedalens-kommuns-allmanna-vatten--och-avloppsanlaggning.html>
+
+## Text
+
+Texten är hämtad från kommunens webbsida.
+
+### Allmänna bestämmelser för användande av Härjedalens kommuns allmänna vatten- och avloppsanläggning (ABVA)
+
+Fastställda av kommunfullmäktige 21 juni 2021 § 49.\
+Diarienummer KS 2020/499.
+
+#### Inledning
+
+1. För fastighetsägares användning av den allmänna VA-anläggningen i Härjedalens kommun gäller vad som föreskrivs i lagen om allmänna vattentjänster (2006:412) eller annan författning samt vad som nedan föreskrivs.
+
+Vad som enligt dessa bestämmelser gäller för fastighetsägaren gäller även för den som innehar fast egendom med tomträtt, ständig besittningsrätt, fideikommissrätt eller på grund av testamentariskt förordnande.
+
+Har huvudmannen träffat avtal med annan än fastighetsägare om användning av anläggningen, gäller för denne jämlikt 5 § lagen om allmänna vattentjänster vad som i lagen och dessa allmänna bestämmelser föreskrivs om fastighetsägare.
+
+Med fastighet kan enligt 4 § lagen om allmänna vattentjänster i vissa fall även förstås byggnad eller annan anläggning, som ej tillhör ägaren till marken.
+
+Fastighetsägare är skyldig att följa ändring i och tillägg till dessa allmänna bestämmelser.
+
+2. Huvudman för den allmänna VA-anläggningen är Härjedalens kommun, nedan kallad huvudmannen. Förvaltningen av anläggningen handhas av Vatten och Miljöresurs i Berg Härjedalen AB på uppdrag av huvudmannen.
+
+#### Inkoppling till den allmänna anläggningen
+
+3. Fastighetsägare som vill ansluta fastigheten till den allmänna anläggningen ska göra skriftlig anmälan till huvudmannen som sedan ombesörjer inkoppling.
+
+#### Användning av den allmänna dricksvattenanläggningen
+
+4. Huvudmannen levererar vatten till fastighet, vars ägare har rätt att använda den allmänna dricksvattenanläggningen och som iakttar gällande bestämmelser för användandet.
+
+Huvudmannens leveransskyldighet avser endast vatten av dricksvattenkvalitet för normal hushållsanvändning. Huvudmannen garanterar inte att visst vattentryck eller viss vattenmängd per tidsenhet alltid kan levereras.
+
+Vatten som levereras genom allmän VA-anläggning får utnyttjas för värmeutvinning eller kyla endast om huvudmannen efter ansökan skriftligen medger detta.
+
+5. Huvudmannen har rätt att begränsa eller avbryta vattenleveransen när denne finner det nödvändigt för att förebygga person- eller egendomsskada samt för reparation, ändring, kontroll eller annan sådan åtgärd som berör huvudmannens egna eller därmed förbundna anläggningar.
+
+Vid begränsad vattentillgång är fastighetsägare skyldig att reducera sin vattenförbrukning enligt huvudmannens anvisningar.
+
+Vid planlagt leveransavbrott lämnar huvudmannen på lämpligt sätt meddelande om detta.
+
+6. Ska vattenförbrukning hos fastighetsägare fastställas genom mätning tillhandahålls vattenmätare av huvudmannen och förblir huvudmannens egendom. Huvudmannen bestämmer antalet mätare och vilket slag av mätare som ska användas. Fastighetsägaren ska bekosta erforderliga anordningar för uppsättning av mätare och sammankoppling med installationen i övrigt.
+
+Vattenmätares plats ska vara godkänd av huvudmannen, som har rätt att kostnadsfritt disponera platsen och ensam har befogenhet att sätta upp, ta ned, kontrollera, justera, underhålla samt till- och frånkoppla mätaren.
+
+#### Användning av den allmänna avloppsanläggningen
+
+7. Huvudmannen tar emot avloppsvatten från fastighet, vars ägare har rätt att använda den allmänna avloppsanläggningen och som iakttar gällande bestämmelser för användandet, om behovet av avledning inte kan tillgodoses bättre på annat sätt.
+
+Huvudmannen är inte skyldig att ta emot spillvatten vars beskaffenhet i ej oväsentlig mån avviker från hushållsspillvatten.
+
+8. Vatten som utnyttjats för värmeutvinning eller kyla får avledas till den allmänna avloppsanläggningen endast om huvudmannen efter ansökan skriftligen medger det.
+
+9. Fastighetsägare får inte tillföra avloppet lösningsmedel, avfettningsmedel, färger, olja, bensin eller annan petroleumprodukt, fett i större mängd, läkemedel eller sura, frätande eller giftiga vätskor och inte heller vätska, ämnen eller föremål som kan orsaka stopp, avlagring, vidhäftning, gasbildning eller explosion.
+
+Ånga eller varmvatten med högre temperatur än 45°C får inte tillföras i förbindelsepunkten.
+
+Oavsiktligt utsläpp av sådant slag som anges i första och andra styckena ska ofördröjligen anmälas till huvudmannen.
+
+Fastighetsägare får inte tillföra avloppet spillvatten från köksavfallskvarn utan huvudmannens skriftliga medgivande.
+
+10. Värmeuttag ur avloppsvatten får inte ske så att temperaturen i utsläppt avloppsvatten underskrider temperaturen i det av huvudmannen levererade dricksvattnet.
+
+11. Huvudmannen har rätt att tillfälligt begränsa fastighetsägares möjlighet att använda avloppsanläggningen när huvudmannen finner det nödvändigt för att förebygga person- eller egendomsskada samt för reparation, ändring, kontroll eller annan åtgärd som berör huvudmannens egna eller därmed förbundna anläggningar.
+
+12. Spillvatten får inte tillföras allmän ledning som är avsedd att uteslutande avleda dag- och dränvatten. (Med spillvatten likställs i denna punkt allt avloppsvatten som huvudmannen bedömer ska avledas till spillvattenledning).
+
+Dag- och dränvatten får inte tillföras allmän ledning som inte är avsedd för sådant ändamål, om inte huvudmannen av särskilda skäl skriftligen medgivit undantag.
+
+Avleds dag- och dränvatten från fastighet till spillvattenförande ledning får fortsatt tillförsel av sådant vatten inte ske, sedan särskild förbindelsepunkt för ändamålet upprättats och fastighetsägaren underrättats därom, eller om huvudmannen vidtagit åtgärder för avledande av dagvatten utan att förbindelsepunkt för dagvatten upprättats, när huvudmannen meddelat fastighetsägaren att sådana åtgärder har vidtagits. Huvudmannen bestämmer tidsrymd inom vilken tillförseln ska ha upphört. Undantag från förbudet eller anstånd med att avbryta tillförseln kan medges av huvudmannen om särskilda skäl föreligger.
+
+Har särskild förbindelsepunkt för dag- och dränvatten inte upprättats, kan huvudmannen ändå förbjuda dittills tillåten tillförsel av sådant vatten till spillvattenförande ledning. Förutsättningar för detta är dels att avledning kan ske ändamålsenligt på annat sätt, dels att huvudmannen i skälig omfattning ersätter fastighetsägaren hans kostnader för erforderlig omläggning. Dag- och dränvatten från fastighet, som nyinkopplas till den allmänna anläggningen, får inte tillföras annan ledning än den huvudmannen bestämmer.
+
+13. Huvudmannen kan i enskilda fall medge utsläpp i den allmänna avloppsanläggningen av avloppsvatten som i ej oväsentlig mån har annan sammansättning än spillvatten från bostäder (hushållsspillvatten) vad gäller arten eller halten av ingående ämnen. Huvudmannen bestämmer därvid villkoren för utsläpp av såväl spill- som dagvatten.
+
+14. Fastighetsägare som helt eller delvis använder eller upplåter fastighet till annat än bostadsändamål ska informera huvudmannen om sådan verksamhet som kan påverka beskaffenheten hos avloppsvattnet från fastigheten. Fastighetsägaren ska bekosta de provtagningar och analyser som huvudmannen finner vara nödvändiga för kontroll av avloppsvattnet.
+
+Huvudmannen har rätt att fordra att fastighetsägaren för journal över verksamhet som inverkar på avloppsvattnets beskaffenhet och företar kontroll av vattnet genom provtagningar och analyser. Huvudmannen anger hur journalföring och provtagningar ska göras.
+
+#### Bestämmelse rörande installation av pumpenhet som ingår i tryckavloppssystem med klena dimensioner (LTA-anläggning)
+
+15. Vid anslutning till allmänt tryckavloppssystem tillhandahåller huvudmannen LTA- pumpenhet eller annan aktuell pumpenhet som förblir dennes egendom. Huvudmannen bestämmer antalet pumpenheter och vilket slag av pumpenhet som ska användas samt svarar för installationen. Fastighetsägaren bekostar erforderliga anordningar för att sammankoppla enheten med installationen i övrigt.
+
+Enhetens plats ska bestämmas av huvudmannen, som äger rätt till kostnadsfri upplåtelse av platsen och som ensam har befogenhet att sätta upp, ta ned, kontrollera, justera, underhålla samt till- och frånkoppla enheten.
+
+Kompletterande förklaringar och upplysningar till ABVA finns i foldern Information till fastighetsägare om Bergs och Härjedalens allmänna vatten- och avloppstjänster.
+
+#### Relaterade dokument
+
+- Allmänna bestämmelser för användande av Härjedalens kommuns allmänna vatten- och avloppsanläggning (ABVA) (145.9 kB)
+
+Facebook Twitter LinkedIn Mail
+
+**Senast uppdaterad:** 5 januari 2026 10:33
+
+**Redaktör för sidan:** Sarah Tjärnås
+
+**Faktaansvarig** (syns endast i edit-läge): Saknas

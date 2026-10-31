@@ -67,12 +67,17 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | STFS (Sametinget) | 13 | 13 | counted | 100.0% |
 | agency | SvKFS (Svenska kraftnät) | 6 | 6 | counted | 100.0% |
 | agency | TFS (Tullverket) | 24 | 24 | counted | 100.0% |
-| case_law | Case law | 16475 | 16640 | counted | 99.0% |
+| agency | DVFS (DV) | 154 | 154 | counted | 100.0% |
+| agency | EIFS (Ei) | 34 | 34 | counted | 100.0% |
+| agency | KBVFS (KBV) | 4 | 4 | counted | 100.0% |
+| agency | FFS (FM) | 68 | 68 | counted | 100.0% |
+| agency | HSLF-FS | 119 | 155 | counted | 76.8% |
+| case_law | Case law | 16466 | 16640 | counted | 99.0% |
 | sfs | SÖ treaties | 3515 | 3515 | counted | 100.0% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
 | eu | EU judgments | 605 | 611 | counted | 99.0% |
 | region | Regional regulations | 11649 | unknown | unknown | - |
-| municipality | Municipal regulations | 4476 | unknown | unknown | - |
+| municipality | Municipal regulations | 5358 | unknown | unknown | - |
 | service | Public services | 0 | unknown | unknown | - |
 
 Progress is capped at the target; a series without a known target has no percentage.
@@ -141,6 +146,11 @@ Targets:
 - STFS (Sametinget): counted, https://sametinget.se/dokumentbank?cat=72 (base regulations), as of 2026-10-30
 - SvKFS (Svenska kraftnät): counted, https://www.svk.se/services/documents/v1/get?categories=28 (regulations, in force and repealed), as of 2026-10-30
 - TFS (Tullverket): counted, Tullverket's search of steering documents, all TFS documents (base regulations in force), as of 2026-10-30
+- DVFS (DV): counted, domstol.se sitemap, DVFS base regulation pages, as of 2026-10-30
+- EIFS (Ei): counted, https://ei.se/om-oss/lagar-och-regler/foreskrifter (el, naturgas, fjärrvärme tables), as of 2026-10-30
+- KBVFS (KBV): counted, https://www.kustbevakningen.se/om-oss/kustbevakningens-forfattningssamling/ (in force), as of 2026-10-30
+- FFS (FM): counted, Försvarsmakten's four Gällande FFS lists (base regulations in force), as of 2026-10-30
+- HSLF-FS: counted, https://kunskapsguiden.se/gemensam-forfattningssamling/ (base regulations, Läkemedelsverket excluded), as of 2026-10-30
 - Case law: counted, https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar?publiceringsformer=referat,notis, as of 2026-10-29
 - SÖ treaties: counted, regeringen.se sitemap: distinct SÖ numbers on pages under /rattsliga-dokument/sveriges-internationella-overenskommelser/, as of 2026-10-30
 - EU law (curated list): curated, collector/data/eu-acts.json, as of 2026-10-29
@@ -148,10 +158,10 @@ Targets:
 
 ## Integrity
 
-Audit of 51586 documents (2026-10-30T21:39:57Z):
+Audit of 52838 documents (2026-10-30T22:52:31Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
-- text-quality flags: 873
-- cross-references not in the corpus: 39297 of 39358 (informational, the corpus is partial)
+- text-quality flags: 883
+- cross-references not in the corpus: 39338 of 39399 (informational, the corpus is partial)

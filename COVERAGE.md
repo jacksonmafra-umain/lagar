@@ -186,6 +186,19 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   list or from the regulation that repealed them). Repealed LIVSFS
   regulations (no repeal date on the page), 23 MYHFS ones without a known
   repeal date and the predecessor series SLVFS are not collected.
+  Five more on 2026-10-30, also with titles, dates and text from their PDFs:
+  DVFS (154 base regulations, one page each in domstol.se's sitemap because
+  the register needs JavaScript), FFS (68 in force, from the lists that
+  Försvarsmakten's four "Gällande FFS" pages load from the site's content API;
+  8 old prints are scans without a text layer), EIFS (34, from Ei's el,
+  naturgas and fjärrvärme tables), KBVFS (4) and HSLF-FS (119 of about 155
+  base regulations listed on kunskapsguiden.se, read from each agency's site
+  with its own robots.txt: Socialstyrelsen 62, Folkhälsomyndigheten 37, TLV 7,
+  Rättsmedicinalverket 7, IVO 5 and one joint regulation). HSLF-FS gaps:
+  Läkemedelsverket's regulations are not collected (its pages need JavaScript
+  and its robots.txt disallows PDFs); about 30 more fail on dead or moved links,
+  MFOF's redirects and TLV regulations no longer on TLV's page. Predecessor
+  series on kunskapsguiden's list (SOSFS, FoHMFS and others) are not collected.
   [AGENCIES.md](AGENCIES.md) lists every series and
   source with its status.
 - Agency series published as a list of PDF links (configured in
@@ -285,9 +298,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
 - Since 2026-10-30 the PDF-only series above (RGKFS, RIFS, SGU-FS, SiSFS,
   TVFS, UFS, VALFS, VRFS, SKSFS, SSMFS, UHRFS, PFS, ÅFS, PRVFS, PMFS and
   RPSFS, STEMFS, RA-FS, SJÖFS, TRVFS) carry the regulation text read from
-  the PDF's text layer. SKOLFS still holds metadata and PDF links only.
+  the PDF's text layer. SKOLFS carries the text of each regulation as issued
+  (not the consolidated version). Skolverket serves the latest consolidated
+  version of SKOLFS 2011:22 as a Word file instead of a PDF; it is noted in the
+  manifest and not linked.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
+- SJVFS (Statens jordbruksverk) is a gap: its regulations are PDFs on
+  `jvdoc.sharepoint.com`, whose robots.txt disallows every path, and
+  Jordbruksverket's search page lists only the first 50 of its 341 base
+  regulations without JavaScript (checked 2026-10-30, #202).
 - Public services have no collector yet; what the Tjänster tab should hold is
   an open owner decision.
 - Regional regulations: 2025 and 2026 are collected for all 21 counties (630
@@ -338,33 +358,72 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     Sorsele, Lycksele and Arjeplog mix resident rules and internal documents on one
     page without headings, so their configs keep only listed file names; a new
     document with another name is not picked up until the config is updated.
-  - Not collected yet because their sites need a strategy the collector lacks:
-    one HTML page per document, with the text or the PDF only on that page (Vara,
-    Götene, Skara, Falköping, Arvika, Hudiksvall, Härjedalen, Älvsbyn), an
-    embedded JSON list (Skövde), SharePoint (Karlstad), MediaFlow (Gävle),
-    Evolution DocumentWeb (Hallstahammar) and a WordPress file-download plugin
-    (Övertorneå). Nora and Ljusnarsberg have no page listing their resident
-    rules; they are spread over topic pages. Their issues stay open.
+  - Karlstad serves its files only
+    through time-limited SharePoint links on a host whose robots.txt disallows
+    everything, so it is not collected.
+  - Skövde: the taxor och avgifter page and the five lokala föreskrifter
+    (ordnings-, avfalls-, hälsoskydds- and torghandelsföreskrifter and ABVA),
+    which its författningssamling lists only as JSON in the Next.js page's
+    script data (read with `embedded: "next"`), are collected. Nora
+    publishes only three taxor as PDFs (bygglov, VA, avfall); no ordnings-,
+    avfalls- or hälsoskyddsföreskrifter were found on its site. Arvika's taxor
+    page and Älvsbyn's föreskrifter (no index page) are not covered.
   - Boden's taxor pages and Örnsköldsvik's, Sandviken's and Tidaholm's topic
     pages hold rules that the configured listings do not cover; Kiruna covers
     its föreskrifter and bygglovstaxa only.
+  - Trelleborg: robots.txt disallows `/app/uploads/`, where every PDF lives, so
+    the PDFs are never fetched; the documents point at the listing page and are
+    recorded as gaps in the manifest. Its taxor page lists no PDFs.
+  - Ystad's taxor section of the författningssamling is empty on the page; only
+    section A (allmänna föreskrifter) is collected. Lund links two of its avgifter
+    as HTML pages, which are not collected. Ängelholm covers its lokala
+    ordningsregler page only.
+  - Helsingborg publishes its författningssamling on styrning.helsingborg.se
+    (PDFs on media.helsingborg.se); its föreskrifter page and the two avgifter
+    PDFs are collected. Its avfallstaxa lives on NSR's site and its environment
+    fees on a separate site for companies; neither is collected.
+  - Båstad's "Regler och styrande dokument" page (under Kommunfakta) lists its
+    författningssamling as one Sitevision file list; its 29 föreskrifter and
+    taxor are collected, internal documents left out by title.
+  - Perstorp: its "Kommunal författningssamling" page keeps the document list in
+    a minimised layout that opens only through `?sv.state=normal`, which
+    robots.txt disallows, and the site has no sitemap. Not bypassed; a gap.
+  - Lomma publishes its författningssamling in a Netpublicator reader; its channels
+    E (lokala föreskrifter) and F (taxor) are read through Netpublicator's public
+    API (`json_list` with `follow_items`). Vellinge publishes its lokala
+    ordningsföreskrifter and hälsoskyddsföreskrifter as web pages, collected as
+    page text (`html_pages` over its gzipped sitemap).
+  - Östra Göinge and Höör publish their rules only in Ciceron meeting portals
+    (`sok-og.unikom.se`, `sok-hr.unikom.se`); their "Styrande dokument" are read
+    through the portal's JSON-RPC search (`ciceron`).
+  - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
+    the PDFs are never fetched; the documents point at the listing page and are
+    recorded as gaps in the manifest.
+  - Simrishamn publishes its taxor as HTML text on its taxor page, which is not
+    collected; only the allmänna lokala ordningsföreskrifter are a PDF.
   - Tanum publishes its rules as web pages in an A–Z list; they are collected as
     page text (`html_pages`), the ABVA as its PDF. The avfallsföreskrifter page
     refers to Rambo AB's site for the full text.
+  - Härryda has no författningssamling or list of its rules. Its avgifter och
+    taxor page links to topic pages, collected as page text (`html_pages`) or as
+    the taxa PDF a page links; the VA and avfall taxor and the avfallsföreskrifter
+    come as PDFs from the pages of Härryda Vatten och Avfall AB (hvaa.se), the
+    current versions only; library fees and hall hire are left out, and no lokala
+    ordningsföreskrifter were found on either site: 13 documents (2026-10-30).
 - Kommuner checked and not collected are listed with the reason in `AGENCIES.md`
   (curated in the `kommuner` section of `collector/data/agencies.json`):
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
     included, with an HTTP 403 "Åtkomst nekad" bot-check page; not bypassed.
-  - Not collected yet in Stockholm, Uppsala, Östergötland, Jönköping, Kalmar
-    and Gotland counties, with the reason per kommun in `AGENCIES.md`:
-    Vallentuna (file-share folders answer 404), Lidingö (Evolution
-    DocumentWeb), Sigtuna (Netpublicator), Uppsala (no index; sitemap only),
-    Aneby and Jönköping (no collection page), Värnamo (document service down),
-    Torsås (titles outside the links), Mönsterås (site did not answer),
-    Västervik (file list not in the HTML) and Gotland (external document
-    service). Linköping links its rules to Google Drive and waits for an owner
-    decision. Härryda has no författningssamling or list of its rules: its
-    taxor are spread over topic pages, some as HTML text. Their issues stay open.
+  - Not collected yet, with the reason per kommun in `AGENCIES.md`: Värnamo
+    (its DocumentWeb host did not answer; retried 2026-10-31), Mönsterås (site
+    did not answer; retried 2026-10-31) and Linköping (rules on Google Drive;
+    waits for an owner decision). Their issues stay open.
+  - Collected through platform adapters: Lidingö and Västervik (Evolution
+    DocumentWeb API), Sigtuna (Netpublicator), Gotland (its document service),
+    Vallentuna (gzipped sitemap of the file-share module), Uppsala (sitemap and
+    the rule pages' own titles), Torsås (titles from table rows) and Aneby and
+    Jönköping (curated topic pages; Jönköping's avfall rules are on
+    juneavfall.se and not collected).
     Östhammar's robots.txt shuts named AI crawlers out of its rule pages but
     allows this collector's agent; the owner approved collecting it.
 - Public services have no collector yet and no known target.

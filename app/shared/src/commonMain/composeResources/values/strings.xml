@@ -306,6 +306,8 @@
     <string name="note_save">Save note</string>
     <string name="note_delete">Delete note</string>
     <string name="reader_inspector">About this document</string>
+    <string name="reader_inspector_open">Show the document details</string>
+    <string name="reader_inspector_close">Close the document details</string>
     <string name="type_agency_regulation">Agency regulation</string>
     <string name="type_case_report">Case report</string>
     <string name="type_case_notice">Case notice</string>
