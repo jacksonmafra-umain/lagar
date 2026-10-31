@@ -1167,7 +1167,10 @@
     "series:VVFS": 671,
     "series:SRVFS": 666,
     "series:SÄIFS": 666,
-    "series:KBMFS": 666
+    "series:KBMFS": 666,
+    "series:AMSFS": 695,
+    "series:RNFS": 696,
+    "series:RA-MS": 697
   },
   "kommuner": {
     "0683": {
