@@ -14920,6 +14920,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:21Z",
       "sha256": "fb0cc2ab3ea74de19a2ef1a9a6049b0448681c423b524c25f5356607fd934492",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/13789"
     },
     {
@@ -14929,6 +14930,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:32Z",
       "sha256": "4132347c18fd1f5c4fdcaab25e5ee39610e7061ddfc202e5d78dee3d91fcac5c",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/14319"
     },
     {
@@ -14938,6 +14940,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:21Z",
       "sha256": "0665b4cb78a18e67dc70856b8f57bb471e9296557226d158323c4064a62ba052",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/14508"
     },
     {
@@ -14947,6 +14950,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:26Z",
       "sha256": "7dd19f1754e46df74d5b320e1be4d2ded1cd9ecc491cb895f70625051a3ea44b",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/14510"
     },
     {
@@ -14956,6 +14960,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:30Z",
       "sha256": "13ccf88a3ec0ef22e78731df3a5ebb06f0644690249c0e3ef8ba3ebc41dbc59f",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/14522"
     },
     {
@@ -14965,6 +14970,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:25Z",
       "sha256": "14f4614630ffef9ec19fd0eb8486fa4d8aa412f7a18766bf6c342bd825083a89",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/14530"
     },
     {
@@ -14974,6 +14980,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:00Z",
       "sha256": "1b4d84619ba6f28dfc7030040dee919dfbba50d2ff8b982c3117a595c9ea0565",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/16018"
     },
     {
@@ -14983,6 +14990,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:05Z",
       "sha256": "77563eb044a82c0c4e9b7e5796de51d959a41b356eb72368ce93d423ece2e97f",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/16290"
     },
     {
@@ -14992,6 +15000,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:22Z",
       "sha256": "b215eed90f48def511952278d02deb5d774bd358879be499c7ec525375aad71e",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/16347"
     },
     {
@@ -15001,6 +15010,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:27Z",
       "sha256": "8685d30a3e52a61bf1129a562a0bcc27f164e2eac852cc88c39108f29b10e59d",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/16348"
     },
     {
@@ -15010,6 +15020,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:34Z",
       "sha256": "a555afddb55380017ae72e72b1816005b08e5c2438c38452d0fe39e3e279c2db",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/16350"
     },
     {
@@ -15019,6 +15030,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:14Z",
       "sha256": "9de9c5dfedbccd88f9fbfec4bd307b2f852508764866ab72e37405c0359c275f",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/16395"
     },
     {
@@ -15028,6 +15040,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:11Z",
       "sha256": "c605c89ba8a14bc0fd624ca08619f36af98d79565aac762c062eb55d0355bb4c",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/16542"
     },
     {
@@ -15037,6 +15050,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:18Z",
       "sha256": "13a91c0c08439408f7e181af2ec6a1f7e9251195bdf14c17c3df96c33e6b7241",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/18584"
     },
     {
@@ -15046,6 +15060,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:24Z",
       "sha256": "cba5f34d29ea38c6b0a1b9e9cf28022e146cc4f36a81f21842086da9cbeaf9d0",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/21920"
     },
     {
@@ -15055,6 +15070,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:20Z",
       "sha256": "d9521d541cc7062fc475c4ecdf580403ec170ca1548eed7691c308058e790661",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/22718"
     },
     {
@@ -15064,6 +15080,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:31Z",
       "sha256": "c34e19d40722da37d58c8207c18e472112d3ce1be5f9a3ed4302b7410cc2f72a",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/23964"
     },
     {
@@ -15073,6 +15090,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:00Z",
       "sha256": "d0a2e23d0140471cfc41367489dd0dd197f859fb3a222a02ec9cbcbb3b65030b",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/25300"
     },
     {
@@ -15082,6 +15100,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:28Z",
       "sha256": "8f48d0de55f976fde491025a1f607a7202c6a43b711d5a312e042edf7c930e99",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/25317"
     },
     {
@@ -15091,6 +15110,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:33Z",
       "sha256": "976e32db5145aa852c28863e49501858a820c00149a42c47d615d3a20d0f0a49",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/26783"
     },
     {
@@ -15100,6 +15120,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:23Z",
       "sha256": "3c17744997dd0bbc359953436336432c9e27f910dafb8a56e2b31d2d3d9534be",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/31203"
     },
     {
@@ -15109,6 +15130,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:14Z",
       "sha256": "af7983cce8be63d7b41e319b446c39a94455d1e466257ac4ec9db6330f3df7f0",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/40576"
     },
     {
@@ -15118,6 +15140,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:08Z",
       "sha256": "2a4fb5ba3bc3154053b028b81025c4088385785f07b77db004f68fc685f0c3a8",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/44083"
     },
     {
@@ -15127,6 +15150,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:17Z",
       "sha256": "a9a9cfb76c8902ba062b6857c982c41023a524c542634e7976af9b13bb77563b",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/44971"
     },
     {
@@ -15136,6 +15160,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:05Z",
       "sha256": "e89496851da229a5692e031df8c97d63a5aea3b76e73271880441238c15f7d8f",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/50727"
     },
     {
@@ -15145,6 +15170,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:02Z",
       "sha256": "670b5c5e98342efc565bf363ca8d52538aff54ddf456050c8c83a426a9711191",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/52170"
     },
     {
@@ -15154,6 +15180,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:11Z",
       "sha256": "8f099aca490d1dd02ca2bef987dbdd34891ebad384e3179c6832777224d523c6",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/52700"
     },
     {
@@ -15163,6 +15190,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:08Z",
       "sha256": "c4bb0be06afeb5dcdc172927c1cffdadd2ecf11992dc5ad8c7da0b4f7b835713",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/52814"
     },
     {
@@ -15172,6 +15200,7 @@
       "municipality_code": "0980",
       "retrieved_at": "2026-10-30T22:12:31Z",
       "sha256": "674af63e0dd02f005a5a397e1b883bdddece5d0a4293e21da3466285b2b5e386",
+      "text": "pdf",
       "url": "https://dokument.gotland.se:443/IntegrationService.svc/doc/content/5572"
     },
     {
