@@ -794,45 +794,60 @@ class LivsfsAdapter(PdfListAdapter):
     The status cell names the regulation an amendment changes ("Ändrar LIVSFS
     2021:8") and whether the regulation is in force ("Gällande", "Upphävd
     genom LIVSFS 2024:2"). A repealed regulation has no repeal date on the
-    page, so only regulations in force are collected. Before 2005 the series
-    was SLVFS, which is not collected. The index page links the year pages
+    page, so only regulations in force are collected. The series began in
+    2002; the years before were SLVFS (`SlvfsAdapter`). The index page links the year pages
     (not every year has one); they are read newest first, so the amendments
     of a base regulation are known when its own year is read.
     """
 
     series = "LIVSFS"
     issuer = "Livsmedelsverket"
+    first_year, last_year = 2002, 9999  # the year pages of the series
     base_url = "https://www.livsmedelsverket.se"
     listings = (base_url + "/om-oss/lagstiftning1/foreskrifter-i-nummerordning/",)
     _YEAR_PAGE = re.compile(r'href="(/om-oss/lagstiftning1/foreskrifter-i-nummerordning/'
                             r'foreskrifter-i-nummerordning-(\d{4})/)"')
     _AMENDS = re.compile(r"^(Ändrar|Ändring|Rättar)", re.IGNORECASE)
     _REPEALED = re.compile(r"upphävd|inte gällande", re.IGNORECASE)
+    _REPLACES = re.compile(r"\bersätter\s+([A-ZÅÄÖ]+FS\s+\d{4}:\d+)", re.IGNORECASE)
+    _ANY_NUMBER = re.compile(r"\b([A-ZÅÄÖ]+FS)\s+(\d{4}):(\d+)")
 
     def __init__(self):
         self._amended_by = {}
+        self._replaced = set()  # "Ersätter SLVFS 2000:1" on a later row: the earlier one is no longer in force
 
     def more_pages(self, text, url):
         if url != self.listings[0]:
             return []
         years = {int(year): absolute(url, path) for path, year in self._YEAR_PAGE.findall(text)}
-        return [years[year] for year in sorted(years, reverse=True) if year >= 2005]
+        return [years[year] for year in sorted(years, reverse=True) if self.first_year <= year <= self.last_year]
 
     def parse_listing(self, text, url):
         if url == self.listings[0]:
-            self._amended_by = {}
+            self._amended_by, self._replaced = {}, set()
             return []
-        entries = {}
+        entries, rows = {}, 0
         for row in parse_html(text).find_all("tr"):
             cells = row.find_all("td")
             if len(cells) < 2:
                 continue
             link = next((a for a in cells[0].find_all("a") if _is_pdf_link(a.attrs.get("href", ""))), None)
-            number = self.number(link.text(), link.attrs.get("title", "")) if link is not None else None
-            if number is None or number in entries or _COMPANION.match(link.text()):
+            if link is None or _COMPANION.match(link.text()):
                 continue
+            rows += 1
             status = cells[1].text()
-            base = not self._AMENDS.match(status) and not self._REPEALED.search(status)
+            self._replaced.update(_clean(ref) for ref in self._REPLACES.findall(status))
+            number = self.number(link.text(), link.attrs.get("title", ""))
+            if number is None:  # a row of the other series (LIVSFS for SLVFS): only what it amends counts
+                other = self._ANY_NUMBER.search(link.text() + " " + link.attrs.get("title", ""))
+                if other is not None and self._AMENDS.match(status):
+                    for ref in self.references(self._REPEALED.split(status)[0]):
+                        self._amended_by.setdefault(ref, set()).add(f"{other.group(1)} {other.group(2)}:{int(other.group(3))}")
+                continue
+            if number in entries:
+                continue
+            base = (not self._AMENDS.match(status) and not self._REPEALED.search(status)
+                    and number not in self._replaced)
             pdf = absolute(url, link.attrs["href"])
             # The status of an amendment names what it amends, for `amended_by`. A base gets its title from the
             # PDF, unless the subject cell is a full title ("Livsmedelsverkets förteckning över ...").
@@ -840,8 +855,8 @@ class LivsfsAdapter(PdfListAdapter):
             title = subject if subject.startswith("Livsmedelsverkets ") else number
             entries[number] = LinkEntry(number=number, title=title if base else status, url=pdf, base=base,
                                         pdfs=[(number, pdf)])
-        if not entries:
-            raise ValueError(f"no {self.series} regulations found on {url}")
+        if not rows:
+            raise ValueError(f"no regulations found on {url}")
         for entry in entries.values():
             if not entry.base:  # "Ändrar LIVSFS 2005:20 Upphävd genom LIVSFS 2011:3": only the first names a base
                 for ref in self.references(self._REPEALED.split(entry.title)[0]):
@@ -1115,11 +1130,76 @@ class TlvfsAdapter(_HslffsPredecessor):
     issuer = "Tandvårds- och läkemedelsförmånsverket"
 
 
+# --- predecessor series --------------------------------------------------------
+# Regulations of an agency's earlier series that are still listed (and often still in force) on
+# the page its current series is read from; each reads that page for its own numbers.
+
+class LmvfsAdapter(LmfsAdapter):
+    series = "LMVFS"  # Lantmäteriverket, before LMFS (2009)
+    issuer = "Lantmäteriet"
+
+
+class FifsAdapter(HvmfsAdapter):
+    series = "FIFS"  # Fiskeriverket's series, administered by Havs- och vattenmyndigheten
+    issuer = "Fiskeriverket"
+
+
+class MsbfsAdapter(McffsAdapter):
+    series = "MSBFS"  # before MCFFS (2026)
+    issuer = "Myndigheten för samhällsskydd och beredskap"
+    title_prefix = "Myndigheten för samhällsskydd och beredskaps"
+
+
+class RffsAdapter(FkfsAdapter):
+    series = "RFFS"  # Riksförsäkringsverket, before FKFS (2005); its register lists both
+    issuer = "Riksförsäkringsverket"
+
+
+class SlvfsAdapter(LivsfsAdapter):
+    """Statens livsmedelsverk's series before LIVSFS (2002), from the same year tables.
+
+    Every year is read: the LIVSFS years only for what their rows amend or replace
+    ("Ändrar SLVFS 1998:8", "Ersätter SLVFS 2001:4").
+    """
+
+    series = "SLVFS"
+    first_year, last_year = 0, 9999
+
+
+class _TsfsPredecessor(agency.TsfsAdapter):
+    """A series Transportstyrelsen took over in 2009, from the year pages of its TSFS index."""
+
+    amending = re.compile(r"(\w+ )?[Ff]öreskrifter (och allmänna råd )?om (ändring|ändringar|upphävande) ")
+
+    def __init__(self):
+        self.ref = re.compile(re.escape(self.series) + r" \d{4}:\d+")
+
+    def parse_index(self, text):
+        return [year for year in super().parse_index(text) if year < 2009]
+
+
+class LfsAdapter(_TsfsPredecessor):
+    series = "LFS"
+    issuer = "Luftfartsverket"
+    issuers = {"Luftfartsstyrelsens": "Luftfartsstyrelsen"}  # 2005-2008
+
+
+class JvsfsAdapter(_TsfsPredecessor):
+    series = "JvSFS"
+    issuer = "Järnvägsstyrelsen"
+
+
+class VvfsAdapter(_TsfsPredecessor):
+    series = "VVFS"
+    issuer = "Vägverket"
+
+
 SERIES = (MigrfsAdapter(), KamfsAdapter(), KfmfsAdapter(), KfsAdapter(), KrfsAdapter(), MemyfsAdapter(),
           ElsakfsAdapter(), McffsAdapter(), MdffsAdapter(), NfsAdapter(), KifsAdapter(), AgvfsAdapter(),
           KovfsAdapter(), HvmfsAdapter(), FkfsAdapter(), IaffsAdapter(), AffsAdapter(), BfnarAdapter(),
           CsnfsAdapter(), ImyfsAdapter(), LmfsAdapter(), MtfsAdapter(),
           KvfsAdapter(), LivsfsAdapter(), MyhfsAdapter(), DvfsAdapter(), EifsAdapter(), KbvfsAdapter(),
-          FfsAdapter(), HslffsAdapter(), SosfsAdapter(), FohmfsAdapter(), TlvfsAdapter())
+          FfsAdapter(), HslffsAdapter(), SosfsAdapter(), FohmfsAdapter(), TlvfsAdapter(), LmvfsAdapter(),
+          FifsAdapter(), MsbfsAdapter(), RffsAdapter(), SlvfsAdapter(), LfsAdapter(), JvsfsAdapter(), VvfsAdapter())
 
 agency.ADAPTERS.update({a.series: a for a in SERIES})

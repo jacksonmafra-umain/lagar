@@ -548,6 +548,9 @@ class TsfsAdapter:
     detail = True
     series = "TSFS"
     issuer = "Transportstyrelsen"
+    ref = _TSFS_REF  # the numbers of the series on a year listing
+    amending = _TSFS_AMENDING
+    issuers: "dict[str, str]" = {}  # title's first word -> issuer, where it differs from `issuer`
     base_url = "https://www.transportstyrelsen.se"
     index_url = base_url + "/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/ts-foreskrifter-i-nummerordning/"
     listing_url = index_url
@@ -574,9 +577,10 @@ class TsfsAdapter:
             cells = [c for c in item.children if isinstance(c, Node)]
             number = cells[0].text() if cells else ""
             link = item.find("a")
-            if not _TSFS_REF.fullmatch(number) or link is None:
+            if not self.ref.fullmatch(number) or link is None:
                 continue
             title = link.text().removesuffix(", " + number)
+            first_word = title.split(" ", 1)[0]
             status = item.find("span", "small")
             badge = item.find("span", "badge")
             repealed = None
@@ -586,9 +590,10 @@ class TsfsAdapter:
                 number=number,
                 title=title,
                 url=absolute(url, link.attrs.get("href", "")),
-                base=not _TSFS_AMENDING.match(title),
+                base=not self.amending.match(title),
                 in_force=_date(status.text()) if status is not None else None,
                 repealed=repealed,
+                issuer=self.issuers.get(first_word),
             ))
         return entries
 
