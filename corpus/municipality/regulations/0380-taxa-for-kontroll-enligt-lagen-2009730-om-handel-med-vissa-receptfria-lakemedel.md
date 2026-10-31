@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.uppsala.se/contentassets/1844e39cfccc42dea504ed58484603d0/taxa-for-kontroll-enligt-lagen-om-handel-med-vissa-receptfria-lakemedel-2026.pdf"
 source_sha256: "4c47097d1fc237f4ed2e63be7aeef1740011c43db6962c2a583f1b6846ca87a5"
-fetched_at: "2026-10-30T21:06:35Z"
+fetched_at: "2026-10-31T15:59:13Z"
 issuer: "Uppsala kommun"
 region_code: "03"
 municipality_code: "0380"
@@ -73,7 +73,43 @@ Vill ej kommentera
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Taxa för kontroll enligt lagen om handel med vissa receptfria läkemedel 2026](<https://www.uppsala.se/contentassets/1844e39cfccc42dea504ed58484603d0/taxa-for-kontroll-enligt-lagen-om-handel-med-vissa-receptfria-lakemedel-2026.pdf>)
 - [Taxa för kontroll enligt lagen (2009:730) om handel med vissa receptfria läkemedel 2025](<https://www.uppsala.se/contentassets/1844e39cfccc42dea504ed58484603d0/taxa-for-kontroll-enligt-lagen-om-handel-med-vissa-receptfria-lakemedel.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Taxa för kontroll enligt lagen om handel med vissa receptfria läkemedel
+
+Beslutad av kommunfullmäktige 3 november 2025, § 315
+
+Denna taxa gäller från och med 1 januari 2026.
+
+Taxa för kontroll enligt lagen om handel med vissa receptfria läkemedel
+
+Inledande bestämmelser
+
+1 § Denna taxa gäller avgift för Uppsala kommuns kostnader för kontroll enligt lagen (2009:730) om handel med vissa receptfria läkemedel och de föreskrifter som har meddelats med stöd av lagen.
+
+2 § Avgift enligt denna taxa ska betalas till miljö- och hälsoskyddsnämnden.
+
+3 § Om det finns särskilda skäl med hänsyn till verksamhetens art och omfattning, behov av kontroller, nedlagd kontrolltid eller andra omständigheter får miljö- och hälsoskyddsnämnden besluta att avgift enligt denna taxa sätts ned eller efterskänks i enskilda fall.
+
+4 § Avgiftsuttag sker i form av fast årlig avgift för kontroll enligt 6 §. Avgiften beräknas enligt schablon för genomsnittligt nedlagd handläggningstid per kontrollobjekt och ska täcka verksamhetens kostnader.
+
+Med handläggningstid avses den sammanlagda tid som varje tjänsteperson vid nämnden har använt för administration, planering av kontroll, kontrollbesök, samt rapportskrivning.
+
+5 § Beslut om avgift fattas av miljö- och hälsoskyddsnämnden.
+
+Avgifter
+
+Årlig kontrollavgift
+
+6 § Årlig avgift för kontroll av försäljning av vissa receptfria läkemedel 1 500 kr*
+
+7 § Avgift för kontroll av anmälningspliktig försäljning av vissa receptfria läkemedel ska betalas av verksamhetsutövaren inom den tid som anges på fakturan. Avgiften betalas för innevarande år.
+
+*Rabatt ges på kontrollavgiften för vissa receptfria läkemedel om försäljningsstället samtidigt säljer folköl och/eller elektroniska cigaretter och påfyllningsbehållare. Avgiften blir då 1 000 kr per produkt som säljs. Rabatten på anmälningspliktiga produkter gäller även i kombination med försäljning av tobak.

@@ -4,6 +4,7 @@ import io
 import json
 import tempfile
 import unittest
+from unittest import mock
 import urllib.error
 from pathlib import Path
 
@@ -1090,6 +1091,107 @@ class DocumentGapTest(unittest.TestCase):
             self.assertIn("Google Drive's robots.txt disallows the download", body)
             manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
             self.assertEqual(manifest["gaps"][0]["url"], drive)
+
+
+LAYER_TEXT = "1 § Avfall ska sorteras.\n\n2 § Kärl ska ställas ut senast klockan sju."
+
+
+def pdf_result(text, gap=None):
+    return municipal.pdftext.PdfText(text=text, pages=1, text_pages=1 if gap is None else 0, gap=gap)
+
+
+class PdfTextTest(unittest.TestCase):
+    def run_text(self, tmp, client=None, **kw):
+        args = Args(tmp, limit=1, text=True, ocr=kw.pop("ocr", False), **kw)
+        with mock.patch.object(municipal.pdftext, "available", return_value=True), \
+                mock.patch.object(municipal.ocr, "available", return_value=True):
+            return municipal.run(client or FakeClient(sthlm_routes()), args), args
+
+    def stored(self, args):
+        path = Path(args.corpus) / "municipality" / "regulations" / "0180-kfs-2026-12.md"
+        meta, body = frontmatter.load(path.read_text(encoding="utf-8"))
+        manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+        record = next(d for d in manifest["documents"] if d["id"] == "0180-kfs-2026-12")
+        return meta, body, record
+
+    def test_text_layer_goes_into_the_body_and_is_reused_while_the_pdf_is_unchanged(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.object(municipal.pdftext, "extract", return_value=pdf_result(LAYER_TEXT)) as extract:
+                self.run_text(tmp)
+                meta, body, record = self.stored(Args(tmp))
+                self.assertEqual(schema.validate(meta), [])
+                self.assertNotIn("text_source", meta)
+                self.assertEqual(record["text"], "pdf")
+                self.assertIn("## Text\n\nTexten är hämtad ur kommunens pdf.", body)
+                self.assertIn("1 § Avfall ska sorteras.\n\n2 § Kärl ska ställas ut senast klockan sju.\n", body)
+                self.assertNotIn("Texten har inte konverterats", body)
+                extract.reset_mock()
+                summary, _ = self.run_text(tmp, refresh=True)
+                self.assertNotIn(mock.call(PDF + b"KFS 2026:12"), extract.call_args_list)
+                self.assertIn("0180-kfs-2026-12", summary.unchanged)
+
+    def test_scan_is_read_by_ocr_and_marked(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.object(municipal.pdftext, "extract",
+                                   return_value=pdf_result("", municipal.pdftext.NO_TEXT_LAYER)), \
+                    mock.patch.object(municipal.ocr, "extract", return_value=pdf_result(LAYER_TEXT)):
+                self.run_text(tmp, ocr=True)
+            meta, body, record = self.stored(Args(tmp))
+            self.assertEqual(meta["text_source"], "ocr")
+            self.assertEqual(record["text"], "ocr")
+            self.assertIn("maskinellt inläst (OCR)", body)
+
+    def test_scan_without_ocr_is_a_noted_text_gap_and_ocr_later_fills_it(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            scan = pdf_result("", municipal.pdftext.NO_TEXT_LAYER)
+            with mock.patch.object(municipal.pdftext, "extract", return_value=scan):
+                self.run_text(tmp)
+            _meta, body, record = self.stored(Args(tmp))
+            self.assertEqual(record["text"], municipal.pdftext.NO_TEXT_LAYER)
+            self.assertIn("Pdf:en är inskannad och saknar textlager", body)
+            self.assertNotIn("## Text", body)
+            with mock.patch.object(municipal.pdftext, "extract", return_value=scan), \
+                    mock.patch.object(municipal.ocr, "extract", return_value=pdf_result(LAYER_TEXT)):
+                summary, _ = self.run_text(tmp, ocr=True)
+            self.assertEqual(summary.written, ["0180-kfs-2026-12"])
+            self.assertEqual(self.stored(Args(tmp))[2]["text"], "ocr")
+
+    def test_scan_without_text_after_ocr_is_not_read_again(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            scan = pdf_result("", municipal.pdftext.NO_TEXT_LAYER)
+            with mock.patch.object(municipal.pdftext, "extract", return_value=scan), \
+                    mock.patch.object(municipal.ocr, "extract", return_value=scan) as recognise:
+                self.run_text(tmp, ocr=True)
+                _meta, body, record = self.stored(Args(tmp))
+                self.assertEqual(record["text"], municipal.OCR_NO_TEXT)
+                self.assertIn("ingen text som kan läsas maskinellt", body)
+                recognise.reset_mock()
+                self.run_text(tmp, ocr=True)
+                self.assertNotIn(mock.call(PDF + b"KFS 2026:12"), recognise.call_args_list)
+
+    def test_documents_collected_without_text_are_read_on_the_next_text_run(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            municipal.run(FakeClient(sthlm_routes()), Args(tmp, limit=1))
+            with mock.patch.object(municipal.pdftext, "extract", return_value=pdf_result(LAYER_TEXT)):
+                summary, _ = self.run_text(tmp)
+            self.assertEqual(summary.written, ["0180-kfs-2026-12"])
+            self.assertIn("## Text", self.stored(Args(tmp))[1])
+
+    def test_text_with_a_personal_identity_number_is_not_stored(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            text = "Beslutad av Anna Andersson, 811218-9876, kommunfullmäktiges ordförande."
+            with mock.patch.object(municipal.pdftext, "extract", return_value=pdf_result(text)):
+                summary, _ = self.run_text(tmp)
+            self.assertIn("0180-kfs-2026-12", summary.failed)
+            self.assertEqual(summary.written, [])
+
+    def test_missing_ocr_tools_stop_the_run_unless_ocr_is_off(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            args = Args(tmp, text=True, ocr=True)
+            with mock.patch.object(municipal.pdftext, "available", return_value=True), \
+                    mock.patch.object(municipal.ocr, "available", return_value=False):
+                with self.assertRaises(municipal.ConfigError):
+                    municipal.run(FakeClient(sthlm_routes()), args)
 
 
 class MainTest(unittest.TestCase):

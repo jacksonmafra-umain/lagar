@@ -143,7 +143,7 @@ poppler-utils`, `brew install poppler`); the collector and sync workflows instal
 `lagar/ocr.py` reads a PDF that `pdftext` finds without a text layer: poppler's `pdftoppm` renders
 each page at 300 dpi in grey scale and `tesseract -l swe` reads it. Install `tesseract-ocr` and
 `tesseract-ocr-swe` (`brew install tesseract tesseract-lang`); the collector CI and the agency,
-county and municipal sync workflows install them.
+county, municipal and SÖ sync workflows install them.
 
 - `ocr.extract(data)` returns the same `PdfText` as `pdftext.extract`. Lines read with a mean word
   confidence below 60 (signatures, stamps, handwriting) are dropped; a file whose words average
@@ -391,8 +391,11 @@ Documents are `treaty` in layer `sfs`, under `corpus/sfs/treaties/`, with ids su
 `so-2023-3`. The text is only published as PDF: for SÖ years from `--text-from-year`
 (default 2010) the PDFs are downloaded and their text extracted with
 `collector/lagar/pdftext.py`; size, SHA-256, page count and the extraction result go
-into `sources/so-pdf-manifest.json`, and the bytes are not kept. Older treaties, and
-scanned PDFs, keep the page metadata and the PDF link only. Many treaties are printed
+into `sources/so-pdf-manifest.json`, and the bytes are not kept. A scanned PDF, or one
+whose text layer cannot be read, is read by OCR (`collector/lagar/ocr.py`; `--no-ocr` skips
+it): the manifest's `text` is `ocr`, the document gets `text_source: ocr` and a note before
+the text. Older treaties, and PDFs OCR cannot read either, keep the page metadata and the
+PDF link only. Many treaties are printed
 in Swedish and one or more other languages side by side; the extracted text keeps
 every language, as printed. `authoritative` stays false: the text is not tied to a
 verified snapshot of the print.
@@ -737,7 +740,8 @@ dataset. `municipal` reads the kommuner listed in `collector/data/municipalities
 
 ```
 python3 -I collector/collect.py municipal --kommun 0180 [--kommun 1480 ...] [--limit N] \
-    [--refresh] [--report FILE] [--rate SECONDS] [--config collector/data/municipalities.json] \
+    [--refresh] [--no-text] [--no-ocr] [--report FILE] [--rate SECONDS] \
+    [--config collector/data/municipalities.json] \
     [--state collector/data/municipal-state.json] [--manifest sources/municipal-manifest.json]
 python3 -I collector/collect.py municipal --all [--limit N]
 python3 -I collector/collect.py municipal --kommun 0120 --dry-run
@@ -752,8 +756,18 @@ python3 -I collector/collect.py municipal --kommun 0120 --dry-run
   and longest-match precedence (the standard library parser ignores wildcards). A disallowed
   listing stops that kommun; a disallowed document is not fetched and is recorded as a gap.
   Requests go only to the hosts configured for the kommun, redirects included.
-- PDF text is never extracted. A fetched PDF goes into the manifest with its SHA-256 and becomes
-  `source`/`source_sha256`. When robots.txt disallows the PDF, `source` is the listing page (or the
+- A fetched PDF goes into the manifest with its SHA-256 and becomes `source`/`source_sha256`; the
+  bytes are never kept. Its text is read with `lagar/pdftext.py` and goes into the body under
+  `## Text`, as paragraphs; a scan without a usable text layer is read by `lagar/ocr.py`, and the
+  document then carries `text_source: ocr` and a note that the text may hold misreadings. The
+  manifest records the outcome as `text` (`pdf`, `ocr` or the gap reason, such as "no text layer
+  (scanned PDF)"); the body notes a text gap. While a PDF's SHA-256 is unchanged its stored text is
+  reused, and a run reads the text of documents collected before (no `text` in the manifest) and,
+  with OCR, of scans recorded without text; a scan OCR finds no text in is recorded as "no text
+  found by OCR (scanned PDF)" and not read again. A text holding a personal identity number is not
+  stored: the document fails. `--no-text` skips reading text and `--no-ocr` skips OCR; without
+  them the run stops when `pdftotext` or tesseract with the Swedish model is missing.
+  `document_gap` kommuner and documents that robots.txt keeps out get no text. When robots.txt disallows the PDF, `source` is the listing page (or the
   Domino detail page) and `source_sha256` hashes that page; the body says the document was not
   fetched.
 - Mapping: `id` is `<kommun code>-<slug of number>`, for example `0180-kfs-2026-12`; `number` is the
@@ -763,7 +777,7 @@ python3 -I collector/collect.py municipal --kommun 0120 --dry-run
   `issued` and `in_force` stay `null`: the listings do not give them reliably.
 - Body: kommun, collection and number (plus version, adopting body and the handbook's
   "Gällande från" date for Domino), a link to the listing or detail page, the kommun's own note
-  (Domino `BodyField`, converted with `htmlmd`) and links to the PDFs.
+  (Domino `BodyField`, converted with `htmlmd`), links to the PDFs and the PDF's text.
 - Some servers answer with brotli even when only gzip is accepted. Brotli streams made of
   uncompressed meta-blocks (start.stockholm's robots.txt) are decoded; a compressed one is
   retried twice and then counted as a failure.

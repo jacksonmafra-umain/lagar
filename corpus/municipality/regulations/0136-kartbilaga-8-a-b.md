@@ -16,10 +16,11 @@ language: "sv"
 authoritative: false
 source: "https://www.haninge.se/49cca6/globalassets/dokument/styrdokument/kommunal-forfattningssamling/foreskrifter/kartbilaga-8-a-b.pdf"
 source_sha256: "80dfac00bf806cc08ab551689767c2aa65a5713587c06a93161ddcee138610e2"
-fetched_at: "2026-10-30T00:47:40Z"
+fetched_at: "2026-10-31T15:35:19Z"
 issuer: "Haninge kommun"
 region_code: "01"
 municipality_code: "0136"
+text_source: "ocr"
 ---
 # Kartbilaga 8 A–B
 
@@ -31,6 +32,32 @@ Förteckning: <https://www.haninge.se/kommun-och-politik/politik-och-organisatio
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Kartbilaga 8 A–B](<https://www.haninge.se/49cca6/globalassets/dokument/styrdokument/kommunal-forfattningssamling/foreskrifter/kartbilaga-8-a-b.pdf>)
+
+## Text
+
+Texten är maskinellt inläst (OCR) ur kommunens inskannade pdf och kan innehålla läsfel. Den gällande lydelsen finns i pdf:en.
+
+Haninge
+
+Haninge kommuns allmänna lokala ordningsföreskrifter Kartbilaga 8A
+
+= Reglerat område
+
+—
+
+0 100 200. [ 30
+
+meter —
+
+Skala 1:6500
+
+Haninge
+
+Q
+
+Haninge kommuns allmänna lokala ordningsföreskrifter Kartbilaga 8B
+
+= Reglerat område
