@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://hedemora.se/wp-content/uploads/2022/10/5.1_Taxa_for_tillsyn_enligt_tobakslagen.pdf"
 source_sha256: "3ae61b8f442e065393a8aa0fc39486821c5b09d3866a3db22a3d12a7a3218e11"
-fetched_at: "2026-10-30T15:11:28Z"
+fetched_at: "2026-10-31T21:19:34Z"
 issuer: "Hedemora kommun"
 region_code: "20"
 municipality_code: "2083"
@@ -31,6 +31,20 @@ Förteckning: <https://hedemora.se/kommun-och-demokrati/sa-fungerar-kommunen/reg
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Taxa för tillsyn enligt tobakslagen](<https://hedemora.se/wp-content/uploads/2022/10/5.1_Taxa_for_tillsyn_enligt_tobakslagen.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+FFS 5:1
+
+TAXA FÖR TILLSYN ENLIGT TOBAKSLAGEN antaget av kommunfullmäktige den 17 februari 2015 § 9.
+
+Den 26 november 2013 § 152 beslutade kommunfullmäktige i Hedemora kommun att ingå i den gemensamma nämnden för alkohol, tobak och receptfria läkemedel.
+
+I den gemensamma nämnden för alkohol, tobak och receptfria läkemedel samverkar sju Dalakommuner i tillståndsfrågor som rör servering av alkohol och försäljning av tobak, folköl och receptfria läkemedel. Syftet med samarbetet är att erbjuda hög kompetens och bra service. De sju kommunerna är Borlänge, Gagnef, Säter, Smedjebacken, Ludvika, Hedemora och Falun. Den gemensamma nämnden och ATL-kontoret (kontoret för alkohol, tobak och receptfria läkemedel) ligger i Falun.
+
+Aktuella taxor för tillsyn av tobak återfinns på Falu kommuns hemsida: https://www.falun.se/naringsliv--arbete/tillstand-regler-och-tillsyn/folkol-tobak-och-ecigaretter.html
