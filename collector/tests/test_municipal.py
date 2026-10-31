@@ -1060,6 +1060,38 @@ class CiceronTest(unittest.TestCase):
         self.assertIn(f'source: "{url}"', meta)
 
 
+class DocumentGapTest(unittest.TestCase):
+    def test_documents_are_linked_but_never_fetched(self):
+        listing_url = "https://www.linkoping.se/regler-och-styrande-dokument"
+        drive = "https://drive.google.com/file/d/15phzXYcMMTaWUX_cwUFw0rcR8rClfrIy/view?usp=sharing"
+        entry = {"name": "Linköping", "issuer": "Linköpings kommun", "region_code": "05",
+                 "collection": "Regler och styrande dokument", "strategy": "html_index",
+                 "hosts": ["www.linkoping.se"], "listings": [listing_url], "sections": ["Lokala föreskrifter"],
+                 "link_pattern": "^https://drive\\.google\\.com/file/d/[\\w-]+/view",
+                 "number": [{"from": "href", "pattern": "/file/d/([\\w-]+)/"}],
+                 "title_strip": ["\\s*\\(pdf\\)\\s*$"],
+                 "document_gap": "Google Drive's robots.txt disallows the download"}
+        listing = ("<html><body><h2>Lokala föreskrifter</h2><a href='" + drive + "'>"
+                   "Lokala ordningsföreskrifter för Linköpings kommun (pdf)</a></body></html>").encode()
+        client = FakeClient({"https://www.linkoping.se/robots.txt": b"User-agent: *\nDisallow:\n", listing_url: listing})
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "m.json"
+            path.write_text(json.dumps({"kommuner": {"0580": entry}}), encoding="utf-8")
+            args = Args(tmp, kommun=["0580"], config=str(path))
+            summary = municipal.run(client, args)
+            self.assertEqual(summary.gaps, [municipal.corpus_id("0580", "15phzXYcMMTaWUX_cwUFw0rcR8rClfrIy")])
+            self.assertNotIn(drive, client.calls)
+            meta, body = frontmatter.load(next((Path(args.corpus) / "municipality" / "regulations").glob("*.md"))
+                                          .read_text(encoding="utf-8"))
+            self.assertEqual(schema.validate(meta), [])
+            self.assertEqual(meta["source"], listing_url)
+            self.assertEqual(meta["source_sha256"], hashlib.sha256(listing).hexdigest())
+            self.assertIn(f"(<{drive}>)", body)
+            self.assertIn("Google Drive's robots.txt disallows the download", body)
+            manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+            self.assertEqual(manifest["gaps"][0]["url"], drive)
+
+
 class MainTest(unittest.TestCase):
     def test_bad_code_is_rejected(self):
         with self.assertRaises(SystemExit):

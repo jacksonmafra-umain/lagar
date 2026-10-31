@@ -185,6 +185,7 @@ class Kommun:
     json_recursive: bool = False
     json_follow: "dict" = field(default_factory=dict)
     href_titles: bool = False
+    document_gap: str = ""
     json_embedded: str = ""
     json_number_pattern: str = ""
     # url -> Kommun with that listing's own settings (a listing given as an object)
@@ -259,6 +260,7 @@ def _kommun(code, entry):
         json_recursive=bool(entry.get("recursive", False)),
         json_follow=dict(entry.get("follow_items") or {}),
         href_titles=bool(entry.get("href_titles", False)),
+        document_gap=entry.get("document_gap", ""),
         json_embedded=entry.get("embedded", ""),
         json_number_pattern=entry.get("number_pattern", ""),
     )
@@ -1373,6 +1375,10 @@ def collect_document(fetcher, kommun, entry, args, manifest):
         sha, record = _fetch_pdf(fetcher, kommun, _mediaflow_download(fetcher, kommun, entry.url))
         if sha is not None:
             record = {**record, "url": entry.url}
+    elif kommun.document_gap:
+        # The documents live where they may not be fetched (a third-party host whose robots.txt
+        # disallows the download): metadata and the link only, recorded as a gap.
+        sha, record = None, kommun.document_gap
     else:
         sha, record = _fetch_pdf(fetcher, kommun, pdf_url)
     doc_id = corpus_id(kommun.code, entry.number)
