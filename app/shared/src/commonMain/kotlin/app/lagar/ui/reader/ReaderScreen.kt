@@ -337,7 +337,6 @@ fun ReaderScreen(
                                     // A § printed once per wording carries Riksdagen's marker, shown as a label.
                                     val statute = remember(block) { statuteValidity(block) }
                                     StatuteContainer(
-                                        layer = key,
                                         action = if (blockAnchor != null && label != null) {
                                             { sectionActions(blockAnchor, label, statute.text) }
                                         } else {
