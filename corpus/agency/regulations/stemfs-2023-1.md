@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=98748690df294745832529ae6acfa29c&res=c029ca4194c14727a8bd895d0b74ea1c&lr=False&fn=STEMFS%202023_1webb.pdf&elp=portal&elt=t&eloid=98748690df294745832529ae6acfa29c"
 source_sha256: "b56f3a8c0fd39c186453ad4fd8d37d9efc040bb5aec5df7faa68adc43d888106"
-fetched_at: "2026-10-30T15:21:12Z"
+fetched_at: "2026-10-31T03:22:05Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om kontoföring och registrering i unionsregistret
@@ -56,11 +56,11 @@ Ansökan om öppnande av konto
 
 **3 §** En ansökan om öppnande av konto genomförs av sökande i unionsregistret. En ansökan om öppnande av konto kan också göras på blankett som Statens energimyndighet tillhandahåller. En ansökan om öppnande av konto ska vara undertecknad av behörig företrädare för sökande.
 
-**4 §** Vid ansökan om öppnande av konto ska sådan dokumentation som enligt registerförordningen ska bifogas en ansökan lämnas in till Statens energimyndighet.
+**4 §** Vid ansökan om öppnande av konto ska sådan dokumentation som enligt registerförordningen ska bifogas en ansökan lämnas in till Statens energi­ myndighet.
 
 **5 §** En juridisk person som ansöker om att öppna ett handelskonto ska lämna in en kopia på den juridiska personens årsredovisning eller senaste reviderade räkenskaper till Statens energimyndighet.
 
-I dessa föreskrifter finns bestämmelser som kompletterar reglerna i kommissionens förordning (EU) nr 389/2013 av den 2 maj 2013 om upprättande av ett unionsregister i enlighet med Europaparlamentets och rådets direktiv 2003/87/EG och Europaparlamentets och rådets beslut nr 280/2004/EG och nr 406/2009/EG samt om upphävande av kommissionens förordningar (EU) nr 920/2010 och (EU) nr 1193/2011.
+I dessa föreskrifter finns bestämmelser som kompletterar reglerna i kommissionens förordning (EU) nr 389/2013 av den 2 maj 2013 om upprättande av ett unionsregister i enlighet med Europaparlamentets och rådets direktiv 2003/87/EG och Europaparlamentets och rådets beslut nr 280/2004/EG och nr 406/2009/EG samt om upphävande av kom­ missionens förordningar (EU) nr 920/2010 och (EU) nr 1193/2011.
 
 STEMFS
 
@@ -74,19 +74,19 @@ Ansökan om behöriga ombud
 
 **8 §** Samtliga personer som ska ha tillgång till konton i unionsregistret ska anmälas till Statens energimyndighet som behöriga ombud.
 
-**9 §** En förutsättning för att bli godkänd som behörigt ombud är att ombudet godkänner de användarvillkor som Statens energimyndighet tillhandahåller. Användarvillkoren kan godkännas genom elektronisk signering och ­överföring i samband med att ombudet fyller i behörighetsnyckel vid inloggning för ­första gången i unionsregistret.
+**9 §** En förutsättning för att bli godkänd som behörigt ombud är att ombudet godkänner de användarvillkor som Statens energimyndighet tillhandahåller. Användarvillkoren kan godkännas genom elektronisk signering och ö­ verföring i samband med att ombudet fyller i behörighetsnyckel vid inloggning för f­ örsta gången i unionsregistret.
 
 **10 §** Fullmakt ska finnas för samtliga personer som ska ha tillgång till ­konton i unionsregistret och som inte är firmatecknare för kontoinnehavaren. En fullmakt ska lämnas in till Statens energimyndighet och vara undertecknad av behörig firmatecknare för kontoinnehavaren.
 
 Åtgärder i unionsregistret
 
-**11 §** En kontoinnehavares begäran om en åtgärd i registret görs genom unionsregistret eller på blankett som Statens energimyndighet tillhandahåller. ­Blanketten ska vara undertecknad av behörig företrädare för kontoinnehavaren och lämnas in till Statens energimyndighet.
+**11 §** En kontoinnehavares begäran om en åtgärd i registret görs genom unions­ registret eller på blankett som Statens energimyndighet tillhandahåller. B ­ lanketten ska vara undertecknad av behörig företrädare för kontoinnehavaren och lämnas in till Statens energimyndighet.
 
 Avgifter
 
 **12 §** Ansökningsavgiften ska betalas senast 14 dagar från det att ansökan om öppnande av handelskonto eller persondepåkonto under Kyotoprotokollet kommit in till Statens energimyndighet.
 
-**13 §** Årsavgiften för innehav av handelskonto eller persondepåkonto under ­Kyotoprotokollet ska betalas av kontoinnehavaren i förskott för varje ­kalenderår till Statens energimyndighet senast den 31 december.
+**13 §** Årsavgiften för innehav av handelskonto eller persondepåkonto under ­Kyotoprotokollet ska betalas av kontoinnehavaren i förskott för varje k­ alenderår till Statens energimyndighet senast den 31 december.
 
 Avslutande av konto
 

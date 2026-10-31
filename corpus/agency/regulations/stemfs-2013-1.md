@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=e2ee97832c504f24b2d817eb1573aeed&res=13a1fe86404848598ccfb6eae6dda53b&lr=False&fn=STEMFS%202013_1webb.pdf&elp=portal&elt=t&eloid=e2ee97832c504f24b2d817eb1573aeed"
 source_sha256: "008c4895fcd2376fd4a322bb4d0eb4ac03bd96003eb191d5ef328b2dc9d3a133"
-fetched_at: "2026-10-30T15:28:08Z"
+fetched_at: "2026-10-31T03:28:56Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om anläggningar som omfattas av system för certifiering av vissa installatörer.
@@ -41,29 +41,21 @@ Statens energimyndighet föreskriver följande med stöd av 1 § förordning (20
 
 Tillämpningsområde
 
-**1 §** Dessa föreskrifter innehåller bestämmelser om vilka typer av anläggningar som ska omfattas av det system för certifiering som bör vara i I och
+**1 §** Dessa föreskrifter innehåller bestämmelser om vilka typer av anlägg­ ningar som ska omfattas av det system för certifiering som bör vara i I och
 
-2 §§ lagen (2012:838) om certifiering av vissa installatörer.
-
-Föreskrifterna meddelas som en del i Sveriges genomförande av artikel
-
-14.3 i Europaparlamentets och rådets direktiv 2009/28/EG av den 23 april
-
-2009 om främjande av användningen av energi från förnybara energikällor och om ändring och ett senare upphävande av direktiven 2001/77/EG och
-
-2003/30/EG.
+2 §§ lagen (2012:838) om certifiering av vissa installatörer. Föreskrifterna meddelas som en del i Sveriges genomförande av artikel 14.3 i Europaparlamentets och rådets direktiv 2009/28/EG av den 23 april 2009 om främjande av användningen av energi från förnybara energikällor och om ändring och ett senare upphävande av direktiven 2001/77/EG och 2003/30/EG.
 
 Installationer som omfattas av certifieringssystemet
 
 **2 §** I I § lagen (2012:838) om certifiering av vissa installatörer anges att frivillig certifiering får ske i fråga om installatörer av små pannor och ugnar som drivs med biomassa, solcells- och solvärmesystem, system för ytnära jordvärme eller värmepumpar.
 
-De typer av anläggningar som minst ska ingå i respektive installations certifieringssystem är de nedan angivna när de finns i enkla byggnader med maximalt värmeeffektbehov på 20 kW. Med enkla byggander avses dels enoch tvåbostadshus, dels flerbostadshus och lokaler som inte har luftkonditioneringssystem större än 12 kW kyleffekt och som i byggnaden har 1) låg eller ingen integrationsnivå mellan de tekniska systemen, eller 2) enkelt system för styrning och reglering.
+De typer av anläggningar som minst ska ingå i respektive installations certifieringssystem är de nedan angivna när de finns i enkla byggnader med maximalt värmeeffektbehov på 20 kW. Med enkla byggander avses dels en­ och tvåbostadshus, dels flerbostadshus och lokaler som inte har luftkonditio­ neringssystem större än 12 kW kyleffekt och som i byggnaden har 1) låg eller ingen integrationsnivå mellan de tekniska systemen, eller 2) enkelt system för styrning och reglering.
 
-1\. I fråga om pannor och ugnar: pannor, inklusive pelletspannor, vedpannor, kökspannor, flispannor och spannmålspannor eller ugnar inklusive vedspisar, kakelugnar samt pellets- och vedkaminer.
+1\. I fråga om pannor och ugnar: pannor, inklusive pelletspannor, vedpan­ nor, kökspannor, flispannor och spannmålspannor eller ugnar inklusive ved­ spisar, kakelugnar samt pellets- och vedkaminer.
 
 2\. I fråga om solcells- och solvärmesystem: samtliga.
 
-3\. I fråga om ytnära jordvärme och värmepumpar: luftluftvärmepump, luftvattenvärmepump inklusive frånluftsvärmepump eller vätskavattenvärmepump inklusive bergvärme-, jordvärme-, sjövattenvärme- samt grundvattenvärmepump.
+3\. I fråga om ytnära jordvärme och värmepumpar: luftluftvärmepump, luftvattenvärmepump inklusive frånluftsvärmepump eller vätskavattenvär­ mepump inklusive bergvärme-, jordvärme-, sjövattenvärme- samt grund­ vattenvärmepump.
 
 STEMFS
 
@@ -87,8 +79,6 @@ Lina Groth
 
 Information om STEMFS
 
-Statens energimyndighets föreskrifter och allmänna råd kan beställas hos CM-gruppen.
-
-Statens energimyndighet, Box 11093, 161 1 I Bromma, tel. 08-505 93 33 55, fax. 08-505 93 33 99.
+Statens energimyndighets föreskrifter och allmänna råd kan beställas hos CM-gruppen. Statens energimyndighet, Box 11093, 161 1 I Bromma, tel. 08-505 93 33 55, fax. 08-505 93 33 99.
 
 Elanders Sverige AB, 2013

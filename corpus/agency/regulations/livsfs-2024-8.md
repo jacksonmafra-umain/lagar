@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4aa4dd/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2024-8_web.pdf"
 source_sha256: "7a4646c8361a2bec57b50168f346042c8864aae595d0398cbf288d92d1d31f6d"
-fetched_at: "2026-10-30T15:14:44Z"
+fetched_at: "2026-10-31T05:04:40Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om handelsbeteckningar för fiskeri- och vattenbruksprodukter
@@ -42,7 +42,7 @@ Utkom från trycket den 30 oktober 2024
 
 Med stöd av 2, 6, 7 och 19 §§ livsmedelsförordningen (2006:813) föreskriver1 Livsmedelsverket följande.
 
-**1 §** I bilagan till dessa föreskrifter anges de handelsbeteckningar för fiskeri- och vattenbruksprodukter som är tillåtna på Sveriges territorium i enlighet med artiklarna 35.1 och 37.1 i Europaparlamentets och rådets förordning (EU) nr 1379/2013 av den 11 december 2013 om den gemensamma marknadsordningen för fiskeri- och vattenbruksprodukter, om ändring av rådets förordningar (EG) nr 1184/2006 och (EG) nr 1224/2009 och om upphävande av rådets förordning (EG) nr 104/2000.
+**1 §** I bilagan till dessa föreskrifter anges de handelsbeteckningar för fiskeri- och vattenbruksprodukter som är tillåtna på Sveriges territo­ rium i enlighet med artiklarna 35.1 och 37.1 i Europaparlamentets och rådets förordning (EU) nr 1379/2013 av den 11 december 2013 om den gemensamma marknadsordningen för fiskeri- och vattenbruksprodukter, om ändring av rådets förordningar (EG) nr 1184/2006 och (EG) nr 1224/2009 och om upphävande av rådets förordning (EG) nr 104/2000.
 
 **2 §** Den som avser att sälja fiskeri- och vattenbruksprodukter som inte finns upptagna i bilagan till dessa föreskrifter ska anmäla dessa produkter till Livsmedelsverket. Livsmedelsverket kan, efter en prövning av anmälan, fastställa en tillfällig handelsbeteckning under vilken den anmälda produkten får säljas i avvaktan på att handelsbeteckningen regleras i föreskrifterna.
 
@@ -1932,7 +1932,7 @@ Djuphavskapkummel
 
 − Indisk groplöja
 
-− Öring − Salmo trutta alternativa namn beroende på − Bäcköring, Insjööring, Havsöring typ/fångstområde − Salvelinus alpinus
+− Öring − Salmo trutta  äcköring, Insjööring, alternativa namn beroende på − B Havsöring typ/fångstområde − Salvelinus alpinus
 
 − Fjällröding, Röding
 

@@ -1,6 +1,6 @@
 ---
 id: "livsfs-2008-1"
-title: "gällande föreskrifter och allmänna råd inom verkets ansvarsområde"
+title: "LIVSFS 2008:1"
 type: "agency_regulation"
 layer: "agency"
 number: "LIVSFS 2008:1"
@@ -16,10 +16,10 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4aac67/globalassets/om-oss/lagstiftning/galler-flera-foreskrifter/livsfs-2008-1-tryckv.pdf"
 source_sha256: "911e62fbde71ca32bd97fa0996665d3c37dbe4f6a596f8a726ac7f88dc2a9b19"
-fetched_at: "2026-10-30T15:18:57Z"
+fetched_at: "2026-10-31T05:05:18Z"
 issuer: "Livsmedelsverket"
 ---
-# gällande föreskrifter och allmänna råd inom verkets ansvarsområde
+# LIVSFS 2008:1
 
 Författningssamling: LIVSFS  
 Utgivare: Livsmedelsverket  

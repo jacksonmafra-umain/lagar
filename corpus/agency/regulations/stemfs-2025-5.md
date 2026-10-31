@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=dccef42815d649dead40913c933cb979&res=98c80441be4a401c83ce4df00a7ee3e4&lr=False&fn=STEMFS%202025_5%20Drivmedelslagen_webb.pdf&elp=portal&elt=t&eloid=dccef42815d649dead40913c933cb979"
 source_sha256: "6ec02994e7394c5fc72516b9cd8e91567cd0cc829926c2b0ee770546bd8742e5"
-fetched_at: "2026-10-30T15:18:32Z"
+fetched_at: "2026-10-31T03:19:26Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om rapportering enligt drivmedelslagen och miljöinformation om drivmedel
@@ -57,9 +57,9 @@ Därutöver avses med förnybar komponent: i drivmedel ingående komponent som f
 
 Rapportering
 
-**3 §** Senast den 1 april varje år ska en utsläppsrapport enligt 20 § drivmedelslagen lämnas in till Energimyndigheten avseende föregående år. Utsläppsrapporten ska lämnas enligt den rapporteringsmall som tillhandahålls av Energimyndigheten.
+**3 §** Senast den 1 april varje år ska en utsläppsrapport enligt 20 § drivmedels­ lagen lämnas in till Energimyndigheten avseende föregående år. Utsläppsrapporten ska lämnas enligt den rapporteringsmall som tillhandahålls av Energimyndigheten.
 
-I de fall leverantören saluför flera olika produkter av drivmedel, som ­uppfyller samma specifikation eller standard, ska de olika produkterna r­apporteras ­separat under respektive produktnamn. En drivmedelsleverantör kan saluföra flera olika produkter inom samma drivmedelsspecifikation.
+I de fall leverantören saluför flera olika produkter av drivmedel, som ­uppfyller samma specifikation eller standard, ska de olika produkterna ­rapporteras s­ eparat under respektive produktnamn. En drivmedelsleverantör kan saluföra flera olika produkter inom samma drivmedelsspecifikation.
 
 **4 §** I utsläppsrapporten ska samtliga produkter av drivmedel anges som drivmedels­leverantören har levererat och för vilket skattskyldighet har inträtt enligt lagen (1994:1776) om skatt på energi under det år som rapporteringen avser, med uppgift om:
 
@@ -143,19 +143,19 @@ GHGia utsläpp av växthusgaser uttryckt i gram koldioxidekvivalenter per megajo
 
 **9 §** Vid beräkning enligt 8 § ska utsläppsvärden av växthusgaser från fossila komponenter hämtas ifrån bilaga 1.
 
-**10 §** Vid beräkning enligt 8 § ska en drivmedelsleverantör beräkna utsläpp av växthusgaser från förnybara komponenter på det sätt som anges i ­kapitel 9 i Statens energimyndighets författningssamling (STEMFS 2025:2) om hållbarhets­kriterier för vissa bränslen.
+**10 §** Vid beräkning enligt 8 § ska en drivmedelsleverantör beräkna utsläpp av växthusgaser från förnybara komponenter på det sätt som anges i k­ apitel 9 i Statens energimyndighets författningssamling (STEMFS 2025:2) om hållbarhets­kriterier för vissa bränslen.
 
-Om det inte kan säkerställas att en förnybar komponent uppfyller hållbarhetskriterierna som följer av lagen (2010:598) om hållbarhetskriterier för vissa bränslen, ska utsläpp av växthusgaser från den förnybara komponenten anges med ett utsläppsvärde för den närmast jämförbara fossila komponenten enligt bilaga 1.
+Om det inte kan säkerställas att en förnybar komponent uppfyller hållbarhets­ kriterierna som följer av lagen (2010:598) om hållbarhetskriterier för vissa bränslen, ska utsläpp av växthusgaser från den förnybara komponenten anges med ett utsläppsvärde för den närmast jämförbara fossila komponenten enligt bilaga 1.
 
 **11 §** Utsläpp av växthusgaser från el som drivmedel ska beräknas utifrån andel av förnybar el, fossil el och el från kärnkraft. Utsläppsvärde för varje typ av energikälla tillhandahålls av Energimyndigheten.
 
 Miljöinformation
 
-**12 §** Miljöinformation ska presenteras på webbplats och i tillämpbara fall på en påfyllningsanordning när Energimyndigheten meddelat att kontroll har genomförts av rapportering och växthusgasberäkning enligt 20 § drivmedelslagen och 3 kap. 1 e § lagen om hållbarhetskriterier för vissa bränslen.
+**12 §** Miljöinformation ska presenteras på webbplats och i tillämpbara fall på en påfyllningsanordning när Energimyndigheten meddelat att kontroll har genomförts av rapportering och växthusgasberäkning enligt 20 § drivmedels­ lagen och 3 kap. 1 e § lagen om hållbarhetskriterier för vissa bränslen.
 
 Miljöinformation på anordning för påfyllnad av drivmedel
 
-**13 §** Varje anordning avsedd för konsumenters påfyllnad av drivmedel ska vara märkt med den deklaration som tillhandahållits av ­drivmedelsleverantören enligt 11 c § drivmedelsförordningen. Deklarationen ska vara fäst på ett sådant sätt att den är väl synlig för konsumenten. En deklaration ska finnas för ­respektive saluförd produkt. Deklarationen ska innehålla en hänvisning till drivmedelsleverantörens webbplats där information i enlighet med 14 § nedan ska redovisas.
+**13 §** Varje anordning avsedd för konsumenters påfyllnad av drivmedel ska vara märkt med den deklaration som tillhandahållits av d­ rivmedelsleverantören enligt 11 c § drivmedelsförordningen. Deklarationen ska vara fäst på ett sådant sätt att den är väl synlig för konsumenten. En deklaration ska finnas för ­respektive saluförd produkt. Deklarationen ska innehålla en hänvisning till drivmedelsleverantörens webbplats där information i enlighet med 14 § nedan ska redovisas.
 
 STEMFS
 
@@ -175,7 +175,7 @@ Hur deklarationen ska vara utformad framgår av bilaga 2.
 
 Miljöinformation på webbplats
 
-**14 §** Miljöinformationen ska presenteras på den webbplats drivmedelsleverantören har angett på deklarationen vid påfyllningsanordningen. Informationen på webbplats ska innehålla följande uppgifter om varje produkt:
+**14 §** Miljöinformationen ska presenteras på den webbplats drivmedels­ leverantören har angett på deklarationen vid påfyllningsanordningen. Informa­ tionen på webbplats ska innehålla följande uppgifter om varje produkt:
 
 1\. Det namn under vilken produkten saluförs och vilken typ av drivmedel produkten är. Om produkten inte uppfyller en klassificering enligt 3–15 §§ drivmedelslagen, en nationell eller internationell standard för drivmedel eller är el ska produkten anges som Övriga drivmedel.
 
@@ -183,7 +183,7 @@ Miljöinformation på webbplats
 
 3\. Andel av produkten som utgörs av förnybar energi respektive f­ossil energi. Andelarna ska anges i procent i förhållande till energiinnehållet. El ska redovisas uppdelad på förnybar el, fossil el och el från kärnkraft. ­Uppdelningen ska utgå från de uppgifter som kommer ifrån en leverantör som omfattas av bestämmelserna i 16 § i förordning (2023:242) om leverans av el och aggregerings­tjänster, eller baseras på annullering av ursprungs­garantier. I de fall elen inte har köpts av en leverantör som omfattas av ­bestämmelserna i 16 § i förordning om leverans av el och aggregeringstjänster, ska uppdelningen utgå från senaste tillgängliga residualmix eller annullering av ursprungs­garantier.
 
-4\. Vilka råvaror som använts för att framställa produkten samt hur stor andel av produkten som varje råvara utgör. Andelarna ska anges i procent i ­förhållande till produktens energiinnehåll. För produkter av el ska ­råvaran anges utifrån energikälla baserat på de uppgifter som kommer ifrån en l­everantör som omfattas av 16 § förordning om leverans av el och aggregerings­tjänster eller baserat på annullering av ursprungsgarantier eller baserat på senaste ­tillgängliga residualmix. Om uppgifterna finns ­tillgängligt ska råvara anges på högre detaljnivå än fossil el, förnybar el eller el från ­kärnkraft.
+4\. Vilka råvaror som använts för att framställa produkten samt hur stor andel av produkten som varje råvara utgör. Andelarna ska anges i procent i ­förhållande till produktens energiinnehåll. För produkter av el ska r­ åvaran anges utifrån energikälla baserat på de uppgifter som kommer ifrån en ­leverantör som omfattas av 16 § förordning om leverans av el och aggregerings­tjänster eller baserat på annullering av ursprungsgarantier eller baserat på senaste ­tillgängliga residualmix. Om uppgifterna finns ­tillgängligt ska råvara anges på högre detaljnivå än fossil el, förnybar el eller el från k­ ärnkraft.
 
 STEMFS
 
@@ -193,7 +193,7 @@ STEMFS
 
 Årlig uppdatering
 
-**15 §** Miljöinformationen ska vara uppdaterad senast den 1 oktober a­vseende de mängder som rapporterades in senast den 1 april samma år. ­Energimyndigheten kan ange ett senare datum för när miljöinformationen ska vara uppdaterad.
+**15 §** Miljöinformationen ska vara uppdaterad senast den 1 oktober ­avseende de mängder som rapporterades in senast den 1 april samma år. ­Energimyndigheten kan ange ett senare datum för när miljöinformationen ska vara uppdaterad.
 
 Ikraftträdande
 
@@ -201,7 +201,7 @@ Ikraftträdande
 
 2\. Genom föreskrifterna upphävs:
 
-a) Statens energimyndighets föreskrifter (STEMFS 2017:3) om ­rapportering och beräkning enligt drivmedelslagen.
+a) Statens energimyndighets föreskrifter (STEMFS 2017:3) om r­apportering och beräkning enligt drivmedelslagen.
 
 b) Statens energimyndighets föreskrifter (STEMFS 2021:1) om ­skyldighet att ge konsumenter miljöinformation om drivmedel.
 
@@ -875,7 +875,7 @@ STEMFS
 
 Bilaga 2
 
-Klimatpåverkan, i enlighet med 13 § 2 och 14 § 2, ska anges som ett värde i siffror och i ett stapeldiagram. Stapeldiagrammet ska innehålla sex olika färgfält i enlighet med deklarationerna ovan. Den svarta markering som visar produktens klimatprestanda ska placeras i den ruta i färgfältet som har samma siffra som produktens klimatpåverkan. Klimatpåverkan mäts i gram koldioxidekvivalenter per megajoule (LCA), enligt stapeldiagrammet och tabellen nedan.
+Klimatpåverkan, i enlighet med 13 § 2 och 14 § 2, ska anges som ett värde i siffror och i ett stapeldiagram. Stapeldiagrammet ska innehålla sex olika färgfält i enlighet med deklarationerna ovan. Den svarta markering som visar produktens klimatprestanda ska placeras i den ruta i färgfältet som har samma siffra som produktens klimatpåverkan. Klimatpåverkan mäts i gram koldioxid­ ekvivalenter per megajoule (LCA), enligt stapeldiagrammet och tabellen nedan.
 
 Stapeldiagram 1
 

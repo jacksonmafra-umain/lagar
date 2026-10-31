@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=36b97be6edbd43f281951666d3f373e9&res=5ca76f30971d4953801bc8908030d100&lr=False&fn=STEMFS%202025_8%20Ursprungsgarantier%20f%C3%B6r%20energi_webb.pdf&elp=portal&elt=t&eloid=36b97be6edbd43f281951666d3f373e9"
 source_sha256: "fd32b621d345f596f0728329a0003628c0de68a643e9c36aa0b1621ef0b65fef"
-fetched_at: "2026-10-30T15:19:12Z"
+fetched_at: "2026-10-31T03:20:06Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om ursprungsgarantier för energi
@@ -67,9 +67,11 @@ Nettoproduktion av el, gas, värme och kyla
 
 **3 §** Nettoelproduktion är producerad el som mäts vid en punkt placerad efter uttag av hjälpkraft och förluster i transformatorer.
 
-Om el som rapporteras enligt föreskrifterna inte utgör ­nettoelproduktion enligt första stycket ska med nettoelproduktion avses rapporterad el som j­usterats av Statens energimyndighet med en korrektionsfaktor. Hur korrektions­faktorn ska bestämmas framgår av 6 §.
+Om el som rapporteras enligt föreskrifterna inte utgör n­ ettoelproduktion enligt första stycket ska med nettoelproduktion avses rapporterad el som ­ justerats av Statens energimyndighet med en korrektionsfaktor. Hur korrektions­faktorn ska bestämmas framgår av 6 §.
 
-**4 §** Nettogasproduktion är bruttoproduktion av gas med avdrag för hjälpenergi och förluster inom anläggningen. Nettogasproduktion beräknas utifrån gasens volym eller massa, vid standardtryck och standardtemperatur och därefter multiplicering med det högre värmevärdet för att räkna om det till energi.
+**4 §** Nettogasproduktion är bruttoproduktion av gas med avdrag för hjälp­ energi och förluster inom anläggningen.
+
+Nettogasproduktion beräknas utifrån gasens volym eller massa, vid standardtryck och standardtemperatur och därefter multiplicering med det högre värmevärdet för att räkna om det till energi.
 
 **5 §** Nettovärmeproduktion och nettokylaproduktion är bruttoproduktion av värme respektive kyla med avdrag för hjälpenergi, egenanvändning och ­förluster inom anläggningen.
 
@@ -115,7 +117,7 @@ b) hjälpenergin är förnybar och inköpt från en leverantör som har annuller
 
 c) hjälpenergin är nödvändig för avfallsbehandling,
 
-d) den totala hjälpenergin inte överstiger två procent av bruttovärmeproduktionen eller bruttokylaproduktionen.
+d) den totala hjälpenergin inte överstiger två procent av bruttovärme­ produktionen eller bruttokylaproduktionen.
 
 Uppgifter vid ansökan om ursprungsgarantier för energi
 
@@ -123,7 +125,7 @@ Uppgifter som ska ingå i ansökan
 
 **9 §** En ansökan om utfärdande av ursprungsgarantier för el, gas, värme eller kyla ska lämnas in till Statens energimyndighet och vara undertecknad av behörig företrädare för producenten.
 
-**10 §** Om en anläggning kan producera flera typer av energi behöver en ­ansökan ske för varje typ av energi som producenten önskar få ursprungsgarantier utfärdade för.
+**10 §** Om en anläggning kan producera flera typer av energi behöver en ­ansökan ske för varje typ av energi som producenten önskar få ursprungs­ garantier utfärdade för.
 
 STEMFS
 
@@ -159,15 +161,15 @@ e) energilagring och
 
 f) egenanvändning av gas inom anläggningen.
 
-Om det produceras vätgas i anläggningen ska även markering göras i flödesschemat som visar eventuellt kompressionssystem, reningssystem och ­förvätskningssystem.
+Om det produceras vätgas i anläggningen ska även markering göras i flödes­ schemat som visar eventuellt kompressionssystem, reningssystem och ­förvätskningssystem.
 
 En rapport från en oberoende aktör som har granskat anläggningen på plats ska bifogas vid ansökan om utfärdande av ursprungsgarantier för gas. ­Rapporten ska inte vara mer än fyra år gammal.
 
 Rapporten behöver inte bifogas om producenten vid ansökan i stället ­bifogar något av följande:
 
-a) miljötillstånd från länsstyrelsen enligt 21 kap. 2, 4 eller 5 §§ miljöprövningsförordningen (2013:251), eller
+a) miljötillstånd från länsstyrelsen enligt 21 kap. 2, 4 eller 5 §§ miljö­ prövningsförordningen (2013:251), eller
 
-b) anmälan till kommunen enligt 21 kap. 3 eller 6 §§ miljöprövningsförordningen om anläggningar inte omfattas av krav på miljötillstånd.
+b) anmälan till kommunen enligt 21 kap. 3 eller 6 §§ miljöprövnings­ förordningen om anläggningar inte omfattas av krav på miljötillstånd.
 
 **13 §** Vid ansökan om utfärdande av ursprungsgarantier för värme eller kyla ska följande uppgifter om anläggningen, under förutsättning att de finns, ­bifogas vid ansökan, och markeras i ett flödesschema:
 
@@ -249,7 +251,9 @@ STEMFS
 
 2025:8
 
-c) produktionskapacitet enligt 15 § punkt c är den beräknade normalårsproduktionen dividerat med 8 760 timmar. Om anläggningen producerar vätgas får även renhetsgrad för den ­producerade vätgasen anges. Om anläggningen är ansluten till ett distributions- eller ­transmissionsnät för gas, ska namnet på nätet anges.
+c) produktionskapacitet enligt 15 § punkt c är den beräknade normalårs­ produktionen dividerat med 8 760 timmar.
+
+Om anläggningen producerar vätgas får även renhetsgrad för den ­producerade vätgasen anges. Om anläggningen är ansluten till ett distributions- eller ­transmissionsnät för gas, ska namnet på nätet anges.
 
 **18 §** En ansökan om utfärdande av ursprungsgarantier för värme eller kyla ska utöver det som anges i 13-15 §§ innehålla följande uppgifter:
 
@@ -257,7 +261,7 @@ a) om anläggningen är ansluten till ett nät och namnet på det nätet,
 
 b) den bärare av värmeenergi som används för att överföra värme eller kyla: vatten, termisk olja, luft eller residuala gaser, salt, kylmedel eller ospecificerat. Om det förekommer flera bärare av värmeenergi ska ospecificerat användas,
 
-c) produktionskapacitet enligt 15 § punkt c är den beräknade normalårsproduktionen dividerat med 8 760 timmar.
+c) produktionskapacitet enligt 15 § punkt c är den beräknade normalårs­ produktionen dividerat med 8 760 timmar.
 
 **19 §** En ansökan om utfärdande av ursprungsgarantier för el ska utöver vad som anges i 11 och 14-16 §§ innehålla uppgifter om energikälla och typ av anläggning med hänvisning till sådan relevant teknikkod för el som specificerats i det av Association of Issuing Bodies utgivna EECS-rules Fact Sheet 5 angivet som ett eller flera av följande alternativ:
 
@@ -283,7 +287,7 @@ j) våg,
 
 k) kärnkraft, eller
 
-l) övrigt för det fall inget av alternativen a–k är tillämpligt. Om ansökan avser en anläggning som kan producera el från flera olika energikällor ska energikälla och typ enligt första stycket samt drifttagningsdatum och produktionskapacitet anges för var och en av produktionsenheterna.
+l) övrigt för det fall inget av alternativen a–k är tillämpligt. Om ansökan avser en anläggning som kan producera el från flera olika energi­ källor ska energikälla och typ enligt första stycket samt drifttagningsdatum och produktionskapacitet anges för var och en av produktionsenheterna.
 
 **20 §** En ansökan om utfärdande av ursprungsgarantier för gas ska utöver vad som anges i 12, 14, 15 och 17 §§ innehålla uppgifter om vilken gas som ­produceras angivet som ett av följande alternativ:
 
@@ -307,7 +311,7 @@ STEMFS
 
 2025:8
 
-Energikällor och teknikkoder ska anges enligt Association of Issuing Bodies utgivna EECS-rules Fact Sheet 5. Om anläggningen har flera olika teknikkoder ska teknikkoden ”ospecificerad” anges.
+Energikällor och teknikkoder ska anges enligt Association of Issuing Bodies utgivna EECS-rules Fact Sheet 5. Om anläggningen har flera olika teknik­ koder ska teknikkoden ”ospecificerad” anges.
 
 **21 §** En ansökan om utfärdande av ursprungsgarantier för värme eller kyla ska utöver vad som anges i 13-15 och 18 §§ innehålla information om energin anläggningen producerar är i form av värme eller kyla.
 
@@ -357,17 +361,19 @@ Ytterligare fördelning av andelen förnybart i energikällor får utgå från d
 
 Hur el, gas, värme eller kyla producerat från el, gas, värme eller kyla ska rapporteras
 
-**25 §** För anläggningar där el, gas, värme eller kyla produceras genom ­omvandling av el, gas, värme eller kyla för vilket ursprungsgarantier inte har utfärdats, ska den tillförda energin anges som en energikälla i bränsledeklarationen. Det är även möjligt att använda sig av energi som det har utfärdats ursprungs­garantier för, om producenten kan påvisa att det finns ett avtal där ­energileverantören annullerar ursprungsgarantier motsvarande producentens energianvändning. I de fall där producenten använder energi producerad inom samma organisation och där ett avtal med energileverantör inte är möjligt att påvisa, är energi producerad inom samma organisation möjlig att använda om producenten kan påvisa att ursprungsgarantier har annullerats för den tillförda energin.
+**25 §** För anläggningar där el, gas, värme eller kyla produceras genom ­omvandling av el, gas, värme eller kyla för vilket ursprungsgarantier inte har utfärdats, ska den tillförda energin anges som en energikälla i bränsle­ deklarationen.
+
+Det är även möjligt att använda sig av energi som det har utfärdats ursprungs­garantier för, om producenten kan påvisa att det finns ett avtal där ­energileverantören annullerar ursprungsgarantier motsvarande producentens energianvändning. I de fall där producenten använder energi producerad inom samma organisation och där ett avtal med energileverantör inte är möjligt att påvisa, är energi producerad inom samma organisation möjlig att använda om producenten kan påvisa att ursprungsgarantier har annullerats för den tillförda energin.
 
 Konvertering
 
 **26 §** För anläggningar där el, gas, värme eller kyla produceras genom ­omvandling av el, gas, värme eller kyla för vilken ursprungsgarantier redan har utfärdats, med undantag för 25 § andra stycket, ska utfärdande av ursprungs­garantier för utgående energi ske först efter att ursprungsgarantierna för ­ingående energi annullerats enligt 8 § förordningen om ursprungsgarantier för energi.
 
-a) Producenten behöver innan utfärdande av ursprungsgarantier efter konvertering bifoga ett annulleringsbevis avseende ursprungsgarantier ­motsvarande den ingående energin som annullerats för ändamålet konvertering, och
+a) Producenten behöver innan utfärdande av ursprungsgarantier efter konvert­ ering bifoga ett annulleringsbevis avseende ursprungsgarantier ­motsvarande den ingående energin som annullerats för ändamålet konvertering, och
 
-b) vid utfärdande av ursprungsgarantier efter konvertering ska de energiförluster som uppstår i konverteringsprocessen beaktas vid beräkning av netto­produktion för el, gas, värme och kyla.
+b) vid utfärdande av ursprungsgarantier efter konvertering ska de energi­ förluster som uppstår i konverteringsprocessen beaktas vid beräkning av netto­produktion för el, gas, värme och kyla.
 
-Efter konvertering ska uppgifterna på ursprungsgarantin övertas enligt 16 § andra stycket i förordningen om ursprungsgarantier för energi. Om det rör sig om en andel av en ursprungsgaranti vid utfärdande efter konvert­ering ska avrundning alltid ske nedåt till närmaste hela megawattimme. Producenten ska ansöka om utfärdande av ursprungsgarantier efter konvertering på det sätt som Statens energimyndighet anger på sin webbplats.
+Efter konvertering ska uppgifterna på ursprungsgarantin övertas enligt 16 § andra stycket i förordningen om ursprungsgarantier för energi. Om det rör sig om en andel av en ursprungsgaranti vid utfärdande efter konvert­ering ska avrundning alltid ske nedåt till närmaste hela megawattimme. Producenten ska ansöka om utfärdande av ursprungsgarantier efter konvert­ ering på det sätt som Statens energimyndighet anger på sin webbplats.
 
 STEMFS
 
@@ -381,7 +387,7 @@ Rapporten ska säkerställa att:
 
 a) de bränsledeklarationer som lämnats in till Statens energimyndighet är korrekta avseende den period som har granskats och
 
-b) det är rimligt att sammansättningen och mängden rapporterad energikälla kan resultera i mängden producerad energi som de utfärdade ursprungsgarantierna motsvarar avseende period och respektive attribut. För el, gas, värme och kyla behöver producenten inte skicka in en rapport enligt första och andra stycket om producenten är rapporteringsskyldig enligt
+b) det är rimligt att sammansättningen och mängden rapporterad energikälla kan resultera i mängden producerad energi som de utfärdade ursprungs­ garantierna motsvarar avseende period och respektive attribut. För el, gas, värme och kyla behöver producenten inte skicka in en rapport enligt första och andra stycket om producenten är rapporteringsskyldig enligt
 
 3 kap. 1 § lagen (2010:598) om hållbarhetskriterier för vissa bränslen och har ett hållbarhetsbesked som omfattar deklarerade bränslen av biologiskt ursprung eller ett certifieringsbevis enligt 35 § förordning (2025:588) om hållbarhets­kriterier för vissa bränslen.
 
@@ -409,7 +415,7 @@ STEMFS
 
 Hur el producerad med olika teknikkoder ska rapporteras
 
-**33 §** I de fall producenten enligt 19 § har angivit olika teknikkoder för ­enheter inom samma produktionsanläggning ska anläggningen anses använda flera energikällor. Producenten ska rapportera andelen producerad el från ­respektive energikälla i en enhetsdeklaration. Rapporteringen ska baseras på mätning av elproduktionen.
+**33 §** I de fall producenten enligt 19 § har angivit olika teknikkoder för e­ nheter inom samma produktionsanläggning ska anläggningen anses använda flera energikällor. Producenten ska rapportera andelen producerad el från ­respektive energikälla i en enhetsdeklaration. Rapporteringen ska baseras på mätning av elproduktionen.
 
 Hur egenanvändning av el rapporteras
 
@@ -425,13 +431,13 @@ Hur el från högeffektiv kraftvärme ska rapporteras
 
 Mätning och rapportering för gas
 
-**37 §** Nettogasproduktion per månad ska rapporteras till Statens ­energimyndighet i megawattimmar. Rapporteringen ska utföras digitalt i kontoföringssystemet av behörig företrädare för producenten.
+**37 §** Nettogasproduktion per månad ska rapporteras till Statens e­ nergimyndighet i megawattimmar. Rapporteringen ska utföras digitalt i kontoföringssystemet av behörig företrädare för producenten.
 
 Producenten ska efter att ha rapporterat in nettogasproduktion även ange distributionen av energi för perioden i en licensdeklaration. Producenten får ange om den har ett hållbarhetsbesked och typ av hållbarhetsbesked eller ­certifieringsbevis.
 
 Mätning och rapportering för värme och kyla
 
-**38 §** Producenten ska mäta eller beräkna nettovärmeproduktion och nettokylaproduktion i enlighet med 5 §. Nettoproduktion av värme eller kyla ska rapporteras per månad till Statens energimyndighet i megawattimmar. Rapporteringen ska utföras elektroniskt i kontoföringssystemet av behörig företrädare för producenten.
+**38 §** Producenten ska mäta eller beräkna nettovärmeproduktion och nettokylaproduktion i enlighet med 5 §. Nettoproduktion av värme eller kyla ska rapporteras per månad till Statens energimyndighet i megawattimmar. Rapport­ eringen ska utföras elektroniskt i kontoföringssystemet av behörig företrädare för producenten.
 
 STEMFS
 
@@ -449,7 +455,7 @@ Producentens skyldighet att meddela förändring
 
 Ikraftträdande- och övergångsbestämmelser
 
-1\. Dessa föreskrifter träder i kraft när den Europeiska kommissionen ­meddelat att det svenska kontoföringssystemet är anslutet till unionsdatabasen i fråga om 41 § och i övrigt den 1 februari 2026.
+1\. Dessa föreskrifter träder i kraft när den Europeiska kommissionen ­ eddelat att det svenska kontoföringssystemet är anslutet till unionsdatabasen m i fråga om 41 § och i övrigt den 1 februari 2026.
 
 2\. Genom föreskrifterna upphör Statens energimyndighets föreskrifter (2017:2) om ursprungsgarantier för el att gälla.
 

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=2862e5b468a5491d901e53878bdbea52&res=3d7ea8aac684496fb5a586e5cd0f6ff2&lr=False&fn=STEMFS%202024_5webb.pdf&elp=portal&elt=t&eloid=2862e5b468a5491d901e53878bdbea52"
 source_sha256: "609b8ffafc60ee83d736f857de475cab0d0ea10297e6cd3c92ca012028133831"
-fetched_at: "2026-10-30T15:20:42Z"
+fetched_at: "2026-10-31T03:21:36Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om skyldighet att lämna uppgifter till statistik om leveranser av fordonsgas och vätgas
@@ -52,7 +52,7 @@ Statens energimyndighet föreskriver följande med stöd av 15 § förordningen 
 
 Uppgifterna ska lämnas senast den tjugonde dagen i varje kalendermånad eller vid den senare tidpunkt som Statens energimyndighet bestämmer och avse förhållandena under närmast föregående kalendermånad.
 
-**3 §** Om det finns särskilda skäl får Statens energimyndighet medge ­undantag från bestämmelserna i dessa föreskrifter. Den som är skyldig att lämna ­uppgifter kan ansöka om undantag hos Statens energimyndighet.
+**3 §** Om det finns särskilda skäl får Statens energimyndighet medge ­undantag från bestämmelserna i dessa föreskrifter. Den som är skyldig att lämna u­ ppgifter kan ansöka om undantag hos Statens energimyndighet.
 
 Ikraftträdandebestämmelser
 
@@ -76,7 +76,7 @@ Leveranser av:
 
 Publika tankställen
 
-Icke-publika tankställen
+Icke-­ publika tankställen
 
 Naturgas, Nm3 till:
 
@@ -86,13 +86,13 @@ Publika tankställen
 
 LNG, kg till:
 
-Icke-publika tankställen
+Icke-­ publika tankställen
 
 Tankställen för bussar
 
 Publika tankställen
 
-Icke-publika tankställen
+Icke-­ publika tankställen
 
 Biogas, Nm3 till:
 
@@ -102,19 +102,19 @@ Publika tankställen
 
 LBG, kg till:
 
-Icke-publika tankställen
+Icke-­ publika tankställen
 
 Tankställen för bussar
 
 Publika tankställen
 
-Icke-publika tankställen
+Icke-­ publika tankställen
 
 Vätgas, Nm3 till:
 
 Tankställen för bussar
 
-Icke-publika tankställen
+Icke-­ publika tankställen
 
 Tankställen för bussar
 

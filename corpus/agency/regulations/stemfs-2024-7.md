@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=bd4f9dc083e34a87a59693148e652e24&res=fc87edc9e536494c8fd74733142ca343&lr=False&fn=STEMFS%202024_7webb.pdf&elp=portal&elt=t&eloid=bd4f9dc083e34a87a59693148e652e24"
 source_sha256: "c313d2d85b844d975f46c1c203aa9b252f3ede62b32b53df1dada352bd12f425"
-fetched_at: "2026-10-30T15:20:32Z"
+fetched_at: "2026-10-31T03:21:26Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om skyldighet att lämna uppgifter till statistik om nätanslutna solcellsanläggningar
@@ -50,7 +50,7 @@ Statens energimyndighet föreskriver följande med stöd av 15 § förordningen 
 
 **2 §** Näringsidkare som bedriver elnätsverksamhet ska lämna de uppgifter som framgår av bilaga 1. Uppgifterna ska lämnas senast den 31 januari varje år eller vid den senare tidpunkt som Statens energimyndighet bestämmer och avse förhållandena under det närmast föregående kalenderåret.
 
-**3 §** Om det finns särskilda skäl får Statens energimyndighet medge undantag från bestämmelserna i dessa föreskrifter. Den som är skyldig att lämna ­uppgifter kan ansöka om undantag hos Statens energimyndighet.
+**3 §** Om det finns särskilda skäl får Statens energimyndighet medge undantag från bestämmelserna i dessa föreskrifter. Den som är skyldig att lämna u­ ppgifter kan ansöka om undantag hos Statens energimyndighet.
 
 Ikraftträdandebestämmelser
 

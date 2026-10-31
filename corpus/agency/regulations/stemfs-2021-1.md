@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=5eb13ddb375347be87134561e8040959&res=b487f80dfed14dcb807cfa2ace264f4f&lr=False&fn=STEMFS%202021_1_webb.pdf&elp=portal&elt=t&eloid=5eb13ddb375347be87134561e8040959"
 source_sha256: "f87c7fa2d749e6d70f92b222e765552dd5d7d132e4e0e9655c552041a2dc9d03"
-fetched_at: "2026-10-30T15:22:53Z"
+fetched_at: "2026-10-31T03:23:45Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om skyldighet att ge konsumenter miljöinformation om drivmedel Leverantörer av drivmedel ska från och med 1 oktober 2021 informera om drivmedlet klimatpåverkan och ursprung. I dessa föreskrifter finns bestämmelser om innehåll och utformning av den miljöinformation som ska lämnas till konsumenter Föreskriften har ändrats, se STEMFS 2021:5.
@@ -38,7 +38,7 @@ Texten är hämtad ur pdf:en STEMFS 2021:1. Den tryckta författningssamlingen �
 
 beslutade den 20 januari 2021.
 
-Med stöd av 13 § drivmedelsförordningen (2011:346) meddelar Statens energimyndighet följande föreskrifter1.
+Med stöd av 13 § drivmedelsförordningen (2011:346) meddelar Statens energi­ myndighet följande föreskrifter1.
 
 Inledande bestämmelser och definitioner
 

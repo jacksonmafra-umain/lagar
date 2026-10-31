@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=789501152c744a4bbcdf024654637452&res=038a71ec6c25414494e1bf975c5af002&lr=False&fn=STEMFS%202025_2_HBK_webb.pdf&elp=portal&elt=t&eloid=789501152c744a4bbcdf024654637452"
 source_sha256: "090ffca789d1e89fbbb596ee456369f24d31b1ba96fc74d9720ccc1238a23612"
-fetched_at: "2026-10-30T15:18:25Z"
+fetched_at: "2026-10-31T03:19:17Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om hållbarhetskriterier för vissa bränslen
@@ -61,7 +61,7 @@ STEMFS
 
 2025:2
 
-boskap och förbättra jordens bördighet i syfte att få högre avkastning av huvudsakliga jordbruksgrödor delnormalvärde: ett fastställt värde för växthusgasutsläppen för några eller alla steg i en specifik produktionskedja för biodrivmedel eller biobränslen, som är representativ för användningen i unionen, ekonomiskt försvarbar efterfrågan: en efterfrågan som inte överstiger behovet av värme (inbegripet kyla) och som annars skulle tillgodoses på marknadsvillkor, faktiskt värde: minskningen av växthusgasutsläpp för några eller alla steg i en specifik produktionskedja för biodrivmedel eller biobränslen, ­beräknad enligt metoden i 9 kap., fleråriga grödor: grödor där stammen i regel inte skördas årligen, såsom skottskog med kort omloppstid och oljepalm, förnybartdirektivet: Europaparlamentets och rådets direktiv (EU) 2018/2001 av den 11 december 2018 om främjande av användningen av energi från f­örnybara energikällor senast ändrat genom Europaparlamentets och rådets direktiv2, hållbarhetsegenskaper: de uppgifter som beskriver ett parti råvaror eller ­bränslen och som krävs för att visa att partiet uppfyller tillämpliga ­markkriterier och utsläppsminskningskrav, hållbara mängder: de mängder förnybara bränslen eller återvunna kolbränslen som uppfyller samtliga tillämpliga markkriterier och utsläppsminskningskrav, kraftvärme: samtidig framställning i en och samma process av värmeenergi och el och/eller mekanisk energi, utsläppsminskningskrav: hållbarhetskriterierna i 2 kap. 1–4 §§ hållbarhetslagen och 12–13 §§ hållbarhetsförordningen, markkriterier: hållbarhetskriterierna i 2 kap. 7–14 §§ hållbarhetslagen och 15–17 §§ hållbarhetsförordningen, mellanprodukt: en produkt som är ett mellansteg mellan råvara och slutlig produkt, normalvärde: ett fastställt värde för minskningen av växthusgasutsläpp för en specifik produktionskedja för biodrivmedel eller biobränslen, som är ­representativ för användningen i unionen, nyttiggjord värme: värme som framställs för att tillgodose en ekonomiskt försvarbar efterfrågan på värme för uppvärmning och kylning, parti: en mängd förnybara bränslen eller återvunna kolbränslen som har identiska hållbarhetsegenskaper, så som bränslekategori, användningsområde, råvarans ursprungsland, växthusgasutsläpp och detaljerade uppgifter om råvara, samprodukt: en produkt som en process direkt producerar tillsammans med bränslet eller dess mellanprodukt, och som inte är en restprodukt eller ett avfall, stärkelserika grödor: grödor, framför allt spannmål (oberoende av om det enbart är sädeskornen eller hela växten, till exempel vad gäller majs, som används), rotfrukter (till exempel potatis, jordärtskocka, sötpotatis, maniok och jams) och stamknölar (till exempel taro).
+boskap och förbättra jordens bördighet i syfte att få högre avkastning av huvudsakliga jordbruksgrödor delnormalvärde: ett fastställt värde för växthusgasutsläppen för några eller alla steg i en specifik produktionskedja för biodrivmedel eller biobränslen, som är representativ för användningen i unionen, ekonomiskt försvarbar efterfrågan: en efterfrågan som inte överstiger behovet av värme (inbegripet kyla) och som annars skulle tillgodoses på marknads­ villkor, faktiskt värde: minskningen av växthusgasutsläpp för några eller alla steg i en specifik produktionskedja för biodrivmedel eller biobränslen, ­beräknad enligt metoden i 9 kap., fleråriga grödor: grödor där stammen i regel inte skördas årligen, såsom skottskog med kort omloppstid och oljepalm, förnybartdirektivet: Europaparlamentets och rådets direktiv (EU) 2018/2001 av den 11 december 2018 om främjande av användningen av energi från ­förnybara energikällor senast ändrat genom Europaparlamentets och rådets direktiv2, hållbarhetsegenskaper: de uppgifter som beskriver ett parti råvaror eller ­bränslen och som krävs för att visa att partiet uppfyller tillämpliga ­markkriterier och utsläppsminskningskrav, hållbara mängder: de mängder förnybara bränslen eller återvunna kolbränslen som uppfyller samtliga tillämpliga markkriterier och utsläppsminskningskrav, kraftvärme: samtidig framställning i en och samma process av värmeenergi och el och/eller mekanisk energi, utsläppsminskningskrav: hållbarhetskriterierna i 2 kap. 1–4 §§ hållbarhets­ lagen och 12–13 §§ hållbarhetsförordningen, markkriterier: hållbarhetskriterierna i 2 kap. 7–14 §§ hållbarhetslagen och 15–17 §§ hållbarhetsförordningen, mellanprodukt: en produkt som är ett mellansteg mellan råvara och slutlig produkt, normalvärde: ett fastställt värde för minskningen av växthusgasutsläpp för en specifik produktionskedja för biodrivmedel eller biobränslen, som är ­representativ för användningen i unionen, nyttiggjord värme: värme som framställs för att tillgodose en ekonomiskt försvarbar efterfrågan på värme för uppvärmning och kylning, parti: en mängd förnybara bränslen eller återvunna kolbränslen som har identiska hållbarhetsegenskaper, så som bränslekategori, användnings­ ­ område, råvarans ursprungsland, växthusgasutsläpp och detaljerade uppgifter om råvara, samprodukt: en produkt som en process direkt producerar tillsammans med bränslet eller dess mellanprodukt, och som inte är en restprodukt eller ett avfall, stärkelserika grödor: grödor, framför allt spannmål (oberoende av om det enbart är sädeskornen eller hela växten, till exempel vad gäller majs, som används), rotfrukter (till exempel potatis, jordärtskocka, sötpotatis, maniok och jams) och stamknölar (till exempel taro).
 
 EUT L 2419, 31.10.2023, s.1 (Celex 32023L2413).
 
@@ -93,7 +93,9 @@ Hållbarhetsbesked
 
 6\. en beskrivning av de krav som ställs på leverantörer för att säkerställa att levererade mängder uppfyller hållbarhetskriterierna, och
 
-7\. en beskrivning av hur kontrollsystemet säkerställer kraven på massbalanssystem och årlig rapportering till Energimyndigheten. Den rapporteringsskyldige ska också skicka in ett utlåtande från en oberoende granskare enligt 3 kap. 1 b § hållbarhetslagen, inklusive underlag som styrker granskarens kompetens och oberoende. Utlåtandet ska innehålla de uppgifter som framgår av 4 kap. hållbarhetsföreskriften.
+7\. en beskrivning av hur kontrollsystemet säkerställer kraven på mass­ balanssystem och årlig rapportering till Energimyndigheten.
+
+Den rapporteringsskyldige ska också skicka in ett utlåtande från en oberoende granskare enligt 3 kap. 1 b § hållbarhetslagen, inklusive underlag som styrker granskarens kompetens och oberoende. Utlåtandet ska innehålla de uppgifter som framgår av 4 kap. hållbarhetsföreskriften.
 
 Hållbarhetsbesked för en viss tidsperiod
 
@@ -113,9 +115,11 @@ STEMFS
 
 2025:2
 
-skriften. Om ett certifieringsbevis inte omfattar alla tillämpliga hållbarhetskriterier eller alla delar av verksamheten, behöver den rapporteringsskyldiges anmälan omfatta alla uppgifter enligt 2 eller 3 §§ för de delar av kontrollsystemet som inte täcks av certifieringsbeviset. Omprövning av hållbarhetsbesked
+skriften. Om ett certifieringsbevis inte omfattar alla tillämpliga hållbarhetskriterier eller alla delar av verksamheten, behöver den rapporteringsskyldiges anmälan omfatta alla uppgifter enligt 2 eller 3 §§ för de delar av kontroll­ systemet som inte täcks av certifieringsbeviset.
 
-**5 §** Vid omprövning av hållbarhetsbesked enligt 3 kap. 1 b § tredje stycket hållbarhetslagen och 29 och 30 §§ hållbarhetsförordningen ska den rapporteringsskyldige skicka in ett utlåtande från en oberoende granskare enligt 4 kap., och underlag som styrker granskarens kompetens och oberoende.
+Omprövning av hållbarhetsbesked
+
+**5 §** Vid omprövning av hållbarhetsbesked enligt 3 kap. 1 b § tredje stycket hållbarhetslagen och 29 och 30 §§ hållbarhetsförordningen ska den rapporterings­ skyldige skicka in ett utlåtande från en oberoende granskare enligt 4 kap., och underlag som styrker granskarens kompetens och oberoende.
 
 För en rapporteringsskyldig som innehar ett godkänt certifieringsbevis enligt 34 och 35 §§ hållbarhetsförordningen behöver endast certifieringsbeviset skickas in. Om ett certifieringsbevis inte omfattar alla tillämpliga hållbarhetskriterier eller alla delar av verksamheten, behöver den rapporteringsskyldige även skicka in underlag enligt första stycket för de delar av kontrollsystemet som inte täcks av certifieringsbeviset.
 
@@ -123,7 +127,7 @@ För en rapporteringsskyldig som innehar ett godkänt certifieringsbevis enligt 
 
 Kontrollsystemets utformning
 
-**1 §** Den rapporteringsskyldiges kontrollsystem ska uppfylla kraven i 3 kap. 1 a § hållbarhetslagen, 22–27 §§ hållbarhetsförordningen och 3 kap. hållbarhetsföreskriften. Kontrollsystemet ska baseras på en aktuell risk­bedömning av verksamheten och ska dokumenteras skriftligt. ­Dokumentationen ska ­innehålla
+**1 §** Den rapporteringsskyldiges kontrollsystem ska uppfylla kraven i 3 kap. 1 a § hållbarhetslagen, 22–27 §§ hållbarhetsförordningen och 3 kap. hållbarhets­ föreskriften. Kontrollsystemet ska baseras på en aktuell risk­bedömning av verksamheten och ska dokumenteras skriftligt. ­Dokumentationen ska ­innehålla
 
 1\. vilka bränslen och/eller råvaror som kontrollsystemet omfattar,
 
@@ -151,7 +155,7 @@ Kontrollsystemets utformning
 
 Dokumentationens omfattning bör anpassas till tillämpbara krav på kontrollsystemet och den aktuella verksamheten utifrån riskbedömningen.
 
-**2 §** För rapporteringsskyldiga med krav enligt 2 kap. 1-4 §§ hållbarhets­lagen och andra rapporteringsskyldiga som väljer att beräkna växthusgasutsläpp inom sitt kontrollsystem, ska kontrollsystemet säkerställa att beräkningen görs enligt 9 kap. i hållbarhetsföreskriften samt 12 och 13 §§ hållbarhetsförordningen.
+**2 §** För rapporteringsskyldiga med krav enligt 2 kap. 1-4 §§ hållbarhets­lagen och andra rapporteringsskyldiga som väljer att beräkna växthusgasutsläpp inom sitt kontrollsystem, ska kontrollsystemet säkerställa att beräkningen görs enligt 9 kap. i hållbarhetsföreskriften samt 12 och 13 §§ hållbarhets­ förordningen.
 
 STEMFS
 
@@ -159,7 +163,7 @@ STEMFS
 
 **3 §** Rapporteringsskyldiga som endast använder biobränsle som omfattas av hållbarhetsbesked hos den som levererat bränslet, behöver endast kontrollera att levererat bränsle omfattas av hållbarhetsbeskedet för att uppfylla kravet på metod och rutiner för stickprov enligt 23 § hållbarhetsförordningen.
 
-**4 §** Den som är rapporteringsskyldig för ett förnybart bränsle av icke-­biologiskt ursprung ska genom kontrollsystemet säkerställa att den förnybara el som används vid produktion av förnybara bränslen av icke-biologiskt ursprung är framställd på så vis som anges i 7 och 8 §§ hållbarhetsförordningen. Kontrollsystemet ska säkerställa att mängden använd förnybar el, som ­uppfyller tillämpliga bestämmelser i artiklarna 3 och 4 i kommissionens ­delegerade förordning (EU) 2023/11843 av den 10 februari 2023 om ­komplettering av Europa­parlamentets och rådets direktiv (EU) 2018/2001 genom fastställande av en unionsmetod med närmare regler för produktion av förnybara bränslen av icke-biologiskt ursprung, dokumenteras.
+**4 §** Den som är rapporteringsskyldig för ett förnybart bränsle av icke-­biologiskt ursprung ska genom kontrollsystemet säkerställa att den förnybara el som används vid produktion av förnybara bränslen av icke-biologiskt ursprung är framställd på så vis som anges i 7 och 8 §§ hållbarhetsförordningen. Kontrollsystemet ska säkerställa att mängden använd förnybar el, som ­uppfyller tillämpliga bestämmelser i artiklarna 3 och 4 i kommissionens d­ elegerade förordning (EU) 2023/11843 av den 10 februari 2023 om k­ omplettering av Europa­parlamentets och rådets direktiv (EU) 2018/2001 genom fastställande av en unionsmetod med närmare regler för produktion av förnybara bränslen av icke-biologiskt ursprung, dokumenteras.
 
 **5 §** Ett intyg enligt 26 § hållbarhetsförordningen ska innehålla uppgifter om
 
@@ -201,9 +205,9 @@ Avvikelser
 
 4 kap. Oberoende granskning
 
-**1 §** Vid anmälan om hållbarhetsbesked eller vid omprövning av hållbarhetsbesked ska den rapporteringsskyldiges kontrollsystem granskas av en oberoende granskare enligt 3 kap. 1 a § hållbarhetslagen, 30 § hållbarhetsförordningen, samt 2 kap 2-5 §§. Granskningen och utlåtandet från den ­oberoende granskaren ska omfatta uppgifter enligt 2-7 §§ nedan. Oberoende granskning vid anmälan om hållbarhetsbesked
+**1 §** Vid anmälan om hållbarhetsbesked eller vid omprövning av hållbarhets­ besked ska den rapporteringsskyldiges kontrollsystem granskas av en oberoende granskare enligt 3 kap. 1 a § hållbarhetslagen, 30 § hållbarhets­ förordningen, samt 2 kap 2-5 §§. Granskningen och utlåtandet från den ­oberoende granskaren ska omfatta uppgifter enligt 2-7 §§ nedan. Oberoende granskning vid anmälan om hållbarhetsbesked
 
-**2 §** Vid anmälan om hållbarhetsbesked ska den rapporteringsskyldiges kontroll­system granskas av en oberoende granskare enligt 41 § hållbarhetsförordningen. Utlåtandet från den oberoende granskaren ska omfatta
+**2 §** Vid anmälan om hållbarhetsbesked ska den rapporteringsskyldiges kontroll­system granskas av en oberoende granskare enligt 41 § hållbarhets­ förordningen. Utlåtandet från den oberoende granskaren ska omfatta
 
 1\. en beskrivning av de identifierade risker som legat till grund för ­granskningen samt vilka områden som har granskats,
 
@@ -213,13 +217,13 @@ Avvikelser
 
 3 kap. 1 § i hållbarhetsföreskriften,
 
-4\. en bedömning av om kontrollsystemets processer och arbetssätt är t­illräckliga för att säkerställa att förnybara bränslen och återvunna ­kolbränslen uppfyller utsläppsminskningskrav,
+4\. en bedömning av om kontrollsystemets processer och arbetssätt är tillräckliga för att säkerställa att förnybara bränslen och återvunna ­ ­kolbränslen uppfyller utsläppsminskningskrav,
 
 5\. en bedömning av om kontrollsystemets processer och arbetssätt är tillräckliga för att säkerställa att biodrivmedel och biobränslen uppfyller markkriterierna, inklusive a. en bedömning av om kontrollsystemet säkerställer att råvaror inte avsiktligen ändrats eller tagits ur bruk för att partiet ska anses utgöra ett avfall eller en restprodukt, och b. en bedömning av om kontrollsystemet säkerställer att råvaror kan spåras tillbaka till den plats där råvaran odlats, avverkats, tillkommit eller samlats in,
 
-6\. en bedömning av om de krav som ställs på leverantörer är tillräckliga för att säkerställa hållbarhetskriterierna, inklusive a. en bedömning av om metoden för stickprov som ingår i systemet och stickprovens frekvens är tillräcklig för att säkerställa att kontrollsystemet fungerar med hög trovärdighet,
+6\. en bedömning av om de krav som ställs på leverantörer är tillräckliga för att säkerställa hållbarhetskriterierna, inklusive a. en bedömning av om metoden för stickprov som ingår i systemet och stickprovens frekvens är tillräcklig för att säkerställa att kontroll­ systemet fungerar med hög trovärdighet,
 
-7\. en bedömning av om kontrollsystemets rutiner avseende massbalanssystem och årlig rapportering till Energimyndigheten är tillräckliga, för att säkerställa korrekt hantering och rapportering av partier bränslen, och
+7\. en bedömning av om kontrollsystemets rutiner avseende massbalans­ system och årlig rapportering till Energimyndigheten är tillräckliga, för att säkerställa korrekt hantering och rapportering av partier bränslen, och
 
 8\. en bedömning av om kontrollsystemet är tillförlitligt och skyddat mot missbruk.
 
@@ -229,7 +233,7 @@ STEMFS
 
 Oberoende granskning vid anmälan om hållbarhetsbesked för en viss tidsperiod
 
-**3 §** Vid anmälan om hållbarhetsbesked för en viss tidsperiod ska en ­oberoende granskare granska ett urval av de mängder som omfattas av anmälan. ­Urvalet ska baseras på en riskbedömning. Granskaren ska kontrollera att urvalet mängder uppfyller kraven i 32 § hållbarhetsförordningen. Om granskaren identifierar mängder som inte är hållbara, ska urvalet utökas till att omfatta alla mängder som anmälan avser.
+**3 §** Vid anmälan om hållbarhetsbesked för en viss tidsperiod ska en ­oberoende granskare granska ett urval av de mängder som omfattas av anmälan. U ­ rvalet ska baseras på en riskbedömning. Granskaren ska kontrollera att urvalet mängder uppfyller kraven i 32 § hållbarhetsförordningen. Om granskaren identifierar mängder som inte är hållbara, ska urvalet utökas till att omfatta alla mängder som anmälan avser.
 
 Vid anmälan om hållbarhetsbesked för en viss tidsperiod föranledd av en väsentlig ändring i kontrollsystemet, ska granskningen omfatta de delar Energi­myndigheten begär.
 
@@ -249,9 +253,11 @@ STEMFS
 
 5\. en bedömning av om granskade mängder hanterats i enlighet med ­kraven på användning av ett massbalanssystem i 24 § hållbarhets­förordningen, och
 
-6\. en bedömning av om samtliga mängder som omfattas av anmälan kan anses vara hållbara utifrån det urval av mängder som har kontrollerats, inklusive a. en bedömning av om de uppgifter som den rapporteringsskyldige har lämnat om ansökta mängder (enligt 2 kap. 3 §) är riktiga, b. om några ej hållbara mängder identifierats under granskningen, och c. en bedömning av risken för missbruk i de aktuella produktionskedjorna. Oberoende granskning vid omprövning av hållbarhetsbesked
+6\. en bedömning av om samtliga mängder som omfattas av anmälan kan anses vara hållbara utifrån det urval av mängder som har kontrollerats, inklusive a. en bedömning av om de uppgifter som den rapporteringsskyldige har lämnat om ansökta mängder (enligt 2 kap. 3 §) är riktiga, b. om några ej hållbara mängder identifierats under granskningen, och c. en bedömning av risken för missbruk i de aktuella produktions­ kedjorna.
 
-**5 §** Vid omprövning av hållbarhetsbesked enligt 29 § hållbarhetsförordningen ska den rapporteringsskyldiges kontrollsystem granskas av en oberoende ­granskare enligt 41 och 42 §§ hållbarhetsförordningen. Enligt 42 § hållbarhetsförordningen ska granskningen omfatta ett urval av rutiner och dokumentation av hållbara mängder. Detta urval ska utökas i de fall stora avvikelser upptäcks. Granskningen ska avse hela den period som Energimyndigheten anger.
+Oberoende granskning vid omprövning av hållbarhetsbesked
+
+**5 §** Vid omprövning av hållbarhetsbesked enligt 29 § hållbarhetsförordningen ska den rapporteringsskyldiges kontrollsystem granskas av en oberoende ­granskare enligt 41 och 42 §§ hållbarhetsförordningen. Enligt 42 § hållbarhets­ förordningen ska granskningen omfatta ett urval av rutiner och dokumentation av hållbara mängder. Detta urval ska utökas i de fall stora avvikelser upptäcks. Granskningen ska avse hela den period som Energimyndigheten anger.
 
 **6 §** Vid omprövning av hållbarhetsbesked enligt 29 § 1 hållbarhetsförordningen ska utlåtandet från den oberoende granskaren, utöver vad som följer av 2 § 2–8, omfatta
 
@@ -269,7 +275,7 @@ STEMFS
 
 7\. de avvikelser som identifierats vid granskningens genomförande och en beskrivning av de åtgärder som vidtagits av den rapporteringsskyldige, och
 
-8\. en bedömning av om samtliga mängder som hanteras av kontrollsystemet kan anses vara hållbara utifrån det urval av mängder som ­kontrollerats, inklusive a. om några ej hållbara mängder identifierats under granskningen, och b. en bedömning av risken för missbruk i de aktuella produktionskedjorna.
+8\. en bedömning av om samtliga mängder som hanteras av kontroll­ systemet kan anses vara hållbara utifrån det urval av mängder som ­kontrollerats, inklusive a. om några ej hållbara mängder identifierats under granskningen, och b. en bedömning av risken för missbruk i de aktuella produktions­ kedjorna.
 
 STEMFS
 
@@ -279,11 +285,11 @@ STEMFS
 
 5 kap. Anläggningsbesked
 
-**1 §** Den som begär anläggningsbesked ska i begäran beskriva hur kontrollsystemet uppfyller kraven i 50 eller 51 §§ hållbarhetsförordningen. Av ­begäran ska det framgå om anläggningsbeskedet ska avse en viss tidsperiod.
+**1 §** Den som begär anläggningsbesked ska i begäran beskriva hur kontroll­ systemet uppfyller kraven i 50 eller 51 §§ hållbarhetsförordningen. Av b­ egäran ska det framgå om anläggningsbeskedet ska avse en viss tidsperiod.
 
 6 kap. Årlig rapportering av uppgifter
 
-**1 §** Den som är rapporteringsskyldig enligt 3 kap. 1 § första stycket 1–7 hållbarhetslagen ska senast 1 april varje år lämna in uppgifter avseende ­föregående kalenderår enligt 44 § hållbarhetsförordningen. Uppgifter ska lämnas till Energi­myndigheten enligt 2–8 §§ i detta kapitel.
+**1 §** Den som är rapporteringsskyldig enligt 3 kap. 1 § första stycket 1–7 hållbarhetslagen ska senast 1 april varje år lämna in uppgifter avseende f­ öregående kalenderår enligt 44 § hållbarhetsförordningen. Uppgifter ska lämnas till Energi­myndigheten enligt 2–8 §§ i detta kapitel.
 
 Den som i yrkesmässig verksamhet använder flytande biobränsle för ­produktion av bränsle, behöver inte lämna uppgifter om det flytande biobränslet. Rapportering av uppgifter om biodrivmedel och biobränslen
 
@@ -323,13 +329,13 @@ När den hållbara mängden utgör en delmängd i ett bränsle ska andelen håll
 
 9\. Om råvaran utgörs av en sådan livsmedels- eller fodergröda med hög risk för indirekt ändrad markanvändning som avses i artikel 26.2 i ­förnybartdirektivet.
 
-10\. Det datum då den anläggning där biodrivmedlet eller det flytande b­iobränslet producerades respektive där det fasta eller gasformiga ­biobränslet användes tagits i drift, och om anläggningen där det fasta eller gasformiga biobränslet användes har en sammanlagd installerad tillförd effekt på mindre än 10 MW.
+10\. Det datum då den anläggning där biodrivmedlet eller det flytande biobränslet producerades respektive där det fasta eller gasformiga ­ ­biobränslet användes tagits i drift, och om anläggningen där det fasta eller gasformiga biobränslet användes har en sammanlagd installerad tillförd effekt på mindre än 10 MW.
 
-**4 §** För biodrivmedel och biobränsle som omfattas av krav på minskade växthus­gasutsläpp enligt 2 kap. 1–4 §§ hållbarhetslagen, ska den rapporteringsskyldige även lämna följande uppgifter:
+**4 §** För biodrivmedel och biobränsle som omfattas av krav på minskade växthus­gasutsläpp enligt 2 kap. 1–4 §§ hållbarhetslagen, ska den rapporterings­ skyldige även lämna följande uppgifter:
 
 1\. Utsläpp av växthusgaser från biodrivmedel eller användning av biobränsle i g CO2eq/MJ,
 
-2\. Vilken metod för summering av utsläpp enligt 9 kap. 1 § i hållbarhetsföreskriften som har använts.
+2\. Vilken metod för summering av utsläpp enligt 9 kap. 1 § i hållbarhets­ föreskriften som har använts.
 
 3\. Typ av produktionskedja som använts vid summering av utsläpp i de fall ett normalvärde enligt bilaga 3–5 har använts.
 
@@ -337,9 +343,9 @@ STEMFS
 
 2025:2
 
-**5 §** För biodrivmedel som omfattas av 2 § och finns med i Bilaga 11, ska den rapporteringsskyldige även ange vilken del, A eller B, samt vilken underkategori som råvaran tillhör.
+**5 §** För biodrivmedel som omfattas av 2 § och finns med i Bilaga 11, ska den rapporteringsskyldige även ange vilken del, A eller B, samt vilken under­ kategori som råvaran tillhör.
 
-**6 §** Rapporteringsskyldiga enligt 3 kap. 1 § första stycket 3–4 ­hållbarhetslagen ska lämna uppgift om mängd fast eller gasformigt biobränsle som används för att producera el i en anläggning som tagits i drift efter den 25 december 2021 eller som mottar stöd för elproduktionen enligt ett stödsystem som godkänts efter den 25 december 2021.
+**6 §** Rapporteringsskyldiga enligt 3 kap. 1 § första stycket 3–4 h­ ållbarhetslagen ska lämna uppgift om mängd fast eller gasformigt biobränsle som används för att producera el i en anläggning som tagits i drift efter den 25 december 2021 eller som mottar stöd för elproduktionen enligt ett stödsystem som godkänts efter den 25 december 2021.
 
 Om minst ett av följande kriterier uppfylls, ges undantag från kravet att lämna uppgifter enligt första stycket:
 
@@ -351,7 +357,7 @@ Om minst ett av följande kriterier uppfylls, ges undantag från kravet att läm
 
 4\. Elen produceras genom användning av biomassa med tillämpning av avskiljning och lagring av koldioxid.
 
-Rapporteringsskyldiga enligt 3 kap. 1 § första stycket 3–4 hållbarhetslagen ska även lämna uppgifter om eventuella mängder biobränslen som används i en anläggning där fossila bränslen utgör huvudsakligt bränsle och där enbart el produceras trots att det finns en kostnadseffektiv potential för ­tillämpning av högeffektiv kraftvärme enligt den bedömning som gjorts i enlighet med ­artikel 14 i Europaparlamentets och rådets direktiv 2012/27/EU av den 25 ­oktober 2012 om energieffektivitet, om ändring av direktiven 2009/125/EG och 2010/30/EU och om upphävande av direktiven 2004/8/EG och 2006/32/EG.
+Rapporteringsskyldiga enligt 3 kap. 1 § första stycket 3–4 hållbarhets­ lagen ska även lämna uppgifter om eventuella mängder biobränslen som används i en anläggning där fossila bränslen utgör huvudsakligt bränsle och där enbart el produceras trots att det finns en kostnadseffektiv potential för ­tillämpning av högeffektiv kraftvärme enligt den bedömning som gjorts i enlighet med a­ rtikel 14 i Europaparlamentets och rådets direktiv 2012/27/EU av den 25 ­oktober 2012 om energieffektivitet, om ändring av direktiven 2009/125/EG och 2010/30/EU och om upphävande av direktiven 2004/8/EG och 2006/32/EG.
 
 Rapportering av uppgifter om förnybara bränslen av icke-biologiskt ursprung
 
@@ -363,9 +369,9 @@ STEMFS
 
 2025:2
 
-1\. Den som är rapporteringsskyldig för förnybara bränslen av icke-biologiskt ursprung enligt 3 kap. 1 § första stycket 1 hållbarhetslagen ska lämna uppgifter om mängder drivmedel för vilka skattskyldighet har inträtt enligt 5 eller 6 kap. lagen (1994:1776) om skatt på energi.
+1\. Den som är rapporteringsskyldig för förnybara bränslen av icke-­ biologiskt ursprung enligt 3 kap. 1 § första stycket 1 hållbarhetslagen ska lämna uppgifter om mängder drivmedel för vilka skattskyldighet har inträtt enligt 5 eller 6 kap. lagen (1994:1776) om skatt på energi.
 
-2\. Den som är rapporteringsskyldig för förnybara bränslen av icke-biologiskt ursprung enligt 3 kap. 1 § första stycket 6–7 hållbarhetslagen ska lämna uppgifter om mängder gasformigt förnybart bränsle av icke-biologiskt ursprung som i yrkesmässig verksamhet levererats till en slutkund som använder bränslet i en bränslecell i ett fordon, fartyg eller luftfartyg, samt om de förnybara bränslen av icke-biologiskt ursprung som använts i yrkesmässig verksamhet.
+2\. Den som är rapporteringsskyldig för förnybara bränslen av icke-­ biologiskt ursprung enligt 3 kap. 1 § första stycket 6–7 hållbarhets­ lagen ska lämna uppgifter om mängder gasformigt förnybart bränsle av icke-biologiskt ursprung som i yrkesmässig verksamhet levererats till en slutkund som använder bränslet i en bränslecell i ett fordon, fartyg eller luftfartyg, samt om de förnybara bränslen av icke-biologiskt ursprung som använts i yrkesmässig verksamhet.
 
 Uppgifter ska lämnas till Energimyndigheten för varje parti enligt 8 §.
 
@@ -381,11 +387,11 @@ När den hållbara mängden utgör en delmängd i ett bränsle ska andelen håll
 
 4\. Effektivt värmevärde enligt Bilaga 2, och för bränslen som saknar ­effektivt värmevärde i bilagan ska effektivt värmevärde bestämmas enligt en dokumenterad metod i kontrollsystemet och anges: a. För bränslen i vätskeform i MJ/l vid 15 °C eller MJ/kg. b. För gasformiga bränslen i MJ/kg eller MJ/Nm3.
 
-5\. Mängden använd el i kWh som räknas som förnybar (om tillämpligt) i enlighet med kommissionens delegerade förordning (EU) 2023/11845 av den 10 februari 2023 om komplettering av Europaparlamentets och rådets direktiv (EU) 2018/2001 genom fastställande av en ­unionsmetod med närmare regler för produktion av förnybara flytande och gas­formiga drivmedel av icke-biologiskt ursprung: a. från en direkt anslutning b. från nätet
+5\. Mängden använd el i kWh som räknas som förnybar (om tillämpligt) i enlighet med kommissionens delegerade förordning (EU) 2023/11845 av den 10 februari 2023 om komplettering av Europaparlamentets och rådets direktiv (EU) 2018/2001 genom fastställande av en u­ nionsmetod med närmare regler för produktion av förnybara flytande och gas­formiga drivmedel av icke-biologiskt ursprung: a. från en direkt anslutning b. från nätet
 
 EGT L 157 20.6.2023, s. 11 (Celex 02023R1184)
 
-6\. Utsläpp av växthusgaser från förnybara bränslen av icke ­biologiskt ursprung angivet som g CO2eq/MJ beräknat enligt k­ommissionens d­elegerade förordning (EU) 2023/11856 av den 10 februari 2023 om k­omplettering av Europaparlamentets och rådets direktiv (EU) 2018/2001 genom fastställande av ett minimitröskelvärde för minskningen av växthusgasutsläpp från återvunna kolbaserade bränslen och genom specificering av en metod för bedömningen av minskningen av växthusgasutsläpp från förnybara flytande och gasformiga drivmedel av icke-biologiskt ursprung och från återvunna kolbaserade bränslen.
+6\. Utsläpp av växthusgaser från förnybara bränslen av icke ­biologiskt ursprung angivet som g CO2eq/MJ beräknat enligt ­ kommissionens delegerade förordning (EU) 2023/11856 av den 10 februari 2023 ­ om ­ komplettering av Europaparlamentets och rådets direktiv (EU) 2018/2001 genom fastställande av ett minimitröskelvärde för minskningen av växthusgasutsläpp från återvunna kolbaserade bränslen och genom specificering av en metod för bedömningen av minskningen av växthusgasutsläpp från förnybara flytande och gasformiga drivmedel av icke-biologiskt ursprung och från återvunna kolbaserade bränslen.
 
 STEMFS
 
@@ -423,7 +429,7 @@ STEMFS
 
 2025:2
 
-4\. För förnybara bränslen av icke-biologiskt ursprung och återvunna kolbränslen genom ett faktiskt värde för hela produktionskedjan beräknat i enlighet med den metod som anges i Bilaga 1 i kommissionens ­delegerade förordning (EU) 2023/11857 av den 10 februari 2023 om komplettering av Europaparlamentets och rådets direktiv (EU) 2018/2001 genom fastställande av ett minimitröskelvärde för minskningen av växthusgasutsläpp från återvunna kolbaserade bränslen och genom specificering av en metod för bedömningen av minskningen av växthusgasutsläpp från förnybara flytande och gasformiga drivmedel av icke-biologiskt ursprung och från återvunna kolbaserade bränslen.
+4\. För förnybara bränslen av icke-biologiskt ursprung och återvunna kolbränslen genom ett faktiskt värde för hela produktionskedjan beräknat i enlighet med den metod som anges i Bilaga 1 i kommissionens d­ elegerade förordning (EU) 2023/11857 av den 10 februari 2023 om komplettering av Europaparlamentets och rådets direktiv (EU) 2018/2001 genom fastställande av ett minimitröskelvärde för minskningen av växthusgasutsläpp från återvunna kolbaserade bränslen och genom specificering av en metod för bedömningen av minskningen av växthusgasutsläpp från förnybara flytande och gasformiga drivmedel av icke-biologiskt ursprung och från återvunna kolbaserade bränslen.
 
 Växthusgasutsläppsminskning för biodrivmedel och biobränsle
 
@@ -431,7 +437,7 @@ Växthusgasutsläppsminskning för biodrivmedel och biobränsle
 
 1\. växthusgasutsläpp från biodrivmedel och biobränslen, E, ska uttryckas som gram koldioxidekvivalenter per MJ biodrivmedel eller MJ biobränsle, g CO2eq/MJ.
 
-2\. växthusgasutsläpp från uppvärmning eller el, producerad från biobränslen, EC, ska uttryckas som gram koldioxidekvivalenter per MJ slutlig energiprodukt (värme eller el), g CO2eq/MJ.
+2\. växthusgasutsläpp från uppvärmning eller el, producerad från bio­ bränslen, EC, ska uttryckas som gram koldioxidekvivalenter per MJ slutlig energiprodukt (värme eller el), g CO2eq/MJ.
 
 **3 §** De minskade växthusgasutsläppen till följd av användningen av biodrivmedel och biobränslen beräknas enligt följande:
 
@@ -465,7 +471,9 @@ ECel,h = totala utsläpp från värmen eller elen, beräknade enligt 7 §. ECF =
 
 EUT L 157, 20.6.2023, s. 20–33 (Celex 32023R1185)
 
-Tabell 1, Värden på EF och ECF, de fossila motsvarigheterna till biodrivmedel och biobränslen Typ av bränsle och ändamål
+Tabell 1, Värden på EF och ECF, de fossila motsvarigheterna till biodriv­ medel och biobränslen
+
+Typ av bränsle och ändamål
 
 Fossil motsvarighet
 
@@ -501,7 +509,7 @@ STEMFS
 
 Beräkning av faktiska värden för växthusgasutsläpp
 
-**4 §** Med växthusgaser avses koldioxid (CO2), lustgas (N2O) och metan (CH4). Vid beräkningen av koldioxidekvivalenter ska följande värden ­användas för dessa gaser:
+**4 §** Med växthusgaser avses koldioxid (CO2), lustgas (N2O) och metan (CH4). Vid beräkningen av koldioxidekvivalenter ska följande värden a­ nvändas för dessa gaser:
 
 Växthusgaser
 
@@ -591,7 +599,7 @@ E ηel Cel \*ηel +Ch \*ηh
 
 ECh =
 
-För esca ska en bonus på 45 g CO2eq/MJ gödsel tilldelas för förbättrade jordbruksmetoder och förbättrad gödselhantering om stallgödsel används som substrat för ­produktion av biogas och biometan.
+För esca ska en bonus på 45 g CO2eq/MJ gödsel tilldelas för förbättrade jordbruksmetoder och förbättrad gödselhantering om stallgödsel används som substrat för p­ roduktion av biogas och biometan.
 
 Ch \*ηh
 
@@ -721,7 +729,7 @@ där
 
 E
 
-= totala utsläpp från produktionen av biogas eller biometan före energiomvandlingen
+= totala utsläpp från produktionen av biogas eller biometan före energi­ omvandlingen
 
 Sn
 
@@ -775,11 +783,11 @@ STEMFS
 
 Avskiljning av koldioxid vid odlingen av råvaror ska inte räknas med.
 
-**11 §** Vid beräkning av utsläppen från odling av agrobiomassa är det tillåtet att, i stället för faktiska värden, utgå från de regionala medelvärden för utsläpp från odling som ingår i de rapporter som avses i artikel 31.4 f­örnybartdirektivet. I brist på relevant information i dessa rapporter är det tillåtet att beräkna medel­värden baserade på lokala jordbruksmetoder, t.ex. baserat på data från en grupp av gårdar, som ett alternativ till att använda faktiska värden. Vid beräkning av utsläppen från odling och skörd av skogsbiomassa är det t­illåtet att utgå från medelvärden för utsläpp från odling och skörd som beräknas för geografiska områden på nationell nivå, som ett alternativ till att använda faktiska värden.
+**11 §** Vid beräkning av utsläppen från odling av agrobiomassa är det tillåtet att, i stället för faktiska värden, utgå från de regionala medelvärden för utsläpp från odling som ingår i de rapporter som avses i artikel 31.4 f­örnybartdirektivet. I brist på relevant information i dessa rapporter är det tillåtet att beräkna medel­värden baserade på lokala jordbruksmetoder, t.ex. baserat på data från en grupp av gårdar, som ett alternativ till att använda faktiska värden. Vid beräkning av utsläppen från odling och skörd av skogsbiomassa är det ­tillåtet att utgå från medelvärden för utsläpp från odling och skörd som beräknas för geografiska områden på nationell nivå, som ett alternativ till att använda faktiska värden.
 
 **12 §** Om utsläppen av växthusgaser från extraktion, skörd och odling av ­råvaror, eec, uttrycks i gram koldioxidekvivalenter per ton torr bränsleråvara, ska omvandlingen till utsläpp i g CO2eq/MJ beräknas enligt följande11
 
-För esca ska en bonus på 45 g CO2eq/MJ gödsel tilldelas för förbättrade jordbruks­metoder och förbättrad gödselhantering om stallgödsel används som substrat för ­produktion av biogas och biometan.
+För esca ska en bonus på 45 g CO2eq/MJ gödsel tilldelas för förbättrade jordbruks­metoder och förbättrad gödselhantering om stallgödsel används som substrat för p­ roduktion av biogas och biometan.
 
 Formeln för beräkning av utsläpp av växthusgaser från utvinning eller odling av ­råvaror, eec, beskriver fall där bränsleråvaran omvandlas till biodrivmedel i ett steg. För mer komplexa försörjningskedjor behövs anpassningar för att beräkna utsläppen av växthusgaser från utvinning eller odling av råvaror, eec, för mellanprodukter.
 
@@ -841,7 +849,7 @@ eec,bränsleråvara,fukta
 
 6\. Övrig mark
 
-**14 §** De årliga utsläppen från kollagerförändringar till följd av ändrad markanvändning, el, beräknas genom att de totala utsläppen fördelas jämnt över 20 år. Följande formel ska användas:
+**14 §** De årliga utsläppen från kollagerförändringar till följd av ändrad mark­ användning, el, beräknas genom att de totala utsläppen fördelas jämnt över 20 år. Följande formel ska användas:
 
 el = CSR -CSA ∙3,664∙ 1/ 20 ∙ 1/ P -eB 12
 
@@ -851,7 +859,7 @@ STEMFS
 
 2025:2
 
-= årligt växthusgasutsläpp från kollagerförändringar till följd av ändrad markanvändning, g CO2eq/MJ biodrivmedel eller biobränsle. Åkermark13 och jordbruksmark för fleråriga grödor ska betraktas som en och samma markanvändning
+= årligt växthusgasutsläpp från kollagerförändringar till följd av ändrad mark­ användning, g CO2eq/MJ biodrivmedel eller biobränsle. Åkermark13 och jordbruks­ mark för fleråriga grödor ska betraktas som en och samma markanvändning
 
 CSR = kollager per ytenhet för referensmarkanvändningen, ton C (kol) per ytenhet, inklusive både mark och vegetation. Referensmarkanvändningen är den användning som marken hade antingen i januari 2008 eller 20 år innan råvaran erhölls, beroende på vilket som inträffar senare
 
@@ -875,13 +883,15 @@ Bonusen på 29 g CO2eq/MJ ska vara tillämplig upp till 20 år från och med dag
 
 **16 §** Utsläpp från bearbetning, ep, omfattar utsläpp från själva ­bearbetningen, från avfall och utlakning, och från produktionen av kemikalier och ­produkter som används vid bearbetningen, däribland de koldioxidutsläpp som ­motsvarar halten kol i fossila insatsvaror, oavsett om dessa faktiskt förbränts vid ­processen. Utsläpp från bearbetning ska inbegripa utsläpp från torkning av mellanprodukter och material om detta är relevant.
 
-**17 §** När man ska beräkna utsläpp för användningen av el som inte ­producerats i produktionsanläggningen för biodrivmedel eller biobränslen, ska växthusgasutsläppen vid produktion och distribution av denna el antas motsvara de genomsnittliga utsläppen vid produktion och distribution av el i en angiven Den kvot som erhålls när molekylvikten för CO2 (44,010 g/mol) divideras med molekylvikten för kol (12,011 g/mol) är lika med 3,664. Åkermark enligt definitionen i IPCC (2006 års IPCC ­Guidelines for National Greenhouse Gas Inventories, volym 4).
+**17 §** När man ska beräkna utsläpp för användningen av el som inte p­ roducerats i produktionsanläggningen för biodrivmedel eller biobränslen, ska växthusgasutsläppen vid produktion och distribution av denna el antas motsvara de genomsnittliga utsläppen vid produktion och distribution av el i en angiven Den kvot som erhålls när molekylvikten för CO2 (44,010 g/mol) divideras med molekyl­ vikten för kol (12,011 g/mol) är lika med 3,664.
+
+Åkermark enligt definitionen i IPCC (2006 års IPCC ­Guidelines for National Greenhouse Gas Inventories, volym 4).
 
 STEMFS
 
 2025:2
 
-region. Emissionsfaktorer som ska användas finns i bilaga IX till kommissionens genomförandeförordning (EU) 2022/99614 av den 14 juni 2022 om regler för att verifiera hållbarhet och kriterier för minskade växthusgasutsläpp och kriterier för låg risk för indirekt ändring av markanvändning. Med undantag från denna bestämmelse får producenter använda sig av ett genomsnittsvärde för en enskild anläggning för elproduktion när det gäller el som producerats av den anläggningen, förutsatt att den inte är ansluten till elnätet.
+region. Emissionsfaktorer som ska användas finns i bilaga IX till kommis­ sionens genomförandeförordning (EU) 2022/99614 av den 14 juni 2022 om regler för att verifiera hållbarhet och kriterier för minskade växthusgasutsläpp och kriterier för låg risk för indirekt ändring av markanvändning. Med undantag från denna bestämmelse får producenter använda sig av ett genomsnittsvärde för en enskild anläggning för elproduktion när det gäller el som producerats av den anläggningen, förutsatt att den inte är ansluten till elnätet.
 
 **18 §** Utsläpp från transporter och distribution, etd, ska omfatta utsläpp från transport av råvaror och mellanprodukter samt från lagring och distribution av mellanprodukter och färdigt material. Utsläpp från transporter och distribution som ska beaktas enligt 10 § ska inte omfattas av den här paragrafen.
 
@@ -889,7 +899,7 @@ region. Emissionsfaktorer som ska användas finns i bilaga IX till kommissionens
 
 **20 §** I beräkningen ska minskade växthusgasutsläpp genom förbättrade jordbruksmetoder, esca, endast beaktas om de inte riskerar att inverka negativt på den biologiska mångfalden. Med förbättrade jordbruksmetoder menas till exempel övergång till begränsad jordbearbetning eller direkt sådd, förbättrat växelbruk och användning av täckgrödor samt hantering av restprodukter från jordbruk och användning av organiska jordförbättringsmedel, såsom kompost och rötrester från fermentering av gödsel.
 
-Dessutom ska pålitliga och kontrollerbara bevis tillhandahållas för att i­nlagringen av kol i marken har ökat, eller för att det är rimligt att förvänta sig att den har ökat under den period då de berörda råvarorna odlades. Hänsyn ska också tas till utsläppen om dessa metoder leder till ökad användning av gödningsmedel och bekämpningsmedel.
+Dessutom ska pålitliga och kontrollerbara bevis tillhandahållas för att ­inlagringen av kol i marken har ökat, eller för att det är rimligt att förvänta sig att den har ökat under den period då de berörda råvarorna odlades. Hänsyn ska också tas till utsläppen om dessa metoder leder till ökad användning av gödningsmedel och bekämpningsmedel.
 
 **21 §** Minskade utsläpp genom avskiljning av koldioxid och geologisk lagring, eccs, som inte redan har redovisats i ep, ska begränsas till utsläpp som undviks genom avskiljning och lagring av koldioxid med direkt koppling till utvinning, transport, bearbetning och distribution av drivmedel och biobränsle om den lagras i enlighet med Europaparlamentets och rådets direktiv 2009/31/EG15.
 
@@ -905,7 +915,7 @@ STEMFS
 
 2025:2
 
-**24 §** Växthusgasutsläppen ska fördelas mellan bränslet (eller dess mellanprodukt) och samprodukter i förhållande till deras energiinnehåll, när en ­process både producerar det bränsle för vilket utsläpp beräknas och en eller flera andra produkter. Energiinnehåll ska fastställas med det effektiva värmevärdet när det gäller andra samprodukter än el och värme. Växthusgasutsläpp ska tilldelas överskott av nyttiggjord värme eller el, motsvarande växthusgasutsläpp för den värme eller el som tillförs produktionsprocessen för biodrivmedlet eller biobränslet. Utsläppen som ska tilldelas överskott av nyttiggjord värme eller el, bestäms genom att beräkna växthusgasutsläpp för samtliga tillförda ämnen och utsläpp för produktionsprocessen. Detta inkluderar utsläpp från samtliga ämnen, inklusive bränsleråvaran, som tillförts den kraftvärmeenhet, panna eller annan apparat som tillhandahåller värme eller el till processen. Det inkluderar även samtliga utsläpp, inklusive CH4- och N2O-utsläpp, från den kraftvärmeenhet, panna eller annan apparat som tillhandahåller värme eller el till produktionsprocessen. För kraftvärme utförs beräkningen i enlighet med 23 §.
+**24 §** Växthusgasutsläppen ska fördelas mellan bränslet (eller dess mellan­ produkt) och samprodukter i förhållande till deras energiinnehåll, när en ­process både producerar det bränsle för vilket utsläpp beräknas och en eller flera andra produkter. Energiinnehåll ska fastställas med det effektiva värmevärdet när det gäller andra samprodukter än el och värme. Växthusgasutsläpp ska tilldelas överskott av nyttiggjord värme eller el, motsvarande växthusgasutsläpp för den värme eller el som tillförs produktionsprocessen för biodrivmedlet eller biobränslet. Utsläppen som ska tilldelas överskott av nyttiggjord värme eller el, bestäms genom att beräkna växthusgasutsläpp för samtliga tillförda ämnen och utsläpp för produktionsprocessen. Detta inkluderar utsläpp från samtliga ämnen, inklusive bränsleråvaran, som tillförts den kraftvärmeenhet, panna eller annan apparat som tillhandahåller värme eller el till processen. Det inkluderar även samtliga utsläpp, inklusive CH4- och N2O-utsläpp, från den kraftvärmeenhet, panna eller annan apparat som tillhandahåller värme eller el till produktionsprocessen. För kraftvärme utförs beräkningen i enlighet med 23 §.
 
 **25 §** Utsläppen som ska fördelas i beräkningen enligt 24 § är eec + el + esca + de fraktioner av ep, etd, eccs, och eccr som äger rum till och med det processteg där en samprodukt bildas. Om fördelning till samprodukter redan har skett vid ett tidigare processteg i livscykeln, är det den tilldelade fraktionen av utsläpp från det tidigare processteget som ska fördelas vid nästa processteg. När det gäller biodrivmedel och flytande biobränslen ska alla samprodukter som inte ­omfattas av 24 § tas med i denna beräkning. Samprodukter med negativt energi­innehåll ska vid beräkningen anses ha energiinnehållet noll. När det gäller drivmedel och biobränslen som produceras i raffinaderier, annat än den kombination av bearbetningsanläggningar med pannor eller kraftvärmeenheter som tillhandahåller värme och/eller el till bearbetnings­anläggningen, ska den enhet som analyseras för beräkningen i 24 § utgöras av raffinaderiet.
 
@@ -951,7 +961,7 @@ Bilaga 8 Delnormalvärden för fasta och gasformiga biobränslen samt gasformiga
 
 Bilaga 9 Riktlinjer för beräkning av kollager i mark vid ändrad markanvändning . 69
 
-Bilaga 10 Utsläpp på grund av indirekt ändring av ­markanvändning ...................... 91
+Bilaga 10 Utsläpp på grund av indirekt ändring av m ­ arkanvändning ...................... 91
 
 Bilaga 11 Råvaror för avancerade biodrivmedel ..................................................... 92
 
@@ -993,7 +1003,7 @@ Etylester som framställs med biomassa som ursprung
 
 MFA
 
-Fettsyror och återstoder från bearbetning av animaliska eller vegetabiliska fetter. T.ex. restprodukter från läkemedelstillverkning, oleokemisk industri eller biodieseltillverkning
+Fettsyror och återstoder från bearbetning av animaliska eller vegetabiliska fetter. T.ex. restprodukter från läkemedels­ tillverkning, oleokemisk industri eller biodieseltillverkning
 
 Paraffinisk diesel
 
@@ -1085,7 +1095,7 @@ Bränslekategori
 
 Förklaring
 
-Vätgas av icke-biologiskt ursprung
+Vätgas av icke-­ biologiskt ursprung
 
 Vätgas från andra förnybara energikällor än biomassa
 
@@ -1461,7 +1471,7 @@ STEMFS
 
 Normalvärden för fasta och gasformiga biobränslen samt gasformiga biodrivmedel
 
-Vid produktion utan nettoutsläpp av koldioxidekvivalenter till följd av f­örändrad markanvändning. Normalvärdet anger procentuell minskning av växthusgasutsläpp jämfört med en fossil motsvarighet.
+Vid produktion utan nettoutsläpp av koldioxidekvivalenter till följd av ­förändrad markanvändning. Normalvärdet anger procentuell minskning av växthusgasutsläpp jämfört med en fossil motsvarighet.
 
 Del 1. Normalvärden för fasta biobränslen
 
@@ -2559,7 +2569,7 @@ Inneslutna rötrester, ­förbränning av restgaser
 
 84 %
 
-Minskningarna av växthusgasutsläpp specifikt för biogas avser komprimerad biometan i förhållande till det motsvarande fossila drivmedlet (94 g CO2eq/MJ). (\*\*) Denna kategori omfattar följande teknikformer för uppgradering av biogas till biometan: PSA (Pressure Swing Adsorption), PWS (Pressure Water Scrubbing), membran, kryogen separering och OPS (Organic Physical Scrubbing). Här ingår ett utsläpp på 0,03 MJ CH4/MJ biometan till följd av metanutsläppen i restgaserna. (\*\*\*) Denna kategori omfattar följande teknikformer för uppgradering av biogas till biometan: PWS (Pressure Water Scrubbing) när vattnet återvinns, PSA (Pressure Swing Adsorption), kemisk skrubber, OPS (Organic Physical Scrubbing), membran och kryogen separering. Inga metanutsläpp beaktas för denna kategori (den metan som eventuellt finns i restgaserna förbränns).
+Minskningarna av växthusgasutsläpp specifikt för biogas avser komprimerad biometan i förhållande till det motsvarande fossila drivmedlet (94 g CO2eq/MJ). (\*\*) Denna kategori omfattar följande teknikformer för uppgradering av biogas till biometan: PSA (Pressure Swing Adsorption), PWS (Pressure Water Scrubbing), membran, kryogen separering och OPS (Organic Physical Scrubbing). Här ingår ett utsläpp på 0,03 MJ CH4/MJ biometan till följd av metanutsläppen i restgaserna. (\*\*\*) Denna kategori omfattar följande teknikformer för uppgradering av biogas till biometan: PWS (Pressure Water Scrubbing) när vattnet återvinns, PSA (Pressure Swing Adsorption), kemisk skrubber, OPS (Organic Physical Scrubbing), membran och kryogen separering. Inga metan­ utsläpp beaktas för denna kategori (den metan som eventuellt finns i restgaserna förbränns).
 
 Bilaga 6. Delnormalvärden för flytande biodrivmedel och flytande biobränslen
 
@@ -2877,7 +2887,7 @@ Vätebehandlad vegetabilisk olja av palmolja (öppen damm för avloppsslam)
 
 38,9
 
-Vätebehandlad vegetabilisk olja av palmolja (processen i oljefabriken sker med omhändertagande av metan)
+Vätebehandlad vegetabilisk olja av palmolja (processen i olje­ fabriken sker med omhändertagande av metan)
 
 13,6
 
@@ -3127,7 +3137,7 @@ Delnormalvärde (g CO2eq/MJ)
 
 Vätebehandlad vegetabilisk olja av palmolja (öppen damm för avloppsslam)
 
-Vätebehandlad vegetabilisk olja av palmolja (processen i oljefabriken sker med omhändertagande av metan)
+Vätebehandlad vegetabilisk olja av palmolja (processen i olje­ fabriken sker med omhändertagande av metan)
 
 Vätebehandlad olja av avfall i form av matolja
 
@@ -4811,7 +4821,9 @@ STEMFS
 
 2025:2
 
-Del 2. Delnormalvärden för gasformiga biobränslen och gasformiga ­biodrivmedel Tabell 4. Delnormalvärde för biogas för elproduktion
+Del 2. Delnormalvärden för gasformiga biobränslen och gasformiga b ­ iodrivmedel
+
+Tabell 4. Delnormalvärde för biogas för elproduktion
 
 Produktionssystem för biobränsle
 
@@ -4821,7 +4833,7 @@ Delnormalvärde (g CO2eq/MJ)
 
 Odling Bearbet­ Andra (eec) ning utsläpp än (ep) koldioxid från det bränsle som används (eu)
 
-Transport Gödsel(etd) krediter (esca)
+Transport Gödsel­ (etd) krediter (esca)
 
 Fall 1 Ej inneslutna rötrester
 
@@ -5011,9 +5023,9 @@ STEMFS
 
 Tabell 5. Delnormalvärde för biometan
 
-Produk­ Teknik­alternativ tionssystem för biometan
+Produk­ Teknik­alternativ tions­ system för biometan
 
-Flytgödsel
+Flyt­ gödsel
 
 Majs, hel växt
 
@@ -5021,7 +5033,9 @@ Bioavfall
 
 Delnormalvärde (g CO2eq/MJ)
 
-Odling Be­arbet­ UppTrans- Komprim­ Gödsel(eec) ning gradering port ering vid krediter (ep) (etd) fyllnings­ (esca) stationer
+Odling Be­arbet­ Upp­
+
+Trans- Komprim­ Gödsel­ (eec) ning gradering port ering vid krediter (ep) (etd) fyllnings­ (esca) stationer
 
 ingen
 
@@ -5165,7 +5179,7 @@ Produktionssystem för biobränsle (\*)
 
 Transportsträcka
 
-Totalt värde för växthusgasutsläppen (g CO2eq/MJ)
+Totalt värde för växthusgas­ utsläppen (g CO2eq/MJ)
 
 Träflis från restprodukter från skogsbruk
 
@@ -5261,7 +5275,7 @@ Produktionssystem för biobränsle (\*)
 
 Transportsträcka
 
-Totalt värde för växthusgasutsläppen (g CO2eq/MJ)
+Totalt värde för växthusgas­ utsläppen (g CO2eq/MJ)
 
 Träbriketter eller träpellets av skottskog
 
@@ -5373,7 +5387,7 @@ Produktionssystem för biobränsle (\*)
 
 Transportsträcka
 
-Totalt värde för växthusgasutsläppen (g CO2eq/MJ)
+Totalt värde för växthusgas­ utsläppen (g CO2eq/MJ)
 
 Träbriketter eller träpellets av träindustriavfall (fall 2a)
 
@@ -5563,7 +5577,7 @@ Inneslutna rötrester, förbränning av restgaser
 
 (\*)
 
-När det gäller biometan som används som drivmedel i form av komprimerad biometan måste ett värde på 4,6 g CO2eq/MJ biometan läggas till utsläppsvärdena. (\*\*) Denna kategori omfattar följande teknikformer för uppgradering av biogas till biometan: PSA (Pressure Swing Adsorption), PWS (Pressure Water Scrubbing), membran, kryogen separering och OPS (Organic Physical Scrubbing). Här ingår ett utsläpp på 0,03 MJ CH4/MJ biometan till följd av metanutsläppen i restgaserna. (\*\*\*) Denna kategori omfattar följande teknikformer för uppgradering av biogas till biometan: PWS (Pressure Water Scrubbing) när vattnet återvinns, PSA (Pressure Swing Adsorption), kemisk skrubber, OPS (Organic Physical Scrubbing), membran och kryogen separering. Inga metanutsläpp beaktas för denna kategori (den metan som eventuellt finns i restgaserna förbränns).
+När det gäller biometan som används som drivmedel i form av komprimerad biometan måste ett värde på 4,6 g CO2eq/MJ biometan läggas till utsläppsvärdena. (\*\*) Denna kategori omfattar följande teknikformer för uppgradering av biogas till biometan: PSA (Pressure Swing Adsorption), PWS (Pressure Water Scrubbing), membran, kryogen separering och OPS (Organic Physical Scrubbing). Här ingår ett utsläpp på 0,03 MJ CH4/MJ biometan till följd av metanutsläppen i restgaserna. (\*\*\*) Denna kategori omfattar följande teknikformer för uppgradering av biogas till biometan: PWS (Pressure Water Scrubbing) när vattnet återvinns, PSA (Pressure Swing Adsorption), kemisk skrubber, OPS (Organic Physical Scrubbing), membran och kryogen separering. Inga metan­ utsläpp beaktas för denna kategori (den metan som eventuellt finns i restgaserna förbränns).
 
 Bilaga 8. Delnormalvärden för fasta och gasformiga biobränslen samt gasformiga biodrivmedel
 
@@ -5725,7 +5739,7 @@ I punkt 4 anges detaljerade regler för bestämning av jordens organiska kollage
 
 I punkt 6 anges regler för hur man väljer lämpliga värden i de fall då man använder riktlinjernas värden för organiskt kol i mineraljordar (värdena ges i punkterna 6 och 7). I dessa regler hänvisas till datalager om klimatregioner och jordtyper som finns att tillgå via den öppenhetsplattform som etablerats genom direktiv 2009/28/EG.
 
-I punkt 8 anges värden för kollager i vegetation ovan och under jord och ­relaterade parametrar. I punkterna 7 och 8 anges värden för fyra olika markanvändningskategorier: åkermark, fleråriga grödor, gräsmark och skogsmark.
+I punkt 8 anges värden för kollager i vegetation ovan och under jord och ­relaterade parametrar. I punkterna 7 och 8 anges värden för fyra olika mark­ användningskategorier: åkermark, fleråriga grödor, gräsmark och skogsmark.
 
 2\. KONSEKVENT REDOVISNING AV KOLLAGER I MARK
 
@@ -5769,7 +5783,9 @@ SOC = organiskt kolinnehåll i marken (anges som massan kol per hektar), SOCST =
 
 FLU = markanvändningsfaktor som återspeglar skillnaden mellan markens organiska kolinnehåll vid den aktuella markanvändningen och standardvärdet för organiskt kolinnehåll,
 
-FMG = skötselfaktor som återspeglar skillnaden mellan markens organiska kolinnehåll vid den aktuella skötseln och standardvärdet för organiskt kolinnehåll, FI = tillförselfaktor som återspeglar skillnaden mellan organiskt kolinnehåll i jorden i samband med olika nivåer av koltillförsel till marken och standardvärdet för organiskt kolinnehåll. För SOCST ska de lämpliga värden som anges i punkt 6 gälla.
+FMG = skötselfaktor som återspeglar skillnaden mellan markens organiska kolinnehåll vid den aktuella skötseln och standardvärdet för organiskt kolinnehåll, FI = tillförselfaktor som återspeglar skillnaden mellan organiskt kolinnehåll i jorden i samband med olika nivåer av koltillförsel till marken och standard­ värdet för organiskt kolinnehåll.
+
+För SOCST ska de lämpliga värden som anges i punkt 6 gälla.
 
 För FLU, FMG och FI ska de lämpliga värden som anges i punkt 7 gälla. Som ett alternativ till formeln ovan kan andra lämpliga metoder, inbegripet mätningar, användas för att bestämma kolinnehållet SOC. I den mån metoderna inte baserar sig på mätningar ska de beakta klimat, jordtyp, marktäcke, markskötsel och tillförsel.
 
@@ -5897,13 +5913,15 @@ STEMFS
 
 6\. STANDARDVÄRDEN FÖR KOLLAGER I MINERALJORD
 
-Ett värde för SOCST ska väljas i tabell 1 på grundval av lämplig klimatregion och jordtyp för det berörda området (se punkterna 6.1 och 6.2). Tabell 1. SOCST = organiskt kol i det översta (0–30 cm) skiktet i standardjord (ton kol per hektar) Klimatregion
+Ett värde för SOCST ska väljas i tabell 1 på grundval av lämplig klimatregion och jordtyp för det berörda området (se punkterna 6.1 och 6.2). Tabell 1. SOCST = organiskt kol i det översta (0–30 cm) skiktet i standard­ jord (ton kol per hektar)
+
+Klimatregion
 
 Jordtyp
 
-Lerjordar Lerjordar Sandmed hög med låg jordar aktivitet aktivitet
+Lerjordar Lerjordar Sand­ med hög med låg jordar aktivitet aktivitet
 
-Podsol-­ Vulkaniska Våtmarksjordar jordar jordar
+Podsol-­ Vulkaniska Våtmarks­ jordar jordar jordar
 
 Borealt
 
@@ -6017,7 +6035,7 @@ Lämpliga värden för FLU, FMG och FI ska väljas enligt tabellerna i denna pun
 
 Tabell 2. Faktorer för åkermark
 
-Klimatregion Markanvändning (FLU)
+Klimatregion Mark­ användning (FLU)
 
 Skötsel (FMG)
 
@@ -6031,7 +6049,7 @@ FI
 
 Tempererat/ borealt torrt klimat
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Låg
 
@@ -6081,7 +6099,7 @@ Hög, utan stallgödsel
 
 1,04
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 Låg
 
@@ -6113,7 +6131,7 @@ Hög, utan stallgödsel
 
 1,04
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Låg
 
@@ -6207,11 +6225,11 @@ Reducerad
 
 Låg jordbearbetning Medel
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 Bilaga 9. Riktlinjer för beräkning av kollager i mark vid ändrad markanvändning
 
-Klimatregion Markanvändning (FLU)
+Klimatregion Mark­ användning (FLU)
 
 Skötsel (FMG)
 
@@ -6225,7 +6243,7 @@ FI
 
 Tropiskt torrt klimat
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Låg
 
@@ -6275,7 +6293,7 @@ Hög, utan stallgödsel
 
 1,04
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 Låg
 
@@ -6307,7 +6325,7 @@ Hög, utan stallgödsel
 
 1,04
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Låg
 
@@ -6357,7 +6375,7 @@ Hög, utan stallgödsel
 
 1,11
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 Låg
 
@@ -6389,7 +6407,7 @@ Hög, utan stallgödsel
 
 1,11
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Låg
 
@@ -6491,7 +6509,7 @@ Reducerad
 
 Låg jordbearbetning Medel
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 STEMFS
 
@@ -6507,7 +6525,7 @@ I tabell 3 finns vägledning för val av lämpliga värden i tabellerna 2 och 4.
 
 Skötsel/tillförsel Vägledning
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Betydande markpåverkan med intensiv (full vändning av jorden) eller frekvent (inom ett år) jord-bearbetning. Vid planteringstidpunkten är endast en liten andel (t.ex. < 30 %) täckt av rester.
 
@@ -6515,7 +6533,7 @@ Reducerad jordbearbetning
 
 Primär och/eller sekundär jordbearbetning men med reducerad markpåverkan (oftast på litet djup och utan full vändning av jorden); resulterande yta är i regel täckt med över 30 % rester vid sådd.
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 Direktsådd utan primär jordbearbetning, med endast minimal markpåverkan inom såddområdet. Typiskt används herbicider för ogräsbekämpning.
 
@@ -6529,7 +6547,7 @@ Representativ för ettåriga odlingar med spannmål där alla odlingsrester åte
 
 Hög, med stallgödsel
 
-Representerar betydligt högre koltillförsel i jämförelse med odlingssystem med medelhög koltillförsel, på grund av ytterligare regelbunden tillförsel av stallgödsel.
+Representerar betydligt högre koltillförsel i jämförelse med odlings­ system med medelhög koltillförsel, på grund av ytterligare regelbunden tillförsel av stallgödsel.
 
 Hög, utan stallgödsel
 
@@ -6543,7 +6561,7 @@ STEMFS
 
 7.2 Fleråriga grödor
 
-Tabell 4. Faktorer för fleråriga grödor, dvs. grödor vars stam i regel inte skördas årligen, såsom skottskog med kort omloppstid och oljepalm Klimatregion Markanvänd­ning (FLU)
+Tabell 4. Faktorer för fleråriga grödor, dvs. grödor vars stam i regel inte skördas årligen, såsom skottskog med kort omloppstid och oljepalm Klimatregion Mark­ använd­ning (FLU)
 
 Skötsel (FMG)
 
@@ -6557,7 +6575,7 @@ FI
 
 Tempererat/ borealt torrt klimat
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Låg
 
@@ -6591,7 +6609,7 @@ Hög, utan stallgödsel
 
 1,04
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 Låg
 
@@ -6615,7 +6633,7 @@ Hög, utan stallgödsel
 
 1,04
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Låg
 
@@ -6649,7 +6667,7 @@ Hög, utan stallgödsel
 
 1,11
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 Låg
 
@@ -6673,7 +6691,7 @@ Hög, utan stallgödsel
 
 1,11
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Låg
 
@@ -6751,7 +6769,7 @@ Reducerad
 
 Låg jordbearbetning Medel
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 Bilaga 9. Riktlinjer för beräkning av kollager i mark vid ändrad markanvändning
 
@@ -6759,7 +6777,7 @@ STEMFS
 
 2025:2
 
-Klimatregion Markanvänd­ning (FLU)
+Klimatregion Mark­ använd­ning (FLU)
 
 Skötsel (FMG)
 
@@ -6773,7 +6791,7 @@ FI
 
 Tropiskt fuktigt/vått klimat
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Låg
 
@@ -6807,7 +6825,7 @@ Hög, utan stallgödsel
 
 1,11
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 Låg
 
@@ -6831,7 +6849,7 @@ Hög, utan stallgödsel
 
 1,11
 
-Intensiv jordbearbetning
+Intensiv jord­ bearbetning
 
 Låg
 
@@ -6901,7 +6919,7 @@ Reducerad
 
 Låg jordbearbetning Medel
 
-Ingen jordbearbetning
+Ingen jord­ bearbetning
 
 I tabell 3 i punkt 7.1 finns vägledning för val av lämpliga värden i tabell 4.
 
@@ -6915,7 +6933,9 @@ STEMFS
 
 Tabell 5. Faktorer för gräsmark, inklusive savanner
 
-Klimatregion MarkSkötsel (FMG) användning (FLU)
+Klimatregion Mark­
+
+Skötsel (FMG) användning (FLU)
 
 Tillförsel (FI)
 
@@ -7241,9 +7261,9 @@ Tropiskt vått klimat
 
 Subtropiskt
 
-Varmtempererat torrt klimat
+Varm­ tempererat torrt klimat
 
-Varmtempererat fuktigt klimat
+Varm­ tempererat fuktigt klimat
 
 Kontinent
 
@@ -7293,9 +7313,7 @@ STEMFS
 
 8.2 Fleråriga grödor, dvs. grödor vars stam i regel inte skördas årligen, såsom skottskog med kort omloppstid och oljepalm.
 
-Tabell 11. Vegetationsvärden för fleråriga grödor (allmänna)
-
-Klimatregion
+Tabell 11. Vegetationsvärden för fleråriga grödor (allmänna) Klimatregion
 
 CVEG (ton kol per hektar)
 

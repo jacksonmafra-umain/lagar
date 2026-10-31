@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=8a8729666ac94a86875e2a1b09f07b70&res=1ea5ebbc35e948a3b2995028c40c3c71&lr=False&fn=STEMFS%202016_5-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=8a8729666ac94a86875e2a1b09f07b70"
 source_sha256: "62fdf4a1f701701a58443ba1f5cfa9c342834dd37fd3f1e5b60a988cf58f1f15"
-fetched_at: "2026-10-30T15:26:37Z"
+fetched_at: "2026-10-31T03:27:18Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om uppgifter till energistatistik
@@ -312,9 +312,9 @@ Antal byten föregående månad
 
 Volym i MWh föregående m.&nad
 
-Antal byten motsvarande månad föregående år
+Antal byten motsvarande månad före­ gående år
 
-Volym i MWh motsvarande månad föregående år
+Volym i MWh motsvarande månad före­ gående år
 
 Hushlll ö vrig a
 
@@ -4454,7 +4454,7 @@ Stationsnamn:
 
 Kommun:
 
-Sammanlagd generatoreffekt:
+Sammanlagd gener generat ator oref efffekt ekt:
 
 Antal aggregat
 
@@ -4490,7 +4490,7 @@ MWh
 
 MWh 1)
 
-Mottryck
+Mottr ttry yck
 
 Kondens
 
@@ -4664,7 +4664,7 @@ Därav från:
 
 Värmeförluster fram till leveranspunkten =
 
-••.•••.•••.•••.•••.•••.•••.•••.•••.•••.•••.•••.•••.••.•.••.•.••.•.••.•.••.•.••.•.••.•.••.•.••.• Totala värmeleveranser (rad 6+7-10) kulvertförluster m.m.3)
+••.•••.•••.•••.•••.•••.•••.•••.•••.•••.•••.•••.•••.••..•.••..•.••.•.••..•.••..•.••..•.••.•.••..•.••..• Totala värmeleveranser (rad 6+7-10) kulvertförluster m.m.3)
 
 P
 
@@ -4692,9 +4692,9 @@ Värmeverksdrift (exkl. elpannor och värmepumpar)
 
 Elpannedrift
 
-Värde, nät- och elpris,
+Värde, nät- oc och h elpri elpri pris s,
 
-1000 kr -- -- --- -- -- -- -- -- -- -- -- -- -- \_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-1\_4-\_~==-1~=====,------' Värmepumpsdrift
+1000 kr kr -- -- -- -- -- -- -- -- -- -- -- -- -- -- \_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-\_-1\_4-\_~==-1~=====,------' Värmepumpsdrift
 
 Summa elförbrukning och värde (rad 12–14)
 
@@ -4864,9 +4864,7 @@ Värmepumpsdrift
 
 Summa elförbrukning och värde (rad 12–14)
 
-Värde, nät- och elpris,
-
-1000s,kr1000 kr elpri
+Värde, nät- oc och h elpri elpri pris s, elpri el pris pri s,k1000 r kr
 
 Förbrukning av bränsle för produktion av värme
 
@@ -5546,7 +5544,9 @@ MWh
 
 Kr/KWh
 
-Inköpt el (O BS! Nätavgiften redovisas på rad 3)
+Inköpt el (O
+
+O BS! Nätavgiften redovisas på rad 3)
 
 - för reservkraft och täckande av nätförluster
 
@@ -6318,15 +6318,15 @@ STEMFS
 
 Rökgaskondens
 
-I
-
-..... ·.·.·•··•····· · · ··•····· · · ··•··•·· · · · ·•··k\_l
-
 Elpanna
 
 Värmepump
 
 Summa (rad 1–5)
+
+I
+
+..... ·.·.·•··•······· · ···•······· · ···•··•··· · · ··•···k\_l
 
 I
 

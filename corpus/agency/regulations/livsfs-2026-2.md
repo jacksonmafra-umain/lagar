@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/49e8c8/globalassets/om-oss/lagstiftning/alkoholhaltiga-drycker/livsfs-2026-2-tillg.pdf"
 source_sha256: "eed4feb5d9965c117491319374698302e060316eace981c49e4756ecfdf2527e"
-fetched_at: "2026-10-30T15:14:33Z"
+fetched_at: "2026-10-31T05:04:28Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om vinprodukter
@@ -48,13 +48,15 @@ Tillämpningsområde
 
 - Europaparlamentets och rådets förordning (EU) nr 1308/2013 av den 17 december 2013 om upprättande av en samlad marknadsordning för jordbruksprodukter och om upphävande av rådets för­ordningar (EEG) nr 922/72, (EEG) nr 234/79, (EG) nr 1037/2001 och (EG) nr 1234/2007,
 
-- kommissionens genomförandeförordning (EU) 2018/274 av den 11 december 2017 om regler för tillämpningen av Europaparlamentets och rådets förordning (EU) nr 1308/2013 vad gäller ordningen för tillstånd för plantering av vinstockar, certifiering, register över mottagna och avsända leveranser, obligatoriska deklarationer och anmälningar, och av Europaparlamentets och rådets förordning (EU) nr 1306/2013 vad gäller relevanta kontroller, och om upp­hävande av kommissionens genomförandeförordning (EU) 2015/561,
+- kommissionens genomförandeförordning (EU) 2018/274 av den 11 december 2017 om regler för tillämpningen av Europaparlamentets och rådets förordning (EU) nr 1308/2013 vad gäller ordningen för till­ stånd för plantering av vinstockar, certifiering, register över mottagna och avsända leveranser, obligatoriska deklarationer och an­ mälningar, och av Europaparlamentets och rådets förordning (EU) nr 1306/2013 vad gäller relevanta kontroller, och om upp­hävande av kommissionens genomförandeförordning (EU) 2015/561,
 
-- kommissionens delegerade förordning (EU) 2019/33 av den 17 oktober 2018 om komplettering av Europaparlamentets och rådets förordning (EU) nr 1308/2013 vad gäller ansökningar om skydd av ursprungsbeteckningar, geografiska beteckningar och traditionella uttryck inom vinsektorn, invändningsförfarandet, begränsningar i fråga om användning, ändringar av produktspecifikationer, avregistrering av skydd samt märkning och presentation, och
+- kommissionens delegerade förordning (EU) 2019/33 av den 17 oktober 2018 om komplettering av Europaparlamentets och rådets förordning (EU) nr 1308/2013 vad gäller ansökningar om skydd av ursprungsbeteckningar, geografiska beteckningar och traditionella ut­ tryck inom vinsektorn, invändningsförfarandet, begränsningar i fråga om användning, ändringar av produktspecifikationer, avregistrering av skydd samt märkning och presentation, och
 
 Se Europaparlamentets och rådets direktiv (EU) 2015/1535 av den 9 september 2015 om ett informationsförfarande beträffande tekniska föreskrifter och beträffande föreskrifter för informationssamhällets tjänster.
 
-- kommissionens delegerade förordning (EU) 2019/934 av den 12 mars 2019 om komplettering av Europaparlamentets och rådets förordning (EU) nr 1308/2013 vad gäller vinodlingsområden där alkoholhalten får höjas, tillåtna oenologiska metoder och restriktioner som är tillämpliga på framställning och bevarande av vinprodukter, lägsta alkoholhalt för biprodukter och bortskaffande av dessa samt offentliggörande av OIV-akter. De uttryck som används i dessa föreskrifter har samma betydelse som i ovan nämnda EU-förordningar.
+- kommissionens delegerade förordning (EU) 2019/934 av den 12 mars 2019 om komplettering av Europaparlamentets och rådets för­ ordning (EU) nr 1308/2013 vad gäller vinodlingsområden där alkohol­ halten får höjas, tillåtna oenologiska metoder och restriktioner som är tillämpliga på framställning och bevarande av vinprodukter, lägsta al­ koholhalt för biprodukter och bortskaffande av dessa samt offentliggö­ rande av OIV-akter.
+
+De uttryck som används i dessa föreskrifter har samma betydelse som i ovan nämnda EU-förordningar.
 
 Höjning av den naturliga alkoholhalten
 
@@ -78,7 +80,7 @@ Med ett vinår avses i enlighet med artikel 6 d i Europaparlamentets och rådets
 
 Årgång och druvsort
 
-**4 §** En livsmedelsföretagare får, efter godkännande av Livsmedelsverket, ange årgång och druvsort vid märkning och presentation av följande vinprodukter utan skyddad geografisk beteckning eller skyddad ursprungsbeteckning:
+**4 §** En livsmedelsföretagare får, efter godkännande av Livsmedels­ verket, ange årgång och druvsort vid märkning och presentation av följande vinprodukter utan skyddad geografisk beteckning eller skyddad ursprungsbeteckning:
 
 - vin,
 
@@ -122,7 +124,7 @@ Livsmedelsföretagaren ska på begäran även lämna de kompletterande uppgifter
 
 Druvsortsvin
 
-**7 §** En livsmedelsföretagare får, efter godkännande av Livsmedelsverket, ange uttrycket druvsortsvin åtföljt av Sverige eller namn på druvsorten eller båda vid märkning och presentation av följande vinprodukter utan skyddad geografisk beteckning eller skyddad ursprungsbeteckning:
+**7 §** En livsmedelsföretagare får, efter godkännande av Livsmedels­ verket, ange uttrycket druvsortsvin åtföljt av Sverige eller namn på druvsorten eller båda vid märkning och presentation av följande vinprodukter utan skyddad geografisk beteckning eller skyddad ursprungsbeteckning:
 
 - vin,
 
@@ -150,7 +152,9 @@ Druvsortsvin
 
 2\. livsmedelsföretagarens organisationsnummer, personnummer eller samordningsnummer eller, om sådana uppgifter saknas för den som är etablerad i ett annat land inom Europeiska ekonomiska samarbetsområdet (EES), motsvarande identifieringsuppgifter, och
 
-3\. uppgifter som styrker att det finns rutiner som säkerställer att vinprodukterna kan märkas korrekt med druvsorter. Livsmedelsföretagaren ska på begäran även lämna de kompletterande uppgifter som behövs för handläggningen av ansökan.
+3\. uppgifter som styrker att det finns rutiner som säkerställer att vin­ produkterna kan märkas korrekt med druvsorter.
+
+Livsmedelsföretagaren ska på begäran även lämna de kompletterande uppgifter som behövs för handläggningen av ansökan.
 
 **9 §** Ett godkännande som har meddelats enligt 7 § får återkallas av Livsmedelsverket om förutsättningarna för godkännandet inte längre är uppfyllda.
 
