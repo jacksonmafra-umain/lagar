@@ -1170,14 +1170,6 @@
       "status": "blocked",
       "note": "www.karlskrona.se answers every request, robots.txt included, with an HTTP 403 \"Åtkomst nekad\" bot-check page (checked 2026-10-30); not bypassed."
     },
-    "1256": {
-      "status": "no_adapter",
-      "note": "Östra Göinge's page \"Styrande dokument och kommunala författningar\" is a search filled in by the browser; the static HTML lists no documents (the KFS PDFs live under /wp-content/uploads/). Needs an adapter for its search (checked 2026-10-30)."
-    },
-    "1267": {
-      "status": "no_adapter",
-      "note": "Höör's \"Styrande dokument\" page is a search and filter form filled in by the browser; the static HTML lists no documents. Needs an adapter for its search (checked 2026-10-30)."
-    },
     "1275": {
       "status": "robots",
       "note": "Perstorp's \"Kommunal författningssamling\" page keeps its document list in a minimised layout that opens only through ?sv.state=normal, which robots.txt disallows (Disallow: /*?sv.state=*); the site has no sitemap. Not bypassed (checked 2026-10-31)."

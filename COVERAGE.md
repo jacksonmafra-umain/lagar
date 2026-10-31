@@ -393,8 +393,9 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     API (`json_list` with `follow_items`). Vellinge publishes its lokala
     ordningsföreskrifter and hälsoskyddsföreskrifter as web pages, collected as
     page text (`html_pages` over its gzipped sitemap).
-  - Not collected in Skåne, with the reason per kommun in `AGENCIES.md`: Östra
-    Göinge and Höör (Ciceron meeting portals). Their issues stay open.
+  - Östra Göinge and Höör publish their rules only in Ciceron meeting portals
+    (`sok-og.unikom.se`, `sok-hr.unikom.se`); their "Styrande dokument" are read
+    through the portal's JSON-RPC search (`ciceron`).
   - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
     the PDFs are never fetched; the documents point at the listing page and are
     recorded as gaps in the manifest.
