@@ -1170,10 +1170,6 @@
     "series:KBMFS": 666
   },
   "kommuner": {
-    "0580": {
-      "status": "no_adapter",
-      "note": "Linköping links its rules to Google Drive share pages instead of files on its own site; not collected pending an owner decision on that host."
-    },
     "0683": {
       "status": "no_adapter",
       "note": "Värnamo's documents are served by evodokweb2.varnamo.se (/api/download/<uuid>/<uuid>), which answered 504 and whose robots.txt was unreachable on 2026-10-30; retried on 2026-10-31, still no answer (robots.txt times out)."
