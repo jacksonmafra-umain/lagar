@@ -154,8 +154,8 @@
     "finansinspektionens-forfattningssamling-fffs": {
       "series": "FFFS",
       "agency": "Finansinspektionen",
-      "status": "collected_pdf",
-      "note": "Register pages give metadata and FI's summary; the text is published only as PDF."
+      "status": "collected",
+      "note": "Register pages give metadata and FI's summary; the text is published only as PDF and read from it."
     },
     "domstolsverkets-forfattningssamling-dvfs": {
       "series": "DVFS",
@@ -298,8 +298,8 @@
     "transportstyrelsens-forfattningssamling-tsfs": {
       "series": "TSFS",
       "agency": "Transportstyrelsen",
-      "status": "collected_pdf",
-      "note": "Year listings and detail pages give metadata; the text is published only as PDF. Predecessor series on the same index (LFS, JvSFS and others) are not collected."
+      "status": "collected",
+      "note": "Year listings and detail pages give metadata; the text is published only as PDF and read from it. Predecessor series on the same index (LFS, JvSFS and others) are not collected."
     },
     "universitets-och-hogskoleradets-forfattningssamling-uhrfs": {
       "series": "UHRFS",
