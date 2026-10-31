@@ -4171,7 +4171,7 @@
       "code": "MMOD",
       "court": "Mark- och miljööverdomstolen",
       "status": "collected",
-      "documents": 730,
+      "documents": 739,
       "note": null,
       "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MMOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
       "issue": null
@@ -4334,7 +4334,7 @@
     "sfs": 11428,
     "fundamental": 4,
     "eu": 675,
-    "case_law": 16466
+    "case_law": 16475
   },
   "other_sources": [
     {

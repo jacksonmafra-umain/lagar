@@ -13,7 +13,7 @@ Which Swedish legal sources the corpus processes and which it does not, with the
 | not collected: blocked by a WAF | 5 |
 | not collected: API key needed | 1 |
 
-Other layers in the corpus: 4 fundamental laws, 11428 SFS statutes, 16466 case-law documents, 675 EU documents (a curated list, from the Publications Office Cellar).
+Other layers in the corpus: 4 fundamental laws, 11428 SFS statutes, 16475 case-law documents, 675 EU documents (a curated list, from the Publications Office Cellar).
 
 ## Agency regulation series
 
@@ -456,7 +456,7 @@ Every court in Sveriges Domstolar's rättspraxis API. Referat and notiser are co
 | REGR | [Regeringsrätten](https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522REGR%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522) | collected | 1726 | - | - |
 | HSV | [Svea hovrätt](https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HSV%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522) | collected | 1388 | - | - |
 | HFD | [Högsta förvaltningsdomstolen](https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HFD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522) | collected | 1231 | - | - |
-| MMOD | [Mark- och miljööverdomstolen](https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MMOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522) | collected | 730 | - | - |
+| MMOD | [Mark- och miljööverdomstolen](https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MMOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522) | collected | 739 | - | - |
 | MOD | [Miljööverdomstolen](https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522) | collected | 709 | - | - |
 | HVS | [Hovrätten för Västra Sverige](https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HVS%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522) | collected | 627 | - | - |
 | MIOD | [Migrationsöverdomstolen](https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MIOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522) | collected | 534 | - | - |

@@ -269,7 +269,7 @@
 <text x="16" y="2435" fill="#7a2e4d">Case law</text>
 <rect x="240" y="2424" width="260" height="16" rx="8" fill="#7a2e4d" fill-opacity="0.18"/>
 <rect x="240" y="2424" width="257" height="16" rx="8" fill="#7a2e4d"/>
-<text x="704" y="2435" text-anchor="end" fill="#7a2e4d">16466 / 16640 (99.0%)</text>
+<text x="704" y="2435" text-anchor="end" fill="#7a2e4d">16475 / 16640 (99.0%)</text>
 <text x="16" y="2471" fill="#005b99">SÖ treaties</text>
 <rect x="240" y="2460" width="260" height="16" rx="8" fill="#005b99" fill-opacity="0.18"/>
 <rect x="240" y="2460" width="260" height="16" rx="8" fill="#005b99"/>
@@ -287,7 +287,7 @@
 <text x="704" y="2579" text-anchor="end" fill="#28772d">11649 / unknown (-)</text>
 <text x="16" y="2615" fill="#8b2e1f">Municipal regulations</text>
 <rect x="240" y="2604" width="260" height="16" rx="8" fill="#8b2e1f" fill-opacity="0.18"/>
-<text x="704" y="2615" text-anchor="end" fill="#8b2e1f">5547 / unknown (-)</text>
+<text x="704" y="2615" text-anchor="end" fill="#8b2e1f">5541 / unknown (-)</text>
 <text x="16" y="2651" fill="#8c6300">Public services</text>
 <rect x="240" y="2640" width="260" height="16" rx="8" fill="#e0a100" fill-opacity="0.18"/>
 <text x="704" y="2651" text-anchor="end" fill="#8c6300">0 / unknown (-)</text>
