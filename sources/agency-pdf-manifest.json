@@ -8412,62 +8412,6 @@
       ]
     },
     {
-      "number": "FFS 2023:2",
-      "detail_url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-02.pdf",
-      "files": [
-        {
-          "label": "FFS 2023:2",
-          "url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-02.pdf",
-          "bytes": 145871,
-          "sha256": "1facc642d1b630c33cdeeb4c3bbbe404aecd288e5061409b499f7fa3e980a391",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T20:53:19Z"
-        }
-      ]
-    },
-    {
-      "number": "FFS 2023:3",
-      "detail_url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-03.pdf",
-      "files": [
-        {
-          "label": "FFS 2023:3",
-          "url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-03.pdf",
-          "bytes": 125599,
-          "sha256": "2cd1a38ca54beec49216dad2c2d9996646668af9b5a8f70771481e4ff1e6f01c",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T20:53:19Z"
-        }
-      ]
-    },
-    {
-      "number": "FFS 2023:4",
-      "detail_url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-04.pdf",
-      "files": [
-        {
-          "label": "FFS 2023:4",
-          "url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-04.pdf",
-          "bytes": 137390,
-          "sha256": "beffc4bbbc823b946931bff237725970f2ae69062a0e1a733606e6d928fe59ca",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T20:53:20Z"
-        }
-      ]
-    },
-    {
-      "number": "FFS 2023:5",
-      "detail_url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-05.pdf",
-      "files": [
-        {
-          "label": "FFS 2023:5",
-          "url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-05.pdf",
-          "bytes": 144151,
-          "sha256": "fb2bc6ea8aea57435cd8efacb8e994982dfd58a8c4a0a84faadbee72295c5c7f",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T20:53:22Z"
-        }
-      ]
-    },
-    {
       "number": "FFS 2023:6",
       "detail_url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-06.pdf",
       "files": [
@@ -8478,48 +8422,6 @@
           "sha256": "e0a6345204ce08a5be49eaba4c0de5fc45f1f3e68a411572cbe573f6bdee631d",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T20:53:22Z"
-        }
-      ]
-    },
-    {
-      "number": "FFS 2023:7",
-      "detail_url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-07.pdf",
-      "files": [
-        {
-          "label": "FFS 2023:7",
-          "url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-07.pdf",
-          "bytes": 138396,
-          "sha256": "26de26714473c41b6c392765a0f5fb3814ba930d4ae1a7932d8cab7b976a910e",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T20:53:23Z"
-        }
-      ]
-    },
-    {
-      "number": "FFS 2023:8",
-      "detail_url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-08.pdf",
-      "files": [
-        {
-          "label": "FFS 2023:8",
-          "url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-08.pdf",
-          "bytes": 151036,
-          "sha256": "bf372f56351654bd00c349b91f96f8f2dbf33099fe3dcb21107be0f2ad0984dc",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T20:53:24Z"
-        }
-      ]
-    },
-    {
-      "number": "FFS 2023:9",
-      "detail_url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-09.pdf",
-      "files": [
-        {
-          "label": "FFS 2023:9",
-          "url": "https://www.forsvarsmakten.se/globalassets/02-om-forsvarsmakten/myndighetsinformation/dokument/lagrum/gallande-ffs-2014-/ffs-2023-09.pdf",
-          "bytes": 140160,
-          "sha256": "870f806665416b48665d674576df7e2b362a0576425eb7d74d937f8aeebed175",
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T20:53:25Z"
         }
       ]
     },
