@@ -76,8 +76,6 @@ import app.lagar.ui.common.typeNameRes
 import app.lagar.ui.reader.LegalMarkdown
 import app.lagar.ui.reader.MetadataHeader
 import app.lagar.ui.reader.ReaderViewModel
-import app.lagar.ui.reader.StatuteContainer
-import app.lagar.ui.reader.isStatuteBlock
 import app.lagar.ui.reader.splitParagraphs
 import app.lagar.ui.reader.splitSections
 import app.lagar.ui.reader.withoutTitle
@@ -230,11 +228,6 @@ private fun DocumentPreview(
                         splitParagraphs(if (first) withoutTitle(section) else section).also { first = false }
                     }.filter { it.isNotBlank() }
                 }
-                val key = if (document.meta.repealed != null) {
-                    LayerKey.Repealed
-                } else {
-                    DisplayLayer.fromRoute(document.meta.layer, document.meta.type)?.key ?: LayerKey.SfsAct
-                }
                 Column(Modifier.padding(spacing.lg), verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
                     Row(verticalAlignment = Alignment.Top, horizontalArrangement = Arrangement.spacedBy(spacing.sm)) {
                         MetadataHeader(document.meta, Modifier.weight(1f))
@@ -244,9 +237,7 @@ private fun DocumentPreview(
                     }
                     SelectionContainer {
                         Column(verticalArrangement = Arrangement.spacedBy(spacing.sm)) {
-                            blocks.take(PREVIEW_BLOCKS).forEach { block ->
-                                if (isStatuteBlock(block)) StatuteContainer(key) { LegalMarkdown(block.trimEnd()) } else LegalMarkdown(block.trimEnd())
-                            }
+                            blocks.take(PREVIEW_BLOCKS).forEach { block -> LegalMarkdown(block.trimEnd()) }
                         }
                     }
                     if (blocks.size > PREVIEW_BLOCKS) {

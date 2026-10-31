@@ -16,6 +16,7 @@ import app.lagar.data.SearchService
 import app.lagar.domain.SearchQuery
 import app.lagar.settings.BookmarkStore
 import app.lagar.settings.NoteStore
+import app.lagar.settings.ReadingPreferences
 import app.lagar.settings.UserPreferences
 import app.lagar.ui.hierarki.HierarkiViewModel
 import app.lagar.ui.hierarki.MinistriesViewModel
@@ -55,6 +56,7 @@ fun appModule(config: DataSourceConfig) = module {
     single<LocalityRepository> { get<ApiSource>() }
     single { Settings() }
     single { UserPreferences(get()) }
+    single { ReadingPreferences(get()) }
     single { BookmarkStore(get()) }
     single { NoteStore(get()) }
     single { GeoRepository() }
