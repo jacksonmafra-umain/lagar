@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://arjeplog.se/wp-content/uploads/se/2024/11/vajningsplikt-pa-drottninggatan.pdf"
 source_sha256: "06831253cd14a314134fc5f1be6919eaf966a608217469bc9da1e8a1bd3770b9"
-fetched_at: "2026-10-30T00:49:54Z"
+fetched_at: "2026-10-31T22:53:23Z"
 issuer: "Arjeplogs kommun"
 region_code: "25"
 municipality_code: "2506"
@@ -31,6 +31,26 @@ Förteckning: <https://arjeplog.se/kommun-och-politik/regler-och-styrande-dokume
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Väjningsplikt på Drottninggatan](<https://arjeplog.se/wp-content/uploads/se/2024/11/vajningsplikt-pa-drottninggatan.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+2506 2022:14
+
+Arjeplogs kommuns lokala trafikföreskrifter om väjningsplikt på
+
+Drottninggatan; beslutade den 22 februari 2022.
+
+Arjeplogs kommun föreskriver följande med stöd av 10 kap. 1 § andra stycket 12 och 3 § första stycket trafikförordningen (1998:1276).
+
+Förare av fordon i östlig riktning på Drottninggatan har väjningsplikt mot fordon som kommer norrifrån från Centralgatan och Drottninggatan.
+
+Denna författning träder i kraft den 1 juni 2022.
+
+På Arjeplogs kommuns vägnar.
+
+Christian Claesson

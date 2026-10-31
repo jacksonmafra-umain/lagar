@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.kalix.se/globalassets/politik-och-styrning/omradesovergripande-dokument/taxor-och-avgifter/automatspel.pdf"
 source_sha256: "d4be2ddd2778047be375a2d7e34428249ebedd6a8479ae25d588f9daf6d7fe7c"
-fetched_at: "2026-10-30T13:26:46Z"
+fetched_at: "2026-10-31T23:02:17Z"
 issuer: "Kalix kommun"
 region_code: "25"
 municipality_code: "2514"
@@ -31,6 +31,18 @@ Förteckning: <https://www.kalix.se/kommun/Forfattningssamling/Avgifter-och-taxo
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Avgift ansökan om automatspel](<https://www.kalix.se/globalassets/politik-och-styrning/omradesovergripande-dokument/taxor-och-avgifter/automatspel.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Automatspel
+
+E:62
+
+Avgift få tas ut för prövning av ansökan om tillstånd enligt Lagen (1982:636) om anordnande av visst automatspel. Avgiften fastställs till 1 000 kr per ansökan. Antaget av kommunfullmäktige 1997.06-17, § 62
+
+W:\DATA\KS\Författningssamling\Taxor\Automatspel.doc

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://arjeplog.se/wp-content/uploads/se/2024/11/tatbebyggt-omrade.pdf"
 source_sha256: "c66ce5e4bc2bf0ce5c083d4c003459eaa0b50c34e8ba0f87036ac6011f719f11"
-fetched_at: "2026-10-30T00:49:52Z"
+fetched_at: "2026-10-31T22:52:50Z"
 issuer: "Arjeplogs kommun"
 region_code: "25"
 municipality_code: "2506"
@@ -34,3 +34,5 @@ Förteckning: <https://arjeplog.se/kommun-och-politik/regler-och-styrande-dokume
 Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
 
 - [Tätbebyggt område](<https://arjeplog.se/wp-content/uploads/se/2024/11/tatbebyggt-omrade.pdf>)
+
+Pdf:en är inskannad och innehåller ingen text som kan läsas maskinellt.
