@@ -735,7 +735,9 @@ python3 -I collector/collect.py municipal --kommun 0120 --dry-run
   that kommun (exit code 2); the other kommuner still run.
 - The weekly `Sync municipal regulations` workflow (`.github/workflows/sync-municipal.yml`) runs
   `municipal --kommun <code>` for every kommun in the config, one at a time so that one kommun's
-  failure does not stop the others, and opens one pull request on `data/municipal-sync` with the
+  failure does not stop the others. A kommun that fails or is blocked (a timeout, a changed page)
+  is listed in the run summary and the commit message and does not hold back what the others
+  collected. The workflow opens one pull request on `data/municipal-sync` with the
   corpus, the manifest and the regenerated reports. The state is not committed; the manifest keeps
   the weekly run from downloading PDFs it already has. Run it by hand with
   `gh workflow run sync-municipal.yml [-f kommun="0114 0115"]`. A kommun added to the config joins
