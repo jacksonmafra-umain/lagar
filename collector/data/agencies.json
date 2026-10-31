@@ -209,7 +209,7 @@
       "series": "MCFFS",
       "agency": "Myndigheten för civilt försvar",
       "status": "collected",
-      "note": "MCF lists the MCFFS regulations in force with a page per regulation and a link to its PDF; the text is read from the PDF (consolidated version where published). Regulations in force from the predecessor series (MSBFS and older) are listed on the same page but not collected."
+      "note": "MCF lists the MCFFS regulations in force with a page per regulation and a link to its PDF; the text is read from the PDF (consolidated version where published). Regulations in force from the predecessor series on the same list (MSBFS, SRVFS, SÄIFS, KBMFS) are collected as series of their own."
     },
     "myndigheten-for-tillvaxtpolitiska-utvarderingar-och-analysers-forfattningssamling-mtfs": {
       "series": "MTFS",
@@ -1164,7 +1164,10 @@
     "series:FIFS": 682,
     "series:LMVFS": 683,
     "series:JvSFS": 671,
-    "series:VVFS": 671
+    "series:VVFS": 671,
+    "series:SRVFS": 666,
+    "series:SÄIFS": 666,
+    "series:KBMFS": 666
   },
   "kommuner": {
     "0580": {

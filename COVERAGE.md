@@ -164,7 +164,7 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   (21), MCFFS (11), AFFS (9), MDFFS (6), AGVFS (5), ELSÄK-FS (3), KIFS (3) and
   IAFFS (3). AFFS and MDFFS publish the full text as HTML and have it; the
   others publish the text only as PDF. Predecessor series listed on the same
-  pages (RFFS, MSBFS, FIFS, AMSFS) are not collected. Bolagsverket (BOLFS)
+  pages (RFFS, FIFS, AMSFS) are not collected. Bolagsverket (BOLFS)
   answers with a bot check and Konkurrensverket (KKVFS) with 403 Forbidden;
   neither is bypassed, both are gaps.
   Since 2026-10-30 the text of these series comes from their PDFs through
@@ -322,6 +322,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   scan without a text layer) and SLVFS (2 in force, 1995-2001). LIVSFS is now
   read from 2002, its first year (4 more regulations). DIFS has nothing in
   force: IMY lists only regulations repealing DIFS ones.
+- MSBFS (Myndigheten för samhällsskydd och beredskap, 44), SRVFS (Statens
+  räddningsverk, 15), SÄIFS (Sprängämnesinspektionen, 7) and KBMFS
+  (Krisberedskapsmyndigheten, 1), the predecessors' series still in force on
+  Myndigheten för civilt försvar's list, as of 2026-10-31, in full text from
+  the PDFs. The pages of MSBFS 2011:4 and SRVFS 2006:6 link no PDF, so those
+  two hold metadata only. Repealed regulations are on a separate page and not
+  collected.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - SJVFS (Statens jordbruksverk) is a gap: its regulations are PDFs on
