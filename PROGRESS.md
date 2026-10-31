@@ -86,6 +86,8 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | SRVFS (Räddningsverket) | 15 | 15 | counted | 100.0% |
 | agency | SÄIFS (SÄI) | 7 | 7 | counted | 100.0% |
 | agency | KBMFS (KBM) | 1 | 1 | counted | 100.0% |
+| agency | AMSFS (AMS) | 1 | 1 | counted | 100.0% |
+| agency | RA-MS (Riksarkivet) | 1270 | 1270 | counted | 100.0% |
 | case_law | Case law | 16475 | 16640 | counted | 99.0% |
 | sfs | SÖ treaties | 3515 | 3515 | counted | 100.0% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
@@ -179,6 +181,8 @@ Targets:
 - SRVFS (Räddningsverket): counted, https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed), as of 2026-10-31
 - SÄIFS (SÄI): counted, https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed), as of 2026-10-31
 - KBMFS (KBM): counted, https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed), as of 2026-10-31
+- AMSFS (AMS): counted, https://arbetsformedlingen.se/om-oss/var-verksamhet/styrning-och-resultat/forfattningssamling-AFFS (base regulations listed), as of 2026-10-31
+- RA-MS (Riksarkivet): counted, https://foreskrifter.riksarkivet.se/api/rams/sok?nummer=&rubrik=&fulltext=&sokBlandGiltiga=true&sokBlandUpphavda=true&ramsSort=1 (base regulations listed), as of 2026-10-31
 - Case law: counted, https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar?publiceringsformer=referat,notis, as of 2026-10-29
 - SÖ treaties: counted, regeringen.se sitemap: distinct SÖ numbers on pages under /rattsliga-dokument/sveriges-internationella-overenskommelser/, as of 2026-10-30
 - EU law (curated list): curated, collector/data/eu-acts.json, as of 2026-10-29
@@ -186,10 +190,10 @@ Targets:
 
 ## Integrity
 
-Audit of 53522 documents (2026-10-31T11:00:42Z):
+Audit of 54793 documents (2026-10-31T11:51:58Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
 - text-quality flags: 888
-- cross-references not in the corpus: 39612 of 39673 (informational, the corpus is partial)
+- cross-references not in the corpus: 39935 of 39996 (informational, the corpus is partial)
