@@ -31,16 +31,17 @@ import org.intellij.markdown.MarkdownElementTypes
 import org.intellij.markdown.ast.findChildOfType
 import org.intellij.markdown.ast.getTextInNode
 
-/** Longest line the reader allows, in characters; DESIGN.md asks for 60-75ch. */
-private const val MAX_LINE_CHARS = 70
-
 /** Average glyph width of the legal serif, as a fraction of the font size. */
 private const val AVERAGE_CHAR_EM = 0.5f
 
-/** Centers content and caps it at about [MAX_LINE_CHARS] characters of legal text; the cap scales with the font. */
+/**
+ * Centers content and caps it at the reading measure ([LocalReadingMeasure], 70 characters unless the reader's width
+ * setting changes it); the cap scales with the font.
+ */
 @Composable
 internal fun Modifier.readingColumn(): Modifier {
-    val max = with(LocalDensity.current) { (LagarTheme.type.bodyLegalMd.fontSize * (MAX_LINE_CHARS * AVERAGE_CHAR_EM)).toDp() }
+    val chars = LocalReadingMeasure.current
+    val max = with(LocalDensity.current) { (LagarTheme.type.bodyLegalMd.fontSize * (chars * AVERAGE_CHAR_EM)).toDp() }
     return fillMaxWidth().widthIn(max = max)
 }
 
