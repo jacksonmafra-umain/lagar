@@ -141,6 +141,7 @@ Item object:
 | `ministry` | string | yes | issuing ministry or body; same value as `meta.ministry` |
 | `region_code` | string | yes | county code (`01`–`25`); same value as `meta.region_code`. Set for `county_regulation` and usually for `municipal_regulation`, `null` elsewhere |
 | `municipality_code` | string | yes | four-digit kommun code; same value as `meta.municipality_code`. Set for `municipal_regulation`, `null` elsewhere |
+| `text_source` | string | yes | `ocr` when the body text was read from a scanned PDF by optical character recognition: it may hold misread characters, and the PDF (`source` or the linked documents) stays the authoritative text. `null` for text taken from a text layer, an HTML page or an API |
 
 Keys appear in the order above. `in_force`, `amended_through`, `ministry`,
 `region_code` and `municipality_code` were added within v1: they are always
@@ -302,7 +303,7 @@ it are optional in the frontmatter, and the API then serves them as `null`.
 | `region_code` | string | yes | county code, `01`–`25` as used by SCB (`01` Stockholm … `25` Norrbotten). Required for `county_regulation` and equal to its series prefix; allowed for `municipal_regulation`; `null` elsewhere |
 | `municipality_code` | string | yes | four-digit SCB kommun code, e.g. `0180` Stockholm; starts with `region_code` when both are set. Required for `municipal_regulation`, `null` elsewhere |
 
-The last six fields were added within v1, after `amendments`, without a
+The last seven fields were added within v1, after `amendments`, without a
 version bump: every document carries them, as `null` where they do not apply.
 
 ### Amendment object

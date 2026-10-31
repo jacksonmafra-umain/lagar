@@ -13,7 +13,7 @@ BUILT_AT = "2026-10-27T10:30:00Z"
 sys.path.insert(0, str(ROOT / "collector"))
 from lagar import frontmatter, schema  # noqa: E402
 
-NEW_FIELDS = ("issuer", "court", "ecli", "celex", "region_code", "municipality_code")
+NEW_FIELDS = ("issuer", "court", "ecli", "celex", "region_code", "municipality_code", "text_source")
 
 
 def run_build(out, corpus=CORPUS, built_at=BUILT_AT):
