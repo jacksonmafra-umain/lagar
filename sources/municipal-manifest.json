@@ -22305,6 +22305,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:52Z",
       "sha256": "91c59489255ae9c85400075b6afe5b0fe0a2c30c870417d54ac8424e6302479c",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.150b299d19b355c6fee31138/1769440117851/Taxa%20f%C3%B6r%20omr%C3%A5den%20inom%20Milj%C3%B6balken,%20Livsmedelslagen,%20alkohollagen,%20Str%C3%A5lskyddslagen,%20Tobakslagen%20och%20Lagen%20om%20receptfria%20l%C3%A4kemedel%202026.pdf"
     },
     {
@@ -22314,6 +22315,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:52Z",
       "sha256": "851e5d57c01e9e33a45e4f0438408ea95a841f91d716eec0a20794bf01fcf69b",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.251c2d9418c8adae8321f4b3/1705517703761/Taxa%20f%C3%B6r%20utl%C3%A4mnande%20av%20allm%C3%A4nna%20handlingar.pdf"
     },
     {
@@ -22323,6 +22325,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:53Z",
       "sha256": "eb86ef76be95a0c8cc222023783bb48e9175f721b10271dc17fa378d552c157e",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.32d2f8e4187df94b81e296/1683098926432/Felparkeringsavgift.pdf"
     },
     {
@@ -22332,6 +22335,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:50Z",
       "sha256": "221774cd7c11f06466ac4286a61a2787dd5938c72de9d777d55c0e72f3c6419e",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.41f03f8719bc63cb19ae8/1768560387915/VA%20taxa%202026%20f%C3%B6r%20Hylte%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning(317402)%20(0)_TMP.pdf"
     },
     {
@@ -22341,6 +22345,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:55Z",
       "sha256": "d711483c5ab5474805cada1177860c3009e2ec15728f0c197d7daa74e4151bc3",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.5a63330019c88eba1c911a57/1772783545082/Avgifter%20omsorgsn%C3%A4mnden%202026.pdf"
     },
     {
@@ -22350,6 +22355,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:46Z",
       "sha256": "5dd6c70d84266b3d6f42dc2009648dbdb93e5f7b8bc3cb30e11daa843586f63d",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.5a9ee1b419b3545ed4f1f8e6/1768480485318/Taxa%20f%C3%B6r%20verksamhetsmark%202026.pdf"
     },
     {
@@ -22359,6 +22365,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:46Z",
       "sha256": "52ea3c37d6a1c142d5a54ead493e799d34791e619e6aaa61c7cb6784838decd9",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.5a9ee1b419b3545ed4f1f92e/1768481081823/Taxa%20f%C3%B6r%20uppl%C3%A5telse%20av%20allm%C3%A4n%20platsmark%202026.pdf"
     },
     {
@@ -22368,6 +22375,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:47Z",
       "sha256": "b749bb5aacb2868195e6c962fe590e85a7d835edd11f69eb6e577e67d929da72",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.5a9ee1b419b3545ed4f1f92f/1768481093922/Taxa%20f%C3%B6r%20m%C3%A5ltider%20vid%20dagcentraler%20m.m.%202026.pdf"
     },
     {
@@ -22377,6 +22385,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:49Z",
       "sha256": "f7b96ba988147582e97900f73688973d00c63ce3fb18bd3527719cfeedc82c17",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.5a9ee1b419b3545ed4f1f930/1768481098310/Taxa%20f%C3%B6r%20gr%C3%A4vtillst%C3%A5nd%20och%20TA-planer%202026.pdf"
     },
     {
@@ -22386,6 +22395,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:49Z",
       "sha256": "3b59be05e175c5d3fb9c0bfa00d0f5cd66cb83c0d6a49ac5c90cbfe78f14ea4f",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.5a9ee1b419b3545ed4f1f931/1768481107264/Taxa%20f%C3%B6r%20arrenden%20och%20andra%20nyttjander%C3%A4tter%202026.pdf"
     },
     {
@@ -22395,6 +22405,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:36Z",
       "sha256": "e0e4e276df7f825e90061a867a78c34ef8792021e287d220306ff8fa83fcb3dd",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc8c/1683033170268/Lokala%20h%C3%A4lsoskyddsf%C3%B6reskrifter%20KF%20%C2%A7%2076%202020.pdf"
     },
     {
@@ -22404,6 +22415,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:37Z",
       "sha256": "7ec17181ba2b381ffe5f16775fd6708f27841de416dde2fc8326bae5c30cfe85",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc8d/1683033170321/ABVA%202012%20Hylte%20kommun.pdf"
     },
     {
@@ -22413,6 +22425,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:38Z",
       "sha256": "1a91c684634b1ad192e68b08f7b114c15dca5e9aeeffa08d9105edadfd912571",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc8e/1683033170373/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Hylte%20kommun.pdf"
     },
     {
@@ -22422,6 +22435,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:40Z",
       "sha256": "2db97ff946b069ab36701774aae2dd9defd3f096568462f1b47aa3b7549adad6",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc8f/1683033170420/F%C3%B6reskrifter%20f%C3%B6r%20vattenskyddsomr%C3%A5de%20Nyebro%20%C3%96vreg%C3%A5rds%20vattent%C3%A4kt%20inkl.%20karta.pdf"
     },
     {
@@ -22431,6 +22445,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:41Z",
       "sha256": "d7c3137f34f54c1deabda68cdf72344e137541e5991786d91f02b64caa840abe",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc90/1683033170484/F%C3%B6reskrifter%20f%C3%B6r%20vattenskyddsomr%C3%A5de%20Torups%20vattent%C3%A4kt%20inkl.%20karta.pdf"
     },
     {
@@ -22440,6 +22455,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:41Z",
       "sha256": "972772c99b24282f9b49e099f3e4b011dc4273bd2e0a39ca1fe3860c190055eb",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc91/1683033170533/F%C3%B6reskrifter%20f%C3%B6r%20vattenskyddsomr%C3%A5de%20Unnaryds%20vattent%C3%A4kt%20inkl.%20karta.pdf"
     },
     {
@@ -22449,6 +22465,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:43Z",
       "sha256": "6c427594edd8a1530841f1cbbcfb2ab70b0d980722c3440e837204a9d341acfe",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc93/1683033170622/F%C3%B6reskrifter%20om%20avfallshantering%20-%20Renh%C3%A5llningsordning%20f%C3%B6r%20Hylte%20kommun.pdf"
     },
     {
@@ -22458,6 +22475,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:43Z",
       "sha256": "a85a4c5b09c12264165b694233edd471115f077896715bf52a606c3c9776d2b8",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc94/1683033170680/F%C3%B6reskrifter%20om%20vattenskyddsomr%C3%A5de%20Bj%C3%B6rnaryds%20vattent%C3%A4kt%20inkl.%20karta.pdf"
     },
     {
@@ -22467,6 +22485,7 @@
       "municipality_code": "1315",
       "retrieved_at": "2026-10-30T15:00:44Z",
       "sha256": "59048299bebcf42c3bba280c548e84fd20ec8a7cd5b282e300cc0444a87955ff",
+      "text": "pdf",
       "url": "https://www.hylte.se/download/18.8cccb0a187da6d9bebc95/1683033170724/Hylte%20kommuns%20f%C3%B6reskrifter%20om%20reng%C3%B6ringsfrister.pdf"
     },
     {
@@ -22476,6 +22495,7 @@
       "municipality_code": "1380",
       "retrieved_at": "2026-10-30T15:10:14Z",
       "sha256": "b4dd947853028b67162e5e2fb2c05c486d8bcfc22e2e3ae6b7a1744e4109a926",
+      "text": "pdf",
       "url": "https://www.halmstad.se/download/18.35afc4c81756ed4e2d32b39/1610955211358/Alaggande-om-gangbanerenhallning.pdf"
     },
     {
@@ -22485,6 +22505,7 @@
       "municipality_code": "1380",
       "retrieved_at": "2026-10-30T15:10:15Z",
       "sha256": "91d52ed588fa8a10d39214a2c8d96abd737a43fb063c01feac0557722ce3201a",
+      "text": "pdf",
       "url": "https://www.halmstad.se/download/18.35afc4c81756ed4e2d32b3c/1610955211426/Foreskrifter-for-Alets-naturreservat.pdf"
     },
     {
@@ -22494,6 +22515,7 @@
       "municipality_code": "1380",
       "retrieved_at": "2026-10-30T15:10:16Z",
       "sha256": "f66f39a1c674bfb8d8b4fe0214205c232477dbaef814dbdcf9cccfbf69a143cb",
+      "text": "pdf",
       "url": "https://www.halmstad.se/download/18.35afc4c81756ed4e2d32b3e/1687847937276/Lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljo-2023.pdf"
     },
     {
@@ -22503,6 +22525,7 @@
       "municipality_code": "1380",
       "retrieved_at": "2026-10-30T15:10:17Z",
       "sha256": "ee38af48ce927418de62bbe6433c92052cba04e236e62c23620bfc037846732b",
+      "text": "pdf",
       "url": "https://www.halmstad.se/download/18.35afc4c81756ed4e2d32b3f/1610955211491/Lokala-Hamnforeskrifter.pdf"
     },
     {
@@ -22512,6 +22535,7 @@
       "municipality_code": "1380",
       "retrieved_at": "2026-10-30T15:10:18Z",
       "sha256": "84daadf34a7926508336f305ad511b6060bf6e988ab7a1db45b0ce72aaba610f",
+      "text": "no text found by OCR (scanned PDF)",
       "url": "https://www.halmstad.se/download/18.35afc4c81756ed4e2d32b40/1610955211518/Lokala-Hamnforeskrifter-Bilaga-kartor-inskannade.pdf"
     },
     {
@@ -22521,6 +22545,7 @@
       "municipality_code": "1380",
       "retrieved_at": "2026-10-30T15:10:20Z",
       "sha256": "ae1fa2af93a6c3d9c942ab7c5b60b44b1b0a85dcf0c00a4958501cd910f3ecd5",
+      "text": "pdf",
       "url": "https://www.halmstad.se/download/18.35afc4c81756ed4e2d32b44/1610955211626/Torghandelsforeskrifter.pdf"
     },
     {
@@ -22530,6 +22555,7 @@
       "municipality_code": "1380",
       "retrieved_at": "2026-10-30T15:10:20Z",
       "sha256": "7ef4b5d450775cca21016b7bf4bc868c353b0947384ec6d0e076ef081f1a1b21",
+      "text": "pdf",
       "url": "https://www.halmstad.se/download/18.54625899197ca9071d41afa9/1782314637752/Lokala-ordningsforeskrifter-Halmstads-kommun.pdf"
     },
     {
@@ -22539,6 +22565,7 @@
       "municipality_code": "1380",
       "retrieved_at": "2026-10-30T15:10:21Z",
       "sha256": "01b5a72a0c5acdd4aac9a63d39f13145a286ee28f8b8140143808ccb3157a269",
+      "text": "pdf",
       "url": "https://www.halmstad.se/download/18.64fd99c31946474708965051/1737463790658/riktlinje-avfallsforeskrifter-kommunfullmaktige-halmstads-kommun.pdf"
     },
     {
@@ -22548,6 +22575,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:25Z",
       "sha256": "058d1ab1d9b6f0d265da4a875441776a7f10ca12601a0057689227f5d7dc2474",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e31525b/1767180155857/LFS%202.2%20Taxa%20f%C3%B6r%20brandskyddskontroll.pdf"
     },
     {
@@ -22557,6 +22585,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:29Z",
       "sha256": "3722ddab59993f4d77fa6a4286e0588639aedf925794d84b9986e81fc60d6520",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e31528e/1695040086061/LFS%202.5%20F%C3%B6rskole-%20och%20fritidshemstaxa.pdf"
     },
     {
@@ -22566,6 +22595,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:35Z",
       "sha256": "6e70cd3af5ba465e9c8f2e0c78470fbdeb5a774221f676a778de206c6144862d",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e3152b6/1695040387441/LFS%202.10%20Taxa%20f%C3%B6r%20uppl%C3%A5telse%20av%20lokaler%20och%20utrustning%20i%20Laholms%20L%C3%A4rcentrum.pdf"
     },
     {
@@ -22575,6 +22605,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:40Z",
       "sha256": "e09b50ce59128e1c7e98d816cdaf6e24190191c54d9eb61d5607ed939fde4eac",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e3152cd/1695040517883/LFS%202.11%20Taxa%20f%C3%B6r%20uttag%20av%20parkeringsavgifter.pdf"
     },
     {
@@ -22584,6 +22615,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:46Z",
       "sha256": "95c750c7bc9019f8862778a9a042e6516441cd46ffa8640658531248b1159521",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e315301/1695040730757/LFS%202.15%20Avgift%20f%C3%B6r%20cykelparkering%20i%20cykelgarage.pdf"
     },
     {
@@ -22593,6 +22625,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:37Z",
       "sha256": "e05db76e5915729d89054acc0fe44f707e20502a49f3bf753d5a869f86820ad0",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e315414/1695041482986/LFS%202.21%20Avgifter%20f%C3%B6r%20ans%C3%B6kan%20om%20godk%C3%A4nnande%20av%20frist%C3%A5ende%20f%C3%B6rskola%20och%20frist%C3%A5ende%20friliggande%20fritidshem%20enligt%20skollagen.pdf"
     },
     {
@@ -22602,6 +22635,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:50Z",
       "sha256": "24f01ea4f63c91b0bb79d0c04d01b4deea32a81ef346d2d8957822bdfee0227c",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e315434/1695041716545/LFS%202.23%20Avgift%20f%C3%B6r%20resor%20med%20f%C3%A4rdtj%C3%A4nst.pdf"
     },
     {
@@ -22611,6 +22645,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:51Z",
       "sha256": "cc97341a70e3ae9f3490693468978aa9c3bab84ab4d9f4dccac2740623959605",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e319a44/1695108223693/LFS%202.24%20Avgifter%20f%C3%B6r%20gr%C3%A4vtillst%C3%A5nd%20och%20trafikanordningsplan.pdf"
     },
     {
@@ -22620,6 +22655,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:25Z",
       "sha256": "a51777b873fa35d4c2c7d186b3c5fc02b36bba30d8aebfa4cd5284031d082a4f",
+      "text": "no text found by OCR (scanned PDF)",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e31a418/1695113929011/lfs1-2%20Kartbilagor.pdf"
     },
     {
@@ -22629,6 +22665,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:53Z",
       "sha256": "28ce5df407422cbdca6461925ac0f534eb2674484d68dedbe6ffc2f8ea0af4fd",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.162ad65718a92ee55e31ba19/1695128598380/LFS%207.17.pdf"
     },
     {
@@ -22638,6 +22675,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:23Z",
       "sha256": "188ab640aa75816439efa7ad7e7e59494465b78c91235433357b8070355e2170",
+      "text": "ocr",
       "url": "https://laholm.se/download/18.17211e651984f52e92bfbb0/1753862789429/Bilaga%201-3%20till%20%C2%A7%2013%20allm%C3%A4nna%20lokala%20f%C3%B6reskrifter.pdf"
     },
     {
@@ -22647,6 +22685,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:34Z",
       "sha256": "2af06a248db3f92899d196fe3d86efc969fbc7fdc2932b44c9a58c622265a73f",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb8338c/1767180047614/LFS%202.1%20Avgift%20f%C3%B6r%20anv%C3%A4ndning%20av%20offentlig%20plats.pdf"
     },
     {
@@ -22656,6 +22695,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:26Z",
       "sha256": "7dfc0f80f9e640ba3af615f5728f5aeea163829604fdbb24e8ea8766bafc246b",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb833a4/1767180188126/LFS%202.2%20Bilaga%20Taxa%20brandskyddskontroll%20exkl%20moms%202026.pdf"
     },
     {
@@ -22665,6 +22705,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:27Z",
       "sha256": "16c5a255fda04447a0c1d3123d5155cb63123f2ae2ef0fe8192cf0129166cc97",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb8399c/1767183745691/LFS%202.3%20Avgifter%20f%C3%B6r%20tillst%C3%A5ndspr%C3%B6vning%20och%20tillsyn%20enligt%20alkohollagen,%20lag%20om%20tobak%20m.m.%20g%C3%A5rdsf%C3%B6rs%C3%A4ljning.pdf"
     },
     {
@@ -22674,6 +22715,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:28Z",
       "sha256": "2046116e67250ce84c6a04e012f10c92064e99fdd09584b78be40b544e43e52d",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83a18/1767184105208/LFS%202.4%20Avgifter%20f%C3%B6r%20r%C3%A4ddningstj%C3%A4nster%20av%20servicekarakt%C3%A4r%20m.m..pdf"
     },
     {
@@ -22683,6 +22725,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:33Z",
       "sha256": "46ae25f0d9cdd92139874e036db45e0b02569454ea447c70e9b7c560fad66e5f",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83b97/1767184818534/LFS%202.8.1%20Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20inom%20milj%C3%B6balkens%20omr%C3%A5de.pdf"
     },
     {
@@ -22692,6 +22735,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:34Z",
       "sha256": "ff98f6dff3ae8fc323dfc1462115ef8f3d519b17cb98acfbe6fcde52dd357703",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83b98/1767184854417/LFS%202.8.1%20Taxebilaga%20A.pdf"
     },
     {
@@ -22701,6 +22745,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:35Z",
       "sha256": "8f009a22e2ee7f88493c7e6fcbe2ea580423dc62dac69d31b90029ee92505d83",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83ba4/1767184889227/LFS%202.8.1%20Taxebilaga%20B.pdf"
     },
     {
@@ -22710,6 +22755,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:36Z",
       "sha256": "501a5637af564b1282fa63d2e1ef5a441d4277e2cfc7bd35508c50af3071fb9c",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83baf/1767184939416/LFS%202.8.2%20Taxa%20f%C3%B6r%20pr%C3%B6vning%20enligt%20lagen%20med%20s%C3%A4rskilda%20best%C3%A4mmelser%20om%20gaturenh%C3%A5llning%20och%20skyltning.pdf"
     },
     {
@@ -22719,6 +22765,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:37Z",
       "sha256": "9ad5d5a6a4319caca251e5bb3b374bd588bbc75a7ff433dc121cfd8b6351e1e6",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83bbb/1767184966246/LFS%202.8.3%20Taxa%20f%C3%B6r%20tillsyn%20enligt%20str%C3%A5lskyddslagen.pdf"
     },
     {
@@ -22728,6 +22775,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:38Z",
       "sha256": "8d0694d4d604e122b5c50de0018b778c803a73c2f2d9a688609faa4b7940b1e0",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83bbc/1767184998401/LFS%202.8.4%20Taxa%20f%C3%B6r%20offentlig%20kontroll%20av%20livsmedelslagstiftning.pdf"
     },
     {
@@ -22737,6 +22785,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:41Z",
       "sha256": "758203f414615bf421b90195381a81ae18f80f7bf813472807f5ac79bc928762",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83be0/1767185171165/LFS%202.12%20Taxa%20f%C3%B6r%20tillsyn%20enligt%20lagen%20om%20skydd%20mot%20olyckor%20samt%20tillsyn%20och%20tillst%C3%A5nd%20enligt%20lagen%20om%20brandfarliga%20och%20explosiva%20varor.pdf"
     },
     {
@@ -22746,6 +22795,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:42Z",
       "sha256": "106da2dcbe71c269a5fcbb56ab6f629a7488b3a614e232354668728be428933f",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83bf0/1767185199365/LFS%202.12%20Bilaga%20Taxetabell%20LSO.pdf"
     },
     {
@@ -22755,6 +22805,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:43Z",
       "sha256": "161d6cfceb51a0dfb7c39ff8ece4054c064f9a21a79137f7fc96d80c8b3b2ff8",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83c06/1767185238193/LFS%202.13%20Avfallstaxa.pdf"
     },
     {
@@ -22764,6 +22815,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:44Z",
       "sha256": "6fc4732815fd3e66185dd2f8ae423ba4ab3c67a2d780688ea7b3b7e509ac1f9a",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83c07/1767185303466/LFS%202.14%20Avgift%20f%C3%B6r%20sotning.pdf"
     },
     {
@@ -22773,6 +22825,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:45Z",
       "sha256": "ef41da69dca557522c806019dd8bbd28b6374539848b2ca4a909f231ed88cac1",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83c13/1767185363074/LFS%202.14%20Bilaga%20Taxa%20sotning-reng%C3%B6ring%20exkl%20moms%202026.pdf"
     },
     {
@@ -22782,6 +22835,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:47Z",
       "sha256": "94569f25ce68caedda03580c5ad058ce1a2898ca8e9d1a619898b16976a3f1da",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83c21/1767185412334/LFS%202.16%20Taxa%20f%C3%B6r%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggningar.pdf"
     },
     {
@@ -22791,6 +22845,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:48Z",
       "sha256": "58afd4ee4b82428e30689b25c85b898dbf8af1a3bc6c4620b4bc158e667713e1",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83c2d/1767185443663/LFS%202.17%20Hyror%20och%20avgifter%202026%20Kultur-%20och%20folkh%C3%A4lson%C3%A4mnden.pdf"
     },
     {
@@ -22800,6 +22855,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:52Z",
       "sha256": "d6e948c4e0c23a3aeb64c7ee58f60411f9e43fbdfbb658ab8d5f02c981160239",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83c93/1767185520915/LFS%202.25%20Hyror%20och%20avgifter%20f%C3%B6r%20lokaler%20inom%20utbildningsf%C3%B6rvaltningen.pdf"
     },
     {
@@ -22809,6 +22865,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:38Z",
       "sha256": "24fe897bd0c5e8fa9e28403b53d17907b3aa1e90e68d260d5dce4635c7a661db",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83cf2/1767185983840/LFS%207.14%20Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20Laholms%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning.pdf"
     },
     {
@@ -22818,6 +22875,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:39Z",
       "sha256": "62f84af8eb103989adb4a0ad880350b8be12c81a037b5a53b1945ab74c942f77",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461eb83d29/1767186153058/LFS%207.14%202026%20Information%20till%20fastighets%C3%A4gare%20om%20Laholms%20kommuns%20allm%C3%A4nna%20vattentj%C3%A4nster%2020260101.pdf"
     },
     {
@@ -22827,6 +22885,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:32Z",
       "sha256": "ed94996c27c0b541c9ced8d7b02071a4ef020500c6a2d7f93e635ac36fb7cbd2",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.356a004a19b2bf461ebcafe1/1767873192047/LFS%202.7%20Avgifter%20f%C3%B6r%20m%C3%A5ltidsservice%20i%20socialn%C3%A4mndens%20verksamheter%20_%20(002).pdf"
     },
     {
@@ -22836,6 +22895,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:33Z",
       "sha256": "0ece43acbe2ff721d77f82f7313895689d5aa3d95a933567a829de9b62ee016a",
+      "text": "no text found by OCR (scanned PDF)",
       "url": "https://laholm.se/download/18.3a6ebd0a18df279a76132ed9/1709651450449/LFS%201.5%20Bilaga%201%20Stortorget.pdf"
     },
     {
@@ -22845,6 +22905,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:34Z",
       "sha256": "5fd590e0bd33cde5c2dde517ee49d773d1e2c1ba4cffab96aaa07e64bbe5937c",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.3a6ebd0a18df279a76132edd/1709651485752/LFS%201.5%20Bilaga%202%20Strandtorget.pdf"
     },
     {
@@ -22854,6 +22915,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:32Z",
       "sha256": "80f1ebfaf6cda39ff50e8ff6088b6c551682a58c0eea1def5402586e33930d77",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.3eded986192bd271c0f6467a/1730963030708/LFS%201.4%20Avfallsf%C3%B6reskrifter.pdf"
     },
     {
@@ -22863,6 +22925,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:23Z",
       "sha256": "0fe77ded5df019e4b6dfa922f7c7f0c0d3299e75d32d94e9df9c9fd8be98c985",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.3eded986192bd271c0f64717/1730963263336/LFS%201.2.pdf"
     },
     {
@@ -22872,6 +22935,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:24Z",
       "sha256": "fab95a96a9fcbf6156be37effb7d95eeaea55fc0d0f46570ccf38ff19f7933b1",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.4cd1e90119d05297ae92bd69/1774276044842/LFS%201.5%20Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandel%20i%20Laholms%20kommun.pdf"
     },
     {
@@ -22881,6 +22945,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:28Z",
       "sha256": "cf87632942d6728410e07263fdd77f31d2be14756f831341eaa8846510a56d47",
+      "text": "no text found by OCR (scanned PDF)",
       "url": "https://laholm.se/download/18.608dac54191e51917217db31/1727855130339/Bilaga%20till%20LFS%201.3%20-Kn%C3%A4redsslingan.pdf"
     },
     {
@@ -22890,6 +22955,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:25Z",
       "sha256": "37900d9cc5ef0acdcd68c89c445eee083a6f57dc82bd32eacb756166303f19a9",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.608dac54191e51917217db6b/1727855185752/Bilaga%20till%20LFS%201.3%20-%20Genevadslingan.pdf"
     },
     {
@@ -22899,6 +22965,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:27Z",
       "sha256": "c3cf16c815f26646b6fc1a9c9464fb960dd62573d4c7e4685c52e27bc58e51fe",
+      "text": "no text found by OCR (scanned PDF)",
       "url": "https://laholm.se/download/18.608dac54191e51917217db75/1727855243319/Bilaga%20till%20LFS%201.3%20Gl%C3%A4nningeslingan.pdf"
     },
     {
@@ -22908,6 +22975,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:29Z",
       "sha256": "837107d1ef39d7760e94e4e6bcb35adb45f5a6ed37f8e7a763dcd0a48c8c1aaf",
+      "text": "no text found by OCR (scanned PDF)",
       "url": "https://laholm.se/download/18.608dac54191e51917217db7d/1727855348931/Bilaga%20till%20LFS%201.3%20-%20Mellbystrandsslingan,%20Hokaslingan.pdf"
     },
     {
@@ -22917,6 +22985,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:30Z",
       "sha256": "58cb188e5520ee6853955f73ccdaf95b861f77ca55a366358fad73e3e3cc890b",
+      "text": "ocr",
       "url": "https://laholm.se/download/18.608dac54191e51917217dba1/1727855394714/Bilaga%20till%20LFS%201.3%20-%20Veingeslingan.pdf"
     },
     {
@@ -22926,6 +22995,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T21:17:31Z",
       "sha256": "29cbdb55adb41b4a260f9f44d16c2ad66c6d04af061732eec83f97b78b784b34",
+      "text": "ocr",
       "url": "https://laholm.se/download/18.608dac54191e51917217dba9/1727855437625/Bilaga%20till%20LFS%201.3%20-%20V%C3%A5xtorpsslingan.pdf"
     },
     {
@@ -22935,6 +23005,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:22Z",
       "sha256": "1c54a13aea588462bc8ac9dab7eef106338eee24973883d169741d8efd0b8b6e",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.608dac54191e51917217dbba/1727855614012/NY%20LFS%201-3%20Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter.pdf"
     },
     {
@@ -22944,6 +23015,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:31Z",
       "sha256": "5abbbbffa41cb29d759a200e777d1bdd6d70bb6ab45b5a4297b2b3c7fad4fc66",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.6be2659619bdff188fc3f496/1769587882648/LFS%202.6%20Bilaga%20Plan-%20och%20bygglovstaxa.pdf"
     },
     {
@@ -22953,6 +23025,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:30Z",
       "sha256": "4b4ae310e5e13753b7338cbd9bdc62528ad3f8a64baa6443568d684affefcd9e",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.6be2659619bdff188fc3f4f2/1769587961707/LFS%202.6%20Plan-%20och%20bygglovstaxa.pdf"
     },
     {
@@ -22962,6 +23035,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:39Z",
       "sha256": "d3028a4c6555211f2d8458e51737c79da68360d1a08d6205b50bc9a3adf4a334",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.6be2659619bdff188fcfda/1769000604996/LFS%202.9%20med%202026%20%C3%A5rs%20avgift.pdf"
     },
     {
@@ -22971,6 +23045,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:49Z",
       "sha256": "c47fb13d1343b7dd128466f165e700b9f98ecddf57179d21f9f1d8de9b7220e8",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.7abb7a98198e6109f7d16552/1756453562269/LFS%202.19%20Avgifter%20f%C3%B6r%20avskrift%20eller%20kopia%20av%20allm%C3%A4n%20handling.pdf"
     },
     {
@@ -22980,6 +23055,7 @@
       "municipality_code": "1381",
       "retrieved_at": "2026-10-30T15:27:21Z",
       "sha256": "766e51dde375b46cd5ed589a817e20f139fe19fbdbedc4172a21d95b19acb8b4",
+      "text": "pdf",
       "url": "https://laholm.se/download/18.7e99939119e637a031743f5c/1780469901645/LFS1.1%20F%C3%B6reskrifter%20om%20skyldighet%20f%C3%B6r%20fastighetsinnehavare%20att%20utf%C3%B6ra%20g%C3%A5ngbanerenh%C3%A5llning%20med%20mera.pdf"
     },
     {
@@ -22989,6 +23065,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:37Z",
       "sha256": "ab38fb9f6009684780ff6454c726cead07c8a7fb6619b5accf0f1630c3294065",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/09f67659-6538-4191-b26f-6511d2e7265e.pdf"
     },
     {
@@ -22998,6 +23075,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:11:07Z",
       "sha256": "d6623fe4cc5299fac89c0b93dd759cbd757ab621409c83e3964ce4247193a67f",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/5d3c6d20-8fbc-4c22-a8bb-c19d8625eb60/10ba963d-da8b-4e9d-a702-9ad24fcbbf82.pdf"
     },
     {
@@ -23007,6 +23085,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:51Z",
       "sha256": "362f23941c16afac81cb8fe6b88cd868a86133a520988fb3d125b86956612802",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/13466d4a-754b-40ce-a91f-72f3e52a7a8a.pdf"
     },
     {
@@ -23016,6 +23095,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:38Z",
       "sha256": "379fc5cf8abed80f0215948208a7870ffe798a4ffcda471544cccf7f71192457",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/146e6259-0a34-4195-9b30-36444f474535.pdf"
     },
     {
@@ -23025,6 +23105,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:41Z",
       "sha256": "40d7bf7f627c79acf0818ce3d6227b71a11d69f000c88cabd177de8ba2562328",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/14949e38-616d-4d70-b498-a1aee22a8579.pdf"
     },
     {
@@ -23034,6 +23115,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:11:05Z",
       "sha256": "354c1e036cbe3cabcd8c0bbf959fa7ffed04649f6467120148b961ec686eae9a",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/5d3c6d20-8fbc-4c22-a8bb-c19d8625eb60/191c7647-6017-4fdc-b21c-34c5ae1a1841.pdf"
     },
     {
@@ -23043,6 +23125,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:48Z",
       "sha256": "ca793e93de92f078fdabac057a21f8a5b008b55c81b60376b1205a5da532c3aa",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/287d3d06-dea1-4390-933e-5a6b93c13e94.pdf"
     },
     {
@@ -23052,6 +23135,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:29Z",
       "sha256": "b9834738123d781b5a7ffdcdccec730d0fac8550f0e769d63fca396ded5b6799",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/1c8ac2ec-71a9-4070-b3c5-1e98ba13cfbe/2e285a40-b750-4c46-a9a7-27c50af6f47f.pdf"
     },
     {
@@ -23061,6 +23145,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:53Z",
       "sha256": "3d75ec9b7545d39b10bdc38146f37cc254fabe88d7b4243c41e39f7b1660f660",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/97401fdd-4204-47a5-aaac-eca4023df5a4/3a59c102-441b-4357-b0ce-9ffc738f425f.pdf"
     },
     {
@@ -23070,6 +23155,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:52Z",
       "sha256": "e0687ff5c9efe7126d408dd09c2e2c0d9f8768a055e012bcc5f4dcf08f32a8ff",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/3fc557cf-86c1-47ea-a9a3-2fd21c4906dd.pdf"
     },
     {
@@ -23079,6 +23165,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:11:06Z",
       "sha256": "b009eaabd9b635e48cb51c3f03b1133c67dd0af25447bacd1a8130d001783a5d",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/5d3c6d20-8fbc-4c22-a8bb-c19d8625eb60/4862782e-7b1a-40aa-9569-7c690e70ea06.pdf"
     },
     {
@@ -23088,6 +23175,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:57Z",
       "sha256": "419a867383fd9da308c0308191b391ee6e9c13f761850f764f3ee37bf37dc6cb",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/4d92b4e3-5492-437f-af0e-ff5f63ca3e92/5153b56d-ff34-4b7f-8ec3-249c369780e2.pdf"
     },
     {
@@ -23097,6 +23185,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:58Z",
       "sha256": "dc2117f98c7d9be12732b1fe3b8e37d36fd64fe62e6ead120043566abedceb12",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/4d92b4e3-5492-437f-af0e-ff5f63ca3e92/5428712e-25d8-4a3b-a653-f74cbcb5fb13.pdf"
     },
     {
@@ -23106,6 +23195,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:49Z",
       "sha256": "2269640fdba3414221e00ebbbbae0c759c5fd01710b57177131d546162bc48f9",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/582ac11c-c9ca-498e-b26e-e0ad58a701c5.pdf"
     },
     {
@@ -23115,6 +23205,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:34Z",
       "sha256": "396007261e46c852a088dbce71ca79a3599d8db9953540bd8c0e4b66290c460a",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/1c8ac2ec-71a9-4070-b3c5-1e98ba13cfbe/588d7984-0fdb-4be3-8b5d-243d184bcfb9.pdf"
     },
     {
@@ -23124,6 +23215,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:46Z",
       "sha256": "4cd924e7b60c0eadfc4a6a87f003320a2eb2686365261dd77489a351f2ead6ad",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/5fa611ed-35c3-4f9a-bace-6555a5ca6733.pdf"
     },
     {
@@ -23133,6 +23225,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:45Z",
       "sha256": "eb7ee41c4f459c76fc1a665604806729c92165dd9639ac7faefe2e593ddcd5bf",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/5ffab8e6-c951-43b2-a0c7-17670155f1b9.pdf"
     },
     {
@@ -23142,6 +23235,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:36Z",
       "sha256": "08d16ba6c2d407c6934b39b876e2e58fbf8469eed362f5e446ae6a74729ae432",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/01b15d38-25e4-4bbc-9b14-cf8e51efc2af/60da4666-8043-401a-a278-e24d75a27a85.pdf"
     },
     {
@@ -23151,6 +23245,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:32Z",
       "sha256": "ed8018a3ca407206dcf8f95221f065d8f0bae8327da0957f21b79ee3f8b8d294",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/1c8ac2ec-71a9-4070-b3c5-1e98ba13cfbe/616f303d-3d81-469e-aefb-9cbf459f6287.pdf"
     },
     {
@@ -23160,6 +23255,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:57Z",
       "sha256": "e3082c26a980811a562f6dc3f0223835b28b7f8233b343e8648214f28aca8bf0",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/4d92b4e3-5492-437f-af0e-ff5f63ca3e92/627439c3-2d6b-4a33-9848-c85d7d3e2581.pdf"
     },
     {
@@ -23169,6 +23265,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:11:08Z",
       "sha256": "94d48c2733d6ab1a08eac9f99a91967e6af960493b69972c17fd31a7a29995b5",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/28aa44f5-575f-40fe-843e-e76dbbf9c420/6311fab8-85cd-4d74-a0a7-1296bc138516.pdf"
     },
     {
@@ -23178,6 +23275,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:42Z",
       "sha256": "30e59a93953296b7c6f1b24c2dd8ffd36d03dd46da5dbe436f36fa07d4b4f466",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/63594f83-211a-4abb-9243-9703761883a7.pdf"
     },
     {
@@ -23187,6 +23285,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:43Z",
       "sha256": "c6607eb2f2aeeab27c641c2e62e3a62de6dd8985da6d6664a6d70f18c1af965c",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/653f4d79-f370-447f-a4f1-756ca0211f6f.pdf"
     },
     {
@@ -23196,6 +23295,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:33Z",
       "sha256": "7118e8316b2d0f953f52819f7038b4e97c579be0190ebc4d0d2b1f28ddd4133e",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/1c8ac2ec-71a9-4070-b3c5-1e98ba13cfbe/68e3765f-bd2c-44c7-a35f-d65812f39e99.pdf"
     },
     {
@@ -23205,6 +23305,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:32Z",
       "sha256": "1cadbdfb95c0fa50cd296996b9924968298c333c274d9352bf87c998a9268d28",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/1c8ac2ec-71a9-4070-b3c5-1e98ba13cfbe/69ff86e7-8b0e-4852-9c89-75fd5df779e0.pdf"
     },
     {
@@ -23214,6 +23315,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:11:02Z",
       "sha256": "df866a4ffb9feecdc10da89ff155ff9b6e0006105913df6fa18ef2d418b4a236",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/341636e2-08d4-4d2b-9486-6d786d5641dd/6a4f1774-8960-411f-9ee2-29bd031e63c5.pdf"
     },
     {
@@ -23223,6 +23325,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:11:04Z",
       "sha256": "f7ec2e05b88e904767582d99233b4ffbaa4866bbba3bfa957ced3335e17a671c",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/341636e2-08d4-4d2b-9486-6d786d5641dd/7014df1e-e2b5-424e-b759-8af7b9e1a9d0.pdf"
     },
     {
@@ -23232,6 +23335,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:50Z",
       "sha256": "1eedf8f402121f81f2d5883ef3184d2feca2cb7553f74a9ad39b914a40462820",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/7395124e-e5b1-4383-9e1d-dcf450223a80.pdf"
     },
     {
@@ -23241,6 +23345,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:40Z",
       "sha256": "08b01f14bb3360e20b8dd18f229c6ebde57af6537ba07cbb4996145554590694",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/83256303-aa51-45c7-9aeb-227f4bfdda63.pdf"
     },
     {
@@ -23250,6 +23355,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:47Z",
       "sha256": "44ded0615cacfad74fd36fd267b9f50f6aa445eaa22d99e520dbea61fa9b7830",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/877a768e-78ca-468d-99e1-2a110bad1b96.pdf"
     },
     {
@@ -23259,6 +23365,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:11:01Z",
       "sha256": "0b50d3cbe0759873fa05cd0757ebb0a5b1e5b8e0ca0c25ac81231a6b31ed5ef2",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/e802dc4a-2501-4eed-ba7b-c2fefe871296/8b776807-f6eb-4387-9c9d-f279edcb8f4b.pdf"
     },
     {
@@ -23268,6 +23375,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:11:00Z",
       "sha256": "44edebde130d56f270563cdb6e5b94fee9569e5543f2ff30a96f040139e7a543",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/e802dc4a-2501-4eed-ba7b-c2fefe871296/9519fc6e-7253-45ed-a16f-af73f0cb6af9.pdf"
     },
     {
@@ -23277,6 +23385,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:44Z",
       "sha256": "842c2e5e4e6d2198c99faa17b4835e45d87c1f6958584e3f727951cfb9e48994",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/a007b165-d2ef-41e1-9e4c-4edc284cd279.pdf"
     },
     {
@@ -23286,6 +23395,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:59Z",
       "sha256": "f5c54adda2237cb669e8edb2e764b71cd566bcb4221da116e2e557bc1a9704d9",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/4d92b4e3-5492-437f-af0e-ff5f63ca3e92/a1f154a2-a116-4f79-b3ec-bc007d97d65f.pdf"
     },
     {
@@ -23295,6 +23405,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:35Z",
       "sha256": "aee82a509aa4ef1d0f5457a2cf0421eebd5d617518522a059ad11813bb4bea58",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/01b15d38-25e4-4bbc-9b14-cf8e51efc2af/b1f6c857-ae65-4719-bf6e-4eec753088f7.pdf"
     },
     {
@@ -23304,6 +23415,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:11:03Z",
       "sha256": "5feebd98b89aa636761a8737e356a8e4f699232c0f58e70c69e9db83b1761f17",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/341636e2-08d4-4d2b-9486-6d786d5641dd/ce92ce60-5cd7-4d67-b8a3-5a8d9cdd63aa.pdf"
     },
     {
@@ -23313,6 +23425,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:30Z",
       "sha256": "80b70817f62396ae36083bab6b476594e4246edddba0609877931251da0bb48a",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/1c8ac2ec-71a9-4070-b3c5-1e98ba13cfbe/e1663bbd-fa0b-4d81-bc4b-613eda2625fb.pdf"
     },
     {
@@ -23322,6 +23435,7 @@
       "municipality_code": "1382",
       "retrieved_at": "2026-10-30T15:10:39Z",
       "sha256": "72092343d38c21959ed35d5c57f17f3705d9b2ca007af6e1cae7fd2f91d1a72b",
+      "text": "pdf",
       "url": "https://kommun.falkenberg.se/media/evolution/0943d6ed-53d5-4f9e-91d1-d28fcb049865/e7508dc4-fb91-4caf-89a3-8422987496a4.pdf"
     },
     {
@@ -23331,6 +23445,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:31Z",
       "sha256": "7c66b4a7d66b5d3abaf0671182ae3c732900fffe6e63fb5999700d2e1edd6f75",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.1285e6db1941ac326f0b47d4/1735801395461/Taxa%20f%C3%B6r%20felparkering%202025%20och%20tills%20vidare.pdf"
     },
     {
@@ -23340,6 +23455,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:32Z",
       "sha256": "48b268b57934490cda41851ce3cbf755765d6963db7eaacb6852c0ac5ba0f31c",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.1285e6db1941ac326f0b48f1/1767338141663/Taxa%20f%C3%B6r%20nyttoparkering%202025%20och%20tills%20vidare.pdf"
     },
     {
@@ -23349,6 +23465,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:21Z",
       "sha256": "cd920e107f0cbeadfb60c711103835be8bf4ab1c02e060f4d3207724f15c401d",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.203374a3193956d587265cc7/1767338604538/Taxa%20f%C3%B6r%20milj%C3%B6-%20och%20h%C3%A4lsoskyddsn%C3%A4mndens%20offentliga%20kontroll%20inom%20livsmedelslagstiftningen.pdf"
     },
     {
@@ -23358,6 +23475,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:22Z",
       "sha256": "a4f61be7f7b36f4ebed30fe33a638504870776000acb6771bbcd7b2336e24d6e",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.203374a3193956d587265cc8/1767338648332/Taxa%20f%C3%B6r%20milj%C3%B6-%20och%20h%C3%A4lsoskyddsn%C3%A4mndens%20verksamhet%20enligt%20lagen%20om%20skydd%20mot%20internationella%20hot%20mot%20m%C3%A4nniskors%20h%C3%A4lsa.pdf"
     },
     {
@@ -23367,6 +23485,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:23Z",
       "sha256": "826a046e17edcb5304f76448ea33c57e9d0bf4a03d47ec58f1a7309155652b65",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.203374a3193956d587265cc9/1767338708549/Taxa%20f%C3%B6r%20milj%C3%B6-%20och%20h%C3%A4lsoskyddsn%C3%A4mndens%20verksamhet%20enligt%20lagen%20om%20%C3%A5tg%C3%A4rder%20mot%20f%C3%B6rorening%20fr%C3%A5n%20fartyg.pdf"
     },
     {
@@ -23376,6 +23495,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:24Z",
       "sha256": "2e0aecc4c18addec3fec9a26e81ed21f2fb71cf4d64e29d2a7cd0206f0cdd321",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.203374a3193956d587265cca/1767338738439/Taxa%20f%C3%B6r%20milj%C3%B6-%20och%20h%C3%A4lsoskyddsn%C3%A4mndens%20verksamhet%20enligt%20str%C3%A5lskyddslagen.pdf"
     },
     {
@@ -23385,6 +23505,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:25Z",
       "sha256": "20390d00966d561026fa0b165fcc2d8a47b600ec32525862f05826b1e1d943c1",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.203374a3193956d587265ccb/1772435077772/Taxa%20f%C3%B6r%20milj%C3%B6-%20och%20h%C3%A4lsoskyddsn%C3%A4mndens%20verksamhet%20f%C3%B6r%20pr%C3%B6vning,%20tillsyn,%20kontroll%20och%20annan%20offentlig%20verksamhet%20enligt%20milj%C3%B6balken.pdf"
     },
     {
@@ -23394,6 +23515,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:14Z",
       "sha256": "1725d8b3f35fc358ce3bc5c1b3b2145b472119b6ecc9f42771876c474a97d2b8",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.2b514d9b18a92e6fafc234e3/1681465113549/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandeln%20i%20Varbergs%20kommun.pdf"
     },
     {
@@ -23403,6 +23525,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:15Z",
       "sha256": "52a4fe891968fa986a8f4e3e5dc53bb4b3b974aee018ce40a1f8f5f3f457a378",
+      "text": "ocr",
       "url": "https://varberg.se/download/18.2b514d9b18a92e6fafc26a26/1674469962817/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Varbergs%20kommun.pdf"
     },
     {
@@ -23412,6 +23535,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:14Z",
       "sha256": "53e7cc1793b4ee120c5c590771aaa561983cfdec581a1dd4c38bd92ae81ed4ea",
+      "text": "no text found by OCR (scanned PDF)",
       "url": "https://varberg.se/download/18.2b514d9b18a92e6fafc33884/1672752444080/Lokala%20f%C3%B6reskrifter%20om%20milj%C3%B6farlig%20verksamhet%20och%20h%C3%A4lsoskydd%20f%C3%B6r%20Varbergs%20kommun.pdf"
     },
     {
@@ -23421,6 +23545,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:41Z",
       "sha256": "2c249cb5a88f21d4b951e452c4a8875a77aacc4508d09a9540b18b364dfe400e",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.2b514d9b18a92e6fafc40a52/1528899776061/Allm%C3%A4nna%20best%C3%A4mmelser%20vatten-%20och%20avlopp%202018.pdf"
     },
     {
@@ -23430,6 +23555,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:20Z",
       "sha256": "f8db22600cbe992224bc95bceac2c30b7c375d49d2a93a981e25c91007518e83",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.2b514d9b18a92e6fafc48a7e/1780910062558/Taxa%20sotning.pdf"
     },
     {
@@ -23439,6 +23565,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:19Z",
       "sha256": "9a5e01387e5b9b2e4290c4b03f88bc912a41cd39a3daae78376b9f6d13211733",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.2b514d9b18a92e6fafc48a7f/1780910054075/Taxa%20f%C3%B6r%20brandskyddskontroll.pdf"
     },
     {
@@ -23448,6 +23575,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:40Z",
       "sha256": "926f841360d61fbcb1b68815f358e181759d55e0749d7aa8dea0450bacde2d56",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.2b514d9b18a92e6fafc4cc6b/1553782913984/Avfallsf%C3%B6reskrifter%20Varbergs%20kommun.pdf"
     },
     {
@@ -23457,6 +23585,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:36Z",
       "sha256": "bbfc5fcb117ba9cb6d16767c480c47ecb55280b76cb6b8a56ee0e0737d3a5702",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.2b514d9b18a92e6fafc4e0fc/1680170592767/Taxa%20R%C3%A4ddningstj%C3%A4nstens%20tillsynstaxa,%20LSO%20och%20LBE.pdf"
     },
     {
@@ -23466,6 +23595,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:35Z",
       "sha256": "4d02a87c268bcb27723a52bce64f8181d69630d268ea02f931788ff277ed0b1e",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.2b514d9b18a92e6fafc5421e/1642512352288/Taxa%20f%C3%B6r%20kopior%20och%20avskrifter%20av%20allm%C3%A4n%20handling.pdf"
     },
     {
@@ -23475,6 +23605,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:17Z",
       "sha256": "d1ff79a6e493db304c4619394351fefc9000da25e918957c9754f51d866e7344",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.3768252c19ef63cbc2d2809e/1782293419629/Bildande%20av%20Nedreg%C3%A5rdens%20naturreservat%202026-06-16.pdf"
     },
     {
@@ -23484,6 +23615,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:34Z",
       "sha256": "c6cbe5c0a96af5ea2eab9e3e2d0b4d3eeff6a0d53e7b0be5fe1138b16e3befea",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.3bb5b6fd19b7665c3a0609eb/1767338013463/Taxa%20f%C3%B6r%20hyror%20och%20avgifter%20f%C3%B6r%20kultur-%20och%20fritidsverksamhet%202026.pdf"
     },
     {
@@ -23493,6 +23625,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:37Z",
       "sha256": "a31062d36768f599b4c8233d9d6e55edcd6ac0544aa0b5473a8817ac768bd788",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.3bb5b6fd19b7665c3a060cae/1767338214613/Taxa%20f%C3%B6r%20uppl%C3%A5telse%20av%20offentlig%20plats%202026%20och%20tills%20vidare.pdf"
     },
     {
@@ -23502,6 +23635,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:33Z",
       "sha256": "10760a010a20418c9299b7a03108230665c2e6fb7dc2a189d1612159b93fbae7",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.3bb5b6fd19b7665c3a061121/1767338523681/Taxa%20f%C3%B6r%20Varbergs%20innerhamn%20och%20Tr%C3%A4sl%C3%B6vsl%C3%A4ges%20hamn%202026%20och%20tills%20vidare.pdf"
     },
     {
@@ -23511,6 +23645,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:26Z",
       "sha256": "33b913c10ea8fd6a8eae16cb40babde98ffb4c32f30d3fcdb158301bdc59eb85",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.3bb5b6fd19b7665c3a0614d4/1767338855982/Avfallstaxa%20f%C3%B6r%20verksamheter%202026.pdf"
     },
     {
@@ -23520,6 +23655,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:27Z",
       "sha256": "30d165b1e586d457aaa750e886d988c99802bf3b768d17a2f79bf10610e52f5e",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.3bb5b6fd19b7665c3a0614d5/1767338856022/Plan-%20och%20bygglovstaxa%202026%20med%20kart-%20och%20m%C3%A4ttaxa.pdf"
     },
     {
@@ -23529,6 +23665,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:28Z",
       "sha256": "243c19afff49791a31d99eb2548a3c351bc94eebf733ce98d579ff589b574e36",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.3bb5b6fd19b7665c3a0614d6/1767338856064/Taxa%20f%C3%B6r%20%C3%A5tervinningscentraler,%20grovavfall%20och%20tr%C3%A4dg%C3%A5rdsavfall%202026.pdf"
     },
     {
@@ -23538,6 +23675,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:29Z",
       "sha256": "a1908b6cef0c946966b7b5a36223439e1fdbf375d64f92ac806d95039e5b34ab",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.3bb5b6fd19b7665c3a0614d7/1767338856091/Taxor%20f%C3%B6r%20vatten%20och%20avlopp,%20VA-taxa%202026.pdf"
     },
     {
@@ -23547,6 +23685,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:30Z",
       "sha256": "98167b7a657b068146732ffa2bf8d2e1da86caeff2011f96c44fac6658b17ece",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.3bb5b6fd19b7665c3a0614d8/1767338856126/Avfallstaxa%20f%C3%B6r%20h%C3%A4mtning%20av%20hush%C3%A5llsavfall%202026.pdf"
     },
     {
@@ -23556,6 +23695,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:18Z",
       "sha256": "af8bbd3ed693f37d7f8420fd13d2caa696d92ec3c68c191497e0e9902883db77",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.3bb5b6fd19b7665c3a061be4/1767339394079/Avgifter%20%C3%A4ldreomsorg%202026.pdf"
     },
     {
@@ -23565,6 +23705,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:16Z",
       "sha256": "a4592b8c0fff62dc087ca9e4e95590df6244e6fdb9ffb2109b9f748020bdbece",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.44975ce4194564f4632deb60/1736843695659/Lokala%20hamnf%C3%B6reskrifter%20f%C3%B6r%20Varbergs%20hamn%20och%20Tr%C3%A4sl%C3%B6vsl%C3%A4ges%20hamn.PDF"
     },
     {
@@ -23574,6 +23715,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:39Z",
       "sha256": "56ba8ae858cd599fbbfb1e31278bae82d757fd37af4e7071d5d634f8496bd567",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.4874721719d97177c8c25ec9/1776403214508/Hallands%20Hamnar%20Hamntaxa%20Varberg%202026%20och%20tills%20vidare.pdf"
     },
     {
@@ -23583,6 +23725,7 @@
       "municipality_code": "1383",
       "retrieved_at": "2026-10-30T15:11:38Z",
       "sha256": "b1dff5dbd64b14d33982685590e1f105c55e5d777e3abd44986bf91d785e9cbf",
+      "text": "pdf",
       "url": "https://varberg.se/download/18.501c04c919d24d1e4b74d04a/1774533041872/Avgifter%20f%C3%B6r%202026%20inkl%20g%C3%A5rdsf%C3%B6rs%C3%A4ljning.pdf"
     },
     {
@@ -23592,6 +23735,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:15Z",
       "sha256": "3a81f19062022cd378d4a28ac99eab846a85db365358b72996e6a48fa13d6e09",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.14e39d9618a26429fc7cd3d/1693408376832/Brandskydd,%20sotning,%20brandfarliga%20varor,%20taxa.pdf"
     },
     {
@@ -23601,6 +23745,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:53Z",
       "sha256": "8c6f21c83cb4c410147630e5e797451a1bf4f7cac881ffd39dbc66c49818eacc",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.163db07219be2865ea843056/1770045354443/Plan-%20och%20byggverksamhet%202026,%20taxa.pdf"
     },
     {
@@ -23610,6 +23755,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:10Z",
       "sha256": "160b098ec2436a4cade175a151646b12e2909dcce8645ec4adc2e10d40b7acea",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.1ec384d6192704b8d9d138/1728462288147/L%C3%A5st%20cykelparkering,%20taxa.pdf"
     },
     {
@@ -23619,6 +23765,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:47Z",
       "sha256": "56f7fe882f6f3097b4f009cffc82a76f7ca38d2d9899caed5ce7acd04db0672d",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.2727e29417ee2988a501a9e6/1771233984254/Lokala%20f%C3%B6reskrifter%20till%20skydd%20f%C3%B6r%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n.pdf"
     },
     {
@@ -23628,6 +23775,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:59Z",
       "sha256": "2a2bbb95b9341a1bc3f8282519c0884c55d39128dc4bac5f3509d6e69fb15964",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.2b49f86518ecb777ac81665d/1713528293428/F%C3%A4rdtj%C3%A4nst,%20taxa.pdf"
     },
     {
@@ -23637,6 +23785,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:56Z",
       "sha256": "d0c9bab6b05af2489efc009d54399ab415a53c53a07b62793d790afdc954cb8d",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.3022ca0a184b9251f0a19369/1670599644696/Offentlig%20kontroll%20av%20livsmedel%20och%20vissa%20jordbruksprodukter,%20taxa.pdf"
     },
     {
@@ -23646,6 +23795,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:53Z",
       "sha256": "811a6d7851ed02d37a893b7a19a6cfcd1fdc49b40561663d4ae78e63e7137cdc",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.351964301943ea33b038cb31/1736757505433/Plan-%20och%20byggverksamhet%202025,%20taxa.pdf"
     },
     {
@@ -23655,6 +23805,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:00Z",
       "sha256": "6e411d9da77084fdb3e67a2753820affeaf7a8ad366cf85e97ba89eca7824d2a",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.3681ec99188bdbf7b008449a/1692018800490/M%C3%A5ltid%20daglig%20verksamhet,%20taxa.pdf"
     },
     {
@@ -23664,6 +23815,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:18Z",
       "sha256": "6c4fb0c9e837c8de5dc3de77d70bef1a2b252341d2137abcea4eaf1cb5f562f3",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.4028632d1864b8f9bc31375e/1676903511940/Vigsel,%20avgift.pdf"
     },
     {
@@ -23673,6 +23825,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:58Z",
       "sha256": "0c0a549d7179d20997b54e5197659565161a67d615d0b7368ddfd5f26fc197a6",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.4108226e188bd8de7bc102ca/1754043061406/Pr%C3%B6vning%20och%20tillsyn%20enligt%20alkohollagen%20lag%20om%20tobak%20liknande%20produkter%20mfl,%20taxa.pdf"
     },
     {
@@ -23682,6 +23835,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:05Z",
       "sha256": "4d2f46585cbd6b5206928baa9b10199183c308e587a0ab8da319d886a3aa5445",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.41389fe41961dfdf98c14fb7/1744358960597/Kungsbacka%20Konsthall,%20taxa.pdf"
     },
     {
@@ -23691,6 +23845,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:06Z",
       "sha256": "f252249ccc2a737b17e2bd211d0e988ca5398d5d36c80f4a4ec4d5b37830e387",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.41389fe41961dfdf98c14fb8/1744358960643/Kungsbacka%20teater%20och%20Sn%C3%A4ckan,%20taxa.pdf"
     },
     {
@@ -23700,6 +23855,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:07Z",
       "sha256": "8593e7c8422ba1c57ac8a9ec9df47be8302163f7b4d4bd237e9768240ad199d8",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.50c580bd18002891b9f2306a/1650890930865/Logi%20i%20kommunens%20lokaler,%20taxa%20och%20avgifter.pdf"
     },
     {
@@ -23709,6 +23865,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:45Z",
       "sha256": "2c01f6a1da3fb16ddc4aca8dc0be0e10e58814d3ecb8c57287d592e483281022",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.58e850c319b35598f86330/1773061142901/Lokala%20avfallsf%C3%B6reskrifter.pdf"
     },
     {
@@ -23718,6 +23875,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:16Z",
       "sha256": "8730547a0f581250e1889c9c37656966aa5f51d4fbc025bd03c734e8d13e0480",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.58e850c319b35598f86358/1766131272537/Bredbandsn%C3%A4t,%20taxa%202026.pdf"
     },
     {
@@ -23727,6 +23885,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:50Z",
       "sha256": "3c0b363db7a6483da3705f183c6146bcb4b77d97cde6706fbadb283079859b28",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.58e850c319b35598f86365/1780653314258/Avfallstaxa%202026.pdf"
     },
     {
@@ -23736,6 +23895,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:11Z",
       "sha256": "867058e4ff6029c8fb2434bc01328e672b6d74c9702c40cab045bc7166a1943e",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.58e850c319b35598f86396/1766131626711/Parkeringsavgifter%20och%20felparkeringsavgifter.pdf"
     },
     {
@@ -23745,6 +23905,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:13Z",
       "sha256": "3dd89c9a0bbf5043c446099b57abe970eb37837cd6967836e8ce9ac787775388",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.58e850c319b35598f863af/1766131769224/Uppl%C3%A5telse%20av%20kommunal%20mark,%20taxa.pdf"
     },
     {
@@ -23754,6 +23915,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:54Z",
       "sha256": "afc6dbc5aea2888a8af6014371cd2a81efd32f313a796468502b675e073d096b",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.58e850c319b35598f8642a/1766132445512/Vatten%20och%20avlopp,%20taxa%202026.pdf"
     },
     {
@@ -23763,6 +23925,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:48Z",
       "sha256": "0e33b11ebcf9393d5f29e1aa4f0b6c313a402e50463deb05e4cabfbee747e61a",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.66aeefd7197a1f981df3b75a/1774346139856/Lokala%20ordningsf%C3%B6reskrifter.pdf"
     },
     {
@@ -23772,6 +23935,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:49Z",
       "sha256": "627a9403ddd10fd2ef146dc922b2a73428572c7c337e2b3cf905c48d3544863b",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.67d5448018f7764eec7bea3/1716271038892/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandel.pdf"
     },
     {
@@ -23781,6 +23945,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:14Z",
       "sha256": "a8f9486622134e276146c93b79abfd92cf56f1de8bffd33e4607a67870d64a56",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.67d5448018f7764eec7bfc9/1716274529750/Bostadsf%C3%B6rmedling,%20taxa.pdf"
     },
     {
@@ -23790,6 +23955,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:01Z",
       "sha256": "87941b36c203bc5c102ee72b2dd0e04e3a229ed66f0a93e9388249ed1150661d",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.68e39ecb17ede8bc2d926881/1645004673060/Patientavgifter%20inom%20hemsjukv%C3%A5rd.pdf"
     },
     {
@@ -23799,6 +23965,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:09Z",
       "sha256": "a5261ef2247300cdae4ecee4e2384ffeacc9758ef487c88972211ada33db45a0",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.68e39ecb17ede8bc2d927df1/1645025533971/Uthyrning%20av%20lokaler,%20taxa%20g%C3%A4ller%20t.o.m.%202026-06-31.pdf"
     },
     {
@@ -23808,6 +23975,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:55Z",
       "sha256": "98e0a4f480a7d8d04c4d0da28ca64b91e22c1f0ab3d8ef918db6530137ca862b",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.6ddc9c4118babb45c386552/1699601451984/Milj%C3%B6%20&%20H%C3%A4lsoskydd,%20uppdragstaxa.pdf"
     },
     {
@@ -23817,6 +23985,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:04Z",
       "sha256": "4d0cf62bec59222ac9b2b4ece1b4dd1c72555bacaa650d4293da09affd3dde2e",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.7c9da29193deb51bde1082/1734616661051/Kulturskolan,%20taxa.pdf"
     },
     {
@@ -23826,6 +23995,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:03Z",
       "sha256": "59613864e145e73558c6661606ceb4cabbdc90aebe31e3ca4d2e2eb9cfbe10f3",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.7c9da29193deb51bde1171/1734617112399/Bibliotek,%20taxa.pdf"
     },
     {
@@ -23835,6 +24005,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:08Z",
       "sha256": "749317342841f0327b6130df4c8ecd00922c5e77adc92965847fe0e8d1274afc",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.7c9da29193deb51bde124b/1734617548144/Naturum%20Fj%C3%A4r%C3%A5s%20Br%C3%A4cka%20och%20%C3%84skhults%20by,%20taxa.pdf"
     },
     {
@@ -23844,6 +24015,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:44Z",
       "sha256": "dbdee91c83bdd2c8551ef1064d9b5afc6814f62310f40a0fb40e21254357f1d6",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.7f46a58d17f98c034d86709/1693298666952/Allm%C3%A4nna%0Abest%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20allm%C3%A4nna%20vatten-%20och%0Aavloppsanl%C3%A4ggning%20(ABVA).pdf"
     },
     {
@@ -23853,6 +24025,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:17Z",
       "sha256": "a67f1a8cea8cdd30df1c645b1575969175b9d373aa29b8f0ef6ba2daf7034195",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.923d58818c8ad0cb555c2/1703164583462/Kopia%20allm%C3%A4n%20handling,%20taxa.pdf"
     },
     {
@@ -23862,6 +24035,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:12Z",
       "sha256": "c0280dd39898876d6982af18b3ed9fe4ad350311bb5c515527717ce6bd359b04",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.99ff57618df2ddb19d26fe3/1710324916855/Publika%20laddstolpar,%20taxa.pdf"
     },
     {
@@ -23871,6 +24045,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:12:02Z",
       "sha256": "04f7f177c450acef0bb7da155ec1bab5247dd9d77d64654c26a2275412a22d8d",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.bb15d6018388c7e65d488aa/1666779304440/V%C3%A5rd%20och%20omsorg,%20taxa.pdf"
     },
     {
@@ -23880,6 +24055,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:51Z",
       "sha256": "b6a17436002fd41bebae9c2bfce5ece6c69c4c8d86674d42fcd5cbdae1db0082",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.eb3c2f918c80d36426580/1703000883137/Plan-%20och%20byggverksamhet%202024,%20taxa.pdf"
     },
     {
@@ -23889,6 +24065,7 @@
       "municipality_code": "1384",
       "retrieved_at": "2026-10-30T15:11:57Z",
       "sha256": "8829c4d22d81f0f0706623d275dfde07dad8fa85d2d46d9d0479c01e416a28ec",
+      "text": "pdf",
       "url": "https://kungsbacka.se/download/18.eb3c2f918c80d364265bf/1703001614066/Pr%C3%B6vning%20och%20tillsyn%202024%20milj%C3%B6balken,%20str%C3%A5lskydd,%20spr%C3%A4ng%C3%A4mne,%20gaturenh%C3%A5llning,%20skyltning,%20fartyg,%20taxa.pdf"
     },
     {
