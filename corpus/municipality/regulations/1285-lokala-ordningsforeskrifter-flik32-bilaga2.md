@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://eslov.se/wp-content/uploads/lokala-ordningsforeskrifter-flik32-bilaga2.pdf"
 source_sha256: "f71e7a89ddc4cdb412db33882d85e3a0af49848e2bb6d129c1e49ec3e9edce5e"
-fetched_at: "2026-10-30T15:00:01Z"
+fetched_at: "2026-10-31T18:37:34Z"
 issuer: "Eslövs kommun"
 region_code: "12"
 municipality_code: "1285"
@@ -34,3 +34,5 @@ Förteckning: <https://eslov.se/kommun-politik/kommunfakta/regler-och-styrande-d
 Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
 
 - [Lokala ordningsföreskrifter, bilaga 2](<https://eslov.se/wp-content/uploads/lokala-ordningsforeskrifter-flik32-bilaga2.pdf>)
+
+Pdf:en är inskannad och innehåller ingen text som kan läsas maskinellt.

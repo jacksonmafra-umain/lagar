@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://eslov.se/wp-content/uploads/borgerlig-vigsel-taxa394795-0_tmp.pdf"
 source_sha256: "7ca06147cb0fee164f573ddd5905da880c6d45e8f1916c5a3469a03be3f39431"
-fetched_at: "2026-10-30T15:00:06Z"
+fetched_at: "2026-10-31T18:37:43Z"
 issuer: "Eslövs kommun"
 region_code: "12"
 municipality_code: "1285"
@@ -31,6 +31,28 @@ Förteckning: <https://eslov.se/kommun-politik/kommunfakta/regler-och-styrande-d
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Taxa för borgerlig vigsel](<https://eslov.se/wp-content/uploads/borgerlig-vigsel-taxa394795-0_tmp.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Borgerlig vigsel i
+
+Eslövs kommun, taxa
+
+ESLÖVS KOMMUNS FÖRFATTNINGSSAMLING
+
+Antagen av kommunfullmäktige 2022-02-28 § 9
+
+Gäller från och med 2022-03-01
+
+Ej folkbokförda
+
+Eslövs kommun tar ut en taxa om 1 000 kr per borgerlig vigsel för de par där ingen av parterna är folkbokförda i Eslövs kommun.
+
+Folkbokförda
+
+I de fall där en eller båda parter är folkbokförda i Eslövs kommun tas ingen avgift ut.

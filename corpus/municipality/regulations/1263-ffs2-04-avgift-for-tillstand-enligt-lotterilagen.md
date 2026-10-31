@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.svedala.se/contentassets/3839f51e55894c23b9eb4d7d5bf338f3/ffs2-04-avgift-for-tillstand-enligt-lotterilagen.pdf"
 source_sha256: "27eb9bf7c4fad2bc2f094b6161ba2371ef5c01507266874413ea00e7dae17246"
-fetched_at: "2026-10-30T20:26:48Z"
+fetched_at: "2026-10-31T18:24:24Z"
 issuer: "Svedala kommun"
 region_code: "12"
 municipality_code: "1263"
@@ -31,6 +31,26 @@ Förteckning: <https://www.svedala.se/paverka/kommun/kommunfakta/regler-och-styr
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Avgift - lotterilagen](<https://www.svedala.se/contentassets/3839f51e55894c23b9eb4d7d5bf338f3/ffs2-04-avgift-for-tillstand-enligt-lotterilagen.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Svedala Kommuns
+
+Författningssamling
+
+2:04
+
+Avgift för tillstånd och registrering enligt lotterilagen
+
+antagen av kommunfullmäktige 1995-03-08, § 8
+
+Avgiften för tillstånd respektive registrering enligt lotterilagen är 300 kronor.
+
+Gäller från
+
+1995-03-01

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://media.helsingborg.se/uploads/networks/4/sites/141/2025/09/renhallningsordning_helsingborg-2025-2032_rev.pdf"
 source_sha256: "85acafd9a19f03f12705919bdf426a8be94e8604df8a90e2e9afb71dd0795fcd"
-fetched_at: "2026-10-30T21:56:39Z"
+fetched_at: "2026-10-31T18:36:37Z"
 issuer: "Helsingborgs stad"
 region_code: "12"
 municipality_code: "1283"
@@ -31,6 +31,972 @@ Förteckning: <https://styrning.helsingborg.se/sa-styrs-helsingborg/kommunens-re
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Renhållningsordning Helsingborg 2025-2032](<https://media.helsingborg.se/uploads/networks/4/sites/141/2025/09/renhallningsordning_helsingborg-2025-2032_rev.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+RENHÅLLNINGSORDNING
+
+2025–2032
+
+HELSINGBORGS STAD
+
+Antagen av kommunfullmäktige 2025-03-11
+
+Gäller från och med 11 april 2025
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Renhållningsordningen innehåller bestämmelser för avfallshanteringen i Helsingborgs stad. Här kan invånare, fastighetsägare och företrädare för olika verksamheter se vem som ansvarar för vad. Det är också ett verktyg för att styra och utveckla kommunens avfallshantering.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+INNEHÅLL
+
+1. Inledande bestämmelser
+
+1 § Bemyndigande
+
+2 § Definitioner och begreppsförklaringar
+
+2. Ansvar och skyldigheter
+
+1§ Kommunens renhållningsansvar
+
+2§ Fastighetsägarens ansvar
+
+3§ Avfallslämnarens ansvar
+
+3. Avfall under kommunalt ansvar
+
+1§ Avfallsspecifika anvisningar
+
+2§ Transportväg för insamlingsfordon
+
+4§ Gångväg
+
+5§ Behållare och emballering
+
+6§ Avfallsutrymme och avfallsplats
+
+7§ Anvisande av plats
+
+4. Dispens
+
+5. Ikraftträdande och uppföljning
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+1. INLEDANDE BESTÄMMELSER
+
+1 § Bemyndigande
+
+Med stöd av 15 kap. 38, 39 och 41 §§ miljöbalken (1998:808) och 9 kap. 1 och 2 §§ avfallsförordningen (2020:614) meddelar kommunfullmäktige dessa föreskrifter för avfallshantering i Helsingborgs stad.
+
+2 § Definitioner och begreppsförklaringar
+
+Termer och begrepp som förekommer i renhållningsordningen har samma betydelse som de har i 15 kapitlet miljöbalken (1998:808) och i avfallsförordningen (2020:614). I övrigt används följande begrepp med de betydelser som anges nedan.
+
+ABVA
+
+Allmänna bestämmelser vatten och avlopp
+
+Anvisande av plats
+
+Plats utanför en fastighet som kommunen hänvisar till för att kommunen ska kunna forsla bort avfallet.
+
+Avfall
+
+Föremål eller ämne som innehavaren antingen gör sig av med, tänker göra sig av med eller måste göra sig av med (15 kapitlet 1 § miljöbalken).
+
+Avfallsbehållare
+
+Kärl, container, säck eller liknande som är avsett att innehålla någon typ av avfall. Avfallslämnare
+
+Fastighetsägare, hyresgäst, privatperson, verksamhet eller annan som ger upphov till avfall. Avfallsslag
+
+Indelning av avfall i olika kategorier.
+
+Avfallstaxa
+
+Avgift som avser hantering av avfall som utförs genom kommunens försorg. Avfallsutrymme
+
+Byggnad eller del av en byggnad med väggar, golv och tak där avfall förvaras.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Bioavfall
+
+Med bioavfall avses:
+
+1. Biologiskt nedbrytbart trädgårds-eller parkavfall som innehåller parkslide eller invasiva främmande arter som finns upptagna på unionsförteckningen enligt förordningen (EU) nr 1143/2014.
+
+2. Annat biologiskt nedbrytbart trädgårds- eller parkavfall än sådant som avses i 1, som i dessa föreskrifter benämns trädgårdsavfall.
+
+3. Biologiskt nedbrytbart livsmedels- eller köksavfall, som i dessa föreskrifter benämns matavfall. I detta ingår ätlig olja eller liknande flytande ätligt fett men inte annat flytande bioavfall.
+
+Farligt avfall
+
+Avfall som är markerat med en asterisk (*) efter koden i avfallsförordningen (2020:614) eller som Naturvårdsverket meddelat föreskrifter om.
+
+Fastighetsägare
+
+Den eller de som äger en fastighet eller den som enligt 1 kapitlet 5 § fastighetstaxeringslagen (1979:1152) ska anses som fastighetsägare eller fastighetsinnehavare. Flerfamiljsfastighet
+
+Bostadshus med minst tre bostadslägenheter. Samfällighetsföreningar med gemensamt avfallsutrymme kan betraktas som flerfamiljsfastighet.
+
+Fosforfälla
+
+Fosforfälla innebär att en filtermassa av kalk placeras exempelvis i eller efter ett minireningsverk eller en markbädd. Det behandlade avloppsvattnet leds genom filtret som ett avslutande reningssteg.
+
+Fritidsboende
+
+Bostad som är avsett att användas som tillfälligt boende under vissa tider av året. Ingen folkbokförd på fastigheten.
+
+Före detta livsmedel
+
+Kommunalt avfall av animaliskt ursprung från livsmedelsbutiker eller annan detaljhandel enligt förordningarna (EG) nr 1069/20091 och (EU) nr 142/20112.
+
+Förvaringsplats
+
+Utrymme eller avgränsad plats för förvaring av avfall.
+
+Gemensam avfallsanläggning
+
+Soprum, behållare eller liknande som två eller flera fastigheter är anslutna till.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Grovavfall
+
+Kommunalt avfall som är så skrymmande eller har andra egenskaper som gör att det inte är lämpligt att samla in i kärl (5 § i Naturvårdsverkets föreskrifter och allmänna råd om hantering av brännbart avfall och organiskt avfall, NFS 2004:4).
+
+Hantering av avfall
+
+Insamling, transport, sortering, återbruk, återvinning, bortforslande och deponering av avfall (15 kapitlet 5 § miljöbalken).
+
+Hämtningsintervall
+
+Anger hur ofta ett avfall hämtas.
+
+Avfall under kommunalt ansvar
+
+Med avfall under kommunalt ansvar avses kommunalt avfall och annat avfall som kommunen har ansvar för enligt 15 kap. 20 § miljöbalken (Se kap 2.1 punkt A) samt förpackningsavfall enligt 6 kap. 2 och 6 §§ förordningen (2022:1274) om producentansvar för förpackningar. Kompost
+
+Kompost är ett ställe eller en behållare där man lägger biologiskt nedbrytbart avfall som ska brytas ned och bli jord.
+
+Kommunalt avfall
+
+Med kommunalt avfall avses avfall som kommer från hushåll och sådant avfall från andra källor som till sin art och sammansättning liknar avfall från hushåll, dock inte
+
+1. Avfall från tillverkning
+
+2. Avfall från jord- och skogsbruk
+
+3. Avfall från fiske
+
+4. Avfall från septiktankar, avloppsnät och avloppsrening
+
+5. Bygg- och rivningsavfall, och 6. uttjänta bilar. (15 kap. 3 § 1–6 miljöbalken).
+
+6. I begreppet kommunalt avfall ingår även returpapper enligt 1 kap 10 § avfallsförordningen (2020:614)
+
+Källsortering
+
+Sortering och/eller separering av avfall på samma plats där avfallet har blivit till. Lastningsplats
+
+Platsen där insamlingsfordon stannar för att hämta avfall.
+
+Latrin
+
+Blandning av urin och exkrementer från människor.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Lättillgängliga insamlingsplatser (LIP)
+
+Plats i kommunen där hushåll och samlokaliserade verksamheter kan lämna sitt skrymmande förpackningsavfall. Matavfall
+
+Med matavfall avses biologiskt nedbrytbart avfall som består av livsmedel eller som uppstår i samband med hantering av livsmedel. Till exempel frukt- och grönsaksrester, fiskrens och äggskal. Gräs, kvistar och annat från trädgårdar är inte matavfall. NSR
+
+Nordvästra Skånes Renhållnings AB
+
+NSVA
+
+Nordvästra Skånes Vatten och Avlopp AB
+
+Nyttjanderättshavare
+
+Verksamheter eller personer som har rätt att använda en fastighet men inte äger den. Permanentboende
+
+Bostad som nyttjas året om som bostad.
+
+Personekvivalent
+
+En personekvivalent motsvarar den mängd förorening som en person normalt kan anses ge upphov till per dygn.
+
+Producent
+
+Den som yrkesmässigt tillverkar, importerar eller säljer en vara eller en förpackning, eller den som i sin yrkesmässiga verksamhet skapar avfall som kräver särskilda åtgärder av renhållnings- eller miljöskäl. Renhållaren
+
+Kommunen eller den som kommunen utser att sköta renhållningen.
+
+Insamlingsfordon
+
+Fordon som används för att hämta avfall och slam.
+
+Restavfall
+
+Det avfall som inte är farligt avfall och som inte går att återanvända eller återvinna på annat sätt än genom förbränning. Returpapper
+
+Kommunalt avfall som utgörs av tidningar, tidskrifter, direktreklam, kataloger och liknande produkter som till som till sin art och sammansättning liknar avfall från hushåll, tex returpapper från kontor och butik.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Slam
+
+Restprodukt från rening av toalettavfall.
+
+Toalettavfall
+
+Avloppsvatten och annat avfall från toalett och urinoar.
+
+Toalettbod
+
+Toalettbyggnader som inte är kopplade till det kommunala avloppssystemet utan är anslutna till en behållare. Exempel på toalettbodar är flyttbara toaletter och toaletter på rastplatser. Torrtoalett
+
+Torrtoalett är en toalett som inte använder vattenspolning. Tex mulltoa, förbränningstoalett eller urinseparerande toalett. Trädgårdsavfall
+
+Med trädgårdsavfall avses sådant biologiskt nedbrytbart trädgårds- och parkavfall i enlighet med definitionen i 1 kap. 5§ 1 punkten avfallsförordningen (2020:614) som uppstår i trädgården vid bostadshus och sådant avfall från andra källor som är kommunalt avfall i enlighet med 15 kap. 3§ miljöbalken.
+
+Samlokaliserad verksamhet
+
+En verksamhet i en fastighet som använder samma avfallsbehållare som boende i fastigheten räknas som en samlokaliserad verksamhet. Det kan till exempel vara en frisör i ett hyreshus som nyttjar samma kärl. Skulle en restaurang finnas i ett hyreshus men har egna kärl för avfall räknas restaurangen inte som en samlokaliserad verksamhet. Samlokaliserade verksamheter ska anmäla till kommunen att de är en samlokaliserad verksamhet. Om verksamheten upphör eller flyttar ska detta meddelas kommunen omgående. Verksamhet
+
+Skolor, förskolor, restauranger, sjukhus, fritidsanläggningar, affärer, kontor, hotell, båtklubbar m.m. som inte är avsedda för boende. Villahushåll
+
+En- eller tvåfamiljsfastighet. Till denna kategori räknas samtliga fastigheter som enligt Skatteverket är taxerade som småhus.
+
+Återanvändning
+
+Sådant som inte är avfall utan används ytterligare en eller flera gånger för att fylla samma funktion som det ursprungligen var avsett för (15 kapitlet 2 § miljöbalken). Återvinning
+
+Återvinning innebär att avfallet kommer till nytta som ersättning för annat material eller förbereds för att komma till sådan nytta eller en avfallshantering som innebär förberedelse för återanvändning.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+2. ANSVAR OCH SKYLDIGHETER
+
+I detta kapitel regleras ansvaret kring avfallshanteringen.
+
+1§ Kommunens renhållningsansvar
+
+A. Kommunen ansvarar för att följande avfall inom kommunen transporteras och behandlas för att skydda miljön och människors hälsa.
+
+1. Kommunalt avfall
+
+2. Avloppsfraktioner och filtermaterial från enskilda avloppsanläggningar, som är dimensionerade för högst 25 personekvivalenter, om anläggning en endast används för a. Hushållsspillvatten eller b. Spillvatten som till sin art och sammansättning liknar hushållsspill vatten.
+
+3. Latrin från torrtoaletter eller jämförliga lösningar
+
+4. Bygg- och rivningsavfall som inte producerats i en yrkesmässig verksamhet. B. Kommunen har däremot inte ansvar för avfall som ska samlas in och tas om hand av producenter enligt dea föreskrifter som meddelats med stöd av 15 kapitlet 12§ miljöbalken (1998:808). Det gäller till exempel elektronikavfall, batterier, däck, bilar och läkemedelsrester.
+
+C. Kommunfullmäktige fastställer avfallstaxan och renhållningsordningen samt beslutar om vem som är renhållare i kommunen.
+
+D. Renhållare är Nordvästra Skånes Renhållnings AB, och ansvarar för att samla in avfall under kommunalt ansvar. Gaturenhållning ingår inte i NSR:s ansvar. E. Kommunen ska låta transportera bort avfall från fartyg som ligger i hamn. Det kan vara oljerester, toalettavfall, fast avfall eller rester av andra skadliga ämnen som det är förbjudet att släppa ut enligt lagen om åtgärder mot förorening från fartyg (1980:424) eller enligt föreskrifter som har meddelats med stöd av avfallsförordningen (2022:614).10
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+F.
+
+Stadsbyggnadsnämnden är ansvarig nämnd för avfallshanteringen i
+
+Helsingborgs stad.
+
+G. Miljönämnden kontrollerar hur bestämmelserna om avfall i miljöbalken och i föreskrifter som meddelats med stöd av balken följs. Om inget annat anges beslutar Miljönämnden om undantag och prövar individuella ärenden enligt denna renhållningsordning.
+
+H. Stadsbyggnadsnämnden är ansvarig nämnd för anvisande av plats.
+
+2§ Fastighetsägarens ansvar
+
+A. Fastighetsägare ska betala enligt gällande avfallstaxa.
+
+B. Fastighetsägare ska omgående meddela renhållaren om ägandet av fastigheten ändras eller om det sker andra förändringar som berör avfallshanteringen.
+
+C. Fastighetsägaren ska informera dem som bor eller bedriver verksamhet i fastigheten om föreskrifterna i denna renhållningsordning. Fastighetsägaren ansvarar för att reglerna följs.
+
+D. Fastighetsägaren ska se till så att det är möjligt att sortera de olika typer av avfall som anges i renhållningsordningen och som renhållaren ska transportera bort. Fastighetsägaren ska också tillhandahålla påsar för matavfall. Påsarna ska vara godkända av renhållaren.
+
+E. Fastighetsägaren ska kontakta renhållaren om avfallsutrymmet ska byggas om eller om det ska byggas nya sådana.
+
+F.
+
+Renhållaren ska kontrollera avfallsutrymmet innan det får användas.
+
+Vid kontrollen skrivs ett besiktningsprotokoll som ska följa fastigheten oavsett ägare.
+
+G. Fastighetsägaren ansvarar för att avfallsutrymmet och platsen där avfallet ska hämtas utformas och underhålls så att kraven på tillgänglighet och god arbetsmiljö uppfylls.
+
+H. Fastighetsägaren ska rengöra avfallsbehållarna för avfall så att arbetsmiljön och hygienen blir god.
+
+I.
+
+Fastighetsägaren ansvarar för att avfallsabonnemanget täcker behovet, det vill säga den mängd avfall som uppstår i fastigheten.
+
+J.
+
+Inom vissa områden i kommunen, och för vissa fastigheter, ska avfall samlas in och transporteras bort från en gemensam avfallsanläggning. Äger eller tillhandahåller kommunen eller renhållaren en gemensam avfallsanläggning ansvarar renhållaren för behållare och utrustningen kopplad till behållaren. Markägaren/Fastighetsägaren äger och ansvarar för anläggning eller del av anläggning inom fastigheten.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+3§ Avfallslämnarens ansvar
+
+A. Avfallet ska sorteras.
+
+B. Avfallet ska lämnas på ett sätt som är godtagbart med hänsyn till både miljö och hälsa.
+
+C. Avfallet ska lämnas i avfallsbehållare som tillhandahålls av renhållaren. D. Den som i yrkesmässig verksamhet ger upphov till annat avfall än kommunalt avfall ska lämna det till den som enligt avfallsförordningen (2020:614) har tillstånd för transportverksamhet, är anmäld hos föreskriven myndighet eller har undantagits från anmälningsplikt enligt Naturvårdsverkets föreskrifter om transport av avfall (NFS 2022:32).
+
+3. AVFALL UNDER KOMMUNALT ANSVAR
+
+I detta kapitel regleras avfall som kommunen har ansvar att samla in. Observera att många verksamheter även har avfall klassat som kommunalt avfall (till exempel avfall från matsalar eller som uppkommit vid städning).
+
+1§ Avfallsspecifika anvisningar
+
+De avfallsslag som inte nämns nedan hämtas efter behov. Hämtningsintervallerna är angivna så som renhållningen normalt fungerar. Det går att söka dispens, se kapitel
+
+Matavfall
+
+Biologiskt nedbrytbart livsmedels- eller köksavfall, som i dessa föreskrifter nämns matavfall, ska sorteras ut och hållas skilt från annat avfall.
+
+Emballering, behållare och förvaring av matavfall
+
+•
+
+Matavfall ska läggas i påsar som är godkända av renhållaren, undantag kan i vissa fall göras för verksamheter.
+
+•
+
+Storhushåll, restauranger, livsmedelsrelaterade affärsrörelser eller andra närings ställen där det uppstår ruttnande eller vått matavfall kan behöva kylt avfallsutrymme.
+
+•
+
+Det är tillåtet att använda matavfallskvarn som är kopplad till en separat sluten tank, så kallad matavfallstank. Matavfallstankar ska placeras så att de lätt kan slamsugas. Är tanken placerad inomhus ska den tömmas via en anslutning på utsidan av fasaden i gatuplan. Matavfallskvarnar kopplade till kommunala avloppsnätet kräver dispens.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Så ofta hämtas matavfall
+
+Nedan angivna intervall gäller förutsatt avfallet är korrekt sorterat och inte orsakar olägenheter för människors hälsa eller miljö. •
+
+För permanentboende i en- och tvåfamiljsfastigheter ska matavfall hämtas efter behov, dock minst en gång varannan vecka.
+
+•
+
+För fritidsboende i en- och tvåfamiljsfastigheter ska matavfall hämtas minst en gång varannan vecka under vecka 18–39. Övrig del av året hämtas matavfallet efter behov och enligt gällande avfallstaxa.
+
+•
+
+För flerfamiljsfastigheter och verksamheter ska matavfall hämtas vid behov, dock minst en gång varje vecka.
+
+•
+
+Matavfallsslurry och matavfallsslam, till exempel från matavfallstankar töms enligt gällande avfallstaxa för att upprätta en god funktion, dock minst en gång var fjärde vecka.
+
+Detaljhandelns köks- och livsmedelsavfall
+
+Före detta livsmedel från livsmedelsbutiker och annan detaljhandel ställer särskilda krav på spårbarhet. Ytterligare vägledning finns att ta del av på Jordbruksverkets hemsida. •
+
+Före detta livsmedel ska åtföljas av ett handelsdokument. Det är avsändaren som ska se till att det finns ett handelsdokument som transportören får med sig. Transportör får däremot inte transportera bort det före detta livsmedlet utan dokumentationen.
+
+•
+
+Avfall från detaljhandeln utgör kommunalt avfall och enbart kommunen eller den kommunen anlitar får därför transportera avfallet. Det gäller oavsett om avfallet är förpackat eller oförpackat.
+
+•
+
+Förpackat köks- och livsmedelsavfall för efterföljande avskiljande av förpackning får inte genomgå maskinell komprimering.
+
+•
+
+Dispens för att på egen hand transportera bort avfallet från uppkomstplatsen kan sökas hos miljönämnden.
+
+•
+
+Flytande utsorterat köks- eller livsmedelsavfall med höga fetthalter får inte hällas i avloppet om det strider mot ABVA.
+
+•
+
+Samma hämtningsfrekvens gäller som för övriga verksamheter.
+
+Hemkompostering av matavfall
+
+Kompostering av matavfall på den egna fastigheten ska anmälas till miljönämnden enligt avfallsförordningen. Komposten ska vara isolerad och säkrad mot skadedjur samt utformas, placeras och skötas så att det inte uppstår några olägenheter för miljön eller människors hälsa. Vid kompostering i stallgödsel ska matavfallet grävas ner så att djur inte kan komma åt det. Anmälan är kopplad till fastighetsägare och om ändringar görs ska det anmälas till miljönämnden.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Restavfall
+
+Restavfall är det avfall som är kvar efter källsortering, och får plats i kärlet. Emballering och behållare av restavfall •
+
+Restavfall ska emballeras väl och läggas i avfallsbehållaren för restavfall.
+
+•
+
+Nedgrävda avfallsbehållare för restavfall kan användas där renhållaren och Helsingborgs stad anser att det är lämpligt.
+
+•
+
+Komprimering av avfallet i kärl är inte godkänt av renhållaren
+
+Så ofta hämtas restavfall •
+
+För permanentboende i en- och tvåfamiljsfastigheter ska restavfall hämtas efter behov, dock minst en gång var fjärde vecka
+
+•
+
+För fritidsboende i en- och tvåfamiljsfastigheter ska restavfall hämtas minst en gång var fjärde vecka under vecka 18-39. Övrig del av året hämtas restavfall efter behov enligt gällande avfallstaxa.
+
+•
+
+För flerfamiljsfastigheter och verksamheter ska restavfall hämtas efter behov, dock minst en gång varje vecka.
+
+•
+
+Markbehållare med restavfall ska hämtas vid behov, dock minst en gång var fjärde vecka.
+
+Grovavfall
+
+Grovavfall ska hållas skilt från annat avfall. Privatpersoner får själva transportera bort grovavfall som uppkommer i hushållet, till NSR:s återvinningscentraler eller till annan plats som renhållaren anvisat. Grovavfall får inte komprimeras.
+
+Uppmärkning och placering av grovavfall •
+
+Grovavfall från en- och tvåfamiljsfastigheter som hämtas vid fastigheten ska märkas med ”Grovavfall” och placeras vid tomtgränsen mot körbar väg där insamlingsfordonet kan stanna på ett säkert sätt.
+
+•
+
+Grovavfall från flerfamiljsfastigheter och grupphusområden ska förvaras under tak tills det transporteras bort enligt renhållarens anvisningar.
+
+•
+
+Grovavfall ska alltid placeras vid lastningsplatsen på hämtningsdagen.
+
+•
+
+Grovavfallet får inte vara packat i säck eller kartong.
+
+Så hämtas och transporteras grovavfall
+
+•
+
+Grovavfall hämtas efter beställning av fastighetsägaren eller på schema. Avgift betalas enligt gällande avfallstaxa.
+
+•
+
+Fastighetsägare får inte anlita annan än renhållaren eller renhållarens entreprenör för att transportera bort grovavfall som faller under definitionen kommunalt avfall.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Farligt avfall
+
+Farligt avfall ska sorteras ut och hållas skilt från annat avfall. Privatpersoner ska själva transportera farligt avfall som uppkommit i det egna hushållet till en plats som kommunen anvisat, till exempel NSR:s återvinningscentraler eller till en miljöbod. Det är förbjudet att spola ner farligt avfall i avloppet.
+
+Yrkesmässiga verksamheter får inte anlitas för att transportera farligt avfall som faller under definitionen kommunalt ansvar.
+
+Märkning och emballering av farligt avfall
+
+Det farliga avfallet ska vara tydligt märkt med innehåll, vara väl förpackat och får inte blandas med annat avfall, inte heller med annat farligt avfall.
+
+Förpackningar
+
+Förpackningsavfall i form av papper, plast, metall, färgat glas och ofärgat glas ska sorteras ut och hållas skilt från annat avfall. Förpackningar med pant ska sorteras ut och lämnas till ett retursystem.
+
+Emballering, behållare och förvaring av förpackningar •
+
+Hushåll och samlokaliserade verksamheter ska lämna de utsorterade förpackningarna till ett insamlingssystem som renhållaren tillhandahåller.
+
+•
+
+Förpackningar som innehåller avfall ska tömmas på innehåll, men behöver inte diskas. Dock gäller det inte en förpackning som innehåller farligt avfall eller läkemedelsavfall, om förpackningen underlättar den praktiska hantering en av avfallet.
+
+•
+
+Förpackning som innehåller farligt avfall eller rester av farligt avfall ska hanteras som farligt avfall.
+
+•
+
+Hushåll ska lämna förpackning som innehåller läkemedelsavfall som inte är farligt avfall till apotek i enlighet med förordning (2009:1031) om producentansvar för läkemedel.
+
+Så hämtas förpackningar
+
+Förpackningsavfall hämtas fastighetsnära utifrån gällande avfallstaxa, till en plats som anvisats av kommunen eller till NSR:s återvinningscentraler.
+
+Tidningar och returpapper
+
+Tidningar och returpapper ska sorteras ut, hållas skilt från annat avfall. Så ska tidningar och returpapper lämnas
+
+Hushåll ska lämna utsorterade tidningar och returpapper till ett insamlingssystem som renhållaren tillhandahåller. Till exempel i särskilda kärl eller containrar.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Så hämtas tidningar och returpapper
+
+Tidningar och returpapper hämtas fastighetsnära utifrån gällande avfallstaxa, till en plats som anvisats av kommunen eller till NSR:s återvinningscentraler.
+
+Elavfall
+
+Elavfall, ska sorteras ut och hållas skilt från annat avfall. För elavfall gäller producentansvar.
+
+Batterier
+
+Batterier ska sorteras ut och hållas skilda från annat avfall. För batterier gäller producentansvar.
+
+Läkemedelsavfall
+
+Läkemedelsavfall ska sorteras ut, hållas skilt från annat avfall och lämnas till apotek. Det är förbjudet att spola ner läkemedelsrester i avloppet (ABVA). Producentansvar gäller.
+
+Trädgårdsavfall
+
+Biologiskt nedbrytbart trädgårds- eller parkavfall, som i dessa förskrifter kallas trädgårdsavfall, ska sorteras ut, hållas skilt från annat avfall. Fastighetsägare får själva transportera trädgårdsavfall till en plats som anvisats av kommunen eller till NSR:s återvinningscentraler. För flerfamiljsfastigheter och grupphusområden gäller att avfallet ska förvaras på lämplig plats i avvaktan på borttransport enligt renhållarens anvisningar.
+
+Trädgårdsavfall från parker är ett kommunalt avfall.
+
+Så hämtas trädgårdsavfall
+
+Trädgårdsavfall kan hämtas vid fastigheten enligt gällande avfallstaxa. Kompostering av trädgårdsavfall
+
+För att kompostera trädgårdsavfall krävs att komposten utformas, placeras och sköts så att besvär inte uppstår för miljön eller människors hälsa. Kompostering av trädgårdsavfall vid en- och tvåfamiljsfastigheter behöver inte anmälas till miljönämnden. Detsamma gäller om trädgårdsavfallets vikt understiger 50 ton per kalenderår.
+
+Eldning av trädgårdsavfall
+
+Man får endast under veckorna 16, 17, 40 och 41 elda trädgårds- och parkavfall. I första hand ska man dock kompostera avfallet eller lämna det till återvinning. Detta gäller inom områden med detaljplan samt inom områden med områdesbestämmelser1. Eldning får dock inte ske när räddningstjänsten utfärdat eldningsförbud. När man eldar trädgårds- och parkavfall ska man säkerställa att det medför endast ringa eller helt tillfälliga störningar i närområdet.
+
+1 Detaljplan och områdesbestämmelser i kommunen finns på kommunens hemsida
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Invasiva växter
+
+Biologiskt nedbrytbart trädgårds- eller parkavfall som innehåller parkslide eller invasiva arter som finns upptagna på unionsförteckningen enligt förordningen (EU) nr 1143/2014 ska sorteras ut och hållas skilt från annat biologiskt avfall.
+
+Emballering av invasiva arter
+
+Biologiskt nedbrytbart trädgårds- eller parkavfall som innehåller parkslide eller invasiva arter ska paketeras i dubbla väl förslutna påsar och lämnas till en plats som anvisats av kommunen eller till NSR:s återvinningscentraler.
+
+Matfett
+
+Överblivet vegetabiliskt och animaliskt fett från matlagning, till exempel frityrolja och stekfett ska sorteras ut och hållas skilt från annat avfall.
+
+Emballering och förvaring av matfett
+
+Hushållskunder ska hälla avsvalnat fett i en lämplig behållare. Därefter ska behållaren lämnas till NSR:s återvinningscentraler eller annan anvisad plats för återvinning. Mindre mängder fett får läggas i restavfallet som ett komplement till separat insamling via återvinningscentraler. Fettet får inte hällas i avloppet eftersom det kan orsaka stopp där, något som i sin tur kan leda till källaröversvämningar eller att orenat avloppsvatten rinner ut i hav och vattendrag. Frityrolja och liknande från restauranger och storkök ska förvaras i behållare som renhållaren tillhandahåller. Så hämtas matfett hos verksamheter
+
+Frityrfett och liknande som samlas i behållare hämtas eller töms av renhållaren eller renhållarens entreprenör vid behov enligt gällande avfallstaxa, dock minst en gång per år.
+
+Fettslam från fettavskiljare
+
+Fettslam från fettavskiljare hos restauranger, storkök, livsmedelsbutiker och liknande ska tömmas av renhållaren eller renhållarens entreprenör. Enligt ABVA får en verksamhet inte släppa ut mer fett i kommunens ledningsnät än 150 mg per liter vatten. Utöver ABVA gäller att fettavskiljare ska vara certifierad enligt svensk standard, SS EN 1825–2. Material som sugs upp från fettavskiljare får inte ha en större partikelstorlek än 12 mm. Dimensionering och övrig information om fettavskiljaren ska skickas till NSVA i samband med VA-anmälan. Underhåll ska utföras efter behov enligt leverantörens rekommendationer. Så hämtas fettslam från fettavskiljare
+
+Fettslam från fettavskiljare ska hämtas vid behov så att fett inte följer med vattenflödet i avloppssystemet eller har en större partikelstorlek än 12 mm, dock minst två gånger per år. Intervallen för hämtning ska anpassas till anläggningens belastning, typ och storlek. Renhållaren har rätt att ändra abonnemanget till tätare hämtningsintervall vid behov. Fastighetsägaren är alltid ansvarig för avskiljarens funktion utöver det som anges ovan.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Slam från små avloppsanläggningar
+
+Slutna tankar, slamavskiljare som till exempel två- och trekammarbrunnar, minireningsverk och liknande ska tömmas av renhållaren eller renhållarens entreprenör och enligt gällande avfallstaxa.
+
+Små avloppsanläggningar för slam ska vara tillgängliga •
+
+Små avloppsanläggningar ska vara lättillgängliga för tömning. Lock eller manlucka ska kunna öppnas av en person, får inte väga mer än 25 kilo och får vid tömningstillfället inte vara övertäckt eller låst. Sluten tank, eller annan anläggning som töms via slangkoppling ska ha en typ av anslutningskoppling som renhållaren godkänt. Fastighetsägaren ansvarar för anläggningens skötsel och underhåll.
+
+•
+
+Avståndet mellan lastningsplatsen och slambrunnen bör inte vara mer än 20 meter. Är avståndet längre debiteras avgift enligt gällande avfallstaxa.
+
+•
+
+Om brunnen eller tanken ligger utanför den egna fastigheten, eller om det är oklart till vilken fastighet anläggningen hör, ska tömningsplatsen vara markerad med en tydlig skylt som anger fastighetsbeteckning för den fastighet som brunnen tillhör.
+
+•
+
+På ett minireningsverk ska det finnas instruktioner för hur det töms.
+
+Instruktionerna ska vara lätt åtkomliga för personalen som ska tömma det.
+
+Så töms slam från små avloppsanläggningar
+
+För bostadshus som nyttjas som permanentboende ska slam från sluten tank, slamavskiljare och minireningsverk tömmas minst en gång per år. För fritidsboende ska tömning ske minst vartannat år. Slamavskiljare eller minireningsverk utan en ansluten vattentoalett, ska tömmas vid behov efter beställning.
+
+Reningsverk som använder slamnedbrytande tank ska tömmas vid behov efter beställning.
+
+Filtermaterial från fosforfällor
+
+Filtermaterial ska hämtas av renhållaren eller på uppdrag av renhållaren Emballering och behållare av filtermaterial från fosforfällor
+
+Filtermaterial i fosforfällor ska vara förpackat och tillgängligt så att det kan hämtas med kranbil. Filtermaterial från fosforfällor för små avloppsanläggningar ska hämtas av renhållaren eller på uppdrag från renhållaren. Fastighetsägaren ansvarar för att platsen och fosforfällan är tillgänglig.
+
+Fastighetsägaren och uppdragsutföraren ansvarar för att bytet av filtermaterial utförs samtidigt. Det innebär att förbrukat filtermaterial ska transporteras bort och nytt filtermaterial ska monteras vid samma tillfälle.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Tillgänglighet för filtermaterial från fosforfällor
+
+För att kunna hämta filtermaterial i säckar måste det finnas en väg som är lämplig för kranbilar fram till fosforfällan och det måste finnas tillräckligt med plats för att kunna utföra arbetet. Renhållaren kan ge ytterligare råd om hur platsen bör vara utformad. Anläggningar som tillkommit före 1 juli 2016 och som har filter i lösvikt är undantagna från kravet att filtermaterialet ska vara förpackat. Filtermaterial i lösvikt ska vara i sådan konsistens att det går att suga upp eftersom det hämtas med slamsugningsbil. Så byts filtermaterial i fosforfällor
+
+Fosforfällans filtermaterial ska bytas enligt villkoren som står i tillståndet för avloppsanläggningen.
+
+Toalettbodar
+
+Toalettbodar ska tömmas av renhållaren eller på uppdrag av renhållaren. Avfallet ska kunna hämtas med slamsugningsbil.
+
+Så ska toalettbodar tömmas
+
+Toalettbodar som slamsugs ska tömmas minst en gång per år i den ordning renhållaren bestämmer.
+
+Tillgänglighet
+
+Avståndet mellan toalettboden och platsen för slamsugningsbilen bör inte vara längre än 20 meter. Är avståndet längre debiteras en avgift enligt avfallstaxan. Toalettavfall från torra lösningar
+
+Behållare för latrintoalett ska hämtas av renhållaren eller av företag på uppdrag av renhållaren. Undantaget är om miljönämnden har gett fastighetsägaren dispens för att själv ta hand om innehållet.
+
+Toalettavfall från olika typer av förmultningstoaletter, det vill säga mull, ska i första hand hanteras som jordförbättringsmedel i ett eget omhändertagande som miljönämnden har gett sitt godkännande för i ett anmälnings- eller dispensärende. Ofullständigt nedbruten mull från en mulltoalett ska hanteras på samma sätt som latrin.
+
+Aska från förbränningstoalett kan hanteras som jordförbättringsmedel inom egen tomt eller fastighet. Om inte den möjligheten finns kan det förpackas i lämpligt material och lämnas i kärl för restavfall.
+
+Verksamheter kan ha latrin som faller under kommunalt ansvar, tex campingar.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Så ska latrintunna hämtas
+
+Latriner ska tömmas minst en gång varannan vecka hos permanentboende. För fritidsboende gäller minst en gång varannan vecka under maj-september och en gång i månaden för resten av året.
+
+Latriner ska tömmas minst en gång varannan vecka hos året runt verksamheter. För säsongsverksamheter gäller minst en gång varannan vecka under maj-september och en gång i månaden för resten av året.
+
+Latrintunnan ska vara tillgänglig
+
+Latrintunna ska stå vid tomtgräns när den ska hämtas.
+
+Stickande eller skärande smittförande avfall
+
+Avfall som kan föra smitta vidare eller avfall som man kan sticka eller skära sig på ska sorteras ut och hållas skilt från annat avfall. Det ska förvaras i speciella behållare som privatpersoner kan hämta på apotek som renhållaren skrivit avtal med.
+
+Apoteken tar emot avfallet om det är paketerat i rätt emballage.
+
+Stickande eller skärande avfall
+
+Avfall som man kan sticka eller skära sig på men som inte har kommit i kontakt med kroppsvätskor ska förpackas väl och sorteras som restavfallet.
+
+Exempel på sådant avfall är knivar och trasiga glas.
+
+Smittförande avfall
+
+Det kan uppkomma avfall som kan föra vidare smitta hos den som vårdar sig själv i hemmet. Bandage kan exempelvis innehålla blod eller andra kroppsvätskor. Sådant avfall ska förpackas väl och sorteras som restavfall. Stänk eller enstaka droppar gör inte att avfallet behöver klassas som smittförande.
+
+Aska
+
+Aska och sot från kol- och vedeldning kan användas som jordförbättring inom den egna fastigheten. Om inte den möjligheten finns ska det sorteras som restavfall och hanteras så det inte kan orsaka brand i avfallsbehållare. Askan och sotet ska packas så att det inte dammar när det hämtas.
+
+Döda sällskapsdjur
+
+Döda sällskapsdjur, inklusive hästar, kan grävas ner enligt Jordbruksverkets föreskrifter. Hästar ska grävas ner enligt miljönämndens anvisningar. Sällskapsdjur kan också lämnas till veterinärkliniker, djurbegravningsplatser eller djurkrematorier.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Bygg och rivningsavfall
+
+Bygg- och rivningsavfall ska sorteras i minst sex fraktioner: trä, mineral (betong, klinker, keramik, sten), metall, glas, plast och gips så de olika materialen kan återanvändas eller återvinnas. Fraktionerna ska förvaras skilt från annat avfall och även transporteras skilt. Privatpersoner får transportera bygg- och rivningsavfall till NSR:s återvinningscentraler eller beställa hämtning hos NSR:s auktoriserade entreprenörer.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+2§ Transportväg för insamlingsfordon
+
+Fastighetsägaren ska se till så att vägen till platsen där avfallsbehållare ska hämtas eller tömmas är framkomlig hela året. Vägen ska ha en hårdgjord körbana samt vara snöröjd och grusad eller saltad vintertid.
+
+Vägbredd
+
+Vägen ska vara minst 5,5 meter bred om det är trafik i båda riktningarna. Är parkering tillåten vid sidan av vägen måste den vara bredare. Är vägen mötesfri och det inte finns parkerade bilar kan vägen vara smalare men den bör vara minst 3,5 meter. Träd och annan växtlighet får inte inkräkta på vägbredden, inte heller snövallar (se figur 1).
+
+Figur 1 Väggbredd mötesfri väg och för väg med trafik i båda riktningarna.
+
+Fri höjd
+
+Vägen ska ha en fri höjd av minst 4,7 meter (se figur 2). Träd och annan växtlighet får inte inkräkta på den fria höjden.
+
+Figur 2 Fri höjd.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Vändplats
+
+Insamlingsfordon ska kunna vända på en återvändsgata. Vändplats för ett insamlingsfordon av standardstorlek ska ha en diameter av 18 meter med en hinderfri remsa på ytterligare 1,5 meter runt om (se figur 3). Alternativ till detta kan vara en vändplats eller en trevägskorsning som möjliggör en så kallad T-vändning. (se figur 4)
+
+Figur 3 Mått för vändplats.
+
+Figur 4 Mått för T-vändning.
+
+Enskild väg och tomtmark
+
+Enskild väg och tomtmark som utnyttjas ska vara så dimensionerad och hållas i sådant skick att den är körbar för insamlingsfordon. Om vägen inte kan hållas körbar ska fastighetsägaren eller nyttjanderättshavaren lämna avfallet på en plats som överenskommits med renhållaren eller på en plats som kommunen anvisat.
+
+Backning
+
+I ny- och ombyggnationer av områden bör inte backning krävas mer än vid en T-vändning.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+3§ Lastningsplats
+
+Platsen där insamlingsfordonet stannar för att hämta avfall ska vara jämn och hårdgjord. Lastningsplatsen ska röjas från snö och vara halkfri.
+
+Vid kärlhämtning
+
+Platsen där insamlingsfordonet stannar ska vara minst 4,6 meter bred och minst 15 meter lång. Den fria höjden ska vara minst 4,7 meter.
+
+Vid baktömmande containerhämtning
+
+Platsen där insamlingsfordonet stannar ska vara minst 4,6 meter bred och minst 18 meter lång. Den fria höjden ska vara minst 10 meter. Det får inte finnas någon nivåskillnad.
+
+Vid tömning av nergrävda avfallsbehållare
+
+Platsen där insamlingsfordonet stannar ska vara minst 4,6 meter bred och minst 18 meter lång. Den fria höjden ska vara minst 10 meter. Avståndet mellan lastningsplatsen och den nergrävda avfallsbehållaren som ska lyftas ska vara mellan 3 och 10 meter. Lastningsplatsen får inte vara placerad så att behållaren lyfts över vägar, gång- och cykelbanor eller parkeringsplatser. Det får inte finnas några hinder i höjdled eller sidled som kan begränsa tömningen.
+
+4§ Gångväg
+
+Vägen mellan platsen där insamlingsfordonet stannar och platsen där avfallet ska hämtas ska vara jämn och hårdgjord. Vid nybyggnation eller om avfallsutrymmet byggs om eller flyttas, får det inte finnas trappsteg eller kullersten. Gångvägen ska vara fri från snö och hållas halkfri.
+
+4.4.1 Gångvägens bredd
+
+Gångvägen ska vara minst 1,2 meter bred. Om vägen ändrar riktning ska den vara minst 1,35 meter bred.
+
+4.4.2 Fri höjd
+
+Den fria höjden ska vara minst 2,1 meter.
+
+4.4.3 Lutning
+
+Gångvägen bör inte ha någon längslutning. Men om det inte kan undvikas bör lutningen inte överstiga 1:20 för att belastningen ska vara acceptabel, och får inte överstiga 1:12. Lutningen på en ramp får vara högst 1:12 och rampen får vara max 12 meter lång. Skulle rampen vara längre måste det finnas ett vilplan på minst 1,5 meter innan nästa ramp.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+5§ Behållare och emballering
+
+A. Renhållaren beslutar om avfallsbehållarnas typ och storlek i samråd med fastighetsägaren.
+
+B. När avfallet ska hämtas ska avfallsbehållarna stå på en hårdgjord yta (till exempel asfalterad eller stenlagd) på tomten vid körbar allmän väg. För villor och fritidshus får behållaren stå max 2 meter in på fastigheten. (se figur 5)
+
+För flerfamiljshus gäller 5 meter till mitten av utrymmet (se figur 6). Kommunen kan anvisa annan plats. Avfallskärl ska placeras enligt renhållarens anvisningar. Kärl med tre eller fler hjul ska alltid placeras på en slät hårdgjord yta. Är underlaget av annat slag ska kärlet placeras med handtaget ut mot där kärlet hämtas eller enligt kommunens anvisningar.
+
+Tomtgräns
+
+T
+
+K1
+
+Handtag
+
+Max 2 meter
+
+T
+
+Handtag
+
+K1
+
+K2
+
+Trottoar eller liknande
+
+Figur 5 Avstånd mellan tomtgräns och behållare
+
+Miljörum
+
+Tomtgräns
+
+Max 5 meter
+
+Figur 6 Avstånd mellan tomtgräns och miljörum
+
+K2
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+C. I behållarna får man endast lägga det avfall som behållaren är till för. Vilken slags avfall det är kan ses på skylt, dekal eller annan märkning. D. Behållare som renhållaren ställer till förfogande ägs av renhållaren, som också ersätter eller reparerar vid normalt slitage. Skadegörelse och borttappade behållare ersätts av fastighetsägaren.
+
+E. Markbehållare ägs och underhålls av fastighetsägaren om inget annat anges. F.
+
+Avfallsbehållare får inte fyllas mer än att den lätt kan stängas. Den får heller inte vara så tung att den blir svår att flytta eller att arbetsmiljökraven inte kan tillgodoses. Överfull eller för tung avfallsbehållare hämtas först när avfallet har paketerats om.
+
+Tömningskriterier för nedgrävd avfallsbehållare
+
+Nergrävd avfallsbehållare placeras på eller delvis under marken och töms genom öppningar i botten. Innan nedgrävd avfallsbehållare placeras ut ska renhållaren kontaktas. Denna bedömer om platsen för behållaren är lämplig.
+
+Nergrävd avfallsbehållare töms genom att den lyfts med en kran. För att det ska kunna ske säkert och för att tömningen ska godkännas måste både måtten som anges under Kapitel 3 §3 och villkoren nedan uppfyllas.
+
+•
+
+Nergrävd behållare får inte tömmas över allmän gångbana, cykelbana eller körbana. Om behållaren töms över ett så kallat naturligt gångstråk ska det finnas en säker alternativ gångväg runt och förbi behållaren.
+
+•
+
+Insamlingsfordonets lastningsplats får inte vara placerad vid utfarter eller vid en korsning. Lastningsplatsen bör inte placeras utmed huvudgator.
+
+Platsen får inte heller innebära att insamlingsfordonet måste backa.
+
+•
+
+Hinder i höjdled får inte begränsa lyftarmen eller behållaren.
+
+•
+
+Nergrävd avfallsbehållare ska stå på kvartersmark med inkastet vänt mot kvartersmark och ska vara placerad så att regnvatten kan rinna bort.
+
+•
+
+Nergrävd avfallsbehållare ska placeras så att risken för lukt minimeras. Den bör inte stå nära bostad eller luftintag till byggnad.
+
+•
+
+Lyftanordningen på markbehållare ska vara försedd med lyftanordning godkänd av renhållaren samt enligt standard EN 13071-3.
+
+•
+
+Nergrävd avfallsbehållare ska vara godkänd enligt standard EN 13071-1
+
+•
+
+Nergrävd avfallsbehållare ska vara låst för att undvika felsortering och att obehöriga använder behållaren samt för att minska risken för olyckor.
+
+•
+
+Nergrävd avfallsbehållare ska servas minst var 6:e månad av behörig servicekontrollant, oftare vid behov. Protokoll från service ska delges renhållaren för att säkerställas att tömning kan ske säkert.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+6§ Avfallsutrymme och avfallsplats
+
+Avfallsutrymme eller avfallsplats ska uppfylla och underlätta källsorteringen. All förvaring av avfall ska ske så att det inte blir några olägenheter för miljön eller människors hälsa. A. Vid om- och nybyggnationer ska avfallsutrymmet utformas i enlighet med föreskrifterna i renhållningsordningen. Även befintliga avfallsutrymmen bör uppfylla anvisningarna. Bygglov kan behövas vid byggnation av mur, plank, byggnad, eller avfallsutrymme. Kontakta bygglovsenheten på stadsbyggnadsförvaltningen för att ta reda på om bygglov behövs.
+
+B. Vid flerbostadshus och grupphusområden ska avfallsbehållarna placeras så att material och/eller avfallet kan lämnas på ett tryggt och säkert sätt så det inte uppstår olägenheter för miljön eller människors hälsa.
+
+Avfallsbehållarna bör placeras under tak och skyddade för vind.
+
+C. Vid flerbostadshus och grupphusområde ska grovavfall förvaras på en lämplig plats innan det transporteras bort enligt renhållarens anvisningar. D. Vid flerbostadshus och grupphusområde ska trädgårdsavfall förvaras på lämplig plats innan det komposteras lokalt eller transporteras bort enligt renhållarens anvisningar.
+
+E. Verksamheter där det uppkommer kommunalt avfall ska förvara avfallsbehållare i ett avfallsutrymme eller på en annan lämplig plats. F.
+
+Hos storhushåll, restauranger, livemedelsrelaterade affärsrörelser eller andra näringsställen med avfall som ruttnar eller är vått bör det finnas ett kylt utrymme för avfall.
+
+G. Avfallsbehållarna ska placeras i markplan, lutningen bör vara högst 1:20 och får inte vara högre än 1:12.
+
+H. Strömbrytare, dörrar, handtag, lås, lock, med mera ska kunna manövreras från en rullstol.
+
+Dörr
+
+Det ska finnas en uppställningsanordning för dörren till avfallsutrymmet. Karminnermåttet ska ha fri bredd på minst 1,2 meter och fri höjd på 2,0 meter. Detta gäller dörr till avfallsutrymme eller dörr som behöver passeras in till avfallsutrymme. För containerhämtning ska karmmåttet i bredd vara minst 2,4 meter och i höjd minst 2,1 meter.
+
+Avfallsutrymmets utformning
+
+Avfallsutrymmet ska vara minst 2,1 meter högt. Det bör placeras i bottenvåning, helst med egen entré och nära insamlingsfordonets lastningsplats. Samtliga avfallsslag utom möjligen grovavfall bör finnas i samma avfallsutrymme. Alla ytor i rummet ska vara lätta att rengöra och tåla slitage. Ventilation ska finnas och följa riktvärdena i Boverkets byggregler. Golven ska vara halkfria.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+Kärlens placering
+
+Kärlen ska placeras så nära fordonets lastningsplats som möjligt. Gången vid kärlen ska vara minst 1,5 meter bred och avståndet mellan kärlen ska vara minst 6 centimeter. Kärl med två hjul ska placeras så att kärlets handtag kan nås från gången. Flerfamiljsfastigheter kan ha kärlen utomhus. Då bör de stå inom staket eller liknande och vara skyddade av tak. Fastighetsägaren ansvarar för att endast personer som har rätt att använda lokalerna har tillträde till avfallsbehållarna.
+
+Passage
+
+Passagen till ett avfallsutrymme ska vara minst 1,2 meter bred. Om passagens riktning ändras mer än 30 grader ska bredden vara minst 1,35 meter.
+
+Låsning och passersystem
+
+Lås ska vara utformade med en smäck så att renhållningsarbetare och hyresgäster bara behöver öppna dörrarna, aldrig låsa dem. Dörrar måste kunna öppnas inifrån utan nyckel. Renhållaren ska ha tillträde till avfallsutrymmena i fastigheten. Nycklar, portkoder, taggar och liknande ska vid begäran om avfallshämtning lämnas till den som renhållaren anvisar. Ändringar av nycklar, koder eller annat ska meddelas till renhållaren. Vid nybyggnation eller om avfallsutrymmet byggs om eller flyttas får endast dörrar försedda med nyckelfria lås- och passersystem och av renhållaren upphandlat så kallat en-nyckel-system installeras. Påkörningsskydd för låsvred ska finnas.
+
+Belysning
+
+Det ska finnas belysning i avfallsutrymmet. Belysningsstyrkan ska följa Boverkets byggregler och bör styras av rörelsedetektor. Trösklar
+
+Trösklar ska ha ramp på båda sidor.
+
+7§ Anvisande av plats
+
+Kommunen kan bestämma att avfallet ska hämtas på en anvisad plats utanför fastigheten. Anledningen kan vara att det på fastigheten inte finns någon väg för hämtningsbilarna, att det av arbetsmiljöskäl inte går att hämta avfall på fastigheten eller att det av annat skäl inte bedöms lämpligt att göra det. Anvisning kan vara permanent eller tillfällig.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+4. DISPENS
+
+I detta kapitel regleras vilka dispenser från renhållningsordningen som kan medges och vem som beslutar om dispenser. När en fastighet byter ägare slutar eventuell dispens att gälla.
+
+1§ Prövning av dispens
+
+Dispens från renhållningsordningens föreskrifter prövas av miljönämnden om inget annat anges. Ansökan ska innehålla uppgifter om vilka avfallsslag som avses, en redogörelse om hur avfallet ska tas om hand samt skäl till dispensansökan. Dispenser och beslut kan upphävas omedelbart om föreskrifterna inte följs. Dispenser upphör när en fastighet byter ägare.
+
+2§ Gemensamma behållare
+
+Under förutsättning att det inte innebär olägenheter för människors hälsa eller miljön kan fastighetsägare få rätt att använda gemensamma behållare för kommunalt avfall. Fastigheterna ska ligga nära varandra och avfallet ska bedömas kunna rymmas i behållarna. Berörda fastighetsägare ska fylla i en gemensam ansökan och lämna den till stadsbyggnadsnämnden minst sex veckor före önskat startdatum.
+
+Dispensen gäller fem år i taget och beslutas av stadsbyggnadsnämnden.
+
+3§ Uppehåll i hämtning av kommunalt avfall och slam
+
+Den som äger permanentboende eller fritidsboende kan få uppehåll i hämtningen av kommunalt avfall och slam. Förutsättningen är att fastigheten inte kommer att användas alls under en sammanhängande period av minst 6 månader för permanentboende och minst 12 månader för fritidsboende.
+
+Uppehållet beviljas av stadsbyggnadsnämnden och gäller för högst tre år i taget. Fastighetsägaren ska lämna ansökan till stadsbyggnadsnämnden minst sex veckor före önskat startdatum. Abonnemanget öppnas automatiskt efter uppehållstiden.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+4§ Förlängt hämtningsintervall av slam
+
+Miljönämnden kan besluta om förlängt hämtningsintervall för slamavskiljare, minireningsverk och sluten tank. En förutsättning för detta att anläggningen används så sparsamt att förlängt tömningsintervall inte påverkar dess funktion negativt. Förlängt tömningsintervall får inte innebära någon fara för miljön och kan beviljas för högst fem år i taget. Fastighetsägaren ska lämna ansökan till miljönämnden minst sex veckor före önskat startdatum
+
+5§ Befrielse från hämtning av kommunalt avfall, slam, toalettavfall och filtermaterial i fosforfälla
+
+Om fastighetsägare eller nyttjanderättsinnehavare (den som har rätt att använda en fastighet) själv kan ta hand om avfallet på fastigheten, så kan miljönämnden bevilja dispens från hämtning av kommunalt avfall, slam, toalettavfall och filtermaterial i fosforfällor. Förutsättningen är att fastighetsägaren eller nyttjanderättsinnehavaren tar hand om avfallet på ett sätt som inte orsakar olägenhet för människors hälsa eller miljö.
+
+Befrielsen kan beviljas högst fem år i taget för kommunalt avfall, slam och toalettavfall. För filtermaterial i fosforfällor kan befrielsen beviljas i högst 10 år. Fastighetsägaren ska lämna ansökan till miljönämnden minst sex veckor före önskat startdatum.
+
+6§ Totalbefrielse från hämtning av allt kommunalt avfall, slam, toalettavfall och filtermaterial i fosforfälla Fastigheter som inte är i beboeligt skick, till exempel förfallna bostäder, kan helt befrias från hämtning av kommunalt avfall. Fastighetsägaren ska lämna ansökan till miljönämnden minst sex veckor före önskat startdatum och dispensen gäller minst tre år och som längst tio år.
+
+7§ Dispens för fettavskiljare
+
+Stadsbyggnadsnämnden genom NSVA prövar dispens från ABVA gällande utsläpp av avloppsvatten som innehåller mer fett än vad ABVA anger. Fastighetsägaren ska lämna ansökan minst sex veckor före önskat startdatum. Om anläggningen är kopplad till kommunalt avloppsnät prövar stadsbyggnadsnämnden dispens för kravet på att fett från fettavskiljare ska hämtas minst två gånger. Om anläggningen är kopplad till enskilda avloppsanläggningar prövar miljönämnden dispensen.
+
+8§ Dispens bygg- och rivningsavfall.
+
+Miljönämnden prövar dispens gällande sortering av bygg- och rivningsavfall. Enligt avfallsförordningen (2020:614) 3 kap. 10 och 12 §§ ska bygg-och rivningsavfall sorteras minst i 6 separata fraktioner (trä, mineraler som består av betong, tegel, klinker, keramik eller sten, metall, glas, plast och gips). Ansökan lämnas till miljönämnden minst sex veckor innan påbörjat arbete.
+
+RENHÅLLNINGSORDNING – Helsingborgs stad
+
+9§ Dispens eldning av trädgårdsavfall
+
+Miljönämnden får i enskilda fall medge dispens från eldningsbestämmelsen i dessa föreskrifter om det är lämpligt och eldningen kan ske på ett sätt som medför endast ringa eller helt tillfälliga störningar i närområdet.
+
+10 §Övriga dispenser
+
+Om det finns särskilda skäl kan miljönämnden även ge dispens från annat i denna renhållningsordning. Särskilda skäl är sådant som främjar återanvändning och återvinning och som inte innebär olägenhet för miljön eller människors hälsa eller främjar en bättre miljö. Ansökan lämnas till miljönämnden minst sex veckor före önskat startdatum.
+
+5. IKRAFTTRÄDANDE OCH UPPFÖLJNING
+
+I detta kapitel regleras när renhållningsordningen träder i kraft samt hur den ska följas upp.
+
+1§ Ikraftträdande
+
+Dessa föreskrifter träder i kraft 11 april 2025 då renhållningsordning daterad 1 januari 2020 upphör att gälla. Dispenser som har medgetts med stöd av tidigare renhållningsordningar gäller tills vidare eller tills nytt beslut meddelas med stöd av dessa föreskrifter.
+
+2§ Omprövning
+
+Beviljade dispenser i denna renhållningsordning kan omprövas av den nämnd som beviljat dispensen, om olägenhet för människors hälsa eller miljön konstateras eller om andra villkor för beviljade dispenser inte följs. Om den som fått dispens begär en omprövning måste denna lämna en ny ansökan.
+
+3§ Uppföljning av avfallsplanen
+
+Kommunen och NSR ska följa upp avfallsplanen varje år innan april månad är slut.
+
+Bilaga 1 Sorteringsbilaga (externt dokument)
+
+Bilaga 2: Avfallsplan 2024 (externt dokument)
