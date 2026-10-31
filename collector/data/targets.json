@@ -798,6 +798,26 @@
     "as_of": "2026-10-31"
   },
   {
+    "layer": "agency",
+    "type": null,
+    "series": "AMSFS",
+    "label": "AMSFS (AMS)",
+    "target": 1,
+    "kind": "counted",
+    "source": "https://arbetsformedlingen.se/om-oss/var-verksamhet/styrning-och-resultat/forfattningssamling-AFFS (base regulations listed)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "RA-MS",
+    "label": "RA-MS (Riksarkivet)",
+    "target": 1270,
+    "kind": "counted",
+    "source": "https://foreskrifter.riksarkivet.se/api/rams/sok?nummer=&rubrik=&fulltext=&sokBlandGiltiga=true&sokBlandUpphavda=true&ramsSort=1 (base regulations listed)",
+    "as_of": "2026-10-31"
+  },
+  {
     "layer": "case_law",
     "type": null,
     "label": "Case law",

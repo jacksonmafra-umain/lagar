@@ -164,7 +164,8 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   (21), MCFFS (11), AFFS (9), MDFFS (6), AGVFS (5), ELSÄK-FS (3), KIFS (3) and
   IAFFS (3). AFFS and MDFFS publish the full text as HTML and have it; the
   others publish the text only as PDF. Predecessor series listed on the same
-  pages (RFFS, FIFS, AMSFS) are not collected. Bolagsverket (BOLFS)
+  pages (RFFS, FIFS) are not collected; AMSFS (Arbetsmarknadsstyrelsen) has
+  one regulation in force, AMSFS 1996:7, collected with its HTML text. Bolagsverket (BOLFS)
   answers with a bot check and Konkurrensverket (KKVFS) with 403 Forbidden;
   neither is bypassed, both are gaps.
   Since 2026-10-30 the text of these series comes from their PDFs through
@@ -215,7 +216,8 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   UFS and some TVFS links carry only the number, so those documents are titled
   with it. A base regulation whose own PDF is not linked with its number (RGKFS
   2006:1, TVFS 2015:1) is known through its reprint. Older series of the same
-  agencies (Revisorsnämnden's RNFS on the RIFS page) are not collected.
+  agencies (Revisorsnämnden's RNFS on the RIFS page) are not collected; every
+  RNFS regulation stopped applying on 2018-07-01, when RIFS replaced it (#696).
 - SKSFS (18 base regulations) and SSMFS (41) as of 2026-10-30, the same way.
   Skogsstyrelsen writes numbers as `SKSFS 2011 7` and files every amendment in
   its base regulation's folder; a regulation that replaced another (SKSFS
@@ -262,8 +264,12 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   behind its register `foreskrifter.riksarkivet.se` (`api/rafs/sok`): base
   regulations in force and repealed ones, whose `repealed` date is the entry
   into force of the regulation that repealed them; a repealed regulation whose
-  repealing regulation is not in the register is not stored. Riksarkivet's
-  agency-specific regulations (RA-MS) are not collected.
+  repealing regulation is not in the register is not stored. RA-MS,
+  Riksarkivet's regulations for named agencies, comes from the same register
+  (`api/rams/sok`) on the same terms: 1270 base regulations as of 2026-10-31,
+  283 in force and 987 repealed; 641 older PDFs are scans without a text
+  layer. Older gallring decisions numbered without a year, Serie A and KrA-MS
+  in that register are not collected.
 - SKOLFS (Skolverket, 965 base regulations in force), SJÖFS (Sjöfartsverket,
   44 base regulations in force from its systematic list) and TRVFS
   (Trafikverket, 42 regulations) as of 2026-10-30. SKOLFS comes from the API
