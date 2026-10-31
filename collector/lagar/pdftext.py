@@ -8,6 +8,9 @@ poppler-utils`, `brew install poppler`), run on a temporary copy of the bytes.
 A PDF made of page images has no text layer, and one whose fonts lack a
 Unicode map yields symbols instead of letters. Both come back with `usable`
 false and a `gap` reason; callers record the gap and never guess the text.
+The one exception is a known font encoding that shifts every character by a
+fixed amount: such text is decoded, and kept only when the result passes the
+same checks.
 """
 
 import re
@@ -33,12 +36,20 @@ MIN_ALNUM_SHARE = 0.5
 # names and other languages in a parallel text stay well below either.
 MIN_FOREIGN_LATIN_SHARE = 0.1
 MIN_EQUALS_SHARE = 0.02
+# Glyphs drawn with wrong widths come out letter-spaced, with word breaks lost
+# ("Läns s t y r e l s e niKr onobe r g sl änskung"). The text is unreadable when
+# at least this share of its words are single letters and this share at most two
+# letters long (common short Swedish words aside); readable text stays far below.
+MIN_WORDS = 50
+MIN_SINGLE_LETTER_SHARE = 0.25
+MIN_SHORT_WORD_SHARE = 0.4
 # A line shorter than this share of the text width ends its paragraph when the
 # next line starts with a capital letter or a digit.
 SHORT_LINE = 0.75
 
 NO_TEXT_LAYER = "no text layer (scanned PDF)"
 UNREADABLE_TEXT = "text layer is not readable (fonts without a Unicode map)"
+LETTER_SPACED = "text layer is not readable (letter-spaced, word breaks lost)"
 
 _PAGE_NUMBER = re.compile(r"^\s*(?:-\s*)?(?:sid(?:a|an)?\s+)?\d{1,4}(?:\s*\(\d{1,4}\))?(?:\s*-)?\s*$", re.I)
 _HYPHENATED = re.compile(r"(\w)-$")
@@ -49,6 +60,28 @@ _SWEDISH_LETTERS = frozenset("åäöéüÅÄÖÉÜ")
 _SPACES = re.compile(r"[ \t ]+")
 # "miljö- och hälsoskydd": a hyphen before these words is not a line-break hyphen.
 _CONJUNCTIONS = frozenset({"och", "eller", "samt", "respektive", "resp", "till", "som"})
+# One- and two-letter words that ordinary Swedish text is full of.
+_SHORT_WORDS = frozenset("i e s m a b c d av om en på är de ut nu så få se ny ha ej än ur st kr ca nr km".split())
+
+
+def _shift_table():
+    """Shifted character -> original character, for the Jämtland fonts.
+
+    Their embedded TrueType fonts number the glyphs in Apple's standard order and
+    the PDF draws each character with its glyph number, which `pdftotext` reads
+    as WinAnsi/MacRoman: ASCII comes out 0x1D higher ("=" for a space, "~" for
+    "a"), and from "b" on the code lands in the MacRoman upper half one further
+    along ("É" for "e", "®" for "ä", "∏" for "ö").
+    """
+    table = {chr(code): chr(code - 0x1D) for code in range(0x3D, 0x7F)}
+    for code in range(0x80, 0x100):
+        original = code - 0x1E
+        shifted = bytes([code]).decode("mac_roman")
+        table[shifted] = bytes([original]).decode("mac_roman") if original >= 0x80 else chr(original)
+    return table
+
+
+_UNSHIFT = _shift_table()
 
 
 class PdfTextError(Exception):
@@ -94,8 +127,13 @@ def extract(data, timeout=TIMEOUT_SECONDS):
     return classify(result.stdout.decode("utf-8", "replace"))
 
 
-def classify(raw):
-    """PdfText for the raw `pdftotext` output: pages split by form feeds."""
+def classify(raw, decode=True):
+    """PdfText for the raw `pdftotext` output: pages split by form feeds.
+
+    Text in the shifted font encoding is decoded once when `decode` is true;
+    so are shifted lines among readable ones (a heading in another font). Either
+    way the decoded text is kept only when it passes the same checks.
+    """
     pages = raw.split("\f")
     if pages and not pages[-1].strip():
         pages.pop()
@@ -105,9 +143,28 @@ def classify(raw):
     gap = None
     if text_pages < count * MIN_TEXT_PAGES:
         gap = NO_TEXT_LAYER
-    elif _alnum(raw) < visible * MIN_ALNUM_SHARE or _shifted_encoding(raw, visible):
+    elif _shifted_encoding(raw, visible):
+        if decode:
+            result = classify(unshift(raw), decode=False)
+            if result.usable:
+                return result
         gap = UNREADABLE_TEXT
+    elif _alnum(raw) < visible * MIN_ALNUM_SHARE:
+        gap = UNREADABLE_TEXT
+    elif _letter_spaced(raw):
+        gap = LETTER_SPACED
+    elif decode:
+        lines = _unshift_lines(raw)
+        if lines != raw:
+            result = classify(lines, decode=False)
+            if result.usable:
+                return result
     return PdfText(text=raw.replace("\f", "\n\n"), pages=count, text_pages=text_pages, gap=gap)
+
+
+def unshift(text):
+    """Decode text drawn with the shifted font encoding (see `_shift_table`)."""
+    return "".join(_UNSHIFT.get(c, c) for c in text)
 
 
 def paragraphs(text):
@@ -171,6 +228,35 @@ def _shifted_encoding(raw, visible):
         and foreign >= letters * MIN_FOREIGN_LATIN_SHARE
         and raw.count("=") >= visible * MIN_EQUALS_SHARE
     )
+
+
+def _unshift_lines(raw):
+    """Decode the lines that can only be shifted text.
+
+    A shifted line has "=" for every space, so each of its words ends in "=",
+    and it holds only characters the shift produces (no digits, no space
+    other than between "=" words). Lines like "F=" are too short to tell.
+    """
+    lines = raw.split("\n")
+    for index, line in enumerate(lines):
+        words = line.split()
+        if (
+            words
+            and all(word.endswith("=") for word in words)
+            and sum(len(word) - 1 for word in words) >= 4
+            and all(c in _UNSHIFT for word in words for c in word)
+        ):
+            lines[index] = unshift(line)
+    return "\n".join(lines)
+
+
+def _letter_spaced(raw):
+    words = [w for w in (t.strip(".,;:()") for t in raw.split()) if w.isalpha()]
+    if len(words) < MIN_WORDS:
+        return False
+    unusual = [w for w in words if len(w) <= 2 and w.lower() not in _SHORT_WORDS]
+    single = sum(1 for w in unusual if len(w) == 1)
+    return single >= len(words) * MIN_SINGLE_LETTER_SHARE and len(unusual) >= len(words) * MIN_SHORT_WORD_SHARE
 
 
 def _alnum(text):
