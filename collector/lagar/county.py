@@ -982,7 +982,11 @@ def _store_files(client, robots, item, args, manifest):
         return _stored_meta(probe, args.corpus), False
     decided, published, in_force = pdf_facts(texts)
     item.decided = item.decided or decided
-    printed = next((title_in_text(p) for p in texts.values() if p), None)
+    ocr_urls = _ocr_urls(stored)
+    # A title read by OCR may hold misread letters: it only stands in for a missing link title.
+    printed = next((title_in_text(p) for u, p in texts.items() if p and u not in ocr_urls), None)
+    if not printed and not item.title:
+        printed = next((title_in_text(p) for p in texts.values() if p), None)
     if printed:
         item.title = printed
     if published:
@@ -996,7 +1000,6 @@ def _store_files(client, robots, item, args, manifest):
     other = existing_path(meta["id"], args.corpus)
     if other is not None and other != path_for(meta, args.corpus):
         raise ValueError(f"{meta['number']} is already stored as {other}")
-    ocr_urls = _ocr_urls(stored)
     if ocr_urls & set(texts):
         meta["text_source"] = "ocr"
     body = file_markdown(meta, item, texts, published, ocr_urls)
