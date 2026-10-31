@@ -310,8 +310,13 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   text from the PDFs. A SOSFS regulation is collected when Socialstyrelsen's
   index of regulations in force names its publication page; four SOSFS PDFs are
   scans without a text layer. Dead links (FoHMFS, SOSFS) and TLVFS regulations
-  TLV's page no longer names are not collected. LVFS (Läkemedelsverket) is not
-  collected (#673), and FHIFS has only repealing regulations on the list.
+  TLV's page no longer names are not collected. FHIFS has only repealing
+  regulations on the list.
+- LVFS (Läkemedelsverket) is a gap (#673). Its regulation pages, about 700 in
+  the site's sitemap with HSLF-FS, render only with JavaScript: without it a
+  page carries just its title, with no text, dates or in-force status. The
+  site's robots.txt disallows every PDF (`/*.pdf$`) and its regulation API
+  (`/api/lmfrest/`). Checked on 2026-10-31.
 - Predecessor series still listed where their successors are read, as of
   2026-10-31, in full text from the PDFs: RFFS (Riksförsäkringsverket, 221 in
   force, from Försäkringskassan's register; RFFS 1999:12's file is not a PDF),
