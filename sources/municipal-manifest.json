@@ -6445,12 +6445,12 @@
       "url": "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/bestammelser-och-avgifter-vid-uthyrning-av-skol--och-barnomsorgslokaler-2023-beslut-2020-02-06-reviderad-2023-08-08.pdf"
     },
     {
-      "bytes": 2864,
+      "bytes": 1131,
       "content_type": "text/markdown",
       "id": "0382-taxa-inom-den-gemensamma-raddningsnamndens-omrade",
       "municipality_code": "0382",
-      "retrieved_at": "2026-10-30T20:25:41Z",
-      "sha256": "9050b7775a65d785d1ead7e5808b6438dbda2c83ea2c4211a986fd14f7ba7a8a",
+      "retrieved_at": "2026-10-31T00:22:58Z",
+      "sha256": "426344e4ad1b15d0b2776dd0aaa33912bcd943f8bc568ffc3c04c9af9c4902a2",
       "url": "https://www.osthammar.se/dokument/avgifter-och-taxor/taxa-inom-den-gemensamma-raddningsnamndens-omrade/"
     },
     {
@@ -31186,6 +31186,33 @@
       "url": "https://mariestad.se/download/18.4c63de6f18c8ad0610e15359/1748933980558/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n.pdf"
     },
     {
+      "bytes": 128331,
+      "content_type": "application/pdf",
+      "id": "1493-18-519a747419d7225f199142d",
+      "municipality_code": "1493",
+      "retrieved_at": "2026-10-31T00:41:04Z",
+      "sha256": "5459c2e7dae04262fa2bbff95464342b6bf4eec35f2368942a320505570b2840",
+      "url": "https://mariestad.se/download/18.519a747419d7225f199142d/1775821122315/Taxa%20f%C3%B6r%20ans%C3%B6knings-%20och%20tillsynsavgifter%20enligt%20lag%20om%20tobak%20och%20liknande%20produkter%20-%20Antagen%20av%20KF%202026-03-30.pdf"
+    },
+    {
+      "bytes": 140230,
+      "content_type": "application/pdf",
+      "id": "1493-18-519a747419d7225f1991515",
+      "municipality_code": "1493",
+      "retrieved_at": "2026-10-31T00:41:03Z",
+      "sha256": "710b7e404cca74f39bff54364d44d40973f21e6d33f85257db4cdad8c15aaedc",
+      "url": "https://mariestad.se/download/18.519a747419d7225f1991515/1775824347415/Taxa%20f%C3%B6r%20ans%C3%B6knings-%20och%20tillsynsavgifter%20enligt%20alkohollag,%20antagen%20KF%202026-03-30.pdf"
+    },
+    {
+      "bytes": 137561,
+      "content_type": "application/pdf",
+      "id": "1493-18-519a747419d7225f19915a4",
+      "municipality_code": "1493",
+      "retrieved_at": "2026-10-31T00:41:05Z",
+      "sha256": "bb6f8bf566f571d9e9c8207b6847b8110c819457fc99425ed53dad1ecc6d4dfe",
+      "url": "https://mariestad.se/download/18.519a747419d7225f19915a4/1775827672983/Taxa%20f%C3%B6r%20tillsynsavgifter%20enligt%20lag%20om%20tobaksfria%20nikotinprodukter,%20antagen%20KF%202026-03-30.pdf"
+    },
+    {
       "bytes": 9899298,
       "content_type": "application/pdf",
       "id": "1493-18-54eaee3118f379fe2fd1132b",
@@ -31193,6 +31220,24 @@
       "retrieved_at": "2026-10-30T13:25:49Z",
       "sha256": "6efd229d2cb6cd5c2058246783a5c3be14609c4cd40be09430b37e962ee88783",
       "url": "https://mariestad.se/download/18.54eaee3118f379fe2fd1132b/1781770172671/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Mariestads%20kommun.pdf"
+    },
+    {
+      "bytes": 585516,
+      "content_type": "application/pdf",
+      "id": "1493-18-55d2d87a19ed4311ffb34008",
+      "municipality_code": "1493",
+      "retrieved_at": "2026-10-31T00:41:02Z",
+      "sha256": "c11ffc12b7d9467b450d772e5f8dbe0ad293ea028f90bd88c270625d523c30ae",
+      "url": "https://mariestad.se/download/18.55d2d87a19ed4311ffb34008/1785746617501/Taxa%20f%C3%B6r%20Plan-%20och%20bygglagen%202026-08-01.pdf"
+    },
+    {
+      "bytes": 308475,
+      "content_type": "application/pdf",
+      "id": "1493-18-715062d41a115a69c7e2ad",
+      "municipality_code": "1493",
+      "retrieved_at": "2026-10-31T00:41:08Z",
+      "sha256": "b2182754da07f93fde676c6afba993cf45a0d2109c46121b5ce9827858137140",
+      "url": "https://mariestad.se/download/18.715062d41a115a69c7e2ad/1791377367804/Avgifter%20f%C3%B6r%20kopior%20av%20allm%C3%A4nna%20handlingar.pdf"
     },
     {
       "bytes": 4652173,
@@ -32462,6 +32507,15 @@
       "retrieved_at": "2026-10-30T01:00:04Z",
       "sha256": "64c72984c6703269d101c405c2a7c724b19f3b1de48a4a73f469e0d30b10f15b",
       "url": "https://www.eda.se/Userfiles/Filarkiv/1286/Taxor_avgifter_och_bidrag/Taxa_for_plats_i_forskola_fritidshem_och_pedagogisk_omsorg_KF_2023-04-26_T230508.pdf"
+    },
+    {
+      "bytes": 180554,
+      "content_type": "application/pdf",
+      "id": "1730-taxa-for-provning-och-tillsyn-inom-miljobalkens-omrade",
+      "municipality_code": "1730",
+      "retrieved_at": "2026-10-31T00:43:57Z",
+      "sha256": "d41ccd68af8e4fac813ca8ade0975d3d0704c67365018de4d9371c0f4f6f7c80",
+      "url": "https://www.eda.se/Userfiles/Filarkiv/1294/Taxor/Taxa_for_provning_och_tillsyn_inom_miljobalkens_omrade.pdf"
     },
     {
       "bytes": 1711838,

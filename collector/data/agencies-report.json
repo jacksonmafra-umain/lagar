@@ -14,7 +14,7 @@
     },
     "shared": 24,
     "kommuner": 290,
-    "kommuner_configured": 277,
+    "kommuner_configured": 284,
     "courts": 23,
     "courts_collected": 20
   },
@@ -2203,20 +2203,20 @@
         "kommun": "Vellinge",
         "url": "https://www.vellinge.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/343",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Vellinge publishes its lokala ordningsföreskrifter and hälsoskyddsföreskrifter as HTML text on topic pages under /kommun-och-politik/kommunfakta/styrande-dokument/, and the styrande-dokument page lists no documents in its static HTML; only an attachment PDF is linked. Needs an HTML-page strategy (checked 2026-10-30)."
+        "collection": "Vellinge kommuns styrande dokument",
+        "status": "partial",
+        "documents": 2,
+        "note": null
       },
       {
         "code": "1256",
         "kommun": "Östra Göinge",
         "url": "https://www.ostragoinge.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/344",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Östra Göinge's page \"Styrande dokument och kommunala författningar\" is a search filled in by the browser; the static HTML lists no documents (the KFS PDFs live under /wp-content/uploads/). Needs an adapter for its search (checked 2026-10-30)."
+        "collection": "Östra Göinge kommuns författningssamling (KFS)",
+        "status": "partial",
+        "documents": 25,
+        "note": null
       },
       {
         "code": "1257",
@@ -2253,10 +2253,10 @@
         "kommun": "Lomma",
         "url": "https://lomma.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/348",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Lomma publishes its författningssamling in a Netpublicator reader embedded in the \"Regler och styrande dokument\" page; the static HTML lists no documents. Needs a Netpublicator adapter (checked 2026-10-30)."
+        "collection": "Lomma kommuns författningssamling",
+        "status": "partial",
+        "documents": 50,
+        "note": null
       },
       {
         "code": "1263",
@@ -2303,10 +2303,10 @@
         "kommun": "Höör",
         "url": "https://www.hoor.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/353",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Höör's \"Styrande dokument\" page is a search and filter form filled in by the browser; the static HTML lists no documents. Needs an adapter for its search (checked 2026-10-30)."
+        "collection": "Höörs kommuns författningssamling",
+        "status": "partial",
+        "documents": 28,
+        "note": null
       },
       {
         "code": "1270",
@@ -2344,9 +2344,9 @@
         "url": "https://www.perstorp.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/357",
         "collection": null,
-        "status": "no_adapter",
+        "status": "robots",
         "documents": 0,
-        "note": "Perstorp's \"Kommunal författningssamling\" page lists no documents in its static HTML; the list is loaded by the browser. Needs an adapter (checked 2026-10-30)."
+        "note": "Perstorp's \"Kommunal författningssamling\" page keeps its document list in a minimised layout that opens only through ?sv.state=normal, which robots.txt disallows (Disallow: /*?sv.state=*); the site has no sitemap. Not bypassed (checked 2026-10-31)."
       },
       {
         "code": "1276",
@@ -2373,10 +2373,10 @@
         "kommun": "Båstad",
         "url": "https://www.bastad.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/360",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "No page listing Båstad's författningssamling or lokala föreskrifter was found; its rules are spread over topic pages (checked 2026-10-30)."
+        "collection": "Båstads kommuns författningssamling",
+        "status": "partial",
+        "documents": 29,
+        "note": null
       },
       {
         "code": "1280",
@@ -2985,7 +2985,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/421",
         "collection": "Mariestads kommun, kommunal författningssamling",
         "status": "partial",
-        "documents": 19,
+        "documents": 24,
         "note": null
       },
       {
@@ -3013,10 +3013,10 @@
         "kommun": "Skövde",
         "url": "https://www.skovde.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/424",
-        "collection": "Skövde kommuns taxor och avgifter",
+        "collection": "Skövde kommuns författningssamling: lokala föreskrifter, taxor och avgifter",
         "status": "partial",
-        "documents": 10,
-        "note": "Only the taxor och avgifter page is collected; the lokala föreskrifter are listed as JSON inside the Next.js page's script data (static.skovde.se), which the collector cannot read yet."
+        "documents": 15,
+        "note": null
       },
       {
         "code": "1497",
@@ -3065,7 +3065,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/429",
         "collection": "Eda kommuns taxor, policys och styrande dokument",
         "status": "partial",
-        "documents": 25,
+        "documents": 26,
         "note": null
       },
       {
@@ -3463,10 +3463,10 @@
         "kommun": "Leksand",
         "url": "https://www.leksand.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/469",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "leksand.se publishes its författningssamling in a Netpublicator reader (JavaScript, noindex); no adapter yet."
+        "collection": "Leksands kommuns författningssamling: föreskrifter samt taxor och avgifter",
+        "status": "partial",
+        "documents": 20,
+        "note": null
       },
       {
         "code": "2031",
@@ -3633,10 +3633,10 @@
         "kommun": "Gävle",
         "url": "https://www.gavle.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/486",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "gavle.se publishes its documents through MediaFlow; no adapter yet."
+        "collection": "Gävle kommuns styrande dokument: föreskrifter samt taxor och avgifter",
+        "status": "partial",
+        "documents": 24,
+        "note": null
       },
       {
         "code": "2181",
