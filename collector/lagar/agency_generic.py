@@ -1205,12 +1205,6 @@ class FifsAdapter(HvmfsAdapter):
     issuer = "Fiskeriverket"
 
 
-class MsbfsAdapter(McffsAdapter):
-    series = "MSBFS"  # before MCFFS (2026)
-    issuer = "Myndigheten för samhällsskydd och beredskap"
-    title_prefix = "Myndigheten för samhällsskydd och beredskaps"
-
-
 class RffsAdapter(FkfsAdapter):
     series = "RFFS"  # Riksförsäkringsverket, before FKFS (2005); its register lists both
     issuer = "Riksförsäkringsverket"
@@ -1262,6 +1256,6 @@ SERIES = (MigrfsAdapter(), KamfsAdapter(), KfmfsAdapter(), KfsAdapter(), KrfsAda
           CsnfsAdapter(), ImyfsAdapter(), LmfsAdapter(), MtfsAdapter(),
           KvfsAdapter(), LivsfsAdapter(), MyhfsAdapter(), DvfsAdapter(), EifsAdapter(), KbvfsAdapter(),
           FfsAdapter(), HslffsAdapter(), SosfsAdapter(), FohmfsAdapter(), TlvfsAdapter(), LmvfsAdapter(),
-          FifsAdapter(), MsbfsAdapter(), RffsAdapter(), SlvfsAdapter(), LfsAdapter(), JvsfsAdapter(), VvfsAdapter())
+          FifsAdapter(), RffsAdapter(), SlvfsAdapter(), LfsAdapter(), JvsfsAdapter(), VvfsAdapter())
 
 agency.ADAPTERS.update({a.series: a for a in SERIES})

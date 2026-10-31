@@ -519,7 +519,7 @@ Socialstyrelsen's index (its regulations in force) names a publication page for 
 
 Predecessor series still listed where the current series is read get adapters of their own that
 read the same page for their own numbers: LMVFS (LMFS page), FIFS (HVMFS list, issuer
-Fiskeriverket), MSBFS (MCF's regler page), RFFS (Försäkringskassan's register, issuer
+Fiskeriverket), RFFS (Försäkringskassan's register, issuer
 Riksförsäkringsverket) and SLVFS (Livsmedelsverket's year tables before 2002; it reads every year,
 because later LIVSFS rows amend SLVFS regulations or replace them, "Ersätter SLVFS 2001:4", and a
 replaced regulation is not in force). LIVSFS itself is read from 2002, its first year. LFS, JvSFS
