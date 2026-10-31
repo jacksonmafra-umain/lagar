@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4a54a4/globalassets/om-oss/lagstiftning/berikn---kosttillsk---livsm-spec-gr-fsmp/livsfs-2022-4_tillg.pdf"
 source_sha256: "69530f43e412c40a1d2d5a1d0eb8baf89d824a160050bb0aa9d6f992e47a1a0e"
-fetched_at: "2026-10-30T15:14:51Z"
+fetched_at: "2026-10-31T02:20:15Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om livsmedel avsedda för särskilda grupper
@@ -54,7 +54,7 @@ Tillämpningsområde
 
 - kommissionens delegerade förordning (EU) 2016/127 av den
 
-25 september 2015 om komplettering av Europaparlamentets och ­rådets förordning (EU) nr 609/2013 vad gäller särskilda sammansättnings- och informationskrav för modersmjölksersättning och tillskottsnäring och vad gäller informationskrav för uppfödning av spädbarn och småbarn,
+25 september 2015 om komplettering av Europaparlamentets och ­rådets förordning (EU) nr 609/2013 vad gäller särskilda sammansättnings- och informationskrav för modersmjölksersättning och tillskotts­ näring och vad gäller informationskrav för uppfödning av spädbarn och småbarn,
 
 - kommissionens delegerade förordning (EU) 2016/128 av den
 

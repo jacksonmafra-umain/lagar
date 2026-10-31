@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4ad7b7/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2022-8_web_t.pdf"
 source_sha256: "4211c7f2d4f78b91777f11ca67865230042b2cfae3f1dfac63a3134e327ef6eb"
-fetched_at: "2026-10-30T15:14:53Z"
+fetched_at: "2026-10-31T02:20:17Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om registrering och godkännande
@@ -48,11 +48,11 @@ Med stöd av 2, 5, 12, 17, 17 c, 30 och 31 §§ livsmedelsförordningen (2006:81
 
 Inledande bestämmelser
 
-**1 §** Dessa föreskrifter innehåller bestämmelser om registrering och godkännande av livsmedelsanläggningar och anläggningar vid vilka det bedrivs verksamhet som omfattas av Livsmedelsverkets föreskrifter (SLVFS 2001:30) om dricksvatten.
+**1 §** Dessa föreskrifter innehåller bestämmelser om registrering och godkännande av livsmedelsanläggningar och anläggningar vid vilka det bedrivs verksamhet som omfattas av Livsmedelsverkets före­ skrifter (SLVFS 2001:30) om dricksvatten.
 
 Anmälan för registrering
 
-**2 §** En livsmedelsföretagare som ska låta registrera sina anläggningar enligt artikel 6.2 i Europaparlamentets och rådets förordning (EG) nr 852/2004 av den 29 april 2004 om livsmedelshygien ska skriftligen anmäla sina anläggningar så att de kan registreras.
+**2 §** En livsmedelsföretagare som ska låta registrera sina anläggning­ ar enligt artikel 6.2 i Europaparlamentets och rådets förordning (EG) nr 852/2004 av den 29 april 2004 om livsmedelshygien ska skriftligen anmäla sina anläggningar så att de kan registreras.
 
 En livsmedelsföretagare som bedriver verksamhet i en anläggning med mobil verksamhet som är registrerad eller godkänd i ett annat land inom Europeiska ekonomiska samarbetsområdet (EES) behöver inte anmäla anläggningen för registrering i Sverige.
 
@@ -60,17 +60,11 @@ En livsmedelsföretagare som bedriver verksamhet i en anläggning med mobil verk
 
 Ansökan om godkännande
 
-**4 §** En livsmedelsföretagare som avser att bedriva verksamhet i en anläggning som omfattas av krav på godkännande enligt artikel 4.2 i
+**4 §** En livsmedelsföretagare som avser att bedriva verksamhet i en anläggning som omfattas av krav på godkännande enligt artikel 4.2 i Europaparlamentets och rådets förordning (EG) nr 853/2004 av den 29 april 2004 om fastställande av särskilda hygienregler för livsmedel
 
-Europaparlamentets och rådets förordning (EG) nr 853/2004 av den
+av animaliskt ursprung ska skriftligen ansöka om godkännande av an­ läggningen.
 
-29 april 2004 om fastställande av särskilda hygienregler för livsmedel
-
-av animaliskt ursprung ska skriftligen ansöka om godkännande av anläggningen.
-
-**5 §** En livsmedelsföretagare som avser att bedriva verksamhet i en anläggning som omfattas av krav på godkännande enligt artikel 2 i kommissionens förordning (EU) nr 210/2013 av den 11 mars 2013 om godkännande av anläggningar som producerar groddar, i enlighet med
-
-Europaparlamentets och rådets förordning (EG) nr 852/2004, ska skriftligen ansöka om godkännande av anläggningen.
+**5 §** En livsmedelsföretagare som avser att bedriva verksamhet i en anläggning som omfattas av krav på godkännande enligt artikel 2 i kommissionens förordning (EU) nr 210/2013 av den 11 mars 2013 om godkännande av anläggningar som producerar groddar, i enlighet med Europaparlamentets och rådets förordning (EG) nr 852/2004, ska skriftligen ansöka om godkännande av anläggningen.
 
 Innehåll i en anmälan eller ansökan
 
@@ -90,21 +84,19 @@ Innehåll i en anmälan eller ansökan
 
 5\. I förekommande fall uppgift om hur länge verksamheten kommer att bedrivas.
 
-Livsmedelsföretagaren eller verksamhetsutövaren ska på begäran även lämna de kompletterande uppgifter som behövs för handläggningen av anmälan eller ansökan.
+Livsmedelsföretagaren eller verksamhetsutövaren ska på begäran även lämna de kompletterande uppgifter som behövs för hand­ läggningen av anmälan eller ansökan.
 
 Myndigheter som handlägger anmälan eller ansökan
 
-**7 §** En anmälan för registrering eller ansökan om godkännande ska ges in till den myndighet som är behörig att registrera anläggningen eller verksamheten eller att pröva frågor om godkännande av anläggningen enligt 23 § livsmedelsförordningen (2006:813).
+**7 §** En anmälan för registrering eller ansökan om godkännande ska ges in till den myndighet som är behörig att registrera anläggningen eller verksamheten eller att pröva frågor om godkännande av an­ läggningen enligt 23 § livsmedelsförordningen (2006:813).
 
-**8 §** För en anläggning med mobil verksamhet ska anmälan för ­registrering eller ansökan om godkännande ges in till den myndighet som enligt 23 § livsmedelsförordningen är behörig i den kommun eller det län där verksamheten huvudsakligen kommer att bedrivas, eller till
+**8 §** För en anläggning med mobil verksamhet ska anmälan för ­registrering eller ansökan om godkännande ges in till den myndighet som enligt 23 § livsmedelsförordningen är behörig i den kommun eller det län där verksamheten huvudsakligen kommer att bedrivas, eller till Livsmedelsverket eller Försvarsinspektören för hälsa och miljö när ­någon av de myndigheterna är behörig enligt samma paragraf.
 
-Livsmedelsverket eller Försvarsinspektören för hälsa och miljö när ­någon av de myndigheterna är behörig enligt samma paragraf.
-
-Den myndighet som registrerar eller godkänner en anläggning med LIVSFS 2022:8 mobil verksamhet ska utfärda ett bevis där det framgår vilken verksamhet registreringen eller godkännandet avser.
+Den myndighet som registrerar eller godkänner en anläggning med LIVSFS 2022:8 mobil verksamhet ska utfärda ett bevis där det framgår vilken verk­ samhet registreringen eller godkännandet avser.
 
 Påbörjande av verksamhet vid anläggningar som ska anmälas för registrering
 
-**9 §** Verksamheten vid en anläggning som ska anmälas för registrering får påbörjas i och med att myndigheten registrerar anläggningen. Verksamheten får dock påbörjas två veckor efter att anmälan kommit in till myndigheten, även om myndigheten ännu inte har registrerat anläggningen.
+**9 §** Verksamheten vid en anläggning som ska anmälas för registre­ ring får påbörjas i och med att myndigheten registrerar anläggningen. Verksamheten får dock påbörjas två veckor efter att anmälan kommit in till myndigheten, även om myndigheten ännu inte har registrerat anläggningen.
 
 Tidsfrist för handläggning av ansökan om godkännande
 
@@ -114,17 +106,17 @@ Tidsfrist för handläggning av ansökan om godkännande
 
 Om det är motiverat på grund av ärendets komplexa karaktär får tidsfristen förlängas för en begränsad period vid högst ett tillfälle. ­Sökanden ska informeras om förlängningen och skälen för denna ­innan den ursprungliga tidsfristen gått ut.
 
-Enligt 8 § lagen (2009:1079) om tjänster på den inre marknaden ska myndigheten sända ett mottagningsbevis till sökanden när en fullständig ansökan kommit in.
+Enligt 8 § lagen (2009:1079) om tjänster på den inre marknaden ska myndigheten sända ett mottagningsbevis till sökanden när en fullstän­ dig ansökan kommit in.
 
 Uppgiftsskyldighet
 
-**11 §** I artikel 6.2 andra stycket i Europaparlamentets och rådets förordning (EG) nr 852/2004 finns bestämmelser om att livsmedelsföretagare ska se till att den behöriga myndigheten alltid har aktuell information om anläggningar, bland annat genom att underrätta myndigheten om betydande ändringar i verksamheten och om nedläggningar av ­befintliga anläggningar. Artikel 6.2 andra stycket ska även tillämpas på en verksamhetsutövare som ska anmäla sina anläggningar för registrering enligt 3 §.
+**11 §** I artikel 6.2 andra stycket i Europaparlamentets och rådets för­ ordning (EG) nr 852/2004 finns bestämmelser om att livsmedels­ företagare ska se till att den behöriga myndigheten alltid har aktuell information om anläggningar, bland annat genom att underrätta myn­ digheten om betydande ändringar i verksamheten och om nedlägg­ ningar av ­befintliga anläggningar.
 
-**12 §** En livsmedelsföretagare eller verksamhetsutövare som bedriver verksamhet i en anläggning med mobil verksamhet ska vid offentlig kontroll kunna visa för kontrollmyndigheten att den verksamhet som bedrivs omfattas av registreringen eller godkännandet av anläggningen.
+Artikel 6.2 andra stycket ska även tillämpas på en verksamhetsut­ övare som ska anmäla sina anläggningar för registrering enligt 3 §.
 
-Dessa föreskrifter träder i kraft den 1 januari 2023.
+**12 §** En livsmedelsföretagare eller verksamhetsutövare som bedriver verksamhet i en anläggning med mobil verksamhet ska vid offentlig kontroll kunna visa för kontrollmyndigheten att den verksamhet som bedrivs omfattas av registreringen eller godkännandet av anläggning­ en.
 
-ANNICA SOHLSTRÖM
+Dessa föreskrifter träder i kraft den 1 januari 2023. ANNICA SOHLSTRÖM
 
 Elin Häggqvist (Juridiska avdelningen)
 

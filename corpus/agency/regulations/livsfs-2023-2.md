@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/49b4bc/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2023-2_web_tillg.pdf"
 source_sha256: "6fbc95fd96074c22c544102a47df995d249d64068dd95e7fabf0831ffabdb62a"
-fetched_at: "2026-10-30T15:14:46Z"
+fetched_at: "2026-10-31T02:20:10Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter och allmänna råd om kontrollfrekvens för riskbaserad offentlig kontroll
@@ -51,11 +51,11 @@ Innehåll och tillämpningsområde
 
 Bestämmelser om riskbaserad offentlig kontroll finns bl.a. i − artikel 9 i Europaparlamentet och rådets förordning (EU) 2017/625 av den 15 mars 2017 om offentlig kontroll och annan offentlig verksamhet för att säkerställa tillämpningen av livsmedels- och foderlagstiftningen och av bestämmelser om djurs hälsa och djurskydd, växtskydd och växtskyddsmedel samt om ändring av Europaparlamentets och rådets förordningar (EG) nr 999/2001, (EG) nr 396/2005, (EG) nr 1069/2009, (EG) nr 1107/2009, (EU) nr
 
-1151/2012, (EU) nr 652/2014, (EU) 2016/429 och (EU) 2016/2031, rådets förordningar (EG) nr 1/2005 och (EG) nr 1099/2009 och r­ådets direktiv 98/58/EG, 1999/74/EG, 2007/43/EG, 2008/119/EG och 2008/120/EG och om upphävande av Europaparlamentets och rådets förordningar (EG) nr 854/2004 och (EG) nr 882/2004, rådets direktiv 89/608/EEG, 89/662/EEG, 90/425/EEG, 91/496/EEG,
+1151/2012, (EU) nr 652/2014, (EU) 2016/429 och (EU) 2016/2031, rådets förordningar (EG) nr 1/2005 och (EG) nr 1099/2009 och ­rådets direktiv 98/58/EG, 1999/74/EG, 2007/43/EG, 2008/119/EG och 2008/120/EG och om upphävande av Europaparlamentets och rådets förordningar (EG) nr 854/2004 och (EG) nr 882/2004, rådets direktiv 89/608/EEG, 89/662/EEG, 90/425/EEG, 91/496/EEG,
 
 96/23/EG, 96/93/EG och 97/78/EG samt rådets beslut 92/438/EEG (förordningen om offentlig kontroll), och − Livsmedelsverkets föreskrifter (LIVSFS 2005:21) om offentlig kontroll.
 
-**2 §** Dessa föreskrifter ska inte tillämpas på − Livsmedelsverkets offentliga kontroll av aktiviteterna slakt och vilthantering vid anläggningar som är godkända enligt Europaparlamentets och rådets förordning (EG) nr 853/2004 av den 29 april 2004 om fastställande av särskilda hygienregler för livsmedel av animaliskt ursprung, − Livsmedelsverkets stickprovsundersökningar enligt 18 a § livsmedelsförordningen, − offentlig kontroll enligt förordningen (2011:1060) om kontroll vid export av livsmedel, − offentlig kontroll av anläggningar för tillverkning av snusliknande produkter, och − offentlig kontroll vad gäller material och produkter avsedda att komma i kontakt med livsmedel.
+**2 §** Dessa föreskrifter ska inte tillämpas på − Livsmedelsverkets offentliga kontroll av aktiviteterna slakt och vilthantering vid anläggningar som är godkända enligt Europaparlamentets och rådets förordning (EG) nr 853/2004 av den 29 april 2004 om fastställande av särskilda hygienregler för livsmedel av animaliskt ursprung, − Livsmedelsverkets stickprovsundersökningar enligt 18 a § livs­ medelsförordningen, − offentlig kontroll enligt förordningen (2011:1060) om kontroll vid export av livsmedel, − offentlig kontroll av anläggningar för tillverkning av snusliknande produkter, och − offentlig kontroll vad gäller material och produkter avsedda att komma i kontakt med livsmedel.
 
 Ord och uttryck
 
@@ -65,7 +65,7 @@ Fastställande av kontrollfrekvens
 
 **4 §** Kontrollmyndigheten ska på enhetliga och icke-diskriminerande grunder fastställa en planerad kontrollfrekvens för den regelbundna riskbaserade offentliga kontrollen för varje verksamhet som myndigheten kontrollerar.
 
-**5 §** Kontrollmyndigheten ska fastställa den planerade kontrollfrekvensen utifrån det kontrollbehov som föreligger vid varje verksamhet, i tillämpliga fall med beaktande av kraven i artikel 9 i förordning (EU) 2017/625, inklusive, men inte begränsat till, − risker förknippade med verksamheten enligt 7−9 §§, och − förväntad efterlevnad av livsmedelslagstiftningen enligt 10−12 §§.
+**5 §** Kontrollmyndigheten ska fastställa den planerade kontroll­ frekvensen utifrån det kontrollbehov som föreligger vid varje verksamhet, i tillämpliga fall med beaktande av kraven i artikel 9 i förordning (EU) 2017/625, inklusive, men inte begränsat till, − risker förknippade med verksamheten enligt 7−9 §§, och − förväntad efterlevnad av livsmedelslagstiftningen enligt 10−12 §§.
 
 Allmänna råd
 
@@ -73,7 +73,7 @@ Kontrollmyndigheten bör använda Livsmedelsverkets modell för fastställande a
 
 Kontrollfrekvensen bör inte understiga ett kontrolltillfälle per fem år eller överstiga åtta kontrolltillfällen per år.
 
-**6 §** Kontrollmyndigheten ska fastställa den planerade kontrollfrekvensen i samband med, eller i nära anslutning till, att en verksam-
+**6 §** Kontrollmyndigheten ska fastställa den planerade kontroll­ frekvensen i samband med, eller i nära anslutning till, att en verksam-
 
 het registreras eller godkänns. Kontrollmyndigheten ska därefter fast- LIVSFS 2023:2 ställa en ny kontrollfrekvens när det bedöms nödvändigt med hänsyn till det kontrollbehov som föreligger vid verksamheten.
 
@@ -87,11 +87,11 @@ Risker förknippade med verksamheten
 
 **8 §** Vid bedömningen av vilket kontrollbehov som föreligger vid en verksamhet ska hänsyn tas till verksamhetens omfattning.
 
-**9 §** Vid bedömningen av vilket kontrollbehov som föreligger vid h­uvudkontor och livsmedelsanläggningar som huvudsakligen tillhandahåller livsmedel till andra livsmedelsanläggningar, ska hänsyn tas till ett ökat kontrollbehov om det i verksamheten tillverkas, importeras eller utformas livsmedelsinformation för livsmedel som omfattas av särskild tillstånds- eller anmälningsplikt enligt livsmedelslagstiftningen.
+**9 §** Vid bedömningen av vilket kontrollbehov som föreligger vid huvudkontor och livsmedelsanläggningar som huvudsakligen till­ ­ handahåller livsmedel till andra livsmedelsanläggningar, ska hänsyn tas till ett ökat kontrollbehov om det i verksamheten tillverkas, im­ porteras eller utformas livsmedelsinformation för livsmedel som omfattas av särskild tillstånds- eller anmälningsplikt enligt livsmedels­ lagstiftningen.
 
 Förväntad efterlevnad av lagstiftningen
 
-**10 §** Vid bedömningen av vilket kontrollbehov som föreligger vid en verksamhet ska hänsyn tas till om verksamhetsutövaren tidigare följt relevanta krav i livsmedelslagstiftningen. Om en verksamhetsutövare bedöms ha god efterlevnad av livsmedelslagstiftningen ska, om möjligt, en lägre kontrollfrekvens fastställas för verksamheten. För att kunna bedöma att verksamhetsutövaren har följt kraven i livsmedelslagstiftningen ska dock minst två kontroller vid verksamheten ha genomförts under en period om minst tolv månader.
+**10 §** Vid bedömningen av vilket kontrollbehov som föreligger vid en verksamhet ska hänsyn tas till om verksamhetsutövaren tidigare följt relevanta krav i livsmedelslagstiftningen. Om en verksamhetsutövare bedöms ha god efterlevnad av livsmedelslagstiftningen ska, om möjligt, en lägre kontrollfrekvens fastställas för verksamheten. För att kunna bedöma att verksamhetsutövaren har följt kraven i livs­ medelslagstiftningen ska dock minst två kontroller vid verksamheten ha genomförts under en period om minst tolv månader.
 
 Om en verksamhetsutövare inte längre uppfyller förutsättningarna för att få en lägre kontrollfrekvens med anledning av god efterlevnad av livsmedelslagstiftningen ska kontrollmyndigheten fastställa en ny planerad kontrollfrekvens.
 

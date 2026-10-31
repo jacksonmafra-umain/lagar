@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4ae67a/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-4-tillg.pdf"
 source_sha256: "3a1c6d92dc5afe0f04d330dee8ab4b3fc3028e11988484ce6ca261336130de5c"
-fetched_at: "2026-10-30T15:14:36Z"
+fetched_at: "2026-10-31T02:20:00Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om fruktjuice och fruktnektar
@@ -88,15 +88,13 @@ Märkning
 
 **11 §** I ingrediensförteckningen behöver inte sådana ämnen anges, som använts för att återställa olika former av juice eller nektar till ursprungligt skick och som är absolut nödvändiga för den processen. Om extra fruktkött eller celler tillförts ska detta anges i märkningen.
 
-**12 §** Uppgiften ”från koncentrat” eller i förekommande fall ”delvis LIVSFS 2025:4 från koncentrat” ska anges i märkningen − för blandningar av fruktjuice från koncentrat eller sockerreducerad fruktjuice från koncentrat med fruktjuice eller med sockerreducerad fruktjuice, och − för fruktnektar som erhålls helt eller delvis ur en eller flera koncentrerade produkter.
-
-Uppgiften i första stycket ska finnas i omedelbar anslutning till ­beteckningen, framträda tydligt och vara skriven med tydliga bokstäver.
+**12 §** Uppgiften ”från koncentrat” eller i förekommande fall ”delvis LIVSFS 2025:4 från koncentrat” ska anges i märkningen − för blandningar av fruktjuice från koncentrat eller sockerreducerad fruktjuice från koncentrat med fruktjuice eller med sockerreducerad fruktjuice, och − för fruktnektar som erhålls helt eller delvis ur en eller flera koncentrerade produkter. Uppgiften i första stycket ska finnas i omedelbar anslutning till ­beteckningen, framträda tydligt och vara skriven med tydliga bokstäver.
 
 **13 §** För fruktjuice och fruktjuice från koncentrat får uppgiften ”fruktjuicer innehåller endast naturligt förekommande socker” anges i märkningen i samma synfält som beteckningen.
 
 **14 §** För fruktnektar ska minimiinnehållet av fruktjuice, fruktpuré eller en blandning av dessa anges i märkningen med uttrycket ”fruktinnehåll minst…%”. Uppgiften ska finnas i samma synfält som beteckningen.
 
-**15 §** För fruktnektar får ett påstående som anger att sockerarter inte har tillsatts, och varje påstående som sannolikt har samma innebörd för konsumenten, bara göras om produkten inte innehåller tillsatser av mono- eller disackarider eller något annat livsmedel som används på grund av sina sötande egenskaper, inbegripet sötningsmedel enligt d­efinitionen i Europaparlamentets och rådets förordning (EG) nr 1333/2008 av den 16 december 2008 om livsmedelstillsatser. Om ett sådant påstående görs ska även följande uppgift finnas i märkningen: ”innehåller naturligt förekommande socker”.
+**15 §** För fruktnektar får ett påstående som anger att sockerarter inte har tillsatts, och varje påstående som sannolikt har samma innebörd för konsumenten, bara göras om produkten inte innehåller tillsatser av mono- eller disackarider eller något annat livsmedel som används på grund av sina sötande egenskaper, inbegripet sötningsmedel enligt definitionen i Europaparlamentets och rådets förordning (EG) ­ nr 1333/2008 av den 16 december 2008 om livsmedelstillsatser. Om ett sådant påstående görs ska även följande uppgift finnas i märkningen: ”innehåller naturligt förekommande socker”.
 
 **16 §** För koncentrerad fruktjuice som inte är avsedd att levereras ­direkt till konsument ska märkningen innehålla en uppgift om den mängd citronjuice, limejuice eller surhetsreglerande medel som tillförts. Uppgiften ska stå på förpackningen, eller på en etikett på förpackningen eller i en medföljande handling.
 
@@ -106,7 +104,9 @@ Uppgiften i första stycket ska finnas i omedelbar anslutning till ­beteckninge
 
 3\. Produkter som släppts ut på marknaden eller märkts före den
 
-14 juni 2026 i enlighet med äldre bestämmelser får fortsätta att saluföras till dess att lagren tömts. CHRISTINA NORDIN
+14 juni 2026 i enlighet med äldre bestämmelser får fortsätta att salu­ föras till dess att lagren tömts.
+
+CHRISTINA NORDIN
 
 Kent Olsson (Enheten för juridik)
 
@@ -124,7 +124,7 @@ Blandning av fruktjuice med fruktpuré tillåts vid framställning av fruktjuice
 
 1\. b) Fruktjuice från koncentrat
 
-Den produkt som erhålls genom rekonstituering av koncentrerad fruktjuice med dricksvatten som uppfyller kriterierna i Livsmedelsverkets föreskrifter om dricksvatten.
+Den produkt som erhålls genom rekonstituering av koncentrerad frukt­ juice med dricksvatten som uppfyller kriterierna i Livsmedelsverkets föreskrifter om dricksvatten.
 
 Halten löslig torrsubstans i den färdiga produkten ska uppfylla det lägsta tillåtna brixtalet för rekonstituerad fruktjuice enligt bilaga 5.
 

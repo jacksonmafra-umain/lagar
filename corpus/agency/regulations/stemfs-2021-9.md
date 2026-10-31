@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=6894b67e6eaf4ca2b886072607d5ffff&res=1941f2dab0fb4529b707f322f63b9fa0&lr=False&fn=STEMFS%202021_9_webb.pdf&elp=portal&elt=t&eloid=6894b67e6eaf4ca2b886072607d5ffff"
 source_sha256: "f315ae20d9f15cdc6645ba09e69568016a18c706dd59480155c968ab37af5aed"
-fetched_at: "2026-10-30T15:23:02Z"
+fetched_at: "2026-10-31T00:30:27Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om reduktion av växthusgasutsläpp från vissa fossila drivmedel
@@ -68,7 +68,7 @@ Anmäla reduktionsplikt
 
 3\. den totala mängden bensin, diesel och flygfotogen angivet som antal kubikmeter vid 15 °C där varje typ av drivmedel redovisas separat.
 
-**6 §** Den som har reduktionsplikt ska även redovisa varje fossil drivmedelskomponent som ingår i det reduktionspliktiga drivmedlet med angivande av
+**6 §** Den som har reduktionsplikt ska även redovisa varje fossil drivmedels­ komponent som ingår i det reduktionspliktiga drivmedlet med angivande av
 
 1\. vilket reduktionspliktigt drivmedel komponenten ingår i,
 
@@ -92,7 +92,7 @@ STEMFS
 
 4\. metod för bestämmande av energiinnehåll om det krävs enligt 10 § andra stycket,
 
-5\. växthusgasutsläpp beräknade enligt den metod som anges för beräkning av totala utsläpp i 7 kap. 1 § 1 Statens energimyndighets föreskrifter (STEMFS 2021:7) om hållbarhetskriterier för biodrivmedel och biobränslen, och
+5\. växthusgasutsläpp beräknade enligt den metod som anges för beräkning av totala utsläpp i 7 kap. 1 § 1 Statens energimyndighets föreskrifter (STEMFS 2021:7) om hållbarhetskriterier för biodrivmedel och bio­ bränslen, och
 
 6\. om biodrivmedlet omfattas av hållbarhetsbesked enligt lagen (2010:598) om hållbarhetskriterier för biodrivmedel och biobränslen.
 
@@ -102,11 +102,11 @@ STEMFS
 
 2\. storlek på överlåtelse och förvärv av överskott av utsläppsminskning uttryckt i kilogram koldioxidekvivalenter,
 
-3\. uppgift om storlek och typ av drivmedel för överskott som uppkommit under kalenderåret och som avses användas för att uppfylla reduktionsplikten nästkommande år uttryckt i kilogram koldioxidekvivalenter, och
+3\. uppgift om storlek och typ av drivmedel för överskott som uppkommit under kalenderåret och som avses användas för att uppfylla reduktions­ plikten nästkommande år uttryckt i kilogram koldioxidekvivalenter, och
 
 4\. när överenskommelse träffats och mellan vilka parter.
 
-Om överlåtelse eller förvärv av utsläppsminskning har skett ska överenskommelsen lämnas in till Statens energimyndighet.
+Om överlåtelse eller förvärv av utsläppsminskning har skett ska överens­ kommelsen lämnas in till Statens energimyndighet.
 
 Ikraftträdandebestämmelser
 

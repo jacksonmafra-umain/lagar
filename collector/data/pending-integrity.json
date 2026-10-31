@@ -13,8 +13,8 @@
         "1920:859",
         "1921:21"
       ],
-      "total": 33206,
-      "unknown": 33182
+      "total": 33393,
+      "unknown": 33369
     },
     "amended_through": {
       "sample": [
@@ -49,10 +49,10 @@
       "unknown": 426
     }
   },
-  "documents": 52838,
+  "documents": 53329,
   "duplicate_ids": [],
   "fsck": null,
-  "generated_at": "2026-10-30T22:52:31Z",
+  "generated_at": "2026-10-31T03:00:10Z",
   "path_mismatches": [],
   "schema_errors": [],
   "text_quality": [
@@ -85,6 +85,16 @@
       "flag": "replacement_character",
       "id": "eifs-2025-1",
       "path": "agency/regulations/eifs-2025-1.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "fffs-2015-8",
+      "path": "agency/regulations/fffs-2015-8.md"
+    },
+    {
+      "flag": "replacement_character",
+      "id": "fffs-2019-22",
+      "path": "agency/regulations/fffs-2019-22.md"
     },
     {
       "flag": "replacement_character",

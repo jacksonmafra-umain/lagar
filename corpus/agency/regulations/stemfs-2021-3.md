@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=4429022018d9456486992de94c10bbe0&res=bf0b7c50ae2948ac892fdb89ae9c2562&lr=False&fn=STEMFS%202021_3webb.pdf&elp=portal&elt=t&eloid=4429022018d9456486992de94c10bbe0"
 source_sha256: "3c07a909ba110bdec720e108161b6372d2d3e0aa1fcea310377a2ccfe5646ca9"
-fetched_at: "2026-10-30T15:22:04Z"
+fetched_at: "2026-10-31T00:29:28Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter och allmänna råd om riskanalys och säkerhetsåtgärder för nätverk och informationssystem inom energisektorn, även känd som NIS-föreskrifter.
@@ -54,19 +54,13 @@ Statens energimyndighet föreskriver följande med stöd av 8 § förordningen (
 
 Tillämpningsområde
 
-**1 §** I dessa föreskrifter finns bestämmelser för leverantörer av samhälls­viktiga tjänster inom energisektorn om riskanalys enligt 12 § lagen (2018:1174) om informationssäkerhet för samhällsviktiga och digitala tjänster samt om säkerhetsåtgärder enligt 13 och 14 §§ samma lag.
+**1 §** I dessa föreskrifter finns bestämmelser för leverantörer av samhälls­viktiga tjänster inom energisektorn om riskanalys enligt 12 § lagen (2018:1174) om informationssäkerhet för samhällsviktiga och digitala tjänster samt om säkerhets­ åtgärder enligt 13 och 14 §§ samma lag.
 
-**2 §** Dessa föreskrifter avser en leverantörs nätverk och informationssystem som leverantören använder för att tillhandahålla samhällsviktiga tjänster.
-
-För att identifiera vilka nätverk och informationssystem som leverantören använder för att tillhandahålla samhällsviktiga tjänster ska leverantören analysera sina nätverk och informationssystem. Om leverantören anlitar underleverantör för att stödja tillhandahållandet av de samhällsviktiga tjänsterna ska dessa nätverk och informationssystem omfattas av leverantörens analys.
-
-Leverantören ska dokumentera den analysmetod som används enligt andra stycket liksom resultatet av analysen.
+**2 §** Dessa föreskrifter avser en leverantörs nätverk och informationssystem som leverantören använder för att tillhandahålla samhällsviktiga tjänster. För att identifiera vilka nätverk och informationssystem som leverantören använder för att tillhandahålla samhällsviktiga tjänster ska leverantören analysera sina nätverk och informationssystem. Om leverantören anlitar under­ leverantör för att stödja tillhandahållandet av de samhällsviktiga tjänsterna ska dessa nätverk och informationssystem omfattas av leverantörens analys. Leverantören ska dokumentera den analysmetod som används enligt andra stycket liksom resultatet av analysen.
 
 Definitioner
 
-**3 §** Begrepp och uttryck i dessa föreskrifter har samma innebörd som i lagen (2018:1174) om informationssäkerhet för samhällsviktiga och digitala tjänster.
-
-Dessutom betyder leverantör: leverantör av tjänster rörande el, olja eller gasförsörjning enligt
+**3 §** Begrepp och uttryck i dessa föreskrifter har samma innebörd som i lagen (2018:1174) om informationssäkerhet för samhällsviktiga och digitala tjänster. Dessutom betyder leverantör: leverantör av tjänster rörande el, olja eller gasförsörjning enligt
 
 3 kap. 1–3 §§ Myndigheten för samhällsskydd och beredskaps föreskrifter (MSBFS 2018:7) om anmälan och identifiering av leverantörer av samhällsviktiga tjänster,
 
@@ -74,17 +68,15 @@ STEMFS
 
 2021:3
 
-IT (från engelskans ”Information Technology”): nätverk och informationssystem med funktioner för administrativt bruk, utan funktioner att hantera verksamhetens cyberfysiska processer,
+IT (från engelskans ”Information Technology”): nätverk och informations­ system med funktioner för administrativt bruk, utan funktioner att hantera verksamhetens cyberfysiska processer,
 
 OT (från engelskans ”Operational Technology”): industriella informationssystem med huvudsaklig funktion att styra och övervaka en fysisk process, informationssäkerhetskrav: funktionella krav på säkerhetsåtgärder i nätverk och informationssystem, informationssystem: applikationer, tjänster eller andra komponenter som hanterar information.
 
 2 kap. Riskanalys
 
-**1 §** Enligt 12 § lagen (2018:1174) om informationssäkerhet för samhällsviktiga och digitala tjänster ska leverantörer göra en riskanalys som ska ligga till grund för val av säkerhetsåtgärder enligt 13 och 14 §§ samma lag. Riskanalysen ska omfatta de nätverk och informationssystem som identifierats genom den analysen som utförts enligt 1 kap. 2 §.
+**1 §** Enligt 12 § lagen (2018:1174) om informationssäkerhet för samhälls­ viktiga och digitala tjänster ska leverantörer göra en riskanalys som ska ligga till grund för val av säkerhetsåtgärder enligt 13 och 14 §§ samma lag. Risk­ analysen ska omfatta de nätverk och informationssystem som identifierats genom den analysen som utförts enligt 1 kap. 2 §.
 
-De risker som leverantören har identifierat i riskanalysen ska värderas utifrån riskernas sannolikhet och konsekvens, varvid varje risk ska tilldelas ett riskvärde.
-
-Leverantören ska även bedöma hur de identifierade riskerna kan påverka leveransen av den samhällsviktiga tjänsten.
+De risker som leverantören har identifierat i riskanalysen ska värderas utifrån riskernas sannolikhet och konsekvens, varvid varje risk ska tilldelas ett riskvärde. Leverantören ska även bedöma hur de identifierade riskerna kan påverka leveransen av den samhällsviktiga tjänsten.
 
 3 kap. Informationssäkerhetskrav
 
@@ -96,7 +88,7 @@ Leverantören ska även bedöma hur de identifierade riskerna kan påverka lever
 
 **2 §** Leverantören ska upprätta en systemförteckning över sin IT och OT genom att
 
-1\. kartlägga och analysera de IT- och OT-tjänster samt nätverk och informationssystem som används vid leverantörens tillhandahållande av samhällsviktiga tjänster samt hur dessa kommunicerar med och är beroende av varandra,
+1\. kartlägga och analysera de IT- och OT-tjänster samt nätverk och informationssystem som används vid leverantörens tillhandahållande av samhälls­ viktiga tjänster samt hur dessa kommunicerar med och är beroende av varandra,
 
 2\. inventera vilka hårdvaror som används i leverantörens IT och OT,
 
@@ -106,7 +98,7 @@ STEMFS
 
 2021:3
 
-4\. identifiera vilka interna och externa nätverk och informationssystem liksom vilka hårdvaror och mjukvaror som är mest kritiska för leverantörens tillhandahållande av samhällsviktiga tjänster, samt
+4\. identifiera vilka interna och externa nätverk och informationssystem liksom vilka hårdvaror och mjukvaror som är mest kritiska för leverantörens tillhanda­ hållande av samhällsviktiga tjänster, samt
 
 5\. upprätta en nätverkskarta avseende leverantörens IT och OT.
 
@@ -122,9 +114,7 @@ Systemförteckningen ska hållas uppdaterad.
 
 4\. använda proportionella autentiseringsmetoder,
 
-5\. om möjligt använda antivirusprogram på enheter som är uppkopplade mot
-
-IT och OT,
+5\. om möjligt använda antivirusprogram på enheter som är uppkopplade mot IT och OT,
 
 6\. begränsa fysisk tillgång till IT och OT, samt
 
@@ -192,7 +182,7 @@ Robert Andrén
 
 Göran Smedbäck
 
-Allmänna råd till Statens energimyndighets föreskrifter om riskanalys och säkerhetsåtgärder för nätverk och informationssystem inom energisektorn
+Allmänna råd till Statens energimyndighets före­ skrifter om riskanalys och säkerhetsåtgärder för nätverk och informationssystem inom energisektorn
 
 STEMFS
 
@@ -202,19 +192,13 @@ Allmänna råd till 1 kap. om inledande bestämmelser och definitioner
 
 1§
 
-Utöver Statens energimyndighets föreskrifter om riskanalys och säkerhetsåtgärder för nätverk och informationssystem inom energisektorn finns Myndigheten för samhällsskydd och beredskaps (MSB) föreskrifter om:
+Utöver Statens energimyndighets föreskrifter om riskanalys och säkerhets­ åtgärder för nätverk och informationssystem inom energisektorn finns Myndig­ heten för samhällsskydd och beredskaps (MSB) föreskrifter om:
 
-- anmälan och identifiering av leverantörer av samhällsviktiga tjänster,
+- anmälan och identifiering av leverantörer av samhällsviktiga tjänster, MSBFS 2018:7,
 
-MSBFS 2018:7,
+- informationssäkerhet för leverantörer av samhällsviktiga tjänster, MSBFS 2018:8,
 
-- informationssäkerhet för leverantörer av samhällsviktiga tjänster, MSBFS
-
-2018:8,
-
-- rapportering av incidenter för leverantörer av samhällsviktiga tjänster,
-
-MSBFS 2018:9 samt,
+- rapportering av incidenter för leverantörer av samhällsviktiga tjänster, MSBFS 2018:9 samt,
 
 - frivillig rapportering av incidenter i tjänster som är viktiga för samhällets funktionalitet, MSBFS 2018:11.
 
@@ -226,9 +210,7 @@ I analysen bör leverantören även ta ställning till vilka applikationer och v
 
 3§
 
-I begreppet ”IT” ingår bland annat e-post, delade filytor och applikationer för personaladministration, ekonomi, försäljning och produktivitet. Begreppet IT kallas ibland ”Kontors-IT”. Även nätverk som innefattar dessa informationssystem omfattas av i begreppet IT. I begreppet ”OT” ingår bland annat det som kallas ICS (Industrial Control
-
-Systems), SCADA (Supervisory Control And Data Acquisition). Även nätverk som innefattar dessa informationssystem omfattas av begreppet OT.
+I begreppet ”IT” ingår bland annat e-post, delade filytor och applikationer för personaladministration, ekonomi, försäljning och produktivitet. Begreppet IT kallas ibland ”Kontors-IT”. Även nätverk som innefattar dessa informationssystem omfattas av i begreppet IT. I begreppet ”OT” ingår bland annat det som kallas ICS (Industrial Control Systems), SCADA (Supervisory Control And Data Acquisition). Även nätverk som innefattar dessa informationssystem omfattas av begreppet OT.
 
 STEMFS
 
@@ -250,17 +232,15 @@ I samband med utförandet av riskanalysen bör leverantören ta ställning till 
 
 Leverantörens bedömning i riskanalysen av de incidenter som kan uppstå i dess nätverk och informationssystem bör avse både incidenter som kan ske direkt i dessa, liksom incidenter som kan uppstå utanför leverantörens nätverk och informationssystemen men som kan påverka dem.
 
-Leverantören bör i riskanalysen beakta risker som kan påverka tillgänglighet, riktighet eller konfidentialitet i leverantörens nätverk och informationssystem.
-
-Även risker som kan påverka befintliga säkerhetsåtgärder i leverantörens nätverk och informationssystem bör beaktas. De incidenter som bör ingå i en riskanalys kan exempelvis vara antagonistiska angrepp, tekniska fel, fel orsakade av människan eller naturpåverkan.
+Leverantören bör i riskanalysen beakta risker som kan påverka tillgänglighet, riktighet eller konfidentialitet i leverantörens nätverk och informationssystem. Även risker som kan påverka befintliga säkerhetsåtgärder i leverantörens nätverk och informationssystem bör beaktas. De incidenter som bör ingå i en riskanalys kan exempelvis vara antagonistiska angrepp, tekniska fel, fel orsakade av människan eller naturpåverkan.
 
 Allmänna råd till 3 kap. om informationssäkerhetskrav
 
 1§
 
-I arbetet med att uppfylla informationssäkerhetskrav bör leverantören ta ställning till vilken typ av övervakning och larmfunktioner som krävs för att ­åtgärder ska fungera.
+I arbetet med att uppfylla informationssäkerhetskrav bör leverantören ta ställning till vilken typ av övervakning och larmfunktioner som krävs för att å­ tgärder ska fungera.
 
-Systemloggar bör hanteras med hög säkerhet för att undvika att de riskerar att manipuleras. Loggning bör ske av olika typer av transaktioner, exempelvis av nätverkstrafik mellan segment, nätverkstrafik externt mot internet, förändringar i konfiguration av nätverkets skalskydd eller tilldelning av administratörsrättigheter.
+Systemloggar bör hanteras med hög säkerhet för att undvika att de riskerar att manipuleras. Loggning bör ske av olika typer av transaktioner, exempelvis av nätverkstrafik mellan segment, nätverkstrafik externt mot internet, förändringar i konfiguration av nätverkets skalskydd eller tilldelning av administratörs­ rättigheter.
 
 Leverantören bör även införa analysverktyg för att möjliggöra upptäckt av otillåtna aktiviteter, och för att kunna spåra aktiviteter i utredande eller problem­lösande syfte. Leverantören bör testa och kalibrera larmfunktioner för att säkerställa att rätt person eller funktion inom organisationen tillhandahålls relevant information.
 
@@ -300,7 +280,7 @@ STEMFS
 
 4§
 
-Informationssystem bör härdas enligt punkt 1, bland annat genom avstängning av förkonfigurerade tjänster, ändring av lösenord på förinställda användarprofiler och avstängning av schemalagda arbeten.
+Informationssystem bör härdas enligt punkt 1, bland annat genom avstängning av förkonfigurerade tjänster, ändring av lösenord på förinställda användar­ profiler och avstängning av schemalagda arbeten.
 
 5§
 

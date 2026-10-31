@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/49f122/globalassets/om-oss/lagstiftning/avgifter/livsfs-2021-8_tillg.pdf"
 source_sha256: "5bb13479b06a2c88a00b1b6ea94317b7360b1a6ff4b58d26ddb61fd720180be0"
-fetched_at: "2026-10-30T15:14:56Z"
+fetched_at: "2026-10-31T02:20:20Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om avgifter för offentlig kontroll och annan offentlig verksamhet
@@ -72,7 +72,7 @@ Betalning
 
 **2 §** Av 7 § förordningen om avgifter för offentlig kontroll av livsmedel och vissa jordbruksprodukter följer att Livsmedelsverket ska debitera avgifter för offentlig kontroll och annan offentlig verksamhet som hänger samman med kontrollen efter det att kontrollen har utförts.
 
-**3 §** Timavgift ska debiteras för varje påbörjad kvart. I den debiterbara tiden ingår förutom tid för kontroll även tid för förberedande och uppföljande administrativt arbete.
+**3 §** Timavgift ska debiteras för varje påbörjad kvart. I den debiter­ bara tiden ingår förutom tid för kontroll även tid för förberedande och uppföljande administrativt arbete.
 
 **4 §** Avgift ska betalas mot faktura.
 
@@ -110,7 +110,7 @@ Avgift för livsmedelsanläggningar
 
 **1 §** Livsmedelsanläggningar som omfattas av artikel 79.1 och 2 i förordning (EU) 2017/625 ska, med undantag för de anläggningar som avses i 4–6 §§, betala en avgift till Livsmedelsverket för offentlig kontroll och annan offentlig verksamhet som hänger samman med sådan kontroll med 1 860 kr per timme.
 
-**2 §** Övriga livsmedelsanläggningar ska betala en avgift till Livsmedelsverket för offentlig kontroll och annan offentlig verksamhet som hänger samman med sådan kontroll med 1 890 kr per timme.
+**2 §** Övriga livsmedelsanläggningar ska betala en avgift till Livs­ medelsverket för offentlig kontroll och annan offentlig verksamhet som hänger samman med sådan kontroll med 1 890 kr per timme.
 
 **3 §** För offentlig kontroll som ursprungligen inte var planerad och annan offentlig verksamhet som hänger samman med sådan kontroll ska de livsmedelsanläggningarna som avses i 1 och 2 §§ betala avgift enligt vad som framgår av 1 §.
 
@@ -220,7 +220,7 @@ Samordning
 
 **1 §** Livsmedelsföretagare ska, för att täcka Livsmedelsverkets kostnader för provtagning och undersökning av mjölk i fråga om restsubstanser, för var och en av sina anläggningar som tar emot obehandlad mjölk årligen betala en avgift på 0,88 kronor per tusen liter obehandlad mjölk som anläggningen beräknas samla in. Avgiften ska baseras på årets beräknade produktionsvolym.
 
-**2 §** Livsmedelsföretagare ska, för att täcka Livsmedelsverkets kost- LIVSFS 2021:8 nader för provtagning och undersökning av restsubstanser i ägg, årligen betala en avgift för var och en av sina anläggningar som förpackar ägg. Avgiften betalas med 9,99 kronor per ton ägg som anläggningen beräknas väga in och ska baseras på årets beräknade produktionsvolym.
+**2 §** Livsmedelsföretagare ska, för att täcka Livsmedelsverkets kost- LIVSFS 2021:8 nader för provtagning och undersökning av restsubstanser i ägg, årligen betala en avgift för var och en av sina anläggningar som förpackar ägg. Avgiften betalas med 9,99 kronor per ton ägg som anläggningen beräknas väga in och ska baseras på årets beräknade produktions­ volym.
 
 **2 a §** Livsmedelsföretagare ska för var och en av sina anläggningar som
 
@@ -294,7 +294,7 @@ Europaparlamentets och rådets förordning (EU) 2017/625 inte anländer till den
 
 6\. Intyg för icke-gemenskapsvaror, kontroll av enskilda sändningar samt kontroll av lager för dessa varor
 
-För utfärdande av intyg som avses i artikel 21 i kommissionens delegerade förordning (EU) 2019/2124 av den 10 oktober 2019 om komplettering av Europaparlamentets och rådets förordning (EU) 2017/625 vad gäller bestämmelser för offentlig kontroll av sändningar av djur och varor i transitering, omlastning och vidaretransport genom unionen samt om ändring av kommissionens förordningar (EG) nr 798/2008, (EG) nr 1251/2008, (EG) nr 119/2009, (EU) nr 206/2010, (EU) nr 605/2010, (EU) nr 142/2011 och (EU) nr 28/2012, kommissionens genomförandeförordning (EU) 2016/759 och kommissionens beslut 2007/777/EG ska en avgift på 350 kronor per intyg betalas. Vid revision eller inspektion av lager godkända enligt artiklarna 23 och 26 i kommissionens delegerade förordning (EU) 2019/2124 eller inspektion av enskilda sändningar i dessa lager ska en avgift på 1 000 kr per timme betalas. Restid ska inte debiteras.
+För utfärdande av intyg som avses i artikel 21 i kommissionens delegerade förordning (EU) 2019/2124 av den 10 oktober 2019 om komplettering av Europaparlamentets och rådets förordning (EU) 2017/625 vad gäller bestämmelser för offentlig kontroll av sändningar av djur och varor i transitering, omlastning och vidaretransport genom unionen samt om ändring av kommissionens förordningar (EG) nr 798/2008, (EG) nr 1251/2008, (EG) nr 119/2009, (EU) nr 206/2010, (EU) nr 605/2010, (EU) nr 142/2011 och (EU) nr 28/2012, kommis­ sionens genomförandeförordning (EU) 2016/759 och kommissionens beslut 2007/777/EG ska en avgift på 350 kronor per intyg betalas. Vid revision eller inspektion av lager godkända enligt artiklarna 23 och 26 i kommissionens delegerade förordning (EU) 2019/2124 eller inspektion av enskilda sändningar i dessa lager ska en avgift på 1 000 kr per timme betalas. Restid ska inte debiteras.
 
 Avsnitt 2 - Avgifter för kontroll enligt 5 kap. 2 § vid import av icke-animaliska livsmedel
 

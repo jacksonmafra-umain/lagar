@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d59a9e34c6ee4098aad48c76ec5fa818&res=c676148f7e1f4e39904c4a856318ccc8&lr=False&fn=STEMFS%202025_1webb.pdf&elp=portal&elt=t&eloid=d59a9e34c6ee4098aad48c76ec5fa818"
 source_sha256: "fb57245abb9ed6c303f0c5a2ac38cf0c0ce6ff0040b90a88e4c6b8f917cdb33d"
-fetched_at: "2026-10-30T15:19:32Z"
+fetched_at: "2026-10-31T00:26:58Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om skyldighet att lämna uppgifter till statistik om energianvändning och uppvärmningssätt i flerbostadshus
@@ -168,7 +168,7 @@ Ja
 
 Nej  Ange den totala area som användningsuppgifterna avser m2
 
-Uppgifter om energianvändning för uppvärmning/varmvatten ska om ­möjligt anges för den utvalda byggnaden med riksbyggnadsnyckel: xxxxxxxxxxxxxx Om uppgifter ej finns tillgängliga för denna byggnad, ange istället energianvändning för en större area, t.ex. hela fastigheten eller bostadsrätts­föreningen. Ange då i fråga 8 den totala arean som användningsuppgifterna avser.
+Uppgifter om energianvändning för uppvärmning/varmvatten ska om m ­ öjligt anges för den utvalda byggnaden med riksbyggnadsnyckel: xxxxxxxxxxxxxx Om uppgifter ej finns tillgängliga för denna byggnad, ange istället energi­ användning för en större area, t.ex. hela fastigheten eller bostadsrätts­föreningen. Ange då i fråga 8 den totala arean som användningsuppgifterna avser.
 
 STEMFS
 

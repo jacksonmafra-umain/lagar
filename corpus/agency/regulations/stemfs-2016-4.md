@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=3d8123a62ba042a0a228e9330dc38733&res=81b286f22a7a4a52aa34d4240d919cb6&lr=False&fn=STEMFS%202016_4-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=3d8123a62ba042a0a228e9330dc38733"
 source_sha256: "ac18758e67f3c1cb2b25c502c3fb95f8e905ad5246d7b51691867f24ca8efa34"
-fetched_at: "2026-10-30T15:26:47Z"
+fetched_at: "2026-10-31T00:34:07Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om register för utsläppsrätter
@@ -40,9 +40,7 @@ beslutade den 31 oktober 2016.
 
 Statens energimyndighet föreskriver följande med stöd av 34 § förordningen (2004:1205) om handel med utsläppsrätter.
 
-Denna författning genomför reglerna i kommissionens förordning (EU) nr
-
-389/2013 av den 2 maj 2013 om upprättande av ett unionsregister i enlighet med Europaparlamentets och rådets direktiv 2003/87/EG och Europaparlamentets och rådets beslut nr 280/2004/EG och nr 406/2009/EG samt om upphävande av kommissionens förordningar (EU) nr 920/2010 och (EU) nr 1193/ 2011.
+Denna författning genomför reglerna i kommissionens förordning (EU) nr 389/2013 av den 2 maj 2013 om upprättande av ett unionsregister i enlighet med Europaparlamentets och rådets direktiv 2003/87/EG och Europaparla­ mentets och rådets beslut nr 280/2004/EG och nr 406/2009/EG samt om upp­ hävande av kommissionens förordningar (EU) nr 920/2010 och (EU) nr 1193/ 2011.
 
 Inledande bestämmelser och definitioner
 
@@ -60,7 +58,7 @@ Inledande bestämmelser och definitioner
 
 U
 
-**2 §** Termer och begrepp som inte definieras särskilt i dessa föreskrifter används i samma betydelse som i lagen (2004:1199) om handel med utsläppsrätter samt förordningen (2004:1205) om handel med utsläppsrätter. I dessa föreskrifter avses med: dag: en kalenderdag, persondepåkonto: konton i EU:s utsläppshandelssystem och konton i det svenska registret under Kyotoprotokollet.
+**2 §** Termer och begrepp som inte definieras särskilt i dessa föreskrifter an­ vänds i samma betydelse som i lagen (2004:1199) om handel med utsläpps­ rätter samt förordningen (2004:1205) om handel med utsläppsrätter. I dessa föreskrifter avses med: dag: en kalenderdag, persondepåkonto: konton i EU:s utsläppshandelssystem och konton i det svenska registret under Kyotoprotokollet.
 
 **3 §** Om inte annat sägs avser begreppet konto följande:
 
@@ -84,9 +82,7 @@ STEMFS
 
 Ansökan om öppnande av konto i unionsregistret
 
-**4 §** Ansökan om öppnande av konto görs genom unionsregistret och ska kompletteras med dokumentation i pappersform till Statens energimyndighet.
-
-Ansökan ska vara undertecknad av behörig firmatecknare för kontoinnehavaren eller behörigt ombud.
+**4 §** Ansökan om öppnande av konto görs genom unionsregistret och ska kompletteras med dokumentation i pappersform till Statens energimyndighet. Ansökan ska vara undertecknad av behörig firmatecknare för kontoinnehava­ ren eller behörigt ombud.
 
 **5 §** En ansökan om öppnande av konto kan också göras på en utskriven blankett i den form som Statens energimyndighet tillhandahåller. Ansökan ska vara undertecknad av behörig firmatecknare för kontoinnehavaren eller behörigt ombud och lämnas in till Statens energimyndighet.
 
@@ -100,7 +96,9 @@ H
 
 D
 
-**6 §** En förutsättning för att ansökan om öppnande av konto ska beviljas är att sökanden godkänner de användarvillkor som Statens energimyndighet tillhandahåller tillsammans med ansökningshandlingarna. Användarvillkoren kan godkännas av behörig firmatecknare för kontoinnehavare eller behörigt ombud genom elektronisk signering och överföring, eller genom undertecknande av en utskriven blankett i den form som Statens energimyndighet tillhandahåller.
+**6 §** En förutsättning för att ansökan om öppnande av konto ska beviljas är att sökanden godkänner de användarvillkor som Statens energimyndighet till­ handahåller tillsammans med ansökningshandlingarna.
+
+Användarvillkoren kan godkännas av behörig firmatecknare för kontoinne­ havare eller behörigt ombud genom elektronisk signering och överföring, eller genom undertecknande av en utskriven blankett i den form som Statens energimyndighet tillhandahåller.
 
 **7 §** Om en ansökan om öppnande av konto är ofullständig ska sökande efter föreläggande från Statens energimyndighet inge kompletterande information inom 20 dagar.
 
@@ -108,19 +106,17 @@ Om kompletterande uppgifter inte kommit in till Statens energimyndighet inom 20 
 
 Ansökan om behöriga ombud
 
-**8 §** Ansökan om behörighet till unionsregistret görs genom unionsregistret.
-
-Ansökan ska kompletteras med dokumentation i pappersform som lämnas in till Statens energimyndighet.
+**8 §** Ansökan om behörighet till unionsregistret görs genom unionsregistret. Ansökan ska kompletteras med dokumentation i pappersform som lämnas in till Statens energimyndighet.
 
 **9 §** Samtliga personer som ska ha tillgång till konton i unionsregistret ska anmälas till Statens energimyndighet som behöriga ombud.
 
 U
 
-**10 §** En förutsättning för att bli godkänd som behörigt ombud är att ombudet godkänner de användarvillkor som Statens energimyndighet tillhandahåller. Användarvillkoren kan godkännas av behörig firmatecknare för kontoinnehavare eller behörigt ombud genom elektronisk signering och överföring, eller genom undertecknande av en utskriven blankett i den form som Statens energimyndighet tillhandahåller.
+**10 §** En förutsättning för att bli godkänd som behörigt ombud är att om­ budet godkänner de användarvillkor som Statens energimyndighet tillhanda­ håller.
 
-**11 §** Fullmakt ska finnas för samtliga personer som ska ha tillgång till konton i unionsregistret och som inte är firmatecknare för kontoinnehavaren.
+Användarvillkoren kan godkännas av behörig firmatecknare för kontoinne­ havare eller behörigt ombud genom elektronisk signering och överföring, eller genom undertecknande av en utskriven blankett i den form som Statens energimyndighet tillhandahåller.
 
-Fullmakt ska lämnas in till Statens energimyndighet i pappersform undertecknad av behörig firmatecknare för kontoinnehavaren i original eller kopia certifierad av Notarius Publicus. Statens energimyndighet tillhandahåller mall för fullmakt på sin webbplats.
+**11 §** Fullmakt ska finnas för samtliga personer som ska ha tillgång till konton i unionsregistret och som inte är firmatecknare för kontoinnehavaren. Fullmakt ska lämnas in till Statens energimyndighet i pappersform under­ tecknad av behörig firmatecknare för kontoinnehavaren i original eller kopia certifierad av Notarius Publicus. Statens energimyndighet tillhandahåller mall för fullmakt på sin webbplats.
 
 **12 §** En kontoinnehavares begäran om en åtgärd i registret görs genom unionsregistret.
 
@@ -150,13 +146,11 @@ D
 
 Språk
 
-**16 §** Alla dokument som lämnas in till Statens energimyndighet av kontoinnehavare eller behöriga ombud ska vara på svenska eller engelska. Om originalspråket är ett annat ska dokumentet lämnas in tillsammans med en auktoriserad översättning till svenska eller engelska.
+**16 §** Alla dokument som lämnas in till Statens energimyndighet av konto­ innehavare eller behöriga ombud ska vara på svenska eller engelska. Om originalspråket är ett annat ska dokumentet lämnas in tillsammans med en auktoriserad översättning till svenska eller engelska.
 
 Ikraftträdandebestämmelser
 
-Dessa föreskrifter träder i kraft den 1 januari 2017 och samtidigt upphör
-
-Statens energimyndighets föreskrifter 2012:1 om register för utsläppsrätter att gälla.
+Dessa föreskrifter träder i kraft den 1 januari 2017 och samtidigt upphör Statens energimyndighets föreskrifter 2012:1 om register för utsläppsrätter att gälla.
 
 På Statens energimyndighets vägnar
 
@@ -180,8 +174,6 @@ U
 
 Information om STEMFS
 
-Statens energimyndighets föreskrifter och allmänna råd kan beställas hos CM-gruppen.
-
-Statens energimyndighet, Box 11093, 161 11 Bromma, tel. 08-505 93 33 55, fax. 08-505 93 33 99.
+Statens energimyndighets föreskrifter och allmänna råd kan beställas hos CM-gruppen. Statens energimyndighet, Box 11093, 161 11 Bromma, tel. 08-505 93 33 55, fax. 08-505 93 33 99.
 
 Elanders Sverige AB, 2016

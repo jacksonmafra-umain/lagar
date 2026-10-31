@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=aa1b0e02d3214d8abbe7995b00abedb5&res=82bbe373c92e4cd9b0505ec28bfe5e9b&lr=False&fn=STEMFS%202011_2-UPPH%C3%84VD.pdf&elp=portal&elt=t&eloid=aa1b0e02d3214d8abbe7995b00abedb5"
 source_sha256: "ff023454c421efaad0860a6c30835e83bae15de20f9a0df71d1fc83d6da7ca2c"
-fetched_at: "2026-10-30T15:28:49Z"
+fetched_at: "2026-10-31T00:36:08Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om hållbarhetskriterier för biodrivmedel och flytande biobränslen STEMFS 2011:2 Upphävd.
@@ -351,7 +351,7 @@ b) råvara som odlas inom områden som framgår av de förteckningar som medlems
 
 c) avfall eller restprodukter som härrör från andra verksamheter än jordbruk, vattenbruk eller fske.
 
-Kapitel 7 Metod för beräkning av minskning av växthusgasutsläpp
+Kapitel 7 Metod för beräkning av minskning av växthusgas­ utsläpp
 
 Allmänna bestämmelser
 
@@ -689,13 +689,15 @@ STEMFS
 
 Bilaga 2
 
-Normalvärden för biodrivmedel när de produceras utan några nettoutsläpp av koldioxidekvivalenter till följd av ändrad markanvändning Typ av produktionskedja för biodrivmedel
+Normalvärden för biodrivmedel när de produceras utan några nettout­ släpp av koldioxidekvivalenter till följd av ändrad markanvändning
+
+Typ av produktionskedja för biodrivmedel
 
 Etanol av sockerbetor
 
 Etanol av vete (processbränsle inte specifcerat)
 
-Normalvärde för växthusgasminskningen
+Normalvärde för växthusgas­ minskningen
 
 52%
 
@@ -811,7 +813,7 @@ Uppskattade normalvärden för framtida biodrivmedel som inte, eller bara i för
 
 Typ av produktionskedja för biodrivmedel
 
-Normalvärde för växthusgasminskningen
+Normalvärde för växthusgasminsk­ ningen
 
 85%
 
@@ -949,7 +951,7 @@ STEMFS
 
 Bilaga 5
 
-Uppskattade delnormalvärden för framtida biodrivmedel och fytande biobränslen som inte, eller bara i försumbar omfattning, fanns på marknaden i januari 2008 Typ av produktionskedja för biodrivmedel och fytande biobränslen
+Uppskattade delnormalvärden för framtida biodrivmedel och fytande biobränslen som inte, eller bara i försumbar omfattning, fanns på marknaden i januari 2008 Typ av produktionskedja för biodrivmedel och fytande bio­ bränslen
 
 ep­eee etd ep­eee+eec+etd eec [gCO2eq/MJ] [gCO2eq/MJ] [gCO2eq/MJ] [gCO2eq/MJ]
 
@@ -1029,7 +1031,9 @@ STEMFS
 
 Bilaga 7.
 
-Riktlinjer för beräkning av kollager i mark vid ändrad markanvändning, specifcerade i kommissionens beslut av den 10 juni 2010 (2010/335/EU)
+Riktlinjer för beräkning av kollager i mark vid ändrad markan­ vändning, specifcerade i kommissionens beslut av den 10 juni
+
+2010 (2010/335/EU)
 
 1\. INLEDNING
 
@@ -1285,9 +1289,7 @@ Ett värde för SOCST ska väljas i tabell 1 på grundval av lämplig klimatregi
 
 Tabell 1
 
-SOCST = organiskt kol i det översta (0–30 cm) skiktet i standardjord
-
-Klimatregion
+SOCST = organiskt kol i det översta (0–30 cm) skiktet i standardjord Klimatregion
 
 Jordtyp
 
@@ -1297,11 +1299,11 @@ Lerjordar med låg aktivitet
 
 Sandjordar
 
-Podsoljordar
+Podsol­ jordar
 
 Vulkaniska jordar
 
-Våtmarksjordar
+Våtmarks­ jordar
 
 Borealt
 
@@ -2501,7 +2503,7 @@ Faktorer för gräsmark, inklusive savanner
 
 Klimatregion
 
-Markanvändning (FLU)
+Markanvänd­ ning (FLU)
 
 Skötsel (FMG)
 
@@ -2799,7 +2801,9 @@ D
 
 Lång träda
 
-8\. VÄRDEN FÖR KOLLAGER I VEGETATION OVAN OCH UNDER JORD
+8\. VÄRDEN FÖR KOLLAGER I VEGETATION OVAN OCH UN­
+
+DER JORD
 
 För CVEG eller R kan man använda de ungefärliga värden som anges i denna punkt.
 
@@ -3035,7 +3039,9 @@ D
 
 Tabell 15
 
-Vegetationsvärden för buskmark, dvs. mark där vegetationen domineras av vedväxter lägre än 5 meter utan tydlig trädkaraktär Område
+Vegetationsvärden för buskmark, dvs. mark där vegetationen domine­ ras av vedväxter lägre än 5 meter utan tydlig trädkaraktär
+
+Område
 
 Tropiskt
 
@@ -3347,7 +3353,9 @@ STEMFS
 
 Tabell 17
 
-Vegetationsvärden för skogsmark (utom skogsplanteringar) med krontäckning över 30 % Område
+Vegetationsvärden för skogsmark (utom skogsplanteringar) med kron­ täckning över 30 %
+
+Område
 
 Ekologisk zon
 

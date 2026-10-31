@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://mediemyndigheten.se/globalassets/om-mediemyndigheten/lagar-forordningar-och-foreskrifter/foreskrifter-om-tillstand-att-sanda-kommersiell-radio-memyfs-2025_3.pdf"
 source_sha256: "8a0c676f6fb24d49b0a068fc5f8fcd5eee6541c66840dc111db009445a23f8c7"
-fetched_at: "2026-10-30T08:37:33Z"
+fetched_at: "2026-10-31T02:00:58Z"
 issuer: "Mediemyndigheten"
 ---
 # Föreskrifter om tillstånd att sända kommersiell radio .
@@ -42,7 +42,7 @@ Mediemyndigheten föreskriver med stöd av 6 § radio- och tv-förordningen (202
 
 Föreskrifternas innehåll
 
-**1 §** Dessa föreskrifter innehåller bestämmelser om ansökningsförfarandet och vad en ansökan ska innehålla när det gäller frågor om tillstånd och överlåtelse av tillstånd att sända kommersiell radio samt om sändningsavgift för analog kommersiell radio.
+**1 §** Dessa föreskrifter innehåller bestämmelser om ansökningsförfarandet och vad en ansökan ska innehålla när det gäller frågor om tillstånd och över­ låtelse av tillstånd att sända kommersiell radio samt om sändningsavgift för analog kommersiell radio.
 
 Ordförklaringar
 
@@ -98,7 +98,7 @@ Den som ansöker om tillstånd att sända digital kommersiell radio ska också l
 
 7\. vilka tekniska förutsättningar förvärvaren har att bedriva sändningsverksamhet, och
 
-8\. de åtaganden förvärvaren av ett tillstånd att sända digital kommersiell radio är beredd att göra avseende överenskommelser med övriga tillståndshavare om teknisk samverkan om multiplexering, elektroniska programguider och tillämpningsprogram.
+8\. de åtaganden förvärvaren av ett tillstånd att sända digital kommersiell radio är beredd att göra avseende överenskommelser med övriga tillstånds­ havare om teknisk samverkan om multiplexering, elektroniska programguider och tillämpningsprogram.
 
 Till ansökan ska fogas en handling som visar att överlåtaren avser att överlåta tillståndet till förvärvaren om ansökan medges. Handlingen ska vara ­undertecknad av båda parter.
 
@@ -110,9 +110,7 @@ Betalningen ska anses ha skett den dag då avgiften bokförts på Mediemyndighet
 
 Årlig sändningsavgift för analog kommersiell radio
 
-**7 §** Den årliga sändningsavgiften omfattar perioden 1 augusti–31 juli.
-
-Sändningsavgiften ska betalas in till Mediemyndigheten senast den dag som anges i myndighetens beslut om årlig sändningsavgift. Betalningen ska anses ha skett den dag då avgiften har bokförts på Mediemyndighetens konto.
+**7 §** Den årliga sändningsavgiften omfattar perioden 1 augusti–31 juli. Sändningsavgiften ska betalas in till Mediemyndigheten senast den dag som anges i myndighetens beslut om årlig sändningsavgift. Betalningen ska anses ha skett den dag då avgiften har bokförts på Mediemyndighetens konto.
 
 1\. Dessa föreskrifter träder i kraft den 21 november 2025.
 

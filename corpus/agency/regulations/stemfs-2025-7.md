@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b73011aaa2bb490ca284e18268bd02cf&res=5f1ba7a9ac6547f9b2b36ba924b7f93e&lr=False&fn=STEMFS%202025_7%20Industrins%20energianv%C3%A4ndning_webb.pdf&elp=portal&elt=t&eloid=b73011aaa2bb490ca284e18268bd02cf"
 source_sha256: "5bad7df2396a8518fa96d98b0ed86325249868ea913052801b8877df1b997f97"
-fetched_at: "2026-10-30T15:19:22Z"
+fetched_at: "2026-10-31T00:26:48Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om skyldighet att lämna uppgifter till statistik om skyldighet att lämna uppgifter till statistik om industrins energianvändning och industrins energianvändning i småföretag
@@ -44,13 +44,13 @@ Statens energimyndighet föreskriver följande med stöd av 15 § förordningen 
 
 **2 §** Uppgifter ska lämnas enligt bilaga 1 av arbetsställen vilka tilldelats klass 05–33 enligt Standard för svensk näringsgrensindelning 2007 (SNI 2007) och har minst tio anställda personer.
 
-Uppgifterna ska lämnas senast den 15 mars varje år eller vid den senare t­idpunkt som Statens energimyndighet bestämmer och avse förhållandena under det närmast föregående kalenderåret.
+Uppgifterna ska lämnas senast den 15 mars varje år eller vid den senare ­tidpunkt som Statens energimyndighet bestämmer och avse förhållandena under det närmast föregående kalenderåret.
 
 **3 §** Uppgifter ska lämnas enligt bilaga 2 av arbetsställen vilka tilldelats klass 05–33 enligt Standard för svensk näringsgrensindelning 2007 (SNI 2007) och har mellan en och nio anställda personer.
 
 Uppgifterna ska lämnas vid den tidpunkt som Statens energimyndighet bestämmer och avse förhållandena under det närmast föregående kalenderåret.
 
-**4 §** Om det finns särskilda skäl får Statens energimyndighet medge undantag från bestämmelserna i dessa föreskrifter. Den som är skyldig att lämna ­uppgifter kan ansöka om undantag till Statens energimyndighet.
+**4 §** Om det finns särskilda skäl får Statens energimyndighet medge undantag från bestämmelserna i dessa föreskrifter. Den som är skyldig att lämna u­ ppgifter kan ansöka om undantag till Statens energimyndighet.
 
 Ikraftträdandebestämmelser
 
@@ -624,7 +624,7 @@ Producerat vid er arbetsplats
 
 Summa tillförsel av bränsle
 
-Petroliumprodukter
+Petrolium­ produkter
 
 Eldningsolja nr 1
 
@@ -688,7 +688,7 @@ Vald enhet
 
 Använt inom arbetsplatsen
 
-Använt utanför arbetsplatsen för transporter
+Använt utanför arbets­ platsen för transporter
 
 Levererat till andra
 
@@ -766,7 +766,7 @@ m3
 
 ton
 
-Petroliumprodukter
+Petrolium­ produkter
 
 Eldningsolja nr 1
 

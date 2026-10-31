@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d683e12a663442139b4363ae4430518f&res=11b9a7eaf0954e6a8380eb2fa5dc9507&lr=False&fn=STEMFS%202023_2%20FINAL%20WEB%20TA.pdf&elp=portal&elt=t&eloid=d683e12a663442139b4363ae4430518f"
 source_sha256: "7b2c12e26d84ef19d751b82347da1cc6e4a0ef2c70a4a17440b11e5702a20af5"
-fetched_at: "2026-10-30T15:21:22Z"
+fetched_at: "2026-10-31T00:28:48Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om säkerhetsskydd
@@ -48,7 +48,7 @@ Statens energimyndighet föreskriver följande med stöd av 8 kap. 10 § säkerh
 
 Tillämpningsområde
 
-**1 §** Dessa föreskrifter innehåller bestämmelser för enskilda verksamhetsutövare som bedriver säkerhetskänslig verksamhet enligt 1 kap. 1 § säkerhetsskyddslagen (2018:585) inom något av områdena fjärrvärme-, naturgas-, olje- och drivmedelsförsörjningen.
+**1 §** Dessa föreskrifter innehåller bestämmelser för enskilda verksamhets­ utövare som bedriver säkerhetskänslig verksamhet enligt 1 kap. 1 § säkerhets­ skyddslagen (2018:585) inom något av områdena fjärrvärme-, naturgas-, olje- och drivmedelsförsörjningen.
 
 Bestämmelserna i 12 § gäller för den som enligt 4 kap. 15 § tredje stycket säkerhetsskyddslagen (2018:585) avser överlåta aktier eller andelar i en säkerhetskänslig verksamhet inom något av områdena fjärrvärme-, naturgas, oljeoch drivmedelsförsörjningen. Dessa föreskrifter kompletterar Säkerhetspolisens föreskrifter (PMFS 2022:1) om säkerhetsskydd och Försvarsmaktens föreskrifter (FFS 2021:1) om signalskyddstjänsten.
 
@@ -74,7 +74,7 @@ Placering i säkerhetsklass
 
 **5 §** En begäran om placering i säkerhetsklass 2 och 3 enligt 5 kap. 10 § säkerhetsskyddsförordningen (2021:955) ska göras av verksamhetsutövaren till Statens energimyndighet på blankett som myndigheten tillhandahåller på sin webbplats.
 
-Om verksamhetsutövaren bedömer att det finns behov av placering i säkerhetsklass 1 ska verksamhetsutövaren i begäran till Statens energimyndighet ange att det finns ett sådant behov.
+Om verksamhetsutövaren bedömer att det finns behov av placering i säkerhets­ klass 1 ska verksamhetsutövaren i begäran till Statens energimyndighet ange att det finns ett sådant behov.
 
 Registerkontroll
 
@@ -90,7 +90,7 @@ I samband med ansökan om registerkontroll ska verksamhetsutövaren redovisa til
 
 Anmälan om säkerhetsskyddsavtal
 
-**9 §** En anmälan om avsikt att ingå säkerhetsskyddsavtal enligt 6 kap. 4 § s­äkerhetskyddssförordningen (2021:955) ska göras av verksamhetsutövaren till Statens energimyndighet på blankett som myndigheten tillhandahåller på sin webbplats.
+**9 §** En anmälan om avsikt att ingå säkerhetsskyddsavtal enligt 6 kap. 4 § ­säkerhetskyddssförordningen (2021:955) ska göras av verksamhetsutövaren till Statens energimyndighet på blankett som myndigheten tillhandahåller på sin webbplats.
 
 En anmälan enligt 6 kap. 5 § säkerhetsskyddsförordningen (2021:955) om att verksamhetsutövaren har ingått ett säkerhetsskyddsavtal eller anmälan om att ett säkerhetsskyddsavtal upphört att gälla ska göras till Statens energimyndighet på blankett som Säkerhetspolisen tillhandahåller på sin webbplats.
 
@@ -102,7 +102,7 @@ Samråd
 
 **10 §** Verksamhetsutövare som enligt 4 kap. 9 § säkerhetsskyddslagen (2018:585) ska samråda med Statens energimyndighet inför förfaranden som kräver säkerhetsskyddsavtal ska använda blankett som myndigheten tillhandahåller på sin webbplats.
 
-**11 §** Verksamhetsutövare som enligt 4 kap. 15 § säkerhetsskyddslagen (2018:585) ska samråda med Statens energimyndighet inför överlåtelser av säkerhetskänslig verksamhet och viss egendom ska använda blankett som myndigheten tillhandahåller på sin webbplats.
+**11 §** Verksamhetsutövare som enligt 4 kap. 15 § säkerhetsskyddslagen (2018:585) ska samråda med Statens energimyndighet inför överlåtelser av säkerhets­ känslig verksamhet och viss egendom ska använda blankett som myndigheten tillhandahåller på sin webbplats.
 
 **12 §** Den som enligt 4 kap. 15 § tredje stycket säkerhetsskyddslagen (2018:585) ska samråda med Statens energimyndighet inför överlåtelser av aktier eller andelar i säkerhetskänslig verksamhet ska använda blankett som myndigheten tillhandahåller på sin webbplats.
 

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/49f7aa/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2021-9_tillg.pdf"
 source_sha256: "c5ca962a7402be0e93bdc102eb8ca5f2b392dbf695ab62a8fcaaba468cf5c06b"
-fetched_at: "2026-10-30T15:14:57Z"
+fetched_at: "2026-10-31T02:20:21Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om planering av besiktning före och efter slakt
@@ -54,7 +54,7 @@ Slaktschema
 
 1 decem­ber året innan.
 
-Av slaktschemat ska framgå om anläggningen ska ha ständig närvaro under slakten.
+Av slaktschemat ska framgå om anläggningen ska ha ständig när­ varo under slakten.
 
 **3 §** Ett slakteri som ska slakta ren ska senast söndag anmäla vilka veckodagar som besiktning före och efter slakt ska ske veckan efter den närmast följande.
 
@@ -68,7 +68,9 @@ Av slaktschemat ska framgå om anläggningen ska ha ständig närvaro under slak
 
 **7 §** En anmälan om en tillfällig ändring av ett slaktschema ska ske senast fem arbetsdagar innan önskad dag för besiktning.
 
-En anmälan om en tillfällig ändring av ett slaktschema avseende första veckan i januari, veckan före eller veckan efter påsk, juni, juli, augusti eller de två sista veckorna i december ska ske femton arbetsdagar innan önskad dag för besiktning. Vid anmälan om en tillfällig ändring mindre än fem respektive femton arbetsdagar innan önskad dag för besiktning kan Livsmedelsverket neka att utföra besiktningen.
+En anmälan om en tillfällig ändring av ett slaktschema avseende första veckan i januari, veckan före eller veckan efter påsk, juni, juli, augusti eller de två sista veckorna i december ska ske femton arbets­ dagar innan önskad dag för besiktning.
+
+Vid anmälan om en tillfällig ändring mindre än fem respektive femton arbetsdagar innan önskad dag för besiktning kan Livsmedelsverket neka att utföra besiktningen.
 
 **8 §** Undantag från 7 § kan medges i de fall Livsmedelsverket bedömer att ett verkligt behov av slakt föreligger.
 

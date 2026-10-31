@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://skolfs.skolverket.se/api/document/2025:5/ascending"
 source_sha256: "fd160d9b111e1a843249d062c4781803743ca693aa5691420a38ce999a3ec807"
-fetched_at: "2026-10-30T21:20:50Z"
+fetched_at: "2026-10-31T00:41:44Z"
 issuer: "Statens skolverk"
 ---
 # Skolverkets föreskrifter om nationella prov i kommunal vuxenutbildning på gymnasial nivå andra kalenderhalvåret 2025 och första kalenderhalvåret 2026
@@ -55,7 +55,7 @@ Skolverket föreskriver följande med stöd av 4 kap. 10 c § förordningen (201
 
 Ett nationellt prov består av flera delprov.
 
-**4 §** Föreskrifterna ska tillämpas på nationella prov i kommunal vuxenutbildning på gymnasial nivå andra kalenderhalvåret 2025 och första kalenderhalvåret 2026.
+**4 §** Föreskrifterna ska tillämpas på nationella prov i kommunal vuxenutbildning på gymnasial nivå andra kalenderhalvåret 2025 och första kalenderhalv­ året 2026.
 
 **5 §** Följande gäller som första datum och första tidpunkt för genomförande av de delprov i de nationella proven, i det format som framgår nedan. För utbildning som påbörjats efter den 30 juni 2025
 

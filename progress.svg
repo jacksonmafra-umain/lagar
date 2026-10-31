@@ -213,7 +213,7 @@
 <text x="16" y="1931" fill="#007270">LIVSFS (SLV)</text>
 <rect x="240" y="1920" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="1920" width="260" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="1931" text-anchor="end" fill="#007270">39 / 39 (100.0%)</text>
+<text x="704" y="1931" text-anchor="end" fill="#007270">43 / 39 (100.0%)</text>
 <text x="16" y="1967" fill="#007270">MYHFS (MYH)</text>
 <rect x="240" y="1956" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="1956" width="260" height="16" rx="8" fill="#0f7c7a"/>
@@ -287,7 +287,7 @@
 <text x="704" y="2579" text-anchor="end" fill="#28772d">11649 / unknown (-)</text>
 <text x="16" y="2615" fill="#8b2e1f">Municipal regulations</text>
 <rect x="240" y="2604" width="260" height="16" rx="8" fill="#8b2e1f" fill-opacity="0.18"/>
-<text x="704" y="2615" text-anchor="end" fill="#8b2e1f">5358 / unknown (-)</text>
+<text x="704" y="2615" text-anchor="end" fill="#8b2e1f">5541 / unknown (-)</text>
 <text x="16" y="2651" fill="#8c6300">Public services</text>
 <rect x="240" y="2640" width="260" height="16" rx="8" fill="#e0a100" fill-opacity="0.18"/>
 <text x="704" y="2651" text-anchor="end" fill="#8c6300">0 / unknown (-)</text>

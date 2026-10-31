@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b19007e0abf74f0aad1f4cc63b2acad0&res=3794bb88d01c4bcf9e45ac0377510a0b&lr=False&fn=STEMFS%202024_6webb.pdf&elp=portal&elt=t&eloid=b19007e0abf74f0aad1f4cc63b2acad0"
 source_sha256: "114b703dd4f36003f5dda32c62c839f258339fea94111f646ad2db4e91a2fac6"
-fetched_at: "2026-10-30T15:20:13Z"
+fetched_at: "2026-10-31T00:27:38Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om skyldighet att lämna uppgifter till kvartalsvis bränslestatistik och statistik om trädbränsle-, torv- och avfallspriser
@@ -52,7 +52,7 @@ Statens energimyndighet föreskriver följande med stöd av 15 § förordningen 
 
 4\. företag som bedriver överföring av stadsgas (bilaga 4).
 
-Uppgifterna ska lämnas senast den sista måndagen i månaden som följer efter avslutat kalenderkvartal eller vid den senare tidpunkt som Statens energimyndighet bestämmer och avse förhållandena under det närmast föregående kalenderkvartalet.
+Uppgifterna ska lämnas senast den sista måndagen i månaden som följer efter avslutat kalenderkvartal eller vid den senare tidpunkt som Statens energi­ myndighet bestämmer och avse förhållandena under det närmast föregående kalenderkvartalet.
 
 **3 §** Uppgifter ska lämnas, enligt bilaga 5, av företag som bedriver överföring eller import av naturgas.
 

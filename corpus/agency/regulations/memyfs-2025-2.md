@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://mediemyndigheten.se/globalassets/om-mediemyndigheten/lagar-forordningar-och-foreskrifter/foreskrifter-om-ansokan-om-och-overlatelse-av-tillstand-att-sanda-tv-och-sokbar-text-tv-memyfs-2025-2.pdf"
 source_sha256: "6dc65c41f48ac2d653cccf36839b92c09413be05038957cef8fbae3342812193"
-fetched_at: "2026-10-30T08:37:34Z"
+fetched_at: "2026-10-31T02:00:59Z"
 issuer: "Mediemyndigheten"
 ---
 # Föreskrifter om ansökan om och överlåtelse av tillstånd att sända tv och sökbar text tv .
@@ -42,7 +42,9 @@ Mediemyndigheten föreskriver med stöd av 6 § radio- och tv-förordningen (202
 
 Föreskrifternas innehåll
 
-**1 §** Dessa föreskrifter innehåller bestämmelser om ansökningsförfarandet och vad en ansökan ska innehålla när det gäller frågor om tillstånd och överlåtelse av tillstånd att sända tv och sökbar text-tv som meddelas av Mediemyndigheten. Föreskrifterna gäller inte vid ansökan om tillstånd för sändningar som gäller för en begränsad tid om högst två veckor.
+**1 §** Dessa föreskrifter innehåller bestämmelser om ansökningsförfarandet och vad en ansökan ska innehålla när det gäller frågor om tillstånd och över­ låtelse av tillstånd att sända tv och sökbar text-tv som meddelas av Mediemyndigheten.
+
+Föreskrifterna gäller inte vid ansökan om tillstånd för sändningar som gäller för en begränsad tid om högst två veckor.
 
 Ordförklaringar
 

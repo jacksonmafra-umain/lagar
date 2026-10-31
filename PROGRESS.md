@@ -58,7 +58,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | LMFS (LM) | 14 | 14 | counted | 100.0% |
 | agency | MTFS (TVA) | 3 | 3 | counted | 100.0% |
 | agency | KVFS (KV) | 17 | 17 | counted | 100.0% |
-| agency | LIVSFS (SLV) | 39 | 39 | counted | 100.0% |
+| agency | LIVSFS (SLV) | 43 | 39 | counted | 100.0% |
 | agency | MYHFS (MYH) | 44 | 44 | counted | 100.0% |
 | agency | TPPVFS (Pliktverket) | 1 | 1 | counted | 100.0% |
 | agency | TRMFS (Pliktverket) | 2 | 2 | counted | 100.0% |
@@ -77,7 +77,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
 | eu | EU judgments | 605 | 611 | counted | 99.0% |
 | region | Regional regulations | 11649 | unknown | unknown | - |
-| municipality | Municipal regulations | 5358 | unknown | unknown | - |
+| municipality | Municipal regulations | 5541 | unknown | unknown | - |
 | service | Public services | 0 | unknown | unknown | - |
 
 Progress is capped at the target; a series without a known target has no percentage.
@@ -158,10 +158,10 @@ Targets:
 
 ## Integrity
 
-Audit of 52838 documents (2026-10-30T22:52:31Z):
+Audit of 53329 documents (2026-10-31T03:00:10Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
-- text-quality flags: 883
-- cross-references not in the corpus: 39338 of 39399 (informational, the corpus is partial)
+- text-quality flags: 885
+- cross-references not in the corpus: 39525 of 39586 (informational, the corpus is partial)

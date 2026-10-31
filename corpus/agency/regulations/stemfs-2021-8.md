@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=90f99815a8ab427fb240ece6dcd93e4d&res=2f5bd1b9778547a198eff5bbd1a2dc9c&lr=False&fn=STEMFS%202021_8_webb.pdf&elp=portal&elt=t&eloid=90f99815a8ab427fb240ece6dcd93e4d"
 source_sha256: "77dd2d570163c7e16776fa1d5df824f05aed88a7e084e91d7399006d96a575a4"
-fetched_at: "2026-10-30T15:22:12Z"
+fetched_at: "2026-10-31T00:29:38Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om reduktion av växthusgasutsläpp genom inblandning av biodrivmedel i bensin och dieselbränslen
@@ -44,7 +44,7 @@ Statens energimyndighets föreskrifter (STEMFS
 
 2018:2) om reduktion av växthusgasutsläpp från vissa fossila drivmedel
 
-**2 §** Begrepp och uttryck i dessa föreskrifter används i samma betydelse som i lagen (2017:1201) om reduktion av växthusgasutsläpp från vissa fossila drivmedel (reduktionspliktslagen) och reduktionspliktsförordningen. Dessutom betyder fossil drivmedelskomponent: en i bensin, diesel eller flygfotogen ingående komponent som inte är ett biodrivmedel, utsläppsminskning: den reduktion av utsläpp som den som har reduktionsplikt har åstadkommit under ett kalenderår uttryckt som kilogram koldioxidekvivalenter.
+**2 §** Begrepp och uttryck i dessa föreskrifter används i samma betydelse som i lagen (2017:1201) om reduktion av växthusgasutsläpp från vissa fossila drivmedel (reduktionspliktslagen) och reduktionspliktsförordningen. Dessutom betyder fossil drivmedelskomponent: en i bensin, diesel eller flygfotogen ingående komponent som inte är ett biodrivmedel, utsläppsminskning: den reduktion av utsläpp som den som har reduktionsplikt har åstadkommit under ett kalenderår uttryckt som kilogram koldioxid­ ekvivalenter.
 
 Reduktionsplikt
 
@@ -114,7 +114,7 @@ Energiinnehåll (MJ/L)
 
 34,6
 
-Tabell 2. Normalvärden för vissa biodrivmedel enligt bilaga III Europaparlamentets och rådets direktiv (EU) 2018/2001 av den 11 december 2018 om främjande av användningen av energi från förnybara energikällor. Biodrivmedel
+Tabell 2. Normalvärden för vissa biodrivmedel enligt bilaga III Europa­ parlamentets och rådets direktiv (EU) 2018/2001 av den 11 december 2018 om främjande av användningen av energi från förnybara energikällor. Biodrivmedel
 
 Energiinnehåll (MJ/L)
 

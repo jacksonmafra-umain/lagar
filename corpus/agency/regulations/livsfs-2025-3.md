@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4ae690/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-3-tillg.pdf"
 source_sha256: "dc7e7ffcaff9b59bed112acfa959bfe9eef999e960280b68340236f98474eb5c"
-fetched_at: "2026-10-30T15:14:35Z"
+fetched_at: "2026-10-31T02:19:59Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om honung och bagerihonung
@@ -40,7 +40,7 @@ beslutade den 1 december 2025.
 
 Utkom från trycket den 11 december 2025
 
-Med stöd av 6 och 7 §§ livsmedelsförordningen (2006:813) föreskriver1 Livsmedelsverket följande.
+Med stöd av 6 och 7 §§ livsmedelsförordningen (2006:813) före­ skriver1 Livsmedelsverket följande.
 
 Inledande bestämmelser
 
@@ -48,29 +48,29 @@ Inledande bestämmelser
 
 **2 §** Generella bestämmelser om livsmedelsinformation finns i
 
-1\. Europaparlamentets och rådets förordning (EU) nr 1169/2011 om tillhandahållande av livsmedelsinformation till konsumenterna, och om ändring av Europaparlamentets och rådets förordningar (EG) nr 1924/2006 och (EG) nr 1925/2006 samt om upphävande av kommissionens direktiv 87/250/EEG, rådets direktiv 90/496/EEG, kommissionens direktiv 1999/10/EG, Europaparlamentets och rådets d­irektiv 2000/13/EG, kommissionens direktiv 2002/67/EG och
+1\. Europaparlamentets och rådets förordning (EU) nr 1169/2011 om tillhandahållande av livsmedelsinformation till konsumenterna, och om ändring av Europaparlamentets och rådets förordningar (EG) nr 1924/2006 och (EG) nr 1925/2006 samt om upphävande av kom­ missionens direktiv 87/250/EEG, rådets direktiv 90/496/EEG, kom­ missionens direktiv 1999/10/EG, Europaparlamentets och rådets direktiv 2000/13/EG, kommissionens direktiv 2002/67/EG och ­
 
 2008/5/EG samt kommissionens förordning (EG) nr 608/2004, och
 
-2\. Livsmedelsverkets föreskrifter (LIVSFS 2014:4) om livsmedelsinformation.
+2\. Livsmedelsverkets föreskrifter (LIVSFS 2014:4) om livsmedels­ information.
 
 Ord och uttryck
 
-**3 §** Definitioner av honung, blom-, nektar- och bladhonung, honung i vaxkakor eller kakhonung, honung med bitar av vaxkakor, självrunnen honung, slungad honung, pressad honung samt bagerihonung finns i bilaga 1.
+**3 §** Definitioner av honung, blom-, nektar- och bladhonung, honung i vaxkakor eller kakhonung, honung med bitar av vaxkakor, självrun­ nen honung, slungad honung, pressad honung samt bagerihonung finns i bilaga 1.
 
 Jfr rådets direktiv 2001/110/EG av den 20 december 2001 om honung, i lydelse enligt Europaparlamentets och rådet direktiv (EU) 2024/1438.
 
 Beteckningar
 
-**4 §** De beteckningar som anges i bilaga 1 utgör föreskrivna beteckningar i enlighet med Europaparlamentets och rådets förordning (EU) nr 1169/2011.
+**4 §** De beteckningar som anges i bilaga 1 utgör föreskrivna beteck­ ningar i enlighet med Europaparlamentets och rådets förordning (EU) nr 1169/2011.
 
-**5 §** Beteckningarna blomhonung, nektarhonung, bladhonung, självrunnen honung, slungad honung och pressad honung får ersättas med enbart beteckningen honung.
+**5 §** Beteckningarna blomhonung, nektarhonung, bladhonung, själv­ runnen honung, slungad honung och pressad honung får ersättas med enbart beteckningen honung.
 
 De beteckningar som anges i första stycket får åtföljas av uppgifter om
 
-- produktens ursprung från blommor eller växter, under förutsättning att den uteslutande eller huvudsakligen kommer från den angivna källan och har källans organoleptiska, fysikalisk-kemiska och mikroskopiska egenskaper,
+- produktens ursprung från blommor eller växter, under förutsätt­ ning att den uteslutande eller huvudsakligen kommer från den angivna källan och har källans organoleptiska, fysikalisk-kemiska och mikro­ skopiska egenskaper,
 
-- produktens regionala, territoriella eller topografiska ursprung, ­under förutsättning att den uteslutande kommer från den angivna källan, och
+- produktens regionala, territoriella eller topografiska ursprung, ­under förutsättning att den uteslutande kommer från den angivna käl­ lan, och
 
 - specifika kvalitetskriterier.
 
@@ -80,39 +80,31 @@ Sammansättning
 
 Pollen
 
-**7 §** I honung ingår pollen som en naturlig och specifik beståndsdel.
-
-Pollen utgör således inte en ingrediens i den mening som avses i artikel
-
-2.2 f i Europaparlamentets och rådets förordning (EU) nr 1169/2011.
+**7 §** I honung ingår pollen som en naturlig och specifik beståndsdel. Pollen utgör således inte en ingrediens i den mening som avses i artikel 2.2 f i Europaparlamentets och rådets förordning (EU) nr 1169/2011.
 
 Bagerihonung
 
-**8 §** Om bagerihonung har använts som en ingrediens i ett sammansatt livsmedel får beteckningen ”honung” användas i beteckningen på det sammansatta livsmedlet i stället för beteckningen ”bagerihonung”.
+**8 §** Om bagerihonung har använts som en ingrediens i ett samman­ satt livsmedel får beteckningen ”honung” användas i beteckningen på det sammansatta livsmedlet i stället för beteckningen ”bagerihonung”. I ingrediensförteckningen ska dock beteckningen ”bagerihonung” an­ ges.
 
-I ingrediensförteckningen ska dock beteckningen ”bagerihonung” anges.
-
-**9 §** För bagerihonung ska orden ”endast för matlagning och bakning” stå i omedelbar anslutning till beteckningen.
+**9 §** För bagerihonung ska orden ”endast för matlagning och bak­ ning” stå i omedelbar anslutning till beteckningen.
 
 Ursprungsland
 
-**10 §** Det ursprungsland där honungen har skördats ska anges på etiketten.
+**10 §** Det ursprungsland där honungen har skördats ska anges på eti­ ketten.
 
-Om honungen har sitt ursprung i mer än ett land ska de ursprungsländer där honungen har skördats anges på etiketten i det huvudsakliga synfältet, i fallande ordning efter deras andel av vikten, tillsammans med den procentandel som varje ursprungsland representerar.
-
-En tolerans på 5 % ska tillåtas för varje enskild andel i blandningen, beräknad på grundval av aktörens spårbarhetsdokumentation.
+Om honungen har sitt ursprung i mer än ett land ska de ursprungs­ länder där honungen har skördats anges på etiketten i det huvudsakliga synfältet, i fallande ordning efter deras andel av vikten, tillsammans med den procentandel som varje ursprungsland representerar. En tolerans på 5 % ska tillåtas för varje enskild andel i blandningen, beräknad på grundval av aktörens spårbarhetsdokumentation.
 
 **11 §** För förpackningar som innehåller nettokvantiteter av honung om mindre än 30 gram, får ursprungsländernas namn ersättas med en tvåbokstavskod.
 
-Tvåbokstavskoden ska skrivas i enlighet med den senaste gällande versionen av den internationella standarden ISO 3166–1 (tvåbokstavskoden alpha-2).
+Tvåbokstavskoden ska skrivas i enlighet med den senaste gällande versionen av den internationella standarden ISO 3166–1 (tvåbokstavs­ koden alpha-2).
 
 1\. Dessa föreskrifter träder i kraft den 14 juni 2026.
 
 2\. Genom föreskrifterna upphävs Livsmedelsverket föreskrifter (LIVSFS 2003:10) om honung.
 
-3\. Produkter som släpps ut på marknaden eller märks före den
+3\. Produkter som släpps ut på marknaden eller märks före den 14 juni 2026 i enlighet med äldre bestämmelser får fortsätta att salu­ föras till dess att lagren tömts.
 
-14 juni 2026 i enlighet med äldre bestämmelser får fortsätta att saluföras till dess att lagren tömts. CHRISTINA NORDIN
+CHRISTINA NORDIN
 
 Dick Moberg (Enheten för juridik)
 
@@ -120,31 +112,23 @@ Bilaga 1 (till LIVSFS 2025:3)
 
 Produktbeteckningar och definitioner
 
-1\. Honung är det naturliga söta ämne som Apis mellifera-bin bereder av nektar från växter eller av sekret från levande växtdelar eller av exkret av växtsugande insektsarter på de levande växtdelarna, som bina samlar och omvandlar genom att förena dem med egna särskilda ämnen, deponerar, torkar, lagrar och låter utvecklas i vaxkakor.
-
-Honung kan delas in i följande huvudsorter:
+1\. Honung är det naturliga söta ämne som Apis mellifera-bin bereder av nektar från växter eller av sekret från levande växtdelar eller av exkret av växtsugande insektsarter på de levande växtdelarna, som bina samlar och omvandlar genom att förena dem med egna särskilda ämnen, deponerar, torkar, lagrar och låter utvecklas i vaxkakor. Honung kan delas in i följande huvudsorter:
 
 a) Beroende på ursprung Blomhonung eller nektarhonung: Honung som kommer från växters nektar. Bladhonung: Honung som huvudsakligen kommer från exkret från sugande insektsarter (Hemiptera) på levande växtdelar eller sekret av levande växtdelar.
 
-b) Beroende på hur den produceras och/eller presenteras Honung i vaxkakor eller kakhonung: Honung som bina förvarat i cellerna i nybyggda vaxkakor utan yngel eller i tunna bottenplattor för vaxkakor enbart gjorda av bivax och som säljs i hela eller delade täckta vaxkakor. Honung med bitar av vaxkakor: Honung som innehåller en eller flera bitar av honung i vaxkakor. Självrunnen honung: Honung som fått självrinna ur avtäckta vaxkakor utan yngel. Slungad honung: Honung som utvinns genom att centrifugera avtäckta vaxkakor utan yngel. Pressad honung: Honung som utvinns genom att under svag värme (högst 45 °C) eller utan värme pressa vaxkakor utan yngel.
+b) Beroende på hur den produceras och/eller presenteras  onung i vaxkakor eller kakhonung: Honung som bina förvarat i H cellerna i nybyggda vaxkakor utan yngel eller i tunna bottenplattor för vaxkakor enbart gjorda av bivax och som säljs i hela eller delade täckta vaxkakor.  onung med bitar av vaxkakor: Honung som innehåller en eller H flera bitar av honung i vaxkakor. Självrunnen honung: Honung som fått självrinna ur avtäckta vaxkakor utan yngel. Slungad honung: Honung som utvinns genom att centrifugera avtäckta vaxkakor utan yngel. Pressad honung: Honung som utvinns genom att under svag värme (högst 45 °C) eller utan värme pressa vaxkakor utan yngel.
 
 2\. Med bagerihonung avses honung
 
 a) som är lämplig för industriellt bruk eller som ingrediens i andra livsmedel som därefter bearbetas, och
 
-b) som kan − ha en främmande smak eller lukt, − ha börjat jäsa eller har jäst, − ha överhettats, eller − ha utvunnits genom att främmande oorganiska och organiska ­ämnen avlägsnats på ett sådant sätt att avsevärda mängder pollen avlägsnats.
+b) som kan − ha en främmande smak eller lukt, − ha börjat jäsa eller har jäst, − ha överhettats, eller − ha utvunnits genom att främmande oorganiska och organiska ­ämnen avlägsnats på ett sådant sätt att avsevärda mängder pollen av­ lägsnats.
 
 Bilaga 2 LIVSFS 2025:3 (till LIVSFS 2025:3)
 
 Kriterier för honungens sammansättning
 
-Honung består huvudsakligen av olika former av socker, framför allt av fruktos och glukos, samt av andra ämnen såsom organiska syror, enzymer och fasta partiklar från insamlingen av honungen. Honungens färg varierar från nästan färglös till mörkbrun. Till konsistensen kan den vara lättflytande, trögflytande eller helt eller delvis kristalliserad.
-
-Smaken och aromen varierar men härrör från honungens växtursprung.
-
-När honungen saluförs som honung eller används i någon annan produkt som är avsedd som livsmedel får inga livsmedelsingredienser, inbegripet livsmedelstillsatser, ha tillförts den, och inte heller får något annat än honung tillsättas. Honung ska så långt det är möjligt vara fri från organiska och oorganiska ämnen som är främmande för dess sammansättning. Annan honung än bagerihonung får inte ha någon främmande smak eller lukt eller ha börjat jäsa, ha en på konstgjord väg förändrad surhetsgrad eller ha uppvärmts så mycket att dess naturliga enzymer förstörts eller i väsentlig grad förlorat sin verkan.
-
-Pollen eller andra beståndsdelar som är specifika för honungen får inte avlägsnas från annan honung än bagerihonung, såvida inte detta är oundvikligt när främmande organiska eller oorganiska ämnen avlägsnas. När honung saluförs som honung eller används i någon sammansatt produkt ska den uppfylla följande kriterier när det gäller sammansättningen.
+Honung består huvudsakligen av olika former av socker, framför allt av fruktos och glukos, samt av andra ämnen såsom organiska syror, enzymer och fasta partiklar från insamlingen av honungen. Honungens färg varierar från nästan färglös till mörkbrun. Till konsistensen kan den vara lättflytande, trögflytande eller helt eller delvis kristalliserad. Smaken och aromen varierar men härrör från honungens växtursprung. När honungen saluförs som honung eller används i någon annan pro­ dukt som är avsedd som livsmedel får inga livsmedelsingredienser, inbegripet livsmedelstillsatser, ha tillförts den, och inte heller får något annat än honung tillsättas. Honung ska så långt det är möjligt vara fri från organiska och oorganiska ämnen som är främmande för dess sam­ mansättning. Annan honung än bagerihonung får inte ha någon främ­ mande smak eller lukt eller ha börjat jäsa, ha en på konstgjord väg förändrad surhetsgrad eller ha uppvärmts så mycket att dess naturliga enzymer förstörts eller i väsentlig grad förlorat sin verkan. Pollen eller andra beståndsdelar som är specifika för honungen får inte avlägsnas från annan honung än bagerihonung, såvida inte detta är ound­ vikligt när främmande organiska eller oorganiska ämnen avlägsnas. När honung saluförs som honung eller används i någon sammansatt produkt ska den uppfylla följande kriterier när det gäller sammansätt­ ningen.
 
 1 Sockerhalt
 
