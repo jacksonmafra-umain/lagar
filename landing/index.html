@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n="meta.title">lagar: gällande svensk lag, utan versionskaos</title>
-  <meta name="description" data-i18n-attr="content:meta.description" content="Sök och läs svenska lagar och förordningar i sin aktuella lydelse. Gratis, utan konto, öppen källkod.">
+  <title data-i18n="meta.title">lagar: svensk lag, lätt att hitta och läsa</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="Lagar, föreskrifter, domar och kommunala regler från hundratals offentliga källor, samlade som läsbar text. Gratis, utan konto, öppen källkod.">
   <meta property="og:type" content="website">
-  <meta property="og:title" data-i18n-attr="content:meta.title" content="lagar: gällande svensk lag, utan versionskaos">
-  <meta property="og:description" data-i18n-attr="content:meta.description" content="Sök och läs svenska lagar och förordningar i sin aktuella lydelse. Gratis, utan konto, öppen källkod.">
+  <meta property="og:title" data-i18n-attr="content:meta.title" content="lagar: svensk lag, lätt att hitta och läsa">
+  <meta property="og:description" data-i18n-attr="content:meta.description" content="Lagar, föreskrifter, domar och kommunala regler från hundratals offentliga källor, samlade som läsbar text. Gratis, utan konto, öppen källkod.">
   <meta name="theme-color" content="#004373">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/site.css">
   <script src="js/lang.js" defer></script>
+  <script src="js/stats.js" defer></script>
   <script src="js/catalog.js" defer></script>
 </head>
 <body>
@@ -29,72 +30,177 @@
     <section id="hero" class="hero">
       <div class="wrap hero__grid">
         <div class="hero__copy">
-          <h1 data-i18n="hero.title">Gällande svensk lag, utan versionskaos</h1>
-          <p class="lead" data-i18n="hero.lead">Sök och läs lagar i sin aktuella lydelse, gratis och utan konto.</p>
+          <h1 data-i18n="hero.title">Lagen är offentlig. Nu går den också att hitta.</h1>
+          <p class="lead" data-i18n="hero.lead">lagar samlar lagar, föreskrifter, domar och lokala regler från hundratals offentliga källor på ett ställe, som text du kan söka i och läsa.</p>
           <div class="actions">
-            <a class="button button--primary" href="/app/" data-i18n="hero.cta">Öppna lagar</a>
+            <a class="button button--primary" href="#numbers" data-i18n="hero.numbers">Se vad som finns</a>
             <a class="button button--secondary" href="https://github.com/jacksonmafra-umain/lagar" data-i18n="hero.source">Källkod på GitHub</a>
           </div>
         </div>
         <figure class="specimen" lang="sv" style="--layer: var(--layer-fundamental)">
-          <figcaption class="specimen__cite">Regeringsformen 1 kap. 1 §</figcaption>
-          <blockquote class="specimen__text">All offentlig makt i Sverige utgår från folket.</blockquote>
+          <figcaption class="specimen__cite">Tryckfrihetsförordningen 2 kap. 1 §</figcaption>
+          <blockquote class="specimen__text specimen__text--long">Till främjande av ett fritt meningsutbyte, en fri och allsidig upplysning och ett fritt konstnärligt skapande ska var och en ha rätt att ta del av allmänna handlingar.</blockquote>
         </figure>
       </div>
     </section>
 
     <section id="why" class="section">
       <div class="wrap split">
-        <h2 data-i18n="why.title">Varför lagar</h2>
-        <p data-i18n="why.p1">Svensk lag är offentlig, men den är svårare att läsa än den borde vara. En lag ändras om och om igen, och den lydelse som gäller i dag är utspridd över originaltexten och alla ändringar sedan dess. De officiella källorna är fullständiga men byggda för den som redan vet var man ska leta.</p>
-        <p data-i18n="why.p2">lagar samlar den gällande lydelsen av varje lag på ett ställe, lätt att läsa i mobilen, gratis och utan konto. Varje lag är en vanlig textfil i ett öppet arkiv, byggd från officiella öppna data, så att vem som helst kan se var en text kommer ifrån, återanvända den eller hjälpa till att förbättra den.</p>
+        <h2 data-i18n="why.title">Rätten att läsa lagen</h2>
+        <p data-i18n="why.p1">Sverige har haft offentlighetsprincipen sedan 1766. Allmänna handlingar är öppna för alla, och lagar och föreskrifter är fria att läsa, kopiera och dela: de omfattas inte av upphovsrätt.</p>
+        <p data-i18n="why.p2">Men offentligt är inte samma sak som lätt att hitta. Reglerna som gäller dig publiceras av riksdagen, regeringen, ett åttiotal myndigheter, 21 länsstyrelser och 290 kommuner, var och en på sitt eget sätt.</p>
+        <ul class="hurdles">
+          <li>
+            <span class="hurdles__name" data-i18n="hurdle.paths">Krångliga vägar</span>
+            <span data-i18n="hurdle.paths_desc">Varje utgivare har sin egen webbplats och sitt eget sätt att ordna reglerna: en lista, ett diarium, en filbank.</span>
+          </li>
+          <li>
+            <span class="hurdles__name" data-i18n="hurdle.pdf">PDF-filer</span>
+            <span data-i18n="hurdle.pdf_desc">De flesta regler från myndigheter, länsstyrelser och kommuner finns bara som PDF, svåra att söka i och att läsa i mobilen.</span>
+          </li>
+          <li>
+            <span class="hurdles__name" data-i18n="hurdle.scans">Inskannade sidor</span>
+            <span data-i18n="hurdle.scans_desc">Äldre regler är ofta inskannade bilder utan text. Det går inte att söka i dem, och en skärmläsare hittar ingenting.</span>
+          </li>
+          <li>
+            <span class="hurdles__name" data-i18n="hurdle.apis">API:er och spärrar</span>
+            <span data-i18n="hurdle.apis_desc">Öppna data finns, men ofta som API:er byggda för utvecklare, och vissa källor kräver en nyckel eller spärrar automatisk läsning.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="who" class="section section--alt">
+      <div class="wrap">
+        <h2 data-i18n="who.title">Vem lagar är till för</h2>
+        <ul class="people">
+          <li>
+            <span class="people__name" data-i18n="who.resident">Den som bor här</span>
+            <span data-i18n="who.resident_desc">Får jag elda trädgårdsavfall? Var får hunden springa lös? Svaret står ofta i en kommunal föreskrift som är svår att hitta.</span>
+          </li>
+          <li>
+            <span class="people__name" data-i18n="who.student">Den som studerar</span>
+            <span data-i18n="who.student_desc">Lagtext, föreskrifter och prejudikat på ett ställe, i sin gällande lydelse, med länk till den officiella källan.</span>
+          </li>
+          <li>
+            <span class="people__name" data-i18n="who.newcomer">Den som är ny i Sverige</span>
+            <span data-i18n="who.newcomer_desc">Att förstå reglerna i ett nytt land är en del av att komma in i samhället. Det ska inte kräva att man först vet hur myndigheterna publicerar.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="wrap split">
+        <h2 data-i18n="how.title">Därför finns lagar</h2>
+        <p class="how__lead" data-i18n="how.lead">lagar gör jobbet en gång, så att ingen annan behöver göra om det.</p>
+        <ol class="steps">
+          <li>
+            <span class="steps__name" data-i18n="how.collect">Hämtar</span>
+            <span data-i18n="how.collect_desc">Texterna hämtas från officiella källor varje dag eller vecka, med länk tillbaka till originalet.</span>
+          </li>
+          <li>
+            <span class="steps__name" data-i18n="how.read">Läser</span>
+            <span data-i18n="how.read_desc">Texten tas fram ur PDF-filer, och inskannade sidor läses med OCR. OCR-text är märkt, och originalet gäller alltid.</span>
+          </li>
+          <li>
+            <span class="steps__name" data-i18n="how.order">Ordnar</span>
+            <span data-i18n="how.order_desc">Allt får samma form: en textfil per regel, ordnad efter lager och utgivare, sökbar genom ett öppet API.</span>
+          </li>
+          <li>
+            <span class="steps__name" data-i18n="how.gaps">Redovisar</span>
+            <span data-i18n="how.gaps_desc">Det som inte går att samla in, till exempel källor som spärrar automatisk läsning, redovisas öppet med ett ärende per lucka.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="numbers" class="section section--band numbers">
+      <div class="wrap">
+        <div class="numbers__head">
+          <h2 data-i18n="numbers.title">lagar i siffror</h2>
+          <p class="numbers__date"><span data-i18n="numbers.updated">Uppdaterad</span> <time data-stat="generated_at" data-format="date" datetime="2026-10-31">31 oktober 2026</time></p>
+        </div>
+        <ul class="figures">
+          <li><span class="figures__value" data-stat="documents">54 786</span> <span class="figures__label" data-i18n="numbers.documents">texter</span></li>
+          <li><span class="figures__value" data-stat="words" data-format="millions">119</span> <span class="figures__label" data-i18n="numbers.words">miljoner ord</span></li>
+          <li><span class="figures__value" data-stat="issuers">617</span> <span class="figures__label" data-i18n="numbers.issuers">utgivare</span></li>
+          <li><span class="figures__value"><span data-stat="geography.kommuner">285</span>/<span data-stat="geography.kommun_total">290</span></span> <span class="figures__label" data-i18n="numbers.kommuner">kommuner</span></li>
+          <li><span class="figures__value"><span data-stat="geography.counties">21</span>/<span data-stat="geography.county_total">21</span></span> <span class="figures__label" data-i18n="numbers.counties">län</span></li>
+          <li><span class="figures__value" data-stat="from_pdf">21 860</span> <span class="figures__label" data-i18n="numbers.from_pdf">texter lästa ur PDF-filer</span></li>
+          <li><span class="figures__value" data-stat="text.ocr">1 487</span> <span class="figures__label" data-i18n="numbers.ocr">inskannade texter lästa med OCR</span></li>
+          <li><span class="figures__value" data-stat="quality.ocr_calibration.word_recall.mean" data-format="percent">96 %</span> <span class="figures__label" data-i18n="numbers.ocr_recall">av orden rätt i OCR-text, i snitt</span></li>
+        </ul>
+        <div class="origin">
+          <h3 data-i18n="numbers.origin">Var texten kommer ifrån</h3>
+          <div class="origin__bar" aria-hidden="true">
+            <span class="origin__part origin__part--web" data-share="text.web" style="--share: 59.2%"></span>
+            <span class="origin__part origin__part--pdf" data-share="text.pdf" style="--share: 37.2%"></span>
+            <span class="origin__part origin__part--ocr" data-share="text.ocr" style="--share: 2.7%"></span>
+            <span class="origin__part origin__part--none" data-share="text.none" style="--share: 0.9%"></span>
+          </div>
+          <ul class="origin__legend">
+            <li class="origin__key origin__key--web"><span data-i18n="numbers.web">Webbsida eller API</span> <span class="origin__count" data-stat="text.web">32 453</span></li>
+            <li class="origin__key origin__key--pdf"><span data-i18n="numbers.pdf">Textlager i PDF</span> <span class="origin__count" data-stat="text.pdf">20 373</span></li>
+            <li class="origin__key origin__key--ocr"><span data-i18n="numbers.ocr_short">OCR av inskannad PDF</span> <span class="origin__count" data-stat="text.ocr">1 487</span></li>
+            <li class="origin__key origin__key--none"><span data-i18n="numbers.none">Ingen text än</span> <span class="origin__count" data-stat="text.none">473</span></li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section id="inside" class="section section--alt">
       <div class="wrap">
         <h2 data-i18n="inside.title">Vad som finns i lagar</h2>
-        <p data-i18n="inside.lead">Normerna är ordnade i lager, från grundlagarna och nedåt. De första lagren finns redan, fler kommer.</p>
+        <p data-i18n="inside.lead">Normerna är ordnade i lager, från grundlagarna och nedåt. Alla lager utom tjänsterna finns redan.</p>
         <ul class="layers">
           <li class="layer" style="--layer: var(--layer-fundamental)">
             <span class="layer__name" data-i18n="inside.fundamental">Grundlagar</span>
             <span class="layer__desc" data-i18n="inside.fundamental_desc">Regeringsformen och de andra grundlagarna</span>
+            <span class="layer__count"><span data-stat="layers.fundamental.documents">4</span> <span data-i18n="inside.texts">texter</span></span>
             <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
           </li>
           <li class="layer" style="--layer: var(--layer-sfs-act)">
             <span class="layer__name" data-i18n="inside.sfs_act">SFS Lagar</span>
             <span class="layer__desc" data-i18n="inside.sfs_act_desc">Lagar beslutade av riksdagen</span>
+            <span class="layer__count"><span data-stat="layers.sfs.types.act.documents">3 000</span> <span data-i18n="inside.texts">texter</span></span>
             <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
           </li>
           <li class="layer" style="--layer: var(--layer-sfs-ordinance)">
             <span class="layer__name" data-i18n="inside.sfs_ordinance">SFS Förordningar</span>
             <span class="layer__desc" data-i18n="inside.sfs_ordinance_desc">Förordningar utfärdade av regeringen</span>
+            <span class="layer__count"><span data-stat="layers.sfs.types.ordinance.documents">6 591</span> <span data-i18n="inside.texts">texter</span></span>
             <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
           </li>
           <li class="layer" style="--layer: var(--layer-agency)">
             <span class="layer__name" data-i18n="inside.agency">Myndighetsföreskrifter</span>
-            <span class="layer__desc" data-i18n="inside.agency_desc">Föreskrifter utfärdade av myndigheter</span>
-            <span class="badge" data-i18n="inside.coming">Kommer</span>
+            <span class="layer__desc" data-i18n="inside.agency_desc">Föreskrifter från arbetsmiljö till livsmedel och trafik</span>
+            <span class="layer__count"><span data-stat="layers.agency.documents">5 468</span> <span data-i18n="inside.texts">texter</span></span>
+            <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
           </li>
           <li class="layer" style="--layer: var(--layer-case-law)">
             <span class="layer__name" data-i18n="inside.case_law">Rättspraxis</span>
-            <span class="layer__desc" data-i18n="inside.case_law_desc">Domar och prejudikat</span>
-            <span class="badge" data-i18n="inside.coming">Kommer</span>
+            <span class="layer__desc" data-i18n="inside.case_law_desc">Vägledande avgöranden från svenska domstolar</span>
+            <span class="layer__count"><span data-stat="layers.case_law.documents">16 475</span> <span data-i18n="inside.texts">texter</span></span>
+            <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
           </li>
           <li class="layer" style="--layer: var(--layer-eu)">
             <span class="layer__name" data-i18n="inside.eu">EU-rätt</span>
-            <span class="layer__desc" data-i18n="inside.eu_desc">Förordningar och direktiv från Europeiska unionen</span>
-            <span class="badge" data-i18n="inside.coming">Kommer</span>
+            <span class="layer__desc" data-i18n="inside.eu_desc">EU-förordningar och direktiv på svenska, och domar som tolkar dem</span>
+            <span class="layer__count"><span data-stat="layers.eu.documents">675</span> <span data-i18n="inside.texts">texter</span></span>
+            <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
           </li>
           <li class="layer" style="--layer: var(--layer-region)">
-            <span class="layer__name" data-i18n="inside.region">Regioner</span>
-            <span class="layer__desc" data-i18n="inside.region_desc">Regionala regler och beslut</span>
-            <span class="badge" data-i18n="inside.coming">Kommer</span>
+            <span class="layer__name" data-i18n="inside.region">Län</span>
+            <span class="layer__desc" data-i18n="inside.region_desc">Länsstyrelsernas föreskrifter: naturreservat, jakt, fiske och trafik</span>
+            <span class="layer__count"><span data-stat="layers.region.documents">11 649</span> <span data-i18n="inside.texts">texter</span></span>
+            <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
           </li>
           <li class="layer" style="--layer: var(--layer-municipality)">
             <span class="layer__name" data-i18n="inside.municipality">Kommuner</span>
-            <span class="layer__desc" data-i18n="inside.municipality_desc">Kommunala föreskrifter och planer</span>
-            <span class="badge" data-i18n="inside.coming">Kommer</span>
+            <span class="layer__desc" data-i18n="inside.municipality_desc">Ordningsföreskrifter, taxor och andra lokala regler</span>
+            <span class="layer__count"><span data-stat="layers.municipality.documents">5 572</span> <span data-i18n="inside.texts">texter</span></span>
+            <span class="badge badge--ready" data-i18n="inside.ready">Finns nu</span>
           </li>
           <li class="layer" style="--layer: var(--layer-service)">
             <span class="layer__name" data-i18n="inside.service">Tjänster</span>
@@ -190,8 +296,9 @@
     <section id="sources" class="section">
       <div class="wrap split">
         <h2 data-i18n="sources.title">Källor</h2>
-        <p data-i18n="sources.lead">Texterna hämtas från officiella öppna data. De är informativa och ersätter inte den officiella publiceringen.</p>
+        <p data-i18n="sources.lead">Texterna hämtas från officiella källor: riksdagens öppna data, domstolarnas och EU:s publiceringar, och myndigheternas, länsstyrelsernas och kommunernas webbplatser. De är informativa och ersätter inte den officiella publiceringen.</p>
         <ul class="links">
+          <li><a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/tryckfrihetsforordning-1949105_sfs-1949-105/" data-i18n="sources.access">Tryckfrihetsförordningen 2 kap.</a> <span data-i18n="sources.access_desc">offentlighetsprincipen: rätten att ta del av allmänna handlingar</span></li>
           <li><a href="https://data.riksdagen.se/" data-i18n="sources.riksdagen">Riksdagens öppna data</a> <span data-i18n="sources.riksdagen_desc">källan till SFS-texterna</span></li>
           <li><a href="https://svenskforfattningssamling.se/" data-i18n="sources.sfs">Svensk författningssamling</a> <span data-i18n="sources.sfs_desc">den officiella publiceringen av lagar och förordningar</span></li>
           <li><a href="https://lagrummet.se/" data-i18n="sources.lagrummet">Lagrummet</a> <span data-i18n="sources.lagrummet_desc">det offentliga rättsinformationssystemets portal</span></li>
@@ -200,11 +307,11 @@
       </div>
     </section>
 
-    <section id="open" class="section section--band">
+    <section id="open" class="section">
       <div class="wrap split">
         <h2 data-i18n="open.title">Öppen källkod</h2>
-        <p data-i18n="open.p1">Varje norm är en Markdown-fil i arkivet. En insamlare hämtar texterna från officiella källor, och ett statiskt JSON-API driver webbappen. Allt är fritt under MIT-licensen.</p>
-        <p data-i18n="open.p2">Appar för Android och iOS är på väg. Tills vidare fungerar webbappen i alla moderna webbläsare, även i mobilen.</p>
+        <p data-i18n="open.p1">Varje norm är en Markdown-fil i arkivet. En insamlare hämtar texterna från officiella källor, och ett statiskt JSON-API gör dem sökbara. Allt är fritt under MIT-licensen.</p>
+        <p data-i18n="open.p2">Webbappen är pausad medan den byggs om, och appar för Android och iOS är på väg. Under tiden finns alla texter i arkivet på GitHub, och API:t och en MCP-server för AI-assistenter går att köra på den egna datorn.</p>
         <ul class="links">
           <li><a href="https://github.com/jacksonmafra-umain/lagar" data-i18n="open.repo">lagar på GitHub</a></li>
           <li><a href="https://github.com/jacksonfdam/leis" data-i18n="open.leis">leis</a> <span data-i18n="open.leis_desc">systerprojektet för brasiliansk lagstiftning</span></li>

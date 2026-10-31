@@ -361,7 +361,7 @@ h2 {
 
 .badge {
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
   align-self: center;
   padding: var(--space-1) var(--space-3);
   border-radius: 999px;
@@ -590,7 +590,7 @@ h2 {
   cursor: default;
 }
 
-/* Open source: the one inverted band. */
+/* The numbers: the one inverted band. */
 
 .section--band {
   background: var(--color-primary);
@@ -611,6 +611,238 @@ h2 {
 
 .section--band :focus-visible {
   outline-color: var(--color-on-primary);
+}
+
+/* The hero quote is a full sentence of law, so it is set smaller than a slogan would be. */
+
+.specimen__text--long {
+  font-size: clamp(1.375rem, 2.2vw, 1.875rem);
+  line-height: 1.3;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Why: the four hurdles between a public text and a reader. */
+
+.hurdles,
+.people,
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.hurdles {
+  margin-top: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.hurdles li,
+.people li {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-surface);
+  color: var(--color-on-surface-variant);
+}
+
+.hurdles__name,
+.people__name,
+.steps__name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-on-surface);
+}
+
+/* Who: three readers, one line each. */
+
+#who .wrap {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.people {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.people li {
+  background: var(--color-surface);
+}
+
+/* How: four verbs, numbered in the order the work happens. */
+
+.how__lead {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+}
+
+.steps {
+  counter-reset: step;
+  border-top: 1px solid var(--color-outline-variant);
+  gap: 0;
+}
+
+.steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  column-gap: var(--space-4);
+  row-gap: var(--space-1);
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--color-outline-variant);
+  color: var(--color-on-surface-variant);
+}
+
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  grid-row: 1 / span 2;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+}
+
+.steps li > * {
+  grid-column: 2;
+}
+
+/* Numbers: big figures, then one bar for where the text comes from. */
+
+.numbers .wrap {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.numbers__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-6);
+}
+
+.numbers__date {
+  font-size: var(--text-sm);
+  color: color-mix(in oklab, var(--color-on-primary) 80%, transparent);
+}
+
+.figures {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--space-8) var(--gap-columns);
+}
+
+.figures li {
+  display: grid;
+  gap: var(--space-1);
+  padding-top: var(--space-4);
+  border-top: 1px solid color-mix(in oklab, var(--color-on-primary) 32%, transparent);
+}
+
+.figures__value {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.figures__label {
+  color: color-mix(in oklab, var(--color-on-primary) 85%, transparent);
+}
+
+.origin {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.origin__bar {
+  display: flex;
+  height: 20px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--color-on-primary) 12%, transparent);
+}
+
+.origin__part {
+  flex: 0 0 var(--share);
+  min-width: 3px;
+}
+
+.origin__part + .origin__part {
+  border-left: 2px solid var(--color-primary);
+}
+
+.origin__part--web,
+.origin__key--web::before {
+  background: var(--color-on-primary);
+}
+
+.origin__part--pdf,
+.origin__key--pdf::before {
+  background: color-mix(in oklab, var(--color-on-primary) 62%, var(--color-primary));
+}
+
+.origin__part--ocr,
+.origin__key--ocr::before {
+  background: var(--color-tertiary-container);
+}
+
+.origin__part--none,
+.origin__key--none::before {
+  background: color-mix(in oklab, var(--color-on-primary) 22%, var(--color-primary));
+}
+
+.origin__legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-8);
+}
+
+.origin__key {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.origin__key::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-on-primary) 40%, transparent);
+}
+
+.origin__count {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Layer cards: the number of texts under the description. */
+
+.layer__count {
+  grid-column: 1;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-on-surface);
 }
 
 /* Footer */
@@ -686,6 +918,11 @@ h2 {
 
   .specimen {
     padding: var(--space-8) var(--space-6);
+  }
+
+  .figures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6) var(--space-4);
   }
 }
 

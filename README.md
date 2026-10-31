@@ -4,7 +4,7 @@ Swedish laws, case law, EU law, municipal regulations and public services as
 Markdown, one file per norm, with a static JSON API and Compose Multiplatform
 apps for Android, iOS and the web.
 
-- Web app: <https://grundlagar.vercel.app/app/> (landing page at <https://grundlagar.vercel.app>)
+- Landing page: <https://grundlagar.vercel.app>. The hosted web app is paused while it is rebuilt; run it locally with `scripts/serve_local.py` (see [Run it locally](#run-it-locally)).
 - API: built and served per machine with `python3 -I scripts/serve_local.py` ([contract](docs/api.md)); the copy at <https://jacksonmafra-umain.github.io/lagar/api/v1/index.json> is frozen and no longer updated
 
 ## Progress
