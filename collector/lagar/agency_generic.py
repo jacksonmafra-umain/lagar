@@ -675,7 +675,7 @@ class AffsAdapter(DetailPageAdapter):
                 entries[number] = Entry(number=number, title=title, url=absolute(url, item["URI"]),
                                         base=not is_amending(title))
         if not entries:
-            raise ValueError(f"no AFFS regulations in the page state on {url}")
+            raise ValueError(f"no {self.series} regulations in the page state on {url}")
         return self.link_amendments(list(entries.values()))
 
     def title(self, page, entry):
@@ -692,6 +692,11 @@ class AffsAdapter(DetailPageAdapter):
             if marker is not None and content is not None:
                 blocks.append(to_html(content))
         return _markdown("".join(blocks)) if blocks else ""
+
+
+class AmsfsAdapter(AffsAdapter):
+    series = "AMSFS"  # Arbetsmarknadsstyrelsen, before AFFS; Arbetsförmedlingen's page lists both
+    issuer = "Arbetsmarknadsstyrelsen"
 
 
 class FkfsAdapter:
@@ -1256,6 +1261,6 @@ SERIES = (MigrfsAdapter(), KamfsAdapter(), KfmfsAdapter(), KfsAdapter(), KrfsAda
           CsnfsAdapter(), ImyfsAdapter(), LmfsAdapter(), MtfsAdapter(),
           KvfsAdapter(), LivsfsAdapter(), MyhfsAdapter(), DvfsAdapter(), EifsAdapter(), KbvfsAdapter(),
           FfsAdapter(), HslffsAdapter(), SosfsAdapter(), FohmfsAdapter(), TlvfsAdapter(), LmvfsAdapter(),
-          FifsAdapter(), RffsAdapter(), SlvfsAdapter(), LfsAdapter(), JvsfsAdapter(), VvfsAdapter())
+          FifsAdapter(), RffsAdapter(), AmsfsAdapter(), SlvfsAdapter(), LfsAdapter(), JvsfsAdapter(), VvfsAdapter())
 
 agency.ADAPTERS.update({a.series: a for a in SERIES})
