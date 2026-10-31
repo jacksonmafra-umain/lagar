@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/bilaga_1.pdf"
 source_sha256: "237abcaa6949bae8e5702e412c423e2978966989db04ddca10e373ac13d4166a"
-fetched_at: "2026-10-30T01:04:59Z"
+fetched_at: "2026-10-31T20:22:25Z"
 issuer: "Kristinehamns kommun"
 region_code: "17"
 municipality_code: "1781"
@@ -34,3 +34,5 @@ Förteckning: <https://www.kristinehamn.se/kommun-och-politik/lokala-bestammelse
 Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
 
 - [bilaga 1](<https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/bilaga_1.pdf>)
+
+Pdf:en är inskannad och innehåller ingen text som kan läsas maskinellt.

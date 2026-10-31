@@ -16,10 +16,11 @@ language: "sv"
 authoritative: false
 source: "https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/lokala-ordningsforeskrifter.-bilaga-2-omraden-som-jamstalls-med-offentlig-plats.pdf"
 source_sha256: "73bb820e2e9ff306d7be9367854d84e850b7c7a81e242bbd25e82c770dc4e57d"
-fetched_at: "2026-10-30T01:05:00Z"
+fetched_at: "2026-10-31T20:22:54Z"
 issuer: "Kristinehamns kommun"
 region_code: "17"
 municipality_code: "1781"
+text_source: "ocr"
 ---
 # bilaga 2
 
@@ -31,6 +32,54 @@ Förteckning: <https://www.kristinehamn.se/kommun-och-politik/lokala-bestammelse
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [bilaga 2](<https://www.kristinehamn.se/contentassets/aecd5b30bd0b45939380e09722074163/lokala-ordningsforeskrifter.-bilaga-2-omraden-som-jamstalls-med-offentlig-plats.pdf>)
+
+## Text
+
+Texten är maskinellt inläst (OCR) ur kommunens inskannade pdf och kan innehålla läsfel. Den gällande lydelsen finns i pdf:en.
+
+Område som jämställs med offentlig plats - bensinstationsområde vid Stationsgatan
+
+Bilaga 2
+
+Område som jämställs med offentlig plats bensinstationsområde vid Karlstadsvägen
+
+Bilaga 2
+
+A —
+
+O
+
+D
+
+S
+
+c =
+
+O
+
+D
+
+E —
+
+A
+
+&E
+
+O
+
+A
+
+D
+
+O
+
+Hamburgerkedjorna Övre kvarn
+
+Bilaga 2
+
+Bilaga 2
+
+Område som jämställs med offentlig plats Hamburgerkedjorna Övre kvarn
