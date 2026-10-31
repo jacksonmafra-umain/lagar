@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.valdemarsvik.se/wp-content/uploads/2025/04/kartbilaga-hamntaxan.pdf"
 source_sha256: "8bc4209cb2b9724858cfe338a89ca342cb457804338a28bb47c62c5645676a09"
-fetched_at: "2026-10-30T13:20:14Z"
+fetched_at: "2026-10-31T16:35:27Z"
 issuer: "Valdemarsviks kommun"
 region_code: "05"
 municipality_code: "0563"
@@ -34,3 +34,5 @@ Förteckning: <https://www.valdemarsvik.se/kommun/kommun-politik/kommunal-forfat
 Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
 
 - [Hamntaxa – Kartbilaga](<https://www.valdemarsvik.se/wp-content/uploads/2025/04/kartbilaga-hamntaxan.pdf>)
+
+Pdf:en är inskannad och innehåller ingen text som kan läsas maskinellt.
