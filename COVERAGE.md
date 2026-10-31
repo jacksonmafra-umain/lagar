@@ -447,7 +447,7 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
     included, with an HTTP 403 "Åtkomst nekad" bot-check page; not bypassed.
   - Not collected yet, with the reason per kommun in `AGENCIES.md`: Värnamo
-    (its DocumentWeb host did not answer; retried 2026-10-31), and Mönsterås (site
+    (its DocumentWeb host did not answer; retried 2026-10-31) and Mönsterås (site
     did not answer; retried 2026-10-31). Their issues stay open.
   - Collected through platform adapters: Lidingö and Västervik (Evolution
     DocumentWeb API), Sigtuna (Netpublicator), Gotland (its document service),
