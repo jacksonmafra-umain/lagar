@@ -763,7 +763,8 @@ python3 -I collector/collect.py municipal --kommun 0120 --dry-run
   manifest records the outcome as `text` (`pdf`, `ocr` or the gap reason, such as "no text layer
   (scanned PDF)"); the body notes a text gap. While a PDF's SHA-256 is unchanged its stored text is
   reused, and a run reads the text of documents collected before (no `text` in the manifest) and,
-  with OCR, of scans recorded without text. A text holding a personal identity number is not
+  with OCR, of scans recorded without text; a scan OCR finds no text in is recorded as "no text
+  found by OCR (scanned PDF)" and not read again. A text holding a personal identity number is not
   stored: the document fails. `--no-text` skips reading text and `--no-ocr` skips OCR; without
   them the run stops when `pdftotext` or tesseract with the Swedish model is missing.
   `document_gap` kommuner and documents that robots.txt keeps out get no text. When robots.txt disallows the PDF, `source` is the listing page (or the
