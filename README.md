@@ -62,14 +62,61 @@ Screen-by-screen status is in [docs/screens.md](docs/screens.md).
 - [API contract](docs/api.md)
 - [Notice](NOTICE.md) and [licence](LICENSE)
 
-## Local tools
+## Run it locally
 
-Run the web app fully offline against the local corpus. The script builds the API and the
-wasmJs app when they are missing (the web build needs JDK 21), then serves both from one server:
+The API is not hosted: you build it from the corpus and serve it yourself. Everything below runs
+from the repo root and needs Python 3.12+, plus JDK 21 for the app builds.
+
+### 1. Web app and API on one server
 
 ```sh
-python3 -I scripts/serve_local.py   # http://127.0.0.1:8001/
+python3 -I scripts/serve_local.py --host 0.0.0.0 --port 8000
 ```
+
+The first run builds the API (`build/api/v1`) and the web app, then serves the web app at `/` and
+the API at `/api/v1/`. Open <http://localhost:8000/> and browse the laws. Other devices on the
+same network can open `http://<your-ip>:8000/` (find the IP with `ipconfig getifaddr en0` on macOS
+or `hostname -I` on Linux). Leave out `--host 0.0.0.0` to keep the server private to your
+computer. After the corpus changes, add `--build always` to rebuild.
+
+### 2. Android and iOS on the emulator or simulator
+
+Debug builds already read `http://<host>:8000/api/v1/`, so with the server from step 1 running
+they work as they are:
+
+```sh
+cd app
+./gradlew :androidApp:installDebug   # Android emulator, which reaches the computer as 10.0.2.2
+```
+
+For iOS, open `app/iosApp/iosApp.xcodeproj` in Xcode and run it on a simulator (it reaches the
+computer as `localhost`).
+
+### 3. A physical phone
+
+A real device can't reach `10.0.2.2` or `localhost`, so give it an address it can reach. The
+simplest is an HTTPS tunnel, which works for both platforms and from any network:
+
+```sh
+cloudflared tunnel --url http://localhost:8000   # no account; prints https://<name>.trycloudflare.com
+ngrok http 8000                                  # alternative; needs a free ngrok account
+```
+
+The tunnel URL also opens the web app in the phone's browser. To use it in the apps, put
+`<tunnel-url>/api/v1/` in the debug URL and rebuild:
+
+- Android: `app/androidApp/src/main/kotlin/app/lagar/MainActivity.kt`
+- iOS: `app/shared/src/iosMain/kotlin/app/lagar/MainViewController.kt`
+
+To use the LAN IP instead (`http://<your-ip>:8000/api/v1/`, phone on the same Wi-Fi), Android
+also needs the IP added to `app/androidApp/src/debug/res/xml/network_security_config.xml`, because
+debug builds allow plain HTTP only to listed hosts. iOS blocks plain HTTP to other hosts, so use
+the tunnel there.
+
+Don't commit these URL changes. Release builds read the last copy published to GitHub Pages,
+which is frozen. More detail is in [app/README.md](app/README.md).
+
+## Local tools
 
 Search and read the corpus from an MCP client (Claude Code, Claude Desktop and others) with the
 stdio server in `mcp/`, standard library only. `.mcp.json` registers it for this checkout against
