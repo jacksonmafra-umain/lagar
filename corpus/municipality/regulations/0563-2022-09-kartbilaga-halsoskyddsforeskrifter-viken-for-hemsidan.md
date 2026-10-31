@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.valdemarsvik.se/wp-content/uploads/2022/09/kartbilaga-halsoskyddsforeskrifter-viken-for-hemsidan.pdf"
 source_sha256: "d9a51e828b3a062c205716327e7d32f2ace6adcee2808539ef6739789f819f4e"
-fetched_at: "2026-10-30T13:20:31Z"
+fetched_at: "2026-10-31T16:36:48Z"
 issuer: "Valdemarsviks kommun"
 region_code: "05"
 municipality_code: "0563"
@@ -31,6 +31,14 @@ Förteckning: <https://www.valdemarsvik.se/kommun/kommun-politik/kommunal-forfat
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Kartbilaga hälsoskyddsföreskrifter](<https://www.valdemarsvik.se/wp-content/uploads/2022/09/kartbilaga-halsoskyddsforeskrifter-viken-for-hemsidan.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Kartbilaga till lokala hälsoskyddsföreskrifter
+
+20 Kilometer
