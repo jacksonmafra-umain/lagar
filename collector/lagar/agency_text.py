@@ -13,6 +13,7 @@ text kept is what follows the masthead; the dates are read from it:
 import re
 from dataclasses import dataclass, field
 
+from . import ocr as ocr_reader
 from . import pdftext
 
 _MONTHS = {name: i for i, name in enumerate(
@@ -40,6 +41,7 @@ class PdfRegulation:
     published: "str | None" = None
     in_force: "str | None" = None
     notes: "list[str]" = field(default_factory=list)
+    ocr: bool = False  # the text was read by OCR from a scan
 
 
 def _iso(day, month, year):
@@ -143,15 +145,24 @@ def title(text):
     return None
 
 
-def read(data, number, series_name=None):
-    """PdfRegulation of the PDF bytes `data`; `gap` tells why text is missing."""
+def read(data, number, series_name=None, ocr=False):
+    """PdfRegulation of the PDF bytes `data`; `gap` tells why text is missing.
+
+    With `ocr`, a scan without a text layer is read by OCR (`lagar.ocr`).
+    """
     try:
         extracted = pdftext.extract(data)
     except pdftext.PdfTextError as error:
         return PdfRegulation(gap=str(error))
+    recognised = False
+    if ocr and extracted.gap == pdftext.NO_TEXT_LAYER:
+        try:
+            extracted, recognised = ocr_reader.extract(data), True
+        except ocr_reader.OcrError:
+            return PdfRegulation(gap=pdftext.NO_TEXT_LAYER)
     if not extracted.usable:
         return PdfRegulation(gap=extracted.gap)
     issued, published, in_force = dates(extracted.text)
     return PdfRegulation(text=to_markdown(extracted.text, number, series_name), title=title(extracted.text),
                          issued=issued,
-                         published=published, in_force=in_force)
+                         published=published, in_force=in_force, ocr=recognised)

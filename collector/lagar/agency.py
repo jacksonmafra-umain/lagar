@@ -37,7 +37,7 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
-from . import agency_text, frontmatter, htmlmd, pdftext
+from . import agency_text, frontmatter, htmlmd, ocr, pdftext
 from .caselaw import NETWORK_ERRORS, USER_AGENT, StateError, _load_state, _save_state
 from .http import Blocked, PoliteClient
 from .vocabulary import TYPES
@@ -232,6 +232,7 @@ class Regulation:
     amendments: "list[Amendment]" = field(default_factory=list)
     text_source: "str | None" = None  # label of the PDF the text was read from
     text_gap: "str | None" = None  # why the PDF's text could not be read
+    text_ocr: bool = False  # the text was read by OCR from a scanned PDF
 
 
 def _check_number(found, entry):
@@ -2048,6 +2049,7 @@ def build_meta(adapter, entry, regulation, raw_sha256, fetched_at):
         "source_sha256": raw_sha256,
         "fetched_at": fetched_at,
         "issuer": entry.issuer or adapter.issuer,
+        **({"text_source": "ocr"} if regulation.text_ocr else {}),
     }
 
 
@@ -2088,7 +2090,12 @@ def to_markdown(adapter, meta, regulation):
     if regulation.pdfs:
         blocks.extend(["## Dokument", "\n".join("- " + _link(label, url) for label, url in regulation.pdfs)])
     if regulation.text:
-        if regulation.text_source:
+        if regulation.text_ocr:
+            blocks.extend(["## Författningstext", f"Texten är maskinläst (OCR) ur den inskannade pdf:en "
+                                                  f"{regulation.text_source} och kan innehålla läsfel. "
+                                                  "Den tryckta författningssamlingen är den officiella versionen.",
+                           regulation.text])
+        elif regulation.text_source:
             blocks.extend(["## Författningstext", f"Texten är hämtad ur pdf:en {regulation.text_source}. "
                                                   "Den tryckta författningssamlingen är den officiella versionen.",
                            regulation.text])
@@ -2099,7 +2106,8 @@ def to_markdown(adapter, meta, regulation):
                 f"[{i}] {note}" for i, note in enumerate(regulation.footnotes, 1))])
     else:
         gap = {pdftext.NO_TEXT_LAYER: " Pdf:en är inskannad och saknar textlager.",
-               pdftext.UNREADABLE_TEXT: " Pdf:ens textlager går inte att läsa."}.get(regulation.text_gap, "")
+               pdftext.UNREADABLE_TEXT: " Pdf:ens textlager går inte att läsa.",
+               ocr.LOW_CONFIDENCE: " Pdf:en är inskannad och kan inte läsas maskinellt."}.get(regulation.text_gap, "")
         blocks.extend(["## Författningstext", (
             f"{adapter.issuer} publicerar texten endast som pdf; se Dokument ovan.{gap} "
             "Den tryckta författningssamlingen är den officiella versionen.")])
@@ -2321,21 +2329,55 @@ def _text_pdf(regulation, entry):
     return own or (regulation.pdfs[0] if regulation.pdfs else None)
 
 
-def _add_pdf_text(client, robots, regulation, label, url, body, prefer_title=False):
+# The OCR text of a stored document: the paragraphs after the note that opens the text section.
+_STORED_OCR_TEXT = re.compile(r"^## Författningstext\n\nTexten är maskinläst \(OCR\)[^\n]*\n\n(.*?)(?=\n\n## |\Z)",
+                              re.S | re.M)
+_STORED_PUBLISHED = re.compile(r"^Utkom från tryck: (\d{4}-\d{2}-\d{2})", re.M)
+
+
+def _stored_ocr(number, corpus, pdf_sha256):
+    """What an earlier run read by OCR from the PDF with hash `pdf_sha256`, or None.
+
+    OCR is slow, so a scan that has not changed is not read again: its text,
+    title and dates are taken from the stored document.
+    """
+    path = existing_path(corpus_id(number), corpus)
+    if path is None or pdf_sha256 is None:
+        return None
+    try:
+        stored, body = frontmatter.load(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    text = _STORED_OCR_TEXT.search(body)
+    if stored.get("text_source") != "ocr" or text is None:
+        return None
+    published = _STORED_PUBLISHED.search(body)
+    return {"sha256": pdf_sha256, "text": text.group(1).strip(), "title": stored.get("title"),
+            "issued": stored.get("issued"), "in_force": stored.get("in_force"),
+            "published": published.group(1) if published else None}
+
+
+def _add_pdf_text(client, robots, regulation, label, url, body, prefer_title=False, use_ocr=False, stored=None):
     """Fill the text, and dates and title the listing lacked, from the PDF's text layer.
 
     With `prefer_title` the PDF's title replaces a listing title that is only a
-    short name ("Årsbokslut").
+    short name ("Årsbokslut"). With `use_ocr` a scan is read by OCR, unless
+    `stored` (from `_stored_ocr`) holds what was read from the same file before.
     """
     if body is None:
         if not robots.allows(url):
             return
         body = client.get(url)
-    read = agency_text.read(body, regulation.number)
+    if stored is not None and stored["sha256"] != hashlib.sha256(body).hexdigest():
+        stored = None
+    read = agency_text.read(body, regulation.number, ocr=use_ocr and stored is None)
+    if not read.text and read.gap == pdftext.NO_TEXT_LAYER and stored is not None:
+        read = agency_text.PdfRegulation(text=stored["text"], title=stored["title"], issued=stored["issued"],
+                                         published=stored["published"], in_force=stored["in_force"], ocr=True)
     if not read.text:
         regulation.text_gap = read.gap
         return
-    regulation.text, regulation.text_source = read.text, label
+    regulation.text, regulation.text_source, regulation.text_ocr = read.text, label, read.ocr
     if "konsolid" in (label + " " + url).lower():
         regulation.version = "Konsoliderad version"
     else:  # dates of a consolidated print may be those of its last amendment
@@ -2363,8 +2405,11 @@ def _collect_one(client, robots, adapter, entry, args, manifest, summary):
     keep = {text_pdf[1]: None} if text_pdf else None
     summary.pdfs += _snapshot_pdfs(client, robots, regulation, entry, manifest, args.refresh, keep)
     if text_pdf:
+        files = {f["url"]: f for f in manifest.get(regulation.number, {}).get("files", [])}
+        stored = None if args.refresh else _stored_ocr(
+            regulation.number, args.corpus, (files.get(text_pdf[1]) or {}).get("sha256"))
         _add_pdf_text(client, robots, regulation, *text_pdf, keep[text_pdf[1]],
-                      prefer_title=getattr(adapter, "pdf_title", False))
+                      prefer_title=getattr(adapter, "pdf_title", False), use_ocr=args.ocr, stored=stored)
         if getattr(adapter, "amending_title", None) and adapter.amending_title(entry, regulation):
             manifest.pop(regulation.number, None)
             raise NotBase(f"{entry.number} is an amending regulation ({regulation.title})")
@@ -2500,6 +2545,9 @@ def parse_args(argv):
                         help="refetch regulations and PDFs already done")
     parser.add_argument("--no-pdf-text", dest="pdf_text", action="store_false",
                         help="do not read the text of series published only as PDF (needs pdftotext)")
+    parser.add_argument("--no-ocr", dest="ocr", action="store_false",
+                        help="do not read scanned PDFs by OCR (needs pdftoppm and tesseract with Swedish); "
+                             "text read by OCR before is kept")
     parser.add_argument("--report", metavar="FILE", help="write a JSON run report")
     parser.add_argument("--rate", type=_rate, default=MIN_RATE, metavar="SECONDS",
                         help=f"minimum interval between requests (at least {MIN_RATE} s)")
@@ -2525,6 +2573,10 @@ def main(argv, client=None):
         print(f"error: {pdftext.TOOL} is not installed (poppler-utils); install it or pass --no-pdf-text",
               file=sys.stderr, flush=True)
         return 1
+    if args.pdf_text and args.ocr and not ocr.available() and any(not ADAPTERS[s].has_text for s in args.series):
+        print("warning: OCR needs pdftoppm and tesseract with the Swedish model (tesseract-ocr-swe); "
+              "new scanned PDFs stay gaps", file=sys.stderr, flush=True)
+        args.ocr = False
     if client is None:
         client = PoliteClient(USER_AGENT, min_interval=args.rate)
     try:

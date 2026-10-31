@@ -4,8 +4,9 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
-from lagar import agency, agency_text, frontmatter, pdftext
+from lagar import agency, agency_text, frontmatter, ocr, pdftext
 from tests.test_agency import FakeClient
 from tests.test_pdftext import HAVE_TOOL, REQUIRED, make_pdf
 
@@ -104,10 +105,11 @@ class RunTextTest(unittest.TestCase):
     LISTING = ('<ul><li class="sv-channel-item"><a href="/download/18.1/1/MIGRFS_2026_14.pdf">MIGRFS 2026:14</a>'
                "</li></ul>")
 
-    def run_collector(self, pdf, *extra):
-        tmp = tempfile.TemporaryDirectory()
-        self.addCleanup(tmp.cleanup)
-        root = Path(tmp.name)
+    def run_collector(self, pdf, *extra, root=None):
+        if root is None:
+            tmp = tempfile.TemporaryDirectory()
+            self.addCleanup(tmp.cleanup)
+            root = Path(tmp.name)
         client = FakeClient({self.MIGRFS.listing_url: self.LISTING.encode(), self.PDF: pdf})
         argv = ["--series", "MIGRFS", "--corpus", str(root / "corpus"), "--state", str(root / "state.json"),
                 "--manifest", str(root / "manifest.json"), *extra]
@@ -128,6 +130,56 @@ class RunTextTest(unittest.TestCase):
     def test_scanned_pdf_is_recorded_as_a_gap(self):
         _, (meta, body), _ = self.run_collector(make_pdf([None]))
         self.assertEqual(meta["title"], "MIGRFS 2026:14")
+        self.assertIn("Pdf:en är inskannad och saknar textlager.", body)
+
+    def ocr_patches(self, read):
+        """Patch OCR as installed; `read` is what it returns for any PDF."""
+        stack = contextlib.ExitStack()
+        self.addCleanup(stack.close)
+        stack.enter_context(mock.patch.object(ocr, "available", return_value=True))
+        return stack.enter_context(mock.patch.object(ocr, "extract", return_value=read))
+
+    def test_scanned_pdf_is_read_by_ocr(self):
+        recognised = self.ocr_patches(pdftext.classify("\n".join(PDF_LINES)))
+        _, (meta, body), _ = self.run_collector(make_pdf([None]))
+        recognised.assert_called_once()
+        self.assertEqual(meta["text_source"], "ocr")
+        self.assertEqual(meta["title"], "Migrationsverkets föreskrifter om försörjningskravet för studier")
+        self.assertIn("Texten är maskinläst (OCR) ur den inskannade pdf:en MIGRFS 2026:14", body)
+        self.assertIn("**1 §** Den som avser studera", body)
+
+    def test_ocr_text_is_kept_while_the_scan_is_unchanged(self):
+        recognised = self.ocr_patches(pdftext.classify("\n".join(PDF_LINES)))
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        _, first, _ = self.run_collector(make_pdf([None]), root=Path(tmp.name))
+        _, again, _ = self.run_collector(make_pdf([None]), root=Path(tmp.name))
+        _, without, _ = self.run_collector(make_pdf([None]), "--no-ocr", root=Path(tmp.name))
+        recognised.assert_called_once()
+        self.assertEqual(first[1], again[1])
+        self.assertEqual(without, again)
+        self.assertEqual(again[0]["issued"], "2026-10-20")
+
+    def test_changed_scan_is_read_again(self):
+        recognised = self.ocr_patches(pdftext.classify("\n".join(PDF_LINES)))
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.run_collector(make_pdf([None]), root=Path(tmp.name))
+        self.run_collector(make_pdf([None, None]), root=Path(tmp.name))
+        self.assertEqual(recognised.call_count, 2)
+
+    def test_low_confidence_ocr_is_a_gap(self):
+        read = pdftext.classify("\n".join(PDF_LINES))
+        self.ocr_patches(pdftext.PdfText(read.text, read.pages, read.text_pages, ocr.LOW_CONFIDENCE))
+        _, (meta, body), _ = self.run_collector(make_pdf([None]))
+        self.assertNotIn("text_source", meta)
+        self.assertIn("Pdf:en är inskannad och kan inte läsas maskinellt.", body)
+
+    def test_no_ocr(self):
+        recognised = self.ocr_patches(pdftext.classify("\n".join(PDF_LINES)))
+        _, (meta, body), _ = self.run_collector(make_pdf([None]), "--no-ocr")
+        recognised.assert_not_called()
+        self.assertNotIn("text_source", meta)
         self.assertIn("Pdf:en är inskannad och saknar textlager.", body)
 
     def test_no_pdf_text(self):
