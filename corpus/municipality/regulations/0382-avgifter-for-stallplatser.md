@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/avgiftsniva-for-stallplatser_protokollsutdrag-kf-2025-11-04--150.pdf"
 source_sha256: "41353689a103959301ecd670269930121825d26fbfa41109e203b9a1a284bb66"
-fetched_at: "2026-10-31T00:22:33Z"
+fetched_at: "2026-10-31T16:01:02Z"
 issuer: "Östhammars kommun"
 region_code: "03"
 municipality_code: "0382"
@@ -93,6 +93,76 @@ Godkänn alla kakorStäng Godkänn nödvändiga kakorStäng
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Avgiftsnivå för ställplatser_Protokollsutdrag KF 2025-11-04 § 150](<https://www.osthammar.se/globalassets/dokument/avgifter-och-taxor/avgiftsniva-for-stallplatser_protokollsutdrag-kf-2025-11-04--150.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Utdrag ur SAMMANTRÄDESPROTOKOLL
+
+Sammanträdesdatum
+
+2025-11-04
+
+Sid
+
+Kommunfullmäktige
+
+Dnr KS-2025-705
+
+§ 150.
+
+Avgiftsnivåer för ställplatser
+
+Beslut
+
+Kommunfullmäktige fastställer avgiftsnivåer för ställplatser enligt följande:  Nivå 1: (495 kr/dygn)  Nivå 2: (350 kr/dygn)  Nivå 3: (195 kr/dygn) och upphäver tidigare fattat beslut om Fastställande av parkeringsavgifter för husbilar 202504-21 § 20 (dnr KS-2015-162). Beslutsmotivering
+
+Avgifter för ställplatser är till för att täcka de kostnader som uppstår när kommunen tillhandahåller ytor för husbilar.
+
+Det avser bland annat:  Skötsel och underhåll – renhållning, sopkärl, gräsklippning och underhåll av marken.  Service och säkerhet – belysning, skyltning, markeringar och tillsyn.  Tillgänglighet – att platserna kan användas av både besökare och kommuninvånare på ett ordnat sätt.
+
+Ärendebeskrivning
+
+Kommunen tillhandahåller i dag ställplatser för husbilar och husvagnar på olika geografiska platser. Efterfrågan varierar mellan områdena vilket ger behov av differentierade avgiftsnivåer. Nuvarande beslutsordning innebär att varje ny avgift behöver fastställas av kommunfullmäktige, vilket försvårar och fördröjer etablering av nya platser. För att förenkla och skapa en enhetlig struktur föreslås att fasta avgiftsnivåer fastställs av kommunfullmäktige enligt följande:  Nivå 1: (490 kr/dygn)  Nivå 2: (350 kr/dygn)  Nivå 3: (190 kr/dygn)
+
+Som ett resultat av detta föreslår förvaltningen även att tidigare fattat beslut om avgifter för ställplatser upphävs.
+
+Kommunstyrelsen föreslås revidera delegationsordningen för att hanteringen och bedömningen av avgiftsnivåerna tillämpas och verkställs enligt fullmäktiges beslut. Dagens sammanträde
+
+Yrkanden
+
+Fabian Sjöberg (M) yrkar följande ändring:
+
+Ändra nivå 1 till 495 kr/dygn och nivå 3 till 195 kr/dygn.
+
+Utdrag ur SAMMANTRÄDESPROTOKOLL
+
+Sammanträdesdatum
+
+2025-11-04
+
+Sid
+
+Kommunfullmäktige
+
+Propositionsordning
+
+Ordförande ställer proposition på yrkandet och finner att kommunfullmäktige beslutar att bifalla Fabian Sjöbergs (M) ändringsyrkande.
+
+Beslutet skickas för åtgärd till
+
+Markstrateg
+
+Webbredaktionen för publicering och avpublicering
+
+Sekreterare för kommunstyrelsen
+
+Beslutet skickas för kännedom till
+
+Gatu- och trafikansvarig Anders Hedberg
+
+Markansvarig
