@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.538abe0919e0227e509470/1778584082855/Taxa%20f%C3%B6r%20mottagning%20av%20massor%20till%20slutt%C3%A4ckning%20av%20deponier.pdf"
 source_sha256: "17b64333c12346bc59eac33c2e042ce4f103fccc6f0b0659f4698d47c6f7f425"
-fetched_at: "2026-10-30T21:13:01Z"
+fetched_at: "2026-10-31T20:08:26Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -82,6 +82,96 @@ Uppdaterades: 12 maj 2026
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Taxa för mottagning av massor till sluttäckning av deponier (pdf) pdf, 259.6 kB.](<https://www.falkoping.se/download/18.538abe0919e0227e509470/1778584082855/Taxa%20f%C3%B6r%20mottagning%20av%20massor%20till%20slutt%C3%A4ckning%20av%20deponier.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Taxa för mottagning av massor till sluttäckning av deponier
+
+TAXA
+
+Typ av styrdokument
+
+Taxa
+
+Beslutsinstans
+
+Kommunfullmäktige
+
+Diarienummer
+
+KS 2026/00178
+
+Giltighetstid
+
+Fr o m 2026-05-15 tills vidare
+
+Dokumentet gäller för
+
+Kommunledningsförvaltningen
+
+Fastställd
+
+2026-04-27, § 53
+
+Ersätter
+
+Finns ingen tidigare version av dokumentet
+
+Dokumentansvarig
+
+VA-chef
+
+Tidpunkt för aktualitetsprövning
+
+Vid behov
+
+Innehåll § 1 Allmänt ................................................................................................. 3 § 2 Krav på godkännande av material ........................................................ 3 § 3 Felaktigt avlämnat avfall ...................................................................... 3 § 4 Avgifter för företag exkl. moms ........................................................... 3
+
+§ 1 Allmänt
+
+I Falköpings kommun pågår sluttäckningsarbete på deponier i Floby,
+
+Stenstorp och Falevi, vilket kräver massor. Sluttäckningsarbetet och mottagningen får endast ske i enlighet med gällande lagstiftning och tillhörande myndighetsbeslut och riktlinjer. Detta innebär att endast massor som på förhand är godkänt för ändamålet kan tas emot. Dialog och bedömning av massor behöver därmed ske innan massor kan tas emot.
+
+Med massor avses material för sluttäckning av deponier.
+
+§ 2 Krav på godkännande av material
+
+Vid mottagning av massor krävs att avlämnaren i förväg fått godkännande om inleverans. Det är alltid kommunen som bestämmer om massor ska tas in på anläggningen.
+
+Inlämnaren ska lämna intyg om att det inte förekommer invasiva arter i massor som lämnas på deponin. Om massorna sedan visar sig innehålla invasiva, främmande arter kommer kostnader för hantering av massor samt sanering av invasiva arter att debiteras entreprenören.
+
+§ 3 Felaktigt avlämnat avfall
+
+I det fall avlämnade massor inte överensstämmer med vad som uppgetts och godkänts av kommunen äger kommunen rätt att på avlämnares bekostnad ombesörja hantering och bortforsling. Kommunen har då rätt att debitera avlämnaren för de fullständiga kostnader som kommunen har till följd av det felaktig avlämnade massor.
+
+§ 4 Avgifter för företag exkl. moms
+
+Avfallsslag
+
+Pris (kr/ton)
+
+Kommentar
+
+Schaktmassor, ovan tätskikt
+
+Användbara massor utan stora fraktioner.
+
+Ej grenar, stubbar, rötter eller annat organiskt material
+
+Schaktmassor ovan tätskikt som kräver hantering
+
+Massor som kräver hantering (avvattning, sortering)
+
+Massor under tätskikt
+
+Användbara massor utan stora fraktioner
+
+Massor under tätskikt som kräver hantering
+
+Massor som kräver hantering (avvattning, sortering)

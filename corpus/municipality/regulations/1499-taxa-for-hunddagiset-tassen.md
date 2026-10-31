@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404aca/1703771785537/Taxa%20f%C3%B6r%20hunddagiset%20Tassen.pdf"
 source_sha256: "9105a3e980877f821bce148a82cb0667e6158a3a39ceb483a948729f9d4ea543"
-fetched_at: "2026-10-30T21:12:59Z"
+fetched_at: "2026-10-31T20:08:24Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -82,6 +82,52 @@ Uppdaterades: 7 januari 2025
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Taxa för hunddagiset Tassen (pdf) pdf, 31.3 kB.](<https://www.falkoping.se/download/18.5f7d535517115b399404aca/1703771785537/Taxa%20f%C3%B6r%20hunddagiset%20Tassen.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Taxa för hunddagiset Tassen
+
+KOMMUNAL FÖRFATTNINGSSAMLING
+
+Typ av dokument
+
+Taxa
+
+Beslutsinstans
+
+Kommunfullmäktige
+
+Fastställd
+
+2023-11-27
+
+Ersätter dokument
+
+Ersätter taxa för hunddagiset Tassen antagen av kommunfullmäktige den 27 maj 2019, § 48
+
+Diarienummer
+
+KS 2023/01184
+
+Giltighetstid
+
+Fr.o.m. 2024-01-01 och tills vidare
+
+Dokumentet gäller för
+
+Kompetens- och arbetslivsnämnden
+
+Dokumentansvarig
+
+Kanslichef
+
+Tidpunkt för aktualitetsprövning
+
+En gång per mandatperiod
+
+Taxa för hunddagiset Tassen § 1 Platsavgiften per hund och månad är ett fast belopp som motsvarar 3,0 procent av avgiftsårets prisbasbelopp, som publiceras av SCB (Statistiska Centralbyrån). För 2024 är avgiften 1 719 kr exkl. mervärdesskatt. Inget avdrag görs för frånvaro eller andra orsaker. Mervärdesskatt tillkommer enligt gällande skatteregler. § 2 Avgift tas från och med den månad som inskolningshunden godkänns. Om inskolningshund inte godkänns är inskolningsperioden kostnadsfri. § 3 Kompetens- och arbetslivsnämnden har rätt att fastställa allmänna villkor för hunddagiset Tassen.

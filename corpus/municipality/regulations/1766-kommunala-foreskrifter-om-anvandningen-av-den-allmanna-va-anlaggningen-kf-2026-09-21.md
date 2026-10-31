@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/bygga-bo-och-miljo/kommunala-foreskrifter-om-anvandningen-av-den-allmanna-va-anlaggningen-kf-2026-09-21.pdf"
 source_sha256: "fb4d5acc8f6f223f4aea807bebb5e0e401e785900e3fd5c9f9d011396756178e"
-fetched_at: "2026-10-30T01:04:29Z"
+fetched_at: "2026-10-31T20:21:49Z"
 issuer: "Sunne kommun"
 region_code: "17"
 municipality_code: "1766"
@@ -31,6 +31,214 @@ Förteckning: <https://www.sunne.se/kommun/kommun-och-politik/kommunfakta/forfat
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Kommunala föreskrifter om användningen av den allmänna VA-anläggningen - KFVA](<https://www.sunne.se/globalassets/dokument/7.-kommun-och-politik/kommunfakta/forfattningssamling/bygga-bo-och-miljo/kommunala-foreskrifter-om-anvandningen-av-den-allmanna-va-anlaggningen-kf-2026-09-21.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Styrdokument
+
+Kommunala föreskrifter om användningen av den allmänna VAanläggningen KFVA
+
+Dokumenttyp
+
+Föreskrift
+
+Diarienummer
+
+KS/2026:150
+
+Beslutad av
+
+Kommunfullmäktige 2026-09-21, § 85
+
+Reviderad av
+
+Dokumentansvarig
+
+Enhetschef VA/Renhållning
+
+Styrdokument • Kommunala föreskrifter om användningen av den allmänna VA-anläggningen KFVA
+
+Innehåll
+
+1. Inledande bestämmelser .............................................................................................................. 4
+
+2. Användning av den allmänna dricksvattenanläggningen ........................................................ 4 2.1 Huvudmannens skyldighet att leverera dricksvatten .............................................................. 4 2.2 Energiutvinning ur levererat vatten ........................................................................................... 4 2.3 Huvudmannens rätt att begränsa leveransen med mera ....................................................... 5 2.4 Vattenmätare ................................................................................................................................. 5
+
+3. Användning av den allmänna spillvattenanläggningen ........................................................... 5 3.1 Huvudmannens skyldighet att ta emot spillvatten ................................................................... 5 3.2 Krav på spillvattnets innehåll och egenskaper .......................................................................... 5 3.3 Energiutvinning ur spillvatten ..................................................................................................... 6 3.4 Huvudmannens rätt att tillfälligt begränsa användningen ..................................................... 6 3.5 Dag- och dränvatten får endast tillföras avsedd ledning ........................................................ 6 3.6 Frånkoppling av dag- och dränvatten från spillvattenförande ledning ................................. 6 3.7 Spillvatten från fastighet som inte används som bostad ........................................................ 7 3.7 Lätt tryckavloppssystem (LTA-system) ....................................................................................... 7
+
+4. Användning av den allmänna dagvattenanläggningen ............................................................ 7 4.1 Huvudmannens skyldighet att ta emot dag- och dränvatten ................................................. 7 4.2 Krav på dag- och dränvattnets innehåll och egenskaper ........................................................ 7 4.3 Huvudmannens rätt att tillfälligt begränsa användningen ..................................................... 8 4.4 Spillvatten får inte tillföras dag- och dränledning .................................................................... 8 4.5 Dag- och dränvatten från fastighet som inte används som bostad ....................................... 8
+
+Styrdokument • Kommunala föreskrifter om användningen av den allmänna VA-anläggningen KFVA
+
+1. Inledande bestämmelser
+
+1§ Med stöd av 23 § lagen (2006:412) om allmänna vattentjänster (vattentjänstlagen) och 2 § förordningen (2007:701) om allmänna vattentjänster meddelar kommunfullmäktige följande föreskrifter om användningen av den allmänna VA-anläggningen.
+
+2§ Definitioner och uttryck i dessa föreskrifter har samma betydelse som i vattentjänstlagen.
+
+3§ För fastighetsägarens användning av den allmänna VA-anläggningen i Sunne kommun gäller vad som föreskrivs i vattentjänstlagen, annan författning och dessa föreskrifter.
+
+4§ Dessa föreskrifter omfattar fastigheter som är belägna inom det av kommunen beslutade verksamhetsområdet för respektive vattentjänst.
+
+Vad som enligt dessa bestämmelser gäller för en fastighetsägare gäller enligt 2 § vattentjänstlagen även för den som innehar fast egendom med tomträtt, ständig besittningsrätt, fideikommissrätt eller på grund av testamentariskt förordnande och enligt 5 § vattentjänstlagen den som har ingått avtal med huvudmannen om att få använda den allmänna VA-anläggningen.
+
+Det som gäller för en fastighet kan enligt 4 § vattentjänstlagen även gälla för en byggnad eller annan anläggning som inte tillhör fastighetens ägare.
+
+5§ Huvudman för den allmänna VA-anläggningen är Sunne Kommun.
+
+6§ Huvudmannen tillhandahåller vattentjänster till en fastighet, vars ägare i enlighet med 16–
+
+18 §§ vattentjänstlagen har rätt att använda den allmänna VA-anläggningen och som följer gällande bestämmelser för användandet, om behovet inte kan tillgodoses bättre på annat sätt.
+
+7§ En fastighetsägare som vill ansluta en fastighet till den allmänna VA-anläggningen ska göra en skriftlig anmälan till huvudmannen som sedan bestämmer hur inkoppling ska ske.
+
+2. Användning av den allmänna dricksvattenanläggningen
+
+2.1 Huvudmannens skyldighet att leverera dricksvatten
+
+8§ Huvudmannens är endast skyldig att leverera vatten av dricksvattenkvalitet för normal hushållsanvändning. Huvudmannen garanterar inte att ett visst vattentryck eller en viss vattenmängd per tidsenhet alltid kan levereras.
+
+2.2 Energiutvinning ur levererat vatten
+
+9§ Vatten som levereras genom en allmän VA-anläggning får utnyttjas för energiutvinning endast om huvudmannen efter ansökan skriftligen medger detta.
+
+Styrdokument • Kommunala föreskrifter om användningen av den allmänna VA-anläggningen KFVA
+
+2.3 Huvudmannens rätt att begränsa leveransen med mera
+
+10§ Huvudmannen får tillfälligt begränsa eller avbryta vattenleveransen när denne bedömer att det är nödvändigt för att förebygga miljö-, person- eller egendomsskada och för underhåll, ändring, kontroll eller annan sådan åtgärd som berör huvudmannens egna eller därmed förbundna anläggningar.
+
+Vid begränsad vattentillgång är fastighetsägaren skyldig att reducera sin vattenförbrukning enligt huvudmannens anvisningar.
+
+Vid planlagt leveransavbrott ska huvudmannen på lämpligt sätt meddela fastighetsägaren om detta.
+
+2.4 Vattenmätare
+
+11§ Om vattenförbrukningen hos en fastighetsägare ska fastställas genom mätning tillhandahåller huvudmannen vattenmätare som förblir huvudmannens egendom.
+
+Huvudmannen bestämmer antalet mätare och vilken typ av mätare som ska användas.
+
+Fastighetsägaren ska bekosta de anordningar som behövs för uppsättning av mätare och sammankoppling med VA-installationen i övrigt.
+
+Vattenmätarens plats ska vara godkänd av huvudmannen. Huvudmannen bestämmer om en tidigare godkänd plats behöver ändras.
+
+Huvudmannen har rätt att kostnadsfritt disponera vattenmätarens plats och har ensam befogenhet att sätta upp, ta ned, kontrollera, justera, underhålla samt till- och frånkoppla mätaren.
+
+Fastighetsägaren är skyldig att skydda mätaren mot frost, skadlig värmepåverkan och annan skada.
+
+3. Användning av den allmänna spillvattenanläggningen
+
+3.1 Huvudmannens skyldighet att ta emot spillvatten
+
+12§ Huvudmannen är inte skyldig att ta emot spillvatten vars beskaffenhet mer än oväsentligt avviker från spillvatten från bostäder (hushållsspillvatten).
+
+Huvudmannen kan i enskilda fall medge utsläpp i den allmänna anläggningen av spillvatten med annan beskaffenhet än som anges i första stycket vad gäller arten eller halten av ingående ämnen. Huvudmannen bestämmer de villkor som ska gälla för utsläppet.
+
+3.2 Krav på spillvattnets innehåll och egenskaper
+
+13§ Fastighetsägaren får inte tillföra spillvattnet lösningsmedel, avfettningsmedel, färg, olja, bensin eller annan petroleumprodukt, fett i större mängd, läkemedel, sura, frätande, giftiga eller andra miljöfarliga ämnen och inte heller vätska, ämnen eller föremål som kan orsaka stopp, avlagring, korrosion, vidhäftning, gasbildning eller explosion. Exempelvis är det förbjudet att tillföra spillvattnet våtservetter eller andra sanitetsprodukter än toalettpapper. Ånga eller varmvatten med högre temperatur än 45 °C får inte tillföras spillvattenanläggningen
+
+Styrdokument • Kommunala föreskrifter om användningen av den allmänna VA-anläggningen KFVA
+
+i förbindelsepunkten.
+
+Utsläpp i strid med förbuden i första och andra stycket ska omedelbart anmälas till huvudmannen.
+
+Fastighetsägaren får inte tillföra den allmänna anläggningen spillvatten från köksavfallskvarn utan huvudmannens skriftliga medgivande.
+
+3.3 Energiutvinning ur spillvatten
+
+14§ Fastighetsägare som avser utnyttja spillvatten för energiutvinning ska anmäla till huvudmannen innan sådant vatten börjar släppas till den allmänna spillvattenanläggningen. Energiutvinning ur spillvatten får inte ske så att temperaturen i utsläppt spillvatten underskrider temperaturen i det av huvudmannen levererade dricksvattnet.
+
+3.4 Huvudmannens rätt att tillfälligt begränsa användningen
+
+15§ Huvudmannen har rätt att tillfälligt begränsa fastighetsägarens möjlighet att använda spillvattenanläggningen när huvudmannen bedömer att det är nödvändigt för att förebygga miljö-, person- eller egendomsskada samt för underhåll, ändring, kontroll eller annan åtgärd som berör huvudmannens egna eller därmed förbundna anläggningar.
+
+Vid planlagt driftsavbrott ska huvudmannen på lämpligt sätt meddela fastighetsägaren om detta.
+
+3.5 Dag- och dränvatten får endast tillföras avsedd ledning
+
+16§ Det är förbjudet att tillföra dag- och dränvatten till en allmän ledning som inte är avsedd
+
+för sådant ändamål.
+
+Huvudmannen får skriftligen medge undantag från förbudet, om det finns särskilda skäl.
+
+3.6 Frånkoppling av dag- och dränvatten från spillvattenförande ledning
+
+17§ Om dag- och dränvatten avleds från en fastighet till en spillvattenförande ledning får fortsatt tillförsel av sådant vatten inte ske från det datum som huvudmannen bestämmer, efter det att
+
+1. särskild förbindelsepunkt för dag- och dränvatten har ordnats och fastighetsägaren har underrättats om detta, eller
+
+2. huvudmannen vidtagit åtgärder för bortledande av dag- och dränvatten som inte sker genom en förbindelsepunkt och meddelat fastighetsägaren om att sådana åtgärder har vidtagits.
+
+Huvudmannen får vid behov medge anstånd med att avbryta tillförseln eller medge undantag från förbudet om det finns särskilda skäl.
+
+18§ Har särskild förbindelsepunkt för dag- och dränvatten inte ordnats får huvudmannen ändå förbjuda tidigare tillåten tillförsel av sådant vatten till spillvattenförande ledning om
+
+1. avledning kan ske ändamålsenligt på annat sätt, och
+
+Styrdokument • Kommunala föreskrifter om användningen av den allmänna VA-anläggningen KFVA
+
+2. huvudmannen i skälig omfattning ersätter fastighetsägaren dennes kostnader för nödvändig omläggning.
+
+3.7 Spillvatten från fastighet som inte används som bostad
+
+19§ En fastighetsägare som helt eller delvis använder eller upplåter en fastighet för annat än bostadsändamål ska informera huvudmannen om sådan verksamhet som kan påverka beskaffenheten hos spillvattnet från fastigheten. Fastighetsägaren ska bekosta de provtagningar, analyser och utredningar som huvudmannen bedömer vara nödvändiga för kontroll av spillvattnet.
+
+Huvudmannen har rätt att kräva att fastighetsägaren för journal över verksamhet som inverkar på spillvattnets innehåll och kontrollerar spillvattnet genom provtagningar och analyser. Huvudmannen får ange hur journalföring och provtagning ska göras.
+
+3.7 Lätt tryckavloppssystem (LTA-system)
+
+20§ Vid anslutning till ett allmänt lätt tryckavloppssystem (LTA-system) tillhandahåller
+
+huvudmannen LTA-pumpenhet som förblir dennes egendom. Huvudmannen bestämmer antalet pumpenheter och vilken typ av pumpenhet som ska användas samt svarar för installationen. Fastighetsägaren ska bekosta de anordningar som behövs för att sammankoppla pumpenheten med VA-installationen i övrigt.
+
+Enhetens plats ska bestämmas av huvudmannen, som har rätt till kostnadsfri upplåtelse av platsen och som ensam har befogenhet att sätta upp, ta ned, kontrollera, justera, underhålla samt till- och frånkoppla enheten.
+
+Fastighetsägaren är skyldig att skydda enheten mot frost och annan skada samt svara för dess elförsörjning.
+
+4. Användning av den allmänna dagvattenanläggningen
+
+4.1 Huvudmannens skyldighet att ta emot dag- och dränvatten
+
+21§ Huvudmannen är inte skyldig att ta emot dag- och dränvatten från fastigheter av en sådan
+
+beskaffenhet eller mängd att den allmänna VA-anläggningen eller huvudmannen orsakas skada eller olägenhet, att huvudmannen får svårt att uppfylla sina skyldigheter eller att användningen på annat sätt strider mot 21 § vattentjänstlagen .
+
+4.2 Krav på dag- och dränvattnets innehåll och egenskaper
+
+22§ Fastighetsägaren får inte tillföra dagvattenanläggningen lösningsmedel, avfettningsmedel, färg, olja, bensin eller annan petroleumprodukt, fett i större mängd, läkemedel eller sura, frätande eller giftiga ämnen och inte heller vätska, ämnen eller föremål som kan orsaka stopp, avlagring, korrosion, vidhäftning, gasbildning eller explosion. Dagvatten som avleds till den allmänna VA-anläggningen får dessutom inte innehålla större mängder av partiklar, näringsämnen, tungmetaller, vägsalt eller andra miljöfarliga ämnen.
+
+Styrdokument • Kommunala föreskrifter om användningen av den allmänna VA-anläggningen KFVA
+
+Ånga eller varmvatten med högre temperatur än 45 °C får inte tillföras den allmänna anläggningen.
+
+Fastighetsägaren får inte tillföra den allmänna VA-anläggningen dagvatten i sådan mängd att anläggningen eller huvudmannen orsakas skada eller olägenhet eller att huvudmannen får svårt att uppfylla sina skyldigheter.
+
+Utsläpp i strid med förbuden i första och andra stycket ska omedelbart anmälas till huvudmannen.
+
+4.3 Huvudmannens rätt att tillfälligt begränsa användningen
+
+23§ Huvudmannen får tillfälligt begränsa fastighetsägarens möjlighet att använda dagvattenanläggningen när huvudmannen bedömer att det är nödvändigt för att förebygga miljö-, person- eller egendomsskada samt för underhåll, ändring, kontroll eller annan åtgärd som berör huvudmannens egna eller därmed förbundna anläggningar.
+
+Vid planlagt driftavbrott ska huvudmannen på lämpligt sätt meddela fastighetsägaren om detta.
+
+4.4 Spillvatten får inte tillföras dag- och dränledning
+
+24§ Det är förbjudet att tillföra spillvatten till en allmän ledning som uteslutande är avsedd för
+
+dag- och dränvatten. Huvudmannen avgör vilket avloppsvatten som ska anses vara spillvatten och avledas till en spillvattenledning.
+
+4.5 Dag- och dränvatten från fastighet som inte används som bostad
+
+25§ En fastighetsägare som helt eller delvis använder eller upplåter en fastighet för annat än bostadsändamål ska informera huvudmannen om sådan verksamhet som kan påverka beskaffenheten hos dag- och dränvattnet från fastigheten. Fastighetsägaren ska bekosta de provtagningar, analyser och utredningar som huvudmannen bedömer är nödvändiga för kontroll av dag- och dränvattnet.
+
+Huvudmannen har rätt att kräva att fastighetsägaren för journal över verksamhet som inverkar på dag- och dränvattnets innehåll och kontrollerar dag- och dränvattnet genom provtagningar och analyser. Huvudmannen får ange hur journalföring och provtagningar ska göras.
+
+Styrdokument • Kommunala föreskrifter om användningen av den allmänna VA-anläggningen KFVA
