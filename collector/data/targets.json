@@ -758,6 +758,46 @@
     "as_of": "2026-10-31"
   },
   {
+    "layer": "agency",
+    "type": null,
+    "series": "MSBFS",
+    "label": "MSBFS (MSB)",
+    "target": 44,
+    "kind": "counted",
+    "source": "https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SRVFS",
+    "label": "SRVFS (Räddningsverket)",
+    "target": 15,
+    "kind": "counted",
+    "source": "https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SÄIFS",
+    "label": "SÄIFS (SÄI)",
+    "target": 7,
+    "kind": "counted",
+    "source": "https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "KBMFS",
+    "label": "KBMFS (KBM)",
+    "target": 1,
+    "kind": "counted",
+    "source": "https://www.mcf.se/sv/regler/gallande-regler/ (base regulations listed)",
+    "as_of": "2026-10-31"
+  },
+  {
     "layer": "case_law",
     "type": null,
     "label": "Case law",
