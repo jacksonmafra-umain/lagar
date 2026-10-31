@@ -481,6 +481,10 @@ PDFs (MIGRFS, KAMFS, KFMFS, KFS, KRFS, MEMYFS, IAFFS, BFNAR, CSNFS, IMYFS, LMFS,
 HTML page per regulation (ELSÄK-FS, MCFFS, MDFFS, KIFS, AGVFS, KOVFS, HVMFS, EIFS); `SitemapAdapter`
 finds the regulation pages in the site's XML sitemap when the register needs JavaScript (NFS, KVFS, DVFS; `path_pattern` keeps one page per base
 regulation).
+MCF's list of regulations in force also holds its predecessors' series (MSBFS, SRVFS, SÄIFS,
+KBMFS); each has its own `McffsAdapter` subclass that follows the paged list (`?selectedpage=N`,
+every page linking only a few others) and takes the number from the page's URL slug, since an
+item's text often names the regulation it repeals.
 A detail page's HTML text is kept when the series sets `text_nodes` (MDFFS). AFFS reads the
 list from the Sitevision page state and FKFS the JSON register of Försäkringskassan's
 lagrummet; both have their own small adapters in the same module.
@@ -515,7 +519,7 @@ Socialstyrelsen's index (its regulations in force) names a publication page for 
 
 Predecessor series still listed where the current series is read get adapters of their own that
 read the same page for their own numbers: LMVFS (LMFS page), FIFS (HVMFS list, issuer
-Fiskeriverket), MSBFS (MCF's regler page), RFFS (Försäkringskassan's register, issuer
+Fiskeriverket), RFFS (Försäkringskassan's register, issuer
 Riksförsäkringsverket) and SLVFS (Livsmedelsverket's year tables before 2002; it reads every year,
 because later LIVSFS rows amend SLVFS regulations or replace them, "Ersätter SLVFS 2001:4", and a
 replaced regulation is not in force). LIVSFS itself is read from 2002, its first year. LFS, JvSFS
