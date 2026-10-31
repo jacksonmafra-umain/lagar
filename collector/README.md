@@ -47,8 +47,11 @@ When the corpus changed, the workflow:
 - merges that pull request into `main` (`gh pr merge --merge`) once the collector tests and the
   corpus audit have passed, and deletes the branch.
 
-Every sync workflow ends with the same merge step. A merge that fails, for example on a conflict
-with `main`, leaves the pull request open, and the next run tries again.
+Every sync workflow ends with the same merge step, `.github/scripts/merge-sync-pr.sh`. Syncs run
+side by side and regenerate the same reports, so before each merge attempt the branch takes in
+`main` again: conflicts on the reports are resolved by regenerating them, then the corpus audit
+runs on the merged tree. A conflict on any other file, or a merge that keeps failing, leaves the
+pull request open for a person, and the next run tries again.
 
 The marker only moves inside that commit, so a failed run, a rejected push or an abandoned pull
 request never skips documents: the next run collects them again. A run that finds nothing new
@@ -508,7 +511,21 @@ agency's own site, so the adapter sets `multi_host = True` and the run reads rob
 the agency becomes the document's `issuer`. A link straight to a PDF makes the PDF the document,
 and on a page that lists many regulations (TLV) only the PDFs naming the number are kept.
 Läkemedelsverket's regulations are not collected: its pages need JavaScript and its robots.txt
-disallows PDFs. Predecessor series on the same list (SOSFS, FoHMFS and others) are not collected.
+disallows PDFs. The series used before HSLF-FS on the same list, SOSFS (Socialstyrelsen),
+FoHMFS (Folkhälsomyndigheten) and TLVFS (TLV), have adapters of their own built on it. Links to a
+page of repealed regulations are left out, and a SOSFS regulation is collected only when
+Socialstyrelsen's index (its regulations in force) names a publication page for it. LVFS
+(Läkemedelsverket) and FHIFS, whose listed regulations only repeal earlier ones, are not collected.
+
+Predecessor series still listed where the current series is read get adapters of their own that
+read the same page for their own numbers: LMVFS (LMFS page), FIFS (HVMFS list, issuer
+Fiskeriverket), MSBFS (MCF's regler page), RFFS (Försäkringskassan's register, issuer
+Riksförsäkringsverket) and SLVFS (Livsmedelsverket's year tables before 2002; it reads every year,
+because later LIVSFS rows amend SLVFS regulations or replace them, "Ersätter SLVFS 2001:4", and a
+replaced regulation is not in force). LIVSFS itself is read from 2002, its first year. LFS, JvSFS
+and VVFS come from the TSFS index's year pages before 2009; like TSFS, repealed base regulations
+are kept with the repeal date from their badge, and an LFS regulation from 2005-2008 names
+Luftfartsstyrelsen as its issuer.
 
 Adapters whose site publishes no HTML text (`has_text = False`) get their text from a PDF:
 the consolidated version when one is linked, else the regulation's own PDF, read with
@@ -725,7 +742,9 @@ python3 -I collector/collect.py municipal --kommun 0120 --dry-run
   that kommun (exit code 2); the other kommuner still run.
 - The weekly `Sync municipal regulations` workflow (`.github/workflows/sync-municipal.yml`) runs
   `municipal --kommun <code>` for every kommun in the config, one at a time so that one kommun's
-  failure does not stop the others, and opens one pull request on `data/municipal-sync` with the
+  failure does not stop the others. A kommun that fails or is blocked (a timeout, a changed page)
+  is listed in the run summary and the commit message and does not hold back what the others
+  collected. The workflow opens one pull request on `data/municipal-sync` with the
   corpus, the manifest and the regenerated reports. The state is not committed; the manifest keeps
   the weekly run from downloading PDFs it already has. Run it by hand with
   `gh workflow run sync-municipal.yml [-f kommun="0114 0115"]`. A kommun added to the config joins

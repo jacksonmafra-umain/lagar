@@ -58,7 +58,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | LMFS (LM) | 14 | 14 | counted | 100.0% |
 | agency | MTFS (TVA) | 3 | 3 | counted | 100.0% |
 | agency | KVFS (KV) | 17 | 17 | counted | 100.0% |
-| agency | LIVSFS (SLV) | 39 | 39 | counted | 100.0% |
+| agency | LIVSFS (SLV) | 43 | 43 | counted | 100.0% |
 | agency | MYHFS (MYH) | 44 | 44 | counted | 100.0% |
 | agency | TPPVFS (Pliktverket) | 1 | 1 | counted | 100.0% |
 | agency | TRMFS (Pliktverket) | 2 | 2 | counted | 100.0% |
@@ -72,12 +72,22 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | KBVFS (KBV) | 4 | 4 | counted | 100.0% |
 | agency | FFS (FM) | 68 | 68 | counted | 100.0% |
 | agency | HSLF-FS | 119 | 155 | counted | 76.8% |
-| case_law | Case law | 16466 | 16640 | counted | 99.0% |
+| agency | SOSFS (Socialstyrelsen) | 51 | 51 | counted | 100.0% |
+| agency | FoHMFS (FoHM) | 12 | 12 | counted | 100.0% |
+| agency | TLVFS (TLV) | 4 | 4 | counted | 100.0% |
+| agency | RFFS (RFV) | 221 | 221 | counted | 100.0% |
+| agency | FIFS (Fiskeriverket) | 8 | 8 | counted | 100.0% |
+| agency | LMVFS (LMV) | 6 | 6 | counted | 100.0% |
+| agency | SLVFS (SLV) | 2 | 2 | counted | 100.0% |
+| agency | LFS (Luftfart) | 65 | 65 | counted | 100.0% |
+| agency | JvSFS (Järnväg) | 20 | 20 | counted | 100.0% |
+| agency | VVFS (Vägverket) | 1 | 1 | counted | 100.0% |
+| case_law | Case law | 16475 | 16640 | counted | 99.0% |
 | sfs | SÖ treaties | 3515 | 3515 | counted | 100.0% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
 | eu | EU judgments | 605 | 611 | counted | 99.0% |
 | region | Regional regulations | 11649 | unknown | unknown | - |
-| municipality | Municipal regulations | 5358 | unknown | unknown | - |
+| municipality | Municipal regulations | 5547 | unknown | unknown | - |
 | service | Public services | 0 | unknown | unknown | - |
 
 Progress is capped at the target; a series without a known target has no percentage.
@@ -137,7 +147,7 @@ Targets:
 - LMFS (LM): counted, https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/ (base regulations in force), as of 2026-10-30
 - MTFS (TVA): counted, https://www.tillvaxtanalys.se/statistik/tillvaxtanalysforeskrifter.125740.html (base regulations in force), as of 2026-10-30
 - KVFS (KV): counted, https://www.kriminalvarden.se/sitemap_kriminalvarden.se.xml (base regulations in the KVFS pages), as of 2026-10-30
-- LIVSFS (SLV): counted, https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/ (base regulations in force, 2005 on), as of 2026-10-30
+- LIVSFS (SLV): counted, https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/ (base regulations in force, 2005 on), as of 2026-10-31
 - MYHFS (MYH): counted, https://www.myh.se/lag-och-ratt/foreskrifter-och-allmanna-rad (21 in force, 23 repealed with a known date), as of 2026-10-30
 - TPPVFS (Pliktverket): counted, https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter (base regulations listed), as of 2026-10-30
 - TRMFS (Pliktverket): counted, https://www.pliktverket.se/om-myndigheten/vart-uppdrag/lag-och-ratt/foreskrifter (predecessor regulations in force), as of 2026-10-30
@@ -151,6 +161,16 @@ Targets:
 - KBVFS (KBV): counted, https://www.kustbevakningen.se/om-oss/kustbevakningens-forfattningssamling/ (in force), as of 2026-10-30
 - FFS (FM): counted, Försvarsmakten's four Gällande FFS lists (base regulations in force), as of 2026-10-30
 - HSLF-FS: counted, https://kunskapsguiden.se/gemensam-forfattningssamling/ (base regulations, Läkemedelsverket excluded), as of 2026-10-30
+- SOSFS (Socialstyrelsen): counted, https://kunskapsguiden.se/gemensam-forfattningssamling/ (base regulations listed), as of 2026-10-31
+- FoHMFS (FoHM): counted, https://kunskapsguiden.se/gemensam-forfattningssamling/ (base regulations listed), as of 2026-10-31
+- TLVFS (TLV): counted, https://kunskapsguiden.se/gemensam-forfattningssamling/ (base regulations listed), as of 2026-10-31
+- RFFS (RFV): counted, https://lagrummet.forsakringskassan.se/foreskrifter (RFFS regulations in force in the register), as of 2026-10-31
+- FIFS (Fiskeriverket): counted, https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/foreskrifter.html (FIFS in force), as of 2026-10-31
+- LMVFS (LMV): counted, https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/ (LMVFS in force), as of 2026-10-31
+- SLVFS (SLV): counted, Livsmedelsverket's year tables 1995-2001 (SLVFS in force), as of 2026-10-31
+- LFS (Luftfart): counted, Transportstyrelsen's TSFS index, year pages before 2009 (base regulations, in force and repealed), as of 2026-10-31
+- JvSFS (Järnväg): counted, Transportstyrelsen's TSFS index, year pages before 2009 (base regulations, in force and repealed), as of 2026-10-31
+- VVFS (Vägverket): counted, Transportstyrelsen's TSFS index, year pages before 2009 (base regulations, in force and repealed), as of 2026-10-31
 - Case law: counted, https://rattspraxis.etjanst.domstol.se/api/v1/publiceringar?publiceringsformer=referat,notis, as of 2026-10-29
 - SÖ treaties: counted, regeringen.se sitemap: distinct SÖ numbers on pages under /rattsliga-dokument/sveriges-internationella-overenskommelser/, as of 2026-10-30
 - EU law (curated list): curated, collector/data/eu-acts.json, as of 2026-10-29
@@ -158,10 +178,10 @@ Targets:
 
 ## Integrity
 
-Audit of 52838 documents (2026-10-30T22:52:31Z):
+Audit of 53430 documents (2026-10-31T00:54:41Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
-- text-quality flags: 883
-- cross-references not in the corpus: 39338 of 39399 (informational, the corpus is partial)
+- text-quality flags: 886
+- cross-references not in the corpus: 39610 of 39671 (informational, the corpus is partial)

@@ -47,7 +47,7 @@
       "series": "LIVSFS",
       "agency": "Livsmedelsverket",
       "status": "collected",
-      "note": "Livsmedelsverket lists LIVSFS in one table per year from 2005 (number, status, subject) with a link to each PDF; titles and text are read from the PDFs. Repealed regulations have no repeal date on the page and are not collected, nor is the predecessor series SLVFS (before 2005)."
+      "note": "Livsmedelsverket lists LIVSFS in one table per year from 2005 (number, status, subject) with a link to each PDF; titles and text are read from the PDFs. Repealed regulations have no repeal date on the page and are not collected; a regulation replaced by a later one (\"Ersätter ...\") is not in force. LIVSFS is read from 2002, its first year; the predecessor series SLVFS (1995-2001) is collected as its own series from the same tables."
     },
     "mediemyndighetens-forfattningssamling-memyfs": {
       "series": "MEMYFS",
@@ -101,7 +101,7 @@
       "series": "HVMFS",
       "agency": "Havs- och vattenmyndigheten",
       "status": "collected",
-      "note": "Havs- och vattenmyndigheten lists the regulations in force with a page per regulation and its PDF editions; the text is read from the PDF (consolidated version where published). Regulations of predecessor series (FIFS, NFS) on the same list are not collected here."
+      "note": "Havs- och vattenmyndigheten lists the regulations in force with a page per regulation and its PDF editions; the text is read from the PDF (consolidated version where published). FIFS regulations on the same list are collected as their own series (issuer Fiskeriverket); NFS has its own adapter."
     },
     "arbetsgivarverkets-forfattningssamling-agvfs": {
       "series": "AGVFS",
@@ -154,8 +154,8 @@
     "finansinspektionens-forfattningssamling-fffs": {
       "series": "FFFS",
       "agency": "Finansinspektionen",
-      "status": "collected_pdf",
-      "note": "Register pages give metadata and FI's summary; the text is published only as PDF."
+      "status": "collected",
+      "note": "Register pages give metadata and FI's summary; the text is published only as PDF and read from it."
     },
     "domstolsverkets-forfattningssamling-dvfs": {
       "series": "DVFS",
@@ -167,7 +167,7 @@
       "series": "IMYFS",
       "agency": "Integritetsskyddsmyndigheten",
       "status": "collected",
-      "note": "IMY lists its regulations with a link to each PDF; the text is read from the PDF. Repealing regulations and the predecessor series DIFS on the same page are not collected."
+      "note": "IMY lists its regulations with a link to each PDF; the text is read from the PDF. Repealing regulations are not collected; the predecessor series DIFS has nothing in force (the page lists only regulations repealing DIFS ones)."
     },
     "kammarkollegiets-forfattningssamling-kamfs": {
       "series": "KAMFS",
@@ -197,7 +197,7 @@
       "series": "LMFS",
       "agency": "Lantmäteriet",
       "status": "collected",
-      "note": "Lantmäteriet lists the regulations in force, each with its title and a link to the PDF; the text is read from the PDF. Repealed regulations and the predecessor series LMVFS are not collected; one PDF (LMFS 2015:5) is a scan without a text layer."
+      "note": "Lantmäteriet lists the regulations in force, each with its title and a link to the PDF; the text is read from the PDF. Repealed regulations are not collected; the predecessor series LMVFS (in force on the same page) is collected as its own series; one PDF (LMFS 2015:5) is a scan without a text layer."
     },
     "myndigheten-for-digital-forvaltnings-forfattningssamling-mdffs": {
       "series": "MDFFS",
@@ -298,8 +298,8 @@
     "transportstyrelsens-forfattningssamling-tsfs": {
       "series": "TSFS",
       "agency": "Transportstyrelsen",
-      "status": "collected_pdf",
-      "note": "Year listings and detail pages give metadata; the text is published only as PDF. Predecessor series on the same index (LFS, JvSFS and others) are not collected."
+      "status": "collected",
+      "note": "Year listings and detail pages give metadata; the text is published only as PDF and read from it. Predecessor series on the index's year pages before 2009 (LFS, JvSFS, VVFS) are collected as their own series, repealed base regulations with their repeal date."
     },
     "universitets-och-hogskoleradets-forfattningssamling-uhrfs": {
       "series": "UHRFS",
@@ -317,7 +317,7 @@
       "series": "FKFS",
       "agency": "Försäkringskassan",
       "status": "collected",
-      "note": "Försäkringskassan's lagrummet holds the register and each document's data (dates, consolidated and amending PDFs) as JSON in the page; the text is read from the PDF (consolidated version where published). Predecessor series RFFS, listed in the same register, is not collected."
+      "note": "Försäkringskassan's lagrummet holds the register and each document's data (dates, consolidated and amending PDFs) as JSON in the page; the text is read from the PDF (consolidated version where published). Predecessor series RFFS, listed in the same register, is collected as its own series (issuer Riksförsäkringsverket)."
     },
     "inspektionen-for-arbetsloshetsforsakringens-forfattningssamling-iaffs": {
       "series": "IAFFS",
@@ -1151,7 +1151,20 @@
     "series:VRFS": 221,
     "series:ÅFS": 222,
     "source:register-over-svensk-forfattningssamling-sfs": 537,
-    "source:svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": 536
+    "source:svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": 536,
+    "series:SOSFS": 665,
+    "series:MSBFS": 666,
+    "series:TLVFS": 667,
+    "series:FoHMFS": 668,
+    "series:DIFS": 669,
+    "series:SLVFS": 670,
+    "series:LFS": 671,
+    "series:LVFS": 673,
+    "series:RFFS": 681,
+    "series:FIFS": 682,
+    "series:LMVFS": 683,
+    "series:JvSFS": 671,
+    "series:VVFS": 671
   },
   "kommuner": {
     "0580": {
@@ -1169,14 +1182,6 @@
     "1080": {
       "status": "blocked",
       "note": "www.karlskrona.se answers every request, robots.txt included, with an HTTP 403 \"Åtkomst nekad\" bot-check page (checked 2026-10-30); not bypassed."
-    },
-    "1256": {
-      "status": "no_adapter",
-      "note": "Östra Göinge's page \"Styrande dokument och kommunala författningar\" is a search filled in by the browser; the static HTML lists no documents (the KFS PDFs live under /wp-content/uploads/). Needs an adapter for its search (checked 2026-10-30)."
-    },
-    "1267": {
-      "status": "no_adapter",
-      "note": "Höör's \"Styrande dokument\" page is a search and filter form filled in by the browser; the static HTML lists no documents. Needs an adapter for its search (checked 2026-10-30)."
     },
     "1275": {
       "status": "robots",

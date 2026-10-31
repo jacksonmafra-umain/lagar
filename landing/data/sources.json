@@ -95,6 +95,16 @@
         "agency": "Elsäkerhetsverket"
       },
       {
+        "name": "FFFS",
+        "status": "collected",
+        "documents": 121,
+        "url": "https://www.fi.se/sv/vara-register/fffs/sok-fffs/",
+        "issue": null,
+        "description": null,
+        "note": "Register pages give metadata and FI's summary; the text is published only as PDF and read from it.",
+        "agency": "Finansinspektionen"
+      },
+      {
         "name": "FFS",
         "status": "collected",
         "documents": 68,
@@ -111,7 +121,7 @@
         "url": "https://lagrummet.forsakringskassan.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/168",
         "description": "Innehåller föreskrifter om aktivitetsstöd, förmåner för totalförsvarspliktiga, tandvårdsersättning, ersättning för kostnader för internationell vård, sjukvårdsersättning,, arbetsgivaravgifter och egenavgifter, Fritidskortet, dataskydd och integritet, självbetjäningstjänster via Internet.",
-        "note": "Försäkringskassan's lagrummet holds the register and each document's data (dates, consolidated and amending PDFs) as JSON in the page; the text is read from the PDF (consolidated version where published). Predecessor series RFFS, listed in the same register, is not collected.",
+        "note": "Försäkringskassan's lagrummet holds the register and each document's data (dates, consolidated and amending PDFs) as JSON in the page; the text is read from the PDF (consolidated version where published). Predecessor series RFFS, listed in the same register, is collected as its own series (issuer Riksförsäkringsverket).",
         "agency": "Försäkringskassan"
       },
       {
@@ -131,7 +141,7 @@
         "url": "https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/foreskrifter.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/170",
         "description": null,
-        "note": "Havs- och vattenmyndigheten lists the regulations in force with a page per regulation and its PDF editions; the text is read from the PDF (consolidated version where published). Regulations of predecessor series (FIFS, NFS) on the same list are not collected here.",
+        "note": "Havs- och vattenmyndigheten lists the regulations in force with a page per regulation and its PDF editions; the text is read from the PDF (consolidated version where published). FIFS regulations on the same list are collected as their own series (issuer Fiskeriverket); NFS has its own adapter.",
         "agency": "Havs- och vattenmyndigheten"
       },
       {
@@ -151,7 +161,7 @@
         "url": "https://www.imy.se/om-oss/beslut-publikationer-och-remisser/foreskrifter-och-allmanna-rad/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/172",
         "description": null,
-        "note": "IMY lists its regulations with a link to each PDF; the text is read from the PDF. Repealing regulations and the predecessor series DIFS on the same page are not collected.",
+        "note": "IMY lists its regulations with a link to each PDF; the text is read from the PDF. Repealing regulations are not collected; the predecessor series DIFS has nothing in force (the page lists only regulations repealing DIFS ones).",
         "agency": "Integritetsskyddsmyndigheten"
       },
       {
@@ -237,11 +247,11 @@
       {
         "name": "LIVSFS",
         "status": "collected",
-        "documents": 39,
+        "documents": 43,
         "url": "https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/182",
         "description": null,
-        "note": "Livsmedelsverket lists LIVSFS in one table per year from 2005 (number, status, subject) with a link to each PDF; titles and text are read from the PDFs. Repealed regulations have no repeal date on the page and are not collected, nor is the predecessor series SLVFS (before 2005).",
+        "note": "Livsmedelsverket lists LIVSFS in one table per year from 2005 (number, status, subject) with a link to each PDF; titles and text are read from the PDFs. Repealed regulations have no repeal date on the page and are not collected; a regulation replaced by a later one (\"Ersätter ...\") is not in force. LIVSFS is read from 2002, its first year; the predecessor series SLVFS (1995-2001) is collected as its own series from the same tables.",
         "agency": "Livsmedelsverket"
       },
       {
@@ -251,7 +261,7 @@
         "url": "https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/183",
         "description": null,
-        "note": "Lantmäteriet lists the regulations in force, each with its title and a link to the PDF; the text is read from the PDF. Repealed regulations and the predecessor series LMVFS are not collected; one PDF (LMFS 2015:5) is a scan without a text layer.",
+        "note": "Lantmäteriet lists the regulations in force, each with its title and a link to the PDF; the text is read from the PDF. Repealed regulations are not collected; the predecessor series LMVFS (in force on the same page) is collected as its own series; one PDF (LMFS 2015:5) is a scan without a text layer.",
         "agency": "Lantmäteriet"
       },
       {
@@ -555,6 +565,16 @@
         "agency": "Trafikverket"
       },
       {
+        "name": "TSFS",
+        "status": "collected",
+        "documents": 622,
+        "url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/",
+        "issue": null,
+        "description": "Föreskrifter om järnväg, spårväg och tunnelbana, luftfart, sjöfart och vägtrafik.",
+        "note": "Year listings and detail pages give metadata; the text is published only as PDF and read from it. Predecessor series on the index's year pages before 2009 (LFS, JvSFS, VVFS) are collected as their own series, repealed base regulations with their repeal date.",
+        "agency": "Transportstyrelsen"
+      },
+      {
         "name": "TVFS",
         "status": "collected",
         "documents": 10,
@@ -613,26 +633,6 @@
         "description": null,
         "note": "Base regulations in force from the cards on Åklagarmyndigheten's ÅFS page, with decision and publication dates; repealed regulations and notices are not stored, and; text from the PDFs.",
         "agency": "Åklagarmyndigheten"
-      },
-      {
-        "name": "FFFS",
-        "status": "collected_pdf",
-        "documents": 121,
-        "url": "https://www.fi.se/sv/vara-register/fffs/sok-fffs/",
-        "issue": null,
-        "description": null,
-        "note": "Register pages give metadata and FI's summary; the text is published only as PDF.",
-        "agency": "Finansinspektionen"
-      },
-      {
-        "name": "TSFS",
-        "status": "collected_pdf",
-        "documents": 622,
-        "url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/",
-        "issue": null,
-        "description": "Föreskrifter om järnväg, spårväg och tunnelbana, luftfart, sjöfart och vägtrafik.",
-        "note": "Year listings and detail pages give metadata; the text is published only as PDF. Predecessor series on the same index (LFS, JvSFS and others) are not collected.",
-        "agency": "Transportstyrelsen"
       },
       {
         "name": "BOLFS",
@@ -768,7 +768,7 @@
       },
       {
         "name": "Luftfartsverket",
-        "status": "collected_pdf",
+        "status": "collected",
         "documents": null,
         "url": "https://www.transportstyrelsen.se/sv/Regler/",
         "issue": null,
@@ -2272,23 +2272,23 @@
       },
       {
         "name": "Vellinge",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 2,
         "url": "https://www.vellinge.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/343",
         "description": null,
-        "note": "Vellinge publishes its lokala ordningsföreskrifter and hälsoskyddsföreskrifter as HTML text on topic pages under /kommun-och-politik/kommunfakta/styrande-dokument/, and the styrande-dokument page lists no documents in its static HTML; only an attachment PDF is linked. Needs an HTML-page strategy (checked 2026-10-30).",
+        "note": null,
         "code": "1233",
         "county": "Skåne län"
       },
       {
         "name": "Östra Göinge",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 25,
         "url": "https://www.ostragoinge.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/344",
         "description": null,
-        "note": "Östra Göinge's page \"Styrande dokument och kommunala författningar\" is a search filled in by the browser; the static HTML lists no documents (the KFS PDFs live under /wp-content/uploads/). Needs an adapter for its search (checked 2026-10-30).",
+        "note": null,
         "code": "1256",
         "county": "Skåne län"
       },
@@ -2327,12 +2327,12 @@
       },
       {
         "name": "Lomma",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 50,
         "url": "https://lomma.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/348",
         "description": null,
-        "note": "Lomma publishes its författningssamling in a Netpublicator reader embedded in the \"Regler och styrande dokument\" page; the static HTML lists no documents. Needs a Netpublicator adapter (checked 2026-10-30).",
+        "note": null,
         "code": "1262",
         "county": "Skåne län"
       },
@@ -2382,12 +2382,12 @@
       },
       {
         "name": "Höör",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 28,
         "url": "https://www.hoor.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/353",
         "description": null,
-        "note": "Höör's \"Styrande dokument\" page is a search and filter form filled in by the browser; the static HTML lists no documents. Needs an adapter for its search (checked 2026-10-30).",
+        "note": null,
         "code": "1267",
         "county": "Skåne län"
       },
@@ -2426,12 +2426,12 @@
       },
       {
         "name": "Perstorp",
-        "status": "no_adapter",
+        "status": "robots",
         "documents": 0,
         "url": "https://www.perstorp.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/357",
         "description": null,
-        "note": "Perstorp's \"Kommunal författningssamling\" page lists no documents in its static HTML; the list is loaded by the browser. Needs an adapter (checked 2026-10-30).",
+        "note": "Perstorp's \"Kommunal författningssamling\" page keeps its document list in a minimised layout that opens only through ?sv.state=normal, which robots.txt disallows (Disallow: /*?sv.state=*); the site has no sitemap. Not bypassed (checked 2026-10-31).",
         "code": "1275",
         "county": "Skåne län"
       },
@@ -2459,12 +2459,12 @@
       },
       {
         "name": "Båstad",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 29,
         "url": "https://www.bastad.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/360",
         "description": null,
-        "note": "No page listing Båstad's författningssamling or lokala föreskrifter was found; its rules are spread over topic pages (checked 2026-10-30).",
+        "note": null,
         "code": "1278",
         "county": "Skåne län"
       },
@@ -3131,7 +3131,7 @@
       {
         "name": "Mariestad",
         "status": "partial",
-        "documents": 19,
+        "documents": 24,
         "url": "https://mariestad.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/421",
         "description": null,
@@ -3164,11 +3164,11 @@
       {
         "name": "Skövde",
         "status": "partial",
-        "documents": 10,
+        "documents": 15,
         "url": "https://www.skovde.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/424",
         "description": null,
-        "note": "Only the taxor och avgifter page is collected; the lokala föreskrifter are listed as JSON inside the Next.js page's script data (static.skovde.se), which the collector cannot read yet.",
+        "note": null,
         "code": "1496",
         "county": "Västra Götalands län"
       },
@@ -3219,7 +3219,7 @@
       {
         "name": "Eda",
         "status": "partial",
-        "documents": 25,
+        "documents": 26,
         "url": "https://www.eda.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/429",
         "description": null,
@@ -3658,12 +3658,12 @@
       },
       {
         "name": "Leksand",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 20,
         "url": "https://www.leksand.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/469",
         "description": null,
-        "note": "leksand.se publishes its författningssamling in a Netpublicator reader (JavaScript, noindex); no adapter yet.",
+        "note": null,
         "code": "2029",
         "county": "Dalarnas län"
       },
@@ -3845,12 +3845,12 @@
       },
       {
         "name": "Gävle",
-        "status": "no_adapter",
-        "documents": 0,
+        "status": "partial",
+        "documents": 24,
         "url": "https://www.gavle.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/486",
         "description": null,
-        "note": "gavle.se publishes its documents through MediaFlow; no adapter yet.",
+        "note": null,
         "code": "2180",
         "county": "Gävleborgs län"
       },
@@ -4437,7 +4437,7 @@
       {
         "name": "Mark- och miljööverdomstolen",
         "status": "collected",
-        "documents": 730,
+        "documents": 739,
         "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MMOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
         "issue": null,
         "description": null,

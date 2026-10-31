@@ -135,9 +135,11 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   series are collected, so those are a gap. The earliest TSFS base regulation
   in the corpus is TSFS 2009:1. AFS has the consolidated text from
   Arbetsmiljöverket's HTML pages. FFFS and TSFS publish the text only as PDF:
-  their bodies hold metadata, the agency's summary and links to the PDFs,
-  whose SHA-256 is in `sources/agency-pdf-manifest.json`; PDF text is not
-  extracted (owner decision: no non-stdlib dependency). `issued` is known only
+  since 2026-10-31 their bodies hold the text read from the PDF (the
+  consolidated version where one is linked) besides metadata, the agency's
+  summary and links to the PDFs, whose SHA-256 is in
+  `sources/agency-pdf-manifest.json`; one TSFS PDF is a scan without a text
+  layer. `issued` is known only
   for unamended AFS regulations, and AFS `in_force` only for those; FFFS and
   TSFS have no decision date on their pages. Arbetsmiljöverket's robots.txt
   disallows its folder of original PDFs, which is never requested. Boverket
@@ -302,6 +304,24 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   (not the consolidated version). Skolverket serves the latest consolidated
   version of SKOLFS 2011:22 as a Word file instead of a PDF; it is noted in the
   manifest and not linked.
+- SOSFS (Socialstyrelsen, 51), FoHMFS (Folkhälsomyndigheten, 12) and TLVFS
+  (TLV, 4), the series used before HSLF-FS, as of 2026-10-31, from the
+  regulations kunskapsguiden.se still lists under those designations, in full
+  text from the PDFs. A SOSFS regulation is collected when Socialstyrelsen's
+  index of regulations in force names its publication page; four SOSFS PDFs are
+  scans without a text layer. Dead links (FoHMFS, SOSFS) and TLVFS regulations
+  TLV's page no longer names are not collected. LVFS (Läkemedelsverket) is not
+  collected (#673), and FHIFS has only repealing regulations on the list.
+- Predecessor series still listed where their successors are read, as of
+  2026-10-31, in full text from the PDFs: RFFS (Riksförsäkringsverket, 221 in
+  force, from Försäkringskassan's register; RFFS 1999:12's file is not a PDF),
+  LFS (Luftfartsverket and Luftfartsstyrelsen, 65) and JvSFS (Järnvägsstyrelsen,
+  20) and VVFS (Vägverket, 1) from Transportstyrelsen's year pages before 2009,
+  repealed base regulations kept with their repeal date as for TSFS, FIFS
+  (Fiskeriverket, 8, from Havs- och vattenmyndigheten's list), LMVFS (6, one a
+  scan without a text layer) and SLVFS (2 in force, 1995-2001). LIVSFS is now
+  read from 2002, its first year (4 more regulations). DIFS has nothing in
+  force: IMY lists only regulations repealing DIFS ones.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - SJVFS (Statens jordbruksverk) is a gap: its regulations are PDFs on
@@ -393,8 +413,9 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     API (`json_list` with `follow_items`). Vellinge publishes its lokala
     ordningsföreskrifter and hälsoskyddsföreskrifter as web pages, collected as
     page text (`html_pages` over its gzipped sitemap).
-  - Not collected in Skåne, with the reason per kommun in `AGENCIES.md`: Östra
-    Göinge and Höör (Ciceron meeting portals). Their issues stay open.
+  - Östra Göinge and Höör publish their rules only in Ciceron meeting portals
+    (`sok-og.unikom.se`, `sok-hr.unikom.se`); their "Styrande dokument" are read
+    through the portal's JSON-RPC search (`ciceron`).
   - Staffanstorp: robots.txt disallows `/app/uploads/`, where every PDF lives, so
     the PDFs are never fetched; the documents point at the listing page and are
     recorded as gaps in the manifest.
