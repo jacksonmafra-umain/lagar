@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.7bdef21a19ac5f61f0122ef/1787572835109/Avgift%20f%C3%B6r%20f%C3%B6rskola%20och%20fritidshem%20-%20maxtaxa%20f%C3%B6r%20%C3%A5r%202026.pdf"
 source_sha256: "b575673b2e9c1d1f1cc27aa4391ad256c7c2251c492614f81b89eb674ebf9dd6"
-fetched_at: "2026-10-30T21:12:28Z"
+fetched_at: "2026-10-31T20:07:39Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -84,6 +84,106 @@ Uppdaterades: 24 augusti 2026
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Avgift för förskola och fritidshem - maxtaxa för år 2026 (pdf) pdf, 179 kB.](<https://www.falkoping.se/download/18.7bdef21a19ac5f61f0122ef/1787572835109/Avgift%20f%C3%B6r%20f%C3%B6rskola%20och%20fritidshem%20-%20maxtaxa%20f%C3%B6r%20%C3%A5r%202026.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Avgift för förskola och fritidshem
+
+MAXTAXA FÖR ÅR 2026
+
+Typ av styrdokument
+
+Avgifter och taxor
+
+Beslutsinstans
+
+Barn- och utbildningsnämnden
+
+Diarienummer
+
+BUN 2026/347
+
+Giltighetstid
+
+Fr.o.m. 2026-07-01 t.o.m. 2026-12-31
+
+Dokumentet gäller för
+
+Barn- och utbildningsnämnden
+
+Fastställd
+
+2026-05-19, § 43
+
+Ersätter
+
+Ersätter tidigare version, beslutad 2025-12-06, § 44, BUN 2025/1083
+
+Dokumentansvarig
+
+Skolchef
+
+Tidpunkt för aktualitetsprövning
+
+Årligen
+
+Inledning
+
+Enligt skollagen (2010:800) kapitel 8 § 16 och kapitel 14 § 12 har kommunen rätt att ta ut avgift för plats i barnomsorg, såsom förskola och fritidshem. Falköpings kommun tillämpar maxtaxa i enlighet med förordning (2001:160) om statsbidrag till kommuner som tillämpar maxtaxa inom förskola och fritidshem. Maxtaxan bygger på inkomst- och avgiftstak som årligen fastställs av Skolverket och som utgör grunden för beräkning av avgifter inom kommunens förskole- och fritidshemsverksamheter.
+
+Maxtaxa
+
+Från och med den 1 juli 2026 fastställs maxtaxan (högsta avgift) för hushåll med en sammanlagd bruttoinkomst på 51 560 kronor per månad. Det kommer vara ett fribelopp på 10 000 kronor och avgiften beräknas på beloppet över detta. Avgiftstaket och högsta avgiften för år 2026 är följande.
+
+Förskola
+
+Procent av bruttoinkomst (avgiftstak)
+
+Dock högsta avgift, kronor per månad
+
+Första barnet
+
+3 procent
+
+1547 kronor
+
+Andra barnet
+
+2 procent
+
+1031 kronor
+
+Tredje barnet
+
+1 procent
+
+516 kronor
+
+Procent av bruttoinkomst (avgiftstak)
+
+Dock högsta avgift, kr/månaden
+
+Första barnet
+
+2 procent
+
+1031 kronor
+
+Andra barnet
+
+1 procent
+
+516 kronor
+
+Tredje barnet
+
+1 procent
+
+516 kronor
+
+Fritidshem
