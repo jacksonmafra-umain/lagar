@@ -1156,6 +1156,19 @@ class PdfTextTest(unittest.TestCase):
             self.assertEqual(summary.written, ["0180-kfs-2026-12"])
             self.assertEqual(self.stored(Args(tmp))[2]["text"], "ocr")
 
+    def test_scan_without_text_after_ocr_is_not_read_again(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            scan = pdf_result("", municipal.pdftext.NO_TEXT_LAYER)
+            with mock.patch.object(municipal.pdftext, "extract", return_value=scan), \
+                    mock.patch.object(municipal.ocr, "extract", return_value=scan) as recognise:
+                self.run_text(tmp, ocr=True)
+                _meta, body, record = self.stored(Args(tmp))
+                self.assertEqual(record["text"], municipal.OCR_NO_TEXT)
+                self.assertIn("ingen text som kan läsas maskinellt", body)
+                recognise.reset_mock()
+                self.run_text(tmp, ocr=True)
+                self.assertNotIn(mock.call(PDF + b"KFS 2026:12"), recognise.call_args_list)
+
     def test_documents_collected_without_text_are_read_on_the_next_text_run(self):
         with tempfile.TemporaryDirectory() as tmp:
             municipal.run(FakeClient(sthlm_routes()), Args(tmp, limit=1))

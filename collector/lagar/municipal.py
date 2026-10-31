@@ -1326,6 +1326,7 @@ TEXT_OCR = "ocr"  # read by optical character recognition (a scan)
 TEXT_READ = (TEXT_PDF, TEXT_OCR)
 OCR_GAPS = frozenset({pdftext.NO_TEXT_LAYER, pdftext.UNREADABLE_TEXT, pdftext.LETTER_SPACED})
 TEXT_TOOL_FAILED = "the PDF could not be read"
+OCR_NO_TEXT = "no text found by OCR (scanned PDF)"  # recorded so later runs do not read it again
 _TEXT_HEADING = "## Text"
 _TEXT_INTRO = {
     TEXT_PDF: "Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.",
@@ -1337,6 +1338,7 @@ _TEXT_GAP = {
     pdftext.UNREADABLE_TEXT: "Pdf:ens textlager går inte att läsa; texten har inte lästs in.",
     pdftext.LETTER_SPACED: "Pdf:ens textlager går inte att läsa; texten har inte lästs in.",
     ocr.LOW_CONFIDENCE: "Pdf:en är inskannad och kan inte läsas maskinellt; texten har inte lästs in.",
+    OCR_NO_TEXT: "Pdf:en är inskannad och innehåller ingen text som kan läsas maskinellt.",
 }
 
 
@@ -1357,7 +1359,7 @@ def read_text(raw, use_ocr=False):
             recognised = None
         if recognised is not None:
             if not recognised.usable:
-                return recognised.gap, None
+                return (ocr.LOW_CONFIDENCE if recognised.gap == ocr.LOW_CONFIDENCE else OCR_NO_TEXT), None
             result, status = recognised, TEXT_OCR
     if not result.usable:
         return result.gap, None
