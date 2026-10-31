@@ -489,7 +489,7 @@ class CountyTextTests(unittest.TestCase):
 
     def test_scanned_pdf_is_a_gap(self):
         with fake_extract("\f\f", pdftext.NO_TEXT_LAYER):
-            self.run_files(FilesClient(), "24", "--from-year", "2026")
+            self.run_files(FilesClient(), "24", "--from-year", "2026", "--no-ocr")
         _, body = self.body("24FS 2026:2")
         self.assertIn(county.NO_TEXT, body)
         entry = json.loads(self.manifest.read_text(encoding="utf-8"))["entries"][1]
@@ -563,6 +563,67 @@ class CountyTextTests(unittest.TestCase):
         with mock.patch.object(county.pdftext, "available", return_value=False):
             self.assertEqual(self.run_files(FilesClient(), "24", "--from-year", "2026")[0], 1)
             self.assertEqual(self.run_files(FilesClient(), "24", "--from-year", "2026", "--no-text")[0], 0)
+
+
+def fake_ocr(text=PDF_TEXT, gap=None):
+    """Patch OCR as installed, returning `text` (with `gap`) for any PDF."""
+    stack = contextlib.ExitStack()
+    stack.enter_context(mock.patch.object(county.ocr, "available", return_value=True))
+    stack.enter_context(mock.patch.object(
+        county.ocr, "extract", return_value=pdftext.PdfText(text=text, pages=1, text_pages=1, gap=gap)))
+    return stack
+
+
+class CountyOcrTests(unittest.TestCase):
+    setUp = CountyRunTests.setUp
+    tearDown = CountyRunTests.tearDown
+    run_files = CountyFilesRunTests.run_files
+    body = CountyTextTests.body
+
+    def files(self, n):
+        return json.loads(self.manifest.read_text(encoding="utf-8"))["entries"][n]["files"]
+
+    def test_scanned_pdf_is_read_by_ocr(self):
+        with fake_extract("\f\f", pdftext.NO_TEXT_LAYER), fake_ocr():
+            self.run_files(FilesClient(), "24", "--from-year", "2026")
+        meta, body = self.body("24FS 2026:1")
+        self.assertEqual(schema.validate(meta), [])
+        self.assertEqual(meta["text_source"], "ocr")
+        self.assertEqual(meta["in_force"], "2026-06-05")
+        self.assertIn(county.OCR_NOTE + "\n\nVästerbottens läns författningssamling", body)
+        self.assertIn("1 § Det är förbjudet att elda", body)
+        self.assertEqual(self.files(0)[0]["text"], county.TEXT_OCR)
+
+    def test_unreadable_text_layer_is_read_by_ocr(self):
+        with fake_extract("i®åëëíóêÉäëÉå", pdftext.UNREADABLE_TEXT), fake_ocr():
+            self.run_files(FilesClient(), "24", "--from-year", "2026")
+        self.assertEqual(self.body("24FS 2026:1")[0]["text_source"], "ocr")
+
+    def test_gap_is_read_again_once_ocr_is_installed(self):
+        with fake_extract("\f\f", pdftext.NO_TEXT_LAYER):
+            self.run_files(FilesClient(), "24", "--from-year", "2026", "--no-ocr")
+        self.assertNotIn("text_source", self.body("24FS 2026:1")[0])
+        client = FilesClient()
+        with fake_extract("\f\f", pdftext.NO_TEXT_LAYER), fake_ocr():
+            _, report = self.run_files(client, "24", "--from-year", "2026")
+        self.assertEqual(len(report["written"]), 3)
+        self.assertEqual(self.body("24FS 2026:1")[0]["text_source"], "ocr")
+        client = FilesClient()
+        with fake_extract("\f\f", pdftext.NO_TEXT_LAYER), fake_ocr():
+            _, report = self.run_files(client, "24", "--from-year", "2026")
+        self.assertEqual(report["written"], [])
+        self.assertFalse(any(c.endswith(".pdf") for c in client.calls))
+
+    def test_scan_ocr_cannot_read_is_not_read_again(self):
+        with fake_extract("\f\f", pdftext.NO_TEXT_LAYER), fake_ocr("\f", pdftext.NO_TEXT_LAYER):
+            self.run_files(FilesClient(), "24", "--from-year", "2026")
+        self.assertEqual(self.files(0)[0]["text"], county.OCR_NO_TEXT)
+        self.assertIn(county.NO_TEXT, self.body("24FS 2026:1")[1])
+        self.state.unlink()
+        client = FilesClient()
+        with fake_extract("\f\f", pdftext.NO_TEXT_LAYER), fake_ocr():
+            self.run_files(client, "24", "--from-year", "2026")
+        self.assertFalse(any(c.endswith(".pdf") for c in client.calls))
 
 
 if __name__ == "__main__":

@@ -36,7 +36,7 @@ from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from . import frontmatter, htmlmd, pdftext
+from . import frontmatter, htmlmd, ocr, pdftext
 from .caselaw import NETWORK_ERRORS, StateError, _load_state, _save_state, personal_numbers
 from .http import Blocked, PoliteClient
 from .vocabulary import TYPES
@@ -97,9 +97,15 @@ DOCUMENT_ERRORS = (ValueError, KeyError, UnicodeDecodeError)
 
 # Manifest `text` values besides pdftext's gap reasons.
 TEXT_EXTRACTED = "extracted"
+TEXT_OCR = "ocr"  # read by OCR from a scan or a file whose text layer is unreadable
+OCR_NO_TEXT = "no text found by OCR"
 TEXT_UNREADABLE = "unreadable PDF"
 PDF_ONLY = "Författningen publiceras bara som pdf."
 NO_TEXT = "Texten kan inte läsas ur den tryckta författningen (inskannad pdf utan textlager); den finns bara i pdf-filen."
+OCR_NOTE = ("Texten är maskinläst (OCR) ur den tryckta författningen och kan innehålla läsfel. "
+            "Den tryckta författningen (pdf) är den officiella versionen.")
+# Manifest `text` values a run with OCR reads again.
+OCR_GAPS = frozenset({pdftext.NO_TEXT_LAYER, pdftext.UNREADABLE_TEXT})
 
 _NUMBER = re.compile(r"(\d{2})\s*FS\s+(\d{4})\s*:\s*0*(\d+)", re.IGNORECASE)
 _YEAR_LINK = re.compile(r"""href="([^"]*/lanets-forfattningssamling/forfattningar-(\d{4})\.html)\"""")
@@ -518,15 +524,16 @@ def build_meta(detail, item, region_code, fetched_at):
     }
 
 
-def text_blocks(files, texts):
+def text_blocks(files, texts, ocr_urls=frozenset()):
     """Markdown blocks of the PDFs' text, in file order.
 
     `texts` maps a PDF url to its paragraphs, or to None when the file has no
     readable text; files missing from it were not read. With several readable
-    files each gets a heading with its link text.
+    files each gets a heading with its link text. Text of the files in
+    `ocr_urls` was read by OCR, which a note says first.
     """
     readable = [(label, texts[url]) for url, label in files if texts.get(url)]
-    blocks = []
+    blocks = [OCR_NOTE] if any(texts.get(url) for url, _ in files if url in ocr_urls) else []
     for label, paragraphs in readable:
         if len(readable) > 1:
             blocks.append("## " + label)
@@ -565,7 +572,7 @@ def pdf_facts(texts):
     return _find_date(_DECIDED, text), _find_date(_PUBLISHED, text), _in_force(text)
 
 
-def to_markdown(meta, detail, texts=None):
+def to_markdown(meta, detail, texts=None, ocr_urls=frozenset()):
     published = detail.published
     facts = [
         ("Författningssamling", meta["number"]),
@@ -579,7 +586,7 @@ def to_markdown(meta, detail, texts=None):
     if text:
         blocks.append(text)
     else:
-        blocks.extend(text_blocks(detail.pdfs, texts or {}))
+        blocks.extend(text_blocks(detail.pdfs, texts or {}, ocr_urls))
     if detail.pdfs:
         blocks.append("## Tryckt version")
         blocks.append(
@@ -619,7 +626,7 @@ def build_file_meta(item, region_code, source, source_sha256, fetched_at, in_for
     }
 
 
-def file_markdown(meta, item, texts=None, published=None):
+def file_markdown(meta, item, texts=None, published=None, ocr_urls=frozenset()):
     facts = [
         ("Författningssamling", meta["number"]),
         ("Utkom från trycket", published),
@@ -631,7 +638,7 @@ def file_markdown(meta, item, texts=None, published=None):
     blocks = ["# " + meta["title"], "  \n".join(f"{k}: {v}" for k, v in facts if v)]
     if item.marked_repealed:
         blocks.append("Länsstyrelsen markerar författningen som upphävd.")
-    blocks.extend(text_blocks(item.files, texts or {}))
+    blocks.extend(text_blocks(item.files, texts or {}, ocr_urls))
     blocks.append("## Tryckt version")
     blocks.append(
         "Den tryckta författningen i länets författningssamling (pdf):\n\n"
@@ -753,16 +760,30 @@ def _file_candidates(client, robots, args, config, landing, unnumbered, manifest
     yield from items
 
 
-def read_text(body):
-    """(manifest `text` value, paragraphs or None) for the bytes of one PDF."""
+def read_text(body, use_ocr=False):
+    """(manifest `text` value, paragraphs or None) for the bytes of one PDF.
+
+    With `use_ocr` a scan, or a file whose text layer cannot be read, is read by OCR.
+    """
     try:
         result = pdftext.extract(body)
     except pdftext.PdfTextError:
         return TEXT_UNREADABLE, None
+    status = TEXT_EXTRACTED
+    if use_ocr and result.gap in OCR_GAPS:
+        try:
+            recognised = ocr.extract(body)
+        except ocr.OcrError:
+            recognised = None
+        if recognised is not None and not recognised.usable:
+            # Recorded so later runs do not read the file again.
+            return (ocr.LOW_CONFIDENCE if recognised.gap == ocr.LOW_CONFIDENCE else OCR_NO_TEXT), None
+        if recognised is not None:
+            result, status = recognised, TEXT_OCR
     if not result.usable:
         return result.gap, None
     paragraphs = pdftext.paragraphs(result.text)
-    return (TEXT_EXTRACTED, paragraphs) if paragraphs else (pdftext.NO_TEXT_LAYER, None)
+    return (status, paragraphs) if paragraphs else (pdftext.NO_TEXT_LAYER, None)
 
 
 class Prefetched:
@@ -826,7 +847,7 @@ def _number_from_text(client, robots, args, config, landing, items, loose, manif
     return remaining
 
 
-def _hash_pdfs(client, robots, pdfs, download, want_text=False):
+def _hash_pdfs(client, robots, pdfs, download, want_text=False, use_ocr=False):
     """Manifest file entries for `pdfs` and {url: paragraphs or None} for those read."""
     files, texts = [], {}
     for url, _label in pdfs:
@@ -842,7 +863,7 @@ def _hash_pdfs(client, robots, pdfs, download, want_text=False):
                 retrieved_at=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             )
             if want_text:
-                entry["text"], texts[url] = read_text(body)
+                entry["text"], texts[url] = read_text(body, use_ocr)
         files.append(entry)
     return files, texts
 
@@ -855,7 +876,17 @@ def _needs_fetch(stored, urls, args, want_text):
         return False
     if args.refresh_pdf or any(f.get("sha256") is None for f in stored["files"]):
         return True
-    return want_text and any("text" not in f for f in stored["files"])
+    return want_text and any("text" not in f or _wants_ocr(f, args) for f in stored["files"])
+
+
+def _ocr_urls(entry):
+    """URLs of the manifest entry's files whose text was read by OCR."""
+    return {f["url"] for f in (entry or {}).get("files", []) if f.get("text") == TEXT_OCR}
+
+
+def _wants_ocr(file, args):
+    """Whether a run with OCR reads this manifest file entry again: its text is a gap OCR may fill."""
+    return getattr(args, "ocr", False) and file.get("text") in OCR_GAPS
 
 
 def _stored_meta(meta, corpus):
@@ -899,7 +930,7 @@ def _store(client, robots, item, args, manifest):
     if _needs_fetch(stored, [u for u, _ in detail.pdfs], args, want_text) or (
         want_text and _stored_meta(meta, args.corpus) is None
     ):
-        files, texts = _hash_pdfs(client, robots, detail.pdfs, args.pdf, want_text)
+        files, texts = _hash_pdfs(client, robots, detail.pdfs, args.pdf, want_text, args.ocr)
         manifest[meta["number"]] = {
             "number": meta["number"],
             "detail_url": item.url,
@@ -913,7 +944,10 @@ def _store(client, robots, item, args, manifest):
         decided, _published, in_force = pdf_facts(texts)
         meta["issued"] = meta["issued"] or decided
         meta["in_force"] = meta["in_force"] or in_force
-    body = to_markdown(meta, detail, texts)
+    ocr_urls = _ocr_urls(manifest.get(meta["number"]))
+    if ocr_urls & set(texts):
+        meta["text_source"] = "ocr"
+    body = to_markdown(meta, detail, texts, ocr_urls)
     found = personal_numbers(body)
     if found:
         raise ValueError(f"possible personal identity number in the text ({len(found)} found)")
@@ -935,7 +969,7 @@ def _store_files(client, robots, item, args, manifest):
     stored = manifest.get(item.number)
     texts = {}
     if _needs_fetch(stored, urls, args, want_text) or (want_text and _stored_meta(probe, args.corpus) is None):
-        files, texts = _hash_pdfs(client, robots, item.files, args.pdf, want_text)
+        files, texts = _hash_pdfs(client, robots, item.files, args.pdf, want_text, args.ocr)
         stored = manifest[item.number] = {
             "number": item.number,
             "detail_url": item.url,
@@ -961,7 +995,10 @@ def _store_files(client, robots, item, args, manifest):
     other = existing_path(meta["id"], args.corpus)
     if other is not None and other != path_for(meta, args.corpus):
         raise ValueError(f"{meta['number']} is already stored as {other}")
-    body = file_markdown(meta, item, texts, published)
+    ocr_urls = _ocr_urls(stored)
+    if ocr_urls & set(texts):
+        meta["text_source"] = "ocr"
+    body = file_markdown(meta, item, texts, published, ocr_urls)
     found = personal_numbers(body)
     if found:
         raise ValueError(f"possible personal identity number in the text ({len(found)} found)")
@@ -1046,6 +1083,10 @@ def parse_args(argv):
         help="do not read the PDFs' text (it is read with poppler's pdftotext)",
     )
     parser.add_argument(
+        "--no-ocr", dest="ocr", action="store_false",
+        help="do not read scanned or unreadable PDFs by OCR (needs pdftoppm and tesseract with Swedish)",
+    )
+    parser.add_argument(
         "--refresh-pdf", action="store_true",
         help="download and read PDFs again even when the manifest already has them",
     )
@@ -1070,6 +1111,10 @@ def run(client, args):
         raise ConfigError(f"county {args.county} is not in {args.config}")
     if args.pdf and args.text and not pdftext.available():
         raise ConfigError(f"{pdftext.TOOL} is not installed (poppler-utils); install it or pass --no-text")
+    if args.pdf and args.text and args.ocr and not ocr.available():
+        print("warning: OCR needs pdftoppm and tesseract with the Swedish model (tesseract-ocr-swe); "
+              "scanned PDFs stay gaps", file=sys.stderr, flush=True)
+        args.ocr = False
     state = _load_state(args.state)
     state["blocked"] = None
     manifest = load_manifest(args.manifest)
@@ -1090,7 +1135,9 @@ def run(client, args):
         for item in _candidates(client, robots, args, config, summary.unnumbered, manifest):
             if args.limit is not None and summary.written >= args.limit:
                 break
-            if _already_done(state, item, args.corpus):
+            if _already_done(state, item, args.corpus) and not any(
+                _wants_ocr(f, args) for f in manifest.get(item.number, {}).get("files", [])
+            ):
                 summary.skipped += 1
                 continue
             try:
