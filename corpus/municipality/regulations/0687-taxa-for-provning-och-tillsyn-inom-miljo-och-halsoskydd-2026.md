@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Taxa-for-provning-och-tillsyn-inom-miljo-och-halsoskydd-2026.pdf"
 source_sha256: "bd7eef9f3bcb34f3035e6682a3d63bf56630f17a5d52a471b4fba8fa479c0f1c"
-fetched_at: "2026-10-30T13:32:55Z"
+fetched_at: "2026-10-31T16:59:51Z"
 issuer: "Tranås kommun"
 region_code: "06"
 municipality_code: "0687"
@@ -31,6 +31,5196 @@ Förteckning: <https://tranas.se/kommun-och-politik/kommunfakta/regler-och-styra
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Taxa för provning och tillsyn inom miljö och halsoskydd 2026](<https://tranas.se/wp-content/dokument/5898f25410384fb3/regler-och-styrande-dokument/Taxa-for-provning-och-tillsyn-inom-miljo-och-halsoskydd-2026.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Beslutad av kommunfullmäktige i
+
+Tranås 2023-10-16, § 191,
+
+Reviderad 2025-03-31, § 51
+
+Reviderad 2025-12-08, § 215
+
+Taxa för prövning och tillsyn inom miljö- och hälsoskydd
+
+Taxebestämmelser
+
+Inledande bestämmelser
+
+1§
+
+Denna taxa gäller avgifter för Tranås kommuns kostnader för prövning och tillsyn enligt miljöbalken, bestämmelser meddelade med stöd av miljöbalken eller EU:s förordningar inom miljöbalkens tillämpningsområde, bl.a. vad gäller naturvård och kulturvård, skydd av områden, miljöfarlig verksamhet, hälsoskydd, verksamheter som orsakar miljöskador, vattenverksamhet, skötsel av jordbruksmark, kemiska produkter, biotekniska organismer och varor, avfall och producentansvar. Taxan gäller även avgifter för prövning och tillsyn enligt strålskyddslagen och strålskyddsförordningen. Utöver vad som anges i denna taxa kan ersättning till kommunen utgå bl.a. enligt 26 kap. 22 § miljöbalken för undersökningskostnader och enligt 25 kap. 2 § miljöbalken för rättegångskostnader.
+
+2§
+
+Avgift enligt denna taxa ska betalas för
+
+1. Handläggning och andra åtgärder med anledning av ansökningar om tillstånd, dispens eller undantag.
+
+2. Handläggning och andra åtgärder med anledning av anmälan av verksamhet eller åtgärd.
+
+3. Handläggning och andra åtgärder vid tillsyn i övrigt.
+
+3§
+
+Avgift enligt denna taxa tas inte ut för
+
+1. Handläggning av klagomål som visar sig obefogade
+
+2. Handläggning av överklagande, t.ex. rättidsprövning och överlämnande till nästa instans samt yttrande i överklagade ärenden
+
+3. Handläggning för att svara på remisser t.ex. till prövningsmyndigheter
+
+4. Handläggning av ansökan om utdömande av vite.
+
+4§
+
+Beslut om avgift eller om nedsättning eller efterskänkning av avgiften enligt 27 § fattas av bygg- och miljönämnden.
+
+Vid förändringar i miljöbalken eller förordningar meddelade med stöd av miljöbalken, får bygg- och miljönämnden göra motsvarande förändringar i taxebilagorna. Taxebilagorna får också justeras vid förändrat tillsynsbehov och kompletteras med ytterligare verksamheter som inte är tillstånds- eller anmälningspliktiga.
+
+5§
+
+Enligt 27 kap. 3 § miljöbalken är alla som är skyldiga att betala en avgift enligt denna taxa, eller enligt 26 kap. 22 § miljöbalken, skyldiga att lämna de uppgifter som behövs för att avgiftens eller ersättningens storlek ska kunna bestämmas.
+
+Avgifter
+
+6§
+
+Avgiftsuttag kan ske genom:
+
+1. Handläggningsavgift
+
+Enligt nedlagd schablonberäknad handläggningstid (H)
+
+2. Årlig avgift
+
+Enligt tidsfaktor som anges i taxebilaga 2
+
+3. Timavgift
+
+I förhållande till den faktiskt nedlagda tillsynstiden i det enskilda ärendet
+
+4. Enligt de andra grunder som anges i taxan.
+
+7§
+
+Kommunfullmäktige beslutar om timavgiftens storlek vid antagande av taxan i sin helhet, med utgångspunkt från gällande kostnadsläge. Bygg- och miljönämnden får för varje kalenderår (avgiftsår) därefter besluta att höja avgiften med den procentsats för PKV som är publicerad på SKR:s webbplats för oktober månad året före avgiftsåret. Det framräknade beloppet avrundas nedåt till hela kronor. Vid antagande av denna taxa är timavgiften 1148 kr (handläggningskostnaden per hel timmes handläggningstid år 2025).
+
+8§
+
+I de fall timavgift tas ut i förhållande till faktiskt nedlagd handläggningstid avses med handläggningstid den sammanlagda tid som varje tjänsteperson vid nämnden har använt för handläggning och andra åtgärder i ärendet såsom inläsning av ärendet, kontakter med parter, samråd med experter och myndigheter, inspektioner, revisioner, restidoch provtagning och kontroller i övrigt, beredning i övrigt av ärendet samt föredragning av beslut.
+
+9§
+
+Avgift tas ut för varje nedlagd halv timme nedlagd handläggningstid. När timavgift tas ut debiteras en restid på högst 60 minuter, i de fall restid förekommer i ärendet. Om den sammanlagda handläggningstiden understiger en halvtimme per år tas ingen timavgift ut. För inspektioner, mätningar, och andra kontroller som utförs vardagar mellan 19:00 och 07:00 lördagar, söndagar, julafton, nyårsafton, påskafton, trettondagsafton, midsommarafton och helgdagar tas avgift ut med en 1,5 gånger ordinarie timavgift.
+
+Avgifter för ansökningar om tillstånd, dispens eller undantag
+
+10 §
+
+Avgift för prövning av ansökningar om tillstånd, dispens eller undantag ska betalas som antingen handläggningsavgift genom tillämpning av den avgiftsnivå som anges i taxebilaga 1 eller i form av timavgift om handläggningstiden över- eller understiger schablonen avsevärt. Avgift för prövning ska betalas för varje avgiftsbelagt ärende som ansökningen avser. För tillsyn av verksamhet eller åtgärd som inte finns angiven i bilaga 1 tas timavgift ut.
+
+11 §
+
+Om det i ett beslut om tillstånd föreskrivs att en anordning inte får tas i bruk förrän den har besiktigats och godkänts av nämnden ingår kostnaden för en sådan besiktning i prövningsavgiften. Kan anordningen inte godkännas vid den besiktningen och ny besiktning måste ske vid ytterligare ett tillfälle, tas timavgift ut för den ytterligare handläggningstiden.
+
+12 §
+
+Avgift för prövning av ansökan om tillstånd, dispens eller undantag ska erläggas av sökanden.
+
+13 §
+
+Avgift för prövning ska erläggas även om ansökan avslås. Avgift tas inte ut för en ansökan som återkallas innan handläggning påbörjas.
+
+14 §
+
+I ärenden om ansökan om tillstånd till miljöfarlig verksamhet som prövas av kommunen är sökanden i förekommande fall även skyldig att ersätta kommunens kostnader enligt 19 kap. 4 och 5 §§ miljöbalken för sakkunniga som har tillkallats av kommunen och för kungörelser i ärendet. Sökanden är även skyldig att ersätta kommunens kostnader för kungörelser i ärendet om tillstånd, dispens eller undantag enligt 7 kap. miljöbalken eller förordningen (1998:1252) om områdesskydd.
+
+15 §
+
+Utöver avgift för prövning, tillstånd, dispens eller undantag, kan avgift för tillsyn komma att tas ut för den verksamhet eller åtgärd som prövningen avser enligt vad som anges i denna taxa.
+
+Avgifter för handläggning av anmälningsärenden
+
+16 §
+
+Avgift för handläggning av anmälan av verksamhet eller åtgärd ska betalas i form av årlig avgift eller handläggningsavgift motsvarande den för verksamheten eller åtgärden föreskrivna avgiftsnivån i taxebilaga 1 eller 2.
+
+Om nedlagd handläggningstid för anmälan avsevärt skiljer sig från avgiftsnivån för verksamheten enligt taxebilaga 1 eller 2, får avgiften för handläggning av anmälan istället tas ut genom timtaxa. Avgift med anledning av handläggning av anmälan ska betalas för varje avgiftsbelagt ärende som anmälan avser.
+
+Om en anmälan omfattar flera verksamhetsgrupper (avgiftskoder) enligt taxebilaga 2, ska full avgift betalas för den punkt som medför den högsta avgiften med tillägg av 25 procent av summan av de belopp som anges för övriga verksamhetsgrupper. Endast ett belopp inom varje verksamhetsgrupp ska ingå i beräkningen. Det beloppet ska motsvara det högsta av de belopp som verksamheten omfattas av inom verksamhetsgruppen.
+
+Avgift för handläggning ska erläggas även om verksamheten förbjuds. Avgift tas inte ut för en anmälan som återkallas innan handläggningen har påbörjats.
+
+17 §
+
+Avgift för handläggningen av anmälan ska betalas av den som driver eller avser att bedriva verksamheten eller vidta åtgärden.
+
+I ärenden om anmälan av miljöfarlig verksamhet med beteckningen C i miljöprövningsförordningen är denne i förekommande fall skyldig att ersätta kommunens kostnader för kungörelse i ärendet.
+
+18 §
+
+Utöver avgift med anledning av handläggning av anmälan, kan avgift för tillsyn komma att tas ut för den verksamhet eller åtgärd som anmälan avser enligt vad som anges i denna taxa.
+
+Avgift för tillsyn
+
+19 §
+
+Avgift för tillsyn av verksamhet eller åtgärd ska betalas i form av årlig avgift, handläggningsavgift eller timavgift motsvarande den för verksamheten eller åtgärden föreskrivna avgiftsnivån i taxebilaga 1 eller 2.
+
+Om verksamheten omfattas av flera verksamhetsgrupper (avgiftskoder) enligt taxebilaga 2, ska full avgift betalas för den punkt som medför den högsta avgiften med tillägg av 25 procent av summan av de belopp som anges för övriga verksamhetsgrupper. Endast ett belopp inom varje verksamhetsgrupp ska ingå i beräkningen. Det beloppet ska motsvara det högsta av de belopp som verksamheten omfattas av inom verksamhetsgruppen.
+
+20 §
+
+För verksamheter som tillståndsprövats ska avgiften bestämmas med utgångspunkt ifrån vad som anges i tillståndsbeslutet i fråga om produktionsvolym eller liknande.
+
+21 §
+
+Årlig avgift omfattar kalenderår och ska betalas i förskott. Sådan avgift ska betalas från och med det kalenderår som följer efter det att beslut om tillstånd till verksamhet meddelats eller anmälan skett eller i de fall tillstånd eller anmälan inte krävts, verksamheten har påbörjats. För tillsyn som sker dessförinnan tas timavgift ut. Årlig avgift ska betalas med helt avgiftsbelopp för varje påbörjat kalenderår som verksamheten bedrivs.
+
+22 §
+
+Verksamheter eller åtgärder som saknar fastställd årlig avgift eller handläggningsavgift i taxebilagorna ska betala timavgift för tillsynen.
+
+23 §
+
+Avgift för tillsyn betalas av den som bedriver eller avser att bedriva verksamheten eller vidta åtgärd som föranleder avgiften. Tillsyn över miljöskador enligt 10 kap. miljöbalken ska betalas av den som enligt det
+
+10 kap. miljöbalken är ansvarig för avhjälpande eller kostnader.
+
+Avgifter vid utökat tillsynsbehov
+
+24 §
+
+Om den faktiskt utförda tillsynen överskrider den tillsynstid som motsvaras av erlagd avgift och denna tillsyn är föranledd av att verksamhetsutövaren bryter mot villkor, inte följer förelägganden, förbud eller andra åtaganden får den extra nedlagda tiden tas ut som timavgift.
+
+Extra tillsynsavgift beräknas som timavgift enligt § 8 och ska betalas i efterskott av den som är verksamhetsutövare vid tillsynens utförande.
+
+Avgift för tillsyn i övrigt
+
+25 §
+
+Avgift för tillsyn i övrigt ska betalas i form av timavgift eller enligt de grunder som i övrigt anges i taxebilagorna.
+
+26 §
+
+Avgift för tillsyn betalas av den som bedriver eller avser att bedriva verksamheten, vidtar åtgärd eller i annat fall kan anses ha gett upphov till olägenheter som föranleder tillsynsåtgärden.
+
+Nedsättning av avgift
+
+27 §
+
+Om det finns särskilda skäl med hänsyn till verksamhetens art, omfattning, tillsynsbehov, nedlagd handläggningstid och övriga omständigheter, får avgift enligt denna taxa i ett enskilt fall sättas ner eller efterskänkas.
+
+Avgiftens erläggande
+
+28 §
+
+Betalning av avgift enligt denna taxa ska ske till Tranås kommun. Betalning ska ske inom tid som anges i beslutet om avgift eller på fakturan.
+
+Verkställighetsfrågor m.m.
+
+29 §
+
+Av 1 kap. 2 § och 9 kap. 4 § förordningen (1998:940) om avgifter för prövning och tillsyn enligt miljöbalken framgår att en kommunal nämnds beslut om avgift får verkställas enligt utsökningsbalken.
+
+30 §
+
+Av 1 kap. 2 § och 9 kap. 5 § förordningen (1998:940) om avgifter för prövning och tillsyn enligt miljöbalken framgår att kommunal nämnd får förordna att dess beslut om avgift ska gälla omedelbart, även om det överklagas.
+
+31 §
+
+Enligt 19 kap. 1 § miljöbalken överklagas en kommunal nämnds beslut om avgift till länsstyrelsen.
+
+Denna taxa träder i kraft den dag beslutet fattas i kommunfullmäktige. I ärenden som rör tillstånd, anmälningar och dispenser tillämpas taxan på ärenden som kommer in efter denna dag.
+
+Taxebilaga 1
+
+Följande förkortningar används i tabellen:
+
+T=
+
+Tidsfaktor i timmar (årlig avgift, förskottsdebitering)
+
+H=
+
+Handläggningsavgift i timmar (schablon, efterhandsdebitering)
+
+tim =
+
+Timavgift (enligt 8 §, efterhandsdebitering)
+
+Avgiftsnivå
+
+2 KAP ALLMÄNNA HÄNSYNSREGLER
+
+TILLSYN
+
+Hushållning med energi samt användning av förnyelsebara energikällor, i verksamhet eller vid vidtagande av åtgärd som inte omfattas av taxebilaga 2, enligt 2 kap 5 § miljöbalken
+
+tim
+
+I verksamhet eller vid vidtagande av åtgärd som inte omfattas av taxebilaga 2, utnyttja möjligheterna att
+
+1. minska mängden avfall,
+
+2. minska mängden skadliga ämnen i material och produkter,
+
+3. minska de negativa effekterna av avfall, och
+
+4. återvinna avfall, enligt 2 kap 5 § miljöbalken
+
+tim
+
+Övrig tillsyn enligt 2 kap miljöbalken
+
+tim
+
+7 KAP SKYDD AV NATUREN
+
+PRÖVNING
+
+Ansökan om dispens från strandskyddsbestämmelserna, 7 kap 18 b § miljöbalken
+
+4H
+
+Ansökan om dispens eller undantag från föreskrifter för natur- och kulturreservat, naturminne, djur- och växtskyddsområde och vattenskyddsområde enligt 7 kap 7 § miljöbalken och 9 § förordning (1998:1252) om områdesskydd
+
+4H
+
+Ansökan om tillstånd till verksamhet eller åtgärd som inte får utföras utan tillstånd enligt föreskrifter för naturoch kulturreservat eller vattenskyddsområde enligt 7 kap 7 § miljöbalken och 9 § förordning (1998:1252) om områdesskydd
+
+4H
+
+Ansökan om dispens från förbudet att bedriva en verksamhet eller vidta en åtgärd som kan skada naturmiljön inom ett biotopskyddsområde enligt 7 kap 11 § 2 st miljöbalken
+
+4H
+
+ANMÄLAN
+
+Anmälan om en verksamhet eller åtgärd inom natur- och kulturreservat eller vattenskyddsområde som kräver anmälan enligt föreskrifter för natur- och kulturreservat eller vattenskyddsområde.
+
+2H
+
+Anmälan för samråd av en åtgärd som inte omfattas av tillstånds- eller anmälningsplikt enligt andra bestämmelser i miljöbalken och som kan komma att väsentligt ändra naturmiljön enligt 12 kap. 6 § miljöbalken
+
+2H
+
+TILLSYN
+
+Tillsyn över naturreservat, kulturreservat, naturminnen, biotopskyddsområden, vattenskyddsområden som kommunen har beslutat om, djur- och växtskyddsområden som kommunen har meddelat föreskrifter om, område eller föremål som omfattas av ett interimistiskt beslut meddelat av kommunen enligt 7 kap 24 § miljöbalken, strandskydd utom det som länsstyrelsen har tillsyn över när det gäller väg- och järnvägsanläggningar enligt 2 kap 9 § miljötillsynsförordningen (2011:13)
+
+tim
+
+Tillsyn av skyddade områden enligt 7 kap miljöbalken som har beslutats av länsstyrelsen, om länsstyrelsen har överlåtit uppgiften att utöva tillsyn enligt 1 kap 19-20 §§ och 2 kap 8 § miljötillsynsförordningen (2011:13)
+
+tim
+
+Övrig tillsyn av skötsel av jordbruksmark och annan markanvändning i jordbruket och som inte omfattas av taxebilaga 2, enligt 2 kap 8 § miljötillsynsförordningen (2011:13)
+
+tim
+
+9 KAP MILJÖFARLIG VERKSAMHET
+
+Avgiftsnivå
+
+PRÖVNING
+
+Ansökan om inrättande av avloppsanordning eller anslutning av vattentoalett enligt 13 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd avseende
+
+1.
+
+Inrättande av vattentoalett till sluten tank
+
+4H
+
+2.
+
+Anslutning av vattentoalett till befintlig avloppsanordning
+
+4H
+
+3.
+
+Inrättande av flera avloppsanordningar på samma fastighet och vid samma tillfälle
+
+8H
+
+4.
+
+Inrättande av avloppsanordning med vattentoalett för 5 personekvivalenter
+
+6H
+
+5.
+
+Inrättande av gemensam avloppsanordning för 6 - 25 personekvivalenter
+
+8H
+
+6.
+
+Inrättande av gemensam avloppsanordning för 26 - 100 personekvivalenter (90.21-a)
+
+10H
+
+7.
+
+Inrättande av gemensam avloppsanordning för 101 - 200 personekvivalenter (90.21-b)
+
+15H
+
+Ansökan om att inrätta annat slags toalett än vattentoalett enligt 13 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+2H
+
+Ansökan enligt 17 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd att inrätta värmepumpsanläggning för utvinning av värme ur mark, ytvatten eller grundvatten enligt vad kommunen föreskrivit.
+
+3H
+
+Ansökan om att hålla vissa djur inom område med detaljplan eller områdesbestämmelser enligt 39 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+2H
+
+Ansökan om dispens i andra frågor enligt lokala föreskrifter för Tranås kommun avseende skydd för människors hälsa och miljön meddelade med stöd av 40 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd.
+
+4H
+
+ANMÄLAN
+
+Anmälan om miljöfarlig verksamhet enligt 9 kap 6 § miljöbalken, 1 kap 10 § miljöprövningsförordningen (2013:251) avseende: 1.
+
+Inrättande av avloppsanordning utan vattentoalett enligt 13 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+4H
+
+2.
+
+1. Inrättande av avloppsanordning som avser dagvattensanläggning enligt 13 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+7H
+
+3.
+
+Ändring av avloppsanordning enligt 14 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+4H
+
+4.
+
+Anmälan om inrättande av annan slags toalett än vattentoalett enligt 40 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+2H
+
+Anmälan enligt 17 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd att inrätta värmepumpsanläggning för utvinning av värme ur mark, ytvatten eller grundvatten.
+
+2H
+
+Anmälan om att anlägga gödselstad eller annan upplagsplats för djurspillning inom detaljplan enligt 37 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+2H
+
+Anmälan om spridning av naturlig gödsel, slam och annan orenlighet inom område med detaljplan eller intill sådant område enligt 40 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+2H
+
+Anmälan i andra frågor enligt lokala föreskrifter för Tranås kommun avseende skydd för människors hälsa och miljön, meddelade med stöd av 40 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd.
+
+2H
+
+Anmälan enligt 38 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd om att driva och arrangera: 1.
+
+Verksamhet där allmänheten yrkesmässigt erbjuds hygienisk behandling som innebär risk för blodsmitta eller annan smitta på grund av användningen av skalpeller, akupunkturnålar, piercingsverktyg eller andra liknande skärande eller stickande verktyg. T.ex. tatuering, piercing, kosmetisk tatuering, microblading, microneedling, fotvård, öronhåltagning med kasett, akupunktur, barberare, manikyr/pedikyr
+
+1.1 Ny verksamhet
+
+2.
+
+4H
+
+Badanläggningar
+
+2.1 Simhall, äventyrs-/ upplevelsebad eller bassängbad som är upplåtna åt allmänheten eller som annars används av många människor
+
+4H
+
+Avgiftsnivå
+
+2.2 Anläggning med enbart bubbelpool eller liknande där rening eller desinficering av vatten sker 3.
+
+2H
+
+Anmälan enligt 38 a § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+3.1 Anmälan om att uppföra eller använda kyltorn.
+
+4.
+
+4H
+
+Lokaler för undervisning eller omhändertagande
+
+4.1 Skola med mer än 400 elever
+
+10H
+
+4.2 Skola med högst 300 elever
+
+8H
+
+4.3 Förskola, öppen förskola, fritidshem, öppen fritidsverksamhet, förskoleklass
+
+8H
+
+Anmälan om Strålskydd
+
+Anmälan enligt 5 kap 8 § strålskyddsförordningen om att yrkesmässigt upplåta ett kosmetiskt solarie
+
+4H
+
+TILLSYN
+
+Annan verksamhet enligt 26 kap 3 § 3 st miljöbalken, 2 kap 31-32 §§ och 1 kap 11 § miljötillsynsförordningen (2011:13)
+
+Taxebilaga 2
+
+Avloppsanordningar som kräver tillstånd eller anmälan enligt 13-14 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+1.
+
+Avloppsanordning för upp till 5 personekvivalenter
+
+tim
+
+2.
+
+Avloppsanordning för 6 - 25 personekvivalenter
+
+tim
+
+3.
+
+Avloppsanordning för 26 - 100 personekvivalenter (90.21-a)
+
+tim
+
+4.
+
+Avloppsanordning för 101 - 200 personekvivalenter (90.21-b)
+
+tim
+
+Byggnader, lokaler och anläggningar enligt 45 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd 1.
+
+Byggnader som innehåller en eller flera bostäder och tillhörande utrymmen
+
+tim
+
+2.
+
+Samlingslokaler där många människor samlas eller lokaler för vård eller annat omhändertagande
+
+tim
+
+3.
+
+Hotell, kursgård med övernattning, folkhögskola med boende, vandrarhem, bed & breakfast och liknande lokaler där allmänheten yrkesmässigt erbjuds tillfällig bostad
+
+tim
+
+4.
+
+Idrottsanläggningar, campinganläggningar och andra liknande anläggningar som är upplåtna för allmänheten eller som annars utnyttjas av många människor
+
+tim
+
+5.
+
+Strandbad eller enklare badanläggningar som upplåts till allmänheten eller nyttjas av många människor
+
+tim
+
+6.
+
+Hygieniska verksamheter: Sjukgymnastik, kiropraktik, naprapat, massage, zonterapi, frisörer, (här ingår också tillsyn över kosmetiska och hygieniska produkter) samt övriga hygiensiska verksamheter som yrkesmässigt erbjuder behandling som kan påverka människors hälsa som inte enbart omfattas av lagen (2021:363) om estetiska kirurgiska ingrepp och estetiska injektionsbehandlingar.
+
+tim
+
+Lokaler för förvaring av djur
+
+tim
+
+7.
+
+Övrig tillsyn enligt 45 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd
+
+tim
+
+Strålskydd
+
+Handläggning av radonärenden rörande bostäder och lokaler där allmänheten har tillträde enligt 8 kap 2 punkt 3 strålskyddsförordningen (2018:506), 9 kap 9 § och 26 kap 3 § 3 st miljöbalken
+
+tim
+
+Avgiftsnivå
+
+10 KAP MILJÖSKADOR
+
+ANMÄLAN
+
+Anmälan om avhjälpande åtgärd med anledning av en föroreningsskada i ett mark- eller vattenområde, grundvatten eller byggnad eller en anläggning enligt 28 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd.
+
+tim
+
+Handläggning enligt 10 kap. 11-14 §§ miljöbalken med anledning av underrättelse om allvarlig miljöskada
+
+tim
+
+TILLSYN
+
+Underrättelse om upptäckt av en förorening på en fastighet och föroreningen kan medföra skada eller olägenhet för människors hälsa eller miljön enligt 10 kap 11 § miljöbalken
+
+tim
+
+Underrättelse om upptäckt av en överhängande fara för att en verksamhet eller åtgärd medför en allvarlig miljöskada enligt 10 kap 12 och 14 §§ miljöbalken
+
+tim
+
+Underrättelse om upptäckt av att en allvarlig miljöskada har uppstått enligt 10 kap 13 och 14 §§ miljöbalken
+
+tim
+
+Föroreningsskador som inte omfattas av länsstyrelsens ansvar enligt 2 kap. 31 § punkt 3 miljötillsynsförordningen (2011:13)
+
+tim
+
+Övrig tillsyn av miljöskador enligt 10 kap. miljöbalken, om skadorna har orsakats av en verksamhet eller åtgärd som den kommunala nämnden har tillsynsansvaret för enligt 2 kap 31 § punkt 4 miljötillsynsförordningen (2011:13)
+
+tim
+
+11 KAP VATTENVERKSAMHET
+
+länsstyrelsen
+
+12 KAP JORDBRUK OCH ANNAN VERKSAMHET
+
+Taxebilaga 2
+
+14 KAP KEMISKA PRODUKTER OCH BIOTEKNISKA ORGANISMER
+
+PRÖVNING
+
+Ansökan om dispens från förbudet att använda växtskyddsmedel på ängs- eller betesmark som inte är lämplig att plöja men som kan användas till slåtter eller bete enligt 2 kap 37, 39 §§ förordning (2014:425) om bekämpningsmedel
+
+4H
+
+Ansökan om särskilt tillstånd att yrkesmässigt använda växtskyddsmedel enligt 2 kap 40 § förordning (2014:425) om bekämpningsmedel
+
+4H
+
+Ansökan om tillstånd att yrkesmässigt använda växtskyddsmedel inom ett vattenskyddsområde som har inrättats före den 1 januari 2018 eller där föreskrifterna inte har ändrats efter den 1 januari 2018 enligt 6 kap 1 och 2 §§ (NFS 2015:2)
+
+4H
+
+Ansökan om undantag från bestämmelserna om information och underrättelse vid spridning av vissa biocidprodukter i 4 kap 1-3 §§ enligt 4 kap 4 § (NFS 2015:3)
+
+4H
+
+Ansökan om dispens från kravet om avlägsnande av PCB-produkt i byggnader och anläggningar enlig 17 b § förordningen (2007:19) om PCB mm
+
+4H
+
+ANMÄLAN
+
+Anmälan om yrkesmässig användning av växtskyddsmedel enligt 2 kap 41 § förordning (2014:425) om bekämpningsmedel
+
+5H
+
+Anmälan om avlägsnande av fogmassa eller halkskyddad golvmassa som innehåller PCB enligt 18 § förordningen (2007:19) om PCB m.m.
+
+4H
+
+TILLSYN
+
+Underrättelse i samband med spridning av vissa biocidprodukter på en plats som allmänheten har tillträde till 4 kap 2 § (NFS 2015:3) och 26 kap 9 § miljöbalken
+
+4H
+
+Underrättelse vid olyckor då en större mängd växtskyddsmedel läckt ut eller kan befaras läcka ut enligt 9 kap 1 § Naturvårdsverkets föreskrifter om spridning och viss övrig hantering av växtskyddsmedel (NFS 2015:2)
+
+tim
+
+Underrättelse om vattentäkt, grundvatten eller en sjö eller ett vattendrag befaras bli förorenat av växtskyddsmedel enligt 9 kap 3 § Naturvårdsverkets föreskrifter om spridning och viss övrig hantering av växtskyddsmedel (NFS 2015:2)
+
+tim
+
+Avgiftsnivå
+
+Underrättelse och samråd innan installation eller konvertering sker av sådan utrustning som innehåller 14 ton koldioxidekvivalenter f-gas eller mer enligt 14 § förordningen (2016:1128) om fluorerade växthusgaser
+
+4H
+
+Återkommande registrering och kontroll av inlämnad kontrollrapport enligt 15 § förordningen (2016:1128) om fluorerade växthusgaser.
+
+1,5 H
+
+Information innan installation påbörjas eller hantering inleds av brandfarliga vätskor eller spillolja i cistern ovan eller i mark som rymmer mer än 1 m3 vätska med tillhörande rörledningar enligt 3 kap 1 § 1 st (NFS 2021:10)
+
+2H
+
+Information innan hantering inleds av brandfarliga vätskor eller spillolja i cistern ovan eller i mark som rymmer mer än 250 liter brandfarliga vätskor eller spillolja med tillhörande rörledningar enligt 3 kap 1 § 1 st (NFS 2021:10)
+
+2H
+
+Information om cistern som tagits ur bruk enligt 6 kap 1 § (NFS 2021:10)
+
+Ingen avgift
+
+Hantering av kemiska produkter, biotekniska organismer och varor i andra verksamheter än miljöfarliga verksamheter enligt 9 kap miljöbalken, utom den tillsyn som Kemikalieinspektionen utövar, enligt 2 kap 31 § punkt 5 miljötillsynsförordningen (2011:13)
+
+tim
+
+Kosmetiska produkter, de uppgifter som enligt artiklarna 24, 25.1, 25.5 första stycket, 26, 27.1 och 27.5 i förordning (EG) nr 1223/2009 ska skötas av behörig myndighet, samt rådgöra med Läkemedelsverket innan åtgärder vidtas enligt artikel 27.1 i förordningen, 2 kap 34 § miljötillsynsförordningen (2011:13)
+
+tim
+
+Övrig tillsyn av kemiska produkter och biotekniska organismer enligt 2 kap 31-32 §§ miljötillsynsförordningen (2011:13)
+
+tim
+
+15 KAP AVFALL OCH PRODUCENTANSVAR
+
+PRÖVNING
+
+Ansökan om dispens från förbudet att hantera avfall när kommunen ska ansvara för en viss hantering av avfall enligt 15 kap. 25 § punkt 1 miljöbalken (1998:808)
+
+2H
+
+Ansökan om tillstånd från en fastighetsinnehavare att på fastigheten själv återvinna eller bortskaffa avfall även om ett sådant tillstånd inte krävs enligt 15 kap. 25 § punkt 2 miljöbalken (1998:808)
+
+2H
+
+Ansökan om undantag från kommunens föreskrifter om avfallshantering enligt 9 kap 2 § avfallsförordningen (2020:614). Ansökan som avser uppehåll i hämtning.
+
+2H
+
+Ansökan om undantag från kommunens föreskrifter om avfallshantering enligt 9 kap 2 § avfallsförordningen (2020:614). Ansökan som avser befrielse eller eget omhändertagande
+
+4H
+
+Ansökan om dispens, enligt 3 kap 15 § avfallsförordningen (2020:614), från kraven på utsortering av bygg- och rivningsavfall i 3 kap 10 och 12 §§ avfallsförordningen
+
+4H
+
+Ansökan om dispens, enligt 3 kap 15a § avfallsförordningen (2020:614), från kravet på att skilja förpackningar från innehåll som är avfall i 3 kap 4a § avfallsförordningen
+
+4H
+
+Ansökan om dispens, enligt 3 kap 15b § avfallsförordningen (2020:614), från kravet på utsortering av bioavfall i 3 kap 1 § avfallsförordningen
+
+4H
+
+Övriga ansökningar enligt 9 kap 1-2 §§ avfallsförordning (2020:614)
+
+2H
+
+ANMÄLAN
+
+Anmälan enligt 5 kap 15 § avfallsförordningen (2020:614) från fastighetsinnehavare eller nyttjanderättshavare att på fastigheten själv kompostera eller på annat sätt behandla annat avfall än trädgårdsavfall som kommunen ansvarar för enligt 15 kap. 20 § miljöbalken
+
+2H
+
+Avser ej handläggning av anmälan om kompostering vid en- och tvåfamiljsbostäder Anmälan från fastighetsinnehavare att enligt kommunens föreskrifter om avfallshantering på fastigheten själv återvinna eller bortskaffa avfall enligt 9 kap. 2 § avfallsförordningen (2020:614)
+
+2H
+
+Anmälan om undantag från kommunens föreskrifter om avfallshantering enligt 9 kap 2 § avfallsförordningen (2020:614)
+
+2H
+
+Övriga anmälningar enligt 9 kap 1-2 §§ avfallsförordning (2020:614)
+
+2H
+
+TILLSYN
+
+Verksamheter som yrkesmässigt samlar in eller transporterar avfall enligt 1 kap 10 a § miljötillsynsförordningen (2011:13)
+
+2H
+
+Yrkesmässig verksamhet där farligt avfall uppkommer som ett led i den yrkesmässiga verksamheten enligt 1 kap 10 a § miljötillsynsförordningen (2011:13)
+
+2H
+
+Avgiftsnivå
+
+Insamlingsplatser för avfall, t.ex. återvinningsstationer för insamling av avfall med producentansvar
+
+1H
+
+Nedskräpning utomhus enligt 15 kap 26 § miljöbalken
+
+4H
+
+Tillsyn enligt lokala avfallsföreskrifter för den egna kommunen
+
+tim
+
+Övrig tillsyn av avfall enligt 26 kap 3 § 3 stycket miljöbalken
+
+tim
+
+ÖVRIGT
+
+Tillsyn i övrigt för verksamhet eller åtgärd som inte finns angiven i bilagorna (22 § i taxebestämmelserna)
+
+tim
+
+Taxebilaga 2
+
+I denna taxebilaga anges lagrummet i miljöprövningsförordningen (2013:251) samt verksamhetskod för sådana verksamheter som omfattas av bestämmelserna i miljöprövningsförordningen. Övriga verksamheter har fått koder angivna på samma sätt som i tidigare taxebilaga, eller på nytt sätt som bättre följer SKR:s förslag. När det gäller information om ändrade lydelser och översättning av tidigare koder till nya verksamhetskoder i miljöprövningsförordningen hänvisas till den översättningsnyckel som Naturvårdsverket har tagit fram.
+
+För de verksamheter där årligt tillsynsbesök kan krävas enligt 1 kap 10 a § miljötillsynsförordningen (2011:13) anges aktuell IED-kod.
+
+Följande förkortningar används i tabellen:
+
+MPF = Miljöprövningsförordning (2013:251) uppdaterad t. o. m. SFS 2025:660 VK =
+
+Verksamhetskod
+
+IED = IED-kod (anges när sådan finns)
+
+T=
+
+Tidsfaktor i timmar (årlig avgift, förskottsdebitering)
+
+tim =
+
+Timavgift (enligt 8 §, efterhandsdebitering)
+
+PN =
+
+Prövningsnivå
+
+B = tillståndsplikt
+
+C = anmälningsplikt
+
+U = utan prövnings- eller anmälningsplikt
+
+MPF
+
+VK
+
+IED
+
+T
+
+PN Beskrivning
+
+2 KAP JORDBRUK
+
+Djurhållning
+
+2 kap 1 §
+
+2 kap 2 §
+
+1.10-i
+
+1.11
+
+6.6a-c
+
+-
+
+B
+
+B
+
+Anläggning för djurhållning med
+
+1.
+
+mer än 40 000 platser för fjäderfän,
+
+2.
+
+mer än 2 000 platser för växande grisar som är tyngre än 30 kilogram och avsedda för produktion, eller
+
+3.
+
+mer än 750 platser för suggor.
+
+Anläggning med stadigvarande djurhållning av nötkreatur, hästar eller minkar med mer än 400 djurenheter, dock inte inhägnad.
+
+Med en djurenhet avses
+
+1.
+
+en mjölkko eller sinko inklusive kalv upp till en månads ålder,
+
+2.
+
+sex kalvar från en månads upp till sex månaders ålder,
+
+3.
+
+tre övriga nöt, sex månader eller äldre,
+
+4.
+
+en häst, inklusive föl upp till sex månaders ålder, eller
+
+5.
+
+tio minkhonor för avel, inklusive valpar upp till åtta månaders ålder och avelshannar.
+
+2 kap 3 §
+
+1.20
+
+-
+
+C
+
+Anläggning med stadigvarande djurhållning med mer än 100 djurenheter, dock inte inhägnad. a) b)
+
+mer än 200 men högst 400 djurenheter mer än 100 men högst 200 djurenheter
+
+Med en djurenhet avses
+
+1.
+
+2.
+
+3.
+
+4.
+
+en mjölkko eller sinko, inklusive kalv upp till en månads ålder, sex kalvar från en månads upp till sex månaders ålder, tre övriga nöt, sex månader eller äldre, tre suggor eller betäckta gyltor, inklusive smågrisar upp till tolv veckors ålder,
+
+5. tio slaktsvin, obetäckta gyltor eller avelsgaltar, tolv veckor eller äldre,
+
+6. en häst, inklusive föl upp till sex månaders ålder,
+
+7. tio minkhonor för avel, inklusive valpar upp till åtta månaders ålder och avelshannar,
+
+8. etthundra kaniner,
+
+9. etthundra värphöns eller kycklingmödrar, sexton veckor eller äldre,
+
+10. tvåhundra unghöns upp till sexton veckors ålder,
+
+11. tvåhundra slaktkycklingar,
+
+12. etthundra kalkoner, gäss eller ankor, inklusive kycklingar och ungar upp till en veckas ålder,
+
+13. femton strutsfåglar av arterna struts, emu eller nandu, inklusive kycklingar upp till en veckas ålder,
+
+14. tio får eller getter, sex månader eller äldre,
+
+15. fyrtio lamm eller killingar upp till sex månaders ålder, eller
+
+16. i fråga om andra djurarter, det antal djur som har en årlig sammanlagd utsöndring motsvarande 100 kilogram kväve eller 13 kilogram fosfor i färsk träck eller urin.
+
+Vid beräkningen av antalet djur enligt första stycket 16 ska det alternativ av kväve eller fosfor väljas som ger det lägsta antalet djur.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 1 eller 2 § eller endast avser renskötsel.
+
+Uppodling av annan mark än jordbruksmark för jordbruksproduktion
+
+2 kap 4 §
+
+1.30
+
+-
+
+3H
+
+C
+
+Uppodling av annan mark än jordbruksmark för produktion av foder, livsmedel eller annan liknande jordbruksproduktion.
+
+3 KAP FISKODLING OCH ÖVERVINTRING AV FISK
+
+3 kap 1 §
+
+5.10
+
+-
+
+B
+
+Fiskodling eller övervintring av fisk där mer än 40 ton foder förbrukas per kalenderår.
+
+3 kap 2 §
+
+5.20
+
+-
+
+C
+
+Fiskodling eller övervintring av fisk där mer än 1,5 ton foder förbrukas per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+1 §.
+
+4 KAP UTVINNING, BRYTNING OCH BEARBETNING AV TORV, OLJA, GAS,
+
+KOL, MALM, MINERAL, BERG, NATURGRUS OCH ANNAT
+
+Berg, naturgrus och andra jordarter
+
+4 kap 1 §
+
+10.10
+
+-
+
+B
+
+Täkt av torv med ett verksamhetsområde som är större än 150 hektar, om verksamheten inte endast innebär uppläggning och bortforsling av redan utbrutet och bearbetat material efter det att tillsynsmyndigheten meddelat beslut om att täkten är avslutad.
+
+4 kap 2 §
+
+10.11
+
+4 kap 3 §
+
+10.20
+
+-
+
+B
+
+Täkt av berg, naturgrus eller andra jordarter, förutom torv, med ett verksamhetsområde som är större än 25 hektar, om verksamheten inte endast innebär uppläggning och bortforsling av redan utbrutet och bearbetat material efter det att tillsynsmyndigheten meddelat beslut om att täkten är avslutad
+
+B
+
+Täkt för annat än markinnehavarens husbebehov av berg, naturgrus eller andra jordarter, om verksamheten inte
+
+1.
+
+är tillståndspliktig enligt lagen (1966:314) om kontinentalsockeln,
+
+2.
+
+är tillståndspliktig enligt 1 eller 2 §, eller
+
+3.
+
+endast innebär uppläggning och bortforsling av redan utbrutet och bearbetat material efter det att tillsynsmyndigheten meddelat beslut om att täkten är avslutad.
+
+4 kap 4 §
+
+10.30
+
+-
+
+C
+
+Täkt för markinnehavarens husbehov av mer än 10 000 ton totalt uttagen mängd naturgrus.
+
+4 kap 5 §
+
+10.40
+
+-
+
+C
+
+Täkt för markinnehavarens husbehov av
+
+1.
+
+mer än 10 000 ton totalt uttagen mängd berg,
+
+2.
+
+torv med ett verksamhetsområde större än 5 hektar, eller
+
+3.
+
+mer än 50 000 kubikmeter totalt uttagen mängd torv.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 1 eller 2 §.
+
+4 kap 6 §
+
+4 kap 7 §
+
+10.50
+
+10.60
+
+-
+
+-
+
+C
+
+C
+
+Anläggning för sortering eller krossning av berg, naturgrus eller andra jordarter
+
+1.
+
+inom område som omfattas av detaljplan eller områdesbestämmelser, eller
+
+2.
+
+utanför område som omfattas av detaljplan eller områdesbestämmelser, om verksamheten bedrivs på samma plats under en längre tid än trettio kalenderdagar under en tolvmånadersperiod.
+
+Anläggning för framställning, bearbetning eller omvandling av bränsle eller bränsleprodukt som baseras på mer än 500 ton torv per kalenderår.
+
+Råpetroleum, naturgas och kol
+
+4 kap 9 §
+
+11.20
+
+-
+
+B
+
+Utvinning av råolja eller naturgas inom andra områden än de som avses i
+
+8 §.
+
+4 kap 10 §
+
+11.30
+
+-
+
+C
+
+Industriell tillverkning av briketter av kol eller brunkol.
+
+Malm och mineral
+
+4 kap 13 §
+
+13.30
+
+-
+
+B
+
+Anläggning för rostning eller sintring av metallhaltig malm för provändamål.
+
+4 kap 15 §
+
+13.50
+
+-
+
+B
+
+Provbrytning inklusive annan bearbetning eller anrikning av malm, mineral eller kol än rostning och sintring.
+
+4 kap 16 §
+
+13.60
+
+-
+
+B
+
+Anläggning för utvinning av asbest.
+
+Annan utvinningsindustri
+
+4 kap 17 §
+
+13.70
+
+-
+
+C
+
+Djupborrning som inte är tillståndspliktig enligt 8 eller 9 §.
+
+5 KAP LIVSMEDEL OCH FODER
+
+Slakterier
+
+5 kap 1 §
+
+15.10-i
+
+6.4a
+
+B
+
+Slakteri med en produktion baserad på en slaktvikt av mer än 50 ton per dygn eller mer än 12 500 ton slaktvikt per kalenderår a) b)
+
+Mer än 50 000 ton slaktvikt per kalenderår.
+
+Mer än 12 500 men högst 50 000 ton slaktvikt per kalenderår.
+
+5 kap 2 §
+
+15.20
+
+-
+
+B
+
+Slakteri med en produktion baserad på mer än 7 500 ton men högst 12 500 ton slaktvikt per kalenderår.
+
+5 kap 3 §
+
+15.30
+
+-
+
+C
+
+Slakteri med en produktion baserad på mer än 50 ton men högst 7 500 ton slaktvikt per kalenderår.
+
+Livsmedel och foder av animaliska råvaror
+
+5 kap 4 §
+
+15.40-i
+
+6.4bi
+
+B
+
+Anläggning för framställning av livsmedel eller foder med beredning och behandling av enbart animaliska råvaror med en produktion av mer än 75 ton per dygn eller mer än 18 750 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten endast avser mjölkprodukter eller endast innebär paketering.
+
+5 kap 5 §
+
+15.45
+
+-
+
+B
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart animaliska råvaror med en produktion av mer än 2 000 ton men högst 18 750 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten endast avser mjölkprodukter eller glass eller endast innebär paketering.
+
+5 kap 6 §
+
+15.50
+
+-
+
+C
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart animaliska råvaror med en produktion av mer än 50 ton men högst 2 000 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten endast avser mjölkprodukter eller glass eller endast innebär paketering.
+
+5 kap 6 a §
+
+a)
+
+b)
+
+15.65
+
+C
+
+Beredning och behandling med en produktion av mer än 500 ton men högst 2000 ton per kalenderår.
+
+Beredning och behandling med en produktion av mer än 50 ton men högst 500 ton per kalenderår.
+
+Anläggning för framställning av foder med beredning och behandling av enbart animaliska råvaror med en produktion av mer än 500 ton men högst 18 750 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten
+
+1. är tillståndspliktig enligt 4 §,
+
+2. endast avser mjölk, eller
+
+3. endast innebär paketering.
+
+a)
+
+b)
+
+Beredning och behandling med en produktion av mer än 5 000 ton men högst 18 750 ton per kalenderår.
+
+Beredning och behandling med en produktion av mer än 500 ton men högst 5 000 ton per kalenderår.
+
+Rökeri
+
+5 kap 7 §
+
+15.80
+
+-
+
+C
+
+Rökeri för en produktion av mer än 50 ton men högst 18 750 ton per kalenderår.
+
+a)
+
+b)
+
+Mer än 500 ton men högst 18 750 ton rökta produkter per kalenderår.
+
+Mer än 50 ton men högst 500 ton rökta produkter per kalenderår.
+
+Livsmedel och foder av vegetabiliska råvaror
+
+5 kap 8 §
+
+15.90-i
+
+6,4bii
+
+B
+
+Anläggning för framställning av livsmedel eller foder med beredning och behandling av enbart vegetabiliska råvaror med en produktion av
+
+1.
+
+mer än 75 000 ton produkter per kalenderår, eller
+
+2.
+
+mer än a)
+
+600 ton per dygn om anläggningen är i drift högst 90 dygn i rad under ett kalenderår.
+
+b)
+
+300 ton per dygn i övriga fall
+
+Tillståndsplikten gäller inte om verksamheten endast innebär paketering. 5 kap 9 §
+
+15.95
+
+-
+
+B
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart vegetabiliska råvaror med en produktion av mer än 10 000 ton men högst 75 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten
+
+5 kap 10 §
+
+15.101
+
+-
+
+C
+
+1.
+
+är tillståndspliktig enligt 8 §, eller
+
+2.
+
+endast avser kvarnprodukter, glass, råsprit, alkoholhaltig dryck, malt, maltdryck, läskedryck, jäst eller kafferostning eller endast innebär paketering.
+
+Anläggning för framställning av livsmedel med beredning och behandling av enbart vegetabiliska råvaror med en produktion av mer än 2 000 ton men högst 10 000 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten
+
+5 kap 10a §
+
+15.115
+
+-
+
+C
+
+1.
+
+är tillståndspliktig enligt 8 §, eller
+
+2.
+
+endast avser kvarnprodukter, glass, råsprit, alkoholhaltig dryck, malt, maltdryck, läskedryck, jäst eller kafferostning eller endast innebär paketering.
+
+Anläggning för framställning av foder med beredning och behandling av enbart vegetabiliska råvaror med en produktion av mer än 5 000 ton men högst 75 000 ton produkter per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten
+
+1.
+
+är tillståndspliktig enligt 8 §,
+
+2.
+
+endast avser oljekakor från vegetabiliska oljor eller fetter, eller
+
+3.
+
+endast innebär paketering.
+
+Kvarnprodukter
+
+5 kap 11 §
+
+15.125
+
+-
+
+C
+
+Framställning av livsmedel med tillverkning av kvarnprodukter samt beredning och behandling av kvarnprodukter, med en produktion av mer än 1 000 ton men högst 75 000 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+8 § eller endast innebär paketering. a) b)
+
+Mer än 50 000 ton per kalenderår.
+
+Mer än 1 000 ton men högst 50 000 ton per kalenderår.
+
+Livsmedel och foder av kombinerade råvaror
+
+5 kap 12 §
+
+15.131-i
+
+6.4biii
+
+B
+
+Anläggning för framställning av livsmedel eller foder med beredning och behandling av både animaliska och vegetabiliska råvaror, i kombinerade eller separata produkter, med en produktion av en slutprodukt vars innehåll av animaliskt material uppgår till
+
+1.
+
+mer än 10 viktprocent och produktionen uppgår till mer än 75 ton per dygn eller mer än 18 750 ton per kalenderår, eller
+
+2.
+
+högst 10 viktprocent och produktionen uppgår till en mängd
+
+a) per dygn som i antal ton överstiger animalievärdet,
+
+b) per kalenderår som i antal ton överstiger talet 250 multiplicerat med animalievärdet.
+
+Med animalievärdet avses talet 300 minskat med det tal som bestäms genom att multiplicera 22,5 med talet för det animaliska materialets viktprocent av slutprodukten.
+
+Tillståndsplikten gäller inte om verksamheten innebär endast paketering. 5 kap 13 §
+
+15.141
+
+-
+
+B
+
+Anläggning för framställning av livsmedel med beredning och behandling av både animaliska och vegetabiliska råvaror, i kombinerade eller separata produkter, med en produktion av mer 5 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten
+
+1.
+
+2.
+
+5 kap 14 §
+
+15.151
+
+-
+
+C
+
+är tillståndspliktig enligt 12 §, eller endast avser glass eller endast innebär paketering.
+
+Anläggning för framställning av livsmedel med beredning och behandling av både animaliska och vegetabiliska råvaror, i kombinerade eller separata produkter, med en produktion av mer än 400 ton men högst 5 000 ton per år.
+
+Anmälningsplikten gäller inte om verksamheten
+
+1.
+
+2.
+
+5 kap 14a §
+
+15.155
+
+-
+
+C
+
+är tillståndspliktig enligt 12 §, eller endast avser glass eller endast innebär paketering.
+
+Anläggning för framställning av foder med beredning och behandling av både animaliska och vegetabiliska råvaror, i kombinerade eller separata produkter, med en produktion av mer än 500 ton men högst 18 750 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+12 § eller endast innebär paketering.
+
+1.
+
+2.
+
+Mer än 5 000 men högst 18 750 ton
+
+Mer 500 ton men högst 5 000 ton
+
+Mjölkprodukter
+
+5 kap 15 §
+
+15.170-i
+
+6.4c
+
+5 kap 16 §
+
+15.180
+
+-
+
+B
+
+Anläggning för framställning av mjölkprodukter med en produktion baserad på en invägning av mer än 200 ton per dygn som kalenderårsmedelvärde.
+
+C
+
+Anläggning för framställning av mjölkprodukter med en produktion baserad på en invägning av mer än 500 ton per kalenderår men högst 200 ton per dygn som kalenderårsmedelvärde.
+
+Anmälningsplikten gäller inte om verksamheten endast avser glass.
+
+a) b) c)
+
+Mer än 50 000 ton per kalenderår.
+
+Mer än 20 000 ton men högst 50 000 ton per kalenderår.
+
+Mer än 500 ton men högst 20 000 ton per kalenderår.
+
+Oljor och fetter
+
+5 kap 17 §
+
+15.185-i
+
+-
+
+B
+
+Anläggning för framställning eller raffinering av vegetabiliska eller animaliska oljor eller fetter eller produkter av sådana oljor eller fetter med en produktion av
+
+1.
+
+2.
+
+mer än 18 750 ton per kalenderår, om produktionen baseras på animaliska råvaror, eller mer än 75 000 ton per kalenderår, om produktionen baseras på enbart vegetabiliska råvaror.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 4, 5, 8, 9, 12, 13 eller 15 §.
+
+5 kap 18 §
+
+15.190
+
+-
+
+B
+
+Anläggning för framställning eller raffinering av vegetabiliska eller animaliska oljor eller fetter eller produkter av sådana oljor eller fetter med en produktion av
+
+1.
+
+mer än 5 000 ton men högst 18 750 ton per kalenderår, om produktionen baseras på animaliska råvaror, eller
+
+2.
+
+mer än 5 000 ton men högst 75 000 ton per kalenderår, om produktionen baseras på vegetabiliska råvaror.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 4, 5, 8, 9, 12, 13, 15 eller 17 §.
+
+5 kap 19 §
+
+15.200
+
+-
+
+C
+
+Anläggning för framställning eller raffinering av vegetabiliska eller animaliska oljor eller fetter eller produkter av sådana oljor eller fetter med en produktion av mer än 100 ton men högst 5 000 ton kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt 4, 5, 6, 8, 9, 10, 11, 12, 13 eller 14 § eller om verksamheten endast avser mjölkprodukter.
+
+Glass
+
+5 kap 20 §
+
+15.210
+
+-
+
+B
+
+Anläggning för tillverkning av glass med en produktion av
+
+1.
+
+mer än 15 000 ton men högst 18 750 ton per kalenderår om produktionen baseras på animaliska råvaror, eller
+
+2.
+
+mer än 15 000 ton men högst 75 000 ton per kalenderår om produktionen baseras på endast vegetabiliska råvaror.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 4, 8, 9, 12 eller 15 §.
+
+5 kap 21 §
+
+15.220
+
+-
+
+C
+
+Anläggning för tillverkning av glass med en produktion av mer än 10 ton men högst 15 000 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 4, 8, 9, 12 eller 15 §.
+
+Råsprit och alkoholhaltiga drycker
+
+5 kap 22 §
+
+15.230
+
+-
+
+B
+
+Anläggning för framställning av råsprit eller alkoholhaltig dryck genom jäsning eller destillation med en produktion av mer än 5 000 ton men högst 75 000 ton ren etanol per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 8 §.
+
+5 kap 23 §
+
+15.240
+
+-
+
+C
+
+Anläggning för framställning av råsprit eller alkoholhaltig dryck genom jäsning eller destillation motsvarande en årlig produktion av mer än 10 ton men högst 5 000 ton ren etanol per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+8 §.
+
+a) mer än 500 ton men högst 5000 ton ren etanol per kalenderår.
+
+b) mer än 100 ton men högst 500 ton ren etanol per kalenderår.
+
+c) mer än 10 ton men högst 100 ton ren etanol per kalenderår.
+
+Jäst
+
+5 kap 26 §
+
+15.270
+
+-
+
+B
+
+Tillverkning av jäst med en produktion av mer än 100 ton men högst
+
+75 000 ton per kalenderår eller för framställning av startkulturer av mikroorganismer för livsmedelsindustri eller jordbruk, om anläggningen har en sammanlagd reaktorvolym om minst tio kubikmeter.
+
+Tillståndsplikt gäller inte om verksamheten är tillståndspliktig enligt 8 §. Kafferostning
+
+5 kap 27 §
+
+15.280
+
+-
+
+C
+
+Anläggning för rostning av mer än 100 ton men högst 75 000 ton kaffe per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+8 §. a) b)
+
+Rostning av mer än 3 000 ton kaffe per kalenderår.
+
+Rostning av mer än 100 ton men högst 3 000 ton kaffe per kalenderår.
+
+Paketering av livsmedel
+
+5 kap 28 §
+
+15.310
+
+-
+
+C
+
+Anläggning för yrkesmässig industriell förpackning av animaliska eller vegetabiliska produkter som inte sker i någon tillstånds- eller anmälningspliktig verksamhet enligt någon av 1–27 §§.
+
+Malt, maltdrycker och läskedrycker
+
+5 kap 24 §
+
+15.250
+
+-
+
+B
+
+Bryggeri eller annan anläggning för framställning av malt, maltdryck eller läskedryck med en produktion av mer än 10 000 ton men högst 75 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 8 §.
+
+5 kap 25 §
+
+15.260
+
+-
+
+C
+
+Bryggeri eller annan anläggning för framställning av malt, maltdryck eller läskedryck med en produktion av mer än 1 000 ton men högst 10 000 ton per kalenderår. Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 8 §.
+
+6 KAP TEXTILVAROR
+
+6 kap 1 §
+
+17.10-i
+
+6,2
+
+B
+
+Anläggning för förbehandling eller färgning av mer än 10 ton textilfibrer eller textilier per dygn eller mer än 2 500 ton textilfibrer eller textilier per kalenderår.
+
+6 kap 2 §
+
+17.20
+
+-
+
+B
+
+Anläggning för förbehandling eller färgning av mer än 200 ton men högst 2 500 ton textilfibrer eller textilier per kalenderår eller för annan beredning av mer än 200 ton textilmaterial per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten
+
+1.
+
+är tillståndspliktig enligt 1 §, eller
+
+2.
+
+inte medför utsläpp av avloppsvatten eller utsläpp till luft av mer än 3 ton flyktiga organiska föreningar per kalenderår. a) b)
+
+6 kap 3 §
+
+17.30
+
+-
+
+C
+
+hantering av mer än 1 000 ton men högst 2 500 ton textilfibrer eller textilier per kalenderår hantering av mer än 200 ton men högst 1000 ton textilfibrer eller textilier per kalenderår
+
+Anläggning för förbehandling, färgning eller annan beredning av mer än 10 ton men högst 200 ton textilmaterial per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 1 §.
+
+7 KAP PÄLS, SKINN OCH LÄDER
+
+7 kap 1 §
+
+18.10-i
+
+6,3
+
+B
+
+Anläggning för garvning av mer än 12 ton hudar eller skinn per dygn eller mer än 3 000 ton hudar eller skinn per kalenderår.
+
+7 kap 2 §
+
+18.20
+
+-
+
+B
+
+Anläggning för garvning av mer än 100 ton men högst 3 000 ton hudar eller skinn per kalenderår eller för annan beredning av mer än 100 ton hudar eller skinn.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 1 §. a) b) c)
+
+7 kap 3 §
+
+18.30
+
+-
+
+C
+
+garvning av mer än 1 000 ton produkter per kalenderår garvning av mer än 100 ton men högst 1 000 ton produkter per kalenderår annan beredning av hudar och skinn än garvning
+
+Anläggning för garvning eller annan beredning av mer än 2 ton men högst 100 ton hudar eller skinn per kalenderår. Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 1 §.
+
+8 KAP TRÄVAROR
+
+Kemikaliebehandling av trä och träprodukter
+
+8 kap 1 §
+
+20.05-i
+
+6.10
+
+B
+
+Anläggning för behandling av trä eller träprodukter med kemikalier med en produktion av mer än 75 kubikmeter behandlat trä eller träprodukter per dygn eller mer än 18 750 kubikmeter behandlat trä eller träprodukter per kalenderår.
+
+Tillståndsplikt gäller inte om verksamheten endast avser behandling mot blånadssvamp.
+
+8 kap 2 §
+
+20.10
+
+-
+
+C
+
+Anläggning för behandling av trä eller träprodukter med kemikalier med en produktion av högst 75 kubikmeter behandlat trä eller träprodukter per dygn eller högst 18 750 kubikmeter behandlat trä eller träprodukter per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten endast avser behandling mot blånadssvamp.
+
+Sågning, hyvling och svarvning av trä
+
+8 kap 3 §
+
+20.20
+
+-
+
+B
+
+Sågverk eller annan anläggning för tillverkning av träprodukter genom sågning, hyvling eller svarvning för en produktion av mer än 70 000 kubikmeter per kalenderår. a) b) c)
+
+mer än 500 000 kubikmeter per kalenderår mer än 200 000 kubikmeter men högst 500 000 kubikmeter per kalenderår mer än 70 000 kubikmeter men högst 200 000 kubikmeter per kalenderår.
+
+8 kap 4 §
+
+20.30
+
+-
+
+C
+
+Sågverk eller annan anläggning för tillverkning av träprodukter genom sågning, hyvling eller svarvning för en produktion av mer än 6 000 kubikmeter per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten inte är tillståndspliktig enligt 3 §.
+
+Sågverk
+
+a)
+
+b)
+
+mer än 30 000 kubikmeter men högst 70 000 kubikmeter per kalenderår mer än 6 000 kubikmeter men högst 30 000 kubikmeter per kalenderår
+
+Annan anläggning
+
+a)
+
+b)
+
+mer än 30 000 kubikmeter men högst 70 000 kubikmeter per kalenderår mer än 6 000 kubikmeter men högst 30 000 kubikmeter per kalenderår
+
+Träbaserade bränslen och bränslen av jordbruksprodukter
+
+8 kap 5 §
+
+20.40
+
+-
+
+C
+
+Anläggning för framställning eller bearbetning av träbaserat bränsle, eller av bränsleprodukter som är baserade på skogs- eller jordbruksprodukter, i form av
+
+1. träull, trämjöl, flis, spån eller liknande, baserad på mer än 1 000 kubikmeter fast mått eller 3 000 kubikmeter löst mått råvara per kalenderår, eller
+
+2. pellets eller briketter, baserad på mer än 5 000 kubikmeter råvara per kalenderår.
+
+Anmälningsplikten gäller inte tillfällig flisning. a)
+
+b)
+
+c)
+
+d)
+
+e)
+
+träull, trämjöl, flis, spån eller liknande, baserad på mer än
+
+100 000 kubikmeter fast mått eller på mer än 150 000 kubikmeter löst mått råvara per kalenderår. träull, trämjöl, flis, spån eller liknande, baserad på mer än
+
+30 000 men högst 100 000 kubikmeter fast mått eller på mer än
+
+50 000 men högst 150 000 kubikmeter löst mått råvara per kalenderår. träull, trämjöl, flis, spån eller liknande, baserad på mer än
+
+10 000 kubikmeter men högst 30 000 kubikmeter fast mått eller på mer än 20 000 men högst 50 000 kubikmeter löst mått råvara per kalenderår. träull, trämjöl, flis, spån eller liknande, baserad på mer än 1 000 kubikmeter men högst 10 000 kubikmeter fast mått eller på mer än 3 000 kubikmeter men högst 20 000 kubikmeter löst mått råvara per kalenderår. pellets eller briketter, baserad på mer än 5 000 kubikmeter råvara per kalenderår.
+
+Träbaserade skivor, fanér, plywood och spån
+
+8 kap 6 §
+
+20.50-i
+
+6.1c
+
+B
+
+Anläggning med en produktion av mer än 600 kubikmeter per dygn eller mer än 150 000 kubikmeter per kalenderår av OSB-skivor, träfiberskivor eller spånskivor.
+
+8 kap 7 §
+
+20.60
+
+-
+
+C
+
+Anläggning för tillverkning av
+
+1.
+
+fanér eller plywood, eller
+
+2.
+
+högst 600 kubikmeter per dygn eller högst 150 000 kubikmeter per kalenderår av OSB-skivor, träfiberskivor, spånskivor eller andra produkter av spån.
+
+a) b)
+
+mer än 10 000 kubikmeter per kalenderår högst 10 000 kubikmeter per kalenderår
+
+Lagring av timmer
+
+8 kap 8 §
+
+20.70
+
+-
+
+B
+
+Anläggning för lagring av
+
+1.
+
+mer än 20 000 kubikmeter timmer fast mått under bark (m³ fub) på land med begjutning av vatten, eller
+
+2.
+
+mer än 10 000 kubikmeter timmer fast mått under bark (m³ fub) i vatten.
+
+Tillståndsplikten gäller inte om verksamheten är anmälningspliktig enligt
+
+10 §.
+
+8 kap 9 §
+
+20.80
+
+-
+
+C
+
+Anläggning för lagring av
+
+1.
+
+mer än 2 000 kubikmeter timmer fast mått under bark (m³ fub), om lagringen sker på land utan vattenbegjutning,
+
+2.
+
+mer än 500 kubikmeter timmer fast mått under bark (m³ fub), om lagringen sker på land med vattenbegjutning och inte är tillståndspliktig enligt 8 §, eller
+
+3.
+
+mer än 500 kubikmeter timmer fast mått under bark (m³ fub) i vatten, om lagringen inte är tillståndspliktig enligt 8 §. a) b)
+
+c) d) e)
+
+8 kap 10 §
+
+20.90
+
+-
+
+C
+
+mer än 2 000 kubikmeter på land utan vattenbegjutning. mer än 500 kubikmeter men högst 10 000 kubikmeter på land med vattenbegjutning. mer än 10 000 kubikmeter men högst 20 000 kubikmeter på land med vattenbegjutning mer än 500 kubikmeter men högst 5 000 kubikmeter i vatten. mer än 5 000 kubikmeter men högst 10 000 kubikmeter i vatten.
+
+Anläggning för lagring av timmer som inte sker i eller nära vattentäkt, om lagringen har pågått mer än sex veckor, behövs med anledning av storm eller orkan och omfattar
+
+1.
+
+mer än 20 000 kubikmeter timmer fast mått under bark (m3 fub) på land med begjutning av vatten, eller
+
+2.
+
+mer än 10 000 kubikmeter timmer fast mått under bark (m3 fub) i vatten.
+
+Behandling mot blånadssvamp
+
+8 kap 11 §
+
+20.91
+
+-
+
+C
+
+Anläggning för behandling av trä och träprodukter mot blånadssvamp.
+
+Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt 1 eller 2 §.
+
+9 KAP MASSA, PAPPER OCH PAPPERSVAROR
+
+9 kap 3 §
+
+21.40
+
+-
+
+B
+
+Anläggning för framställning i industriell skala av högst 20 ton per dygn eller högst 7 300 ton per kalenderår av papper, papp eller kartong.
+
+10 KAP FOTOGRAFISK OCH GRAFISK PRODUKTION
+
+10 kap 1 §
+
+22.10
+
+-
+
+C
+
+Rulloffsettryckeri där tryckning sker med heatsetfärg.
+
+Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt 19 kap. 2, 3 eller 4 §.
+
+10 kap 2 §
+
+22.20
+
+-
+
+C
+
+Anläggning med tillverkning av metallklichéer.
+
+10 kap 3 §
+
+22.30
+
+-
+
+B
+
+Anläggning med utsläpp av processavloppsvatten där mer än 50 000 kvadratmeter fotografiskt material i form av film eller papperskopior framkallas per kalenderår.
+
+10 kap 4 §
+
+22.40
+
+-
+
+C
+
+Anläggning
+
+1.
+
+utan utsläpp av processavloppsvatten där mer än 50 000 kvadratmeter fotografiskt material i form av film eller papperskopior framkallas per kalenderår, eller
+
+2.
+
+med utsläpp av processavloppsvatten där mer än 5 000 kvadratmeter fotografiskt material i form av film eller papperskopior framkallas per kalenderår, om verksamheten inte är tillståndspliktig enligt 3 §. a)
+
+b) c)
+
+Utan utsläpp av processavloppsvatten där mer än 50 000 kvadratmeter framkallas per kalenderår.
+
+Med utsläpp av processavloppsvatten där mer än 15 000 kvadratmeter men högst 50 000 kvadratmeter framkallas per kalenderår.
+
+Med utsläpp av processavloppsvatten där mer än 5 000 kvadratmeter men högst 15 000 kvadratmeter framkallas per kalenderår.
+
+11 KAP STENKOLSPRODUKTER, RAFFINERADE PETROLEUMPRODUKTER
+
+OCH KÄRNBRÄNSLE
+
+11 kap 6 §
+
+23.20
+
+-
+
+B
+
+Anläggning för tillverkning av produkter ur kol, om verksamheten inte är tillståndspliktig enligt 2, 3, 4 eller 5 § eller 17 kap. 4 §.
+
+12 KAP KEMISKA PRODUKTER
+
+Organiska kemikalier
+
+12 kap 2 §
+
+24.02-i
+
+12 kap 4 §
+
+4.1ak,
+
+4.2ae,
+
+4.4,
+
+4.5,
+
+4.6
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton enkla kolväten per kalenderår.
+
+24.04-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton syreinnehållande organiska föreningar per kalenderår.
+
+12 kap 6 §
+
+24.06-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton svavelinnehållande organiska föreningar per kalenderår.
+
+12 kap 8 §
+
+24.08-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton kväveinnehållande organiska föreningar per kalenderår.
+
+12 kap 10 §
+
+24.10-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton fosforinnehållande organiska föreningar per kalenderår
+
+12 kap 12 §
+
+24.12-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton halogenerade kolväten per kalenderår
+
+12 kap 14 §
+
+24.14-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton metallorganiska föreningar per kalenderår
+
+12 kap 16 §
+
+24.16-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton plaster per kalenderår
+
+12 kap 18 §
+
+24.18-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton syntetgummi per kalenderår
+
+12 kap 20 §
+
+24.20-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton färgämnen eller pigment per kalenderår
+
+12 kap 22 §
+
+24.22-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton ytaktiva ämnen eller tensider per kalenderår Oorganiska kemikalier
+
+12 kap 24 §
+
+24.24-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton gaser per kalenderår
+
+12 kap 26 §
+
+24.26-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton syror per kalenderår
+
+12 kap 28 §
+
+24.28-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton baser per kalenderår
+
+12 kap 30 §
+
+24.30-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton salter per kalenderår
+
+12 kap 32 §
+
+24.32-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 20 000 ton icke-metaller, metalloxider eller andra oorganiska föreningar per kalenderår
+
+Gödselmedel
+
+12 kap 34 §
+
+24.34-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala per kalenderår tillverka högst 20 000 ton enkla eller sammansatta gödselmedel baserade på fosfor, kväve eller kalium
+
+Växtskyddsmedel och biocider
+
+12 kap 36 §
+
+24.36-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 1 000 ton växtskyddsmedel eller biocider per kalenderår
+
+12 kap 37 §
+
+24.37
+
+B
+
+Anläggning för tillverkning i industriell skala av biotekniska organismer för bekämpningsändamål
+
+Läkemedel
+
+12 kap 39 §
+
+24.39-i
+
+12 kap 40 §
+
+24.40
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 1 000 ton läkemedel, även mellanprodukter, per kalenderår
+
+C
+
+Anläggning för att genom endast fysikaliska processer tillverka läkemedel (farmaceutisk tillverkning).
+
+Anmälningsplikten gäller inte apotek eller sjukhus eller om verksamheten är tillståndspliktig enligt 19 kap 3 §.
+
+12 kap 41 §
+
+24.41
+
+a) b) c) d)
+
+C
+
+mer än 100 ton kalenderår. mer än 10 ton men högst 100 ton per kalenderår. mer än 500 kg men högst 10 ton per kalenderår. högst 500 kg per kalenderår.
+
+Anläggning för behandling av mellanprodukter.
+
+Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt någon av 1-40 eller 42-47 §§.
+
+Sprängämnen
+
+12 kap 43 §
+
+24.43-i
+
+B
+
+Anläggning för att genom kemisk eller biologisk reaktion i industriell skala tillverka högst 1 000 ton sprängämnen per kalenderår
+
+Annan kemisk tillverkning
+
+12 kap 44 §
+
+24.44
+
+C
+
+Anläggning för att genom kemiska eller biologiska reaktioner yrkesmässigt tillverka organiska eller oorganiska ämnen, i försöks-, pilot- eller laboratorieskala eller annan icke industriell skala.
+
+12 kap 45 §
+
+24.45
+
+B
+
+Anläggning för att genom endast fysikaliska processer i industriell skala tillverka
+
+1. gas- eller vätskeformiga kemiska produkter,
+
+2. läkemedelssubstanser genom extraktion ur biologiskt material,
+
+3. sprängämnen,
+
+4. pyrotekniska artiklar, eller
+
+5. ammunition.
+
+Tillståndsplikten gäller inte
+
+1. tillverkning av mindre än 100 ton per kalenderår, om det i verksamheten inte används eller tillverkas någon kemisk produkt som
+
+a) enligt föreskrifter som har meddelats av Kemikalieinspektionen är klassificerad eller uppfyller kriterierna för att klassificeras med de riskfraser som ingår i faroklasserna ”mycket giftig”, ”giftig”, ”frätande”, ”cancerframkallande”, ”mutagen”, ”reproduktionstoxisk” eller ”miljöfarlig”, eller
+
+b) enligt Europaparlamentets och rådets förordning (EG) nr 1272/2008 av den 16 december 2008 om klassificering, märkning och förpackning av ämnen och blandningar, ändring och upphävande av direktiven
+
+67/548/EEG och 1999/45/EG samt ändring av förordning (EG) nr
+
+1907/2006 uppfyller kriterierna för att klassificeras i faroklasserna ”akut toxicitet kategori 1”, ”akut toxicitet kategori 2”, ”akut toxicitet kategori 3”, ”specifik organtoxicitet enstaka exponering kategori 1”, ”specifik organtoxicitet upprepad exponering kategori 1”, ”frätande på huden kategori 1A”, ”frätande på huden kategori 1B”, ”frätande på huden kategori 1C”, ”cancerogenitet kategori 1A”, ”cancerogenitet kategori 1B”, ”cancerogenitet kategori 2”, ”mutagenitet i könsceller kategori 1A”, ”mutagenitet i könsceller kategori 1B”, ”mutagenitet i könsceller kategori 2”, ”reproduktionstoxicitet kategori 1A”, ”reproduktionstoxicitet kategori 1B”, ”reproduktionstoxicitet kategori 2”, ”farligt för vattenmiljön kategori akut 1”, ”farligt för vattenmiljön kategori kronisk 1”, ”farligt för vattenmiljön kategori kronisk 2”, ”farligt för vattenmiljön kategori kronisk 3”, ”farligt för vattenmiljön kategori kronisk 4” eller ”farligt för ozonskiktet”,
+
+2. tillverkning av färg eller lack, om tillverkningen uppgår till högst 1 000 ton per kalenderår,
+
+3. tillverkning av rengöringsmedel eller kroppsvårds-, kosmetik- eller hygienprodukter, om tillverkningen uppgår till högst 2 000 ton per kalenderår,
+
+4. tillverkning av gasformiga kemiska produkter genom destillation, eller
+
+5. om verksamheten är tillståndspliktig enligt 19 kap. a) b) c) d) e)
+
+verksamheten avser gas- eller vätskeformiga kemiska produkter verksamheten avser läkemedelssubstanser verksamheten avser sprängämnen verksamheten avser pyrotekniska artiklar verksamheten avser ammunition
+
+12 kap 46 §
+
+24.46
+
+C
+
+Anläggning för att genom endast fysikaliska processer i industriell skala tillverka
+
+1.
+
+naturläkemedel genom extraktion ur biologiskt material,
+
+2.
+
+mer än 10 ton färg eller lack per kalenderår, om verksamheten inte är tillståndspliktig enligt 45 §,
+
+3.
+
+mer än 10 ton rengöringsmedel eller kroppsvårds-, kosmetik- eller hygienprodukter per kalenderår, om verksamheten inte är tillståndspliktig enligt 45 §,
+
+4.
+
+mer än 5 000 ton gasformiga kemiska produkter per kalenderår, om tillverkningen sker genom destillation, eller
+
+5.
+
+andra kemiska produkter, om verksamheten inte är tillståndspliktig enligt 45 §.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+19 kap. 3 §.
+
+12 kap 47 §
+
+24.47
+
+C
+
+Anläggning för att genom endast fysikaliska processer, i försöks-, piloteller laboratorieskala eller annan icke industriell skala, yrkesmässigt tillverka
+
+1.
+
+sprängämnen,
+
+2.
+
+pyrotekniska artiklar,
+
+3.
+
+ammunition,
+
+4.
+
+mer än 10 ton färg eller lack per kalenderår,
+
+5.
+
+mer än 10 ton rengöringsmedel eller kroppsvårds-, kosmetik- eller hygienprodukter per kalenderår, eller
+
+6.
+
+andra kemiska produkter.
+
+13 KAP GUMMI OCH PLASTVAROR
+
+13 kap 1 §
+
+25.10
+
+-
+
+B
+
+Anläggning för att genom vulkning tillverka gummivaror, om produktionen baseras på mer än 2 000 ton ovulkad gummiblandning per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 19 kap. 3 §.
+
+13 kap 2 §
+
+25.11
+
+a)
+
+b)
+
+-
+
+C
+
+mer än 2 000 ton men högst 10 000 ton ovulkad gummiblandning per kalenderår mer än 10 000 ton ovulkad gummiblandning per kalenderår
+
+Anläggning för att genom vulkning tillverka gummivaror, om produktionen baseras på mer än 1 ton ovulkad gummiblandning per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt 1 § eller 19 kap. 3 eller 4 §.
+
+a)
+
+b)
+
+c)
+
+d)
+
+mer än 500 ton men högst 2 000 ton ovulkad gummiblandning per kalenderår. mer än 100 ton men högst 500 ton ovulkad gummiblandning per kalenderår mer än 50 ton men högst 100 ton ovulkad gummiblandning per kalenderår. mer än 1 ton men högst 50 ton ovulkad gummiblandning per kalenderår.
+
+13 kap 3 §
+
+25.20
+
+-
+
+B
+
+Anläggning för att genom ytterligare polymerisation tillverka produkter av 1.
+
+2.
+
+3.
+
+13 kap 4 §
+
+25.30
+
+-
+
+13 kap 5 §
+
+25.40
+
+-
+
+13 kap 6 §
+
+25.50
+
+-
+
+C
+
+polyuretan utan användning av toluendiisocyanat, om produktionen baseras på mer än 200 ton plastråvara per kalenderår, polyuretan med användning av toluendiisocyanat, om produktionen baseras på mer än 20 ton plastråvara per kalenderår, eller annan plast, om produktionen baseras på mer än 20 ton plastråvara per kalenderår.
+
+a) polyuretan utan användning av toluendiisocyanat, om produktionen baseras på mer än 200 ton plastråvara per kalenderår.
+
+b) polyuretan med användning av toluendiisocyanat, om produktionen baseras på mer än 500 ton plastråvara per kalenderår, eller annan plast om produktionen baseras på mer än
+
+500 ton plastråvara per kalenderår.
+
+c) polyuretan med användning av toluendiisocyanat, om produktionen baseras på mer än 20 ton men högst 500 ton plastråvara per kalenderår, eller annan plast om produktionen baseras på mer än 20 men högst 500 ton plastråvara per kalenderår.
+
+Anläggning för att genom ytterligare polymerisation tillverka produkter av plast, om
+
+1.
+
+produktionen baseras på mer än 1 ton plastråvara per kalenderår, och
+
+2.
+
+verksamheten inte är tillståndspliktig enligt 3 §.
+
+B
+
+Anläggning för flamlaminering med plast.
+
+C
+
+Anläggning där produktionen baseras på mer än 1 ton plastråvara per kalenderår och inte omfattar ytterligare polymerisation, för
+
+1.
+
+tillverkning av produkter av plast förutom endast mekanisk montering eller mekanisk bearbetning, eller
+
+2.
+
+beläggning eller kalandrering med plast.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig eller anmälningspliktig enligt 19 kap. 3 eller 4 §.
+
+a) b) c)
+
+d)
+
+e)
+
+f)
+
+g)
+
+Mer än 200 ton plastråvara per kalenderår.
+
+Mer än 1 ton men högst 200 ton plastråvara per kalenderår.
+
+Mer än 20 ton plastråvara per kalenderår för beläggning eller kalandrering med plast.
+
+Mer än 10 ton men högst 20 ton plastråvara per kalenderår för beläggning eller kalandrering med plast.
+
+Mer än 5 ton men högst 10 ton plastråvara per kalenderår för beläggning eller kalandrering med plast.
+
+Mer än 3 ton men högst 5 ton plastråvara per kalenderår för beläggning eller kalandrering med plast.
+
+Mer än 1 ton men högst 3 ton plastråvara per kalenderår för beläggning eller kalandrering med plast.
+
+14 KAP MINERALISKA PRODUKTER
+
+Glas, glasvaror och keramiska produkter
+
+14 kap 1 §
+
+26.05-i
+
+14 kap 2 §
+
+26.10-i
+
+3.3,
+
+3.4
+
+B
+
+Anläggning för tillverkning av glas inklusive glasfiber med smältning av mer än 20 ton per dygn eller mer än 5 000 ton per kalenderår.
+
+B
+
+Anläggning för smältning av mineraler, inklusive tillverkning av mineralull, med smältning av mer än 20 ton per dygn eller mer än 5 000 ton per kalenderår.
+
+14 kap 3 §
+
+26.20
+
+-
+
+B
+
+Anläggning för tillverkning av glas eller glasvaror som omfattar blandning av glasråvaror (mäng), smältning eller syrabehandling av glas, om verksamheten innebär att
+
+1. mer än 5 ton glasråvaror med tillsats av bly- eller arsenikföreningar förbrukas per kalenderår, eller
+
+2. mer än 500 ton andra glasråvaror förbrukas per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 1 eller 2 §. a) b) c) d)
+
+14 kap 4 §
+
+26.30
+
+-
+
+C
+
+mer än 1 000 ton glasråvaror med tillsats av bly- eller arsenikföreningar förbrukas per kalenderår. mer än 5 ton men högst 1 000 ton glasråvaror med tillsats av blyeller arsenikföreningar förbrukas per kalenderår. mer än 2 000 ton andra glasråvaror (än sådana med tillsats av blyeller arsenikföreningar) förbrukas per kalenderår. mer än 500 ton men högst 2 000 ton andra glasråvaror (än sådana med tillsats av bly- eller arsenikföreningar) förbrukas per kalenderår.
+
+Anläggning för tillverkning av glas eller glasvaror som omfattar blandning av glasråvaror (mäng), smältning eller syrabehandling av glas, om verksamheten innebär att
+
+1.
+
+mer än 500 kilogram glasråvaror med tillsats av bly- eller arsenikföreningar förbrukas per kalenderår, eller
+
+2.
+
+mer än 5 ton andra glasråvaror förbrukas per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 1, 2 eller 3 §.
+
+14 kap 5 §
+
+26.40
+
+-
+
+C
+
+Anläggning för tillverkning av glasfiber, om verksamheten inte är tillståndspliktig enligt 1 §.
+
+14 kap 6 §
+
+26.50-i
+
+3,5
+
+B
+
+Anläggning för att tillverka keramiska produkter genom bränning, särskilt takpannor, tegel, eldfast sten, kakel, stengods eller porslin, med en 1.
+
+produktion av mer än 75 ton per dygn eller mer än 18 750 ton per kalenderår, eller
+
+2.
+
+ugnskapacitet på mer än fyra kubikmeter och med en satsningsdensitet på mer än 300 kilogram per kubikmeter.
+
+14 kap 7 §
+
+26.51
+
+-
+
+B
+
+Anläggning för att genom bränning tillverka mer än 50 ton keramiska produkter per kalenderår, om glasyr med tillsats av tungmetaller används.
+
+14 kap 8 §
+
+26.60
+
+-
+
+C
+
+Anläggning för tillverkning av mer än 100 ton keramiska produkter per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 6 eller 7 §.
+
+Cement, betong, kalk, krita och gips
+
+14 kap 10 §
+
+26.80
+
+-
+
+B
+
+Anläggning för tillverkning av cement.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 9 §
+
+14 kap 11 §
+
+26.90-i
+
+3.1b
+
+B
+
+Anläggning för tillverkning i ugn av mer än 50 ton kalk per dygn eller mer än 12 500 ton kalk per kalenderår.
+
+14 kap 12 §
+
+26.100
+
+-
+
+C
+
+Anläggning för tillverkning av mer än 5 ton kalk, krita eller kalkprodukter per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 9, 10 eller 11 §.
+
+14 kap 13 §
+
+26.110
+
+-
+
+C
+
+Anläggning för tillverkning av mer än 500 ton
+
+1.
+
+betong eller lättbetong per kalenderår, eller
+
+2.
+
+varor av betong, lättbetong eller cement per kalenderår.
+
+14 kap 14 §
+
+26.120
+
+-
+
+C
+
+Anläggning för tillverkning av mer än 500 ton varor av gips per kalenderår. Andra mineraliska produkter
+
+14 kap 15 §
+
+26.130-i
+
+3,2
+
+B
+
+Anläggning för tillverkning av asbest eller asbestbaserade produkter.
+
+14 kap 16 §
+
+26.140
+
+-
+
+B
+
+Anläggning för behandling eller omvandling av asbest. Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 15 § eller 4 kap 16 §
+
+14 kap 17 §
+
+26.150
+
+-
+
+C
+
+Asfaltverk eller oljegrusverk
+
+14 kap 18 §
+
+26.160
+
+14 kap 19 §
+
+26.170-i
+
+14 kap 20 §
+
+26.180
+
+-
+
+-
+
+1.
+
+som ställs upp inom område med detaljplan eller områdesbestämmelser, eller
+
+2.
+
+som ställs upp utanför område med detaljplan eller områdesbestämmelser i mer än 90 kalenderdagar under en tolvmånadersperiod.
+
+C
+
+Anläggning för tillverkning av varor av asfalt.
+
+B
+
+Anläggning för tillverkning i ugn av mer än 50 ton per dygn eller mer än 12 500 ton magnesiumoxid per kalenderår.
+
+C
+
+Anläggning för tillverkning av konstgjorda mineralfibrer.
+
+Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt någon annan bestämmelse i denna förordning
+
+15 KAP STÅL OCH METALL
+
+15 kap 7 §
+
+27.32
+
+-
+
+B
+
+Anläggning för att behandla järnbaserade metaller genom kallvalsning av högst 100 000 ton stål per kalenderår.
+
+15 kap 8 §
+
+27.40-i
+
+2,4
+
+B
+
+Anläggning för att gjuta järn eller stål, om produktion är mer än 20 ton per dygn eller mer än 5 000 ton per kalenderår.
+
+15 kap 9 §
+
+27.50
+
+-
+
+B
+
+Anläggning för att gjuta järn, stål, aluminium, zink eller magnesium, om produktionen är mer än 500 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 8 eller 14 §.
+
+15 kap 10 §
+
+27.60
+
+-
+
+C
+
+Anläggning för att gjuta järn, stål, aluminium, zink eller magnesium, om produktionen är mer än 10 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 8, 9 eller 14 §.
+
+15 kap 12 §
+
+27.80-i
+
+2,5a
+
+B
+
+Anläggning för att av malm, koncentrat eller sekundärt råmaterial producera högst 1 000 ton icke-järnmetall per kalenderår, om produktionen sker genom metallurgiska, kemiska eller elektrolytiska processer. Tillståndsplikten gäller inte gjuterier.
+
+15 kap 14 §
+
+27.101-i
+
+2.5b
+
+B
+
+I gjuteri eller annan anläggning smälta eller legera icke-järnmetaller, oavsett om metallerna är återvinningsprodukter eller inte, om produktion är mer än 20 ton per dygn eller mer än 5 000 ton per kalenderår. a) b)
+
+15 kap 15 §
+
+27.110
+
+-
+
+B
+
+mer än 20 000 ton metaller per kalenderår. mer än 5000 ton men högst 20 000 metaller per kalenderår.
+
+Anläggning för att smälta eller legera icke-järnmetaller, oavsett om metallerna är återvinningsprodukter eller inte.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 13 eller 14 § eller endast avser gjuterier. a) b)
+
+mer än 1 000 ton men högst 5 000 ton icke-järnmetall eller återvinningsprodukter. högst 1 000 ton icke-järnmetall eller återvinningsprodukter.
+
+15 kap 16 §
+
+27.120
+
+-
+
+B
+
+Anläggning för yrkesmässig smälta eller raffinera icke-järnmetall ur annan råvara och genom andra processer än de som anges i 11-15 §§.
+
+Tillståndsplikten gäller inte gjuterier.
+
+15 kap 17 §
+
+27.130
+
+-
+
+B
+
+Anläggning för gjutning av andra metaller än järn, stål, zink, aluminium och magnesium, om produktionen är mer än 50 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 13 eller 14 §. a) b) c) d) e) f)
+
+mer än 20 000 ton per kalenderår. mer än 10 000 ton men högst 20 000 ton per kalenderår. mer än 3 000 ton men högst 10 000 ton per kalenderår. mer än 1 000 ton men högst 3 000 ton per kalenderår. mer än 200 ton men högst 1 000 ton per kalenderår. mer än 50 ton men högst 200 ton per kalenderår.
+
+15 kap 18 §
+
+27.140
+
+-
+
+C
+
+Anläggning för att gjuta andra metaller än järn, stål, zink, aluminium och magnesium, om produktionen är mer än 1 ton per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 13, 14 eller 17 §.
+
+-
+
+27.14001 (27.145)
+
+-
+
+U
+
+Anläggning för att gjuta andra metaller än järn, stål, zink, aluminium och magnesium, om produktionen är högst 1 ton per kalenderår.
+
+16 KAP METALL- OCH PLASTYTBEHANDLING, AVFETTNING OCH
+
+FÄRGBORTTAGNING
+
+16 kap 1 §
+
+16 kap 2 §
+
+28.10-i
+
+28.20
+
+2,6
+
+B
+
+Anläggning för kemisk eller elektrolytisk ytbehandling av metall eller plast, om behandlingsbaden har en sammanlagd volym av mer än 30 kubikmeter.
+
+a)
+
+b)
+
+c)
+
+d)
+
+-
+
+B
+
+verksamheten ger upphov till mer än 10 000 kubikmeter avloppsvatten per kalenderår. verksamheten ger upphov till mer än 1 000 kubikmeter men högst
+
+10 000 kubikmeter avloppsvatten per kalenderår. verksamheten ger upphov till mer än 100 kubikmeter men högst
+
+1 000 kubikmeter avloppsvatten per kalenderår. verksamheten ger upphov till högst 100 kubikmeter avloppsvatten per kalenderår.
+
+Anläggning för kemisk eller elektrolytisk ytbehandling av metall eller plast, om
+
+1.
+
+2.
+
+behandlingsbaden har en sammanlagd volym som överstiger 1 kubikmeter men högst 30 kubikmeter, och verksamheten ger upphov till mer än 10 kubikmeter avloppsvatten per kalenderår.
+
+Tillståndsplikten gäller inte betning med betpasta.
+
+a) b) c) d)
+
+mer än 10 000 kubikmeter avloppsvatten per kalenderår. mer än 1 000 kubikmeter men högst 10 000 kubikmeter avloppsvatten per kalenderår. mer än 100 kubikmeter men högst 1 000 kubikmeter avloppsvatten per kalenderår. mer än 10 kubikmeter men högst 100 kubikmeter avloppsvatten per kalenderår.
+
+16 kap 3 §
+
+28.25
+
+-
+
+C
+
+Anläggning för kemisk eller elektrolytisk ytbehandling av metall eller plast. Anmälningsplikten gäller inte betning med betpasta eller om verksamheten är tillståndspliktig enligt 1 eller 2 §.
+
+16 kap 4 §
+
+28.30
+
+a)
+
+b)
+
+-
+
+B
+
+om verksamheten ger upphov till mer än 1 kubikmeter avloppsvatten per kalenderår. om verksamheten ger upphov till högst 1 kubikmeter avloppsvatten per kalenderår.
+
+Anläggning för
+
+1.
+
+beläggning med metall på annat sätt än genom kemisk eller elektrolytisk ytbehandling, om verksamheten ger upphov till mer än
+
+10 kubikmeter avloppsvatten per kalenderår, eller
+
+2.
+
+våttrumling av annan metall än aluminium eller stål, om verksamheten ger upphov till mer än 10 kubikmeter avloppsvatten per kalenderår.
+
+Tillståndsplikten gäller inte beläggning med metall som sker med vakuummetod.
+
+a) b)
+
+c) d)
+
+16 kap 5 §
+
+28.40
+
+-
+
+C
+
+mer än 10 000 kubikmeter avloppsvatten per kalenderår. mer än 1 000 kubikmeter men högst 10 000 kubikmeter avloppsvatten per kalenderår. mer än 100 kubikmeter men högst 1 000 kubikmeter avloppsvatten per kalenderår. mer än 10 kubikmeter men högst 100 kubikmeter avloppsvatten per kalenderår.
+
+Anläggning för annan beläggning med metall än genom kemisk eller elektrolytisk ytbehandling, om verksamheten ger upphov till mer än 1 kubikmeter avloppsvatten per kalenderår.
+
+Anmälningsplikten gäller inte beläggning med metall som sker med vakuummetod eller om verksamheten är tillståndspliktig enligt 4 §.
+
+16 kap 6 §
+
+28.50
+
+-
+
+B
+
+Anläggning för termisk ytbehandling i form av varmdoppning eller termisk sprutning med en metallförbrukning av mer än 2 ton per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 15 kap. 3 §.
+
+Utan uppsamling och filter:
+
+a) metallförbrukning av mer än 10 000 ton per kalenderår.
+
+b) metallförbrukning av mer än 1 000 ton men högst 10 000 ton per kalenderår.
+
+c) metallförbrukning av mer än 100 ton men högst 1 000 ton per kalenderår.
+
+d) metallförbrukning av mer än 2 ton men högst 100 ton per kalenderår.
+
+Med uppsamling och filter:
+
+a) metallförbrukning av mer än 10 000 ton per kalenderår.
+
+b) metallförbrukning av mer än 1 000 ton men högst 10 000 ton per kalenderår.
+
+c) metallförbrukning av mer än 100 ton men högst 1 000 ton per kalenderår.
+
+d) metallförbrukning av mer än 2 ton men högst 100 ton per kalenderår.
+
+16 kap 7 §
+
+28.71
+
+-
+
+C
+
+Blästra mer än 500 kvadratmeter yta.
+
+Anmälningsplikten gäller inte om verksamheten är anmälningspliktig enligt
+
+10 §.
+
+16 kap 8 §
+
+28.80
+
+-
+
+B
+
+Anläggning för att med kemiska eller termiska metoder yrkesmässigt ta bort lack eller färg från mer än 50 ton metallgods per kalenderår
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 19 kap. 2 eller 3 §.
+
+16 kap 9 §
+
+28.90
+
+-
+
+C
+
+Anläggning för att med kemiska eller termiska metoder yrkesmässigt ta bort lack eller färg.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 8 § eller 19 kap. 2 eller 3 §.
+
+16 kap 10 §
+
+28.95
+
+-
+
+C
+
+Anläggning för
+
+1. vattenbaserad avfettning som ger upphov till mer än 10 kubikmeter avloppsvatten per kalenderår, om verksamheten inte är en fordonstvätt eller tillståndspliktig enligt 19 kap. 2, 3, 4 eller 6 §,
+
+2. betning med mer än 50 kilogram betpasta per kalenderår, om verksamheten ger upphov till avloppsvatten,
+
+3. blästring av mer än 500 kvadratmeter yta per kalenderår,
+
+4. våttrumling av mer än 1 ton metaller per kalenderår eller härdning av mer än 1 ton gods per kalenderår,
+
+5. termisk ytbehandling med en metallförbrukning av mer än 50 kilogram men högst 2 ton per kalenderår, eller
+
+6. metallbeläggning med vakuummetod med en metallförbrukning av mer än 500 kilogram per kalenderår.
+
+a)
+
+b)
+
+anläggning för produktion som omfattas av mer än två punkter ovan. anläggning för produktion som omfattas av högst två punkter ovan.
+
+17 KAP ELEKTRISKA ARTIKLAR
+
+17 kap 2 §
+
+31.20
+
+-
+
+B
+
+Anläggning för att tillverka batterier eller ackumulatorer som inte innehåller kadmium, bly eller kvicksilver.
+
+17 kap 3 §
+
+31.30
+
+-
+
+C
+
+Anläggning för att tillverka eller repararera ljuskällor som innehåller kvicksilver.
+
+17 kap 6 §
+
+31.60
+
+-
+
+C
+
+Anläggning för att tillverka elektrisk tråd eller elektrisk kabel.
+
+18 KAP METALLBEARBETNING
+
+Motorer, turbiner och reaktorer
+
+18 kap 1 §
+
+34.10
+
+-
+
+C
+
+Anläggning för tillverkning av fler än 100 fordonsmotorer per kalenderår.
+
+18 kap 2 §
+
+34.20
+
+-
+
+C
+
+Provbänk för motorer, turbiner eller reaktorer.
+
+Motorfordon
+
+18 kap 3 §
+
+34.30
+
+-
+
+B
+
+Anläggning för tillverkning och sammansättning per kalenderår av
+
+1.
+
+2.
+
+fler än 25 000 motorfordon med en totalvikt per fordon som uppgår till högst 3,5 ton, eller fler än 1 000 motorfordon med en totalvikt per fordon som uppgår till mer än 3,5 ton.
+
+18 kap 4 §
+
+34.40
+
+-
+
+C
+
+Anläggning för tillverkning och sammansättning per kalenderår av
+
+1.
+
+fler än 100 motorfordon med en totalvikt per fordon som uppgår till högst 3,5 ton, eller
+
+2. fler än 10 motorfordon med en totalvikt per fordon som uppgår till mer än 3,5 ton.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+3§.
+
+Järnvägsutrustning och flygplan
+
+18 kap 5 §
+
+34.50
+
+-
+
+C
+
+Anläggning för
+
+1.
+
+2.
+
+3.
+
+tillverkning av järnvägsutrustning, tillverkning av flygplan, eller reparation av flygplan.
+
+Maskinell metallbearbetning
+
+18 kap 7 §
+
+34.70
+
+-
+
+B
+
+Anläggning där det förekommer maskinell metallbearbetning och där total tankvolym för skärvätskor, processoljor och hydrauloljor i metallbearbetningsmaskinerna är större än 20 kubikmeter, om verksamheten inte är tillståndspliktig enligt 3 eller 6 §.
+
+Med total tankvolym avses såväl volymen i ett fast centralt system för vätskor som volymen i lösa behållare som är kopplade antingen till metallbearbetningsmaskin eller till öppnade behållare som används för påfyllning av metallbearbetningsmaskin. a) b)
+
+18 kap 8 §
+
+34.80
+
+-
+
+C
+
+total tankvolym för skärvätskor, processoljor och hydrauloljor i metallbearbetningsmaskinerna är större än 75 kubikmeter. total tankvolym för skärvätskor, processoljor och hydrauloljor i metallbearbetningsmaskinerna är större än 20 kubikmeter men högst 75 kubikmeter.
+
+Anläggning där det förekommer maskinell metallbearbetning och där total tankvolym för skärvätskor, processoljor och hydrauloljor i metallbearbetningsmaskinerna är större än 1 kubikmeter, om verksamheten inte är tillstånds- eller anmälningspliktig enligt 1, 2, 3, 4, 5, 6, 7, 9 eller
+
+10 §.
+
+Med total tankvolym avses det samma som i 7 § andra stycket.
+
+a) b) c) d)
+
+större än 15 kubikmeter men högst 20 kubikmeter. större än 10 kubikmeter men högst 15 kubikmeter. större än 5 kubikmeter men högst 10 kubikmeter. större än 1 kubikmeter men högst 5 kubikmeter.
+
+Gas- och oljeplattformar
+
+Skeppsvarv
+
+18 kap 10 §
+
+35.20
+
+-
+
+C
+
+Skeppsvarv
+
+19 KAP FÖRBRUKNING AV ORGANISKA LÖSNINGSMEDEL
+
+19 kap 1 §
+
+-
+
+-
+
+-
+
+-
+
+Med förbrukning avses i detta kapitel lösningsmedelstillförseln minskad med den mängd som i tekniskt eller kommersiellt syfte återvinns för återanvändning där även återanvändning av lösningsmedel som bränsle ingår men inte lösningsmedel som slutligt bortskaffas som avfall.
+
+19 kap 2 §
+
+39.10-i
+
+6,7
+
+B
+
+Anläggning för att appretera, trycka, bestryka, avfetta, vattenskyddsimpregnera, limma, måla, rengöra, impregnera eller på annat sätt ytbehandla material, föremål eller produkter, om förbrukningen av organiska lösningsmedel är mer än 150 kilogram per timme eller mer än 200 ton per kalenderår.
+
+19 kap 3 §
+
+39.15
+
+-
+
+B
+
+Anläggning där det per kalenderår förbrukas
+
+1. mer än 5 ton halogenerade organiska lösningsmedel,
+
+2. mer än totalt 25 ton organiska lösningsmedel,
+
+3. mer än 50 ton organiska lösningsmedel i tillverkning av farmaceutiska produkter, eller
+
+4. mer än 100 ton organiska lösningsmedel i tillverkning av lack, tryckfärg, lim eller andra beläggningspreparat.
+
+Vid tillämpningen av första stycket ska inte sådana organiska lösningsmedel medräknas som omfattas av förordningen (2007:846) om fluorerade växthusgaser och ozonnedbrytande ämnen eller av föreskrifter som har meddelats med stöd av den förordningen.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 2 §. Tillståndsplikten enligt första stycket 2 gäller inte sjukhus.
+
+19 kap 4 §
+
+39.30
+
+-
+
+C
+
+Anläggning där organiska lösningsmedel förbrukas per kalenderår med
+
+1.
+
+mer än 1 ton i ytrengöring, om lösningsmedlet innehåller någon kemisk produkt, som a)
+
+2.
+
+enligt föreskrifter som har meddelats av Kemikalieinspektionen har klassificerats med riskfraserna ”misstänks kunna ge cancer” (R40), kan ge cancer” (R45), ”kan ge ärftliga genetiska skador” (R46), ”kan ge cancer vid inandning” (R49), ”kan ge nedsatt fortplantningsförmåga” (R60) eller ”kan ge fosterskador” (R61), eller
+
+b) enligt Europaparlamentets och rådets förordning (EG) nr
+
+1272/2008 av den 16 december 2008 om klassificering, märkning och förpackning av ämnen och blandningar, ändring och upphävande av direktiven 67/548/EEG och 1999/45/EG samt ändring av förordning (EG) nr 1907/2006 uppfyller kriterierna för att klassificeras i faroklasserna ”cancerogenitet kategori 1A”, ”cancerogenitet kategori 1B”, ”cancerogenitet kategori 2”, ”mutagenitet i könsceller kategori 1A”, ”mutagenitet i könsceller kategori 1B”, ”reproduktionstoxicitet kategori 1A”, eller ”reproduktionstoxicitet kategori 1B”, mer än 2 ton i annan ytrengöring,
+
+3.
+
+mer än 500 kilogram i fordonslackering, eller
+
+4.
+
+mer än 1 kilogram i kemtvätt.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 2 eller 3 §.
+
+19 kap 5 §
+
+39.35
+
+-
+
+C
+
+Anläggning där organiska lösningsmedel förbrukas per kalenderår med mer än 500 kilogram i lackering av vägfordon till följd av reparation, underhåll eller dekoration som sker utanför tillverkningsanläggningar.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 2 eller 3 §.
+
+19 kap 6 §
+
+39.50
+
+-
+
+C
+
+Anläggning där det per kalenderår förbrukas
+
+1.
+
+mer än 1 ton halogenerade organiska lösningsmedel, eller
+
+2.
+
+mer än totalt 5 ton organiska lösningsmedel.
+
+Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt 2, 3 eller 4 §.
+
+20 KAP HANTERING AV BRÄNSLEN OCH ANDRA KEMISKA PRODUKTER
+
+20 kap 1 §
+
+39.60
+
+-
+
+B
+
+Anläggning för lagring eller annan hantering av
+
+1. gasformiga eller flytande petrokemiska produkter, oljor, petroleumprodukter eller brännbara gaser, om anläggningen har kapacitet för lagring av mer än 50 000 ton vid ett och samma tillfälle eller hantering av mer än 500 000 ton per kalenderår,
+
+2. andra kemiska produkter, om lagringen eller hanteringen omfattar mer än 5 000 ton vid ett och samma tillfälle eller mer än 50 000 ton per kalenderår och produkterna
+
+a) enligt föreskrifter som har meddelats av Kemikalieinspektionen har klassificerats med de riskfraser som ingår i faroklasserna ”mycket giftig”, ”giftig”, ”frätande”, ”cancerframkallande”, ”mutagen”, ”reproduktionstoxisk” eller ”miljöfarlig”, eller
+
+b) enligt Europaparlamentets och rådets förordning (EG) nr
+
+1272/2008 av den 16 december 2008 om klassificering, märkning och förpackning av ämnen och blandningar, ändring och upphävande av direktiven 67/548/EEG och 1999/45/EG samt ändring av förordning (EG) nr 1907/2006 uppfyller kriterierna för att klassificeras i faroklasserna ”akut toxicitet kategori 1”, ”akut toxicitet kategori 2”, ”akut toxicitet kategori 3”, ”specifik organtoxicitet enstaka exponering kategori 1”, ”specifik organtoxicitet upprepad exponering kategori 1”, ”frätande för huden kategori 1A”, ”frätande för huden kategori 1B”, ”frätande för huden kategori 1C”, ”cancerogenitet kategori 1A”, ”cancerogenitet kategori 1B”, ”cancerogenitet kategori 2”, ”mutagenitet i könsceller kategori 1A”, ”mutagenitet i könsceller kategori 1B”, ”mutagenitet i könsceller kategori 2”, ”reproduktionstoxicitet kategori 1A”, ”reproduktionstoxicitet kategori 1B”, ”reproduktionstoxicitet kategori 2”, ”farligt för vattenmiljön kategori akut 1”, ”farligt för vattenmiljön kategori kronisk 1”, ”farligt för vattenmiljön kategori kronisk 2”, ”farligt för vattenmiljön kategori kronisk 3”, ”farligt för vattenmiljön kategori kronisk 4” eller ”farligt för ozonskiktet, eller
+
+3.
+
+andra kemiska produkter än som avses i 1 och 2, om det i anläggningen lagras mer än 200 000 ton vid ett och samma tillfälle
+
+20 kap 2 §
+
+39.70
+
+-
+
+C
+
+Anläggning för lagring av
+
+1.
+
+gasformiga eller flytande petrokemiska produkter, oljor, petroleumprodukter eller brännbara gaser, om det i anläggningen lagras mer än 5 000 ton vid ett och samma tillfälle,
+
+2.
+
+andra kemiska produkter än som avses i 1, om anläggningen avser verksamhet för energiproduktion eller kemisk industri och har kapacitet för lagring av mer än 1 ton vid ett och samma tillfälle och a)
+
+3.
+
+20 kap 3 §
+
+39.80
+
+-
+
+B
+
+någon produkt enligt föreskrifter som har meddelats av
+
+Kemikalieinspektionen har klassificerats med de riskfraser som ingår i faroklasserna ”mycket giftig”, ”giftig”, ”frätande”, ”cancerframkallande”, ”mutagen”, ”reproduktionstoxisk” eller ”miljöfarlig”, eller
+
+b) någon produkt enligt förordning (EG) nr 272/2008 uppfyller kriterierna för att klassificeras i faroklasserna ”akut toxicitet kategori 1”, ”akut toxicitet kategori 2”, ”akut toxicitet kategori 3”, ”specifik organtoxicitet enstaka exponering kategori 1”, ”specifik organtoxicitet upprepad exponering kategori 1”, ”frätande för huden kategori 1A”, ”frätande för huden kategori 1B”, ”frätande för huden kategori 1C”, ”cancerogenitet kategori 1A”, ”cancerogenitet kategori 1B”, ”cancerogenitet kategori 2”, ”mutagenitet i könsceller kategori 1A”, ”mutagenitet i könsceller kategori 1B”, ”mutagenitet i könsceller kategori 2”, ”reproduktionstoxicitet kategori 1A”, ”reproduktionstoxicitet kategori 1B”, ”reproduktionstoxicitet kategori 2”, ”farligt för vattenmiljön kategori akut 1”, ”farligt för vattenmiljön kategori kronisk 1”, ”farligt för vattenmiljön kategori kronisk 2”, ”farligt för vattenmiljön kategori kronisk 3”, ”farligt för vattenmiljön kategori kronisk 4” eller ”farligt för ozonskiktet”, eller andra kemiska produkter än som avses i 1 och 2, om det i anläggningen lagras mer än 50 000 ton vid ett och samma tillfälle.
+
+Anläggning för lagring av mer än 50 miljoner normalkubikmeter naturgas per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+1 §.
+
+20 kap 4 §
+
+39.90
+
+-
+
+C
+
+Anläggning för lagring av mer än 5 000 ton kol, torv eller bränsleflis eller annat träbränsle per kalenderår.
+
+21 KAP GAS- OCH VÄTSKEFORMIGA BRÄNSLEN, EL, VÄRME OCH KYLA
+
+21 kap 1 §
+
+-
+
+-
+
+-
+
+-
+
+Med avfall och farligt avfall avses i detta kapitel detsamma som i 15 kap. miljöbalken och avfallsförordningen (2011:927).
+
+Anaerob biologisk behandling
+
+21 kap 2 §
+
+40.01
+
+-
+
+B
+
+Anläggning som genom anaerob biologisk behandling av stallgödsel, grödor eller annat biologiskt material producerar mer än 3 000 megawattimmar biogas per kalenderår.
+
+Tillståndsplikten gäller även om stallgödseln är avfall och även om det material som inte är stallgödsel består av högst 500 ton icke-farligt avfall per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+29 kap. 65 §.
+
+21 kap 3 §
+
+40.02
+
+-
+
+C
+
+Anläggning som genom anaerob biologisk behandling av stallgödsel, grödor eller annat biologiskt material producerar biogas.
+
+Anmälningsplikten gäller även om stallgödseln är avfall och även om det material som inte är stallgödsel består av högst 500 ton icke-farligt avfall per kalenderår.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+2 §.
+
+Framställning av gas- och vätskeformiga bränslen
+
+21 kap 4 §
+
+40.05-1
+
+1.4b
+
+B
+
+Anläggning för förgasning eller förvätskning av andra bränslen än kol där anläggningen har en kapacitet att överföra 20 megawatt tillförd bränsleeffekt eller mer.
+
+21 kap 5 §
+
+40.15
+
+-
+
+B
+
+Anläggning för att uppgradera eller för att på annat sätt än genom anaerob biologisk behandling tillverka mer än 1 500 megawattimmar gas eller vätskeformigt bränsle per kalenderår.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 4 § eller 12 kap. 1 eller 2 §.
+
+21 kap 6 §
+
+40.20
+
+-
+
+C
+
+Anläggning för att uppgradera eller för att på annat sätt än genom anaerob biologisk behandling tillverka högst 1 500 megawattimmar gas eller vätskeformigt bränsle per kalenderår.
+
+Kärnkraft
+
+Förbränning
+
+21 kap 9 §
+
+40.50-i
+
+1,1
+
+B
+
+Anläggning för förbränning med en total installerad tillförd effekt av minst 50 megawatt men högst 300 megawatt. a) b)
+
+21 kap 10 §
+
+40.51
+
+-
+
+21 kap 11 §
+
+40.60
+
+-
+
+Total installerad tillförd effekt av mer än 100 megawatt men högst 300 megawatt.
+
+Total installerad tillförd effekt av mer än 50 megawatt men högst
+
+100 megawatt.
+
+B
+
+Anläggning för förbränning med en total installerad tillförd effekt av mer än 20 megawatt men mindre än 50 megawatt.
+
+C
+
+Anläggning för förbränning med en total installerad tillförd effekt av 1.
+
+mer än 500 kilowatt men högst 20 megawatt, om annat bränsle används än enbart fossil eldningsolja eller biogen eller fossil bränslegas, eller
+
+2.
+
+mer än 10 megawatt men högst 20 megawatt, om inget annat bränsle används än fossil eldningsolja eller biogen eller fossil bränslegas.
+
+Anmälningsplikten gäller inte om verksamheten är anmälningspliktig enligt
+
+12 § eller avser en stationär förbränningsmotor avsedd endast som reservaggregat vid elavbrott.
+
+-
+
+40.6001 (40.65)
+
+-
+
+a)
+
+b)
+
+c)
+
+U
+
+Total installerad tillförd effekt av mer än 5 megawatt men högst
+
+20 megawatt, om annat bränsle används än enbart fossil eldningsolja eller biogen eller fossil bränslegas.
+
+Total installerad tillförd effekt av mer än 500 kilowatt men högst
+
+5 megawatt, om annat bränsle används än enbart fossil eldningsolja eller biogen eller fossil bränslegas.
+
+Total installerad tillförd effekt av mer än 10 megawatt men högst
+
+20 megawatt, om inget annat bränsle än fossil eldningsolja eller biogen eller fossil bränslegas.
+
+Anläggning för förbränning med en total installerad tillförd effekt av
+
+1. högst 500 kilowatt, om annat bränsle används än enbart fossil eldningsolja eller biogen eller fossil bränslegas, eller
+
+2. högst 10 megawatt, om inget annat bränsle används än fossil eldningsolja eller biogen eller fossil bränslegas.
+
+21 kap 12 §
+
+40.70
+
+-
+
+C
+
+Gasturbinanläggning med en total installerad tillförd effekt av högst 20 megawatt.
+
+Vindkraft
+
+21 kap 13 §
+
+21 kap 14 §
+
+40.90
+
+40.95
+
+-
+
+-
+
+B
+
+B
+
+Verksamhet med
+
+1.
+
+två eller flera vindkraftverk som står tillsammans (gruppstation), om vart och ett av vindkraftverken inklusive rotorblad är högre än 150 meter,
+
+2.
+
+ett vindkraftverk som inklusive rotorblad är högre än 150 meter och står tillsammans med en sådan gruppstation som avses i 1, eller
+
+3.
+
+ett vindkraftverk som inklusive rotorblad är högre än 150 meter och står tillsammans med ett annat sådant vindkraftverk, om verksamheten påbörjas efter att verksamheten med det andra vindkraftverket påbörjades.
+
+Verksamhet med
+
+1.
+
+sju eller fler vindkraftverk som står tillsammans (gruppstation), om vart och ett av vindkraftverken inklusive rotorblad är högre än 120 meter,
+
+2.
+
+ett vindkraftverk som inklusive rotorblad är högre än 120 meter och står tillsammans med en sådan gruppstation som avses i 1, eller
+
+3.
+
+ett eller fler vindkraftverk som vart och ett inklusive rotorblad är högre än 120 meter och står tillsammans med så många andra sådana vindkraftverk att gruppstationen sammanlagt består av minst sju vindkraftverk, om verksamheten påbörjas efter det att verksamheten eller verksamheterna med de andra vindkraftverken påbörjades.
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+13 §.
+
+21 kap 15 §
+
+40.100
+
+-
+
+C
+
+Verksamhet med
+
+1.
+
+ett vindkraftverk som inklusive rotorblad är högre än 50 meter,
+
+2.
+
+två eller fler vindkraftverk som står tillsammans (gruppstation), eller
+
+3.
+
+ett vindkraftverk som står tillsammans med ett annat vindkraftverk, om verksamheten påbörjas efter det att verksamheten med det andra vindkraftverket påbörjades.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt 13 eller 14 §.
+
+Värme- och kylanläggningar
+
+21 kap 16 §
+
+40.110
+
+-
+
+C
+
+Värmepump eller kylanläggning för uttag eller tillförsel av värmeenergi från mark, vattenområde, grundvatten eller avloppsvatten för en uttagen eller tillförd effekt av mer än 10 megawatt.
+
+Anmälningsplikten gäller inte uttag eller tillförsel genom vattentäkt.
+
+21 kap 17 §
+
+40.120
+
+-
+
+C
+
+Anläggning för lagring av värme i mark, vattenområde eller i grundvatten för en tillförd energimängd av mer än 3 000 megawattimmar.
+
+22 KAP AVVECKLING AV KÄRNREAKTORER
+
+23 KAP FORDONSSERVICE OCH DRIVMEDELSHANTERING
+
+23 kap 1 §
+
+50.10
+
+-
+
+C
+
+Anläggning för tvättning av
+
+1.
+
+2.
+
+3.
+
+4.
+
+fler än 5 000 personbilar per kalenderår, fler än 100 tåg eller flygplan per kalenderår, fler än 500 tågvagnar eller lok per kalenderår, eller fler än 1 000 andra motordrivna fordon per kalenderår.
+
+Tvättning av
+
+a) b) c) d)
+
+Tvättning av a) b) c) d)
+
+23 kap 2 §
+
+50.20
+
+-
+
+fler än 15 000 personbilar per kalenderår, fler än 1 000 tåg eller flygplan per kalenderår, fler än 5 000 tågvagnar eller lok per kalenderår, eller fler än 3 000 andra motordrivna fordon per kalenderår.
+
+C
+
+fler än 5 000 personbilar per kalenderår, fler än 100 tåg eller flygplan per kalenderår, fler än 500 tågvagnar eller lok per kalenderår, eller fler än 1 000 andra motordrivna fordon per kalenderår.
+
+Anläggning där det per kalenderår hanteras
+
+1.
+
+mer än 1 000 kubikmeter flytande motorbränsle, eller
+
+2.
+
+mer än 1 miljon normalkubikmeter gas avsedd som motorbränsle.
+
+Anmälningsplikten gäller inte om verksamheten är tillstånds- eller anmälningspliktig enligt 20 kap. 1, 2 eller 3 §.
+
+24 KAP HAMNAR OCH FLYGPLATSER
+
+Hamnar
+
+24 kap 1 §
+
+63.10
+
+-
+
+B
+
+Gäller för hamn där trafik medges för fartyg med en bruttodräktighet på mer än 1 350.
+
+Tillståndsplikten gäller inte
+
+1.
+
+hamn för Försvarsmakten, eller
+
+2.
+
+färjekaj med högst tio planerade fartygsanlöp per kalenderår. a) b) c)
+
+24 kap 2 §
+
+63.20
+
+-
+
+C
+
+Hamn med mer än 50 anlöp per kalenderår
+
+Hamn med 10 – 50 anlöp per kalenderår
+
+Hamn med högst 10 anlöp per kalenderår
+
+Fiskehamn eller hamn för Försvarsmakten.
+
+Anmälningsplikten gäller inte fiskehamn som är tillståndspliktig enligt 1 §. Flygplatser
+
+24 kap 4 §
+
+63.40
+
+-
+
+B
+
+Flottiljflygplats eller civil flygplats med infrastruktur för militär flygverksamhet, om instrumentbanan på flottiljflygplatsen eller den civila flygplatsen är längre än 1 200 meter.
+
+24 kap 5 §
+
+63.50
+
+-
+
+C
+
+Flygplats för motordrivna luftfartyg där mer än 500 flygrörelser per kalenderår äger rum.
+
+Anmälningsplikten gäller inte om flygplatsen är tillståndspliktig enligt 3 eller 4 §§.
+
+25 KAP LABORATORIER
+
+25 kap 1 §
+
+73.10
+
+-
+
+C
+
+Kemiska eller biologiska laboratorier med en total golvyta som är större än 5 000 kvadratmeter.
+
+Anmälningsplikten gäller inte laboratorier som
+
+1.
+
+ingår i verksamhet som är tillstånds- eller anmälningspliktig enligt någon annan bestämmelse i denna förordning,
+
+2.
+
+är tillstånds- eller anmälningspliktiga enligt 13 kap. miljöbalken, eller
+
+3.
+
+ingår i utbildningslokaler som är anmälningspliktiga enligt 38 § förordningen (1998:899) om miljöfarlig verksamhet och hälsoskydd.
+
+26 KAP TANKRENGÖRING
+
+26 kap 1 §
+
+74.10
+
+-
+
+B
+
+Anläggning för rengöring av cisterner, tankar eller fat som i annan verksamhet än den egna används för förvaring eller transport av kemiska produkter och där någon kemisk produkt, a) enligt föreskrifter som har meddelats av Kemikalieinspektionen har klassificerats med de riskfraser som ingår i faroklasserna ”mycket giftig”, ”giftig”, ”frätande”, ”cancerframkallande”, ”mutagen”, ”reproduktionstoxisk” eller ”miljöfarlig”, eller b) enligt Europaparlamentets och rådets förordning (EG) nr 1272/2008 av den 16 december 2008 om klassificering, märkning och förpackning av ämnen och blandningar, ändring och upphävande av direktiven 67/548/EEG och 1999/45/EG samt ändring av förordning (EG) nr 1907/2006 uppfyller kriterierna för att klassificeras i faroklasserna ”akut toxicitet kategori 1”, ”akut toxicitet kategori 2”, ”akut toxicitet kategori 3”, ”specifik organtoxicitet enstaka exponering kategori 1”, ”specifik organtoxicitet upprepad exponering kategori 1”, ”frätande för huden kategori 1A”, ”frätande för huden kategori 1B”, ”frätande för huden kategori 1C”, ”cancerogenitet kategori 1A”, ”cancerogenitet kategori 1B”, ”cancerogenitet kategori 2”, ”mutagenitet i könsceller kategori 1A”, ”mutagenitet i könsceller kategori 1B”, ”mutagenitet i könsceller kategori 2”, ”reproduktionstoxicitet kategori 1A”, ”reproduktionstoxicitet kategori 1B”, ”reproduktionstoxicitet kategori 2”, ”farligt för vattenmiljön kategori akut 1”, ”farligt för vattenmiljön kategori kronisk 1”, ”farligt för vattenmiljön kategori kronisk 2”, ”farligt för vattenmiljön kategori kronisk 3”, ”farligt för vattenmiljön kategori kronisk 4” eller ”farligt för ozonskiktet”. a)
+
+b)
+
+26 kap 2 §
+
+74.20
+
+-
+
+C
+
+Rengöring av cisterner, tankar eller fat som i annan verksamhet än den egna används för förvaring eller transport av mer än 500 kubikmeter per kalenderår.
+
+Rengöring av cisterner, tankar eller fat som i annan verksamhet än den egna används för förvaring eller transport av högst 500 kubikmeter per kalenderår.
+
+Anläggning för rengöring av cisterner, tankar eller fat som används för förvaring eller för transport av kemiska produkter.
+
+Anmälningsplikten gäller inte om verksamheten är tillståndspliktig enligt
+
+1 §.
+
+27 KAP HÄLSO- OCH SJUKVÅRD
+
+27 kap 1 §
+
+85.10
+
+-
+
+C
+
+Sjukhus med fler än 200 vårdplatser.
+
+27 kap 2 §
+
+85.20
+
+-
+
+C
+
+Anläggning för sterilisering av sjukvårdsartiklar, om etylenoxid används som steriliseringsmedel.
+
+28 KAP RENING AV AVLOPPSVATTEN
+
+28 kap 1 §
+
+90.10
+
+-
+
+B
+
+Avloppsreningsanläggning som omfattas av lagen (2006:412) om allmänna vattentjänster och som tar emot avloppsvatten med en föroreningsmängd som motsvarar mer än 2 000 personekvivalenter (pe). a) b) c)
+
+28 kap 2 §
+
+90.11
+
+-
+
+B
+
+mottagande av en föroreningsmängd som motsvarar mer än
+
+100 000 pe. mottagande av en föroreningsmängd som motsvarar mer än
+
+20 000 pe men högst 100 000 pe. mottagande av en föroreningsmängd som motsvarar mer än
+
+2 000 pe men högst 20 000 pe.
+
+Avloppsreningsanläggning med en anslutning av 2 000 personer eller fler. Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 1 § a) b) c)
+
+28 kap 3 §
+
+90.15-i
+
+B
+
+Anslutning av fler än 100 000.
+
+Anslutning av fler än 20 000 personer men högst 100 000 personer.
+
+Anslutning av fler än 2 000 personer men högst 20 000 personer.
+
+Avloppsreningsanläggning som tar emot avloppsvatten från en eller flera sådana anläggningar som avses i 1 kap. 2 § industriutsläppsförordningen (2013:250).
+
+Tillståndsplikten gäller inte om verksamheten är tillståndspliktig enligt 1 §
+
+28 kap 4 §
+
+90.16
+
+-
+
+C
+
+a) b)
+
+28 kap 5 §
+
+90.20
+
+-
+
+Avloppsreningsanläggning som tar emot avloppsvatten med en föroreningsmängd som motsvarar mer än 200 men högst 2 000 personekvivalenter (pe).
+
+C
+
+>500 pe – 2 000 pe >200 pe – 500 pe
+
+1. Anläggning för återvinning av avloppsvatten från en verksamhet enligt 1, 2 eller 4 § för sådan bevattning inom jordbruket som anges i avsnitt 1 i bilaga I till Europaparlamentets och rådets förordning (EU) 2020/741 av den 25 maj 2020 om minimikrav för återanvändning av vatten, i den ursprungliga lydelsen, och
+
+2. Tillhandahållande av återvunnet vatten från en sådan anläggning.
+
+29 KAP AVFALL
+
+Ordförklaringar
+
+29 kap 1 §
+
+Med avfall, återvinna avfall, förbereda avfall för återanvändning, materialåtervinna avfall, bortskaffa avfall, samla in avfall och uttjänt bil avses i detta kapitel detsamma som i 15 kap. miljöbalken.
+
+29 kap 2 §
+
+Med farligt avfall och deponering avses i detta kapitel detsamma som i avfallsförordningen (2020:614).
+
+29 kap 3 §
+
+Med inert avfall avses i detta kapitel detsamma som i 3 a § förordningen (2001:512) om deponering av avfall.
+
+29 kap 4 §
+
+Med förbränningsanläggning och samförbränningsanläggning avses i detta kapitel detsamma som i förordningen (2013:253) om förbränning av avfall. Förbränning
+
+29 kap 7 §
+
+90.190
+
+-
+
+B
+
+Samförbränningsanläggning där farligt avfall förbränns, om den tillförda mängden avfall är högst 10 ton per dygn men högst 2 500 ton per kalenderår.
+
+29 kap 8 §
+
+90.191
+
+-
+
+B
+
+Avfallsförbränningsanläggning där farligt avfall förbränns, om den tillförda mängden avfall är högst 10 ton per dygn eller högst 2 500 ton per kalenderår.
+
+29 kap 11 §
+
+90.210-i
+
+5.2a
+
+B
+
+Samförbränningsanläggning där icke-farligt avfall förbränns, om den tillförda mängden avfall är
+
+1.
+
+mer än 3 ton per timme, eller
+
+2.
+
+mer än 18 000 ton men högst 100 000 ton per kalenderår.
+
+I den tillförda mängden inräknas inte rent träavfall eller avfall som anges i
+
+17 § 1-3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+29 kap 12 §
+
+90.211-i
+
+5.2a
+
+B
+
+Avfallsförbränningsanläggning där icke-farligt avfall förbränns, om den tillförda mängden avfall är
+
+1.
+
+mer än 3 ton per timme, eller
+
+2.
+
+mer än 18 000 ton men högst 100 000 ton per kalenderår.
+
+I den tillförda mängden inräknas inte rent träavfall eller avfall som anges i
+
+17 § 1-3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+29 kap 13 §
+
+29 kap 14 §
+
+29 kap 15 §
+
+90.212-i
+
+90.213-i
+
+90.220
+
+-
+
+B
+
+B
+
+B
+
+Samförbränningsanläggning där animaliskt avfall förbränns om den tillförda mängden avfall är
+
+1.
+
+mer än 10 ton per dygn, eller
+
+2.
+
+mer än 2 500 ton men högst 18 000 ton per kalenderår.
+
+Avfallsförbränningsanläggning där animaliskt avfall förbränns om den tillförda mängden avfall är
+
+1.
+
+mer än 10 ton per dygn, eller
+
+2.
+
+mer än 2 500 ton men högst 18 000 ton per kalenderår.
+
+Samförbränningsanläggning där icke-farligt avfall förbränns, om den tillförda mängden avfall är
+
+1.
+
+högst 3 ton per timme, eller
+
+2.
+
+mer än 50 ton men högst 18 000 ton per kalenderår.
+
+I den tillförda mängden inräknas inte rent träavfall eller avfall som anges i
+
+17 § 1-3 och 5 i förordningen (2013:253) om förbränning av avfall. a)
+
+b)
+
+29 kap 16 §
+
+90.221
+
+-
+
+c)
+
+B
+
+den tillförda mängden avfall är större än 10 000 ton men högst
+
+18 000 ton per kalenderår. den tillförda mängden avfall är större än 1000 ton men högst
+
+10 000 ton per kalenderår. den tillförda mängden avfall är större än 50 ton men högst
+
+1 000 ton per kalenderår.
+
+Avfallsförbränningsanläggning där icke-farligt avfall förbränns, om den tillförda mängden avfall är
+
+1.
+
+högst 3 ton per timme, eller
+
+2.
+
+mer än 50 ton men högst 18 000 ton per kalenderår.
+
+I den tillförda mängden inräknas inte rent träavfall eller avfall som anges i
+
+17 § 1-3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+29 kap 17 §
+
+90.230
+
+-
+
+a)
+
+b)
+
+c)
+
+C
+
+den tillförda mängden avfall är större än 10 000 ton men högst
+
+18 000 ton per kalenderår. den tillförda mängden avfall är större än 1000 ton men högst
+
+10 000 ton per kalenderår. den tillförda mängden avfall är större än 50 ton men högst
+
+1 000 ton per kalenderår.
+
+Samförbrännings- eller avfallsförbränningsanläggning där icke-farligt avfall förbränns yrkesmässigt, om den tillförda mängden är högst 50 ton per kalenderår.
+
+Anmälningsplikten gäller inte anläggning som endast förbränner rent träavfall eller avfall som anges i 17 § 1-3 och 5 i förordningen (2013:253) om förbränning av avfall.
+
+Deponering
+
+29 kap 18 §
+
+29 kap 19 §
+
+29 kap 21 §
+
+90.271
+
+90.281
+
+90.300-i
+
+-
+
+-
+
+B
+
+Deponering av icke-farliga muddermassor på land längs små sund, kanaler eller vattenvägar som massorna har muddrats från, om
+
+1.
+
+mängden massor är mer än 1 000 ton, eller
+
+2.
+
+föroreningsrisken inte endast är ringa.
+
+a)
+
+b)
+
+5,4
+
+C
+
+B
+
+där föroreningsrisken inte endast är ringa, eller i större mängd än
+
+2 500 ton. där föroreningsrisken inte endast är ringa, eller i större mängd är
+
+1 000 ton men högst 2 500 ton.
+
+Deponering av icke-farliga muddermassor på land längs små sund, kanaler eller vattenvägar som massorna har muddrats från, om
+
+1.
+
+mängden massor är högst 1 000 ton, eller
+
+2.
+
+föroreningsrisken endast är ringa.
+
+Deponera icke-farligt avfall som inte är inert, om
+
+1.
+
+den tillförda mängden är mer än 2 500 ton men högst 100 000 ton avfall per kalenderår, eller
+
+2.
+
+mängden avfall som deponeras är mer än 25 000 ton.
+
+Tillståndsplikten gäller inte om deponeringen är tillståndspliktig enligt
+
+20 §.
+
+29 kap 22 §
+
+90.310
+
+a)
+
+b)
+
+c)
+
+-
+
+B
+
+den tillförda mängden avfall är mer än 20 000 ton men högst
+
+100 000 ton per kalenderår. den tillförda mängden avfall är mer än 10 000 ton men högst
+
+20 000 ton per kalenderår. den tillförda mängden avfall är mer än 2 500 ton men högst
+
+10 000 ton per kalenderår.
+
+Deponera icke-farligt avfall.
+
+Tillståndsplikten gäller inte om deponeringen är tillstånds- eller anmälningspliktig enligt 18, 19, 20 eller 21 §.
+
+29 kap 24 §
+
+90.330-i
+
+5,4
+
+a) b)
+
+c)
+
+B
+
+den tillförda mängden avfall är mer än 10 000 ton per kalenderår. den tillförda mängden avfall är mer än 2 500 ton men högst
+
+10 000 ton per kalenderår. den tillförda mängden avfall är högst 2 500 ton per kalenderår.
+
+Deponera farligt avfall, om
+
+1.
+
+den tillförda mängden farligt avfall är mer än 2 500 ton men högst
+
+10 000 ton per kalenderår, eller
+
+2.
+
+mängden farligt avfall som deponeras är mer än 25 000 ton.
+
+Tillståndsplikten gäller inte om deponeringen är tillståndspliktig enligt
+
+23 §.
+
+29 kap 25 §
+
+29 kap 26 §
+
+90.340
+
+90.341
+
+-
+
+-
+
+B
+
+Deponera farligt avfall, om deponeringen inte är tillståndspliktig enligt 23 eller 24 §§.
+
+a)
+
+b)
+
+C
+
+den tillförda mängden avfall är mer än 1 000 ton men högst 2 500 ton per kalenderår. den tillförda mängden avfall är högst 1 000 ton per kalenderår.
+
+Sluttäckt deponi där sluttäckningen har godkänts enligt 32 § förordningen (2001:512) om deponering av avfall, fram till dess åtgärder inte längre behöver vidtas enligt 33 § samma förordning.
+
+Återvinning eller bortskaffande av avfall som uppkommit i egen verksamhet
+
+Biologisk behandling
+
+29 kap 30 §
+
+90.161
+
+-
+
+B
+
+Behandla icke-farligt avfall genom biologisk behandling om avfallet inte är park- och trädgårdsavfall och
+
+1.
+
+den tillförda mängden avfall är mer än 500 ton men högst 18 750 ton per kalenderår, eller
+
+2.
+
+om behandlingen enbart sker genom anaerob biologisk nedbrytning och den tillförda mängden avfall är mer än 500 ton men högst 25 000 ton per kalenderår
+
+Tillståndsplikten gäller inte om behandlingen
+
+29 kap 31 §
+
+90.171
+
+-
+
+C
+
+1.
+
+är tillståndspliktig enligt 66 §, eller
+
+2.
+
+är tillstånds- eller anmälningspliktig enligt 21 kap. 2 eller 3 §
+
+Behandla icke-farligt avfall genom biologisk behandling, om
+
+1.
+
+avfallet inte är park- och trädgårdsavfall och den tillförda mängden är mer än 10 ton men högst 500 ton per kalenderår, eller
+
+2.
+
+avfallet är park- och trädgårdsavfall och den tillförda mängden är mer än 50 ton men högst 18 750 ton per kalenderår.
+
+Anmälningsplikten gäller inte om behandlingen är tillstånds- eller anmälningspliktig enligt 21 kap. 2 eller 3 §.
+
+Animaliskt avfall
+
+29 kap 32 §
+
+90.241-i
+
+6,5
+
+B
+
+Behandla animaliskt avfall på annat sätt än genom biologisk behandling eller förbränning, om den tillförda mängden avfall är mer än 10 ton per dygn eller mer än 2 500 ton per kalenderår.
+
+29 kap 33 §
+
+90.251
+
+-
+
+C
+
+Yrkesmässigt behandla animaliskt avfall på annat sätt än genom biologisk behandling eller förbränning, om den tillförda mängden avfall är högst 10 ton per dygn eller högst 2 500 ton per kalenderår.
+
+Återvinning för anläggningsändamål
+
+29 kap 34 §
+
+29 kap 35 §
+
+90.131
+
+90.141
+
+-
+
+-
+
+B
+
+Återvinna icke-farligt avfall för anläggningsändamål på ett sätt som kan förorena mark, vattenområde eller grundvatten, om föroreningsrisken inte endast är ringa.
+
+a)
+
+b)
+
+c)
+
+d)
+
+e)
+
+C
+
+mer än 10 000 ton totalt upplagda massor på en och samma sammanhängande plats. mer än 2 500 ton men högst 10 000 ton totalt upplagda massor på en och samma sammanhängande plats. mer än 1 000 ton men högst 2 500 ton totalt upplagda massor på en och samma sammanhängande plats. mer än 50 ton men högst 1 000 ton totalt upplagda massor på en och samma sammanhängande plats. högst 50 ton totalt upplagda massor på en och samma sammanhängande plats.
+
+Återvinna icke-farligt avfall för anläggningsändamål på ett sätt som kan förorena mark, vattenområde eller grundvatten, om föroreningsrisken är ringa.
+
+Uppgrävda massor
+
+29 kap 36 §
+
+90.361
+
+-
+
+B
+
+Behandla farligt avfall som utgörs av uppgrävda massor, om mängden avfall är högst 2 500 ton per kalenderår.
+
+Tillståndsplikten gäller inte om behandlingen är tillstånds- eller anmälningspliktig enligt 25 eller 37 §.
+
+29 kap 37 §
+
+90.370
+
+-
+
+C
+
+Behandla avfall som utgörs av uppgrävda förorenade massor från den plats där behandlingen sker, om behandlingen pågår under högst en tolvmånadersperiod och inte är tillståndspliktig enligt 21, 22, 23, 24 eller
+
+25 §.
+
+Konvertering av smittförande avfall
+
+29 kap 38 §
+
+90.382
+
+-
+
+tim
+
+C
+
+Konvertera smittförande avfall på ett sjukhus
+
+Avvattning
+
+29 kap 39 §
+
+90.375
+
+-
+
+C
+
+Avvattna icke-farligt eller farligt avfall, om mängden avfall som behandlas är högst 2 000 ton per kalenderår.
+
+Mekanisk bearbetning och sortering
+
+29 kap 40 §
+
+90.100
+
+-
+
+B
+
+Återvinna mer än 10 000 ton icke-farligt avfall per kalenderår genom mekanisk bearbetning.
+
+Tillståndsplikten gäller inte
+
+1.
+
+för att genom krossning, siktning eller motsvarande mekanisk bearbetning återvinna avfall för byggnads- eller anläggningsändamål, eller
+
+2.
+
+om återvinningen är tillståndspliktig enligt 65 §.
+
+Den hanterade avfallsmängden är a) b)
+
+29 kap 41 §
+
+90.110
+
+-
+
+C
+
+större än 50 000 ton per kalenderår. större än 10 000 ton men högst 50 000 ton per kalenderår.
+
+1.
+
+Yrkesmässigt återvinna icke-farligt avfall genom mekanisk bearbetning, om den tillförda mängden avfall är högst 10 000 ton per kalenderår, eller
+
+2.
+
+genom krossning, siktning eller motsvarande mekanisk bearbetning återvinna avfall för byggnads- eller anläggningsändamål.
+
+Den hanterade avfallsmängden är a) b) c)
+
+29 kap 42 §
+
+90.70
+
+-
+
+B
+
+större än 5 000 ton men högst 10 000 ton avfall per kalenderår. högst 5 000 ton avfall per kalenderår tillfällig krossning/återvinning för byggnads- eller anläggningsändamål
+
+Sortera icke-farligt avfall, om mängden avfall är mer än 10 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte för att sortera avfall för byggnads- eller anläggningsändamål.
+
+29 kap 43 §
+
+90.80
+
+-
+
+a)
+
+b)
+
+C
+
+den hanterade avfallsmängden är mer än 75 000 ton per kalenderår. den hanterade avfallsmängden är mer än 10 000 ton men högst
+
+75 000 ton per kalenderår.
+
+Sortera icke-farligt avfall, om mängden avfall är
+
+1.
+
+mer än 1 000 ton per kalenderår och avfallet ska användas för byggnads- eller anläggningsändamål, eller
+
+2.
+
+mer än 1 000 ton men högst 10 000 ton per kalenderår i andra fall.
+
+Elavfall
+
+29 kap 44 §
+
+90.90
+
+-
+
+C
+
+Yrkesmässigt sortera, demontera eller på annat sätt behandla avfall som utgörs av elektriska eller elektroniska produkter innan ytterligare behandling.
+
+Anmälningsplikten gäller inte behandling av komponenter eller utrustning som innehåller isolerolja.
+
+Uttjänta fordon
+
+29 kap 45 §
+
+90.119
+
+-
+
+B
+
+Tömma, demontera eller på annat sätt yrkesmässigt återvinna sådana uttjänta motordrivna fordon som inte omfattas av bilskrotningsförordningen (2007:186).
+
+Tillståndsplikten gäller inte om återvinningen är anmälningspliktig enligt
+
+46 § p 2.
+
+29 kap 46 §
+
+90.120
+
+-
+
+a)
+
+b)
+
+C
+
+den hanterade avfallsmängden är större än 10 000 ton per kalenderår. den hanterade avfallsmängden är högst 10 000 ton per kalenderår.
+
+Tömma, demontera eller på annat sätt yrkesmässigt återvinna
+
+1. uttjänta bilar som omfattas av bilskrotningsförordningen (2007:186), eller
+
+2. andra uttjänta motordrivna fordon vars totalvikt inte överstiger
+
+3 500 kilogram, om fordonen återvinns av en bilskrotare som är auktoriserad enligt bilskrotningsförordningen.
+
+Förberedelser för återanvändning
+
+29 kap 47 §
+
+90.29
+
+-
+
+tim
+
+C
+
+Yrkesmässigt förbereda avfall för återanvändning.
+
+Lagring som en del av att samla in avfall
+
+29 kap 48 §
+
+90.30
+
+-
+
+B
+
+Lagra icke-farligt avfall som en del av att samla in det, om mängden avfall vid något tillfälle är
+
+1.
+
+2.
+
+29 kap 49 §
+
+90.40
+
+-
+
+a)
+
+b)
+
+c)
+
+mer än 30 000 ton och avfallet ska användas för byggnads- eller anläggningsändamål, eller mer än 10 000 ton annat icke-farligt avfall i andra fall.
+
+C
+
+mer än 300 000 ton och avfallet ska användas för byggnads- eller anläggningsändamål, eller mer än 10 000 ton i andra fall. mer än 150 000 ton men högst 300 000 ton och avfallet ska användas för byggnads- eller anläggningsändamål, eller mer än
+
+50 000 ton men högst 100 000 ton i andra fall. mer än 30 000 ton men högst 150 000 ton och avfallet ska användas för byggnads- eller mer än 10 000 ton men högst
+
+50 000 ton i andra fall.
+
+Lagra icke-farligt avfall som en del av att samla in det, om mängden avfall vid något tillfälle är
+
+1.
+
+mer än 10 ton men högst 30 000 ton och avfallet ska användas för byggnads- eller anläggningsändamål, eller
+
+2.
+
+mer än 10 ton men högst 10 000 ton annat icke-farligt avfall i andra fall. a) b) c)
+
+mer än 5 000 men högst 10 000 ton/30 000 ton mer än 2 500 men högst 5 000 ton mer än 10 men högst 2 500 ton
+
+29 kap 50 §
+
+90.50
+
+-
+
+B
+
+Lagra farligt avfall som en del av att samla in det, om mängden avfall vid något tillfälle är
+
+1.
+
+mer än 5 ton och utgörs av olja,
+
+2.
+
+mer än 30 ton och utgörs av blybatterier,
+
+3.
+
+mer än 50 ton och utgörs av elektriska eller elektroniska produkter,
+
+4.
+
+mer än 30 ton och utgörs av impregnerat trä,
+
+5.
+
+mer än 50 ton och utgörs av motordrivna fordon, eller
+
+6.
+
+mer än 1 ton i andra fall. a) b)
+
+c)
+
+d) e)
+
+29 kap 51 §
+
+90.60
+
+-
+
+C
+
+om mängden farligt avfall vid något tillfälle är mer än 50 ton om mängden farligt avfall vid något tillfälle uppgår till mer än
+
+10 ton men högst 50 ton annat farligt avfall. om mängden farligt avfall vid något tillfälle uppgår till mer än
+
+25 ton men högst 50 ton olja, eller mer än 5 ton men högst
+
+10 ton annat farligt avfall. om mängden farligt avfall vid något tillfälle uppgår till mer än
+
+15 ton men högst 25 ton olja, eller mer än 2,5 ton men högst
+
+5 ton annat farligt avfall. om mängden farligt avfall vid något tillfälle uppgår till mer än
+
+5 ton men högst 15 ton olja, mer än 30 ton men högst 50 ton blybatterier, mer än 30 ton men högst 50 ton impregnerat trä, eller mer än 1 ton men högst 2,5 ton annat farligt avfall.
+
+Lagra farligt avfall som en del av att samla in det, om mängden avfall vid något tillfälle är
+
+1.
+
+mer än 200 kilogram men högst 5 ton och utgörs av olja,
+
+2.
+
+mer än 1 500 kilogram men högst 30 ton och utgörs av blybatterier,
+
+3.
+
+mer än 1 ton men högst 50 ton och utgörs av elektriska eller elektroniska produkter,
+
+4.
+
+mer än 200 kilogram men högst 30 ton och utgörs av impregnerat trä,
+
+5.
+
+högst 50 ton och utgörs av motordrivna fordon, eller
+
+6.
+
+mer än 200 kilogram men högst 1 ton i andra fall.
+
+Långtidslagring, djupt bergförvar och underjordsförvar
+
+29 kap 55 §
+
+90.458
+
+-
+
+B
+
+Underjordsförvara icke-farligt avfall.
+
+Lagring i avvaktan på återvinning eller bortskaffande
+
+29 kap 56 §
+
+90.408-i
+
+B
+
+Lagra farligt avfall i avvaktan på sådan behandling som kräver tillstånd enligt 5, 6, 7, 8 eller 67 §, om mängden avfall vid något tillfälle är mer än 50 ton.
+
+Lagring av blandat bygg- och rivningsavfall, lättfraktion och stoft
+
+29 kap 56 a §
+
+90.350
+
+B
+
+På en annan plats än där avfallet uppkom lagra icke- farligt avfall som består av blandat bygg- och rivningsavfall (avfallskod 17 09 04) eller lättfraktion och stoft (avfallskod 19 10 04), om mängden avfall vid något tillfälle är mer än totalt 1 000 ton.
+
+29 kap 56 b §
+
+90.351
+
+C
+
+På en annan plats än där avfallet uppkom lagra icke- farligt avfall som består av blandat bygg- och rivningsavfall (avfallskod 17 09 04) eller lättfraktion och stoft (avfallskod 19 10 04), om mängden avfall vid något tillfälle är mer än totalt 10 ton och verksamheten inte omfattas av tillståndsplikt enligt 56 a §.
+
+Fartygsåtervinning
+
+Radioaktivt avfall
+
+Lagring och avskiljning av koldioxid
+
+29 kap 61 §
+
+90.485
+
+29 kap 62 §
+
+90.500-i
+
+29 kap 63 §
+
+90.510
+
+29 kap 64 §
+
+90.520
+
+-
+
+B
+
+Anläggning för geologisk lagring av koldioxid, om mängden koldioxid som är planerad att lagras är högst 100 000 ton.
+
+B
+
+Avskilja koldioxidströmmar för geologisk lagring av koldioxid från industriutsläppsverksamheter som beskrivs i 1 kap 2 § industriutsläppsförordningen (2013:250)
+
+-
+
+B
+
+Avskilja koldioxidströmmar för geologisk lagring av koldioxid från anläggningar som inte är tillståndspliktiga enligt 62 §
+
+-
+
+C
+
+Borra i syfte att bedöma om en plats är lämplig för geologisk lagring av koldioxid.
+
+Andra verksamheter med återvinning eller bortskaffande
+
+29 kap 65 §
+
+90.406
+
+5.3av,
+
+5.3biiv
+
+B
+
+Återvinna eller både återvinna och bortskaffa icke-farligt avfall, om den tillförda mängden avfall är mer än 75 ton per dygn eller mer än 18 750 ton per kalenderår och verksamheten avser
+
+1.
+
+biologisk behandling,
+
+2.
+
+behandling innan förbränning eller samförbränning
+
+3.
+
+behandling i anläggning för fragmentering av metallavfall, eller
+
+4.
+
+behandling av slagg eller aska.
+
+Om behandlingen enbart avser anaerob biologisk nedbrytning gäller tillståndsplikten endast om den tillförda mängden avfall är mer än
+
+100 ton per dygn eller mer än 25 000 ton per kalenderår.
+
+29 kap 66 §
+
+29 kap 69 §
+
+90.405-i
+
+90.420
+
+5.3aiiv
+
+-
+
+B
+
+B
+
+Bortskaffa icke-farligt avfall, om den tillförda mängden avfall är mer än 50 ton per dygn eller mer än 12 500 ton per kalenderår och verksamheten avser
+
+1.
+
+biologisk behandling,
+
+2.
+
+fysikalisk-kemisk behandling,
+
+3.
+
+behandling innan förbränning eller samförbränning
+
+4.
+
+behandling i anläggning för fragmentering av metallavfall, eller
+
+5.
+
+behandling av slagg eller aska.
+
+Behandla icke-farligt avfall, om den tillförda mängden avfall är mer än 500 ton men högst 100 000 ton per kalenderår.
+
+Tillståndsplikten gäller inte om behandlingen är tillståndspliktig enligt någon annan bestämmelse i detta kapitel.
+
+29 kap 70 §
+
+90.430
+
+-
+
+a)
+
+b)
+
+c)
+
+d)
+
+e)
+
+C
+
+den tillförda mängden avfall är mer än 20 000 ton men högst
+
+100 000 ton per kalenderår. den tillförda mängden avfall är mer än 10 000 ton men högst
+
+20 000 ton per kalenderår. den tillförda mängden avfall är mer än 2 500 ton men högst
+
+10 000 ton per kalenderår. den tillförda mängden avfall är mer än 1 000 ton men högst
+
+2 500 ton per kalenderår. den tillförda mängden avfall är mer än 500 ton men högst
+
+1 000 ton per kalenderår.
+
+Yrkesmässigt behandla icke-farligt avfall, om den tillförda mängden avfall är högst 500 ton per kalenderår.
+
+Anmälningsplikten gäller inte om behandlingen är anmälnings- eller tillståndspliktig enligt någon annan bestämmelse i detta kapitel.
+
+29 kap 72 §
+
+90.450
+
+-
+
+B
+
+Yrkesmässigt behandla farligt avfall, om den tillförda mängden avfall är högst 2 500 ton per kalenderår.
+
+Tillståndsplikten gäller inte om behandlingen är tillståndspliktig enligt någon annan bestämmelse i detta kapitel.
+
+a)
+
+b)
+
+c)
+
+den tillförda mängden avfall är mer än 1 000 ton men högst
+
+2 500 ton per kalenderår den tillförda mängden avfall är mer än 50 ton men högst
+
+1 000 ton per kalenderår den tillförda mängden avfall är högst 50 ton per kalenderår
+
+30 KAP SKJUTFÄLT, SKJUTBANOR OCH SPORTANLÄGGNINGAR
+
+30 kap 1 §
+
+92.10
+
+-
+
+30 kap 2 §
+
+92.20
+
+-
+
+B
+
+Skjutfält för skjutning med grovkalibriga vapen (kaliber större än 20 millimeter) eller för sprängningar av ammunition, minor eller andra sprängladdningar.
+
+C
+
+Skjutbana som är stadigvarande inrättad för skjutning utomhus med skarp ammunition till finkalibriga vapen (kaliber mindre än 20 millimeter) för mer än 5 000 skott per kalenderår. a) b) c)
+
+30 kap 3 §
+
+92.30
+
+-
+
+C
+
+mer än 100 000 skott per kalenderår. mer än 20 000 skott men högst 100 000 skott per kalenderår. mer än 5 000 skott men högst 20 000 skott per kalenderår.
+
+Permanent tävlings-, tränings- eller testbana för motorfordon.
+
+31 KAP TEXTILTVÄTTERIER
+
+31 kap 1 §
+
+93.10
+
+-
+
+C
+
+Tvätteri för mer än 2 ton tvättgods per dygn.
+
+Anmälningsplikten gäller inte om
+
+1.
+
+utsläpp av vatten från verksamheten leds till ett avloppsreningsverk som är tillståndspliktigt enligt 28 kap. 1 eller 2 §, eller
+
+2.
+
+verksamheten är anmälningspliktig enligt 19 kap. 4 §.
+
+BEGRAVNINGSVERKSAMHET
+
+32 kap 1 §
+
+93.20
+
+-
+
+B
+
+Krematorium
+
+ÖVRIGA VERKSAMHETER SOM INTE FINNS UPPTAGNA I TAXEBILAGA 2
+
+MB
+
+-
+
+tim
+
+U
+
+Övriga verksamheter som inte finns upptagna i taxebilaga 2.
+
+Verksamhetskod
+
+Årlig avgift
+
+AP
+
+HÄLSOSKYDDSVERKSAMHETER
+
+Lokal för undervisning eller omhändertagande
+
+1.1.1
+
+1.1.2
+
+1.1.3
+
+H
+
+H
+
+H
+
+1.1.4
+
+H
+
+1.1.5
+
+1.1.6
+
+H
+
+H
+
+1.2.1
+
+H
+
+1.2.2
+
+H
+
+1.3.1
+
+H
+
+1.4.1
+
+1.4.2
+
+1.4.3
+
+H
+
+H
+
+H
+
+1.5.1
+
+1.5.2
+
+UH
+
+UH
+
+1.6
+
+H
+
+Gymnasieskola eller anpassad gymnasieskola med mer än 300 elever
+
+Gymnasieskola eller anpassad gymnasieskola med högst 300 elever
+
+Grundskola, anpassad grundskola, specialskola, internationell skola med mer än 300 elever
+
+Grundskola, anpassad grundskola, specialskola, internationell skola med högst 300 elever
+
+Förskola
+
+Fritids, fritidshem
+
+Verksamhet där allmänheten yrkesmässigt erbjuds hygienisk behandling som innebär risk för blodsmitta eller annan smitta genom användning av skalpeller, akupunkturnålar, piercingverktyg eller andra liknande skärande eller stickande verktyg
+
+Mer tillsynsbehov: Tatuering, piercing, kosmetisk tatuering, microblading, microneedling, skönhetsbehandling som innebär silikoninjektioner
+
+Mindre tillsynsbehov: Medicinsk fotvård, öronhåltagning med kassett, akupunktur, barberare, manikyr/pedikyr, samt övriga anmälningspliktiga hygieniska verksamheter
+
+Solarier och artificiella solningsanläggningar
+
+Solarium
+
+Bassängbad som är upplåtna åt allmänheten eller som annars används av många människor
+
+Simhall, äventyrs-/ upplevelsebad
+
+Badanläggning
+
+Anläggning med enbart bubbelpool eller liknande där rening eller desinficering av vatten sker
+
+Vård och hälsa
+
+Vårdboenden och särskilda boenden
+
+Lokaler för vård eller annat omhändertagande med högst 10 boende.
+
+Lokaler för vård eller annat omhändertagande med mer än 10 boende.
+
+Kyltorn
+
+Kyltorn
