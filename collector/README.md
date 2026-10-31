@@ -155,6 +155,11 @@ county and municipal sync workflows install them.
   when the tools or the Swedish model are missing. OCR is slow (about two seconds a page), so a
   later run keeps the stored OCR text while the PDF's SHA-256 matches the manifest; `--refresh`
   reads it again.
+- The county collector reads by OCR both scans and files whose text layer cannot be read
+  (`--no-ocr` skips it). The manifest's `text` is `ocr` for a file read that way, or `no text
+  found by OCR` / the low-confidence gap when OCR fails, so the file is not read again; a file
+  still recorded as `no text layer` or `text layer is not readable` is downloaded and read on the
+  next run with OCR.
 - Tests that run the tools skip when they are not installed, unless `LAGAR_REQUIRE_OCR=1` (set in
   CI).
 
@@ -702,8 +707,9 @@ python3 -I collector/collect.py county --county CODE [--from-year YYYY] [--to-ye
   PDF. Regulations published only as PDF (all of the `files` layout, and detail pages without
   text) get the PDF's text instead, read with `lagar/pdftext.py` and reflowed into paragraphs;
   with several readable files (a regulation and its appendix) each gets a heading. A PDF without
-  a readable text layer (scanned) is a gap: the body says the text is only in the PDF and nothing
-  is guessed. A regulation the county marks "UPPHÄVD" gets a note saying so. `pdftotext`
+  a readable text layer (scanned) is read by OCR (`lagar/ocr.py`, marked `text_source: ocr` and
+  noted in the body); one OCR cannot read is a gap: the body says the text is only in the PDF and
+  nothing is guessed. A regulation the county marks "UPPHÄVD" gets a note saying so. `pdftotext`
   (poppler-utils) must be installed unless `--no-text` (or `--no-pdf`) is given.
 - PDFs: on detail pages, a paragraph made only of PDF links is the regulation's own printed
   version; PDF links in running text point at other regulations and are not followed. Each own PDF
