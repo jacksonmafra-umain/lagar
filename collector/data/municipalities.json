@@ -1771,6 +1771,24 @@
       "link_pattern": "^https://www\\.valdemarsvik\\.se/wp-content/uploads/.*\\.pdf$",
       "number": [{"from": "href", "pattern": "/wp-content/uploads/(\\d{4}/\\d{2}/[^/]+?)\\.pdf$"}]
     },
+    "0580": {
+      "name": "Linköping",
+      "issuer": "Linköpings kommun",
+      "region_code": "05",
+      "collection": "Regler och styrande dokument",
+      "strategy": "html_index",
+      "hosts": ["www.linkoping.se"],
+      "listings": [
+        "https://www.linkoping.se/kommun-och-politik/sa-styrs-linkopings-kommun/regler-och-styrande-dokument"
+      ],
+      "section_level": 2,
+      "sections": ["Lokala föreskrifter", "Taxor och avgifter"],
+      "link_pattern": "^https://drive\\.google\\.com/file/d/[\\w-]+/view",
+      "number": [{"from": "href", "pattern": "/file/d/([\\w-]+)/"}],
+      "title_strip": ["\\s*L(ä|a)nk till annan webbplats\\.?\\s*$", "\\s*\\(\\s*pdf\\s*\\)\\s*$"],
+      "title_exclude": ["^bilaga\\s*\\d*$", "^karta ", "^beslut om"],
+      "document_gap": "the document is a Google Drive share page; robots.txt disallows its download (drive.usercontent.google.com: Disallow: /; drive.google.com/uc falls under Disallow: /)"
+    },
     "0581": {
       "name": "Norrköping",
       "issuer": "Norrköpings kommun",
