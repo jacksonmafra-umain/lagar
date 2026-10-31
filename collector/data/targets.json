@@ -522,10 +522,10 @@
     "type": null,
     "series": "LIVSFS",
     "label": "LIVSFS (SLV)",
-    "target": 39,
+    "target": 43,
     "kind": "counted",
     "source": "https://www.livsmedelsverket.se/om-oss/lagstiftning1/foreskrifter-i-nummerordning/ (base regulations in force, 2005 on)",
-    "as_of": "2026-10-30"
+    "as_of": "2026-10-31"
   },
   {
     "layer": "agency",
@@ -685,6 +685,76 @@
     "target": 4,
     "kind": "counted",
     "source": "https://kunskapsguiden.se/gemensam-forfattningssamling/ (base regulations listed)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "RFFS",
+    "label": "RFFS (RFV)",
+    "target": 221,
+    "kind": "counted",
+    "source": "https://lagrummet.forsakringskassan.se/foreskrifter (RFFS regulations in force in the register)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "FIFS",
+    "label": "FIFS (Fiskeriverket)",
+    "target": 8,
+    "kind": "counted",
+    "source": "https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/foreskrifter.html (FIFS in force)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "LMVFS",
+    "label": "LMVFS (LMV)",
+    "target": 6,
+    "kind": "counted",
+    "source": "https://www.lantmateriet.se/sv/Om-Lantmateriet/Rattsinformation/Foreskrifter/ (LMVFS in force)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "SLVFS",
+    "label": "SLVFS (SLV)",
+    "target": 2,
+    "kind": "counted",
+    "source": "Livsmedelsverket's year tables 1995-2001 (SLVFS in force)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "LFS",
+    "label": "LFS (Luftfart)",
+    "target": 65,
+    "kind": "counted",
+    "source": "Transportstyrelsen's TSFS index, year pages before 2009 (base regulations, in force and repealed)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "JvSFS",
+    "label": "JvSFS (Järnväg)",
+    "target": 20,
+    "kind": "counted",
+    "source": "Transportstyrelsen's TSFS index, year pages before 2009 (base regulations, in force and repealed)",
+    "as_of": "2026-10-31"
+  },
+  {
+    "layer": "agency",
+    "type": null,
+    "series": "VVFS",
+    "label": "VVFS (Vägverket)",
+    "target": 1,
+    "kind": "counted",
+    "source": "Transportstyrelsen's TSFS index, year pages before 2009 (base regulations, in force and repealed)",
     "as_of": "2026-10-31"
   },
   {

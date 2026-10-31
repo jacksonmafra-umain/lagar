@@ -312,6 +312,16 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   scans without a text layer. Dead links (FoHMFS, SOSFS) and TLVFS regulations
   TLV's page no longer names are not collected. LVFS (Läkemedelsverket) is not
   collected (#673), and FHIFS has only repealing regulations on the list.
+- Predecessor series still listed where their successors are read, as of
+  2026-10-31, in full text from the PDFs: RFFS (Riksförsäkringsverket, 221 in
+  force, from Försäkringskassan's register; RFFS 1999:12's file is not a PDF),
+  LFS (Luftfartsverket and Luftfartsstyrelsen, 65) and JvSFS (Järnvägsstyrelsen,
+  20) and VVFS (Vägverket, 1) from Transportstyrelsen's year pages before 2009,
+  repealed base regulations kept with their repeal date as for TSFS, FIFS
+  (Fiskeriverket, 8, from Havs- och vattenmyndigheten's list), LMVFS (6, one a
+  scan without a text layer) and SLVFS (2 in force, 1995-2001). LIVSFS is now
+  read from 2002, its first year (4 more regulations). DIFS has nothing in
+  force: IMY lists only regulations repealing DIFS ones.
 - PTSFS (Post- och telestyrelsen) is a gap: on 2026-10-30 pts.se answered its
   regulation library with a Radware bot-verification page (#194).
 - SJVFS (Statens jordbruksverk) is a gap: its regulations are PDFs on
