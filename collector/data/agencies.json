@@ -1151,7 +1151,15 @@
     "series:VRFS": 221,
     "series:ÅFS": 222,
     "source:register-over-svensk-forfattningssamling-sfs": 537,
-    "source:svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": 536
+    "source:svensk-forfattningssamling-sfs-pa-svenskforfattningssamling-se": 536,
+    "series:SOSFS": 665,
+    "series:MSBFS": 666,
+    "series:TLVFS": 667,
+    "series:FoHMFS": 668,
+    "series:DIFS": 669,
+    "series:SLVFS": 670,
+    "series:LFS": 671,
+    "series:LVFS": 673
   },
   "kommuner": {
     "0580": {
