@@ -131,21 +131,22 @@ internal fun ReadingPaper.isDark(appDark: Boolean): Boolean = when (this) {
     ReadingPaper.Dark -> true
 }
 
+/** The colors of [paper]; [ReadingPaper.App] is the app's own scheme, [appColors]. */
+internal fun ReadingPaper.scheme(appColors: ColorScheme, appDark: Boolean): ColorScheme = when (this) {
+    ReadingPaper.App -> appColors
+    ReadingPaper.Light -> lagarLightColorScheme()
+    ReadingPaper.Sepia -> sepiaScheme()
+    ReadingPaper.Dark -> lagarDarkColorScheme()
+    ReadingPaper.HighContrast -> highContrastScheme(appDark)
+}
+
 /** Sets [content] on the paper, type and measure that [settings] asks for. */
 @Composable
 internal fun ReadingTheme(settings: ReadingSettings, content: @Composable () -> Unit) {
     val appDark = LagarTheme.isDark
     val appColors = LagarTheme.colors
     val dark = settings.paper.isDark(appDark)
-    val colors = remember(settings.paper, appDark, appColors) {
-        when (settings.paper) {
-            ReadingPaper.App -> appColors
-            ReadingPaper.Light -> lagarLightColorScheme()
-            ReadingPaper.Sepia -> sepiaScheme()
-            ReadingPaper.Dark -> lagarDarkColorScheme()
-            ReadingPaper.HighContrast -> highContrastScheme(appDark)
-        }
-    }
+    val colors = remember(settings.paper, appDark, appColors) { settings.paper.scheme(appColors, appDark) }
     val appType = LagarTheme.type
     val type = remember(appType, settings) { appType.forReading(settings) }
     LagarSubtheme(colors = colors, type = type, darkTheme = dark) {
