@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.bromolla.se/globalassets/kommun-och-politik/regler-och-styrande-dokument/avgifter-och-taxor/taxor-for-arrenden.pdf"
 source_sha256: "2e66d56420792d98c0c2a8025322b1b0aca0ce3e4794c5fb51ebe840e67a1b17"
-fetched_at: "2026-10-30T15:10:06Z"
+fetched_at: "2026-10-31T18:29:32Z"
 issuer: "Bromölla kommun"
 region_code: "12"
 municipality_code: "1272"
@@ -34,3 +34,5 @@ Förteckning: <https://www.bromolla.se/kommun-och-politik/kommunfakta/regler-och
 Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
 
 - [Taxor för arrenden](<https://www.bromolla.se/globalassets/kommun-och-politik/regler-och-styrande-dokument/avgifter-och-taxor/taxor-for-arrenden.pdf>)
+
+Pdf:en är inskannad och innehåller ingen text som kan läsas maskinellt.

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://cms.landskrona.se/wp-content/uploads/2024/09/bilaga7_upplockningstvang-hundar_allmanna-lokala-ordningsforeskrifter.pdf"
 source_sha256: "ddd5c67e6e860653d886c653fb0e0516c721a3fd1815272e9049b5ea1719521c"
-fetched_at: "2026-10-30T14:58:48Z"
+fetched_at: "2026-10-31T18:34:02Z"
 issuer: "Landskrona stad"
 region_code: "12"
 municipality_code: "1282"
@@ -31,6 +31,16 @@ Förteckning: <https://www.landskrona.se/kommun-och-politik/kommunfakta/forfattn
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Bilaga 7 Upplockningstvång hundar – Allmänna lokala ordningsföreskrifter](<https://cms.landskrona.se/wp-content/uploads/2024/09/bilaga7_upplockningstvang-hundar_allmanna-lokala-ordningsforeskrifter.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Bilaga 7
+
+Upplockningstvång efter hundar
+
+Strandlinjen – Lilla Strandgatan – Strandlinjen – Söderleden – Österleden – Järnvägen – Stenorsvägen – Kopparhögarnas koloniområde – Säbyholm – Tullstorpsvägen – Hälsingborgsvägen – Erikstorpsvägen – Lill-Olas väg – Strandlinjen

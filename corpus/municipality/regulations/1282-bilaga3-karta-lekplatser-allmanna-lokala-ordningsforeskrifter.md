@@ -16,10 +16,11 @@ language: "sv"
 authoritative: false
 source: "https://cms.landskrona.se/wp-content/uploads/2024/09/bilaga3_karta-lekplatser_allmanna-lokala-ordningsforeskrifter.pdf"
 source_sha256: "98fe55ac56eb2793c8ee3492e7dc6e66d074c53f3ffbbaad6571c40fed201389"
-fetched_at: "2026-10-30T14:58:43Z"
+fetched_at: "2026-10-31T18:33:48Z"
 issuer: "Landskrona stad"
 region_code: "12"
 municipality_code: "1282"
+text_source: "ocr"
 ---
 # Bilaga 3 Karta över lekplatser- Allmänna lokala ordningsföreskrifter
 
@@ -31,6 +32,28 @@ Förteckning: <https://www.landskrona.se/kommun-och-politik/kommunfakta/forfattn
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Bilaga 3 Karta över lekplatser- Allmänna lokala ordningsföreskrifter](<https://cms.landskrona.se/wp-content/uploads/2024/09/bilaga3_karta-lekplatser_allmanna-lokala-ordningsforeskrifter.pdf>)
+
+## Text
+
+Texten är maskinellt inläst (OCR) ur kommunens inskannade pdf och kan innehålla läsfel. Den gällande lydelsen finns i pdf:en.
+
+Landskrona tätort, Borstahusen och Örja kyrkb
+
+EE Lill-Olas badkolonin badkioske
+
+Glumslöv
+
+Härslöv Vadensjö
+
+Y' — Gamla S shuset
+
+Asmundtorp och Råga Hörstad
+
+/
+
+Axeltofta koloniområde och Häljarp
+
+lt

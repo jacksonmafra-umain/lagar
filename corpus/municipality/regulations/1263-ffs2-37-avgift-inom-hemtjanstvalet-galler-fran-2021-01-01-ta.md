@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.svedala.se/contentassets/3839f51e55894c23b9eb4d7d5bf338f3/ffs2-37-avgift-inom-hemtjanstvalet-galler-fran-2021-01-01-ta.pdf"
 source_sha256: "e9bb4908febdafdbc815a41b61b61197ca563d12cfcb158b04fcc47ff993a99d"
-fetched_at: "2026-10-30T20:26:47Z"
+fetched_at: "2026-10-31T18:24:23Z"
 issuer: "Svedala kommun"
 region_code: "12"
 municipality_code: "1263"
@@ -31,6 +31,26 @@ Förteckning: <https://www.svedala.se/paverka/kommun/kommunfakta/regler-och-styr
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Avgift inom hemtjänstvalet](<https://www.svedala.se/contentassets/3839f51e55894c23b9eb4d7d5bf338f3/ffs2-37-avgift-inom-hemtjanstvalet-galler-fran-2021-01-01-ta.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Svedala Kommuns
+
+Författningssamling
+
+2:37
+
+Avgift inom hemtjänstvalet
+
+antagen av kommunfullmäktige 2010-06-09, § 116, senast uppdaterad av socialnämnden 2019-11-07, § 108, 2020-12-10, § 103, Ersättningen för omvårdnads- och delegerade hälso- och sjukvårdsinsatser för externa utförare 446 kr per timme exklusive momskompensation och för kommunens hemtjänst 460 kr per timme.
+
+Ersättning för serviceinsatser är 363 kr per timme exklusive moms och serviceinsatser för obekväm arbetstid 399 kr per timme exklusive moms.
+
+Gäller från
+
+2021-01-01
