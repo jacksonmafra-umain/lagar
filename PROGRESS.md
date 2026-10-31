@@ -70,7 +70,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | DVFS (DV) | 154 | 154 | counted | 100.0% |
 | agency | EIFS (Ei) | 34 | 34 | counted | 100.0% |
 | agency | KBVFS (KBV) | 4 | 4 | counted | 100.0% |
-| agency | FFS (FM) | 68 | 68 | counted | 100.0% |
+| agency | FFS (FM) | 61 | 68 | counted | 89.7% |
 | agency | HSLF-FS | 119 | 155 | counted | 76.8% |
 | agency | SOSFS (Socialstyrelsen) | 51 | 51 | counted | 100.0% |
 | agency | FoHMFS (FoHM) | 12 | 12 | counted | 100.0% |
@@ -190,10 +190,10 @@ Targets:
 
 ## Integrity
 
-Audit of 54793 documents (2026-10-31T11:51:58Z):
+Audit of 54786 documents (2026-10-31T23:41:09Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
-- text-quality flags: 888
+- text-quality flags: 904
 - cross-references not in the corpus: 39935 of 39996 (informational, the corpus is partial)

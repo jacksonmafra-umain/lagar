@@ -260,8 +260,8 @@
 <text x="704" y="2327" text-anchor="end" fill="#007270">4 / 4 (100.0%)</text>
 <text x="16" y="2363" fill="#007270">FFS (FM)</text>
 <rect x="240" y="2352" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
-<rect x="240" y="2352" width="260" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="2363" text-anchor="end" fill="#007270">68 / 68 (100.0%)</text>
+<rect x="240" y="2352" width="233" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2363" text-anchor="end" fill="#007270">61 / 68 (89.7%)</text>
 <text x="16" y="2399" fill="#007270">HSLF-FS</text>
 <rect x="240" y="2388" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="2388" width="200" height="16" rx="8" fill="#0f7c7a"/>

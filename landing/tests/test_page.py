@@ -90,12 +90,18 @@ class PageTest(unittest.TestCase):
         self.assertEqual(self.page.lang, "sv")
 
     def test_required_sections_present(self):
-        for id_ in ["hero", "why", "inside", "catalog", "sources", "open"]:
+        for id_ in ["hero", "why", "who", "how", "numbers", "inside", "catalog", "sources", "open"]:
             self.assertIn(id_, self.page.ids)
         self.assertIn("footer", self.page.tags)
 
-    def test_primary_cta_points_to_app(self):
-        self.assertEqual(self.page.i18n_hrefs.get("hero.cta"), "/app/")
+    def test_no_link_to_the_paused_web_app(self):
+        # the web app is not deployed; old /app links redirect home (vercel.json)
+        for tag, name, url in self.page.urls:
+            with self.subTest(url=url):
+                self.assertFalse(url.startswith("/app"), url)
+
+    def test_primary_cta_points_to_the_numbers(self):
+        self.assertEqual(self.page.i18n_hrefs.get("hero.numbers"), "#numbers")
 
     def test_independence_note_present(self):
         self.assertIn("Oberoende projekt. Inte en myndighetstjänst.", self.page.text)
@@ -112,8 +118,8 @@ class PageTest(unittest.TestCase):
                     self.assertIn(url[1:], self.page.ids)
                     continue
                 path = url.split("#")[0].split("?")[0]
-                # fonts/ and app/ are added by the build script
-                if path.startswith(("/app/", "fonts/")):
+                # fonts/ is added by the build script
+                if path.startswith("fonts/"):
                     continue
                 self.assertTrue((LANDING / path.lstrip("/")).is_file(), path)
 

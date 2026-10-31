@@ -4,7 +4,7 @@ Swedish laws, case law, EU law, municipal regulations and public services as
 Markdown, one file per norm, with a static JSON API and Compose Multiplatform
 apps for Android, iOS and the web.
 
-- Web app: <https://grundlagar.vercel.app/app/> (landing page at <https://grundlagar.vercel.app>)
+- Landing page: <https://grundlagar.vercel.app>. The hosted web app is paused while it is rebuilt; run it locally with `scripts/serve_local.py` (see [Run it locally](#run-it-locally)).
 - API: built and served per machine with `python3 -I scripts/serve_local.py` ([contract](docs/api.md)); the copy at <https://jacksonmafra-umain.github.io/lagar/api/v1/index.json> is frozen and no longer updated
 
 ## Progress
@@ -16,7 +16,7 @@ apps for Android, iOS and the web.
 | --- | ---: | ---: | ---: |
 | Fundamental laws | 4 | 4 | 100.0% |
 | SFS (statutes and ordinances) (2 series) | 14943 | 15082 | 99.1% |
-| Agency regulations (80 series) | 5475 | 5513 | 99.3% |
+| Agency regulations (80 series) | 5468 | 5513 | 99.2% |
 | Case law | 16475 | 16640 | 99.0% |
 | EU law (2 series) | 675 | 681 | 99.1% |
 | County regulations | 11649 | unknown | - |
