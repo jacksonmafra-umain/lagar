@@ -594,6 +594,23 @@ class CountyOcrTests(unittest.TestCase):
         self.assertIn("1 § Det är förbjudet att elda", body)
         self.assertEqual(self.files(0)[0]["text"], county.TEXT_OCR)
 
+    def test_ocr_title_only_stands_in_for_a_missing_link_title(self):
+        with fake_extract("\f\f", pdftext.NO_TEXT_LAYER):
+            self.run_files(FilesClient(), "22", "--from-year", "2026", "--no-ocr")
+        linked = {p.name: frontmatter.load(p.read_text(encoding="utf-8"))[0]["title"]
+                  for p in self.corpus.rglob("22fs-*.md")}
+        self.assertTrue(any(not title.startswith("22FS") for title in linked.values()), linked)
+        self.state.unlink()
+        with fake_extract("\f\f", pdftext.NO_TEXT_LAYER), fake_ocr(PDF_TEXT.replace("24FS", "22FS")):
+            self.run_files(FilesClient(), "22", "--from-year", "2026")
+        for path in self.corpus.rglob("22fs-*.md"):
+            meta, _ = frontmatter.load(path.read_text(encoding="utf-8"))
+            self.assertEqual(meta["text_source"], "ocr")
+            expected = linked[path.name]
+            if expected.startswith("22FS"):  # no link title: the printed one stands in
+                expected = "Länsstyrelsen i Västerbottens läns föreskrifter om eldningsförbud"
+            self.assertEqual(meta["title"], expected)
+
     def test_unreadable_text_layer_is_read_by_ocr(self):
         with fake_extract("i®åëëíóêÉäëÉå", pdftext.UNREADABLE_TEXT), fake_ocr():
             self.run_files(FilesClient(), "24", "--from-year", "2026")
