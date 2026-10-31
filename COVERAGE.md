@@ -447,9 +447,8 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
   - Karlskrona (1080): www.karlskrona.se answers every request, robots.txt
     included, with an HTTP 403 "Åtkomst nekad" bot-check page; not bypassed.
   - Not collected yet, with the reason per kommun in `AGENCIES.md`: Värnamo
-    (its DocumentWeb host did not answer; retried 2026-10-31), Mönsterås (site
-    did not answer; retried 2026-10-31) and Linköping (rules on Google Drive;
-    waits for an owner decision). Their issues stay open.
+    (its DocumentWeb host did not answer; retried 2026-10-31) and Mönsterås (site
+    did not answer; retried 2026-10-31). Their issues stay open.
   - Collected through platform adapters: Lidingö and Västervik (Evolution
     DocumentWeb API), Sigtuna (Netpublicator), Gotland (its document service),
     Vallentuna (gzipped sitemap of the file-share module), Uppsala (sitemap and
@@ -458,6 +457,11 @@ Sveriges Domstolar API lists (`x-total-count`) on 2026-10-29, all courts togethe
     juneavfall.se and not collected).
     Östhammar's robots.txt shuts named AI crawlers out of its rule pages but
     allows this collector's agent; the owner approved collecting it.
+  - Linköping links its rules to Google Drive share pages. The owner approved
+    collecting them; robots.txt allows Drive's share pages but disallows the
+    download (`drive.usercontent.google.com`: `Disallow: /`, checked
+    2026-10-31), so each rule is kept as metadata and its Drive link, recorded
+    as a gap in the manifest, and the PDF is not fetched.
 - Public services have no collector yet and no known target.
 
 ## Failures and blocked sources

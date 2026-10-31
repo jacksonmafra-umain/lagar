@@ -1,0 +1,16 @@
+{
+  "listings": {
+    "https://www.linkoping.se/kommun-och-politik/sa-styrs-linkopings-kommun/regler-och-styrande-dokument": "0580-listing.html"
+  },
+  "count": 25,
+  "sample": {
+    "number": "1Ewzw-OYF7Li3EsD7pqqMQzwy_9B4Phic",
+    "title": "Renhållningsordning med Avfallsplan och Lokala avfallsföreskrifter del 1",
+    "url": "https://drive.google.com/file/d/1Ewzw-OYF7Li3EsD7pqqMQzwy_9B4Phic/view?usp=sharing"
+  },
+  "excluded": [
+    "Delegationsordning för arbetsmarknadsnämnden",
+    "Delegationsordning för barn- och ungdomsnämnden",
+    "Delegationsordning för bildningsnämnden"
+  ]
+}
