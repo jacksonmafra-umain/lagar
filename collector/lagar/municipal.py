@@ -38,9 +38,12 @@ waste rules and the like); internal governance documents (reglementen,
 bolagsordningar, delegationsordningar, instruktioner) are left out through the
 config's sections and kinds.
 
-PDF text is never extracted: the body holds the metadata, the kommun's own note
-when it has one and a link to the official PDF, whose SHA-256 goes into the
-manifest. robots.txt is read for every host before it is contacted, with
+The body holds the metadata, the kommun's own note when it has one, a link to
+the official PDF, whose SHA-256 goes into the manifest, and the PDF's text read
+with `pdftext` (a scan without a text layer is read by `ocr` and marked
+`text_source: ocr`). The manifest records the text outcome per document, and the
+stored text is reused while the PDF's SHA-256 is unchanged. PDF bytes are never
+kept. robots.txt is read for every host before it is contacted, with
 RFC 9309 wildcards; a document whose URL is disallowed is not fetched and is
 recorded as a gap, its corpus file then pointing at the listing page instead.
 """
@@ -63,7 +66,8 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
-from . import frontmatter, htmlmd, writer
+from . import frontmatter, htmlmd, ocr, pdftext, writer
+from .caselaw import personal_numbers
 from .http import Blocked, PoliteClient
 from .sfs import NETWORK_ERRORS, USER_AGENT, StateError, _save_state
 from .vocabulary import TYPES
@@ -1245,7 +1249,7 @@ def build_meta(kommun, entry, source, sha, fetched_at):
     }
 
 
-def build_body(kommun, entry, documents, detail=None, gap=None, text=None):
+def build_body(kommun, entry, documents, detail=None, gap=None, text=None, pdf_text=(None, None)):
     """Markdown body: metadata, the kommun's own note and links to the official documents.
 
     With `text` (a rule published as an HTML page), the body holds that text instead.
@@ -1276,17 +1280,21 @@ def build_body(kommun, entry, documents, detail=None, gap=None, text=None):
         return "\n".join(lines) + "\n"
     if detail is not None and detail.note:
         lines += ["", "## Uppgifter från kommunen", "", detail.note]
-    lines += [
-        "",
-        "## Dokument",
-        "",
-        "Kommunen publicerar texten som PDF. Texten har inte konverterats; "
-        "den gällande lydelsen finns i kommunens dokument.",
-        "",
-    ]
+    status, paragraphs = pdf_text
+    if paragraphs:
+        intro = "Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den."
+    else:
+        intro = ("Kommunen publicerar texten som PDF. Texten har inte konverterats; "
+                 "den gällande lydelsen finns i kommunens dokument.")
+    lines += ["", "## Dokument", "", intro, ""]
     lines += [f"- [{label}](<{url}>)" for url, label in documents]
     if gap:
         lines += ["", f"Dokumentet har inte hämtats: {gap}."]
+    elif status in _TEXT_GAP:
+        lines += ["", _TEXT_GAP[status]]
+    if paragraphs:
+        lines += ["", _TEXT_HEADING, "", _TEXT_INTRO[status], ""]
+        lines.append("\n\n".join(paragraphs))
     return "\n".join(lines) + "\n"
 
 
@@ -1301,14 +1309,88 @@ def _unchanged(meta, body, corpus):
 
 
 def _fetch_pdf(fetcher, kommun, url):
-    """(sha256, record) of a PDF, or (None, gap reason) when robots.txt disallows it."""
+    """(sha256, record, bytes) of a PDF, or (None, gap reason, None) when robots.txt disallows it."""
     if not fetcher.allows(url):
-        return None, "robots.txt disallows the document URL"
+        return None, "robots.txt disallows the document URL", None
     raw, content_type, final = fetcher.get(kommun, url)
     if not _is_pdf(raw, content_type):
         raise ValueError(f"expected a PDF, got {content_type}: {url}")
     sha = hashlib.sha256(raw).hexdigest()
-    return sha, {"url": final, "content_type": content_type, "bytes": len(raw), "sha256": sha}
+    return sha, {"url": final, "content_type": content_type, "bytes": len(raw), "sha256": sha}, raw
+
+
+# --- PDF text -----------------------------------------------------------------
+
+TEXT_PDF = "pdf"  # manifest `text`: read from the PDF's text layer
+TEXT_OCR = "ocr"  # read by optical character recognition (a scan)
+TEXT_READ = (TEXT_PDF, TEXT_OCR)
+OCR_GAPS = frozenset({pdftext.NO_TEXT_LAYER, pdftext.UNREADABLE_TEXT, pdftext.LETTER_SPACED})
+TEXT_TOOL_FAILED = "the PDF could not be read"
+_TEXT_HEADING = "## Text"
+_TEXT_INTRO = {
+    TEXT_PDF: "Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.",
+    TEXT_OCR: "Texten är maskinellt inläst (OCR) ur kommunens inskannade pdf och kan innehålla läsfel. "
+              "Den gällande lydelsen finns i pdf:en.",
+}
+_TEXT_GAP = {
+    pdftext.NO_TEXT_LAYER: "Pdf:en är inskannad och saknar textlager; texten har inte lästs in.",
+    pdftext.UNREADABLE_TEXT: "Pdf:ens textlager går inte att läsa; texten har inte lästs in.",
+    pdftext.LETTER_SPACED: "Pdf:ens textlager går inte att läsa; texten har inte lästs in.",
+    ocr.LOW_CONFIDENCE: "Pdf:en är inskannad och kan inte läsas maskinellt; texten har inte lästs in.",
+}
+
+
+def read_text(raw, use_ocr=False):
+    """(manifest `text` value, paragraphs or None) for the bytes of one PDF.
+
+    With `use_ocr` a scan, or a file whose text layer cannot be read, is read by OCR.
+    """
+    try:
+        result = pdftext.extract(raw)
+    except pdftext.PdfTextError:
+        return TEXT_TOOL_FAILED, None
+    status = TEXT_PDF
+    if use_ocr and result.gap in OCR_GAPS:
+        try:
+            recognised = ocr.extract(raw)
+        except ocr.OcrError:
+            recognised = None
+        if recognised is not None:
+            if not recognised.usable:
+                return recognised.gap, None
+            result, status = recognised, TEXT_OCR
+    if not result.usable:
+        return result.gap, None
+    paragraphs = pdftext.paragraphs(result.text)
+    return (status, paragraphs) if paragraphs else (pdftext.NO_TEXT_LAYER, None)
+
+
+def _stored_text(meta, corpus):
+    """Paragraphs of the text section already stored for this document, or None."""
+    try:
+        _stored, body = frontmatter.load(writer.path_for(meta, corpus).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    if f"\n{_TEXT_HEADING}\n" not in body:
+        return None
+    section = body.split(f"\n{_TEXT_HEADING}\n", 1)[1].strip("\n").split("\n\n")
+    return section[1:] or None  # the first paragraph is the intro line
+
+
+def _document_text(kommun, entry, args, manifest, sha, raw):
+    """(text status, paragraphs) of a fetched PDF; stored text is reused while its SHA-256 holds."""
+    if not getattr(args, "text", False):
+        return None, None
+    doc_id = corpus_id(kommun.code, entry.number)
+    old = next((e for e in manifest["documents"] if e["id"] == doc_id), None)
+    if old is not None and old.get("sha256") == sha and old.get("text") in TEXT_READ:
+        stored = _stored_text({"id": doc_id, "type": TYPE}, args.corpus)
+        if stored is not None:
+            return old["text"], stored
+    status, paragraphs = read_text(raw, getattr(args, "ocr", False))
+    if paragraphs and personal_numbers("\n".join(paragraphs)):
+        raise ValueError("possible personal identity number in the PDF text; the text is not stored")
+    return status, paragraphs
 
 
 def _collect_page(fetcher, kommun, entry, args, manifest):
@@ -1372,25 +1454,31 @@ def collect_document(fetcher, kommun, entry, args, manifest):
     if kommun.strategy == "mediaflow":
         # The signed link expires within minutes: the stable file URL and the page stand for it.
         pdf_url = entry.url
-        sha, record = _fetch_pdf(fetcher, kommun, _mediaflow_download(fetcher, kommun, entry.url))
+        sha, record, raw = _fetch_pdf(fetcher, kommun, _mediaflow_download(fetcher, kommun, entry.url))
         if sha is not None:
             record = {**record, "url": entry.url}
     elif kommun.document_gap:
         # The documents live where they may not be fetched (a third-party host whose robots.txt
         # disallows the download): metadata and the link only, recorded as a gap.
-        sha, record = None, kommun.document_gap
+        sha, record, raw = None, kommun.document_gap, None
     else:
-        sha, record = _fetch_pdf(fetcher, kommun, pdf_url)
+        sha, record, raw = _fetch_pdf(fetcher, kommun, pdf_url)
     doc_id = corpus_id(kommun.code, entry.number)
     now = _now()
+    text_status, paragraphs = None, None
     if sha is None:
         gap, (source, sha) = record, fallback
         _record_gap(manifest, {"id": doc_id, "municipality_code": kommun.code, "url": pdf_url, "reason": gap})
     else:
         gap, source = None, kommun.page if kommun.strategy == "mediaflow" else record["url"]
+        text_status, paragraphs = _document_text(kommun, entry, args, manifest, sha, raw)
+        if text_status is not None:
+            record = {**record, "text": text_status}
         _record_document(manifest, {"id": doc_id, "municipality_code": kommun.code, **record, "retrieved_at": now})
     meta = build_meta(kommun, entry, source, sha, now)
-    body = build_body(kommun, entry, documents, detail, gap)
+    if text_status == TEXT_OCR and paragraphs:
+        meta["text_source"] = "ocr"
+    body = build_body(kommun, entry, documents, detail, gap, pdf_text=(text_status, paragraphs))
     if _unchanged(meta, body, args.corpus):
         return meta, False, gap
     writer.write(meta, body, args.corpus)
@@ -1437,6 +1525,8 @@ def _record_document(manifest, entry):
     manifest["gaps"] = [g for g in manifest["gaps"] if g["id"] != entry["id"]]
     old = next((e for e in manifest["documents"] if e["id"] == entry["id"]), None)
     if old is not None and old.get("sha256") == entry["sha256"] and old.get("url") == entry["url"]:
+        if "text" in entry:
+            old["text"] = entry["text"]
         return  # same bytes: keep the first retrieval date
     manifest["documents"] = [e for e in manifest["documents"] if e["id"] != entry["id"]]
     manifest["documents"].append(entry)
@@ -1518,9 +1608,18 @@ def _known(manifest):
     return known
 
 
+def _text_pending(kommun, args, record):
+    """Whether a fetched document still lacks the text this run is asked to read."""
+    if not getattr(args, "text", False) or kommun.document_gap or record is None:
+        return False
+    status = record.get("text")
+    return status is None or (getattr(args, "ocr", False) and status in OCR_GAPS)
+
+
 def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
     entries, problems = list_entries(fetcher, kommun)
     known = _known(manifest)
+    records = {e["id"]: e for e in manifest["documents"]}
     for url in problems:
         summary.failed.append(url)
         state["failed"][url] = "listing link without a number"
@@ -1531,7 +1630,7 @@ def _collect_kommun(fetcher, kommun, args, state, manifest, summary):
         doc_id = corpus_id(kommun.code, entry.number)
         path = writer.path_for({"id": doc_id, "type": TYPE}, args.corpus)
         done = doc_id in state["done"] or (kommun.strategy in ("html_index", "json_list", "mediaflow", "ciceron") and known.get(doc_id) == entry.url)
-        if not args.refresh and done and path.exists():
+        if not args.refresh and done and path.exists() and not _text_pending(kommun, args, records.get(doc_id)):
             summary.skipped += 1
             continue
         try:
@@ -1586,6 +1685,10 @@ def dry_run(client, args, out=sys.stdout):
 
 
 def run(client, args):
+    if getattr(args, "text", False) and not pdftext.available():
+        raise ConfigError(f"{pdftext.TOOL} is not installed (poppler-utils); install it or pass --no-text")
+    if getattr(args, "text", False) and getattr(args, "ocr", False) and not ocr.available():
+        raise ConfigError(f"{ocr.RECOGNISE} with the {ocr.LANGUAGE} model is not installed; install it or pass --no-ocr")
     config = load_config(args.config)
     codes = _codes(config, args)
     summary = RunSummary()
@@ -1637,6 +1740,10 @@ def parse_args(argv):
     parser.add_argument("--dry-run", action="store_true",
                         help="list what the listings yield without fetching documents or writing")
     parser.add_argument("--report", metavar="FILE", help="write a JSON run report")
+    parser.add_argument("--no-text", dest="text", action="store_false",
+                        help="do not read the PDFs' text (pdftotext, poppler-utils)")
+    parser.add_argument("--no-ocr", dest="ocr", action="store_false",
+                        help="do not read scanned PDFs by OCR (tesseract with the Swedish model)")
     parser.add_argument("--rate", type=_rate, default=DEFAULT_RATE, metavar="SECONDS")
     parser.add_argument("--config", default=DEFAULT_CONFIG)
     parser.add_argument("--state", default=DEFAULT_STATE)
