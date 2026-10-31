@@ -245,7 +245,8 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | --- | --- | --- |
 | Metadata header: layer badge, citation, title, issue date, ministry (without the unit code, grouped as in By ministry), status, amended through, source link | Done | #132 |
 | Source Serif 4 legal text, bold Inter § numbers, reading column width | Done | |
-| § cards with the layer indicator, bookmark toggle, text selection | Done | |
+| Flat running text: each § set like a page of a book (no card or side bar), with its actions button and text selection | Done | #154 |
+| Reading settings sheet (text-size button in the top bar): paper (app, light, sepia, dark, high contrast), serif or sans font, text size 80-200 %, line spacing, letter spacing, column width (narrow, standard, wide), left or justified alignment, bold text; applied at once and stored on the device | Done | #154 |
 | Riksdagen's "Upphör att gälla U:…" and "Träder i kraft I:…" markers on a § shown as a label above its text ("Upphör att gälla …", "Träder i kraft …" with the date or condition as published) | Done | #124 |
 | Save a single § or chapter: one 48dp actions button per § card and chapter heading opens a menu (save or remove, add or edit note, share link); a saved section shows the filled bookmark in the layer colour | Done | #28 |
 | Repealed banner and strikethrough | Missing | #21 |
