@@ -75,12 +75,15 @@ jobs:
             git commit --no-edit
           fi
 
-      - name: Install poppler-utils
-        run: sudo apt-get update -q && sudo apt-get install -y -q --no-install-recommends poppler-utils
+      - name: Install poppler-utils and tesseract
+        run: >-
+          sudo apt-get update -q && sudo apt-get install -y -q --no-install-recommends
+          poppler-utils tesseract-ocr tesseract-ocr-swe
 
       - name: Collector tests
         env:
           LAGAR_REQUIRE_PDFTOTEXT: "1"
+          LAGAR_REQUIRE_OCR: "1"
         run: python3 -I -m unittest discover -s collector/tests -t collector
 
       - name: Choose the years

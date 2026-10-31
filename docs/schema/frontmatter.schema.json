@@ -45,7 +45,8 @@
     "ecli": {"type": ["string", "null"], "pattern": "^ECLI:[A-Z]{2}:[A-Z0-9.]{1,7}:\\d{4}:[A-Za-z0-9.]{1,25}$"},
     "celex": {"type": ["string", "null"], "pattern": "^[0-9CE]\\d{4}[A-Z]{1,2}\\d{4}([A-Z]?\\(\\d{2}\\))?(-\\d{8})?$"},
     "region_code": {"type": ["string", "null"], "pattern": "^(0[13-9]|1[02-47-9]|2[0-5])$"},
-    "municipality_code": {"type": ["string", "null"], "pattern": "^(0[13-9]|1[02-47-9]|2[0-5])\\d{2}$"}
+    "municipality_code": {"type": ["string", "null"], "pattern": "^(0[13-9]|1[02-47-9]|2[0-5])\\d{2}$"},
+    "text_source": {"type": ["string", "null"], "enum": ["ocr", null]}
   },
   "allOf": [
     {

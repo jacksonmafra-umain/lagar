@@ -124,8 +124,8 @@ poppler-utils`, `brew install poppler`); the collector and sync workflows instal
   less than half of the visible characters are letters or digits (fonts without a Unicode map),
   `gap` is `"text layer is not readable ..."`. The same gap covers letter-spaced text whose word
   breaks are lost (glyphs drawn with wrong widths: at least a quarter of the words are single
-  letters). Callers record the gap and keep the PDF link and SHA-256; they never guess or OCR the
-  text.
+  letters). Callers record the gap and keep the PDF link and SHA-256; they never guess the text.
+  A scan may be read by OCR (below).
 - One font encoding is decoded instead: Jämtland's older PDFs (23FS) draw every character with
   its glyph number in Apple's standard order, so `pdftotext` returns `i®åëëíóêÉäëÉå` for
   `Länsstyrelsen` and `=` for each space. That text is shifted back (`pdftext.unshift`), and kept
@@ -137,6 +137,26 @@ poppler-utils`, `brew install poppler`); the collector and sync workflows instal
 - A missing tool, a timeout or a file `pdftotext` cannot open raises `pdftext.PdfTextError`.
 - Tests that run the tool skip when it is not installed, unless `LAGAR_REQUIRE_PDFTOTEXT=1`
   (set in CI).
+
+### OCR of scanned PDFs
+
+`lagar/ocr.py` reads a PDF that `pdftext` finds without a text layer: poppler's `pdftoppm` renders
+each page at 300 dpi in grey scale and `tesseract -l swe` reads it. Install `tesseract-ocr` and
+`tesseract-ocr-swe` (`brew install tesseract tesseract-lang`); the collector CI and the agency,
+county and municipal sync workflows install them.
+
+- `ocr.extract(data)` returns the same `PdfText` as `pdftext.extract`. Lines read with a mean word
+  confidence below 60 (signatures, stamps, handwriting) are dropped; a file whose words average
+  below 70 gets the gap `"OCR confidence too low (scanned PDF)"` and stays a gap.
+- OCR text can hold misread characters (`8` for `§` is common). A document with OCR text carries
+  `text_source: ocr` in its frontmatter and its body says the text is machine-read; the PDF stays
+  the authoritative source.
+- The agency collector reads scans by OCR unless `--no-ocr` is given, and warns and skips OCR
+  when the tools or the Swedish model are missing. OCR is slow (about two seconds a page), so a
+  later run keeps the stored OCR text while the PDF's SHA-256 matches the manifest; `--refresh`
+  reads it again.
+- Tests that run the tools skip when they are not installed, unless `LAGAR_REQUIRE_OCR=1` (set in
+  CI).
 
 ## Amendment register (SFSR)
 
@@ -538,8 +558,9 @@ the consolidated version when one is linked, else the regulation's own PDF, read
 `collector/lagar/pdftext.py` from the same download that hashes it and turned into Markdown by
 `collector/lagar/agency_text.py` (masthead dropped, section signs in bold). The masthead also
 gives the title when the listing only names the number, and the decision, publication and
-entry-into-force dates when the listing has none. A scanned PDF is noted in the body. The run
-stops when `pdftotext` (poppler-utils) is missing; `--no-pdf-text` skips the step.
+entry-into-force dates when the listing has none. A scanned PDF is read by OCR (`--no-ocr`
+skips it) and its text marked `text_source: ocr`; a scan OCR cannot read is noted in the body. The
+run stops when `pdftotext` (poppler-utils) is missing; `--no-pdf-text` skips the step.
 
 | series | listing | detail | text |
 | --- | --- | --- | --- |
