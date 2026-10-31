@@ -143,7 +143,7 @@ poppler-utils`, `brew install poppler`); the collector and sync workflows instal
 `lagar/ocr.py` reads a PDF that `pdftext` finds without a text layer: poppler's `pdftoppm` renders
 each page at 300 dpi in grey scale and `tesseract -l swe` reads it. Install `tesseract-ocr` and
 `tesseract-ocr-swe` (`brew install tesseract tesseract-lang`); the collector CI and the agency,
-county and municipal sync workflows install them.
+county, municipal and SÖ sync workflows install them.
 
 - `ocr.extract(data)` returns the same `PdfText` as `pdftext.extract`. Lines read with a mean word
   confidence below 60 (signatures, stamps, handwriting) are dropped; a file whose words average
@@ -391,8 +391,11 @@ Documents are `treaty` in layer `sfs`, under `corpus/sfs/treaties/`, with ids su
 `so-2023-3`. The text is only published as PDF: for SÖ years from `--text-from-year`
 (default 2010) the PDFs are downloaded and their text extracted with
 `collector/lagar/pdftext.py`; size, SHA-256, page count and the extraction result go
-into `sources/so-pdf-manifest.json`, and the bytes are not kept. Older treaties, and
-scanned PDFs, keep the page metadata and the PDF link only. Many treaties are printed
+into `sources/so-pdf-manifest.json`, and the bytes are not kept. A scanned PDF, or one
+whose text layer cannot be read, is read by OCR (`collector/lagar/ocr.py`; `--no-ocr` skips
+it): the manifest's `text` is `ocr`, the document gets `text_source: ocr` and a note before
+the text. Older treaties, and PDFs OCR cannot read either, keep the page metadata and the
+PDF link only. Many treaties are printed
 in Swedish and one or more other languages side by side; the extracted text keeps
 every language, as printed. `authoritative` stays false: the text is not tied to a
 verified snapshot of the print.
