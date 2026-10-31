@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="3044" viewBox="0 0 720 3044" role="img" aria-label="Corpus progress per series">
-<rect width="720" height="3044" fill="#f8f9fc"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="3188" viewBox="0 0 720 3188" role="img" aria-label="Corpus progress per series">
+<rect width="720" height="3188" fill="#f8f9fc"/>
 <g font-family="Inter, system-ui, sans-serif" font-size="13">
 <text x="16" y="26" font-size="16" font-weight="600" fill="#191c1e">Corpus progress per series</text>
 <text x="16" y="59" fill="#0b3d91">Fundamental laws</text>
@@ -306,30 +306,46 @@
 <rect x="240" y="2748" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="2748" width="260" height="16" rx="8" fill="#0f7c7a"/>
 <text x="704" y="2759" text-anchor="end" fill="#007270">1 / 1 (100.0%)</text>
-<text x="16" y="2795" fill="#7a2e4d">Case law</text>
-<rect x="240" y="2784" width="260" height="16" rx="8" fill="#7a2e4d" fill-opacity="0.18"/>
-<rect x="240" y="2784" width="257" height="16" rx="8" fill="#7a2e4d"/>
-<text x="704" y="2795" text-anchor="end" fill="#7a2e4d">16475 / 16640 (99.0%)</text>
-<text x="16" y="2831" fill="#005b99">SÖ treaties</text>
-<rect x="240" y="2820" width="260" height="16" rx="8" fill="#005b99" fill-opacity="0.18"/>
-<rect x="240" y="2820" width="260" height="16" rx="8" fill="#005b99"/>
-<text x="704" y="2831" text-anchor="end" fill="#005b99">3515 / 3515 (100.0%)</text>
-<text x="16" y="2867" fill="#5b3fa6">EU law (curated list)</text>
-<rect x="240" y="2856" width="260" height="16" rx="8" fill="#5b3fa6" fill-opacity="0.18"/>
-<rect x="240" y="2856" width="260" height="16" rx="8" fill="#5b3fa6"/>
-<text x="704" y="2867" text-anchor="end" fill="#5b3fa6">70 / 70 (100.0%)</text>
-<text x="16" y="2903" fill="#5b3fa6">EU judgments</text>
-<rect x="240" y="2892" width="260" height="16" rx="8" fill="#5b3fa6" fill-opacity="0.18"/>
-<rect x="240" y="2892" width="257" height="16" rx="8" fill="#5b3fa6"/>
-<text x="704" y="2903" text-anchor="end" fill="#5b3fa6">605 / 611 (99.0%)</text>
-<text x="16" y="2939" fill="#28772d">Regional regulations</text>
-<rect x="240" y="2928" width="260" height="16" rx="8" fill="#2e7d32" fill-opacity="0.18"/>
-<text x="704" y="2939" text-anchor="end" fill="#28772d">11649 / unknown (-)</text>
-<text x="16" y="2975" fill="#8b2e1f">Municipal regulations</text>
-<rect x="240" y="2964" width="260" height="16" rx="8" fill="#8b2e1f" fill-opacity="0.18"/>
-<text x="704" y="2975" text-anchor="end" fill="#8b2e1f">5547 / unknown (-)</text>
-<text x="16" y="3011" fill="#8c6300">Public services</text>
-<rect x="240" y="3000" width="260" height="16" rx="8" fill="#e0a100" fill-opacity="0.18"/>
-<text x="704" y="3011" text-anchor="end" fill="#8c6300">0 / unknown (-)</text>
+<text x="16" y="2795" fill="#007270">MSBFS (MSB)</text>
+<rect x="240" y="2784" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="2784" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2795" text-anchor="end" fill="#007270">44 / 44 (100.0%)</text>
+<text x="16" y="2831" fill="#007270">SRVFS (Räddningsverket)</text>
+<rect x="240" y="2820" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="2820" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2831" text-anchor="end" fill="#007270">15 / 15 (100.0%)</text>
+<text x="16" y="2867" fill="#007270">SÄIFS (SÄI)</text>
+<rect x="240" y="2856" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="2856" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2867" text-anchor="end" fill="#007270">7 / 7 (100.0%)</text>
+<text x="16" y="2903" fill="#007270">KBMFS (KBM)</text>
+<rect x="240" y="2892" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
+<rect x="240" y="2892" width="260" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2903" text-anchor="end" fill="#007270">1 / 1 (100.0%)</text>
+<text x="16" y="2939" fill="#7a2e4d">Case law</text>
+<rect x="240" y="2928" width="260" height="16" rx="8" fill="#7a2e4d" fill-opacity="0.18"/>
+<rect x="240" y="2928" width="257" height="16" rx="8" fill="#7a2e4d"/>
+<text x="704" y="2939" text-anchor="end" fill="#7a2e4d">16475 / 16640 (99.0%)</text>
+<text x="16" y="2975" fill="#005b99">SÖ treaties</text>
+<rect x="240" y="2964" width="260" height="16" rx="8" fill="#005b99" fill-opacity="0.18"/>
+<rect x="240" y="2964" width="260" height="16" rx="8" fill="#005b99"/>
+<text x="704" y="2975" text-anchor="end" fill="#005b99">3515 / 3515 (100.0%)</text>
+<text x="16" y="3011" fill="#5b3fa6">EU law (curated list)</text>
+<rect x="240" y="3000" width="260" height="16" rx="8" fill="#5b3fa6" fill-opacity="0.18"/>
+<rect x="240" y="3000" width="260" height="16" rx="8" fill="#5b3fa6"/>
+<text x="704" y="3011" text-anchor="end" fill="#5b3fa6">70 / 70 (100.0%)</text>
+<text x="16" y="3047" fill="#5b3fa6">EU judgments</text>
+<rect x="240" y="3036" width="260" height="16" rx="8" fill="#5b3fa6" fill-opacity="0.18"/>
+<rect x="240" y="3036" width="257" height="16" rx="8" fill="#5b3fa6"/>
+<text x="704" y="3047" text-anchor="end" fill="#5b3fa6">605 / 611 (99.0%)</text>
+<text x="16" y="3083" fill="#28772d">Regional regulations</text>
+<rect x="240" y="3072" width="260" height="16" rx="8" fill="#2e7d32" fill-opacity="0.18"/>
+<text x="704" y="3083" text-anchor="end" fill="#28772d">11649 / unknown (-)</text>
+<text x="16" y="3119" fill="#8b2e1f">Municipal regulations</text>
+<rect x="240" y="3108" width="260" height="16" rx="8" fill="#8b2e1f" fill-opacity="0.18"/>
+<text x="704" y="3119" text-anchor="end" fill="#8b2e1f">5572 / unknown (-)</text>
+<text x="16" y="3155" fill="#8c6300">Public services</text>
+<rect x="240" y="3144" width="260" height="16" rx="8" fill="#e0a100" fill-opacity="0.18"/>
+<text x="704" y="3155" text-anchor="end" fill="#8c6300">0 / unknown (-)</text>
 </g>
 </svg>

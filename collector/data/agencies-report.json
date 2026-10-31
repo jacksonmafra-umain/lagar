@@ -13,7 +13,7 @@
     },
     "shared": 24,
     "kommuner": 290,
-    "kommuner_configured": 284,
+    "kommuner_configured": 285,
     "courts": 23,
     "courts_collected": 20
   },
@@ -299,7 +299,7 @@
       "status": "collected",
       "documents": 11,
       "target": 11,
-      "note": "MCF lists the MCFFS regulations in force with a page per regulation and a link to its PDF; the text is read from the PDF (consolidated version where published). Regulations in force from the predecessor series (MSBFS and older) are listed on the same page but not collected.",
+      "note": "MCF lists the MCFFS regulations in force with a page per regulation and a link to its PDF; the text is read from the PDF (consolidated version where published). Regulations in force from the predecessor series on the same list (MSBFS, SRVFS, SÄIFS, KBMFS) are collected as series of their own.",
       "url": "https://www.mcf.se/sv/regler/om-regler/",
       "description": "I Myndigheten för civilt försvars författningssamling (MCFFS) ingår även regler utgivna av de tidigare myndigheterna MSB (MSBFS) Statens räddningsverk (SRVFS), Krisberedskapsmyndigheten (KBMFS) och Sprängämnesinspektionen (SÄIFS).",
       "issue": "https://github.com/jacksonmafra-umain/lagar/issues/184"
@@ -1722,10 +1722,10 @@
         "kommun": "Linköping",
         "url": "https://www.linkoping.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/295",
-        "collection": null,
-        "status": "no_adapter",
-        "documents": 0,
-        "note": "Linköping links its rules to Google Drive share pages instead of files on its own site; not collected pending an owner decision on that host."
+        "collection": "Regler och styrande dokument",
+        "status": "partial",
+        "documents": 25,
+        "note": "25 documents not fetched: the document is a Google Drive share page; robots.txt disallows its download (drive.usercontent.google.com: Disallow: /; drive.google.com/uc falls under Disallow: /)"
       },
       {
         "code": "0581",
