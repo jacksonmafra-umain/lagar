@@ -15319,6 +15319,7 @@
       "municipality_code": "1060",
       "retrieved_at": "2026-10-30T14:00:39Z",
       "sha256": "fd374c1d1338eb5c9c3ffdb63d0265541fb746d7baf413881be8931545dc7864",
+      "text": "pdf",
       "url": "https://olofstrom.se/download/18.30eb2ed016f19a67e6c2ca27/1577959820777/lokala-ordningsforeskrifter-for-torghandel.pdf"
     },
     {
@@ -15328,6 +15329,7 @@
       "municipality_code": "1060",
       "retrieved_at": "2026-10-30T14:00:40Z",
       "sha256": "3fe5f6677bfbece5671d0e9e0fa2f0d597be897c110da51cba1c31de4b5b6243",
+      "text": "pdf",
       "url": "https://olofstrom.se/download/18.30eb2ed016f19a67e6c2ca28/1577959820787/lokala-trafikforeskrifter.pdf"
     },
     {
@@ -15337,6 +15339,7 @@
       "municipality_code": "1060",
       "retrieved_at": "2026-10-30T14:00:43Z",
       "sha256": "f5ccbf3d43db37a699edec586ba4c1ffbcfa54a1a71489879781054abada08f0",
+      "text": "pdf",
       "url": "https://olofstrom.se/download/18.3a309c3719a7bd89da132cf7/1764074726345/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6.pdf"
     },
     {
@@ -15346,6 +15349,7 @@
       "municipality_code": "1060",
       "retrieved_at": "2026-10-30T14:00:41Z",
       "sha256": "5cdda7dc77a81a7b716a660155021020522c675d02df04dec899bb96d29533f0",
+      "text": "pdf",
       "url": "https://olofstrom.se/download/18.506734c51817fe18b912cee/1758540834831/F%C3%B6reskrift%20f%C3%B6r%20avfallshantering.pdf"
     },
     {
@@ -15355,6 +15359,7 @@
       "municipality_code": "1060",
       "retrieved_at": "2026-10-30T14:00:42Z",
       "sha256": "ee14940519f9b8d39291eb3a9d1e0204a488dd7725674b8081caeb4cb7c59bef",
+      "text": "pdf",
       "url": "https://olofstrom.se/download/18.64a05af218d872499d7b098/1708950191633/Allm%C3%A4nna%20lokala%20ordningsf%C3%B6reskrifter%20Olofstr%C3%B6ms%20kommun.PDF"
     },
     {
@@ -15364,6 +15369,7 @@
       "municipality_code": "1081",
       "retrieved_at": "2026-10-30T14:00:46Z",
       "sha256": "5e09a5092db7ba98e77cbff8a9bd75695d839be0755869465f93974a579f2bde",
+      "text": "pdf",
       "url": "https://www.ronneby.se/download/18.1357fa49193df02b7b23486/1734619418894/Allm%C3%A4nna%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Ronneby%20kommun.pdf"
     },
     {
@@ -15373,6 +15379,7 @@
       "municipality_code": "1081",
       "retrieved_at": "2026-10-30T14:00:50Z",
       "sha256": "c273148b4f491aa228f164e9d8a0ccd572fc4920f07c4d94649fd117baf67dd1",
+      "text": "pdf",
       "url": "https://www.ronneby.se/download/18.2467a4fd161230b4ac9b34bc/1517482575996/%C3%85l%C3%A4ggande%20om%20g%C3%A5ngbaneh%C3%A5llning%20med%20mera%20i%20Ronneby%20kommun.pdf"
     },
     {
@@ -15382,6 +15389,7 @@
       "municipality_code": "1081",
       "retrieved_at": "2026-10-30T14:00:47Z",
       "sha256": "e4f1f3c4338e2cb5d8ea7090c165906995d6bcf686b4e9ec7c3a4a7d6857340b",
+      "text": "pdf",
       "url": "https://www.ronneby.se/download/18.2467a4fd161230b4ac9b34bd/1517482576034/Lokala%20f%C3%B6reskrifter%20f%C3%B6r%20att%20skydda%20m%C3%A4nniskors%20h%C3%A4lsa%20och%20milj%C3%B6n%20140301.pdf"
     },
     {
@@ -15391,6 +15399,7 @@
       "municipality_code": "1081",
       "retrieved_at": "2026-10-30T14:00:49Z",
       "sha256": "6ae2d56393859a58fc7c74ab89d9f9f819d1af30beb4bbe35f7051776b29f3ab",
+      "text": "pdf",
       "url": "https://www.ronneby.se/download/18.2467a4fd161230b4ac9b34be/1517482576063/Lokala%20ordnings-%20och%20s%C3%A4kerhetsf%C3%B6reskrifter%20f%C3%B6r%20Ronneby%20hamn.pdf"
     },
     {
@@ -15400,6 +15409,7 @@
       "municipality_code": "1081",
       "retrieved_at": "2026-10-30T14:00:49Z",
       "sha256": "ba77ebc901701984b86ca4ce8016f62c1113d2cde620f6138522ca456826cac1",
+      "text": "pdf",
       "url": "https://www.ronneby.se/download/18.2467a4fd161230b4ac9b34bf/1517482576084/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20Torghandlen%20i%20Ronneby.pdf"
     },
     {
@@ -15409,6 +15419,7 @@
       "municipality_code": "1081",
       "retrieved_at": "2026-10-30T14:00:47Z",
       "sha256": "f66b7e9959ec5a6beca48c68a1a3774c1f08f3ed1b7c83d42f6f3aae25448e87",
+      "text": "pdf",
       "url": "https://www.ronneby.se/download/18.7715d9e193be43278c94db9/1734347599930/F%C3%B6reskrifter%20om%20avfallshantering%20f%C3%B6r%20Ronneby%20kommun.pdf"
     },
     {
@@ -15418,6 +15429,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:00:55Z",
       "sha256": "607c5144fc85534a49d325373ab1aa65cc215caf0dde88867b6cb9000cc9e7e5",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/4.1-Lokala-ordningsforeskrifter-2022-11-07.pdf"
     },
     {
@@ -15427,6 +15439,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:00:59Z",
       "sha256": "c272f386553c4ea50c16553622dc4a0972cbb214ee6cbb78e90d35ea13367d0d",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/4.10-Skyddsforeskrifter-Ringamala-vattenskyddsomrade-26016772-FS-10-2024_31.pdf"
     },
     {
@@ -15436,6 +15449,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:03Z",
       "sha256": "a6de8d801823cea16e75fd6d3a05251984fc5497425023f1611e15ccf7a0b7a3",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/4.11-Kommunala-foreskrifter-om-anvandningen-av-den-allmanna-VA-anlaggningen-KFVA-2025-06-23.pdf"
     },
     {
@@ -15445,6 +15459,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:00:56Z",
       "sha256": "79f50fc119e2e51c70f013464f33bdc3cd79b47a92b67f570496650f8be9c5a8",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/4.2-Lokala-ordningsforeskrifter-for-torghandel-och-sommargata-Skeppsbron-2023-06-12-1.pdf"
     },
     {
@@ -15454,6 +15469,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:00:57Z",
       "sha256": "b60f56c9ef91e2c8f00cfcbca9115db062d8d70faaec5f52027901e8a558afb4",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/4.3-Lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon-i-Karlshamns-kommun-1.pdf"
     },
     {
@@ -15463,6 +15479,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:00:58Z",
       "sha256": "01a231a13e54d387b999938f7373ffde3d69aff3bc933e71ae6d5e48fa9fe214",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/4_4_Skyddsomrade_och_skyddsforeskrifter_for_den_kommunala_ytvattentackten_Langasjon_i_Karlshamns_kommun.pdf"
     },
     {
@@ -15472,6 +15489,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:00Z",
       "sha256": "4740509a78c287db9ce135140db24e33b65351573a31d5162920fe129981f25d",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/4_5_Lokal_hamnordning.pdf"
     },
     {
@@ -15481,6 +15499,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:01Z",
       "sha256": "8bb42e61be4ae8f62ebf2834299e9daef2251a6a09774bfcc67568dd9e4120a4",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/4.6-Foreskrifter-for-avfallshantering-2023-12-11.pdf"
     },
     {
@@ -15490,6 +15509,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:02Z",
       "sha256": "d2b61f96441e3ce26e46b002464f7e50d3ca8b40a7b486271a928ec329947472",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/4_7_Lokala_foreskrifter_om_gaturenhallning_mm-1.pdf"
     },
     {
@@ -15499,6 +15519,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:14Z",
       "sha256": "3683beee89b982a88a75ec8fa367c1d233c845fa5d4f991726fceca6d6b32c23",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.10-Taxa-for-kontroll-inom-livsmedelslagstiftningens-omrade-2025-12-08.pdf"
     },
     {
@@ -15508,6 +15529,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:15Z",
       "sha256": "b22e704586a00351d027dd42f2042316078825a2a2429feac48f0516e915e540",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.11.1-Taxa-for-handlaggning-och-tillsyn-enligt-alkohollagen-for-antagande.pdf"
     },
     {
@@ -15517,6 +15539,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:17Z",
       "sha256": "3e04fcc90e69f508feac375225003e5e6cf48ee4699b73c0a09cc57047f33d12",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5_13_Laboratorietaxa-1.pdf"
     },
     {
@@ -15526,6 +15549,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:35Z",
       "sha256": "018211d17ae6a6cf26646a4dd9e225d4e292b59666190a494db566a66ad0df00",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.16-Taxa-for-batplatser-upplaggningsplatser-mastforvaring-m.m.-2026-2026-01-08.pdf"
     },
     {
@@ -15535,6 +15559,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:04Z",
       "sha256": "cb9226df2a52f3d38097f58d158d4f6f040e278d236efbe0ae379a6813db1b74",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.2-Taxa-for-plan-bygglov-kart-och-mattjanster-galler-fran-2025-01-01-2026-05-18.pdf"
     },
     {
@@ -15544,6 +15569,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:05Z",
       "sha256": "eb05f730fec1a2affc494d72386257229e1e9521fa0bae226e454969678c2927",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5-_2_1_Taxa_for_byggnadsnamndens_verksamhetsomrade-3.pdf"
     },
     {
@@ -15553,6 +15579,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:36Z",
       "sha256": "7ebe0ef356ac98a54823fdd0c92d1a9a2ebf3543eb9ef199fca9aca4b874d5b6",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5_20_Taxor_och_avgifter_for_turistverksamheten_2016-2.pdf"
     },
     {
@@ -15562,6 +15589,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:37Z",
       "sha256": "c3526bf1bf11ee97d549ecc24497dee4c56ef9904d9f73f062f7f050deecb70c",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.21-Taxor-och-avgifter-inom-kulturnamndens-verksamhetsomraden.pdf"
     },
     {
@@ -15571,6 +15599,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:38Z",
       "sha256": "02c1377cdc60dbd4690ee52632ebc69251862dfe5039fa5aa93f50b62433fbf8",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.22-Avgifter-for-Vaggabadet-2024-12-09.pdf"
     },
     {
@@ -15580,6 +15609,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:40Z",
       "sha256": "65d2ee6db488f92c34727e3f4163425e51c8fab38d941c460f93eb2e915223ae",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.23-Barnomsorgstaxa-2021.pdf"
     },
     {
@@ -15589,6 +15619,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:41Z",
       "sha256": "da81e3a9b9c213593041def1604622cb8c8cbdac20f846da8a5d436f437dab6a",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5_25_Avgifter_for_personer_med_beslut_om_boende_med_sarskild_service-2.pdf"
     },
     {
@@ -15598,6 +15629,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:42Z",
       "sha256": "3e6d54070006e997a4b3b707fafade73ce2d220703fa9c980762059578ce62e1",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5_26_Avgifter_for_transport_vid_daglig_verksamhet-2.pdf"
     },
     {
@@ -15607,6 +15639,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:06Z",
       "sha256": "9d1a43b4c260bb521877a1f9da595b6c04c8db76e6e2d2b43a7d6a8f6d78a399",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5__3_Taxa_for_fjarrvarme-3.pdf"
     },
     {
@@ -15616,6 +15649,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:47Z",
       "sha256": "00ec45d2219f1137d27dce81147b192d28b75c608c6a8ad1f33a6a58ed2d4f25",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5_30_Hyresavgift_vid_utlaning_av_instrument_i_musikskolan-2.pdf"
     },
     {
@@ -15625,6 +15659,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:49Z",
       "sha256": "3d06b80af9262802aba654b7ea5c01a582dc69da447c4675df8304272332778a",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5_31_Taxa-for-nyttoparkeringskort-2.pdf"
     },
     {
@@ -15634,6 +15669,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:50Z",
       "sha256": "d90eb14287b1fbfa57a1f067e1919913d8783faed93d8c8e52d97bcfc51ec19e",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.32-Taxa-for-parkeringsavgifter-2024-02-19.pdf"
     },
     {
@@ -15643,6 +15679,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:51Z",
       "sha256": "2cfcca7c7d0a91763a0ec0f1af7c880e18511d3d0d08e1035c0d43f54b1b276c",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.33-Taxa-for-felparkeringsavgifter-KF-2022-12-12.pdf"
     },
     {
@@ -15652,6 +15689,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:53Z",
       "sha256": "0581b2e6cfe8358d74ed2a1dd7b3830d7cc71f3eb4f32393bb6aa1d277145cd4",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.34-Taxa-vid-utlamnande-av-allmanna-handlingar-2024-03-25.pdf"
     },
     {
@@ -15661,6 +15699,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:18Z",
       "sha256": "6c32d9fc9f927ab8467ffe695fa3779a0f6fb0058fa7d04848c75a03731d2658",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.36-Taxa-for-myndighetsutovning-2026-Raddningstjansten-Vastra-Blekinge-2025-12-08.pdf"
     },
     {
@@ -15670,6 +15709,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:19Z",
       "sha256": "60f68c173a4df00d617a7413eeb245a527929b1a7544b062d3ce040de68b035a",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5_37_Prislista_2018_Raddningstjansten_Vastra_Blekinge.doc-1.pdf"
     },
     {
@@ -15679,6 +15719,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:20Z",
       "sha256": "eb856e695f41007aa2932856aca95b56f2beb82fbb962b8d96be1d54038dd32c",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.38-Taxa-for-rengoring-sotning-2026-05-04.pdf"
     },
     {
@@ -15688,6 +15729,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:21Z",
       "sha256": "670219f4a1eaf755aaf7de8cc204a23a1e1418c52061994a212887968817db9d",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.39-Taxa-for-brandskyddskontroll-2026-05-04.pdf"
     },
     {
@@ -15697,6 +15739,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:07Z",
       "sha256": "c9f93f8c388b84b59ead8122cfbc8838e1deadf7d12718b6617f5e32ab6aa96c",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.4-Taxa-for-Karlshamns-kommuns-allmanna-vatten-och-avloppsanlaggningar-2025-11-03.pdf"
     },
     {
@@ -15706,6 +15749,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:22Z",
       "sha256": "20d02aa39e3e606a18761e19e0fbaacd1a2dc8eaf40105b72d7053d80b8be6e6",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.40-Taxa-for-provning-och-tillsyn-inom-miljobalkens-omrade-2025-12-08.pdf"
     },
     {
@@ -15715,6 +15759,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:23Z",
       "sha256": "c6e8ba496de43f513e6216c4ca180600e2a455e938458de741c45881e8edb856",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.40.1-Taxebilaga-1-_-Avgifter-for-provning-och-tillsyn-2022-11-07.pdf"
     },
     {
@@ -15724,6 +15769,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:24Z",
       "sha256": "0314393e463234ab76da89164880b10f383d520b1848ecc039add869d6d2289d",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.40.2-Taxebilaga-2-_-Fasta-arliga-avgifter-forskottsbetalning-2022-11-07.pdf"
     },
     {
@@ -15733,6 +15779,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:25Z",
       "sha256": "6ad6c7c4066d0f57d25b02d2d7b7a72d558da51c2718f4f0c4ec58a69212d7d1",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.40.3-Taxebilaga-3-_-Timavgift-efterskottsbetalning.pdf"
     },
     {
@@ -15742,6 +15789,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:26Z",
       "sha256": "c5267eebcb309c4a5930ab464fc93e3e28684f1a16b765003d73892b92eecdf6",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.41-Taxa-enligt-lagen-om-skydd-mot-internationella-hot-mot-manniskors-halsa-2025-12-08.pdf"
     },
     {
@@ -15751,6 +15799,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:27Z",
       "sha256": "279cab27eb9cbe13f3f749be5c6d42e7f8f14dbdc0b36aab94c1b41e05f1dbcf",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.42-Taxa-for-offentlig-kontroll-av-animaliska-biprodukter-2025-12-08.pdf"
     },
     {
@@ -15760,6 +15809,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:28Z",
       "sha256": "63854729312113a2ff55dd6b401ccebbeccf7e695db23be3c632e0eb30142202",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.43-Timtaxa-for-Miljoforbundet-Blekinge-Vasts-verksamhet-2025-2024-12-09.pdf"
     },
     {
@@ -15769,6 +15819,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:29Z",
       "sha256": "efb588e4ab1d8625f4d5fafd00f76fb0365a680fb96e3582fc040d3ee7a90203",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.43.1-Taxebilaga-1-Avgifter-for-provning-och-tillsyn-2025-03-24.pdf"
     },
     {
@@ -15778,6 +15829,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:30Z",
       "sha256": "cc4e58e992a0a1b17df800d9687506ff11a830337fb0706f434242b818c076bc",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.44-Renhallningstaxa-for-2026-2025-12-08.pdf"
     },
     {
@@ -15787,6 +15839,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:43Z",
       "sha256": "3522b38281b9fddc4201ebc69c09dae17e6b99169d2b0f1e0ec418534ddb1f30",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.45-Taxa-for-dodsboforvaltning-och-atgarder-enligt-begravningslagen-2025-11-03.pdf"
     },
     {
@@ -15796,6 +15849,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:44Z",
       "sha256": "c79b85ce4cbc0ffbff427c41091ff8e6c384e649987ae02431b3a2f4bb979798",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5_46_Kyrkoavgift_och_maxtaxa_-2018_inom_aldreomsorgen.doc-3.pdf"
     },
     {
@@ -15805,6 +15859,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:45Z",
       "sha256": "82b0649b6ec552eb1b5f9015af88b271fe9e88374637d13704e2043c722687f7",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.47-Taxa-for-arbetsmarknadsenhetens-tjanster-till-foreningar.doc.pdf"
     },
     {
@@ -15814,6 +15869,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:52Z",
       "sha256": "c8491e967be2ca06d1dd41ae317601422285b089095ce13a9c5d190d4146f222",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.48-Taxa-Radhusets-sammantradesrum.pdf"
     },
     {
@@ -15823,6 +15879,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:31Z",
       "sha256": "d5d8f59b600b0a279a97be53c285380aae1e742f6160057ba557f0b945c629b6",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.49-Taxa-for-tillsyn-enligt-lagen-om-sprangamnesprekursorer-2025-12-08.pdf"
     },
     {
@@ -15832,6 +15889,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:09Z",
       "sha256": "4e41b96f9dbc9e5b5cd58bb16e7c5906b217da4878ad27deef7678150f7abd1b",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5__5_Taxa_for_externslammottagning-1.pdf"
     },
     {
@@ -15841,6 +15899,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:46Z",
       "sha256": "ec444ada87fb8fe3eb01c56977f69f349de94300d84f4c2925ef15fc6ce878e5",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.50-Taxa-for-egenavgift-for-heldygnsvard-inom-forvaltningen-for-omsorg-och-arbetsmarknads-vuxenenhet-2025-11-03.pdf"
     },
     {
@@ -15850,6 +15909,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:48Z",
       "sha256": "00b83bcf0c3a849187e7a47ad094b8af4abaab1b64b79201243923c10c087f85",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.51-Avgift-for-utfardande-av-ersattningslegitimation-vid-forlust-av-skollegitimation-2022-06-28.pdf"
     },
     {
@@ -15859,6 +15919,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:39Z",
       "sha256": "2a2e50b3c4a5ca1168edfabfbea0fb6888be302c0a3f0c38c99debc2a18e66c6",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.54-Taxa-for-tillsyn-av-avfallshantering-i-fritidsbatshamnar-2024-02-19.pdf"
     },
     {
@@ -15868,6 +15929,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:32Z",
       "sha256": "2db0bf88b95b8071e38222cc85dfdaea54cf0b5c31e69ecd4c4f45153f6668d3",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.55-Taxa-for-kopiering-av-allmanna-handlingar-for-Miljoforbundet-Blekinge-Vast-2025-12-08.pdf"
     },
     {
@@ -15877,6 +15939,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:33Z",
       "sha256": "74437dfa40d0d28293d667e26c585c22a74eeae812ebc60b3e9e1385d8bf3d7e",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.56-Taxa-for-lag-om-atgarder-mot-fororening-fran-fartyg-LAFF-och-forordning-om-atgarder-mot-fororening-fran-fartyg2025-12-08.pdf"
     },
     {
@@ -15886,6 +15949,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:34Z",
       "sha256": "3f0e209411c75aac8b0eb5b06b9dd2dae33b64af12d23b6d774eed9ec0dcc3ec",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.57-Taxa-for-tillsyn-inom-stralskyddslagens-omrade-2025-12-08-1.pdf"
     },
     {
@@ -15895,6 +15959,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:54Z",
       "sha256": "d55f6c7a2646a4bbda954b5ab1d3c8b4ebae1c9b919691f8fdd4d81e68dfb92f",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.58-Taxa-for-borgerlig-vigsel-2026-03-30.pdf"
     },
     {
@@ -15904,6 +15969,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:10Z",
       "sha256": "56a55ecb36c095e173374b8d52e61f39c1c0ade8a1444e24299faa0403533b19",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.6-Spolbilstaxa-1.pdf"
     },
     {
@@ -15913,6 +15979,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:11Z",
       "sha256": "dec84a72cdfad36460913404d6cf183b496c1ef3cda579afa04535b2769cd50c",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5__7_Taxa_for_el-1.pdf"
     },
     {
@@ -15922,6 +15989,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:12Z",
       "sha256": "155bc25c37e28dcc5c989a386548749ebe98dbdadecfb81ea9b2dc2ec5eb14dd",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5__8_Taxor_-for_arrenden-3.pdf"
     },
     {
@@ -15931,6 +15999,7 @@
       "municipality_code": "1082",
       "retrieved_at": "2026-10-30T14:01:13Z",
       "sha256": "61f90b2ab97c25d5887c7ee18f5116b1b0a45d2d9da31e28ff2f732150003cb6",
+      "text": "pdf",
       "url": "https://www.karlshamn.se/wp-content/uploads/5.9-Taxa-for-nyttjande-av-kommunal-mark-2026-05-18.pdf"
     },
     {
@@ -15940,6 +16009,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:24Z",
       "sha256": "ad9f5e17538a9188d09b8c58f415fd8d301567998119b53493dbf53fbda3558a",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.19b8bc08178adb03b2b78bd/1618407581700/FFS%207.34%20Taxor%20f%C3%B6r%20arrenden%20och%20andra%20nyttjander%C3%A4tter%20210401.pdf"
     },
     {
@@ -15949,6 +16019,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:08Z",
       "sha256": "5f70bc2acb59c8e577bb9293b84ee5cb8ab8416cef5a43e894c8fb0ad6f651aa",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1ab6688218e5a4c7b5343dc8/1712048694854/FFS%207.6%20Felpark%20avgifter%20240401.pdf"
     },
     {
@@ -15958,6 +16029,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:05Z",
       "sha256": "98b645ef56229f2a6bdd95f6b03628f08eb75f3f09c2ea1344599f024732fb5a",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a7ea81/1767428716653/FFS%207.3%20Taxa%20f%C3%B6r%20bygg-%20%20plan-%20och%20kartverksamhet%20260101.pdf"
     },
     {
@@ -15967,6 +16039,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:06Z",
       "sha256": "67ff0fb49c72ffde339a3b8bd8e89f4d9f4b9d8c8939f711dd1a0b9ee0a67a7d",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a7ea82/1767428716714/FFS%207.4%20Taxa%20f%C3%B6r%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggningen.pdf"
     },
     {
@@ -15976,6 +16049,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:09Z",
       "sha256": "e717f495a5afcc7df1b6151d7ddc73d4f769676af210c726bf61c5e522528163",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a7ea83/1767428716757/FFS%207.7%20%C3%96vriga%20avgifter%20arbete%20och%20v%C3%A4lf%C3%A4rdsn%C3%A4mnden%202026.pdf"
     },
     {
@@ -15985,6 +16059,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:10Z",
       "sha256": "20fa93f7efa4920b5d1b5f05154ed15697e4d9484fac6ce4618c401a8b356f86",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a7ea86/1767428716885/FFS%207.11%20Taxa%20%C3%A4ldreomsorg%202026.pdf"
     },
     {
@@ -15994,6 +16069,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:11Z",
       "sha256": "0c40fb19d4257baa0edbf29d286f81fab64d45b35ca8fcddb38c318ded33b97a",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a7ea87/1767428716911/FFS%207.12%20Taxa%20f%C3%B6r%20plats%20i%20barnomsorg%20och%20skolbarnomsorg.pdf"
     },
     {
@@ -16003,6 +16079,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:17Z",
       "sha256": "4bd043b4f8ccc7a00fa365c3ea2168221bd7b5599bc0a298c2f2cef64ba6315e",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a7ea88/1767428716943/FFS%207.21%20Taxa%20%C3%B6vriga%20avgifter%20%C3%A4ldreomsorg%202026.pdf"
     },
     {
@@ -16012,6 +16089,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:17Z",
       "sha256": "bd4b37a13624fb1a66014e79476ed0e605f18d24cd2fad82063ee5873ad9b95c",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a7ea89/1767428716970/FFS%207.23%20Taxa%20hyror%20s%C3%A4rskilt%20boende%202026.pdf"
     },
     {
@@ -16021,6 +16099,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:20Z",
       "sha256": "d25e9c201024e234fa5e185445c4e6ba7696109dd0ef126909a5e5489de2d5e9",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a7ea8a/1767428716997/FFS%207.30%20Ans%C3%B6knings-%20och%20tillsynsavgifter%20enligt%20alkohollagen%20260101.pdf"
     },
     {
@@ -16030,6 +16109,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:07Z",
       "sha256": "2eee7da394498f2f80274191900afbc6fa2d4d0da15c501ca9c23dbc92428aa7",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a8cb28/1767599147476/FFS%207.5%20Renh%C3%A5llningstaxa%20260101.pdf"
     },
     {
@@ -16039,6 +16119,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:22Z",
       "sha256": "b9b0fd21a25e004283002ee84e7382b5c57a3a5b5e27491af4114301423fff60",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a8cb29/1767599147505/FFS%207.32%20Taxa%20f%C3%B6r%20R%C3%A4ddningstj%C3%A4nsten%20V%C3%A4stra%20Blekinge.pdf"
     },
     {
@@ -16048,6 +16129,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:21Z",
       "sha256": "35de565ade4d3e2a5e760e283cf79d1945ca22cffade7474901b67d2ce90b6ba",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.1e0f9bc919b2be0992a8cb33/1767599384554/FFS%207.31%20Milj%C3%B6-taxa%20260101.pdf"
     },
     {
@@ -16057,6 +16139,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:01:58Z",
       "sha256": "5f83578d836c94f1f1672a408d87bfcd83ccd0953087630344951d28f4b69b17",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.20c796bf194998f129f27251/1738337365794/FFS%206.1%20Lokala%20allm%C3%A4nna%20ordningsf%C3%B6reskrifter%20-%20beslutad%20%2020250127.pdf"
     },
     {
@@ -16066,6 +16149,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:01Z",
       "sha256": "18cb5819ec49e6564d7f43df5631ea29a4aa70c988d9dd5fb66ea96e35a9e04b",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.25620913160d9e96f031b0d/1515515256098/FFS%206.5.pdf"
     },
     {
@@ -16075,6 +16159,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:13Z",
       "sha256": "013a67d579afe5f9ab721832b1f0d060cb25ed31376e5c7d9d1f3d6353444c48",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.25620913160d9e96f031bd1/1515516242248/FFS%207.15.pdf"
     },
     {
@@ -16084,6 +16169,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:18Z",
       "sha256": "97d7fc6b96354d1bcfc0e461574e0ce4250a14fbff3e6fe1ef16d9fd62544ff8",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.25620913160d9e96f031bd3/1515516242358/FFS%207.24.pdf"
     },
     {
@@ -16093,6 +16179,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:19Z",
       "sha256": "14c89c82b593efe6939a46af912444dd9b513a76caf9773341e5bb863eba8539",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.25620913160d9e96f031bd5/1515516242436/FFS%207.27.pdf"
     },
     {
@@ -16102,6 +16189,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:00Z",
       "sha256": "d56d2ee6d25251545c5e607673a884d8dd9061916ea95ec464f2f5c8aa44dd74",
+      "text": "ocr",
       "url": "https://solvesborg.se/download/18.31cba8f116a53b6b259641ce/1558022808091/FFS%206.3%20Kartbilaga.pdf"
     },
     {
@@ -16111,6 +16199,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:12Z",
       "sha256": "a0806d312041d6b499c5bb5c94150f5331e094526c7604ffe1ecb56ad8abe156",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.32c53f16193dec935ae885d8/1736504634049/FFS%207.13%20Taxor%20o%20avgifter%20240101.pdf"
     },
     {
@@ -16120,6 +16209,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:15Z",
       "sha256": "6062298f6ebfed50130081b9dca2cac27192ee2e71945522e7c6a38790302742",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.332e8dae1a0ad99783b13178/1790585409140/FFS%207.20%20Priser%20vid%20f%C3%B6rs%C3%A4ljning%20av%20kommunala%20sm%C3%A5hustomter%20%20tomter%20f%C3%B6r%20flerfamiljsbost%C3%A4der%20och%20f%C3%B6retagsmark.pdf"
     },
     {
@@ -16129,6 +16219,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:03Z",
       "sha256": "0780d0034f2e18bf71df487b6f09adabbe739dc220da7360d4242d129686aad2",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.38d993d618d548fa2fb1427c/1706859505363/FFS%206.7%20F%C3%B6reskrifter%20f%C3%B6r%20avfallshantering%20240101.pdf"
     },
     {
@@ -16138,6 +16229,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:03Z",
       "sha256": "4a93e6fca86f451482c10696336fe03c691727c83684d710e88394b525db880c",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.3de8938e167c696d4f831793/1546265979195/FFS%207.1%20Kopierings-%20och%20utskriftstaxa.pdf"
     },
     {
@@ -16147,6 +16239,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:14Z",
       "sha256": "aac4529d7c21f1398fb019ad1aac8d5a4ba750653cdeb750a350048ea2626fc9",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.4e18cdf71999e163406978c/1759412765831/FFS%207.17%20Taxa%20f%C3%B6r%20uthyrning%20av%20f%C3%B6rskole-%20och%20skollokaler%202025-01-01.pdf"
     },
     {
@@ -16156,6 +16249,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:24Z",
       "sha256": "11a4f3bb8e279b2fdaf6325b50713c07401ed4e4b56350195581ea9dc77dff1e",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.4e18cdf71999e163406978d/1759412765880/FFS%207.35%20Taxa%20f%C3%B6r%20ans%C3%B6kan%20om%20att%20starta%20frist%C3%A5ende%20skola%20%20f%C3%B6rskola%20%20fritidshem%20eller%20pedagogisk%20omsorg%202025-01-01.pdf"
     },
     {
@@ -16165,6 +16259,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:01:59Z",
       "sha256": "b4fe6fee6a498086e720c63a4e2b3af7d9cd527de8d4f7b75d32b10586995fee",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.7598d99d195ad882f1759758/1743595754163/FFS%206%202%20Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandel%20m%20m%20i%20S%C3%B6lvesborgs%20kommun.pdf"
     },
     {
@@ -16174,6 +16269,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:01:59Z",
       "sha256": "5e2a3cf627d32bfc1e49d8b51c8c778195ced9307be957d23f507749cac0b600",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.76dfff1b19ed42d8839882a/1781774535666/FFS%206.3%20%20lokala%20h%C3%A4lsoskyddsf%C3%B6reskrifter%20f%C3%B6r%20S%C3%B6lvesborgs%20kommun.pdf"
     },
     {
@@ -16183,6 +16279,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:04Z",
       "sha256": "34a2a538e37935b0afe0956ef55a3e625c08d9c260826dae14e36633dd0d0d88",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.92f514e19dd773b8574d6d7/1778500589538/FFS%207.2%20Taxa%20f%C3%B6r%20allm%C3%A4n%20platsmark%20offentlig%20plats%20torgplatser%20250929.pdf"
     },
     {
@@ -16192,6 +16289,7 @@
       "municipality_code": "1083",
       "retrieved_at": "2026-10-30T14:02:26Z",
       "sha256": "dd7ea8774d0c6853dd074e3694b08607fe28d78a29916ce42c6db8dd6f23bf5a",
+      "text": "pdf",
       "url": "https://solvesborg.se/download/18.ffbf03199c8d59330633/1760015614390/FFS%207.36%20Taxa%20f%C3%B6r%20sotning%20och%20brandskyddskontroll%20251001.pdf"
     },
     {
