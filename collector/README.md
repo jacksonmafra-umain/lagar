@@ -519,7 +519,7 @@ Socialstyrelsen's index (its regulations in force) names a publication page for 
 
 Predecessor series still listed where the current series is read get adapters of their own that
 read the same page for their own numbers: LMVFS (LMFS page), FIFS (HVMFS list, issuer
-Fiskeriverket), RFFS (Försäkringskassan's register, issuer
+Fiskeriverket), AMSFS (the page state of AFFS, issuer Arbetsmarknadsstyrelsen), RFFS (Försäkringskassan's register, issuer
 Riksförsäkringsverket) and SLVFS (Livsmedelsverket's year tables before 2002; it reads every year,
 because later LIVSFS rows amend SLVFS regulations or replace them, "Ersätter SLVFS 2001:4", and a
 replaced regulation is not in force). LIVSFS itself is read from 2002, its first year. LFS, JvSFS
@@ -548,6 +548,7 @@ stops when `pdftotext` (poppler-utils) is missing; `--no-pdf-text` skips the ste
 | STEMFS (Energimyndigheten) | document archive, category Föreskrifter, 40 a page (crawl delay 10 s) | none | PDF only |
 | RFS (Riksdagsförvaltningen) | `https://data.riksdagen.se/dokumentlista/?doktyp=rfs&utformat=json` | `https://data.riksdagen.se/dokument/<dok_id>.html` | HTML (Fulltext) |
 | RA-FS (Riksarkivet) | `https://foreskrifter.riksarkivet.se/api/rafs/sok` (JSON, in force and repealed) | none | PDF only |
+| RA-MS (Riksarkivet, regulations for named agencies) | `https://foreskrifter.riksarkivet.se/api/rams/sok` (JSON, in force and repealed; only the `RA-MS` series, numbered by year) | none | PDF only |
 | SKOLFS (Skolverket) | `https://skolfs.skolverket.se/api/statute` (JSON, paged) | `.../api/document/<number>/ascending` (JSON) | PDF only |
 | SJÖFS (Sjöfartsverket) | `.../lagrum/systematisk-forteckning-n/<subject>/` (21 subject pages) | none | PDF only |
 | TRVFS (Trafikverket) | `https://trvfs.ea.trafikverket.se/TRVFS/Home/SearchInDocCollection` (POST per year) | `.../Home/DocumentHistory/<year>-<n>` | PDF only |
