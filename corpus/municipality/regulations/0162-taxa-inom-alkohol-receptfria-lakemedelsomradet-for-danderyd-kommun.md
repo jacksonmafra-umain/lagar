@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.danderyd.se/globalassets/globala-filer/kommun-och-politik/forfattningssamling_ny/avgifter-och-taxor/taxa-inom-alkohol--receptfria-lakemedelsomradet-for-danderyd-kommun.pdf"
 source_sha256: "0d42ab72ad65c798299a8154c9d4c1b9edd39bc0e2de6b4f9cf35b3ae4bc2843"
-fetched_at: "2026-10-30T00:55:47Z"
+fetched_at: "2026-10-31T15:17:53Z"
 issuer: "Danderyds kommun"
 region_code: "01"
 municipality_code: "0162"
@@ -31,6 +31,430 @@ Förteckning: <https://www.danderyd.se/kommun-och-politik/fakta-danderyds-kommun
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Taxa inom alkohol- receptfria läkemedelsområdet för Danderyd kommun](<https://www.danderyd.se/globalassets/globala-filer/kommun-och-politik/forfattningssamling_ny/avgifter-och-taxor/taxa-inom-alkohol--receptfria-lakemedelsomradet-for-danderyd-kommun.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Styrdokument
+
+Diarienummer: KS 2025/0334
+
+Beslutsinstans: Kommunfullmäktige
+
+Processägare: Socialdirektör
+
+Senast uppdaterad: 2026-01-26 § 5
+
+Styrdokumentsnummer: DK 2026:5
+
+Taxa inom alkohol-, tobaksoch receptfria läkemedelsområdet i
+
+Danderyds kommun
+
+Dokumentets syfte
+
+Denna taxa reglerar grunderna för hur avgifter tas ut för prövning och tillsyn enligt alkohollagen, tobakslagstiftningen samt regler om handel med receptfria läkemedel.
+
+Dokumentet gäller för
+
+Taxan gäller för verksamheter som omfattas av alkohollagen, tobakslagstiftningen, regler om tobaksfria nikotinprodukter och handel med vissa receptfria läkemedel i Danderyds kommun.
+
+Diarienummer: KS 2025/0334
+
+Taxa för prövning och tillsyn av serveringstillstånd
+
+Meddelad med stöd av 8 kap. 10 § alkohollagen (2010:1622)
+
+Taxa för tillsyn av försäljning och servering av folköl
+
+Meddelad med stöd av 8 kap. 10 § alkohollagen (2010:1622)
+
+Taxa för prövning och tillsyn av tobak och liknande produkter
+
+Meddelad med stöd av 8 kap 2 § Lag (2018:2088) om tobak och liknande produkter Taxa för tillsyn av försäljning av tobaksfria nikotinprodukter
+
+Meddelad med stöd av 40 § Lag (2022:1257) om tobaksfria nikotinprodukter Taxa för tillsyn av handel med vissa receptfria läkemedel
+
+Meddelad med stöd av 23 § Lag (2009:730) om handel med vissa receptfria läkemedel Beslut i Södra Roslagens miljö- och hälsoskyddsnämnd: § 25 2025-09-17, Dnr: SRMH-20251709
+
+Diarienummer: KS 2025/0334
+
+Innehåll
+
+Inledande bestämmelser ......................................................................... 4 Allmänna bestämmelser om avgift .......................................................... 4 Avgift för ansökan om tillstånd ............................................................... 4 Avgift för anmälan .................................................................................. 5 Avgift för kunskapsprov .......................................................................... 5 Avgift för återkommande tillsyn.............................................................. 5 Avgift för extra tillsyn.............................................................................. 5 Påminnelseavgifter och tillsynsavgift vid utebliven restaurangrapport ... 6 Ikraftträdande......................................................................................... 6
+
+Bilaga 1 - Prövningsavgifter ..................................................................... 7
+
+Bilaga 2 – Tillsynsavgifter ........................................................................ 9
+
+Diarienummer: KS 2025/0334
+
+Inledande bestämmelser
+
+1§
+
+2§
+
+3§
+
+4§
+
+Avgift enligt denna taxa erläggs för Danderyd kommuns kostnader för prövning och tillsyn enligt alkohollagen (2010:1622), lagen (2018:2088) om tobak och liknande produkter, lagen (2022:1257) om tobaksfria nikotinprodukter och lagen (2009:730) om handel med vissa receptfria läkemedel.
+
+Betalning av avgift enligt denna taxa ska ske till Södra Roslagens miljö- och hälsoskyddsnämnd. Betalning ska ske inom den tid som anges i beslut om avgift eller i räkning.
+
+Om det finns särskilda skäl med hänsyn till verksamhetens art och omfattning, tillsynsbehov, nedlagd kontrolltid eller andra omständigheter får Södra Roslagens miljö- och hälsoskyddsnämnds besluta att avgift enligt denna taxa sättas ned eller efterskänkas.
+
+Södra Roslagens miljö- och hälsoskyddsnämnds beslut om avgift enligt denna taxa får överklagas till förvaltningsdomstol.
+
+Allmänna bestämmelser om avgift
+
+5§
+
+Avgift enligt denna taxa ska betalas för:
+
+1. Handläggning och andra åtgärder med anledning av ansökan och anmälan enligt alkohollagen och lagen om tobak och liknande produkter
+
+2. Handläggning och andra åtgärder vid tillsyn enligt alkohollagen, lagen om tobak och liknande produkter, lagen om tobaksfria nikotinprodukter sam lagen om handel med vissa receptfria läkemedel
+
+6§
+
+Beslut om extra tillsynsavgift fattas av Södra Roslagens miljö- och hälsoskyddsnämnd.
+
+Avgift för ansökan om tillstånd
+
+7§
+
+Avgift för ansökan om tillstånd tas ut enligt Bilaga 1.
+
+Ansökningsavgift ska betalas för varje avgiftsbelagt ärende som ansökan avser.
+
+8§
+
+Avgift för ansökan om tillstånd ska betalas även om ansökan avslås.
+
+I det fall ansökan återtas innan ansökningsärendet är komplett kan efter begäran från sökanden avgiften sättas ned till hälften.
+
+Diarienummer: KS 2025/0334
+
+Avgift för anmälan
+
+9§
+
+Avgift för anmälan ska betalas enligt Bilaga 1.
+
+Anmälningsavgift ska betalas för varje avgiftsbelagt ärende som anmälan avser.
+
+10 § I det fall anmälan återtas innan ärendet är komplett kan avgiften efter begäran från sökanden sättas ned till hälften.
+
+Avgift för kunskapsprov
+
+11 § Avgift för att avlägga kunskapsprov debiteras med 1 500 kronor per person som utför provet. Erlagd avgift berättigar till tre (3) provtillfällen.
+
+Avgift för återkommande tillsyn
+
+12 § Avgift för återkommande tillsyn debiteras enligt Bilaga 2.
+
+Avgift för återkommande tillsyn omfattar kalenderår och ska betalas i förskott.
+
+13 § Verksamhet som innehar stadigvarande tillstånd att servera alkohol eller bedriva detalj- eller partihandel med tobaksvaror debiteras tillsynsavgift med ett helt avgiftsbelopp från och med året efter det ursprungliga tillståndet beviljades.
+
+14 § Verksamhet som bedriver anmälningspliktig servering eller försäljning av folköl, anmälningspliktig handel med elektroniska cigaretter och påfyllningsbehållare eller tobaksfria nikotinprodukter debiteras tillsynsavgift från och med det år verksamheten anmäldes.
+
+15 § Verksamhet som bedriver anmälningspliktig handel med vissa receptfria läkemedel debiteras tillsynsavgift från och med det år Läkemedelsverket informerat Södra Roslagens miljö- och hälsoskyddsnämnd om verksamheten.
+
+Avgift för extra tillsyn
+
+16 § En avgift för extra tillsyn på 10 000 kronor debiteras i de fall Södra Roslagens miljö- och hälsoskyddsnämnd i samband med ett tillsynsärende beslutar att meddela innehavare av tillstånd att servera alkohol en varning eller en erinran enligt 9 kap 17 § alkohollagen (2010:1622).
+
+Diarienummer: KS 2025/0334
+
+17 § En avgift för extra tillsyn på 10 000 kronor debiteras i de fall Södra Roslagens miljö- och hälsoskyddsnämnd i samband med ett tillsynsärende beslutar att meddela innehavare av tillstånd att bedriva detalj- eller partihandel med tobaksvaror en varning enligt 7 kap 11 § lagen (2018:2088) om tobak och liknande produkter.
+
+18 § Avgift för extra tillsyn enligt 16–17 §§ debiteras då beslut om att meddela varning eller erinran vunnit laga kraft.
+
+Påminnelseavgifter och tillsynsavgift vid utebliven restaurangrapport
+
+19 § Vid påminnelse om att anmäla förändringar enligt 9 kap 11 § alkohollagen (2010:1622) debiteras en påminnelseavgift om 1 000 kronor per påminnelse.
+
+20 § Vid påminnelse om att anmäla förändringar enligt 5 kap 7 § lagen (2018:2088) om tobak och liknande produkter debiteras en påminnelseavgift om 1 000 kronor per påminnelse.
+
+21 § Vid påminnelse om att lämna in restaurangrapport debiteras 1 000 kronor per påminnelse.
+
+22 § Om innehavare av stadigvarande serveringstillstånd av alkoholdrycker inte lämnat in restaurangrapport den 30 april året efter rapporteringsperioden debiteras tillståndsinnehavaren en årlig tillsynsavgift enligt Bilaga 2 med fast del samt högsta omsättningsbaserade del.
+
+Ikraftträdande
+
+23 § Denna taxa träder i kraft den 1 januari 2026 och tillämpas på ärenden som kommer in från och med denna dag. För ärenden som påbörjats innan denna taxas ikraftträdande tillämpas tidigare gällande taxa.
+
+Diarienummer: KS 2025/0334
+
+Bilaga 1 - Prövningsavgifter
+
+Avgifter för ansökan om tillstånd
+
+Serveringstillstånd
+
+Ansökan om stadigvarande serveringstillstånd för allmänheten,
+
+13 000 kr
+
+Ansökan om tillstånd för gårdsförsäljning
+
+13 000 kr
+
+Ansökan om stadigvarande utökning av sortiment
+
+2 000 kr
+
+Ansökan om stadigvarande utökning av serveringstid
+
+5 000 kr
+
+Ansökan om stadigvarande utökning av serveringsyta
+
+5 000 kr
+
+Ansökan om stadigvarande tillstånd för gemensam serveringsyta
+
+5 000 kr
+
+Ansökan om stadigvarande tillstånd för provsmakning
+
+10 000 kr
+
+Ansökan om tillfälligt tillstånd för pausservering
+
+2 000 kr
+
+Ansökan om tillfälligt serveringstillstånd för allmänheten (sökande gällande serveringstillstånd)
+
+6 000 kr utan
+
+Ansökan om tillfälligt serveringstillstånd för allmänheten (sökande gällande serveringstillstånd).
+
+3 000 kr med
+
+Ansökan om tillfällig utökning av serveringstid om ansökan avser tid normaltiden kl. 11.00-01.00
+
+2 000 kr inom
+
+Ansökan om tillfällig utökning av serveringstid om ansökan avser tid normaltiden kl. 11.00-01.00
+
+4 000 kr utanför
+
+Ansökan om tillfällig utökning av serveringsyta
+
+2 000 kr
+
+Ansökan om tillfälligt tillstånd för gemensam serveringsyta
+
+2 000 kr
+
+Ansökan om tillfällig utökning av sortiment
+
+1 000 kr
+
+Ansökan om tillfälligt tillstånd för provsmakning
+
+2 000 kr
+
+Ansökan om tillfälligt serveringstillstånd för slutet sällskap
+
+1 000 kr
+
+Anmälan om förändrad bolagssammansättning
+
+11 000 kr
+
+Diarienummer: KS 2025/0334
+
+Anmälan om mindre ändring av bolagssammansättning (ingen ändring av ägarmajoritet)
+
+5 000 kr
+
+Tobakstillstånd
+
+Ansökan om stadigvarande tillstånd att sälja tobak (detaljhandel)
+
+8 750 kr
+
+Ansökan om stadigvarande tillstånd att sälja tobak (partihandel)
+
+10 000 kr
+
+Ansökan om tillfälligt tillstånd att sälja tobak
+
+7 500 kr
+
+Anmälan om ändrade ägar- eller bolagsförhållanden
+
+6 250 kr
+
+Anmälan om förändrat tillstånd
+
+2 500 kr
+
+Diarienummer: KS 2025/0334
+
+Bilaga 2 – Tillsynsavgifter
+
+1. Serveringstillstånd
+
+Fast del
+
+Servering till slutet sällskap
+
+1.1 Serveringstid till och med klockan 22.00
+
+1.2 Serveringstid senare än klockan 22.00
+
+3 000 kr
+
+4 000 kr
+
+Servering till allmänheten
+
+1.3 Serveringstid till och med klockan 22.00
+
+1.4 Serveringstid efter klockan 22.00
+
+1.5 Serveringstid efter klockan 22.00 med vaktvillkor
+
+3 000 kr
+
+5 000 kr
+
+9 000 kr
+
+Omsättningsbaserad del
+
+Omsättning av alkoholförsäljning (kronor)
+
+50 001–250 000
+
+250 001–500 000
+
+500 001–1 000 000
+
+1 000 001–2 000 000
+
+2 000 001–3 000 000
+
+3 000 001–4 000 000
+
+4 000 001–5 000 000
+
+5 000 001–6 000 000
+
+6 000 001–7 000 000
+
+7 000 001–8 000 000
+
+8 000 0001–9 000 000
+
+9 000 001–10 000 000
+
+10 000 001–
+
+Belopp
+
+1 000 kr
+
+2 000 kr
+
+3 000 kr
+
+4 000 kr
+
+5 000 kr
+
+6 000 kr
+
+7 000 kr
+
+8 000 kr
+
+10 000 kr
+
+11 000 kr
+
+12 000 kr
+
+13 000 kr
+
+14 000 kr
+
+Diarienummer: KS 2025/0334
+
+2. Tillstånd för gårdsförsäljning
+
+2.3 Försäljningsställe med gällande stadigvarande serveringstillstånd 2.4 Försäljningsställe utan gällande stadigvarande serveringstillstånd
+
+1 000 kr
+
+5 000 kr
+
+3. Handel med tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfria läkemedel
+
+Tillsynsavgiften beror på vilken typ av handel som bedrivs.
+
+Tillsynsavgift för tillståndspliktig handel med tobak
+
+3.1
+
+3.2
+
+3.2
+
+3.3
+
+3.4
+
+Detalj- eller partihandel tobak
+
+Detalj- eller partihandel tobak inkl. serveringstillstånd
+
+Detalj- eller partihandel tobak inkl. punkt 4.2 nedan
+
+Detalj- eller partihandel tobak inkl. punkt 4.3 nedan
+
+Detalj- eller partihandel tobak inkl. punkt 4.4 nedan
+
+6 250 kr
+
+2 500 kr
+
+8 750 kr
+
+10 250 kr
+
+12 750 kr
+
+Handel med folköl, e-cigaretter, tobaksfria nikotinprodukter samt receptfria läkemedel 3.5
+
+3.6
+
+3.7
+
+3.8
+
+Handel med en (1) produkttyp
+
+Handel med två (2) produkttyper
+
+Handel med tre (3) produkttyper
+
+Handel med fyra (4) produkttyper
+
+3 125 kr
+
+5 000 kr
+
+7 500 kr
+
+10 000 kr

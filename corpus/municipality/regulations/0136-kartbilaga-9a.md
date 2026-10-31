@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.haninge.se/4a4dba/globalassets/dokument/styrdokument/kommunal-forfattningssamling/foreskrifter/kartbilaga-9a.pdf"
 source_sha256: "f9cf681d4f6a9fb155e702e1ec77b29312c52dcf14ad1a9fdf45e433cdbb1851"
-fetched_at: "2026-10-30T00:47:41Z"
+fetched_at: "2026-10-31T15:15:51Z"
 issuer: "Haninge kommun"
 region_code: "01"
 municipality_code: "0136"
@@ -31,6 +31,26 @@ Förteckning: <https://www.haninge.se/kommun-och-politik/politik-och-organisatio
 
 ## Dokument
 
-Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande lydelsen finns i kommunens dokument.
+Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
 - [Kartbilaga 9 A](<https://www.haninge.se/4a4dba/globalassets/dokument/styrdokument/kommunal-forfattningssamling/foreskrifter/kartbilaga-9a.pdf>)
+
+## Text
+
+Texten är hämtad ur kommunens pdf. Den gällande lydelsen finns i pdf:en.
+
+Haninge kommun
+
+BILAGA 9A. YTOR FÖR ELSPARKCYKtAR
+
+Koordinatsystem: SWEREF99 18 00 I Höjdsystem: RH2000 I Skala: 1:50 000
+
+'Q '
+
+N
+
+v◄
+
+s
+
+►o
