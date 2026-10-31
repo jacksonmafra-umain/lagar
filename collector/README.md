@@ -164,6 +164,28 @@ county, municipal and SÖ sync workflows install them.
 - Tests that run the tools skip when they are not installed, unless `LAGAR_REQUIRE_OCR=1` (set in
   CI).
 
+## Corpus statistics
+
+`collector/stats.py` (`lagar/corpusstats.py`) writes `STATISTICS.md` and `collector/data/statistics.json`
+from files in the repository only: the corpus, the source manifests, `collector/data/pending-integrity.json`
+(run the audit first), `sources/sfs-pdf-verification.json` and `sources/ocr-calibration.json`.
+
+- Documents, sections (paragraphs opening with `N §`) and words per type; distinct issuers per layer;
+  counties and kommuner covered; documents per host of their `source`.
+- How each text was obtained: a web page or API, a PDF's text layer, OCR (`text_source: ocr`) or none
+  (metadata and link only), from the body notes the collectors write and the manifests' `text` values.
+- Per issuer, the documents that rely on a PDF, how many are scans, how many were read by OCR and how
+  many still have no text.
+- Quality: the audit counts, the share of SFS statutes whose Riksdagen text matches the printed PDF,
+  and the OCR accuracy.
+
+`collector/ocr_calibration.py` (`lagar/ocrcalibration.py`) measures OCR accuracy: a fixed sample of
+short text-layer PDFs per source (agency, county, SÖ; the lowest SHA-256 first) is downloaded at most
+once a second, honouring robots.txt, read by `pdftotext` and by OCR, and compared: word recall and
+precision as multisets (the section sign counts as a word) and `difflib`'s character similarity. Pages
+rendered from a text layer are cleaner than paper scans, so the result is an upper bound for real
+scans. It writes `sources/ocr-calibration.json`; run it again after changing `lagar/ocr.py`.
+
 ## Amendment register (SFSR)
 
 Riksdagen texts carry no entry-into-force date and only mention amending acts inline. The SFS
