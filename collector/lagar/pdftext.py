@@ -130,7 +130,9 @@ def extract(data, timeout=TIMEOUT_SECONDS):
 def classify(raw, decode=True):
     """PdfText for the raw `pdftotext` output: pages split by form feeds.
 
-    Text in the shifted font encoding is decoded once when `decode` is true.
+    Text in the shifted font encoding is decoded once when `decode` is true;
+    so are shifted lines among readable ones (a heading in another font). Either
+    way the decoded text is kept only when it passes the same checks.
     """
     pages = raw.split("\f")
     if pages and not pages[-1].strip():
@@ -151,6 +153,12 @@ def classify(raw, decode=True):
         gap = UNREADABLE_TEXT
     elif _letter_spaced(raw):
         gap = LETTER_SPACED
+    elif decode:
+        lines = _unshift_lines(raw)
+        if lines != raw:
+            result = classify(lines, decode=False)
+            if result.usable:
+                return result
     return PdfText(text=raw.replace("\f", "\n\n"), pages=count, text_pages=text_pages, gap=gap)
 
 
@@ -220,6 +228,26 @@ def _shifted_encoding(raw, visible):
         and foreign >= letters * MIN_FOREIGN_LATIN_SHARE
         and raw.count("=") >= visible * MIN_EQUALS_SHARE
     )
+
+
+def _unshift_lines(raw):
+    """Decode the lines that can only be shifted text.
+
+    A shifted line has "=" for every space, so each of its words ends in "=",
+    and it holds only characters the shift produces (no digits, no space
+    other than between "=" words). Lines like "F=" are too short to tell.
+    """
+    lines = raw.split("\n")
+    for index, line in enumerate(lines):
+        words = line.split()
+        if (
+            words
+            and all(word.endswith("=") for word in words)
+            and sum(len(word) - 1 for word in words) >= 4
+            and all(c in _UNSHIFT for word in words for c in word)
+        ):
+            lines[index] = unshift(line)
+    return "\n".join(lines)
 
 
 def _letter_spaced(raw):
