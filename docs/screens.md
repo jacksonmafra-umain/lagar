@@ -239,7 +239,7 @@ Route: `LayerList(layer, type?, ministry?, ministryName?, code?, codeName?)`. Co
 
 ## Reader
 
-Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 §) scrolled to once the text loads. Web links: `?doc=<id>&p=<anchor>`. Code: `ui/reader/`. References: DESIGN.md (Legal Text Cards, Typography) and architecture §4 flow 5.
+Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 §) scrolled to once the text loads. Web links: `?doc=<id>&p=<anchor>`; while browsing, the web address keeps the screen in its fragment (`#/reader/<id>?p=<anchor>`, see below). Code: `ui/reader/`. References: DESIGN.md (Legal Text Cards, Typography) and architecture §4 flow 5.
 
 | Feature | Status | Issue |
 | --- | --- | --- |
@@ -297,3 +297,13 @@ Route: `Settings`, opened from the drawer. Code: `ui/settings/SettingsScreen.kt`
 | --- | --- | --- |
 | Release builds and the web app read the published API | Done | #10 |
 | Scheduled sync of new and amended statutes | Missing | #20 |
+
+## Web addresses
+
+Code: `ui/navigation/WebPaths.kt`, `BrowserHistory.kt`. On the web every screen past onboarding writes its route to the URL fragment: `#/utforska`, `#/hierarki`, `#/sparade`, `#/tjanster`, `#/settings`, `#/advanced-search`, `#/reader/<id>?p=<anchor>`, `#/layer/<layer>?type=&ministry=&ministryName=&code=&codeName=`, `#/ministries/<layer>/<type>` and `#/search?q=&types=&from=&to=&mode=&status=&inForceFrom=&inForceTo=&vacatioLegis=1&sort=`. The browser's back and forward follow the back stack (`bindToBrowserNavigation`).
+
+| Feature | Status | Issue |
+| --- | --- | --- |
+| A reload rebuilds the back stack the history saved for the page, so the screen and in-app back survive it | Done | |
+| An address opened fresh (bookmark, new tab) opens its screen on top of Utforska after the splash | Done | |
+| Editing the fragment by hand in an open tab | Not handled: reload to apply it | |
