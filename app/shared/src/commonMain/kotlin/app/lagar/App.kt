@@ -14,7 +14,6 @@ import app.lagar.i18n.ProvideAppLocale
 import app.lagar.i18n.systemLanguageTag
 import app.lagar.settings.ThemeMode
 import app.lagar.settings.UserPreferences
-import app.lagar.ui.navigation.Reader
 import app.lagar.ui.shell.AppShell
 import app.lagar.ui.shell.SystemBarAppearance
 import dev.chrisbanes.haze.HazeState
@@ -22,16 +21,19 @@ import org.koin.compose.KoinApplication
 import org.koin.compose.koinInject
 import org.koin.dsl.koinConfiguration
 
-/** [startLink] is the document a shared link asks for (the web app's `?doc=…&p=…`); it opens after the splash. */
+/**
+ * Web only: [startRoute] is the screen the address asks for and [startStack] the back stack the browser history saved
+ * before a reload (route strings); after the splash the stack is rebuilt, or else the screen opens.
+ */
 @Composable
-fun App(dataSource: DataSourceConfig = DataSourceConfig(), startLink: Reader? = null) {
+fun App(dataSource: DataSourceConfig = DataSourceConfig(), startRoute: Any? = null, startStack: List<String> = emptyList()) {
     KoinApplication(koinConfiguration { modules(appModule(dataSource)) }) {
-        AppContent(startLink)
+        AppContent(startRoute, startStack)
     }
 }
 
 @Composable
-private fun AppContent(startLink: Reader?) {
+private fun AppContent(startRoute: Any?, startStack: List<String>) {
     val preferences = koinInject<UserPreferences>()
     val language by preferences.language.collectAsState()
     val theme by preferences.theme.collectAsState()
@@ -55,7 +57,8 @@ private fun AppContent(startLink: Reader?) {
                 navController = navController,
                 hazeState = hazeState,
                 onToggleTheme = { preferences.setTheme(if (dark) ThemeMode.Light else ThemeMode.Dark) },
-                startLink = startLink,
+                startRoute = startRoute,
+                startStack = startStack,
             )
         }
     }
