@@ -6,6 +6,7 @@ on:
       - mcp/**
       - scripts/serve_local.py
       - scripts/tests/**
+      - docs/replicate/**
       - api/**
       - ruff.toml
       - .github/workflows/tools.yml
@@ -15,6 +16,7 @@ on:
       - mcp/**
       - scripts/serve_local.py
       - scripts/tests/**
+      - docs/replicate/**
       - api/**
       - ruff.toml
       - .github/workflows/tools.yml
