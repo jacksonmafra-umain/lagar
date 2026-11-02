@@ -91,7 +91,117 @@ To be written.
 
 ## Reference A: Architecture contracts
 
-To be written.
+Each contract says what must be true and links to lagar's working version. Build what the contract says with the country profile's values; read the linked file for detail and proven edge cases. Parts marked *optional* are built only when chosen in Phase 1.
+
+### Layout
+
+One repository, one folder per part, everything in English:
+
+- `collector/`: Python collectors (`collector/<project>/*.py` modules, thin entry scripts such as `collect.py`, `audit.py`, `plan.py`, `stats.py`), `collector/data/` for configuration, the country profile and committed sync markers, `collector/tests/` with fixtures.
+- `corpus/`: one Markdown file per norm, one folder per layer and type.
+- `sources/`: committed manifests of every source file read (`sources/cache/` holds the bytes and is git-ignored).
+- `api/`: the static API builder and its tests. `mcp/`: the MCP server (optional). `app/`: the app (optional). `landing/`: the landing page (optional).
+- `docs/`: the API contract (`docs/api.md`), the frontmatter schema (`docs/schema/`), the country profile, the onboarding answers.
+- Root: `README.md`, `LICENSE`, generated reports (`PROGRESS.md`, `STATISTICS.md`, a sources log), a hand-written `COVERAGE.md`, `.editorconfig`, `.gitignore`, the lint configuration and `.pre-commit-config.yaml`.
+
+Example: [lagar's README, with its command list](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/README.md).
+
+### Corpus
+
+- One YAML-fronted Markdown file per norm. The body is the legal text as Markdown, with headings for chapters and sections exactly as the source structures them.
+- A **closed vocabulary**: every `type` belongs to exactly one `layer`, both from the country profile; an unknown type is an error, not a new folder. See [`vocabulary.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/vocabulary.py).
+- **Universal keys**, required in every document in every country, with these formats:
+  - `id`: lowercase, pattern `^[a-z0-9_]+-[0-9a-z-]+$`, built from the type's prefix and the official number (`sfs-1999-175` in lagar);
+  - `title`, `type`, `layer`, `number` (the official number as printed, or null), `issued` (`YYYY-MM-DD` or null);
+  - `in_force`, `repealed` (dates or null), `amended_by` (list of numbers);
+  - `language` (one of the profile's legal languages; a norm published in several languages gets one document per language, linked by number);
+  - `authoritative` (true only when the source's text is the legally binding one);
+  - `source` (the URL read), `source_sha256` (64 lowercase hex characters of the exact bytes read), `fetched_at` (`YYYY-MM-DDTHH:MM:SSZ`, UTC).
+- **Optional universal key**: `text_source`, `ocr` when the text came from OCR, otherwise null or absent.
+- **Country-specific keys**, declared `required`, `optional` or `absent` in the profile's `frontmatter`: in lagar these are `ministry`, `eli`, `ecli`, `celex`, `amended_through`, `reprinted_by`, `amendments`, `issuer`, `court`, `region_code`, `municipality_code`, plus cross-field checks (a county regulation's number starts with its county code). Keep only what the country has.
+- The path follows from type and id: one folder per type (for example `corpus/<layer>/<type-plural>/<number>.md`), never chosen by hand. See [`writer.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/writer.py).
+- Frontmatter is a small YAML subset (quoted strings, null, booleans, flow lists of strings, block lists of flat mappings) with a writer and a reader that are exact inverses, tested by round trip. See [`frontmatter.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/frontmatter.py).
+- The schema is a JSON Schema file plus a stdlib validator for cross-field rules: [`frontmatter.schema.json`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/docs/schema/frontmatter.schema.json), [`schema.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/schema.py).
+
+### Collectors
+
+- Python standard library only, run as `python3 -I` (isolated mode). No third-party packages, so nothing to pin and nothing to audit.
+- One shared HTTP client ([`http.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/http.py)):
+  - at least 1 second between requests to a host (`--rate` can raise it; never lower it below 1 s);
+  - up to 3 retries on 429, 500, 502, 503 and 504, with exponential backoff and `Retry-After` honoured;
+  - a 403, or a `Retry-After` over 300 seconds, raises `Blocked` and stops the run: never retry around a block;
+  - 30-second timeout; a User-Agent like `<project>-collector/0.1 (+<repository URL>)`.
+- robots.txt is read once per host and applied before every request, with RFC 9309 matching (`*` wildcards, `$` anchors, longest match wins, agent groups). A disallowed URL becomes a gap with the reason. See the `Robots` class in [`municipal.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/municipal.py).
+- **Resumable and idempotent:** state in `collector/data/<name>-state.json` (git-ignored) with `done`, `failed`, `blocked`; written atomically (temporary file, fsync, rename); a corrupt state file is an error, never silently reset. `done` is keyed to the source's change stamp so unchanged items are skipped and a rerun writes nothing new.
+- **Incremental sync:** a committed marker (`collector/data/<name>-sync.json`) records the last change date read; on failure the marker is held back so the next run retries.
+- **Manifests:** every source file read gets an entry in a committed `sources/<name>-manifest.json` with URL, size, content type, retrieval time, SHA-256 and how its text was obtained, plus a `gaps` list. Source bytes (PDFs especially) are never committed.
+- **Adapters:** one module per source family, sharing the run loop; configurable adapters for the common shapes (a list of PDF links, one HTML page per rule) so a new issuer is a data entry, not new code. See [`agency_generic.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/agency_generic.py).
+- A `--limit`, `--dry-run` or `--report` option on every collector so a run can be tried small and reported.
+
+### Parsing
+
+- HTML to Markdown with a stdlib converter that keeps headings, lists, tables and links: [`htmlmd.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/htmlmd.py).
+- PDF text through poppler's `pdftotext`, then a classifier that rejects unusable text layers (no text, unreadable encoding, letter-spaced text) as gaps: [`pdftext.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/pdftext.py).
+- OCR only for scanned PDFs: `pdftoppm` plus `tesseract` with the country's language models, low-confidence lines dropped, and the document marked `text_source: ocr`: [`ocr.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/ocr.py). Measure OCR accuracy by reading text-layer PDFs again with OCR and comparing (word recall and precision): [`ocrcalibration.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/ocrcalibration.py).
+- Patterns in the country's language (dates such as "issued on", entry into force, amendment headers) live in the module of the source that needs them, with a test per pattern taken from a real document.
+- Never guess text. A page or PDF that cannot be read is a gap with its reason.
+
+### Audit and reports
+
+- `audit.py` checks every document: schema errors, duplicate ids, paths that do not match type and id, empty or broken text, unresolved cross-references. It writes a JSON report and exits non-zero on schema errors, duplicates or path mismatches; CI and a pre-commit hook run it. See [`audit.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/audit.py).
+- `plan.py` writes `PROGRESS.md` and a progress chart against `collector/data/targets.json` (expected counts per layer and type, with the source of each target): [`progress.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/progress.py).
+- `stats.py` writes `STATISTICS.md` and `collector/data/statistics.json` (documents, sections and words per type, issuers, divisions covered, source hosts, how each text was obtained): [`corpusstats.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/corpusstats.py).
+- A sources log lists every official source of the country with its status (collected, partial, gap and why): [`agencies.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/agencies.py).
+- `COVERAGE.md` is written by hand: what is covered, what is not, and why.
+
+### Static API
+
+The app and other tools read only the API, never the corpus. The full contract is [`docs/api.md`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/docs/api.md); generalise it with the profile:
+
+- Version prefix `v1`; every key always present, `null` when unknown; listings paged at 50 items.
+- `index.json`: API version, build time, every layer with its counts and series.
+- `<layer>/index-<page>.json`, `<layer>/<type>/index-<page>.json`: listing items with id, title, number, type, dates and the division codes.
+- `<layer>/by-code/index.json` and `<layer>/by-code/<code>/index-<page>.json` for each division layer; any other grouping (lagar's `by-ministry`) only when the profile has that key.
+- `docs/<id>.json`: `meta` (all frontmatter) and the body.
+- Full-text search per layer ([`searchindex.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/api/searchindex.py)): an inverted index sharded by the first two characters of each term (`search/<group>/shards/<key>.json`); postings carry field bits title=1, number=2, body=4; text lowercased with diacritic folding and stop words for each legal language, and official numbers kept as one token; a per-layer size budget (40 000 000 bytes in lagar) above which the group indexes titles and numbers only. The app's normalisation must be byte-for-byte the same as the builder's, with a shared test vector.
+- Built with `python3 -I api/build.py --corpus corpus --out build/api/v1`, served per machine; a size report prints the size per layer. See [`build.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/api/build.py).
+
+### App
+
+*Optional.* Compose Multiplatform, Kotlin, with a shared module and thin hosts for the platforms chosen in Phase 1.
+
+- Versions of Kotlin, Compose Multiplatform, the Android Gradle plugin, Gradle and Ktor are the latest stable, pinned in one version catalog: [`libs.versions.toml`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/app/gradle/libs.versions.toml).
+- Data behind repository interfaces with an HTTP implementation (Ktor), a bundled sample and a cache; the app depends only on the API contract. See [`data/`](https://github.com/jacksonmafra-umain/lagar/tree/46a8e7d3f386bbbec82917a9725fe03220268ab5/app/shared/src/commonMain/kotlin/app/lagar/data).
+- Scopes come from the profile: the nation plus one scope for each division level that issues rules. The home screen, the hierarchy view and search filters are driven by the profile's layers and divisions, never by hard-coded names. lagar's screens and navigation: [`architecture.md`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/docs/architecture.md), [`screens.md`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/docs/screens.md).
+- Internationalisation from the first screen: Compose resources, English in `values/`, one folder per UI language, the profile's fallback for an unsupported device language, no hard-coded user-facing strings: [`i18n.md`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/docs/i18n.md).
+- Design tokens (colors, typography, spacing, radii) in the frontmatter of `DESIGN.md`, generated into Kotlin by a Gradle plugin: [`DESIGN.md`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/DESIGN.md), [`build-logic`](https://github.com/jacksonmafra-umain/lagar/tree/46a8e7d3f386bbbec82917a9725fe03220268ab5/app/build-logic). One color per layer, chosen for the country; light and dark themes; every text color meets WCAG AA contrast.
+- Anonymous: no accounts, bookmarks and settings stay on the device.
+- On the web, each screen has its own address in the URL fragment so reloads and shared links work.
+
+### Landing page
+
+*Optional.* Static HTML, CSS and a little JavaScript in `landing/`, in every UI language, showing the corpus statistics from `statistics.json` and the sources log. Deployed with GitHub Pages by default (a workflow with `pages: write` only on the deploy job), or Vercel if the person chose it. See [`landing/`](https://github.com/jacksonmafra-umain/lagar/tree/46a8e7d3f386bbbec82917a9725fe03220268ab5/landing).
+
+### MCP server
+
+*Optional.* A stdio JSON-RPC 2.0 server over the built API (local folder or published URL), stdlib only, with tools to search, get a document, list layers, list documents and read the reports. Its descriptions name the country and tell callers that legal text must not be machine-translated. See [`server.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/mcp/lagarmcp/server.py).
+
+### Sync workflows
+
+*Optional.* One scheduled GitHub Actions workflow per source family ([example](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/.github/workflows/sync-sfs.yml)):
+
+- runs the collector with `--changed-since` the committed marker, then the audit and every report;
+- commits to a `data/<name>-sync` branch and opens a pull request; with no changes it opens nothing;
+- merges itself once the collector tests and the audit pass, after merging `main` again and regenerating only the report files on conflict; any other conflict fails the job for a person to fix: [`merge-sync-pr.sh`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/.github/scripts/merge-sync-pr.sh);
+- `concurrency` without cancellation, a timeout, and only `contents: write` and `pull-requests: write`.
+
+### Amendment history
+
+*Optional.* A script that writes a `git fast-import` stream with one commit per amendment, dated at entry into force, on a separate branch that is never pushed without the person's approval: [`history.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/history.py).
+
+### Continuous integration
+
+Separate workflows for collectors (lint, tests), API (tests, audit, full build, size report), tools (MCP server) and app (lint, tests, a build per platform), each triggered by its paths, each with `permissions: contents: read`: [`workflows/`](https://github.com/jacksonmafra-umain/lagar/tree/46a8e7d3f386bbbec82917a9725fe03220268ab5/.github/workflows).
 
 ## Reference B: Security rules
 

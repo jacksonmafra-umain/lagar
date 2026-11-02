@@ -53,7 +53,7 @@ class ReplicatePromptTests(unittest.TestCase):
     def test_names_no_agent_product_or_private_spec(self):
         lowered = text().lower()
         for word in ["claude", "codex", "copilot", "gemini", "windsurf", "aider", "chatgpt", "agents.md", "lagar-implementation-prompt"]:
-            self.assertNotIn(word, lowered)
+            self.assertFalse(word in lowered, word)
         self.assertIsNone(re.search(r"\bcursor\b", lowered))
 
     def test_has_no_owner_specific_details(self):
@@ -117,6 +117,28 @@ class ReplicatePromptTests(unittest.TestCase):
         last = section("Phase 2: Legal-structure research").strip().split("\n\n")[-1]
         self.assertIn("approve", last)
         self.assertIn("no code", last.lower())
+
+    def test_contracts_cover_every_part(self):
+        contracts = section("Reference A: Architecture contracts")
+        headings = re.findall(r"^### (.+?)\s*$", contracts, re.MULTILINE)
+        for heading in ["Layout", "Corpus", "Collectors", "Parsing", "Audit and reports", "Static API", "App", "MCP server", "Sync workflows"]:
+            self.assertIn(heading, headings)
+
+    def test_universal_keys_are_listed(self):
+        corpus = section("Corpus", "### ", section("Reference A: Architecture contracts"))
+        for key in ["id", "title", "type", "layer", "number", "issued", "in_force", "repealed", "amended_by", "language", "authoritative", "source", "source_sha256", "fetched_at"]:
+            self.assertIn(f"`{key}`", corpus)
+        self.assertIn("`text_source`", corpus)
+        self.assertIn("optional", corpus[corpus.index("`text_source`") - 200:])
+
+    def test_contracts_link_their_sources(self):
+        linked = set(lagar_links(section("Reference A: Architecture contracts")))
+        for path in [
+            "docs/api.md", "docs/schema/frontmatter.schema.json", "collector/lagar/http.py", "collector/lagar/pdftext.py",
+            "collector/lagar/ocr.py", "collector/lagar/frontmatter.py", "collector/audit.py", "api/searchindex.py",
+            "mcp/lagarmcp/server.py", "docs/i18n.md", "DESIGN.md", ".github/scripts/merge-sync-pr.sh",
+        ]:
+            self.assertIn(path, linked)
 
 
 if __name__ == "__main__":
