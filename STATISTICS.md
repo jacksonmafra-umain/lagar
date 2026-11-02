@@ -1,6 +1,6 @@
 # Corpus statistics
 
-Generated 2026-10-31T23:41:28Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-02T13:01:22Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
@@ -20,7 +20,7 @@ The corpus holds 54,786 documents in 7 layers.
 | eu | eu_directive | 28 | 0 | 651,177 |
 | eu | eu_decision | 2 | 0 | 14,266 |
 | eu | eu_judgment | 605 | 35 | 3,651,042 |
-| region | county_regulation | 11,649 | 14,166 | 10,999,529 |
+| region | county_regulation | 11,649 | 14,166 | 10,998,721 |
 | municipality | municipal_regulation | 5,572 | 44,907 | 12,425,695 |
 
 Sections count paragraphs that open with a section number (`1 §`, `2 a §`); case law and EU documents have none.

@@ -18553,17 +18553,9 @@
       "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
       "files": [
         {
-          "bytes": 123542,
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-31T14:51:01Z",
-          "sha256": "1d2e46ba90498cef276acf9664be87a02bdd9b1659ab793c33947cd8e8aafdde",
-          "text": "extracted",
-          "url": "https://www.lansstyrelsen.se/download/18.5754b1b8194d34147316bf7/1738829880150/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndrad%20ordningsf%C3%B6reskrift%20inom%20Br%C3%A5tbergets%20naturreservat,%20Kinda%20kommun%202025.2.pdf"
-        },
-        {
           "bytes": 111829,
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-31T14:51:02Z",
+          "retrieved_at": "2026-11-02T12:56:19Z",
           "sha256": "1e01b9383967e7caa3fee9e473987604516c23f7a9bb848297fee5c4a4ba7d1c",
           "text": "extracted",
           "url": "https://www.lansstyrelsen.se/download/18.5d22726519618d6580ab1992/1745583968034/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndrad%20ordningsf%C3%B6reskrift%20inom%20Br%C3%A5tbergets%20naturreservat,%20Kinda%20kommun%202025.2.pdf"
@@ -18576,17 +18568,9 @@
       "detail_url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
       "files": [
         {
-          "bytes": 124116,
-          "content_type": "application/pdf",
-          "retrieved_at": "2026-10-31T14:51:03Z",
-          "sha256": "831c727b37b1e78a98defc8e71e85736848b80511a94fdee5e055ced0aaccfe3",
-          "text": "extracted",
-          "url": "https://www.lansstyrelsen.se/download/18.5754b1b8194d34147316bf8/1738829880172/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndrad%20ordningsf%C3%B6reskrift%20inom%20Storsko-gens%20naturreservat,%20%C3%85tvidabergs%20kommun%202025.3.pdf"
-        },
-        {
           "bytes": 113414,
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-31T14:51:04Z",
+          "retrieved_at": "2026-11-02T12:56:20Z",
           "sha256": "4cde73660b853ce14d01c6ff68d19d9ba39c81741b99db527ae11c73732f2121",
           "text": "extracted",
           "url": "https://www.lansstyrelsen.se/download/18.5d22726519618d6580ab1991/1745583968011/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20%C3%A4ndrad%20ordningsf%C3%B6reskrift%20inom%20Storsko-gens%20naturreservat,%20%C3%85tvidabergs%20kommun%202025.3.pdf"
@@ -165029,12 +165013,12 @@
       "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
       "files": [
         {
-          "bytes": 983173,
+          "bytes": 983284,
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T15:00:52Z",
-          "sha256": "44ed3251c0c194709035ba166d518acb4f180e00dd93e9b35df8f89ff3e5380d",
+          "retrieved_at": "2026-11-02T13:00:05Z",
+          "sha256": "3c83f26382edcc3f6067e99b04af399a8edb881b15b5f7ee1cf0ccb6689138dd",
           "text": "extracted",
-          "url": "https://www.lansstyrelsen.se/download/18.aee4ed61a162fd23d8605c4/1793283712026/24FS%202026-29.pdf"
+          "url": "https://www.lansstyrelsen.se/download/18.440f9b941a18c40286424c36/1793622226367/24FS%202026-29.pdf"
         }
       ],
       "number": "24FS 2026:29",
@@ -165044,12 +165028,12 @@
       "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
       "files": [
         {
-          "bytes": 380961,
+          "bytes": 380986,
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T15:00:53Z",
-          "sha256": "888afe7a35351b100e9dcd17c459c80c805124a98f91afc338de34ac0bde22e6",
+          "retrieved_at": "2026-11-02T13:00:07Z",
+          "sha256": "ec8c711d0a8b2424fc116722233a1684f559ec169a1f678c617ff8507083eaff",
           "text": "extracted",
-          "url": "https://www.lansstyrelsen.se/download/18.aee4ed61a162fd23d8605c5/1793283712084/24FS%202026-30.pdf"
+          "url": "https://www.lansstyrelsen.se/download/18.440f9b941a18c40286424c35/1793622226319/24FS%202026-30.pdf"
         }
       ],
       "number": "24FS 2026:30",

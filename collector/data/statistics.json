@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T23:41:28Z",
+ "generated_at": "2026-11-02T13:01:22Z",
  "documents": 54786,
  "layers": {
   "fundamental": {
@@ -208,7 +208,7 @@
     "county_regulation": {
      "documents": 11649,
      "sections": 14166,
-     "words": 10999529
+     "words": 10998721
     }
    },
    "issuers": 21,
