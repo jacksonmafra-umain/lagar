@@ -52,6 +52,7 @@ import app.lagar.ui.list.LayerListRoute
 import app.lagar.ui.list.LocalityFilter
 import app.lagar.ui.list.MinistryFilter
 import app.lagar.ui.navigation.AdvancedSearch
+import app.lagar.ui.navigation.BrowserHistoryEffect
 import app.lagar.ui.navigation.Hierarki
 import app.lagar.ui.navigation.LayerList
 import app.lagar.ui.navigation.Ministries
@@ -64,6 +65,7 @@ import app.lagar.ui.navigation.Sparade
 import app.lagar.ui.navigation.Splash
 import app.lagar.ui.navigation.Tjanster
 import app.lagar.ui.navigation.Utforska
+import app.lagar.ui.navigation.restoreStack
 import app.lagar.ui.onboarding.OnboardingViewModel
 import app.lagar.ui.onboarding.ScopeStepRoute
 import app.lagar.ui.onboarding.SplashRoute
@@ -84,8 +86,8 @@ import org.koin.compose.viewmodel.koinViewModel
 
 /**
  * Four-tab shell. The [navController] and [hazeState] are owned by the caller, above the locale
- * provider, so a language switch keeps the back stack. [startLink] (a shared web link) opens once the
- * splash is done.
+ * provider, so a language switch keeps the back stack. Once the splash is done, [startStack] (the web back stack saved
+ * in the browser history before a reload) is rebuilt, or else [startRoute] (the screen in the web address) opens.
  */
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
@@ -93,7 +95,8 @@ fun AppShell(
     navController: NavHostController,
     hazeState: HazeState,
     onToggleTheme: () -> Unit,
-    startLink: Reader? = null,
+    startRoute: Any? = null,
+    startStack: List<String> = emptyList(),
 ) {
     val scope = rememberCoroutineScope()
     val preferences = koinInject<UserPreferences>()
@@ -189,6 +192,9 @@ fun AppShell(
         Tab.entries.firstOrNull { it.route == item.route }?.let(::selectTab) ?: navigateWhenResumed(item.route)
     }
 
+    // Bound once the splash has handed over, so a reload rebuilds its stack before the history is written again.
+    if (destination != null && !destination.hasRoute(Splash::class)) BrowserHistoryEffect(navController)
+
     BackHandler(enabled = drawerState.isOpen) { scope.launch { drawerState.close() } }
 
     // Web only: Cmd/Ctrl+K focuses the search field when search is open, and opens search from any screen past onboarding.
@@ -257,10 +263,14 @@ fun AppShell(
                     ) {
                         composable<Splash> {
                             SplashRoute(onLoaded = {
-                                val next: Any = if (preferences.onboardingDone.value) Utforska else OnboardingWelcome
+                                val onboarded = preferences.onboardingDone.value
+                                val next: Any = if (onboarded) Utforska else OnboardingWelcome
                                 navController.navigate(next) { popUpTo(Splash) { inclusive = true } }
-                                // A shared link opens its document on top, so back leads into the app.
-                                startLink?.let { navController.navigate(it) }
+                                if (onboarded && navController.restoreStack(startStack)) return@SplashRoute
+                                // The address's screen opens on top, so back leads into the app.
+                                startRoute?.takeIf { it != next }?.let { route ->
+                                    Tab.entries.firstOrNull { it.route == route }?.let(::selectTab) ?: navController.navigate(route)
+                                }
                             })
                         }
                         composable<OnboardingWelcome> { entry ->
