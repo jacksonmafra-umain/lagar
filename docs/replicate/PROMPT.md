@@ -9,7 +9,7 @@ Paste this whole file into your coding agent, in an empty folder or in a copy of
 Instructions for the agent:
 
 - Read this whole prompt once before you say anything. Once the Phase 1 gate is passed, copy Phase 0 into your project instructions file (the file your agent reads at the start of every session) so the rules survive across sessions; in a copy of lagar, replace that file's Swedish content instead of adding a second file.
-- **Resuming.** If `docs/replication/onboarding.md` or `docs/country-profile.md` already exists, read them first. Skip every question they already answer, tell the person what you found, and continue from the first phase that is not finished. A phase is finished only when its file carries a `Confirmed: <date>` line written after the person's approval.
+- **Resuming.** If `docs/replication/onboarding.md`, `docs/country-profile.md` or `docs/replication/plan.md` already exists, read them first. Skip every question they already answer, tell the person what you found, and continue from the first phase that is not finished. A phase is finished only when its file carries a `Confirmed: <date>` line written after the person's approval; in the plan, a milestone is finished only when it carries a `Done: <date>` line.
 - The phases are gates. Phase 1 ends with saved answers, Phase 2 with an approved country profile, Phase 3 with an approved plan. Do not move past a gate without the person's explicit approval.
 - The references at the end (A, B, C) are contracts, not suggestions. Each one summarises what must be true and links to the file in lagar that shows a working example. The links point to one fixed lagar version so they always match this prompt; read the linked file when you implement that part.
 - If your agent can run helpers in parallel, use them for research and for independent collectors. Hand each helper the relevant rules from Phase 0 and Reference B. Helpers share each host's rate limit: never send two helpers to the same host at once.
@@ -22,7 +22,7 @@ These rules hold for the whole project, in every phase and every session.
 2. **Never machine-translate legal text.** Not in the corpus, not in the app, not in a summary presented as the law. A text that is not published in a supported language is a gap, not a translation job. A translation the state itself publishes may be collected, marked `authoritative: false`.
 3. **Never invent legal text.** If a source cannot be read (a scanned PDF without OCR, a broken page), record a gap. Never fill it from memory.
 4. **Collect politely and legally.** Honour robots.txt (including its `Crawl-delay`) and each site's terms of use, rate-limit every host, identify the collector with a User-Agent that carries the repository URL, and never bypass a block, captcha, login, firewall or paywall. When a source forbids automation, its terms conflict with each other or with the law (generic portal terms against a statute that frees official texts from copyright), or its terms cannot be read, stop and ask the person.
-5. **Gates first.** Writing the answers, the profile and the plan is how the gates work; apart from those files, do not write anything until the person has confirmed the onboarding answers (Phase 1), the country profile (Phase 2) and the plan (Phase 3).
+5. **Gates first.** Writing the answers, the profile and the plan is how the gates work, and the project instructions file carries these rules; apart from those files, do not write anything until the person has confirmed the onboarding answers (Phase 1), the country profile (Phase 2) and the plan (Phase 3).
 6. **Respect the country's structure.** Layers, document types, divisions and identifiers come from the country profile. Never carry Swedish structure (three fixed scopes, ministries, SFS numbers, Swedish stop words) into another country.
 7. **Prove it.** Every milestone ends with the tests and checks named in Reference A passing, and you show the person the result.
 8. **Small steps.** One focused change per commit, Conventional Commits messages, each commit building and passing tests.
@@ -76,13 +76,13 @@ Write the result in two files:
 - `docs/country-profile.md`: the readable version, one section per item above, every claim with its URL.
 - `collector/data/country-profile.json`: the machine-readable version that the collectors, the audit, the API builder and the app read. Top-level keys:
   - `country`: name and ISO 3166-1 code.
-  - `languages`: `legal` (a list of `{code, binding}`, ISO 639-1 codes, where `binding` lists the layers or division codes in which the language is authoritative, or `all`), `translations` (languages of official translations the state publishes, collected with `authoritative: false`), `ui` (app languages), `default_ui`, `fallback_ui`.
+  - `languages`: `legal` (a list of `{code, binding}`, ISO 639-1 codes, where `binding` is `all` or `{layers, divisions}`: the layer ids and division codes in which the language is authoritative), `translations` (codes of languages that are binding nowhere but in which the state publishes official translations; a language binding in some divisions stays in `legal`, and is a translation elsewhere), `ui` (app languages), `default_ui`, `fallback_ui`.
   - `divisions`: a list, one entry per level, each `{level, key, name, parent, code_pattern, count, as_of, source, coordinates_source}`, from the largest to the smallest: `key` is the frontmatter key for its code, named after the level (`canton_code`, `parish_code`; lagar's are `region_code` and `municipality_code`), `name` a map from language to name, `parent` the level above or null, `coordinates_source` null unless the location suggestion was chosen.
-  - `layers`: a list of `{id, name, rank, rank_note, types}`, with English ids chosen for this country (a supranational id such as `eu` only when the check above says so, one id per division level), `name` a map from legal language to name, `rank` from 1 (highest, ties allowed) and `rank_note` (null, or why the rank is contested or only orders listings).
+  - `layers`: a list of `{id, name, rank, rank_note, division, types}`, with English ids chosen for this country (a supranational id such as `eu` only when the check above says so, one id per division level), `name` a map from legal language to name, `rank` from 1 (highest, ties allowed) and `rank_note` (null, or why the rank is contested or only orders listings), `division` (the `key` of the division level whose codes group this layer, or null).
   - `types`: a closed map from document type (English, snake_case) to its layer.
   - `id_scheme`: the id prefix per type and how the official number becomes the id, with one example per type.
   - `frontmatter`: a map from each key this country uses beyond the universal ones (Reference A, Corpus) to `{status, layers, pattern}`, where `status` is `required` or `optional` within `layers`; plus `cross_field`, a list of rules between keys (a parish code starts with its municipality code).
-  - `sources`: a list of `{layers, host, access, id_scheme, update_signal, robots, crawl_delay, terms, licence, authoritative}`, where `layers` is a list, `robots` is `{url, status, rules}`, `terms` is `{url, verdict}` with a verdict of `allows`, `forbids`, `conflict`, `not_found` or `unreadable`, `licence` is the copyright basis of the texts with its URL, and `authoritative` maps each collection or language the source serves to true or false.
+  - `sources`: a list of `{layers, host, access, id_scheme, update_signal, robots, crawl_delay, terms, licence, authoritative}`, where `layers` is a list, `robots` is `{url, status, rules}`, `terms` is `{url, verdict, decision}` with a verdict of `allows`, `forbids`, `conflict`, `not_found` or `unreadable` and `decision` the person's answer, with its date, for any verdict other than `allows`, `licence` is the copyright basis of the texts with its URL, and `authoritative` maps each collection or language the source serves to true or false.
   - `case_law_privacy`: `{published_anonymised, may_store, never_fetch, urls}`.
   - `gaps`: a list of `{layers, reason, url}`.
 
@@ -101,7 +101,7 @@ Turn the onboarding answers and the approved profile into ordered milestones. Wr
 5. **Reports.** Progress against targets, statistics, the sources log, and a hand-written `COVERAGE.md`.
 6. Optional, in this order when chosen: **Sync workflows**, **MCP server**, **App** (design tokens and i18n first, then the shell, home, hierarchy, search, reader, saved items and settings), **Landing page**, **Amendment history**.
 
-Explain the plan to the person at their experience level, including anything they must do themselves (create the GitHub repository, enable GitHub Pages, add a deploy secret). Wait for them to approve the plan before Phase 4.
+Explain the plan to the person at their experience level, including anything they must do themselves (create the GitHub repository, enable GitHub Pages, add a deploy secret). Wait for them to approve the plan before Phase 4, and record the approval as a `Confirmed: <date>` line in `docs/replication/plan.md`.
 
 ## Phase 4: Build
 
@@ -110,7 +110,7 @@ Build the approved plan one milestone at a time.
 - Work test-first where code is involved: write the test from the contract, see it fail, make it pass. Fixtures come from real source responses, saved small, never invented.
 - Commit in small steps with Conventional Commits messages (`feat(collector):`, `fix(api):`, `data(<layer>):`, `chore(ci):`, `docs:`, `test:`); stage explicit files; each commit builds and passes tests. Whether commit messages mention an assistant or carry a co-author line is the person's choice, recorded in the onboarding answers; follow it.
 - Use issues and pull requests if the person wants them; otherwise commit to the main branch only after the milestone's checks pass.
-- At the end of each milestone, run its **Done when** checks, show the person the result (counts, a sample document, the test summary) in the depth their experience level calls for, and update `docs/replication/plan.md` with what is done.
+- At the end of each milestone, run its **Done when** checks, show the person the result (counts, a sample document, the test summary) in the depth their experience level calls for, and add a `Done: <date>` line to that milestone in `docs/replication/plan.md`.
 - When a source forbids automation, blocks the collector (403, captcha, login, firewall) or changes so that the collector no longer matches it, stop that collector, record a gap with the reason and URL, and ask the person how to continue. Never work around it.
 - When the person asks for something this prompt does not cover, or a decision would change the profile or the plan, update the relevant file and confirm with them before building it.
 - Large first collections run in the background or in batches with `--limit`, resuming from the state file; never delete state to start over without asking.
@@ -142,7 +142,7 @@ Example: [lagar's README, with its command list](https://github.com/jacksonmafra
   - `id`: lowercase, pattern `^[a-z0-9_]+-[0-9a-z-]+$`, built from the type's prefix and the official number (`sfs-1999-175` in lagar), with the language code appended when the profile has more than one legal or translation language (`sr-101-de`, `sr-101-fr`), so every id is unique;
   - `title`, `type`, `layer`, `number` (the official number as printed, or null), `issued` (`YYYY-MM-DD` or null);
   - `in_force`, `repealed` (dates or null), `amended_by` (list of numbers);
-  - `language` (one of the profile's legal or translation languages; a norm published in several languages gets one document per language, all with the same `number`, which is what links them);
+  - `language` (a code from the profile's `languages.legal` or `languages.translations`; a norm published in several languages gets one document per language, all with the same `number`, which is what links them);
   - `authoritative` (true only when this text, in this collection and language, is the legally binding one: a consolidated text or an official translation is usually `false`);
   - `source` (the URL read), `source_sha256` (64 lowercase hex characters of the exact bytes read), `fetched_at` (`YYYY-MM-DDTHH:MM:SSZ`, UTC).
 - **One optional universal key**: `text_source`, `ocr` when the text came from OCR, otherwise null or absent.
@@ -159,7 +159,7 @@ Example: [lagar's README, with its command list](https://github.com/jacksonmafra
   - up to 3 retries on 429, 500, 502, 503 and 504, with exponential backoff and `Retry-After` honoured;
   - a 403, or a `Retry-After` over 300 seconds, raises `Blocked` and stops the run: never retry around a block;
   - 30-second timeout; a User-Agent like `<project>-collector/0.1 (+<repository URL>)`.
-- robots.txt is read once per host and applied before every request, with RFC 9309 matching (`*` wildcards, `$` anchors, longest match wins, agent groups). A missing robots.txt allows everything, an unreachable one blocks the host. A disallowed URL becomes a gap with the reason. Keep this in its own module (`robots.py`) that every collector imports; lagar's lives in the `Robots` class in [`municipal.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/municipal.py).
+- robots.txt is read once per host and applied before every request, with RFC 9309 matching (`*` wildcards, `$` anchors, longest match wins, agent groups). A robots.txt answered with 404 or 410 allows everything (lagar treats any other 4xx as an error, and so should you until the person decides); an unreachable one (5xx, timeout) blocks the host. The robots.txt `Crawl-delay` for the collector's agent sets the minimum spacing when it is longer than 1 s. A disallowed URL becomes a gap with the reason. Keep this in its own module that every collector imports. lagar has two halves of it: RFC 9309 matching in the `Robots` class of [`municipal.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/municipal.py), and `Crawl-delay` in the `_Robots` class of [`agency.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/agency.py); a new country needs both in one class.
 - **Resumable and idempotent:** state in `collector/data/<name>-state.json` (git-ignored) with `done`, `failed`, `blocked`; written atomically (temporary file, fsync, rename); a corrupt state file is an error, never silently reset. `done` is keyed to the source's change stamp so unchanged items are skipped and a rerun writes nothing new.
 - **Incremental sync:** a committed marker (`collector/data/<name>-sync.json`) records the last change date read; on failure the marker is held back so the next run retries.
 - **Manifests:** every source file read gets an entry in a committed `sources/<name>-manifest.json` with URL, size, content type, retrieval time, SHA-256 and how its text was obtained, plus a `gaps` list. Source bytes (PDFs especially) are never committed.
@@ -239,7 +239,7 @@ Every rule says how it is checked. Put the checks in tests, CI or a pre-commit h
 
 - Read robots.txt for every host before fetching and skip disallowed URLs, recording them as gaps. Check: a test with a robots.txt fixture that disallows a path, asserting no request is made and a gap is written.
 - Read each source's terms of use during Phase 2; when they forbid automated access, conflict, cannot be found or cannot be read, do not build that collector until the person has decided. Check: the source entry in the country profile records the terms URL and verdict, and the person's decision for any verdict other than `allows`.
-- Rate-limit every host to at least one request per second, or its robots.txt `Crawl-delay` when longer. Check: a test with a fake clock asserting the spacing, including a robots.txt fixture with a longer `Crawl-delay`.
+- Rate-limit every host to at most one request per second (at least 1 s between requests), or its robots.txt `Crawl-delay` when longer. Check: a test with a fake clock asserting the spacing, including a robots.txt fixture with a longer `Crawl-delay`.
 - Never bypass a 403, captcha, bot challenge, login, firewall or paywall; stop the run and record the block. Check: a test asserting that a 403 raises the block error and stops the run.
 - Identify the collector honestly with a User-Agent that carries the repository URL. Check: a test on the client's default headers.
 
@@ -261,13 +261,26 @@ Every rule says how it is checked. Put the checks in tests, CI or a pre-commit h
 ### Legal-text integrity
 
 - Every document records the URL and the SHA-256 of the exact bytes it was built from, and every source file read has a manifest entry. Check: the audit fails a document without `source` or with a malformed `source_sha256`.
-- Prefer authoritative sources, and mark `authoritative` true only when the source says its text is binding. Check: the country profile names the authoritative source per layer, and a test per collector asserts the flag.
-- No machine translation and no invented text, anywhere. Check: the corpus `language` is always one of the profile's legal or translation languages, a translation-language document always has `authoritative: false`, and every gap is recorded instead of filled.
+- Prefer authoritative sources, and mark `authoritative` true only when the source says its text is binding. Check: every entry in the profile's `sources` has a `sources[].authoritative` map covering each collection and language it serves, and a test per collector asserts the flag.
+- No machine translation and no invented text, anywhere. Check: the corpus `language` is always a code from `languages.legal` or `languages.translations`; `authoritative` is true only when the document's layer or division is in its language's `binding` and its collection is marked binding in `sources[].authoritative`; and every gap is recorded instead of filled.
 - Only anonymised case law; full judgments with personal data and their attachments are never fetched. Check: a test per case-law collector asserting which URLs it requests.
 
 ## Reference C: Reusing lagar
 
-Use this path when the person chose *Reuse lagar* in Phase 1. Copy lagar's files into a new repository (not a fork), then work through the lists below in order, one commit per list item group. The paths are lagar's at the pinned version. Never delete the onboarding answers in docs/replication or the country profile.
+Use this path when the person chose *Reuse lagar* in Phase 1. Copy lagar's files at the pinned version into a new repository (not a fork): download `https://github.com/jacksonmafra-umain/lagar/archive/46a8e7d3f386bbbec82917a9725fe03220268ab5.tar.gz`, unpack it into the new folder, and start the git history there (for someone non-technical, do these steps for them and explain each one). A copy of a later lagar will not match the lists below. Then work through the lists in order, one commit per list item group, each commit building. The paths are lagar's at the pinned version. Never delete the onboarding answers in docs/replication or the country profile.
+
+### Untangle
+
+Some generic modules import from Swedish ones. Before deleting anything, move the shared pieces into generic modules and point every import at them, so the copy still builds after each deletion:
+
+- `StateError`, `_save_state` (the atomic state writer) and the state loading from `collector/lagar/sfs.py` into a state module;
+- `NETWORK_ERRORS` and the User-Agent constant from `collector/lagar/sfs.py` and `collector/lagar/caselaw.py` into `collector/lagar/http.py`;
+- `personal_numbers` from `collector/lagar/caselaw.py` into a privacy helper that the municipal and case-law collectors share;
+- `PRINT_ONLY_NOTE` from `collector/lagar/riksdagen.py`, used by `collector/lagar/audit.py` and `collector/lagar/corpusstats.py`: move it if the country has print-only documents, otherwise drop its use;
+- the `Robots` class from `collector/lagar/municipal.py` and the `_Robots` class (with its `Crawl-delay`) from `collector/lagar/agency.py` into one robots module;
+- the shared parsing helpers that `collector/lagar/agency_generic.py` imports from `collector/lagar/agency.py`, so the adapter classes there can go.
+
+Run the collector tests after each move.
 
 ### Delete
 
@@ -289,10 +302,15 @@ Use this path when the person chose *Reuse lagar* in Phase 1. Copy lagar's files
 - The app: scope names and divisions (lagar's `domain/Scope.kt`), route and tab names (Utforska, Hierarki, Sparade, Tjanster in `ui/navigation/Routes.kt`), `values-sv/` strings replaced by the UI languages, the default and fallback language in `i18n/SupportedLanguage.kt`, the geo file, the layer colors and the flag accent in `DESIGN.md`.
 - The landing page copy, languages (`landing/js/lang.js`) and catalog; the MCP server's name, descriptions and instructions.
 - `README.md`, `docs/architecture.md`, the project instructions file and `LICENSE` (the person's name and year).
+- `collector/collect.py`: its subcommands, one per new collector.
+- `api/searchindex.py`'s `BODY_END` (Swedish heading `## Referat`): the heading, per layer, after which this country's text is not indexed, or none.
+- `.github/workflows/pages.yml` (it publishes the API under lagar's URL): the person's own URL, or delete it.
+- `collector/lagar/agencies.py` (the sources log, built on lagrummet.se and Swedish data files): rewrite it to read the profile's `sources` and `gaps`.
+- `collector/lagar/history.py` (built on the Swedish amendment register): rewrite it on this country's amendment data, if amendment history was chosen.
 
 ### Keep
 
-The generic machinery, unchanged except for names, and only for the parts the person chose. First move the `Robots` class out of `collector/lagar/municipal.py` into a robots module of its own, so collectors do not import a municipal adapter. `collector/lagar/http.py`, `collector/lagar/frontmatter.py`, `collector/lagar/htmlmd.py`, `collector/lagar/pdftext.py`, `collector/lagar/ocr.py`, `collector/lagar/ocrcalibration.py`, `collector/lagar/agency_generic.py`, `collector/lagar/municipal.py` (its robots.txt parser and strategies; drop the Swedish presets), `collector/lagar/audit.py`, `collector/lagar/progress.py`, `collector/lagar/corpusstats.py`, `collector/lagar/agencies.py`, `collector/lagar/history.py`, `api/build.py`, `api/searchindex.py`, `api/size_report.py`, `mcp/`, `scripts/serve_local.py`, `scripts/build-site.sh`, `app/build-logic/`, the app's shell, `.github/scripts/merge-sync-pr.sh`, `.github/workflows/collector.yml`, `.github/workflows/api.yml`, `.github/workflows/tools.yml`, `.github/workflows/app.yml`, `.pre-commit-config.yaml`, `ruff.toml`, `.editorconfig`.
+The generic machinery, unchanged except for names, and only for the parts the person chose. `collector/lagar/http.py`, `collector/lagar/frontmatter.py`, `collector/lagar/htmlmd.py`, `collector/lagar/pdftext.py`, `collector/lagar/ocr.py`, `collector/lagar/ocrcalibration.py`, `collector/lagar/agency_generic.py`, `collector/lagar/municipal.py` (its strategies; drop the Swedish presets), `collector/lagar/audit.py`, `collector/lagar/progress.py`, `collector/lagar/corpusstats.py`, `api/build.py`, `api/searchindex.py`, `api/size_report.py`, `mcp/`, `scripts/serve_local.py`, `scripts/build-site.sh`, `app/build-logic/`, the app's shell, `.github/scripts/merge-sync-pr.sh`, `.github/workflows/collector.yml`, `.github/workflows/api.yml`, `.github/workflows/tools.yml`, `.github/workflows/app.yml`, `.pre-commit-config.yaml`, `ruff.toml`, `.editorconfig`.
 
 ### Rename
 
@@ -302,6 +320,6 @@ The generic machinery, unchanged except for names, and only for the parts the pe
 
 ### Finish
 
-1. Search the copy for Swedish leftovers, case-insensitively, and resolve every hit or explain it to the person: `riksdagen`, `sfs`, `kommun`, `län`, `lansstyrelsen`, `regeringen`, `domstol`, `swe` (the OCR model and language codes), `sverige`, `sweden`, `svenska`, `lagar`, `jacksonmafra`, `ministry` (the `by-ministry` grouping), `"sv"` (a single hard-coded language).
+1. Search the copy for Swedish leftovers, case-insensitively, and resolve every hit or explain it to the person: `riksdagen`, `sfs`, `kommun`, `län`, `lansstyrelsen`, `regeringen`, `domstol`, `swe` (the OCR model and language codes), `sverige`, `sweden`, `svenska`, `lagar`, `jacksonmafra`, `ministry` (the `by-ministry` grouping), `"sv"` (a single hard-coded language), `referat`, `lagrummet`, `rattspraxis`, `etjanst`.
 2. Run the collector, API, tools and app checks from Reference A; all must pass on an empty or sample corpus.
 3. Start a new git history (`git init` in the copy, one first commit): lagar's history is mostly Swedish corpus commits and would make the copy large for no gain. Keep a line in `README.md` crediting lagar as the origin.

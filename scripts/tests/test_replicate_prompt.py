@@ -64,7 +64,7 @@ class ReplicatePromptTests(unittest.TestCase):
         links = re.findall(rf"{re.escape(REPO)}[^)\s>`]*", text())
         self.assertTrue(links)
         for link in links:
-            self.assertRegex(link, rf"^{re.escape(REPO)}(blob|tree)/{PIN}/")
+            self.assertRegex(link, rf"^{re.escape(REPO)}((blob|tree)/{PIN}/|archive/{PIN}\.tar\.gz$)")
 
     def test_linked_paths_exist(self):
         paths = lagar_links()
@@ -123,6 +123,48 @@ class ReplicatePromptTests(unittest.TestCase):
         self.assertIn("Confirmed: <date>", section("How to use this prompt"))
         self.assertIn("Confirmed: <date>", section("Phase 1: Onboarding"))
         self.assertIn("Confirmed: <date>", section("Phase 2: Legal-structure research"))
+
+    def test_plan_gate_and_milestones_are_recorded_for_resuming(self):
+        self.assertIn("docs/replication/plan.md", section("How to use this prompt"))
+        self.assertIn("Confirmed: <date>", section("Phase 3: Plan"))
+        self.assertIn("Done: <date>", section("Phase 4: Build"))
+
+    def test_instructions_file_is_a_gate_exception(self):
+        rule = next(line for line in section("Phase 0: Ground rules").splitlines() if "**Gates first.**" in line)
+        self.assertIn("project instructions file", rule)
+
+    def test_profile_fields_use_their_current_shape(self):
+        research = section("Phase 2: Legal-structure research")
+        self.assertIn("`{url, verdict, decision}`", research)
+        self.assertIn("rank_note, division, types}", research)
+        self.assertIn("{layers, divisions}", research)
+        security = section("Reference B: Security rules")
+        self.assertNotIn("per layer", security)
+        self.assertIn("`sources[].authoritative`", security)
+        self.assertNotIn("legal or translation languages", text())
+
+    def test_rate_limit_is_a_ceiling(self):
+        rules = section("Collectors", "### ", section("Reference B: Security rules"))
+        self.assertIn("at most one request per second", rules)
+        self.assertNotIn("at least one request per second", rules)
+
+    def test_crawl_delay_points_to_a_working_example(self):
+        collectors = section("Collectors", "### ", section("Reference A: Architecture contracts"))
+        self.assertIn("collector/lagar/agency.py", lagar_links(collectors))
+        self.assertIn("404 or 410", collectors)
+
+    def test_reuse_untangles_shared_code_before_deleting(self):
+        reuse = section("Reference C: Reusing lagar")
+        untangle = section("Untangle", "### ", reuse)
+        for name in ["_save_state", "StateError", "NETWORK_ERRORS", "PRINT_ONLY_NOTE", "personal_numbers", "Robots"]:
+            self.assertIn(name, untangle)
+        keep = section("Keep", "### ", reuse)
+        for path in ["collector/lagar/agencies.py", "collector/lagar/history.py"]:
+            self.assertNotIn(path, keep)
+        replace = section("Replace from the profile", "### ", reuse)
+        for name in ["collector/collect.py", "BODY_END", ".github/workflows/pages.yml", "collector/lagar/agencies.py", "collector/lagar/history.py"]:
+            self.assertIn(name, replace)
+        self.assertIn(f"archive/{PIN}", reuse)
 
     def test_research_ends_with_a_confirmation_gate(self):
         last = section("Phase 2: Legal-structure research").strip().split("\n\n")[-1]
