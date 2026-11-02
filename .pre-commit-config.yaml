@@ -1,6 +1,6 @@
 # Install with `pre-commit install`; run everything with `pre-commit run --all-files`.
-# Source captures are kept byte-for-byte: the design export, collector fixtures and bundled licence texts.
-exclude: ^(design/stitch/|collector/tests/fixtures/|app/shared/src/commonMain/composeResources/files/licenses/)
+# Source captures are kept byte-for-byte: the design export, collector and script fixtures and bundled licence texts.
+exclude: ^(design/stitch/|collector/tests/fixtures/|scripts/tests/fixtures/|app/shared/src/commonMain/composeResources/files/licenses/)
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks

@@ -73,10 +73,23 @@ python3 -I api/build.py --corpus corpus --out build/api/v1
 
 `.mcp.json` in the repository already does this for clients that read it. Tools: `search_laws` (full-text search, filtered by layer and type), `get_document` (metadata and text by id), `list_layers`, `list_documents` and `get_report`. Ask the assistant to search, read the document, and quote the § with its `source` URL.
 
+## Exporting a dataset
+
+`scripts/export_corpus.py` (standard library only) writes the corpus as JSON Lines, ready to embed:
+
+```sh
+python3 -I scripts/export_corpus.py --target dataset --only-in-force --layers sfs,fundamental --out build/export/dataset
+```
+
+- `documents.jsonl` has one record per norm: `id`, `layer`, `type`, `number`, `title`, the dates and amendment fields, `court`, `ecli`, `celex`, `region_code`, `municipality_code`, `source`, `source_sha256`, `fetched_at`, `text_source` and the `text`.
+- `sections.jsonl` has one record per § for statutes, in order (`seq`), with `doc_id`, `chapter`, `section`, the `heading` before it, a `citation` line such as `3 kap. 5 § brottsbalken (1962:700)`, the `version` marker of a § about to change (`/Upphör att gälla U:<date>/` or `/Träder i kraft I:<date>/`) with the `in_force` and `repealed` dates it implies, `source` and `text`. Text before the first §, transitional provisions, case law and regulations without § are split at headings and paragraphs into chunks of at most `--chunk-words` words (500 by default).
+
+Folders or files named on the command line limit the export (default `corpus`); `--layers` keeps only the layers you name and `--only-in-force` leaves out repealed documents. The whole corpus takes about a minute and 2 GB of disk. LanceDB, pandas and DuckDB read JSON Lines directly; for Parquet, run `COPY (SELECT * FROM read_json_auto('sections.jsonl')) TO 'sections.parquet' (FORMAT parquet)` in DuckDB.
+
 ## Building retrieval
 
 1. **Choose what to index.** Start with one area (SFS acts and ordinances, or one legal field) rather than all 122 million words: embedding everything on a CPU takes hours to days.
-2. **Chunk by section.** Split statutes at `**N §**`, keeping the chapter and section in the chunk's metadata, and start every chunk with a citation line such as `3 kap. 5 § brottsbalken (1962:700)`. Split case law and long regulations at headings or paragraphs, around 512 to 1,024 tokens per chunk.
+2. **Chunk by section.** `sections.jsonl` from the export script already does this. To chunk yourself, split statutes at `**N §**`, keeping the chapter and section in the chunk's metadata, and start every chunk with a citation line such as `3 kap. 5 § brottsbalken (1962:700)`. Split case law and long regulations at headings or paragraphs, around 512 to 1,024 tokens per chunk.
 3. **Keep the metadata.** Store `id`, `number`, `title`, chapter, section, `in_force`, `repealed`, `layer` and `source` with each chunk, so you can filter (current law only, one layer) and cite.
 4. **Embed.** Embedding models that handle Swedish:
    - **BGE-M3:** dense and sparse retrieval, 8,000-token context, a good fit for long sections.
@@ -124,6 +137,5 @@ A dataset or model built from the corpus should say that it is not the official 
 
 These would make the steps above shorter; they are not in the repository yet:
 
-- an export script that writes the corpus as a dataset (one record per document and one per §, as JSONL and Parquet), with filters for layer and current law;
 - a published dataset on Hugging Face, versioned by corpus commit;
 - a small retrieval example (BGE-M3, LanceDB, Ollama) with a Swedish question set, and a fine-tuning notebook.
