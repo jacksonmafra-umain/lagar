@@ -61,6 +61,8 @@ Screen-by-screen status is in [docs/screens.md](docs/screens.md).
 - [App architecture](docs/architecture.md)
 - [API contract](docs/api.md)
 - [Replicate lagar for another country](docs/replicate/PROMPT.md): a prompt for any coding agent that researches a country's legal organization and builds the same project for it
+- [Ask questions in a notebook tool](docs/guides/notebooks.md): NotebookLM, Open Notebook, AnythingLLM and Open WebUI, with a script that bundles laws into sources
+- [Use the corpus with a language model](docs/guides/llm.md): the MCP server, retrieval (RAG), fine-tuning, models for Swedish and licensing
 - [Notice](NOTICE.md) and [licence](LICENSE)
 
 ## Run it locally
