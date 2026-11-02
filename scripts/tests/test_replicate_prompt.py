@@ -96,6 +96,28 @@ class ReplicatePromptTests(unittest.TestCase):
             self.assertIn(path, usage)
         self.assertIn("skip", usage.lower())
 
+    def test_profile_contract_lists_every_key(self):
+        research = section("Phase 2: Legal-structure research")
+        for key in ["country", "languages", "divisions", "layers", "types", "frontmatter", "sources", "case_law_privacy", "gaps"]:
+            self.assertIn(f"`{key}`", research)
+        self.assertIn("docs/country-profile.md", research)
+        self.assertIn("collector/data/country-profile.json", research)
+
+    def test_prompt_allows_several_divisions_and_languages(self):
+        research = section("Phase 2: Legal-structure research")
+        self.assertIn("any number of levels", research)
+        self.assertIn("several authoritative languages", research)
+        self.assertNotIn("three scopes", text().replace("three fixed scopes", ""))
+
+    def test_supranational_layer_is_conditional(self):
+        research = section("Phase 2: Legal-structure research")
+        self.assertIn("only when", research[research.index("Supranational"):])
+
+    def test_research_ends_with_a_confirmation_gate(self):
+        last = section("Phase 2: Legal-structure research").strip().split("\n\n")[-1]
+        self.assertIn("approve", last)
+        self.assertIn("no code", last.lower())
+
 
 if __name__ == "__main__":
     unittest.main()

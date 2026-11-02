@@ -52,7 +52,34 @@ Write the answers to `docs/replication/onboarding.md` (one heading per question,
 
 ## Phase 2: Legal-structure research
 
-To be written.
+You research the country's legal organization; the person confirms it. Use official sources first: the legislature, the government's legal gazette, the courts, national statistics or mapping agencies, and the country's legal information portal. Cite a URL for every claim and mark anything you could not verify as **unverified**. If your agent can browse in parallel, give each layer to a separate helper.
+
+Research these, in this order:
+
+1. **Hierarchy of norms.** Every level from the constitution down to local rules, with how each ranks against the others: constitutional law, statutes, ordinances or decrees, agency regulations, regional and municipal rules, case law (which courts publish guiding or precedent decisions), treaties, and supranational law. Supranational law (for example EU law in a member state) gets a layer only when a body's law applies directly in the country.
+2. **Administrative divisions.** The levels below the nation that issue their own binding rules: there can be any number of levels (Sweden has län and kommun; a federation may have states, districts and municipalities). For each level: its name in the official language, the official code list and its code pattern, and an authoritative source for the list and for coordinates (used by the app's location suggestion).
+3. **Languages of the law.** Which languages each layer is authoritative in. A country can have several authoritative languages, and one norm can exist in more than one; record which sources publish which language.
+4. **Official sources per layer.** For each layer: the host, how it is accessed (API, open-data dump, HTML pages, PDF), the identifier scheme (national numbering, ELI, ECLI or others), the signal for incremental updates (change date, feed, sitemap), the robots.txt rules for the paths you need, the terms of use, and whether the text there is the authoritative one. Read robots.txt and the terms yourself; do not assume.
+5. **Case-law privacy.** Whether anonymised versions of decisions are published and which publications may be stored. Only anonymised case law is ever collected.
+6. **Gaps.** Layers or divisions with no machine-readable source, a source that forbids automation, or one behind a login, paywall or captcha. Record each one with the reason and the URL; never plan a workaround.
+
+Write the result in two files:
+
+- `docs/country-profile.md`: the readable version, one section per item above, every claim with its URL.
+- `collector/data/country-profile.json`: the machine-readable version that the collectors, the audit, the API builder and the app read. Top-level keys:
+  - `country`: name and ISO 3166-1 code.
+  - `languages`: `legal` (authoritative languages, ISO 639-1), `ui` (app languages), `default_ui`, `fallback_ui`.
+  - `divisions`: a list, one entry per level, each `{level, name, code_pattern, source}`, from the largest to the smallest.
+  - `layers`: a list of `{id, name, rank, types}`, with English ids (`fundamental`, `statute`, `agency`, `case_law`, a supranational id such as `eu`, one per division level, and so on), names in the legal languages, and `rank` from 1 (highest).
+  - `types`: a closed map from document type (English, snake_case) to its layer.
+  - `frontmatter`: for each country-specific frontmatter key (Reference A, Corpus), `required`, `optional` or `absent`, plus any key this country adds, with its pattern.
+  - `sources`: a list of `{layer, host, access, id_scheme, update_signal, robots, terms, authoritative}`.
+  - `case_law_privacy`: what is published anonymised and what may be stored.
+  - `gaps`: a list of `{layer, reason, url}`.
+
+lagar's Swedish version of this structure is in [`collector/lagar/vocabulary.py`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/collector/lagar/vocabulary.py) and [`docs/schema/frontmatter.schema.json`](https://github.com/jacksonmafra-umain/lagar/blob/46a8e7d3f386bbbec82917a9725fe03220268ab5/docs/schema/frontmatter.schema.json); use them as a worked example, not as a template to copy.
+
+Present the profile to the person as a short summary: the layers in rank order, the divisions, the sources with their access method, and the gaps. Ask them to approve it or correct it. No code is written until the person approves the profile; when they correct something, update both files and ask again.
 
 ## Phase 3: Plan
 
