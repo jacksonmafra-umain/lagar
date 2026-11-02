@@ -140,6 +140,37 @@ class ReplicatePromptTests(unittest.TestCase):
         ]:
             self.assertIn(path, linked)
 
+    def test_security_rules_have_four_groups(self):
+        rules = section("Reference B: Security rules")
+        for heading in ["Collectors", "App privacy", "Repository and CI", "Legal-text integrity"]:
+            group = section(heading, "### ", rules)
+            items = [line for line in group.splitlines() if line.startswith("- ")]
+            self.assertTrue(items, heading)
+            for item in items:
+                self.assertIn("Check:", item, item)
+
+    def test_reuse_paths_exist(self):
+        reuse = section("Reference C: Reusing lagar")
+        for heading in ["Delete", "Keep"]:
+            for path in re.findall(r"`([^`\s<>]+)`", section(heading, "### ", reuse)):
+                if "/" not in path and not re.search(r"\.[a-z]+$", path):
+                    continue
+                if "*" in path:
+                    self.assertTrue(list(ROOT.glob(path)), path)
+                else:
+                    self.assertTrue((ROOT / path).exists(), path)
+
+    def test_reuse_keeps_the_onboarding_answers(self):
+        delete = section("Delete", "### ", section("Reference C: Reusing lagar"))
+        self.assertIn("`docs/replicate/`", delete)
+        self.assertNotIn("`docs/replication/`", delete)
+
+    def test_reuse_ends_with_leftover_search(self):
+        reuse = section("Reference C: Reusing lagar")
+        last = section("Finish", "### ", reuse).lower()
+        for word in ["riksdagen", "kommun", "sfs", "swe", "git history"]:
+            self.assertIn(word, last)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -205,8 +205,73 @@ Separate workflows for collectors (lint, tests), API (tests, audit, full build, 
 
 ## Reference B: Security rules
 
-To be written.
+Every rule says how it is checked. Put the checks in tests, CI or a pre-commit hook so they hold after you are gone.
+
+### Collectors
+
+- Read robots.txt for every host before fetching and skip disallowed URLs, recording them as gaps. Check: a test with a robots.txt fixture that disallows a path, asserting no request is made and a gap is written.
+- Read each source's terms of use during Phase 2; when they forbid automated access, do not build that collector and ask the person. Check: the source entry in the country profile records the terms URL and verdict.
+- Rate-limit every host to at least one request per second. Check: a test with a fake clock asserting the spacing.
+- Never bypass a 403, captcha, login, firewall or paywall; stop the run and record the block. Check: a test asserting that a 403 raises the block error and stops the run.
+- Identify the collector honestly with a User-Agent that carries the repository URL. Check: a test on the client's default headers.
+
+### App privacy
+
+- No accounts, no sign-in, no analytics, no crash reporting or tracking SDKs. Check: the version catalog has no analytics or tracking dependency, and a reviewer confirms it on every dependency change.
+- Bookmarks, notes and settings stay on the device; the only network traffic is reading the static API. Check: the HTTP client is created in one place with the API base URL, and a test asserts it.
+- No permissions the app does not use (location only if the location suggestion is built, and only when the person taps it). Check: the Android manifest and iOS `Info.plist` are reviewed in the app milestone.
+
+### Repository and CI
+
+- No secrets in the repository; deploy tokens live only in GitHub Actions secrets. Check: a secret scan (for example `git log -p | grep -iE "token|secret|password"` reviewed) before the first push, and GitHub's push protection enabled.
+- Every workflow declares `permissions:`; read-only by default, write scopes only on the job that needs them. Check: a test or lint step that fails when a workflow lacks a `permissions:` block.
+- Every third-party action is pinned to a full commit SHA with the version in a comment. Check: a test that fails on `uses:` lines with a tag instead of a 40-character SHA.
+- Dependency versions are pinned (the version catalog for the app; collectors have none). Check: no `+` or `latest` versions in Gradle files.
+- Pull requests from forks never deploy and never receive secrets. Check: deploy jobs have an `if:` that excludes forks.
+- Pre-commit hooks: merge-conflict markers, large files (over 1 MB outside `corpus/`), JSON and YAML syntax, lint, and the corpus audit. Check: `.pre-commit-config.yaml` lists them and CI runs the same checks.
+
+### Legal-text integrity
+
+- Every document records the URL and the SHA-256 of the exact bytes it was built from, and every source file read has a manifest entry. Check: the audit fails a document without `source` or with a malformed `source_sha256`.
+- Prefer authoritative sources, and mark `authoritative` true only when the source says its text is binding. Check: the country profile names the authoritative source per layer, and a test per collector asserts the flag.
+- No machine translation and no invented text, anywhere. Check: the corpus `language` is always one of the profile's legal languages, and every gap is recorded instead of filled.
+- Only anonymised case law; full judgments with personal data and their attachments are never fetched. Check: a test per case-law collector asserting which URLs it requests.
 
 ## Reference C: Reusing lagar
 
-To be written.
+Use this path when the person chose *Reuse lagar* in Phase 1. Copy lagar's files into a new repository (not a fork), then work through the lists below in order, one commit per list item group. The paths are lagar's at the pinned version. Never delete the onboarding answers in docs/replication or the country profile.
+
+### Delete
+
+- The Swedish corpus and its records: `corpus/`, every file in `sources/` (`sources/*.json`), the sync markers `collector/data/*-sync.json`, and the generated reports `PROGRESS.md`, `progress.svg`, `STATISTICS.md`, `AGENCIES.md`, `COVERAGE.md`, `collector/data/statistics.json`, `collector/data/agencies-report.json`, `collector/data/pending-integrity.json`.
+- Swedish source adapters: `collector/lagar/riksdagen.py`, `collector/lagar/sfs.py`, `collector/lagar/sfspdf.py`, `collector/lagar/sfsr.py`, `collector/lagar/sfsverify.py`, `collector/lagar/caselaw.py`, `collector/lagar/county.py`, `collector/lagar/treaties.py`, the agency adapter classes in `collector/lagar/agency.py`, `collector/lagar/agency_text.py`, `collector/lagar/centroids.py`, and their tests and fixtures in `collector/tests/`. Keep `collector/lagar/eu.py`, `collector/lagar/eucaselaw.py` and `.github/workflows/sync-eu.yml` only for an EU member state, switched to its legal languages.
+- Swedish data: `collector/data/counties.json`, `collector/data/municipalities.json`, `collector/data/kommuner.json`, `collector/data/agencies.json`, `collector/data/agency-series.json`, `collector/data/rattskalla.json`, `collector/data/courts.json`, `collector/data/eu-acts.json`, `collector/data/targets.json`, and the app's `app/shared/src/commonMain/composeResources/files/geo/sweden.json`.
+- Sweden's sync workflows: `.github/workflows/sync-sfs.yml`, `.github/workflows/sync-case-law.yml`, `.github/workflows/sync-county.yml`, `.github/workflows/sync-so.yml`, `.github/workflows/sync-agency.yml`, `.github/workflows/sync-municipal.yml`, `.github/workflows/sync-agencies.yml` (rewrite them per source family from the country profile if sync was chosen); `.github/workflows/site.yml` unless the person chose Vercel.
+- Design input and lagar's own documents: `design/stitch/`, `docs/specs/`, `docs/replicate/` (this prompt), `docs/screens.md`, `landing/data/sources.json`, `landing/i18n/sv.json`, `NOTICE.md`.
+
+### Replace from the profile
+
+- The layer and type vocabulary in `collector/lagar/vocabulary.py`, the schema in `docs/schema/frontmatter.schema.json` and the cross-field checks in `collector/lagar/schema.py` (country-specific keys, division code patterns, the `court` pattern, the `language` enum).
+- Folder and id prefix mapping in `collector/lagar/writer.py`.
+- User-Agent strings and repository URLs in every collector module, `README.md`, the MCP server and the app's published API URL.
+- Stop words and diacritic folding in `api/searchindex.py`, mirrored in the app's search normalisation, and the OCR language in `collector/lagar/ocr.py`.
+- The API contract `docs/api.md`: layers, types, number formats, division groupings; drop `by-ministry` unless the country has the key.
+- The app: scope names and divisions (lagar's `domain/Scope.kt`), route and tab names (Utforska, Hierarki, Sparade, Tjanster in `ui/navigation/Routes.kt`), `values-sv/` strings replaced by the UI languages, the default and fallback language in `i18n/SupportedLanguage.kt`, the geo file, the layer colors and the flag accent in `DESIGN.md`.
+- The landing page copy, languages (`landing/js/lang.js`) and catalog; the MCP server's name, descriptions and instructions.
+- `README.md`, `docs/architecture.md`, the project instructions file and `LICENSE` (the person's name and year).
+
+### Keep
+
+The generic machinery, unchanged except for names: `collector/lagar/http.py`, `collector/lagar/frontmatter.py`, `collector/lagar/htmlmd.py`, `collector/lagar/pdftext.py`, `collector/lagar/ocr.py`, `collector/lagar/ocrcalibration.py`, `collector/lagar/agency_generic.py`, `collector/lagar/municipal.py` (its robots.txt parser and strategies; drop the Swedish presets), `collector/lagar/audit.py`, `collector/lagar/progress.py`, `collector/lagar/corpusstats.py`, `collector/lagar/agencies.py`, `collector/lagar/history.py`, `api/build.py`, `api/searchindex.py`, `api/size_report.py`, `mcp/`, `scripts/serve_local.py`, `scripts/build-site.sh`, `app/build-logic/`, the app's shell, `.github/scripts/merge-sync-pr.sh`, `.github/workflows/collector.yml`, `.github/workflows/api.yml`, `.github/workflows/tools.yml`, `.github/workflows/app.yml`, `.pre-commit-config.yaml`, `ruff.toml`, `.editorconfig`.
+
+### Rename
+
+- The Python package `collector/lagar/` and the MCP package `mcp/lagarmcp/` to the project's name, with every import.
+- The Kotlin package `app.lagar` and the app id, the Gradle plugin id `app.lagar.design-tokens`, `LagarTheme` and the other `Lagar*` types.
+- Workflow names, the User-Agent product name and the landing page title.
+
+### Finish
+
+1. Search the copy for Swedish leftovers, case-insensitively, and resolve every hit or explain it to the person: `riksdagen`, `sfs`, `kommun`, `län`, `lansstyrelsen`, `regeringen`, `domstol`, `swe` (the OCR model and language codes), `sverige`, `sweden`, `svenska`, `lagar`, `jacksonmafra`.
+2. Run the collector, API, tools and app checks from Reference A; all must pass on an empty or sample corpus.
+3. Start a new git history (`git init` in the copy, one first commit): lagar's history is mostly Swedish corpus commits and would make the copy large for no gain. Keep a line in `README.md` crediting lagar as the origin.
