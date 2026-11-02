@@ -5,6 +5,8 @@ on:
     paths:
       - mcp/**
       - scripts/serve_local.py
+      - scripts/export_corpus.py
+      - collector/lagar/frontmatter.py
       - scripts/tests/**
       - docs/replicate/**
       - api/**
@@ -15,6 +17,8 @@ on:
     paths:
       - mcp/**
       - scripts/serve_local.py
+      - scripts/export_corpus.py
+      - collector/lagar/frontmatter.py
       - scripts/tests/**
       - docs/replicate/**
       - api/**
