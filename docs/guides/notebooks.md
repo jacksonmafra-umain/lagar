@@ -60,62 +60,26 @@ The laws are public, but your questions may not be. On a personal Google account
 
 ### Combine files into bundles
 
-To fit more laws into one notebook, combine them into bundle files of at most 400,000 words each, leaving room under the 500,000-word limit. Each law keeps its title as a heading and a line with its official source link, so citations stay traceable. Repealed laws are left out.
+To fit more laws into one notebook, combine them into bundle files of at most 400,000 words each, leaving room under the 500,000-word limit. Each law keeps its title as a heading and a line with its official source link, so citations stay traceable. `--only-in-force` leaves repealed laws out.
 
-You need Python 3 (on Windows, type `py` instead of `python3`). Save this as `bundle.py` in the unzipped repository folder:
-
-```python
-import sys
-from pathlib import Path
-
-CAP = 400_000  # words per bundle, under NotebookLM's 500,000 per source
-out = Path(sys.argv[1])
-out.mkdir(parents=True, exist_ok=True)
-docs = sorted(p for arg in map(Path, sys.argv[2:]) for p in (arg.rglob("*.md") if arg.is_dir() else [arg]))
-bundles, bundle, words, skipped = [], [], 0, []
-
-for path in docs:
-    _, head, body = path.read_text(encoding="utf-8").split("---\n", 2)
-    meta = {k: v.strip('"') for k, _, v in (line.partition(": ") for line in head.splitlines()) if v}
-    if meta.get("repealed", "null") != "null":
-        continue
-    heading, _, rest = body.strip().partition("\n")
-    text = f"{heading}\n\nSource: {meta.get('source')} | In force: {meta.get('in_force')}\n{rest}"
-    size = len(text.split())
-    if size > CAP:
-        skipped.append(path)
-        continue
-    if words + size > CAP:
-        bundles.append(bundle)
-        bundle, words = [], 0
-    bundle.append(text)
-    words += size
-if bundle:
-    bundles.append(bundle)
-
-for number, parts in enumerate(bundles, 1):
-    (out / f"bundle-{number:03}.md").write_text("\n\n".join(parts), encoding="utf-8")
-print(f"{len(bundles)} bundles in {out}")
-for path in skipped:
-    print(f"too long for one source, upload its PDF instead: {path}")
-```
-
-Then run it with an output folder and the folders or files you want:
+You need Python 3 (on Windows, type `py` instead of `python3`). In the unzipped repository folder, run the export script with an output folder, your plan and the folders or files you want:
 
 ```sh
-python3 -I bundle.py notebook/employment corpus/fundamental-laws corpus/sfs/acts/1982-80.md corpus/sfs/acts/1976-580.md
+python3 -I scripts/export_corpus.py --target notebooklm --only-in-force --tier free --out notebook/employment corpus/fundamental-laws corpus/sfs/acts/1982-80.md corpus/sfs/acts/1976-580.md
 ```
 
-Upload the `bundle-*.md` files from the output folder to your notebook. What fits, measured on 2026-11-02 with laws in force only:
+`--tier` is `free`, `plus`, `pro` or `ultra`. If the selection needs more sources than that plan allows, the script says how many it needs and writes nothing; choose fewer files or a larger plan. `--layers sfs,eu` keeps only those layers of the folders you name.
+
+Upload the `bundle-*.md` files from the output folder to your notebook. `manifest.json` in the same folder lists the laws in each bundle, with their word counts. What fits, measured on 2026-11-02 with laws in force only:
 
 | Selection | Bundles | Plan it fits |
 |---|---|---|
 | `corpus/fundamental-laws` | 1 | Free |
 | `corpus/sfs/acts` | 16 | Free |
 | `corpus/sfs` (acts, ordinances, treaties, other) | 30 | Free |
-| `corpus` (everything) | 260 | Pro |
+| `corpus` (everything) | 274 | Pro |
 
-Seven documents, all county or agency regulations, are longer than one source allows; the script names them, and you can upload the official PDF from the document's source link instead.
+A document longer than one bundle is split at chapter or § boundaries, and each part's heading says which part it is, such as `(part 1/2)`. Seven documents, all county or agency regulations, are split this way.
 
 ### Ask well
 
@@ -126,7 +90,13 @@ Seven documents, all county or agency regulations, are longer than one source al
 
 ## Open-source tools on your own computer
 
-These run on your computer with a local language model, so your questions stay there. They split files into small pieces and search them, so import one file per law (not bundles): citations then point to a single law. Embedding (indexing) many files takes time on an ordinary computer, from minutes for a topic to days for the whole corpus, so start with a topic.
+These run on your computer with a local language model, so your questions stay there. They split files into small pieces and search them, so import one file per law (not bundles): citations then point to a single law. The export script writes one file per law with its number, dates and official source link at the top, so an answer is easy to check against the official text:
+
+```sh
+python3 -I scripts/export_corpus.py --target files --only-in-force --out notebook/files corpus/fundamental-laws corpus/sfs/acts
+```
+
+The files land in one folder per layer, named after each document's id. Embedding (indexing) many files takes time on an ordinary computer, from minutes for a topic to days for the whole corpus, so start with a topic.
 
 You need a local model runner: install [Ollama](https://ollama.com) and download a chat model that handles Swedish (see the model notes in [llm.md](llm.md#models-for-swedish)) and a multilingual embedding model such as `bge-m3`.
 
@@ -152,7 +122,4 @@ A chat interface for Ollama with knowledge bases you can attach to a chat ([GitH
 
 ## Coming later
 
-These are not in the repository yet:
-
-- an export script that writes ready-made bundles per plan and topic, and one file per law with a readable header for the local tools;
-- prebuilt packs (fundamental laws, employment, data protection, all acts) to download without the repository.
+Prebuilt packs (fundamental laws, employment, data protection, all acts) to download without the repository are not available yet.
