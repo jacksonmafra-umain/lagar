@@ -113,6 +113,17 @@ class ReplicatePromptTests(unittest.TestCase):
         research = section("Phase 2: Legal-structure research")
         self.assertIn("only when", research[research.index("Supranational"):])
 
+    def test_research_covers_what_the_dry_runs_missed(self):
+        research = section("Phase 2: Legal-structure research")
+        for phrase in ["Which text is binding", "Crawl-delay", "unreadable", "not_found", "bot challenge", "sample two or three", "translations"]:
+            self.assertIn(phrase, research)
+        self.assertIn("Crawl-delay", section("Collectors", "### ", section("Reference A: Architecture contracts")))
+
+    def test_gates_are_recorded_for_resuming(self):
+        self.assertIn("Confirmed: <date>", section("How to use this prompt"))
+        self.assertIn("Confirmed: <date>", section("Phase 1: Onboarding"))
+        self.assertIn("Confirmed: <date>", section("Phase 2: Legal-structure research"))
+
     def test_research_ends_with_a_confirmation_gate(self):
         last = section("Phase 2: Legal-structure research").strip().split("\n\n")[-1]
         self.assertIn("approve", last)
