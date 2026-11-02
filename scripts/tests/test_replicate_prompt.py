@@ -72,6 +72,30 @@ class ReplicatePromptTests(unittest.TestCase):
         for path in paths:
             self.assertTrue((ROOT / path).exists(), path)
 
+    def test_ground_rules_are_stated(self):
+        rules = section("Phase 0: Ground rules")
+        for phrase in ["robots.txt", "machine-translate", "confirm", "person's language"]:
+            self.assertIn(phrase, rules)
+
+    def test_onboarding_asks_every_question(self):
+        onboarding = section("Phase 1: Onboarding")
+        labels = re.findall(r"^\d+\. \*\*(.+?)\.?\*\*", onboarding, re.MULTILINE)
+        self.assertEqual(["Country", "Languages", "Experience level", "Starting point", "Features", "Project identity"], labels)
+        languages = onboarding[onboarding.index("**Languages"): onboarding.index("**Experience level")]
+        for phrase in ["UI", "authoritative", "fallback"]:
+            self.assertIn(phrase, languages)
+        features = onboarding[onboarding.index("**Features"): onboarding.index("**Project identity")]
+        for feature in ["collectors", "corpus", "static API", "app", "landing page", "MCP server", "sync workflows", "amendment history"]:
+            self.assertIn(feature, features)
+        self.assertIn("GitHub owner", onboarding[onboarding.index("**Project identity"):])
+
+    def test_prompt_resumes_from_saved_answers(self):
+        self.assertIn("docs/replication/onboarding.md", section("Phase 1: Onboarding"))
+        usage = section("How to use this prompt")
+        for path in ["docs/replication/onboarding.md", "docs/country-profile.md"]:
+            self.assertIn(path, usage)
+        self.assertIn("skip", usage.lower())
+
 
 if __name__ == "__main__":
     unittest.main()
