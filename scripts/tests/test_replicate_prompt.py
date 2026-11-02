@@ -188,6 +188,12 @@ class ReplicatePromptTests(unittest.TestCase):
         self.assertIn("Conventional Commits", build)
         self.assertIn("person's choice", build)
 
+    def test_readme_and_claude_md_point_to_the_prompt(self):
+        self.assertIn("docs/replicate/PROMPT.md", (ROOT / "README.md").read_text(encoding="utf-8"))
+        notes = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+        line = next(line for line in notes.splitlines() if "docs/replicate/PROMPT.md" in line)
+        self.assertIn("test_replicate_prompt.py", line)
+
 
 if __name__ == "__main__":
     unittest.main()

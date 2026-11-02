@@ -11,6 +11,7 @@ The repo holds the Python collector (`collector/`, SFS from Riksdagen open data)
 - `DESIGN.md` — the chosen design system ("Nordic Juridisk Klarhet"): M3 color roles (light + dark), layer colors, typography, radii, spacing, Liquid Glass elevation spec, Compose implementation notes. Started from `design/stitch/nordic_juridisk_klarhet/DESIGN.md` but has since been extended (dark mode, accessible layer text colors); the root file is canonical, the Stitch copy is the untouched export.
 - `design/stitch/` — Google Stitch export (`code.html` + `screen.png` per screen).
 - `docs/screens.md` — inventory of every app screen: route, design references, features with status, and the issue for each gap. Keep it current when a screen changes.
+- `docs/replicate/PROMPT.md` — agent-agnostic prompt that rebuilds lagar for another country, linking lagar files at one pinned commit. When an architecture contract, a linked file or the Swedish-specific file list changes, update the prompt (and its pin) too; `scripts/tests/test_replicate_prompt.py` checks its structure, links and reuse paths.
 
 ## Commands
 

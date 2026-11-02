@@ -60,6 +60,7 @@ Screen-by-screen status is in [docs/screens.md](docs/screens.md).
 - [Design system](DESIGN.md)
 - [App architecture](docs/architecture.md)
 - [API contract](docs/api.md)
+- [Replicate lagar for another country](docs/replicate/PROMPT.md): a prompt for any coding agent that researches a country's legal organization and builds the same project for it
 - [Notice](NOTICE.md) and [licence](LICENSE)
 
 ## Run it locally
