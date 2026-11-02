@@ -83,11 +83,30 @@ Present the profile to the person as a short summary: the layers in rank order, 
 
 ## Phase 3: Plan
 
-To be written.
+Turn the onboarding answers and the approved profile into ordered milestones. Write the plan to `docs/replication/plan.md`: for each milestone, what it builds, the files it creates or changes, and a **Done when** line naming the checks from Reference A that must pass. Keep this order; leave out the optional milestones the person did not choose.
+
+1. **Skeleton and contracts.** The repository layout (or the cleaned copy, Reference C), the licence, lint and pre-commit configuration, the read-only CI workflows, `docs/api.md` written for this country, the frontmatter schema and the closed vocabulary from the profile. Done when: CI is green on an empty corpus and the schema tests pass.
+2. **First collector and corpus.** The shared HTTP client and robots.txt handling, then the collector for the highest-ranked layer with a machine-readable source (usually the constitution and the statutes), a small first run (`--limit`), the manifests and the audit. Done when: collector tests pass, the audit is clean, and the person has read a few documents and compared them with the official source.
+3. **Static API.** The builder, listings, documents and per-layer search for that corpus. Done when: API tests pass and the size report is printed.
+4. **More layers.** One milestone per further layer or source family, in the profile's rank order, with PDF text and OCR only where a source needs them. Done when: each collector's tests pass and its gaps are recorded.
+5. **Reports.** Progress against targets, statistics, the sources log, and a hand-written `COVERAGE.md`.
+6. Optional, in this order when chosen: **Sync workflows**, **MCP server**, **App** (design tokens and i18n first, then the shell, home, hierarchy, search, reader, saved items and settings), **Landing page**, **Amendment history**.
+
+Explain the plan to the person at their experience level, including anything they must do themselves (create the GitHub repository, enable GitHub Pages, add a deploy secret). Wait for them to approve the plan before Phase 4.
 
 ## Phase 4: Build
 
-To be written.
+Build the approved plan one milestone at a time.
+
+- Work test-first where code is involved: write the test from the contract, see it fail, make it pass. Fixtures come from real source responses, saved small, never invented.
+- Commit in small steps with Conventional Commits messages (`feat(collector):`, `fix(api):`, `data(<layer>):`, `chore(ci):`, `docs:`, `test:`); stage explicit files; each commit builds and passes tests. Whether commit messages mention an assistant or carry a co-author line is the person's choice; ask once and follow it.
+- Use issues and pull requests if the person wants them; otherwise commit to the main branch only after the milestone's checks pass.
+- At the end of each milestone, run its **Done when** checks, show the person the result (counts, a sample document, the test summary) in the depth their experience level calls for, and update `docs/replication/plan.md` with what is done.
+- When a source forbids automation, blocks the collector (403, captcha, login, firewall) or changes so that the collector no longer matches it, stop that collector, record a gap with the reason and URL, and ask the person how to continue. Never work around it.
+- When the person asks for something this prompt does not cover, or a decision would change the profile or the plan, update the relevant file and confirm with them before building it.
+- Large first collections run in the background or in batches with `--limit`, resuming from the state file; never delete state to start over without asking.
+
+When every chosen milestone is done, give the person a final summary: what is collected per layer, the gaps, how to run each part locally, and how the sync workflows (if built) keep it current.
 
 ## Reference A: Architecture contracts
 

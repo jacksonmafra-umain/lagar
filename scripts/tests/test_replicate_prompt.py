@@ -171,6 +171,23 @@ class ReplicatePromptTests(unittest.TestCase):
         for word in ["riksdagen", "kommun", "sfs", "swe", "git history"]:
             self.assertIn(word, last)
 
+    def test_plan_phase_has_milestones_and_gate(self):
+        plan = section("Phase 3: Plan")
+        order = [plan.index(name) for name in ["Skeleton and contracts", "First collector and corpus", "Static API"]]
+        self.assertEqual(sorted(order), order)
+        self.assertIn("Done when", plan)
+        self.assertIn("approve", plan.strip().split("\n\n")[-1])
+
+    def test_build_phase_stops_on_blocked_source(self):
+        build = section("Phase 4: Build")
+        for phrase in ["forbids automation", "blocks", "gap", "ask"]:
+            self.assertIn(phrase, build)
+
+    def test_build_phase_sets_commit_rules(self):
+        build = section("Phase 4: Build")
+        self.assertIn("Conventional Commits", build)
+        self.assertIn("person's choice", build)
+
 
 if __name__ == "__main__":
     unittest.main()
