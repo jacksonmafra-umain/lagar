@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T13:01:22Z",
+ "generated_at": "2026-11-03T12:27:00Z",
  "documents": 54786,
  "layers": {
   "fundamental": {
@@ -1660,8 +1660,8 @@
     "short_body": 548,
     "print_only": 259
    },
-   "unresolved_references": 39935,
-   "references": 39996
+   "unresolved_references": 39936,
+   "references": 39997
   },
   "sfs_pdf_verification": {
    "statuses": {
