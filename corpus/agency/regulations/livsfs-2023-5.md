@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4aa8ca/globalassets/om-oss/lagstiftning/forpackn---matrl-i-kontakt-m-livsm/livsfs-2023-5_tillg2.pdf"
 source_sha256: "0393a5ec5d9d56c4a56842808da1554a65267f115d0430b01df31ac0e5bc451b"
-fetched_at: "2026-10-31T05:04:43Z"
+fetched_at: "2026-11-03T14:51:24Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om material och produkter avsedda att komma i kontakt med livsmedel
@@ -50,7 +50,7 @@ Med stöd av 5, 6, 30 och 31 §§ livsmedelsförordningen (2006:813) och 30 § f
 
 Tillämpningsområde
 
-**1 §** Dessa föreskrifter innehåller bestämmelser om krav på, och ­import av, material och produkter avsedda att komma i kontakt med livsmedel, samt bestämmelser om registrering av vissa verksamheter som tillverkar, förädlar eller importerar material och produkter avsedda att komma i kontakt med livsmedel. Dessa föreskrifter kompletterar bland annat bestämmelserna i ­­Europaparlamentets och rådets förordning (EG) nr 1935/2004 av den 27 oktober 2004 om material och produkter avsedda att komma i kontakt med livsmedel och om upphävande av direktiven 80/590/EEG och 89/109/EEG samt de bestämmelser som beslutats med stöd av den förordningen.
+**1 §** Dessa föreskrifter innehåller bestämmelser om krav på, och i­mport av, material och produkter avsedda att komma i kontakt med livsmedel, samt bestämmelser om registrering av vissa verksamheter som tillverkar, förädlar eller importerar material och produkter avsedda att komma i kontakt med livsmedel. Dessa föreskrifter kompletterar bland annat bestämmelserna i ­­Europaparlamentets och rådets förordning (EG) nr 1935/2004 av den 27 oktober 2004 om material och produkter avsedda att komma i kontakt med livsmedel och om upphävande av direktiven 80/590/EEG och 89/109/EEG samt de bestämmelser som beslutats med stöd av den förordningen.
 
 **2 §** Bestämmelser om
 

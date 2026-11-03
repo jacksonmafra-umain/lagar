@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/49b5cc/globalassets/om-oss/lagstiftning/berikn---kosttillsk---livsm-spec-gr-fsmp/livsfs-2023-3_web_t.pdf"
 source_sha256: "52beaf4aea50f128e2bc587d58ac67b47a9a551c6754cef0582973978fe61710"
-fetched_at: "2026-10-31T05:04:42Z"
+fetched_at: "2026-11-03T14:51:23Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om kosttillskott
@@ -80,7 +80,7 @@ Jfr Europaparlamentets och rådets direktiv 2002/46/EG av den 10 juni 2002 om ti
 
 3\. att den rekommenderade dagliga dosen inte får överskridas,
 
-4\. att kosttillskott inte bör användas som ett alternativ till en v­ arierad kost, och
+4\. att kosttillskott inte bör användas som ett alternativ till en ­varierad kost, och
 
 5\. att kosttillskott bör förvaras utom räckhåll för små barn.
 

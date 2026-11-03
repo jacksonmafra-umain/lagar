@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=b0a1b098d2b04ffc9062bec17c894c70&res=bca99e96625044999c8ccca1af93c54c&lr=False&fn=STEMFS%202025_3_Reduktionsplikten_webb.pdf&elp=portal&elt=t&eloid=b0a1b098d2b04ffc9062bec17c894c70"
 source_sha256: "1b9435e3fc321a8a09212e240db73b32c34c64cf51f831e5123620980ca59533"
-fetched_at: "2026-10-31T03:19:56Z"
+fetched_at: "2026-11-03T13:01:17Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om reduktion av växthusgasutsläpp från bensin och diesel
@@ -60,7 +60,7 @@ Inledande bestämmelser
 
 Ord och uttryck
 
-**2 §** Ord och uttryck som används i dessa föreskrifter har samma betydelse som i lagen (2017:1201) om reduktion av växthusgas­ utsläpp från bensin och diesel (reduktionspliktslagen) och ­förordningen (2025:589) om reduktion av växthusgasutsläpp från bensin och diesel (reduktionspliktsförordningen). Dessutom betyder: fossilt bränsle: en komponent i bensin eller diesel som inte utgörs av förnybara bränslen, publik laddningsstation: en laddningsstation för elfordon som är belägen på en plats eller i en fastighet som är öppen för allmän­ heten, oavsett om laddningsstationen är belägen på allmän eller privat mark, oavsett om begränsningar eller villkor gäller för tillträde till platsen eller fastigheten och oberoende av de t­illämpliga användningsvillkoren för laddningsstationen,
+**2 §** Ord och uttryck som används i dessa föreskrifter har samma betydelse som i lagen (2017:1201) om reduktion av växthusgas­ utsläpp från bensin och diesel (reduktionspliktslagen) och ­förordningen (2025:589) om reduktion av växthusgasutsläpp från bensin och diesel (reduktionspliktsförordningen). Dessutom betyder: fossilt bränsle: en komponent i bensin eller diesel som inte utgörs av förnybara bränslen, publik laddningsstation: en laddningsstation för elfordon som är belägen på en plats eller i en fastighet som är öppen för allmän­ heten, oavsett om laddningsstationen är belägen på allmän eller privat mark, oavsett om begränsningar eller villkor gäller för tillträde till platsen eller fastigheten och oberoende av de ­tillämpliga användningsvillkoren för laddningsstationen,
 
 STEMFS
 
@@ -70,7 +70,7 @@ utsläppsminskning: den reduktion av utsläpp, uttryckt som kilogram koldioxid­
 
 Anmälan om reduktionsplikt
 
-**3 §** Anmälan om reduktionsplikt enligt 4 § r­ eduktionspliktslagen ska innehålla information om:
+**3 §** Anmälan om reduktionsplikt enligt 4 § ­reduktionspliktslagen ska innehålla information om:
 
 1\. Vilket eller vilka drivmedel som omfattas av reduktionsplikt.
 
@@ -120,9 +120,9 @@ STEMFS
 
 Redovisning av levererad fossilfri el till elfordon
 
-**8 §** En operatör av en laddningsstation som har levererat f­ ossilfri el från publika laddningsstationer till elfordon, och själv använt eller överlåtit utsläppsminskningen som den levererade fossilfria elen har bidragit med, ska redovisa mängden levererad el till Energimyndigheten. Mängden el ska r­edovisas i enheten kilo­ wattimme och får som mest motsvara den mängd som d­ ebiterats de publika laddningsstationernas kunder.
+**8 §** En operatör av en laddningsstation som har levererat ­fossilfri el från publika laddningsstationer till elfordon, och själv använt eller överlåtit utsläppsminskningen som den levererade fossilfria elen har bidragit med, ska redovisa mängden levererad el till Energimyndigheten. Mängden el ska r­edovisas i enheten kilo­ wattimme och får som mest motsvara den mängd som ­debiterats de publika laddningsstationernas kunder.
 
-**9 §** Den redovisning som avses i 8 § ska granskas av en auktoriserad eller ­godkänd revisor. Revisorn ska lämna ett yttrande om redovisningen med f­ öljande innehåll:
+**9 §** Den redovisning som avses i 8 § ska granskas av en auktoriserad eller ­godkänd revisor. Revisorn ska lämna ett yttrande om redovisningen med ­följande innehåll:
 
 1\. En beskrivning av det underlag som ligger till grund för yttrandet.
 
@@ -146,7 +146,7 @@ Redovisning av överlåtelse och förvärv av överskott av utsläppsminskning
 
 6\. Kontaktuppgifter till och fullmakt för ombudet i det fall ett ombud har anlitats.
 
-**11 §** Den som har förvärvat ett överskott av utsläppsminskning enligt 6–7 § reduktionspliktslagen ska lämna följande uppgifter om varje förvärv till E ­ nergimyndigheten:
+**11 §** Den som har förvärvat ett överskott av utsläppsminskning enligt 6–7 § reduktionspliktslagen ska lämna följande uppgifter om varje förvärv till ­Energimyndigheten:
 
 STEMFS
 
@@ -166,7 +166,7 @@ Redovisning av sparat och nyttjat överskott
 
 **12 §** Den som har åstadkommit större utsläppsminskningar än vad som krävs för att uppfylla reduktionsplikten i enlighet med
 
-**7 §** reduktionspliktslagen, ska redovisa det aktuella ­drivmedlet och överskottet av utsläppsminskningen uttryckt i kilogram koldioxidekvivalenter som denne avser att spara till nästa ­ ­kalenderår.
+**7 §** reduktionspliktslagen, ska redovisa det aktuella ­drivmedlet och överskottet av utsläppsminskningen uttryckt i kilogram k­oldioxidekvivalenter som denne avser att spara till nästa ­kalenderår.
 
 Den som har sparat överskott från föregående kalenderår och avser att nyttja överskottet, ska till Energimyndigheten redovisa till vilket reduktionspliktigt drivmedel överskottet används.
 
@@ -174,7 +174,7 @@ Redovisning av reduktionspliktig energimängd
 
 **13 §** Energimängden för ett fossilt bränsle (Ef) beräknas genom att ­ multi­ plicera energiinnehållet för bränslet angivet i 10 § reduktionspliktsförordningen med den redovisade mängden enligt 6 § 2.
 
-**14 §** Energimängden för ett förnybart bränsle (Efb) beräknas genom att m ­ ultiplicera energiinnehållet för det förnybara b­ ränslet enligt aktuellt värde i bilaga 1 med den enligt 7 § 2 redovisade mängden.
+**14 §** Energimängden för ett förnybart bränsle (Efb) beräknas genom att ­multiplicera energiinnehållet för det förnybara ­bränslet enligt aktuellt värde i bilaga 1 med den enligt 7 § 2 redovisade mängden.
 
 Om beräkningen enligt första stycket avser ett förnybart bränsle som saknar ett värde för energiinnehåll i bilaga 1, ska den som har reduktionsplikt själv mäta energiinnehållet för det ­aktuella förny­bara bränslet i bombkalorimeter. Den metod som används ska dokumenteras och ha en precision på åtminstone 0,4 ­megajoule per kilogram.
 
@@ -216,7 +216,7 @@ Beräkning av växthusgasutsläpp
 
 Beräkning av mängden utsläppsreduktion från fossilfri el till elfordon
 
-**16 §** Utsläppsreduktion uttryckt som kilogram koldioxidekvi­ valenter för f­ ossil­fri el (Fel) ska beräknas enligt följande formel:
+**16 §** Utsläppsreduktion uttryckt som kilogram koldioxidekvi­ valenter för ­fossil­fri el (Fel) ska beräknas enligt följande formel:
 
 Fel =
 
