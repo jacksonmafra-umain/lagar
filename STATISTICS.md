@@ -1,6 +1,6 @@
 # Corpus statistics
 
-Generated 2026-11-02T13:01:22Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-03T12:27:00Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
@@ -316,7 +316,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 - Documents checked: 54,786
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
-- Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,935 of 39,996 (mostly older amending acts, which are not collected as documents of their own)
+- Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,936 of 39,997 (mostly older amending acts, which are not collected as documents of their own)
 
 ### SFS text against the official PDF
 
