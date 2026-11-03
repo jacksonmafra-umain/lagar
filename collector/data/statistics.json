@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-03T12:53:56Z",
- "documents": 54786,
+ "generated_at": "2026-11-03T13:03:31Z",
+ "documents": 54787,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -143,12 +143,12 @@
    }
   },
   "case_law": {
-   "documents": 16475,
+   "documents": 16476,
    "types": {
     "case_report": {
-     "documents": 16404,
+     "documents": 16405,
      "sections": 715,
-     "words": 55713491
+     "words": 55714610
     },
     "case_notice": {
      "documents": 71,
@@ -158,13 +158,13 @@
    },
    "issuers": 20,
    "text": {
-    "web": 16475,
+    "web": 16476,
     "pdf": 0,
     "ocr": 0,
     "none": 0
    },
    "hosts": {
-    "rattspraxis.etjanst.domstol.se": 16475
+    "rattspraxis.etjanst.domstol.se": 16476
    }
   },
   "eu": {
@@ -528,7 +528,7 @@
   }
  },
  "text": {
-  "web": 32453,
+  "web": 32454,
   "pdf": 20373,
   "ocr": 1487,
   "none": 473
@@ -1651,7 +1651,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54786,
+   "documents": 54787,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
