@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.sodertalje.se/globalassets/politiska-dokument/forfattningssamling/kartbilagor_lokala-ordningsforeskrifter.pdf"
 source_sha256: "213fb11a5e972c7e5beda3e08bb8ae5d7cecf5874cefcd474a651d2f7e72bc23"
-fetched_at: "2026-10-31T15:19:17Z"
+fetched_at: "2026-11-03T12:51:37Z"
 issuer: "Södertälje kommun"
 region_code: "01"
 municipality_code: "0181"
@@ -35,4 +35,4 @@ Kommunen publicerar texten som PDF. Texten har inte konverterats; den gällande 
 
 - [Kartbilagor till allmänna lokala ordningsföreskrifter](<https://www.sodertalje.se/globalassets/politiska-dokument/forfattningssamling/kartbilagor_lokala-ordningsforeskrifter.pdf>)
 
-Pdf:en är inskannad och saknar textlager; texten har inte lästs in.
+Pdf:en är inskannad och innehåller ingen text som kan läsas maskinellt.

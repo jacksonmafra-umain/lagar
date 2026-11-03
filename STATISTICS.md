@@ -1,10 +1,10 @@
 # Corpus statistics
 
-Generated 2026-11-03T12:27:00Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-03T13:25:02Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,786 documents in 7 layers.
+The corpus holds 54,790 documents in 7 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
@@ -21,7 +21,7 @@ The corpus holds 54,786 documents in 7 layers.
 | eu | eu_decision | 2 | 0 | 14,266 |
 | eu | eu_judgment | 605 | 35 | 3,651,042 |
 | region | county_regulation | 11,649 | 14,166 | 10,998,721 |
-| municipality | municipal_regulation | 5,572 | 44,907 | 12,425,695 |
+| municipality | municipal_regulation | 5,576 | 44,998 | 12,449,716 |
 
 Sections count paragraphs that open with a section number (`1 §`, `2 a §`); case law and EU documents have none.
 
@@ -97,14 +97,14 @@ Documents per host of their `source`, per layer (the ten largest).
 | docs.netpublicator.com | 104 |
 | gallivare.se | 60 |
 | karlshamn.se | 58 |
-| pitea.se | 57 |
+| pitea.se | 58 |
 | boras.se | 56 |
 | uddevalla.se | 54 |
 | lerum.se | 51 |
-| laholm.se | 49 |
+| laholm.se | 50 |
 | ale.se | 49 |
 | lillaedet.se | 49 |
-| 275 other hosts | 4,985 |
+| 275 other hosts | 4,987 |
 
 ## How the text was obtained
 
@@ -116,8 +116,8 @@ Documents per host of their `source`, per layer (the ten largest).
 | case_law | 16,475 | 0 | 0 | 0 |
 | eu | 675 | 0 | 0 | 0 |
 | region | 420 | 10,768 | 428 | 33 |
-| municipality | 197 | 4,922 | 284 | 169 |
-| **all** | **32,453** (59.2 %) | **20,373** (37.2 %) | **1,487** (2.7 %) | **473** (0.9 %) |
+| municipality | 197 | 4,927 | 290 | 162 |
+| **all** | **32,453** (59.2 %) | **20,378** (37.2 %) | **1,493** (2.7 %) | **466** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -128,7 +128,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | layer | issuers using PDF | documents | issuers with scans | scanned | read by OCR | still without text |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | agency | 75 | 5,391 | 12 | 743 | 740 | 3 |
-| municipality | 280 | 5,469 | 144 | 346 | 284 | 62 |
+| municipality | 280 | 5,473 | 144 | 348 | 290 | 58 |
 | region | 21 | 11,589 | 15 | 461 | 428 | 33 |
 | sfs | 3 | 293 | 1 | 36 | 35 | 1 |
 
@@ -162,7 +162,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Danderyds kommun | 22 | 1 | 1 |
 | municipality: Dorotea kommun | 14 | 1 | 1 |
 | municipality: Eda kommun | 26 | 1 | 0 |
-| municipality: Ekerö kommun | 34 | 7 | 2 |
+| municipality: Ekerö kommun | 34 | 7 | 3 |
 | municipality: Eskilstuna kommun | 20 | 1 | 1 |
 | municipality: Eslövs kommun | 32 | 3 | 0 |
 | municipality: Essunga kommun | 29 | 4 | 3 |
@@ -191,7 +191,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Håbo kommun | 27 | 4 | 4 |
 | municipality: Hörby kommun | 6 | 1 | 1 |
 | municipality: Jokkmokks kommun | 30 | 6 | 6 |
-| municipality: Järfälla kommun | 16 | 8 | 5 |
+| municipality: Järfälla kommun | 16 | 8 | 7 |
 | municipality: Kalix kommun | 25 | 1 | 1 |
 | municipality: Kalmar kommun | 39 | 2 | 2 |
 | municipality: Katrineholms kommun | 36 | 1 | 1 |
@@ -203,7 +203,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Kungälvs kommun | 37 | 3 | 3 |
 | municipality: Kävlinge kommun | 23 | 3 | 3 |
 | municipality: Köpings kommun | 7 | 1 | 1 |
-| municipality: Laholms kommun | 49 | 8 | 3 |
+| municipality: Laholms kommun | 50 | 8 | 3 |
 | municipality: Landskrona stad | 29 | 3 | 3 |
 | municipality: Laxå kommun | 6 | 1 | 1 |
 | municipality: Leksands kommun | 20 | 1 | 1 |
@@ -214,7 +214,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Ljungby kommun | 14 | 1 | 1 |
 | municipality: Ljusdals kommun | 21 | 1 | 1 |
 | municipality: Ljusnarsbergs kommun | 9 | 1 | 1 |
-| municipality: Lomma kommun | 50 | 1 | 1 |
+| municipality: Lomma kommun | 50 | 2 | 2 |
 | municipality: Ludvika kommun | 19 | 4 | 4 |
 | municipality: Luleå kommun | 12 | 3 | 2 |
 | municipality: Lysekils kommun | 15 | 1 | 1 |
@@ -236,12 +236,12 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Nynäshamns kommun | 39 | 3 | 3 |
 | municipality: Osby kommun | 5 | 1 | 1 |
 | municipality: Ovanåkers kommun | 6 | 3 | 3 |
-| municipality: Piteå kommun | 57 | 1 | 1 |
+| municipality: Piteå kommun | 58 | 1 | 1 |
 | municipality: Rättviks kommun | 26 | 2 | 1 |
 | municipality: Sala kommun | 30 | 1 | 1 |
 | municipality: Salems kommun | 11 | 1 | 1 |
 | municipality: Sjöbo kommun | 6 | 1 | 1 |
-| municipality: Skövde kommun | 15 | 4 | 4 |
+| municipality: Skövde kommun | 16 | 4 | 4 |
 | municipality: Smedjebacken kommun | 35 | 2 | 2 |
 | municipality: Sorsele kommun | 30 | 4 | 4 |
 | municipality: Sotenäs kommun | 19 | 2 | 2 |
@@ -258,7 +258,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Söderköpings kommun | 9 | 1 | 1 |
 | municipality: Södertälje kommun | 10 | 1 | 0 |
 | municipality: Sölvesborg kommun | 29 | 1 | 1 |
-| municipality: Timrå kommun | 38 | 4 | 4 |
+| municipality: Timrå kommun | 39 | 4 | 4 |
 | municipality: Tingsryds kommun | 10 | 3 | 3 |
 | municipality: Tjörns kommun | 15 | 1 | 1 |
 | municipality: Tomelilla kommun | 25 | 1 | 1 |
@@ -269,12 +269,12 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Ulricehamns kommun | 11 | 1 | 0 |
 | municipality: Upplands Väsby kommun | 29 | 1 | 1 |
 | municipality: Vaggeryds kommun | 12 | 1 | 1 |
-| municipality: Valdemarsviks kommun | 21 | 4 | 2 |
+| municipality: Valdemarsviks kommun | 21 | 5 | 3 |
 | municipality: Varbergs kommun | 29 | 2 | 1 |
 | municipality: Vaxholms stad | 4 | 1 | 1 |
 | municipality: Vilhelmina kommun | 22 | 1 | 1 |
 | municipality: Vänersborgs kommun | 37 | 1 | 1 |
-| municipality: Värmdö kommun | 25 | 4 | 2 |
+| municipality: Värmdö kommun | 25 | 4 | 3 |
 | municipality: Västerås stad | 21 | 2 | 1 |
 | municipality: Vårgårda kommun | 20 | 4 | 4 |
 | municipality: Ydre kommun | 12 | 2 | 2 |
@@ -313,7 +313,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 
 ### Corpus audit
 
-- Documents checked: 54,786
+- Documents checked: 54,790
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
 - Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,936 of 39,997 (mostly older amending acts, which are not collected as documents of their own)

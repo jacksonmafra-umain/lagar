@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/regler-och-foreskrifter/foreskrifter-om-avfallshantering/"
-source_sha256: "a50f04446cb34ebb713f6fcd51c8e7ab0e0f724e2d5fdcd803677fa8ff008321"
-fetched_at: "2026-10-30T21:13:31Z"
+source_sha256: "207a2faf966efa3ee055d66df2b3e1399ea159567e315ffcbb1186ef3157c4ca"
+fetched_at: "2026-11-03T13:19:28Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -619,4 +619,4 @@ Information kan hämtas på transportstyrelsens webbplats.
 ² Framkomligheten kan också lösas med mötesplatser\
 ³ Träd och växtlighet får inte begränsa den fria höjden
 
-Publicerad: 22 december 2023 07.32 Uppdaterad: 9 juni 2026 13.38
+Publicerad: 22 december 2023 07.32 Uppdaterad: 2 november 2026 12.07

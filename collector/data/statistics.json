@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-03T12:27:00Z",
- "documents": 54786,
+ "generated_at": "2026-11-03T13:25:02Z",
+ "documents": 54790,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -223,30 +223,30 @@
    }
   },
   "municipality": {
-   "documents": 5572,
+   "documents": 5576,
    "types": {
     "municipal_regulation": {
-     "documents": 5572,
-     "sections": 44907,
-     "words": 12425695
+     "documents": 5576,
+     "sections": 44998,
+     "words": 12449716
     }
    },
    "issuers": 285,
    "text": {
     "web": 197,
-    "pdf": 4922,
-    "ocr": 284,
-    "none": 169
+    "pdf": 4927,
+    "ocr": 290,
+    "none": 162
    },
    "hosts": {
     "docs.netpublicator.com": 104,
     "gallivare.se": 60,
     "karlshamn.se": 58,
-    "pitea.se": 57,
+    "pitea.se": 58,
     "boras.se": 56,
     "uddevalla.se": 54,
     "lerum.se": 51,
-    "laholm.se": 49,
+    "laholm.se": 50,
     "ale.se": 49,
     "lillaedet.se": 49,
     "bjurholm.se": 47,
@@ -259,9 +259,9 @@
     "kalmar.se": 39,
     "hassleholm.se": 39,
     "kungsor.se": 39,
+    "timra.se": 39,
     "bromolla.se": 38,
     "kommun.falkenberg.se": 38,
-    "timra.se": 38,
     "oxelosund.se": 37,
     "kungalv.se": 37,
     "vanersborg.se": 37,
@@ -393,6 +393,7 @@
     "boxholm.se": 16,
     "klippan.se": 16,
     "grastorp.se": 16,
+    "static.skovde.se": 16,
     "norberg.se": 16,
     "krokom.se": 16,
     "nykvarn.se": 15,
@@ -400,7 +401,6 @@
     "tjorn.se": 15,
     "toreboda.se": 15,
     "lysekil.se": 15,
-    "static.skovde.se": 15,
     "grums.se": 15,
     "falun.se": 15,
     "overkalix.se": 15,
@@ -529,9 +529,9 @@
  },
  "text": {
   "web": 32453,
-  "pdf": 20373,
-  "ocr": 1487,
-  "none": 473
+  "pdf": 20378,
+  "ocr": 1493,
+  "none": 466
  },
  "issuers": {
   "agency": 77,
@@ -559,11 +559,11 @@
   },
   "municipality": {
    "issuers": 280,
-   "documents": 5469,
+   "documents": 5473,
    "issuers_with_scans": 144,
-   "scanned": 346,
-   "ocr": 284,
-   "still_without_text": 62
+   "scanned": 348,
+   "ocr": 290,
+   "still_without_text": 58
   },
   "region": {
    "issuers": 21,
@@ -748,9 +748,9 @@
   "municipality: Ekerö kommun": {
    "documents": 34,
    "pdf": 27,
-   "none": 5,
+   "none": 4,
    "scanned": 7,
-   "ocr": 2
+   "ocr": 3
   },
   "municipality: Eskilstuna kommun": {
    "documents": 20,
@@ -926,9 +926,9 @@
   "municipality: Järfälla kommun": {
    "documents": 16,
    "pdf": 8,
-   "none": 3,
+   "none": 1,
    "scanned": 8,
-   "ocr": 5
+   "ocr": 7
   },
   "municipality: Kalix kommun": {
    "documents": 25,
@@ -998,8 +998,8 @@
    "scanned": 1
   },
   "municipality: Laholms kommun": {
-   "documents": 49,
-   "pdf": 41,
+   "documents": 50,
+   "pdf": 42,
    "none": 5,
    "scanned": 8,
    "ocr": 3
@@ -1068,9 +1068,8 @@
   "municipality: Lomma kommun": {
    "documents": 50,
    "pdf": 48,
-   "ocr": 1,
-   "scanned": 1,
-   "none": 1
+   "ocr": 2,
+   "scanned": 2
   },
   "municipality: Ludvika kommun": {
    "documents": 19,
@@ -1201,8 +1200,8 @@
    "pdf": 3
   },
   "municipality: Piteå kommun": {
-   "documents": 57,
-   "pdf": 56,
+   "documents": 58,
+   "pdf": 57,
    "ocr": 1,
    "scanned": 1
   },
@@ -1232,8 +1231,8 @@
    "scanned": 1
   },
   "municipality: Skövde kommun": {
-   "documents": 15,
-   "pdf": 11,
+   "documents": 16,
+   "pdf": 12,
    "ocr": 4,
    "scanned": 4
   },
@@ -1334,8 +1333,8 @@
    "scanned": 1
   },
   "municipality: Timrå kommun": {
-   "documents": 38,
-   "pdf": 34,
+   "documents": 39,
+   "pdf": 35,
    "ocr": 4,
    "scanned": 4
   },
@@ -1402,10 +1401,10 @@
   },
   "municipality: Valdemarsviks kommun": {
    "documents": 21,
-   "ocr": 2,
-   "scanned": 4,
+   "ocr": 3,
+   "scanned": 5,
    "pdf": 16,
-   "none": 3
+   "none": 2
   },
   "municipality: Varbergs kommun": {
    "documents": 29,
@@ -1435,9 +1434,9 @@
   "municipality: Värmdö kommun": {
    "documents": 25,
    "pdf": 21,
-   "ocr": 2,
+   "ocr": 3,
    "scanned": 4,
-   "none": 2
+   "none": 1
   },
   "municipality: Västerås stad": {
    "documents": 21,
@@ -1651,7 +1650,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54786,
+   "documents": 54790,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
