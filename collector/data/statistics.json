@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T12:27:00Z",
+ "generated_at": "2026-11-03T12:53:56Z",
  "documents": 54786,
  "layers": {
   "fundamental": {
@@ -27,18 +27,18 @@
    "types": {
     "act": {
      "documents": 3000,
-     "sections": 93738,
-     "words": 8804639
+     "sections": 93765,
+     "words": 8807544
     },
     "ordinance": {
      "documents": 6591,
-     "sections": 101864,
-     "words": 6895220
+     "sections": 101899,
+     "words": 6900084
     },
     "other_statute": {
      "documents": 1837,
-     "sections": 12462,
-     "words": 1343279
+     "sections": 12463,
+     "words": 1343463
     },
     "treaty": {
      "documents": 3515,
@@ -1660,8 +1660,8 @@
     "short_body": 548,
     "print_only": 259
    },
-   "unresolved_references": 39936,
-   "references": 39997
+   "unresolved_references": 39950,
+   "references": 40011
   },
   "sfs_pdf_verification": {
    "statuses": {
