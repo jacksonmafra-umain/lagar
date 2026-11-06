@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T13:03:31Z",
+ "generated_at": "2026-11-06T12:34:35Z",
  "documents": 54787,
  "layers": {
   "fundamental": {
@@ -188,7 +188,7 @@
     "eu_judgment": {
      "documents": 605,
      "sections": 35,
-     "words": 3651042
+     "words": 3651044
     }
    },
    "issuers": 5,
