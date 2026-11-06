@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T12:34:35Z",
+ "generated_at": "2026-11-06T13:02:01Z",
  "documents": 54787,
  "layers": {
   "fundamental": {
@@ -32,8 +32,8 @@
     },
     "ordinance": {
      "documents": 6591,
-     "sections": 101899,
-     "words": 6900084
+     "sections": 101880,
+     "words": 6894013
     },
     "other_statute": {
      "documents": 1837,
@@ -1660,8 +1660,8 @@
     "short_body": 548,
     "print_only": 259
    },
-   "unresolved_references": 39950,
-   "references": 40011
+   "unresolved_references": 39946,
+   "references": 40007
   },
   "sfs_pdf_verification": {
    "statuses": {
