@@ -6,10 +6,13 @@
 # since this job started. Before each merge attempt the branch takes in main again;
 # conflicts on the reports are resolved by regenerating them, any other conflict is
 # left for a person. The corpus audit runs on the merged tree.
+#
+# REPORTS lists every report more than one sync workflow writes;
+# scripts/tests/test_sync_workflows.py fails when a workflow adds one that is missing here.
 set -euo pipefail
 
 : "${BRANCH:?}"
-REPORTS="PROGRESS.md progress.svg README.md AGENCIES.md collector/data/agencies-report.json landing/data/sources.json collector/data/pending-integrity.json"
+REPORTS="PROGRESS.md progress.svg README.md AGENCIES.md collector/data/agencies-report.json landing/data/sources.json collector/data/pending-integrity.json STATISTICS.md collector/data/statistics.json"
 
 pr=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
 if [ -z "$pr" ]; then
@@ -41,6 +44,7 @@ for attempt in 1 2 3 4 5; do
   fi
   python3 -I collector/audit.py
   python3 -I collector/plan.py
+  python3 -I collector/stats.py
   python3 -I collector/agencies.py
   git add -- $REPORTS
   if ! git diff --cached --quiet; then

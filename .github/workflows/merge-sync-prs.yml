@@ -1,0 +1,85 @@
+name: Merge sync pull requests
+
+# Each sync workflow merges its own pull request at the end of its run. When that merge
+# fails (main moved, a check was slow, a report conflicted), the pull request would stay
+# open until that workflow runs again, up to a week later. This job retries every open
+# data/*-sync pull request once a day, after the morning syncs, with the same script and
+# the same checks: collector tests first, then merge-sync-pr.sh takes in main again,
+# regenerates the shared reports and runs the corpus audit before merging.
+#
+# A conflict outside the generated reports is left for a person; the run fails and
+# names the file.
+
+on:
+  schedule:
+    - cron: "7 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: merge-sync-prs
+  cancel-in-progress: false
+
+env:
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Find open sync pull requests
+        id: open
+        run: |
+          branches=$(gh pr list --state open --json headRefName \
+            --jq '[.[].headRefName | select(test("^data/[a-z-]+-sync$"))] | join(" ")')
+          echo "branches=$branches" >> "$GITHUB_OUTPUT"
+          echo "Open sync pull requests: ${branches:-none}"
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        if: steps.open.outputs.branches != ''
+        with:
+          python-version: "3.13"
+
+      - name: Configure git
+        if: steps.open.outputs.branches != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Install poppler-utils and tesseract
+        if: steps.open.outputs.branches != ''
+        run: >-
+          sudo apt-get update -q && sudo apt-get install -y -q --no-install-recommends
+          poppler-utils tesseract-ocr tesseract-ocr-swe
+
+      - name: Collector tests
+        if: steps.open.outputs.branches != ''
+        run: python3 -I -m unittest discover -s collector/tests -t collector
+
+      - name: Merge each pull request into main
+        if: steps.open.outputs.branches != ''
+        env:
+          BRANCHES: ${{ steps.open.outputs.branches }}
+        run: |
+          failed=()
+          for branch in $BRANCHES; do
+            echo "::group::$branch"
+            # One pull request that needs a person must not hold back the others.
+            BRANCH="$branch" bash .github/scripts/merge-sync-pr.sh || failed+=("$branch")
+            git merge --abort 2>/dev/null || true
+            git checkout -q --detach origin/main
+            git reset -q --hard
+            echo "::endgroup::"
+          done
+          if [ ${#failed[@]} -gt 0 ]; then
+            echo "::error::still open: ${failed[*]}"
+            exit 1
+          fi
