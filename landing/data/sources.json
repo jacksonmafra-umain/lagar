@@ -2625,7 +2625,7 @@
       {
         "name": "Laholm",
         "status": "partial",
-        "documents": 49,
+        "documents": 50,
         "url": "https://www.laholm.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/375",
         "description": null,
@@ -3164,7 +3164,7 @@
       {
         "name": "Skövde",
         "status": "partial",
-        "documents": 15,
+        "documents": 16,
         "url": "https://www.skovde.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/424",
         "description": null,
@@ -3912,7 +3912,7 @@
       {
         "name": "Timrå",
         "status": "partial",
-        "documents": 38,
+        "documents": 39,
         "url": "https://www.timra.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/492",
         "description": null,
@@ -4341,7 +4341,7 @@
       {
         "name": "Piteå",
         "status": "partial",
-        "documents": 57,
+        "documents": 58,
         "url": "https://www.pitea.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/531",
         "description": null,
