@@ -10,7 +10,7 @@ name: Sync SÖ
 
 on:
   schedule:
-    - cron: "41 4 * * 1" # Mondays
+    - cron: "41 4 * * 4" # Thursdays, apart from the county sync
   workflow_dispatch:
     inputs:
       from_year:
