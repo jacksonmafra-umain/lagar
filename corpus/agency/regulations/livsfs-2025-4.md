@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4ae67a/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-4-tillg.pdf"
 source_sha256: "3a1c6d92dc5afe0f04d330dee8ab4b3fc3028e11988484ce6ca261336130de5c"
-fetched_at: "2026-10-31T05:04:31Z"
+fetched_at: "2026-11-03T14:51:12Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om fruktjuice och fruktnektar
@@ -94,7 +94,7 @@ Märkning
 
 **14 §** För fruktnektar ska minimiinnehållet av fruktjuice, fruktpuré eller en blandning av dessa anges i märkningen med uttrycket ”fruktinnehåll minst…%”. Uppgiften ska finnas i samma synfält som beteckningen.
 
-**15 §** För fruktnektar får ett påstående som anger att sockerarter inte har tillsatts, och varje påstående som sannolikt har samma innebörd för konsumenten, bara göras om produkten inte innehåller tillsatser av mono- eller disackarider eller något annat livsmedel som används på grund av sina sötande egenskaper, inbegripet sötningsmedel enligt definitionen i Europaparlamentets och rådets förordning (EG) ­ nr 1333/2008 av den 16 december 2008 om livsmedelstillsatser. Om ett sådant påstående görs ska även följande uppgift finnas i märkningen: ”innehåller naturligt förekommande socker”.
+**15 §** För fruktnektar får ett påstående som anger att sockerarter inte har tillsatts, och varje påstående som sannolikt har samma innebörd för konsumenten, bara göras om produkten inte innehåller tillsatser av mono- eller disackarider eller något annat livsmedel som används på grund av sina sötande egenskaper, inbegripet sötningsmedel enligt d­efinitionen i Europaparlamentets och rådets förordning (EG) nr 1333/2008 av den 16 december 2008 om livsmedelstillsatser. Om ett sådant påstående görs ska även följande uppgift finnas i märkningen: ”innehåller naturligt förekommande socker”.
 
 **16 §** För koncentrerad fruktjuice som inte är avsedd att levereras ­direkt till konsument ska märkningen innehålla en uppgift om den mängd citronjuice, limejuice eller surhetsreglerande medel som tillförts. Uppgiften ska stå på förpackningen, eller på en etikett på förpackningen eller i en medföljande handling.
 

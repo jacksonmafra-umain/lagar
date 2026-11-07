@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4af339/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-6-tillg.pdf"
 source_sha256: "7c2c0e72cf911ed9a921bb551d2b0115b43959d3efc31bfd7c3c6f80c7544946"
-fetched_at: "2026-10-31T05:04:33Z"
+fetched_at: "2026-11-03T14:51:14Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om sylt, gelé och marmelad
@@ -56,9 +56,7 @@ Föreskrifterna gäller inte produkter som är avsedda för framställ­ ning av
 
 **2 §** Generella bestämmelser om livsmedelsinformation finns i
 
-1\. Europaparlamentets och rådets förordning (EU) nr 1169/2011 om tillhandahållande av livsmedelsinformation till konsumenterna, och om ändring av Europaparlamentets och rådets förordningar (EG) nr 1924/2006 och (EG) nr 1925/2006 samt om upphävande av kom­ missionens direktiv 87/250/EEG, rådets direktiv 90/496/EEG, kom­ missionens direktiv 1999/10/EG, Europaparlamentets och rådets direktiv 2000/13/EG, kommissionens direktiv 2002/67/EG och ­
-
-2008/5/EG samt kommissionens förordning (EG) nr 608/2004, och
+1\. Europaparlamentets och rådets förordning (EU) nr 1169/2011 om tillhandahållande av livsmedelsinformation till konsumenterna, och om ändring av Europaparlamentets och rådets förordningar (EG) nr 1924/2006 och (EG) nr 1925/2006 samt om upphävande av kom­ missionens direktiv 87/250/EEG, rådets direktiv 90/496/EEG, kom­ missionens direktiv 1999/10/EG, Europaparlamentets och rådets d­irektiv 2000/13/EG, kommissionens direktiv 2002/67/EG och 2008/5/EG samt kommissionens förordning (EG) nr 608/2004, och
 
 2\. Livsmedelsverkets föreskrifter (LIVSFS 2014:4) om livsmedels­ information.
 
@@ -174,7 +172,7 @@ Den ätliga delen av hela frukten, eventuellt utan skal, kärnor, kärnhus eller
 
 Den ätliga delen av hela frukten, eventuellt utan skal, kärnor, kärnhus eller liknande, som har mosats genom passering eller på liknande sätt. Vattenextrakt (av frukt)
 
-Vattenextrakt av frukt som, efter de förluster som ofrånkomligen uppstår vid vedertagen framställning, innehåller alla vattenlösliga ­ ­beståndsdelar som finns i frukten.
+Vattenextrakt av frukt som, efter de förluster som ofrånkomligen u­ppstår vid vedertagen framställning, innehåller alla vattenlösliga ­beståndsdelar som finns i frukten.
 
 Vissa former av socker
 

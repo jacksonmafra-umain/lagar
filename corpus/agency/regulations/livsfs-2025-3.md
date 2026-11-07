@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4ae690/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2025-3-tillg.pdf"
 source_sha256: "dc7e7ffcaff9b59bed112acfa959bfe9eef999e960280b68340236f98474eb5c"
-fetched_at: "2026-10-31T05:04:30Z"
+fetched_at: "2026-11-03T14:51:11Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om honung och bagerihonung
@@ -48,9 +48,7 @@ Inledande bestämmelser
 
 **2 §** Generella bestämmelser om livsmedelsinformation finns i
 
-1\. Europaparlamentets och rådets förordning (EU) nr 1169/2011 om tillhandahållande av livsmedelsinformation till konsumenterna, och om ändring av Europaparlamentets och rådets förordningar (EG) nr 1924/2006 och (EG) nr 1925/2006 samt om upphävande av kom­ missionens direktiv 87/250/EEG, rådets direktiv 90/496/EEG, kom­ missionens direktiv 1999/10/EG, Europaparlamentets och rådets direktiv 2000/13/EG, kommissionens direktiv 2002/67/EG och ­
-
-2008/5/EG samt kommissionens förordning (EG) nr 608/2004, och
+1\. Europaparlamentets och rådets förordning (EU) nr 1169/2011 om tillhandahållande av livsmedelsinformation till konsumenterna, och om ändring av Europaparlamentets och rådets förordningar (EG) nr 1924/2006 och (EG) nr 1925/2006 samt om upphävande av kom­ missionens direktiv 87/250/EEG, rådets direktiv 90/496/EEG, kom­ missionens direktiv 1999/10/EG, Europaparlamentets och rådets d­irektiv 2000/13/EG, kommissionens direktiv 2002/67/EG och 2008/5/EG samt kommissionens förordning (EG) nr 608/2004, och
 
 2\. Livsmedelsverkets föreskrifter (LIVSFS 2014:4) om livsmedels­ information.
 
@@ -116,7 +114,7 @@ Produktbeteckningar och definitioner
 
 a) Beroende på ursprung Blomhonung eller nektarhonung: Honung som kommer från växters nektar. Bladhonung: Honung som huvudsakligen kommer från exkret från sugande insektsarter (Hemiptera) på levande växtdelar eller sekret av levande växtdelar.
 
-b) Beroende på hur den produceras och/eller presenteras  onung i vaxkakor eller kakhonung: Honung som bina förvarat i H cellerna i nybyggda vaxkakor utan yngel eller i tunna bottenplattor för vaxkakor enbart gjorda av bivax och som säljs i hela eller delade täckta vaxkakor.  onung med bitar av vaxkakor: Honung som innehåller en eller H flera bitar av honung i vaxkakor. Självrunnen honung: Honung som fått självrinna ur avtäckta vaxkakor utan yngel. Slungad honung: Honung som utvinns genom att centrifugera avtäckta vaxkakor utan yngel. Pressad honung: Honung som utvinns genom att under svag värme (högst 45 °C) eller utan värme pressa vaxkakor utan yngel.
+b) Beroende på hur den produceras och/eller presenteras Honung i vaxkakor eller kakhonung: Honung som bina förvarat i cellerna i nybyggda vaxkakor utan yngel eller i tunna bottenplattor för vaxkakor enbart gjorda av bivax och som säljs i hela eller delade täckta vaxkakor. Honung med bitar av vaxkakor: Honung som innehåller en eller flera bitar av honung i vaxkakor. Självrunnen honung: Honung som fått självrinna ur avtäckta vaxkakor utan yngel. Slungad honung: Honung som utvinns genom att centrifugera avtäckta vaxkakor utan yngel. Pressad honung: Honung som utvinns genom att under svag värme (högst 45 °C) eller utan värme pressa vaxkakor utan yngel.
 
 2\. Med bagerihonung avses honung
 

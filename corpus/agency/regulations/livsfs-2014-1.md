@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/49096c/globalassets/om-oss/lagstiftning/overgripande-lagstiftning/livsfs-2014-1-tryckv-140203.pdf"
 source_sha256: "70a38da24416fd23ae9812bc0c9bb8ead24d2f8dd48ddf44c347326b5dca897d"
-fetched_at: "2026-10-31T05:05:05Z"
+fetched_at: "2026-11-03T14:51:45Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets förteckning över gällande föreskrifter
@@ -86,9 +86,7 @@ Ikraft: 13 december 1979 livsmedel och om specialutrustning för sådan transpor
 
 - Ändr. SLVFS 1995:18, omtryck bilagorna
 
-Saknr: av
-
-H 27:3
+Saknr: H 27:3 av
 
 Ikraft: 1 juli 1995
 
@@ -148,11 +146,9 @@ Ikraft: 1 januari 1992
 
 Saknr: H 35:2
 
-Bemynd.:
+Bemynd.: 5, 6 och 40 §§
 
-1 §,
-
-5, 6 och 40 §§ (2006:813)
+1 §, (2006:813)
 
 Ikraft: 1 januari 1997
 
@@ -186,9 +182,9 @@ Nya 1 a och 10 a §§
 
 Saknr: H 35
 
-Bemynd.:
+Bemynd.: 5 och 40 §§
 
-15 och 40 §§ (2006:813)
+1(2006:813)
 
 Celexnr: 31998L0034
 
@@ -592,9 +588,7 @@ Ikraft: 1 april 1999
 
 Saknr: H 376
 
-Bemynd.: till
-
-5, 6 och 7 §§ (2006:813)
+Bemynd.: 5, 6 och 7 §§ till (2006:813)
 
 Ikraft: 1 juli 2000
 
@@ -910,11 +904,9 @@ Saknr: H 90
 
 Bemynd.: 3, 5, 6, 11, 31 och 40 §§ (2006:813)
 
-Celexnr:
+Celexnr: 31998L0034
 
-1031998L0034
-
-Ikraft: 1 april 2011 i fråga om bilaga 1 och 1 januari
+10Ikraft: 1 april 2011 i fråga om bilaga 1 och 1 januari
 
 2012 i övriga delar
 
@@ -1162,7 +1154,7 @@ Ikraft: 6 juli 2007
 
 Saknr: H 165
 
-Upph. bilagorna 1 och 2; Ändr. 4, Bemynd.: 5, 6, och 40 § och 10 §§ samt bilaga 3 (2006:813)
+Upph. bilagorna 1 och 2; Ändr. 4, 6 Bemynd.: 5, 6, och 40 § och 10 §§ samt bilaga 3 (2006:813)
 
 Celexnr: 32009R1170
 
@@ -1444,9 +1436,7 @@ Upph. 6 §; rubrik närmast före 6 utgår; Ändr 4, 8, 21 och 23 §§
 
 Saknr: H 170:1
 
-Bemynd.: §
-
-5, 6, 7 och 40 §§ (2006:813)
+Bemynd.: 5, 6, 7 och 40 §§ § (2006:813)
 
 Celexnr: 32009L0054,
 
@@ -1486,9 +1476,7 @@ Upph. 65 § och bilaga 6; Ändr.
 
 Saknr: J 64:2
 
-Bemynd.:
-
-**2 §** (2006:812)
+Bemynd.: 2 § (2006:812)
 
 Celexnr: 32005R1688
 
@@ -1634,9 +1622,7 @@ Saknr: H 125:3
 
 Bemynd.: 7 § (2006:813)
 
-Celexnr: den
-
-32007L0068
+Celexnr: 32007L0068 den
 
 Ikraft: 26 november 2007
 
@@ -1870,9 +1856,7 @@ Ikraft: 6 juli 2007
 
 Saknr: H 15:1
 
-Bemynd.: b
-
-5, 13 och 40 §§ (2006:813)
+Bemynd.: 5, 13 och 40 §§ b (2006:813)
 
 Ikraft: 22 december 2008
 
@@ -2148,9 +2132,7 @@ Uppgifter om författningar
 
 Saknr: H 20:3
 
-Bemynd.:
-
-6 och 11 §§ (1974:271), 9 § (2006:1165)19, 8, 6 och 18 §§ (2006:1166)
+Bemynd.: 6 och 11 §§ (1974:271), 9 § (2006:1165)19, 8, 6 och 18 §§ (2006:1166)
 
 Celex: 32004R0856
 

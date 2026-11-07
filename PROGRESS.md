@@ -190,7 +190,7 @@ Targets:
 
 ## Integrity
 
-Audit of 54787 documents (2026-11-06T13:03:52Z):
+Audit of 54787 documents (2026-11-07T11:23:14Z):
 
 - schema errors: 0
 - duplicate ids: 0

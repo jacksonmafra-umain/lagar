@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d683e12a663442139b4363ae4430518f&res=11b9a7eaf0954e6a8380eb2fa5dc9507&lr=False&fn=STEMFS%202023_2%20FINAL%20WEB%20TA.pdf&elp=portal&elt=t&eloid=d683e12a663442139b4363ae4430518f"
 source_sha256: "7b2c12e26d84ef19d751b82347da1cc6e4a0ef2c70a4a17440b11e5702a20af5"
-fetched_at: "2026-10-31T03:22:15Z"
+fetched_at: "2026-11-03T13:03:37Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om säkerhetsskydd
@@ -90,7 +90,7 @@ I samband med ansökan om registerkontroll ska verksamhetsutövaren redovisa til
 
 Anmälan om säkerhetsskyddsavtal
 
-**9 §** En anmälan om avsikt att ingå säkerhetsskyddsavtal enligt 6 kap. 4 § ­säkerhetskyddssförordningen (2021:955) ska göras av verksamhetsutövaren till Statens energimyndighet på blankett som myndigheten tillhandahåller på sin webbplats.
+**9 §** En anmälan om avsikt att ingå säkerhetsskyddsavtal enligt 6 kap. 4 § s­äkerhetskyddssförordningen (2021:955) ska göras av verksamhetsutövaren till Statens energimyndighet på blankett som myndigheten tillhandahåller på sin webbplats.
 
 En anmälan enligt 6 kap. 5 § säkerhetsskyddsförordningen (2021:955) om att verksamhetsutövaren har ingått ett säkerhetsskyddsavtal eller anmälan om att ett säkerhetsskyddsavtal upphört att gälla ska göras till Statens energimyndighet på blankett som Säkerhetspolisen tillhandahåller på sin webbplats.
 

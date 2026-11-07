@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/49b4bc/globalassets/om-oss/lagstiftning/offentlig-kontroll/livsfs-2023-2_web_tillg.pdf"
 source_sha256: "6fbc95fd96074c22c544102a47df995d249d64068dd95e7fabf0831ffabdb62a"
-fetched_at: "2026-10-31T05:04:41Z"
+fetched_at: "2026-11-03T14:51:22Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter och allmänna råd om kontrollfrekvens för riskbaserad offentlig kontroll
@@ -51,7 +51,7 @@ Innehåll och tillämpningsområde
 
 Bestämmelser om riskbaserad offentlig kontroll finns bl.a. i − artikel 9 i Europaparlamentet och rådets förordning (EU) 2017/625 av den 15 mars 2017 om offentlig kontroll och annan offentlig verksamhet för att säkerställa tillämpningen av livsmedels- och foderlagstiftningen och av bestämmelser om djurs hälsa och djurskydd, växtskydd och växtskyddsmedel samt om ändring av Europaparlamentets och rådets förordningar (EG) nr 999/2001, (EG) nr 396/2005, (EG) nr 1069/2009, (EG) nr 1107/2009, (EU) nr
 
-1151/2012, (EU) nr 652/2014, (EU) 2016/429 och (EU) 2016/2031, rådets förordningar (EG) nr 1/2005 och (EG) nr 1099/2009 och ­rådets direktiv 98/58/EG, 1999/74/EG, 2007/43/EG, 2008/119/EG och 2008/120/EG och om upphävande av Europaparlamentets och rådets förordningar (EG) nr 854/2004 och (EG) nr 882/2004, rådets direktiv 89/608/EEG, 89/662/EEG, 90/425/EEG, 91/496/EEG,
+1151/2012, (EU) nr 652/2014, (EU) 2016/429 och (EU) 2016/2031, rådets förordningar (EG) nr 1/2005 och (EG) nr 1099/2009 och r­ådets direktiv 98/58/EG, 1999/74/EG, 2007/43/EG, 2008/119/EG och 2008/120/EG och om upphävande av Europaparlamentets och rådets förordningar (EG) nr 854/2004 och (EG) nr 882/2004, rådets direktiv 89/608/EEG, 89/662/EEG, 90/425/EEG, 91/496/EEG,
 
 96/23/EG, 96/93/EG och 97/78/EG samt rådets beslut 92/438/EEG (förordningen om offentlig kontroll), och − Livsmedelsverkets föreskrifter (LIVSFS 2005:21) om offentlig kontroll.
 
@@ -87,7 +87,7 @@ Risker förknippade med verksamheten
 
 **8 §** Vid bedömningen av vilket kontrollbehov som föreligger vid en verksamhet ska hänsyn tas till verksamhetens omfattning.
 
-**9 §** Vid bedömningen av vilket kontrollbehov som föreligger vid huvudkontor och livsmedelsanläggningar som huvudsakligen till­ ­ handahåller livsmedel till andra livsmedelsanläggningar, ska hänsyn tas till ett ökat kontrollbehov om det i verksamheten tillverkas, im­ porteras eller utformas livsmedelsinformation för livsmedel som omfattas av särskild tillstånds- eller anmälningsplikt enligt livsmedels­ lagstiftningen.
+**9 §** Vid bedömningen av vilket kontrollbehov som föreligger vid h­uvudkontor och livsmedelsanläggningar som huvudsakligen till­ handahåller livsmedel till andra livsmedelsanläggningar, ska hänsyn tas till ett ökat kontrollbehov om det i verksamheten tillverkas, im­ porteras eller utformas livsmedelsinformation för livsmedel som omfattas av särskild tillstånds- eller anmälningsplikt enligt livsmedels­ lagstiftningen.
 
 Förväntad efterlevnad av lagstiftningen
 
