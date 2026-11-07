@@ -14,7 +14,7 @@ name: Sync agency regulations
 
 on:
   schedule:
-    - cron: "17 5 * * 2" # Tuesdays
+    - cron: "17 5 * * 3" # Wednesdays, a day after the municipal sync
   workflow_dispatch:
     inputs:
       series:

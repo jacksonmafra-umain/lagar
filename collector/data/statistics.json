@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-03T15:16:20Z",
- "documents": 54786,
+ "generated_at": "2026-11-06T13:02:01Z",
+ "documents": 54787,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -27,18 +27,18 @@
    "types": {
     "act": {
      "documents": 3000,
-     "sections": 93738,
-     "words": 8804639
+     "sections": 93765,
+     "words": 8807544
     },
     "ordinance": {
      "documents": 6591,
-     "sections": 101864,
-     "words": 6895220
+     "sections": 101880,
+     "words": 6894013
     },
     "other_statute": {
      "documents": 1837,
-     "sections": 12462,
-     "words": 1343279
+     "sections": 12463,
+     "words": 1343463
     },
     "treaty": {
      "documents": 3515,
@@ -63,16 +63,16 @@
    "types": {
     "agency_regulation": {
      "documents": 5468,
-     "sections": 61188,
-     "words": 14295358
+     "sections": 61190,
+     "words": 14296515
     }
    },
    "issuers": 77,
    "text": {
     "web": 291,
-    "pdf": 4425,
+    "pdf": 4426,
     "ocr": 740,
-    "none": 12
+    "none": 11
    },
    "hosts": {
     "foreskrifter.riksarkivet.se": 1363,
@@ -143,12 +143,12 @@
    }
   },
   "case_law": {
-   "documents": 16475,
+   "documents": 16476,
    "types": {
     "case_report": {
-     "documents": 16404,
+     "documents": 16405,
      "sections": 715,
-     "words": 55713491
+     "words": 55714610
     },
     "case_notice": {
      "documents": 71,
@@ -158,13 +158,13 @@
    },
    "issuers": 20,
    "text": {
-    "web": 16475,
+    "web": 16476,
     "pdf": 0,
     "ocr": 0,
     "none": 0
    },
    "hosts": {
-    "rattspraxis.etjanst.domstol.se": 16475
+    "rattspraxis.etjanst.domstol.se": 16476
    }
   },
   "eu": {
@@ -188,7 +188,7 @@
     "eu_judgment": {
      "documents": 605,
      "sections": 35,
-     "words": 3651042
+     "words": 3651044
     }
    },
    "issuers": 5,
@@ -528,10 +528,10 @@
   }
  },
  "text": {
-  "web": 32453,
-  "pdf": 20372,
+  "web": 32454,
+  "pdf": 20373,
   "ocr": 1487,
-  "none": 474
+  "none": 473
  },
  "issuers": {
   "agency": 77,
@@ -641,10 +641,9 @@
   },
   "agency: Socialstyrelsen": {
    "documents": 110,
-   "pdf": 105,
+   "pdf": 106,
    "ocr": 4,
-   "scanned": 4,
-   "none": 1
+   "scanned": 4
   },
   "agency: Statens energimyndighet": {
    "documents": 65,
@@ -1652,7 +1651,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54786,
+   "documents": 54787,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
@@ -1661,8 +1660,8 @@
     "short_body": 548,
     "print_only": 259
    },
-   "unresolved_references": 39936,
-   "references": 39997
+   "unresolved_references": 39946,
+   "references": 40007
   },
   "sfs_pdf_verification": {
    "statuses": {

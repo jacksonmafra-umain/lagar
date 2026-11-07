@@ -12,6 +12,9 @@ on:
       - api/**
       - ruff.toml
       - .github/workflows/tools.yml
+      - .github/workflows/sync-*.yml
+      - .github/workflows/merge-sync-prs.yml
+      - .github/scripts/**
   push:
     branches: [main]
     paths:
@@ -24,6 +27,9 @@ on:
       - api/**
       - ruff.toml
       - .github/workflows/tools.yml
+      - .github/workflows/sync-*.yml
+      - .github/workflows/merge-sync-prs.yml
+      - .github/scripts/**
 
 permissions:
   contents: read

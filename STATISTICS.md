@@ -1,25 +1,25 @@
 # Corpus statistics
 
-Generated 2026-11-03T15:16:20Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-06T13:02:01Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,786 documents in 7 layers.
+The corpus holds 54,787 documents in 7 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
 | fundamental | fundamental_law | 4 | 494 | 33,286 |
-| sfs | act | 3,000 | 93,738 | 8,804,639 |
-| sfs | ordinance | 6,591 | 101,864 | 6,895,220 |
-| sfs | other_statute | 1,837 | 12,462 | 1,343,279 |
+| sfs | act | 3,000 | 93,765 | 8,807,544 |
+| sfs | ordinance | 6,591 | 101,880 | 6,894,013 |
+| sfs | other_statute | 1,837 | 12,463 | 1,343,463 |
 | sfs | treaty | 3,515 | 75 | 2,002,459 |
-| agency | agency_regulation | 5,468 | 61,188 | 14,295,358 |
-| case_law | case_report | 16,404 | 715 | 55,713,491 |
+| agency | agency_regulation | 5,468 | 61,190 | 14,296,515 |
+| case_law | case_report | 16,405 | 715 | 55,714,610 |
 | case_law | case_notice | 71 | 4 | 93,635 |
 | eu | eu_regulation | 40 | 0 | 2,191,225 |
 | eu | eu_directive | 28 | 0 | 651,177 |
 | eu | eu_decision | 2 | 0 | 14,266 |
-| eu | eu_judgment | 605 | 35 | 3,651,042 |
+| eu | eu_judgment | 605 | 35 | 3,651,044 |
 | region | county_regulation | 11,649 | 14,166 | 10,998,721 |
 | municipality | municipal_regulation | 5,572 | 44,907 | 12,425,695 |
 
@@ -76,7 +76,7 @@ Documents per host of their `source`, per layer (the ten largest).
 
 | host | documents |
 | --- | ---: |
-| rattspraxis.etjanst.domstol.se | 16,475 |
+| rattspraxis.etjanst.domstol.se | 16,476 |
 
 ### eu
 
@@ -112,12 +112,12 @@ Documents per host of their `source`, per layer (the ten largest).
 | --- | ---: | ---: | ---: | ---: |
 | fundamental | 4 | 0 | 0 | 0 |
 | sfs | 14,391 | 257 | 35 | 260 |
-| agency | 291 | 4,425 | 740 | 12 |
-| case_law | 16,475 | 0 | 0 | 0 |
+| agency | 291 | 4,426 | 740 | 11 |
+| case_law | 16,476 | 0 | 0 | 0 |
 | eu | 675 | 0 | 0 | 0 |
 | region | 420 | 10,768 | 428 | 33 |
 | municipality | 197 | 4,922 | 284 | 169 |
-| **all** | **32,453** (59.2 %) | **20,372** (37.2 %) | **1,487** (2.7 %) | **474** (0.9 %) |
+| **all** | **32,454** (59.2 %) | **20,373** (37.2 %) | **1,487** (2.7 %) | **473** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -313,10 +313,10 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 
 ### Corpus audit
 
-- Documents checked: 54,786
+- Documents checked: 54,787
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
-- Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,936 of 39,997 (mostly older amending acts, which are not collected as documents of their own)
+- Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,946 of 40,007 (mostly older amending acts, which are not collected as documents of their own)
 
 ### SFS text against the official PDF
 
