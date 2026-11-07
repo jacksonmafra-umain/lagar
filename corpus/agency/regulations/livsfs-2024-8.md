@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/4aa4dd/globalassets/om-oss/lagstiftning/marknadsordn---handelsnorm---varustand/livsfs-2024-8_web.pdf"
 source_sha256: "7a4646c8361a2bec57b50168f346042c8864aae595d0398cbf288d92d1d31f6d"
-fetched_at: "2026-10-31T05:04:40Z"
+fetched_at: "2026-11-03T14:51:21Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om handelsbeteckningar för fiskeri- och vattenbruksprodukter
@@ -1932,7 +1932,7 @@ Djuphavskapkummel
 
 − Indisk groplöja
 
-− Öring − Salmo trutta  äcköring, Insjööring, alternativa namn beroende på − B Havsöring typ/fångstområde − Salvelinus alpinus
+− Öring − Salmo trutta alternativa namn beroende på − Bäcköring, Insjööring, Havsöring typ/fångstområde − Salvelinus alpinus
 
 − Fjällröding, Röding
 

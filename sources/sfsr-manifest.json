@@ -62971,11 +62971,11 @@
     },
     {
       "amendments": 6,
-      "bytes": 17519,
+      "bytes": 17675,
       "number": "2000:1175",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T03:41:20Z",
-      "sha256": "2cb19dc3ac2737741ecfbf3aa7b3b5b280519ec511a61edddd580e057c5fb023",
+      "retrieved_at": "2026-11-03T12:52:56Z",
+      "sha256": "df77a2a48706a4772320ec9310ad004a5b57324e74f35b5e2539c63f49567af9",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2000:1175"
     },
     {
@@ -67132,8 +67132,8 @@
       "bytes": 32994,
       "number": "2003:1156",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T03:56:57Z",
-      "sha256": "4a4be7f36911d287f3a02bb28ee1323c523212a9032e0485305505e245d7f0ae",
+      "retrieved_at": "2026-11-03T12:52:54Z",
+      "sha256": "262806d54a19ab88e46bbd2032722724d07c6d3c63a1ebfa6309e5fd9dda49e8",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2003:1156"
     },
     {
@@ -67159,8 +67159,8 @@
       "bytes": 22147,
       "number": "2003:1178",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T03:57:03Z",
-      "sha256": "23680741304c13e2c0df2948143ba4b81990f07b9c5342eeabbde4a555b88c51",
+      "retrieved_at": "2026-11-03T12:52:52Z",
+      "sha256": "f7faaef71de15a7944cd7836992727c270c9ead46b84976e392ef3c46630d34a",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2003:1178"
     },
     {
@@ -67168,8 +67168,8 @@
       "bytes": 19198,
       "number": "2003:1179",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T03:57:05Z",
-      "sha256": "bbb0afcc7b20043ef08d506e05556e8fb85d115e08136dc73b5c024eb65149de",
+      "retrieved_at": "2026-11-03T12:52:50Z",
+      "sha256": "b5f36cb02aae690dba2f265b3a051d759298d0c03f5c723aed238d04a6016f22",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2003:1179"
     },
     {
@@ -67456,8 +67456,8 @@
       "bytes": 27812,
       "number": "2004:255",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T03:58:10Z",
-      "sha256": "4bf4470a785db75f05313ff95020315acc4054960420f56db4f9d8063b856983",
+      "retrieved_at": "2026-11-06T13:01:01Z",
+      "sha256": "4d9303e3504a67c01b9ef187718f0e35d056f3b3b543af550344f495c599c774",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2004:255"
     },
     {
@@ -69040,8 +69040,8 @@
       "bytes": 47790,
       "number": "2005:559",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:04:02Z",
-      "sha256": "2bce32b966703eabe151c3e12646cc2f20e253fe6c886b862a5b42a85052faac",
+      "retrieved_at": "2026-11-03T12:52:48Z",
+      "sha256": "e12c0184b822e090f80e2a675dec7f7885b18b84253e43b209ed4a6f283deefd",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2005:559"
     },
     {
@@ -71911,8 +71911,8 @@
       "bytes": 18926,
       "number": "2007:375",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:14:43Z",
-      "sha256": "340ae25b6b26a02edf183af8ce70bb88ffc637dc5ba8ed393706331646fbf482",
+      "retrieved_at": "2026-11-03T12:52:46Z",
+      "sha256": "d5a40d3d80eea1712e161a03f2d5bde83526c40644f6d6936910bc3646f1154b",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2007:375"
     },
     {
@@ -72028,8 +72028,8 @@
       "bytes": 46592,
       "number": "2007:572",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:15:09Z",
-      "sha256": "cc1ddb8b07a0bc31612520da0c4e6e859f426a4061154b0ca73848f5d5bf9faa",
+      "retrieved_at": "2026-11-03T12:52:44Z",
+      "sha256": "dafcb130bde5e870ac0d5f202c793f41e0a2ba1aadeeacc1afe291b55cd4aa06",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2007:572"
     },
     {
@@ -72622,8 +72622,8 @@
       "bytes": 26554,
       "number": "2007:845",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:17:21Z",
-      "sha256": "e5d64022ef831ac8030489669d91270958cd8b6e6f10285b6f916ae34161af3f",
+      "retrieved_at": "2026-11-06T13:00:59Z",
+      "sha256": "cdf70d8016d9d6b25cf12efd8498ed311f028245303d48265c162b196307a44f",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2007:845"
     },
     {
@@ -76699,8 +76699,8 @@
       "bytes": 162056,
       "number": "2009:641",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:32:31Z",
-      "sha256": "5bb2e5d3e851a55326529f06e46ee87a958073e6edb6f0b9cf1f411b7e64abdb",
+      "retrieved_at": "2026-11-03T12:52:42Z",
+      "sha256": "b4991e17022338e76aa27449bfa43fd57f75e581427198751f390baf8848d235",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2009:641"
     },
     {
@@ -77464,8 +77464,8 @@
       "bytes": 25906,
       "number": "2009:1237",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:35:22Z",
-      "sha256": "432deb9aca8b1c88062c65931bcb5e8cef5ef6f941332a7b4bde71c5e202af9b",
+      "retrieved_at": "2026-11-03T12:52:40Z",
+      "sha256": "06d699ece0272fb2794776fd2c8c2761d634e90097073dd365426cc255b01ac5",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2009:1237"
     },
     {
@@ -79615,8 +79615,8 @@
       "bytes": 75188,
       "number": "2011:13",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:43:25Z",
-      "sha256": "2d78a8c3d23dd06ab5078f5995b4078c6e8df12b9a59be9b4d4a8d97ccbdd220",
+      "retrieved_at": "2026-11-06T13:00:58Z",
+      "sha256": "518ec7ae5f895fe06cf008f64ef30f497d3d267939c934875db84ef5bb32340b",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2011:13"
     },
     {
@@ -80857,8 +80857,8 @@
       "bytes": 23788,
       "number": "2011:1165",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:48:02Z",
-      "sha256": "32ffbf8557c429201d97ccb6cfc4cb92ecbd018d212cb8ffc028d9af82b0e95d",
+      "retrieved_at": "2026-11-03T12:52:30Z",
+      "sha256": "04649baa82f50a1081aba41cf52d73c1b624600047c35f0ce13082fb14cdc8ba",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2011:1165"
     },
     {
@@ -81079,11 +81079,11 @@
     },
     {
       "amendments": 4,
-      "bytes": 14500,
+      "bytes": 14658,
       "number": "2011:1553",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:48:52Z",
-      "sha256": "851cb88dcc836a4b1f9a467586234274e345f0596ccf48f2e2d303b93856b542",
+      "retrieved_at": "2026-11-03T12:52:28Z",
+      "sha256": "fdae0ed8f33c989713bc91eebd1ba042918656cb3f10944bc9b49c435d5c2606",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2011:1553"
     },
     {
@@ -81421,11 +81421,11 @@
     },
     {
       "amendments": 1,
-      "bytes": 11626,
+      "bytes": 11784,
       "number": "2012:331",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:50:08Z",
-      "sha256": "e7762385417b9a07eb36378d40c2e41c663f6274e9382d885ec1ccba40e2ef56",
+      "retrieved_at": "2026-11-03T12:52:36Z",
+      "sha256": "7f6d609c6f3dcae05629ba6faedf7b19d9840da8f7e9b85080d6d7364d4c3908",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2012:331"
     },
     {
@@ -81667,8 +81667,8 @@
       "bytes": 15862,
       "number": "2012:565",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:51:04Z",
-      "sha256": "a43ef52ca8941acc412a8970962b8956f31fc81b39f036385c2d5af40fd9a10f",
+      "retrieved_at": "2026-11-03T12:52:34Z",
+      "sha256": "22e3562b7dbadbe14c0093be6504baf82f176272f15493fe66f6cd8ed71ce9af",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2012:565"
     },
     {
@@ -81676,8 +81676,8 @@
       "bytes": 16735,
       "number": "2012:566",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:51:06Z",
-      "sha256": "33fc922073f39b6fe8cd8016eaf3a35ab3cc9a7b8d3d9d297988cbfe48d6ab9d",
+      "retrieved_at": "2026-11-03T12:52:32Z",
+      "sha256": "70af80607134f8c1a7e06334b4f657b5c2ef847177a86dec63fffd87b61fb751",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2012:566"
     },
     {
@@ -82297,8 +82297,8 @@
       "bytes": 19274,
       "number": "2013:63",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:53:25Z",
-      "sha256": "68760922772bfb44850462983fceef880d53c2228e85ce0d492456c4f8e943ca",
+      "retrieved_at": "2026-11-03T12:52:38Z",
+      "sha256": "8abfe85e7b26e62233f688f96dc85ac8baf6d35fbb65713def552e2eeb316b9d",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2013:63"
     },
     {
@@ -82576,8 +82576,8 @@
       "bytes": 17596,
       "number": "2013:319",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T04:54:27Z",
-      "sha256": "d402d2f0f4d634b540bbb77f97a3cd1cf7f5899435490b60e6eacbe78f6c903c",
+      "retrieved_at": "2026-11-06T13:00:55Z",
+      "sha256": "19e069dc4c0411d02b909d5ac60d30bc9a127401fa189a03f83a14c8b11c6e2a",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2013:319"
     },
     {
@@ -85816,8 +85816,8 @@
       "bytes": 23218,
       "number": "2015:744",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T05:06:28Z",
-      "sha256": "1ed5425513077ff4c3ee047ac633b18135a4c6c0a89c65c5d5cdc6c5c75132a3",
+      "retrieved_at": "2026-11-06T13:00:49Z",
+      "sha256": "ab1d7a7f5e8fab57a234f1c94cd6224195e76f0e7ceb253720b5002b084a7405",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2015:744"
     },
     {
@@ -90793,8 +90793,8 @@
       "bytes": 22432,
       "number": "2019:66",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T05:25:05Z",
-      "sha256": "127e5ecb7504fbebdd34ac02ddca9af982155e7c82f459026f86d3a898296a71",
+      "retrieved_at": "2026-11-06T13:00:53Z",
+      "sha256": "0f6733ce0c36d475ffea8b9e7aecac58d38f8cd7b1f0e6c0891440123de1e0fb",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2019:66"
     },
     {
@@ -91171,8 +91171,8 @@
       "bytes": 21916,
       "number": "2019:502",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T05:26:29Z",
-      "sha256": "3dc625b9fc80d6a3bd8ccadaa67553a49d030b23c7979a850ebcf0524893cb0a",
+      "retrieved_at": "2026-11-06T13:00:52Z",
+      "sha256": "2baad27378780762cdb5924641386ef7f95630ff821ed3ceb98c0c9f2d29f910",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2019:502"
     },
     {
@@ -93583,8 +93583,8 @@
       "bytes": 13779,
       "number": "2021:709",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T05:35:30Z",
-      "sha256": "542ff6861de91ceee428c285cfb26f09c18c60742413440d27409f4e7c215e99",
+      "retrieved_at": "2026-11-03T12:52:26Z",
+      "sha256": "f2f7eb3208d42de2314e0161a08829d10ee20a80c949e598b6873f34c65ae798",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2021:709"
     },
     {
@@ -93592,8 +93592,8 @@
       "bytes": 13049,
       "number": "2021:713",
       "other_entries": [],
-      "retrieved_at": "2026-10-30T05:35:32Z",
-      "sha256": "e60d75e02be5e2b8db22e8b8597e51727b9915cfbb416cb2414f54da2021a3df",
+      "retrieved_at": "2026-11-03T12:52:24Z",
+      "sha256": "3dc0649f0e6ce2bd00f4d921cd8b2069498b39d82944ce6765abe4c25ea6a605",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=2021:713"
     },
     {

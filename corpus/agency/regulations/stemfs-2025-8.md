@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=36b97be6edbd43f281951666d3f373e9&res=5ca76f30971d4953801bc8908030d100&lr=False&fn=STEMFS%202025_8%20Ursprungsgarantier%20f%C3%B6r%20energi_webb.pdf&elp=portal&elt=t&eloid=36b97be6edbd43f281951666d3f373e9"
 source_sha256: "fd32b621d345f596f0728329a0003628c0de68a643e9c36aa0b1621ef0b65fef"
-fetched_at: "2026-10-31T03:20:06Z"
+fetched_at: "2026-11-03T13:01:27Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om ursprungsgarantier för energi
@@ -67,7 +67,7 @@ Nettoproduktion av el, gas, värme och kyla
 
 **3 §** Nettoelproduktion är producerad el som mäts vid en punkt placerad efter uttag av hjälpkraft och förluster i transformatorer.
 
-Om el som rapporteras enligt föreskrifterna inte utgör n­ ettoelproduktion enligt första stycket ska med nettoelproduktion avses rapporterad el som ­ justerats av Statens energimyndighet med en korrektionsfaktor. Hur korrektions­faktorn ska bestämmas framgår av 6 §.
+Om el som rapporteras enligt föreskrifterna inte utgör ­nettoelproduktion enligt första stycket ska med nettoelproduktion avses rapporterad el som j­usterats av Statens energimyndighet med en korrektionsfaktor. Hur korrektions­faktorn ska bestämmas framgår av 6 §.
 
 **4 §** Nettogasproduktion är bruttoproduktion av gas med avdrag för hjälp­ energi och förluster inom anläggningen.
 
@@ -415,7 +415,7 @@ STEMFS
 
 Hur el producerad med olika teknikkoder ska rapporteras
 
-**33 §** I de fall producenten enligt 19 § har angivit olika teknikkoder för e­ nheter inom samma produktionsanläggning ska anläggningen anses använda flera energikällor. Producenten ska rapportera andelen producerad el från ­respektive energikälla i en enhetsdeklaration. Rapporteringen ska baseras på mätning av elproduktionen.
+**33 §** I de fall producenten enligt 19 § har angivit olika teknikkoder för ­enheter inom samma produktionsanläggning ska anläggningen anses använda flera energikällor. Producenten ska rapportera andelen producerad el från ­respektive energikälla i en enhetsdeklaration. Rapporteringen ska baseras på mätning av elproduktionen.
 
 Hur egenanvändning av el rapporteras
 
@@ -431,7 +431,7 @@ Hur el från högeffektiv kraftvärme ska rapporteras
 
 Mätning och rapportering för gas
 
-**37 §** Nettogasproduktion per månad ska rapporteras till Statens e­ nergimyndighet i megawattimmar. Rapporteringen ska utföras digitalt i kontoföringssystemet av behörig företrädare för producenten.
+**37 §** Nettogasproduktion per månad ska rapporteras till Statens ­energimyndighet i megawattimmar. Rapporteringen ska utföras digitalt i kontoföringssystemet av behörig företrädare för producenten.
 
 Producenten ska efter att ha rapporterat in nettogasproduktion även ange distributionen av energi för perioden i en licensdeklaration. Producenten får ange om den har ett hållbarhetsbesked och typ av hållbarhetsbesked eller ­certifieringsbevis.
 
@@ -455,7 +455,7 @@ Producentens skyldighet att meddela förändring
 
 Ikraftträdande- och övergångsbestämmelser
 
-1\. Dessa föreskrifter träder i kraft när den Europeiska kommissionen ­ eddelat att det svenska kontoföringssystemet är anslutet till unionsdatabasen m i fråga om 41 § och i övrigt den 1 februari 2026.
+1\. Dessa föreskrifter träder i kraft när den Europeiska kommissionen ­meddelat att det svenska kontoföringssystemet är anslutet till unionsdatabasen i fråga om 41 § och i övrigt den 1 februari 2026.
 
 2\. Genom föreskrifterna upphör Statens energimyndighets föreskrifter (2017:2) om ursprungsgarantier för el att gälla.
 

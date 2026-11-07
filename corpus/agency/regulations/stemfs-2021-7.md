@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=d34fd4c19ed54bb3b91c7d93bd30111a&res=16b9308ab51349fab47a4a0a0b3017f7&lr=False&fn=STEMFS%202021_7webb.pdf&elp=portal&elt=t&eloid=d34fd4c19ed54bb3b91c7d93bd30111a"
 source_sha256: "d30ae8b1d1e832095cc0f8f044686aa2bd8300e2750cb1e2edcf995834e2e9b6"
-fetched_at: "2026-10-31T03:22:46Z"
+fetched_at: "2026-11-03T13:04:08Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om hållbarhetskriterier för biodrivmedel och biobränslen
@@ -146,7 +146,7 @@ En plats enligt första stycket kan vara en infrastruktur eller plats för över
 
 **8 §** Om ett parti bearbetas ska informationen om hållbarhetsegenskaperna och egenskaperna vad gäller minskade utsläpp av växthusgaser anpassas och tilldelas produkterna i enlighet med följande regler
 
-1\. när bearbetningen av ett råvaruparti endast ger en produkt som är avsedd för framställning av biodrivmedel eller biobränslen ska partiets storlek och de berörda kvantiteterna av hållbarhetsegenskaper och egenskaper som ­gäller minskade utsläpp av växthusgaser anpassas genom tillämpning av en omräkningsfaktor som anger förhållandet mellan massan av den p­ rodukt som är avsedd för sådan framställning och massan av den råvara som ­kommer in i processen, eller
+1\. när bearbetningen av ett råvaruparti endast ger en produkt som är avsedd för framställning av biodrivmedel eller biobränslen ska partiets storlek och de berörda kvantiteterna av hållbarhetsegenskaper och egenskaper som ­gäller minskade utsläpp av växthusgaser anpassas genom tillämpning av en omräkningsfaktor som anger förhållandet mellan massan av den ­produkt som är avsedd för sådan framställning och massan av den råvara som ­kommer in i processen, eller
 
 2\. när bearbetningen av ett råvaruparti ger mer än en produkt som är avsedd för framställning av biodrivmedel eller biobränslen ska för varje produkt en separat omräkningsfaktor tillämpas och en separat massbalans användas.
 
@@ -236,7 +236,7 @@ STEMFS
 
 2\. användningsområde, om bränslet har använts till transport, elproduktion, värmeproduktion (inbegripet kyla) eller kraftvärmeproduktion,
 
-3\. mängd, i kg för biogas i flytande form och i kg eller m3 vid 15 °C för övriga vätskor. För biogas i gasform anges mängden i kg eller m3 vid 0 °C och 101,325 kilopascal. För fasta bränslen anges mängden i MWh f­ ramräknat på det sätt som framgår av kontrollsystemet. När den hållbara mängden utgör en delmängd i ett bränsle ska andelen hållbart bränsle beräknas ­utifrån de ingående komponenternas energiinnehåll.
+3\. mängd, i kg för biogas i flytande form och i kg eller m3 vid 15 °C för övriga vätskor. För biogas i gasform anges mängden i kg eller m3 vid 0 °C och 101,325 kilopascal. För fasta bränslen anges mängden i MWh ­framräknat på det sätt som framgår av kontrollsystemet. När den hållbara mängden utgör en delmängd i ett bränsle ska andelen hållbart bränsle beräknas ­utifrån de ingående komponenternas energiinnehåll.
 
 4\. effektivt värmevärde, för biogas i flytande form uttryckt i MJ/kg, för övriga vätskor uttryckt i MJ/l vid 15 °C eller MJ/kg och för biogas i gasform uttryckt i MJ/kg eller MJ/m3 vid 0 °C och 101,325 kilopascal,
 
@@ -558,7 +558,7 @@ STEMFS
 
 där
 
-Th = temperatur, mätt i absolut temperatur (kelvin) för den nyttiggjorda v­ ärmen vid leveranspunkten,
+Th = temperatur, mätt i absolut temperatur (kelvin) för den nyttiggjorda ­värmen vid leveranspunkten,
 
 T0 = omgivningstemperatur, sätts till 273,15 kelvin (motsvarar 0 °C). Om överskottsvärmen exporteras för uppvärmning av byggnader får, vid en temperatur lägre än 150 °C (423,15 Kelvin), Ch alternativt definieras på följande sätt Ch =Carnot-effektivitet i värme på 150 °C (423,15 kelvin), som är 0,3546. I denna beräkning ska de faktiska verkningsgraderna användas, definierade som den årligen producerade mekaniska energin, elen respektive värmen, dividerat med den årligen tillförda energin.
 
@@ -630,7 +630,7 @@ Förklaring
 
 Biodiesel
 
-metylester som framställs genom förestring av v­ egetabilisk eller animalisk olja
+metylester som framställs genom förestring av ­vegetabilisk eller animalisk olja
 
 Butanol
 
@@ -646,7 +646,7 @@ etyltertiärbutyleter som framställs av bioetanol tillsammans med fossil råvar
 
 Fischer-Tropsch-bensin
 
-syntetiskt kolväte eller en blandning av syntetiska k­ olväten av bensinkvalitet som framställs av biomassa
+syntetiskt kolväte eller en blandning av syntetiska ­kolväten av bensinkvalitet som framställs av biomassa
 
 Fischer-Tropsch-diesel
 
@@ -1956,7 +1956,7 @@ Inneslutna rötrester, ingen förbränning av restgaser
 
 179 %
 
-Inneslutna rötrester, f­ örbränning av restgaser
+Inneslutna rötrester, ­förbränning av restgaser
 
 202 %
 
@@ -1972,7 +1972,7 @@ Inneslutna rötrester, ingen förbränning av restgaser
 
 41 %
 
-Inneslutna rötrester, f­ örbränning av restgaser
+Inneslutna rötrester, ­förbränning av restgaser
 
 63 %
 
@@ -1988,7 +1988,7 @@ Inneslutna rötrester, ingen förbränning av restgaser
 
 58 %
 
-Inneslutna rötrester, f­ örbränning av restgaser
+Inneslutna rötrester, ­förbränning av restgaser
 
 80 %
 
@@ -6744,7 +6744,7 @@ B7.4 Skogsmark
 
 Tabell B7. Faktorer för skogsmark med krontäckning på minst 10 % Klimatregion
 
-Mark­­ användning (FLU)
+Mark­ användning (FLU)
 
 Skötsel (FMG)
 

@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-03T13:25:02Z",
- "documents": 54790,
+ "generated_at": "2026-11-07T11:23:32Z",
+ "documents": 54787,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -27,18 +27,18 @@
    "types": {
     "act": {
      "documents": 3000,
-     "sections": 93738,
-     "words": 8804639
+     "sections": 93765,
+     "words": 8807544
     },
     "ordinance": {
      "documents": 6591,
-     "sections": 101864,
-     "words": 6895220
+     "sections": 101880,
+     "words": 6894013
     },
     "other_statute": {
      "documents": 1837,
-     "sections": 12462,
-     "words": 1343279
+     "sections": 12463,
+     "words": 1343463
     },
     "treaty": {
      "documents": 3515,
@@ -63,16 +63,16 @@
    "types": {
     "agency_regulation": {
      "documents": 5468,
-     "sections": 61190,
-     "words": 14296515
+     "sections": 61188,
+     "words": 14295358
     }
    },
    "issuers": 77,
    "text": {
     "web": 291,
-    "pdf": 4426,
+    "pdf": 4425,
     "ocr": 740,
-    "none": 11
+    "none": 12
    },
    "hosts": {
     "foreskrifter.riksarkivet.se": 1363,
@@ -143,12 +143,12 @@
    }
   },
   "case_law": {
-   "documents": 16475,
+   "documents": 16476,
    "types": {
     "case_report": {
-     "documents": 16404,
+     "documents": 16405,
      "sections": 715,
-     "words": 55713491
+     "words": 55714610
     },
     "case_notice": {
      "documents": 71,
@@ -158,13 +158,13 @@
    },
    "issuers": 20,
    "text": {
-    "web": 16475,
+    "web": 16476,
     "pdf": 0,
     "ocr": 0,
     "none": 0
    },
    "hosts": {
-    "rattspraxis.etjanst.domstol.se": 16475
+    "rattspraxis.etjanst.domstol.se": 16476
    }
   },
   "eu": {
@@ -188,7 +188,7 @@
     "eu_judgment": {
      "documents": 605,
      "sections": 35,
-     "words": 3651042
+     "words": 3651044
     }
    },
    "issuers": 5,
@@ -223,30 +223,30 @@
    }
   },
   "municipality": {
-   "documents": 5576,
+   "documents": 5572,
    "types": {
     "municipal_regulation": {
-     "documents": 5576,
-     "sections": 44998,
-     "words": 12449716
+     "documents": 5572,
+     "sections": 44907,
+     "words": 12425695
     }
    },
    "issuers": 285,
    "text": {
     "web": 197,
-    "pdf": 4927,
-    "ocr": 290,
-    "none": 162
+    "pdf": 4922,
+    "ocr": 284,
+    "none": 169
    },
    "hosts": {
     "docs.netpublicator.com": 104,
     "gallivare.se": 60,
     "karlshamn.se": 58,
-    "pitea.se": 58,
+    "pitea.se": 57,
     "boras.se": 56,
     "uddevalla.se": 54,
     "lerum.se": 51,
-    "laholm.se": 50,
+    "laholm.se": 49,
     "ale.se": 49,
     "lillaedet.se": 49,
     "bjurholm.se": 47,
@@ -259,9 +259,9 @@
     "kalmar.se": 39,
     "hassleholm.se": 39,
     "kungsor.se": 39,
-    "timra.se": 39,
     "bromolla.se": 38,
     "kommun.falkenberg.se": 38,
+    "timra.se": 38,
     "oxelosund.se": 37,
     "kungalv.se": 37,
     "vanersborg.se": 37,
@@ -393,7 +393,6 @@
     "boxholm.se": 16,
     "klippan.se": 16,
     "grastorp.se": 16,
-    "static.skovde.se": 16,
     "norberg.se": 16,
     "krokom.se": 16,
     "nykvarn.se": 15,
@@ -401,6 +400,7 @@
     "tjorn.se": 15,
     "toreboda.se": 15,
     "lysekil.se": 15,
+    "static.skovde.se": 15,
     "grums.se": 15,
     "falun.se": 15,
     "overkalix.se": 15,
@@ -528,10 +528,10 @@
   }
  },
  "text": {
-  "web": 32453,
-  "pdf": 20378,
-  "ocr": 1493,
-  "none": 466
+  "web": 32454,
+  "pdf": 20372,
+  "ocr": 1487,
+  "none": 474
  },
  "issuers": {
   "agency": 77,
@@ -559,11 +559,11 @@
   },
   "municipality": {
    "issuers": 280,
-   "documents": 5473,
+   "documents": 5469,
    "issuers_with_scans": 144,
-   "scanned": 348,
-   "ocr": 290,
-   "still_without_text": 58
+   "scanned": 346,
+   "ocr": 284,
+   "still_without_text": 62
   },
   "region": {
    "issuers": 21,
@@ -641,9 +641,10 @@
   },
   "agency: Socialstyrelsen": {
    "documents": 110,
-   "pdf": 106,
+   "pdf": 105,
    "ocr": 4,
-   "scanned": 4
+   "scanned": 4,
+   "none": 1
   },
   "agency: Statens energimyndighet": {
    "documents": 65,
@@ -748,9 +749,9 @@
   "municipality: Ekerö kommun": {
    "documents": 34,
    "pdf": 27,
-   "none": 4,
+   "none": 5,
    "scanned": 7,
-   "ocr": 3
+   "ocr": 2
   },
   "municipality: Eskilstuna kommun": {
    "documents": 20,
@@ -926,9 +927,9 @@
   "municipality: Järfälla kommun": {
    "documents": 16,
    "pdf": 8,
-   "none": 1,
+   "none": 3,
    "scanned": 8,
-   "ocr": 7
+   "ocr": 5
   },
   "municipality: Kalix kommun": {
    "documents": 25,
@@ -998,8 +999,8 @@
    "scanned": 1
   },
   "municipality: Laholms kommun": {
-   "documents": 50,
-   "pdf": 42,
+   "documents": 49,
+   "pdf": 41,
    "none": 5,
    "scanned": 8,
    "ocr": 3
@@ -1068,8 +1069,9 @@
   "municipality: Lomma kommun": {
    "documents": 50,
    "pdf": 48,
-   "ocr": 2,
-   "scanned": 2
+   "ocr": 1,
+   "scanned": 1,
+   "none": 1
   },
   "municipality: Ludvika kommun": {
    "documents": 19,
@@ -1200,8 +1202,8 @@
    "pdf": 3
   },
   "municipality: Piteå kommun": {
-   "documents": 58,
-   "pdf": 57,
+   "documents": 57,
+   "pdf": 56,
    "ocr": 1,
    "scanned": 1
   },
@@ -1231,8 +1233,8 @@
    "scanned": 1
   },
   "municipality: Skövde kommun": {
-   "documents": 16,
-   "pdf": 12,
+   "documents": 15,
+   "pdf": 11,
    "ocr": 4,
    "scanned": 4
   },
@@ -1333,8 +1335,8 @@
    "scanned": 1
   },
   "municipality: Timrå kommun": {
-   "documents": 39,
-   "pdf": 35,
+   "documents": 38,
+   "pdf": 34,
    "ocr": 4,
    "scanned": 4
   },
@@ -1401,10 +1403,10 @@
   },
   "municipality: Valdemarsviks kommun": {
    "documents": 21,
-   "ocr": 3,
-   "scanned": 5,
+   "ocr": 2,
+   "scanned": 4,
    "pdf": 16,
-   "none": 2
+   "none": 3
   },
   "municipality: Varbergs kommun": {
    "documents": 29,
@@ -1434,9 +1436,9 @@
   "municipality: Värmdö kommun": {
    "documents": 25,
    "pdf": 21,
-   "ocr": 3,
+   "ocr": 2,
    "scanned": 4,
-   "none": 1
+   "none": 2
   },
   "municipality: Västerås stad": {
    "documents": 21,
@@ -1650,7 +1652,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54790,
+   "documents": 54787,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
@@ -1659,8 +1661,8 @@
     "short_body": 548,
     "print_only": 259
    },
-   "unresolved_references": 39936,
-   "references": 39997
+   "unresolved_references": 39946,
+   "references": 40007
   },
   "sfs_pdf_verification": {
    "statuses": {

@@ -4188,7 +4188,7 @@
       "code": "HVS",
       "court": "Hovrätten för Västra Sverige",
       "status": "collected",
-      "documents": 627,
+      "documents": 628,
       "note": null,
       "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522HVS%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
       "issue": null
@@ -4333,7 +4333,7 @@
     "sfs": 11428,
     "fundamental": 4,
     "eu": 675,
-    "case_law": 16475
+    "case_law": 16476
   },
   "other_sources": [
     {

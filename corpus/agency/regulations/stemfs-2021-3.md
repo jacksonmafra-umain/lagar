@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=4429022018d9456486992de94c10bbe0&res=bf0b7c50ae2948ac892fdb89ae9c2562&lr=False&fn=STEMFS%202021_3webb.pdf&elp=portal&elt=t&eloid=4429022018d9456486992de94c10bbe0"
 source_sha256: "3c07a909ba110bdec720e108161b6372d2d3e0aa1fcea310377a2ccfe5646ca9"
-fetched_at: "2026-10-31T03:22:55Z"
+fetched_at: "2026-11-03T13:04:17Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter och allmänna råd om riskanalys och säkerhetsåtgärder för nätverk och informationssystem inom energisektorn, även känd som NIS-föreskrifter.
@@ -238,7 +238,7 @@ Allmänna råd till 3 kap. om informationssäkerhetskrav
 
 1§
 
-I arbetet med att uppfylla informationssäkerhetskrav bör leverantören ta ställning till vilken typ av övervakning och larmfunktioner som krävs för att å­ tgärder ska fungera.
+I arbetet med att uppfylla informationssäkerhetskrav bör leverantören ta ställning till vilken typ av övervakning och larmfunktioner som krävs för att ­åtgärder ska fungera.
 
 Systemloggar bör hanteras med hög säkerhet för att undvika att de riskerar att manipuleras. Loggning bör ske av olika typer av transaktioner, exempelvis av nätverkstrafik mellan segment, nätverkstrafik externt mot internet, förändringar i konfiguration av nätverkets skalskydd eller tilldelning av administratörs­ rättigheter.
 

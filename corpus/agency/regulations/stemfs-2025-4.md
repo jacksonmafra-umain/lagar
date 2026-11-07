@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=934a6e30e11d42fe9bfb0d127159f65e&res=87a0ac4c050e4d00ac984f6fab399cbc&lr=False&fn=STEMFS%202025_4webb.pdf&elp=portal&elt=t&eloid=934a6e30e11d42fe9bfb0d127159f65e"
 source_sha256: "ac7f77eabae3bfc6a9cc3bce05f7405c6abf18087d3940cde75fac2fda246c3b"
-fetched_at: "2026-10-31T03:19:35Z"
+fetched_at: "2026-11-03T13:00:57Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om tillsynsavgifter för tillhandahållande och användning av hållbara flygbränslen
@@ -37,7 +37,7 @@ Texten är hämtad ur pdf:en STEMFS 2025:4. Den tryckta författningssamlingen �
 
 beslutade den 3 september 2025.
 
-Statens energimyndighet (Energimyndigheten) föreskriver f­ öljande med stöd av 17 § förordning (2025:747) om tillhandahållande och användning av hållbara flygbränslen.
+Statens energimyndighet (Energimyndigheten) föreskriver ­följande med stöd av 17 § förordning (2025:747) om tillhandahållande och användning av hållbara flygbränslen.
 
 Inledande bestämmelser och definitioner
 
@@ -53,9 +53,9 @@ Inledande bestämmelser och definitioner
 
 Avgifter för tillsyn
 
-**3 §** Vid tillsyn av en flygbränsleleverantör kommer en avgift tas ut löpande. Taxan är 1 000 kronor per timme och ska b­ etalas av den tillsynade flygbränsleleverantören för varje påbörjad 30-minuters period. Den lägsta möjliga tillsynsavgiften blir ­således 500 kronor.
+**3 §** Vid tillsyn av en flygbränsleleverantör kommer en avgift tas ut löpande. Taxan är 1 000 kronor per timme och ska ­betalas av den tillsynade flygbränsleleverantören för varje påbörjad 30-minuters period. Den lägsta möjliga tillsynsavgiften blir ­således 500 kronor.
 
-**4 §** Om resor krävs för att utföra tillsynen ska, utöver t­imtaxa, även faktiska kostnader debiteras för transport, boende, t­raktamente
+**4 §** Om resor krävs för att utföra tillsynen ska, utöver ­timtaxa, även faktiska kostnader debiteras för transport, boende, ­traktamente
 
 STEMFS
 

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=72371ca5bdca4bd59d80444ba1fbcab5&res=3e8275863e884fb5ac54af8d2e96b260&lr=False&fn=STEMFS%202021_6_webb.pdf&elp=portal&elt=t&eloid=72371ca5bdca4bd59d80444ba1fbcab5"
 source_sha256: "0408f3be2c2becc21e76f4d5730bf2db1e534c6c1089f6dd47ae40b1cf495840"
-fetched_at: "2026-10-31T03:24:05Z"
+fetched_at: "2026-11-03T13:05:27Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om hållbarhetskriterier för biodrivmedel och flytande biobränslen
@@ -38,7 +38,7 @@ Texten är hämtad ur pdf:en STEMFS 2021:6. Den tryckta författningssamlingen �
 
 beslutade den 31 mars 2021.
 
-Statens energimyndighet beslutar med stöd av 14 §, 17 § och 23 § i förordningen (2011:1088) om hållbarhetskriterier för biodrivmedel och flytande biobränsle (hållbarhetsförordningen) att Statens energimyndighets ­föreskrifter (STEMFS 2011:2) om hållbarhetskriterier för biodrivmedel och flytande biobränslen ska ändras på följande sätt: dels att rubriken närmast före 2 kap. 3 § och rubriken närmast före 4 kap. 9 § ska ha följande lydelse, dels att 2 kap. 3–5 §§, 3 kap. 1 §, 4 kap. 1 § och 9–10 §§ ska ha följande lydelse, dels att det ska införas nya paragrafer 2 kap. 4 a §, 5 a § och 3 kap. 1 a § av följande lydelse.
+Statens energimyndighet beslutar med stöd av 14 §, 17 § och 23 § i förordningen (2011:1088) om hållbarhetskriterier för biodrivmedel och flytande biobränsle (hållbarhetsförordningen) att Statens energimyndighets f­öreskrifter (STEMFS 2011:2) om hållbarhetskriterier för biodrivmedel och flytande biobränslen ska ändras på följande sätt: dels att rubriken närmast före 2 kap. 3 § och rubriken närmast före 4 kap. 9 § ska ha följande lydelse, dels att 2 kap. 3–5 §§, 3 kap. 1 §, 4 kap. 1 § och 9–10 §§ ska ha följande lydelse, dels att det ska införas nya paragrafer 2 kap. 4 a §, 5 a § och 3 kap. 1 a § av följande lydelse.
 
 Kapitel 2 Hållbarhetsbesked och anläggningsbesked
 
