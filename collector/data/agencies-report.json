@@ -13,7 +13,7 @@
     },
     "shared": 24,
     "kommuner": 290,
-    "kommuner_configured": 285,
+    "kommuner_configured": 286,
     "courts": 23,
     "courts_collected": 20
   },
@@ -2032,10 +2032,10 @@
         "kommun": "Mönsterås",
         "url": "https://www.monsteras.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/326",
-        "collection": null,
+        "collection": "Regler och styrande dokument",
         "status": "no_adapter",
         "documents": 0,
-        "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30 and again on 2026-10-31 (no TCP connection on port 443); retry later."
+        "note": null
       },
       {
         "code": "0862",
