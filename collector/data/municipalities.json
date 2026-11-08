@@ -2326,6 +2326,24 @@
         "systematiskt brandskyddsarbete"
       ]
     },
+    "0861": {
+      "name": "Mönsterås",
+      "issuer": "Mönsterås kommun",
+      "region_code": "08",
+      "collection": "Regler och styrande dokument",
+      "strategy": "html_index",
+      "resident_filter": true,
+      "hosts": ["www.monsteras.se"],
+      "listings": [
+        "https://www.monsteras.se/kommun-och-politik/kommunfakta/regler-och-styrande-dokument/",
+        "https://www.monsteras.se/kommun-och-politik/kommunfakta/ekonomi-och-budget/taxor-och-avgifter/"
+      ],
+      "link_pattern": "^https://www\\.monsteras\\.se/app/uploads/\\d{4}/\\d{2}/[^/?#]+\\.pdf$",
+      "number": [
+        {"from": "href", "pattern": "/app/uploads/(\\d{4}/\\d{2}/[^/]+?)\\.pdf$"}
+      ],
+      "title_strip": ["\\s*\\(pdf\\)\\s*$"]
+    },
     "0862": {
       "name": "Emmaboda",
       "issuer": "Emmaboda kommun",
