@@ -13538,6 +13538,136 @@
       "url": "https://www.hultsfred.se/files/2024/12/Foreskrifter-nyttjande-allman-platsmark.pdf"
     },
     {
+      "bytes": 431690,
+      "content_type": "application/pdf",
+      "id": "0861-2021-06-abva-18-antagen-av-kf-2",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:33Z",
+      "sha256": "af59f45936ecc3ac5620141d4974c6464ef6994d0f2e4352d3b397bedb5ecc57",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2021/06/ABVA-18-antagen-av-KF-2.pdf"
+    },
+    {
+      "bytes": 319620,
+      "content_type": "application/pdf",
+      "id": "0861-2021-06-faststallda-frister-rengoring-sotning-kf-110-17-11-27",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:32Z",
+      "sha256": "8d77a53f511c867a8b90f3a406d58615022fb168092bb5d6700e7a6cc8d6156e",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2021/06/Faststallda-frister-rengoring_sotning-Kf-%C2%A7-110-17_11_27.pdf"
+    },
+    {
+      "bytes": 203502,
+      "content_type": "application/pdf",
+      "id": "0861-2021-06-taxor-barnomsorgen-2021",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:35Z",
+      "sha256": "ee62dfafbab73f9e17acc620452e9a7664a93bf7edc4b5d45134fbf72da00182",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2021/06/Taxor-barnomsorgen-2021.pdf"
+    },
+    {
+      "bytes": 9965,
+      "content_type": "application/pdf",
+      "id": "0861-2021-07-lokala-ordningsforeskrifter-for-hamnen-i-monsteras-tatort",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:25Z",
+      "sha256": "3d82332eac218b78f05ec2dc275360a295a802e30c22f3a986759992b1be3eab",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2021/07/Lokala-ordningsforeskrifter-for-hamnen-i-Monsteras-tatort-..pdf"
+    },
+    {
+      "bytes": 519686,
+      "content_type": "application/pdf",
+      "id": "0861-2022-06-alaggande-om-renhallning-av-gangbanor-kf-1996",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:28Z",
+      "sha256": "1c04c832df994b29cb0ac2205b90cb484cedcf1082b8478344f181dd7f8ec979",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2022/06/Alaggande-om-renhallning-av-gangbanor-KF-1996.pdf"
+    },
+    {
+      "bytes": 170641,
+      "content_type": "application/pdf",
+      "id": "0861-2025-08-avfallsforeskrifter-inkl-bilagor",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:34Z",
+      "sha256": "6b2ae33312897594951bcda210859d18b5b14201d92a03b2dfdc40676106a0e5",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2025/08/Avfallsforeskrifter-inkl-bilagor.pdf"
+    },
+    {
+      "bytes": 30764065,
+      "content_type": "application/pdf",
+      "id": "0861-2025-09-lokala-ordningsforeskrifter-antagna-20250616-komprimerad",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:25Z",
+      "sha256": "234da1d82f86900645343a2a7970171fd3cd12a917aaef6cacd170a0145bca43",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2025/09/Lokala-ordningsforeskrifter-antagna-20250616_komprimerad.pdf"
+    },
+    {
+      "bytes": 1326143,
+      "content_type": "application/pdf",
+      "id": "0861-2025-09-lokala-ordningsforeskrifter-torghandel-antagna-20250616",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:27Z",
+      "sha256": "ebc2dadade27e2584ecf13467dfee6d4c159f9a42e3a2c67568c99c6af22d9e0",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2025/09/Lokala-ordningsforeskrifter-torghandel-antagna-20250616.pdf"
+    },
+    {
+      "bytes": 682111,
+      "content_type": "application/pdf",
+      "id": "0861-2026-01-miljotaxa-2026-pdf",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:38Z",
+      "sha256": "f51bf9cb1107bcacf3d48775f4f2664f3bd91f2e8020565967567025a4ed056f",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2026/01/Miljotaxa-2026-PDF.pdf"
+    },
+    {
+      "bytes": 167641,
+      "content_type": "application/pdf",
+      "id": "0861-2026-01-vatten-och-avloppstaxa-2026-beslutad-kf",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:39Z",
+      "sha256": "aced1300c9472bcd8744401ad275cda5884bbc1a727cf933b74f2ad1c536bdbb",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2026/01/Vatten-och-Avloppstaxa-2026-beslutad-KF.pdf"
+    },
+    {
+      "bytes": 884519,
+      "content_type": "application/pdf",
+      "id": "0861-2026-04-pbl-taxa-2026",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:36Z",
+      "sha256": "46694aeeaecf3d473e4fa94962173fb30acfb12cd02e7ff433d5d4062ce6b7cf",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2026/04/PBL-taxa-2026.pdf"
+    },
+    {
+      "bytes": 16029759,
+      "content_type": "application/pdf",
+      "id": "0861-2026-07-lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:30Z",
+      "sha256": "fd3b3fafb4a0f6a88e7c5e70708bce201dd454923d15b71ae81c5ea3f5b52a8e",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2026/07/Lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon.pdf"
+    },
+    {
+      "bytes": 629894,
+      "content_type": "application/pdf",
+      "id": "0861-2026-09-avfallstaxa-2026-1",
+      "municipality_code": "0861",
+      "retrieved_at": "2026-11-08T03:24:40Z",
+      "sha256": "4434993b61069f8ccf820b15a0995e9e61c1ac8132679aa60e01debba85f3756",
+      "text": "pdf",
+      "url": "https://www.monsteras.se/app/uploads/2026/09/Avfallstaxa-2026-1.pdf"
+    },
+    {
       "bytes": 625790,
       "content_type": "application/pdf",
       "id": "0862-18-111d400a1977e8b5ced4cd1",

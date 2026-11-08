@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-07T11:25:24Z",
- "documents": 54791,
+ "generated_at": "2026-11-08T03:26:24Z",
+ "documents": 54804,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -223,18 +223,18 @@
    }
   },
   "municipality": {
-   "documents": 5576,
+   "documents": 5589,
    "types": {
     "municipal_regulation": {
-     "documents": 5576,
-     "sections": 44998,
-     "words": 12449716
+     "documents": 5589,
+     "sections": 45220,
+     "words": 12485207
     }
    },
-   "issuers": 285,
+   "issuers": 286,
    "text": {
     "web": 197,
-    "pdf": 4927,
+    "pdf": 4940,
     "ocr": 290,
     "none": 162
    },
@@ -415,6 +415,7 @@
     "norsjo.se": 14,
     "dorotea.se": 14,
     "botkyrka.se": 13,
+    "monsteras.se": 13,
     "herrljunga.se": 13,
     "lidkoping.se": 13,
     "degerfors.se": 13,
@@ -529,7 +530,7 @@
  },
  "text": {
   "web": 32454,
-  "pdf": 20377,
+  "pdf": 20390,
   "ocr": 1493,
   "none": 467
  },
@@ -538,14 +539,14 @@
   "case_law": 20,
   "eu": 5,
   "fundamental": 1,
-  "municipality": 285,
+  "municipality": 286,
   "region": 21,
   "sfs": 208
  },
  "geography": {
   "counties": 21,
   "county_total": 21,
-  "kommuner": 285,
+  "kommuner": 286,
   "kommun_total": 290
  },
  "pdf": {
@@ -558,8 +559,8 @@
    "still_without_text": 3
   },
   "municipality": {
-   "issuers": 280,
-   "documents": 5473,
+   "issuers": 281,
+   "documents": 5486,
    "issuers_with_scans": 144,
    "scanned": 348,
    "ocr": 290,
@@ -1651,7 +1652,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54791,
+   "documents": 54804,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,

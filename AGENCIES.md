@@ -231,7 +231,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 0834 | [Torsås](https://www.torsas.se/) | Samlade styrdokument | partly collected | 4 | [#323](https://github.com/jacksonmafra-umain/lagar/issues/323) | - |
 | 0840 | [Mörbylånga](https://www.morbylanga.se/) | Taxor och skyddsföreskrifter | partly collected | 4 | [#324](https://github.com/jacksonmafra-umain/lagar/issues/324) | - |
 | 0860 | [Hultsfred](https://www.hultsfred.se/) | Styrdokument | partly collected | 5 | [#325](https://github.com/jacksonmafra-umain/lagar/issues/325) | - |
-| 0861 | [Mönsterås](https://www.monsteras.se/) | Regler och styrande dokument | not collected: no adapter yet | 0 | [#326](https://github.com/jacksonmafra-umain/lagar/issues/326) | - |
+| 0861 | [Mönsterås](https://www.monsteras.se/) | Regler och styrande dokument | partly collected | 13 | [#326](https://github.com/jacksonmafra-umain/lagar/issues/326) | - |
 | 0862 | [Emmaboda](https://www.emmaboda.se/) | Regler och styrande dokument | partly collected | 11 | [#327](https://github.com/jacksonmafra-umain/lagar/issues/327) | - |
 | 0880 | [Kalmar](https://kalmar.se/) | Författningssamlingen | partly collected | 39 | [#328](https://github.com/jacksonmafra-umain/lagar/issues/328) | - |
 | 0881 | [Nybro](https://www.nybro.se/) | Taxor och avgifter, lokala föreskrifter | partly collected | 23 | [#329](https://github.com/jacksonmafra-umain/lagar/issues/329) | - |
