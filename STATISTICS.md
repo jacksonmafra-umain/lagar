@@ -1,10 +1,10 @@
 # Corpus statistics
 
-Generated 2026-11-07T11:25:24Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-08T03:25:09Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,791 documents in 7 layers.
+The corpus holds 54,804 documents in 7 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
@@ -21,7 +21,7 @@ The corpus holds 54,791 documents in 7 layers.
 | eu | eu_decision | 2 | 0 | 14,266 |
 | eu | eu_judgment | 605 | 35 | 3,651,044 |
 | region | county_regulation | 11,649 | 14,166 | 10,998,721 |
-| municipality | municipal_regulation | 5,576 | 44,998 | 12,449,716 |
+| municipality | municipal_regulation | 5,589 | 45,220 | 12,485,207 |
 
 Sections count paragraphs that open with a section number (`1 §`, `2 a §`); case law and EU documents have none.
 
@@ -33,11 +33,11 @@ Sections count paragraphs that open with a section number (`1 §`, `2 a §`); ca
 | case_law | 20 |
 | eu | 5 |
 | fundamental | 1 |
-| municipality | 285 |
+| municipality | 286 |
 | region | 21 |
 | sfs | 208 |
 
-County regulations cover 21 of 21 counties; municipal regulations cover 285 of 290 kommuner.
+County regulations cover 21 of 21 counties; municipal regulations cover 286 of 290 kommuner.
 
 ## Origins
 
@@ -104,7 +104,7 @@ Documents per host of their `source`, per layer (the ten largest).
 | laholm.se | 50 |
 | ale.se | 49 |
 | lillaedet.se | 49 |
-| 275 other hosts | 4,987 |
+| 276 other hosts | 5,000 |
 
 ## How the text was obtained
 
@@ -116,8 +116,8 @@ Documents per host of their `source`, per layer (the ten largest).
 | case_law | 16,476 | 0 | 0 | 0 |
 | eu | 675 | 0 | 0 | 0 |
 | region | 420 | 10,768 | 428 | 33 |
-| municipality | 197 | 4,927 | 290 | 162 |
-| **all** | **32,454** (59.2 %) | **20,377** (37.2 %) | **1,493** (2.7 %) | **467** (0.9 %) |
+| municipality | 197 | 4,940 | 290 | 162 |
+| **all** | **32,454** (59.2 %) | **20,390** (37.2 %) | **1,493** (2.7 %) | **467** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -128,7 +128,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | layer | issuers using PDF | documents | issuers with scans | scanned | read by OCR | still without text |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | agency | 75 | 5,391 | 12 | 743 | 740 | 3 |
-| municipality | 280 | 5,473 | 144 | 348 | 290 | 58 |
+| municipality | 281 | 5,486 | 144 | 348 | 290 | 58 |
 | region | 21 | 11,589 | 15 | 461 | 428 | 33 |
 | sfs | 3 | 293 | 1 | 36 | 35 | 1 |
 
@@ -313,7 +313,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 
 ### Corpus audit
 
-- Documents checked: 54,791
+- Documents checked: 54,804
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
 - Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,946 of 40,007 (mostly older amending acts, which are not collected as documents of their own)
