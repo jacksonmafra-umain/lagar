@@ -2090,7 +2090,7 @@
         "url": "https://www.monsteras.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/326",
         "description": null,
-        "note": "www.monsteras.se did not answer the collector (robots.txt and pages time out) on 2026-10-30 and again on 2026-10-31 (no TCP connection on port 443); retry later.",
+        "note": null,
         "code": "0861",
         "county": "Kalmar län"
       },
