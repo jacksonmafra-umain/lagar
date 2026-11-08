@@ -116,6 +116,36 @@ class CitationNameTests(unittest.TestCase):
         for title, name in cases.items():
             self.assertEqual(export_corpus.citation_name({"title": title}), name)
 
+    def test_multi_word_names_get_their_definite_form(self):
+        cases = {
+            "Offentlighets- och sekretesslag (2009:400)": "offentlighets- och sekretesslagen (2009:400)",
+            "Plan- och bygglag (2010:900)": "plan- och bygglagen (2010:900)",
+            "Hälso- och sjukvårdslag (2017:30)": "hälso- och sjukvårdslagen (2017:30)",
+            "Förordning om nationella järnvägssystem (2022:419)":
+                "förordningen om nationella järnvägssystem (2022:419)",
+            "Förordning med instruktion för Polismyndigheten (2022:1718)":
+                "förordningen med instruktion för Polismyndigheten (2022:1718)",
+        }
+        for title, name in cases.items():
+            with self.subTest(title=title):
+                self.assertEqual(export_corpus.citation_name({"title": title}), name)
+
+    def test_multi_word_name_keeps_words_without_a_known_definite_form(self):
+        meta = {"title": "Riksbankens föreskrifter (2006:30) om sedlar", "number": "2006:30"}
+        self.assertEqual(export_corpus.citation_name(meta), "Riksbankens föreskrifter (2006:30) om sedlar")
+
+    def test_multi_word_name_needs_its_own_number_in_the_parentheses(self):
+        meta = {"title": "Förordning om ändring i förordningen (SKOLFS 2011:144) om läroplan", "number": "N2025:9"}
+        self.assertEqual(export_corpus.citation_name(meta), "N2025:9")
+
+    def test_page_marker_is_dropped(self):
+        meta = {"title": "/r1/ Förordning (1989:439) om statsbidrag", "number": "1989:439"}
+        self.assertEqual(export_corpus.citation_name(meta), "förordningen (1989:439) om statsbidrag")
+
+    def test_fundamental_law_is_cited_by_name_and_number(self):
+        meta = {"title": "Regeringsformen", "number": "1974:152", "type": "fundamental_law"}
+        self.assertEqual(export_corpus.citation_name(meta), "regeringsformen (1974:152)")
+
     def test_other_titles_fall_back_to_the_number(self):
         meta = {"title": "Lantmäteriverkets föreskrifter om stämpelskatt", "number": "LMFS 2009:1"}
         self.assertEqual(export_corpus.citation_name(meta), "LMFS 2009:1")

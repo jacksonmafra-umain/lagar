@@ -47,7 +47,16 @@ _CHAPTER = re.compile(r"^(#+ )?(\d+) ?([a-z])? kap\.(?:\s|$)")
 _TRANSITIONAL = re.compile(r"^(#+ )?[\w ,-]*(?:övergångs|ikraftträdande)bestämmelser(na)?$", re.IGNORECASE)
 _MARKER = re.compile(r"/(Träder i kraft I|Upphör att gälla U):([^/\n]*)/")
 _DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
-_SFS_TITLE = re.compile(r"^(\S+) (\([^)]*\d{4}:\d+[^)]*\).*)$")
+_SFS_TITLE = re.compile(r"^(.+?) (\([^)]*\d{4}:\d+[^)]*\).*)$")
+# A name whose head noun comes first ("Förordning om ...") takes the definite form on its first
+# word; any other ("Plan- och bygglag") on its last.
+_HEAD_FIRST = re.compile(r"^(\S+)( (?:om|med|angående|för|till|i|rörande) .*)$")
+_SFS_NUMBER = re.compile(r"^\d{4}:\d+$")
+_PAGE_MARKER = re.compile(r"^/?r\d+/\s*")
+# Words naming a kind of statute, the only ones a multi-word name gives a definite form:
+# "föreskrifter" or "cirkulär" would need another ending, so those names are cited as written.
+_STATUTE_WORDS = ("lag", "balk", "förordning", "kungörelse", "ordning", "stadga", "instruktion",
+                  "tillkännagivande", "förordnande", "resolution", "taxa")
 
 
 class Document:
@@ -190,20 +199,45 @@ def statute_parts(paragraphs_):
     return parts
 
 
-def citation_name(meta):
-    """How a statute is cited: "lagen (1982:80) om anställningsskydd", "brottsbalken (1962:700)"."""
-    title = meta.get("title") or ""
-    match = _SFS_TITLE.match(title)
-    if not match:
-        return meta.get("number") or title
-    word = match.group(1).lower()
+def _definite(word):
     if word.endswith(("ande", "ente")):
-        word += "t"
-    elif word.endswith(("a", "e")):
-        word += "n"
+        return word + "t"
+    if word.endswith(("a", "e")):
+        return word + "n"
+    return word + "en"
+
+
+def citation_name(meta):
+    """How a statute is cited: "lagen (1982:80) om anställningsskydd", "brottsbalken (1962:700)",
+    "offentlighets- och sekretesslagen (2009:400)", "regeringsformen (1974:152)"."""
+    title = meta.get("title") or ""
+    number = meta.get("number") or ""
+    match = _SFS_TITLE.match(_PAGE_MARKER.sub("", title))
+    if not match:
+        if meta.get("type") == "fundamental_law" and title and _SFS_NUMBER.match(number):
+            return f"{title[0].lower()}{title[1:]} ({number})"
+        return number or title
+    name, rest = match.group(1), match.group(2)
+    if " " not in name:
+        return f"{_definite(name.lower())} {rest}"
+    # A multi-word name: the first parentheses must hold this statute's number, not one it
+    # amends ("Förordning om ändring i förordningen (SKOLFS 2011:144) ...").
+    if number and _digits(number) not in _digits(rest.split(")")[0]):
+        return number
+    head = _HEAD_FIRST.match(name)
+    if head:
+        word, before, after = head.group(1), "", head.group(2)
     else:
-        word += "en"
-    return f"{word} {match.group(2)}"
+        before, _, word = name.rpartition(" ")
+        before, after = before + " ", ""
+    if not word.lower().endswith(_STATUTE_WORDS):
+        return f"{name} {rest}"
+    name = before + _definite(word) + after
+    return f"{name[0].lower()}{name[1:]} {rest}"
+
+
+def _digits(text):
+    return re.sub(r"\D", "", text)
 
 
 def citation(name, chapter, section):
