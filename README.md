@@ -19,7 +19,7 @@ apps for Android, iOS and the web.
 | Agency regulations (80 series) | 5468 | 5513 | 99.2% |
 | Case law | 16476 | 16640 | 99.0% |
 | EU law (2 series) | 675 | 681 | 99.1% |
-| County regulations | 11649 | unknown | - |
+| County regulations | 11658 | unknown | - |
 | Municipal regulations | 5589 | unknown | - |
 | Public services | 0 | unknown | - |
 

@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-08T03:26:24Z",
- "documents": 54804,
+ "generated_at": "2026-11-09T13:31:40Z",
+ "documents": 54813,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -203,23 +203,23 @@
    }
   },
   "region": {
-   "documents": 11649,
+   "documents": 11658,
    "types": {
     "county_regulation": {
-     "documents": 11649,
-     "sections": 14166,
-     "words": 10998721
+     "documents": 11658,
+     "sections": 14168,
+     "words": 11004808
     }
    },
    "issuers": 21,
    "text": {
     "web": 420,
-    "pdf": 10768,
+    "pdf": 10777,
     "ocr": 428,
     "none": 33
    },
    "hosts": {
-    "lansstyrelsen.se": 11649
+    "lansstyrelsen.se": 11658
    }
   },
   "municipality": {
@@ -530,7 +530,7 @@
  },
  "text": {
   "web": 32454,
-  "pdf": 20390,
+  "pdf": 20399,
   "ocr": 1493,
   "none": 467
  },
@@ -568,7 +568,7 @@
   },
   "region": {
    "issuers": 21,
-   "documents": 11589,
+   "documents": 11598,
    "issuers_with_scans": 15,
    "scanned": 461,
    "ocr": 428,
@@ -1565,8 +1565,8 @@
    "scanned": 1
   },
   "region: Länsstyrelsen i Jämtlands län": {
-   "documents": 1648,
-   "pdf": 1623,
+   "documents": 1649,
+   "pdf": 1624,
    "ocr": 19,
    "scanned": 25,
    "none": 6
@@ -1579,11 +1579,11 @@
    "none": 4
   },
   "region: Länsstyrelsen i Kronobergs län": {
-   "documents": 360,
+   "documents": 361,
    "ocr": 80,
    "scanned": 81,
    "none": 1,
-   "pdf": 279
+   "pdf": 280
   },
   "region: Länsstyrelsen i Norrbottens län": {
    "documents": 736,
@@ -1598,8 +1598,8 @@
    "pdf": 321
   },
   "region: Länsstyrelsen i Uppsala län": {
-   "documents": 388,
-   "pdf": 380,
+   "documents": 390,
+   "pdf": 382,
    "ocr": 8,
    "scanned": 8
   },
@@ -1636,8 +1636,8 @@
    "none": 1
   },
   "region: Länsstyrelsen i Östergötlands län": {
-   "documents": 286,
-   "pdf": 268,
+   "documents": 290,
+   "pdf": 272,
    "ocr": 12,
    "scanned": 18,
    "none": 6
@@ -1652,7 +1652,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54804,
+   "documents": 54813,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
