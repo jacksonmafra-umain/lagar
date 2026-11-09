@@ -953,7 +953,7 @@
       {
         "name": "Uppsala län",
         "status": "partial",
-        "documents": 388,
+        "documents": 390,
         "url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/224",
         "description": "Uppsala läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
@@ -977,7 +977,7 @@
       {
         "name": "Östergötlands län",
         "status": "partial",
-        "documents": 286,
+        "documents": 290,
         "url": "https://www.lansstyrelsen.se/ostergotland/om-oss/om-lansstyrelsen-i-ostergotlands-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/226",
         "description": "Östergötlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
@@ -1001,7 +1001,7 @@
       {
         "name": "Kronobergs län",
         "status": "partial",
-        "documents": 360,
+        "documents": 361,
         "url": "https://www.lansstyrelsen.se/kronoberg/om-oss/om-lansstyrelsen-i-kronobergs-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/228",
         "description": "Kronobergs läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
@@ -1049,7 +1049,7 @@
       {
         "name": "Skåne län",
         "status": "partial",
-        "documents": 626,
+        "documents": 627,
         "url": "https://www.lansstyrelsen.se/skane/om-oss/om-lansstyrelsen-skane/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/232",
         "description": "Skåne läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
@@ -1157,7 +1157,7 @@
       {
         "name": "Jämtlands län",
         "status": "partial",
-        "documents": 1648,
+        "documents": 1649,
         "url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/241",
         "description": "Jämtlands läns författningssamling innehåller bland annat föreskrifter om sjötrafik, natur- och kulturreservat och strandskydd. Föreskrifter om naturskydd finns även centralt hos Naturvårdsverket. Vägtrafikföreskrifter som länsstyrelsen beslutar om finns i Svensk trafikföreskriftssamling (STFS).",
