@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T13:33:25Z",
+ "generated_at": "2026-11-09T14:27:09Z",
  "documents": 54813,
  "layers": {
   "fundamental": {
@@ -148,7 +148,7 @@
     "case_report": {
      "documents": 16405,
      "sections": 715,
-     "words": 55714610
+     "words": 55714612
     },
     "case_notice": {
      "documents": 71,

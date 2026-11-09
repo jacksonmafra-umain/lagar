@@ -1,6 +1,6 @@
 # Corpus statistics
 
-Generated 2026-11-09T13:33:25Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-09T14:27:09Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
@@ -14,7 +14,7 @@ The corpus holds 54,813 documents in 7 layers.
 | sfs | other_statute | 1,837 | 12,463 | 1,343,463 |
 | sfs | treaty | 3,515 | 75 | 2,002,459 |
 | agency | agency_regulation | 5,468 | 61,188 | 14,295,358 |
-| case_law | case_report | 16,405 | 715 | 55,714,610 |
+| case_law | case_report | 16,405 | 715 | 55,714,612 |
 | case_law | case_notice | 71 | 4 | 93,635 |
 | eu | eu_regulation | 40 | 0 | 2,191,225 |
 | eu | eu_directive | 28 | 0 | 651,177 |
