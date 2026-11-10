@@ -259,6 +259,8 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | Desktop (≥ 1280dp, `ShellDimens.ReaderInspectorBreakpoint`): facts, source link and amendments in an inspector pane right of the text; the text keeps the badge, number and title | Done | #35 |
 | Below 1024dp (phones, tablets): table of contents in a frosted glass bottom sheet | Done | #26 |
 | From 600dp up to the inspector breakpoint (tablets, narrow desktop windows, the search detail pane): metadata (facts, source, amendments) in a Liquid Glass drawer that slides in from the end edge, opened from the info button in the top bar and closed by its close button, the scrim or back; the text keeps the badge, number and title | Done | #35 |
+| Read aloud (`ReadAloud`, `speech/`): offered in the top bar only when the platform has speech synthesis with a Swedish voice (Web Speech API, Android `TextToSpeech`, iOS `AVSpeechSynthesizer`); reads the law's own Swedish text § by § from the first § on screen, with "kap." and "§" spoken as words; the § being read is tinted in the layer colour and kept on screen; a glass player bar (previous, play or pause, next, voice settings, close) | Done | #770 |
+| Read-aloud voice settings sheet: Swedish voice, speed, pitch and volume (percent steps), a sample, reset; heard at once and stored on the device | Done | #770 |
 | Reading the text as of a past date, version comparator | Blocked: the API has no historical text; owner decision pending | #7 |
 
 ## Sparade

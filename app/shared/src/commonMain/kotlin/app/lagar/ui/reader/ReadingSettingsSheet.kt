@@ -119,7 +119,7 @@ internal fun ReadingSettingsSheet(settings: ReadingSettings, onChange: ((Reading
                 Options(
                     options = ReadingFont.entries,
                     selected = settings.font,
-                    label = { if (it == ReadingFont.Serif) Res.string.reader_font_serif else Res.string.reader_font_sans },
+                    label = { stringResource(if (it == ReadingFont.Serif) Res.string.reader_font_serif else Res.string.reader_font_sans) },
                     onSelect = { font -> onChange { it.copy(font = font) } },
                 )
             }
@@ -159,11 +159,13 @@ internal fun ReadingSettingsSheet(settings: ReadingSettings, onChange: ((Reading
                     options = ReadingWidth.entries,
                     selected = settings.width,
                     label = {
-                        when (it) {
-                            ReadingWidth.Narrow -> Res.string.reader_width_narrow
-                            ReadingWidth.Standard -> Res.string.reader_width_standard
-                            ReadingWidth.Wide -> Res.string.reader_width_wide
-                        }
+                        stringResource(
+                            when (it) {
+                                ReadingWidth.Narrow -> Res.string.reader_width_narrow
+                                ReadingWidth.Standard -> Res.string.reader_width_standard
+                                ReadingWidth.Wide -> Res.string.reader_width_wide
+                            },
+                        )
                     },
                     onSelect = { width -> onChange { it.copy(width = width) } },
                 )
@@ -173,7 +175,7 @@ internal fun ReadingSettingsSheet(settings: ReadingSettings, onChange: ((Reading
                 Options(
                     options = ReadingAlign.entries,
                     selected = settings.align,
-                    label = { if (it == ReadingAlign.Start) Res.string.reader_align_start else Res.string.reader_align_justify },
+                    label = { stringResource(if (it == ReadingAlign.Start) Res.string.reader_align_start else Res.string.reader_align_justify) },
                     onSelect = { align -> onChange { it.copy(align = align) } },
                 )
             }
@@ -202,7 +204,7 @@ internal fun ReadingSettingsSheet(settings: ReadingSettings, onChange: ((Reading
 }
 
 @Composable
-private fun Group(title: StringResource, content: @Composable () -> Unit) {
+internal fun Group(title: StringResource, content: @Composable () -> Unit) {
     Column(verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
         Text(
             stringResource(title),
@@ -217,7 +219,7 @@ private fun Group(title: StringResource, content: @Composable () -> Unit) {
 /** A row of pill-shaped choices, one selected; each is a radio button to screen readers. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun <T> Options(options: List<T>, selected: T, label: (T) -> StringResource, onSelect: (T) -> Unit) {
+internal fun <T> Options(options: List<T>, selected: T, label: @Composable (T) -> String, onSelect: (T) -> Unit) {
     val colors = LagarTheme.colors
     FlowRow(horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm), verticalArrangement = Arrangement.spacedBy(LagarTheme.spacing.sm)) {
         options.forEach { option ->
@@ -233,7 +235,7 @@ private fun <T> Options(options: List<T>, selected: T, label: (T) -> StringResou
                     .selectable(selected = on, role = Role.RadioButton) { onSelect(option) },
             ) {
                 Box(Modifier.padding(horizontal = LagarTheme.spacing.md), contentAlignment = Alignment.Center) {
-                    Text(stringResource(label(option)), style = LagarTheme.type.labelMd, modifier = Modifier.padding(vertical = 14.dp))
+                    Text(label(option), style = LagarTheme.type.labelMd, modifier = Modifier.padding(vertical = 14.dp))
                 }
             }
         }
@@ -242,7 +244,7 @@ private fun <T> Options(options: List<T>, selected: T, label: (T) -> StringResou
 
 /** A setting with a minus and a plus button around its current value. */
 @Composable
-private fun Stepper(
+internal fun Stepper(
     label: String,
     value: String,
     valueDescription: String,
