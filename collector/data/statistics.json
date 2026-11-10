@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-09T14:27:09Z",
- "documents": 54813,
+ "generated_at": "2026-11-10T14:00:51Z",
+ "documents": 54825,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -223,19 +223,19 @@
    }
   },
   "municipality": {
-   "documents": 5589,
+   "documents": 5601,
    "types": {
     "municipal_regulation": {
-     "documents": 5589,
-     "sections": 45220,
-     "words": 12485207
+     "documents": 5601,
+     "sections": 45291,
+     "words": 12532323
     }
    },
    "issuers": 286,
    "text": {
-    "web": 197,
-    "pdf": 4940,
-    "ocr": 290,
+    "web": 198,
+    "pdf": 4950,
+    "ocr": 291,
     "none": 162
    },
    "hosts": {
@@ -278,11 +278,11 @@
     "vingaker.se": 33,
     "nykoping.se": 33,
     "orebro.se": 33,
+    "borlange.se": 33,
     "soderhamn.se": 33,
     "motala.se": 32,
     "eslov.se": 32,
     "dokument.hallstahammar.se": 32,
-    "borlange.se": 32,
     "ostersund.se": 32,
     "sollentuna.se": 31,
     "strangnas.se": 31,
@@ -305,6 +305,7 @@
     "cms.landskrona.se": 29,
     "varberg.se": 29,
     "essunga.se": 29,
+    "municipio.alingsas.se": 29,
     "hammaro.se": 29,
     "hedemora.se": 29,
     "hudiksvall.se": 29,
@@ -316,7 +317,6 @@
     "svenljunga.se": 28,
     "stromstad.se": 28,
     "trollhattan.se:443": 28,
-    "municipio.alingsas.se": 28,
     "morakommun.se": 28,
     "habo.se": 27,
     "svalov.se": 27,
@@ -381,11 +381,13 @@
     "norrkoping.se": 18,
     "nassjo.se": 18,
     "askersund.se": 18,
+    "sater.se": 18,
     "sundsvall.se": 18,
     "haparanda.se": 18,
+    "static.skovde.se": 17,
     "kumla.se": 17,
-    "sater.se": 17,
     "ragunda.se": 17,
+    "vindeln.se": 17,
     "overtornea.se": 17,
     "jarfalla.se": 16,
     "haninge.se": 16,
@@ -393,7 +395,7 @@
     "boxholm.se": 16,
     "klippan.se": 16,
     "grastorp.se": 16,
-    "static.skovde.se": 16,
+    "lidkoping.se": 16,
     "norberg.se": 16,
     "krokom.se": 16,
     "nykvarn.se": 15,
@@ -417,7 +419,6 @@
     "botkyrka.se": 13,
     "monsteras.se": 13,
     "herrljunga.se": 13,
-    "lidkoping.se": 13,
     "degerfors.se": 13,
     "solleftea.se": 13,
     "ydre.se": 12,
@@ -426,7 +427,6 @@
     "markaryd.se": 12,
     "svedala.se": 12,
     "forshaga.se": 12,
-    "vindeln.se": 12,
     "arvidsjaur.se": 12,
     "lulea.se": 12,
     "salem.se": 11,
@@ -529,9 +529,9 @@
   }
  },
  "text": {
-  "web": 32454,
-  "pdf": 20399,
-  "ocr": 1493,
+  "web": 32455,
+  "pdf": 20409,
+  "ocr": 1494,
   "none": 467
  },
  "issuers": {
@@ -560,10 +560,10 @@
   },
   "municipality": {
    "issuers": 281,
-   "documents": 5486,
-   "issuers_with_scans": 144,
-   "scanned": 348,
-   "ocr": 290,
+   "documents": 5498,
+   "issuers_with_scans": 145,
+   "scanned": 349,
+   "ocr": 291,
    "still_without_text": 58
   },
   "region": {
@@ -667,8 +667,8 @@
    "none": 5
   },
   "municipality: Alingsås kommun": {
-   "documents": 36,
-   "pdf": 35,
+   "documents": 37,
+   "pdf": 36,
    "ocr": 1,
    "scanned": 1
   },
@@ -1233,8 +1233,8 @@
    "scanned": 1
   },
   "municipality: Skövde kommun": {
-   "documents": 16,
-   "pdf": 12,
+   "documents": 17,
+   "pdf": 13,
    "ocr": 4,
    "scanned": 4
   },
@@ -1424,6 +1424,12 @@
   "municipality: Vilhelmina kommun": {
    "documents": 22,
    "pdf": 21,
+   "ocr": 1,
+   "scanned": 1
+  },
+  "municipality: Vindelns kommun": {
+   "documents": 17,
+   "pdf": 16,
    "ocr": 1,
    "scanned": 1
   },
@@ -1652,7 +1658,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54813,
+   "documents": 54825,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,

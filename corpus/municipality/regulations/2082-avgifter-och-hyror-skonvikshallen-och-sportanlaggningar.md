@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/avgifter-och-hyror-skonvikshallen-och-sportanlaggningar/"
-source_sha256: "d40a9045e103359c2f1c14c6bf5df4910fa60a4a7e2750a6e435fb55c36f5e80"
-fetched_at: "2026-10-30T21:13:42Z"
+source_sha256: "6f1979fd8643d166eda3d8abc075730546609ed756ba6a61be87f1bcaf63cdec"
+fetched_at: "2026-11-10T13:56:13Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -35,7 +35,8 @@ Texten är hämtad från kommunens webbsida.
 
 ### Avgifter och hyror Skönvikshallen och sportanläggningar
 
-Beslutad av kommunfullmäktige 2024-04-25, § 54
+Beslutad av kommunfullmäktige 2024-04-25, § 54\
+Avgifterna justeras årligen den 1 januari i enlighet med prisindex för kommunal verksamhet
 
 #### Entreavgifter Skönvikshallen
 
@@ -43,26 +44,26 @@ Beslutad av kommunfullmäktige 2024-04-25, § 54
 
 ###### Vuxna
 
-- 1 gång: 62 kronor
-- 10-kort: 556 kronor
-- Halvårskort: 1 390 kronor
-- Årskort: 2 008 kronor
-- Bastu: 51 kronor
+- 1 gång: 65 kronor
+- 10-kort: 586 kronor
+- Halvårskort: 1 465 kronor
+- Årskort: 2 116 kronor
+- Bastu: 54 kronor
 
-###### Personer över 65 år
+###### Personer över 65 år och studenter
 
-- 1 gång: 57 kronor
-- 10-kort: 515 kronor
-- Halvårskort: 1 132 kronor
-- Årskort: 1 646 kronor
+- 1 gång: 60 kronor
+- 10-kort: 542 kronor
+- Halvårskort:1 192 kronor
+- Årskort: 1 735 kronor
 
-###### Barn och ungdom och student
+###### Barn och ungdom
 
 - Under 6 år: Gratis
-- 6–19 år: 26 kronor
-- 10-kort: 206 kronor
-- Halvårskort: 669 kronor
-- Årskort: 1 029 kronor
+- 6–19 år: 27 kronor
+- 10-kort: 217 kronor
+- Halvårskort: 705 kronor
+- Årskort: 1 085 kronor
 
 ##### Babysim
 
@@ -72,17 +73,17 @@ Beslutad av kommunfullmäktige 2024-04-25, § 54
 
 ###### Vuxna
 
-- 1 gång: 93 kronor
-- Månadskort: 412 kronor
-- Halvårskort: 2 058 kronor
-- Årskort: 3 293 kronor
+- 1 gång: 98 kronor
+- Månadskort: 434 kronor
+- Halvårskort: 2 168 kronor
+- Årskort: 3 470 kronor
 
 ###### Ungdom 17–19 år, student och personer över 65 år
 
-- 1 gång: 67 kronor
-- Månadskort: 360 kronor
-- Halvårskort: 1 646 kronor
-- Årskort: 2 264 kronor
+- 1 gång: 71 kronor
+- Månadskort: 379 kronor
+- Halvårskort: 1 735 kronor
+- Årskort: 2 385 kronor
 
 Bad ingår i gymavgiften.
 
@@ -90,17 +91,17 @@ Bad ingår i gymavgiften.
 
 ##### Skönvikshallen – sporthallen
 
-- Hela hallen: föreningar 154 kronor. Övriga, privata, företag m.m. 309 kronor
-- Halva hallen: föreningar 103 kronor. Övriga, privata, företag m.m. 206 kronor
-- Badmintonbana: föreningar 77 kronor. Övriga, privata, företag m.m. 154 kronor
+- Hela hallen: föreningar 162 kronor. Övriga, privata, företag m.m. 325 kronor
+- Halva hallen: föreningar 108 kronor. Övriga, privata, företag m.m. 217 kronor
+- Badmintonbana: föreningar 81 kronor. Övriga, privata, företag m.m. 162 kronor
 
 ##### Skönvikshallen – simhallen
 
-- Lilla och stora bassängen: föreningar 566 kronor. Övriga, privata, företag m.m. 978 kronor
-- Lilla bassängen: föreningar 257 kronor. Övriga, privata, företag m.m. 360 kronor
-- Stora bassängen: föreningar 400 kronor. Övriga, privata, företag m.m. 720 kronor
-- Halva stora bassängen: föreningar 257 kronor. Övriga, privata, företag m.m. 515 kronor
-- En simbana: föreningar 82 kronor. Övriga, privata, företag m.m. 103 kronor
+- Lilla och stora bassängen: föreningar 596 kronor. Övriga, privata, företag m.m. 1 030 kronor
+- Lilla bassängen: föreningar 271 kronor. Övriga, privata, företag m.m. 379 kronor
+- Stora bassängen: föreningar 4434 kronor. Övriga, privata, företag m.m. 759 kronor
+- Halva stora bassängen: föreningar 271 kronor. Övriga, privata, företag m.m. 542 kronor
+- En simbana: föreningar 86 kronor. Övriga, privata, företag m.m. 103 kronor
 
 Vid hyra av halva stora bassängen gäller max 15 personer.
 
@@ -108,44 +109,44 @@ Vid hyra av simbana gäller en person per bana.
 
 ##### Varmvattenbassängen
 
-- Hela bassängen: 617 kronor
-- 1 gång: 72 kronor
-- 10-kort: 617 kronor
-- Grupptränare med ledare, 1 gång: 93 kronor
-- Grupptränare med ledare, 10-kort: 823 kronor
+- Hela bassängen: 651 kronor
+- 10-kort: 651 kronor
+- 1 gång: 76 kronor
+- Grupptränare med ledare, 1 gång: 98 kronor
+- Grupptränare med ledare, 10-kort: 868 kronor
 
 ##### Skäve Arena – sporthallen
 
-- Hela hallen: föreningar 154 kronor. Övriga, privata, företag m.m. 309 kronor
-- Halva hallen: föreningar 103 kronor. Övriga, privata, företag m.m. 206 kronor
-- Badmintonbana: föreningar 77 kronor. Övriga, privata, företag m.m. 154 kronor
-- Konferenslokal: föreningar 82 kronor. Övriga, privata, företag m.m. 165 kronor
+- Hela hallen: föreningar 162 kronor. Övriga, privata, företag m.m. 325 kronor
+- Halva hallen: föreningar 108 kronor. Övriga, privata, företag m.m. 217 kronor
+- Badmintonbana: föreningar 81 kronor. Övriga, privata, företag m.m. 162 kronor
+- Konferenslokal: föreningar 86 kronor. Övriga, privata, företag m.m. 174 kronor
 
 ##### Motionscentralen
 
-- Konferenslokal: föreningar 82 kronor. Övriga, privata, företag m.m. 165 kronor
+- Konferenslokal: föreningar 86 kronor. Övriga, privata, företag m.m. 174 kronor
 
 ##### Övriga sporthallar
 
-- Enbackahallen: föreningar 123 kronor. Övriga, privata, företag m.m. 247 kronor
-- Klockarskolans gymnastiksal: föreningar 103 kronor. Övriga, privata, företag m.m. 206 kronor
-- Kungsgårdsskolans gymnastiksal: föreningar 82 kronor. Övriga, privata, företag m.m. 165 kronor
+- Enbackahallen: föreningar 131 kronor. Övriga, privata, företag m.m. 260 kronor
+- Klockarskolans gymnastiksal: föreningar 108 kronor. Övriga, privata, företag m.m. 217 kronor
+- Kungsgårdsskolans gymnastiksal: föreningar 86 kronor. Övriga, privata, företag m.m. 174 kronor
 
 ##### Ishallen
 
-- Föreningar: 309 kronor
-- Övriga, privata, företag m.m.: 823 kronor
+- Föreningar: 325 kronor
+- Övriga, privata, företag m.m.: 868 kronor
 
 ##### Fotbollsplaner
 
 ###### Naturgräs
 
-- Föreningar: 154 kronor
-- Övriga, privata, företag m.m.: 309 kronor
+- Föreningar: 162 kronor
+- Övriga, privata, företag m.m.: 325 kronor
 
 ##### Friidrottsbana
 
-- Föreningar 154 kronor
-- Övriga, privata, företag m.m.: 309 kronor
+- Föreningar 162 kronor
+- Övriga, privata, företag m.m.: 325 kronor
 
-Publicerad: 21 augusti 2023 10.50 Uppdaterad: 16 juni 2026 11.09
+Publicerad: 21 augusti 2023 10.50 Uppdaterad: 6 november 2026 13.02

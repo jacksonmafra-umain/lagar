@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/avgifter-for-avgiftssystemet-inom-aldre-och-handikappomsorgen/"
-source_sha256: "79a3f93dc6264349b5895fb1361573faa5a3539b9f4fd755bdae426b3489eb74"
-fetched_at: "2026-10-30T21:13:40Z"
+source_sha256: "12d1b25945533db380bead087a2e92e13336c6b0873d230944127f271a726b97"
+fetched_at: "2026-11-10T13:56:10Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -561,7 +561,7 @@ Avgifterna betalas i fallande ordning:
 3. Omvårdnadsavgift i ordinärt boende
 4. Hälso- och sjukvårdsavgift
 
-11 Avgifter (2025)
+11 Avgifter
 
 Prisbasbelopp 2026 enligt Socialförsäkringsbalken (2010:110): 59 200 kronor.
 
@@ -673,7 +673,7 @@ Ingen avgift.
 
 Ingår inte i maxtaxan.
 
-150 kronor
+250 kronor
 
 ##### Avgifter särskilda boende, korttidsboende med beslut om särskilt boende
 
@@ -695,7 +695,7 @@ Ingen avgift.
 
 Ingår inte i maxtaxan.
 
-150 kronor per hjälpmedel. Max 450 kronor
+250 kronor per hjälpmedel. Max 450 kronor
 
 ##### Ersättning till annan kommun för hemtjänst och hemsjukvård vid omsorgstagares tillfälliga vistelse i annan kommun
 
@@ -762,7 +762,7 @@ Förbrukningsvaror och möbler, enligt schablon, som tillhandahålls kostnadsfri
 
 Hemsjukvård, hembesök och hjälpmedel
 
-#### Avgifter för hemsjukvård och hembesök 2022
+#### Avgifter för hemsjukvård och hembesök 2026
 
 ##### Barn och ungdom ej fyllda 20 år
 
@@ -834,12 +834,6 @@ Hjälpmedelsavgift debiteras per komplett hjälpmedel inklusive tillbehör vid f
 
 ##### Särskilt boende samt personer på korttidsboende med beslut om särskilt boende
 
-###### Barn och ungdomar ej fyllda 20 år
-
-Avgift debiteras ej.
-
-0 kronor
-
 ###### Hjälpmedelsavgift
 
 Grundutrustning som finns på enheten, personligt förskrivna hjälpmedel, försäljningsprodukter från egenansvarslistan.
@@ -854,14 +848,16 @@ Personen tar med sig de förskrivna hjälpmedel som är praktiskt möjligt att f
 
 0 kronor
 
-###### Vid nyförskrivning av hjälpmedel inför hemgång från korttidsboende
+Vid ny förskrivning av hjälpmedel inför hemgång från korttidsboende
 
-250 kronor
+Ingår inte i maxtaxan.
 
-###### Kostnad för förbrukningsartiklar och underhåll
+250 kronor per hjälpmedel. Max 450 kronor
+
+Kostnad för förbrukningsartiklar och underhåll
 
 Den enskilde betalar själv för förbrukningsartiklar och för eventuell arbetskostnad för byte. Med förbrukningsartiklar avses t ex däck och slang till rullstol, batterier till hörapparater och lysrör till optik.
 
 Den enskilde betalar för rengöring av hjälpmedel, om hjälpmedlet inte är rengjort innan det lämnas för reparation. Se Avgifter och kostnader för patient/brukare på regiondalarna.se.
 
-Publicerad: 22 augusti 2023 15.35 Uppdaterad: 11 juni 2026 13.30
+Publicerad: 22 augusti 2023 15.35 Uppdaterad: 10 november 2026 10.45
