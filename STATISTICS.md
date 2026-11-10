@@ -1,10 +1,10 @@
 # Corpus statistics
 
-Generated 2026-11-10T13:37:30Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-10T14:03:37Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,813 documents in 7 layers.
+The corpus holds 54,825 documents in 7 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
@@ -21,7 +21,7 @@ The corpus holds 54,813 documents in 7 layers.
 | eu | eu_decision | 2 | 0 | 14,266 |
 | eu | eu_judgment | 605 | 35 | 3,651,044 |
 | region | county_regulation | 11,658 | 14,168 | 11,004,808 |
-| municipality | municipal_regulation | 5,589 | 45,220 | 12,485,207 |
+| municipality | municipal_regulation | 5,601 | 45,291 | 12,532,323 |
 
 Sections count paragraphs that open with a section number (`1 §`, `2 a §`); case law and EU documents have none.
 
@@ -104,7 +104,7 @@ Documents per host of their `source`, per layer (the ten largest).
 | laholm.se | 50 |
 | ale.se | 49 |
 | lillaedet.se | 49 |
-| 276 other hosts | 5,000 |
+| 276 other hosts | 5,012 |
 
 ## How the text was obtained
 
@@ -116,8 +116,8 @@ Documents per host of their `source`, per layer (the ten largest).
 | case_law | 16,476 | 0 | 0 | 0 |
 | eu | 675 | 0 | 0 | 0 |
 | region | 420 | 10,777 | 428 | 33 |
-| municipality | 197 | 4,940 | 290 | 162 |
-| **all** | **32,454** (59.2 %) | **20,399** (37.2 %) | **1,493** (2.7 %) | **467** (0.9 %) |
+| municipality | 198 | 4,950 | 291 | 162 |
+| **all** | **32,455** (59.2 %) | **20,409** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -128,7 +128,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | layer | issuers using PDF | documents | issuers with scans | scanned | read by OCR | still without text |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | agency | 75 | 5,391 | 12 | 743 | 740 | 3 |
-| municipality | 281 | 5,486 | 144 | 348 | 290 | 58 |
+| municipality | 281 | 5,498 | 145 | 349 | 291 | 58 |
 | region | 21 | 11,598 | 15 | 461 | 428 | 33 |
 | sfs | 3 | 293 | 1 | 36 | 35 | 1 |
 
@@ -149,7 +149,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | agency: Statens energimyndighet | 65 | 3 | 3 |
 | agency: Transportstyrelsen | 622 | 1 | 1 |
 | municipality: Ale kommun | 49 | 10 | 5 |
-| municipality: Alingsås kommun | 36 | 1 | 1 |
+| municipality: Alingsås kommun | 37 | 1 | 1 |
 | municipality: Arjeplogs kommun | 47 | 8 | 7 |
 | municipality: Askersunds kommun | 18 | 6 | 6 |
 | municipality: Avesta kommun | 4 | 1 | 1 |
@@ -241,7 +241,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Sala kommun | 30 | 1 | 1 |
 | municipality: Salems kommun | 11 | 1 | 1 |
 | municipality: Sjöbo kommun | 6 | 1 | 1 |
-| municipality: Skövde kommun | 16 | 4 | 4 |
+| municipality: Skövde kommun | 17 | 4 | 4 |
 | municipality: Smedjebacken kommun | 35 | 2 | 2 |
 | municipality: Sorsele kommun | 30 | 4 | 4 |
 | municipality: Sotenäs kommun | 19 | 2 | 2 |
@@ -273,6 +273,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Varbergs kommun | 29 | 2 | 1 |
 | municipality: Vaxholms stad | 4 | 1 | 1 |
 | municipality: Vilhelmina kommun | 22 | 1 | 1 |
+| municipality: Vindelns kommun | 17 | 1 | 1 |
 | municipality: Vänersborgs kommun | 37 | 1 | 1 |
 | municipality: Värmdö kommun | 25 | 4 | 3 |
 | municipality: Västerås stad | 21 | 2 | 1 |
@@ -313,7 +314,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 
 ### Corpus audit
 
-- Documents checked: 54,813
+- Documents checked: 54,825
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
 - Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,957 of 40,018 (mostly older amending acts, which are not collected as documents of their own)

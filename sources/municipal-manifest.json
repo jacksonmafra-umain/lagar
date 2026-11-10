@@ -15773,14 +15773,14 @@
       "url": "https://www.karlshamn.se/wp-content/uploads/5.23-Barnomsorgstaxa-2021.pdf"
     },
     {
-      "bytes": 30411,
+      "bytes": 105296,
       "content_type": "application/pdf",
       "id": "1082-5-25",
       "municipality_code": "1082",
-      "retrieved_at": "2026-10-30T14:01:41Z",
-      "sha256": "da81e3a9b9c213593041def1604622cb8c8cbdac20f846da8a5d436f437dab6a",
+      "retrieved_at": "2026-11-10T13:42:01Z",
+      "sha256": "189f2d68569ee061103469652e8db4d033175020b80e8d0be083414f70e0e36f",
       "text": "pdf",
-      "url": "https://www.karlshamn.se/wp-content/uploads/5_25_Avgifter_for_personer_med_beslut_om_boende_med_sarskild_service-2.pdf"
+      "url": "https://www.karlshamn.se/wp-content/uploads/5.25-Avgifter-for-personer-med-beslut-om-boende-med-sarskild-service-2013-05-06.pdf"
     },
     {
       "bytes": 26703,
@@ -18555,10 +18555,10 @@
       "content_type": "application/pdf",
       "id": "1267-110382",
       "municipality_code": "1267",
-      "retrieved_at": "2026-10-30T23:32:28Z",
-      "sha256": "16dafcecd1cf17b50217bf96ea6c03f86d2a8c2bc113df82b185422196107181",
+      "retrieved_at": "2026-11-10T13:43:47Z",
+      "sha256": "650661df0aa6dd3dbbecbf77824f7abb201c468b1a8f61a59d6dfde3462f5894",
       "text": "pdf",
-      "url": "https://sok-hr.unikom.se/download/document?filename=TG9rYWxhIG9yZG5pbmdzZvZyZXNrcmlmdGVyIGb2ciB0b3JnaGFuZGVsbiBpIEj29nJzIGtvbW11biBLRiAyMDI1LTAzLTEyIKcgMjQuZG9jeC5wdWIucGRm&id=146910"
+      "url": "https://sok-hr.unikom.se/download/document?filename=TG9rYWxhIG9yZG5pbmdzZvZyZXNrcmlmdGVyIGb2ciB0b3JnaGFuZGVsbiBpIEj29nJzIGtvbW11biBLRiAyMDI1LTAzLTEyIKcgMjQuZG9jeC5wdWIucGRm&id=158212"
     },
     {
       "bytes": 231114,
@@ -33776,6 +33776,16 @@
       "url": "https://municipio.alingsas.se/wp-content/uploads/networks/1/sites/2/2026/10/va-taxa-2027_slutversion.pdf"
     },
     {
+      "bytes": 81646,
+      "content_type": "application/pdf",
+      "id": "1489-2026-11-socialnamndens-taxor-och-avgifter-2026",
+      "municipality_code": "1489",
+      "retrieved_at": "2026-11-10T13:50:40Z",
+      "sha256": "79d4fad50db0c23ed76e07a6290064f3fbd42edbda16eae6c65dc6b45f14d25a",
+      "text": "pdf",
+      "url": "https://municipio.alingsas.se/wp-content/uploads/networks/1/sites/2/2026/11/socialnamndens-taxor-och-avgifter-2026.pdf"
+    },
+    {
       "bytes": 139103,
       "content_type": "application/pdf",
       "id": "1490-18-1601545718c38a990ab1705f",
@@ -34866,6 +34876,36 @@
       "url": "https://lidkoping.se/download/18.4d3f227c190e3477ba31d0e0/1759385532345/Avgifter%20f%C3%B6r%20kopior%20av%20allm%C3%A4nna%20handlingar.pdf"
     },
     {
+      "bytes": 397886,
+      "content_type": "application/pdf",
+      "id": "1494-18-50ef81801a133f9416411ee4",
+      "municipality_code": "1494",
+      "retrieved_at": "2026-11-10T13:50:55Z",
+      "sha256": "0db04f877e5c1b979d3a744dd7ff1da4adf970818a0a3977059f83ba09629faa",
+      "text": "pdf",
+      "url": "https://lidkoping.se/download/18.50ef81801a133f9416411ee4/1793890975581/Avfallstaxa%20%C3%A5r%202027%20f%C3%B6r%20Lidk%C3%B6pings%20kommun.pdf"
+    },
+    {
+      "bytes": 422481,
+      "content_type": "application/pdf",
+      "id": "1494-18-50ef81801a133f9416411ee5",
+      "municipality_code": "1494",
+      "retrieved_at": "2026-11-10T13:50:56Z",
+      "sha256": "646f3ab52747071a3030f83186781dadf6dd6fbafa66448d4cdb22c4ca25c2e4",
+      "text": "pdf",
+      "url": "https://lidkoping.se/download/18.50ef81801a133f9416411ee5/1793890983275/Taxa%20f%C3%B6r%20Lidk%C3%B6ping%20kommuns%20allm%C3%A4nna%20vatten-%20och%20avloppsanl%C3%A4ggning%20%C3%A5r%202027.pdf"
+    },
+    {
+      "bytes": 256562,
+      "content_type": "application/pdf",
+      "id": "1494-18-50ef81801a133f9416411ee6",
+      "municipality_code": "1494",
+      "retrieved_at": "2026-11-10T13:50:57Z",
+      "sha256": "0774b06e0ca1882963a948947bb86d58160b017cda59a08c59abe3da70191b72",
+      "text": "pdf",
+      "url": "https://lidkoping.se/download/18.50ef81801a133f9416411ee6/1793890988832/Villkor%20och%20avgifter%20f%C3%B6r%20vatten%20och%20avlopp%20utanf%C3%B6r%20verksamhetsomr%C3%A5det%20%C3%A5r%202027.pdf"
+    },
+    {
       "bytes": 1424315,
       "content_type": "application/pdf",
       "id": "1494-18-52811446199783e57b81cb77",
@@ -34980,8 +35020,8 @@
       "content_type": "text/markdown",
       "id": "1495-1928",
       "municipality_code": "1495",
-      "retrieved_at": "2026-11-03T13:14:25Z",
-      "sha256": "4b8875b75c8a91c32906a5c19f3d0906b64a1e5072c5a593c2deda2397447a35",
+      "retrieved_at": "2026-11-10T13:51:35Z",
+      "sha256": "88f6ee84c0d23c3b04efe066cb16d661db183d01e05b3f3c32189c66078438f1",
       "url": "https://www.skara.se/kommunochpolitik/styrandedokument/foreskrifter/foreskriftforkommunaltbidragtillenskildvag.1928.html"
     },
     {
@@ -35158,6 +35198,16 @@
       "sha256": "5e1a94ab41d0eef1d0addf810c3686118f2d79d46caf3f4ad6dc932920bff590",
       "text": "pdf",
       "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter/avgifter-for-kopior-av-allmanna-handlingar.pdf"
+    },
+    {
+      "bytes": 856586,
+      "content_type": "application/pdf",
+      "id": "1496-avgifter-for-tjanster-som-inte-omfattas-av-taxa-for-den-allmanna-va-anlaggningen",
+      "municipality_code": "1496",
+      "retrieved_at": "2026-11-10T13:51:42Z",
+      "sha256": "96ce9f73423512db58fcfa3e35a4f04878dd065e8daed4f8fe0deb89f0f19599",
+      "text": "pdf",
+      "url": "https://static.skovde.se/siteassets/kommun-och-politik/taxor-avgifter-och-styrande-dokument/taxor-och-avgifter/avgifter-for-tjanster-som-inte-omfattas-av-taxa-for-den-allmanna-va-anlaggningen.pdf"
     },
     {
       "bytes": 5602734,
@@ -43841,6 +43891,16 @@
       "url": "https://www.borlange.se/download/18.20c2c85d19eb7a927aaa1b6/1781588966658/Taxor%20f%C3%B6r%20markuppl%C3%A5telser.pdf"
     },
     {
+      "bytes": 1820877,
+      "content_type": "application/pdf",
+      "id": "2081-18-310fdada1a1648c07671acf3",
+      "municipality_code": "2081",
+      "retrieved_at": "2026-11-10T13:55:54Z",
+      "sha256": "3724d47e40843d616fe3c235b54b79c1c96108679b261a110d74e8280b7a42c1",
+      "text": "pdf",
+      "url": "https://www.borlange.se/download/18.310fdada1a1648c07671acf3/1793887488967/Taxa%20f%C3%B6r%20milj%C3%B6n%C3%A4mndens%20arbetsomr%C3%A5den%20inom%20milj%C3%B6-%20och%20h%C3%A4lsoskydd%202021-10-12.pdf"
+    },
+    {
       "bytes": 122565,
       "content_type": "application/pdf",
       "id": "2081-18-38f9fe4d170346e58aebf84",
@@ -44148,12 +44208,12 @@
       "url": "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/avfallstaxa/"
     },
     {
-      "bytes": 39290,
+      "bytes": 39256,
       "content_type": "text/markdown",
       "id": "2082-avgifter-for-avgiftssystemet-inom-aldre-och-handikappomsorgen",
       "municipality_code": "2082",
-      "retrieved_at": "2026-10-30T21:13:40Z",
-      "sha256": "79a3f93dc6264349b5895fb1361573faa5a3539b9f4fd755bdae426b3489eb74",
+      "retrieved_at": "2026-11-10T13:56:10Z",
+      "sha256": "12d1b25945533db380bead087a2e92e13336c6b0873d230944127f271a726b97",
       "url": "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/avgifter-for-avgiftssystemet-inom-aldre-och-handikappomsorgen/"
     },
     {
@@ -44166,12 +44226,12 @@
       "url": "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/avgifter-for-slamtjanster/"
     },
     {
-      "bytes": 3301,
+      "bytes": 3402,
       "content_type": "text/markdown",
       "id": "2082-avgifter-och-hyror-skonvikshallen-och-sportanlaggningar",
       "municipality_code": "2082",
-      "retrieved_at": "2026-10-30T21:13:42Z",
-      "sha256": "d40a9045e103359c2f1c14c6bf5df4910fa60a4a7e2750a6e435fb55c36f5e80",
+      "retrieved_at": "2026-11-10T13:56:13Z",
+      "sha256": "6f1979fd8643d166eda3d8abc075730546609ed756ba6a61be87f1bcaf63cdec",
       "url": "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/avgifter-och-hyror-skonvikshallen-och-sportanlaggningar/"
     },
     {
@@ -44179,8 +44239,8 @@
       "content_type": "text/markdown",
       "id": "2082-foreskrifter-om-avfallshantering",
       "municipality_code": "2082",
-      "retrieved_at": "2026-11-03T13:19:28Z",
-      "sha256": "207a2faf966efa3ee055d66df2b3e1399ea159567e315ffcbb1186ef3157c4ca",
+      "retrieved_at": "2026-11-10T13:55:59Z",
+      "sha256": "dd43b5433f17bc012fe3d567c1f1d8fb7f6b76c76e26f7490099bda56d371b3b",
       "url": "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/regler-och-foreskrifter/foreskrifter-om-avfallshantering/"
     },
     {
@@ -44227,6 +44287,15 @@
       "retrieved_at": "2026-10-30T21:13:47Z",
       "sha256": "5f47f749a1707fcf4ceccd176ea39ea9c4b5cfa95a30a66a1ef6c70bb54933d8",
       "url": "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/taxa-enligt-plan-och-bygglagen/"
+    },
+    {
+      "bytes": 17874,
+      "content_type": "text/markdown",
+      "id": "2082-taxa-for-detaljplan-samt-kart-och-matuppdrag",
+      "municipality_code": "2082",
+      "retrieved_at": "2026-11-10T13:56:20Z",
+      "sha256": "58149c2e5189909dcb5940c6fc9e69e4b24cbd33b25763e162b0184d079bbf7a",
+      "url": "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/taxa-for-detaljplan-samt-kart-och-matuppdrag/"
     },
     {
       "bytes": 188153,
@@ -49803,6 +49872,16 @@
       "url": "https://www.bjurholm.se/download/18.7d99aaa718ab7ea8b91643e/1767614966489/Taxor%20och%20avgifter%20inom%20socialn%C3%A4mnden.pdf"
     },
     {
+      "bytes": 741142,
+      "content_type": "application/pdf",
+      "id": "2404-18-40376133177916d27f75dd4",
+      "municipality_code": "2404",
+      "retrieved_at": "2026-11-10T13:57:41Z",
+      "sha256": "e224ab6380dac1033731a7eeadd47205512616e7b8e09cd7263d839a3da0c749",
+      "text": "pdf",
+      "url": "https://www.vindeln.se/download/18.40376133177916d27f75dd4/1621688139956/Taxa%20f%C3%B6r%20utl%C3%A4mnande%20av%20allm%C3%A4nna%20handlingar%202020%20tillsvidare.pdf"
+    },
+    {
       "bytes": 472637,
       "content_type": "application/pdf",
       "id": "2404-18-41138627196d07e0422dd",
@@ -49901,6 +49980,46 @@
       "sha256": "f3bcf0b0cac62501a4c5d2ebf74ae58d8ad7ead1f44aecf3f4a3bdd040cce351",
       "text": "pdf",
       "url": "https://www.vindeln.se/download/18.6db6854d19bbe66c84532/1768474692991/Taxa%20f%C3%B6r%20pr%C3%B6vning%20och%20tillsyn%20inom%20milj%C3%B6balkens%20omr%C3%A5de.pdf"
+    },
+    {
+      "bytes": 172576,
+      "content_type": "application/pdf",
+      "id": "2404-18-7cc3703718806aef4f51622",
+      "municipality_code": "2404",
+      "retrieved_at": "2026-11-10T13:57:42Z",
+      "sha256": "0436cf6d8b4c4c1aeb6d7069d7f91eac5e3faf0343de1771413462f3829e0d93",
+      "text": "pdf",
+      "url": "https://www.vindeln.se/download/18.7cc3703718806aef4f51622/1695027279613/Taxa%20f%C3%B6r%20tillst%C3%A5ndshandl%C3%A4ggning%20och%20tillsyn%20Ume%C3%A5regionens%20brandf%C3%B6rsvar%202022.pdf"
+    },
+    {
+      "bytes": 47657,
+      "content_type": "application/pdf",
+      "id": "2404-18-7cc3703718806aef4f51623",
+      "municipality_code": "2404",
+      "retrieved_at": "2026-11-10T13:57:43Z",
+      "sha256": "08fdf05b3167872268e75fb48d04182a1ec05618cb4cc70ab98e11c7c23e5582",
+      "text": "ocr",
+      "url": "https://www.vindeln.se/download/18.7cc3703718806aef4f51623/1695027279735/Taxa%20kvarnomr%C3%A5det%202023.pdf"
+    },
+    {
+      "bytes": 200698,
+      "content_type": "application/pdf",
+      "id": "2404-18-7cc3703718806aef4f51625",
+      "municipality_code": "2404",
+      "retrieved_at": "2026-11-10T13:57:49Z",
+      "sha256": "39577531584fa15271c7954a365d1becc6df6417dab7ef26876d6c02ded87966",
+      "text": "pdf",
+      "url": "https://www.vindeln.se/download/18.7cc3703718806aef4f51625/1695027280107/Taxa%20brandskyddskontroll%20Vindelns%20kommun%202023-06-01.pdf"
+    },
+    {
+      "bytes": 274454,
+      "content_type": "application/pdf",
+      "id": "2404-18-7cc3703718806aef4f51626",
+      "municipality_code": "2404",
+      "retrieved_at": "2026-11-10T13:57:50Z",
+      "sha256": "3354c1695c53942321fc1838eed51588fa4159fd77535c949810cf568cc86f57",
+      "text": "pdf",
+      "url": "https://www.vindeln.se/download/18.7cc3703718806aef4f51626/1695027280238/Taxa%20reng%C3%B6ring%20Vindelns%20kommun%202023-06-01.pdf"
     },
     {
       "bytes": 286133,

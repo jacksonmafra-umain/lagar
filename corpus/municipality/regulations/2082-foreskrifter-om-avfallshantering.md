@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/regler-och-foreskrifter/foreskrifter-om-avfallshantering/"
-source_sha256: "207a2faf966efa3ee055d66df2b3e1399ea159567e315ffcbb1186ef3157c4ca"
-fetched_at: "2026-11-03T13:19:28Z"
+source_sha256: "dd43b5433f17bc012fe3d567c1f1d8fb7f6b76c76e26f7490099bda56d371b3b"
+fetched_at: "2026-11-10T13:55:59Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -294,7 +294,7 @@ Vid förfarande hos fastighetsinnehavare som avviker från beslutad dispens kan 
 
 **40 §** Latrinavfall får efter anmälan komposteras på den egna fastigheten om det kan ske utan olägenhet för människors hälsa och miljö. Anmälan görs till kommunens tillsynsmyndighet.
 
-**41 §** Avfall från små avloppsanordningar får efter ansökan omhändertas på den egna fastigheten om det kan ske utan olägenhet för människors hälsa och miljö. Anmälan görs till kommunens tillsynsmyndighet.
+**41 §** Avfall från små avloppsanordningar får efter ansökan omhändertas på den egna fastigheten om det kan ske utan olägenhet för människors hälsa och miljö. Ansökan görs till kommunens tillsynsmyndighet.
 
 **42 §** Dispens från förbudet enligt 15 kap. 24 § 1 st. miljöbalken att själv hantera allt avfall kan efter ansökan medges om det finns särskilda skäl och fastighetsinnehavaren kan hantera avfallet på fastigheten på ett hälso- och miljömässigt godtagbart sätt. Ansökan görs till kommunens tillsynsmyndighet. Dispens gäller upp till tre år.
 
@@ -619,4 +619,4 @@ Information kan hämtas på transportstyrelsens webbplats.
 ² Framkomligheten kan också lösas med mötesplatser\
 ³ Träd och växtlighet får inte begränsa den fria höjden
 
-Publicerad: 22 december 2023 07.32 Uppdaterad: 2 november 2026 12.07
+Publicerad: 22 december 2023 07.32 Uppdaterad: 9 november 2026 14.22
