@@ -24,6 +24,7 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CircularProgressIndicator
@@ -34,12 +35,14 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -53,6 +56,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import app.lagar.data.DocumentMeta
 import app.lagar.data.DocumentResponse
 import app.lagar.designsystem.LagarTheme
@@ -68,11 +72,13 @@ import app.lagar.resources.ic_format_size
 import app.lagar.resources.ic_info
 import app.lagar.resources.ic_share
 import app.lagar.resources.ic_toc
+import app.lagar.resources.ic_volume_up
 import app.lagar.resources.reader_inspector
 import app.lagar.resources.reader_inspector_open
 import app.lagar.resources.reader_link_copied
 import app.lagar.resources.reader_provision_removed
 import app.lagar.resources.reader_provision_saved
+import app.lagar.resources.reader_read_aloud
 import app.lagar.resources.reader_settings
 import app.lagar.resources.reader_share_failed
 import app.lagar.resources.reader_share_link
@@ -82,7 +88,13 @@ import app.lagar.settings.NoteStore
 import app.lagar.settings.ReadingPreferences
 import app.lagar.settings.ReadingSettings
 import app.lagar.settings.SavedProvision
+import app.lagar.settings.SpeechPreferences
+import app.lagar.settings.SpeechSettings
 import app.lagar.settings.toBookmark
+import app.lagar.speech.ReadAloud
+import app.lagar.speech.rememberSpeechEngine
+import app.lagar.speech.spokenText
+import app.lagar.speech.spokenWords
 import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.ErrorState
 import app.lagar.ui.common.rememberBackTopBarHeight
@@ -111,12 +123,14 @@ fun ReaderRoute(
     store: BookmarkStore = koinInject(),
     noteStore: NoteStore = koinInject(),
     reading: ReadingPreferences = koinInject(),
+    speech: SpeechPreferences = koinInject(),
 ) {
     val state by viewModel.state.collectAsState()
     val bookmarks by store.bookmarks.collectAsState()
     val provisions by store.provisions.collectAsState()
     val notes by noteStore.notes.collectAsState()
     val readingSettings by reading.current.collectAsState()
+    val speechSettings by speech.current.collectAsState()
     val savedAnchors = remember(provisions, id) { provisions.filter { it.document.id == id }.mapTo(HashSet()) { it.anchor } }
     val documentNotes = remember(notes, id) { notes.filter { it.document.id == id } }
     val provisionNotes = remember(documentNotes) { documentNotes.mapNotNull { note -> note.anchor?.let { it to note.text } }.toMap() }
@@ -151,6 +165,9 @@ fun ReaderRoute(
         readingSettings = readingSettings,
         onReadingChange = reading::update,
         onReadingReset = reading::reset,
+        speechSettings = speechSettings,
+        onSpeechChange = speech::update,
+        onSpeechReset = speech::reset,
     )
 }
 
@@ -173,10 +190,14 @@ fun ReaderScreen(
     readingSettings: ReadingSettings = ReadingSettings(),
     onReadingChange: ((ReadingSettings) -> ReadingSettings) -> Unit = {},
     onReadingReset: () -> Unit = {},
+    speechSettings: SpeechSettings = SpeechSettings(),
+    onSpeechChange: ((SpeechSettings) -> SpeechSettings) -> Unit = {},
+    onSpeechReset: () -> Unit = {},
 ) = ReadingTheme(readingSettings) {
     ReaderLayout(
         state, bookmarked, onToggleBookmark, onBack, anchor, amendmentLinks, onResolveAmendmentLinks, crossReferences, onOpenDocument,
         savedAnchors, documentNote, provisionNotes, onToggleProvision, onWriteNote, readingSettings, onReadingChange, onReadingReset,
+        speechSettings, onSpeechChange, onSpeechReset,
     )
 }
 
@@ -200,6 +221,9 @@ private fun ReaderLayout(
     readingSettings: ReadingSettings,
     onReadingChange: ((ReadingSettings) -> ReadingSettings) -> Unit,
     onReadingReset: () -> Unit,
+    speechSettings: SpeechSettings,
+    onSpeechChange: ((SpeechSettings) -> SpeechSettings) -> Unit,
+    onSpeechReset: () -> Unit,
 ) = BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
     val spacing = LagarTheme.spacing
     val wide = LocalWideLayout.current
@@ -248,6 +272,27 @@ private fun ReaderLayout(
             (if (hasAmendments && amendmentsOpen) amendments.size + (if (reprints.isNotEmpty()) 1 else 0) else 0)
     }
     val tocPane = wide && !outline.isEmpty
+
+    // Reading aloud, offered only when the platform has a Swedish voice. One text per block, so the index of the text
+    // being read is the index of its block.
+    val speechEngine = rememberSpeechEngine()
+    val voices by speechEngine.voices.collectAsState()
+    val currentSpeech by rememberUpdatedState(speechSettings)
+    val readAloud = remember(speechEngine) { ReadAloud(speechEngine) { currentSpeech } }
+    val reading by readAloud.state.collectAsState()
+    var showSpeech by rememberSaveable { mutableStateOf(false) }
+    val spoken = remember(blocks) { blocks.map { spokenWords(spokenText(if (isStatuteBlock(it)) statuteValidity(it).text else it)) } }
+    DisposableEffect(readAloud) { onDispose { readAloud.close() } }
+    // A new setting is heard at once: the text being read starts again with it.
+    LaunchedEffect(speechSettings) { readAloud.settingsChanged() }
+    // The text being read stays on screen.
+    LaunchedEffect(reading.active, reading.item) {
+        if (!reading.active || reading.item < 0) return@LaunchedEffect
+        val target = leadingItems + reading.item
+        if (listState.layoutInfo.visibleItemsInfo.none { it.index == target }) listState.animateScrollToItem(target)
+    }
+
+    fun startReading() = readAloud.start(spoken, (listState.firstVisibleItemIndex - leadingItems).coerceAtLeast(0))
 
     // A deep link scrolls to its section once, when the text has loaded; later recompositions leave the scroll alone.
     var anchorDone by rememberSaveable(anchor) { mutableStateOf(anchor == null) }
@@ -317,7 +362,10 @@ private fun ReaderLayout(
                 LazyColumn(
                     state = listState,
                     modifier = modifier,
-                    contentPadding = PaddingValues(top = barHeight + spacing.md, bottom = bottomInset + spacing.lg),
+                    contentPadding = PaddingValues(
+                        top = barHeight + spacing.md,
+                        bottom = bottomInset + spacing.lg + if (reading.active) ReadAloudBarSpace else 0.dp,
+                    ),
                 ) {
                     item(key = "header") {
                         ReadingItem {
@@ -370,7 +418,12 @@ private fun ReaderLayout(
                             Modifier.fillMaxWidth().padding(horizontal = spacing.marginMobile, vertical = spacing.xs),
                             contentAlignment = Alignment.TopCenter,
                         ) {
-                            SelectionContainer(Modifier.readingColumn()) {
+                            val beingRead = reading.active && index == reading.item
+                            SelectionContainer(
+                                Modifier.readingColumn().then(
+                                    if (beingRead) Modifier.background(LagarTheme.layers.tint(key), RoundedCornerShape(8.dp)) else Modifier,
+                                ),
+                            ) {
                                 val blockAnchor = outline.anchorOf(index)
                                 val label = outline.labelOf(index)
                                 if (isStatuteBlock(block)) {
@@ -473,6 +526,17 @@ private fun ReaderLayout(
             if (showReading) {
                 ReadingSettingsSheet(readingSettings, onChange = onReadingChange, onReset = onReadingReset, onDismiss = { showReading = false })
             }
+            if (showSpeech) {
+                SpeechSettingsSheet(
+                    settings = speechSettings,
+                    voices = voices,
+                    onChange = onSpeechChange,
+                    onReset = onSpeechReset,
+                    // While reading, the change itself is heard; otherwise the title is read as a sample.
+                    onSample = { if (!reading.playing) speechEngine.speak(spokenWords(meta.title), speechSettings) {} },
+                    onDismiss = { showSpeech = false },
+                )
+            }
             if (showToc && !tocPane) {
                 TableOfContentsSheet(
                     outline = outline,
@@ -501,6 +565,11 @@ private fun ReaderLayout(
                 BarAction(painterResource(Res.drawable.ic_toc), stringResource(Res.string.reader_toc)) { showToc = true }
             }
             BarAction(painterResource(Res.drawable.ic_format_size), stringResource(Res.string.reader_settings)) { showReading = true }
+            if (voices.isNotEmpty() && spoken.any { it.isNotBlank() }) {
+                BarAction(painterResource(Res.drawable.ic_volume_up), stringResource(Res.string.reader_read_aloud)) {
+                    if (reading.active) readAloud.toggle() else startReading()
+                }
+            }
             if (drawer) {
                 BarAction(painterResource(Res.drawable.ic_info), stringResource(Res.string.reader_inspector_open)) { drawerOpen = true }
             }
@@ -529,8 +598,28 @@ private fun ReaderLayout(
             )
         }
     }
+    if (reading.active) {
+        ReadAloudBar(
+            label = outline.labelOf(reading.item),
+            playing = reading.playing,
+            hazeState = hazeState,
+            accent = LagarTheme.colors.primary,
+            onPrevious = readAloud::previous,
+            onToggle = readAloud::toggle,
+            onNext = readAloud::next,
+            onSettings = { showSpeech = true },
+            onClose = readAloud::close,
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .navigationBarsPadding()
+                .padding(horizontal = spacing.marginMobile, vertical = spacing.sm),
+        )
+    }
     SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter).navigationBarsPadding())
 }
+
+/** Room left under the text for the read-aloud bar, so the last § can be scrolled above it. */
+private val ReadAloudBarSpace = 72.dp
 
 /** The layer colour of a document in the reader: its layer's, or the repealed grey once it is repealed. */
 private fun readerLayer(meta: DocumentMeta): LayerKey =
