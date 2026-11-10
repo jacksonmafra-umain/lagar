@@ -13,8 +13,8 @@
         "1920:859",
         "1921:21"
       ],
-      "total": 33814,
-      "unknown": 33790
+      "total": 33823,
+      "unknown": 33799
     },
     "amended_through": {
       "sample": [
@@ -29,8 +29,8 @@
         "1944:649",
         "1946:851"
       ],
-      "total": 5767,
-      "unknown": 5730
+      "total": 5769,
+      "unknown": 5732
     },
     "reprinted_by": {
       "sample": [
@@ -52,7 +52,7 @@
   "documents": 54813,
   "duplicate_ids": [],
   "fsck": null,
-  "generated_at": "2026-11-09T14:26:51Z",
+  "generated_at": "2026-11-10T13:37:11Z",
   "path_mismatches": [],
   "schema_errors": [],
   "text_quality": [
