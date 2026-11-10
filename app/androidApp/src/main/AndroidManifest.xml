@@ -5,6 +5,13 @@
     <!-- Coarse only: the position just picks the nearest kommun and never leaves the device. -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <!-- Android 11+ only lets the app reach the speech engine (read aloud) when it declares the service. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:enableOnBackInvokedCallback="true"
