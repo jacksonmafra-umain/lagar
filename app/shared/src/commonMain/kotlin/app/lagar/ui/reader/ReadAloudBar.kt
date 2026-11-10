@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
@@ -78,8 +79,10 @@ internal fun ReadAloudBar(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(2.dp),
     ) {
+        // The bar shows the § alone so it fits a phone; screen readers hear "Reading 3 §".
+        val announced = if (label != null) stringResource(Res.string.reader_read_aloud_now, label) else stringResource(Res.string.reader_read_aloud_text)
         Text(
-            text = if (label != null) stringResource(Res.string.reader_read_aloud_now, label) else stringResource(Res.string.reader_read_aloud_text),
+            text = label ?: announced,
             style = LagarTheme.type.labelMd,
             color = LagarTheme.colors.onSurface,
             maxLines = 1,
@@ -87,7 +90,10 @@ internal fun ReadAloudBar(
             modifier = Modifier
                 .weight(1f)
                 .padding(start = spacing.sm)
-                .semantics { liveRegion = LiveRegionMode.Polite },
+                .clearAndSetSemantics {
+                    contentDescription = announced
+                    liveRegion = LiveRegionMode.Polite
+                },
         )
         PlayerButton(painterResource(Res.drawable.ic_skip_previous), stringResource(Res.string.reader_read_aloud_previous), onClick = onPrevious)
         PlayerButton(
