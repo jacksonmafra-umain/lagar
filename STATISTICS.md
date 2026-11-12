@@ -1,6 +1,6 @@
 # Corpus statistics
 
-Generated 2026-11-10T14:03:37Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-12T08:04:35Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
@@ -9,8 +9,8 @@ The corpus holds 54,825 documents in 7 layers.
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
 | fundamental | fundamental_law | 4 | 494 | 33,286 |
-| sfs | act | 3,000 | 93,765 | 8,807,544 |
-| sfs | ordinance | 6,591 | 101,896 | 6,895,866 |
+| sfs | act | 3,000 | 93,765 | 8,807,530 |
+| sfs | ordinance | 6,591 | 101,896 | 6,895,833 |
 | sfs | other_statute | 1,837 | 12,464 | 1,343,514 |
 | sfs | treaty | 3,515 | 75 | 2,002,459 |
 | agency | agency_regulation | 5,468 | 61,188 | 14,295,358 |
@@ -317,7 +317,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 - Documents checked: 54,825
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
-- Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,957 of 40,018 (mostly older amending acts, which are not collected as documents of their own)
+- Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,955 of 40,016 (mostly older amending acts, which are not collected as documents of their own)
 
 ### SFS text against the official PDF
 

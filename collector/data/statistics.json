@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T14:03:37Z",
+ "generated_at": "2026-11-12T08:04:35Z",
  "documents": 54825,
  "layers": {
   "fundamental": {
@@ -28,12 +28,12 @@
     "act": {
      "documents": 3000,
      "sections": 93765,
-     "words": 8807544
+     "words": 8807530
     },
     "ordinance": {
      "documents": 6591,
      "sections": 101896,
-     "words": 6895866
+     "words": 6895833
     },
     "other_statute": {
      "documents": 1837,
@@ -1667,8 +1667,8 @@
     "short_body": 548,
     "print_only": 259
    },
-   "unresolved_references": 39957,
-   "references": 40018
+   "unresolved_references": 39955,
+   "references": 40016
   },
   "sfs_pdf_verification": {
    "statuses": {
