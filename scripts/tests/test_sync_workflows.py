@@ -50,6 +50,21 @@ class SyncWorkflowTest(unittest.TestCase):
             with self.subTest(workflow=workflow.name):
                 self.assertIn("bash .github/scripts/merge-sync-pr.sh", workflow.read_text())
 
+    def test_sync_pushes_go_through_the_push_script(self):
+        # A raw push carries workflow changes from main, which the sync tokens may not make.
+        for path in [*sync_workflows(), MERGE_SCRIPT]:
+            with self.subTest(file=path.name):
+                text = path.read_text()
+                self.assertIn("bash .github/scripts/push-sync-branch.sh", text)
+                self.assertNotRegex(text, r'git push [^\n]*HEAD:\$BRANCH')
+
+    def test_syncs_and_their_retry_use_the_sync_token(self):
+        for path in [*sync_workflows(), RETRY_WORKFLOW]:
+            with self.subTest(workflow=path.name):
+                text = path.read_text()
+                self.assertIn("GH_TOKEN: ${{ secrets.SYNC_TOKEN || github.token }}", text)
+                self.assertIn("token: ${{ secrets.SYNC_TOKEN || github.token }}", text)
+
     def test_reports_shared_by_syncs_are_regenerated_on_merge(self):
         counts = Counter(f for w in sync_workflows() for f in set(generated(w)))
         shared = {f for f, n in counts.items() if n > 1}

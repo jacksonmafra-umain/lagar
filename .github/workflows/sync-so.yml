@@ -130,7 +130,6 @@ jobs:
       - name: Commit and open the pull request
         env:
           SINCE: ${{ steps.window.outputs.since }}
-          PR: ${{ steps.base.outputs.pr }}
           OWNER: ${{ github.repository_owner }}
         run: |
           if [ -z "$(git status --porcelain -- corpus)" ]; then
@@ -148,8 +147,9 @@ jobs:
           } > "$RUNNER_TEMP/message"
           git add -- corpus $GENERATED
           git commit -q -F "$RUNNER_TEMP/message"
-          git push --force-with-lease origin "HEAD:$BRANCH"
-          if [ -z "$PR" ]; then
+          bash .github/scripts/push-sync-branch.sh
+          # The push script may have opened the pull request again; look it up.
+          if [ -z "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')" ]; then
             gh pr create --base main --head "$BRANCH" \
               --title "Sync SÖ treaties" \
               --label "type: data" --label "area: corpus" \
