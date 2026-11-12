@@ -3,6 +3,8 @@ name: Site
 # Tests and builds the landing page, then deploys it to
 # Vercel: a preview for every pull request (URL posted on the PR), production on main.
 # Pull requests from forks build and test but never deploy (no secrets there).
+# The sync workflows merge with the workflow token, whose pushes trigger nothing,
+# so the page is also deployed after each sync workflow succeeds (new statistics).
 
 on:
   pull_request:
@@ -22,6 +24,17 @@ on:
       - app/shared/src/commonMain/composeResources/font/**
       - scripts/build-site.sh
       - .github/workflows/site.yml
+  workflow_run:
+    workflows:
+      - Sync agencies log
+      - Sync agency regulations
+      - Sync case law
+      - Sync county regulations
+      - Sync EU
+      - Sync municipal regulations
+      - Sync SFS
+      - Sync SÖ
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -34,6 +47,7 @@ concurrency:
 
 jobs:
   site:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
