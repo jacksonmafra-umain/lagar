@@ -91,7 +91,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | case_law | Case law | 16476 | 16640 | counted | 99.0% |
 | sfs | SÖ treaties | 3515 | 3515 | counted | 100.0% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
-| eu | EU judgments | 605 | 611 | counted | 99.0% |
+| eu | EU judgments | 606 | 611 | counted | 99.2% |
 | region | Regional regulations | 11658 | unknown | unknown | - |
 | municipality | Municipal regulations | 5601 | unknown | unknown | - |
 | service | Public services | 0 | unknown | unknown | - |
@@ -190,7 +190,7 @@ Targets:
 
 ## Integrity
 
-Audit of 54825 documents (2026-11-12T08:06:01Z):
+Audit of 54826 documents (2026-11-12T13:21:11Z):
 
 - schema errors: 0
 - duplicate ids: 0

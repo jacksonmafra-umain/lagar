@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-12T08:06:20Z",
- "documents": 54825,
+ "generated_at": "2026-11-12T13:21:24Z",
+ "documents": 54826,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -168,7 +168,7 @@
    }
   },
   "eu": {
-   "documents": 675,
+   "documents": 676,
    "types": {
     "eu_regulation": {
      "documents": 40,
@@ -186,20 +186,20 @@
      "words": 14266
     },
     "eu_judgment": {
-     "documents": 605,
+     "documents": 606,
      "sections": 35,
-     "words": 3651044
+     "words": 3656195
     }
    },
    "issuers": 5,
    "text": {
-    "web": 675,
+    "web": 676,
     "pdf": 0,
     "ocr": 0,
     "none": 0
    },
    "hosts": {
-    "publications.europa.eu": 675
+    "publications.europa.eu": 676
    }
   },
   "region": {
@@ -529,7 +529,7 @@
   }
  },
  "text": {
-  "web": 32455,
+  "web": 32456,
   "pdf": 20409,
   "ocr": 1494,
   "none": 467
@@ -1658,7 +1658,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54825,
+   "documents": 54826,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,

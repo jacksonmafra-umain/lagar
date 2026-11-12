@@ -12,7 +12,7 @@ Which Swedish legal sources the corpus processes and which it does not, with the
 | not collected: blocked by a WAF | 5 |
 | not collected: API key needed | 1 |
 
-Other layers in the corpus: 4 fundamental laws, 11428 SFS statutes, 16476 case-law documents, 675 EU documents (a curated list, from the Publications Office Cellar).
+Other layers in the corpus: 4 fundamental laws, 11428 SFS statutes, 16476 case-law documents, 676 EU documents (a curated list, from the Publications Office Cellar).
 
 ## Agency regulation series
 
