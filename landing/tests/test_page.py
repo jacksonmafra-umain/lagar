@@ -118,10 +118,14 @@ class PageTest(unittest.TestCase):
                     self.assertIn(url[1:], self.page.ids)
                     continue
                 path = url.split("#")[0].split("?")[0]
-                # fonts/ is added by the build script
-                if path.startswith("fonts/"):
+                # fonts/ is added by the build script; Vercel serves /_vercel/
+                if path.startswith(("fonts/", "/_vercel/")):
                     continue
                 self.assertTrue((LANDING / path.lstrip("/")).is_file(), path)
+
+    def test_vercel_web_analytics_loaded(self):
+        # Vercel serves the script from the page's own host; it is a 404 elsewhere.
+        self.assertIn(("script", "src", "/_vercel/insights/script.js"), self.page.urls)
 
     def test_no_third_party_assets(self):
         for tag, name, url in self.page.urls:
