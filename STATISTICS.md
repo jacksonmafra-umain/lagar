@@ -1,10 +1,10 @@
 # Corpus statistics
 
-Generated 2026-11-12T14:03:04Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-12T17:18:36Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,827 documents in 7 layers.
+The corpus holds 54,835 documents in 7 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
@@ -13,7 +13,7 @@ The corpus holds 54,827 documents in 7 layers.
 | sfs | ordinance | 6,591 | 101,896 | 6,895,833 |
 | sfs | other_statute | 1,837 | 12,464 | 1,343,514 |
 | sfs | treaty | 3,515 | 75 | 2,002,459 |
-| agency | agency_regulation | 5,468 | 61,188 | 14,295,358 |
+| agency | agency_regulation | 5,476 | 61,277 | 14,302,094 |
 | case_law | case_report | 16,406 | 715 | 55,715,883 |
 | case_law | case_notice | 71 | 4 | 93,635 |
 | eu | eu_regulation | 40 | 0 | 2,191,225 |
@@ -62,15 +62,15 @@ Documents per host of their `source`, per layer (the ten largest).
 | --- | ---: |
 | foreskrifter.riksarkivet.se | 1,363 |
 | skolfs.skolverket.se | 965 |
-| transportstyrelsen.se | 708 |
+| transportstyrelsen.se | 709 |
 | lagrummet.forsakringskassan.se | 368 |
-| regelverk.swedac.se | 187 |
+| regelverk.swedac.se | 189 |
 | naturvardsverket.se | 164 |
 | domstol.se | 154 |
+| socialstyrelsen.se | 125 |
 | fi.se | 121 |
-| socialstyrelsen.se | 121 |
 | pensionsmyndigheten.se | 81 |
-| 55 other hosts | 1,236 |
+| 55 other hosts | 1,237 |
 
 ### case_law
 
@@ -112,12 +112,12 @@ Documents per host of their `source`, per layer (the ten largest).
 | --- | ---: | ---: | ---: | ---: |
 | fundamental | 4 | 0 | 0 | 0 |
 | sfs | 14,391 | 257 | 35 | 260 |
-| agency | 291 | 4,425 | 740 | 12 |
+| agency | 293 | 4,431 | 740 | 12 |
 | case_law | 16,477 | 0 | 0 | 0 |
 | eu | 676 | 0 | 0 | 0 |
 | region | 420 | 10,777 | 428 | 33 |
 | municipality | 198 | 4,950 | 291 | 162 |
-| **all** | **32,457** (59.2 %) | **20,409** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
+| **all** | **32,459** (59.2 %) | **20,415** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -127,7 +127,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 
 | layer | issuers using PDF | documents | issuers with scans | scanned | read by OCR | still without text |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| agency | 75 | 5,391 | 12 | 743 | 740 | 3 |
+| agency | 75 | 5,400 | 12 | 743 | 740 | 3 |
 | municipality | 281 | 5,498 | 145 | 349 | 291 | 58 |
 | region | 21 | 11,598 | 15 | 461 | 428 | 33 |
 | sfs | 3 | 293 | 1 | 36 | 35 | 1 |
@@ -141,13 +141,13 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | agency: Konsumentverket | 22 | 1 | 1 |
 | agency: Lantmäteriet | 20 | 2 | 1 |
 | agency: Naturvårdsverket | 164 | 9 | 9 |
-| agency: Polismyndigheten | 79 | 3 | 3 |
+| agency: Polismyndigheten | 80 | 3 | 3 |
 | agency: Riksarkivet | 1,363 | 707 | 705 |
 | agency: Sametinget | 13 | 1 | 1 |
 | agency: Sjöfartsverket | 44 | 7 | 7 |
-| agency: Socialstyrelsen | 110 | 4 | 4 |
+| agency: Socialstyrelsen | 113 | 4 | 4 |
 | agency: Statens energimyndighet | 65 | 3 | 3 |
-| agency: Transportstyrelsen | 622 | 1 | 1 |
+| agency: Transportstyrelsen | 623 | 1 | 1 |
 | municipality: Ale kommun | 49 | 10 | 5 |
 | municipality: Alingsås kommun | 37 | 1 | 1 |
 | municipality: Arjeplogs kommun | 47 | 8 | 7 |
@@ -314,10 +314,10 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 
 ### Corpus audit
 
-- Documents checked: 54,827
+- Documents checked: 54,835
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
-- Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,955 of 40,016 (mostly older amending acts, which are not collected as documents of their own)
+- Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,960 of 40,021 (mostly older amending acts, which are not collected as documents of their own)
 
 ### SFS text against the official PDF
 

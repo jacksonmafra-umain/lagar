@@ -13,8 +13,8 @@
         "1920:859",
         "1921:21"
       ],
-      "total": 33821,
-      "unknown": 33797
+      "total": 33826,
+      "unknown": 33802
     },
     "amended_through": {
       "sample": [
@@ -49,10 +49,10 @@
       "unknown": 426
     }
   },
-  "documents": 54827,
+  "documents": 54835,
   "duplicate_ids": [],
   "fsck": null,
-  "generated_at": "2026-11-12T14:02:46Z",
+  "generated_at": "2026-11-12T17:18:10Z",
   "path_mismatches": [],
   "schema_errors": [],
   "text_quality": [

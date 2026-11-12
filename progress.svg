@@ -21,7 +21,7 @@
 <text x="16" y="203" fill="#007270">TSFS (Transportstyrelsen)</text>
 <rect x="240" y="192" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="192" width="260" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="203" text-anchor="end" fill="#007270">622 / 622 (100.0%)</text>
+<text x="704" y="203" text-anchor="end" fill="#007270">623 / 622 (100.0%)</text>
 <text x="16" y="239" fill="#007270">PFS (Pensionsmyndigheten)</text>
 <rect x="240" y="228" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="228" width="260" height="16" rx="8" fill="#0f7c7a"/>
@@ -29,7 +29,7 @@
 <text x="16" y="275" fill="#007270">PMFS (Polisen)</text>
 <rect x="240" y="264" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="264" width="260" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="275" text-anchor="end" fill="#007270">50 / 50 (100.0%)</text>
+<text x="704" y="275" text-anchor="end" fill="#007270">51 / 50 (100.0%)</text>
 <text x="16" y="311" fill="#007270">PRVFS (PRV)</text>
 <rect x="240" y="300" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="300" width="260" height="16" rx="8" fill="#0f7c7a"/>
@@ -85,7 +85,7 @@
 <text x="16" y="779" fill="#007270">STAFS (Swedac)</text>
 <rect x="240" y="768" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="768" width="260" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="779" text-anchor="end" fill="#007270">187 / 187 (100.0%)</text>
+<text x="704" y="779" text-anchor="end" fill="#007270">189 / 187 (100.0%)</text>
 <text x="16" y="815" fill="#007270">STEMFS (Energimyndigheten)</text>
 <rect x="240" y="804" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="804" width="260" height="16" rx="8" fill="#0f7c7a"/>
@@ -264,8 +264,8 @@
 <text x="704" y="2363" text-anchor="end" fill="#007270">61 / 68 (89.7%)</text>
 <text x="16" y="2399" fill="#007270">HSLF-FS</text>
 <rect x="240" y="2388" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
-<rect x="240" y="2388" width="200" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="2399" text-anchor="end" fill="#007270">119 / 155 (76.8%)</text>
+<rect x="240" y="2388" width="206" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2399" text-anchor="end" fill="#007270">123 / 155 (79.4%)</text>
 <text x="16" y="2435" fill="#007270">SOSFS (Socialstyrelsen)</text>
 <rect x="240" y="2424" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="2424" width="260" height="16" rx="8" fill="#0f7c7a"/>

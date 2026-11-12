@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://www.socialstyrelsen.se/publikationer/hslf-fs-20245-socialstyrelsens-foreskrifter-om-uppgiftsskyldighet-till-socialstyrelsens-medicinska-fodelseregister-2024-3-8995/"
-source_sha256: "08ab88647c592151df9ecf55b32894f7d9a319d8d5b0c8fcf6e25482a8594424"
-fetched_at: "2026-10-30T21:22:42Z"
+source_sha256: "15b1c5c33ba0a9b882e357d2855a89b34d47263b26af25676139d649b099a588"
+fetched_at: "2026-11-12T15:02:05Z"
 issuer: "Socialstyrelsen"
 ---
 # Socialstyrelsens föreskrifter om uppgiftsskyldighet till Socialstyrelsens medicinska födelseregister
@@ -42,7 +42,7 @@ Socialstyrelsen föreskriver följande med stöd av 6 § tredje stycket förordn
 
 Ledningssystem
 
-**1 §** Av Socialstyrelsens föreskrifter och allmänna råd (SOSFS 2011:9) om ledningssystem för systematiskt kvalitetsarbete framgår det att varje vårdgivare ansvarar för att det finns de processer och rutiner som behövs för att säkra verksamhetens kvalitet.
+**1 §** Av Socialstyrelsens föreskrifter och allmänna råd (SOSFS 2011:9) om ledningssystem för systematiskt kvalitetsarbete framgår det att varje vårdgivare ansvarar för att det finns de processer och ru­ tiner som behövs för att säkra verksamhetens kvalitet.
 
 Uppgiftsskyldighet
 
@@ -72,15 +72,13 @@ HSLF-FS
 
 Ändring av tidigare lämnade uppgifter
 
-**6 §** Om inrapporterade uppgifter behöver kompletteras eller rättas, ska detta göras så snart som möjligt, dock tidigast i samband med ordinarie rapportering i enlighet med 4 §.
+**6 §** Om inrapporterade uppgifter behöver kompletteras eller rättas, ska detta göras så snart som möjligt, dock tidigast i samband med or­ dinarie rapportering i enlighet med 4 §.
 
 Undantagsbestämmelse
 
 **7 §** Socialstyrelsen kan medge undantag från bestämmelserna i dessa föreskrifter, om det finns särskilda skäl.
 
-Denna författning träder i kraft den 1 juli 2025.
-
-Socialstyrelsen
+Denna författning träder i kraft den 1 juli 2025. Socialstyrelsen
 
 OLIVIA WIGZELL
 
@@ -126,9 +124,7 @@ Bilaga 1
 
 Uppgifter om den gravida
 
-Filnamn: MFR\_MHV1\_filkod\_ÅÅÅÅMM\_ÅÅÅÅMMDDTHHMM.txt
-
-Ord­nings- Frågeställning nummer
+Filnamn: MFR\_MHV1\_filkod\_ÅÅÅÅMM\_ÅÅÅÅMMDDTHHMM.txt Ord­nings- Frågeställning nummer
 
 Max antal tecken
 
@@ -168,7 +164,7 @@ Personuppgifter
 
 Den gravidas personnummer
 
-Identifieringsalternativ
+Identifierings­ alternativ
 
 Den gravidas födelsedatum
 
@@ -454,7 +450,7 @@ Antal år av ofrivillig barnlöshet
 
 Ska anges som hela år, räknat från den tidpunkt då försöken att bli gravid påbörjades fram till graviditeten.
 
-Om ofrivillig barnlöshet inte förelåg eller varade mindre än ett år, ska 0 anges.
+Om ofrivillig barnlöshet inte före­ låg eller varade mindre än ett år, ska 0 anges.
 
 Hälsotillstånd m.m.
 
@@ -466,7 +462,7 @@ Upprepade urinvägsinfektioner
 
 2 = information saknas
 
-Kronisk njursjukdom
+Kronisk njur­ sjukdom
 
 0 = nej
 
@@ -640,9 +636,9 @@ Tyreoideasjukdom
 
 0 = nej
 
-1 = ja, diagnostiserad före graviditeten
+1 = ja, diagnostiserad före gravidi­ teten
 
-2 = ja, diagnostiserad under gravidi­teten
+2 = ja, diagnostiserad under gravi­ di­teten
 
 3 = information saknas
 
@@ -772,7 +768,7 @@ Kontakt med barnmorska
 
 Antal fysiska besök
 
-Antal distanskontakter
+Antal distans­ kontakter
 
 Format
 
@@ -790,9 +786,7 @@ Till läkemedel ska även vaccin räknas.
 
 Om den gravida har använt flera läkemedel under graviditeten, ska uppgifterna om varje läkemedel anges på en egen rad.
 
-Filnamn: MFR\_MHV2\_filkod\_ÅÅÅÅMM\_ÅÅÅÅMMDDTHHMM.txt
-
-Ord­nings- Frågeställning nummer
+Filnamn: MFR\_MHV2\_filkod\_ÅÅÅÅMM\_ÅÅÅÅMMDDTHHMM.txt Ord­nings- Frågeställning nummer
 
 Max antal tecken
 
@@ -808,19 +802,19 @@ Graviditets-id
 
 Kontakttillfälle då den gravida lämnade information om sin läkemedelsanvändning under graviditeten
 
-Behandlingsperiod
+Behandlings­ period
 
 Första behandlingstillfälle
 
 ÅÅÅÅMMDD
 
-Om information om datum saknas, ska i stället i nr 6 anges under vilken period behandlingen påbörjades.
+Om information om datum saknas, ska i stället i nr 6 anges under vilken period behandlingen påbörja­ des.
 
 Sista behandlingstillfälle
 
 ÅÅÅÅMMDD
 
-Om information om datum saknas, ska i stället i nr 7 anges under vilken period behandlingen avslutades.
+Om information om datum saknas, ska i stället i nr 7 anges under vil­ ken period behandlingen avsluta­ des.
 
 Läkemedel
 
@@ -868,7 +862,7 @@ Behandlingen påbörjades
 
 Behandlingen avslutades
 
-0 = ej, utan fortsatte resten av graviditeten
+0 = ej, utan fortsatte resten av gra­ viditeten
 
 1 = under första trimestern, dvs. perioden före graviditetsvecka
 
@@ -908,9 +902,7 @@ Bilaga 1
 
 Uppgifter om ultraljudsundersökning
 
-Om den gravida har genomgått flera ultraljudsundersökningar under graviditeten, ska uppgifterna om varje undersökning anges på en egen rad. Om flerbörd, ska uppgift om varje foster anges på en egen rad. Filnamn: MFR\_MHV3\_filkod\_ÅÅÅÅMM\_ÅÅÅÅMMDDTHHMM.txt
-
-Ord­nings- Frågeställning nummer
+Om den gravida har genomgått flera ultraljudsundersökningar under graviditeten, ska uppgifterna om varje undersökning anges på en egen rad. Om flerbörd, ska uppgift om varje foster anges på en egen rad. Filnamn: MFR\_MHV3\_filkod\_ÅÅÅÅMM\_ÅÅÅÅMMDDTHHMM.txt Ord­nings- Frågeställning nummer
 
 Max antal tecken
 
@@ -976,7 +968,7 @@ Mätresultat abdomen circumference (AC)
 
 Mätresultat head circumference (HC)
 
-Mätresultat blodflödesklass (BFC) efter dopplerundersökning av navelsträngsartären
+Mätresultat blodflödesklass (BFC) efter dopplerundersökning av navelsträngs­ artären
 
 1 = BFC normal, positivt diastoliskt flöde, normalt pulsatilitetsindex
 
@@ -988,7 +980,7 @@ Mätresultat blodflödesklass (BFC) efter dopplerundersökning av navelsträngsa
 
 5 = BFC 3B, backflöde i diastole
 
-Resultat av ultraljudsundersökning efter misstänkt avvikelse vid fosterdiagnostik
+Resultat av ultraljuds­ undersökning efter misstänkt avvikelse vid fosterdiagnostik
 
 1 = ej avvikelse
 
@@ -1016,9 +1008,7 @@ Bilaga 1
 
 Uppgifter om fosterdiagnostik
 
-Om flerbörd, ska uppgift om varje foster anges på en egen rad. Filnamn: MFR\_MHV4\_filkod\_ÅÅÅÅMM\_ÅÅÅÅMMDDTHHMM.txt
-
-Ord­nings- Frågeställning nummer
+Om flerbörd, ska uppgift om varje foster anges på en egen rad. Filnamn: MFR\_MHV4\_filkod\_ÅÅÅÅMM\_ÅÅÅÅMMDDTHHMM.txt Ord­nings- Frågeställning nummer
 
 Max antal tecken
 
@@ -1128,7 +1118,9 @@ HSLF-FS
 
 2024:5
 
-Filspecifikationer för förlossnings- och ny­född­hetsvård (FV) Instruktioner
+Filspecifikationer för förlossnings- och ny­född­hets­ vård (FV)
+
+Instruktioner
 
 - Vid rapporteringen till Socialstyrelsens medicinska födelseregister ska de uppgifter som utgörs av svaren på frågorna i de åtta filspecifikationerna nedan (FV1–FV8) lämnas i åtta separata textfiler.
 
@@ -1202,7 +1194,7 @@ Personuppgifter
 
 Den förlöstas personnummer
 
-Identifieringsalternativ
+Identifierings­ alternativ
 
 Den förlöstas födelsedatum
 
@@ -1344,7 +1336,7 @@ Induktion med annan ickefarmakologisk metod än som anges i nr 19 och 20
 
 Huvudindikation för induktion
 
-Ska anges enligt ”Internationell statistisk klassifikation av sjukdomar och relaterade hälsopro­blem – Systematisk förteckning (ICD-10-SE)” med fortlöpande ändringar.
+Ska anges enligt ”Internationell statistisk klassifikation av sjuk­ domar och relaterade hälsopro­blem – Systematisk förteckning (ICD-10-SE)” med fortlöpande ändringar.
 
 Ska anges utan punkt.
 
@@ -1368,7 +1360,7 @@ Amniotomi
 
 Fullvidgad livmodermun
 
-ÅÅÅÅMMDDTHHMM Ska avse tidpunkten när livmodermunnen för första gången var öppen 10 centimeter.
+ÅÅÅÅMMDDTHHMM Ska avse tidpunkten när livmoder­ munnen för första gången var öppen 10 centimeter.
 
 0 = nej
 
@@ -1436,7 +1428,7 @@ Spinalanestesi
 
 2 = information saknas
 
-Pudendusblockad
+Pudendus­ blockad
 
 0 = nej
 
@@ -1468,7 +1460,7 @@ Paracervikalblockad
 
 2 = information saknas
 
-Annan opioid än vid epiduralblockad/spinalanestesi
+Annan opioid än vid epiduralblockad/spinal­ anestesi
 
 0 = nej
 
@@ -1620,7 +1612,7 @@ Bristning
 
 2 = ja, isolerad vaginalbristning
 
-Ska avse den sammanlagda blödningen under förlossningen och efter det att barnet/barnen föddes fram till 2 timmar efter placentaavgång.
+Ska avse den sammanlagda blödningen under förlossningen och efter det att barnet/barnen föddes fram till 2 timmar efter placenta­ avgång.
 
 Öppningsoperation
 
@@ -1744,7 +1736,7 @@ Bilaga 2
 
 Ordnings- Frågeställning nummer
 
-Utskriven från förlossningskliniken/patienthotellet till annan vård
+Utskriven från förlossnings­ kliniken/patient­ hotellet till annan vård
 
 Max antal tecken
 
@@ -1764,9 +1756,7 @@ HSLF-FS
 
 Bilaga 2
 
-Uppgifter om läkemedelsbehandling av den förlösta
-
-Endast uppgifter som avser induktion med läkemedel, tokolysbehandling och steroidbehandling ska rapporteras.
+Uppgifter om läkemedelsbehandling av den förlösta Endast uppgifter som avser induktion med läkemedel, tokolysbehandling och steroidbehandling ska rapporteras.
 
 Om den förlösta har fått flera av ovanstående läkemedelsbehandlingar, ska uppgifterna om varje behandling anges på en egen rad. Vid steroidbehandling ska varje dos anges på en egen rad.
 
@@ -1800,7 +1790,7 @@ Behandlingen påbörjades
 
 ÅÅÅÅMMDDTHHMM
 
-Tokolysbehandlingen avslutades
+Tokolysbehandlingen avsluta­ des
 
 ÅÅÅÅMMDDTHHMM
 
@@ -1862,7 +1852,7 @@ Smärtlindringen påbörjades
 
 10 = annan farmakologisk smärtlindring än i alternativen 01–09
 
-11 = transkutan elektrisk nervstimulering (TNS)
+11 = transkutan elektrisk nerv­ stimulering (TNS)
 
 12 = akupunktur/akupressur
 
@@ -1908,7 +1898,7 @@ Ska skapas av vårdgivaren.
 
 Diagnoskod
 
-Ska anges enligt ”Internationell statistisk klassifikation av sjukdomar och relaterade hälsoproblem – Systematisk förteckning (ICD-10-SE)” med fortlöpande ändringar.
+Ska anges enligt ”Internationell statistisk klassifikation av sjuk­ domar och relaterade hälsoproblem – Systematisk förteckning (ICD-10-SE)” med fortlöpande ändringar.
 
 Diagnos
 
@@ -2090,7 +2080,7 @@ Format
 
 Svarsalternativ och specificeringar
 
-Barnet framföddes i vatten
+Barnet fram­ föddes i vatten
 
 0 = nej
 
@@ -2102,7 +2092,7 @@ Perinealskydd med handgrepp på föregående fosterdel
 
 1 = ja, med en hand på föregående fosterdel
 
-2 = ja, med både en hand på före­gående fosterdel och en som stöttade perineum, dvs. tvåhandsgrepp
+2 = ja, med både en hand på före­gående fosterdel och en som stöttade perineum, dvs. två­ handsgrepp
 
 Perinealskydd vid axlars framfödande
 
@@ -2110,7 +2100,7 @@ Perinealskydd vid axlars framfödande
 
 1 = ja
 
-Förlossningsställning vid barnets framfödande
+Förlossningsställning vid barnets fram­ födande
 
 01 = liggande på sidan
 
@@ -2184,7 +2174,7 @@ Användningen av sugklocka avslutades
 
 Antal drag med sugklocka
 
-Antal sugklockesläpp
+Antal sug­ klockesläpp
 
 Endast en hälsooch sjukvårdspersonal drog ut barnet med sugklocka
 
@@ -2206,11 +2196,11 @@ Fosterhuvudets station vid tång
 
 3 = Utgångsextraktion, vertex vid bäckenbotten
 
-Användningen av tång påbörjades
+Användningen av tång påbörja­ des
 
 ÅÅÅÅMMDDTHHMM
 
-Användningen av tång avslutades
+Användningen av tång avsluta­ des
 
 ÅÅÅÅMMDDTHHMM
 
@@ -2242,7 +2232,7 @@ Format
 
 Svarsalternativ och specificeringar
 
-Ska anges enligt ”Internationell statistisk klassifikation av sjukdomar och relaterade hälsoproblem – Systematisk förteckning (ICD-10-SE)” med fortlöpande ändringar.
+Ska anges enligt ”Internationell statistisk klassifikation av sjuk­ domar och relaterade hälsoproblem – Systematisk förteckning (ICD-10-SE)” med fortlöpande ändringar.
 
 Ska anges utan punkt.
 
@@ -2254,11 +2244,13 @@ Kejsarsnitt
 
 1 = ja, planerat
 
-2 = ja, planerat men utfördes tidigare p.g.a. tidig värkstart 3 = ja, akut
+2 = ja, planerat men utfördes tidi­ gare p.g.a. tidig värkstart
+
+3 = ja, akut
 
 Huvudindikation för kejsarsnitt
 
-Ska anges enligt ”Internationell statistisk klassifikation av sjukdomar och relaterade hälsoproblem – Systematisk förteckning (ICD-10-SE)” med fortlöpande ändringar.
+Ska anges enligt ”Internationell statistisk klassifikation av sjuk­ domar och relaterade hälsoproblem – Systematisk förteckning (ICD-10-SE)” med fortlöpande ändringar.
 
 Ska anges utan punkt.
 
@@ -2304,7 +2296,7 @@ Svarsalternativ och specificeringar
 
 Personuppgifter
 
-Barnets födelsedatum och -klockslag
+Barnets födelse­ datum och -klockslag
 
 ÅÅÅÅMMDDTHHMM
 
@@ -2316,7 +2308,7 @@ Barnets personnummer
 
 NNNNNNNNNNNN
 
-Identifieringsalternativ
+Identifierings­ alternativ
 
 0 = saknas
 
@@ -2588,13 +2580,13 @@ Saturationsmätning i höger hand (POXscreening)
 
 Saturationsmätningstillfälle höger hand
 
-Högsta stabila uppmätta syrehalt i blodet vid saturationsmätning i höger hand
+Högsta stabila uppmätta syre­ halt i blodet vid saturationsmätning i höger hand
 
 Saturationsmätning i höger/ vänster fot
 
 Saturationsmätningstillfälle höger/vänster fot
 
-Högsta stabila uppmätta syrehalt i blodet vid saturationsmätning i höger/ vänster fot
+Högsta stabila uppmätta syre­ halt i blodet vid saturationsmätning i höger/ vänster fot
 
 Högsta uppmätta bilirubinvärde
 
@@ -2638,17 +2630,17 @@ Format
 
 Svarsalternativ och specificeringar
 
-Lägsta P-glukosvärde uppmätt inom 3 timmar efter födseln
+Lägsta P-glukos­ värde uppmätt inom 3 timmar efter födseln
 
 Lägsta uppmätta
 
 P-glukosvärde inom 3 timmar efter födseln
 
-Lägsta P-glukosvärde upp­mätt mellan 3 timmar och 28 levnadsdagar efter födseln
+Lägsta P-glukosvärde upp­mätt mellan 3 timmar och 28 levnads­ dagar efter födseln
 
 Lägsta uppmätta
 
-P-glukosvärde mellan 3 timmar och 28 levnadsdagar efter födseln
+P-glukosvärde mellan 3 timmar och 28 levnads­ dagar efter födseln
 
 Lägsta kroppstemperatur uppmätt senast i samband med inskrivningen i neonatalvården
 
@@ -2848,7 +2840,7 @@ Bilaga 2
 
 Koder för de diagnoser som har ställts på barnet
 
-Diagnoskod ska anges för medfödda tillstånd, inklusive fosterskador och kromosomavvikelser. Den ska vidare anges för tillstånd under barnets första 28 dagar. Även diagnoser som ställdes vid undersökningar efter förlossningen samt efter eventuell obduktion ska rapporteras.
+Diagnoskod ska anges för medfödda tillstånd, inklusive fosterskador och kromo­ somavvikelser. Den ska vidare anges för tillstånd under barnets första 28 dagar. Även diagnoser som ställdes vid undersökningar efter förlossningen samt efter eventuell obduktion ska rapporteras.
 
 Varje diagnoskod ska anges på en egen rad.
 
@@ -2876,7 +2868,7 @@ Ska skapas av vårdgivaren.
 
 Diagnoskod
 
-Ska anges enligt ”Internationell statistisk klassifikation av sjukdomar och relaterade hälsoproblem – Systematisk förteckning (ICD-10-SE)” med fortlöpande ändringar.
+Ska anges enligt ”Internationell statistisk klassifikation av sjuk­ domar och relaterade hälsoproblem – Systematisk förteckning (ICD-10-SE)” med fortlöpande ändringar.
 
 Börd
 

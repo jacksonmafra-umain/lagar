@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-12T14:03:04Z",
- "documents": 54827,
+ "generated_at": "2026-11-12T17:18:36Z",
+ "documents": 54835,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -59,33 +59,33 @@
    }
   },
   "agency": {
-   "documents": 5468,
+   "documents": 5476,
    "types": {
     "agency_regulation": {
-     "documents": 5468,
-     "sections": 61188,
-     "words": 14295358
+     "documents": 5476,
+     "sections": 61277,
+     "words": 14302094
     }
    },
    "issuers": 77,
    "text": {
-    "web": 291,
-    "pdf": 4425,
+    "web": 293,
+    "pdf": 4431,
     "ocr": 740,
     "none": 12
    },
    "hosts": {
     "foreskrifter.riksarkivet.se": 1363,
     "skolfs.skolverket.se": 965,
-    "transportstyrelsen.se": 708,
+    "transportstyrelsen.se": 709,
     "lagrummet.forsakringskassan.se": 368,
-    "regelverk.swedac.se": 187,
+    "regelverk.swedac.se": 189,
     "naturvardsverket.se": 164,
     "domstol.se": 154,
+    "socialstyrelsen.se": 125,
     "fi.se": 121,
-    "socialstyrelsen.se": 121,
     "pensionsmyndigheten.se": 81,
-    "polisen.se": 79,
+    "polisen.se": 80,
     "mcf.se": 78,
     "kammarkollegiet.se": 74,
     "energimyndigheten.a-w2m.se": 65,
@@ -529,8 +529,8 @@
   }
  },
  "text": {
-  "web": 32457,
-  "pdf": 20409,
+  "web": 32459,
+  "pdf": 20415,
   "ocr": 1494,
   "none": 467
  },
@@ -552,7 +552,7 @@
  "pdf": {
   "agency": {
    "issuers": 75,
-   "documents": 5391,
+   "documents": 5400,
    "issuers_with_scans": 12,
    "scanned": 743,
    "ocr": 740,
@@ -616,8 +616,8 @@
    "scanned": 9
   },
   "agency: Polismyndigheten": {
-   "documents": 79,
-   "pdf": 76,
+   "documents": 80,
+   "pdf": 77,
    "ocr": 3,
    "scanned": 3
   },
@@ -641,8 +641,8 @@
    "scanned": 7
   },
   "agency: Socialstyrelsen": {
-   "documents": 110,
-   "pdf": 105,
+   "documents": 113,
+   "pdf": 108,
    "ocr": 4,
    "scanned": 4,
    "none": 1
@@ -654,8 +654,8 @@
    "scanned": 3
   },
   "agency: Transportstyrelsen": {
-   "documents": 622,
-   "pdf": 621,
+   "documents": 623,
+   "pdf": 622,
    "ocr": 1,
    "scanned": 1
   },
@@ -1658,7 +1658,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54827,
+   "documents": 54835,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
@@ -1667,8 +1667,8 @@
     "short_body": 548,
     "print_only": 259
    },
-   "unresolved_references": 39955,
-   "references": 40016
+   "unresolved_references": 39960,
+   "references": 40021
   },
   "sfs_pdf_verification": {
    "statuses": {

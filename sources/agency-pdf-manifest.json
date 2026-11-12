@@ -8127,7 +8127,7 @@
           "bytes": 47853,
           "sha256": "4fb840de5d507add78dbbc2630e5cc4ffb7787d1cf83017ce211066bb7677b8b",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-11-03T15:00:42Z"
+          "retrieved_at": "2026-11-12T14:57:29Z"
         }
       ]
     },
@@ -12339,11 +12339,11 @@
         },
         {
           "label": "FKFS 2010:30 (konsoliderad version)",
-          "url": "https://lagrummet.forsakringskassan.se/download/18.4d7a03d617b3a126505555/1633697015588/pdf_S2010_30.pdf",
-          "bytes": 106574,
-          "sha256": "3f6d12250fb700ef9bea341d2ebbbf7741853ba29d866ce9ff2af855ccd360d5",
+          "url": "https://lagrummet.forsakringskassan.se/download/18.3d0ede8b171aacde18e2298a/1793875705686/pdf_S2010_30.pdf",
+          "bytes": 117552,
+          "sha256": "b95ad53aaa512301b98ddafa5bdd78cca2b9e77487db87b88639a9e75ccf9622",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T08:48:43Z"
+          "retrieved_at": "2026-11-12T14:40:46Z"
         },
         {
           "label": "FKFS 2026:10",
@@ -13972,6 +13972,14 @@
           "sha256": "299f94fe71f61bbead64cc153602c60d9e0163e2d58a594f925082e6a10854b6",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T08:45:01Z"
+        },
+        {
+          "label": "FKFS 2026:11",
+          "url": "https://lagrummet.forsakringskassan.se/download/18.23e756691a1a62ce85815/1793794454660/AFKF2611.pdf",
+          "bytes": 64969,
+          "sha256": "178b36c3d77d31c845da372a4faddc4dc93839dd83e84a9491ef3f9595e1974c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T14:38:39Z"
         }
       ]
     },
@@ -15334,6 +15342,20 @@
       ]
     },
     {
+      "number": "HSLF-FS 2019:12",
+      "detail_url": "https://www.socialstyrelsen.se/publikationer/hslf-fs-201912-socialstyrelsens-foreskrifter-om-undantag-fran-kravet-pa-tillstand-till-genetisk-undersokning-vid-allman-halsoundersokning-2019-6-11/",
+      "files": [
+        {
+          "label": "Öppna publikation",
+          "url": "https://www.socialstyrelsen.se/contentassets/277ee0e881e245c980e4c24064017f97/2019-6-11.pdf",
+          "bytes": 148011,
+          "sha256": "a639e7e402f4cd9c935639d755873a3e2a3fb2ea0b1f1c41f6fc283532823f54",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T15:03:45Z"
+        }
+      ]
+    },
+    {
       "number": "HSLF-FS 2019:13",
       "detail_url": "https://www.socialstyrelsen.se/publikationer/hslf-fs-201913-socialstyrelsens-foreskrifter-om-vilka-sjukdomar-som-far-sparas-och-diagnostiseras-genom-vavnadsprover-i-pku-biobanken-2019-6-12/",
       "files": [
@@ -16410,6 +16432,48 @@
           "sha256": "397a8e01bddb8307e9adc5c0fb14c8ad588663fc1a4984215fb14a9d837c0fd9",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T21:05:51Z"
+        }
+      ]
+    },
+    {
+      "number": "HSLF-FS 2026:35",
+      "detail_url": "https://www.socialstyrelsen.se/publikationer/hslf-fs-202635-socialstyrelsens-foreskrifter-och-allmanna-rad-om-bostad-med-sarskild-service-for-barn-eller-ungdomar-enligt-lss-2026-11-10503/",
+      "files": [
+        {
+          "label": "Öppna publikation",
+          "url": "https://www.socialstyrelsen.se/contentassets/dc79e6609dd546738b130821381a353e/2026-11-10503.pdf",
+          "bytes": 220282,
+          "sha256": "ebf0b938d943635cf1f626f268a0b7de4da6531771d8697b20a91ad052d32bdc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T14:59:03Z"
+        }
+      ]
+    },
+    {
+      "number": "HSLF-FS 2026:36",
+      "detail_url": "https://www.socialstyrelsen.se/publikationer/hslf-fs-202636-socialstyrelsens-foreskrifter-och-allmanna-rad-om-bostad-med-sarskild-service-for-vuxna-enligt-lss-2026-11-10504/",
+      "files": [
+        {
+          "label": "Öppna publikation",
+          "url": "https://www.socialstyrelsen.se/contentassets/0df2893f0a814b8aa1bdf55f44e7131a/2026-11-10504.pdf",
+          "bytes": 326839,
+          "sha256": "2854b300d09b22a0244a22b99de8f3d22b4f7ad7c837a5d0427afbbba420d7f3",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T14:59:00Z"
+        }
+      ]
+    },
+    {
+      "number": "HSLF-FS 2026:37",
+      "detail_url": "https://www.socialstyrelsen.se/publikationer/hslf-fs-202637-rattsmedicinalverkets-foreskrifter-om-riskutredning-infor-provningen-av-uppskjuten-villkorlig-frigivning-2026-11-10511/",
+      "files": [
+        {
+          "label": "Öppna publikation",
+          "url": "https://www.socialstyrelsen.se/contentassets/5616f7d0300f4b6abb915a047d366aa4/2026-11-10511.pdf",
+          "bytes": 238146,
+          "sha256": "da56c8a0c419a49aba77338b8259e48ebff8a9e3d4f5a4363e8d0ec4da9b9449",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T14:58:53Z"
         }
       ]
     },
@@ -28950,6 +29014,20 @@
           "sha256": "dab1b3ade4fc45f6b9ba5f27d1585707b8849fbfaf82966f448bb5fea56c61fb",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T00:56:32Z"
+        }
+      ]
+    },
+    {
+      "number": "PMFS 2026:26",
+      "detail_url": "https://polisen.se/522c195fd8a1ba71d1b7f0430ee91c54/siteassets/forfattningssamling/fap-nummer/fap779-1-pmfs2026-26.pdf",
+      "files": [
+        {
+          "label": "PMFS 2026:26",
+          "url": "https://polisen.se/522c195fd8a1ba71d1b7f0430ee91c54/siteassets/forfattningssamling/fap-nummer/fap779-1-pmfs2026-26.pdf",
+          "bytes": 94949,
+          "sha256": "898f62f06ee399582e56eaf013578ad96a3339c5fe72ac73acf13f29985a824e",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T15:29:46Z"
         }
       ]
     },
@@ -74227,6 +74305,20 @@
       ]
     },
     {
+      "number": "STAFS 1998:8",
+      "detail_url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-1998-8.md",
+      "files": [
+        {
+          "label": "STAFS 1998:8",
+          "url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-1998-8.pdf",
+          "bytes": 1801959,
+          "sha256": "f5fba13e3d1c07bec13d4eebd2443396a5f043ee57249301fc22fb43e8fb9f1a",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T15:28:46Z"
+        }
+      ]
+    },
+    {
       "number": "STAFS 1999:4",
       "detail_url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-1999-4.md",
       "files": [
@@ -74258,6 +74350,14 @@
       "number": "STAFS 2000:1",
       "detail_url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2000-1-konsol.md",
       "files": [
+        {
+          "label": "STAFS 2000:1",
+          "url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2000-1.pdf",
+          "bytes": 54335,
+          "sha256": "070ad07a0488ff7add1da6561fb12bbd60cbfd7b562af374c66277b9f4068a68",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T15:28:41Z"
+        },
         {
           "label": "STAFS 2000:1 (konsoliderad version)",
           "url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2000-1-konsol.pdf",
@@ -74314,6 +74414,14 @@
       "number": "STAFS 2001:11",
       "detail_url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2001-11-konsol.md",
       "files": [
+        {
+          "label": "STAFS 2001:11",
+          "url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2001-11.pdf",
+          "bytes": 227306,
+          "sha256": "91aa995ab0c3898e04b25bcbc125eb1d873865eeabcc4fa412f45f5a8acbae68",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T15:28:39Z"
+        },
         {
           "label": "STAFS 2001:11 (konsoliderad version)",
           "url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2001-11-konsol.pdf",
@@ -74455,12 +74563,34 @@
       "detail_url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2004-4-konsol.md",
       "files": [
         {
+          "label": "STAFS 2004:4",
+          "url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2004-4.pdf",
+          "bytes": 45855,
+          "sha256": "9b40af9879517c4a6a05132d6418549be65d5dcff316abfc9922875d0ff7f6ef",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T15:28:25Z"
+        },
+        {
           "label": "STAFS 2004:4 (konsoliderad version)",
           "url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2004-4-konsol.pdf",
           "bytes": 57051,
           "sha256": "e7909a55e6d76a4bc0eafecd0701c392d112cb2b48f862aafa354de0c9eb93c3",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T00:42:17Z"
+        }
+      ]
+    },
+    {
+      "number": "STAFS 2004:5",
+      "detail_url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2004-5.md",
+      "files": [
+        {
+          "label": "STAFS 2004:5",
+          "url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2004-5.pdf",
+          "bytes": 246260,
+          "sha256": "374a01d7d63b58b62686463b4b5cb079a7fa1a89c0dc0da40e533910c42faaab",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T15:28:24Z"
         }
       ]
     },
@@ -74609,6 +74739,20 @@
           "sha256": "28e375ff576a71f63c5dfc122eacb2500c98708682ef6cc238e35a63ae656f2f",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T00:42:11Z"
+        }
+      ]
+    },
+    {
+      "number": "STAFS 2006:17",
+      "detail_url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2006-17.md",
+      "files": [
+        {
+          "label": "STAFS 2006:17",
+          "url": "https://regelverk.swedac.se/foreskrifter/swedac/upphavda/stafs-2006-17.pdf",
+          "bytes": 284991,
+          "sha256": "e686bc3bc09c4dbc715e4e76760b63c14495fc92311f9c15f8149175ef0d997d",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T15:28:13Z"
         }
       ]
     },
@@ -90237,6 +90381,20 @@
           "sha256": "81edae6de103a3377e1f8f3f35095c3f60fd980782a77b1c169b3852bed99e18",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T23:21:33Z"
+        }
+      ]
+    },
+    {
+      "number": "TSFS 2026:107",
+      "detail_url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/ts-foreskrifter-i-nummerordning/2026/details?RuleNumber=2026:107&ruleprefix=TSFS",
+      "files": [
+        {
+          "label": "TSFS 2026:107",
+          "url": "https://www.transportstyrelsen.se/TSFS/TSFS%202026_107.pdf",
+          "bytes": 108614,
+          "sha256": "c711c7f51fdca48fe896fa8f72e78598d0797151b648d9b026d4cbb11ce1646b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-12T15:24:30Z"
         }
       ]
     },

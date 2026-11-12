@@ -127,7 +127,7 @@
       {
         "name": "HSLF-FS",
         "status": "collected",
-        "documents": 119,
+        "documents": 123,
         "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169",
         "description": "Utnyttjas av E-hälsomyndigheten, Folkhälsomyndigheten, Inspektionen för vård och omsorg, Läkemedelsverket, Myndigheten för familjerätt och föräldraskapsstöd, Rättsmedicinalverket, Socialstyrelsen och Tandvårds- och läkemedelsförmånsverket.",
@@ -347,7 +347,7 @@
       {
         "name": "PMFS",
         "status": "collected",
-        "documents": 50,
+        "documents": 51,
         "url": "https://polisen.se/Lagar-och-regler/Polismyndighetens-forfattningssamling/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/192",
         "description": "Polismyndigheten föreskriver bland annat inom områdena vapen, bevakning, pass och nationellt identitetskort, trafikövervakning, utrustning i polisarbetet och delgivning.",
@@ -477,7 +477,7 @@
       {
         "name": "STAFS",
         "status": "collected",
-        "documents": 187,
+        "documents": 189,
         "url": "https://www.swedac.se/lag-ratt/swedacs-foreskrifter/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/208",
         "description": "Swedac föreskriver om krav på mätningar och mättekniska metoder, krav på kontroll av mätdon, krav på och kontroll av färdigförpackade varor och kontroll av mängduppgifter för färdigförpackade varor, krav i fråga om kundvågar i detaljhandel, kontroll av elmätare och registrering av namnstämplar avsedda för ädelmetallarbeten. Swedac föreskriver vidare om krav på ackrediterade och anmälda/utsedda organ, införande om OECD:s principer om god laboratoriesed (GLP) samt avgifter inom flera områden.",
@@ -567,7 +567,7 @@
       {
         "name": "TSFS",
         "status": "collected",
-        "documents": 622,
+        "documents": 623,
         "url": "https://www.transportstyrelsen.se/sv/om-oss/dina-rattigheter-lagar-och-regler/forfattningssamling/",
         "issue": null,
         "description": "Föreskrifter om järnväg, spårväg och tunnelbana, luftfart, sjöfart och vägtrafik.",
