@@ -10,9 +10,9 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | sfs | SFS (statutes and ordinances) | 11428 | 11567 | counted | 98.8% |
 | agency | AFS (Arbetsmiljöverket) | 15 | 15 | counted | 100.0% |
 | agency | FFFS (Finansinspektionen) | 121 | 121 | counted | 100.0% |
-| agency | TSFS (Transportstyrelsen) | 622 | 622 | counted | 100.0% |
+| agency | TSFS (Transportstyrelsen) | 623 | 622 | counted | 100.0% |
 | agency | PFS (Pensionsmyndigheten) | 81 | 81 | counted | 100.0% |
-| agency | PMFS (Polisen) | 50 | 50 | counted | 100.0% |
+| agency | PMFS (Polisen) | 51 | 50 | counted | 100.0% |
 | agency | PRVFS (PRV) | 17 | 17 | counted | 100.0% |
 | agency | RA-FS (Riksarkivet) | 93 | 93 | counted | 100.0% |
 | agency | RFS (Riksdagen) | 22 | 22 | counted | 100.0% |
@@ -26,7 +26,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | SKOLFS (Skolverket) | 965 | 965 | counted | 100.0% |
 | agency | SKSFS (Skogsstyrelsen) | 18 | 18 | counted | 100.0% |
 | agency | SSMFS (SSM) | 41 | 41 | counted | 100.0% |
-| agency | STAFS (Swedac) | 187 | 187 | counted | 100.0% |
+| agency | STAFS (Swedac) | 189 | 187 | counted | 100.0% |
 | agency | STEMFS (Energimyndigheten) | 65 | 65 | counted | 100.0% |
 | agency | TRVFS (Trafikverket) | 42 | 42 | counted | 100.0% |
 | agency | TVFS (Tillväxtverket) | 10 | 10 | counted | 100.0% |
@@ -71,7 +71,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | EIFS (Ei) | 34 | 34 | counted | 100.0% |
 | agency | KBVFS (KBV) | 4 | 4 | counted | 100.0% |
 | agency | FFS (FM) | 61 | 68 | counted | 89.7% |
-| agency | HSLF-FS | 119 | 155 | counted | 76.8% |
+| agency | HSLF-FS | 123 | 155 | counted | 79.4% |
 | agency | SOSFS (Socialstyrelsen) | 51 | 51 | counted | 100.0% |
 | agency | FoHMFS (FoHM) | 12 | 12 | counted | 100.0% |
 | agency | TLVFS (TLV) | 4 | 4 | counted | 100.0% |
@@ -190,10 +190,10 @@ Targets:
 
 ## Integrity
 
-Audit of 54827 documents (2026-11-12T14:02:46Z):
+Audit of 54835 documents (2026-11-12T17:15:49Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
 - text-quality flags: 904
-- cross-references not in the corpus: 39955 of 40016 (informational, the corpus is partial)
+- cross-references not in the corpus: 39960 of 40021 (informational, the corpus is partial)
