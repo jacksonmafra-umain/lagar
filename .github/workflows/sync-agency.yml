@@ -39,7 +39,7 @@ env:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -115,19 +115,33 @@ jobs:
           mkdir -p "$REPORTS"
           year=$(date -u +%Y)
           failed=()
-          # One series' failure (a changed page, a block) must not stop the others.
-          while read -r code mode; do
+          deferred=()
+          # The job must keep time to commit: no new series starts after BUDGET seconds,
+          # and one series gets at most an hour.
+          budget=$(( 240 * 60 ))
+          mapfile -t series < "$RUNNER_TEMP/series"
+          # Start from a different series each week, so the ones a short budget leaves
+          # out are not always the same.
+          n=${#series[@]}
+          start=$(( 10#$(date -u +%V) % n ))
+          for (( i = 0; i < n; i++ )); do
+            read -r code mode <<< "${series[(start + i) % n]}"
+            if (( SECONDS >= budget )); then deferred+=("$code"); continue; fi
             years=()
             if [ "$mode" = yearly ]; then
               years=(--year "$year" --year "$(( year - 1 ))")
             fi
-            python3 -I collector/collect.py agency --series "$code" "${years[@]}" \
+            # One series' failure (a changed page, a block) must not stop the others.
+            timeout 3600 python3 -I collector/collect.py agency --series "$code" "${years[@]}" \
               --report "$REPORTS/$code.json" < /dev/null || failed+=("$code")
-          done < "$RUNNER_TEMP/series"
+          done
           # The run still commits what the others collected; the summary and the commit
           # message list the failures, and the next run tries them again.
           echo "failed=${failed[*]}" >> "$GITHUB_OUTPUT"
           for code in "${failed[@]}"; do echo "::warning::series $code failed; see the step log"; done
+          if (( ${#deferred[@]} )); then
+            echo "::warning::out of time; left for the next run: ${deferred[*]}"
+          fi
 
       - name: Summarise the run
         if: always() && steps.series.outcome == 'success'
