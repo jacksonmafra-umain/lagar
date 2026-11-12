@@ -18,7 +18,7 @@ apps for Android, iOS and the web.
 | SFS (statutes and ordinances) (2 series) | 14943 | 15082 | 99.1% |
 | Agency regulations (80 series) | 5468 | 5513 | 99.2% |
 | Case law | 16476 | 16640 | 99.0% |
-| EU law (2 series) | 675 | 681 | 99.1% |
+| EU law (2 series) | 676 | 681 | 99.3% |
 | County regulations | 11658 | unknown | - |
 | Municipal regulations | 5601 | unknown | - |
 | Public services | 0 | unknown | - |

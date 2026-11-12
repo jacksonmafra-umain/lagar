@@ -5454,6 +5454,15 @@
       "url": "https://publications.europa.eu/resource/cellar/39e17096-4ea2-11f1-b3e2-01aa75ed71a1.0024.05/DOC_1"
     },
     {
+      "bytes": 69386,
+      "celex": "62025TJ0177",
+      "content_type": "application/xhtml+xml",
+      "id": "eu-62025tj0177",
+      "retrieved_at": "2026-11-12T13:19:38Z",
+      "sha256": "9ae7c8725fbd644310fb05144da5942b92dd5faf09eb0105a2f1cf6e4ba82e8c",
+      "url": "https://publications.europa.eu/resource/cellar/01781c7c-fc2a-11f0-8da5-01aa75ed71a1.0024.05/DOC_1"
+    },
+    {
       "bytes": 99786,
       "celex": "62025TJ0224",
       "content_type": "application/xhtml+xml",

@@ -1,10 +1,10 @@
 # Corpus statistics
 
-Generated 2026-11-12T08:06:20Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-12T13:20:06Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,825 documents in 7 layers.
+The corpus holds 54,826 documents in 7 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
@@ -19,7 +19,7 @@ The corpus holds 54,825 documents in 7 layers.
 | eu | eu_regulation | 40 | 0 | 2,191,225 |
 | eu | eu_directive | 28 | 0 | 651,177 |
 | eu | eu_decision | 2 | 0 | 14,266 |
-| eu | eu_judgment | 605 | 35 | 3,651,044 |
+| eu | eu_judgment | 606 | 35 | 3,656,195 |
 | region | county_regulation | 11,658 | 14,168 | 11,004,808 |
 | municipality | municipal_regulation | 5,601 | 45,291 | 12,532,323 |
 
@@ -82,7 +82,7 @@ Documents per host of their `source`, per layer (the ten largest).
 
 | host | documents |
 | --- | ---: |
-| publications.europa.eu | 675 |
+| publications.europa.eu | 676 |
 
 ### region
 
@@ -114,10 +114,10 @@ Documents per host of their `source`, per layer (the ten largest).
 | sfs | 14,391 | 257 | 35 | 260 |
 | agency | 291 | 4,425 | 740 | 12 |
 | case_law | 16,476 | 0 | 0 | 0 |
-| eu | 675 | 0 | 0 | 0 |
+| eu | 676 | 0 | 0 | 0 |
 | region | 420 | 10,777 | 428 | 33 |
 | municipality | 198 | 4,950 | 291 | 162 |
-| **all** | **32,455** (59.2 %) | **20,409** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
+| **all** | **32,456** (59.2 %) | **20,409** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -314,7 +314,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 
 ### Corpus audit
 
-- Documents checked: 54,825
+- Documents checked: 54,826
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
 - Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,955 of 40,016 (mostly older amending acts, which are not collected as documents of their own)

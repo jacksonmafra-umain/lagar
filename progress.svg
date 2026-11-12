@@ -344,8 +344,8 @@
 <text x="704" y="3083" text-anchor="end" fill="#5b3fa6">70 / 70 (100.0%)</text>
 <text x="16" y="3119" fill="#5b3fa6">EU judgments</text>
 <rect x="240" y="3108" width="260" height="16" rx="8" fill="#5b3fa6" fill-opacity="0.18"/>
-<rect x="240" y="3108" width="257" height="16" rx="8" fill="#5b3fa6"/>
-<text x="704" y="3119" text-anchor="end" fill="#5b3fa6">605 / 611 (99.0%)</text>
+<rect x="240" y="3108" width="258" height="16" rx="8" fill="#5b3fa6"/>
+<text x="704" y="3119" text-anchor="end" fill="#5b3fa6">606 / 611 (99.2%)</text>
 <text x="16" y="3155" fill="#28772d">Regional regulations</text>
 <rect x="240" y="3144" width="260" height="16" rx="8" fill="#2e7d32" fill-opacity="0.18"/>
 <text x="704" y="3155" text-anchor="end" fill="#28772d">11658 / unknown (-)</text>
