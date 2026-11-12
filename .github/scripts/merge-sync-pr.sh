@@ -50,10 +50,16 @@ for attempt in 1 2 3 4 5; do
   if ! git diff --cached --quiet; then
     git commit -q -m "chore(sync): regenerate the reports after merging main"
   fi
-  head=$(git rev-parse HEAD)
-  if [ "$head" != "$(git rev-parse "origin/$BRANCH")" ]; then
-    git push -q --force-with-lease="$BRANCH:$(git rev-parse "origin/$BRANCH")" origin "HEAD:$BRANCH"
+  if [ "$(git rev-parse HEAD)" != "$(git rev-parse "origin/$BRANCH")" ]; then
+    # Keeps main's workflows; may start the branch and its pull request again.
+    bash .github/scripts/push-sync-branch.sh
+    pr=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
+    if [ -z "$pr" ]; then
+      echo "::error::no open pull request on $BRANCH after pushing it"
+      exit 1
+    fi
   fi
+  head=$(git rev-parse HEAD)
   # GitHub needs a moment to compute the mergeability of a head it just got.
   for try in 1 2 3; do
     sleep 10

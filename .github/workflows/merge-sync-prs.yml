@@ -24,7 +24,8 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  GH_TOKEN: ${{ github.token }}
+  # Same token as the sync workflows: see sync-sfs.yml.
+  GH_TOKEN: ${{ secrets.SYNC_TOKEN || github.token }}
 
 jobs:
   merge:
@@ -34,6 +35,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          token: ${{ secrets.SYNC_TOKEN || github.token }}
 
       - name: Find open sync pull requests
         id: open

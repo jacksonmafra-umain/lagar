@@ -79,7 +79,7 @@ jobs:
           git checkout -B "$BRANCH"
           git add -- $GENERATED
           git commit -q -m "data(agencies): refresh the agencies log from lagrummet.se and rättspraxis"
-          git push --force-with-lease origin "HEAD:$BRANCH"
+          bash .github/scripts/push-sync-branch.sh
           if [ -z "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')" ]; then
             gh pr create --base main --head "$BRANCH" \
               --title "Sync agencies log" \
