@@ -4197,7 +4197,7 @@
       "code": "MIOD",
       "court": "Migrationsöverdomstolen",
       "status": "collected",
-      "documents": 534,
+      "documents": 535,
       "note": null,
       "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MIOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
       "issue": null
@@ -4333,7 +4333,7 @@
     "sfs": 11428,
     "fundamental": 4,
     "eu": 676,
-    "case_law": 16476
+    "case_law": 16477
   },
   "other_sources": [
     {

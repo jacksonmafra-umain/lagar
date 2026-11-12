@@ -88,7 +88,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | KBMFS (KBM) | 1 | 1 | counted | 100.0% |
 | agency | AMSFS (AMS) | 1 | 1 | counted | 100.0% |
 | agency | RA-MS (Riksarkivet) | 1270 | 1270 | counted | 100.0% |
-| case_law | Case law | 16476 | 16640 | counted | 99.0% |
+| case_law | Case law | 16477 | 16640 | counted | 99.0% |
 | sfs | SÖ treaties | 3515 | 3515 | counted | 100.0% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
 | eu | EU judgments | 606 | 611 | counted | 99.2% |
@@ -190,7 +190,7 @@ Targets:
 
 ## Integrity
 
-Audit of 54826 documents (2026-11-12T13:21:11Z):
+Audit of 54827 documents (2026-11-12T14:02:46Z):
 
 - schema errors: 0
 - duplicate ids: 0

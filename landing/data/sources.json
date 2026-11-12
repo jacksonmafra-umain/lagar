@@ -4467,7 +4467,7 @@
       {
         "name": "Migrationsöverdomstolen",
         "status": "collected",
-        "documents": 534,
+        "documents": 535,
         "url": "https://rattspraxis.etjanst.domstol.se/sok/sokning?filter=domstolskodLista%3D%255B%2522MIOD%2522%255D%26arVagledande%3Dtrue%26sortering%3D%2522desc%2522",
         "issue": null,
         "description": null,
