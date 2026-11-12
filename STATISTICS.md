@@ -1,10 +1,10 @@
 # Corpus statistics
 
-Generated 2026-11-12T13:21:24Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-12T14:01:20Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,826 documents in 7 layers.
+The corpus holds 54,827 documents in 7 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
@@ -14,7 +14,7 @@ The corpus holds 54,826 documents in 7 layers.
 | sfs | other_statute | 1,837 | 12,464 | 1,343,514 |
 | sfs | treaty | 3,515 | 75 | 2,002,459 |
 | agency | agency_regulation | 5,468 | 61,188 | 14,295,358 |
-| case_law | case_report | 16,405 | 715 | 55,714,612 |
+| case_law | case_report | 16,406 | 715 | 55,715,883 |
 | case_law | case_notice | 71 | 4 | 93,635 |
 | eu | eu_regulation | 40 | 0 | 2,191,225 |
 | eu | eu_directive | 28 | 0 | 651,177 |
@@ -76,7 +76,7 @@ Documents per host of their `source`, per layer (the ten largest).
 
 | host | documents |
 | --- | ---: |
-| rattspraxis.etjanst.domstol.se | 16,476 |
+| rattspraxis.etjanst.domstol.se | 16,477 |
 
 ### eu
 
@@ -113,11 +113,11 @@ Documents per host of their `source`, per layer (the ten largest).
 | fundamental | 4 | 0 | 0 | 0 |
 | sfs | 14,391 | 257 | 35 | 260 |
 | agency | 291 | 4,425 | 740 | 12 |
-| case_law | 16,476 | 0 | 0 | 0 |
+| case_law | 16,477 | 0 | 0 | 0 |
 | eu | 676 | 0 | 0 | 0 |
 | region | 420 | 10,777 | 428 | 33 |
 | municipality | 198 | 4,950 | 291 | 162 |
-| **all** | **32,456** (59.2 %) | **20,409** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
+| **all** | **32,457** (59.2 %) | **20,409** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -314,7 +314,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 
 ### Corpus audit
 
-- Documents checked: 54,826
+- Documents checked: 54,827
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
 - Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,955 of 40,016 (mostly older amending acts, which are not collected as documents of their own)
