@@ -26,11 +26,19 @@ interface LocalityRepository {
     suspend fun localityListing(layer: String, code: String, page: Int): ListingPage
 }
 
+/** The raw service files of the API (`service/catalog.json`, `service/by-norm/index.json`), before caching. */
+interface ServiceSource {
+    suspend fun serviceCatalog(): ServiceCatalog
+
+    suspend fun serviceNormIndex(): ServiceNormIndex
+}
+
 /** A raw source of the whole API, before caching. */
 interface ApiSource :
     LagarRepository,
     MinistryRepository,
-    LocalityRepository
+    LocalityRepository,
+    ServiceSource
 
 internal fun indexPath() = "index.json"
 
@@ -47,3 +55,7 @@ internal fun ministryListingPath(layer: String, type: String, ministry: String, 
 internal fun localityIndexPath(layer: String) = "$layer/by-code/index.json"
 
 internal fun localityListingPath(layer: String, code: String, page: Int) = "$layer/by-code/$code/index-$page.json"
+
+internal fun serviceCatalogPath() = "service/catalog.json"
+
+internal fun serviceNormIndexPath() = "service/by-norm/index.json"

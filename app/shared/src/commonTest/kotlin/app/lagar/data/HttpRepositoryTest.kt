@@ -14,6 +14,7 @@ import kotlinx.serialization.json.Json
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
+import kotlin.test.assertTrue
 
 class HttpRepositoryTest {
     private val jsonHeaders = headersOf(HttpHeaders.ContentType, "application/json")
@@ -96,6 +97,37 @@ class HttpRepositoryTest {
             ),
             urls,
         )
+    }
+
+    @Test
+    fun serviceCatalogueAndByNormPaths() = runTest {
+        val urls = mutableListOf<String>()
+        val repository = repo(
+            MockEngine { request ->
+                urls += request.url.toString()
+                val body = if (request.url.encodedPath.endsWith("catalog.json")) {
+                    ApiExamples.serviceCatalog
+                } else {
+                    ApiExamples.serviceByNorm
+                }
+                respond(body, headers = jsonHeaders)
+            },
+        )
+        assertEquals(3, repository.serviceCatalog().services.size)
+        assertEquals(listOf("service-adoptionsbidrag"), repository.serviceNormIndex().serviceIds("sfs-2010-110"))
+        assertEquals(
+            listOf(
+                "https://example.test/api/v1/service/catalog.json",
+                "https://example.test/api/v1/service/by-norm/index.json",
+            ),
+            urls,
+        )
+    }
+
+    @Test
+    fun missingServiceFileIsANotFoundApiException() = runTest {
+        val repository = repo(MockEngine { respondError(HttpStatusCode.NotFound) })
+        assertTrue(assertFailsWith<ApiException> { repository.serviceNormIndex() }.notFound)
     }
 
     @Test

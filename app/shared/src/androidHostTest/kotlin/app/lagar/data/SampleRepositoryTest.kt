@@ -88,4 +88,16 @@ class SampleRepositoryTest {
         assertEquals(2, repository.localities("region").count("01"))
         assertEquals(2, repository.localities("municipality").count("0180"))
     }
+
+    @Test
+    fun bundledServiceCatalogueAndByNormIndexAgree() = runTest {
+        val catalog = repository.serviceCatalog()
+        assertEquals(catalog.total, catalog.services.size)
+        assertTrue(catalog.services.isNotEmpty())
+        val index = repository.serviceNormIndex()
+        val expected = catalog.services
+            .flatMap { service -> service.basedOn.map { it.id to service.id } }
+            .groupBy({ it.first }, { it.second })
+        assertEquals(expected, index.norms)
+    }
 }
