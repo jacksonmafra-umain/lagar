@@ -426,6 +426,64 @@ The weekly `Sync SÖ` workflow (`.github/workflows/sync-so.yml`) runs
 `collect.py so --changed-since <15 days ago>`, so new treaties and updated pages land
 in one pull request on `data/so-sync`.
 
+## Public services (Tjänster)
+
+```sh
+python3 -I collector/collect.py services [--slug S ...] [--limit N] [--report FILE]
+```
+
+`collector/data/services.json` is the curated list of public services: for each one the slug, the
+Swedish title, the issuer, the official `source` page, `service_url`, `audience`, `topics`, `scope`
+and `based_on`, the corpus norms the service rests on. `based_on` is curated by hand from the
+body's own legal references (see `docs/specs/2026-11-13-tjanster-sources.md`); the collector never
+infers it. `channels`, `issuer_org_number`, `template`, `region_code` and `municipality_code` are
+optional in the list (`[]`, `null`, `false` when left out).
+
+The collector reads every listed page (or only `--slug`, or the first `--limit N`) and writes
+`corpus/services/service-<slug>.md`, type `public_service` in layer `service`: the curated fields as
+frontmatter and a body of a heading, the page's lead as published and a link to the page. The lead
+is never rewritten or translated and keeps at most three sentences; agency web texts are not
+covered by the copyright exception for statutes, so the corpus keeps only the short lead and points
+to the source.
+
+- **Lead per host:** the page's introduction paragraph, found by its class: `sv-font-ingress`
+  (forsakringskassan.se), `ingress` (skatteverket.se, arbetsformedlingen.se),
+  `csn-formatmall-ingress` (csn.se), `mv-font-intro` (migrationsverket.se), `preamble`
+  (polisen.se) and the `lead` block (transportstyrelsen.se). When the page has none, or it is a
+  navigation question ("Vad vill du veta mer om?"), the `og:description` or `description` meta tag
+  is used, unless the site cut it short with "...". Försäkringskassan's navigation pages
+  (`navigationssida-innehall`) put a prompt for their link list in the ingress, so they use the meta
+  description too. A page with neither is reported as `no_lead`.
+  A new host needs an entry in `HOST_LEADS` in `collector/lagar/services.py` and a trimmed saved
+  page in `collector/tests/fixtures/service-<host>.html`.
+- **Manifest:** every fetch goes into `sources/services-manifest.json` with its `result`, HTTP
+  `status`, `final_url`, `Last-Modified`, the page's `<title>`, `sha256`, where the lead came from
+  (`ingress` or `meta`) and `fetched_at`. `sha256` is the SHA-256 of the extracted title and lead,
+  not of the page bytes, because the pages embed nonces and timestamps that change on every fetch.
+  An entry whose fields did not change keeps its old `fetched_at`, so a run without content
+  changes leaves the manifest as it was.
+- **Failures keep the previous file:** a page that is gone (404, 410, `not_found`), redirects to
+  another host (`redirected`; the target is recorded in the manifest but never fetched or written
+  as the source), is disallowed by robots.txt (`robots`) or answers 403 (`blocked`; the host's
+  other pages are skipped too) keeps the corpus file of the previous run, or writes nothing on a
+  first run. It is marked in the manifest, listed under `failed` in the report and kept in the
+  state file's `failed` until a run reads it again. A redirect within the same host is followed
+  (robots.txt checked at every hop) and listed under `moved`, so the list can be updated; the
+  document's `source` stays the curated URL.
+- **Politeness:** robots.txt is read once per host (wildcards and `$` honoured, a redirect to the
+  file on the same host followed), its `Crawl-delay` respected (boverket.se asks for 10 s) and
+  requests are at least `--rate` seconds apart (default 1). Blocks are never bypassed:
+  `www4.skatteverket.se` (Rättslig vägledning) and the `/e-tjanster/` paths of
+  migrationsverket.se stay out of the list.
+- **Idempotent:** the document's `source_sha256` is the SHA-256 of the lead, and the file is only
+  written when its frontmatter (apart from `fetched_at`) or body change.
+
+State lives in `collector/data/services-state.json` (`done`: the last result per slug, `failed`:
+the reason per slug, `blocked`: hosts that answered 403). The report (`--report`) lists `written`,
+`unchanged`, `moved`, `failed` (slug, result, status, final URL, error) and `blocked_hosts`. The
+command exits 2 when a host answered 403, 1 when the list or the state file cannot be read or
+`--slug` names an unknown service, and 0 otherwise.
+
 ## Case law
 
 The `case-law` command (alias `caselaw`) collects the anonymised summaries that the courts

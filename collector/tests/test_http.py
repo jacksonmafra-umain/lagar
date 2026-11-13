@@ -104,6 +104,19 @@ class PoliteClientTest(unittest.TestCase):
         client, _, _ = make([b"plain"])
         self.assertEqual(client.fetch_final("http://x"), (b"plain", None, "http://x"))
 
+    def test_fetch_response_returns_the_response_headers(self):
+        headers = Message()
+        headers["Content-Type"] = "text/html; charset=utf-8"
+        headers["Last-Modified"] = "Wed, 11 Nov 2026 08:00:00 GMT"
+        client, _, _ = make([(b"<html>", headers)])
+        response = client.fetch_response("http://x/page")
+        self.assertEqual((response.body, response.content_type, response.url), (b"<html>", "text/html", "http://x/page"))
+        self.assertEqual(response.headers.get("Last-Modified"), "Wed, 11 Nov 2026 08:00:00 GMT")
+
+    def test_fetch_response_without_headers(self):
+        client, _, _ = make([b"x"])
+        self.assertIsNone(client.fetch_response("http://x").headers.get("Last-Modified"))
+
     def test_fetch_without_content_type_header(self):
         client, _, _ = make([(b"x", Message())])
         self.assertEqual(client.fetch("http://x"), (b"x", None))
