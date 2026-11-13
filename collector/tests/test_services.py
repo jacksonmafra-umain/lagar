@@ -131,6 +131,42 @@ class LeadTest(unittest.TestCase):
         page = self.page("arbetsformedlingen", "https://arbetsformedlingen.se/for-arbetsgivare/anmal-varsel")
         self.assertTrue(page.lead.startswith("Här anmäler du som arbetsgivare eller konkursbo varsel"))
 
+    def test_boverket_lead_not_the_meta_description(self):
+        page = self.page("boverket", "https://www.boverket.se/sv/byggande/bygglov-rivningslov-marklov-och-anmalan/")
+        self.assertEqual(page.lead, "Du som ska bygga eller bygga till en byggnad kan behöva bygglov. Även uppförande "
+                                    "av vissa anläggningar som murar och plank kan kräva bygglov. Ska du riva en "
+                                    "byggnad eller en del av en byggnad kan det krävas rivningslov.")
+        self.assertEqual(page.lead_source, "ingress")
+        self.assertEqual(page.title, "Bygglov, rivningslov, marklov och anmälan - Boverket")
+
+    def test_socialstyrelsen_preamble_block(self):
+        url = "https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/ekonomiskt-bistand/ekonomiskt-bistand-for-privatpersoner/"
+        page = self.page("socialstyrelsen", url)
+        self.assertEqual(page.lead, "Du kan ansöka om försörjningsstöd eller annat ekonomiskt bistånd hos "
+                                    "socialtjänsten i din kommun. Kommunen erbjuder även hjälp med budget- och "
+                                    "skuldrådgivning.")
+        self.assertEqual(page.lead_source, "ingress")
+
+    def test_aldreguiden_preamble_block(self):
+        page = self.page("aldreguiden", "https://aldreguiden.se/mer-om-aldreomsorg/rattigheter/")
+        self.assertTrue(page.lead.startswith("Alla kommuner erbjuder äldreomsorg till personer som är 65 år"))
+        self.assertTrue(page.lead.endswith("Stödet kallas för insatser."))
+        self.assertEqual(page.lead_source, "ingress")
+
+    def test_1177_preamble_not_the_shortened_meta(self):
+        page = self.page("1177", "https://www.1177.se/sa-fungerar-varden/sjukresor-och-fardtjanst/fardtjanst/")
+        self.assertTrue(page.lead.endswith("för att du ska kunna ansöka om färdtjänst."))
+        self.assertEqual(page.lead_source, "ingress")
+        self.assertEqual(page.title, "Färdtjänst - 1177")
+
+    def test_naturvardsverket_preamble_with_a_generated_class(self):
+        url = "https://www.naturvardsverket.se/amnesomraden/avfall/vem-gor-vad/vem-gor-vad-i-avfallshanteringen/"
+        page = self.page("naturvardsverket", url)
+        self.assertEqual(page.lead, "Alla som ger upphov till avfall är skyldiga att se till att det hanteras enligt "
+                                    "gällande regler. Här beskriver vi Naturvårdsverkets roll och hur ansvaret är "
+                                    "fördelat i Sverige.")
+        self.assertIsNone(page.title)
+
     def test_lead_keeps_at_most_three_sentences(self):
         raw = ('<html><head><title>T</title></head><body><p class="ingress">Ett. Två är bra. Tre! '
                'Fyra? Fem.</p></body></html>')

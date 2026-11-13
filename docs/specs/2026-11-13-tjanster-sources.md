@@ -134,3 +134,42 @@ Services considered for the seed whose basis could not be confirmed from the bod
 | Körkortslån, hemutrustningslån | Centrala studiestödsnämnden | The ordinances are named by CSN (2018:1118, 1990:1361), but no application page for either was found in CSN's sitemap, only repayment pages. |
 | Bostadstillägg | Försäkringskassan / Pensionsmyndigheten | Not checked against a vägledning in this spike. |
 | Healthcare services on 1177.se | the regions | Regional services; they belong to the region template services, not to the national seed. |
+
+## Template services (issue #805)
+
+Checked on 2026-11-13 with the project User-Agent, at least 2 s apart per host and 10 s for boverket.se.
+
+### Host verdicts
+
+| host | robots.txt | service pages allowed | sample fetch | notes |
+| --- | --- | --- | --- | --- |
+| www.socialstyrelsen.se | 200, `/sok/`, `/_api/*`, `*.xml` and `*.csv` disallowed | yes | 200, server-rendered | The sitemap is an `.xml` file and so disallowed; pages were found by their links. Lead in `<div class="preamble">`. |
+| aldreguiden.se | 200, only `/sok/` disallowed | yes | 200, server-rendered | Socialstyrelsen's guide to elderly care (its footer and contact address are Socialstyrelsen's). Lead in `<div class="preamble">`. |
+| www.skolverket.se | 200, SiteVision defaults | yes | 200, server-rendered | Sitemap at `/sitemap1.xml.gz`. The meta description equals the ingress, so no lead rule is needed. |
+| www.naturvardsverket.se | 200, `Disallow:` (nothing) | yes | 200, server-rendered (Next.js) | No `<title>` or meta description in the server HTML; the lead is a `<p>` whose class starts with `Typographystyles__Preamble-` followed by a generated suffix. |
+| www.1177.se | as in the host verdicts above | yes | 200, server-rendered | The national pages (`/sa-fungerar-varden/...`) are written by the national editorial team. Lead in `<p class="preamble">`, longer than the meta description. Laws are linked through `/lankbiblioteket/` (disallowed, so not followed); the link slug carries the SFS number (`lag-om-fardtjanst-1997736`). |
+| www.boverket.se | as in the host verdicts above, `Crawl-delay: 10` | yes | 200, server-rendered | Honoured by the collector. Lead in `<p class="lead">`; the meta description is a generic summary. |
+| www.transportstyrelsen.se | as above | yes | 200 | Already a seed host. |
+
+No host forbids automation or answered with a bot check; no gap was recorded.
+
+### Templates
+
+Every template has `template: true`, its `scope` and no `region_code` or `municipality_code`. The source is the national body's page that describes the obligation, not a kommun page; `issuer` is the body that publishes that page, and the app names the kommun or region that provides the service. `based_on` follows the rules above.
+
+| slug | scope | issuer | based_on | evidence |
+| --- | --- | --- | --- | --- |
+| `bygglov` | municipality | Boverket | `sfs-2010-900`, `sfs-2011-338` | [subpage](https://www.boverket.se/sv/byggande/bygglov-rivningslov-marklov-och-anmalan/vad-far-jag-bygga-utan-bygglov/) linked from the source: 'Regler om planering och byggande finns bland annat i plan- och bygglagen (2010:900), PBL och plan- och byggförordningen (2011:338), PBF' |
+| `forsorjningsstod` | municipality | Socialstyrelsen | `sfs-2025-400` | [page](https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/ekonomiskt-bistand/ekonomiskt-bistand-for-privatpersoner/): 'Regler om ekonomiskt bistånd finns i socialtjänstlagen'. Named without a number, so the act in force: Socialtjänstlag (2025:400), which replaced 2001:453 on 2025-07-01 (2001:453 is marked repealed in the corpus). |
+| `forskola` | municipality | Skolverket | `sfs-2010-800` | [page](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-forskola): 'Källor: 8 kapitlet 3–7 och 12 §§ skollagen' |
+| `hemtjanst` | municipality | Socialstyrelsen | `sfs-2025-400` | [page](https://aldreguiden.se/mer-om-aldreomsorg/rattigheter/): 'Kommunerna har ett särskilt ansvar för äldre personer. Det framgår av socialtjänstlagen.'; Socialstyrelsen's [Regelverk](https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/aldre/regelverk/) names 'Socialtjänstlagen (2025:400), SoL' as the basis for 'rätt till insatser i form av exempelvis hemtjänst' |
+| `parkeringstillstand-rorelsehindrade` | municipality | Transportstyrelsen | `sfs-1998-1276`, `tsfs-2009-73` | [page](https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/trafikregler/parkeringstillstand-for-rorelsehindrade/): '13 kapitlet 8 § trafikförordningen (1998:1276) och ... (TSFS 2009:73)'; 'Kommunerna är den myndighet som prövar ansökan' |
+| `avfallshamtning` | municipality | Naturvårdsverket | `sfs-1998-808` | [page](https://www.naturvardsverket.se/amnesomraden/avfall/vem-gor-vad/vem-gor-vad-i-avfallshanteringen/): 'Kommunerna har ansvar för insamling, transport och återvinning eller bortskaffande av kommunalt avfall ... enligt 15 kap. 20 § miljöbalken'. Avfallsförordningen (2020:614) is not named, so it is not listed. |
+| `fardtjanst` | municipality | 1177 | `sfs-1997-736` | [page](https://www.1177.se/sa-fungerar-varden/sjukresor-och-fardtjanst/fardtjanst/): 'Det är färdtjänstlagen som reglerar vem som har rätt att få färdtjänst', linked as 'Lagen om färdtjänst' (`lag-om-fardtjanst-1997736`) |
+| `vardgaranti` | region | 1177 | `sfs-2017-30` | [page](https://www.1177.se/sa-fungerar-varden/lagar-och-bestammelser/vardgaranti/) describes the national care guarantee every region must give; it names no act. Socialstyrelsen's [Regelverk](https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/aldre/regelverk/) names 'Hälso- och sjukvårdslagen (2017:30), HSL' as the act on 'vilket ansvar regioner och kommuner har att erbjuda hälso- och sjukvård' with 'regler om ... vårdgaranti' (9 kap. HSL). |
+
+**Färdtjänst scope.** The design lists färdtjänst under the region templates "where the region runs it". The law gives it to the kommun: 'Varje kommun ansvarar ... för att färdtjänst av god kvalitet anordnas inom kommunen' (3 § lag (1997:736) om färdtjänst); 4 § lets a kommun hand its tasks to the regional public transport authority by agreement. The template is therefore `scope: municipality`; 1177 likewise says to apply to the kommun or to the authority that runs public transport in the county.
+
+**Healthcare.** No national 1177 page names hälso- och sjukvårdslagen in its text or law links (all national `/sa-fungerar-varden/` pages in the sitemap were searched; only "Ny medicinsk bedömning" links HSL, and it covers that one right). The region template therefore uses the 1177 page for the region's core obligation that has a page of its own, the vårdgaranti, and takes the act from Socialstyrelsen's statement that HSL holds the vårdgaranti rules. A broader "hälso- och sjukvård" template would need a source page that names HSL.
+
+Considered and not used: 1177's Äldreomsorg page (names socialtjänstlagen, but Äldreguiden is the authority's own page), Boverket's PBL kunskapsbanken (written for officials), Socialstyrelsen's Regelverk page as a source (written for staff in elderly care; used only as evidence).

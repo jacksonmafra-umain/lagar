@@ -1053,5 +1053,155 @@
     "based_on": [
       "sfs-1974-13"
     ]
+  },
+  {
+    "slug": "bygglov",
+    "title": "Bygglov",
+    "issuer": "Boverket",
+    "source": "https://www.boverket.se/sv/byggande/bygglov-rivningslov-marklov-och-anmalan/",
+    "service_url": null,
+    "audience": [
+      "private",
+      "business"
+    ],
+    "topics": [
+      "housing"
+    ],
+    "scope": "municipality",
+    "template": true,
+    "based_on": [
+      "sfs-2010-900",
+      "sfs-2011-338"
+    ]
+  },
+  {
+    "slug": "forsorjningsstod",
+    "title": "Försörjningsstöd",
+    "issuer": "Socialstyrelsen",
+    "source": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/ekonomiskt-bistand/ekonomiskt-bistand-for-privatpersoner/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "social_support"
+    ],
+    "scope": "municipality",
+    "template": true,
+    "based_on": [
+      "sfs-2025-400"
+    ]
+  },
+  {
+    "slug": "forskola",
+    "title": "Förskola",
+    "issuer": "Skolverket",
+    "source": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-forskola",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family",
+      "education"
+    ],
+    "scope": "municipality",
+    "template": true,
+    "based_on": [
+      "sfs-2010-800"
+    ]
+  },
+  {
+    "slug": "hemtjanst",
+    "title": "Hemtjänst",
+    "issuer": "Socialstyrelsen",
+    "source": "https://aldreguiden.se/mer-om-aldreomsorg/rattigheter/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "social_support"
+    ],
+    "scope": "municipality",
+    "template": true,
+    "based_on": [
+      "sfs-2025-400"
+    ]
+  },
+  {
+    "slug": "parkeringstillstand-rorelsehindrade",
+    "title": "Parkeringstillstånd för rörelsehindrade",
+    "issuer": "Transportstyrelsen",
+    "source": "https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/trafikregler/parkeringstillstand-for-rorelsehindrade/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "vehicles",
+      "social_support"
+    ],
+    "scope": "municipality",
+    "template": true,
+    "based_on": [
+      "sfs-1998-1276",
+      "tsfs-2009-73"
+    ]
+  },
+  {
+    "slug": "avfallshamtning",
+    "title": "Avfallshämtning",
+    "issuer": "Naturvårdsverket",
+    "source": "https://www.naturvardsverket.se/amnesomraden/avfall/vem-gor-vad/vem-gor-vad-i-avfallshanteringen/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "environment",
+      "housing"
+    ],
+    "scope": "municipality",
+    "template": true,
+    "based_on": [
+      "sfs-1998-808"
+    ]
+  },
+  {
+    "slug": "fardtjanst",
+    "title": "Färdtjänst",
+    "issuer": "1177",
+    "source": "https://www.1177.se/sa-fungerar-varden/sjukresor-och-fardtjanst/fardtjanst/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "social_support"
+    ],
+    "scope": "municipality",
+    "template": true,
+    "based_on": [
+      "sfs-1997-736"
+    ]
+  },
+  {
+    "slug": "vardgaranti",
+    "title": "Vårdgaranti",
+    "issuer": "1177",
+    "source": "https://www.1177.se/sa-fungerar-varden/lagar-och-bestammelser/vardgaranti/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "health"
+    ],
+    "scope": "region",
+    "template": true,
+    "based_on": [
+      "sfs-2017-30"
+    ]
   }
 ]

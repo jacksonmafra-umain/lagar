@@ -85,6 +85,18 @@
       "title": "Betala tillbaka studielån - CSN"
     },
     {
+      "fetched_at": "2026-11-13T13:00:05Z",
+      "final_url": "https://www.naturvardsverket.se/amnesomraden/avfall/vem-gor-vad/vem-gor-vad-i-avfallshanteringen/",
+      "last_modified": null,
+      "lead_source": "ingress",
+      "result": "ok",
+      "sha256": "0e9f2d502134bbfa93e7662fe4b19ad08c15f9c2abd6db06bd81490a901d391f",
+      "slug": "avfallshamtning",
+      "source": "https://www.naturvardsverket.se/amnesomraden/avfall/vem-gor-vad/vem-gor-vad-i-avfallshanteringen/",
+      "status": 200,
+      "title": null
+    },
+    {
       "fetched_at": "2026-11-13T12:31:14Z",
       "final_url": "https://www.forsakringskassan.se/privatperson/familj-och-barn/barnbidrag-och-flerbarnstillagg",
       "last_modified": null,
@@ -133,6 +145,18 @@
       "title": "Bostadsbidrag för barnfamiljer - Försäkringskassan"
     },
     {
+      "fetched_at": "2026-11-13T12:59:55Z",
+      "final_url": "https://www.boverket.se/sv/byggande/bygglov-rivningslov-marklov-och-anmalan/",
+      "last_modified": null,
+      "lead_source": "ingress",
+      "result": "ok",
+      "sha256": "b97789fd121792e2b67d07ea3b3f00b33fd9573d591763c914881537ec305e43",
+      "slug": "bygglov",
+      "source": "https://www.boverket.se/sv/byggande/bygglov-rivningslov-marklov-och-anmalan/",
+      "status": 200,
+      "title": "Bygglov, rivningslov, marklov och anmälan - Boverket"
+    },
+    {
       "fetched_at": "2026-11-13T12:32:09Z",
       "final_url": "https://www.skatteverket.se/privat/folkbokforing/namn/bytaefternamn.4.76a43be412206334b89800020669.html",
       "last_modified": null,
@@ -169,6 +193,18 @@
       "title": "Europeiskt skjutvapenpass | Polisen"
     },
     {
+      "fetched_at": "2026-11-13T13:00:07Z",
+      "final_url": "https://www.1177.se/sa-fungerar-varden/sjukresor-och-fardtjanst/fardtjanst/",
+      "last_modified": null,
+      "lead_source": "ingress",
+      "result": "ok",
+      "sha256": "2c74a5bb4fa5c1924978472290f17f88f5b0e9a55b4d1204660ddf556166f967",
+      "slug": "fardtjanst",
+      "source": "https://www.1177.se/sa-fungerar-varden/sjukresor-och-fardtjanst/fardtjanst/",
+      "status": 200,
+      "title": "Färdtjänst - 1177"
+    },
+    {
       "fetched_at": "2026-11-13T12:31:10Z",
       "final_url": "https://www.forsakringskassan.se/privatperson/familj-och-barn/foraldrapenning",
       "last_modified": null,
@@ -193,6 +229,30 @@
       "title": "Förnya körkortet - Transportstyrelsen"
     },
     {
+      "fetched_at": "2026-11-13T12:59:59Z",
+      "final_url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-forskola",
+      "last_modified": null,
+      "lead_source": "meta",
+      "result": "ok",
+      "sha256": "a37bc8849b903bc158f994467416eb05084d9972ca20ffdaf404241cbea8b215",
+      "slug": "forskola",
+      "source": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-forskola",
+      "status": 200,
+      "title": "Rätt till förskola - Skolverket"
+    },
+    {
+      "fetched_at": "2026-11-13T12:59:57Z",
+      "final_url": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/ekonomiskt-bistand/ekonomiskt-bistand-for-privatpersoner/",
+      "last_modified": null,
+      "lead_source": "ingress",
+      "result": "ok",
+      "sha256": "4a4c686407d7c5a4ada2c6ffca3579e62702d77b6f396928a158247eb3b2e50b",
+      "slug": "forsorjningsstod",
+      "source": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/ekonomiskt-bistand/ekonomiskt-bistand-for-privatpersoner/",
+      "status": 200,
+      "title": "Ekonomiskt bistånd – för privatpersoner - Socialstyrelsen"
+    },
+    {
       "fetched_at": "2026-11-13T12:31:44Z",
       "final_url": "https://www.migrationsverket.se/du-vill-ansoka/framlingspass-och-resedokument.html",
       "last_modified": null,
@@ -215,6 +275,18 @@
       "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/gravid-och-kan-inte-jobba-graviditetspenning",
       "status": 200,
       "title": "Gravid och kan inte jobba – graviditetspenning - Försäkringskassan"
+    },
+    {
+      "fetched_at": "2026-11-13T13:00:01Z",
+      "final_url": "https://aldreguiden.se/mer-om-aldreomsorg/rattigheter/",
+      "last_modified": null,
+      "lead_source": "ingress",
+      "result": "ok",
+      "sha256": "57a679590d169c2c8425c2de406db7c61518e857ce9e0dd0648215bbdf32b4ea",
+      "slug": "hemtjanst",
+      "source": "https://aldreguiden.se/mer-om-aldreomsorg/rattigheter/",
+      "status": 200,
+      "title": "Dina rättigheter - Äldreguiden"
     },
     {
       "fetched_at": "2026-11-13T12:31:52Z",
@@ -335,6 +407,18 @@
       "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/barn-med-funktionsnedsattning-eller-behov-av-extra-stod/omvardnadsbidrag",
       "status": 200,
       "title": "Omvårdnadsbidrag - Försäkringskassan"
+    },
+    {
+      "fetched_at": "2026-11-13T13:00:03Z",
+      "final_url": "https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/trafikregler/parkeringstillstand-for-rorelsehindrade/",
+      "last_modified": null,
+      "lead_source": "ingress",
+      "result": "ok",
+      "sha256": "b5127bf53ab2b0b5915b58748c123b4285ed82c52b44cfad14a2e9a6989c8863",
+      "slug": "parkeringstillstand-rorelsehindrade",
+      "source": "https://www.transportstyrelsen.se/sv/vagtrafik/trafikregler-och-vagmarken/trafikregler/parkeringstillstand-for-rorelsehindrade/",
+      "status": 200,
+      "title": "Parkeringstillstånd för rörelsehindrade - Transportstyrelsen"
     },
     {
       "fetched_at": "2026-11-13T12:31:47Z",
@@ -671,6 +755,18 @@
       "source": "https://polisen.se/tjanster-tillstand/vapen-regler-och-tillstand/ansok-om-vapentillstand/",
       "status": 200,
       "title": "E-tjänster för vapentillstånd | Polisen"
+    },
+    {
+      "fetched_at": "2026-11-13T13:00:08Z",
+      "final_url": "https://www.1177.se/sa-fungerar-varden/lagar-och-bestammelser/vardgaranti/",
+      "last_modified": null,
+      "lead_source": "ingress",
+      "result": "ok",
+      "sha256": "825002c9724200a528cf9af51a41bd7a8ddbb890695931ee1b69bacad0368729",
+      "slug": "vardgaranti",
+      "source": "https://www.1177.se/sa-fungerar-varden/lagar-och-bestammelser/vardgaranti/",
+      "status": 200,
+      "title": "Vårdgaranti - 1177"
     },
     {
       "fetched_at": "2026-11-13T12:32:14Z",

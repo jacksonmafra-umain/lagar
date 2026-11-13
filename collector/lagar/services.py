@@ -81,6 +81,11 @@ def _class_paragraph(name):
     return re.compile(rf'<p\b[^>]*\bclass="(?:[^"]*\s)?{token}(?:\s[^"]*)?"[^>]*>(.*?)</p>', re.S | re.I)
 
 
+def _class_div(name):
+    """The first <div> whose class is exactly `name` (a lead block of plain text)."""
+    return re.compile(rf'<div\b[^>]*\bclass="{re.escape(name)}"[^>]*>(.*?)</div>', re.S | re.I)
+
+
 # Where each host puts the lead of a page; hosts not listed use the meta description.
 HOST_LEADS = {
     "www.forsakringskassan.se": (_class_paragraph("sv-font-ingress"),),
@@ -91,6 +96,15 @@ HOST_LEADS = {
     "polisen.se": (_class_paragraph("preamble"),),
     "www.transportstyrelsen.se": (
         re.compile(r'<div\b[^>]*\bclass="lead"[^>]*>\s*(?:<div\b[^>]*>\s*)*<p\b[^>]*>(.*?)</p>', re.S | re.I),
+    ),
+    # Sources of the kommun and region template services.
+    "www.boverket.se": (_class_paragraph("lead"),),
+    "www.socialstyrelsen.se": (_class_div("preamble"),),
+    "aldreguiden.se": (_class_div("preamble"),),
+    "www.1177.se": (_class_paragraph("preamble"),),
+    # A styled-components class: a fixed prefix and a generated suffix.
+    "www.naturvardsverket.se": (
+        re.compile(r'<p\b[^>]*\bclass="Typographystyles__Preamble-[^"]*"[^>]*>(.*?)</p>', re.S | re.I),
     ),
 }
 # On these hosts a page carrying the marker is a navigation page: its ingress is a prompt for the
