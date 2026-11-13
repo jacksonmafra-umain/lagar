@@ -1,4 +1,5 @@
 import json
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -470,6 +471,20 @@ class ServiceLayerTest(unittest.TestCase):
     def test_other_layers_keep_newest_first(self):
         page = read(self.out, "sfs/index-1.json")
         self.assertEqual([i["id"] for i in page["items"]], ["sfs-2010-800", "sfs-2010-110", "sfs-1998-620"])
+
+    def test_unknown_based_on_fails_before_clearing_out(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus = Path(tmp) / "corpus"
+            shutil.copytree(SERVICES_CORPUS, corpus)
+            (corpus / "sfs" / "acts" / "2010-110.md").unlink()
+            out = Path(tmp) / "v1"
+            out.mkdir()
+            (out / "index.json").write_text("{}", encoding="utf-8")
+            result = run_build(out, corpus=corpus)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("service-adoptionsbidrag", result.stderr)
+            self.assertIn("sfs-2010-110", result.stderr)
+            self.assertTrue((out / "index.json").is_file())
 
 
 class OutSafetyTest(unittest.TestCase):

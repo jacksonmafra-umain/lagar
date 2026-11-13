@@ -176,6 +176,13 @@ def load_corpus(corpus):
     dupes = sorted({i for i in ids if ids.count(i) > 1})
     if dupes:
         raise BuildError(f"duplicate document ids: {', '.join(dupes)}")
+    known = set(ids)
+    missing = [
+        f"{meta['id']}: based_on {ref!r} is not a document in the corpus"
+        for meta, _ in docs for ref in meta.get("based_on") or () if ref not in known
+    ]
+    if missing:
+        raise BuildError("\n".join(missing))
     return docs
 
 
