@@ -25,10 +25,14 @@ def amendment():
     }
 
 
+SERVICE_FIELDS = ("based_on", "audience", "topics", "channels", "service_url", "issuer_org_number", "scope", "template")
+
+
 def new_layer_meta(type_):
     """A valid document of one of the non-SFS types, built on the SFS example."""
     meta = example_meta()
-    for key in ("amendments", "issuer", "court", "ecli", "celex", "region_code", "municipality_code", "text_source"):
+    for key in ("amendments", "issuer", "court", "ecli", "celex", "region_code", "municipality_code", "text_source",
+                *SERVICE_FIELDS):
         meta.pop(key, None)
     meta.update(amended_by=[], amended_through=None, reprinted_by=[], ministry=None)
     meta.update(NEW_TYPES[type_])
@@ -70,7 +74,26 @@ NEW_TYPES = {
         "id": "0180-2024-12", "number": "SKFS 2024:12", "municipality_code": "0180", "region_code": "01",
         "issuer": "Stockholms kommun",
     },
+    "public_service": {
+        "id": "service-foraldrapenning", "number": "foraldrapenning", "title": "F\u00f6r\u00e4ldrapenning",
+        "issued": None, "in_force": None, "repealed": None, "eli": None,
+        "issuer": "F\u00f6rs\u00e4kringskassan",
+        "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/foraldrapenning",
+        "based_on": ["sfs-2010-110"], "audience": ["private"], "topics": ["family"], "channels": ["online"],
+        "service_url": None, "issuer_org_number": "202100-5521", "scope": "national", "template": False,
+    },
 }
+
+
+def template_service(scope="municipality"):
+    """A service every kommun (or region) must offer: no locality code of its own."""
+    meta = new_layer_meta("public_service")
+    meta.update(
+        id="service-bygglov", number="bygglov", title="Bygglov", issuer="Kommunen", based_on=["sfs-2010-900"],
+        audience=["private", "business"], topics=["housing"], channels=[], issuer_org_number=None,
+        scope=scope, template=True, region_code=None, municipality_code=None,
+    )
+    return meta
 
 
 class SchemaTest(unittest.TestCase):
@@ -340,3 +363,108 @@ class SchemaTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def field_errors(errors, field):
+    return [e for e in errors if e.startswith(field + ":") or e.startswith(field + "[")]
+
+
+class PublicServiceTest(unittest.TestCase):
+    def test_valid_service_passes(self):
+        self.assertEqual(schema.validate(new_layer_meta("public_service")), [])
+        self.assertEqual(schema.validate(template_service()), [])
+        self.assertEqual(schema.validate(template_service("region")), [])
+
+    def test_service_fields_are_required(self):
+        for field in SERVICE_FIELDS:
+            with self.subTest(field=field):
+                meta = new_layer_meta("public_service")
+                del meta[field]
+                self.assertIn(f"{field}: required key is missing", schema.validate(meta))
+
+    def test_empty_based_on_fails(self):
+        errors = schema.validate({**new_layer_meta("public_service"), "based_on": []})
+        self.assertEqual(errors, ["based_on: must have at least 1 items, got 0"])
+
+    def test_based_on_must_hold_document_ids(self):
+        for bad in (None, ["SFS 2010:110"], [" sfs-2010-110"], "sfs-2010-110"):
+            with self.subTest(bad=bad):
+                errors = schema.validate({**new_layer_meta("public_service"), "based_on": bad})
+                self.assertTrue(field_errors(errors, "based_on"), errors)
+
+    def test_unknown_topic_fails(self):
+        errors = schema.validate({**new_layer_meta("public_service"), "topics": ["family", "pets"]})
+        self.assertEqual(len(errors), 1, errors)
+        self.assertTrue(errors[0].startswith("topics[1]: 'pets' is not one of"), errors)
+
+    def test_vocabularies_match(self):
+        props = schema._load_schema()["properties"]
+        self.assertEqual(props["topics"]["items"]["enum"], list(vocabulary.SERVICE_TOPICS))
+        self.assertEqual(props["audience"]["items"]["enum"], list(vocabulary.SERVICE_AUDIENCES))
+        self.assertEqual(props["channels"]["items"]["enum"], list(vocabulary.SERVICE_CHANNELS))
+        self.assertEqual([s for s in props["scope"]["enum"] if s], list(vocabulary.SERVICE_SCOPES))
+
+    def test_other_vocabularies_checked(self):
+        for field, value in (("audience", ["citizen"]), ("audience", []), ("topics", []), ("channels", ["fax"]),
+                             ("scope", "local"), ("template", None), ("service_url", "not a uri"),
+                             ("issuer_org_number", "2021005521")):
+            with self.subTest(field=field, value=value):
+                errors = schema.validate({**new_layer_meta("public_service"), field: value})
+                self.assertTrue(field_errors(errors, field), errors)
+
+    def test_template_with_municipality_code_fails(self):
+        meta = {**template_service(), "municipality_code": "0180"}
+        self.assertEqual(
+            schema.validate(meta),
+            ["municipality_code: a template service applies to every kommun and has no municipality_code"],
+        )
+
+    def test_template_with_region_code_fails(self):
+        errors = schema.validate({**template_service("region"), "region_code": "01"})
+        self.assertEqual(errors, ["region_code: a template service applies to every region and has no region_code"])
+
+    def test_national_service_cannot_be_a_template(self):
+        errors = schema.validate({**new_layer_meta("public_service"), "template": True})
+        self.assertEqual(errors, ["template: only region and municipality services can be templates"])
+
+    def test_national_service_has_no_locality(self):
+        errors = schema.validate({**new_layer_meta("public_service"), "region_code": "01"})
+        self.assertEqual(errors, ["region_code: a national service has no region_code"])
+
+    def test_local_service_names_its_locality(self):
+        meta = {**template_service(), "template": False}
+        self.assertEqual(
+            schema.validate(meta), ["municipality_code: a municipality service that is not a template needs one"]
+        )
+        self.assertEqual(schema.validate({**meta, "region_code": "01", "municipality_code": "0180"}), [])
+
+    def test_id_is_the_slug(self):
+        errors = schema.validate({**new_layer_meta("public_service"), "id": "service-barnbidrag"})
+        self.assertEqual(errors, ["id: 'service-barnbidrag' does not match 'service-' + number 'foraldrapenning'"])
+        errors = schema.validate({**new_layer_meta("public_service"), "number": "F\u00f6r\u00e4ldrapenning"})
+        self.assertTrue(field_errors(errors, "number"), errors)
+
+    def test_base_fields_that_do_not_fit_stay_empty(self):
+        for field, value in (("issued", "2020-01-01"), ("in_force", "2020-01-01"), ("repealed", "2020-01-01"),
+                             ("amended_by", ["sfs-2020-1"]), ("amended_through", "2020:1"), ("reprinted_by", ["x"]),
+                             ("ministry", "Socialdepartementet"), ("eli", "https://example.org/eli"),
+                             ("authoritative", True), ("court", "HDO"), ("celex", "32016R0679")):
+            with self.subTest(field=field):
+                errors = schema.validate({**new_layer_meta("public_service"), field: value})
+                self.assertTrue(field_errors(errors, field), errors)
+
+    def test_other_types_leave_service_fields_null(self):
+        for type_ in ("act", "agency_regulation", "municipal_regulation"):
+            meta = example_meta() if type_ == "act" else new_layer_meta(type_)
+            for field in SERVICE_FIELDS:
+                with self.subTest(type_=type_, field=field):
+                    self.assertEqual(schema.validate({**meta, field: None}), [])
+            for field, value in (("based_on", ["sfs-2010-110"]), ("topics", ["family"]), ("template", False),
+                                 ("scope", "national"), ("service_url", "https://example.org/")):
+                with self.subTest(type_=type_, field=field, value=value):
+                    errors = schema.validate({**meta, field: value})
+                    self.assertTrue(field_errors(errors, field), errors)
+
+    def test_min_items_keyword(self):
+        self.assertEqual(schema._valid([], {"minItems": 1}), False)
+        self.assertEqual(schema._valid(["a"], {"minItems": 1}), True)
