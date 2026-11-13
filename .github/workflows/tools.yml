@@ -6,6 +6,8 @@ on:
       - mcp/**
       - scripts/serve_local.py
       - scripts/export_corpus.py
+      - scripts/health.py
+      - .github/workflows/health.yml
       - collector/lagar/frontmatter.py
       - scripts/tests/**
       - docs/replicate/**
@@ -21,6 +23,8 @@ on:
       - mcp/**
       - scripts/serve_local.py
       - scripts/export_corpus.py
+      - scripts/health.py
+      - .github/workflows/health.yml
       - collector/lagar/frontmatter.py
       - scripts/tests/**
       - docs/replicate/**
