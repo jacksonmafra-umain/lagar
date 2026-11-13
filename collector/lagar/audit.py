@@ -1,4 +1,4 @@
-"""Corpus audit: schema, duplicates, paths, text quality and cross-references."""
+"""Corpus audit: schema, duplicates, paths, text quality, cross-references and service links."""
 
 import argparse
 import json
@@ -75,10 +75,20 @@ def audit(corpus, generated_at=None, fsck=None):
             path_mismatches.append({"path": rel, "expected": expected})
         for flag in _text_flags(body):
             text_quality.append({"id": meta["id"], "path": rel, "flag": flag})
-        parsed.append(meta)
+        parsed.append((rel, meta))
+
+    # A public service must rest on documents that exist (a repealed norm still counts);
+    # a broken link is a schema error, so a sync cannot merge it.
+    for rel, meta in parsed:
+        missing = [d for d in meta.get("based_on") or () if d not in ids]
+        if missing:
+            schema_errors.append({
+                "path": rel,
+                "errors": [f"based_on: {d!r} is not a document in the corpus" for d in missing],
+            })
 
     cross = {field: {"total": 0, "unknown": 0, "sample": set()} for field in _REFERENCE_FIELDS}
-    for meta in parsed:
+    for _, meta in parsed:
         for field, values in _references(meta).items():
             for value in values:
                 cross[field]["total"] += 1
