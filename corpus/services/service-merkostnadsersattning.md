@@ -14,9 +14,9 @@ ministry: null
 eli: null
 language: "sv"
 authoritative: false
-source: "https://www.forsakringskassan.se/privatperson/vuxen-med-funktionsnedsattning/sa-har-fungerar-merkostnadsersattning"
-source_sha256: "ae91d435b31f128709e3057bc31de095707424f8c9d8abd0afa0801ce04b3331"
-fetched_at: "2026-11-13T12:19:00Z"
+source: "https://www.forsakringskassan.se/privatperson/vuxen-med-funktionsnedsattning/merkostnadsersattning-for-vuxna"
+source_sha256: "3d35e5dc9c85a269c4dc9d0a7762f770ea8c8fc2dd5427c8e56e02d58a4b3876"
+fetched_at: "2026-11-13T12:31:19Z"
 issuer: "Försäkringskassan"
 based_on: ["sfs-2010-110", "sfs-2018-1614"]
 audience: ["private"]
@@ -29,6 +29,6 @@ template: false
 ---
 # Merkostnadsersättning
 
-Här finns åtta korta filmer som svarar på de vanligaste frågorna vi får om merkostnadsersättning
+Merkostnadsersättning kan ersätta extra kostnader som du har på grund av en funktionsnedsättning. Det gäller om Försäkringskassan bedömer att du har merkostnader på mer än 14 800 kronor per år.
 
-Källa: [Försäkringskassan](https://www.forsakringskassan.se/privatperson/vuxen-med-funktionsnedsattning/sa-har-fungerar-merkostnadsersattning)
+Källa: [Försäkringskassan](https://www.forsakringskassan.se/privatperson/vuxen-med-funktionsnedsattning/merkostnadsersattning-for-vuxna)
