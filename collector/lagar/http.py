@@ -4,6 +4,8 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from dataclasses import dataclass
+from email.message import Message
 
 RETRY_STATUSES = frozenset({429, 500, 502, 503, 504})
 TIMEOUT_SECONDS = 30
@@ -21,6 +23,16 @@ def _content_type(response):
 def _final_url(response, url):
     geturl = getattr(response, "geturl", None)
     return (geturl() if callable(geturl) else None) or url
+
+
+@dataclass(frozen=True)
+class Response:
+    """A successful answer: body, bare content type, URL after redirects and the response headers."""
+
+    body: bytes
+    content_type: "str | None"
+    url: str
+    headers: Message
 
 
 class Blocked(Exception):
@@ -81,6 +93,11 @@ class PoliteClient:
         `headers` are sent in addition to the User-Agent (for example Accept);
         `data`, when given, is sent as the body of a POST request.
         """
+        response = self.fetch_response(url, headers, data)
+        return response.body, response.content_type, response.url
+
+    def fetch_response(self, url, headers=None, data=None):
+        """Like `fetch_final`, as a `Response` that also carries the response headers (Last-Modified)."""
         attempt = 0
         while True:
             self._space()
@@ -89,7 +106,13 @@ class PoliteClient:
             )
             try:
                 with self._opener(request, timeout=TIMEOUT_SECONDS) as response:
-                    return response.read(), _content_type(response), _final_url(response, url)
+                    response_headers = getattr(response, "headers", None)
+                    return Response(
+                        response.read(),
+                        _content_type(response),
+                        _final_url(response, url),
+                        response_headers if response_headers is not None else Message(),
+                    )
             except urllib.error.HTTPError as error:
                 if error.code == 403:
                     error.close()
