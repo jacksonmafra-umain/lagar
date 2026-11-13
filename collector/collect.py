@@ -1,11 +1,11 @@
-"""Entry point: python3 -I collector/collect.py {sfs,sfspdf,sfsr,sfsverify,case-law,eu,eu-case-law,agency,county,municipal,so} [options]."""
+"""Entry point: python3 -I collector/collect.py {sfs,sfspdf,sfsr,sfsverify,case-law,eu,eu-case-law,agency,county,municipal,so,services} [options]."""
 
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from lagar import agency, caselaw, county, eu, eucaselaw, municipal, sfs, sfspdf, sfsr, sfsverify, treaties  # noqa: E402
+from lagar import agency, caselaw, county, eu, eucaselaw, municipal, sfs, sfspdf, sfsr, sfsverify, services, treaties  # noqa: E402
 
 if __name__ == "__main__":
     argv = sys.argv[1:]
@@ -27,6 +27,8 @@ if __name__ == "__main__":
         sys.exit(eucaselaw.main(argv[1:]))
     if argv and argv[0] == "so":
         sys.exit(treaties.main(argv[1:]))
+    if argv and argv[0] == "services":
+        sys.exit(services.main(argv[1:]))
     if argv and argv[0] == "municipal":
         sys.exit(municipal.main(argv[1:]))
     sys.exit(sfs.main(argv))
