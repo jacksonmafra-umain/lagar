@@ -75,7 +75,7 @@ Candidates collected so far, in no fixed order:
 
 - **Search by meaning and by voice:** Swedish models from KBLab (sentence embeddings for search, KB-Whisper for speech), proven in the lagar-search demo.
 - **Reading a law as of a date:** point-in-time text, which needs historical text in the API first.
-- **Services (Tjänster):** the fourth tab, today a placeholder.
+- **Services (Tjänster):** the fourth tab, today a placeholder. Designed in [`docs/specs/2026-11-13-tjanster-design.md`](specs/2026-11-13-tjanster-design.md) (public services linked to the norms they are based on) and planned as 14 issues in [`docs/plans/2026-11-13-tjanster.md`](plans/2026-11-13-tjanster.md); waiting for the owner to start it.
 - **The web app:** paused and not deployed; decide whether and when it goes public again.
 - **OCR engine:** replace or complement Tesseract once the real-scan benchmark has a winner.
 

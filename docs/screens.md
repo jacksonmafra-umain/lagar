@@ -276,12 +276,14 @@ Route: `Sparade`. Code: `ui/sparade/SparadeScreen.kt`. Reference: architecture �
 
 ## Tjänster
 
-Route: `Tjanster`. Code: `ui/tjanster/TjansterScreen.kt`. Reference: architecture §4 (notices and gazettes), layer 9.
+Route: `Tjanster`. Code: `ui/tjanster/TjansterScreen.kt`. Reference: layer 9. Design: [`docs/specs/2026-11-13-tjanster-design.md`](specs/2026-11-13-tjanster-design.md); plan: [`docs/plans/2026-11-13-tjanster.md`](plans/2026-11-13-tjanster.md). The tab is a catalogue of public services, each linked to the norms it is based on; official notices (kungörelser) are out of scope.
 
 | Feature | Status | Issue |
 | --- | --- | --- |
 | "Coming soon" empty state | Done | |
-| Public services and official notices | Blocked: no source or collector yet | #38 |
+| Service catalogue: search, topics, Privatperson / Företag, scope-aware list | Planned: plan task 8 | #792 |
+| Service detail with official link and "Bygger på" norms | Planned: plan task 9 | #792 |
+| Services in the reader, bookmarks, Hierarki entry | Planned: plan tasks 10–11 | #792 |
 
 ## Settings
 
