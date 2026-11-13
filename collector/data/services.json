@@ -1,0 +1,1057 @@
+[
+  {
+    "slug": "foraldrapenning",
+    "title": "Föräldrapenning",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/foraldrapenning",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110"
+    ]
+  },
+  {
+    "slug": "tillfallig-foraldrapenning-vab",
+    "title": "Vab för barn under 12 år",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/vab-for-barn-under-12-ar",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family",
+      "work"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110"
+    ]
+  },
+  {
+    "slug": "tio-dagar-efter-fodsel",
+    "title": "10 dagar efter födsel eller adoption",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/10-dagar-efter-fodsel-eller-adoption",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110"
+    ]
+  },
+  {
+    "slug": "graviditetspenning",
+    "title": "Graviditetspenning",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/gravid-och-kan-inte-jobba-graviditetspenning",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family",
+      "work"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110"
+    ]
+  },
+  {
+    "slug": "barnbidrag",
+    "title": "Barnbidrag och flerbarnstillägg",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/barnbidrag-och-flerbarnstillagg",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110",
+      "sfs-1986-386"
+    ]
+  },
+  {
+    "slug": "bostadsbidrag",
+    "title": "Bostadsbidrag för barnfamiljer",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/bostadsbidrag-for-barnfamiljer",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family",
+      "housing"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110"
+    ]
+  },
+  {
+    "slug": "underhallsstod",
+    "title": "Underhållsstöd",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/foraldrar-som-inte-lever-ihop/om-den-som-ska-betala-underhall-inte-kan-eller-vill-betala",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110",
+      "sfs-1996-1036"
+    ]
+  },
+  {
+    "slug": "adoptionsbidrag",
+    "title": "Adoptionsbidrag",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/introduktion-till-dig-som-ska-bli-foralder/adoptionsbidrag",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110"
+    ]
+  },
+  {
+    "slug": "omvardnadsbidrag",
+    "title": "Omvårdnadsbidrag",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/barn-med-funktionsnedsattning-eller-behov-av-extra-stod/omvardnadsbidrag",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family",
+      "social_support"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110",
+      "sfs-2018-1614"
+    ]
+  },
+  {
+    "slug": "merkostnadsersattning",
+    "title": "Merkostnadsersättning",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/vuxen-med-funktionsnedsattning/sa-har-fungerar-merkostnadsersattning",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "social_support",
+      "health"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110",
+      "sfs-2018-1614"
+    ]
+  },
+  {
+    "slug": "sjukpenning",
+    "title": "Sjukpenning",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/sjuk-eller-skadad/ersattning-nar-du-ar-sjuk-eller-skadad-sjukpenning",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "health",
+      "work"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110"
+    ]
+  },
+  {
+    "slug": "narstaendepenning",
+    "title": "Närståendepenning",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/sjuk-eller-skadad/stodja-en-svart-sjuk-narstaende",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "health",
+      "family"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110"
+    ]
+  },
+  {
+    "slug": "arbetsskadeersattning",
+    "title": "Ersättning vid arbetsskada",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/sjuk-eller-skadad/arbetsskada",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "work",
+      "health"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110"
+    ]
+  },
+  {
+    "slug": "sjukersattning",
+    "title": "Sjukersättning",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/vuxen-med-funktionsnedsattning/sjukersattning-resten-av-arbetslivet-sjukpension",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "health",
+      "social_support"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110",
+      "sfs-2002-986"
+    ]
+  },
+  {
+    "slug": "aktivitetsersattning",
+    "title": "Aktivitetsersättning",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/vuxen-med-funktionsnedsattning/aktivitetsersattning-for-unga-vuxna",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "health",
+      "social_support"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110",
+      "sfs-2002-986"
+    ]
+  },
+  {
+    "slug": "assistansersattning",
+    "title": "Assistansersättning",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/vuxen-med-funktionsnedsattning/assistansersattning",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "social_support",
+      "health"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110"
+    ]
+  },
+  {
+    "slug": "bilstod",
+    "title": "Bilstöd för vuxna",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/vuxen-med-funktionsnedsattning/kopa-eller-anpassa-bil-for-vuxen",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "social_support",
+      "vehicles"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110",
+      "sfs-2010-1745"
+    ]
+  },
+  {
+    "slug": "bidrag-arbetshjalpmedel",
+    "title": "Arbetshjälpmedel",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/vuxen-med-funktionsnedsattning/arbetshjalpmedel",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "work",
+      "social_support"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2010-110",
+      "sfs-1991-1046"
+    ]
+  },
+  {
+    "slug": "statligt-tandvardsstod",
+    "title": "Tandvårdsstöd",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/tandvard/tandvardsstod",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "health"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2008-145",
+      "sfs-2008-193"
+    ]
+  },
+  {
+    "slug": "jobbpremie",
+    "title": "Jobbpremie",
+    "issuer": "Försäkringskassan",
+    "source": "https://www.forsakringskassan.se/privatperson/jobbpremie",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "work"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2026-4"
+    ]
+  },
+  {
+    "slug": "studiemedel",
+    "title": "Studiemedel",
+    "issuer": "Centrala studiestödsnämnden",
+    "source": "https://www.csn.se/bidrag-och-lan/studiemedel.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "education"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1999-1395",
+      "sfs-2000-655"
+    ]
+  },
+  {
+    "slug": "studiemedel-utlandsstudier",
+    "title": "Utlandsstudier med studiemedel",
+    "issuer": "Centrala studiestödsnämnden",
+    "source": "https://www.csn.se/bidrag-och-lan/utlandsstudier-med-studiemedel.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "education"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1999-1395",
+      "sfs-2000-655"
+    ]
+  },
+  {
+    "slug": "studiehjalp-gymnasiet",
+    "title": "Bidrag för gymnasiestudier i Sverige",
+    "issuer": "Centrala studiestödsnämnden",
+    "source": "https://www.csn.se/bidrag-och-lan/bidrag-for-gymnasiestudier-i-sverige.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "education",
+      "family"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1999-1395",
+      "sfs-2000-655"
+    ]
+  },
+  {
+    "slug": "studiehjalp-extra-tillagg",
+    "title": "Extra tillägg för gymnasiestudier",
+    "issuer": "Centrala studiestödsnämnden",
+    "source": "https://www.csn.se/bidrag-och-lan/bidrag-for-gymnasiestudier-i-sverige/extra-tillagg.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "education",
+      "family"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1999-1395",
+      "sfs-2000-655"
+    ]
+  },
+  {
+    "slug": "aterbetalning-studielan",
+    "title": "Betala tillbaka studielån",
+    "issuer": "Centrala studiestödsnämnden",
+    "source": "https://www.csn.se/betala-tillbaka/betala-tillbaka-studielan.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "education"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1999-1395"
+    ]
+  },
+  {
+    "slug": "omstallningsstudiestod",
+    "title": "Omställningsstudiestöd",
+    "issuer": "Centrala studiestödsnämnden",
+    "source": "https://www.csn.se/bidrag-och-lan/omstallningsstudiestod-for-dig-mitt-i-arbetslivet.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "education",
+      "work"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2022-856",
+      "sfs-2022-857"
+    ]
+  },
+  {
+    "slug": "uppehallstillstand-arbete",
+    "title": "Arbetstillstånd",
+    "issuer": "Migrationsverket",
+    "source": "https://www.migrationsverket.se/du-vill-ansoka/arbeta.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "migration",
+      "work"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2005-716",
+      "sfs-2006-97"
+    ]
+  },
+  {
+    "slug": "uppehallstillstand-familj",
+    "title": "Uppehållstillstånd för att bo med någon i Sverige",
+    "issuer": "Migrationsverket",
+    "source": "https://www.migrationsverket.se/du-vill-ansoka/bo-med-nagon.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "migration",
+      "family"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2005-716",
+      "sfs-2006-97"
+    ]
+  },
+  {
+    "slug": "uppehallstillstand-studier",
+    "title": "Uppehållstillstånd för studier",
+    "issuer": "Migrationsverket",
+    "source": "https://www.migrationsverket.se/du-vill-ansoka/studera.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "migration",
+      "education"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2005-716",
+      "sfs-2006-97"
+    ]
+  },
+  {
+    "slug": "visering-besok",
+    "title": "Schengenvisum eller uppehållstillstånd för besök",
+    "issuer": "Migrationsverket",
+    "source": "https://www.migrationsverket.se/du-vill-ansoka/besoka-sverige.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "migration"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2005-716",
+      "sfs-2006-97"
+    ]
+  },
+  {
+    "slug": "permanent-uppehallstillstand",
+    "title": "Permanent uppehållstillstånd",
+    "issuer": "Migrationsverket",
+    "source": "https://www.migrationsverket.se/du-vill-ansoka/permanent-uppehallstillstand.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "migration"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2005-716",
+      "sfs-2006-97"
+    ]
+  },
+  {
+    "slug": "asyl",
+    "title": "Ansök om internationellt skydd (asyl)",
+    "issuer": "Migrationsverket",
+    "source": "https://www.migrationsverket.se/du-vill-ansoka/internationellt-skydd-asyl.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "migration"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2005-716",
+      "sfs-2026-999"
+    ]
+  },
+  {
+    "slug": "framlingspass-resedokument",
+    "title": "Främlingspass eller resedokument",
+    "issuer": "Migrationsverket",
+    "source": "https://www.migrationsverket.se/du-vill-ansoka/framlingspass-och-resedokument.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "migration"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2005-716",
+      "sfs-2006-97"
+    ]
+  },
+  {
+    "slug": "svenskt-medborgarskap",
+    "title": "Svenskt medborgarskap",
+    "issuer": "Migrationsverket",
+    "source": "https://www.migrationsverket.se/du-vill-ansoka/svenskt-medborgarskap.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "migration"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2001-82",
+      "sfs-2001-218"
+    ]
+  },
+  {
+    "slug": "pass",
+    "title": "Pass",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/pass-och-nationellt-id-kort/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1978-302"
+    ]
+  },
+  {
+    "slug": "nationellt-id-kort",
+    "title": "Nationellt id-kort",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/pass-och-nationellt-id-kort/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2005-661"
+    ]
+  },
+  {
+    "slug": "provisoriskt-pass",
+    "title": "Provisoriskt pass",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/pass-och-nationellt-id-kort/provisoriskt-pass/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1978-302"
+    ]
+  },
+  {
+    "slug": "utdrag-belastningsregistret",
+    "title": "Kontrollera egna uppgifter i belastningsregistret",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/belastningsregistret/kontrollera-dina-uppgifter-i-belastningsregistret/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "legal",
+      "work"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1998-620",
+      "sfs-1999-1134"
+    ]
+  },
+  {
+    "slug": "registerutdrag-skola-forskola",
+    "title": "Registerutdrag för skola och förskola",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/belastningsregistret/skola-eller-forskola/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "legal",
+      "education",
+      "work"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1998-620",
+      "sfs-1999-1134",
+      "sfs-2010-800"
+    ]
+  },
+  {
+    "slug": "hittegods-forlustanmalan",
+    "title": "Förlust och hittegods",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/hittegods/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1938-121"
+    ]
+  },
+  {
+    "slug": "tillstand-offentlig-plats",
+    "title": "Tillstånd att använda offentlig plats",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/tillstand-ansok/offentlig-plats/",
+    "service_url": null,
+    "audience": [
+      "private",
+      "business"
+    ],
+    "topics": [
+      "legal",
+      "business"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1993-1617"
+    ]
+  },
+  {
+    "slug": "tillstand-arrangemang",
+    "title": "Tillstånd att anordna arrangemang",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/tillstand-ansok/anordna-arrangemang/",
+    "service_url": null,
+    "audience": [
+      "private",
+      "business"
+    ],
+    "topics": [
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1993-1617"
+    ]
+  },
+  {
+    "slug": "tillstand-fyrverkerier",
+    "title": "Tillstånd för fyrverkerier",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/tillstand-ansok/fyrverkerier/",
+    "service_url": null,
+    "audience": [
+      "private",
+      "business"
+    ],
+    "topics": [
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1993-1617"
+    ]
+  },
+  {
+    "slug": "tillstand-ordningsvakter",
+    "title": "Använda ordningsvakter",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/tillstand-ansok/anvanda-ordningsvakter/",
+    "service_url": null,
+    "audience": [
+      "business"
+    ],
+    "topics": [
+      "business",
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2023-421"
+    ]
+  },
+  {
+    "slug": "tillstand-begagnade-varor",
+    "title": "Tillstånd för handel med begagnade varor",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/tillstand-ansok/begagnade-varor/",
+    "service_url": null,
+    "audience": [
+      "business"
+    ],
+    "topics": [
+      "business"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1999-271",
+      "sfs-1999-272"
+    ]
+  },
+  {
+    "slug": "vapentillstand",
+    "title": "Vapentillstånd",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/vapen-regler-och-tillstand/ansok-om-vapentillstand/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2026-408",
+      "sfs-2026-409"
+    ]
+  },
+  {
+    "slug": "europeiskt-skjutvapenpass",
+    "title": "Europeiskt skjutvapenpass",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/vapen-regler-och-tillstand/europeiskt-skjutvapenpass/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2026-408",
+      "sfs-2026-409"
+    ]
+  },
+  {
+    "slug": "allman-handling-polisen",
+    "title": "Ta del av allmän handling hos Polisen",
+    "issuer": "Polismyndigheten",
+    "source": "https://polisen.se/tjanster-tillstand/ta-del-av-allman-handling/",
+    "service_url": null,
+    "audience": [
+      "private",
+      "business"
+    ],
+    "topics": [
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1949-105",
+      "sfs-2009-400"
+    ]
+  },
+  {
+    "slug": "korkortstillstand",
+    "title": "Körkortstillstånd",
+    "issuer": "Transportstyrelsen",
+    "source": "https://www.transportstyrelsen.se/sv/vagtrafik/korkort/ta-korkort/korkortstillstand/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "vehicles"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1998-488",
+      "sfs-1998-980"
+    ]
+  },
+  {
+    "slug": "fornya-korkort",
+    "title": "Förnya körkortet",
+    "issuer": "Transportstyrelsen",
+    "source": "https://www.transportstyrelsen.se/sv/vagtrafik/korkort/har-korkort/fornya-korkortet/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "vehicles"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1998-488",
+      "sfs-1998-980"
+    ]
+  },
+  {
+    "slug": "ersattningskorkort",
+    "title": "Stulet, borttappat eller skadat körkort",
+    "issuer": "Transportstyrelsen",
+    "source": "https://www.transportstyrelsen.se/sv/vagtrafik/korkort/forlorat-korkort/stulet-borttappat-eller-skadat-korkort/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "vehicles"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1998-488",
+      "sfs-1998-980"
+    ]
+  },
+  {
+    "slug": "nytt-korkort-efter-aterkallelse",
+    "title": "Nytt körkort efter återkallelse",
+    "issuer": "Transportstyrelsen",
+    "source": "https://www.transportstyrelsen.se/sv/vagtrafik/korkort/forlorat-korkort/nytt-korkort-efter-aterkallelse/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "vehicles"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1998-488",
+      "sfs-1998-980"
+    ]
+  },
+  {
+    "slug": "utlandskt-korkort",
+    "title": "Ha utländskt körkort i Sverige",
+    "issuer": "Transportstyrelsen",
+    "source": "https://www.transportstyrelsen.se/sv/vagtrafik/korkort/har-korkort/utlandska-korkort/",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "vehicles",
+      "migration"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1998-488"
+    ]
+  },
+  {
+    "slug": "trangselskatt",
+    "title": "Trängselskatt",
+    "issuer": "Transportstyrelsen",
+    "source": "https://www.transportstyrelsen.se/sv/vagtrafik/fordon/skatter-och-avgifter/trangselskatt/",
+    "service_url": null,
+    "audience": [
+      "private",
+      "business"
+    ],
+    "topics": [
+      "vehicles",
+      "tax"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2004-629"
+    ]
+  },
+  {
+    "slug": "byta-efternamn",
+    "title": "Byta efternamn",
+    "issuer": "Skatteverket",
+    "source": "https://www.skatteverket.se/privat/folkbokforing/namn/bytaefternamn.4.76a43be412206334b89800020669.html",
+    "service_url": null,
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "family",
+      "legal"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2016-1013"
+    ]
+  },
+  {
+    "slug": "kassaregister",
+    "title": "Kassaregister",
+    "issuer": "Skatteverket",
+    "source": "https://www.skatteverket.se/foretag/drivaforetag/kassaregister.4.121b82f011a74172e5880005263.html",
+    "service_url": null,
+    "audience": [
+      "business"
+    ],
+    "topics": [
+      "business",
+      "tax"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2011-1244"
+    ]
+  },
+  {
+    "slug": "personalliggare",
+    "title": "Personalliggare",
+    "issuer": "Skatteverket",
+    "source": "https://www.skatteverket.se/foretag/arbetsgivare/personalliggare.4.4f3d00a710cc9ae1c9c80007271.html",
+    "service_url": null,
+    "audience": [
+      "business"
+    ],
+    "topics": [
+      "business",
+      "tax",
+      "work"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-2011-1244"
+    ]
+  },
+  {
+    "slug": "varsel-permittering",
+    "title": "Anmäl varsel och permittering",
+    "issuer": "Arbetsförmedlingen",
+    "source": "https://arbetsformedlingen.se/for-arbetsgivare/anmal-varsel-och-permittering",
+    "service_url": null,
+    "audience": [
+      "business"
+    ],
+    "topics": [
+      "work",
+      "business"
+    ],
+    "scope": "national",
+    "based_on": [
+      "sfs-1974-13"
+    ]
+  }
+]
