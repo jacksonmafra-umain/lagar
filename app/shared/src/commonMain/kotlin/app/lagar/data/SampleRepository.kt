@@ -27,6 +27,10 @@ class SampleRepository(
     override suspend fun localityListing(layer: String, code: String, page: Int) =
         read<ListingPage>(localityListingPath(layer, code, page))
 
+    override suspend fun serviceCatalog() = read<ServiceCatalog>(serviceCatalogPath())
+
+    override suspend fun serviceNormIndex() = read<ServiceNormIndex>(serviceNormIndexPath())
+
     override suspend fun searchManifest() = read<SearchManifest>(searchManifestPath())
 
     override suspend fun searchGroupManifest(group: String) = read<SearchGroupManifest>(searchGroupManifestPath(group))

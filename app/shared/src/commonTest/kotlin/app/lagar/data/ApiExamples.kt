@@ -82,7 +82,22 @@ object ApiExamples {
     "source": "https://data.riksdagen.se/dokument/sfs-1999-175",
     "source_sha256": "9f2b6c1d4e8a7035b1c6d2e9f4a83b70c5d1e6f2a9b84c3d7e0f1a2b3c4d5e6f",
     "fetched_at": "2026-10-27T10:00:00Z",
-    "amendments": null
+    "amendments": null,
+    "issuer": null,
+    "court": null,
+    "ecli": null,
+    "celex": null,
+    "region_code": null,
+    "municipality_code": null,
+    "text_source": null,
+    "based_on": null,
+    "audience": null,
+    "topics": null,
+    "channels": null,
+    "service_url": null,
+    "issuer_org_number": null,
+    "scope": null,
+    "template": null
   },
   "body": "# Rättsinformationsförordning (1999:175)\n\nEtt offentligt rättsinformationssystem\n\n**1 §** I syfte att tillförsäkra den offentliga förvaltningen och enskilda tillgång till grundläggande rättsinformation i elektronisk form skall det finnas ett offentligt rättsinformationssystem.\n"
 }
@@ -225,6 +240,178 @@ object ApiExamples {
   "items": [
     {"id": "0180-2024-12", "title": "Lokala ordningsföreskrifter för Stockholms kommun", "number": "SKFS 2024:12", "type": "municipal_regulation", "issued": "2024-05-06", "repealed": null, "in_force": null, "amended_through": null, "ministry": null, "region_code": "01", "municipality_code": "0180"}
   ]
+}
+"""
+
+    val serviceCatalog = """
+{
+  "total": 3,
+  "services": [
+    {
+      "id": "service-adoptionsbidrag",
+      "title": "Adoptionsbidrag",
+      "issuer": "Försäkringskassan",
+      "audience": [
+        "private"
+      ],
+      "topics": [
+        "family"
+      ],
+      "channels": [],
+      "scope": "national",
+      "template": false,
+      "region_code": null,
+      "municipality_code": null,
+      "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/introduktion-till-dig-som-ska-bli-foralder/adoptionsbidrag",
+      "service_url": null,
+      "based_on": [
+        {
+          "id": "sfs-2010-110",
+          "title": "Socialförsäkringsbalk (2010:110)",
+          "type": "act",
+          "layer": "sfs"
+        }
+      ]
+    },
+    {
+      "id": "service-forskola",
+      "title": "Förskola",
+      "issuer": "Kommunen",
+      "audience": [
+        "private"
+      ],
+      "topics": [
+        "family",
+        "education"
+      ],
+      "channels": [
+        "online"
+      ],
+      "scope": "municipality",
+      "template": true,
+      "region_code": null,
+      "municipality_code": null,
+      "source": "https://www.skolverket.se/for-dig-som-ar/elev-eller-foralder/forskola",
+      "service_url": null,
+      "based_on": [
+        {
+          "id": "sfs-2010-800",
+          "title": "Skollag (2010:800)",
+          "type": "act",
+          "layer": "sfs"
+        }
+      ]
+    },
+    {
+      "id": "service-registerutdrag-skola-forskola",
+      "title": "Registerutdrag för skola och förskola",
+      "issuer": "Polismyndigheten",
+      "audience": [
+        "private"
+      ],
+      "topics": [
+        "legal",
+        "education",
+        "work"
+      ],
+      "channels": [
+        "online",
+        "form"
+      ],
+      "scope": "national",
+      "template": false,
+      "region_code": null,
+      "municipality_code": null,
+      "source": "https://polisen.se/tjanster-tillstand/belastningsregistret/skola-eller-forskola/",
+      "service_url": "https://polisen.se/tjanster-tillstand/belastningsregistret/skola-eller-forskola/e-tjanst/",
+      "based_on": [
+        {
+          "id": "sfs-1998-620",
+          "title": "Lag (1998:620) om belastningsregister",
+          "type": "act",
+          "layer": "sfs"
+        },
+        {
+          "id": "sfs-2010-800",
+          "title": "Skollag (2010:800)",
+          "type": "act",
+          "layer": "sfs"
+        }
+      ]
+    }
+  ]
+}
+"""
+
+    val serviceByNorm = """
+{
+  "norms": {
+    "sfs-1998-620": [
+      "service-registerutdrag-skola-forskola"
+    ],
+    "sfs-2010-110": [
+      "service-adoptionsbidrag"
+    ],
+    "sfs-2010-800": [
+      "service-forskola",
+      "service-registerutdrag-skola-forskola"
+    ]
+  }
+}
+"""
+
+    /** A `public_service` document as the API builds it from `api/tests/fixtures/corpus-services/`, body cut short. */
+    val serviceDocument = """
+{
+  "meta": {
+    "id": "service-registerutdrag-skola-forskola",
+    "title": "Registerutdrag för skola och förskola",
+    "type": "public_service",
+    "layer": "service",
+    "number": "registerutdrag-skola-forskola",
+    "issued": null,
+    "in_force": null,
+    "repealed": null,
+    "amended_by": [],
+    "amended_through": null,
+    "reprinted_by": [],
+    "ministry": null,
+    "eli": null,
+    "language": "sv",
+    "authoritative": false,
+    "source": "https://polisen.se/tjanster-tillstand/belastningsregistret/skola-eller-forskola/",
+    "source_sha256": "9c0a9cbc659f7a8fd5bbc65f9330556d2ae103b61292e01b4f183470b4b58394",
+    "fetched_at": "2026-11-13T12:19:32Z",
+    "amendments": null,
+    "issuer": "Polismyndigheten",
+    "court": null,
+    "ecli": null,
+    "celex": null,
+    "region_code": null,
+    "municipality_code": null,
+    "text_source": null,
+    "based_on": [
+      "sfs-1998-620",
+      "sfs-2010-800"
+    ],
+    "audience": [
+      "private"
+    ],
+    "topics": [
+      "legal",
+      "education",
+      "work"
+    ],
+    "channels": [
+      "online",
+      "form"
+    ],
+    "service_url": "https://polisen.se/tjanster-tillstand/belastningsregistret/skola-eller-forskola/e-tjanst/",
+    "issuer_org_number": "202100-0076",
+    "scope": "national",
+    "template": false
+  },
+  "body": "# Registerutdrag för skola och förskola\n"
 }
 """
 }

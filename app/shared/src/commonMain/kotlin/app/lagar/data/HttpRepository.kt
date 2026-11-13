@@ -31,6 +31,10 @@ class HttpRepository(
     override suspend fun localityListing(layer: String, code: String, page: Int): ListingPage =
         fetch(localityListingPath(layer, code, page))
 
+    override suspend fun serviceCatalog(): ServiceCatalog = fetch(serviceCatalogPath())
+
+    override suspend fun serviceNormIndex(): ServiceNormIndex = fetch(serviceNormIndexPath())
+
     override suspend fun searchManifest(): SearchManifest = fetch(searchManifestPath())
 
     override suspend fun searchGroupManifest(group: String): SearchGroupManifest = fetch(searchGroupManifestPath(group))

@@ -2,6 +2,7 @@ package app.lagar.di
 
 import app.lagar.data.ApiSource
 import app.lagar.data.CachingRepository
+import app.lagar.data.CachingServiceRepository
 import app.lagar.data.Catalog
 import app.lagar.data.DataSourceConfig
 import app.lagar.data.FullTextIndex
@@ -13,6 +14,7 @@ import app.lagar.data.MinistryRepository
 import app.lagar.data.SampleRepository
 import app.lagar.data.SearchIndexSource
 import app.lagar.data.SearchService
+import app.lagar.data.ServiceRepository
 import app.lagar.domain.SearchQuery
 import app.lagar.settings.BookmarkStore
 import app.lagar.settings.NoteStore
@@ -55,6 +57,7 @@ fun appModule(config: DataSourceConfig) = module {
     single<LagarRepository> { CachingRepository(get<ApiSource>()) }
     single<MinistryRepository> { get<ApiSource>() }
     single<LocalityRepository> { get<ApiSource>() }
+    single<ServiceRepository> { CachingServiceRepository(get<ApiSource>()) }
     single { Settings() }
     single { UserPreferences(get()) }
     single { ReadingPreferences(get()) }
