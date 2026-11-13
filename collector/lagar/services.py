@@ -11,7 +11,8 @@ to the page.
 The lead is the page's own introduction paragraph, found per host by its class
 (`ingress`, `preamble`, `lead` ...); when the page has none, or it is a
 navigation question ("Vad vill du veta mer om?"), the meta description is used,
-unless the site cut it short with "...".
+unless the site cut it short with "...". Försäkringskassan's navigation pages put
+a prompt for their link list in the ingress, so they use the meta description.
 
 Every fetch is recorded in the committed manifest `sources/services-manifest.json`:
 HTTP status, final URL, `Last-Modified`, the SHA-256 of the page bytes and when
@@ -87,8 +88,14 @@ HOST_LEADS = {
     "www.migrationsverket.se": (_class_paragraph("mv-font-intro"),),
     "polisen.se": (_class_paragraph("preamble"),),
     "www.transportstyrelsen.se": (
-        re.compile(r'<div\b[^>]*\bclass="lead"[^>]*>\s*<p\b[^>]*>(.*?)</p>', re.S | re.I),
+        re.compile(r'<div\b[^>]*\bclass="lead"[^>]*>\s*(?:<div\b[^>]*>\s*)*<p\b[^>]*>(.*?)</p>', re.S | re.I),
     ),
+}
+# On these hosts a page carrying the marker is a navigation page: its ingress is a prompt for the
+# link list below it ("För att ge information om vad som gäller för dig behöver vi veta ..."), so
+# the meta description is the lead.
+NAVIGATION_PAGES = {
+    "www.forsakringskassan.se": "navigationssida-innehall",
 }
 # Meta descriptions in order of preference (CSN's name="description" is the same on every page).
 META_DESCRIPTIONS = ("og:description", "description")
@@ -149,7 +156,9 @@ def extract(raw, url):
     host = urllib.parse.urlsplit(url).hostname
     title = _TITLE.search(raw)
     title = _text(title.group(1)) if title else None
-    for pattern in HOST_LEADS.get(host, ()):
+    navigation = NAVIGATION_PAGES.get(host)
+    patterns = () if navigation and navigation in raw else HOST_LEADS.get(host, ())
+    for pattern in patterns:
         match = pattern.search(raw)
         lead = _text(match.group(1)) if match else ""
         if _usable(lead):

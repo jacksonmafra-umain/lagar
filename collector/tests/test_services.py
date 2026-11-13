@@ -86,6 +86,13 @@ class LeadTest(unittest.TestCase):
                                     "Läs vem som kan få ersättning och hur reglerna fungerar.")
         self.assertEqual(page.lead_source, "meta")
 
+    def test_forsakringskassan_navigation_page_reads_the_meta_description(self):
+        # The ingress of a navigation page is a prompt for its link list, not a lead.
+        page = self.page("forsakringskassan-guide", FK + "/privatperson/sjuk-eller-skadad/arbetsskada")
+        self.assertEqual(page.lead, "Information för dig som fått en skada i jobbet eller under militärtjänst – "
+                                    "livränta, sjukpenning och kostnader för vård eller hjälpmedel.")
+        self.assertEqual(page.lead_source, "meta")
+
     def test_skatteverket_ingress(self):
         page = self.page("skatteverket", "https://www.skatteverket.se/privat/folkbokforing/namn/bytaefternamn.html")
         self.assertTrue(page.lead.startswith("Du kan både ändra, lägga till och ta bort efternamn."))
@@ -102,6 +109,12 @@ class LeadTest(unittest.TestCase):
         self.assertTrue(page.lead.startswith("Du behöver ett giltigt körkortstillstånd"))
         self.assertTrue(page.lead.endswith("ny körkortsbehörighet."))
         self.assertEqual(page.title, "Körkortstillstånd - Transportstyrelsen")
+
+    def test_transportstyrelsen_lead_block_with_a_nested_div(self):
+        page = self.page("transportstyrelsen-nested", "https://www.transportstyrelsen.se/sv/vagtrafik/korkort/nytt/")
+        self.assertTrue(page.lead.startswith("Det ska alltid tillverkas ett nytt körkort efter återkallelse."))
+        self.assertTrue(page.lead.endswith("om du har en prövotid på ditt körkort."))
+        self.assertEqual(page.lead_source, "ingress")
 
     def test_migrationsverket_intro(self):
         page = self.page("migrationsverket", "https://www.migrationsverket.se/du-vill-ansoka/arbeta.html")

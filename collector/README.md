@@ -451,7 +451,9 @@ to the source.
   `csn-formatmall-ingress` (csn.se), `mv-font-intro` (migrationsverket.se), `preamble`
   (polisen.se) and the `lead` block (transportstyrelsen.se). When the page has none, or it is a
   navigation question ("Vad vill du veta mer om?"), the `og:description` or `description` meta tag
-  is used, unless the site cut it short with "...". A page with neither is reported as `no_lead`.
+  is used, unless the site cut it short with "...". Försäkringskassan's navigation pages
+  (`navigationssida-innehall`) put a prompt for their link list in the ingress, so they use the meta
+  description too. A page with neither is reported as `no_lead`.
   A new host needs an entry in `HOST_LEADS` in `collector/lagar/services.py` and a trimmed saved
   page in `collector/tests/fixtures/service-<host>.html`.
 - **Manifest:** every fetch goes into `sources/services-manifest.json` with its `result`, HTTP
