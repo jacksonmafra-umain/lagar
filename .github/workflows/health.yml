@@ -1,0 +1,66 @@
+name: Health
+
+# Weekly health report (docs/roadmap.md, "Weekly: health report"): sync freshness, the
+# agency sync's run time, SYNC_TOKEN expiry and the public site. scripts/health.py does
+# the checks; this job keeps one open "Health report" issue while it finds problems,
+# updates it on every run, and closes it once a run is clean.
+
+on:
+  schedule:
+    - cron: "37 7 * * 1" # Mondays, after the morning syncs
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+  issues: write
+
+concurrency:
+  group: health
+  cancel-in-progress: false
+
+env:
+  TITLE: Health report
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+
+      - name: Check
+        id: check
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          # Only used to read its own expiry date.
+          SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: |
+          python3 -I scripts/health.py --out "$RUNNER_TEMP/health.md"
+          cat "$RUNNER_TEMP/health.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open, update or close the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROBLEMS: ${{ steps.check.outputs.problems }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          issue=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number,title \
+            --jq "map(select(.title == \"$TITLE\")) | .[0].number // empty")
+          body="$RUNNER_TEMP/health.md"
+          printf '\nRun: %s\n' "$RUN_URL" >> "$body"
+          if [ "${PROBLEMS:-0}" -gt 0 ]; then
+            if [ -n "$issue" ]; then
+              gh issue edit "$issue" --body-file "$body"
+              gh issue comment "$issue" --body "Still $PROBLEMS problem(s) on $(date -u +%F): $RUN_URL"
+            else
+              gh issue create --title "$TITLE" --label "area: ci" --label "type: bug" \
+                --assignee "${{ github.repository_owner }}" --body-file "$body"
+            fi
+          elif [ -n "$issue" ]; then
+            gh issue close "$issue" --comment "All checks pass again: $RUN_URL"
+          fi

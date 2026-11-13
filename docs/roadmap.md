@@ -40,7 +40,7 @@ Three kinds of checks: **health** (is the system running and fresh?), **integrit
 
 ### Weekly: health report (new `health.yml`, scheduled)
 
-One workflow that reads the state of the others and opens or updates a single `health` issue when something is wrong:
+`scripts/health.py`, run by `health.yml` on Mondays, reads the state of the other workflows and keeps a single `Health report` issue open while something is wrong (opened or updated on each run, closed when a run is clean). Freshness, token expiry, site and run time *exist*; failure streaks are *to build*:
 
 - **Freshness:** the last successful run of each sync workflow; flag a daily sync older than 3 days and a weekly one older than 10.
 - **Failure streaks:** a series, county or kommun that failed in two runs in a row.
