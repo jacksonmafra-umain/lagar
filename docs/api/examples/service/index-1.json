@@ -1,0 +1,48 @@
+{
+  "layer": "service",
+  "type": null,
+  "page": 1,
+  "page_count": 1,
+  "total": 3,
+  "items": [
+    {
+      "id": "service-adoptionsbidrag",
+      "title": "Adoptionsbidrag",
+      "number": "adoptionsbidrag",
+      "type": "public_service",
+      "issued": null,
+      "repealed": null,
+      "in_force": null,
+      "amended_through": null,
+      "ministry": null,
+      "region_code": null,
+      "municipality_code": null
+    },
+    {
+      "id": "service-forskola",
+      "title": "Förskola",
+      "number": "forskola",
+      "type": "public_service",
+      "issued": null,
+      "repealed": null,
+      "in_force": null,
+      "amended_through": null,
+      "ministry": null,
+      "region_code": null,
+      "municipality_code": null
+    },
+    {
+      "id": "service-registerutdrag-skola-forskola",
+      "title": "Registerutdrag för skola och förskola",
+      "number": "registerutdrag-skola-forskola",
+      "type": "public_service",
+      "issued": null,
+      "repealed": null,
+      "in_force": null,
+      "amended_through": null,
+      "ministry": null,
+      "region_code": null,
+      "municipality_code": null
+    }
+  ]
+}

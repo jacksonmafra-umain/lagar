@@ -11,6 +11,7 @@ BUILD = ROOT / "api" / "build.py"
 CORPUS = ROOT / "api" / "tests" / "fixtures" / "corpus"
 LAYERS_CORPUS = ROOT / "api" / "tests" / "fixtures" / "corpus-layers"
 SERVICES_CORPUS = ROOT / "api" / "tests" / "fixtures" / "corpus-services"
+EXAMPLES = ROOT / "docs" / "api" / "examples"
 BUILT_AT = "2026-10-27T10:30:00Z"
 sys.path.insert(0, str(ROOT / "collector"))
 from lagar import frontmatter, schema  # noqa: E402
@@ -96,6 +97,11 @@ class BuildTest(unittest.TestCase):
         # An empty locality layer still has its code index, with no codes.
         self.assertEqual(read(self.out, "region/by-code/index.json"),
                          {"layer": "region", "field": "region_code", "total": 0, "codes": []})
+
+    def test_empty_service_layer_has_empty_catalog_and_by_norm_index(self):
+        self.assertEqual(read(self.out, "service/index-1.json")["items"], [])
+        self.assertEqual(read(self.out, "service/catalog.json"), {"total": 0, "services": []})
+        self.assertEqual(read(self.out, "service/by-norm/index.json"), {"norms": {}})
 
     def test_doc_file(self):
         text = (CORPUS / "sfs" / "acts" / "2010-800.md").read_text(encoding="utf-8")
@@ -442,6 +448,10 @@ class ServiceNumberKeyTest(unittest.TestCase):
         self.assertEqual(sorted(keys), [(0, 0, True, "adoptionsbidrag"), (0, 0, True, "pass")])
 
 
+CATALOG_FIELDS = [
+    "id", "title", "issuer", "audience", "topics", "channels", "scope", "template", "region_code",
+    "municipality_code", "source", "service_url", "based_on",
+]
 SERVICE_IDS = ["service-adoptionsbidrag", "service-forskola", "service-registerutdrag-skola-forskola"]
 
 
@@ -471,6 +481,45 @@ class ServiceLayerTest(unittest.TestCase):
     def test_other_layers_keep_newest_first(self):
         page = read(self.out, "sfs/index-1.json")
         self.assertEqual([i["id"] for i in page["items"]], ["sfs-2010-800", "sfs-2010-110", "sfs-1998-620"])
+
+    def test_catalog_lists_every_service_with_the_spec_fields(self):
+        catalog = read(self.out, "service/catalog.json")
+        self.assertEqual(list(catalog), ["total", "services"])
+        self.assertEqual(catalog["total"], 3)
+        self.assertEqual([s["id"] for s in catalog["services"]], SERVICE_IDS)
+        for item in catalog["services"]:
+            with self.subTest(id=item["id"]):
+                self.assertEqual(list(item), CATALOG_FIELDS)
+                meta = read(self.out, f"docs/{item['id']}.json")["meta"]
+                self.assertEqual({k: v for k, v in item.items() if k != "based_on"},
+                                 {k: meta[k] for k in CATALOG_FIELDS if k != "based_on"})
+                self.assertEqual([ref["id"] for ref in item["based_on"]], meta["based_on"])
+
+    def test_catalog_based_on_resolves_to_documents(self):
+        refs = [ref for item in read(self.out, "service/catalog.json")["services"] for ref in item["based_on"]]
+        self.assertEqual(len(refs), 4)
+        for ref in refs:
+            with self.subTest(id=ref["id"]):
+                self.assertEqual(list(ref), ["id", "title", "type", "layer"])
+                meta = read(self.out, f"docs/{ref['id']}.json")["meta"]
+                self.assertEqual(ref, {k: meta[k] for k in ("id", "title", "type", "layer")})
+
+    def test_by_norm_keys_only_norms_with_services(self):
+        index = read(self.out, "service/by-norm/index.json")
+        self.assertEqual(list(index), ["norms"])
+        self.assertEqual(index["norms"], {
+            "sfs-1998-620": ["service-registerutdrag-skola-forskola"],
+            "sfs-2010-110": ["service-adoptionsbidrag"],
+            "sfs-2010-800": ["service-forskola", "service-registerutdrag-skola-forskola"],
+        })
+        self.assertEqual(list(index["norms"]), sorted(index["norms"]))
+        self.assertNotIn("sfs-1974-152", index["norms"])
+
+    def test_examples_match_the_build(self):
+        for rel in ("service/index-1.json", "service/catalog.json", "service/by-norm/index.json"):
+            with self.subTest(rel=rel):
+                example = json.loads((EXAMPLES / rel).read_text(encoding="utf-8"))
+                self.assertEqual(example, read(self.out, rel))
 
     def test_unknown_based_on_fails_before_clearing_out(self):
         with tempfile.TemporaryDirectory() as tmp:

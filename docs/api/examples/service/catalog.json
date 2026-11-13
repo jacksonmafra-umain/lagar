@@ -1,0 +1,97 @@
+{
+  "total": 3,
+  "services": [
+    {
+      "id": "service-adoptionsbidrag",
+      "title": "Adoptionsbidrag",
+      "issuer": "Försäkringskassan",
+      "audience": [
+        "private"
+      ],
+      "topics": [
+        "family"
+      ],
+      "channels": [],
+      "scope": "national",
+      "template": false,
+      "region_code": null,
+      "municipality_code": null,
+      "source": "https://www.forsakringskassan.se/privatperson/familj-och-barn/introduktion-till-dig-som-ska-bli-foralder/adoptionsbidrag",
+      "service_url": null,
+      "based_on": [
+        {
+          "id": "sfs-2010-110",
+          "title": "Socialförsäkringsbalk (2010:110)",
+          "type": "act",
+          "layer": "sfs"
+        }
+      ]
+    },
+    {
+      "id": "service-forskola",
+      "title": "Förskola",
+      "issuer": "Kommunen",
+      "audience": [
+        "private"
+      ],
+      "topics": [
+        "family",
+        "education"
+      ],
+      "channels": [
+        "online"
+      ],
+      "scope": "municipality",
+      "template": true,
+      "region_code": null,
+      "municipality_code": null,
+      "source": "https://www.skolverket.se/for-dig-som-ar/elev-eller-foralder/forskola",
+      "service_url": null,
+      "based_on": [
+        {
+          "id": "sfs-2010-800",
+          "title": "Skollag (2010:800)",
+          "type": "act",
+          "layer": "sfs"
+        }
+      ]
+    },
+    {
+      "id": "service-registerutdrag-skola-forskola",
+      "title": "Registerutdrag för skola och förskola",
+      "issuer": "Polismyndigheten",
+      "audience": [
+        "private"
+      ],
+      "topics": [
+        "legal",
+        "education",
+        "work"
+      ],
+      "channels": [
+        "online",
+        "form"
+      ],
+      "scope": "national",
+      "template": false,
+      "region_code": null,
+      "municipality_code": null,
+      "source": "https://polisen.se/tjanster-tillstand/belastningsregistret/skola-eller-forskola/",
+      "service_url": "https://polisen.se/tjanster-tillstand/belastningsregistret/skola-eller-forskola/e-tjanst/",
+      "based_on": [
+        {
+          "id": "sfs-1998-620",
+          "title": "Lag (1998:620) om belastningsregister",
+          "type": "act",
+          "layer": "sfs"
+        },
+        {
+          "id": "sfs-2010-800",
+          "title": "Skollag (2010:800)",
+          "type": "act",
+          "layer": "sfs"
+        }
+      ]
+    }
+  ]
+}
