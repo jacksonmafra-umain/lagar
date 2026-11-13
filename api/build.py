@@ -103,6 +103,7 @@ def _number_key(number, type_="act"):
     Agency, county and case law: the series or report name only breaks ties.
     EU: year and number of the act, whatever the citation form.
     Municipal: the first year in the number and the digits after it, else (0, 0).
+    Public service: the slug only.
     """
     if type_ in ("agency_regulation", "county_regulation"):
         m = _SERIES_RE.fullmatch(number)
@@ -128,6 +129,9 @@ def _number_key(number, type_="act"):
         if m:
             year = int(m.group(3))
             return (year + (1900 if year >= 50 else 2000), int(m.group(2)), True, m.group(1) or "C")
+    elif type_ == "public_service":
+        # The number is the service slug; listings order services by it.
+        return (0, 0, True, number)
     elif type_ == "municipal_regulation":
         m = _YEAR_RE.search(number)
         return (int(m.group(1)), int(m.group(2) or 0), True, number) if m else (0, 0, True, number)

@@ -433,6 +433,13 @@ class NewLayersTest(unittest.TestCase):
                 self.assertEqual(self._sorted_numbers(type_, list(reversed(expected))), expected)
 
 
+class ServiceNumberKeyTest(unittest.TestCase):
+    def test_service_slug_is_sortable(self):
+        from api import build
+        keys = [build._number_key(slug, "public_service") for slug in ("pass", "adoptionsbidrag")]
+        self.assertEqual(sorted(keys), [(0, 0, True, "adoptionsbidrag"), (0, 0, True, "pass")])
+
+
 class OutSafetyTest(unittest.TestCase):
     def test_symlinked_parent_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
