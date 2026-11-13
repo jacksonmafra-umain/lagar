@@ -12,12 +12,14 @@ from lagarmcp.store import ApiStore, NotFound
 
 ROOT = Path(__file__).resolve().parents[2]
 FIXTURES = ROOT / "api" / "tests" / "fixtures"
+SERVICES = FIXTURES / "corpus-services"
 TMP = None
 API = None
+SERVICE_API = None
 
 
 def setUpModule():
-    global TMP, API
+    global TMP, API, SERVICE_API
     TMP = tempfile.TemporaryDirectory()
     corpus = Path(TMP.name) / "corpus"
     shutil.copytree(FIXTURES / "corpus", corpus)
@@ -25,6 +27,9 @@ def setUpModule():
     API = Path(TMP.name) / "api" / "v1"
     subprocess.run([sys.executable, "-I", str(ROOT / "api" / "build.py"), "--corpus", str(corpus), "--out", str(API)],
                    check=True, capture_output=True)
+    SERVICE_API = Path(TMP.name) / "service-api" / "v1"
+    subprocess.run([sys.executable, "-I", str(ROOT / "api" / "build.py"), "--corpus", str(SERVICES),
+                    "--out", str(SERVICE_API)], check=True, capture_output=True)
 
 
 def tearDownModule():
@@ -121,6 +126,49 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(lines[0], {"jsonrpc": "2.0", "id": 7, "result": {}})
         self.assertEqual(lines[1]["error"]["code"], -32700)
         self.assertEqual(len(lines), 2)
+
+
+class ServiceTests(unittest.TestCase):
+    """Public services (layer `service`) through the same tools as the norms."""
+
+    def setUp(self):
+        self.srv = server.LagarServer(ApiStore(SERVICE_API))
+
+    def test_list_layers_counts_services(self):
+        _, layers = call(self.srv, "list_layers")
+        service = next(layer for layer in layers["layers"] if layer["id"] == "service")
+        self.assertEqual((service["count"], service["series"]), (3, [{"id": "public_service", "count": 3}]))
+
+    def test_search_finds_the_service_next_to_the_law(self):
+        _, found = call(self.srv, "search_laws", query="förskola")
+        rows = {r["id"]: r for r in found["results"]}
+        self.assertEqual(rows["service-forskola"]["layer"], "service")
+        self.assertEqual(rows["service-forskola"]["type"], "public_service")
+        self.assertEqual(rows["service-forskola"]["matched_in"], ["title", "number", "body"])
+        _, law = call(self.srv, "search_laws", query="socialförsäkringsbalk")
+        self.assertEqual([r["id"] for r in law["results"]], ["sfs-2010-110"])
+
+    def test_search_filters_to_the_service_layer(self):
+        _, only = call(self.srv, "search_laws", query="skola", layers=["service"], prefix=True)
+        self.assertEqual({r["layer"] for r in only["results"]}, {"service"})
+        self.assertIn("service-registerutdrag-skola-forskola", [r["id"] for r in only["results"]])
+        _, none = call(self.srv, "search_laws", query="adoptionsbidrag", layers=["sfs"])
+        self.assertEqual(none["total"], 0)
+
+    def test_get_document_resolves_based_on(self):
+        _, doc = call(self.srv, "get_document", id="service-adoptionsbidrag")
+        self.assertEqual(doc["meta"]["based_on"], ["sfs-2010-110"])
+        self.assertEqual(doc["based_on"], [{"id": "sfs-2010-110", "title": "Socialförsäkringsbalk (2010:110)",
+                                            "type": "act", "layer": "sfs"}])
+        self.assertIn("adoptionsbidrag", doc["body"])
+        _, law = call(self.srv, "get_document", id="sfs-2010-110", max_chars=0)
+        self.assertEqual(law["services"], [{"id": "service-adoptionsbidrag", "title": "Adoptionsbidrag",
+                                            "issuer": "Försäkringskassan"}])
+        self.assertNotIn("based_on", law)
+
+    def test_get_document_without_service_files(self):
+        _, doc = call(server.LagarServer(ApiStore(API)), "get_document", id="sfs-2010-800", max_chars=0)
+        self.assertNotIn("services", doc)
 
 
 class StoreTests(unittest.TestCase):

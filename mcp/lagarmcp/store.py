@@ -57,6 +57,13 @@ class ApiStore:
             raise ValueError(f"not a document id: {doc_id!r}")
         return self.read(f"docs/{doc_id}.json")
 
+    def optional(self, path, default):
+        """`read(path)`, or `default` when the API has no such file (an API built before it existed)."""
+        try:
+            return self.read(path)
+        except NotFound:
+            return default
+
     def listing(self, layer, type_=None, page=1):
         for part in (layer, type_):
             if part is not None and not _SEGMENT.match(part):
