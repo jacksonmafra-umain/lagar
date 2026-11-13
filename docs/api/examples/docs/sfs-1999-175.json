@@ -25,7 +25,15 @@
     "celex": null,
     "region_code": null,
     "municipality_code": null,
-    "text_source": null
+    "text_source": null,
+    "based_on": null,
+    "audience": null,
+    "topics": null,
+    "channels": null,
+    "service_url": null,
+    "issuer_org_number": null,
+    "scope": null,
+    "template": null
   },
   "body": "# Rättsinformationsförordning (1999:175)\n\nEtt offentligt rättsinformationssystem\n\n**1 §** I syfte att tillförsäkra den offentliga förvaltningen och enskilda tillgång till grundläggande rättsinformation i elektronisk form skall det finnas ett offentligt rättsinformationssystem.\n"
 }

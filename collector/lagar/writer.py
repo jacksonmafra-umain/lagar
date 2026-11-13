@@ -29,6 +29,7 @@ _DIRS = {
     "eu_judgment": (("eu", "judgments"), "eu-"),
     "county_regulation": (("region", "county-regulations"), ""),
     "municipal_regulation": (("municipality", "regulations"), ""),
+    "public_service": (("services",), ""),
 }
 
 

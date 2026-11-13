@@ -154,5 +154,57 @@ class AuditTests(unittest.TestCase):
         self.assertIsNone(self.run_audit()["fsck"])
 
 
+def service(slug="foraldrapenning", based_on=("sfs-2026-1",)):
+    return {
+        **meta(), "id": f"service-{slug}", "title": "F\u00f6r\u00e4ldrapenning", "type": "public_service",
+        "layer": "service", "number": slug, "issued": None, "issuer": "F\u00f6rs\u00e4kringskassan",
+        "source": f"https://www.forsakringskassan.se/{slug}", "based_on": list(based_on),
+        "audience": ["private"], "topics": ["family"], "channels": ["online"], "service_url": None,
+        "issuer_org_number": None, "scope": "national", "template": False,
+    }
+
+
+class ServiceAuditTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name) / "corpus"
+
+    def run_audit(self):
+        return audit.audit(self.root, generated_at="2026-11-13T00:00:00Z")
+
+    def test_valid_service_passes(self):
+        writer.write(meta(), LONG, self.root)
+        path = writer.write(service(), "# F\u00f6r\u00e4ldrapenning\n", self.root)
+        self.assertEqual(path, self.root / "services" / "service-foraldrapenning.md")
+        report = self.run_audit()
+        self.assertEqual((report["documents"], report["schema_errors"], report["path_mismatches"]), (2, [], []))
+        self.assertEqual(audit.exit_code(report), 0)
+
+    def test_unknown_based_on_id_fails(self):
+        writer.write(meta(), LONG, self.root)
+        writer.write(service(based_on=["sfs-2026-1", "sfs-2099-1"]), "# F\u00f6r\u00e4ldrapenning\n", self.root)
+        report = self.run_audit()
+        self.assertEqual(report["schema_errors"], [{
+            "path": "services/service-foraldrapenning.md",
+            "errors": ["based_on: 'sfs-2099-1' is not a document in the corpus"],
+        }])
+        self.assertEqual(audit.exit_code(report), 1)
+
+    def test_repealed_based_on_target_passes(self):
+        writer.write(meta(repealed="2026-06-30"), LONG, self.root)
+        writer.write(service(), "# F\u00f6r\u00e4ldrapenning\n", self.root)
+        report = self.run_audit()
+        self.assertEqual(report["schema_errors"], [])
+        self.assertEqual(audit.exit_code(report), 0)
+
+    def test_target_with_its_own_schema_error_does_not_resolve(self):
+        path = writer.write(meta(), LONG, self.root)
+        path.write_text(path.read_text(encoding="utf-8").replace('"act"', '"bogus"', 1), encoding="utf-8")
+        writer.write(service(), "# F\u00f6r\u00e4ldrapenning\n", self.root)
+        paths = [e["path"] for e in self.run_audit()["schema_errors"]]
+        self.assertEqual(paths, ["services/service-foraldrapenning.md", "sfs/acts/2026-1.md"])
+
+
 if __name__ == "__main__":
     unittest.main()

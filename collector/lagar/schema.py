@@ -1,10 +1,11 @@
 """Stdlib-only validator for corpus frontmatter.
 
 Implements the JSON Schema keywords used by docs/schema/frontmatter.schema.json
-(type, required, enum, const, pattern, format, items, maxItems,
+(type, required, enum, const, pattern, format, items, minItems, maxItems,
 additionalProperties, properties, allOf, if/then/else) plus the cross-field
-rules in `_cross_checks`: `layer` must equal the layer of `type`, and the
-regional codes must agree with the number.
+rules in `_cross_checks`: `layer` must equal the layer of `type`, the
+regional codes must agree with the number, and a public service's id, scope,
+template flag and regional codes must agree.
 """
 
 import json
@@ -85,6 +86,8 @@ def _check(value, schema, path, errors):
             errors.append(f"{path}: {value!r} does not match {schema['pattern']}")
         if "format" in schema and not _format_ok(schema["format"], value):
             errors.append(f"{path}: {value!r} is not a valid {schema['format']}")
+    if isinstance(value, list) and "minItems" in schema and len(value) < schema["minItems"]:
+        errors.append(f"{path}: must have at least {schema['minItems']} items, got {len(value)}")
     if isinstance(value, list) and "maxItems" in schema and len(value) > schema["maxItems"]:
         errors.append(f"{path}: must have at most {schema['maxItems']} items, got {len(value)}")
     if isinstance(value, list) and "items" in schema:
@@ -132,4 +135,36 @@ def _cross_checks(meta):
             errors.append(f"region_code: {region!r} does not match the series of number {number!r}")
     if isinstance(region, str) and isinstance(kommun, str) and not kommun.startswith(region):
         errors.append(f"municipality_code: {kommun!r} is not in region {region!r}")
+    if type_ == "public_service":
+        errors.extend(_service_checks(meta))
+    return errors
+
+
+def _service_checks(meta):
+    """A service's id is service-<number>; a template has no locality, any other local service names one."""
+    errors = []
+    id_, number = meta.get("id"), meta.get("number")
+    if isinstance(id_, str) and isinstance(number, str) and id_ != "service-" + number:
+        errors.append(f"id: {id_!r} does not match 'service-' + number {number!r}")
+    scope, region, kommun = meta.get("scope"), meta.get("region_code"), meta.get("municipality_code")
+    if meta.get("template") is True:
+        if scope == "national":
+            errors.append("template: only region and municipality services can be templates")
+        if region is not None:
+            errors.append("region_code: a template service applies to every region and has no region_code")
+        if kommun is not None:
+            errors.append("municipality_code: a template service applies to every kommun and has no municipality_code")
+        return errors
+    if scope == "national":
+        if region is not None:
+            errors.append("region_code: a national service has no region_code")
+        if kommun is not None:
+            errors.append("municipality_code: a national service has no municipality_code")
+    elif scope == "region":
+        if region is None:
+            errors.append("region_code: a region service that is not a template needs one")
+        if kommun is not None:
+            errors.append("municipality_code: a region service has no municipality_code")
+    elif scope == "municipality" and kommun is None:
+        errors.append("municipality_code: a municipality service that is not a template needs one")
     return errors
