@@ -175,6 +175,13 @@ The other layers' numbers are also compared by (year, ordinal), descending:
   digits that follow it (`SKFS 2024:12` is (2024, 12)); a number without a
   year sorts as (0, 0), after the others; ties by the full number.
 
+The `service` layer is the exception: services have no `issued` date, so
+`service/index-<page>.json` and `service/public_service/index-<page>.json`
+list them by `number`, the slug, ascending (a to z), then by `id`. Slugs are
+Swedish ASCII (`forskola` for Förskola), so the order is stable and does not
+depend on collation rules for `å`, `ä` and `ö`; clients that show titles in
+Swedish alphabetical order sort them on the device.
+
 ## By ministry: `GET <layer>/<type>/by-ministry/index.json` and `GET <layer>/<type>/by-ministry/<ministry>/index-<page>.json`
 
 Added within v1 (additive: no existing file changes). For each type of the

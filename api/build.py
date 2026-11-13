@@ -39,6 +39,10 @@ class BuildError(Exception):
 # Per-locality listings (docs/api.md, "by code"): the layer and the frontmatter key that names its locality.
 LOCALITY_LAYERS = {"region": "region_code", "municipality": "municipality_code"}
 
+# Layers whose listings run a to z by `number` instead of newest first (docs/api.md, "Sort order"):
+# services have no dates, and their number is the slug.
+ASCENDING_LAYERS = ("service",)
+
 # Per-ministry indexes are built for the series of these layers (docs/api.md, "by ministry").
 MINISTRY_LAYERS = ("sfs",)
 # "Justitiedepartementet L2": the unit code after the ministry name is dropped when grouping.
@@ -143,8 +147,13 @@ def _number_key(number, type_="act"):
     raise BuildError(f"unsortable number: {number!r}")
 
 
-def _sorted(items):
-    """issued descending (null last), then number descending by (year, ordinal)."""
+def _sorted(items, layer=None):
+    """issued descending (null last), then number descending by (year, ordinal).
+
+    Layers in ASCENDING_LAYERS sort by number ascending instead (the service slug, a to z).
+    """
+    if layer in ASCENDING_LAYERS:
+        return sorted(items, key=lambda i: (_number_key(i["number"], i["type"]), i["id"]))
     return sorted(
         items,
         key=lambda i: (bool(i["issued"]), i["issued"] or "", _number_key(i["number"], i["type"]), i["id"]),
@@ -179,7 +188,7 @@ def _write(out, rel, data, written):
 
 
 def _pages(out, rel_dir, layer, type_, items, written, extra=None):
-    items = _sorted(items)
+    items = _sorted(items, layer)
     count = max(1, -(-len(items) // PAGE_SIZE))
     for page in range(1, count + 1):
         chunk = items[(page - 1) * PAGE_SIZE : page * PAGE_SIZE]

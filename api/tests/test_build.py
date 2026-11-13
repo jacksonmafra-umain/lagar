@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[2]
 BUILD = ROOT / "api" / "build.py"
 CORPUS = ROOT / "api" / "tests" / "fixtures" / "corpus"
 LAYERS_CORPUS = ROOT / "api" / "tests" / "fixtures" / "corpus-layers"
+SERVICES_CORPUS = ROOT / "api" / "tests" / "fixtures" / "corpus-services"
 BUILT_AT = "2026-10-27T10:30:00Z"
 sys.path.insert(0, str(ROOT / "collector"))
 from lagar import frontmatter, schema  # noqa: E402
@@ -438,6 +439,37 @@ class ServiceNumberKeyTest(unittest.TestCase):
         from api import build
         keys = [build._number_key(slug, "public_service") for slug in ("pass", "adoptionsbidrag")]
         self.assertEqual(sorted(keys), [(0, 0, True, "adoptionsbidrag"), (0, 0, True, "pass")])
+
+
+SERVICE_IDS = ["service-adoptionsbidrag", "service-forskola", "service-registerutdrag-skola-forskola"]
+
+
+class ServiceLayerTest(unittest.TestCase):
+    """Three services (one a kommun template) and the norms they are based on, plus one norm without a service."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls._tmp = tempfile.TemporaryDirectory()
+        cls.out = Path(cls._tmp.name) / "v1"
+        cls.result = run_build(cls.out, corpus=SERVICES_CORPUS)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls._tmp.cleanup()
+
+    def test_build_succeeds(self):
+        self.assertEqual(self.result.returncode, 0, self.result.stderr)
+
+    def test_listings_sort_by_slug_a_to_z(self):
+        for rel, type_ in (("service/index-1.json", None), ("service/public_service/index-1.json", "public_service")):
+            with self.subTest(rel=rel):
+                page = read(self.out, rel)
+                self.assertEqual((page["layer"], page["type"], page["total"]), ("service", type_, 3))
+                self.assertEqual([i["id"] for i in page["items"]], SERVICE_IDS)
+
+    def test_other_layers_keep_newest_first(self):
+        page = read(self.out, "sfs/index-1.json")
+        self.assertEqual([i["id"] for i in page["items"]], ["sfs-2010-800", "sfs-2010-110", "sfs-1998-620"])
 
 
 class OutSafetyTest(unittest.TestCase):
