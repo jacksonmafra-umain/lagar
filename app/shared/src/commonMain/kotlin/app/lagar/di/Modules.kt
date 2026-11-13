@@ -76,6 +76,6 @@ fun appModule(config: DataSourceConfig) = module {
         LayerListViewModel(get(), layer, type, ministry, get(), locality, get())
     }
     viewModel { (layer: String, type: String) -> MinistriesViewModel(get(), layer, type) }
-    viewModel { (id: String) -> ReaderViewModel(get(), get(), id, get()) }
+    viewModel { (id: String) -> ReaderViewModel(get(), get(), id, get(), serviceRepository = get()) }
     viewModel { (initial: SearchQuery) -> SearchViewModel(get(), get(), initial) }
 }

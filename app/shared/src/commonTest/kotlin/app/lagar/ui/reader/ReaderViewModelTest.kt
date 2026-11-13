@@ -11,6 +11,10 @@ import app.lagar.data.FullTextIndex
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
 import app.lagar.data.ListingPage
+import app.lagar.data.ServiceCatalog
+import app.lagar.data.ServiceNormRef
+import app.lagar.data.ServiceRepository
+import app.lagar.data.ServiceSummary
 import app.lagar.domain.LoadState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -62,8 +66,38 @@ class ReaderViewModelTest {
         }
     }
 
-    private fun viewModel(repo: FakeRepository, id: String = "doc-1", index: FullTextIndex? = null) =
-        ReaderViewModel(repo, Catalog(repo), id, index, Dispatchers.Main)
+    /** Services by norm id; [failing] makes every lookup throw, as an unreachable API would. */
+    private class FakeServices(val byNorm: Map<String, List<ServiceSummary>> = emptyMap(), val failing: Boolean = false) : ServiceRepository {
+        val requested = mutableListOf<String>()
+
+        override suspend fun serviceCatalog(): ServiceCatalog = ServiceCatalog(0, emptyList())
+
+        override suspend fun servicesForNorm(id: String): List<ServiceSummary> {
+            requested += id
+            if (failing) throw IllegalStateException("boom")
+            return byNorm[id].orEmpty()
+        }
+    }
+
+    private fun service(id: String, norm: String) = ServiceSummary(
+        id = id,
+        title = "Ansök om $id",
+        issuer = "Försäkringskassan",
+        audience = listOf("private"),
+        topics = listOf("family"),
+        channels = listOf("online"),
+        scope = "national",
+        template = false,
+        source = "https://example.org/$id",
+        basedOn = listOf(ServiceNormRef(norm, "Title", "act", "sfs")),
+    )
+
+    private fun viewModel(
+        repo: FakeRepository,
+        id: String = "doc-1",
+        index: FullTextIndex? = null,
+        services: ServiceRepository? = null,
+    ) = ReaderViewModel(repo, Catalog(repo), id, index, Dispatchers.Main, services)
 
     @Test
     fun loadsTheDocument() {
@@ -141,5 +175,29 @@ class ReaderViewModelTest {
         val vm = viewModel(repo, index = FullTextIndex(FakeSearchSource(missing = true)))
         assertEquals(mapOf("sfs-2010-800" to "act"), vm.crossReferences.value)
         assertEquals(1, repo.listings)
+    }
+
+    @Test
+    fun listsTheServicesBasedOnTheDocument() {
+        val based = listOf(service("service-foraldrapenning", "sfs-2010-110"), service("service-barnbidrag", "sfs-2010-110"))
+        val services = FakeServices(mapOf("sfs-2010-110" to based))
+        val vm = viewModel(FakeRepository(failing = false), id = "sfs-2010-110", services = services)
+        assertEquals(based, vm.services.value)
+        assertEquals(listOf("sfs-2010-110"), services.requested)
+    }
+
+    @Test
+    fun aDocumentWithoutServicesHasNone() {
+        val services = FakeServices(mapOf("sfs-2010-110" to listOf(service("service-foraldrapenning", "sfs-2010-110"))))
+        val vm = viewModel(FakeRepository(failing = false), id = "sfs-1962-700", services = services)
+        assertEquals(emptyList(), vm.services.value)
+    }
+
+    @Test
+    fun aFailingServiceLookupLeavesTheReaderWorking() {
+        val vm = viewModel(FakeRepository(failing = false), services = FakeServices(failing = true))
+        assertEquals(emptyList(), vm.services.value)
+        val loaded = assertIs<LoadState.Loaded<*>>(vm.state.value)
+        assertEquals("# Title", (loaded.value as DocumentResponse).body)
     }
 }
