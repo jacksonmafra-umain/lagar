@@ -281,9 +281,9 @@ Route: `Tjanster`. Code: `ui/tjanster/TjansterScreen.kt`. Reference: layer 9. De
 | Feature | Status | Issue |
 | --- | --- | --- |
 | "Coming soon" empty state | Done | |
-| Service catalogue: search, topics, Privatperson / Företag, scope-aware list | Planned: plan task 8 | #792 |
-| Service detail with official link and "Bygger på" norms | Planned: plan task 9 | #792 |
-| Services in the reader, bookmarks, Hierarki entry | Planned: plan tasks 10–11 | #792 |
+| Service catalogue: search, topics, Privatperson / Företag, scope-aware list | Planned: plan task 8 | #801 |
+| Service detail with official link and "Bygger på" norms | Planned: plan task 9 | #802 |
+| Services in the reader, bookmarks, Hierarki entry | Planned: plan tasks 10–11 | #803, #804 |
 
 ## Settings
 
