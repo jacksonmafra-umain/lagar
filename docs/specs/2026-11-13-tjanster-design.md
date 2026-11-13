@@ -47,6 +47,8 @@ Not services, and out of this design:
 
 ### Sources
 
+Host verdicts, the SDG link repository finding and the evidence for every seed entry: [`2026-11-13-tjanster-sources.md`](2026-11-13-tjanster-sources.md).
+
 Every source is official, its `robots.txt` is honoured, requests are rate-limited (at least 1 s) and carry the project User-Agent; a page that blocks automation is a recorded gap, as in the other collectors.
 
 - **The curated list** `collector/data/services.json` is the source of truth for which services exist and what they are based on, like `collector/data/eu-acts.json` for EU acts. Each entry has the slug, the Swedish title, the issuer, `source`, `service_url`, `audience`, `topics`, `scope` and `based_on`. `based_on` is curated by hand, from the official page's own legal references where it gives them; it is never inferred by a model *(call)*.
