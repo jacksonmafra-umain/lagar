@@ -7,6 +7,8 @@ import app.lagar.data.DocumentResponse
 import app.lagar.data.FullTextIndex
 import app.lagar.data.LagarRepository
 import app.lagar.data.ListingItem
+import app.lagar.data.ServiceRepository
+import app.lagar.data.ServiceSummary
 import app.lagar.domain.LoadState
 import app.lagar.domain.Scope
 import kotlinx.coroutines.CancellationException
@@ -24,6 +26,7 @@ import kotlinx.coroutines.withContext
  * holds the amending SFS numbers that the API also publishes as documents, so the reader can link them;
  * [crossReferences] does the same for the documents the body cites, checked against the search index's
  * document table ([index], one request) or, without an index, the national catalog. [work] scans the body.
+ * [services] holds the public services based on the document, from [serviceRepository].
  */
 class ReaderViewModel(
     private val repository: LagarRepository,
@@ -31,6 +34,7 @@ class ReaderViewModel(
     private val id: String,
     private val index: FullTextIndex? = null,
     private val work: CoroutineDispatcher = Dispatchers.Default,
+    private val serviceRepository: ServiceRepository? = null,
 ) : ViewModel() {
     private val _state = MutableStateFlow<LoadState<DocumentResponse>>(LoadState.Loading)
     val state: StateFlow<LoadState<DocumentResponse>> = _state.asStateFlow()
@@ -48,11 +52,33 @@ class ReaderViewModel(
      */
     val crossReferences: StateFlow<Map<String, String>> = _crossReferences.asStateFlow()
 
+    private val _services = MutableStateFlow<List<ServiceSummary>>(emptyList())
+
+    /**
+     * The public services based on this document, in catalogue order. Empty until loaded, when the document has
+     * none, and when the lookup fails: the reader then shows no services section and no error.
+     */
+    val services: StateFlow<List<ServiceSummary>> = _services.asStateFlow()
+
     private var job: Job? = null
     private var linkJob: Job? = null
 
     init {
         load()
+        loadServices()
+    }
+
+    private fun loadServices() {
+        val repository = serviceRepository ?: return
+        viewModelScope.launch {
+            _services.value = try {
+                repository.servicesForNorm(id)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                emptyList()
+            }
+        }
     }
 
     private fun load() {

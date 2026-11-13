@@ -343,6 +343,7 @@
     <string name="reader_read_aloud_settings">Röstinställningar</string>
     <string name="reader_read_aloud_now">Läser %1$s</string>
     <string name="reader_read_aloud_text">Läser upp</string>
+    <string name="reader_services">Tjänster</string>
     <string name="speech_settings">Uppläsning</string>
     <string name="speech_note">Enhetens egen röst läser lagens svenska text. Inget översätts.</string>
     <string name="speech_voice">Röst</string>
