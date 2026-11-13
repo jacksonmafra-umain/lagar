@@ -343,6 +343,7 @@
     <string name="reader_read_aloud_settings">Voice settings</string>
     <string name="reader_read_aloud_now">Reading %1$s</string>
     <string name="reader_read_aloud_text">Reading aloud</string>
+    <string name="reader_services">Services</string>
     <string name="speech_settings">Read aloud</string>
     <string name="speech_note">A voice on this device reads the Swedish text of the law. Nothing is translated.</string>
     <string name="speech_voice">Voice</string>

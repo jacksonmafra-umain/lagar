@@ -59,6 +59,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import app.lagar.data.DocumentMeta
 import app.lagar.data.DocumentResponse
+import app.lagar.data.ServiceSummary
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
 import app.lagar.domain.DisplayLayer
@@ -119,6 +120,7 @@ fun ReaderRoute(
     onBack: () -> Unit,
     onOpenDocument: (String) -> Unit,
     anchor: String? = null,
+    onOpenService: (String) -> Unit = {},
     viewModel: ReaderViewModel = koinViewModel(key = id) { parametersOf(id) },
     store: BookmarkStore = koinInject(),
     noteStore: NoteStore = koinInject(),
@@ -136,6 +138,7 @@ fun ReaderRoute(
     val provisionNotes = remember(documentNotes) { documentNotes.mapNotNull { note -> note.anchor?.let { it to note.text } }.toMap() }
     val links by viewModel.linkedAmendments.collectAsState()
     val cited by viewModel.crossReferences.collectAsState()
+    val services by viewModel.services.collectAsState()
     // The layer colors a cross-reference; a type the app does not place falls back to SFS acts.
     val crossReferences = remember(cited) { cited.mapValues { (_, type) -> DisplayLayer.forType(type)?.key ?: LayerKey.SfsAct } }
     // Bookmarks saved before the dates were stored (or before a repeal) catch up when the document is read.
@@ -168,6 +171,8 @@ fun ReaderRoute(
         speechSettings = speechSettings,
         onSpeechChange = speech::update,
         onSpeechReset = speech::reset,
+        services = services,
+        onOpenService = onOpenService,
     )
 }
 
@@ -193,11 +198,13 @@ fun ReaderScreen(
     speechSettings: SpeechSettings = SpeechSettings(),
     onSpeechChange: ((SpeechSettings) -> SpeechSettings) -> Unit = {},
     onSpeechReset: () -> Unit = {},
+    services: List<ServiceSummary> = emptyList(),
+    onOpenService: (String) -> Unit = {},
 ) = ReadingTheme(readingSettings) {
     ReaderLayout(
         state, bookmarked, onToggleBookmark, onBack, anchor, amendmentLinks, onResolveAmendmentLinks, crossReferences, onOpenDocument,
         savedAnchors, documentNote, provisionNotes, onToggleProvision, onWriteNote, readingSettings, onReadingChange, onReadingReset,
-        speechSettings, onSpeechChange, onSpeechReset,
+        speechSettings, onSpeechChange, onSpeechReset, services, onOpenService,
     )
 }
 
@@ -224,6 +231,8 @@ private fun ReaderLayout(
     speechSettings: SpeechSettings,
     onSpeechChange: ((SpeechSettings) -> SpeechSettings) -> Unit,
     onSpeechReset: () -> Unit,
+    services: List<ServiceSummary>,
+    onOpenService: (String) -> Unit,
 ) = BoxWithConstraints(Modifier.fillMaxSize().background(LagarTheme.colors.surface)) {
     val spacing = LagarTheme.spacing
     val wide = LocalWideLayout.current
@@ -263,15 +272,19 @@ private fun ReaderLayout(
     val amendments = remember(document?.meta) { document?.meta?.let(::amendmentRows).orEmpty() }
     val reprints = document?.meta?.reprintedBy.orEmpty()
     val hasAmendments = amendments.isNotEmpty() || reprints.isNotEmpty()
+    val tocPane = wide && !outline.isEmpty
+    // The services based on the document sit below the table of contents: in its pane on wide layouts, else in the
+    // text before the first block. No services (or a failed lookup) shows no section.
+    val inlineServices = services.isNotEmpty() && !tocPane
     // Lazy items before the first block: the header and the document note, then (unless the inspector or the drawer
-    // holds them) the amendments toggle, the open list and a divider.
-    val leadingItems = if (sideFacts) {
-        2
+    // holds them) the amendments toggle, the open list and a divider, then the services.
+    val factItems = if (sideFacts) {
+        0
     } else {
-        2 + (if (hasAmendments) 2 else 0) +
+        (if (hasAmendments) 2 else 0) +
             (if (hasAmendments && amendmentsOpen) amendments.size + (if (reprints.isNotEmpty()) 1 else 0) else 0)
     }
-    val tocPane = wide && !outline.isEmpty
+    val leadingItems = 2 + factItems + (if (inlineServices) 1 else 0)
 
     // Reading aloud, offered only when the platform has a Swedish voice. One text per block, so the index of the text
     // being read is the index of its block.
@@ -413,6 +426,13 @@ private fun ReaderLayout(
                             }
                         }
                     }
+                    if (inlineServices) {
+                        item(key = "services") {
+                            ReadingItem {
+                                ServicesSection(services, onOpenService, Modifier.readingColumn().padding(bottom = spacing.md))
+                            }
+                        }
+                    }
                     itemsIndexed(blocks, key = { index, _ -> index }) { index, block ->
                         Box(
                             Modifier.fillMaxWidth().padding(horizontal = spacing.marginMobile, vertical = spacing.xs),
@@ -478,7 +498,13 @@ private fun ReaderLayout(
                                 onSelect = { block -> scope.launch { listState.scrollToItem(leadingItems + block) } },
                                 contentPadding = PaddingValues(top = spacing.sm, end = spacing.md, bottom = bottomInset + spacing.lg),
                                 modifier = Modifier.weight(1f),
-                            )
+                            ) {
+                                if (services.isNotEmpty()) {
+                                    item(key = "services") {
+                                        ServicesSection(services, onOpenService, Modifier.padding(top = spacing.md))
+                                    }
+                                }
+                            }
                         }
                         VerticalDivider(Modifier.padding(top = paneTop), color = LagarTheme.colors.outlineVariant)
                     }

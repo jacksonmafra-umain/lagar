@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -66,7 +67,10 @@ internal fun TableOfContentsSheet(outline: Outline, layer: LayerKey, onSelect: (
     }
 }
 
-/** The chapters and their § chips; the body of [TableOfContentsSheet], and on desktop the pane beside the text. */
+/**
+ * The chapters and their § chips; the body of [TableOfContentsSheet], and on desktop the pane beside the text.
+ * [footer] adds items below the last chapter that scroll with it.
+ */
 @Composable
 internal fun TableOfContentsList(
     outline: Outline,
@@ -74,6 +78,7 @@ internal fun TableOfContentsList(
     onSelect: (Int) -> Unit,
     contentPadding: PaddingValues,
     modifier: Modifier = Modifier,
+    footer: LazyListScope.() -> Unit = {},
 ) {
     LazyColumn(
         modifier = modifier,
@@ -83,6 +88,7 @@ internal fun TableOfContentsList(
         items(outline.chapters, key = { it.blockIndex }) { chapter ->
             ChapterEntry(chapter, layer, onSelect)
         }
+        footer()
     }
 }
 
