@@ -261,6 +261,7 @@ Route: `Reader(id, anchor)`; `anchor` is an outline anchor (`k3p1` is 3 kap. 1 �
 | From 600dp up to the inspector breakpoint (tablets, narrow desktop windows, the search detail pane): metadata (facts, source, amendments) in a Liquid Glass drawer that slides in from the end edge, opened from the info button in the top bar and closed by its close button, the scrim or back; the text keeps the badge, number and title | Done | #35 |
 | Read aloud (`ReadAloud`, `speech/`): offered in the top bar only when the platform has speech synthesis with a Swedish voice (Web Speech API, Android `TextToSpeech`, iOS `AVSpeechSynthesizer`); reads the law's own Swedish text § by § from the first § on screen, with "kap." and "§" spoken as words; the § being read is tinted in the layer colour and kept on screen; a glass player bar (previous, play or pause, next, voice settings, close) | Done | #770 |
 | Read-aloud voice settings sheet: Swedish voice, speed, pitch and volume (percent steps), a sample, reset; heard at once and stored on the device | Done | #770 |
+| "Tjänster" section: the services based on the document (`ServiceRepository.servicesForNorm`), one row each with title and issuer in the service layer colours; below the table of contents (at the end of its pane on wide layouts, else in the text before the first §); hidden when there are none or the lookup fails. Rows call `onOpenService`, which the service detail route (#802) fills | Done | #803 |
 | Reading the text as of a past date, version comparator | Blocked: the API has no historical text; owner decision pending | #7 |
 
 ## Sparade
@@ -283,7 +284,8 @@ Route: `Tjanster`. Code: `ui/tjanster/TjansterScreen.kt`. Reference: layer 9. De
 | "Coming soon" empty state | Done | |
 | Service catalogue: search, topics, Privatperson / Företag, scope-aware list | Planned: plan task 8 | #801 |
 | Service detail with official link and "Bygger på" norms | Planned: plan task 9 | #802 |
-| Services in the reader, bookmarks, Hierarki entry | Planned: plan tasks 10–11 | #803, #804 |
+| Services in the reader: a "Tjänster" section of the services based on the open norm | Done: plan task 10 (see Reader) | #803 |
+| Bookmarks, Hierarki entry | Planned: plan task 11 | #804 |
 
 ## Settings
 
