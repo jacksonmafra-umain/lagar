@@ -137,6 +137,7 @@ published copy also works, but it is no longer updated:
 }
 ```
 
-Tools: `search_laws` (full-text search with the per-layer index, filters by layer and type),
-`get_document` (metadata and text by id), `list_layers`, `list_documents` (paged listings) and
-`get_report` (progress, coverage and the agencies log).
+Tools: `search_laws` (full-text search with the per-layer index, public services included, filters
+by layer and type), `get_document` (metadata and text by id; a public service with the norms it is
+based on), `list_layers`, `list_documents` (paged listings) and `get_report` (progress, coverage and
+the agencies log).

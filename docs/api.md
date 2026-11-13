@@ -543,9 +543,17 @@ or one Pages build), so it always matches.
 Each group gets body text only when the whole group (manifest, `docs.json`
 and shards, uncompressed) fits its budget; otherwise that group falls back to
 titles and numbers and its `fields` say so, while other groups keep their
-bodies. Budgets live in `api/searchindex.py`: 40 MB per layer. The
-frontmatter has no summary field yet, so titles and numbers are the only
-metadata indexed.
+bodies. Budgets live in `api/searchindex.py`: 40 MB per layer, except
+`service` with 2 MB. The frontmatter has no summary field yet, so titles and
+numbers are the only metadata indexed.
+
+Services (`public_service`, layer `service`) are their own group, so a search
+for "föräldrapenning" returns `service-foraldrapenning` next to the law it
+is based on, and clients that search only norms leave the group out by its
+`layers`. A service's `number` is its slug and its body is the lead and the
+`Källa:` line, so the title, the slug words, the lead and the issuer's name
+are all searchable. At about 0.5 KB per service, 2 MB holds a few thousand
+services with their bodies.
 
 Case-law bodies are indexed only up to their `## Referat` heading
 (`BODY_END` in `api/searchindex.py`): the decision header with court, date,

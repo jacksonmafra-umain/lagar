@@ -20,7 +20,9 @@ SEARCH_VERSION = 2
 # Each group (manifest, document table and shards) must stay within its budget, in bytes,
 # uncompressed, for body text to be indexed; otherwise only its titles and numbers are.
 DEFAULT_BUDGET_BYTES = 40_000_000
-BUDGET_BYTES = {}
+# Services are short pages (title, lead, source line), about 0.5 KB of index each, so 2 MB holds a
+# few thousand; a catalogue that outgrows it keeps titles and numbers (slugs) and stays small.
+BUDGET_BYTES = {"service": 2_000_000}
 # A layer's body text is indexed only up to the first line starting with this heading. A case-law
 # referat runs to tens of KB; the decision header before it (court, dates, case numbers, summary,
 # cited provisions, keywords) is what people search for, at a fifth of the index size.

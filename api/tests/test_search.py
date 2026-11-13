@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 BUILD = ROOT / "api" / "build.py"
 CORPUS = ROOT / "api" / "tests" / "fixtures" / "corpus"
+SERVICES_CORPUS = ROOT / "api" / "tests" / "fixtures" / "corpus-services"
 BUILT_AT = "2026-10-27T10:30:00Z"
 sys.path.insert(0, str(ROOT / "api"))
 sys.path.insert(0, str(ROOT / "collector"))
@@ -184,6 +185,15 @@ class IndexTest(unittest.TestCase):
         self.assertNotIn("search/case_law/shards/do.json", files)
         self.assertIn("search/sfs/shards/be.json", files)
 
+    def test_service_group_has_its_own_budget(self):
+        rows = docs(("service-pass", "Pass", "pass", "public_service", "Ansök om pass hos Polisen."))
+        top = json.loads(si.build_index(self.DOCS + rows, BUILT_AT)["search/index.json"])
+        service = top["groups"][-1]
+        self.assertEqual((service["id"], service["layers"]), ("service", ["service"]))
+        self.assertEqual(service["fields"], ["title", "number", "body"])
+        self.assertEqual(service["budget"], si.BUDGET_BYTES["service"])
+        self.assertLess(si.BUDGET_BYTES["service"], si.DEFAULT_BUDGET_BYTES)
+
     def test_case_law_body_indexed_up_to_referat(self):
         body = "Domstol: Högsta domstolen\n\n## Nyckelord\n\n- Hyra\n\n## Referat\n\nParterna tvistade."
         rows = docs(("nja-2020-1", "Fråga om ränta", "NJA 2020 s. 1", "case_report", body))
@@ -247,3 +257,42 @@ class FixtureQueryTest(unittest.TestCase):
 
     def test_api_build_imports_index(self):
         self.assertIs(build.searchindex, si)
+
+
+class ServiceQueryTest(unittest.TestCase):
+    """Services are their own group: a title or a word of the lead finds the service next to the law."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls._tmp = tempfile.TemporaryDirectory()
+        cls.out = Path(cls._tmp.name) / "v1"
+        result = subprocess.run(
+            [sys.executable, "-I", str(BUILD), "--corpus", str(SERVICES_CORPUS), "--out", str(cls.out),
+             "--built-at", BUILT_AT],
+            capture_output=True, text=True,
+        )
+        assert result.returncode == 0, result.stderr
+
+    @classmethod
+    def tearDownClass(cls):
+        cls._tmp.cleanup()
+
+    def test_service_group_in_manifest(self):
+        manifest = json.loads((self.out / "search/index.json").read_text(encoding="utf-8"))
+        group = manifest["groups"][-1]
+        self.assertEqual((group["id"], group["doc_count"], group["budget"]), ("service", 3, si.BUDGET_BYTES["service"]))
+        self.assertEqual(group["fields"], ["title", "number", "body"])
+        table = json.loads((self.out / "search/service/docs.json").read_text(encoding="utf-8"))
+        self.assertEqual(table["fields"], ["id", "title", "number", "type"])
+
+    def test_title_finds_service(self):
+        self.assertEqual(lookup(self.out, "adoptionsbidrag"), ["service-adoptionsbidrag"])
+        self.assertEqual(lookup(self.out, "Förskola"), ["service-forskola", "service-registerutdrag-skola-forskola"])
+
+    def test_lead_and_issuer_are_indexed(self):
+        self.assertEqual(lookup(self.out, "adopterar"), ["service-adoptionsbidrag"])
+        self.assertEqual(lookup(self.out, "försäkringskassan"), ["service-adoptionsbidrag"])
+
+    def test_layer_filter(self):
+        self.assertEqual(lookup(self.out, "skollag", layers=["service"]), [])
+        self.assertEqual(lookup(self.out, "förskola", layers=["sfs"]), [])

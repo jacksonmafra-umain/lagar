@@ -17,7 +17,8 @@ TOOLS = [
     {
         "name": "search_laws",
         "description": "Full-text search over Swedish laws, ordinances, agency and county regulations, case law, "
-                       "EU law and municipal regulations, using the API's per-layer search index. Query terms are "
+                       "EU law, municipal regulations and public services (layer 'service', e.g. "
+                       "'föräldrapenning' or 'pass'), using the API's per-layer search index. Query terms are "
                        "matched as whole words (å/ä/ö fold to a/a/o; SFS numbers such as 1962:700 are one term); all "
                        "terms must match. Results rank title matches first, then number, then body.",
         "inputSchema": {
@@ -25,7 +26,8 @@ TOOLS = [
             "properties": {
                 "query": {"type": "string", "description": "Words or a number, e.g. 'brottsbalken' or '1962:700'."},
                 "layers": {"type": "array", "items": {"type": "string"},
-                           "description": "Limit to these layers (see list_layers), e.g. ['sfs', 'case_law']."},
+                           "description": "Limit to these layers (see list_layers), e.g. ['sfs', 'case_law'], "
+                                          "or ['service'] for public services only."},
                 "types": {"type": "array", "items": {"type": "string"},
                           "description": "Limit to these document types, e.g. ['act']."},
                 "limit": {"type": "integer", "minimum": 1, "maximum": MAX_LIMIT, "default": 20},
@@ -37,8 +39,10 @@ TOOLS = [
     },
     {
         "name": "get_document",
-        "description": "One document by id (e.g. 'sfs-1962-700', 'afs-2023-1', 'hdo-...'): all metadata and the "
-                       "Markdown text.",
+        "description": "One document by id (e.g. 'sfs-1962-700', 'afs-2023-1', 'hdo-...', "
+                       "'service-foraldrapenning'): all metadata and the Markdown text. A public service also gets "
+                       "'based_on' (the norms it is based on, with id, title, type and layer); a norm that services "
+                       "are based on gets 'services' (id, title, issuer).",
         "inputSchema": {
             "type": "object",
             "properties": {
@@ -134,8 +138,22 @@ class LagarServer:
         except ValueError as error:
             raise ToolError(str(error)) from error
         body, max_chars = doc["body"], max(0, int(max_chars))
-        return {"meta": doc["meta"], "body": body[:max_chars], "body_chars": len(body),
-                "truncated": len(body) > max_chars}
+        result = {"meta": doc["meta"], "body": body[:max_chars], "body_chars": len(body),
+                  "truncated": len(body) > max_chars}
+        result.update(self._service_links(doc["meta"]))
+        return result
+
+    def _service_links(self, meta):
+        """A service's `based_on` norms with their titles, or the services based on a norm (docs/api.md, "Services")."""
+        catalog = self.store.optional("service/catalog.json", {"services": []})["services"]
+        if meta.get("type") == "public_service":
+            entry = next((s for s in catalog if s["id"] == meta["id"]), None)
+            return {"based_on": entry["based_on"]} if entry else {}
+        ids = self.store.optional("service/by-norm/index.json", {"norms": {}})["norms"].get(meta["id"])
+        if not ids:
+            return {}
+        by_id = {s["id"]: s for s in catalog}
+        return {"services": [{k: by_id[i][k] for k in ("id", "title", "issuer")} for i in ids if i in by_id]}
 
     def list_layers(self):
         index = self.store.index()

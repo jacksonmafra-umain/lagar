@@ -71,7 +71,7 @@ python3 -I api/build.py --corpus corpus --out build/api/v1
 }
 ```
 
-`.mcp.json` in the repository already does this for clients that read it. Tools: `search_laws` (full-text search, filtered by layer and type), `get_document` (metadata and text by id), `list_layers`, `list_documents` and `get_report`. Ask the assistant to search, read the document, and quote the § with its `source` URL.
+`.mcp.json` in the repository already does this for clients that read it. Tools: `search_laws` (full-text search over norms and public services, filtered by layer and type), `get_document` (metadata and text by id; a public service with the norms it is based on), `list_layers`, `list_documents` and `get_report`. Ask the assistant to search, read the document, and quote the § with its `source` URL.
 
 ## Exporting a dataset
 
