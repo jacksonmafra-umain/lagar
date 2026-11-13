@@ -15,8 +15,10 @@ unless the site cut it short with "...". Försäkringskassan's navigation pages 
 a prompt for their link list in the ingress, so they use the meta description.
 
 Every fetch is recorded in the committed manifest `sources/services-manifest.json`:
-HTTP status, final URL, `Last-Modified`, the SHA-256 of the page bytes and when
-it was fetched. Redirects are followed by hand and only within the page's own
+HTTP status, final URL, `Last-Modified`, the page's <title>, the SHA-256 of the
+extracted title and lead (pages embed nonces and timestamps, so a hash of their
+bytes would change on every run) and when it was fetched; an entry whose fields
+did not change keeps its old `fetched_at`. Redirects are followed by hand and only within the page's own
 host and robots.txt; a page that is gone (404, 410), redirects to another host,
 is disallowed by robots.txt or answers 403 keeps the previous corpus file (or
 writes nothing on a first run), is marked in the manifest and is reported. The
@@ -374,6 +376,12 @@ def save_manifest(path, entries):
     })
 
 
+def content_sha256(page):
+    """SHA-256 of what the corpus keeps from a page: its <title> and lead."""
+    data = json.dumps([page.title, page.lead], ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(data.encode("utf-8")).hexdigest()
+
+
 def _record(entry, fetched, fetched_at, page=None):
     response = fetched.response
     record = {
@@ -383,7 +391,7 @@ def _record(entry, fetched, fetched_at, page=None):
         "status": fetched.status,
         "final_url": fetched.final_url,
         "last_modified": response.headers.get("Last-Modified") if response is not None else None,
-        "sha256": hashlib.sha256(response.body).hexdigest() if response is not None else None,
+        "sha256": content_sha256(page) if page else None,
         "title": page.title if page else None,
         "lead_source": page.lead_source if page else None,
         "fetched_at": fetched_at,

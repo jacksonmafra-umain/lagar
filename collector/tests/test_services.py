@@ -236,7 +236,10 @@ class RunTest(unittest.TestCase):
         record = self.manifest()["foraldrapenning"]
         self.assertEqual((record["result"], record["status"], record["final_url"]), ("ok", 200, FK_PAGE))
         self.assertEqual(record["last_modified"], "Wed, 11 Nov 2026 08:00:00 GMT")
-        self.assertEqual(record["sha256"], services.hashlib.sha256(fixture("forsakringskassan")).hexdigest())
+        content = json.dumps(["Föräldrapenning - Försäkringskassan",
+                              "Föräldrapenning är ersättning till dig som tar hand om ditt eller någon annans barn."],
+                             ensure_ascii=False, separators=(",", ":"))
+        self.assertEqual(record["sha256"], services.hashlib.sha256(content.encode("utf-8")).hexdigest())
         self.assertEqual(record["title"], "Föräldrapenning - Försäkringskassan")
         self.assertEqual(record["lead_source"], "ingress")
         self.assertIsNone(self.manifest()["pass"]["last_modified"])
@@ -266,6 +269,17 @@ class RunTest(unittest.TestCase):
         self.assertEqual(path.read_bytes(), before)
         self.assertEqual(path.stat().st_mtime_ns, mtime)
         self.assertEqual((self.root / "manifest.json").read_bytes(), manifest_before)
+
+    def test_a_changed_nonce_leaves_the_manifest_identical(self):
+        # Pages embed nonces and timestamps; the manifest hashes the extracted title and lead.
+        page = fixture("forsakringskassan")
+        first = page.replace(b"</body>", b'<script nonce="aaa111">x()</script></body>')
+        second = page.replace(b"</body>", b'<script nonce="bbb222">x()</script></body>')
+        self.run_collector(FakeClient(self.routes(**{FK_PAGE: first})))
+        before = (self.root / "manifest.json").read_bytes()
+        summary, _ = self.run_collector(FakeClient(self.routes(**{FK_PAGE: second})))
+        self.assertEqual(summary.written, [])
+        self.assertEqual((self.root / "manifest.json").read_bytes(), before)
 
     def test_changed_lead_rewrites_the_file(self):
         self.run_collector(FakeClient(self.routes()))

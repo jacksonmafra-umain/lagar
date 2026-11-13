@@ -457,9 +457,11 @@ to the source.
   A new host needs an entry in `HOST_LEADS` in `collector/lagar/services.py` and a trimmed saved
   page in `collector/tests/fixtures/service-<host>.html`.
 - **Manifest:** every fetch goes into `sources/services-manifest.json` with its `result`, HTTP
-  `status`, `final_url`, `Last-Modified`, the SHA-256 of the page bytes, the page's `<title>`,
-  where the lead came from (`ingress` or `meta`) and `fetched_at`. An entry whose fields did not
-  change keeps its old `fetched_at`.
+  `status`, `final_url`, `Last-Modified`, the page's `<title>`, `sha256`, where the lead came from
+  (`ingress` or `meta`) and `fetched_at`. `sha256` is the SHA-256 of the extracted title and lead,
+  not of the page bytes, because the pages embed nonces and timestamps that change on every fetch.
+  An entry whose fields did not change keeps its old `fetched_at`, so a run without content
+  changes leaves the manifest as it was.
 - **Failures keep the previous file:** a page that is gone (404, 410, `not_found`), redirects to
   another host (`redirected`; the target is recorded in the manifest but never fetched or written
   as the source), is disallowed by robots.txt (`robots`) or answers 403 (`blocked`; the host's
