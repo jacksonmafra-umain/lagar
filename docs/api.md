@@ -38,11 +38,12 @@ layout has one reference). Within a layer, `series` lists types in this order.
 | `eu_judgment` | `eu` | judgment of the Court of Justice or the General Court (EU-domstolen, tribunalen) | `eu/judgments/` |
 | `county_regulation` | `region` | länsstyrelsens föreskrift (länets författningssamling) | `region/county-regulations/` |
 | `municipal_regulation` | `municipality` | kommunal föreskrift (kommunens författningssamling) | `municipality/regulations/` |
+| `public_service` | `service` | public service (e-tjänst) offered by an agency, region or kommun, linked to the norms it rests on | `services/` |
 
 File names are the document id plus `.md`, without the `sfs-` prefix for SFS
 and fundamental laws and without the `eu-` prefix for EU acts
 (`sfs/acts/2010-800.md`, `eu/regulations/32016r0679.md`,
-`agency/regulations/afs-2023-1.md`).
+`agency/regulations/afs-2023-1.md`, `services/service-foraldrapenning.md`).
 
 ### Number formats
 
@@ -59,6 +60,7 @@ and fundamental laws and without the `eu-` prefix for EU acts
 | `eu_regulation`, `eu_directive`, `eu_decision` | Swedish citation form: `(EU) 2016/679`, `(EG) nr 1907/2006`, `95/46/EG` | CELEX numbers (`32016R0679`); `reprinted_by` is `[]` |
 | `eu_judgment` | case number: `C-293/12` (Court of Justice), `T-12/19` (General Court), `26/62` (Court of Justice before 1989); joined cases use the lead case | none: `amended_by` and `reprinted_by` are `[]`, `amended_through` is `null`; `celex` is the judgment's CELEX number (`62012CJ0293`), `court` is `CJ` or `TJ`, `ecli` is set |
 | `municipal_regulation` | the local number as printed, any non-empty text without surrounding spaces | any non-empty text |
+| `public_service` | the slug, Swedish ASCII: `foraldrapenning`, `^[a-z0-9]+(-[a-z0-9]+)*$`; `id` is `service-` plus the slug | none: `amended_by` and `reprinted_by` are `[]`, `amended_through` is `null` |
 
 ## Display levels
 
@@ -80,8 +82,8 @@ Type `other_statute` (layer `sfs`) is shown under the SFS acts colour group as
 "other statutes". Type `treaty` (layer `sfs`) has no level of its own either: it
 is found through search in the Nationell scope and opens in the reader. The types of the other layers take their layer's level and
 colour: `case_report` and `case_notice` are case law, the four `eu_*` types
-are EU, `agency_regulation` is agency, `county_regulation` is region and
-`municipal_regulation` is municipality.
+are EU, `agency_regulation` is agency, `county_regulation` is region,
+`municipal_regulation` is municipality and `public_service` is service.
 
 `DESIGN.md` palette keys use hyphens (`case-law`, `sfs-act`, `sfs-ordinance`);
 API ids use underscores (`case_law`, `act`, `ordinance`).
@@ -272,7 +274,7 @@ read, `amendments` is the register's full list of amending acts, so it is
 usually longer than `amended_by`.
 
 Keys are always present, in this order. They mirror the corpus frontmatter
-(`docs/schema/frontmatter.schema.json`); `amendments` and the six fields after
+(`docs/schema/frontmatter.schema.json`); `amendments` and every field after
 it are optional in the frontmatter, and the API then serves them as `null`.
 
 | field | type | null | notes |
@@ -300,11 +302,30 @@ it are optional in the frontmatter, and the API then serves them as `null`.
 | `court` | string | yes | court code as used by Sveriges Domstolar, `^[A-ZÅÄÖ0-9]{2,10}$`, e.g. `HDO`, `HFD`. Required for case law, `null` elsewhere |
 | `ecli` | string | yes | European Case Law Identifier, e.g. `ECLI:SE:HDO:2019:2`. Case law only |
 | `celex` | string | yes | CELEX number, e.g. `32016R0679` or `02016R0679-20160504` for a consolidated version. Required for EU types, `null` elsewhere |
-| `region_code` | string | yes | county code, `01`–`25` as used by SCB (`01` Stockholm … `25` Norrbotten). Required for `county_regulation` and equal to its series prefix; allowed for `municipal_regulation`; `null` elsewhere |
-| `municipality_code` | string | yes | four-digit SCB kommun code, e.g. `0180` Stockholm; starts with `region_code` when both are set. Required for `municipal_regulation`, `null` elsewhere |
+| `region_code` | string | yes | county code, `01`–`25` as used by SCB (`01` Stockholm … `25` Norrbotten). Required for `county_regulation` and equal to its series prefix; allowed for `municipal_regulation`; required for a `public_service` with `scope: region` that is not a template and allowed for a municipality one; `null` elsewhere |
+| `municipality_code` | string | yes | four-digit SCB kommun code, e.g. `0180` Stockholm; starts with `region_code` when both are set. Required for `municipal_regulation`, allowed for a `public_service` with `scope: municipality` that is not a template, `null` elsewhere |
+| `text_source` | string | yes | `ocr` when the body text was read from a scanned PDF by optical character recognition, otherwise `null` |
+| `based_on` | array of string | yes | ids of the corpus documents a `public_service` rests on; non-empty, and every id exists in the corpus (the audit fails otherwise). A repealed norm still counts. `null` for every other type |
+| `audience` | array of string | yes | who a `public_service` is for, one or both of `private`, `business`; non-empty. `null` for every other type |
+| `topics` | array of string | yes | life-event topics of a `public_service`, non-empty, from `family`, `work`, `business`, `housing`, `health`, `tax`, `vehicles`, `education`, `migration`, `social_support`, `environment`, `legal`. `null` for every other type |
+| `channels` | array of string | yes | how a `public_service` can be used, as its official page says: `online`, `form`, `phone`, `office`; may be empty. `null` for every other type |
+| `service_url` | string (URI) | yes | the page where a `public_service` starts (an e-service) when it differs from `source`; `null` otherwise and for every other type |
+| `issuer_org_number` | string | yes | organisation number of the body responsible for a `public_service`, `^\d{6}-\d{4}$` (e.g. `202100-5521`); `null` when not known and for every other type |
+| `scope` | string | yes | who offers a `public_service`: `national`, `region` or `municipality`. `null` for every other type |
+| `template` | boolean | yes | `true` for a `public_service` that every region or kommun must offer; a template has `scope` `region` or `municipality` and both `region_code` and `municipality_code` `null`. `null` for every other type |
 
-The last seven fields were added within v1, after `amendments`, without a
-version bump: every document carries them, as `null` where they do not apply.
+The fields after `amendments` were added within v1 without a version bump:
+`issuer` to `text_source` for the non-SFS layers, `based_on` to `template` for
+the `service` layer. Every document carries them, as `null` where they do not
+apply.
+
+A `public_service` uses the base fields where they fit: `number` is the slug,
+`issuer` the responsible body as it writes its name, `source` the official
+page, `language` `sv` and `authoritative` `false`; `issued`, `in_force`,
+`repealed`, `amended_through`, `ministry`, `eli` and `amendments` are `null`.
+A national service has no `region_code` or `municipality_code`; a region
+service that is not a template sets `region_code`, a municipality service that
+is not a template sets `municipality_code`.
 
 ### Amendment object
 
