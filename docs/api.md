@@ -11,7 +11,9 @@ Conventions:
 - Canonical examples live in `docs/api/examples/` and mirror the paths below.
   They include a series listing (`sfs/ordinance/index-1.json`), an empty layer
   listing (`eu/index-1.json`: `items: []`, `page_count: 1`, `total: 0`) and
-  per-locality listings (`region/by-code/`, `municipality/by-code/`).
+  per-locality listings (`region/by-code/`, `municipality/by-code/`) and the
+  service layer (`service/index-1.json`, `service/catalog.json`,
+  `service/by-norm/index.json`).
 
 ## Vocabulary
 
@@ -175,6 +177,13 @@ The other layers' numbers are also compared by (year, ordinal), descending:
   digits that follow it (`SKFS 2024:12` is (2024, 12)); a number without a
   year sorts as (0, 0), after the others; ties by the full number.
 
+The `service` layer is the exception: services have no `issued` date, so
+`service/index-<page>.json` and `service/public_service/index-<page>.json`
+list them by `number`, the slug, ascending (a to z), then by `id`. Slugs are
+Swedish ASCII (`forskola` for Förskola), so the order is stable and does not
+depend on collation rules for `å`, `ä` and `ö`; clients that show titles in
+Swedish alphabetical order sort them on the device.
+
 ## By ministry: `GET <layer>/<type>/by-ministry/index.json` and `GET <layer>/<type>/by-ministry/<ministry>/index-<page>.json`
 
 Added within v1 (additive: no existing file changes). For each type of the
@@ -251,6 +260,60 @@ A paged listing like `<layer>/index-<page>.json` (same item object, sort order
 and page size; `type` is `null`), with one key after `type`: `code`. A listing
 exists only for the codes in the index; a code that is not listed has no
 documents, so clients show their empty state without requesting it.
+
+## Services: `GET service/catalog.json` and `GET service/by-norm/index.json`
+
+Added within v1 (additive: no existing file changes). Both files exist also
+when the `service` layer is empty. Examples: `docs/api/examples/service/`
+(built from the API test fixture `api/tests/fixtures/corpus-services/`).
+
+### `service/catalog.json`
+
+Every `public_service` in one file, so the Tjänster tab reads one file and
+filters on the device (a few hundred services at most). Services are in the
+listing order: `number` (the slug) ascending.
+
+| field | type | null | notes |
+| --- | --- | --- | --- |
+| `total` | integer | no | services in the catalogue |
+| `services` | array of service | no | `[]` when the layer is empty |
+
+Service object, keys in this order. Every value except `based_on` is the
+document's `meta` value of the same name (see `meta` fields below).
+
+| field | type | null | notes |
+| --- | --- | --- | --- |
+| `id` | string | no | document id, `service-<slug>` |
+| `title` | string | no | as the responsible body publishes it, Swedish |
+| `issuer` | string | no | responsible body |
+| `audience` | array of string | no | `private`, `business` |
+| `topics` | array of string | no | life-event topics |
+| `channels` | array of string | no | `online`, `form`, `phone`, `office`; may be empty |
+| `scope` | string | no | `national`, `region` or `municipality` |
+| `template` | boolean | no | `true` for a service every region or kommun must offer |
+| `region_code` | string | yes | |
+| `municipality_code` | string | yes | |
+| `source` | string (URI) | no | official page |
+| `service_url` | string (URI) | yes | where the service starts, when it differs from `source` |
+| `based_on` | array of reference | no | the norms the service is based on, in frontmatter order, never empty |
+
+Reference object: `id`, `title`, `type` and `layer` of the document, the same
+values as its `meta`; none is null. The build fails when a `based_on` id is
+not a document in the corpus, so every reference resolves to a
+`docs/<id>.json`.
+
+### `service/by-norm/index.json`
+
+For the reader's "Tjänster" section: which services are based on a document.
+
+| field | type | null | notes |
+| --- | --- | --- | --- |
+| `norms` | object | no | document id → array of service ids; `{}` when the layer is empty |
+
+Only documents with at least one service are keys, sorted by id; a document
+that is not a key has no services, so clients show nothing without reading
+anything else. Each array lists service ids in catalogue order, without
+duplicates.
 
 ## `GET docs/<id>.json`
 

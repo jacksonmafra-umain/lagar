@@ -1,0 +1,14 @@
+{
+  "norms": {
+    "sfs-1998-620": [
+      "service-registerutdrag-skola-forskola"
+    ],
+    "sfs-2010-110": [
+      "service-adoptionsbidrag"
+    ],
+    "sfs-2010-800": [
+      "service-forskola",
+      "service-registerutdrag-skola-forskola"
+    ]
+  }
+}

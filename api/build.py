@@ -39,6 +39,17 @@ class BuildError(Exception):
 # Per-locality listings (docs/api.md, "by code"): the layer and the frontmatter key that names its locality.
 LOCALITY_LAYERS = {"region": "region_code", "municipality": "municipality_code"}
 
+# Layers whose listings run a to z by `number` instead of newest first (docs/api.md, "Sort order"):
+# services have no dates, and their number is the slug.
+ASCENDING_LAYERS = ("service",)
+# `service/catalog.json` item keys (docs/api.md, "Services"); `based_on` is resolved.
+CATALOG_FIELDS = (
+    "id", "title", "issuer", "audience", "topics", "channels", "scope", "template", "region_code",
+    "municipality_code", "source", "service_url", "based_on",
+)
+# The keys of a resolved `based_on` entry.
+BASED_ON_FIELDS = ("id", "title", "type", "layer")
+
 # Per-ministry indexes are built for the series of these layers (docs/api.md, "by ministry").
 MINISTRY_LAYERS = ("sfs",)
 # "Justitiedepartementet L2": the unit code after the ministry name is dropped when grouping.
@@ -143,8 +154,13 @@ def _number_key(number, type_="act"):
     raise BuildError(f"unsortable number: {number!r}")
 
 
-def _sorted(items):
-    """issued descending (null last), then number descending by (year, ordinal)."""
+def _sorted(items, layer=None):
+    """issued descending (null last), then number descending by (year, ordinal).
+
+    Layers in ASCENDING_LAYERS sort by number ascending instead (the service slug, a to z).
+    """
+    if layer in ASCENDING_LAYERS:
+        return sorted(items, key=lambda i: (_number_key(i["number"], i["type"]), i["id"]))
     return sorted(
         items,
         key=lambda i: (bool(i["issued"]), i["issued"] or "", _number_key(i["number"], i["type"]), i["id"]),
@@ -167,6 +183,13 @@ def load_corpus(corpus):
     dupes = sorted({i for i in ids if ids.count(i) > 1})
     if dupes:
         raise BuildError(f"duplicate document ids: {', '.join(dupes)}")
+    known = set(ids)
+    missing = [
+        f"{meta['id']}: based_on {ref!r} is not a document in the corpus"
+        for meta, _ in docs for ref in meta.get("based_on") or () if ref not in known
+    ]
+    if missing:
+        raise BuildError("\n".join(missing))
     return docs
 
 
@@ -179,7 +202,7 @@ def _write(out, rel, data, written):
 
 
 def _pages(out, rel_dir, layer, type_, items, written, extra=None):
-    items = _sorted(items)
+    items = _sorted(items, layer)
     count = max(1, -(-len(items) // PAGE_SIZE))
     for page in range(1, count + 1):
         chunk = items[(page - 1) * PAGE_SIZE : page * PAGE_SIZE]
@@ -228,6 +251,26 @@ def _by_code(out, layer, field, items, written):
     }, written)
 
 
+def _services(out, docs, written):
+    """`service/catalog.json` and `service/by-norm/index.json`, also when the layer is empty.
+
+    The catalogue holds every service in listing order (slug a to z) with `based_on` resolved to
+    `{id, title, type, layer}`; the index maps each norm a service is based on to the services' ids.
+    """
+    by_id = {meta["id"]: meta for meta, _ in docs}
+    services = _sorted([meta for meta, _ in docs if meta["type"] == "public_service"], "service")
+    catalog, by_norm = [], {}
+    for meta in services:
+        refs = list(dict.fromkeys(meta["based_on"]))
+        item = {k: meta.get(k) for k in CATALOG_FIELDS}
+        item["based_on"] = [{k: by_id[ref][k] for k in BASED_ON_FIELDS} for ref in refs]
+        catalog.append(item)
+        for ref in refs:
+            by_norm.setdefault(ref, []).append(meta["id"])
+    _write(out, "service/catalog.json", {"total": len(catalog), "services": catalog}, written)
+    _write(out, "service/by-norm/index.json", {"norms": {ref: by_norm[ref] for ref in sorted(by_norm)}}, written)
+
+
 def doc_meta(meta):
     """Frontmatter as served: every schema key in schema order, null when the file leaves it out.
 
@@ -260,6 +303,7 @@ def build(docs, out, built_at):
         if layer in LOCALITY_LAYERS:
             _by_code(out, layer, LOCALITY_LAYERS[layer], in_layer, written)
         layers.append({"id": layer, "count": len(in_layer), "series": series})
+    _services(out, docs, written)
     for meta, body in sorted(docs, key=lambda d: d[0]["id"]):
         _write(out, f"docs/{meta['id']}.json", {"meta": doc_meta(meta), "body": body}, written)
     for rel, text in searchindex.build_index(docs, built_at).items():
