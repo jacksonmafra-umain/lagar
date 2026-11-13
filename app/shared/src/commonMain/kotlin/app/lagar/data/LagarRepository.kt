@@ -26,6 +26,19 @@ interface LocalityRepository {
     suspend fun localityListing(layer: String, code: String, page: Int): ListingPage
 }
 
+/**
+ * Public services for the Tjänster tab and the reader, read once per process. An API without the service files
+ * (built before the service layer) has no services: both functions then answer empty instead of failing. Other
+ * failures surface as exceptions and are not cached.
+ */
+interface ServiceRepository {
+    /** Every service, in listing order (slug ascending). */
+    suspend fun serviceCatalog(): ServiceCatalog
+
+    /** The services based on document [id], in catalogue order; empty when the norm has none. */
+    suspend fun servicesForNorm(id: String): List<ServiceSummary>
+}
+
 /** The raw service files of the API (`service/catalog.json`, `service/by-norm/index.json`), before caching. */
 interface ServiceSource {
     suspend fun serviceCatalog(): ServiceCatalog
