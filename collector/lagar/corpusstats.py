@@ -13,6 +13,8 @@ fetched: every number comes from files in the repository.
 - Text: how each document's text was obtained (web page or API, a PDF's text
   layer, OCR) or why it has none, and per issuer how many documents rely on
   PDFs and how many needed or still need OCR.
+- Public services: per issuer and topic, and the state of their source pages
+  in `sources/services-manifest.json` (moved, dead or failing pages).
 - Quality: the audit report, the SFS text checked against the official PDFs
   (`sources/sfs-pdf-verification.json`) and, when present, the OCR accuracy
   measured on PDFs that also have a text layer (`sources/ocr-calibration.json`).
@@ -61,6 +63,11 @@ _MUNICIPAL_TEXT = {"pdf": PDF, "ocr": OCR}
 _SO_TEXT = {"extracted": PDF, "ocr": OCR}
 # Manifest `text` values that are a scan or an unreadable text layer: documents that need OCR.
 _OCR_GAPS = ("no text layer", "text layer is not readable", "OCR confidence too low", "no text found by OCR")
+SERVICE_MANIFEST = "sources/services-manifest.json"
+# Results of `collector/lagar/services.py` in the services manifest.
+_SERVICE_OK = "ok"
+_SERVICE_GONE = "not_found"  # HTTP 404 or 410
+_SERVICE_MOVED = "redirected"  # a redirect to another host, which is not followed
 
 
 def _load_json(path, default=None):
@@ -91,6 +98,35 @@ def _manifest_texts(root):
     for entry in so:
         texts[("treaty", entry["number"])] = [f.get("text") for f in entry.get("pdfs", [])]
     return texts
+
+
+def service_links(manifest):
+    """The state of the service source pages recorded in the services manifest.
+
+    A page is *ok* when it answered at its curated `source`; *moved* when it redirected within its host (it still works, but the
+    curated `source` should be updated) or to another host (not followed); *dead*
+    when it answered 404 or 410; *failed* when it could not be read for another
+    reason (blocked, robots.txt, a server error, no lead found).
+    """
+    links = {"checked": 0, "ok": 0, "moved": [], "dead": [], "failed": []}
+    for entry in (manifest or {}).get("entries", []):
+        links["checked"] += 1
+        result, slug, source = entry.get("result"), entry.get("slug"), entry.get("source")
+        final_url = entry.get("final_url")
+        if result == _SERVICE_OK and (not final_url or final_url == source):
+            links["ok"] += 1
+        elif result in (_SERVICE_OK, _SERVICE_MOVED):
+            links["moved"].append({"slug": slug, "source": source, "final_url": final_url})
+        else:
+            row = {"slug": slug, "source": source, "result": result, "status": entry.get("status"),
+                   "error": entry.get("error")}
+            links["dead" if result == _SERVICE_GONE else "failed"].append(row)
+    return links
+
+
+def load_service_links(path):
+    """`service_links` of the services manifest at `path` (all zero when it is missing)."""
+    return service_links(_load_json(path))
 
 
 def text_origin(meta, body, manifest_texts=None):
@@ -134,6 +170,7 @@ def collect(root, corpus="corpus"):
     issuers = defaultdict(set)
     pdf_issuers = defaultdict(Counter)
     counties, kommuner = set(), set()
+    services = {"issuers": Counter(), "topics": Counter(), "templates": 0}
     for path in sorted((root / corpus).rglob("*.md")):
         try:
             meta, body = frontmatter.load(path.read_text(encoding="utf-8"))
@@ -151,6 +188,10 @@ def collect(root, corpus="corpus"):
         hosts[layer][_host(meta.get("source"))] += 1
         issuer = _issuer(meta)
         issuers[layer].add(issuer)
+        if type_ == "public_service":
+            services["issuers"][issuer] += 1
+            services["topics"].update(meta.get("topics") or [])
+            services["templates"] += 1 if meta.get("template") else 0
         if meta.get("region_code"):
             counties.add(meta["region_code"])
         if meta.get("municipality_code"):
@@ -167,6 +208,7 @@ def collect(root, corpus="corpus"):
     return {
         "types": types, "sections": sections, "words": words, "origins": origins, "hosts": hosts,
         "issuers": issuers, "pdf_issuers": pdf_issuers, "counties": counties, "kommuner": kommuner,
+        "services": services, "service_links": service_links(_load_json(root / SERVICE_MANIFEST)),
         "audit": _load_json(root / "collector/data/pending-integrity.json"),
         "verification": _load_json(root / "sources/sfs-pdf-verification.json"),
         "calibration": _load_json(root / "sources/ocr-calibration.json"),
@@ -224,6 +266,7 @@ def summarise(data, generated_at):
         "ocr_calibration": data["calibration"],
     }
     total = sum(types.values())
+    services = data["services"]
     return {
         "generated_at": generated_at,
         "documents": total,
@@ -236,7 +279,19 @@ def summarise(data, generated_at):
         "pdf_issuers": {f"{layer}: {name}": dict(row) for (layer, name), row in sorted(data["pdf_issuers"].items())
                         if row["scanned"]},
         "quality": quality,
+        "services": {
+            "documents": types["public_service"],
+            "templates": services["templates"],
+            "issuers": _ranked(services["issuers"]),
+            "topics": _ranked(services["topics"]),
+            "links": data["service_links"],
+        },
     }
+
+
+def _ranked(counter):
+    """Counts from the largest down, ties by name, as a plain dict."""
+    return dict(sorted(counter.items(), key=lambda item: (-item[1], item[0])))
 
 
 def _n(value):
@@ -296,8 +351,9 @@ def render(report):
               "| --- | ---: | ---: | ---: |"]
     for name, row in report["pdf_issuers"].items():
         lines.append(f"| {name} | {_n(row['documents'])} | {_n(row['scanned'])} | {_n(row.get(OCR, 0))} |")
+    lines += [""] + _render_services(report["services"])
     quality = report["quality"]
-    lines += ["", "## Quality and accuracy", ""]
+    lines += ["## Quality and accuracy", ""]
     audit = quality["audit"]
     if audit:
         flags = ", ".join(f"{k} {v}" for k, v in sorted(audit["text_quality_flags"].items())) or "none"
@@ -338,6 +394,38 @@ def render(report):
     else:
         lines += ["Not measured yet: run `python3 -I collector/ocr_calibration.py`.", ""]
     return "\n".join(lines) + "\n"
+
+
+def link_summary(links):
+    """One sentence: how many service source pages were checked and what they answered."""
+    return (f"{_n(links['checked'])} source pages checked: {_n(links['ok'])} ok, {_n(len(links['moved']))} moved, "
+            f"{_n(len(links['dead']))} dead, {_n(len(links['failed']))} failed")
+
+
+def _render_services(services):
+    lines = ["## Public services", ""]
+    if not services["documents"] and not services["links"]["checked"]:
+        return lines + ["No public services yet.", ""]
+    templates = services["templates"]
+    lines += [f"{_n(services['documents'])} services ({_n(templates)} template{'' if templates == 1 else 's'} for "
+              "every kommun or region) from the curated list `collector/data/services.json`.", "",
+              "| issuer | services |", "| --- | ---: |"]
+    lines += [f"| {name} | {_n(n)} |" for name, n in services["issuers"].items()]
+    lines += ["", "| topic | services |", "| --- | ---: |"]
+    lines += [f"| {name} | {_n(n)} |" for name, n in services["topics"].items()]
+    links = services["links"]
+    lines += ["", "### Source pages", "",
+              f"{link_summary(links)} (`{SERVICE_MANIFEST}`, written by the weekly services sync). A moved page "
+              "redirects elsewhere and its curated `source` should be updated; a dead page answers 404 or 410; "
+              "a failed page could not be read. The corpus keeps the last text read from a page that is "
+              "moved, dead or failed.", ""]
+    for heading, rows, describe in (
+            ("Moved", links["moved"], lambda r: f"{r['source']} -> {r['final_url']}"),
+            ("Dead", links["dead"], lambda r: f"HTTP {r['status']} ({r['source']})"),
+            ("Failed", links["failed"], lambda r: f"{r['error'] or r['result']} ({r['source']})")):
+        if rows:
+            lines += [f"{heading}:", ""] + [f"- {r['slug']}: {describe(r)}" for r in rows] + [""]
+    return lines
 
 
 def main(argv):
