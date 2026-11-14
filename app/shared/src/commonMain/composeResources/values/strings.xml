@@ -131,6 +131,7 @@
     <string name="services_place_national">National</string>
     <string name="services_place_region_any">Your county</string>
     <string name="services_place_kommun_any">Your municipality</string>
+    <string name="services_kommun_link">Visit %1$s</string>
     <string name="services_no_match_title">No matching services</string>
     <string name="services_no_match_text">Try another word, topic or audience.</string>
     <string name="splash_tagline">All of Sweden’s rules in one place</string>

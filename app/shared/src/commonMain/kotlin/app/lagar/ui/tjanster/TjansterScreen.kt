@@ -177,7 +177,8 @@ private fun ServiceCatalogList(entries: List<ServiceEntry>, shell: PaddingValues
 
 /**
  * One service: a 3dp indicator in the `service` layer colour, the title as the body publishes it (two lines at
- * most), the issuer in the layer's text colour and a badge for where it is offered, coloured like the scope chip.
+ * most), the issuer in the layer's text colour, a badge for where it is offered, coloured like the scope chip, and for
+ * a template kommun service the [KommunLink] to the chosen kommun's website.
  */
 @Composable
 fun ServiceCard(entry: ServiceEntry, onClick: () -> Unit, modifier: Modifier = Modifier) {
@@ -203,6 +204,7 @@ fun ServiceCard(entry: ServiceEntry, onClick: () -> Unit, modifier: Modifier = M
                 )
                 Text(entry.service.issuer, style = LagarTheme.type.labelSm, color = layers.onTint(LayerKey.Service))
                 PlaceBadge(entry.place)
+                KommunLink(entry.place)
             }
             Icon(
                 painterResource(Res.drawable.ic_chevron_right),
