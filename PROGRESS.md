@@ -94,7 +94,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | eu | EU judgments | 606 | 611 | counted | 99.2% |
 | region | Regional regulations | 11658 | unknown | unknown | - |
 | municipality | Municipal regulations | 5601 | unknown | unknown | - |
-| service | Public services | 0 | unknown | unknown | - |
+| service | Public services | 66 | 66 | curated | 100.0% |
 
 Progress is capped at the target; a series without a known target has no percentage.
 
@@ -187,13 +187,18 @@ Targets:
 - SÖ treaties: counted, regeringen.se sitemap: distinct SÖ numbers on pages under /rattsliga-dokument/sveriges-internationella-overenskommelser/, as of 2026-10-30
 - EU law (curated list): curated, collector/data/eu-acts.json, as of 2026-10-29
 - EU judgments: counted, Cellar SPARQL: Court of Justice (CJ) and General Court (TJ) judgments with cdm:case-law_interpretes_resource_legal pointing to an act in collector/data/eu-acts.json, as of 2026-10-30
+- Public services: curated, collector/data/services.json, as of 2026-11-13
 
 ## Integrity
 
-Audit of 54835 documents (2026-11-12T17:18:10Z):
+Audit of 54901 documents (2026-11-14T00:19:43Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
 - text-quality flags: 904
 - cross-references not in the corpus: 39960 of 40021 (informational, the corpus is partial)
+
+## Public service links
+
+66 source pages checked: 66 ok, 0 moved, 0 dead, 0 failed (`sources/services-manifest.json`); details in [STATISTICS.md](STATISTICS.md).

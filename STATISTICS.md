@@ -1,10 +1,10 @@
 # Corpus statistics
 
-Generated 2026-11-12T17:18:36Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-14T00:20:09Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,835 documents in 7 layers.
+The corpus holds 54,901 documents in 8 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
@@ -22,6 +22,7 @@ The corpus holds 54,835 documents in 7 layers.
 | eu | eu_judgment | 606 | 35 | 3,656,195 |
 | region | county_regulation | 11,658 | 14,168 | 11,004,808 |
 | municipality | municipal_regulation | 5,601 | 45,291 | 12,532,323 |
+| service | public_service | 66 | 0 | 2,991 |
 
 Sections count paragraphs that open with a section number (`1 §`, `2 a §`); case law and EU documents have none.
 
@@ -35,6 +36,7 @@ Sections count paragraphs that open with a section number (`1 §`, `2 a §`); ca
 | fundamental | 1 |
 | municipality | 286 |
 | region | 21 |
+| service | 12 |
 | sfs | 208 |
 
 County regulations cover 21 of 21 counties; municipal regulations cover 286 of 290 kommuner.
@@ -106,6 +108,22 @@ Documents per host of their `source`, per layer (the ten largest).
 | lillaedet.se | 49 |
 | 276 other hosts | 5,012 |
 
+### service
+
+| host | documents |
+| --- | ---: |
+| forsakringskassan.se | 20 |
+| polisen.se | 14 |
+| migrationsverket.se | 8 |
+| transportstyrelsen.se | 7 |
+| csn.se | 6 |
+| skatteverket.se | 3 |
+| 1177.se | 2 |
+| naturvardsverket.se | 1 |
+| boverket.se | 1 |
+| skolverket.se | 1 |
+| 3 other hosts | 3 |
+
 ## How the text was obtained
 
 | layer | web page or API | PDF text layer | OCR of a scan | no text (metadata and link) |
@@ -117,7 +135,8 @@ Documents per host of their `source`, per layer (the ten largest).
 | eu | 676 | 0 | 0 | 0 |
 | region | 420 | 10,777 | 428 | 33 |
 | municipality | 198 | 4,950 | 291 | 162 |
-| **all** | **32,459** (59.2 %) | **20,415** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
+| service | 66 | 0 | 0 | 0 |
+| **all** | **32,525** (59.2 %) | **20,415** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -310,11 +329,49 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | region: Länsstyrelsen i Östergötlands län | 290 | 18 | 12 |
 | sfs: Utrikesdepartementet | 286 | 36 | 35 |
 
+## Public services
+
+66 services (8 templates for every kommun or region) from the curated list `collector/data/services.json`.
+
+| issuer | services |
+| --- | ---: |
+| Försäkringskassan | 20 |
+| Polismyndigheten | 14 |
+| Migrationsverket | 8 |
+| Transportstyrelsen | 7 |
+| Centrala studiestödsnämnden | 6 |
+| Skatteverket | 3 |
+| 1177 | 2 |
+| Socialstyrelsen | 2 |
+| Arbetsförmedlingen | 1 |
+| Boverket | 1 |
+| Naturvårdsverket | 1 |
+| Skolverket | 1 |
+
+| topic | services |
+| --- | ---: |
+| family | 15 |
+| legal | 14 |
+| work | 12 |
+| social_support | 11 |
+| education | 9 |
+| health | 9 |
+| migration | 9 |
+| vehicles | 8 |
+| business | 6 |
+| housing | 3 |
+| tax | 3 |
+| environment | 1 |
+
+### Source pages
+
+66 source pages checked: 66 ok, 0 moved, 0 dead, 0 failed (`sources/services-manifest.json`, written by the weekly services sync). A moved page redirects elsewhere and its curated `source` should be updated; a dead page answers 404 or 410; a failed page could not be read. The corpus keeps the last text read from a page that is moved, dead or failed.
+
 ## Quality and accuracy
 
 ### Corpus audit
 
-- Documents checked: 54,835
+- Documents checked: 54,901
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
 - Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,960 of 40,021 (mostly older amending acts, which are not collected as documents of their own)
