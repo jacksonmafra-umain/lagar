@@ -41,7 +41,8 @@ TOOLS = [
         "name": "get_document",
         "description": "One document by id (e.g. 'sfs-1962-700', 'afs-2023-1', 'hdo-...', "
                        "'service-foraldrapenning'): all metadata and the Markdown text. A public service also gets "
-                       "'based_on' (the norms it is based on, with id, title, type and layer); a norm that services "
+                       "'based_on' (the norms it is based on, with id, title, type, layer and repealed, the repeal date "
+                       "or null while in force); a norm that services "
                        "are based on gets 'services' (id, title, issuer).",
         "inputSchema": {
             "type": "object",

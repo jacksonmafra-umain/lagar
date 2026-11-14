@@ -159,7 +159,7 @@ class ServiceTests(unittest.TestCase):
         _, doc = call(self.srv, "get_document", id="service-adoptionsbidrag")
         self.assertEqual(doc["meta"]["based_on"], ["sfs-2010-110"])
         self.assertEqual(doc["based_on"], [{"id": "sfs-2010-110", "title": "Socialförsäkringsbalk (2010:110)",
-                                            "type": "act", "layer": "sfs"}])
+                                            "type": "act", "layer": "sfs", "repealed": None}])
         self.assertIn("adoptionsbidrag", doc["body"])
         _, law = call(self.srv, "get_document", id="sfs-2010-110", max_chars=0)
         self.assertEqual(law["services"], [{"id": "service-adoptionsbidrag", "title": "Adoptionsbidrag",
