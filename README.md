@@ -15,7 +15,7 @@ apps for Android, iOS and the web.
 | layer | collected | target | % |
 | --- | ---: | ---: | ---: |
 | Fundamental laws | 4 | 4 | 100.0% |
-| SFS (statutes and ordinances) (2 series) | 14943 | 15082 | 99.1% |
+| SFS (statutes and ordinances) (2 series) | 14945 | 15082 | 99.1% |
 | Agency regulations (80 series) | 5476 | 5513 | 99.3% |
 | Case law | 16477 | 16640 | 99.0% |
 | EU law (2 series) | 676 | 681 | 99.3% |

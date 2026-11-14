@@ -1,17 +1,17 @@
 # Corpus statistics
 
-Generated 2026-11-14T00:20:09Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-14T12:18:59Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,901 documents in 8 layers.
+The corpus holds 54,903 documents in 8 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
 | fundamental | fundamental_law | 4 | 494 | 33,286 |
 | sfs | act | 3,000 | 93,765 | 8,807,530 |
-| sfs | ordinance | 6,591 | 101,896 | 6,895,833 |
-| sfs | other_statute | 1,837 | 12,464 | 1,343,514 |
+| sfs | ordinance | 6,592 | 101,904 | 6,896,594 |
+| sfs | other_statute | 1,838 | 12,464 | 1,343,572 |
 | sfs | treaty | 3,515 | 75 | 2,002,459 |
 | agency | agency_regulation | 5,476 | 61,277 | 14,302,094 |
 | case_law | case_report | 16,406 | 715 | 55,715,883 |
@@ -55,7 +55,7 @@ Documents per host of their `source`, per layer (the ten largest).
 
 | host | documents |
 | --- | ---: |
-| data.riksdagen.se | 11,428 |
+| data.riksdagen.se | 11,430 |
 | regeringen.se | 3,515 |
 
 ### agency
@@ -129,14 +129,14 @@ Documents per host of their `source`, per layer (the ten largest).
 | layer | web page or API | PDF text layer | OCR of a scan | no text (metadata and link) |
 | --- | ---: | ---: | ---: | ---: |
 | fundamental | 4 | 0 | 0 | 0 |
-| sfs | 14,391 | 257 | 35 | 260 |
+| sfs | 14,393 | 257 | 35 | 260 |
 | agency | 293 | 4,431 | 740 | 12 |
 | case_law | 16,477 | 0 | 0 | 0 |
 | eu | 676 | 0 | 0 | 0 |
 | region | 420 | 10,777 | 428 | 33 |
 | municipality | 198 | 4,950 | 291 | 162 |
 | service | 66 | 0 | 0 | 0 |
-| **all** | **32,525** (59.2 %) | **20,415** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
+| **all** | **32,527** (59.2 %) | **20,415** (37.2 %) | **1,494** (2.7 %) | **467** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -371,7 +371,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 
 ### Corpus audit
 
-- Documents checked: 54,901
+- Documents checked: 54,903
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
 - Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,960 of 40,021 (mostly older amending acts, which are not collected as documents of their own)

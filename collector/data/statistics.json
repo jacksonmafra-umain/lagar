@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-14T00:20:09Z",
- "documents": 54901,
+ "generated_at": "2026-11-14T12:18:59Z",
+ "documents": 54903,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -23,7 +23,7 @@
    }
   },
   "sfs": {
-   "documents": 14943,
+   "documents": 14945,
    "types": {
     "act": {
      "documents": 3000,
@@ -31,14 +31,14 @@
      "words": 8807530
     },
     "ordinance": {
-     "documents": 6591,
-     "sections": 101896,
-     "words": 6895833
+     "documents": 6592,
+     "sections": 101904,
+     "words": 6896594
     },
     "other_statute": {
-     "documents": 1837,
+     "documents": 1838,
      "sections": 12464,
-     "words": 1343514
+     "words": 1343572
     },
     "treaty": {
      "documents": 3515,
@@ -48,13 +48,13 @@
    },
    "issuers": 208,
    "text": {
-    "web": 14391,
+    "web": 14393,
     "pdf": 257,
     "ocr": 35,
     "none": 260
    },
    "hosts": {
-    "data.riksdagen.se": 11428,
+    "data.riksdagen.se": 11430,
     "regeringen.se": 3515
    }
   },
@@ -561,7 +561,7 @@
   }
  },
  "text": {
-  "web": 32525,
+  "web": 32527,
   "pdf": 20415,
   "ocr": 1494,
   "none": 467
@@ -1691,7 +1691,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54901,
+   "documents": 54903,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
