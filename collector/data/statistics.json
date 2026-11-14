@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-12T17:18:36Z",
- "documents": 54835,
+ "generated_at": "2026-11-14T00:20:09Z",
+ "documents": 54901,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -526,10 +526,42 @@
     "karlskoga.se": 2,
     "simrishamn.se": 1
    }
+  },
+  "service": {
+   "documents": 66,
+   "types": {
+    "public_service": {
+     "documents": 66,
+     "sections": 0,
+     "words": 2991
+    }
+   },
+   "issuers": 12,
+   "text": {
+    "web": 66,
+    "pdf": 0,
+    "ocr": 0,
+    "none": 0
+   },
+   "hosts": {
+    "forsakringskassan.se": 20,
+    "polisen.se": 14,
+    "migrationsverket.se": 8,
+    "transportstyrelsen.se": 7,
+    "csn.se": 6,
+    "skatteverket.se": 3,
+    "1177.se": 2,
+    "naturvardsverket.se": 1,
+    "boverket.se": 1,
+    "skolverket.se": 1,
+    "socialstyrelsen.se": 1,
+    "aldreguiden.se": 1,
+    "arbetsformedlingen.se": 1
+   }
   }
  },
  "text": {
-  "web": 32459,
+  "web": 32525,
   "pdf": 20415,
   "ocr": 1494,
   "none": 467
@@ -541,6 +573,7 @@
   "fundamental": 1,
   "municipality": 286,
   "region": 21,
+  "service": 12,
   "sfs": 208
  },
  "geography": {
@@ -1658,7 +1691,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54835,
+   "documents": 54901,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
@@ -2184,6 +2217,45 @@
      "character_similarity": 0.852
     }
    ]
+  }
+ },
+ "services": {
+  "documents": 66,
+  "templates": 8,
+  "issuers": {
+   "Försäkringskassan": 20,
+   "Polismyndigheten": 14,
+   "Migrationsverket": 8,
+   "Transportstyrelsen": 7,
+   "Centrala studiestödsnämnden": 6,
+   "Skatteverket": 3,
+   "1177": 2,
+   "Socialstyrelsen": 2,
+   "Arbetsförmedlingen": 1,
+   "Boverket": 1,
+   "Naturvårdsverket": 1,
+   "Skolverket": 1
+  },
+  "topics": {
+   "family": 15,
+   "legal": 14,
+   "work": 12,
+   "social_support": 11,
+   "education": 9,
+   "health": 9,
+   "migration": 9,
+   "vehicles": 8,
+   "business": 6,
+   "housing": 3,
+   "tax": 3,
+   "environment": 1
+  },
+  "links": {
+   "checked": 66,
+   "ok": 66,
+   "moved": [],
+   "dead": [],
+   "failed": []
   }
  }
 }

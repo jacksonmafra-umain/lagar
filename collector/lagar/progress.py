@@ -6,11 +6,12 @@ import re
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from . import frontmatter, schema
+from . import corpusstats, frontmatter, schema
 from .vocabulary import TYPES
 
 DEFAULT_TARGETS = "collector/data/targets.json"
 DEFAULT_INTEGRITY = "collector/data/pending-integrity.json"
+DEFAULT_SERVICES_MANIFEST = corpusstats.SERVICE_MANIFEST
 BACKGROUND = "#f8f9fc"
 LABEL_X, BAR_X, BAR_W = 16, 240, 260
 LABEL_CHAR_PX = 7.5  # estimated average glyph width at 13px
@@ -129,7 +130,7 @@ def _target(row):
     return "unknown" if row["target"] is None else str(row["target"])
 
 
-def render_markdown(rows, integrity):
+def render_markdown(rows, integrity, service_links=None):
     lines = [
         "# Progress",
         "",
@@ -169,6 +170,17 @@ def render_markdown(rows, integrity):
             f"- text-quality flags: {len(integrity['text_quality'])}",
             f"- cross-references not in the corpus: {unknown} of {total} (informational, the corpus is partial)",
         ]
+    if service_links and service_links["checked"]:
+        lines += [
+            "",
+            "## Public service links",
+            "",
+            f"{corpusstats.link_summary(service_links)} (`{DEFAULT_SERVICES_MANIFEST}`); details in "
+            "[STATISTICS.md](STATISTICS.md).",
+        ]
+        for heading, key in (("Moved", "moved"), ("Dead", "dead"), ("Failed", "failed")):
+            if service_links[key]:
+                lines += ["", f"{heading}: {', '.join(r['slug'] for r in service_links[key])}."]
     return "\n".join(lines) + "\n"
 
 
@@ -260,6 +272,7 @@ def main(argv):
     parser.add_argument("--targets", default=DEFAULT_TARGETS)
     parser.add_argument("--integrity", default=DEFAULT_INTEGRITY)
     parser.add_argument("--design", default="DESIGN.md")
+    parser.add_argument("--services-manifest", default=DEFAULT_SERVICES_MANIFEST)
     parser.add_argument("--out-dir", default=".")
     parser.add_argument("--readme", help="README whose progress block to rewrite (default: <out-dir>/README.md)")
     args = parser.parse_args(argv)
@@ -270,7 +283,8 @@ def main(argv):
     series = _tally(k for k in map(_series_key, metas) if k)
     rows = build_rows(targets, _tally(map(_type_key, metas)), series)
     out = Path(args.out_dir)
-    (out / "PROGRESS.md").write_text(render_markdown(rows, integrity), encoding="utf-8")
+    links = corpusstats.load_service_links(args.services_manifest)
+    (out / "PROGRESS.md").write_text(render_markdown(rows, integrity, links), encoding="utf-8")
     (out / "progress.svg").write_text(render_svg(rows, load_colors(args.design)), encoding="utf-8")
     readme = Path(args.readme) if args.readme else out / "README.md"
     if readme.exists():

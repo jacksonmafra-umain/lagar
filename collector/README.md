@@ -484,6 +484,14 @@ the reason per slug, `blocked`: hosts that answered 403). The report (`--report`
 command exits 2 when a host answered 403, 1 when the list or the state file cannot be read or
 `--slug` names an unknown service, and 0 otherwise.
 
+The weekly `Sync services` workflow (`.github/workflows/sync-services.yml`) runs `collect.py
+services` over the whole list (or the slugs given to a manual dispatch) and commits changed
+services and manifest entries in one pull request on `data/services-sync`; the run summary and
+the commit message list moved and failed services, and a 403 is a warning rather than a failed
+run. `STATISTICS.md` counts the services per issuer and topic and lists the moved, dead (404,
+410) and failed source pages from the manifest; `PROGRESS.md` tracks the services against the
+curated list.
+
 ## Case law
 
 The `case-law` command (alias `caselaw`) collects the anonymised summaries that the courts

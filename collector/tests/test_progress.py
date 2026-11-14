@@ -160,11 +160,52 @@ class ProgressTests(unittest.TestCase):
         (out / "README.md").write_text(f"# t\n{progress.README_START}\n{progress.README_END}\n", encoding="utf-8")
         code = progress.main(["--corpus", str(self.root), "--targets", str(targets),
                               "--integrity", str(out / "none.json"), "--design", str(DESIGN),
-                              "--out-dir", str(out)])
+                              "--out-dir", str(out), "--services-manifest", str(out / "none.json")])
         self.assertEqual(code, 0)
         self.assertTrue((out / "PROGRESS.md").exists())
         self.assertTrue((out / "progress.svg").exists())
         self.assertIn("| SFS (statutes and ordinances) | 1 | 2 | 50.0% |", (out / "README.md").read_text(encoding="utf-8"))
+
+
+    def test_service_links_section(self):
+        links = {"checked": 3, "ok": 1,
+                 "moved": [{"slug": "b", "source": "https://x.se/b", "final_url": "https://x.se/b2"}],
+                 "dead": [{"slug": "c", "source": "https://x.se/c", "status": 404, "error": "HTTP 404"}],
+                 "failed": []}
+        text = progress.render_markdown(self.rows(), None, links)
+        self.assertIn("## Public service links", text)
+        self.assertIn("3 source pages checked: 1 ok, 1 moved, 1 dead, 0 failed", text)
+        self.assertIn("Moved: b.", text)
+        self.assertIn("Dead: c.", text)
+        self.assertNotIn("## Public service links", progress.render_markdown(self.rows(), None))
+        empty = {"checked": 0, "ok": 0, "moved": [], "dead": [], "failed": []}
+        self.assertNotIn("## Public service links", progress.render_markdown(self.rows(), None, empty))
+
+    def test_main_reads_the_services_manifest(self):
+        targets = Path(self.tmp.name) / "targets.json"
+        targets.write_text(json.dumps(TARGETS), encoding="utf-8")
+        manifest = Path(self.tmp.name) / "services-manifest.json"
+        manifest.write_text(json.dumps({"entries": [
+            {"slug": "a", "source": "https://x.se/a", "result": "ok", "status": 200, "final_url": "https://x.se/a"},
+            {"slug": "b", "source": "https://x.se/b", "result": "not_found", "status": 410,
+             "final_url": "https://x.se/b", "error": "HTTP 410"},
+        ]}), encoding="utf-8")
+        out = Path(self.tmp.name) / "out"
+        out.mkdir()
+        progress.main(["--corpus", str(self.root), "--targets", str(targets), "--integrity", str(out / "none.json"),
+                       "--design", str(DESIGN), "--out-dir", str(out), "--services-manifest", str(manifest)])
+        self.assertIn("2 source pages checked: 1 ok, 0 moved, 1 dead, 0 failed",
+                      (out / "PROGRESS.md").read_text(encoding="utf-8"))
+
+    def test_service_target_is_the_curated_list(self):
+        data = Path(__file__).resolve().parents[1] / "data"
+        targets = json.loads((data / "targets.json").read_text(encoding="utf-8"))
+        rows = [t for t in targets if t["layer"] == "service"]
+        self.assertEqual(len(rows), 1)
+        services = json.loads((data / "services.json").read_text(encoding="utf-8"))
+        self.assertEqual(rows[0]["target"], len(services))
+        self.assertEqual(rows[0]["kind"], "curated")
+        self.assertEqual(rows[0]["source"], "collector/data/services.json")
 
 
 if __name__ == "__main__":

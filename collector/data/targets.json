@@ -875,9 +875,9 @@
     "layer": "service",
     "type": null,
     "label": "Public services",
-    "target": null,
-    "kind": "unknown",
-    "source": null,
-    "as_of": null
+    "target": 66,
+    "kind": "curated",
+    "source": "collector/data/services.json",
+    "as_of": "2026-11-13"
   }
 ]
