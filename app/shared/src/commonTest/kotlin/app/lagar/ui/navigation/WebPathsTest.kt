@@ -11,6 +11,7 @@ class WebPathsTest {
         assertEquals("/reader/sfs-1962-700", webPath(Reader("sfs-1962-700")))
         assertEquals("/reader/sfs-1962-700?p=k3p1", webPath(Reader("sfs-1962-700", "k3p1")))
         assertEquals("/ministries/sfs/statute", webPath(Ministries("sfs", "statute")))
+        assertEquals("/service/service-foraldrapenning", webPath(Service("service-foraldrapenning")))
         assertEquals("/search?q=hyra%20bostad&vacatioLegis=1", webPath(Search(text = "hyra bostad", vacatioLegis = true)))
         assertEquals("/layer/municipality?code=0180&codeName=Stockholms%20kommun", webPath(LayerList("municipality", code = "0180", codeName = "Stockholms kommun")))
     }
@@ -27,6 +28,7 @@ class WebPathsTest {
         val routes = listOf(
             Utforska, Hierarki, Sparade, Tjanster, Settings, AdvancedSearch,
             Reader("sfs-1962-700"), Reader("sfs-1962-700", "k2ap4"),
+            Service("service-foraldrapenning"),
             LayerList("sfs", "statute", ministry = "ju", ministryName = "Justitiedepartementet"),
             LayerList("region", code = "01", codeName = "Stockholms län"),
             Ministries("sfs", "ordinance"),
