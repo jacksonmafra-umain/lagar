@@ -134,6 +134,16 @@
     <string name="services_kommun_link">Visit %1$s</string>
     <string name="services_no_match_title">No matching services</string>
     <string name="services_no_match_text">Try another word, topic or audience.</string>
+    <string name="service_open">Go to the service</string>
+    <string name="service_channels">How to use the service</string>
+    <string name="service_channel_online">Online</string>
+    <string name="service_channel_form">Form</string>
+    <string name="service_channel_phone">Phone</string>
+    <string name="service_channel_office">In person</string>
+    <string name="service_based_on">Based on</string>
+    <string name="service_norm_repealed_on">Repealed on %1$s</string>
+    <string name="service_fetched_on">Read from the official page on %1$s</string>
+    <string name="service_disclaimer">lagar is not the authority behind this service and cannot handle your case. You use the service on the responsible body’s own page, and what that page says is what applies.</string>
     <string name="splash_tagline">All of Sweden’s rules in one place</string>
     <string name="onboarding_step">Step %1$d of %2$d</string>
     <string name="onboarding_skip">Skip</string>
