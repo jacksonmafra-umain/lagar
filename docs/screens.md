@@ -283,6 +283,7 @@ Route: `Tjanster`. Code: `ui/tjanster/TjansterScreen.kt`. Reference: layer 9. De
 | --- | --- | --- |
 | Service catalogue: search over title and issuer, one topic chip at a time, Alla / Privatperson / Företag switch, service cards with a scope badge; loading, error with retry, empty catalogue and no-match states; capped width on desktop | Done | #801 |
 | Scope rule: national services always; the kommun and region template services always, labelled with the chosen kommun or län (or "Din kommun" / "Ditt län" when none is chosen); a service of one kommun or region only when it is the chosen one | Done | #801 |
+| "Hos <kommun>" link (`KommunLink`) on kommun template services: opens the chosen kommun's website (from `kommuner.json`, bundled in `files/geo/sweden.json`) in the system browser; hidden when no kommun is chosen or it has no website | Done | #806 |
 | Service detail with official link and "Bygger på" norms | Planned: plan task 9 | #802 |
 | Services in the reader: a "Tjänster" section of the services based on the open norm | Done: plan task 10 (see Reader) | #803 |
 | Bookmarks, Hierarki entry | Planned: plan task 11 | #804 |
