@@ -41,6 +41,29 @@ class ServiceFiltersTest {
     }
 
     @Test
+    fun kommunTemplatesCarryTheChosenKommunsWebsite() {
+        val withSite = stockholm.copy(kommunWebsite = "https://start.stockholm/")
+        val own = service("service-0180-parkering", "Boendeparkering", "Stockholms stad", scope = "municipality", municipalityCode = "0180")
+        val places = serviceEntries(sampleServices + own, withSite).associate { it.service.id to it.place }
+        assertEquals(ServicePlace.Kommun("Stockholm", "https://start.stockholm/"), places["service-bygglov"])
+        // A kommun's own service links to its own page, not to the kommun's website.
+        assertEquals(ServicePlace.Kommun("Stockholm"), places["service-0180-parkering"])
+        assertEquals(ServicePlace.Region("Stockholms län"), places["service-vardgaranti"])
+    }
+
+    @Test
+    fun aKommunWithoutWebsiteGivesTemplatesNoLink() {
+        val places = serviceEntries(sampleServices, stockholm).associate { it.service.id to it.place }
+        assertEquals(ServicePlace.Kommun("Stockholm", null), places["service-bygglov"])
+    }
+
+    @Test
+    fun websiteOfAnUnknownKommunIsDropped() {
+        val chosen = ServiceLocality.of(Locality("01", "9999"), "Stockholms län", kommunName = null, kommunWebsite = "https://example.se/")
+        assertEquals(null, chosen.kommunWebsite)
+    }
+
+    @Test
     fun codeWithoutNameCountsAsNotChosen() {
         val chosen = ServiceLocality.of(Locality("01", "9999"), regionName = "Stockholms län", kommunName = null)
         assertEquals(ServiceLocality("01", "Stockholms län", null, null), chosen)

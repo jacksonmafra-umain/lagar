@@ -17,7 +17,8 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
 /**
- * Loads the service catalogue and lists it for the user's chosen län and kommun (see [serviceEntries]); it lists
+ * Loads the service catalogue and lists it for the user's chosen län and kommun, with the kommun's website for the
+ * template services' link (see [serviceEntries]); it lists
  * again when the choice changes. The catalogue is read once per process by the repository, so a change of
  * locality costs no request. A failed read is retried with [LoadState.Failed.retry].
  */
@@ -45,6 +46,7 @@ class TjansterViewModel(
                 locality,
                 regionName = geo.localityName(Scope.Region, locality),
                 kommunName = geo.localityName(Scope.Kommun, locality),
+                kommunWebsite = geo.kommunWebsite(locality),
             )
             LoadState.Loaded(serviceEntries(catalog.services, chosen))
         } catch (e: CancellationException) {
