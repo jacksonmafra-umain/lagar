@@ -297,8 +297,9 @@ document's `meta` value of the same name (see `meta` fields below).
 | `service_url` | string (URI) | yes | where the service starts, when it differs from `source` |
 | `based_on` | array of reference | no | the norms the service is based on, in frontmatter order, never empty |
 
-Reference object: `id`, `title`, `type` and `layer` of the document, the same
-values as its `meta`; none is null. The build fails when a `based_on` id is
+Reference object: `id`, `title`, `type`, `layer` and `repealed` of the
+document, the same values as its `meta`; only `repealed` may be null (the norm
+is in force). A repealed norm stays listed, so clients can show it as repealed. The build fails when a `based_on` id is
 not a document in the corpus, so every reference resolves to a
 `docs/<id>.json`.
 

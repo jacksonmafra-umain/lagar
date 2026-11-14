@@ -18,6 +18,7 @@ fun webPath(route: Any): String? = when (route) {
     Tjanster -> "/tjanster"
     Settings -> "/settings"
     AdvancedSearch -> "/advanced-search"
+    is Service -> "/service/" + encode(route.id)
     is Reader -> "/reader/${encode(route.id)}" + query("p" to route.anchor)
     is LayerList -> "/layer/${encode(route.layer)}" + query(
         "type" to route.type,
@@ -58,6 +59,7 @@ fun parseWebPath(fragment: String): Any? {
         "tjanster" -> single(Tjanster)
         "settings" -> single(Settings)
         "advanced-search" -> single(AdvancedSearch)
+        "service" -> segments.getOrNull(1)?.takeIf { segments.size == 2 }?.let(::Service)
         "reader" -> segments.getOrNull(1)?.takeIf { segments.size == 2 }?.let { Reader(it, params["p"]) }
         "layer" -> segments.getOrNull(1)?.takeIf { segments.size == 2 }?.let {
             LayerList(it, params["type"], params["ministry"], params["ministryName"], params["code"], params["codeName"])
@@ -91,6 +93,7 @@ fun NavBackStackEntry.webRoute(): Any? {
         destination.hasRoute<Tjanster>() -> Tjanster
         destination.hasRoute<Settings>() -> Settings
         destination.hasRoute<AdvancedSearch>() -> AdvancedSearch
+        destination.hasRoute<Service>() -> toRoute<Service>()
         destination.hasRoute<Reader>() -> toRoute<Reader>()
         destination.hasRoute<LayerList>() -> toRoute<LayerList>()
         destination.hasRoute<Ministries>() -> toRoute<Ministries>()

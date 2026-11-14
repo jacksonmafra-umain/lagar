@@ -36,6 +36,9 @@ data class LayerList(
 /** A document; [anchor] (an outline anchor such as `k3p1`) is scrolled to once the text has loaded. */
 @Serializable data class Reader(val id: String, val anchor: String? = null)
 
+/** A public service of the Tjänster tab, by its document id (`service-<slug>`). */
+@Serializable data class Service(val id: String)
+
 @Serializable data object Settings
 
 /**

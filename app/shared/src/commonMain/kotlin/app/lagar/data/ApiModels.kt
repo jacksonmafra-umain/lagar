@@ -161,9 +161,18 @@ data class ServiceSummary(
     @SerialName("based_on") val basedOn: List<ServiceNormRef>,
 )
 
-/** A norm a service is based on, resolved to the values of its `meta`; [id] opens `docs/<id>.json`. */
+/**
+ * A norm a service is based on, resolved to the values of its `meta`; [id] opens `docs/<id>.json`. [repealed] is the
+ * norm's repeal date, null while it is in force; it was added within v1, so older catalogues leave it out.
+ */
 @Serializable
-data class ServiceNormRef(val id: String, val title: String, val type: String, val layer: String)
+data class ServiceNormRef(
+    val id: String,
+    val title: String,
+    val type: String,
+    val layer: String,
+    val repealed: String? = null,
+)
 
 /** `service/by-norm/index.json`: document id to the ids of the services based on it, in catalogue order. */
 @Serializable

@@ -134,6 +134,16 @@
     <string name="services_kommun_link">Hos %1$s</string>
     <string name="services_no_match_title">Inga tjänster matchar</string>
     <string name="services_no_match_text">Prova ett annat ord, ämne eller en annan målgrupp.</string>
+    <string name="service_open">Gå till tjänsten</string>
+    <string name="service_channels">Så kan du använda tjänsten</string>
+    <string name="service_channel_online">Digitalt</string>
+    <string name="service_channel_form">Blankett</string>
+    <string name="service_channel_phone">Telefon</string>
+    <string name="service_channel_office">Besök</string>
+    <string name="service_based_on">Bygger på</string>
+    <string name="service_norm_repealed_on">Upphävd %1$s</string>
+    <string name="service_fetched_on">Hämtad från den officiella sidan %1$s</string>
+    <string name="service_disclaimer">lagar är inte myndigheten bakom tjänsten och kan inte handlägga ditt ärende. Du använder tjänsten på den ansvariga myndighetens egen sida, och det är den sidan som gäller.</string>
     <string name="splash_tagline">Hela Sveriges regelverk på ett ställe</string>
     <string name="onboarding_step">Steg %1$d av %2$d</string>
     <string name="onboarding_skip">Hoppa över</string>

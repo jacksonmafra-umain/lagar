@@ -60,6 +60,7 @@ import app.lagar.ui.navigation.OnboardingScope
 import app.lagar.ui.navigation.OnboardingWelcome
 import app.lagar.ui.navigation.Reader
 import app.lagar.ui.navigation.Search
+import app.lagar.ui.navigation.Service
 import app.lagar.ui.navigation.Settings
 import app.lagar.ui.navigation.Sparade
 import app.lagar.ui.navigation.Splash
@@ -76,6 +77,7 @@ import app.lagar.ui.search.SearchRoute
 import app.lagar.ui.search.toRoute
 import app.lagar.ui.settings.SettingsRoute
 import app.lagar.ui.sparade.SparadeRoute
+import app.lagar.ui.tjanster.ServiceDetailRoute
 import app.lagar.ui.tjanster.TjansterRoute
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
@@ -312,8 +314,14 @@ fun AppShell(
                             )
                         }
                         composable<Sparade> { SparadeRoute(onOpen = { id, anchor -> navigateWhenResumed(Reader(id, anchor)) }) }
-                        // Opening a service waits for the service detail route.
-                        composable<Tjanster> { TjansterRoute(onOpenService = {}) }
+                        composable<Tjanster> { TjansterRoute(onOpenService = { navigateWhenResumed(Service(it)) }) }
+                        composable<Service> { entry ->
+                            ServiceDetailRoute(
+                                id = entry.toRoute<Service>().id,
+                                onBack = { navController.popBackStack() },
+                                onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                            )
+                        }
                         composable<LayerList> { entry ->
                             val route = entry.toRoute<LayerList>()
                             LayerListRoute(
@@ -343,6 +351,7 @@ fun AppShell(
                                 anchor = route.anchor,
                                 onBack = { navController.popBackStack() },
                                 onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                                onOpenService = { navigateWhenResumed(Service(it)) },
                             )
                         }
                         composable<Search> { entry ->

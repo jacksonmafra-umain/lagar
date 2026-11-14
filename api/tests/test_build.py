@@ -500,9 +500,9 @@ class ServiceLayerTest(unittest.TestCase):
         self.assertEqual(len(refs), 4)
         for ref in refs:
             with self.subTest(id=ref["id"]):
-                self.assertEqual(list(ref), ["id", "title", "type", "layer"])
+                self.assertEqual(list(ref), ["id", "title", "type", "layer", "repealed"])
                 meta = read(self.out, f"docs/{ref['id']}.json")["meta"]
-                self.assertEqual(ref, {k: meta[k] for k in ("id", "title", "type", "layer")})
+                self.assertEqual(ref, {k: meta[k] for k in ("id", "title", "type", "layer", "repealed")})
 
     def test_by_norm_keys_only_norms_with_services(self):
         index = read(self.out, "service/by-norm/index.json")
