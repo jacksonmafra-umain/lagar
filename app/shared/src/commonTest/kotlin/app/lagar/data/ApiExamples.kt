@@ -269,7 +269,8 @@ object ApiExamples {
           "id": "sfs-2010-110",
           "title": "Socialförsäkringsbalk (2010:110)",
           "type": "act",
-          "layer": "sfs"
+          "layer": "sfs",
+          "repealed": null
         }
       ]
     },
@@ -298,7 +299,8 @@ object ApiExamples {
           "id": "sfs-2010-800",
           "title": "Skollag (2010:800)",
           "type": "act",
-          "layer": "sfs"
+          "layer": "sfs",
+          "repealed": null
         }
       ]
     },
@@ -329,13 +331,15 @@ object ApiExamples {
           "id": "sfs-1998-620",
           "title": "Lag (1998:620) om belastningsregister",
           "type": "act",
-          "layer": "sfs"
+          "layer": "sfs",
+          "repealed": null
         },
         {
           "id": "sfs-2010-800",
           "title": "Skollag (2010:800)",
           "type": "act",
-          "layer": "sfs"
+          "layer": "sfs",
+          "repealed": null
         }
       ]
     }

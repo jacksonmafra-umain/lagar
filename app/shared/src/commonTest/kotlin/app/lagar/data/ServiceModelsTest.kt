@@ -45,6 +45,16 @@ class ServiceModelsTest {
     }
 
     @Test
+    fun decodesTheRepealedDateOfANormReferenceAndDefaultsItForOlderPayloads() {
+        val repealed = json.decodeFromString<ServiceNormRef>(
+            """{"id": "sfs-1980-620", "title": "Socialtjänstlag (1980:620)", "type": "act", "layer": "sfs", "repealed": "2025-07-01"}""",
+        )
+        assertEquals("2025-07-01", repealed.repealed)
+        val older = json.decodeFromString<ServiceNormRef>("""{"id": "sfs-2010-800", "title": "Skollag (2010:800)", "type": "act", "layer": "sfs"}""")
+        assertNull(older.repealed)
+    }
+
+    @Test
     fun decodesTheExampleByNormIndex() {
         val index = json.decodeFromString<ServiceNormIndex>(ApiExamples.serviceByNorm)
         assertEquals(setOf("sfs-1998-620", "sfs-2010-110", "sfs-2010-800"), index.norms.keys)
