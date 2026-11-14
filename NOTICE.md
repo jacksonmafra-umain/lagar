@@ -19,3 +19,6 @@ The kommun centroids in `app/shared/src/commonMain/composeResources/files/geo/sw
 are derived from Statistics Sweden's simplified kommun boundaries
 ([Digitala gränser](https://www.scb.se/hitta-statistik/regional-statistik-och-kartor/regionala-indelningar/digitala-granser/)),
 published under CC0. Source: Statistics Sweden (SCB).
+
+The kommun websites in the same file are copied from `collector/data/kommuner.json`
+(official website, property P856, of each kommun in Wikidata, CC0).

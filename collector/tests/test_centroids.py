@@ -1,8 +1,10 @@
 import io
 import json
 import struct
+import tempfile
 import unittest
 import zipfile
+from pathlib import Path
 
 from lagar import centroids
 
@@ -115,6 +117,49 @@ class RenderTest(unittest.TestCase):
     def test_rejects_mismatched_codes(self):
         with self.assertRaises(ValueError):
             centroids.render(self.GEO, {"0181": (59.0, 18.0, 1)})
+
+    def test_adds_the_website_after_the_centroid(self):
+        text = centroids.render(self.GEO, {"0180": (59.323, 18.0, 15)}, {"0180": "https://start.stockholm/"})
+        self.assertIn('"radiusKm": 15, "website": "https://start.stockholm/"}', text)
+        self.assertEqual(json.loads(text)["kommuner"][0]["website"], "https://start.stockholm/")
+
+    def test_a_kommun_without_website_has_no_website_key(self):
+        text = centroids.render(self.GEO, {"0180": (59.323, 18.0, 15)}, {})
+        self.assertNotIn("website", json.loads(text)["kommuner"][0])
+
+    def test_rejects_a_website_for_an_unknown_kommun(self):
+        with self.assertRaises(ValueError):
+            centroids.render(self.GEO, {"0180": (59.0, 18.0, 1)}, {"0181": "https://www.sodertalje.se/"})
+
+
+class WebsitesTest(unittest.TestCase):
+    def test_keeps_only_https_urls(self):
+        data = {"websites": {"0180": "https://start.stockholm/", "0181": "http://www.sodertalje.se/", "0182": "", "0183": None}}
+        self.assertEqual(centroids.kommun_websites(data), {"0180": "https://start.stockholm/"})
+
+    def test_missing_websites_key_means_none(self):
+        self.assertEqual(centroids.kommun_websites({}), {})
+
+    def test_existing_centroids_are_read_back(self):
+        geo = {"kommuner": [{"code": "0180", "name": "Stockholm", "regionCode": "01", "lat": 59.3, "lon": 18.0, "radiusKm": 15}]}
+        self.assertEqual(centroids.existing_centroids(geo), {"0180": (59.3, 18.0, 15)})
+
+    def test_existing_centroids_fail_without_coordinates(self):
+        with self.assertRaises(ValueError):
+            centroids.existing_centroids({"kommuner": [{"code": "0180", "name": "Stockholm", "regionCode": "01"}]})
+
+    def test_main_without_zip_keeps_centroids_and_adds_websites(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            geo = Path(tmp) / "sweden.json"
+            geo.write_text(json.dumps({
+                "regions": [{"code": "01", "name": "Stockholms län"}],
+                "kommuner": [{"code": "0180", "name": "Stockholm", "regionCode": "01", "lat": 59.3, "lon": 18.0, "radiusKm": 15}],
+            }), encoding="utf-8")
+            sites = Path(tmp) / "kommuner.json"
+            sites.write_text(json.dumps({"websites": {"0180": "https://start.stockholm/"}}), encoding="utf-8")
+            self.assertEqual(centroids.main(["--geo", str(geo), "--websites", str(sites)]), 0)
+            kommun = json.loads(geo.read_text(encoding="utf-8"))["kommuner"][0]
+        self.assertEqual((kommun["lat"], kommun["radiusKm"], kommun["website"]), (59.3, 15, "https://start.stockholm/"))
 
 
 if __name__ == "__main__":
