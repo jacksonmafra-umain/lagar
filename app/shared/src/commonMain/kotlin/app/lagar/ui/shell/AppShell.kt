@@ -76,7 +76,7 @@ import app.lagar.ui.search.SearchRoute
 import app.lagar.ui.search.toRoute
 import app.lagar.ui.settings.SettingsRoute
 import app.lagar.ui.sparade.SparadeRoute
-import app.lagar.ui.tjanster.TjansterScreen
+import app.lagar.ui.tjanster.TjansterRoute
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.CancellationException
@@ -312,7 +312,8 @@ fun AppShell(
                             )
                         }
                         composable<Sparade> { SparadeRoute(onOpen = { id, anchor -> navigateWhenResumed(Reader(id, anchor)) }) }
-                        composable<Tjanster> { TjansterScreen() }
+                        // Opening a service waits for the service detail route.
+                        composable<Tjanster> { TjansterRoute(onOpenService = {}) }
                         composable<LayerList> { entry ->
                             val route = entry.toRoute<LayerList>()
                             LayerListRoute(
