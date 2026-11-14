@@ -58,6 +58,24 @@ class GeoRepositoryTest {
     }
 
     @Test
+    fun kommunWebsiteOfTheChosenKommun() = runTest {
+        assertEquals("https://www.goteborg.se/", repository.kommunWebsite(Locality("14", "1480")))
+        assertNull(repository.kommunWebsite(Locality("14", null)))
+        assertNull(repository.kommunWebsite(Locality(null, null)))
+        assertNull(repository.kommunWebsite(Locality("14", "9999")))
+    }
+
+    @Test
+    fun everyKommunHasAnHttpsWebsite() = runTest {
+        repository.regions().forEach { region ->
+            repository.kommuner(region.code).forEach { kommun ->
+                val website = repository.kommunWebsite(Locality(region.code, kommun.code))
+                assertTrue(website?.startsWith("https://") == true, "${kommun.name}: $website")
+            }
+        }
+    }
+
+    @Test
     fun everyKommunHasACentroidInsideSweden() = runTest {
         val centroids = repository.centroids()
         assertEquals(290, centroids.size)

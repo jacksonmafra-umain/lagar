@@ -10,7 +10,7 @@ import app.lagar.resources.Res
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
-/** Serves the bundled SCB list of län and kommuner, with each kommun's centroid. */
+/** Serves the bundled SCB list of län and kommuner, with each kommun's centroid and official website. */
 class GeoRepository(
     private val readBytes: suspend (path: String) -> ByteArray = { Res.readBytes(it) },
 ) {
@@ -41,6 +41,16 @@ class GeoRepository(
         }
     }
 
+    /**
+     * Official website of the kommun the [locality] selects, from the bundled file (copied from
+     * `collector/data/kommuner.json`); null when no kommun is chosen, the code is unknown or it has no website.
+     */
+    suspend fun kommunWebsite(locality: Locality): String? {
+        val region = locality.regionCode ?: return null
+        val code = locality.kommunCode ?: return null
+        return load().kommuner.firstOrNull { it.code == code && it.regionCode == region }?.website
+    }
+
     private suspend fun load(): Sweden = cached
         ?: json.decodeFromString<Sweden>(readBytes("files/geo/sweden.json").decodeToString()).also { cached = it }
 
@@ -55,6 +65,7 @@ class GeoRepository(
         val lat: Double? = null,
         val lon: Double? = null,
         val radiusKm: Int? = null,
+        val website: String? = null,
     ) {
         fun toKommun() = Kommun(code, name, regionCode)
     }
