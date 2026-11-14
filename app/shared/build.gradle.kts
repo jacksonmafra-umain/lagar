@@ -15,7 +15,8 @@ kotlin {
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
         androidResources { enable = true }
-        withHostTest { }
+        // Compose UI tests run under Robolectric on the host, which needs the merged Android resources.
+        withHostTest { isIncludeAndroidResources = true }
     }
 
     listOf(iosArm64(), iosSimulatorArm64()).forEach { target ->
@@ -73,6 +74,11 @@ kotlin {
             implementation(libs.multiplatform.settings.test)
             implementation(libs.ktor.client.mock)
             implementation(libs.kotlinx.coroutines.test)
+            implementation(libs.compose.ui.test)
+        }
+        getByName("androidHostTest").dependencies {
+            implementation(libs.robolectric)
+            implementation(libs.androidx.compose.ui.test.manifest)
         }
     }
 }
