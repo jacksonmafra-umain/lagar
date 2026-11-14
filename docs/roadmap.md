@@ -16,6 +16,7 @@ Figures from `STATISTICS.md`, `PROGRESS.md` and `AGENCIES.md` on 2026-11-12.
 | SFS against the print | 93.1 % of 682 statutes in their current wording match the official PDF; 47 differ |
 | OCR | 95.5 % word recall and 94.2 % precision on text-layer PDFs read again by OCR (lowest source: 74.4 % precision); not yet measured on real paper scans |
 | Automation | 8 sync workflows (3 daily, 5 weekly) that test, audit and merge themselves; the landing page deploys from `main` |
+| Tjänster | Done (#794 to #807): 66 public services from a curated list, each linked to the norms it is based on, synced weekly; in the app a catalogue tab, a service detail, the kommun link, a section in the reader and bookmarks. Design: [`docs/specs/2026-11-13-tjanster-design.md`](specs/2026-11-13-tjanster-design.md) |
 
 ## Now: open problems (next two weeks)
 
@@ -75,7 +76,6 @@ Candidates collected so far, in no fixed order:
 
 - **Search by meaning and by voice:** Swedish models from KBLab (sentence embeddings for search, KB-Whisper for speech), proven in the lagar-search demo.
 - **Reading a law as of a date:** point-in-time text, which needs historical text in the API first.
-- **Services (Tjänster):** the fourth tab, today a placeholder. Designed in [`docs/specs/2026-11-13-tjanster-design.md`](specs/2026-11-13-tjanster-design.md) (public services linked to the norms they are based on) and planned as 14 issues in [`docs/plans/2026-11-13-tjanster.md`](plans/2026-11-13-tjanster.md); waiting for the owner to start it.
 - **The web app:** paused and not deployed; decide whether and when it goes public again.
 - **OCR engine:** replace or complement Tesseract once the real-scan benchmark has a winner.
 

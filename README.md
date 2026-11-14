@@ -38,7 +38,7 @@ It is anonymous: bookmarks and settings stay on the device.
 - Document reader: legal text by section, table of contents, amendment list, cross-reference links, notes and bookmarks per section
 - Sparade: saved documents
 - Drawer, scope switch and settings (language, theme, main focus)
-- Tjänster (public services) is a placeholder until the corpus has services
+- Tjänster: a catalogue of public services, each linked to the norms it is based on, with a service detail, the kommun's website for kommun services, a section in the reader and bookmarks
 
 Screen-by-screen status is in [docs/screens.md](docs/screens.md).
 
