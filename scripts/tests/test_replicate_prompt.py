@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 PROMPT = ROOT / "docs/replicate/PROMPT.md"
-PIN = "46a8e7d3f386bbbec82917a9725fe03220268ab5"
+PIN = "b9bfbe93941f36e06dd18396871fca725c5ceed4"
 REPO = "github.com/jacksonmafra-umain/lagar/"
 
 SECTIONS = [
