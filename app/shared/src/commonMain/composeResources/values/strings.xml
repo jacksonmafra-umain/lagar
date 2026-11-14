@@ -147,7 +147,7 @@
     <string name="service_based_on">Based on</string>
     <string name="service_norm_repealed_on">Repealed on %1$s</string>
     <string name="service_fetched_on">Read from the official page on %1$s</string>
-    <string name="service_disclaimer">lagar is not the authority behind this service and cannot handle your case. You use the service on the responsible body’s own page, and what that page says is what applies.</string>
+    <string name="service_disclaimer">Lagar is not the authority behind this service and cannot handle your case. You use the service on the responsible body’s own page, and what that page says is what applies.</string>
     <string name="splash_tagline">All of Sweden’s rules in one place</string>
     <string name="onboarding_step">Step %1$d of %2$d</string>
     <string name="onboarding_skip">Skip</string>

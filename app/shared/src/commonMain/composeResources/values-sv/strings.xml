@@ -115,7 +115,7 @@
     <string name="saved_empty_title">Inget sparat ännu</string>
     <string name="saved_empty_text">Tryck på bokmärket i en lag, vid en § eller i en tjänst för att spara den, eller lägg till en anteckning.</string>
     <string name="services_empty_title">Inga tjänster ännu</string>
-    <string name="services_empty_text">Datan du läser har inga offentliga tjänster ännu.</string>
+    <string name="services_empty_text">Det finns inga offentliga tjänster i nuvarande data ännu.</string>
     <string name="services_search">Sök tjänster eller myndigheter</string>
     <string name="services_audience_all">Alla</string>
     <string name="services_audience_private">Privatperson</string>
@@ -147,7 +147,7 @@
     <string name="service_based_on">Bygger på</string>
     <string name="service_norm_repealed_on">Upphävd %1$s</string>
     <string name="service_fetched_on">Hämtad från den officiella sidan %1$s</string>
-    <string name="service_disclaimer">lagar är inte myndigheten bakom tjänsten och kan inte handlägga ditt ärende. Du använder tjänsten på den ansvariga myndighetens egen sida, och det är den sidan som gäller.</string>
+    <string name="service_disclaimer">Lagar är inte myndigheten bakom tjänsten och kan inte handlägga ditt ärende. Du använder tjänsten på den ansvariga myndighetens egen sida, och det är den sidan som gäller.</string>
     <string name="splash_tagline">Hela Sveriges regelverk på ett ställe</string>
     <string name="onboarding_step">Steg %1$d av %2$d</string>
     <string name="onboarding_skip">Hoppa över</string>

@@ -31,7 +31,7 @@ The visual architecture assigns each issuing body and normative level a specific
 | **6** | **EU-rätt** (European Union law) | Violet | `#5B3FA6` | Circle of stars, GDPR, AI Act |
 | **7** | **Regioner** (Regional norms / healthcare) | Forest green | `#2E7D32` | Medical cross, regional healthcare and transport rules |
 | **8** | **Kommuner** (Municipal norms) | Falu red | `#8B2E1F` | Traditional Falun red, local statutes |
-| **9** | **Tjänster** (Public services and citizen utilities) | Flag yellow | `#E0A100` | Kungörelser |
+| **9** | **Tjänster** (Public services) | Flag yellow | `#E0A100` | Official procedures linked to the norms they are based on: föräldrapenning, bygglov, 1177 |
 | **—** | **Upphävd** (Repealed / historical) | Grey | `#8A8F98` | Neutral badge, strikethrough text, inactive history |
 
 ---
@@ -91,8 +91,8 @@ Navigation uses a 4-pillar App Shell with support for floating modal sheets:
        │              │               │               │
        ├──────────────┼───────────────┼───────────────┤
        ▼              ▼               ▼               ▼
-   [ Search &      [ Interactive  [ Saved         [ Notices & ]
-    Mixed Feed ]     Tree ]         Articles &      Gazettes  ]
+   [ Search &      [ Interactive  [ Saved         [ Public    ]
+    Mixed Feed ]     Tree ]         Articles &      Services  ]
        │                            Notes ]
        │
        ├──► [ Modal: Change Location / Scope ]
@@ -117,6 +117,9 @@ Navigation uses a 4-pillar App Shell with support for floating modal sheets:
 
 5. **Consolidated Norm Reader (Document Viewer)**:
    - Immersive legal reading typography with inline notes, article shortcuts and a historical version comparator.
+
+6. **Tjänster (Services) tab**:
+   - A catalogue of public services (official procedures of agencies, regions and kommuner), each linked to the norms it is based on, filtered by topic, audience (Privatperson / Företag) and the active scope. A service detail links out to the responsible body's own page; lagar never performs the service. Official notices (kungörelser) are out of scope. Design: [`docs/specs/2026-11-13-tjanster-design.md`](specs/2026-11-13-tjanster-design.md).
 
 ---
 

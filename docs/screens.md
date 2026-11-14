@@ -31,7 +31,7 @@ Checked on 2026-10-29 in the web app run offline with `python3 -I scripts/serve_
 | Layer list | Matches; the header badge no longer touches the top edge of the bar (fixed) | #129 |
 | Reader | Matches; the table of contents opens over the dimmed reader, validity markers show as labels on the § card and the ministry is shown without its unit code (fixed) | #123, #124, #132 |
 | Sparade | Matches, with the known repealed gap | |
-| Tjänster | Matches | |
+| Tjänster | Matches (the placeholder of the time); the services catalogue built since has no Stitch screen and is not part of this check | |
 | Settings | Matches; Swedish and English complete on the screens visited | |
 | Wide top bar, wide home, reader panes, two-column search and advanced search (1440x900) | Match the layout; the content fixes above apply there too | |
 
@@ -287,8 +287,9 @@ Route: `Tjanster`. Code: `ui/tjanster/TjansterScreen.kt`. Reference: layer 9. De
 | Scope rule: national services always; the kommun and region template services always, labelled with the chosen kommun or län (or "Din kommun" / "Ditt län" when none is chosen); a service of one kommun or region only when it is the chosen one | Done | #801 |
 | "Hos <kommun>" link (`KommunLink`) on kommun template services: opens the chosen kommun's website (from `kommuner.json`, bundled in `files/geo/sweden.json`) in the system browser; hidden when no kommun is chosen or it has no website | Done | #806 |
 | Service detail (route `Service(id)`, web path `/service/<id>`, `ui/tjanster/ServiceDetailScreen.kt`): title and lead as published (Swedish in every locale), issuer, channels, "Gå till tjänsten" opening `service_url` or else `source` in the system browser, the "Hos <kommun>" link on kommun templates, "Bygger på" norms in their layer colours that open the reader (repealed norms in the Repealed colours with the date), fetch date and the note that lagar is not the authority; opened from the catalogue and the reader's "Tjänster" section | Done | #802 |
-| Services in the reader: a "Tjänster" section of the services based on the open norm | Done: plan task 10 (see Reader) | #803 |
-| Bookmarks (service detail and Sparade) and the Hierarki entry (service level opens this tab with its count) | Done: plan task 11 (see Sparade and Hierarki) | #804 |
+| Services in the reader: a "Tjänster" section of the services based on the open norm | Done (see Reader) | #803 |
+| Bookmarks (service detail and Sparade) and the Hierarki entry (service level opens this tab with its count) | Done (see Sparade and Hierarki) | #804 |
+| Strings in English and Swedish for every Tjänster label (topic, audience and channel glossary in [`docs/i18n.md`](i18n.md)) | Done; a native Swedish read-through by the owner is pending | #807 |
 
 ## Settings
 
