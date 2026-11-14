@@ -28,6 +28,10 @@
         <item quantity="one">%1$s document</item>
         <item quantity="other">%1$s documents</item>
     </plurals>
+    <plurals name="service_count">
+        <item quantity="one">%1$s service</item>
+        <item quantity="other">%1$s services</item>
+    </plurals>
     <plurals name="hierarchy_other_statutes">
         <item quantity="one">including %1$s other statute</item>
         <item quantity="other">including %1$s other statutes</item>

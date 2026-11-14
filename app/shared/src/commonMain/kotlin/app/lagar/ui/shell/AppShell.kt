@@ -311,6 +311,7 @@ fun AppShell(
                                     layer.apiType?.let { navigateWhenResumed(Ministries(layer.apiLayer, it)) }
                                 },
                                 onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                                onOpenServices = { selectTab(Tab.Services) },
                             )
                         }
                         composable<Sparade> {

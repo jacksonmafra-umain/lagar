@@ -28,6 +28,10 @@
         <item quantity="one">%1$s dokument</item>
         <item quantity="other">%1$s dokument</item>
     </plurals>
+    <plurals name="service_count">
+        <item quantity="one">%1$s tjänst</item>
+        <item quantity="other">%1$s tjänster</item>
+    </plurals>
     <plurals name="hierarchy_other_statutes">
         <item quantity="one">varav %1$s övrig författning</item>
         <item quantity="other">varav %1$s övriga författningar</item>
