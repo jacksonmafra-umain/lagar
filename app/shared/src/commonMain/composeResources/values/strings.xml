@@ -109,7 +109,7 @@
     <string name="about_credits">Created by %1$s</string>
     <string name="about_license">Released under the %1$s licence</string>
     <string name="saved_empty_title">Nothing saved yet</string>
-    <string name="saved_empty_text">Tap the bookmark on a law or a § to save it, or add a note to it.</string>
+    <string name="saved_empty_text">Tap the bookmark on a law, a § or a service to save it, or add a note to it.</string>
     <string name="services_empty_title">No services yet</string>
     <string name="services_empty_text">The data you are reading has no public services yet.</string>
     <string name="services_search">Search services or agencies</string>
@@ -317,6 +317,7 @@
     <string name="saved_filter_documents">Documents</string>
     <string name="saved_filter_provisions">Provisions</string>
     <string name="saved_filter_notes">Notes</string>
+    <string name="saved_filter_services">Services</string>
     <string name="saved_search">Search saved items</string>
     <string name="saved_no_match_title">No matches</string>
     <string name="saved_no_match_text">Nothing saved matches your search or filter.</string>

@@ -109,7 +109,7 @@
     <string name="about_credits">Skapad av %1$s</string>
     <string name="about_license">Utgiven under licensen %1$s</string>
     <string name="saved_empty_title">Inget sparat ännu</string>
-    <string name="saved_empty_text">Tryck på bokmärket i en lag eller vid en § för att spara den, eller lägg till en anteckning.</string>
+    <string name="saved_empty_text">Tryck på bokmärket i en lag, vid en § eller i en tjänst för att spara den, eller lägg till en anteckning.</string>
     <string name="services_empty_title">Inga tjänster ännu</string>
     <string name="services_empty_text">Datan du läser har inga offentliga tjänster ännu.</string>
     <string name="services_search">Sök tjänster eller myndigheter</string>
@@ -317,6 +317,7 @@
     <string name="saved_filter_documents">Dokument</string>
     <string name="saved_filter_provisions">Bestämmelser</string>
     <string name="saved_filter_notes">Anteckningar</string>
+    <string name="saved_filter_services">Tjänster</string>
     <string name="saved_search">Sök bland sparade</string>
     <string name="saved_no_match_title">Inga träffar</string>
     <string name="saved_no_match_text">Inget sparat matchar din sökning eller ditt filter.</string>

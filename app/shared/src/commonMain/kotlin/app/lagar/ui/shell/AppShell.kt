@@ -313,7 +313,12 @@ fun AppShell(
                                 onOpenDocument = { navigateWhenResumed(Reader(it)) },
                             )
                         }
-                        composable<Sparade> { SparadeRoute(onOpen = { id, anchor -> navigateWhenResumed(Reader(id, anchor)) }) }
+                        composable<Sparade> {
+                            SparadeRoute(
+                                onOpen = { id, anchor -> navigateWhenResumed(Reader(id, anchor)) },
+                                onOpenService = { navigateWhenResumed(Service(it)) },
+                            )
+                        }
                         composable<Tjanster> { TjansterRoute(onOpenService = { navigateWhenResumed(Service(it)) }) }
                         composable<Service> { entry ->
                             ServiceDetailRoute(

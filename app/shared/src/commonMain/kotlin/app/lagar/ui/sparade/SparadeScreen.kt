@@ -77,6 +77,7 @@ import app.lagar.resources.saved_filter_all
 import app.lagar.resources.saved_filter_documents
 import app.lagar.resources.saved_filter_notes
 import app.lagar.resources.saved_filter_provisions
+import app.lagar.resources.saved_filter_services
 import app.lagar.resources.saved_group_other
 import app.lagar.resources.saved_no_match_text
 import app.lagar.resources.saved_no_match_title
@@ -90,6 +91,7 @@ import app.lagar.settings.BookmarkStore
 import app.lagar.settings.Note
 import app.lagar.settings.NoteStore
 import app.lagar.settings.SavedProvision
+import app.lagar.settings.SavedService
 import app.lagar.settings.toListingItem
 import app.lagar.ui.common.EmptyState
 import app.lagar.ui.common.LagarTextField
@@ -109,23 +111,27 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 
 /**
- * Sparade tab: the device-local saved documents, provisions and notes. [onOpen] opens a document, at the
- * provision's anchor when it has one.
+ * Sparade tab: the device-local saved documents, provisions, notes and services. [onOpen] opens a document, at the
+ * provision's anchor when it has one; [onOpenService] opens a service's detail.
  */
 @Composable
 fun SparadeRoute(
     onOpen: (id: String, anchor: String?) -> Unit,
+    onOpenService: (id: String) -> Unit,
     store: BookmarkStore = koinInject(),
     noteStore: NoteStore = koinInject(),
 ) {
     val bookmarks by store.bookmarks.collectAsState()
     val provisions by store.provisions.collectAsState()
+    val services by store.services.collectAsState()
     val notes by noteStore.notes.collectAsState()
     SparadeScreen(
         bookmarks = bookmarks,
         provisions = provisions,
         notes = notes,
+        services = services,
         onOpen = onOpen,
+        onOpenService = onOpenService,
         onRemove = { entry ->
             when (entry) {
                 is SavedEntry.Document -> store.remove(entry.document.id)?.let { removed -> { store.restore(removed) } }
@@ -133,6 +139,7 @@ fun SparadeRoute(
                     ?.let { removed -> { store.restoreProvision(removed) } }
                 is SavedEntry.NoteOnly -> noteStore.delete(entry.document.id, entry.note.anchor)
                     ?.let { removed -> { noteStore.restore(removed) } }
+                is SavedEntry.Service -> store.removeService(entry.service.id)?.let { removed -> { store.restoreService(removed) } }
             }
         },
     )
@@ -149,6 +156,8 @@ fun SparadeScreen(
     notes: List<Note>,
     onOpen: (id: String, anchor: String?) -> Unit,
     onRemove: (SavedEntry) -> (() -> Unit)?,
+    services: List<SavedService> = emptyList(),
+    onOpenService: (id: String) -> Unit = {},
 ) {
     val shell = LocalShellPadding.current
     val spacing = LagarTheme.spacing
@@ -156,7 +165,9 @@ fun SparadeScreen(
     val scope = rememberCoroutineScope()
     var query by rememberSaveable { mutableStateOf("") }
     var filter by rememberSaveable { mutableStateOf(SavedFilter.All) }
-    val groups = remember(bookmarks, provisions, notes, filter, query) { savedGroups(bookmarks, provisions, notes, filter, query) }
+    val groups = remember(bookmarks, provisions, notes, services, filter, query) {
+        savedGroups(bookmarks, provisions, notes, filter, query, services)
+    }
 
     fun remove(entry: SavedEntry) {
         val undo = onRemove(entry) ?: return
@@ -165,6 +176,7 @@ fun SparadeScreen(
                 is SavedEntry.Document -> getString(Res.string.saved_removed, entry.document.title)
                 is SavedEntry.Provision -> getString(Res.string.saved_removed, "${entry.provision.label}, ${entry.document.title}")
                 is SavedEntry.NoteOnly -> getString(Res.string.saved_note_deleted)
+                is SavedEntry.Service -> getString(Res.string.saved_removed, entry.service.title)
             }
             snackbar.currentSnackbarData?.dismiss()
             val result = snackbar.showSnackbar(message, actionLabel = getString(Res.string.saved_undo), duration = SnackbarDuration.Long)
@@ -173,7 +185,7 @@ fun SparadeScreen(
     }
 
     Box(Modifier.fillMaxSize()) {
-        if (bookmarks.isEmpty() && provisions.isEmpty() && notes.isEmpty()) {
+        if (bookmarks.isEmpty() && provisions.isEmpty() && notes.isEmpty() && services.isEmpty()) {
             Box(Modifier.fillMaxSize().padding(shell), contentAlignment = Alignment.Center) {
                 EmptyState(
                     icon = Res.drawable.ic_bookmarks,
@@ -222,7 +234,10 @@ fun SparadeScreen(
                 groups.forEach { group ->
                     item(key = "group:${group.layer?.name ?: "other"}") { GroupHeading(group.layer) }
                     items(group.entries, key = { it.key }) { entry ->
-                        SavedEntryRow(entry, onOpen, onRemove = { remove(entry) })
+                        when (entry) {
+                            is SavedEntry.OnDocument -> SavedEntryRow(entry, onOpen, onRemove = { remove(entry) })
+                            is SavedEntry.Service -> SavedServiceRow(entry.service, onOpenService, onRemove = { remove(entry) })
+                        }
                     }
                 }
             }
@@ -236,6 +251,7 @@ private fun SavedFilter.labelRes(): StringResource = when (this) {
     SavedFilter.Documents -> Res.string.saved_filter_documents
     SavedFilter.Provisions -> Res.string.saved_filter_provisions
     SavedFilter.Notes -> Res.string.saved_filter_notes
+    SavedFilter.Services -> Res.string.saved_filter_services
 }
 
 /** A level heading: a 10dp layer dot and the level name in bold upper-case `labelSm`. */
@@ -257,8 +273,39 @@ private fun GroupHeading(layer: DisplayLayer?) {
     }
 }
 
+/** A saved service: its Swedish title in the service level's text colour and its issuer; it opens the detail. */
 @Composable
-private fun SavedEntryRow(entry: SavedEntry, onOpen: (String, String?) -> Unit, onRemove: () -> Unit) {
+private fun SavedServiceRow(service: SavedService, onOpen: (String) -> Unit, onRemove: () -> Unit) {
+    val key = LayerKey.Service
+    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(LagarTheme.spacing.xs)) {
+        SavedCard(key, onClick = { onOpen(service.id) }, modifier = Modifier.weight(1f)) {
+            Text(
+                service.title,
+                style = LagarTheme.type.bodyUi,
+                fontWeight = FontWeight.Bold,
+                color = LagarTheme.layers.onTint(key),
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Text(
+                service.issuer,
+                style = LagarTheme.type.labelSm,
+                color = LagarTheme.colors.onSurfaceVariant,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+        RemoveButton(
+            painterResource(Res.drawable.ic_bookmark_filled),
+            LagarTheme.layers.onTint(key),
+            stringResource(Res.string.bookmark_remove, service.title),
+            onRemove,
+        )
+    }
+}
+
+@Composable
+private fun SavedEntryRow(entry: SavedEntry.OnDocument, onOpen: (String, String?) -> Unit, onRemove: () -> Unit) {
     val document = entry.document
     val layer = document.displayLayer
     val key = if (document.repealed != null) LayerKey.Repealed else (layer?.key ?: LayerKey.Repealed)
@@ -358,7 +405,7 @@ private fun DocumentTitle(title: String, repealed: Boolean) {
     )
 }
 
-/** A saved provision or note: the `StatuteRow` card shape with a 3dp layer indicator and a chevron. */
+/** A saved provision, note or service: the `StatuteRow` card shape with a 3dp layer indicator and a chevron. */
 @Composable
 private fun SavedCard(key: LayerKey, onClick: () -> Unit, modifier: Modifier = Modifier, content: @Composable ColumnScope.() -> Unit) {
     Surface(
