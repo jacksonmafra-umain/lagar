@@ -30,7 +30,8 @@ class TjansterViewModelTest {
     private val geo = GeoRepository {
         """
         {"regions": [{"code": "01", "name": "Stockholms län"}],
-         "kommuner": [{"code": "0180", "name": "Stockholm", "regionCode": "01"}]}
+         "kommuner": [{"code": "0180", "name": "Stockholm", "regionCode": "01", "website": "https://start.stockholm/"},
+                      {"code": "0181", "name": "Södertälje", "regionCode": "01"}]}
         """.encodeToByteArray()
     }
 
@@ -52,8 +53,17 @@ class TjansterViewModelTest {
 
         preferences.setLocality(Locality("01", "0180"))
         val after = assertIs<LoadState.Loaded<List<ServiceEntry>>>(viewModel.state.value).value
-        assertEquals(ServicePlace.Kommun("Stockholm"), after.single { it.service.id == "service-bygglov" }.place)
+        assertEquals(ServicePlace.Kommun("Stockholm", "https://start.stockholm/"), after.single { it.service.id == "service-bygglov" }.place)
         assertEquals(ServicePlace.Region("Stockholms län"), after.single { it.service.id == "service-vardgaranti" }.place)
+    }
+
+    @Test
+    fun aKommunWithoutWebsiteGivesNoLink() {
+        val preferences = UserPreferences(MapSettings())
+        preferences.setLocality(Locality("01", "0181"))
+        val viewModel = TjansterViewModel(FakeServices(), preferences, geo)
+        val entries = assertIs<LoadState.Loaded<List<ServiceEntry>>>(viewModel.state.value).value
+        assertEquals(ServicePlace.Kommun("Södertälje", null), entries.single { it.service.id == "service-bygglov" }.place)
     }
 
     @Test

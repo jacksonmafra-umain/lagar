@@ -5,6 +5,10 @@ for every kommun in the app's bundled ``sweden.json``, the area centroid as WGS 
 distance in km from the centroid to the farthest boundary vertex (``radiusKm``). The app picks the kommun whose
 centroid is nearest and uses the radii to tell a position outside Sweden from one inside it.
 
+It also copies each kommun's official website from ``collector/data/kommuner.json`` as ``website``, which the app
+links on template services ("Hos <kommun>"). Without the SCB zip the centroids already in the file are kept, so the
+websites can be refreshed on their own.
+
 Source: https://www.scb.se/hitta-statistik/regional-statistik-och-kartor/regionala-indelningar/digitala-granser/
 File:   https://www.scb.se/contentassets/3443fea3fa6640f7a57ea15d9a372d33/shape_svenska_260225.zip
 Licence: CC0 (attribution optional; "Source: Statistics Sweden").
@@ -21,6 +25,7 @@ from pathlib import Path
 
 SOURCE_URL = "https://www.scb.se/contentassets/3443fea3fa6640f7a57ea15d9a372d33/shape_svenska_260225.zip"
 DEFAULT_GEO = "app/shared/src/commonMain/composeResources/files/geo/sweden.json"
+DEFAULT_WEBSITES = "collector/data/kommuner.json"
 KOMMUN_ARCHIVE = "Kommun_Sweref99TM.zip"
 CODE_FIELD = "KnKod"
 DECIMALS = 3
@@ -155,13 +160,38 @@ def read_source(path):
     return inner.read(shp), inner.read(dbf)
 
 
-def render(geo, centroids):
-    """``sweden.json`` text, one entry per line, with each kommun's centroid; fails on a missing or extra code."""
+def existing_centroids(geo):
+    """``{code: (lat, lon, radius_km)}`` already in ``sweden.json``; fails when a kommun has none."""
+    result = {}
+    for k in geo["kommuner"]:
+        if k.get("lat") is None or k.get("lon") is None or k.get("radiusKm") is None:
+            raise ValueError(f"kommun {k['code']} has no centroid; pass the SCB zip")
+        result[k["code"]] = (k["lat"], k["lon"], k["radiusKm"])
+    return result
+
+
+def kommun_websites(data):
+    """``{code: url}`` from ``kommuner.json``; only https URLs are kept, anything else counts as no website."""
+    return {
+        code: url for code, url in (data.get("websites") or {}).items()
+        if isinstance(url, str) and url.startswith("https://")
+    }
+
+
+def render(geo, centroids, websites=None):
+    """``sweden.json`` text, one entry per line, with each kommun's centroid and, when [websites] has one, its website.
+
+    Fails on a missing or extra centroid code and on a website for a kommun that is not in the file.
+    """
     codes = {k["code"] for k in geo["kommuner"]}
     if codes != set(centroids):
         missing = sorted(codes - set(centroids))
         extra = sorted(set(centroids) - codes)
         raise ValueError(f"kommun codes differ: missing {missing}, extra {extra}")
+    websites = websites or {}
+    unknown = sorted(set(websites) - codes)
+    if unknown:
+        raise ValueError(f"websites for unknown kommun codes: {unknown}")
 
     def line(entry):
         return "  " + json.dumps(entry, ensure_ascii=False, separators=(", ", ": "))
@@ -169,22 +199,30 @@ def render(geo, centroids):
     kommuner = []
     for k in geo["kommuner"]:
         lat, lon, radius = centroids[k["code"]]
-        kommuner.append({
+        entry = {
             "code": k["code"], "name": k["name"], "regionCode": k["regionCode"],
             "lat": lat, "lon": lon, "radiusKm": radius,
-        })
+        }
+        if k["code"] in websites:
+            entry["website"] = websites[k["code"]]
+        kommuner.append(entry)
     regions = ",\n".join(line(r) for r in geo["regions"])
     return '{"regions":[\n' + regions + '\n],"kommuner":[\n' + ",\n".join(line(k) for k in kommuner) + "\n]}\n"
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="Add kommun centroids to the app's sweden.json.")
-    parser.add_argument("source", help=f"SCB boundaries zip, downloaded from {SOURCE_URL}")
+    parser = argparse.ArgumentParser(description="Add kommun centroids and websites to the app's sweden.json.")
+    parser.add_argument(
+        "source", nargs="?",
+        help=f"SCB boundaries zip, downloaded from {SOURCE_URL}; without it the centroids in the file are kept",
+    )
     parser.add_argument("--geo", default=DEFAULT_GEO, help="sweden.json to update in place")
+    parser.add_argument("--websites", default=DEFAULT_WEBSITES, help="kommuner.json with each kommun's website")
     args = parser.parse_args(argv)
     geo_path = Path(args.geo)
     geo = json.loads(geo_path.read_text(encoding="utf-8"))
-    centroids = kommun_centroids(*read_source(args.source))
-    geo_path.write_text(render(geo, centroids), encoding="utf-8")
-    print(f"wrote {len(centroids)} centroids to {geo_path}", file=sys.stderr)
+    centroids = kommun_centroids(*read_source(args.source)) if args.source else existing_centroids(geo)
+    websites = kommun_websites(json.loads(Path(args.websites).read_text(encoding="utf-8")))
+    geo_path.write_text(render(geo, centroids, websites), encoding="utf-8")
+    print(f"wrote {len(centroids)} centroids and {len(websites)} websites to {geo_path}", file=sys.stderr)
     return 0

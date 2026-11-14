@@ -28,37 +28,42 @@ enum class ServiceAudience(val key: String?) {
 
 /**
  * Where a service is offered, as its card badge shows it. [Region] and [Kommun] carry the name of the user's chosen
- * län or kommun, or null when none is chosen (the badge then reads "your county" / "your municipality").
+ * län or kommun, or null when none is chosen (the badge then reads "your county" / "your municipality"). A template
+ * kommun service also carries the chosen kommun's [Kommun.website], which [KommunLink] opens; null when the kommun has
+ * none listed or none is chosen.
  */
 sealed interface ServicePlace {
     data object National : ServicePlace
 
     data class Region(val name: String?) : ServicePlace
 
-    data class Kommun(val name: String?) : ServicePlace
+    data class Kommun(val name: String?, val website: String? = null) : ServicePlace
 }
 
 /** One card of the Tjänster tab: the [service] and where it is offered. */
 data class ServiceEntry(val service: ServiceSummary, val place: ServicePlace)
 
 /**
- * The user's chosen län and kommun with their names, which label the template services. A code whose name is
- * unknown (not in the bundled geo file) counts as not chosen.
+ * The user's chosen län and kommun with their names, which label the template services, and the kommun's website,
+ * which template kommun services link to. A code whose name is unknown (not in the bundled geo file) counts as not
+ * chosen, and so has no website.
  */
 data class ServiceLocality(
     val regionCode: String? = null,
     val regionName: String? = null,
     val kommunCode: String? = null,
     val kommunName: String? = null,
+    val kommunWebsite: String? = null,
 ) {
     companion object {
         val None = ServiceLocality()
 
-        fun of(locality: Locality, regionName: String?, kommunName: String?) = ServiceLocality(
+        fun of(locality: Locality, regionName: String?, kommunName: String?, kommunWebsite: String? = null) = ServiceLocality(
             regionCode = locality.regionCode.takeIf { regionName != null },
             regionName = regionName,
             kommunCode = locality.kommunCode.takeIf { kommunName != null },
             kommunName = kommunName,
+            kommunWebsite = kommunWebsite.takeIf { kommunName != null },
         )
     }
 }
@@ -66,7 +71,8 @@ data class ServiceLocality(
 /**
  * The services the tab lists for [locality], in catalogue order. National services are always listed. A template
  * service (one every region or kommun must offer) is listed for everyone and labelled with the chosen län or
- * kommun. A service of one region or kommun is listed only when it is the chosen one; an unknown scope is skipped.
+ * kommun; a kommun template also carries the chosen kommun's website. A service of one region or kommun is listed only
+ * when it is the chosen one; an unknown scope is skipped.
  */
 fun serviceEntries(services: List<ServiceSummary>, locality: ServiceLocality): List<ServiceEntry> = services.mapNotNull { service ->
     val place = when (service.scope) {
@@ -77,7 +83,7 @@ fun serviceEntries(services: List<ServiceSummary>, locality: ServiceLocality): L
             else -> null
         }
         SCOPE_MUNICIPALITY -> when {
-            service.template -> ServicePlace.Kommun(locality.kommunName)
+            service.template -> ServicePlace.Kommun(locality.kommunName, locality.kommunWebsite)
             locality.kommunCode != null && service.municipalityCode == locality.kommunCode -> ServicePlace.Kommun(locality.kommunName)
             else -> null
         }

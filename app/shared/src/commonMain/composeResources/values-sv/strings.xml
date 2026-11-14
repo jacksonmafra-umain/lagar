@@ -131,6 +131,7 @@
     <string name="services_place_national">Nationell</string>
     <string name="services_place_region_any">Ditt län</string>
     <string name="services_place_kommun_any">Din kommun</string>
+    <string name="services_kommun_link">Hos %1$s</string>
     <string name="services_no_match_title">Inga tjänster matchar</string>
     <string name="services_no_match_text">Prova ett annat ord, ämne eller en annan målgrupp.</string>
     <string name="splash_tagline">Hela Sveriges regelverk på ett ställe</string>

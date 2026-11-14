@@ -1,4 +1,4 @@
-"""Entry point: python3 -I collector/centroids.py <scb-boundaries.zip> [--geo sweden.json]."""
+"""Entry point: python3 -I collector/centroids.py [<scb-boundaries.zip>] [--geo sweden.json] [--websites kommuner.json]."""
 
 import os
 import sys
