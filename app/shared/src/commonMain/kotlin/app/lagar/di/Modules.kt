@@ -71,7 +71,7 @@ fun appModule(config: DataSourceConfig) = module {
     single<SearchIndexSource> { if (config.useSample) SampleRepository() else HttpRepository(get(), config.baseUrl) }
     single { FullTextIndex(get()) }
     single { SearchService(get(), get()) }
-    viewModel { HierarkiViewModel(get()) }
+    viewModel { HierarkiViewModel(get(), get()) }
     viewModel { HomeViewModel(get(), get(), get(), get(), get()) }
     viewModel { OnboardingViewModel(get(), get()) }
     viewModel { (layer: String, type: String?, ministry: MinistryFilter?, locality: LocalityFilter?) ->

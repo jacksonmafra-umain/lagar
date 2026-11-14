@@ -4,6 +4,7 @@ import app.lagar.domain.DisplayLayer
 import app.lagar.settings.Bookmark
 import app.lagar.settings.Note
 import app.lagar.settings.SavedProvision
+import app.lagar.settings.SavedService
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -74,5 +75,32 @@ class SavedItemsTest {
     @Test
     fun emptyGroupsAreDropped() {
         assertTrue(savedGroups(listOf(act), emptyList(), emptyList(), SavedFilter.Provisions).isEmpty())
+    }
+    private val parental = SavedService("service-foraldrapenning", "Föräldrapenning", "Försäkringskassan")
+    private val fTax = SavedService("service-f-skatt", "Ansök om F-skatt", "Skatteverket")
+
+    @Test
+    fun servicesFormTheServiceLevelBeforeUnplacedDocuments() {
+        val groups = savedGroups(listOf(unplaced, act), emptyList(), emptyList(), services = listOf(fTax, parental))
+        assertEquals(listOf(DisplayLayer.SfsAct, DisplayLayer.Service, null), groups.map { it.layer })
+        assertEquals(listOf("s:service-f-skatt", "s:service-foraldrapenning"), groups[1].entries.map { it.key })
+        assertEquals(parental, (groups[1].entries[1] as SavedEntry.Service).service)
+    }
+
+    @Test
+    fun theServicesFilterListsOnlyServices() {
+        fun keys(f: SavedFilter) =
+            savedGroups(listOf(act), listOf(murder), listOf(Note(act, "Exam")), f, services = listOf(parental)).flatMap { g -> g.entries.map { it.key } }
+        assertEquals(listOf("s:service-foraldrapenning"), keys(SavedFilter.Services))
+        assertEquals(listOf("d:sfs-1962-700"), keys(SavedFilter.Documents))
+        assertEquals(listOf("d:sfs-1962-700", "p:sfs-1962-700#k3p1", "s:service-foraldrapenning"), keys(SavedFilter.All))
+    }
+
+    @Test
+    fun searchMatchesAServiceTitleOrIssuer() {
+        fun keys(q: String) = savedGroups(listOf(act), emptyList(), emptyList(), query = q, services = listOf(parental, fTax))
+            .flatMap { g -> g.entries.map { it.key } }
+        assertEquals(listOf("s:service-f-skatt"), keys("skatteverket"))
+        assertEquals(listOf("s:service-foraldrapenning"), keys("FÖRÄLDRA"))
     }
 }

@@ -311,9 +311,15 @@ fun AppShell(
                                     layer.apiType?.let { navigateWhenResumed(Ministries(layer.apiLayer, it)) }
                                 },
                                 onOpenDocument = { navigateWhenResumed(Reader(it)) },
+                                onOpenServices = { selectTab(Tab.Services) },
                             )
                         }
-                        composable<Sparade> { SparadeRoute(onOpen = { id, anchor -> navigateWhenResumed(Reader(id, anchor)) }) }
+                        composable<Sparade> {
+                            SparadeRoute(
+                                onOpen = { id, anchor -> navigateWhenResumed(Reader(id, anchor)) },
+                                onOpenService = { navigateWhenResumed(Service(it)) },
+                            )
+                        }
                         composable<Tjanster> { TjansterRoute(onOpenService = { navigateWhenResumed(Service(it)) }) }
                         composable<Service> { entry ->
                             ServiceDetailRoute(

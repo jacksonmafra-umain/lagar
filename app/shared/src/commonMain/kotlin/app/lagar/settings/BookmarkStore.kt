@@ -2,6 +2,7 @@ package app.lagar.settings
 
 import app.lagar.data.DocumentMeta
 import app.lagar.data.ListingItem
+import app.lagar.data.ServiceSummary
 import app.lagar.domain.DisplayLayer
 import com.russhwolf.settings.Settings
 import kotlinx.coroutines.flow.StateFlow
@@ -44,15 +45,27 @@ data class SavedProvision(
 }
 
 /**
- * Device-local saved items, newest first: whole documents ([bookmarks], stored under `bookmarks` as before) and
- * single provisions ([provisions], under `saved_provisions`).
+ * One saved public service ([id], `service-<slug>`): what Sparade needs to list it without the network. [title] is
+ * Swedish as the responsible body publishes it.
+ */
+@Serializable
+data class SavedService(val id: String, val title: String, val issuer: String)
+
+fun ServiceSummary.toSavedService(): SavedService = SavedService(id, title, issuer)
+
+/**
+ * Device-local saved items, newest first: whole documents ([bookmarks], stored under `bookmarks` as before), single
+ * provisions ([provisions], under `saved_provisions`) and public services ([services], under `saved_services`, kept
+ * apart so the documents' stored format and every reader of [bookmarks] stay as they were).
  */
 class BookmarkStore(settings: Settings) {
     private val documents = StoredList(settings, KEY, Bookmark.serializer())
     private val savedProvisions = StoredList(settings, KEY_PROVISIONS, SavedProvision.serializer())
+    private val savedServices = StoredList(settings, KEY_SERVICES, SavedService.serializer())
 
     val bookmarks: StateFlow<List<Bookmark>> = documents.items
     val provisions: StateFlow<List<SavedProvision>> = savedProvisions.items
+    val services: StateFlow<List<SavedService>> = savedServices.items
 
     fun isBookmarked(id: String): Boolean = documents.value.any { it.id == id }
 
@@ -77,6 +90,17 @@ class BookmarkStore(settings: Settings) {
     fun restoreProvision(removed: Removed<SavedProvision>) =
         savedProvisions.restore(removed) { it.isAt(removed.item.document.id, removed.item.anchor) }
 
+    fun isServiceSaved(id: String): Boolean = savedServices.value.any { it.id == id }
+
+    fun toggleService(s: SavedService) {
+        if (removeService(s.id) == null) savedServices.set(listOf(s) + savedServices.value)
+    }
+
+    /** Removes the saved service [id]; the result undoes it through [restoreService]. */
+    fun removeService(id: String): Removed<SavedService>? = savedServices.remove { it.id == id }
+
+    fun restoreService(removed: Removed<SavedService>) = savedServices.restore(removed) { it.id == removed.item.id }
+
     /**
      * Replaces the stored copy of document [b], and the snapshot kept with its saved provisions, with fresher data,
      * keeping positions; does nothing for a document that is not saved.
@@ -93,5 +117,6 @@ class BookmarkStore(settings: Settings) {
     private companion object {
         const val KEY = "bookmarks"
         const val KEY_PROVISIONS = "saved_provisions"
+        const val KEY_SERVICES = "saved_services"
     }
 }

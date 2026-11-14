@@ -58,13 +58,15 @@ private enum class HierarkiView { Layers, Pyramid }
 /**
  * Hierarki tab. [onOpenLayer] is called only for layers that have documents; [onBrowseByMinistry] only for
  * levels with a per-ministry index ([DisplayLayer.hasMinistryIndex]). On wide windows the layer's documents open in a
- * detail pane beside the list instead, and [onOpenDocument] opens one of them.
+ * detail pane beside the list instead, and [onOpenDocument] opens one of them. The service level opens the Tjänster
+ * tab through [onOpenServices] on every width.
  */
 @Composable
 fun HierarkiRoute(
     onOpenLayer: (DisplayLayer) -> Unit,
     onBrowseByMinistry: (DisplayLayer) -> Unit,
     onOpenDocument: (String) -> Unit,
+    onOpenServices: () -> Unit,
     viewModel: HierarkiViewModel = koinViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -73,6 +75,7 @@ fun HierarkiRoute(
     HierarkiScreen(
         state = state,
         onLayerClick = { if (it.count > 0) onOpenLayer(it.layer) else comingSoon = it.layer },
+        onOpenServices = onOpenServices,
         onBrowseByMinistry = { onBrowseByMinistry(it.layer) },
         selected = selected?.let { name -> DisplayLayer.entries.firstOrNull { it.name == name } },
         onSelectLayer = { if (it.count > 0) selected = it.layer.name else comingSoon = it.layer },
@@ -87,6 +90,7 @@ fun HierarkiRoute(
  * A "Lager" / "Pyramid" segmented switch above either the layer list or the norm pyramid. When [detail] is given and
  * the content is at least [ShellDimens.ListDetailMinWidth] wide, the list keeps [ShellDimens.ListPaneWidth] and the
  * [selected] layer (else the first with documents) shows in [detail] beside it; taps then go to [onSelectLayer].
+ * The service level is not a document list: a tap on it, in the list or the pyramid, calls [onOpenServices].
  */
 @Composable
 fun HierarkiScreen(
@@ -96,12 +100,15 @@ fun HierarkiScreen(
     selected: DisplayLayer? = null,
     onSelectLayer: (LayerSummary) -> Unit = onLayerClick,
     detail: (@Composable (DisplayLayer) -> Unit)? = null,
+    onOpenServices: () -> Unit = {},
 ) {
     val spacing = LagarTheme.spacing
     var view by rememberSaveable { mutableStateOf(HierarkiView.Layers) }
+    val layerClick: (LayerSummary) -> Unit = { if (it.layer == DisplayLayer.Service) onOpenServices() else onLayerClick(it) }
+    val selectLayer: (LayerSummary) -> Unit = { if (it.layer == DisplayLayer.Service) onOpenServices() else onSelectLayer(it) }
     LoadStateHost(state) { summaries, shell ->
         BoxWithConstraints(Modifier.fillMaxSize().maxContentWidth()) {
-            val open = selected ?: summaries.firstOrNull { it.count > 0 }?.layer
+            val open = selected ?: summaries.firstOrNull { it.count > 0 && it.layer != DisplayLayer.Service }?.layer
             if (detail != null && open != null && maxWidth >= ShellDimens.ListDetailMinWidth) {
                 Row(Modifier.fillMaxSize()) {
                     LayerPane(
@@ -109,7 +116,7 @@ fun HierarkiScreen(
                         view = view,
                         onViewChange = { view = it },
                         shell = shell,
-                        onLayerClick = onSelectLayer,
+                        onLayerClick = selectLayer,
                         onBrowseByMinistry = onBrowseByMinistry,
                         selected = open,
                         modifier = Modifier.width(ShellDimens.ListPaneWidth),
@@ -136,7 +143,7 @@ fun HierarkiScreen(
                     view = view,
                     onViewChange = { view = it },
                     shell = shell,
-                    onLayerClick = onLayerClick,
+                    onLayerClick = layerClick,
                     onBrowseByMinistry = onBrowseByMinistry,
                     selected = null,
                     modifier = Modifier.fillMaxSize(),

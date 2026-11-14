@@ -212,6 +212,7 @@ Route: `Hierarki`. Code: `ui/hierarki/`. References: Stitch `lagar_normhierarki_
 | Browse SFS acts and ordinances by ministry: "By ministry" pill on their rows, from the API's per-ministry index | Done | #34 |
 | Browse agency, case law and other layers by issuer or court | Blocked: no data in those layers, and no per-issuer index yet | #38 |
 | List-detail from 840dp of content width: the layer list keeps 360dp and the selected layer's documents (first layer with documents by default) open in a pane beside it, without a back button; the selected row has a solid accent outline | Done | #35 |
+| Service level (9): counts the services of the catalogue (`service/catalog.json` total; the index count when the catalogue fails) and opens the Tjänster tab from the list and the pyramid, on every width | Done | #804 |
 
 ### By ministry
 
@@ -274,6 +275,7 @@ Route: `Sparade`. Code: `ui/sparade/SparadeScreen.kt`. Reference: architecture �
 | Repealed state kept on bookmarks | Missing | #21 |
 | Saved single provisions (label, document, excerpt) that open the reader at their §, and notes on documents and provisions | Done | #28 |
 | Grouping by level in hierarchy order, filter (all, documents, provisions, notes), search within saved items, undo snackbar after removing | Done | #28 |
+| Saved services (stored apart from documents under `saved_services`): the bookmark on the service detail saves one; Sparade lists them at the service level in the service colours (title in the `text` token, issuer), with a services filter; a row opens the service detail, removing one can be undone | Done | #804 |
 
 ## Tjänster
 
@@ -286,7 +288,7 @@ Route: `Tjanster`. Code: `ui/tjanster/TjansterScreen.kt`. Reference: layer 9. De
 | "Hos <kommun>" link (`KommunLink`) on kommun template services: opens the chosen kommun's website (from `kommuner.json`, bundled in `files/geo/sweden.json`) in the system browser; hidden when no kommun is chosen or it has no website | Done | #806 |
 | Service detail (route `Service(id)`, web path `/service/<id>`, `ui/tjanster/ServiceDetailScreen.kt`): title and lead as published (Swedish in every locale), issuer, channels, "Gå till tjänsten" opening `service_url` or else `source` in the system browser, the "Hos <kommun>" link on kommun templates, "Bygger på" norms in their layer colours that open the reader (repealed norms in the Repealed colours with the date), fetch date and the note that lagar is not the authority; opened from the catalogue and the reader's "Tjänster" section | Done | #802 |
 | Services in the reader: a "Tjänster" section of the services based on the open norm | Done: plan task 10 (see Reader) | #803 |
-| Bookmarks, Hierarki entry | Planned: plan task 11 | #804 |
+| Bookmarks (service detail and Sparade) and the Hierarki entry (service level opens this tab with its count) | Done: plan task 11 (see Sparade and Hierarki) | #804 |
 
 ## Settings
 

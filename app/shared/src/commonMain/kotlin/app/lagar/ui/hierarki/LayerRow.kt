@@ -29,8 +29,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
+import app.lagar.domain.DisplayLayer
 import app.lagar.i18n.documentCount
 import app.lagar.i18n.formatCount
+import app.lagar.i18n.serviceCount
 import app.lagar.resources.Res
 import app.lagar.resources.coming_soon
 import app.lagar.resources.hierarchy_by_ministry
@@ -117,7 +119,7 @@ fun LayerRow(
                 ) {
                     Text(
                         text = if (summary.count > 0) {
-                            documentCount(summary.count)
+                            layerCount(summary)
                         } else {
                             stringResource(Res.string.coming_soon)
                         },
@@ -164,3 +166,8 @@ private fun BrowseByMinistryPill(summary: LayerSummary, onClick: () -> Unit) {
 }
 
 private const val WRAP_FONT_SCALE = 1.3f
+
+/** The count line of a level: services at the service level, documents everywhere else. */
+@Composable
+internal fun layerCount(summary: LayerSummary): String =
+    if (summary.layer == DisplayLayer.Service) serviceCount(summary.count) else documentCount(summary.count)

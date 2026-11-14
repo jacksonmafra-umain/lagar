@@ -18,7 +18,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import app.lagar.designsystem.LagarTheme
-import app.lagar.i18n.documentCount
 import app.lagar.resources.Res
 import app.lagar.resources.coming_soon
 import app.lagar.ui.common.level
@@ -71,7 +70,7 @@ private fun Band(summary: LayerSummary, onClick: () -> Unit, modifier: Modifier)
                 )
                 if (summary.count > 0) {
                     Text(
-                        text = documentCount(summary.count),
+                        text = layerCount(summary),
                         style = LagarTheme.type.labelSm,
                         color = layers.onTint(key),
                         textAlign = TextAlign.Center,

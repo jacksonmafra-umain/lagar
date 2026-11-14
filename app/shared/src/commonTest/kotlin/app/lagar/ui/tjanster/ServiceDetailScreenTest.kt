@@ -4,13 +4,17 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.UriHandler
 import androidx.compose.ui.test.ComposeUiTest
 import androidx.compose.ui.test.ExperimentalTestApi
+import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.runComposeUiTest
@@ -18,10 +22,15 @@ import androidx.compose.ui.unit.dp
 import app.lagar.data.ServiceNormRef
 import app.lagar.designsystem.LagarTheme
 import app.lagar.domain.LoadState
+import app.lagar.settings.BookmarkStore
+import app.lagar.settings.SavedService
+import app.lagar.settings.toSavedService
 import app.lagar.ui.IgnoreOnWasm
 import app.lagar.ui.UiTest
+import com.russhwolf.settings.MapSettings
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 @IgnoreOnWasm
 @OptIn(ExperimentalTestApi::class)
@@ -48,6 +57,7 @@ class ServiceDetailScreenTest : UiTest() {
         detail: ServiceDetail,
         uriHandler: UriHandler = RecordingUriHandler(),
         onOpenDocument: (String) -> Unit = {},
+        store: BookmarkStore? = null,
     ) {
         setContent {
             LagarTheme(darkTheme = false) {
@@ -56,7 +66,20 @@ class ServiceDetailScreenTest : UiTest() {
                         Modifier
                             .wrapContentSize(Alignment.TopStart, unbounded = true)
                             .requiredSize(width = 400.dp, height = 1600.dp),
-                    ) { ServiceDetailScreen(LoadState.Loaded(detail), onBack = {}, onOpenDocument = onOpenDocument) }
+                    ) {
+                        if (store == null) {
+                            ServiceDetailScreen(LoadState.Loaded(detail), onBack = {}, onOpenDocument = onOpenDocument)
+                        } else {
+                            val saved by store.services.collectAsState()
+                            ServiceDetailScreen(
+                                LoadState.Loaded(detail),
+                                onBack = {},
+                                onOpenDocument = onOpenDocument,
+                                saved = saved.any { it.id == detail.service.id },
+                                onToggleSaved = { store.toggleService(it.toSavedService()) },
+                            )
+                        }
+                    }
                 }
             }
         }
@@ -113,6 +136,23 @@ class ServiceDetailScreenTest : UiTest() {
         show(ServiceDetail(bygglov, null, null, ServicePlace.Kommun("Stockholm", "https://start.stockholm/")), handler)
         onNodeWithText("Visit Stockholm").performClick()
         assertEquals(listOf("https://start.stockholm/"), handler.opened)
+    }
+
+    @Test
+    fun theBookmarkSavesAndRemovesTheService() = runComposeUiTest {
+        val store = BookmarkStore(MapSettings())
+        show(ServiceDetail(foraldrapenning, lead, null), store = store)
+        onNodeWithContentDescription("Save Föräldrapenning").performClick()
+        assertEquals(listOf(SavedService("service-foraldrapenning", "Föräldrapenning", "Försäkringskassan")), store.services.value)
+        onNodeWithContentDescription("Remove Föräldrapenning from saved").performClick()
+        assertTrue(store.services.value.isEmpty())
+        onNodeWithContentDescription("Save Föräldrapenning").assertExists()
+    }
+
+    @Test
+    fun noBookmarkWithoutASaveAction() = runComposeUiTest {
+        show(ServiceDetail(foraldrapenning, lead, null))
+        assertTrue(onAllNodesWithContentDescription("Save Föräldrapenning").fetchSemanticsNodes().isEmpty())
     }
 }
 
