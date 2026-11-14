@@ -72,7 +72,7 @@ Additive within v1, as with the earlier additions:
 
 - `service/index-<page>.json` and `service/public_service/index-<page>.json`: the existing listing shape.
 - `docs/service-<slug>.json`: the existing document shape; the new frontmatter fields are added to `meta` for every document, `null` where they do not apply.
-- `service/catalog.json` *(call)*: every service in one file (a few hundred at most) with `id`, `title`, `issuer`, `audience`, `topics`, `channels`, `scope`, `template`, `region_code`, `municipality_code`, `source`, `service_url` and `based_on` resolved to `{id, title, type, layer}`. The tab reads this one file and filters on the device, so it needs no per-topic listings.
+- `service/catalog.json` *(call)*: every service in one file (a few hundred at most) with `id`, `title`, `issuer`, `audience`, `topics`, `channels`, `scope`, `template`, `region_code`, `municipality_code`, `source`, `service_url` and `based_on` resolved to `{id, title, type, layer, repealed}`. The tab reads this one file and filters on the device, so it needs no per-topic listings.
 - `service/by-norm/index.json`: a map from document id to the ids of the services based on it, for the reader's "Tjänster" section. Only norms with at least one service are keys.
 - Search: services join the search index as their own group, so a search for "föräldrapenning" finds the service as well as the law.
 

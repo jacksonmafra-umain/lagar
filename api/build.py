@@ -47,8 +47,8 @@ CATALOG_FIELDS = (
     "id", "title", "issuer", "audience", "topics", "channels", "scope", "template", "region_code",
     "municipality_code", "source", "service_url", "based_on",
 )
-# The keys of a resolved `based_on` entry.
-BASED_ON_FIELDS = ("id", "title", "type", "layer")
+# The keys of a resolved `based_on` entry; `repealed` lets a client mark a norm that no longer applies.
+BASED_ON_FIELDS = ("id", "title", "type", "layer", "repealed")
 
 # Per-ministry indexes are built for the series of these layers (docs/api.md, "by ministry").
 MINISTRY_LAYERS = ("sfs",)
@@ -255,7 +255,7 @@ def _services(out, docs, written):
     """`service/catalog.json` and `service/by-norm/index.json`, also when the layer is empty.
 
     The catalogue holds every service in listing order (slug a to z) with `based_on` resolved to
-    `{id, title, type, layer}`; the index maps each norm a service is based on to the services' ids.
+    `{id, title, type, layer, repealed}`; the index maps each norm a service is based on to the services' ids.
     """
     by_id = {meta["id"]: meta for meta, _ in docs}
     services = _sorted([meta for meta, _ in docs if meta["type"] == "public_service"], "service")
