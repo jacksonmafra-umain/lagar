@@ -2,6 +2,7 @@ package app.lagar.settings
 
 import app.lagar.data.DocumentMeta
 import app.lagar.data.ListingItem
+import app.lagar.data.ServiceSummary
 import app.lagar.domain.DisplayLayer
 import com.russhwolf.settings.MapSettings
 import kotlin.test.Test
@@ -212,5 +213,68 @@ class BookmarkStoreTest {
         assertEquals(listOf(bookmark("2"), fresh), store.provisions.value.map { it.document })
         assertTrue(store.bookmarks.value.isEmpty())
         assertEquals(fresh, BookmarkStore(settings).provisions.value.last().document)
+    }
+    private fun service(slug: String) = SavedService("service-$slug", "Tjänst $slug", "Försäkringskassan")
+
+    @Test
+    fun serviceToggleAddsThenRemovesNewestFirst() {
+        val store = BookmarkStore(MapSettings())
+        store.toggleService(service("a"))
+        store.toggleService(service("b"))
+        assertTrue(store.isServiceSaved("service-a"))
+        assertEquals(listOf("service-b", "service-a"), store.services.value.map { it.id })
+        store.toggleService(service("a"))
+        assertFalse(store.isServiceSaved("service-a"))
+        assertEquals(listOf("service-b"), store.services.value.map { it.id })
+    }
+
+    @Test
+    fun servicesPersistApartFromDocuments() {
+        val settings = MapSettings()
+        val store = BookmarkStore(settings)
+        store.toggle(bookmark("1"))
+        store.toggleService(service("a"))
+        assertFalse(store.isBookmarked("service-a"))
+        assertEquals(listOf(bookmark("1")), store.bookmarks.value)
+        val reloaded = BookmarkStore(settings)
+        assertEquals(listOf(service("a")), reloaded.services.value)
+        assertEquals(listOf(bookmark("1")), reloaded.bookmarks.value)
+        assertFalse(settings.getString("bookmarks", "").contains("service-a"))
+    }
+
+    @Test
+    fun removeThenRestoreService() {
+        val store = BookmarkStore(MapSettings())
+        listOf("a", "b", "c").forEach { store.toggleService(service(it)) }
+        val removed = store.removeService("service-b")!!
+        assertEquals(listOf("service-c", "service-a"), store.services.value.map { it.id })
+        store.restoreService(removed)
+        assertEquals(listOf("service-c", "service-b", "service-a"), store.services.value.map { it.id })
+        assertNull(store.removeService("service-missing"))
+    }
+
+    @Test
+    fun dataSavedBeforeServicesStillLoads() {
+        val settings = MapSettings()
+        settings.putString("bookmarks", """[{"id":"1","title":"Title 1","number":"2020:1","type":"act","layer":"sfs"}]""")
+        settings.putString(
+            "saved_provisions",
+            """[{"document":{"id":"1","title":"Title 1","number":"2020:1","type":"act","layer":"sfs"},"anchor":"p1","label":"1 §"}]""",
+        )
+        val store = BookmarkStore(settings)
+        assertEquals(listOf(bookmark("1")), store.bookmarks.value)
+        assertEquals(listOf(SavedProvision(bookmark("1"), "p1", "1 §")), store.provisions.value)
+        assertTrue(store.services.value.isEmpty())
+    }
+
+    @Test
+    fun aServiceKeepsItsTitleAndIssuer() {
+        assertEquals(
+            SavedService("service-foraldrapenning", "Föräldrapenning", "Försäkringskassan"),
+            ServiceSummary(
+                "service-foraldrapenning", "Föräldrapenning", "Försäkringskassan", listOf("private"), listOf("family"),
+                listOf("online"), "national", false, null, null, "https://example.se", null, emptyList(),
+            ).toSavedService(),
+        )
     }
 }
