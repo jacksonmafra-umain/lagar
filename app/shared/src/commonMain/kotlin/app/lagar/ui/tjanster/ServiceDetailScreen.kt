@@ -2,12 +2,14 @@ package app.lagar.ui.tjanster
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,6 +19,7 @@ import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -30,14 +33,18 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.UriHandler
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import app.lagar.data.ServiceNormRef
+import app.lagar.data.ServiceSummary
 import app.lagar.designsystem.GlassTier
 import app.lagar.designsystem.LagarTheme
 import app.lagar.designsystem.generated.LayerKey
@@ -45,6 +52,10 @@ import app.lagar.designsystem.glass
 import app.lagar.domain.DisplayLayer
 import app.lagar.domain.LoadState
 import app.lagar.resources.Res
+import app.lagar.resources.bookmark_add
+import app.lagar.resources.bookmark_remove
+import app.lagar.resources.ic_bookmark
+import app.lagar.resources.ic_bookmark_filled
 import app.lagar.resources.ic_chevron_right
 import app.lagar.resources.ic_info
 import app.lagar.resources.ic_link
@@ -58,6 +69,8 @@ import app.lagar.resources.service_disclaimer
 import app.lagar.resources.service_fetched_on
 import app.lagar.resources.service_norm_repealed_on
 import app.lagar.resources.service_open
+import app.lagar.settings.BookmarkStore
+import app.lagar.settings.toSavedService
 import app.lagar.ui.common.BackTopBar
 import app.lagar.ui.common.ErrorState
 import app.lagar.ui.common.LagarButton
@@ -73,28 +86,47 @@ import dev.chrisbanes.haze.hazeSource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
+import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
 
-/** One public service ([id], `service-<slug>`); [onOpenDocument] opens a norm it is based on in the reader. */
+/**
+ * One public service ([id], `service-<slug>`); [onOpenDocument] opens a norm it is based on in the reader. The
+ * bookmark in the top bar saves the service to Sparade.
+ */
 @Composable
 fun ServiceDetailRoute(
     id: String,
     onBack: () -> Unit,
     onOpenDocument: (String) -> Unit,
     viewModel: ServiceDetailViewModel = koinViewModel(key = "service/" + id) { parametersOf(id) },
+    store: BookmarkStore = koinInject(),
 ) {
     val state by viewModel.state.collectAsState()
-    ServiceDetailScreen(state, onBack, onOpenDocument)
+    val saved by store.services.collectAsState()
+    ServiceDetailScreen(
+        state = state,
+        onBack = onBack,
+        onOpenDocument = onOpenDocument,
+        saved = saved.any { it.id == id },
+        onToggleSaved = { store.toggleService(it.toSavedService()) },
+    )
 }
 
 /**
  * The service detail: title and lead as the responsible body publishes them (Swedish in every locale), the issuer,
  * the channels, "Gå till tjänsten" (the e-service when there is one, else the official page, in the system browser),
  * the norms it is based on in their layer colours, the fetch date and the note that lagar is not the authority.
+ * Once the service has loaded, a bookmark in the top bar shows whether it is [saved] and calls [onToggleSaved].
  */
 @Composable
-fun ServiceDetailScreen(state: LoadState<ServiceDetail>, onBack: () -> Unit, onOpenDocument: (String) -> Unit) {
+fun ServiceDetailScreen(
+    state: LoadState<ServiceDetail>,
+    onBack: () -> Unit,
+    onOpenDocument: (String) -> Unit,
+    saved: Boolean = false,
+    onToggleSaved: ((ServiceSummary) -> Unit)? = null,
+) {
     val colors = LagarTheme.colors
     val hazeState = remember { HazeState() }
     var headerHeight by rememberBackTopBarHeight()
@@ -120,6 +152,11 @@ fun ServiceDetailScreen(state: LoadState<ServiceDetail>, onBack: () -> Unit, onO
         }
         BackTopBar(hazeState, onBack, { headerHeight = it }, Modifier.align(Alignment.TopCenter)) {
             LayerBadge(DisplayLayer.Service, stringResource(DisplayLayer.Service.nameRes()))
+            val loaded = (state as? LoadState.Loaded)?.value?.service
+            if (loaded != null && onToggleSaved != null) {
+                Spacer(Modifier.weight(1f))
+                SaveAction(loaded, saved, onToggleSaved)
+            }
         }
     }
 }
@@ -175,6 +212,26 @@ private fun ServiceDetailContent(detail: ServiceDetail, onOpenDocument: (String)
             }
             AuthorityNote(detail.fetchedOn)
         }
+    }
+}
+
+/** The bookmark of the top bar: filled in the service level's text colour while the service is saved. */
+@Composable
+private fun SaveAction(service: ServiceSummary, saved: Boolean, onToggle: (ServiceSummary) -> Unit) {
+    val description = stringResource(if (saved) Res.string.bookmark_remove else Res.string.bookmark_add, service.title)
+    Box(
+        modifier = Modifier
+            .size(ShellDimens.TouchTarget)
+            .clip(CircleShape)
+            .clickable(role = Role.Button) { onToggle(service) }
+            .semantics { contentDescription = description },
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(
+            painterResource(if (saved) Res.drawable.ic_bookmark_filled else Res.drawable.ic_bookmark),
+            contentDescription = null,
+            tint = if (saved) LagarTheme.layers.onTint(LayerKey.Service) else LagarTheme.colors.onSurfaceVariant,
+        )
     }
 }
 
