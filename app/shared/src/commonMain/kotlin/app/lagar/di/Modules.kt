@@ -30,6 +30,7 @@ import app.lagar.ui.list.MinistryFilter
 import app.lagar.ui.onboarding.OnboardingViewModel
 import app.lagar.ui.reader.ReaderViewModel
 import app.lagar.ui.search.SearchViewModel
+import app.lagar.ui.tjanster.ServiceDetailViewModel
 import app.lagar.ui.tjanster.TjansterViewModel
 import com.russhwolf.settings.Settings
 import io.ktor.client.HttpClient
@@ -80,4 +81,5 @@ fun appModule(config: DataSourceConfig) = module {
     viewModel { (id: String) -> ReaderViewModel(get(), get(), id, get(), serviceRepository = get()) }
     viewModel { (initial: SearchQuery) -> SearchViewModel(get(), get(), initial) }
     viewModel { TjansterViewModel(get(), get(), get()) }
+    viewModel { (id: String) -> ServiceDetailViewModel(get(), get(), get(), get(), id) }
 }
