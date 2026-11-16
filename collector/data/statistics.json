@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-14T12:18:59Z",
- "documents": 54903,
+ "generated_at": "2026-11-16T13:20:13Z",
+ "documents": 54915,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -203,23 +203,23 @@
    }
   },
   "region": {
-   "documents": 11658,
+   "documents": 11670,
    "types": {
     "county_regulation": {
-     "documents": 11658,
-     "sections": 14168,
-     "words": 11004808
+     "documents": 11670,
+     "sections": 14169,
+     "words": 11010105
     }
    },
    "issuers": 21,
    "text": {
-    "web": 420,
-    "pdf": 10777,
+    "web": 421,
+    "pdf": 10787,
     "ocr": 428,
-    "none": 33
+    "none": 34
    },
    "hosts": {
-    "lansstyrelsen.se": 11658
+    "lansstyrelsen.se": 11670
    }
   },
   "municipality": {
@@ -561,10 +561,10 @@
   }
  },
  "text": {
-  "web": 32527,
-  "pdf": 20415,
+  "web": 32528,
+  "pdf": 20425,
   "ocr": 1494,
-  "none": 467
+  "none": 468
  },
  "issuers": {
   "agency": 77,
@@ -601,11 +601,11 @@
   },
   "region": {
    "issuers": 21,
-   "documents": 11598,
+   "documents": 11610,
    "issuers_with_scans": 15,
-   "scanned": 461,
+   "scanned": 462,
    "ocr": 428,
-   "still_without_text": 33
+   "still_without_text": 34
   },
   "sfs": {
    "issuers": 3,
@@ -1611,11 +1611,11 @@
    "none": 6
   },
   "region: Länsstyrelsen i Kalmar län": {
-   "documents": 1412,
+   "documents": 1413,
    "pdf": 1327,
    "ocr": 81,
-   "scanned": 85,
-   "none": 4
+   "scanned": 86,
+   "none": 5
   },
   "region: Länsstyrelsen i Kronobergs län": {
    "documents": 361,
@@ -1625,8 +1625,8 @@
    "pdf": 280
   },
   "region: Länsstyrelsen i Norrbottens län": {
-   "documents": 736,
-   "pdf": 734,
+   "documents": 742,
+   "pdf": 740,
    "ocr": 2,
    "scanned": 2
   },
@@ -1637,8 +1637,8 @@
    "pdf": 321
   },
   "region: Länsstyrelsen i Uppsala län": {
-   "documents": 390,
-   "pdf": 382,
+   "documents": 391,
+   "pdf": 383,
    "ocr": 8,
    "scanned": 8
   },
@@ -1655,8 +1655,8 @@
    "scanned": 14
   },
   "region: Länsstyrelsen i Västmanlands län": {
-   "documents": 164,
-   "pdf": 159,
+   "documents": 165,
+   "pdf": 160,
    "ocr": 5,
    "scanned": 5
   },
@@ -1691,7 +1691,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54903,
+   "documents": 54915,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
