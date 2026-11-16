@@ -366,6 +366,7 @@ fun AppShell(
                                 onBack = { navController.popBackStack() },
                                 onOpenDocument = { navigateWhenResumed(Reader(it)) },
                                 onOpenAdvancedSearch = { navigateWhenResumed(AdvancedSearch) },
+                                onOpenService = { navigateWhenResumed(Service(it)) },
                                 focusRequests = searchFocusRequests,
                             )
                         }

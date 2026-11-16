@@ -125,13 +125,17 @@ import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
 
-/** Search results for the query carried by [route]; typing in the top bar refines it. */
+/**
+ * Search results for the query carried by [route]; typing in the top bar refines it. [onOpenService] opens a service
+ * from the "Tjänster" section of the reader pane beside the results.
+ */
 @Composable
 fun SearchRoute(
     route: Search,
     onBack: () -> Unit,
     onOpenDocument: (String) -> Unit,
     onOpenAdvancedSearch: () -> Unit,
+    onOpenService: (String) -> Unit = {},
     focusRequests: Int = 0,
     viewModel: SearchViewModel = koinViewModel(key = route.toString()) { parametersOf(route.toQuery()) },
 ) {
@@ -159,7 +163,7 @@ fun SearchRoute(
         focusRequests = focusRequests,
         opened = opened,
         onSelect = { opened = it },
-        detail = { id -> ReaderRoute(id = id, onBack = {}, onOpenDocument = onOpenDocument) },
+        detail = { id -> ReaderRoute(id = id, onBack = {}, onOpenDocument = onOpenDocument, onOpenService = onOpenService) },
     )
     if (showScopeSheet) ScopeSheet(onDismiss = { showScopeSheet = false })
 }
