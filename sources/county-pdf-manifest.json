@@ -9443,6 +9443,21 @@
       "published": "2026-11-06"
     },
     {
+      "detail_url": "https://www.lansstyrelsen.se/uppsala/om-oss/om-lansstyrelsen-i-uppsala-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 109006,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:13:24Z",
+          "sha256": "786cb71db1280328950ef1260471c85a731b2d1e4fa29ac656cf50fd4b517a55",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.7d0ff34f1a1c913c5211aacf/1794554868302/03FS%202026_17%20F%C3%B6reskrifter%20avseende%20%C3%96rsta%20naturreservat%20i%20%C3%96sthammars%20kommun.pdf"
+        }
+      ],
+      "number": "03FS 2026:17",
+      "published": "2026-11-16"
+    },
+    {
       "detail_url": "https://www.lansstyrelsen.se/sodermanland/om-oss/om-lansstyrelsen-i-sodermanlands-lan/lanets-forfattningssamling.html",
       "files": [
         {
@@ -19245,10 +19260,18 @@
         {
           "bytes": 528524,
           "content_type": "application/pdf",
-          "retrieved_at": "2026-11-09T13:27:06Z",
+          "retrieved_at": "2026-11-16T13:13:48Z",
           "sha256": "259aadabf7129cf3b683c981d3b87d6af641a0c07c99bc6ce0a547d2d3810e51",
           "text": "extracted",
           "url": "https://www.lansstyrelsen.se/download/18.7fc758001a1a1a5b53017cf6/1793882188321/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Sk%C3%A4rl%C3%B6tamarkens%20naturreservat%20i%20Norrk%C3%B6pings%20kommun%202026.31.pdf"
+        },
+        {
+          "bytes": 145151,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:13:48Z",
+          "sha256": "ae152cca90247818050fdcccaa03118cde9c9e21485c536cba9ffbbbd30a6269",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.67690bda1a1a196827c5b589/1794312899707/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Sk%C3%A4rl%C3%B6tamarkens%20naturreservat%20i%20Norrk%C3%B6pings%20kommun%202026.31%20r%C3%A4ttelse.pdf"
         }
       ],
       "number": "05FS 2026:31",
@@ -19260,10 +19283,18 @@
         {
           "bytes": 373927,
           "content_type": "application/pdf",
-          "retrieved_at": "2026-11-09T13:27:09Z",
+          "retrieved_at": "2026-11-16T13:13:51Z",
           "sha256": "1ff57299d123e4e081d34942feb5ac6ef064a0d8bf25ba274b7cc7d282daf64e",
           "text": "extracted",
           "url": "https://www.lansstyrelsen.se/download/18.7fc758001a1a1a5b53017ccc/1793882165105/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Styrs%C3%B6%20naturreservat%20i%20S%C3%B6derk%C3%B6pings%20kommun%202026.32.pdf"
+        },
+        {
+          "bytes": 152883,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:13:51Z",
+          "sha256": "97d3fdcdfb1790819d10196070db0945e394639621494896865d3a9823214002",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.67690bda1a1a196827c5b5a8/1794313029513/L%C3%A4nsstyrelsen%20i%20%C3%96sterg%C3%B6tlands%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20bildande%20av%20Styrs%C3%B6%20naturreservat%20i%20S%C3%B6derk%C3%B6pings%20kommun%202026.32%20r%C3%A4ttelse.pdf"
         }
       ],
       "number": "05FS 2026:32",
@@ -28231,6 +28262,36 @@
       ],
       "number": "06FS 2026:11",
       "published": "2026-10-16"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 98581,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:13:59Z",
+          "sha256": "32c20e0e84c96bf6773aecd05163c678d88ff6b950bcab19851aaca473095ea5",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.7d0ff34f1a1c913c5211ba8a/1794562017351/06FS%202026-12%20F%C3%B6reskrifter%20f%C3%B6r%20Vista%20kulles%20naturreservat%20i%20J%C3%B6nk%C3%B6pings%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2026:12",
+      "published": "2026-11-13"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jonkoping/om-oss/om-lansstyrelsen-i-jonkopings-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 116735,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:14:02Z",
+          "sha256": "86c6e78340193b2e69cdd40d18500b986564e7a736cc2dcca85286fe0a302122",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.7d0ff34f1a1c913c5211be4f/1794562384022/06FS%202026-13%20F%C3%B6reskrifter%20om%20N%C3%B6djehulta%C3%A5ns%20naturreservat%20i%20Eksj%C3%B6%20kommun.pdf"
+        }
+      ],
+      "number": "06FS 2026:13",
+      "published": "2026-11-13"
     },
     {
       "detail_url": "https://www.lansstyrelsen.se/kronoberg/om-oss/om-lansstyrelsen-i-kronobergs-lan/lanets-forfattningssamling.html",
@@ -55426,6 +55487,21 @@
       ],
       "number": "08FS 2026:12",
       "published": "2026-09-14"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 3714610,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:14:19Z",
+          "sha256": "554b589cad800c3c99c299aa1a8500cdc3d66d99ad5bc897be684abd783ef834",
+          "text": "no text found by OCR",
+          "url": "https://www.lansstyrelsen.se/download/18.1da295db1a1a17147295887c/1794294871409/202613%20F%C3%B6reskrifter%20om%20undantag%20fr%C3%A5n%20terr%C3%A4ngk%C3%B6rningsf%C3%B6rbudet%20i%20samband%20med%20skyddsjakt%20i%20M%C3%B6rbyl%C3%A5nga%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:13",
+      "published": null
     },
     {
       "detail_url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
@@ -119596,6 +119672,29 @@
       "published": "2026-08-26"
     },
     {
+      "detail_url": "https://www.lansstyrelsen.se/vastmanland/om-oss/om-lansstyrelsen-i-vastmanlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 102549,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:16:05Z",
+          "sha256": "c084e8209616d4b2824fed85a1d59e5756d69659d289bdbcd60db7386a6667c7",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.54237d801a1a18634e25a8bc/1794312166628/19FS%202026-07%20Upph%20strandskydd%20TGA.pdf"
+        },
+        {
+          "bytes": 1850936,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:16:10Z",
+          "sha256": "8167afc2d6f0658d2ea4b7a76c6d32783bbaf79097bcef595683d27d2be431ae",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.54237d801a1a18634e25a95d/1794312245036/19FS%202026-07%20Bilaga%201%20Kartbild-TGA.pdf"
+        }
+      ],
+      "number": "19FS 2026:7",
+      "published": "2026-11-02"
+    },
+    {
       "detail_url": "https://www.lansstyrelsen.se/dalarna/om-oss/om-lansstyrelsen-i-dalarnas-lan/lanets-forfattningssamling.html",
       "files": [
         {
@@ -129699,6 +129798,20 @@
       ],
       "number": "21FS 2026:10",
       "published": "2026-10-01"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/gavleborg/om-oss/om-lansstyrelsen-i-gavleborgs-lan/lanets-forfattningssamling/forfattningar-2026/forfattningssamling-2026/2026-11-13-21fs-202611.html",
+      "files": [
+        {
+          "bytes": 426081,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:16:59Z",
+          "sha256": "1981a65e4ad35cd9a6592adad2b50d2f037aed4030526dd9b759e0a0f9477e7c",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef92eb7/1794405080159/21FS_2026-11_F%C3%B6rfattningssamling_Hilleviks-Tr%C3%B6djefj%C3%A4rden_nr-pdfA.pdf"
+        }
+      ],
+      "number": "21FS 2026:11",
+      "published": "2026-11-13"
     },
     {
       "detail_url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/lanets-forfattningssamling.html",
@@ -176581,6 +176694,96 @@
       ],
       "number": "25FS 2026:26",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 136886,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:17:39Z",
+          "sha256": "9f427fa795ff83a67e8d4ca27a2686947d0a7346dc1fda6d8a317281ded0ba75",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef9d7b7/1794481220633/25FS%202026_31%20A%2030%20L%C3%A4nsstyrelsen%20i%20Norrbottens%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Jalgga%20naturreservat%20i%20Arjeplogs%20kommun.pdf"
+        }
+      ],
+      "number": "25FS 2026:31",
+      "published": "2026-11-10"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 157588,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:17:41Z",
+          "sha256": "d3777e96b9c0720d2af9f1a7982e9c3612d1dcf1d0a3c6a851f61b66d99aa5eb",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef9d7b8/1794481220659/25FS%202026_32%20A%2031%20L%C3%A4nsstyrelsen%20i%20Norrbottens%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Pingisvaara%20naturreservat%20i%20Kiruna%20kommun.pdf"
+        }
+      ],
+      "number": "25FS 2026:32",
+      "published": "2026-11-10"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 472805,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:17:43Z",
+          "sha256": "cbcee50bfe4bc12555dc7c515253431200c6cb05a95fd0e37c989933b99aad4c",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef9f5ef/1794493308734/25FS%202026_33%20A%2032%20L%C3%A4nsstyrelsen%20i%20Norrbottens%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Lulep%20Tjievtjen%C3%A5jvve%20naturreservat%20i%20Arjeplogs%20och%20A(489-2025-35).pdf"
+        }
+      ],
+      "number": "25FS 2026:33",
+      "published": "2026-11-10"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 599128,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:17:47Z",
+          "sha256": "51ff70fed2c0af9bf742ccc8ee999349b8894d2e843fcfa33668715bdc622ea5",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef9f5f0/1794493308770/25FS%202026_34%20A%2033%20L%C3%A4nsstyrelsen%20i%20Norrbottens%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Svierkku%20naturreservat%20i%20G%C3%A4llivare%20kommun.pdf"
+        }
+      ],
+      "number": "25FS 2026:34",
+      "published": "2026-11-10"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 349802,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:17:49Z",
+          "sha256": "374b011c724c0a4bb454f3c66762b415c215fd9821052d008fbad6fa9707f353",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef9f5f1/1794493308809/25FS%202026_35%20A%2034%20L%C3%A4nsstyrelsen%20i%20Norrbottens%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Tj%C3%A5lmehedens%20naturreservat%20i%20Jokkmokks%20kommun.pdf"
+        }
+      ],
+      "number": "25FS 2026:35",
+      "published": "2026-11-10"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 97896,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-16T13:17:51Z",
+          "sha256": "5c09c2816d798ae7fc4b32826e5c60a05f86b292c4468c54e617e6eeabd5644d",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef9f5f2/1794493308838/25FS%202026_36%20A%2035%20L%C3%A4nsstyrelsen%20i%20Norrbottens%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20Revnask%C3%A1jdde%20naturreservat%20i%20Arvidsjaurs%20och%20Jokkmokks%20kommun.pdf"
+        }
+      ],
+      "number": "25FS 2026:36",
+      "published": "2026-11-10"
     }
   ],
   "source": "https://www.lansstyrelsen.se",
