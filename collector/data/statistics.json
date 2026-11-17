@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T13:20:13Z",
+ "generated_at": "2026-11-17T14:37:16Z",
  "documents": 54915,
  "layers": {
   "fundamental": {
@@ -27,13 +27,13 @@
    "types": {
     "act": {
      "documents": 3000,
-     "sections": 93765,
-     "words": 8807530
+     "sections": 93764,
+     "words": 8807433
     },
     "ordinance": {
      "documents": 6592,
      "sections": 101904,
-     "words": 6896594
+     "words": 6896585
     },
     "other_statute": {
      "documents": 1838,
