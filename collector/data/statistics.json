@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-17T15:03:25Z",
- "documents": 54950,
+ "generated_at": "2026-11-17T14:37:16Z",
+ "documents": 54915,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -27,13 +27,13 @@
    "types": {
     "act": {
      "documents": 3000,
-     "sections": 93765,
-     "words": 8807530
+     "sections": 93764,
+     "words": 8807433
     },
     "ordinance": {
      "documents": 6592,
      "sections": 101904,
-     "words": 6896594
+     "words": 6896585
     },
     "other_statute": {
      "documents": 1838,
@@ -223,18 +223,18 @@
    }
   },
   "municipality": {
-   "documents": 5636,
+   "documents": 5601,
    "types": {
     "municipal_regulation": {
-     "documents": 5636,
-     "sections": 45569,
-     "words": 12619915
+     "documents": 5601,
+     "sections": 45291,
+     "words": 12532323
     }
    },
    "issuers": 286,
    "text": {
-    "web": 200,
-    "pdf": 4983,
+    "web": 198,
+    "pdf": 4950,
     "ocr": 291,
     "none": 162
    },
@@ -245,35 +245,34 @@
     "pitea.se": 58,
     "boras.se": 56,
     "uddevalla.se": 54,
-    "lerum.se": 53,
-    "laholm.se": 51,
+    "lerum.se": 51,
+    "laholm.se": 50,
     "ale.se": 49,
     "lillaedet.se": 49,
     "bjurholm.se": 47,
     "arjeplog.se": 47,
-    "ockero.se": 44,
     "www4.goteborg.se": 43,
     "stenungsund.se": 42,
     "hoganas.se": 40,
     "orust.se": 40,
-    "kungsor.se": 40,
     "nynashamn.se": 39,
     "kalmar.se": 39,
     "hassleholm.se": 39,
+    "kungsor.se": 39,
     "timra.se": 39,
     "bromolla.se": 38,
     "kommun.falkenberg.se": 38,
-    "vanersborg.se": 38,
     "oxelosund.se": 37,
     "kungalv.se": 37,
+    "vanersborg.se": 37,
     "huddinge.se": 36,
     "katrineholm.se": 36,
-    "ekero.se": 35,
     "tierp.se": 35,
     "oskarshamn.se": 35,
     "document.vastervik.se": 35,
-    "burlov.se": 35,
     "smedjebacken.se": 35,
+    "ekero.se": 34,
+    "burlov.se": 34,
     "kungsbacka.se": 34,
     "surahammar.se": 34,
     "vingaker.se": 33,
@@ -324,10 +323,8 @@
     "staffanstorp.se": 27,
     "kristianstad.se": 27,
     "kramfors.se": 27,
-    "tomelilla.se": 26,
     "astorp.se": 26,
     "fargelanda.se": 26,
-    "vara.se": 26,
     "skara.se": 26,
     "eda.se": 26,
     "ess-app.rattvik.se": 26,
@@ -335,14 +332,16 @@
     "varmdo.se": 25,
     "linkoping.se": 25,
     "sok-og.unikom.se": 25,
+    "tomelilla.se": 25,
     "mark.se": 25,
+    "vara.se": 25,
     "kalix.se": 25,
+    "ockero.se": 24,
     "mariestad.se": 24,
     "sunne.se": 24,
     "gavle.se": 24,
     "heby.se": 23,
     "uppsala.se": 23,
-    "finspang.se": 23,
     "nybro.se": 23,
     "kavlinge.se": 23,
     "molndal.se": 23,
@@ -351,6 +350,7 @@
     "danderyd.se": 22,
     "alvkarleby.se": 22,
     "osthammar.se": 22,
+    "finspang.se": 22,
     "gislaved.se": 22,
     "partille.se": 22,
     "orsa.se": 22,
@@ -363,13 +363,13 @@
     "vasteras.se": 21,
     "ljusdal.se": 21,
     "knivsta.se": 20,
-    "gnesta.se": 20,
     "eskilstuna.se": 20,
     "vadstena.se": 20,
     "vargarda.se": 20,
     "saffle.se": 20,
     "vansbro-sok.ciceron.cloud": 20,
     "nacka.se": 19,
+    "gnesta.se": 19,
     "hylte.se": 19,
     "sotenas.se": 19,
     "gotene.se": 19,
@@ -417,17 +417,17 @@
     "norsjo.se": 14,
     "dorotea.se": 14,
     "botkyrka.se": 13,
-    "ydre.se": 13,
     "monsteras.se": 13,
     "herrljunga.se": 13,
     "degerfors.se": 13,
     "solleftea.se": 13,
-    "arvidsjaur.se": 13,
+    "ydre.se": 12,
     "vaggeryd.se": 12,
     "vetlanda.se": 12,
     "markaryd.se": 12,
     "svedala.se": 12,
     "forshaga.se": 12,
+    "arvidsjaur.se": 12,
     "lulea.se": 12,
     "salem.se": 11,
     "tranas.se": 11,
@@ -460,7 +460,6 @@
     "halmstad.se": 8,
     "harryda.se": 8,
     "alingsas.se": 8,
-    "amal.se": 8,
     "filipstad.se": 8,
     "lindesberg.se": 8,
     "nordanstig.se": 8,
@@ -469,6 +468,7 @@
     "trelleborg.se": 7,
     "tanum.se": 7,
     "tranemo.se": 7,
+    "amal.se": 7,
     "kil.se": 7,
     "storfors.se": 7,
     "arvika.se": 7,
@@ -512,7 +512,6 @@
     "avesta.se": 4,
     "ockelbo.se": 4,
     "hofors.se": 4,
-    "vellinge.se": 3,
     "munkedal.se": 3,
     "evoldocs.bengtsfors.se": 3,
     "nora.se": 3,
@@ -522,6 +521,7 @@
     "norrtalje.se": 2,
     "savsjo.se": 2,
     "uppvidinge.se": 2,
+    "vellinge.se": 2,
     "skurup.se": 2,
     "karlskoga.se": 2,
     "simrishamn.se": 1
@@ -561,8 +561,8 @@
   }
  },
  "text": {
-  "web": 32530,
-  "pdf": 20458,
+  "web": 32528,
+  "pdf": 20425,
   "ocr": 1494,
   "none": 468
  },
@@ -593,7 +593,7 @@
   },
   "municipality": {
    "issuers": 281,
-   "documents": 5533,
+   "documents": 5498,
    "issuers_with_scans": 145,
    "scanned": 349,
    "ocr": 291,
@@ -781,8 +781,8 @@
    "scanned": 1
   },
   "municipality: Ekerö kommun": {
-   "documents": 35,
-   "pdf": 28,
+   "documents": 34,
+   "pdf": 27,
    "none": 4,
    "scanned": 7,
    "ocr": 3
@@ -838,8 +838,8 @@
    "scanned": 1
   },
   "municipality: Gnesta kommun": {
-   "documents": 20,
-   "pdf": 18,
+   "documents": 19,
+   "pdf": 17,
    "ocr": 2,
    "scanned": 2
   },
@@ -1033,8 +1033,8 @@
    "scanned": 1
   },
   "municipality: Laholms kommun": {
-   "documents": 51,
-   "pdf": 43,
+   "documents": 50,
+   "pdf": 42,
    "none": 5,
    "scanned": 8,
    "ocr": 3
@@ -1058,8 +1058,8 @@
    "scanned": 1
   },
   "municipality: Lerums kommun": {
-   "documents": 53,
-   "pdf": 44,
+   "documents": 51,
+   "pdf": 42,
    "ocr": 5,
    "scanned": 9,
    "none": 4
@@ -1386,8 +1386,8 @@
    "scanned": 1
   },
   "municipality: Tomelilla kommun": {
-   "documents": 26,
-   "pdf": 25,
+   "documents": 25,
+   "pdf": 24,
    "ocr": 1,
    "scanned": 1
   },
@@ -1467,8 +1467,8 @@
    "scanned": 1
   },
   "municipality: Vänersborgs kommun": {
-   "documents": 38,
-   "pdf": 37,
+   "documents": 37,
+   "pdf": 36,
    "ocr": 1,
    "scanned": 1
   },
@@ -1493,8 +1493,8 @@
    "pdf": 16
   },
   "municipality: Ydre kommun": {
-   "documents": 13,
-   "pdf": 11,
+   "documents": 12,
+   "pdf": 10,
    "ocr": 2,
    "scanned": 2
   },
@@ -1691,7 +1691,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54950,
+   "documents": 54915,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
