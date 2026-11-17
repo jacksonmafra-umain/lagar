@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.hultsfred.se/files/2017/06/Avgifter-for-kopior-vid-utlamnande-av-allman-handling.pdf"
 source_sha256: "ad48ab0cecfcbe79b1d075feb471cf64ca4a780ce1c37e7295f7511b419c977f"
-fetched_at: "2026-10-31T17:21:18Z"
+fetched_at: "2026-11-17T14:38:01Z"
 issuer: "Hultsfreds kommun"
 region_code: "08"
 municipality_code: "0860"
@@ -94,7 +94,6 @@ Antagna av kommunfullmäktige § 42/2023-03-20
 
 - AB Hultsfreds Bostäder
 - Biblioteken
-- Hultsfreds kommuns bloggar
 - Hultsfreds gymnasium
 - Hultsfred Lärcenter
 - jobbaihultsfred.se

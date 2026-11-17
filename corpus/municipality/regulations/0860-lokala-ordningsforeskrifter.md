@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.hultsfred.se/files/2025/04/Lokala_-ordningsforeskrifter_Hultsfreds_kommun_20250519.pdf"
 source_sha256: "3adb3b7b724febcaa4c66c4cc0be1c76f678f1a31f12f2b9ff8de157c83c9785"
-fetched_at: "2026-10-31T17:21:22Z"
+fetched_at: "2026-11-17T14:38:07Z"
 issuer: "Hultsfreds kommun"
 region_code: "08"
 municipality_code: "0860"
@@ -94,7 +94,6 @@ Kommunens sida: <https://www.hultsfred.se/artikel/lokala-ordningsforeskrifter/>
 
 - AB Hultsfreds Bostäder
 - Biblioteken
-- Hultsfreds kommuns bloggar
 - Hultsfreds gymnasium
 - Hultsfred Lärcenter
 - jobbaihultsfred.se

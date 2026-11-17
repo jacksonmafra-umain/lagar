@@ -1250,7 +1250,7 @@
       {
         "name": "Ekerö",
         "status": "partial",
-        "documents": 34,
+        "documents": 35,
         "url": "https://www.ekero.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/249",
         "description": null,
@@ -1580,7 +1580,7 @@
       {
         "name": "Gnesta",
         "status": "partial",
-        "documents": 19,
+        "documents": 20,
         "url": "https://www.gnesta.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/280",
         "description": null,
@@ -1679,7 +1679,7 @@
       {
         "name": "Ydre",
         "status": "partial",
-        "documents": 12,
+        "documents": 13,
         "url": "https://www.ydre.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/289",
         "description": null,
@@ -1723,7 +1723,7 @@
       {
         "name": "Finspång",
         "status": "partial",
-        "documents": 22,
+        "documents": 23,
         "url": "https://www.finspang.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/293",
         "description": null,
@@ -2262,7 +2262,7 @@
       {
         "name": "Burlöv",
         "status": "partial",
-        "documents": 34,
+        "documents": 35,
         "url": "https://burlov.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/342",
         "description": null,
@@ -2273,7 +2273,7 @@
       {
         "name": "Vellinge",
         "status": "partial",
-        "documents": 2,
+        "documents": 3,
         "url": "https://www.vellinge.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/343",
         "description": null,
@@ -2394,7 +2394,7 @@
       {
         "name": "Tomelilla",
         "status": "partial",
-        "documents": 25,
+        "documents": 26,
         "url": "https://www.tomelilla.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/354",
         "description": null,
@@ -2625,7 +2625,7 @@
       {
         "name": "Laholm",
         "status": "partial",
-        "documents": 50,
+        "documents": 51,
         "url": "https://www.laholm.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/375",
         "description": null,
@@ -2691,7 +2691,7 @@
       {
         "name": "Öckerö",
         "status": "partial",
-        "documents": 24,
+        "documents": 44,
         "url": "https://www.ockero.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/381",
         "description": null,
@@ -2801,7 +2801,7 @@
       {
         "name": "Lerum",
         "status": "partial",
-        "documents": 51,
+        "documents": 53,
         "url": "https://www.lerum.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/391",
         "description": null,
@@ -2955,7 +2955,7 @@
       {
         "name": "Vara",
         "status": "partial",
-        "documents": 25,
+        "documents": 26,
         "url": "https://www.vara.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/405",
         "description": null,
@@ -3065,7 +3065,7 @@
       {
         "name": "Vänersborg",
         "status": "partial",
-        "documents": 37,
+        "documents": 38,
         "url": "https://www.vanersborg.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/415",
         "description": null,
@@ -3120,7 +3120,7 @@
       {
         "name": "Åmål",
         "status": "partial",
-        "documents": 7,
+        "documents": 8,
         "url": "https://www.amal.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/420",
         "description": null,
@@ -3538,7 +3538,7 @@
       {
         "name": "Kungsör",
         "status": "partial",
-        "documents": 39,
+        "documents": 40,
         "url": "https://www.kungsor.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/458",
         "description": null,
@@ -4231,7 +4231,7 @@
       {
         "name": "Arvidsjaur",
         "status": "partial",
-        "documents": 12,
+        "documents": 13,
         "url": "https://www.arvidsjaur.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/521",
         "description": null,

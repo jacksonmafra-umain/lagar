@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.hultsfred.se/files/2024/12/Foreskrifter-nyttjande-allman-platsmark.pdf"
 source_sha256: "5a26cb7777a2c8076b1eca4015ad9cc3c141c68f5ff6b4ffd80c6df6fa332692"
-fetched_at: "2026-10-31T17:21:25Z"
+fetched_at: "2026-11-17T14:38:09Z"
 issuer: "Hultsfreds kommun"
 region_code: "08"
 municipality_code: "0860"
@@ -102,7 +102,6 @@ Om dessa regler inte följs kan det utöver polisanmälan och penningböter bli 
 
 - AB Hultsfreds Bostäder
 - Biblioteken
-- Hultsfreds kommuns bloggar
 - Hultsfreds gymnasium
 - Hultsfred Lärcenter
 - jobbaihultsfred.se

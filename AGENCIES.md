@@ -155,7 +155,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 0117 | [Österåker](https://www.osteraker.se/) | Österåkers författningssamling (ÖFS) | partly collected | 21 | [#246](https://github.com/jacksonmafra-umain/lagar/issues/246) | - |
 | 0120 | [Värmdö](https://www.varmdo.se/) | Författningssamling | partly collected | 25 | [#247](https://github.com/jacksonmafra-umain/lagar/issues/247) | - |
 | 0123 | [Järfälla](https://www.jarfalla.se/) | Styrdokument och föreskrifter | partly collected | 16 | [#248](https://github.com/jacksonmafra-umain/lagar/issues/248) | - |
-| 0125 | [Ekerö](https://www.ekero.se/) | Kommunal författningssamling (KFS) | partly collected | 34 | [#249](https://github.com/jacksonmafra-umain/lagar/issues/249) | - |
+| 0125 | [Ekerö](https://www.ekero.se/) | Kommunal författningssamling (KFS) | partly collected | 35 | [#249](https://github.com/jacksonmafra-umain/lagar/issues/249) | - |
 | 0126 | [Huddinge](https://www.huddinge.se/) | Huddinge kommuns författningssamling (HKF) | partly collected | 36 | [#250](https://github.com/jacksonmafra-umain/lagar/issues/250) | - |
 | 0127 | [Botkyrka](https://www.botkyrka.se/) | Kommunal författningssamling | partly collected | 13 | [#251](https://github.com/jacksonmafra-umain/lagar/issues/251) | - |
 | 0128 | [Salem](https://www.salem.se/) | Styrande dokument - taxor, avgifter, policyer mm | partly collected | 11 | [#252](https://github.com/jacksonmafra-umain/lagar/issues/252) | - |
@@ -185,7 +185,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 0381 | [Enköping](https://enkoping.se/) | Författningssamling | partly collected | 28 | [#277](https://github.com/jacksonmafra-umain/lagar/issues/277) | - |
 | 0382 | [Östhammar](https://www.osthammar.se/) | Kommunal författningssamling | partly collected | 22 | [#278](https://github.com/jacksonmafra-umain/lagar/issues/278) | - |
 | 0428 | [Vingåker](https://www.vingaker.se/) | Planer och styrdokument | partly collected | 33 | [#279](https://github.com/jacksonmafra-umain/lagar/issues/279) | - |
-| 0461 | [Gnesta](https://www.gnesta.se/) | Styrdokument | partly collected | 19 | [#280](https://github.com/jacksonmafra-umain/lagar/issues/280) | - |
+| 0461 | [Gnesta](https://www.gnesta.se/) | Styrdokument | partly collected | 20 | [#280](https://github.com/jacksonmafra-umain/lagar/issues/280) | - |
 | 0480 | [Nyköping](https://nykoping.se/) | Författningssamling | partly collected | 33 | [#281](https://github.com/jacksonmafra-umain/lagar/issues/281) | - |
 | 0481 | [Oxelösund](https://www.oxelosund.se/) | Planer och styrdokument | partly collected | 37 | [#282](https://github.com/jacksonmafra-umain/lagar/issues/282) | - |
 | 0482 | [Flen](https://flen.se/) | Flen kommuns författningssamling | partly collected | 29 | [#283](https://github.com/jacksonmafra-umain/lagar/issues/283) | - |
@@ -194,11 +194,11 @@ Their regulations are collected when the series they publish in is; the issue is
 | 0486 | [Strängnäs](https://www.strangnas.se/) | Styrande dokument (allmänna föreskrifter, taxor och avgifter) | partly collected | 31 | [#286](https://github.com/jacksonmafra-umain/lagar/issues/286) | - |
 | 0488 | [Trosa](https://www.trosa.se/) | Trosa författningssamling | partly collected | 30 | [#287](https://github.com/jacksonmafra-umain/lagar/issues/287) | 30 documents not fetched: robots.txt disallows the document URL |
 | 0509 | [Ödeshög](https://www.odeshog.se/) | Regler och styrande dokument | partly collected | 14 | [#288](https://github.com/jacksonmafra-umain/lagar/issues/288) | - |
-| 0512 | [Ydre](https://www.ydre.se/) | Styrande dokument - författningssamling | partly collected | 12 | [#289](https://github.com/jacksonmafra-umain/lagar/issues/289) | - |
+| 0512 | [Ydre](https://www.ydre.se/) | Styrande dokument - författningssamling | partly collected | 13 | [#289](https://github.com/jacksonmafra-umain/lagar/issues/289) | - |
 | 0513 | [Kinda](https://www.kinda.se/) | Kinda kommuns författningssamling | partly collected | 14 | [#290](https://github.com/jacksonmafra-umain/lagar/issues/290) | - |
 | 0560 | [Boxholm](https://www.boxholm.se/) | Boxholms kommuns författningssamling | partly collected | 16 | [#291](https://github.com/jacksonmafra-umain/lagar/issues/291) | - |
 | 0561 | [Åtvidaberg](https://www.atvidaberg.se/) | Regler och styrande dokument | partly collected | 8 | [#292](https://github.com/jacksonmafra-umain/lagar/issues/292) | - |
-| 0562 | [Finspång](https://www.finspang.se/) | Mål- och styrdokument (avgifter och taxor, avfallsföreskrifter) | partly collected | 22 | [#293](https://github.com/jacksonmafra-umain/lagar/issues/293) | - |
+| 0562 | [Finspång](https://www.finspang.se/) | Mål- och styrdokument (avgifter och taxor, avfallsföreskrifter) | partly collected | 23 | [#293](https://github.com/jacksonmafra-umain/lagar/issues/293) | - |
 | 0563 | [Valdemarsvik](https://www.valdemarsvik.se/) | Författningssamling | partly collected | 21 | [#294](https://github.com/jacksonmafra-umain/lagar/issues/294) | - |
 | 0580 | [Linköping](https://www.linkoping.se/) | Regler och styrande dokument | partly collected | 25 | [#295](https://github.com/jacksonmafra-umain/lagar/issues/295) | 25 documents not fetched: the document is a Google Drive share page; robots.txt disallows its download (drive.usercontent.google.com: Disallow: /; drive.google.com/uc falls under Disallow: /) |
 | 0581 | [Norrköping](https://www.norrkoping.se/) | Allmänna föreskrifter och taxor | partly collected | 18 | [#296](https://github.com/jacksonmafra-umain/lagar/issues/296) | - |
@@ -247,8 +247,8 @@ Their regulations are collected when the series they publish in is; the issue is
 | 1083 | [Sölvesborg](https://www.solvesborg.se/) | Författningssamling | partly collected | 29 | [#339](https://github.com/jacksonmafra-umain/lagar/issues/339) | - |
 | 1214 | [Svalöv](https://www.svalov.se/) | Författningssamling | partly collected | 27 | [#340](https://github.com/jacksonmafra-umain/lagar/issues/340) | - |
 | 1230 | [Staffanstorp](https://www.staffanstorp.se/) | Staffanstorps kommuns författningssamling | partly collected | 27 | [#341](https://github.com/jacksonmafra-umain/lagar/issues/341) | 27 documents not fetched: robots.txt disallows the document URL |
-| 1231 | [Burlöv](https://burlov.se/) | Burlövs kommuns författningssamling (BKFS) | partly collected | 34 | [#342](https://github.com/jacksonmafra-umain/lagar/issues/342) | - |
-| 1233 | [Vellinge](https://www.vellinge.se/) | Vellinge kommuns styrande dokument | partly collected | 2 | [#343](https://github.com/jacksonmafra-umain/lagar/issues/343) | - |
+| 1231 | [Burlöv](https://burlov.se/) | Burlövs kommuns författningssamling (BKFS) | partly collected | 35 | [#342](https://github.com/jacksonmafra-umain/lagar/issues/342) | - |
+| 1233 | [Vellinge](https://www.vellinge.se/) | Vellinge kommuns styrande dokument | partly collected | 3 | [#343](https://github.com/jacksonmafra-umain/lagar/issues/343) | - |
 | 1256 | [Östra Göinge](https://www.ostragoinge.se/) | Östra Göinge kommuns författningssamling (KFS) | partly collected | 25 | [#344](https://github.com/jacksonmafra-umain/lagar/issues/344) | - |
 | 1257 | [Örkelljunga](https://www.orkelljunga.se/) | Kommunal författningssamling | partly collected | 10 | [#345](https://github.com/jacksonmafra-umain/lagar/issues/345) | - |
 | 1260 | [Bjuv](https://www.bjuv.se/) | Bjuvs kommuns styrdokument | partly collected | 9 | [#346](https://github.com/jacksonmafra-umain/lagar/issues/346) | - |
@@ -259,7 +259,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 1265 | [Sjöbo](https://www.sjobo.se/) | Sjöbo kommuns författningssamling | partly collected | 6 | [#351](https://github.com/jacksonmafra-umain/lagar/issues/351) | - |
 | 1266 | [Hörby](https://www.horby.se/) | Hörby kommuns författningssamling | partly collected | 6 | [#352](https://github.com/jacksonmafra-umain/lagar/issues/352) | - |
 | 1267 | [Höör](https://www.hoor.se/) | Höörs kommuns författningssamling | partly collected | 28 | [#353](https://github.com/jacksonmafra-umain/lagar/issues/353) | - |
-| 1270 | [Tomelilla](https://www.tomelilla.se/) | Tomelilla kommuns författningssamling | partly collected | 25 | [#354](https://github.com/jacksonmafra-umain/lagar/issues/354) | - |
+| 1270 | [Tomelilla](https://www.tomelilla.se/) | Tomelilla kommuns författningssamling | partly collected | 26 | [#354](https://github.com/jacksonmafra-umain/lagar/issues/354) | - |
 | 1272 | [Bromölla](https://www.bromolla.se/) | Bromölla kommuns författningssamling | partly collected | 38 | [#355](https://github.com/jacksonmafra-umain/lagar/issues/355) | - |
 | 1273 | [Osby](https://www.osby.se/) | Osby kommuns lokala föreskrifter | partly collected | 5 | [#356](https://github.com/jacksonmafra-umain/lagar/issues/356) | - |
 | 1275 | [Perstorp](https://www.perstorp.se/) | - | not collected: robots.txt disallows | 0 | [#357](https://github.com/jacksonmafra-umain/lagar/issues/357) | Perstorp's "Kommunal författningssamling" page keeps its document list in a minimised layout that opens only through ?sv.state=normal, which robots.txt disallows (Disallow: /*?sv.state=*); the site has no sitemap. Not bypassed (checked 2026-10-31). |
@@ -280,13 +280,13 @@ Their regulations are collected when the series they publish in is; the issue is
 | 1293 | [Hässleholm](https://www.hassleholm.se/) | Hässleholms kommuns författningssamling | partly collected | 39 | [#372](https://github.com/jacksonmafra-umain/lagar/issues/372) | - |
 | 1315 | [Hylte](https://www.hylte.se/) | Hylte kommuns författningssamling | partly collected | 19 | [#373](https://github.com/jacksonmafra-umain/lagar/issues/373) | - |
 | 1380 | [Halmstad](https://www.halmstad.se/) | Halmstads kommuns författningssamling | partly collected | 8 | [#374](https://github.com/jacksonmafra-umain/lagar/issues/374) | - |
-| 1381 | [Laholm](https://www.laholm.se/) | Laholms kommuns författningssamling | partly collected | 50 | [#375](https://github.com/jacksonmafra-umain/lagar/issues/375) | - |
+| 1381 | [Laholm](https://www.laholm.se/) | Laholms kommuns författningssamling | partly collected | 51 | [#375](https://github.com/jacksonmafra-umain/lagar/issues/375) | - |
 | 1382 | [Falkenberg](https://kommun.falkenberg.se/) | Falkenbergs kommuns författningssamling | partly collected | 38 | [#376](https://github.com/jacksonmafra-umain/lagar/issues/376) | - |
 | 1383 | [Varberg](https://www.varberg.se/) | Varbergs kommuns författningssamling | partly collected | 29 | [#377](https://github.com/jacksonmafra-umain/lagar/issues/377) | - |
 | 1384 | [Kungsbacka](https://www.kungsbacka.se/) | Kungsbacka kommuns författningssamling | partly collected | 34 | [#378](https://github.com/jacksonmafra-umain/lagar/issues/378) | - |
 | 1401 | [Härryda](https://www.harryda.se/) | Härryda kommuns avgifter och taxor, och Härryda Vatten och Avfall AB:s taxor och avfallsföreskrifter | partly collected | 13 | [#379](https://github.com/jacksonmafra-umain/lagar/issues/379) | Härryda publishes no författningssamling: the rules are read from its avgifter och taxor page (topic pages as text, or the taxa PDF a page links) and from Härryda Vatten och Avfall AB's VA and avfall taxor and avfallsföreskrifter on hvaa.se. |
 | 1402 | [Partille](https://www.partille.se/) | Partille kommuns författningssamling | partly collected | 22 | [#380](https://github.com/jacksonmafra-umain/lagar/issues/380) | - |
-| 1407 | [Öckerö](https://www.ockero.se/) | Öckerö kommuns författningssamling | partly collected | 24 | [#381](https://github.com/jacksonmafra-umain/lagar/issues/381) | - |
+| 1407 | [Öckerö](https://www.ockero.se/) | Öckerö kommuns författningssamling | partly collected | 44 | [#381](https://github.com/jacksonmafra-umain/lagar/issues/381) | - |
 | 1415 | [Stenungsund](https://www.stenungsund.se/) | Stenungsunds kommuns författningssamling | partly collected | 42 | [#382](https://github.com/jacksonmafra-umain/lagar/issues/382) | - |
 | 1419 | [Tjörn](https://tjorn.se/) | Tjörns kommuns författningssamling | partly collected | 15 | [#383](https://github.com/jacksonmafra-umain/lagar/issues/383) | - |
 | 1421 | [Orust](https://www.orust.se/) | Orusts kommuns författningssamling (OKFS) | partly collected | 40 | [#384](https://github.com/jacksonmafra-umain/lagar/issues/384) | - |
@@ -296,7 +296,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 1438 | [Dals-Ed](https://www.dalsed.se/) | Dals-Eds kommuns författningssamling | partly collected | 5 | [#388](https://github.com/jacksonmafra-umain/lagar/issues/388) | - |
 | 1439 | [Färgelanda](https://www.fargelanda.se/) | Färgelanda kommuns författningssamling | partly collected | 26 | [#389](https://github.com/jacksonmafra-umain/lagar/issues/389) | - |
 | 1440 | [Ale](https://www.ale.se/) | Ale kommuns författningssamling | partly collected | 49 | [#390](https://github.com/jacksonmafra-umain/lagar/issues/390) | - |
-| 1441 | [Lerum](https://www.lerum.se/) | Lerums kommuns kommunala författningssamling | partly collected | 51 | [#391](https://github.com/jacksonmafra-umain/lagar/issues/391) | - |
+| 1441 | [Lerum](https://www.lerum.se/) | Lerums kommuns kommunala författningssamling | partly collected | 53 | [#391](https://github.com/jacksonmafra-umain/lagar/issues/391) | - |
 | 1442 | [Vårgårda](https://www.vargarda.se/) | Vårgårda kommuns styrande dokument och taxor | partly collected | 20 | [#392](https://github.com/jacksonmafra-umain/lagar/issues/392) | - |
 | 1443 | [Bollebygd](https://www.bollebygd.se/) | Bollebygds kommuns författningssamling | partly collected | 14 | [#393](https://github.com/jacksonmafra-umain/lagar/issues/393) | - |
 | 1444 | [Grästorp](https://www.grastorp.se/) | Grästorps kommuns styrande dokument | partly collected | 16 | [#394](https://github.com/jacksonmafra-umain/lagar/issues/394) | - |
@@ -310,7 +310,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 1463 | [Mark](https://www.mark.se/) | Marks kommuns regler, styrande dokument och taxor | partly collected | 25 | [#402](https://github.com/jacksonmafra-umain/lagar/issues/402) | - |
 | 1465 | [Svenljunga](https://www.svenljunga.se/) | Svenljunga kommuns författningssamling | partly collected | 28 | [#403](https://github.com/jacksonmafra-umain/lagar/issues/403) | - |
 | 1466 | [Herrljunga](https://www.herrljunga.se/) | Herrljunga kommuns styrdokument | partly collected | 13 | [#404](https://github.com/jacksonmafra-umain/lagar/issues/404) | - |
-| 1470 | [Vara](https://www.vara.se/) | Föreskrifter och taxor | partly collected | 25 | [#405](https://github.com/jacksonmafra-umain/lagar/issues/405) | - |
+| 1470 | [Vara](https://www.vara.se/) | Föreskrifter och taxor | partly collected | 26 | [#405](https://github.com/jacksonmafra-umain/lagar/issues/405) | - |
 | 1471 | [Götene](https://www.gotene.se/) | Kommunens författningar | partly collected | 19 | [#406](https://github.com/jacksonmafra-umain/lagar/issues/406) | - |
 | 1472 | [Tibro](https://www.tibro.se/) | Tibro kommuns styrdokument | partly collected | 9 | [#407](https://github.com/jacksonmafra-umain/lagar/issues/407) | - |
 | 1473 | [Töreboda](https://toreboda.se/) | Töreboda kommuns kommunala författningssamling | partly collected | 15 | [#408](https://github.com/jacksonmafra-umain/lagar/issues/408) | - |
@@ -320,12 +320,12 @@ Their regulations are collected when the series they publish in is; the issue is
 | 1484 | [Lysekil](https://www.lysekil.se/) | Lysekils kommun, styrande dokument | partly collected | 15 | [#412](https://github.com/jacksonmafra-umain/lagar/issues/412) | - |
 | 1485 | [Uddevalla](https://www.uddevalla.se/) | Uddevalla kommuns författningssamling | partly collected | 54 | [#413](https://github.com/jacksonmafra-umain/lagar/issues/413) | - |
 | 1486 | [Strömstad](https://www.stromstad.se/) | Strömstads kommuns författningssamling | partly collected | 28 | [#414](https://github.com/jacksonmafra-umain/lagar/issues/414) | - |
-| 1487 | [Vänersborg](https://www.vanersborg.se/) | Vänersborgs kommun, regler och styrande dokument | partly collected | 37 | [#415](https://github.com/jacksonmafra-umain/lagar/issues/415) | - |
+| 1487 | [Vänersborg](https://www.vanersborg.se/) | Vänersborgs kommun, regler och styrande dokument | partly collected | 38 | [#415](https://github.com/jacksonmafra-umain/lagar/issues/415) | - |
 | 1488 | [Trollhättan](https://www.trollhattan.se/) | Trollhättans stad, föreskrifter samt avgifter och taxor | partly collected | 28 | [#416](https://github.com/jacksonmafra-umain/lagar/issues/416) | - |
 | 1489 | [Alingsås](https://www.alingsas.se/) | Alingsås kommuns författningssamling | partly collected | 37 | [#417](https://github.com/jacksonmafra-umain/lagar/issues/417) | - |
 | 1490 | [Borås](https://www.boras.se/) | Borås Stads författningssamling | partly collected | 56 | [#418](https://github.com/jacksonmafra-umain/lagar/issues/418) | - |
 | 1491 | [Ulricehamn](https://www.ulricehamn.se/) | Ulricehamns kommun, styrdokument samt taxor och avgifter | partly collected | 11 | [#419](https://github.com/jacksonmafra-umain/lagar/issues/419) | - |
-| 1492 | [Åmål](https://www.amal.se/) | Åmåls kommun, styrdokument | partly collected | 7 | [#420](https://github.com/jacksonmafra-umain/lagar/issues/420) | - |
+| 1492 | [Åmål](https://www.amal.se/) | Åmåls kommun, styrdokument | partly collected | 8 | [#420](https://github.com/jacksonmafra-umain/lagar/issues/420) | - |
 | 1493 | [Mariestad](https://mariestad.se/) | Mariestads kommun, kommunal författningssamling | partly collected | 24 | [#421](https://github.com/jacksonmafra-umain/lagar/issues/421) | - |
 | 1494 | [Lidköping](https://lidkoping.se/) | Lidköpings kommuns författningssamling | partly collected | 16 | [#422](https://github.com/jacksonmafra-umain/lagar/issues/422) | - |
 | 1495 | [Skara](https://www.skara.se/) | Föreskrifter, taxor och avgifter | partly collected | 26 | [#423](https://github.com/jacksonmafra-umain/lagar/issues/423) | - |
@@ -363,7 +363,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 1885 | [Lindesberg](https://www.lindesberg.se/) | Lindesbergs kommuns författningssamling | partly collected | 8 | [#455](https://github.com/jacksonmafra-umain/lagar/issues/455) | - |
 | 1904 | [Skinnskatteberg](https://www.skinnskatteberg.se/) | Skinnskattebergs kommuns författningssamling | partly collected | 4 | [#456](https://github.com/jacksonmafra-umain/lagar/issues/456) | - |
 | 1907 | [Surahammar](https://www.surahammar.se/) | Surahammars kommuns författningssamling | partly collected | 34 | [#457](https://github.com/jacksonmafra-umain/lagar/issues/457) | - |
-| 1960 | [Kungsör](https://www.kungsor.se/) | Kungsörs kommuns författningssamling | partly collected | 39 | [#458](https://github.com/jacksonmafra-umain/lagar/issues/458) | - |
+| 1960 | [Kungsör](https://www.kungsor.se/) | Kungsörs kommuns författningssamling | partly collected | 40 | [#458](https://github.com/jacksonmafra-umain/lagar/issues/458) | - |
 | 1961 | [Hallstahammar](https://www.hallstahammar.se/) | Hallstahammars kommuns författningssamling: taxor och föreskrifter | partly collected | 32 | [#459](https://github.com/jacksonmafra-umain/lagar/issues/459) | - |
 | 1962 | [Norberg](https://www.norberg.se/) | Norbergs kommuns författningssamling | partly collected | 16 | [#460](https://github.com/jacksonmafra-umain/lagar/issues/460) | - |
 | 1980 | [Västerås](https://www.vasteras.se/) | Västerås stads författningssamling | partly collected | 21 | [#461](https://github.com/jacksonmafra-umain/lagar/issues/461) | - |
@@ -426,7 +426,7 @@ Their regulations are collected when the series they publish in is; the issue is
 | 2480 | [Umeå](https://www.umea.se/) | Umeå kommun, lokala föreskrifter | partly collected | 9 | [#518](https://github.com/jacksonmafra-umain/lagar/issues/518) | - |
 | 2481 | [Lycksele](https://www.lycksele.se/) | Lycksele kommun, avgifter och taxor samt LAVAB:s styrdokument | partly collected | 19 | [#519](https://github.com/jacksonmafra-umain/lagar/issues/519) | - |
 | 2482 | [Skellefteå](https://www.skelleftea.se/) | Skellefteå kommuns författningssamling, styrande dokument | partly collected | 3 | [#520](https://github.com/jacksonmafra-umain/lagar/issues/520) | - |
-| 2505 | [Arvidsjaur](https://www.arvidsjaur.se/) | Arvidsjaurs kommuns författningssamling | partly collected | 12 | [#521](https://github.com/jacksonmafra-umain/lagar/issues/521) | - |
+| 2505 | [Arvidsjaur](https://www.arvidsjaur.se/) | Arvidsjaurs kommuns författningssamling | partly collected | 13 | [#521](https://github.com/jacksonmafra-umain/lagar/issues/521) | - |
 | 2506 | [Arjeplog](https://www.arjeplog.se/) | Arjeplogs kommun, regler och styrande dokument samt taxor | partly collected | 47 | [#522](https://github.com/jacksonmafra-umain/lagar/issues/522) | - |
 | 2510 | [Jokkmokk](https://www.jokkmokk.se/) | Jokkmokks kommuns kommunala författningssamling | partly collected | 30 | [#523](https://github.com/jacksonmafra-umain/lagar/issues/523) | - |
 | 2513 | [Överkalix](https://www.overkalix.se/) | Överkalix kommuns författningsregister | partly collected | 15 | [#524](https://github.com/jacksonmafra-umain/lagar/issues/524) | - |
