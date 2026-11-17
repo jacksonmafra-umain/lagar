@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://sater.se/kommun-demokrati/planer-taxor-och-styrdokument/taxor-och-avgifter/taxa-for-detaljplan-samt-kart-och-matuppdrag/"
-source_sha256: "58149c2e5189909dcb5940c6fc9e69e4b24cbd33b25763e162b0184d079bbf7a"
-fetched_at: "2026-11-10T13:56:20Z"
+source_sha256: "28efa51774359ce2411847f7af026bed206fa50c4f896cc3d64de252fdca8487"
+fetched_at: "2026-11-17T14:58:09Z"
 issuer: "Säters kommun"
 region_code: "20"
 municipality_code: "2082"
@@ -251,13 +251,13 @@ Nivå | Riktvärde timmar | Beskrivning | Paketpris
 
 Mindre ändring/upphävande | 80 | Tillägg till planbestämmelser, mindre upphävande, begränsad påverkan | 96 000*
 
-Enkel detaljtplan | 160 | Avgränsat ändamål, liten/medel sakägarkrets, begränsad utredningsmängd | 192 00*
+Enkel detaljplan | 160 | Avgränsat ändamål, liten/medel sakägarkrets, begränsad utredningsmängd | 192 000*
 
 Normal detaljplan | 300 | Flera intresseavvägningar, normal utredningsmängd | 360 000*
 
 Komplex detaljplan | 500 | Stora avvägningar, många sakägare, omfattande utredningar och myndighetsdialog | 600 000*
 
-Mycket komplex detaljplan | 500 | Särskilt omfattande förutsättningar, parallella utredningsspår, hög komplexitet | 960 000*
+Mycket komplex detaljplan | 800 | Särskilt omfattande förutsättningar, parallella utredningsspår, hög komplexitet | 960 000*
 
 ##### Taxetabell 3 – Framtagande av detaljplan, Formell handläggning (exklusive planhandlingar)
 
@@ -424,4 +424,4 @@ tillgängligt.
 Innehållet för ett utdrag från primärkartan är varierar beroende på område men är i\
 regel något mindre detaljerat än en nybyggnadskarta och är inte kontrollerat i fält.
 
-Publicerad: 9 november 2026 12.17 Uppdaterad: 9 november 2026 16.09
+Publicerad: 9 november 2026 12.17 Uppdaterad: 13 november 2026 12.59

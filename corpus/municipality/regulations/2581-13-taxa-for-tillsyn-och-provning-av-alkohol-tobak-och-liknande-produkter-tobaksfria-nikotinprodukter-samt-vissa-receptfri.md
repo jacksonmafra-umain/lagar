@@ -1,9 +1,9 @@
 ---
 id: "2581-13-taxa-for-tillsyn-och-provning-av-alkohol-tobak-och-liknande-produkter-tobaksfria-nikotinprodukter-samt-vissa-receptfri"
-title: "Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfri..."
+title: "Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfri"
 type: "municipal_regulation"
 layer: "municipality"
-number: "13/Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfri..."
+number: "13/Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfri"
 issued: null
 in_force: null
 repealed: null
@@ -14,18 +14,18 @@ ministry: null
 eli: null
 language: "sv"
 authoritative: false
-source: "https://www.pitea.se/BOKHYLLAN/Styrande%20dokument/13.%20Taxa/Taxa%20f%C3%B6r%20tillsyn%20och%20pr%C3%B6vning%20av%20alkohol,%20tobak%20och%20liknande%20produkter,%20tobaksfria%20nikotinprodukter%20samt%20vissa%20receptfri....pdf"
-source_sha256: "d508ffc1f8b13b5abaa48f823f72d7aabb20c5e756dd7d45e406ef5c8e294d04"
-fetched_at: "2026-11-03T13:24:23Z"
+source: "https://www.pitea.se/BOKHYLLAN/Styrande%20dokument/13.%20Taxa/Taxa%20f%C3%B6r%20tillsyn%20och%20pr%C3%B6vning%20av%20alkohol,%20tobak%20och%20liknande%20produkter,%20tobaksfria%20nikotinprodukter%20samt%20vissa%20receptfri.pdf"
+source_sha256: "225c5e1545a276074b492791c51bc5c40dd13ca5c4b4d250141ba207d36fadfd"
+fetched_at: "2026-11-17T15:02:36Z"
 issuer: "Piteå kommun"
 region_code: "25"
 municipality_code: "2581"
 ---
-# Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfri...
+# Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfri
 
 Kommun: Piteå (2581)  
 Författningssamling: Piteå kommuns styrande dokument: kommunal föreskrift och taxa  
-Nummer: 13/Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfri...
+Nummer: 13/Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfri
 
 Förteckning: <https://www.pitea.se/invanare/Kommun-politik/politik/Styrning-och-ledning/styrande-dokument/taxa/>
 
@@ -33,7 +33,7 @@ Förteckning: <https://www.pitea.se/invanare/Kommun-politik/politik/Styrning-och
 
 Kommunen publicerar texten som PDF. Texten nedan är hämtad ur den.
 
-- [Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfri...](<https://www.pitea.se/BOKHYLLAN/Styrande%20dokument/13.%20Taxa/Taxa%20f%C3%B6r%20tillsyn%20och%20pr%C3%B6vning%20av%20alkohol,%20tobak%20och%20liknande%20produkter,%20tobaksfria%20nikotinprodukter%20samt%20vissa%20receptfri....pdf>)
+- [Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaksfria nikotinprodukter samt vissa receptfri](<https://www.pitea.se/BOKHYLLAN/Styrande%20dokument/13.%20Taxa/Taxa%20f%C3%B6r%20tillsyn%20och%20pr%C3%B6vning%20av%20alkohol,%20tobak%20och%20liknande%20produkter,%20tobaksfria%20nikotinprodukter%20samt%20vissa%20receptfri.pdf>)
 
 ## Text
 
@@ -53,7 +53,7 @@ Taxa för tillsyn och prövning av alkohol, tobak och liknande produkter, tobaks
 
 Taxa nikotinprodukter samt vissa receptfria läkemedel
 
-2026-10-26 § 202
+2026-10-26 § 203
 
 Kommunfullmäktige
 
@@ -82,8 +82,6 @@ Dokumentet gäller för
 Näringsidkare som bedriver verksamhet som omfattas av alkohollagen, lagen om tobak och liknande produkter, lagen om tobaksfria nikotinprodukter och lagen om handel med vissa receptfria läkemedel.
 
 Tjänstepersoner som arbetar med prövning och tillsyn.
-
-Page 1 of 9
 
 Inledande bestämmelser
 
@@ -115,9 +113,7 @@ Avgiftssättning
 
 7§
 
-Vid tillämpningen av denna taxa gäller 1 440 kronor per timme handläggningstid.
-
-Page 2 of 9
+Vid tillämpningen av denna taxa gäller 1 440 kronor per timme handläggningstid. Page 1 of 9
 
 För prövning av tillståndsansökan eller anmälan samt för inre tillsyn av alkohol och tobak tas en fast avgift ut. Avgiftssättning för övrig tillsyn sker genom timdebitering. Vid timdebitering multipliceras timavgiften med den aktuella handläggningstiden i det enskilda ärendet. Med handläggningstid avses den sammanlagda tid som varje tjänsteperson vid Miljö- och tillsynsnämnden har använt för: • • • • • •
 
@@ -143,7 +139,7 @@ Avgift för prövning ska betalas för varje avgiftsbelagt ärende som ansökan 
 
 Sökanden ska betala avgift för prövning även om ansökan avslås eller om den återkallas efter det att handläggningen påbörjats. Avgift tas inte ut om en ansökan återkallas innan
 
-Page 3 of 9
+Page 2 of 9
 
 handläggningen påbörjats. Vid timdebitering sker debitering för den nedlagda handläggningstiden.
 
@@ -169,9 +165,9 @@ För tillsyn av serveringsställen med stadigvarande tillstånd till allmänhete
 
 Utöver den fasta årliga avgiften tillkommer en rörlig tillsynsavgift. Den rörliga avgiften beräknas genom årsomsättningen föregående år som redovisas i restaurangrapporten, se taxebilaga 3.
 
-Avgift för tillsyn ska betalas av den som bedriver eller avser att bedriva verksamhet eller vidta åtgärd som föranleder avgiften.
+Page 3 of 9
 
-Page 4 of 9
+Avgift för tillsyn ska betalas av den som bedriver eller avser att bedriva verksamhet eller vidta åtgärd som föranleder avgiften.
 
 15 § Avgift för övrig tillsyn, exempelvis gårdsförsäljning, beräknas genom att handläggningstiden för tillsyn multipliceras med timtaxan. Se taxebilaga 1.
 
@@ -195,19 +191,17 @@ Utöver den fasta årliga avgiften tillkommer en rörlig tillsynsavgift. Den rö
 
 18 §
 
-Fast årlig avgift enligt 17 § omfattar kalenderår och ska betalas i förskott. Sådan avgift ska betalas från och med det kalenderår som följer efter det att anmälan eller ansökan skett eller i de fall anmälan/ansökan inte krävs verksamheten påbörjats. För tillsyn som sker dessförinnan och som inte ingår i avgift för handläggning av ansökan sker timdebitering.
+Fast årlig avgift enligt 17 § omfattar kalenderår och ska betalas i förskott. Sådan avgift ska betalas från och med det kalenderår som följer efter det att anmälan eller ansökan skett eller i de fall anmälan/ansökan inte krävs verksamheten påbörjats. För tillsyn som sker dessförinnan och som inte ingår i avgift för handläggning av ansökan sker timdebitering. Page 4 of 9
 
 19 §
 
 Avgift för övrig tillsyn beräknas genom att handläggningstiden för tillsyn multipliceras med timtaxan, se taxebilaga 2.
 
-Page 5 of 9
-
 20 §
 
 Avgift för tillsyn ska betalas av den som bedriver eller avser att bedriva verksamhet eller vidta åtgärd som föranleder avgiften.
 
-Page 6 of 9
+Page 5 of 9
 
 Taxebilaga 1 – Tillstånd, anmälan och tillsyn enligt alkohollagen (exkl. folköl) Ansökan
 
@@ -241,7 +235,11 @@ Anmälan
 
 Avgift
 
-Bolag- eller styrelseändring prövning av − ny delägare, bolagsman, aktieägare, firmatecknare, ledamot eller annan Timdebitering max 10 h person − överlåtelse av aktier/andelar mellan befintliga ägare − ändring av styrelseperson
+Bolag- eller styrelseändring prövning av − ny delägare, bolagsman, aktieägare, firmatecknare, ledamot eller annan person − överlåtelse av aktier/andelar mellan befintliga ägare − ändring av styrelseperson
+
+Timdebitering max
+
+10 h
 
 Kryddning av snaps
 
@@ -289,7 +287,7 @@ Timdebitering
 
 Avgift
 
-Page 7 of 9
+Page 6 of 9
 
 Övrig tillsyn enligt alkohollagen
 
@@ -359,7 +357,7 @@ Rörlig avgift (kr)
 
 50 001 - 100 000
 
-Page 8 of 9
+Page 7 of 9
 
 100 001 - 250 000
 
@@ -435,12 +433,10 @@ Reviderad av Miljö- och tillsynsnämnden 2023-11-22 § 47, indexuppräkning (PK
 
 Reviderad av Miljö- och tillsynsnämnden 2024-11-26 § 80, indexuppräkning (PKV) Reviderad av Kommunfullmäktige 2025-11-24 § 298
 
-Reviderad av Miljö- och tillsynsnämnden 2025-12-02 § 95, indexuppräkning (PKV), gäller från 2026-01-01 Reviderad av Kommunfullmäktige 2026-10-26 § 203
+Reviderad av Miljö- och tillsynsnämnden 2025-12-02 § 95, indexuppräkning (PKV), gäller från 2026-0101 Reviderad av Kommunfullmäktige 2026-10-26 § 203
 
 Indexreglering av taxan
 
 Kommunfullmäktige beslutade 12 december 2022, § 179, att Miljö- och tillsynsnämnden årligen får indexuppräkna taxan upp till Prisindex för kommunal verksamhet (PKV). Basmånad för indexuppräkningen är oktober månad 2022.
 
 Miljö- och tillsynsnämnden ska delge Kommunfullmäktige beslut efter indexuppräkning.
-
-Page 9 of 9

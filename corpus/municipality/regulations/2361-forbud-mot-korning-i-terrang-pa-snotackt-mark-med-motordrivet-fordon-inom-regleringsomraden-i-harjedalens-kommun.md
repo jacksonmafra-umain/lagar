@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://www.herjedalen.se/kommun-och-politik/styrdokument-och-regler/att-vistas-i-harjedalens-kommun/forbud-mot-korning-i-terrang-pa-snotackt-mark-med-motordrivet-fordon-inom-regleringsomraden-i-harjedalens-kommun.html"
-source_sha256: "b7093a701e1025ef39dc4e6f9a910cb65b3e4910e8a112b64c006008c32aba92"
-fetched_at: "2026-10-30T20:32:54Z"
+source_sha256: "63c140c7ce90b83eced1276458f6885f76280a1b9d9e82f8de92dfec3b471c37"
+fetched_at: "2026-11-17T15:00:21Z"
 issuer: "Härjedalens kommun"
 region_code: "23"
 municipality_code: "2361"
@@ -100,7 +100,7 @@ Förbudet att framföra terrängskoter omfattar även alla tätbebyggda områden
 Gällande beslut om undantag (dispens) för leder inom sådana områden gäller även fortsättningsvis.\
 Efter framställan från stugförening, vägsamfällighetsförening eller liknande gemensamt organ för respektive område kan kommunen pröva undantag för leder inom det tätbebyggda/planlagda området och ut till allmän skoterled. Kommunen ska använda berörd markägare och driftsbolaget som remissinstanser. Dessa leder skall placeras så att inte störningar uppstår för fastighetsägarna inom området och följa riktlinjer för skotertrafik i närområden till tätorter (buller, utsläpp, avstånd till bebyggelse mm). Lederna skall tydligt framgå i en karta med avstånd på lederna i aktuellt område. Dessa så kallade anslutningsleder är inte allmänna leder utan endast avsedda för stugägare och dennes folk. Stugförening eller liknande gemensamt organ är ansvariga för skyltning och underhåll av anslutningsled.
 
-Riktlinjer för dispenser
+#### Riktlinjer för dispenser
 
 För inom området permanent verksamma aktivitetsföretag ska kommunen kunna medge undantag/dispens för färdledd utflyktsverksamhet med följande villkor:
 
@@ -113,17 +113,11 @@ De företag som kan komma i fråga ska vara etablerade i området, ha stor känn
 
 Därutöver kan kommunen med stöd av gällande regler pröva undantag/dispens från förbudet om särskilda skäl föreligger.
 
-Öppettider
+#### Öppettider
 
 Information om skoterledernas öppettider finns på följande platser:
 
 Lederna kan stängas på kort varsel om det är nödvändigt av säkerhets-, naturmiljö- eller renskötselskäl.
-
-Förstora bilden
-
-Förstora bilden
-
-Reglerområde Lofsdalen
 
 #### Relaterade dokument
 
@@ -131,7 +125,7 @@ Reglerområde Lofsdalen
 
 Facebook Twitter LinkedIn Mail
 
-**Senast uppdaterad:** 5 januari 2026 10:25
+**Senast uppdaterad:** 11 november 2026 08:29
 
 **Redaktör för sidan:** Sarah Tjärnås
 

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.hultsfred.se/files/2024/12/ABVA-Hultsfred-2021-06-21.pdf"
 source_sha256: "2ef480d12b656688432b209fa3d60ff536a0d2743102a96ae61bc871887b33ef"
-fetched_at: "2026-10-31T17:21:16Z"
+fetched_at: "2026-11-17T14:37:59Z"
 issuer: "Hultsfreds kommun"
 region_code: "08"
 municipality_code: "0860"
@@ -97,7 +97,6 @@ Reviderad ABVA antogs av kommunfullmäktige i Hultsfred 2021-06 21.
 
 - AB Hultsfreds Bostäder
 - Biblioteken
-- Hultsfreds kommuns bloggar
 - Hultsfreds gymnasium
 - Hultsfred Lärcenter
 - jobbaihultsfred.se

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.hultsfred.se/files/2023/05/Lokala-foreskrifter-for-att-skydda-manniskors-halsa-och-miljon-KF-%C2%A7-86_2016.pdf"
 source_sha256: "00cc9e7e5e9fdcc149eb8c65940b61d36b214faf5f3ac39a0ee1c2871447cfdc"
-fetched_at: "2026-10-31T17:21:20Z"
+fetched_at: "2026-11-17T14:38:05Z"
 issuer: "Hultsfreds kommun"
 region_code: "08"
 municipality_code: "0860"
@@ -110,7 +110,6 @@ Kommunfullmäktige antog de lokala föreskrifterna för att skydda människors h
 
 - AB Hultsfreds Bostäder
 - Biblioteken
-- Hultsfreds kommuns bloggar
 - Hultsfreds gymnasium
 - Hultsfred Lärcenter
 - jobbaihultsfred.se
