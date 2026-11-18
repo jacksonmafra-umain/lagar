@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T13:35:03Z",
+ "generated_at": "2026-11-18T16:53:58Z",
  "documents": 54950,
  "layers": {
   "fundamental": {
@@ -63,8 +63,8 @@
    "types": {
     "agency_regulation": {
      "documents": 5476,
-     "sections": 61277,
-     "words": 14302094
+     "sections": 61265,
+     "words": 14300800
     }
    },
    "issuers": 77,
@@ -1700,8 +1700,8 @@
     "short_body": 548,
     "print_only": 259
    },
-   "unresolved_references": 39960,
-   "references": 40021
+   "unresolved_references": 39962,
+   "references": 40023
   },
   "sfs_pdf_verification": {
    "statuses": {
