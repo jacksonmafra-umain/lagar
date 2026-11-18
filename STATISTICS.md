@@ -1,6 +1,6 @@
 # Corpus statistics
 
-Generated 2026-11-18T14:13:13Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-18T14:15:04Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
