@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-17T15:05:04Z",
+ "generated_at": "2026-11-18T13:35:03Z",
  "documents": 54950,
  "layers": {
   "fundamental": {
@@ -173,7 +173,7 @@
     "eu_regulation": {
      "documents": 40,
      "sections": 0,
-     "words": 2191225
+     "words": 2191238
     },
     "eu_directive": {
      "documents": 28,
