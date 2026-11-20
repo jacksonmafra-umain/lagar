@@ -191,7 +191,7 @@ Targets:
 
 ## Integrity
 
-Audit of 54950 documents (2026-11-18T16:55:05Z):
+Audit of 54950 documents (2026-11-20T13:36:39Z):
 
 - schema errors: 0
 - duplicate ids: 0
@@ -201,4 +201,6 @@ Audit of 54950 documents (2026-11-18T16:55:05Z):
 
 ## Public service links
 
-66 source pages checked: 66 ok, 0 moved, 0 dead, 0 failed (`sources/services-manifest.json`); details in [STATISTICS.md](STATISTICS.md).
+66 source pages checked: 65 ok, 0 moved, 0 dead, 1 failed (`sources/services-manifest.json`); details in [STATISTICS.md](STATISTICS.md).
+
+Failed: forskola.
