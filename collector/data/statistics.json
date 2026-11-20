@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T16:55:18Z",
+ "generated_at": "2026-11-20T13:39:30Z",
  "documents": 54950,
  "layers": {
   "fundamental": {
@@ -2252,10 +2252,18 @@
   },
   "links": {
    "checked": 66,
-   "ok": 66,
+   "ok": 65,
    "moved": [],
    "dead": [],
-   "failed": []
+   "failed": [
+    {
+     "slug": "forskola",
+     "source": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-forskola",
+     "result": "error",
+     "status": null,
+     "error": "https://www.skolverket.se/robots.txt: too many redirects"
+    }
+   ]
   }
  }
 }

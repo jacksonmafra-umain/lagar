@@ -85,16 +85,16 @@
       "title": "Betala tillbaka studielån - CSN"
     },
     {
-      "fetched_at": "2026-11-13T13:00:05Z",
+      "fetched_at": "2026-11-20T13:36:03Z",
       "final_url": "https://www.naturvardsverket.se/amnesomraden/avfall/vem-gor-vad/vem-gor-vad-i-avfallshanteringen/",
       "last_modified": null,
       "lead_source": "ingress",
       "result": "ok",
-      "sha256": "0e9f2d502134bbfa93e7662fe4b19ad08c15f9c2abd6db06bd81490a901d391f",
+      "sha256": "0969180f5799e67aabe22acf60814e287a05eb38384a01d88ce622f18a6ae2a4",
       "slug": "avfallshamtning",
       "source": "https://www.naturvardsverket.se/amnesomraden/avfall/vem-gor-vad/vem-gor-vad-i-avfallshanteringen/",
       "status": 200,
-      "title": null
+      "title": "Vem gör vad i avfallshanteringen?"
     },
     {
       "fetched_at": "2026-11-13T12:31:14Z",
@@ -229,16 +229,17 @@
       "title": "Förnya körkortet - Transportstyrelsen"
     },
     {
-      "fetched_at": "2026-11-13T12:59:59Z",
+      "error": "https://www.skolverket.se/robots.txt: too many redirects",
+      "fetched_at": "2026-11-20T13:35:58Z",
       "final_url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-forskola",
       "last_modified": null,
-      "lead_source": "meta",
-      "result": "ok",
-      "sha256": "a37bc8849b903bc158f994467416eb05084d9972ca20ffdaf404241cbea8b215",
+      "lead_source": null,
+      "result": "error",
+      "sha256": null,
       "slug": "forskola",
       "source": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-forskola",
-      "status": 200,
-      "title": "Rätt till förskola - Skolverket"
+      "status": null,
+      "title": null
     },
     {
       "fetched_at": "2026-11-13T12:59:57Z",
