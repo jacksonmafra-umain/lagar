@@ -1,10 +1,10 @@
 # Corpus statistics
 
-Generated 2026-11-20T14:11:55Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-23T15:32:30Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,950 documents in 8 layers.
+The corpus holds 54,965 documents in 8 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
@@ -20,7 +20,7 @@ The corpus holds 54,950 documents in 8 layers.
 | eu | eu_directive | 28 | 0 | 651,177 |
 | eu | eu_decision | 2 | 0 | 14,266 |
 | eu | eu_judgment | 606 | 35 | 3,656,195 |
-| region | county_regulation | 11,670 | 14,169 | 11,010,105 |
+| region | county_regulation | 11,685 | 14,235 | 11,025,431 |
 | municipality | municipal_regulation | 5,636 | 45,569 | 12,619,915 |
 | service | public_service | 66 | 0 | 2,991 |
 
@@ -90,7 +90,7 @@ Documents per host of their `source`, per layer (the ten largest).
 
 | host | documents |
 | --- | ---: |
-| lansstyrelsen.se | 11,670 |
+| lansstyrelsen.se | 11,685 |
 
 ### municipality
 
@@ -133,10 +133,10 @@ Documents per host of their `source`, per layer (the ten largest).
 | agency | 293 | 4,431 | 740 | 12 |
 | case_law | 16,477 | 0 | 0 | 0 |
 | eu | 676 | 0 | 0 | 0 |
-| region | 421 | 10,787 | 428 | 34 |
+| region | 421 | 10,802 | 428 | 34 |
 | municipality | 200 | 4,983 | 291 | 162 |
 | service | 66 | 0 | 0 | 0 |
-| **all** | **32,530** (59.2 %) | **20,458** (37.2 %) | **1,494** (2.7 %) | **468** (0.9 %) |
+| **all** | **32,530** (59.2 %) | **20,473** (37.2 %) | **1,494** (2.7 %) | **468** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -148,7 +148,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | agency | 75 | 5,400 | 12 | 743 | 740 | 3 |
 | municipality | 281 | 5,533 | 145 | 349 | 291 | 58 |
-| region | 21 | 11,610 | 15 | 462 | 428 | 34 |
+| region | 21 | 11,625 | 15 | 462 | 428 | 34 |
 | sfs | 3 | 293 | 1 | 36 | 35 | 1 |
 
 ### Issuers with scanned PDFs
@@ -315,16 +315,16 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | region: Länsstyrelsen i Blekinge län | 981 | 123 | 112 |
 | region: Länsstyrelsen i Dalarnas län | 571 | 23 | 22 |
 | region: Länsstyrelsen i Gotlands län | 91 | 1 | 1 |
-| region: Länsstyrelsen i Jämtlands län | 1,649 | 25 | 19 |
-| region: Länsstyrelsen i Kalmar län | 1,413 | 86 | 81 |
+| region: Länsstyrelsen i Jämtlands län | 1,651 | 25 | 19 |
+| region: Länsstyrelsen i Kalmar län | 1,419 | 86 | 81 |
 | region: Länsstyrelsen i Kronobergs län | 361 | 81 | 80 |
-| region: Länsstyrelsen i Norrbottens län | 742 | 2 | 2 |
+| region: Länsstyrelsen i Norrbottens län | 746 | 2 | 2 |
 | region: Länsstyrelsen i Södermanlands län | 365 | 44 | 44 |
 | region: Länsstyrelsen i Uppsala län | 391 | 8 | 8 |
 | region: Länsstyrelsen i Västerbottens län | 161 | 2 | 2 |
 | region: Länsstyrelsen i Västernorrlands län | 548 | 14 | 14 |
 | region: Länsstyrelsen i Västmanlands län | 165 | 5 | 5 |
-| region: Länsstyrelsen i Västra Götalands län | 264 | 11 | 8 |
+| region: Länsstyrelsen i Västra Götalands län | 265 | 11 | 8 |
 | region: Länsstyrelsen i Örebro län | 1,800 | 19 | 18 |
 | region: Länsstyrelsen i Östergötlands län | 290 | 18 | 12 |
 | sfs: Utrikesdepartementet | 286 | 36 | 35 |
@@ -375,7 +375,7 @@ Failed:
 
 ### Corpus audit
 
-- Documents checked: 54,950
+- Documents checked: 54,965
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
 - Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,953 of 40,014 (mostly older amending acts, which are not collected as documents of their own)

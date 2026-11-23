@@ -92,7 +92,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | sfs | SÖ treaties | 3515 | 3515 | counted | 100.0% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
 | eu | EU judgments | 606 | 611 | counted | 99.2% |
-| region | Regional regulations | 11670 | unknown | unknown | - |
+| region | Regional regulations | 11685 | unknown | unknown | - |
 | municipality | Municipal regulations | 5636 | unknown | unknown | - |
 | service | Public services | 66 | 66 | curated | 100.0% |
 
@@ -191,7 +191,7 @@ Targets:
 
 ## Integrity
 
-Audit of 54950 documents (2026-11-20T14:11:31Z):
+Audit of 54965 documents (2026-11-23T15:32:11Z):
 
 - schema errors: 0
 - duplicate ids: 0
