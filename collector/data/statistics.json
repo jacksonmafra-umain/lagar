@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-20T14:11:55Z",
- "documents": 54950,
+ "generated_at": "2026-11-23T15:30:41Z",
+ "documents": 54965,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -203,23 +203,23 @@
    }
   },
   "region": {
-   "documents": 11670,
+   "documents": 11685,
    "types": {
     "county_regulation": {
-     "documents": 11670,
-     "sections": 14169,
-     "words": 11010105
+     "documents": 11685,
+     "sections": 14235,
+     "words": 11025431
     }
    },
    "issuers": 21,
    "text": {
     "web": 421,
-    "pdf": 10787,
+    "pdf": 10802,
     "ocr": 428,
     "none": 34
    },
    "hosts": {
-    "lansstyrelsen.se": 11670
+    "lansstyrelsen.se": 11685
    }
   },
   "municipality": {
@@ -562,7 +562,7 @@
  },
  "text": {
   "web": 32530,
-  "pdf": 20458,
+  "pdf": 20473,
   "ocr": 1494,
   "none": 468
  },
@@ -601,7 +601,7 @@
   },
   "region": {
    "issuers": 21,
-   "documents": 11610,
+   "documents": 11625,
    "issuers_with_scans": 15,
    "scanned": 462,
    "ocr": 428,
@@ -1604,15 +1604,15 @@
    "scanned": 1
   },
   "region: Länsstyrelsen i Jämtlands län": {
-   "documents": 1649,
-   "pdf": 1624,
+   "documents": 1651,
+   "pdf": 1626,
    "ocr": 19,
    "scanned": 25,
    "none": 6
   },
   "region: Länsstyrelsen i Kalmar län": {
-   "documents": 1413,
-   "pdf": 1327,
+   "documents": 1419,
+   "pdf": 1333,
    "ocr": 81,
    "scanned": 86,
    "none": 5
@@ -1625,8 +1625,8 @@
    "pdf": 280
   },
   "region: Länsstyrelsen i Norrbottens län": {
-   "documents": 742,
-   "pdf": 740,
+   "documents": 746,
+   "pdf": 744,
    "ocr": 2,
    "scanned": 2
   },
@@ -1661,8 +1661,8 @@
    "scanned": 5
   },
   "region: Länsstyrelsen i Västra Götalands län": {
-   "documents": 264,
-   "pdf": 253,
+   "documents": 265,
+   "pdf": 254,
    "ocr": 8,
    "scanned": 11,
    "none": 3
@@ -1691,7 +1691,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54950,
+   "documents": 54965,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,

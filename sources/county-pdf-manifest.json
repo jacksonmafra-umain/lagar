@@ -55504,6 +55504,96 @@
       "published": null
     },
     {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 325955,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:26:40Z",
+          "sha256": "ba2d48586e0c2e71f332c5892029531c2f6d39e759a859fb7da0a8b72ba95e7d",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.4b5c89851a1f88742271607/1795185611098/202614%20F%C3%B6reskrifter%20f%C3%B6r%20Gr%C3%B6tsj%C3%B6%20naturreservat%20i%20Kalmar%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:14",
+      "published": "2026-11-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 416117,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:26:41Z",
+          "sha256": "f07d205d50d86a3ef3cc5284a93ce83d561812461b1347908be9f87f55677058",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.4b5c89851a1f88742271608/1795185611133/202615%20F%C3%B6reskrifter%20f%C3%B6r%20Snappskogs%20naturreservat%20i%20Borgholms%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:15",
+      "published": "2026-11-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 326085,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:26:43Z",
+          "sha256": "22eba2d712f97597a24a2c6f827bc10c069e2c49730d9e5d95ef0e6c5ab9c0e2",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.4b5c89851a1f88742271609/1795185611162/202616%20F%C3%B6reskrifter%20f%C3%B6r%20V%C3%A4lsn%C3%A4s%20kalkbarrskogs%20naturreservat%20i%20H%C3%B6gsby%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:16",
+      "published": "2026-11-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 834419,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:26:45Z",
+          "sha256": "ee8b187b23f8c9a6b5c804471aa55c676d5dc77ba7f99d9db6dfa720b38ee960",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.4b5c89851a1f8874227160a/1795185611190/202617%20F%C3%B6reskrifter%20f%C3%B6r%20B%C3%B6tas%20naturreservat%20i%20H%C3%B6gsby%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:17",
+      "published": "2026-11-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 264105,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:26:46Z",
+          "sha256": "985dd3a7bbbb206fe5ff29a024d4deecc8dae52ecb911b60b2120e9a5ebd2902",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.4b5c89851a1f8874227160b/1795185611239/202618%20F%C3%B6reskrifter%20f%C3%B6r%20Sand%C3%A4ngens%20biotopskyddsomr%C3%A5de%20i%20M%C3%B6rbyl%C3%A5nga%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:18",
+      "published": "2026-11-20"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/kalmar/om-oss/om-lansstyrelsen-kalmar-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 262720,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:26:47Z",
+          "sha256": "a29ce12a9d87f5674a782476fc2f382e077837b3357155de777ae6487a62f10c",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.4b5c89851a1f8874227160c/1795185611263/202619%20F%C3%B6reskrifter%20f%C3%B6r%20ut%C3%B6kning%20av%20naturreservatet%20Vargesl%C3%A4tten%20i%20Borgholms%20kommun.pdf"
+        }
+      ],
+      "number": "08FS 2026:19",
+      "published": "2026-11-20"
+    },
+    {
       "detail_url": "https://www.lansstyrelsen.se/gotland/om-oss/om-lansstyrelsen-i-gotlands-lan/lanets-forfattningssamling.html",
       "files": [
         {
@@ -85770,6 +85860,21 @@
       "published": "2026-09-11"
     },
     {
+      "detail_url": "https://www.lansstyrelsen.se/vastra-gotaland/om-oss/om-lansstyrelsen-vastra-gotaland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 237564,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:28:03Z",
+          "sha256": "6b23be4e3c0b89fd756de518ce42c95a44438f40ab715f2f7ebb012b5d140123",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.171461ef1a1c921b0ed50864/1794901660298/2026-24%20Tillst%C3%A5ndsplikt%20allm%C3%A4nna%20v%C3%A4gar%20V%C3%A4stra%20G%C3%B6talands%20l%C3%A4n.pdf"
+        }
+      ],
+      "number": "14FS 2026:24",
+      "published": "2026-11-17"
+    },
+    {
       "detail_url": "https://www.lansstyrelsen.se/varmland/om-oss/om-lansstyrelsen-varmland/forfattningar.html",
       "files": [
         {
@@ -89962,6 +90067,36 @@
       ],
       "number": "17FS 2026:7",
       "published": "2026-09-01"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/varmland/om-oss/om-lansstyrelsen-varmland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 175059,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:28:12Z",
+          "sha256": "6dc7d689ba44706d0127805bec844683505eadafff6504beee31152ec34aa14f",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef95ff2b/1794998326638/17%20FS%202026_8%20Nybble%20vattenskyddsomr%C3%A5de.pdf"
+        }
+      ],
+      "number": "17FS 2026:8",
+      "published": "2026-11-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/varmland/om-oss/om-lansstyrelsen-varmland/forfattningar.html",
+      "files": [
+        {
+          "bytes": 2425739,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:28:18Z",
+          "sha256": "53f0e0617ff124793c68d150eb41381ee8e1fe57b4448ded7b928e94e7eecfd7",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef979f0c/1795159434501/17%20FS%202026_9%20Inr%C3%A4ttande%20av%20f%C3%A5gelskyddsomr%C3%A5de%20Millesvik.pdf"
+        }
+      ],
+      "number": "17FS 2026:9",
+      "published": "2026-11-20"
     },
     {
       "detail_url": "https://www.lansstyrelsen.se/orebro/om-oss/lanets-forfattningssamling.html",
@@ -162873,6 +163008,36 @@
       "published": "2026-11-03"
     },
     {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 135419,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:29:25Z",
+          "sha256": "64d782bd339f203a0fc620e316c54f04ba49c86ab35df2768645d105706ace37",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.7d0ff34f1a1c913c52154a43/1794917797226/23FS%202026-12%20F%C3%B6reskrift%20g%C3%A4llande%20naturreservatet%20Frostberget,%20Str%C3%B6msunds%20kommun.pdf"
+        }
+      ],
+      "number": "23FS 2026:12",
+      "published": "2026-11-17"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/jamtland/om-oss/om-lansstyrelsen-i-jamtlands-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 127533,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:29:26Z",
+          "sha256": "c6e9bda043b48387ba7c705f2a80d8c3ebcfe64e88c6c9411a70244f76408cf8",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.7d0ff34f1a1c913c52154a44/1794917812532/23FS%202026-13%20F%C3%B6reskrift%20g%C3%A4llande%20naturreservatet%20Ryssdalen,%20Str%C3%B6msunds%20kommun.pdf"
+        }
+      ],
+      "number": "23FS 2026:13",
+      "published": "2026-11-17"
+    },
+    {
       "detail_url": "https://www.lansstyrelsen.se/vasterbotten/om-oss/om-lansstyrelsen-i-vasterbottens-lan/lanets-forfattningssamling.html",
       "files": [
         {
@@ -176694,6 +176859,66 @@
       ],
       "number": "25FS 2026:26",
       "published": null
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 217619,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:29:52Z",
+          "sha256": "0a8dbd66e1adbab9cc0d15d7e16eeb1ca5545a918e9cefb8327a9a3bb6be2c0a",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef960378/1794999874826/25FS%202026_27%20A%2026%20L%C3%A4nsstyrelsen%20i%20Norrbottens%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20vattenskyddsomr%C3%A5de%20med%20tillh%C3%B6rande%20skyddsf%C3%B6reskrifter%20f%C3%B6r%20Lauker%20grundvattent%C3%A4kt%20i%20Arvidsjaur%20kommun.pdf"
+        }
+      ],
+      "number": "25FS 2026:27",
+      "published": "2026-11-16"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 217911,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:29:53Z",
+          "sha256": "1b6330ec12f5b0425edb7737a974116b1abc382f4f156b3ce9733a670f51aa96",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef960379/1794999874848/25FS%202026_28%20A%2027%20L%C3%A4nsstyrelsen%20i%20Norrbottens%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20vattenskyddsomr%C3%A5de%20med%20tillh%C3%B6rande%20skyddsf%C3%B6reskrifter%20f%C3%B6r%20Auktsjaur%20grundvattent%C3%A4kt%20i%20Arvidsjaur%20kommun.pdf"
+        }
+      ],
+      "number": "25FS 2026:28",
+      "published": "2026-11-16"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 210122,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:29:54Z",
+          "sha256": "a9f55126b7297014966ea41af0f7672443838e0cd452a0ebb5aba7f2697f5828",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef960376/1794999874779/25FS%202026_29%20A%2028%20L%C3%A4nsstyrelsen%20i%20Norrbottens%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20fastst%C3%A4llande%20av%20vattenskyddsomr%C3%A5de%20och%20f%C3%B6reskrifter%20f%C3%B6r%20Arvidsjaur%20t%C3%A4torts%20huvudvattent%C3%A4kt.pdf"
+        }
+      ],
+      "number": "25FS 2026:29",
+      "published": "2026-11-11"
+    },
+    {
+      "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",
+      "files": [
+        {
+          "bytes": 195349,
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-23T15:29:55Z",
+          "sha256": "f4db16bb50568419553b8d2ad8b224293e82f895b6d092b3e2839e86a0a9651c",
+          "text": "extracted",
+          "url": "https://www.lansstyrelsen.se/download/18.28431cf71a1c9053ef960377/1794999874805/25FS%202026_30%20A%2029%20L%C3%A4nsstyrelsen%20i%20Norrbottens%20l%C3%A4ns%20f%C3%B6reskrifter%20om%20fastst%C3%A4llande%20av%20vattenskyddsomr%C3%A5de%20och%20f%C3%B6reskrifter%20f%C3%B6r%20Arvidsjaur%20t%C3%A4torts%20reservvattent%C3%A4kt.pdf"
+        }
+      ],
+      "number": "25FS 2026:30",
+      "published": "2026-11-11"
     },
     {
       "detail_url": "https://www.lansstyrelsen.se/norrbotten/om-oss/om-lansstyrelsen-i-norrbottens-lan/lanets-forfattningssamling.html",

@@ -49,10 +49,10 @@
       "unknown": 426
     }
   },
-  "documents": 54950,
+  "documents": 54965,
   "duplicate_ids": [],
   "fsck": null,
-  "generated_at": "2026-11-20T14:11:31Z",
+  "generated_at": "2026-11-23T15:30:21Z",
   "path_mismatches": [],
   "schema_errors": [],
   "text_quality": [
