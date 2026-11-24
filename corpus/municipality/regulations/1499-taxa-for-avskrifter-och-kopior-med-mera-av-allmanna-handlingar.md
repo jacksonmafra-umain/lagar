@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ac6/1587130296734/Taxa%20f%C3%B6r%20avskrifter%20och%20kopior%20med%20mera%20av%20allm%C3%A4nna%20handlingar.pdf"
 source_sha256: "8b1cb58b32b1a6ade6ab84e6bc0b2edd811c5ac24c3e12270906a89b2603ec5a"
-fetched_at: "2026-10-31T20:08:18Z"
+fetched_at: "2026-11-24T16:18:26Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

@@ -1344,7 +1344,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/256",
         "collection": "Författningssamling",
         "status": "partial",
-        "documents": 15,
+        "documents": 16,
         "note": null
       },
       {
@@ -1544,7 +1544,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/277",
         "collection": "Författningssamling",
         "status": "partial",
-        "documents": 28,
+        "documents": 33,
         "note": null
       },
       {
@@ -1724,8 +1724,8 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/295",
         "collection": "Regler och styrande dokument",
         "status": "partial",
-        "documents": 25,
-        "note": "25 documents not fetched: the document is a Google Drive share page; robots.txt disallows its download (drive.usercontent.google.com: Disallow: /; drive.google.com/uc falls under Disallow: /)"
+        "documents": 26,
+        "note": "26 documents not fetched: the document is a Google Drive share page; robots.txt disallows its download (drive.usercontent.google.com: Disallow: /; drive.google.com/uc falls under Disallow: /)"
       },
       {
         "code": "0581",
@@ -1854,7 +1854,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/308",
         "collection": "Författningssamling",
         "status": "partial",
-        "documents": 18,
+        "documents": 19,
         "note": null
       },
       {
@@ -1994,7 +1994,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/322",
         "collection": "Styrande dokument",
         "status": "partial",
-        "documents": 5,
+        "documents": 6,
         "note": null
       },
       {
@@ -2184,8 +2184,8 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/341",
         "collection": "Staffanstorps kommuns författningssamling",
         "status": "partial",
-        "documents": 27,
-        "note": "27 documents not fetched: robots.txt disallows the document URL"
+        "documents": 28,
+        "note": "28 documents not fetched: robots.txt disallows the document URL"
       },
       {
         "code": "1231",
@@ -2374,7 +2374,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/360",
         "collection": "Båstads kommuns författningssamling",
         "status": "partial",
-        "documents": 29,
+        "documents": 30,
         "note": null
       },
       {
@@ -2454,8 +2454,8 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/368",
         "collection": "Trelleborgs kommuns författningssamling",
         "status": "partial",
-        "documents": 7,
-        "note": "7 documents not fetched: robots.txt disallows the document URL"
+        "documents": 8,
+        "note": "8 documents not fetched: robots.txt disallows the document URL"
       },
       {
         "code": "1290",
@@ -2464,7 +2464,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/369",
         "collection": "Kristianstads kommuns författningssamling",
         "status": "partial",
-        "documents": 27,
+        "documents": 28,
         "note": null
       },
       {
@@ -2554,7 +2554,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/378",
         "collection": "Kungsbacka kommuns författningssamling",
         "status": "partial",
-        "documents": 34,
+        "documents": 36,
         "note": null
       },
       {
@@ -2674,7 +2674,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/390",
         "collection": "Ale kommuns författningssamling",
         "status": "partial",
-        "documents": 49,
+        "documents": 51,
         "note": null
       },
       {
@@ -2694,7 +2694,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/392",
         "collection": "Vårgårda kommuns styrande dokument och taxor",
         "status": "partial",
-        "documents": 20,
+        "documents": 21,
         "note": null
       },
       {
@@ -2714,7 +2714,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/394",
         "collection": "Grästorps kommuns styrande dokument",
         "status": "partial",
-        "documents": 16,
+        "documents": 17,
         "note": null
       },
       {
@@ -3994,7 +3994,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/522",
         "collection": "Arjeplogs kommun, regler och styrande dokument samt taxor",
         "status": "partial",
-        "documents": 47,
+        "documents": 48,
         "note": null
       },
       {
@@ -4004,7 +4004,7 @@
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/523",
         "collection": "Jokkmokks kommuns kommunala författningssamling",
         "status": "partial",
-        "documents": 30,
+        "documents": 31,
         "note": null
       },
       {

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.7bdef21a19ac5f61f0122b8/1766136502504/Taxor%20och%20avgifter%20f%C3%B6r%20Barn-och%20utbildningsn%C3%A4mndens%20verksamheter.pdf"
 source_sha256: "e6027c0a177e82bd421d5019eb9142d861c7a728c7f20c81c9495a68ffe5c97d"
-fetched_at: "2026-10-31T20:08:40Z"
+fetched_at: "2026-11-24T16:18:48Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -67,7 +67,7 @@ Uppdaterades: 1 januari 2026
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

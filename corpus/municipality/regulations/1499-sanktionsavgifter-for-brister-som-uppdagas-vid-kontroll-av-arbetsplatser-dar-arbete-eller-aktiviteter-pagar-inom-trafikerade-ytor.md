@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.7b2a2321741104b9d66c56/1602139581878/Sanktionsavgifter%20f%C3%B6r%20brister%20som%20uppdagas%20vid%20kontroll%20av%20arbetsplatser%20d%C3%A4r%20arbete%20eller%20aktiviteter%20p%C3%A5g%C3%A5r%20inom%20trafikerade%20ytor.pdf"
 source_sha256: "09f6260727039d15c5145763cad7570da4e185fa5d189ce9b08cf5c914c38c58"
-fetched_at: "2026-10-31T20:08:08Z"
+fetched_at: "2026-11-24T16:18:16Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

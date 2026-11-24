@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.7bdef21a19ac5f61f0122ef/1787572835109/Avgift%20f%C3%B6r%20f%C3%B6rskola%20och%20fritidshem%20-%20maxtaxa%20f%C3%B6r%20%C3%A5r%202026.pdf"
 source_sha256: "b575673b2e9c1d1f1cc27aa4391ad256c7c2251c492614f81b89eb674ebf9dd6"
-fetched_at: "2026-10-31T20:07:39Z"
+fetched_at: "2026-11-24T16:18:01Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -67,7 +67,7 @@ Uppdaterades: 24 augusti 2026
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

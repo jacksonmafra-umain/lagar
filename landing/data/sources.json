@@ -1327,7 +1327,7 @@
       {
         "name": "Nykvarn",
         "status": "partial",
-        "documents": 15,
+        "documents": 16,
         "url": "https://www.nykvarn.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/256",
         "description": null,
@@ -1547,7 +1547,7 @@
       {
         "name": "Enköping",
         "status": "partial",
-        "documents": 28,
+        "documents": 33,
         "url": "https://enkoping.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/277",
         "description": null,
@@ -1745,11 +1745,11 @@
       {
         "name": "Linköping",
         "status": "partial",
-        "documents": 25,
+        "documents": 26,
         "url": "https://www.linkoping.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/295",
         "description": null,
-        "note": "25 documents not fetched: the document is a Google Drive share page; robots.txt disallows its download (drive.usercontent.google.com: Disallow: /; drive.google.com/uc falls under Disallow: /)",
+        "note": "26 documents not fetched: the document is a Google Drive share page; robots.txt disallows its download (drive.usercontent.google.com: Disallow: /; drive.google.com/uc falls under Disallow: /)",
         "code": "0580",
         "county": "Östergötlands län"
       },
@@ -1888,7 +1888,7 @@
       {
         "name": "Nässjö",
         "status": "partial",
-        "documents": 18,
+        "documents": 19,
         "url": "https://www.nassjo.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/308",
         "description": null,
@@ -2042,7 +2042,7 @@
       {
         "name": "Högsby",
         "status": "partial",
-        "documents": 5,
+        "documents": 6,
         "url": "https://www.hogsby.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/322",
         "description": null,
@@ -2251,11 +2251,11 @@
       {
         "name": "Staffanstorp",
         "status": "partial",
-        "documents": 27,
+        "documents": 28,
         "url": "https://www.staffanstorp.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/341",
         "description": null,
-        "note": "27 documents not fetched: robots.txt disallows the document URL",
+        "note": "28 documents not fetched: robots.txt disallows the document URL",
         "code": "1230",
         "county": "Skåne län"
       },
@@ -2460,7 +2460,7 @@
       {
         "name": "Båstad",
         "status": "partial",
-        "documents": 29,
+        "documents": 30,
         "url": "https://www.bastad.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/360",
         "description": null,
@@ -2548,18 +2548,18 @@
       {
         "name": "Trelleborg",
         "status": "partial",
-        "documents": 7,
+        "documents": 8,
         "url": "https://www.trelleborg.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/368",
         "description": null,
-        "note": "7 documents not fetched: robots.txt disallows the document URL",
+        "note": "8 documents not fetched: robots.txt disallows the document URL",
         "code": "1287",
         "county": "Skåne län"
       },
       {
         "name": "Kristianstad",
         "status": "partial",
-        "documents": 27,
+        "documents": 28,
         "url": "https://www.kristianstad.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/369",
         "description": null,
@@ -2658,7 +2658,7 @@
       {
         "name": "Kungsbacka",
         "status": "partial",
-        "documents": 34,
+        "documents": 36,
         "url": "https://www.kungsbacka.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/378",
         "description": null,
@@ -2790,7 +2790,7 @@
       {
         "name": "Ale",
         "status": "partial",
-        "documents": 49,
+        "documents": 51,
         "url": "https://www.ale.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/390",
         "description": null,
@@ -2812,7 +2812,7 @@
       {
         "name": "Vårgårda",
         "status": "partial",
-        "documents": 20,
+        "documents": 21,
         "url": "https://www.vargarda.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/392",
         "description": null,
@@ -2834,7 +2834,7 @@
       {
         "name": "Grästorp",
         "status": "partial",
-        "documents": 16,
+        "documents": 17,
         "url": "https://www.grastorp.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/394",
         "description": null,
@@ -4242,7 +4242,7 @@
       {
         "name": "Arjeplog",
         "status": "partial",
-        "documents": 47,
+        "documents": 48,
         "url": "https://www.arjeplog.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/522",
         "description": null,
@@ -4253,7 +4253,7 @@
       {
         "name": "Jokkmokk",
         "status": "partial",
-        "documents": 30,
+        "documents": 31,
         "url": "https://www.jokkmokk.se/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/523",
         "description": null,

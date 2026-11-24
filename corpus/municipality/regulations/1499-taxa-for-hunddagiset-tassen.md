@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404aca/1703771785537/Taxa%20f%C3%B6r%20hunddagiset%20Tassen.pdf"
 source_sha256: "9105a3e980877f821bce148a82cb0667e6158a3a39ceb483a948729f9d4ea543"
-fetched_at: "2026-10-31T20:08:24Z"
+fetched_at: "2026-11-24T16:18:32Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

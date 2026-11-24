@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ac5/1734678302105/Taxa%20f%C3%B6r%20anslutning%20av%20vatten%20och%20spillvatten%20utanf%C3%B6r%20verksamhetsomr%C3%A5de.pdf"
 source_sha256: "6dbbd8ffec621ca0284f415568883db4d8100a2d9c1bf1b2b9d51d525663d390"
-fetched_at: "2026-10-31T20:08:16Z"
+fetched_at: "2026-11-24T16:18:24Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

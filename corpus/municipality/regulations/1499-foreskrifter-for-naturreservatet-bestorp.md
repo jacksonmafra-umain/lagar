@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ae0/1587130551911/F%C3%B6reskrifter%20f%C3%B6r%20naturreservatet%20Bestorp%20i%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "b7a9e12f7815693be565b32ebc7bebee54264033e99951fe96170bd324d7bc1d"
-fetched_at: "2026-10-31T20:07:46Z"
+fetched_at: "2026-11-24T16:18:08Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -66,7 +66,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

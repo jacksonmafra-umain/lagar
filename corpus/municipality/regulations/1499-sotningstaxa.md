@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.776f65f5193732fee2e4222/1772456062561/Sotningstaxa.pdf"
 source_sha256: "deaec136acfcacb21ad70ea278160b9ce7ad15f4b928a7fec6b031bbcb90dfed"
-fetched_at: "2026-10-31T20:08:12Z"
+fetched_at: "2026-11-24T16:18:20Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -68,7 +68,7 @@ Uppdaterades: 2 mars 2026
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

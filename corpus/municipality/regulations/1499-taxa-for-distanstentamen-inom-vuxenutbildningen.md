@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5b7f4af4172139070c676af/1709190733937/Taxa%20f%C3%B6r%20distanstentamen%20inom%20vuxenutbildningen.pdf"
 source_sha256: "48bd9f5c4e34728a44aaf2805eb65b45e6e41eeec4117d9668db1f21af94223e"
-fetched_at: "2026-10-31T20:08:20Z"
+fetched_at: "2026-11-24T16:18:28Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.776f65f5193732fee2e2ded/1766476623824/Plan-%20och%20bygglovstaxa.pdf"
 source_sha256: "8a0c30dfe5ab0b14a7a8286f67a50fcf058306ef353f7093f54a0dd7e87342d7"
-fetched_at: "2026-10-31T20:08:06Z"
+fetched_at: "2026-11-24T16:18:15Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -70,7 +70,7 @@ Uppdaterades: 17 mars 2026
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

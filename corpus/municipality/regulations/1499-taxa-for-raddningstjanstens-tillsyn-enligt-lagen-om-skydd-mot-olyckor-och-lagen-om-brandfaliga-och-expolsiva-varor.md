@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.126386df18adc128daf82b6/1767011211531/Taxa%20f%C3%B6r%20r%C3%A4ddningstj%C3%A4nstens%20tillsyn%20enligt%20lagen%20om%20skydd%20mot%20olyckor%20och%20lagen%20om%20brandfaliga%20och%20expolsiva%20varor.pdf"
 source_sha256: "4a6857af9c9a84b1435d843dd540b11eb28a3dd66e9cdaa4787325f3b3e3ad24"
-fetched_at: "2026-10-31T20:08:30Z"
+fetched_at: "2026-11-24T16:18:38Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 29 december 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka
