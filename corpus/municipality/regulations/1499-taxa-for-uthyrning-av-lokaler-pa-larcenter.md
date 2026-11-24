@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ad3/1587130454000/Taxa%20f%C3%B6r%20uthyrning%20av%20lokaler%20p%C3%A5%20L%C3%A4rCenter.pdf"
 source_sha256: "f769c4aef4223ded3d4243972f97464a275ef265accee30781aa8a9dff8268da"
-fetched_at: "2026-10-31T20:08:36Z"
+fetched_at: "2026-11-24T16:18:44Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

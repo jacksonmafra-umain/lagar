@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.776f65f5193732fee2e2dba/1751357448059/Avgifter%20och%20ers%C3%A4ttningar%20f%C3%B6r%20personer%20med%20insatser%20enligt%20socialtj%C3%A4nstlag,%20h%C3%A4lso-%20och%20sjukv%C3%A5rdslag%20och%20lagen%20om%20st%C3%B6d%20och%20service%20till%20vissa%20funktionshindrade.pdf"
 source_sha256: "f9b88832a38161729ae939ae8278890fa53d047f77de61aaae8846b9acae8cd5"
-fetched_at: "2026-10-31T20:07:35Z"
+fetched_at: "2026-11-24T16:17:57Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 1 juli 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

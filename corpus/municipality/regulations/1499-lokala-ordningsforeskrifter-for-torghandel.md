@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ae2/1587130551926/Lokala%20ordningsf%C3%B6reskrifter%20f%C3%B6r%20torghandeln%20i%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "dd35517a350a87b1b82bf6e7e563eb5957c93d475d2b254f2e0cdef16389a8a3"
-fetched_at: "2026-10-31T20:08:04Z"
+fetched_at: "2026-11-24T16:18:12Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -67,7 +67,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

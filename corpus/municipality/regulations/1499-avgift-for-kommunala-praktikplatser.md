@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404abb/1587130210624/Avgift%20f%C3%B6r%20kommunala%20praktikplatser.pdf"
 source_sha256: "82672211f3a4e003a46130468eae655508f864f1ce95dcfd7ec0ea1125a52dd0"
-fetched_at: "2026-10-31T20:07:41Z"
+fetched_at: "2026-11-24T16:18:03Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

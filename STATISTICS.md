@@ -1,10 +1,10 @@
 # Corpus statistics
 
-Generated 2026-11-23T15:32:30Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-24T16:28:46Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
-The corpus holds 54,965 documents in 8 layers.
+The corpus holds 54,986 documents in 8 layers.
 
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
@@ -21,7 +21,7 @@ The corpus holds 54,965 documents in 8 layers.
 | eu | eu_decision | 2 | 0 | 14,266 |
 | eu | eu_judgment | 606 | 35 | 3,656,195 |
 | region | county_regulation | 11,685 | 14,235 | 11,025,431 |
-| municipality | municipal_regulation | 5,636 | 45,569 | 12,619,915 |
+| municipality | municipal_regulation | 5,657 | 45,814 | 12,679,009 |
 | service | public_service | 66 | 0 | 2,991 |
 
 Sections count paragraphs that open with a section number (`1 §`, `2 a §`); case law and EU documents have none.
@@ -104,9 +104,9 @@ Documents per host of their `source`, per layer (the ten largest).
 | uddevalla.se | 54 |
 | lerum.se | 53 |
 | laholm.se | 51 |
-| ale.se | 49 |
+| ale.se | 51 |
 | lillaedet.se | 49 |
-| 276 other hosts | 5,044 |
+| 276 other hosts | 5,063 |
 
 ### service
 
@@ -134,9 +134,9 @@ Documents per host of their `source`, per layer (the ten largest).
 | case_law | 16,477 | 0 | 0 | 0 |
 | eu | 676 | 0 | 0 | 0 |
 | region | 421 | 10,802 | 428 | 34 |
-| municipality | 200 | 4,983 | 291 | 162 |
+| municipality | 200 | 5,001 | 291 | 165 |
 | service | 66 | 0 | 0 | 0 |
-| **all** | **32,530** (59.2 %) | **20,473** (37.2 %) | **1,494** (2.7 %) | **468** (0.9 %) |
+| **all** | **32,530** (59.2 %) | **20,491** (37.3 %) | **1,494** (2.7 %) | **471** (0.9 %) |
 
 OCR text is marked `text_source: ocr` in the frontmatter and may contain misread characters; the PDF stays the authoritative source.
 
@@ -147,7 +147,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | layer | issuers using PDF | documents | issuers with scans | scanned | read by OCR | still without text |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | agency | 75 | 5,400 | 12 | 743 | 740 | 3 |
-| municipality | 281 | 5,533 | 145 | 349 | 291 | 58 |
+| municipality | 281 | 5,551 | 145 | 349 | 291 | 58 |
 | region | 21 | 11,625 | 15 | 462 | 428 | 34 |
 | sfs | 3 | 293 | 1 | 36 | 35 | 1 |
 
@@ -167,9 +167,9 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | agency: Socialstyrelsen | 113 | 4 | 4 |
 | agency: Statens energimyndighet | 65 | 3 | 3 |
 | agency: Transportstyrelsen | 623 | 1 | 1 |
-| municipality: Ale kommun | 49 | 10 | 5 |
+| municipality: Ale kommun | 51 | 10 | 5 |
 | municipality: Alingsås kommun | 37 | 1 | 1 |
-| municipality: Arjeplogs kommun | 47 | 8 | 7 |
+| municipality: Arjeplogs kommun | 48 | 8 | 7 |
 | municipality: Askersunds kommun | 18 | 6 | 6 |
 | municipality: Avesta kommun | 4 | 1 | 1 |
 | municipality: Bergs kommun | 26 | 2 | 1 |
@@ -209,7 +209,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Härnösands kommun | 14 | 1 | 1 |
 | municipality: Håbo kommun | 27 | 4 | 4 |
 | municipality: Hörby kommun | 6 | 1 | 1 |
-| municipality: Jokkmokks kommun | 30 | 6 | 6 |
+| municipality: Jokkmokks kommun | 31 | 6 | 6 |
 | municipality: Järfälla kommun | 16 | 8 | 7 |
 | municipality: Kalix kommun | 25 | 1 | 1 |
 | municipality: Kalmar kommun | 39 | 2 | 2 |
@@ -217,7 +217,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Kinda kommun | 14 | 3 | 3 |
 | municipality: Klippans kommun | 16 | 1 | 0 |
 | municipality: Kramfors kommun | 27 | 5 | 5 |
-| municipality: Kristianstads kommun | 27 | 2 | 2 |
+| municipality: Kristianstads kommun | 28 | 2 | 2 |
 | municipality: Kristinehamns kommun | 19 | 4 | 2 |
 | municipality: Kungälvs kommun | 37 | 3 | 3 |
 | municipality: Kävlinge kommun | 23 | 3 | 3 |
@@ -250,7 +250,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Norbergs kommun | 16 | 3 | 3 |
 | municipality: Nordanstigs kommun | 8 | 1 | 1 |
 | municipality: Norsjö kommun | 14 | 2 | 1 |
-| municipality: Nykvarns kommun | 15 | 1 | 0 |
+| municipality: Nykvarns kommun | 16 | 1 | 0 |
 | municipality: Nyköpings kommun | 33 | 1 | 1 |
 | municipality: Nynäshamns kommun | 39 | 3 | 3 |
 | municipality: Osby kommun | 5 | 1 | 1 |
@@ -296,7 +296,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 | municipality: Vänersborgs kommun | 38 | 1 | 1 |
 | municipality: Värmdö kommun | 25 | 4 | 3 |
 | municipality: Västerås stad | 21 | 2 | 1 |
-| municipality: Vårgårda kommun | 20 | 4 | 4 |
+| municipality: Vårgårda kommun | 21 | 4 | 4 |
 | municipality: Ydre kommun | 13 | 2 | 2 |
 | municipality: Ystads kommun | 14 | 1 | 1 |
 | municipality: Älmhults kommun | 6 | 2 | 2 |
@@ -375,7 +375,7 @@ Failed:
 
 ### Corpus audit
 
-- Documents checked: 54,965
+- Documents checked: 54,986
 - Schema errors: 0; duplicate ids: 0; path mismatches: 0
 - Text-quality flags: print_only 259, replacement_character 97, short_body 548
 - Amendment references (`amended_by`, `amended_through`, `reprinted_by`) to documents not in the corpus: 39,953 of 40,014 (mostly older amending acts, which are not collected as documents of their own)

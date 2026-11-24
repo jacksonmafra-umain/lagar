@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ab9/1611065813318/Sotningsfrister%20f%C3%B6r%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "53737bd3ff0ea7233385bbe669b8677d41546ec01a4ce31c308e508fe7e761a6"
-fetched_at: "2026-10-31T20:08:10Z"
+fetched_at: "2026-11-24T16:18:18Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

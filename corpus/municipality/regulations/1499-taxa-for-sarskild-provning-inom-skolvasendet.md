@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ace/1634801141016/Taxa%20f%C3%B6r%20s%C3%A4rskild%20pr%C3%B6vning%20inom%20skolv%C3%A4sendet.pdf"
 source_sha256: "d4fe83f2b006bcc83d302e453a6b9cd93d096e3a0b994d24b4bd474bef6c62b8"
-fetched_at: "2026-10-31T20:08:32Z"
+fetched_at: "2026-11-24T16:18:40Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

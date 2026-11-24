@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.538abe0919e0227e509470/1778584082855/Taxa%20f%C3%B6r%20mottagning%20av%20massor%20till%20slutt%C3%A4ckning%20av%20deponier.pdf"
 source_sha256: "17b64333c12346bc59eac33c2e042ce4f103fccc6f0b0659f4698d47c6f7f425"
-fetched_at: "2026-10-31T20:08:26Z"
+fetched_at: "2026-11-24T16:18:34Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 12 maj 2026
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

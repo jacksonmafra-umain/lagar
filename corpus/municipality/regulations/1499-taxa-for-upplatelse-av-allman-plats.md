@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ad1/1587130415697/Taxa%20f%C3%B6r%20uppl%C3%A5telse%20av%20allm%C3%A4n%20plats%20i%20Falk%C3%B6pings%20kommun.pdf"
 source_sha256: "cbf0583e32f4e13f0b426994b5ea127615cb22e03985f5a3d3394ee4d07bd39d"
-fetched_at: "2026-10-31T20:08:34Z"
+fetched_at: "2026-11-24T16:18:42Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

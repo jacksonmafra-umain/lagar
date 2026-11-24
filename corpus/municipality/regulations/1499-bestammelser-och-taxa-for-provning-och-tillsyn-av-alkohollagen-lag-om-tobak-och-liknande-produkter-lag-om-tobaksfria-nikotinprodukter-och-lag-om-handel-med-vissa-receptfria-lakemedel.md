@@ -15,8 +15,8 @@ eli: null
 language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/kommun--politik/avgifter-taxor-reglementen-foreskrifter-styrdokument-och-lokala-bestammelser/styrdokument/bestammelser-och-taxa-for-provning-och-tillsyn-av-alkohollagen-lag-om-tobak-och-liknande-produkter-lag-om-tobaksfria-nikotinprodukter-och-lag-om-handel-med-vissa-receptfria-lakemedel"
-source_sha256: "07d1cad093ad6f57a6ba2150bdac6885eea1ded9eef13457cf63224023ffa4b9"
-fetched_at: "2026-10-30T21:12:33Z"
+source_sha256: "2f4566cdb2c9515550acf96066bd183606dcf217c734daf9ce6120e06866c531"
+fetched_at: "2026-11-24T16:18:06Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -71,7 +71,7 @@ Uppdaterades: 12 januari 2026
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

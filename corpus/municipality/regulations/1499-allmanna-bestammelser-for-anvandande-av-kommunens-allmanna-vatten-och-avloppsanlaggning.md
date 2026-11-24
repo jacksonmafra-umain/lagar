@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.5f7d535517115b399404ad6/1587130532934/Allm%C3%A4nna%20best%C3%A4mmelser%20f%C3%B6r%20anv%C3%A4ndande%20av%20kommunens%20allm%C3%A4nna%20vatten%20och%20avloppsanl%C3%A4ggning.pdf"
 source_sha256: "f01cd153198ddd74e52c836981f6e61cc9585906eacdf3892bc896e0e3e890ae"
-fetched_at: "2026-10-31T20:06:18Z"
+fetched_at: "2026-11-24T16:17:53Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -66,7 +66,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

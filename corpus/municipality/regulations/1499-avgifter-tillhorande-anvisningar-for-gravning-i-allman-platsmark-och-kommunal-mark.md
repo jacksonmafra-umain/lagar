@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.7b2a2321741104b9d66c55/1602139535488/Avgifter%20tillh%C3%B6rande%20Anvisningar%20f%C3%B6r%20gr%C3%A4vning%20i%20allm%C3%A4n%20platsmark%20och%20kommunal%20mark.pdf"
 source_sha256: "9a1532bb97a412c2cd08fbaf72c6086470b0dc6f440bb797b215ddff891c7211"
-fetched_at: "2026-10-31T20:07:38Z"
+fetched_at: "2026-11-24T16:17:59Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 7 januari 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka

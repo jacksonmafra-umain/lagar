@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.falkoping.se/download/18.745da7ca1880f3ed78f53bc/1688539197654/Avgift%20f%C3%B6r%20provisorisk%20d%C3%B6dsbof%C3%B6rvaltning.pdf"
 source_sha256: "78059d658893c3b68c190302e69f283e6e1d7217eae7c8a69f2ad5d72f5dcc9c"
-fetched_at: "2026-10-31T20:07:43Z"
+fetched_at: "2026-11-24T16:18:05Z"
 issuer: "Falköpings kommun"
 region_code: "14"
 municipality_code: "1499"
@@ -65,7 +65,7 @@ Uppdaterades: 20 augusti 2025
    - Kommunen, förvaltningar, bolag
    - Kommunfullmäktige, kommunstyrelse och nämnder
    - Media och press
-   - Stipendier och priser
+   - Priser
    - Så arbetar vi för en hållbar utveckling i Falköping
    - Trygg och säker
    - Var med och engagera dig och påverka
