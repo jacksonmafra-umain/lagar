@@ -7,7 +7,7 @@ number: "LIVSFS 2014:4"
 issued: "2014-10-06"
 in_force: "2014-12-13"
 repealed: null
-amended_by: ["LIVSFS 2019:2", "LIVSFS 2020:8", "LIVSFS 2021:3", "LIVSFS 2022:6", "LIVSFS 2024:11", "LIVSFS 2025:2"]
+amended_by: ["LIVSFS 2019:2", "LIVSFS 2020:8", "LIVSFS 2021:3", "LIVSFS 2022:6", "LIVSFS 2024:11", "LIVSFS 2025:2", "LIVSFS 2026:4"]
 amended_through: null
 reprinted_by: []
 ministry: null
@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://www.livsmedelsverket.se/48d6a4/globalassets/om-oss/lagstiftning/livsmedelsinfo-till-konsum---markning/livsfs-2014-4.pdf"
 source_sha256: "bdafb7c38c0339a9bbfe949d01beb108462349310b0d2b95f861141dc56603c6"
-fetched_at: "2026-10-30T15:18:44Z"
+fetched_at: "2026-11-25T15:55:28Z"
 issuer: "Livsmedelsverket"
 ---
 # Livsmedelsverkets föreskrifter om livsmedelsinformation
@@ -35,6 +35,7 @@ Version: Grundförfattning
 - LIVSFS 2022:6
 - LIVSFS 2024:11
 - LIVSFS 2025:2
+- LIVSFS 2026:4
 
 ## Dokument
 

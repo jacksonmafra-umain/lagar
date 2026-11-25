@@ -127,7 +127,7 @@
       {
         "name": "HSLF-FS",
         "status": "collected",
-        "documents": 123,
+        "documents": 124,
         "url": "https://kunskapsguiden.se/gemensam-forfattningssamling/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/169",
         "description": "Utnyttjas av E-hälsomyndigheten, Folkhälsomyndigheten, Inspektionen för vård och omsorg, Läkemedelsverket, Myndigheten för familjerätt och föräldraskapsstöd, Rättsmedicinalverket, Socialstyrelsen och Tandvårds- och läkemedelsförmånsverket.",
@@ -327,7 +327,7 @@
       {
         "name": "NFS",
         "status": "collected",
-        "documents": 164,
+        "documents": 165,
         "url": "https://www.naturvardsverket.se/nfs",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/190",
         "description": "Naturvårdsverket ansvarar för frågor som handlar om klimat och luft, mark, biologisk mångfald, förorenade områden, kretslopp och avfall, resurseffektivitet, miljöövervakning, jakt och vilt samt miljöforskning.",
@@ -337,7 +337,7 @@
       {
         "name": "PFS",
         "status": "collected",
-        "documents": 81,
+        "documents": 83,
         "url": "https://www.pensionsmyndigheten.se/om-pensionsmyndigheten/allmanna-handlingar/lagar-och-regler",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/191",
         "description": "Här publiceras Pensionsmyndighetens gällande och upphävda föreskrifter om pension, andra förmåner och e-tjänster. De föreskrifter som beslutats av Premiepensionsmyndigheten och Försäkringskassan (inklusive Riksförsäkringsverket) gäller även efter Pensionsmyndighetens inrättande 2010.",
@@ -437,7 +437,7 @@
       {
         "name": "SJÖFS",
         "status": "collected",
-        "documents": 44,
+        "documents": 48,
         "url": "https://www.sjofartsverket.se/sv/om-oss/lagrum/systematisk-forteckning-n/",
         "issue": "https://github.com/jacksonmafra-umain/lagar/issues/203",
         "description": "Föreskrifter om bland annat säkerheten på fartyg, sjömanssociala frågor, föroreningar från fartyg, sjötrafik, sjöfartsskydd och hamnskydd.",

@@ -7,7 +7,7 @@ number: "STEMFS 2017:3"
 issued: "2017-11-08"
 in_force: "2017-12-01"
 repealed: null
-amended_by: ["STEMFS 2021:2"]
+amended_by: []
 amended_through: null
 reprinted_by: []
 ministry: null
@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=f4b2f1e5ea7649dfb92d2cee015f9eca&res=53b6ff35fc7e4b9f9af80323488f425a&lr=False&fn=STEMFS%202017_3webb.pdf&elp=portal&elt=t&eloid=f4b2f1e5ea7649dfb92d2cee015f9eca"
 source_sha256: "43bb07990aa077026a24c18e855a448d14ae764e5f6bafe6d24367ba3ad0bb75"
-fetched_at: "2026-10-30T15:26:03Z"
+fetched_at: "2026-11-25T16:46:43Z"
 issuer: "Statens energimyndighet"
 ---
 # Statens energimyndighets föreskrifter om rapportering och beräkning enligt drivmedelslagen. Föreskriften har ändrats, se STEMFS 2021:2.
@@ -27,10 +27,6 @@ Beslutad: 2017-11-08
 Utkom från tryck: 2017-11-27  
 Ikraftträdande: 2017-12-01  
 Version: Grundförfattning
-
-## Ändringsförfattningar
-
-- STEMFS 2021:2
 
 ## Dokument
 

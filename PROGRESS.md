@@ -11,7 +11,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | AFS (Arbetsmiljöverket) | 15 | 15 | counted | 100.0% |
 | agency | FFFS (Finansinspektionen) | 121 | 121 | counted | 100.0% |
 | agency | TSFS (Transportstyrelsen) | 623 | 622 | counted | 100.0% |
-| agency | PFS (Pensionsmyndigheten) | 81 | 81 | counted | 100.0% |
+| agency | PFS (Pensionsmyndigheten) | 83 | 81 | counted | 100.0% |
 | agency | PMFS (Polisen) | 51 | 50 | counted | 100.0% |
 | agency | PRVFS (PRV) | 17 | 17 | counted | 100.0% |
 | agency | RA-FS (Riksarkivet) | 93 | 93 | counted | 100.0% |
@@ -22,7 +22,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | SCB-FS (SCB) | 51 | 51 | counted | 100.0% |
 | agency | SGU-FS (SGU) | 6 | 6 | counted | 100.0% |
 | agency | SiSFS (SiS) | 30 | 30 | counted | 100.0% |
-| agency | SJÖFS (Sjöfartsverket) | 44 | 44 | counted | 100.0% |
+| agency | SJÖFS (Sjöfartsverket) | 48 | 44 | counted | 100.0% |
 | agency | SKOLFS (Skolverket) | 965 | 965 | counted | 100.0% |
 | agency | SKSFS (Skogsstyrelsen) | 18 | 18 | counted | 100.0% |
 | agency | SSMFS (SSM) | 41 | 41 | counted | 100.0% |
@@ -41,7 +41,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | KFMFS (Kronofogdemyndigheten) | 6 | 6 | counted | 100.0% |
 | agency | KFS (Kommerskollegium) | 4 | 4 | counted | 100.0% |
 | agency | MEMYFS (Mediemyndigheten) | 4 | 4 | counted | 100.0% |
-| agency | NFS (Naturvårdsverket) | 164 | 166 | counted | 98.8% |
+| agency | NFS (Naturvårdsverket) | 165 | 166 | counted | 99.4% |
 | agency | FKFS (Försäkringskassan) | 147 | 147 | counted | 100.0% |
 | agency | KOVFS (Konsumentverket) | 22 | 22 | counted | 100.0% |
 | agency | HVMFS (HaV) | 21 | 21 | counted | 100.0% |
@@ -71,7 +71,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | EIFS (Ei) | 34 | 34 | counted | 100.0% |
 | agency | KBVFS (KBV) | 4 | 4 | counted | 100.0% |
 | agency | FFS (FM) | 61 | 68 | counted | 89.7% |
-| agency | HSLF-FS | 123 | 155 | counted | 79.4% |
+| agency | HSLF-FS | 124 | 155 | counted | 80.0% |
 | agency | SOSFS (Socialstyrelsen) | 51 | 51 | counted | 100.0% |
 | agency | FoHMFS (FoHM) | 12 | 12 | counted | 100.0% |
 | agency | TLVFS (TLV) | 4 | 4 | counted | 100.0% |
@@ -87,7 +87,7 @@ Volume does not prove completeness: a series at 100% of its target only means ev
 | agency | SÄIFS (SÄI) | 7 | 7 | counted | 100.0% |
 | agency | KBMFS (KBM) | 1 | 1 | counted | 100.0% |
 | agency | AMSFS (AMS) | 1 | 1 | counted | 100.0% |
-| agency | RA-MS (Riksarkivet) | 1270 | 1270 | counted | 100.0% |
+| agency | RA-MS (Riksarkivet) | 1271 | 1270 | counted | 100.0% |
 | case_law | Case law | 16477 | 16640 | counted | 99.0% |
 | sfs | SÖ treaties | 3515 | 3515 | counted | 100.0% |
 | eu | EU law (curated list) | 70 | 70 | curated | 100.0% |
@@ -191,13 +191,13 @@ Targets:
 
 ## Integrity
 
-Audit of 54986 documents (2026-11-24T16:30:48Z):
+Audit of 54995 documents (2026-11-25T18:23:39Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
 - text-quality flags: 904
-- cross-references not in the corpus: 39953 of 40014 (informational, the corpus is partial)
+- cross-references not in the corpus: 39968 of 40029 (informational, the corpus is partial)
 
 ## Public service links
 

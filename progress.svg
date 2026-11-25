@@ -25,7 +25,7 @@
 <text x="16" y="239" fill="#007270">PFS (Pensionsmyndigheten)</text>
 <rect x="240" y="228" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="228" width="260" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="239" text-anchor="end" fill="#007270">81 / 81 (100.0%)</text>
+<text x="704" y="239" text-anchor="end" fill="#007270">83 / 81 (100.0%)</text>
 <text x="16" y="275" fill="#007270">PMFS (Polisen)</text>
 <rect x="240" y="264" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="264" width="260" height="16" rx="8" fill="#0f7c7a"/>
@@ -69,7 +69,7 @@
 <text x="16" y="635" fill="#007270">SJÖFS (Sjöfartsverket)</text>
 <rect x="240" y="624" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="624" width="260" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="635" text-anchor="end" fill="#007270">44 / 44 (100.0%)</text>
+<text x="704" y="635" text-anchor="end" fill="#007270">48 / 44 (100.0%)</text>
 <text x="16" y="671" fill="#007270">SKOLFS (Skolverket)</text>
 <rect x="240" y="660" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="660" width="260" height="16" rx="8" fill="#0f7c7a"/>
@@ -144,8 +144,8 @@
 <text x="704" y="1283" text-anchor="end" fill="#007270">4 / 4 (100.0%)</text>
 <text x="16" y="1319" fill="#007270">NFS (Naturvårdsverket)</text>
 <rect x="240" y="1308" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
-<rect x="240" y="1308" width="257" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="1319" text-anchor="end" fill="#007270">164 / 166 (98.8%)</text>
+<rect x="240" y="1308" width="258" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="1319" text-anchor="end" fill="#007270">165 / 166 (99.4%)</text>
 <text x="16" y="1355" fill="#007270">FKFS (Försäkringskassan)</text>
 <rect x="240" y="1344" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="1344" width="260" height="16" rx="8" fill="#0f7c7a"/>
@@ -264,8 +264,8 @@
 <text x="704" y="2363" text-anchor="end" fill="#007270">61 / 68 (89.7%)</text>
 <text x="16" y="2399" fill="#007270">HSLF-FS</text>
 <rect x="240" y="2388" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
-<rect x="240" y="2388" width="206" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="2399" text-anchor="end" fill="#007270">123 / 155 (79.4%)</text>
+<rect x="240" y="2388" width="208" height="16" rx="8" fill="#0f7c7a"/>
+<text x="704" y="2399" text-anchor="end" fill="#007270">124 / 155 (80.0%)</text>
 <text x="16" y="2435" fill="#007270">SOSFS (Socialstyrelsen)</text>
 <rect x="240" y="2424" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="2424" width="260" height="16" rx="8" fill="#0f7c7a"/>
@@ -329,7 +329,7 @@
 <text x="16" y="2975" fill="#007270">RA-MS (Riksarkivet)</text>
 <rect x="240" y="2964" width="260" height="16" rx="8" fill="#0f7c7a" fill-opacity="0.18"/>
 <rect x="240" y="2964" width="260" height="16" rx="8" fill="#0f7c7a"/>
-<text x="704" y="2975" text-anchor="end" fill="#007270">1270 / 1270 (100.0%)</text>
+<text x="704" y="2975" text-anchor="end" fill="#007270">1271 / 1270 (100.0%)</text>
 <text x="16" y="3011" fill="#7a2e4d">Case law</text>
 <rect x="240" y="3000" width="260" height="16" rx="8" fill="#7a2e4d" fill-opacity="0.18"/>
 <rect x="240" y="3000" width="257" height="16" rx="8" fill="#7a2e4d"/>
