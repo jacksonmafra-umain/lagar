@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-24T16:31:16Z",
- "documents": 54986,
+ "generated_at": "2026-11-25T18:25:50Z",
+ "documents": 54995,
  "layers": {
   "fundamental": {
    "documents": 4,
@@ -59,32 +59,32 @@
    }
   },
   "agency": {
-   "documents": 5476,
+   "documents": 5485,
    "types": {
     "agency_regulation": {
-     "documents": 5476,
-     "sections": 61265,
-     "words": 14300800
+     "documents": 5485,
+     "sections": 61400,
+     "words": 14315308
     }
    },
    "issuers": 77,
    "text": {
     "web": 293,
-    "pdf": 4431,
+    "pdf": 4440,
     "ocr": 740,
     "none": 12
    },
    "hosts": {
-    "foreskrifter.riksarkivet.se": 1363,
+    "foreskrifter.riksarkivet.se": 1364,
     "skolfs.skolverket.se": 965,
     "transportstyrelsen.se": 709,
     "lagrummet.forsakringskassan.se": 368,
     "regelverk.swedac.se": 189,
-    "naturvardsverket.se": 164,
+    "naturvardsverket.se": 165,
     "domstol.se": 154,
-    "socialstyrelsen.se": 125,
+    "socialstyrelsen.se": 126,
     "fi.se": 121,
-    "pensionsmyndigheten.se": 81,
+    "pensionsmyndigheten.se": 83,
     "polisen.se": 80,
     "mcf.se": 78,
     "kammarkollegiet.se": 74,
@@ -93,9 +93,9 @@
     "forsvarsmakten.se": 61,
     "scb.se": 51,
     "folkhalsomyndigheten.se": 49,
+    "sjofartsverket.se": 48,
     "livsmedelsverket.se": 45,
     "assets.myh.se": 44,
-    "sjofartsverket.se": 44,
     "trvfs.ea.trafikverket.se": 42,
     "stralsakerhetsmyndigheten.se": 41,
     "ei.se": 34,
@@ -562,7 +562,7 @@
  },
  "text": {
   "web": 32530,
-  "pdf": 20491,
+  "pdf": 20500,
   "ocr": 1494,
   "none": 471
  },
@@ -585,7 +585,7 @@
  "pdf": {
   "agency": {
    "issuers": 75,
-   "documents": 5400,
+   "documents": 5409,
    "issuers_with_scans": 12,
    "scanned": 743,
    "ocr": 740,
@@ -643,8 +643,8 @@
    "ocr": 1
   },
   "agency: Naturvårdsverket": {
-   "documents": 164,
-   "pdf": 155,
+   "documents": 165,
+   "pdf": 156,
    "ocr": 9,
    "scanned": 9
   },
@@ -655,10 +655,10 @@
    "scanned": 3
   },
   "agency: Riksarkivet": {
-   "documents": 1363,
+   "documents": 1364,
    "ocr": 705,
    "scanned": 707,
-   "pdf": 656,
+   "pdf": 657,
    "none": 2
   },
   "agency: Sametinget": {
@@ -668,14 +668,14 @@
    "scanned": 1
   },
   "agency: Sjöfartsverket": {
-   "documents": 44,
-   "pdf": 37,
+   "documents": 48,
+   "pdf": 41,
    "ocr": 7,
    "scanned": 7
   },
   "agency: Socialstyrelsen": {
-   "documents": 113,
-   "pdf": 108,
+   "documents": 114,
+   "pdf": 109,
    "ocr": 4,
    "scanned": 4,
    "none": 1
@@ -1691,7 +1691,7 @@
  },
  "quality": {
   "audit": {
-   "documents": 54986,
+   "documents": 54995,
    "schema_errors": 0,
    "duplicate_ids": 0,
    "path_mismatches": 0,
@@ -1700,8 +1700,8 @@
     "short_body": 548,
     "print_only": 259
    },
-   "unresolved_references": 39953,
-   "references": 40014
+   "unresolved_references": 39968,
+   "references": 40029
   },
   "sfs_pdf_verification": {
    "statuses": {

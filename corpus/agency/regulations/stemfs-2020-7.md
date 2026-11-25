@@ -7,7 +7,7 @@ number: "STEMFS 2020:7"
 issued: "2020-02-12"
 in_force: "2020-03-11"
 repealed: null
-amended_by: []
+amended_by: ["STEMFS 2021:14"]
 amended_through: null
 reprinted_by: []
 ministry: null
@@ -16,7 +16,7 @@ language: "sv"
 authoritative: false
 source: "https://energimyndigheten.a-w2m.se/Arkitektkopia/GetTemplateResource/121?id=1deba40da0e9415f8c436d2e1569c9bb&res=58ef1dbd49174e65b583632461d960f2&lr=False&fn=STEMFS_2020_7webb%202997.pdf&elp=portal&elt=t&eloid=1deba40da0e9415f8c436d2e1569c9bb"
 source_sha256: "14a19d5c5199e20488dcb4cfac7d198a83bd0a38eef45f60d8e879a63dfc98fd"
-fetched_at: "2026-10-31T16:29:58Z"
+fetched_at: "2026-11-25T16:45:34Z"
 issuer: "Statens energimyndighet"
 text_source: "ocr"
 ---
@@ -28,6 +28,10 @@ Beslutad: 2020-02-12
 Utkom från tryck: 2020-03-03  
 Ikraftträdande: 2020-03-11  
 Version: Grundförfattning
+
+## Ändringsförfattningar
+
+- STEMFS 2021:14
 
 ## Dokument
 

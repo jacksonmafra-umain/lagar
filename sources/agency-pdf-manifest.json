@@ -8151,7 +8151,7 @@
           "bytes": 47853,
           "sha256": "4fb840de5d507add78dbbc2630e5cc4ffb7787d1cf83017ce211066bb7677b8b",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-11-18T14:32:42Z"
+          "retrieved_at": "2026-11-25T16:03:39Z"
         }
       ]
     },
@@ -16498,6 +16498,20 @@
           "sha256": "da56c8a0c419a49aba77338b8259e48ebff8a9e3d4f5a4363e8d0ec4da9b9449",
           "content_type": "application/pdf",
           "retrieved_at": "2026-11-12T14:58:53Z"
+        }
+      ]
+    },
+    {
+      "number": "HSLF-FS 2026:41",
+      "detail_url": "https://www.socialstyrelsen.se/publikationer/hslf-fs-202641-socialstyrelsens-foreskrifter-och-allmanna-rad-om-krav-pa-delegering-for-ersattning-inom-det-statliga-tandvardsstodet-2026-11-10541/",
+      "files": [
+        {
+          "label": "Öppna publikation",
+          "url": "https://www.socialstyrelsen.se/contentassets/a20a302e6cda4ebb8343a626643a9115/2026-11-10541.pdf",
+          "bytes": 213932,
+          "sha256": "0e4442439d668990f592c3156d97e47a52ad261674d26fd14943468339ffefad",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-25T16:05:15Z"
         }
       ]
     },
@@ -27152,6 +27166,20 @@
       ]
     },
     {
+      "number": "NFS 2026:10",
+      "detail_url": "https://www.naturvardsverket.se/lagar-och-regler/foreskrifter-och-allmanna-rad/2026/nfs-202610",
+      "files": [
+        {
+          "label": "Ladda ner",
+          "url": "https://www.naturvardsverket.se/globalassets/nfs/2026/nfs-2026-10.pdf",
+          "bytes": 273501,
+          "sha256": "a552d0f74684936c7dc03116406b7c2799f068bea08b422625166944d968af7c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-25T18:16:23Z"
+        }
+      ]
+    },
+    {
       "number": "PFS 2010:1",
       "detail_url": "https://www.pensionsmyndigheten.se/content/dam/pensionsmyndigheten/blanketter---broschyrer---faktablad/om-pensionsmyndigheten/lagar-och-regler/f%C3%B6reskrifter/2010/PFS_2010_1.pdf",
       "files": [
@@ -28282,6 +28310,34 @@
           "sha256": "70f86abe229fd6f5572c8376e0fe7ae76325f66fe749b78fa749c0795e658092",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T00:43:54Z"
+        }
+      ]
+    },
+    {
+      "number": "PFS 2026:5",
+      "detail_url": "https://www.pensionsmyndigheten.se/content/dam/pensionsmyndigheten/blanketter---broschyrer---faktablad/om-pensionsmyndigheten/lagar-och-regler/f%C3%B6reskrifter/2026/Pensionsmyndighetens-foreskrifter-PFS-2026-5-om-uppskattning-av-kostnader-for-en-bostads-uppvarmning-hushallsel-och-ovrig-drift-vid-berakning-av-bostadskostnad-for-ar-2027.pdf",
+      "files": [
+        {
+          "label": "PFS 2026:5",
+          "url": "https://www.pensionsmyndigheten.se/content/dam/pensionsmyndigheten/blanketter---broschyrer---faktablad/om-pensionsmyndigheten/lagar-och-regler/f%C3%B6reskrifter/2026/Pensionsmyndighetens-foreskrifter-PFS-2026-5-om-uppskattning-av-kostnader-for-en-bostads-uppvarmning-hushallsel-och-ovrig-drift-vid-berakning-av-bostadskostnad-for-ar-2027.pdf",
+          "bytes": 125259,
+          "sha256": "91534dac79186ff713a0eda2b5588edfc74a7c517654eaf8ee1e46509703c39b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-25T18:03:10Z"
+        }
+      ]
+    },
+    {
+      "number": "PFS 2026:6",
+      "detail_url": "https://www.pensionsmyndigheten.se/content/dam/pensionsmyndigheten/blanketter---broschyrer---faktablad/om-pensionsmyndigheten/lagar-och-regler/f%C3%B6reskrifter/2026/Pensionsmyndighetens-foreskrifter-2026-6-om-inkomstgranser-vid-berakning-av-inkomstpensionstillagg-for-ar-2027%20(TGA).pdf",
+      "files": [
+        {
+          "label": "PFS 2026:6",
+          "url": "https://www.pensionsmyndigheten.se/content/dam/pensionsmyndigheten/blanketter---broschyrer---faktablad/om-pensionsmyndigheten/lagar-och-regler/f%C3%B6reskrifter/2026/Pensionsmyndighetens-foreskrifter-2026-6-om-inkomstgranser-vid-berakning-av-inkomstpensionstillagg-for-ar-2027%20(TGA).pdf",
+          "bytes": 100111,
+          "sha256": "85b534982a92e4b3dcd736ed99d1dd8272649dcfa94246c1bf5a7b6e8feb4c2b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-25T18:03:09Z"
         }
       ]
     },
@@ -30513,15 +30569,15 @@
     },
     {
       "number": "RA-FS 2021:1",
-      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202021-1.pdf",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20RA-FS%202021-1.pdf",
       "files": [
         {
           "label": "RA-FS 2021:1",
-          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FRA-FS%202021-1.pdf",
-          "bytes": 321083,
-          "sha256": "1350eb1ed213941a2d1da6377ad68fdf0abd0e11a2a7ff9a0b0911f72b9acabd",
+          "url": "https://foreskrifter.riksarkivet.se/api/rafs/pdf/rafs%2FKONSOLIDERAD%20RA-FS%202021-1.pdf",
+          "bytes": 280541,
+          "sha256": "9fdb0a6d881723142f1202da267d6212d3ba0d546457074307cec34faef7512e",
           "content_type": "application/pdf",
-          "retrieved_at": "2026-10-30T01:25:59Z"
+          "retrieved_at": "2026-11-25T16:50:36Z"
         }
       ]
     },
@@ -48376,6 +48432,20 @@
       ]
     },
     {
+      "number": "RA-MS 2026:51",
+      "detail_url": "https://foreskrifter.riksarkivet.se/api/rams/pdf/rams%2FRA-MS%202026-51.pdf",
+      "files": [
+        {
+          "label": "RA-MS 2026:51",
+          "url": "https://foreskrifter.riksarkivet.se/api/rams/pdf/rams%2FRA-MS%202026-51.pdf",
+          "bytes": 38395,
+          "sha256": "ea7049143430346a44cebf263d6e248d944e0b6424993ee18ea21883d43c293c",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-25T16:53:11Z"
+        }
+      ]
+    },
+    {
       "number": "RFFS 1977:1",
       "detail_url": "https://lagrummet.forsakringskassan.se/foreskrifter/dokument?id=18.3d0ede8b171aacde18e22330",
       "files": [
@@ -56804,6 +56874,62 @@
           "sha256": "18d71a842b1fa7b4d2569ee73928de82636614020e7d2e3845183365b295be16",
           "content_type": "application/pdf",
           "retrieved_at": "2026-10-30T01:42:06Z"
+        }
+      ]
+    },
+    {
+      "number": "SJÖFS 2026:27",
+      "detail_url": "https://www.sjofartsverket.se/globalassets/om-oss/lagrum/arsforteckningar/2026/sjofs-2026-27.pdf",
+      "files": [
+        {
+          "label": "SJÖFS 2026:27",
+          "url": "https://www.sjofartsverket.se/globalassets/om-oss/lagrum/arsforteckningar/2026/sjofs-2026-27.pdf",
+          "bytes": 917126,
+          "sha256": "f9ce90e493bc672204011b75fbd619790dfb314a897b928cb8413dcf78eefb2b",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-25T17:58:44Z"
+        }
+      ]
+    },
+    {
+      "number": "SJÖFS 2026:28",
+      "detail_url": "https://www.sjofartsverket.se/globalassets/om-oss/lagrum/arsforteckningar/2026/sjofs-2026-28.pdf",
+      "files": [
+        {
+          "label": "SJÖFS 2026:28",
+          "url": "https://www.sjofartsverket.se/globalassets/om-oss/lagrum/arsforteckningar/2026/sjofs-2026-28.pdf",
+          "bytes": 800408,
+          "sha256": "8c7bebbd8e82134d4537a827bdf7002762ffa7d0bc2e71575daa7d81c3b9763f",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-25T17:58:46Z"
+        }
+      ]
+    },
+    {
+      "number": "SJÖFS 2026:29",
+      "detail_url": "https://www.sjofartsverket.se/globalassets/om-oss/lagrum/arsforteckningar/2026/sjofs-2026-29.pdf",
+      "files": [
+        {
+          "label": "SJÖFS 2026:29",
+          "url": "https://www.sjofartsverket.se/globalassets/om-oss/lagrum/arsforteckningar/2026/sjofs-2026-29.pdf",
+          "bytes": 131393,
+          "sha256": "ccaf6d9bea55db0edd0bab7969eb034c20393c1c4faaa73c76270b4b2cdcc5bc",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-25T17:58:47Z"
+        }
+      ]
+    },
+    {
+      "number": "SJÖFS 2026:30",
+      "detail_url": "https://www.sjofartsverket.se/globalassets/om-oss/lagrum/arsforteckningar/2026/sjofs-2026-30.pdf",
+      "files": [
+        {
+          "label": "SJÖFS 2026:30",
+          "url": "https://www.sjofartsverket.se/globalassets/om-oss/lagrum/arsforteckningar/2026/sjofs-2026-30.pdf",
+          "bytes": 251479,
+          "sha256": "14267b1f52674789f89145c4e1b6ad565f0daada05939e8e7b7e331b5d0a15c4",
+          "content_type": "application/pdf",
+          "retrieved_at": "2026-11-25T17:58:49Z"
         }
       ]
     },
