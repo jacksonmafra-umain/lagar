@@ -191,13 +191,13 @@ Targets:
 
 ## Integrity
 
-Audit of 54995 documents (2026-11-25T18:25:30Z):
+Audit of 54995 documents (2026-11-26T15:26:38Z):
 
 - schema errors: 0
 - duplicate ids: 0
 - path mismatches: 0
 - text-quality flags: 904
-- cross-references not in the corpus: 39968 of 40029 (informational, the corpus is partial)
+- cross-references not in the corpus: 39972 of 40033 (informational, the corpus is partial)
 
 ## Public service links
 
