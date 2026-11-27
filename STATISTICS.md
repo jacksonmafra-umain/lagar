@@ -1,6 +1,6 @@
 # Corpus statistics
 
-Generated 2026-11-27T14:23:29Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-27T15:16:33Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
@@ -9,7 +9,7 @@ The corpus holds 54,995 documents in 8 layers.
 | layer | type | documents | sections (§) | words |
 | --- | --- | ---: | ---: | ---: |
 | fundamental | fundamental_law | 4 | 496 | 33,595 |
-| sfs | act | 3,000 | 93,738 | 8,805,461 |
+| sfs | act | 3,000 | 93,738 | 8,805,448 |
 | sfs | ordinance | 6,592 | 101,872 | 6,886,633 |
 | sfs | other_statute | 1,838 | 12,465 | 1,343,577 |
 | sfs | treaty | 3,515 | 75 | 2,002,459 |
