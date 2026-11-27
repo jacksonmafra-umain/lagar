@@ -1,6 +1,6 @@
 # Corpus statistics
 
-Generated 2026-11-26T15:28:10Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
+Generated 2026-11-27T14:21:04Z by `collector/stats.py` from the corpus, the source manifests and the audit report. Every number is computed from files in this repository.
 
 ## Documents
 
@@ -365,11 +365,7 @@ Issuers whose documents rely on a PDF (the text comes from it, or only a PDF is 
 
 ### Source pages
 
-66 source pages checked: 65 ok, 0 moved, 0 dead, 1 failed (`sources/services-manifest.json`, written by the weekly services sync). A moved page redirects elsewhere and its curated `source` should be updated; a dead page answers 404 or 410; a failed page could not be read. The corpus keeps the last text read from a page that is moved, dead or failed.
-
-Failed:
-
-- forskola: https://www.skolverket.se/robots.txt: too many redirects (https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-forskola)
+66 source pages checked: 66 ok, 0 moved, 0 dead, 0 failed (`sources/services-manifest.json`, written by the weekly services sync). A moved page redirects elsewhere and its curated `source` should be updated; a dead page answers 404 or 410; a failed page could not be read. The corpus keeps the last text read from a page that is moved, dead or failed.
 
 ## Quality and accuracy
 
