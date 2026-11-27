@@ -229,17 +229,16 @@
       "title": "Förnya körkortet - Transportstyrelsen"
     },
     {
-      "error": "https://www.skolverket.se/robots.txt: too many redirects",
-      "fetched_at": "2026-11-20T13:35:58Z",
+      "fetched_at": "2026-11-27T14:19:53Z",
       "final_url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-forskola",
       "last_modified": null,
-      "lead_source": null,
-      "result": "error",
-      "sha256": null,
+      "lead_source": "meta",
+      "result": "ok",
+      "sha256": "a37bc8849b903bc158f994467416eb05084d9972ca20ffdaf404241cbea8b215",
       "slug": "forskola",
       "source": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-forskola",
-      "status": null,
-      "title": null
+      "status": 200,
+      "title": "Rätt till förskola - Skolverket"
     },
     {
       "fetched_at": "2026-11-13T12:59:57Z",
@@ -542,12 +541,12 @@
       "title": "Bidrag för gymnasiestudier i Sverige – studiebidrag och andra bidrag - CSN"
     },
     {
-      "fetched_at": "2026-11-13T12:31:31Z",
+      "fetched_at": "2026-11-27T14:18:49Z",
       "final_url": "https://www.csn.se/bidrag-och-lan/studiemedel.html",
       "last_modified": null,
       "lead_source": "ingress",
       "result": "ok",
-      "sha256": "c055213ad226c95bea7d5771f0bbd0c6aa30db8fcc35681c2dab87145ef2b69e",
+      "sha256": "e325262490d48815da261c382a981d20bb3d6d44e273a4a8a91a02e0c9690517",
       "slug": "studiemedel",
       "source": "https://www.csn.se/bidrag-och-lan/studiemedel.html",
       "status": 200,
